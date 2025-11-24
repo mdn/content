@@ -804,6 +804,10 @@
       "inh": "",
       "impl": []
     },
+    "CSSSupportsConditionRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSSupportsRule": {
       "inh": "CSSConditionRule",
       "impl": []
@@ -3081,6 +3085,14 @@
       "impl": []
     },
     "ServiceWorkerRegistration": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "SFrameDecrypterStream": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "SFrameEncrypterStream": {
       "inh": "EventTarget",
       "impl": []
     },

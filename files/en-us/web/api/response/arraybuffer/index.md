@@ -35,8 +35,7 @@ A promise that resolves with an {{jsxref("ArrayBuffer")}}.
     - The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
     - There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
 - {{jsxref("RangeError")}}
-  - : There was a problem creating the associated `ArrayBuffer`.
-    For example, if the data size is more than [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER).
+  - : Thrown if there is a problem creating the associated `ArrayBuffer` (for example, if the data size is too large).
 
 ## Examples
 

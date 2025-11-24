@@ -457,7 +457,7 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   line-height: 0.8;
   color: #0d8dee;
   transition: all 0.2s;
-  font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
+  font-family: "Lucida Sans Unicode", "Arial Unicode MS", "Arial";
 }
 /* checked mark aspect changes */
 [type="checkbox"]:not(:checked) + label::after {

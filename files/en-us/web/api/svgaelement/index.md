@@ -16,7 +16,7 @@ The **`SVGAElement`** interface provides access to the properties of an {{SVGEle
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
 
 - {{domxref("SVGAElement.download")}}
-  - : See {{domxref("HTMLAnchorElement.download")}}.
+  - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser.
 - {{domxref("SVGAElement.hash")}}
   - : A string representing the fragment identifier, including the leading hash mark (`#`), if any, in the referenced URL.
 - {{domxref("SVGAElement.host")}}
@@ -26,9 +26,9 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.href")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} that reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute.
 - {{domxref("SVGAElement.hreflang")}}
-  - : A string that reflects the `hreflang` attribute, indicating the language of the linked resource.
+  - : A string indicating the language of the linked resource.
 - {{domxref("SVGAElement.origin")}} {{ReadOnlyInline}}
-  - : Returns a string containing the origin of the URL, that is its scheme, its domain and its port.
+  - : Returns a string containing the origin of the URL — that is, its scheme, its domain and its port.
 - {{domxref("SVGAElement.pathname")}}
   - : A string containing an initial `/` followed by the path of the URL, not including the query string or fragment.
 - {{domxref("SVGAElement.password")}}
@@ -40,13 +40,13 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.protocol")}}
   - : A string representing the protocol component, including trailing colon (`:`), of the referenced URL.
 - {{domxref("SVGAElement.referrerPolicy")}}
-  - : See {{domxref("HTMLAnchorElement.referrerPolicy")}}.
+  - : A string specifying which [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when fetching the [URL](/en-US/docs/Glossary/URL).
 - {{domxref("SVGAElement.rel")}}
   - : A string reflecting the `rel` SVG attribute, specifying the relationship of the link's target.
 - {{domxref("SVGAElement.relList")}}
   - : A {{domxref("DOMTokenList")}} reflecting the `rel` SVG attribute, as a list of tokens.
 - {{domxref("SVGAElement.search")}}
-  - : A string representing the search element, including leading question mark (`?`), if any, of the referenced URL.
+  - : A string representing the URL's query string, if any, including the leading question mark (`?`).
 - {{domxref("SVGAElement.target")}} {{ReadOnlyInline}}
   - : It corresponds to the {{SVGAttr("target")}} attribute of the given element.
 - {{domxref("SVGAElement.text")}} {{deprecated_inline}}

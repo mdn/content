@@ -122,7 +122,7 @@ Secondly, with the adoption of Priority Hints, you can control the priority furt
 
 As images are loaded asynchronously and continue to load after the first paint, if their dimensions aren't defined before load, they can cause reflows to the page content. For example, when text gets pushed down the page by images loading. For this reason, it's important to set `width` and `height` attributes so that the browser can reserve space for them in the layout.
 
-When the `width` and `height` attributes of an image are included on an HTML {{htmlelement("img")}} element, the [aspect ratio of the image](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio#adjusting_aspect_ratios_of_replaced_elements) can be calculated by the browser prior to the image being loaded. This {{glossary("aspect ratio")}} is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
+When the `width` and `height` attributes of an image are included on an HTML {{htmlelement("img")}} element, the [aspect ratio of the image](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios#adjusting_aspect_ratios_of_replaced_elements) can be calculated by the browser prior to the image being loaded. This {{glossary("aspect ratio")}} is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
 
 Browsers begin rendering content as HTML is parsed, often before all assets, including images, are downloaded. Including dimensions enable browsers to reserve a correctly-sized placeholder box for each image to appear in when the images are loaded when first rendering the page.
 
@@ -130,7 +130,7 @@ Browsers begin rendering content as HTML is parsed, often before all assets, inc
 
 Without the `width` and `height` attributes, no placeholder space is created, creating a noticeable {{glossary('jank')}}, or layout shift, in the page when the image loads after the page is rendered. Page reflow and repaints are performance and usability issues.
 
-The {{glossary("CLS")}} metric measures jank on page load, or how much visible content shifts in the viewport and by how much. The main culprits of bad CLS are replaced elements without declared dimensions that reflow when the asset loads, including images, ad, embeds, and iframes without an size or {{cssxref("aspect-ratio")}} and web fonts.
+The {{glossary("CLS")}} metric measures jank on page load, or how much visible content shifts in the viewport and by how much. The main culprits of bad CLS are replaced elements without declared dimensions that reflow when the asset loads, including images, ad, embeds, and iframes without a size or {{cssxref("aspect-ratio")}} and web fonts.
 
 In responsive designs, when a container is narrower than an image, the following CSS is generally used to keep images from breaking out of their containers:
 

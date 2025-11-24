@@ -189,25 +189,27 @@ You can see how the placeholder is rendered below:
 
 One problem with search forms is their accessibility; a common design practice is not to provide a label for the search field (although there might be a magnifying glass icon or similar), as the purpose of a search form is normally fairly obvious for sighted users due to placement ([this example shows a typical pattern](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
 
-This could, however, cause confusion for screen reader users, since they will not have any verbal indication of what the search input is. One way around this that won't impact on your visual design is to use [WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) features:
+This could, however, cause confusion for screen reader users, as they will not receive any verbal indication of what the search input is. One way around this that won't impact your visual design is to use [landmark elements](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role).
 
-- A `role` attribute of value `search` on the `<form>` element will cause screen readers to announce that the form is a search form.
+- Wrap the whole search functionality in a {{HTMLElement("search")}} element, which creates a landmark region that assistive technologies can announce and quickly navigate to. If your `<input>` is already in a `<form>`, you can alternatively add [`role="search"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) to the `<form>` element, which also makes the `<form>` a search landmark. The `<search>` element uses native HTML semantics, while `role="search"` has more support and may be terser to type if you already have a `<form>` wrapper.
 - If that isn't enough, you can use an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute on the {{HTMLElement("input")}} itself. This should be a descriptive text label that will be read out by the screen reader; it's used as a non-visual equivalent to `<label>`.
 
 Let's have a look at an example:
 
 ```html
-<form role="search">
-  <div>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="Search the site…"
-      aria-label="Search through site content" />
-    <button>Search</button>
-  </div>
-</form>
+<search>
+  <form>
+    <div>
+      <input
+        type="search"
+        id="mySearch"
+        name="q"
+        placeholder="Search the site…"
+        aria-label="Search through site content" />
+      <button>Search</button>
+    </div>
+  </form>
+</search>
 ```
 
 You can see how this is rendered below:

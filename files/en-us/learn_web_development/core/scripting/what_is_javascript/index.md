@@ -53,7 +53,7 @@ Then we can add some CSS into the mix to get it looking nice:
 
 ```css live-sample___string-concat-name
 button {
-  font-family: "helvetica neue", helvetica, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   border: 2px solid rgb(200 200 0 / 60%);

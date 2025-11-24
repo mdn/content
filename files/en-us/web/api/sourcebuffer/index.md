@@ -28,7 +28,7 @@ The **`SourceBuffer`** interface represents a chunk of media to be passed into a
 - {{domxref("SourceBuffer.timestampOffset")}}
   - : Controls the offset applied to timestamps inside media segments that are subsequently appended to the `SourceBuffer`.
 - {{domxref("SourceBuffer.updating")}} {{ReadOnlyInline}}
-  - : A boolean indicating whether the `SourceBuffer` is currently being updated — i.e., whether an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation is currently in progress.
+  - : A boolean indicating whether the `SourceBuffer` is currently being updated — i.e., whether an {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} or {{domxref("SourceBuffer.remove", "remove()")}} operation is currently in progress.
 - {{domxref("SourceBuffer.videoTracks")}} {{ReadOnlyInline}}
   - : A list of the video tracks currently contained inside the `SourceBuffer`.
 

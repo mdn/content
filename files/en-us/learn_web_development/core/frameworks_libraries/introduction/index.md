@@ -182,7 +182,8 @@ body {
   line-height: 1.25;
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", Roboto, Helvetica, Arial, sans-serif;
+    "Segoe UI Emoji", "Segoe UI Symbol", "Roboto", "Helvetica", "Arial",
+    sans-serif;
   color: hsl(0 0 0.13);
 
   width: 95%;

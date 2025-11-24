@@ -54,7 +54,7 @@ This example uses the `read()` method to read image data from the clipboard and 
 
 ```html
 <img id="source" src="butterfly.jpg" alt="A butterfly" />
-<img id="destination" />
+<img id="destination" src="" alt="Pasted image" />
 <button id="reload" type="button">Reload</button>
 <p id="log"></p>
 ```

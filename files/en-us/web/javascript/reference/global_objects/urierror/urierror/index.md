@@ -44,7 +44,7 @@ URIError(message, fileName, lineNumber)
 
 ## Examples
 
-### Catching an URIError
+### Catching a URIError
 
 ```js
 try {
@@ -57,7 +57,7 @@ try {
 }
 ```
 
-### Creating an URIError
+### Creating a URIError
 
 ```js
 try {

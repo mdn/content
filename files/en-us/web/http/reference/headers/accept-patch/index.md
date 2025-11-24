@@ -23,10 +23,6 @@ An `Accept-Patch` header in a response to any request method implicitly means th
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>Yes</td>
-    </tr>
   </tbody>
 </table>
 

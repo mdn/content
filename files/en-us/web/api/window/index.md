@@ -350,7 +350,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the window, the document and its resources are about to be unloaded.
 - {{domxref("Window/load_event", "load")}}
   - : Fired when the whole page has loaded, including all dependent resources such as stylesheets images.
-- {{domxref("Window/unload_event", "unload")}} {{deprecated_inline}}
+- {{domxref("Window/unload_event", "unload")}}
   - : Fired when the document or a child resource is being unloaded.
 
 ### Manifest events

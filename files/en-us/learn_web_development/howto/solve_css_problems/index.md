@@ -49,10 +49,10 @@ This page rounds up questions and answers, and other material on the MDN site th
 
 ### Layout guides
 
-- [Using CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Using CSS multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
-- [Using CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Using CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Using CSS multi-column layouts](/en-US/docs/Web/CSS/Guides/Multicol_layout/Using)
+- [Using CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - [Using CSS generated content](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)
 
 > [!NOTE]
-> We have a cookbook dedicated to [CSS Layout solutions](/en-US/docs/Web/CSS/Layout_cookbook), with fully working examples and explanations of common layout tasks. Also check out [Practical Positioning Examples](/en-US/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples), which shows how you can use positioning to create a tabbed info box, and a sliding hidden panel.
+> We have a cookbook dedicated to [CSS Layout solutions](/en-US/docs/Web/CSS/How_to/Layout_cookbook), with fully working examples and explanations of common layout tasks. Also check out [Practical Positioning Examples](/en-US/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples), which shows how you can use positioning to create a tabbed info box, and a sliding hidden panel.

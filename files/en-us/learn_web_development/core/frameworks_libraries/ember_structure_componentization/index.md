@@ -104,7 +104,8 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
           <button
             type="button"
             class="destroy"
-            title="Remove this todo"></button>
+            title="Remove this todo"
+            aria-label="Remove this todo"></button>
         </div>
 
         <input autofocus class="edit" value="Todo Text" />
@@ -120,7 +121,8 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
           <button
             type="button"
             class="destroy"
-            title="Remove this todo"></button>
+            title="Remove this todo"
+            aria-label="Remove this todo"></button>
         </div>
 
         <input autofocus class="edit" value="Todo Text" />
@@ -254,7 +256,11 @@ Now that we have all of our component structure files, we can cut and paste the 
          class="toggle"
          type="checkbox" />
        <label>Buy Movie Tickets</label>
-       <button type="button" class="destroy" title="Remove this todo"></button>
+       <button
+         type="button"
+         class="destroy"
+         title="Remove this todo"
+         aria-label="Remove this todo"></button>
      </div>
 
      <input autofocus class="edit" value="Todo Text" />

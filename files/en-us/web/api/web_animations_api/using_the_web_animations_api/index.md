@@ -10,7 +10,7 @@ The Web Animations API lets us construct animations and control their playback w
 
 ## Meet the Web Animations API
 
-The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) opens the browser's animation engine to developers and manipulation by JavaScript. This API was designed to underlie implementations of both [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) and [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions), and leaves the door open to future animation effects. It is one of the most performant ways to animate on the Web, letting the browser make its own internal optimizations without hacks, coercion, or {{domxref("Window.requestAnimationFrame()")}}.
+The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) opens the browser's animation engine to developers and manipulation by JavaScript. This API was designed to underlie implementations of both [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations) and [CSS Transitions](/en-US/docs/Web/CSS/Guides/Transitions), and leaves the door open to future animation effects. It is one of the most performant ways to animate on the Web, letting the browser make its own internal optimizations without hacks, coercion, or {{domxref("Window.requestAnimationFrame()")}}.
 
 With the Web Animations API, we can move interactive animations from stylesheets to JavaScript, separating presentation from behavior. We no longer need to rely on DOM-heavy techniques such as writing CSS properties and scoping classes onto elements to control playback direction. And unlike pure, declarative CSS, JavaScript also lets us dynamically set values from properties to durations. For building custom animation libraries and creating interactive animations, the Web Animations API might be the perfect tool for the job. Let's see what it can do!
 
@@ -687,7 +687,7 @@ adjustBackgroundPlayback();
 When animating elements, a common use case is to persist the final state of the animation, after the animation has finished. One method sometimes used for this is to set the animation's [fill mode](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) to `forwards`. However, it is not recommended to use fill modes to persist the effect of an animation indefinitely, for two reasons:
 
 - The browser has to maintain the state of the animation while it is still active, so the animation continues to consume resources even though it is no longer animating. Note that this is somewhat alleviated by the browser [automatically removing filling animations](#automatically_removing_filling_animations).
-- Styles applied by animations have a [higher precedence in the cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) than specified styles, so it can be difficult to override them when needed.
+- Styles applied by animations have a [higher precedence in the cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#cascading_order) than specified styles, so it can be difficult to override them when needed.
 
 A better approach is to use the {{domxref("Animation.commitStyles()")}} method. This writes the computed values of the animation's current styles into its target element's [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute, after which the element can be restyled normally.
 

@@ -54,21 +54,19 @@ In this example, we obtain the usage estimates and present the percentage of sto
 ### HTML
 
 ```html
-<label>
-  You're currently using about <output id="percent"> </output>% of your
-  estimated storage quota (<output id="quota"></output>).
-</label>
+You're currently using about <span id="percent"></span>% of your estimated
+storage quota (<span id="quota"></span>).
 ```
 
 ### JavaScript
 
 ```js
 navigator.storage.estimate().then((estimate) => {
-  document.getElementById("percent").value = (
+  document.getElementById("percent").textContent = (
     (estimate.usage / estimate.quota) *
     100
   ).toFixed(2);
-  document.getElementById("quota").value =
+  document.getElementById("quota").textContent =
     `${(estimate.quota / 1024 / 1024).toFixed(2)}MB`;
 });
 ```

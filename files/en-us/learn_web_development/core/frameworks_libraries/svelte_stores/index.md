@@ -150,7 +150,7 @@ Let's now create our `Alert` component and see how we can read values from the s
      border-radius: 0.2rem;
      background-color: #565656;
      color: white;
-     font-weight: 700;
+     font-weight: bold;
      padding: 0.5rem 1.4rem;
      font-size: 1.5rem;
      z-index: 100;
@@ -486,8 +486,8 @@ As you can see, our store is just an object containing `subscribe()`, `set()`, a
 Just for reference, here's a basic working store implemented from scratch:
 
 ```js
-export const writable = (initial_value = 0) => {
-  let value = initial_value; // content of the store
+export const writable = (initialValue = 0) => {
+  let value = initialValue; // content of the store
   let subs = []; // subscriber's handlers
 
   const subscribe = (handler) => {
@@ -496,13 +496,13 @@ export const writable = (initial_value = 0) => {
     return () => (subs = subs.filter((sub) => sub !== handler)); // return unsubscribe function
   };
 
-  const set = (new_value) => {
-    if (value === new_value) return; // same value, exit
-    value = new_value; // update value
+  const set = (newValue) => {
+    if (value === newValue) return; // same value, exit
+    value = newValue; // update value
     subs.forEach((sub) => sub(value)); // update subscribers
   };
 
-  const update = (update_fn) => set(update_fn(value)); // update function
+  const update = (updateFn) => set(updateFn(value)); // update function
 
   return { subscribe, set, update }; // store contract
 };

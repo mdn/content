@@ -1,5 +1,5 @@
 ---
-title: Firefox 14 for developers
+title: Firefox 14 release notes for developers
 short-title: Firefox 14
 slug: Mozilla/Firefox/Releases/14
 page-type: firefox-release-notes

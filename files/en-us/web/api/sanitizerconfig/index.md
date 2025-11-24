@@ -28,7 +28,7 @@ Note that normally a {{domxref("Sanitizer")}} instance would be passed as the op
 - `elements`
   - : An array indicating the elements to allow when sanitizing HTML, optionally also specifying their allowed or removed attributes.
 
-    Each element can be specified by name (a string), or as a object with the following properties:
+    Each element can be specified by name (a string), or as an object with the following properties:
     - `name`
       - : A string containing the name of the element.
     - `namespace` {{optional_inline}}
@@ -37,7 +37,7 @@ Note that normally a {{domxref("Sanitizer")}} instance would be passed as the op
     - `attributes` {{optional_inline}}
       - : An array indicating the attributes to allow on this (allowed) element when sanitizing HTML.
 
-        Each attribute can be specified by name (a string), or as a object with the following properties:
+        Each attribute can be specified by name (a string), or as an object with the following properties:
         - `name`
           - : A string containing the name of the attribute.
         - `namespace` {{optional_inline}}
@@ -46,7 +46,7 @@ Note that normally a {{domxref("Sanitizer")}} instance would be passed as the op
     - `removeAttributes` {{optional_inline}}
       - : An array indicating the attributes to remove on this (allowed) element when sanitizing HTML.
 
-        Each attribute can be specified by name (a string), or as a object with the following properties:
+        Each attribute can be specified by name (a string), or as an object with the following properties:
         - `name`
           - : A string containing the name of the attribute.
         - `namespace` {{optional_inline}}
@@ -55,7 +55,7 @@ Note that normally a {{domxref("Sanitizer")}} instance would be passed as the op
 - `removeElements`
   - : An array indicating the elements to remove when sanitizing HTML.
 
-    Each element can be specified by name (a string), or as a object with the following properties:
+    Each element can be specified by name (a string), or as an object with the following properties:
     - `name`
       - : A string containing the name of the element.
     - `namespace` {{optional_inline}}
@@ -66,7 +66,7 @@ Note that normally a {{domxref("Sanitizer")}} instance would be passed as the op
   - : An array indicating the elements to replace with their content when sanitizing HTML.
     This is primarily used to strip styles from text (for example, you could use this to change `<b>some text</b>` to `some text`).
 
-    Each element can be specified by name (a string), or as a object with the following properties:
+    Each element can be specified by name (a string), or as an object with the following properties:
     - `name`
       - : A string containing the name of the element.
     - `namespace` {{optional_inline}}
@@ -76,7 +76,7 @@ Note that normally a {{domxref("Sanitizer")}} instance would be passed as the op
 - `attributes`
   - : An array indicating the attributes to allow when sanitizing HTML.
 
-    Each attribute can be specified by name (a string), or as a object with the following properties:
+    Each attribute can be specified by name (a string), or as an object with the following properties:
     - `name`
       - : A string containing the name of the attribute.
     - `namespace` {{optional_inline}}
@@ -85,7 +85,7 @@ Note that normally a {{domxref("Sanitizer")}} instance would be passed as the op
 - `removeAttributes`
   - : An array indicating the attributes to remove from elements when sanitizing HTML.
 
-    Each attribute can be specified by name (a string), or as a object with the following properties:
+    Each attribute can be specified by name (a string), or as an object with the following properties:
     - `name`
       - : A string containing the name of the attribute.
     - `namespace` {{optional_inline}}

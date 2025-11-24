@@ -1,5 +1,5 @@
 ---
-title: Firefox 13 for developers
+title: Firefox 13 release notes for developers
 short-title: Firefox 13
 slug: Mozilla/Firefox/Releases/13
 page-type: firefox-release-notes

@@ -54,7 +54,7 @@ The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Guid
 
 ### Prefer HTML
 
-Using the {{HTMLElement('aside')}} element will automatically communicate a section has a role of `complementary`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('aside')}} element will automatically communicate that the element has a role of `complementary`. If possible, prefer using the semantic `<aside>` element instead of the `complementary` role.
 
 ### Labeling landmarks
 

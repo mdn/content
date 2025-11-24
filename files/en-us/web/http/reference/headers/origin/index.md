@@ -34,7 +34,7 @@ Origin: <scheme>://<hostname>:<port>
 ## Directives
 
 - `null`
-  - : The origin is "privacy sensitive", or is an _opaque origin_ as defined by the HTML specification (specific cases are listed in the [description](#description) section).
+  - : The origin is "privacy sensitive", or is an [opaque origin](/en-US/docs/Glossary/Origin#opaque_origin) (specific cases are listed in the [description](#description) section).
 - `<scheme>`
   - : The protocol that is used.
     Usually, it is the HTTP protocol or its secured version, HTTPS.

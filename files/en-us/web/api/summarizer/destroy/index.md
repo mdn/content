@@ -10,7 +10,9 @@ browser-compat: api.Summarizer.destroy
 
 {{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The **`destroy()`** method of the {{domxref("Summarizer")}} interface destroys the `Summarizer` instance it is called on. It makes sense to destroy `Summarizer` objects if they are no longer going to be used, as they tie up significant resources in their handling.
+The **`destroy()`** method of the {{domxref("Summarizer")}} interface releases the resources assigned to the `Summarizer` instance it is called on and stops any further activity on it. This means that any ongoing and subsequent method calls made on the `Summarizer` will reject with an `AbortError`.
+
+It makes sense to destroy `Summarizer` objects if they are no longer being used, as they tie up significant resources in their handling.
 
 ## Syntax
 

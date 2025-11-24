@@ -22,7 +22,7 @@ pre-commit:
       stage_fixed: true
 
     - name: Run 'yarn filecheck'
-      glob: "*.{svg,png,jpeg,jpg,gif}"
+      glob: "files/*.{svg,png,jpeg,jpg,gif}"
       run: yarn filecheck {staged_files}
 
     - name: Check URL issues

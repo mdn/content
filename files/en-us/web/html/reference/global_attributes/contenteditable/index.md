@@ -116,7 +116,7 @@ h2 {
   margin-bottom: 0;
 }
 .copying {
-  font-family: Georgia, serif;
+  font-family: "Georgia", serif;
   margin: 1rem;
   padding: 1rem;
   border: solid black 1px;

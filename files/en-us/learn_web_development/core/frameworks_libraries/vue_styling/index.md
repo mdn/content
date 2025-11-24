@@ -123,8 +123,8 @@ body {
   margin: 0 auto;
   font:
     1.6rem/1.25 "Helvetica Neue",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
   background-color: whitesmoke;
   color: #4d4d4d;
@@ -292,7 +292,7 @@ We should apply the button CSS classes to the `<button>` in our `ToDoForm` compo
 
 Add `class="btn btn__primary btn__lg"` to your form's `<button>` element:
 
-```html
+```vue
 <button type="submit" class="btn btn__primary btn__lg">Add</button>
 ```
 
@@ -300,7 +300,7 @@ While we're here, there's one more semantic and styling change we can make. Sinc
 
 Update your `ToDoForm` template so that it looks like this:
 
-```html
+```vue
 <template>
   <form @submit.prevent="onSubmit">
     <h2 class="label-wrapper">
@@ -324,7 +324,7 @@ Let's also add the `stack-large` class to the `<ul>` tag in our `App.vue` file. 
 
 Update it as follows:
 
-```html
+```vue
 <ul aria-labelledby="list-summary" class="stack-large">
   …
 </ul>
@@ -346,10 +346,10 @@ Next, copy the following CSS into the newly created `<style>` element:
 
 ```css
 .custom-checkbox > .checkbox-label {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1rem;
   line-height: 1.25;
   color: #0b0c0c;
@@ -357,10 +357,10 @@ Next, copy the following CSS into the newly created `<style>` element:
   margin-bottom: 5px;
 }
 .custom-checkbox > .checkbox {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1rem;
   line-height: 1.25;
   box-sizing: border-box;
@@ -378,9 +378,9 @@ Next, copy the following CSS into the newly created `<style>` element:
   box-shadow: inset 0 0 0 2px;
 }
 .custom-checkbox {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.6rem;
   line-height: 1.25;
   display: block;
@@ -459,11 +459,11 @@ Now we need to add some CSS classes to our template to connect the styles.
 
 To the root `<div>`, add a `custom-checkbox` class. To the `<input>`, add a `checkbox` class. Last of all, to the `<label>` add a `checkbox-label` class. The updated template is below:
 
-```html
+```vue
 <template>
   <div class="custom-checkbox">
     <input type="checkbox" :id="id" :checked="isDone" class="checkbox" />
-    <label :for="id" class="checkbox-label">\{{label}}</label>
+    <label :for="id" class="checkbox-label">\{{ label }}</label>
   </div>
 </template>
 ```

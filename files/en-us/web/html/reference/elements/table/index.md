@@ -108,7 +108,7 @@ The following attributes are deprecated and should not be used. They are documen
   - : Specifies the horizontal alignment of the table within its parent element. The possible {{Glossary("enumerated")}} values are `left`, `center`, and `right`. Use the {{cssxref("margin-inline-start")}} and {{cssxref("margin-inline-end")}} CSS properties instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
-  - : Defines the background color of the table. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of the table. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/Reference/Values/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/Reference/Values/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `border` {{deprecated_inline}}
   - : Defines, as a non-negative integer value (in pixels), the size of the frame surrounding the table. If set to `0`, the [`frame`](#frame) attribute is set to void. Use the {{cssxref("border")}} CSS property instead, as this attribute is deprecated.
@@ -237,7 +237,7 @@ The table rows are defined with {{HTMLElement("tr")}} elements, and the columns 
 
 #### Result
 
-There is no custom [CSS](/en-US/docs/Web/CSS) or [user stylesheet](/en-US/docs/Web/CSS/CSS_cascade/Cascade#author_stylesheets) applied to this table. The styling results purely from the [user-agent stylesheet](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user-agent_stylesheets).
+There is no custom [CSS](/en-US/docs/Web/CSS) or [user stylesheet](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#author_stylesheets) applied to this table. The styling results purely from the [user-agent stylesheet](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#user-agent_stylesheets).
 
 {{EmbedLiveSample('Basic_table', 650, 80)}}
 
@@ -589,8 +589,8 @@ table {
   border: 2px solid rgb(140 140 140);
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -683,8 +683,8 @@ table {
   border: 2px solid rgb(140 140 140);
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 

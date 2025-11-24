@@ -1,5 +1,5 @@
 ---
-title: Firefox 34 for developers
+title: Firefox 34 release notes for developers
 short-title: Firefox 34
 slug: Mozilla/Firefox/Releases/34
 page-type: firefox-release-notes

@@ -60,19 +60,19 @@ For the complete list of page types see [The page-type front matter key](/en-US/
 
 Below are examples of the various pages you'll find on MDN along with templates that can be used to create new content based on the type of content you will be presenting, including the following pages:
 
-- [API landing pages](#api_landing_page)
+- [API landing page](#api_landing_page)
 - [API reference page](#api_reference_page)
 - [API reference subpage](#api_reference_subpage)
-- [ARIA reference](#aria_reference_page)
-- [Conceptual pages](#conceptual_page)
-- [CSS feature reference](#css_feature_reference_page)
+- [HTML element reference page](#html_element_reference_page)
+- [HTML attribute reference page](#html_attribute_reference_page)
+- [SVG element reference page](#svg_element_reference_page)
 - [CSS module landing page](#css_module_landing_page)
-- [Glossary entry](#glossary_page)
-- [HTML element](#html_element_reference_page)
-- [HTML attribute](#html_attribute_reference_page)
-- [HTTP header](#http_header_reference_page)
+- [CSS feature reference page](#css_feature_reference_page)
+- [HTTP header reference page](#http_header_reference_page)
+- [ARIA reference page](#aria_reference_page)
+- [Conceptual page](#conceptual_page)
+- [Glossary page](#glossary_page)
 - [Landing page](#landing_page)
-- [SVG element](#svg_element_reference_page)
 - [Learn web development pages](#learn_web_development_pages)
 
 Each section includes links to live example pages for that page type.
@@ -173,20 +173,20 @@ An **SVG reference page** lists all the attributes that are available on an SVG 
 
 ### CSS module landing page
 
-Every **[CSS](/en-US/docs/Web/CSS) module** represents a CSS specification that provides support for certain features and implementations in CSS. For example, the [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module represents the [specification](/en-US/docs/Web/CSS/CSS_box_model#specifications) that describes the margin and padding properties that let you create spacing in and around a CSS box.
+Every **[CSS](/en-US/docs/Web/CSS) module** represents a CSS specification that provides support for certain features and implementations in CSS. For example, the [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module represents the [specification](/en-US/docs/Web/CSS/Guides/Box_model#specifications) that describes the margin and padding properties that let you create spacing in and around a CSS box.
 
 A **CSS module landing page** provides an overview of the features that the module provides and lists all the properties, data types, CSS functions, and so on offered by the module. When possible, the CSS module landing page provides a quick demonstration of what can be achieved using the properties of the module through an interactive example.
 The module landing page serves primarily as a _navigation_ page, but also functions as an at-a-glance _reference_ page for the module.
 
 Some related properties and features that belong in other modules, but that are closely related to the functionality offered by the module you are documenting, can also be covered in a _Related concepts_ section.
-For example, the `<easing-function>` data type and the `prefers-reduced-motion` media query are not covered in the CSS animations module, but because they are closely related with CSS animations, it is a good idea to highlight them in the [Related concepts](/en-US/docs/Web/CSS/CSS_animations#related_concepts) section of the CSS animations module landing page.
+For example, the `<easing-function>` data type and the `prefers-reduced-motion` media query are not covered in the CSS animations module, but because they are closely related with CSS animations, it is a good idea to highlight them in the [Related concepts](/en-US/docs/Web/CSS/Guides/Animations#related_concepts) section of the CSS animations module landing page.
 
 #### Examples
 
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations)
-- [CSS basic user interface](/en-US/docs/Web/CSS/CSS_basic_user_interface)
-- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects)
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations)
+- [CSS basic user interface](/en-US/docs/Web/CSS/Guides/Basic_user_interface)
+- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
 
 #### Templates
 
@@ -198,9 +198,9 @@ A **CSS reference page** lists all the available syntax for a CSS feature such a
 
 #### Examples
 
-- [`background-color` property](/en-US/docs/Web/CSS/background-color)
-- [`:hover` pseudo-class](/en-US/docs/Web/CSS/:hover)
-- [`@media` at-rule](/en-US/docs/Web/CSS/@media)
+- [`background-color` property](/en-US/docs/Web/CSS/Reference/Properties/background-color)
+- [`:hover` pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/:hover)
+- [`@media` at-rule](/en-US/docs/Web/CSS/Reference/At-rules/@media)
 
 #### Templates
 

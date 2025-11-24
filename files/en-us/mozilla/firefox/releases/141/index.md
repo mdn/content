@@ -1,5 +1,5 @@
 ---
-title: Firefox 141 for developers
+title: Firefox 141 release notes for developers
 short-title: Firefox 141
 slug: Mozilla/Firefox/Releases/141
 page-type: firefox-release-notes

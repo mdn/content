@@ -166,7 +166,7 @@ see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
       <td>A line break</td>
       <td>{{HTMLElement("br")}}</td>
       <td id="br-example">
-        <pre class="brush: html">Line 1&#x3C;br>Line 2</pre>
+        <pre class="brush: html">Line 1&#x3C;br />Line 2</pre>
         {{EmbedLiveSample("br-example", 100, 80)}}
       </td>
     </tr>
@@ -176,7 +176,7 @@ see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
       <td id="wbr-example">
         <pre class="brush: html">
 &#x3C;div style="width: 200px">
-  Llanfair&#x3C;wbr>pwllgwyngyll&#x3C;wbr>gogerychwyrndrobwllllantysiliogogogoch.
+  Llanfair&#x3C;wbr />pwllgwyngyll&#x3C;wbr />gogerychwyrndrobwllllantysiliogogogoch.
 &#x3C;/div></pre
         >
         {{EmbedLiveSample("wbr-example", 100, 80)}}
@@ -212,7 +212,7 @@ format&#x3C;/code>.</pre
       <td id="audio-example">
         <pre class="brush: html">
 &#x3C;audio controls>
-  &#x3C;source src="/shared-assets/audio/t-rex-roar.mp3" type="audio/mpeg">
+  &#x3C;source src="/shared-assets/audio/t-rex-roar.mp3" type="audio/mpeg" />
 &#x3C;/audio>
         </pre>
         {{EmbedLiveSample("audio-example", 100, 80)}}
@@ -326,7 +326,7 @@ an extended quotation.&#x3C;/blockquote></pre
       <td>A horizontal rule</td>
       <td>{{HTMLElement("hr")}}</td>
       <td id="hr-example">
-        <pre class="brush: html">before&#x3C;hr>after</pre>
+        <pre class="brush: html">before&#x3C;hr />after</pre>
         {{EmbedLiveSample("hr-example", 100, 100)}}
       </td>
     </tr>

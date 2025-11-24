@@ -14,14 +14,10 @@ The `Crypto` is available in windows using the {{domxref("Window.crypto")}} prop
 
 ## Instance properties
 
-_This interface implements properties defined on {{domxref("Crypto/getRandomValues", "RandomSource")}}._
-
 - {{domxref("Crypto.subtle")}} {{ReadOnlyInline}} {{SecureContext_inline}}
   - : Returns a {{domxref("SubtleCrypto")}} object providing access to common cryptographic primitives, like hashing, signing, encryption, or decryption.
 
 ## Instance methods
-
-_This interface implements methods defined on {{domxref("Crypto/getRandomValues", "RandomSource")}}._
 
 - {{domxref("Crypto.getRandomValues()")}}
   - : Fills the passed {{ jsxref("TypedArray") }} with cryptographically sound random values.

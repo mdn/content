@@ -1,5 +1,5 @@
 ---
-title: Firefox 73 for developers
+title: Firefox 73 release notes for developers
 short-title: Firefox 73
 slug: Mozilla/Firefox/Releases/73
 page-type: firefox-release-notes
@@ -25,7 +25,7 @@ _No changes._
 
 #### Removals
 
-- The proprietary `-moz-touch-enabled` media query has been removed ([Firefox bug 1486964](https://bugzil.la/1486964)). You should use [`pointer: coarse`](/en-US/docs/Web/CSS/@media/pointer) instead.
+- The proprietary `-moz-touch-enabled` media query has been removed ([Firefox bug 1486964](https://bugzil.la/1486964)). You should use [`pointer: coarse`](/en-US/docs/Web/CSS/Reference/At-rules/@media/pointer) instead.
 
 ### SVG
 

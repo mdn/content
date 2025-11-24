@@ -8,37 +8,40 @@ browser-compat: api.Navigator.appVersion
 
 {{APIRef("HTML DOM")}}
 
-Returns either `"4.0"` or a string representing version information about
-the browser.
-
-> [!NOTE]
-> Do not rely on this property to return the correct browser version.
+The **`Navigator.appVersion`** read-only property of the {{domxref("Navigator")}} interface returns a string representing version information about the browser.
 
 ## Value
 
-Either `"4.0"` or a string representing version information about the
-browser.
+A string.
+
+## Description
+
+The `appVersion` property returns information indicating the browser version.
+
+Note that the information returned varies significantly by browser. In some browsers, such as Chrome, this is nearly the same as the value returned by {{domxref("Navigator.userAgent")}}, with the `Mozilla/` prefix removed. For example:
+
+```plain
+5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+```
+
+In other browsers, such as Firefox, this is cut down to a short string that hints at the platform/OS. For example:
+
+```plain
+5.0 (Macintosh)
+```
+
+Theoretically this information is useful for detecting the browser and serving code to work around browser-specific bugs or lack of feature support. However, this is **unreliable** and **is not recommended** for the reasons given in [User-Agent reduction](/en-US/docs/Web/HTTP/Guides/User-agent_reduction) and [Browser detection using the user agent](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent).
+
+[Feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) is a much more reliable strategy.
 
 ## Examples
 
 ```js
-alert(`Your browser version is reported as ${navigator.appVersion}`);
+console.log(navigator.appVersion);
+// On Chrome, logs something like "5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" (reduced UA string)
+
+// On Firefox, logs something like "5.0 (Macintosh)"
 ```
-
-## Notes
-
-The `window.navigator.userAgent` property may also contain the version
-number (for example
-`"Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape 6/6.1"`),
-but you should be aware of how easy it is to change the user agent string and "spoof"
-other browsers, platforms, or user agents, and also how cavalier the browser vendor
-themselves are with these properties.
-
-The `window.navigator.appVersion`, `window.navigator.appName` and
-`window.navigator.userAgent` properties have been used in "browser sniffing"
-code: scripts that attempt to find out what kind of browser you are using and adjust
-pages accordingly. This lead to the current situation, where browsers had to return fake
-values from these properties in order not to be locked out of some websites.
 
 ## Specifications
 
@@ -47,3 +50,8 @@ values from these properties in order not to be locked out of some websites.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Navigator.userAgent")}}
+- {{HTTPHeader("User-agent")}} HTTP header

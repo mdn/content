@@ -71,11 +71,11 @@ Yes, we get a circle:
 
 ## Backgrounds
 
-When we talk about a fancy box, the core properties to handle that are [background-\* properties](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders). When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.
+When we talk about a fancy box, the core properties to handle that are [background-\* properties](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders). When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.
 
 Before we jump to some practical examples, let's step back a bit as there are two things you should know about backgrounds.
 
-- It's possible to set [several backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) on a single box. They are stacked on top of each other like layers.
+- It's possible to set [several backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds) on a single box. They are stacked on top of each other like layers.
 - Backgrounds can be either solid colors or images: solid color always fills the whole surface but images can be scaled and positioned.
 
 ```html hidden
@@ -119,11 +119,11 @@ Okay, let's have fun with backgrounds:
 {{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
 > [!NOTE]
-> Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). If you want to learn more about gradients, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients).
+> Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). If you want to learn more about gradients, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/Guides/Images/Using_gradients).
 
 ## Pseudo-elements
 
-When styling a single box, you could find yourself limited and could wish to have more boxes to create even more amazing styles. Most of the time, that leads to polluting the DOM by adding extra HTML element for the unique purpose of style. Even if it is necessary, it's somewhat considered bad practice. One solution to avoid such pitfalls is to use [CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements).
+When styling a single box, you could find yourself limited and could wish to have more boxes to create even more amazing styles. Most of the time, that leads to polluting the DOM by adding extra HTML element for the unique purpose of style. Even if it is necessary, it's somewhat considered bad practice. One solution to avoid such pitfalls is to use [CSS pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements).
 
 ### A cloud
 
@@ -241,9 +241,7 @@ blockquote::after {
   position: absolute;
   height: 3rem;
   font:
-    6rem/100% Georgia,
-    "Times New Roman",
-    Times,
+    6rem/100% "Georgia",
     serif;
 }
 

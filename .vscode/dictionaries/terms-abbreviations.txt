@@ -62,6 +62,8 @@ BGRA
 Bignums
 bikeshedding
 bilevel
+bioinformatics
+biscotti
 bitfield
 bitmapped
 bitness
@@ -364,10 +366,12 @@ lifecycles
 lightshow
 linecaps
 linkability
+linkified
 linkify
 livemark
 livemarks
 livestreamed
+lockdown
 lofi
 logpoints
 longhands
@@ -672,6 +676,7 @@ spatializations
 spatialize
 spatialized
 SPDY
+spearphishing
 speedwalk
 spinbuttons
 spinlocking
@@ -889,6 +894,7 @@ untriaged
 unzoomed
 uppercasing
 userbase
+Uyghur
 VDOM
 Velociraptor
 versor

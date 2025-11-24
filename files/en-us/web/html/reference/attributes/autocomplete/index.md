@@ -42,7 +42,7 @@ The `autocomplete` attribute provides a hint to the user agent specifying how to
 ```html
 <input autocomplete="off" />
 <input autocomplete="on" />
-<input autocomplete="shipping street-address" />
+<textarea autocomplete="shipping street-address"></textarea>
 <input autocomplete="section-user1 billing postal-code" />
 ```
 
@@ -127,7 +127,7 @@ The tokens that identify the type of recipient include:
   - : The contact type identified by subsequent tokens is for contacting the recipient regardless of location.
 - `fax`
   - : The recipient identified by subsequent tokens is for a fax machine.
-- `page`
+- `pager`
   - : The recipient identified by subsequent tokens is for a pager or beeper.
 
 ##### Digital contact tokens

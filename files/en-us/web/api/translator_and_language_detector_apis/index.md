@@ -27,9 +27,9 @@ AI is well-suited to facilitating language detection and translation. The Transl
 - Language detection is done via the {{domxref("LanguageDetector")}} interface. A `LanguageDetector` object instance is created using the {{domxref("LanguageDetector.create_static", "LanguageDetector.create()")}} static method, then the {{domxref("LanguageDetector.detect", "detect()")}} instance method is passed the text string to detect the language for.
 - Translation is done via the {{domxref("Translator")}} interface. A `Translator` object instance is created using the {{domxref("Translator.create_static", "Translator.create()")}} static method, then the {{domxref("Translator.translate", "translate()")}} instance method is passed the text string to translate.
 
-You can also cancel pending operations using an {{domxref("AbortController")}}.
+You can cancel a pending `create()`, `detect()`, or `translate()` operation using an {{domxref("AbortController")}}.
 
-The `Translator` and `LanguageDetector` instances consume a lot of resources, so once you're finished with them, you are encouraged to remove them using a `destroy()` instance method (for example, {{domxref("Translator.destroy()")}}).
+After a `LanguageDetector` or `Translator` instance has been created, you can release its assigned resources and stop any further activity by calling its {{domxref("LanguageDetector.destroy()")}}/{{domxref("Translator.destroy()")}} method. You are encouraged to do this after you've finished with the object as it can consume a lot of resources.
 
 See [Using the Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using) for a walkthrough of how to use the APIs.
 

@@ -10,7 +10,8 @@ Use this function to register one or more content scripts.
 
 It accepts one parameter, which is an object with similar properties to the objects given in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key (but note that `content_scripts` is an array of objects, while the argument to `register()` is one object).
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+The extension must have the appropriate [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the patterns in `contentScriptOptions`, or the
+API call is rejected.
 
 ## Syntax
 

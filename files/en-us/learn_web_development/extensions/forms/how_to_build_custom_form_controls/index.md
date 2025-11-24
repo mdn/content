@@ -177,7 +177,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
   /* The computations are made assuming 1em equals 16px which is the default value in most browsers.
      If you are lost with px to em conversion, try https://nekocalc.com/px-to-em-converter */
   font-size: 0.625em; /* this (10px) is the new font size context for em value in this context */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -318,7 +318,7 @@ So here's the result with our three states ([check out the source code here](/en
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -439,7 +439,7 @@ So here's the result with our three states ([check out the source code here](/en
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -560,7 +560,7 @@ So here's the result with our three states ([check out the source code here](/en
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -817,7 +817,7 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -1109,7 +1109,7 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -1427,7 +1427,7 @@ Check out the [source code here](/en-US/docs/Learn_web_development/Extensions/Fo
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -1654,7 +1654,7 @@ To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/li
 ```
 
 > [!NOTE]
-> Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in your CSS.
+> Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) in your CSS.
 
 ### The `aria-selected` attribute
 
@@ -1746,7 +1746,7 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 

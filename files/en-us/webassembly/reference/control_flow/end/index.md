@@ -1,5 +1,6 @@
 ---
-title: end
+title: "end: Wasm text instruction"
+short-title: end
 slug: WebAssembly/Reference/Control_flow/end
 page-type: webassembly-instruction
 sidebar: webassemblysidebar

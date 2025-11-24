@@ -54,7 +54,7 @@ Only use the `region` role if no other relevant [content sectioning](/en-US/docs
 
 ### Prefer HTML
 
-Using the {{HTMLElement('section')}} element will automatically communicate that a section has a role of `region` if it is given an accessible name. If at all possible, prefer using {{HTMLElement('section')}} instead.
+Using the {{HTMLElement('section')}} element will automatically communicate that the element has a role of `region`. If possible, prefer using the semantic `<section>` element instead of the `region` role.
 
 ### Labeling landmarks
 

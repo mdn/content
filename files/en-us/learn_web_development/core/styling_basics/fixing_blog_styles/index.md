@@ -226,7 +226,7 @@ The finished CSS looks like so:
 ```css live-sample___blog-finish
 /* Basic type and text */
 
-/* 1. Set alternative box model on all elements */
+/* Solution: Set alternative box model on all elements */
 * {
   box-sizing: border-box;
 }
@@ -249,23 +249,27 @@ a {
   color: red;
 }
 
-/* 4. Set :hover styles to also apply on :focus */
+/* Solution: Update :hover styles to also apply on :focus
+so that keyboard users can see the updated styles when
+they tab to links */
 a:hover,
 a:focus {
   text-decoration: none;
 }
 
-/* 6, 7. bold ::first-line of each <p> adjacent to an <h2>
-Use :not() selector to specify only those inside a
-<section> that doesn't have the highlight class */
+/* Solution: bold ::first-line of each paragraph that appears
+right after a second-level heading, but only when the parent
+element is not the introduction, summary, or footer
+(use :not(.highlight) to specify this second bit) */
 section:not(.highlight) h2 + p::first-line {
   font-weight: bold;
 }
 
 /*
 
-6, 7. OR set it on all first, then remove it from those
-inside a <section class="highlight"> afterwards
+Alternative to the above solution: bold all instances first,
+then remove it from those inside an element with the highlight
+class afterwards
 
 section h2 + p::first-line {
   font-weight: bold;
@@ -279,8 +283,8 @@ section h2 + p::first-line {
 
 /* Nav menu */
 
-/* 2. Set scope of nav styles to only
-elements that are descendants of <nav> */
+/* Solution: Adjust nav rule selectors to only
+target the <nav> menu */
 
 nav ul {
   display: flex;
@@ -298,14 +302,16 @@ nav a {
   text-decoration: none;
   color: black;
   background-color: yellowgreen;
-  /* 3. Set <a> elements to display: block so they span
-  100% of parent width by default */
+  /* Solution: Set nav <a> elements to display: block so they span
+  the full width of their <li> element parents */
   display: block;
   text-align: center;
   padding: 10px;
 }
 
-/* 4. Set :hover styles to also apply on :focus */
+/* Solution: Update :hover styles to also apply on :focus
+so that keyboard users can see the updated styles when
+they tab to links */
 nav a:hover,
 nav a:focus {
   background-color: goldenrod;
@@ -317,13 +323,15 @@ nav a:focus {
   margin-top: 0;
   background-color: darkslategray;
   color: cornsilk;
-  /* 5. highlight class is set on introduction, summary, and footer.
-  This is where to set the padding for all of them */
+  /* Solution: Set 20px of padding on all sides of the
+  introduction, summary, and footer. They all have the
+  highlight class set on them */
   padding: 20px;
 }
 
-/* 8. ID selectors have a higher specificity than class selectors, so will
-override styles even when earlier in the source order */
+/* Solution: Add higher specificity rule above ".highlight a"
+rule to override color setting (ID selectors have a higher
+specificity than class selectors) */
 #introduction a,
 #summary a {
   color: yellow;
@@ -335,8 +343,8 @@ override styles even when earlier in the source order */
 
 /* Footer */
 
-/* 9. Adding .highlight to the selector increases
-the specificity so now this rule's styles win */
+/* Solution: Increase footer rule specificity by adding ".highlight"
+so that its margin-top and background-color styles are applied */
 footer.highlight {
   margin-top: 20px;
   background-color: goldenrod;

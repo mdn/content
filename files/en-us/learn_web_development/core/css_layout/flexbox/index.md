@@ -7,7 +7,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Position", "Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
-[Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is a one-dimensional layout method for arranging items in rows or columns. Items _flex_ (expand) to fill additional space or shrink to fit into smaller spaces. This article explains all the fundamentals.
+[Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) is a one-dimensional layout method for arranging items in rows or columns. Items _flex_ (expand) to fill additional space or shrink to fit into smaller spaces. This article explains all the fundamentals.
 
 <table>
   <tbody>
@@ -169,9 +169,9 @@ This single declaration gives us everything we need. Incredible, right? We have 
 
 Let's recap what's happening here. Adding a {{cssxref("display")}} value of `flex` to an element makes it a flex container. The container is displayed as [Block-level content](/en-US/docs/Glossary/Block-level_content) in terms of how it interacts with the rest of the page. When the element is converted to a flex container, its children are converted to (and laid out as) flex items.
 
-You can make the container inline using an [outside `display` value](/en-US/docs/Web/CSS/display#outside) (e.g., `display: inline flex`), which affects how the container itself is laid out in the page.
+You can make the container inline using an [outside `display` value](/en-US/docs/Web/CSS/Reference/Properties/display#outside) (e.g., `display: inline flex`), which affects how the container itself is laid out in the page.
 The legacy `inline-flex` display value displays the container as inline as well.
-We'll focus on how the contents of the container behave in this tutorial, but if you want to see the effect of inline versus block layout, you can have a look at the [value comparison](/en-US/docs/Web/CSS/display#display_value_comparison) on the `display` property page.
+We'll focus on how the contents of the container behave in this tutorial, but if you want to see the effect of inline versus block layout, you can have a look at the [value comparison](/en-US/docs/Web/CSS/Reference/Properties/display#display_value_comparison) on the `display` property page.
 
 The next sections explain in more detail what flex items are and what happens inside an element when you make it a flex container.
 
@@ -696,7 +696,7 @@ Have a look at what effect this has and remove it again when you've finished.
 - The value we've used above, `space-around`, is useful — it distributes all the items evenly along the main axis with a bit of space left at either end.
 - There is another value, `space-between`, which is very similar to `space-around` except that it doesn't leave any space at either end.
 
-The [`justify-items`](/en-US/docs/Web/CSS/justify-items) property is ignored in flexbox layouts.
+The [`justify-items`](/en-US/docs/Web/CSS/Reference/Properties/justify-items) property is ignored in flexbox layouts.
 
 We'd like to encourage you to play with these values to see how they work before you continue.
 
@@ -878,11 +878,11 @@ That concludes our tour of the basics of flexbox. We hope you had fun and will h
 
 ## See also
 
-- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [CSS-Tricks guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) — an article explaining everything about flexbox in a visually appealing way
 - [Flexbox Froggy](https://flexboxfroggy.com/) — an educational game to learn and better understand the basics of flexbox
 

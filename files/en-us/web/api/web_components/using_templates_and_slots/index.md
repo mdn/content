@@ -180,7 +180,7 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
 <template id="element-details-template">
   <style>
     details {
-      font-family: "Open Sans Light", Helvetica, Arial;
+      font-family: "Open Sans Light", "Helvetica", "Arial";
     }
     .name {
       font-weight: bold;
@@ -304,7 +304,7 @@ dl {
 }
 dt {
   color: #217ac0;
-  font-family: Consolas, "Liberation Mono", Courier;
+  font-family: "Consolas", "Liberation Mono", "Courier New";
   font-size: 110%;
   font-weight: bold;
 }

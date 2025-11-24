@@ -71,7 +71,7 @@ p {
 ```
 
 ```js live-sample___silly-story-start
-// 1. COMPLETE VARIABLE DEFINITIONS AND RANDOM FUNCTION
+// Complete variable definitions and random functions
 
 const customName = document.getElementById("custom-name");
 const generateBtn = document.querySelector(".generate");
@@ -82,7 +82,7 @@ function randomValueFromArray(array) {
   return array[random];
 }
 
-// 2. RAW TEXT STRINGS
+// Raw text strings
 
 // Willy the Goblin
 // Big Daddy
@@ -96,7 +96,7 @@ function randomValueFromArray(array) {
 // melted into a puddle on the sidewalk
 // turned into a slug and slithered away
 
-// 3. PARTIAL RETURN RANDOM STRING FUNCTION
+// Partial return random string function
 
 function returnRandomStoryString() {
   // It was 94 Fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.
@@ -104,7 +104,7 @@ function returnRandomStoryString() {
   return storyText;
 }
 
-// 4. EVENT LISTENER AND PARTIAL GENERATE FUNCTION DEFINITION
+// Event listener and partial generate function definition
 
 generateBtn.addEventListener("click", generateStory);
 
@@ -137,7 +137,7 @@ You have been provided with a few text strings and JavaScript functions; you nee
 
 ### Initial variables and functions
 
-In the JavaScript, below the "COMPLETE VARIABLE DEFINITIONS AND RANDOM FUNCTION" comment, you've got three constants that store references to:
+In the JavaScript, below the "Complete variable definitions and random function" comment, you've got three constants that store references to:
 
 - The "Enter custom name" text field: `customName`.
 - The "Generate random story" button: `generateBtn`.
@@ -145,7 +145,7 @@ In the JavaScript, below the "COMPLETE VARIABLE DEFINITIONS AND RANDOM FUNCTION"
 
 In addition, you've got a function called `randomValueFromArray()` that takes an array as input and returns one of the items stored inside the array at random.
 
-Below the "RAW TEXT STRINGS" comment, you've got some commented text strings that will act as input into our program. We'd like you to uncomment these strings and store them inside constants like so:
+Below the "Raw text strings" comment, you've got some commented text strings that will act as input into our program. We'd like you to uncomment these strings and store them inside constants like so:
 
 1. Store the first set of three strings inside an array called `characters`.
 2. Store the second set of three strings inside an array called `places`.
@@ -153,7 +153,7 @@ Below the "RAW TEXT STRINGS" comment, you've got some commented text strings tha
 
 ### Completing the `returnRandomStoryString()` function
 
-Below the "PARTIAL RETURN RANDOM STRING FUNCTION" comment you've got a partially-completed `returnRandomStoryString()` containing a long, commented string of text and a `return` statement that returns a value called `storyText`.
+Below the "Partial return random string function" comment you've got a partially-completed `returnRandomStoryString()` containing a long, commented string of text and a `return` statement that returns a value called `storyText`.
 
 To complete this function:
 
@@ -163,7 +163,7 @@ To complete this function:
 
 ### Completing the `generateStory()` function
 
-Below the "EVENT LISTENER AND PARTIAL GENERATE FUNCTION DEFINITION" comment, you've got a couple of code items:
+Below the "Event listener and partial generate function definition" comment, you've got a couple of code items:
 
 - A line that adds a `click` event listener to the `generateBtn` variable so that when the button it represents is clicked, the `generateStory()` function is run.
 - A partially-completed `generateStory()` function definition. For the remainder of the challenge, you'll be filling in lines inside this function to complete it and make it work properly.
@@ -197,7 +197,7 @@ Your finished app should work like the following live example:
 The finished JavaScript should look something like this:
 
 ```js live-sample___silly-story-finish
-// 1. COMPLETE VARIABLE DEFINITIONS AND RANDOM FUNCTION
+// Complete variable definitions and random function
 
 const customName = document.getElementById("custom-name");
 const generateBtn = document.querySelector(".generate");
@@ -208,7 +208,7 @@ function randomValueFromArray(array) {
   return array[random];
 }
 
-// 2. RAW TEXT STRINGS
+// Solution: Raw text strings
 
 const characters = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
 const places = ["the soup kitchen", "Disneyland", "the White House"];
@@ -218,7 +218,7 @@ const events = [
   "turned into a slug and slithered away",
 ];
 
-// 3. PARTIAL RETURN RANDOM STRING FUNCTION
+// Solution: Partial return random string function
 
 function returnRandomStoryString() {
   const randomCharacter = randomValueFromArray(characters);
@@ -230,7 +230,7 @@ function returnRandomStoryString() {
   return storyText;
 }
 
-// 4. EVENT LISTENER AND PARTIAL GENERATE FUNCTION DEFINITION
+// Solution: Event listener and partial generate function definition
 
 generateBtn.addEventListener("click", generateStory);
 

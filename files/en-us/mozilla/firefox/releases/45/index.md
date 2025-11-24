@@ -1,5 +1,5 @@
 ---
-title: Firefox 45 for developers
+title: Firefox 45 release notes for developers
 short-title: Firefox 45
 slug: Mozilla/Firefox/Releases/45
 page-type: firefox-release-notes

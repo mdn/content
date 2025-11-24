@@ -36,7 +36,7 @@ Host: example.com
 Cookie: cookie1=value1; cookie2=value2; cookie3=[…]
 ```
 
-The server responds with an message indicating which header was problematic:
+The server responds with a message indicating which header was problematic:
 
 ```http
 HTTP/1.1 431 Request Header Fields Too Large

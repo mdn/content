@@ -73,7 +73,7 @@ Once again the HTML is quite straightforward, using an unordered list with `list
   <li><button id="play-pause" type="button">Play/Pause</button></li>
   <li><button id="stop" type="button">Stop</button></li>
   <li class="progress">
-    <progress id="progress" value="0" min="0"></progress>
+    <progress id="progress" value="0"></progress>
   </li>
   <li><button id="mute" type="button">Mute/Unmute</button></li>
   <li><button id="vol-inc" type="button">Vol+</button></li>
@@ -194,7 +194,7 @@ This function makes use of the Media API's `volume` attribute, which holds the c
 
 ### Progress
 
-When the {{ htmlelement("progress") }} element was defined above in the HTML, only two attributes were set, `value` and `min`, both being given a value of 0. The function of these attributes is self-explanatory, with `min` indicating the minimum allowed value of the `progress` element and `value` indicating its current value. It also needs to have a maximum value set so that it can display its range correctly, and this can be done via the `max` attribute, which needs to be set to the maximum playing time of the video. This is obtained from the video's `duration` attribute, which again is part of the Media API.
+When the {{ htmlelement("progress") }} element was defined above in the HTML, only the `value` attribute was set to 0. This attribute indicates the current value of the progress element. It also needs to have a maximum value set so that it can display its range correctly, and this can be done via the `max` attribute, which needs to be set to the maximum playing time of the video. This is obtained from the video's `duration` attribute, which again is part of the Media API.
 
 Ideally, the correct value of the video's `duration` attribute is available when the `loadedmetadata` event is raised, which occurs when the video's metadata has been loaded:
 
@@ -280,8 +280,8 @@ The CSS part is hidden for this tutorial, but you can click "Play" to see the fu
 :root {
   color: #333333;
   font-family:
-    "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida", "Arial",
-    "Helvetica", sans-serif;
+    "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida",
+    "Helvetica", "Arial", sans-serif;
 }
 a {
   color: #0095dd;

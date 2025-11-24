@@ -72,7 +72,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
   - : An object that optionally defines a queuing strategy for the stream. This takes two
     parameters:
     - `highWaterMark`
-      - : A non-negative integer — this defines the total number of chunks that can be
+      - : A non-negative integer — this defines the total size of all chunks that can be
         contained in the internal queue before backpressure is applied.
     - `size(chunk)`
       - : A method containing a parameter `chunk` — this indicates the size to

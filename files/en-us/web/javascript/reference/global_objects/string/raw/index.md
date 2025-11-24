@@ -81,9 +81,43 @@ String.raw`Hi\u000A!`;
 const name = "Bob";
 String.raw`Hi\n${name}!`;
 // 'Hi\\nBob!', substitutions are processed.
+```
 
+### Raw strings containing template literal syntax
+
+`String.raw` is a function, so it cannot circumvent basic template literal syntax such as backticks as delimiters and `${` for substitutions. If you want to include these characters in the output string, you need to escape them with backslashes. However, since `String.raw` outputs raw strings, the backslashes will be preserved in the output.
+
+```js
 String.raw`Hi \${name}!`;
 // 'Hi \\${name}!', the dollar sign is escaped; there's no interpolation.
+// However, the backslash is still present in the output string.
+
+String.raw`This is a backtick: \``;
+// 'This is a backtick: \\`', the backslash is still present.
+
+String.raw`A trailing backslash: \\`;
+// 'A trailing backslash: \\\\', both backslashes are present.
+// If you use a single backslash at the end, it escapes the ending backtick,
+// causing subsequent code to be included in the string.
+```
+
+To work around this, you can use a substitution to insert these characters.
+
+```js
+String.raw`Hi ${"$"}{name}!`;
+// 'Hi ${name}!', the substitution inserts a single dollar sign.
+String.raw`This is a backtick: ${"`"}`;
+// 'This is a backtick: `', the substitution inserts a single backtick.
+String.raw`A trailing backslash: ${"\\"}`;
+// 'A trailing backslash: \\', the substitution inserts a single backslash.
+```
+
+This approach works for `String.raw` because it just concatenates the raw strings and the substitutions. In general, unfortunately, there's no way for a template literal tag to receive a `raw` string that contains unescaped template literal syntax.
+
+```js
+function tag(strings) {
+  console.log(strings.raw[0]); // This will never contain unescaped `${` or backticks
+}
 ```
 
 ### Using String.raw with RegExp

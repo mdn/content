@@ -12,7 +12,7 @@ The **`indexedDB`** property of the {{domxref("StorageAccessHandle")}} interface
 
 ## Value
 
-A {{domxref("IDBFactory")}} object.
+An {{domxref("IDBFactory")}} object.
 
 ## Examples
 

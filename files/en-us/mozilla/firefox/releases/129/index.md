@@ -1,5 +1,5 @@
 ---
-title: Firefox 129 for developers
+title: Firefox 129 release notes for developers
 short-title: Firefox 129
 slug: Mozilla/Firefox/Releases/129
 page-type: firefox-release-notes
@@ -12,8 +12,8 @@ This article provides information about the changes in Firefox 129 that affect d
 
 ### CSS
 
-- The [@starting-style](/en-US/docs/Web/CSS/@starting-style) CSS at-rule is supported. This lets you define starting values for properties set on an element that you want to transition from when the element receives its first style update. Currently animating from `display: none;` is not supported ([Firefox bug 1834876](https://bugzil.la/1834876) and [Firefox bug 1834877](https://bugzil.la/1834877)).
-- The {{CSSXRef("transition-behavior")}} CSS property is supported. This lets you specify if discrete properties, such as {{CSSXRef("display")}} and {{CSSXRef("overlay")}}, can be transitioned by setting the value to [`allow-discrete`](/en-US/docs/Web/CSS/transition-behavior#allow-discrete). ([Firefox bug 1901645](https://bugzil.la/1901645)).
+- The [@starting-style](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style) CSS at-rule is supported. This lets you define starting values for properties set on an element that you want to transition from when the element receives its first style update. Currently animating from `display: none;` is not supported ([Firefox bug 1834876](https://bugzil.la/1834876) and [Firefox bug 1834877](https://bugzil.la/1834877)).
+- The {{CSSXRef("transition-behavior")}} CSS property is supported. This lets you specify if discrete properties, such as {{CSSXRef("display")}} and {{CSSXRef("overlay")}}, can be transitioned by setting the value to [`allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete). ([Firefox bug 1901645](https://bugzil.la/1901645)).
 - `-webkit-font-feature-settings` has been implemented as an alias of the standard {{cssxref("font-feature-settings")}} property ([Firefox bug 1595620](https://bugzil.la/1595620)).
 
 ### JavaScript
@@ -32,7 +32,7 @@ This article provides information about the changes in Firefox 129 that affect d
   ([Firefox bug 1901923](https://bugzil.la/1901923).)
 - The default `.toJSON()` methods {{domxref("GeolocationCoordinates.toJSON()")}} and {{domxref("GeolocationPosition.toJSON()")}} are now supported, enabling serialization of `GeolocationCoordinates` and `GeolocationPosition` objects with {{jsxref("JSON.stringify()")}} ([Firefox bug 1890706](https://bugzil.la/1890706)).
 - {{domxref("CSSPageDescriptors")}} is now supported, and is used as the type for {{domxref("CSSPageRule.style")}} instead of {{domxref("CSSStyleDeclaration")}} — matching the current specification.
-  This ensures that `CSSPageDescriptors` only exposes the `@page` related properties, rather than all properties, and also resolves an issue where setting the page [`size`](/en-US/docs/Web/CSS/@page/size) in a CSS `@page` at-rule was not reflected in `CSSPageRule.style`.
+  This ensures that `CSSPageDescriptors` only exposes the `@page` related properties, rather than all properties, and also resolves an issue where setting the page [`size`](/en-US/docs/Web/CSS/Reference/At-rules/@page/size) in a CSS `@page` at-rule was not reflected in `CSSPageRule.style`.
   ([Firefox bug 1890842](https://bugzil.la/1890842), [Firefox bug 1867106](https://bugzil.la/1867106).)
 - {{domxref('MediaCapabilities.decodingInfo()')}} can now get decoding information for a particular _encrypted media_ configuration as well unencrypted media, allowing applications to tell ahead of time if the configuration is supported, and whether it will play the content smoothly and be power efficient. Changes include a new property `keySystemConfiguration` on the method's `configuration` argument that defines the properties of the key system used to encrypt the media, and a new `keySystemAccess` property on the returned object, which is a {{domxref('MediaKeySystemAccess')}} object that can be used to create keys and decode the content for playback. ([Firefox bug 1898344](https://bugzil.la/1898344)).
 - Firefox now fires events for a synchronous {{domxref("XMLHttpRequest")}} before firing the events for any ongoing asynchronous `XMLHttpRequest`. This fixes a long-standing behavioral difference with other browsers. Note that while this should fix some sites, it may also cause degraded performance on sites that expect the old "non-blocking" behavior for a synchronous `XMLHttpRequest`. Please [file a bug](https://bugzil.la/) if your website should have been fixed by this change but still appears to have related issues. ([Firefox bug 697151](https://bugzil.la/697151).)

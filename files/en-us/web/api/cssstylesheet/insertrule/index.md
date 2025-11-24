@@ -29,10 +29,10 @@ insertRule(rule, index)
 - `rule`
   - : A string containing the rule to be inserted. What the inserted
     rule must contain depends on its type:
-    - **For [rule-sets](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements)**, both
+    - **For [rule-sets](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_statements)**, both
       a [selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) and a
       style declaration.
-    - **For [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)**, both an
+    - **For [at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)**, both an
       at-identifier and the rule content.
 
 - `index` {{optional_inline}}

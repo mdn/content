@@ -58,8 +58,6 @@ Related topics:
   - : Certificate Transparency (CT) is an open framework designed to protect against and monitor for certificate misissuance. Newly issued certificates are 'logged' to publicly run, often independent CT logs. These provide append-only, cryptographically assured records of issued TLS certificates.
 - [Mixed content](/en-US/docs/Web/Security/Mixed_content)
   - : An HTTPS page that includes content fetched using [cleartext](/en-US/docs/Glossary/Plaintext) HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers.
-- [Weak signature algorithms](/en-US/docs/Web/Security/Weak_Signature_Algorithm)
-  - : The strength of the hash algorithm used in {{Glossary("Signature/Security", "signing")}} a {{Glossary("digital certificate")}} is a critical element of the security of the certificate. Some signature algorithms are known to be weak, and should be avoided when appropriate.
 
 ### Secure contexts and feature permissions
 
@@ -88,17 +86,17 @@ There are many aspects of web security that need to be thought about on the serv
 
 Handling data responsibly is largely concerned with cutting down on [third-party cookie](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) usage and being careful about the data you store and share with them. Traditionally, web developers have used cookies to store all kinds of data, and it has been easy for attackers to exploit this tendency. As a result, browsers have started to limit what you can do with cross-site cookies, with the aim of removing access to them altogether in the future.
 
-You should prepare for the removal of cross-site cookies by limiting the amount of tracking activities you rely on and/or by implementing the persistence of the desired information in other ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies) and [Replacing third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#replacing_third-party_cookies) for more information.
+You should prepare for the removal of cross-site cookies by limiting the amount of tracking activities you rely on and/or by implementing the persistence of the desired information in other ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies) for more information.
 
 ### Protect user identity and manage logins
 
 When implementing a secure solution that involves data collection, particularly if the data is sensitive such as log-in credentials, it makes sense to use a reputable solution. For example, any respectable server-side framework will have built-in features to protect against common vulnerabilities. You could also consider using a specialized product for your purpose, for example an identity provider solution or a secure online survey provider.
 
-If you want to roll your own solution for collecting user data, make sure you understand all aspects and requirements. Hire an experienced server-side developer and/or security engineer to implement the system, and ensure it is tested thoroughly. Use multi-factor authentication (MFA) to provide better protection. Consider using a dedicated API such as [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API) or [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) to streamline the client-side of the app.
+If you want to roll your own solution for collecting user data, make sure you understand all aspects and requirements. Hire an experienced server-side developer and/or security engineer to implement the system, and ensure it is tested thoroughly. Use {{glossary("multi-factor authentication")}} (MFA) to provide better protection. Consider using a dedicated API such as [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API) or [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) to streamline the client-side of the app.
 
 Here are some other tips for providing secure logins:
 
-- When collecting user login information, enforce strong passwords so that your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. In addition, encourage your users to use a password manager so that they can use more complex passwords, don't need to worry about remembering them, and won't create a security risk by writing them down. See also our article on [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
+- When collecting user login information, enforce strong passwords so that your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. In addition, encourage your users to use a password manager so that they can use more complex passwords, don't need to worry about remembering them, and won't create a security risk by writing them down. See also our article on [password authentication](/en-US/docs/Web/Security/Authentication/Passwords).
 - You should also educate your users about **phishing**. Phishing is the act of sending a message to a user (for example, an email or an SMS) containing a link to a site that looks like a site they use every day but isn't. The link is accompanied by a message designed to trick users into entering their username and password on the site so it can be stolen and then used by an attacker for malicious purposes.
 
   > [!NOTE]

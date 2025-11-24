@@ -1,5 +1,5 @@
 ---
-title: Firefox 8 for developers
+title: Firefox 8 release notes for developers
 short-title: Firefox 8
 slug: Mozilla/Firefox/Releases/8
 page-type: firefox-release-notes
@@ -51,7 +51,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 - Handling of {{ cssxref("background-size") }} has been revised to more closely match the specification.
 - In the past, {{ cssxref("text-decoration") }} in quirks mode had line thickness and position adjusted on descendant text to match the descendant. Now standards mode and quirks mode rendering are more similar.
 - Horizontal positioning for elements has been brought more in line with the specification in many cases. Documentation for this is forthcoming, but for now, see [Firefox bug 682780](https://bugzil.la/682780), comment 23 for details.
-- [SVG images are now scaled properly](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds) when used as background images.
+- [SVG images are now scaled properly](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds) when used as background images.
 
 ### Network
 

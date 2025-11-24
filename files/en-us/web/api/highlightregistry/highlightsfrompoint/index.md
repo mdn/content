@@ -80,9 +80,9 @@ body {
   background-color: white;
   color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   max-width: 800px;
@@ -203,4 +203,4 @@ pElem.addEventListener("dblclick", (event) => {
 ## See also
 
 - {{domxref("css_custom_highlight_api", "The CSS Custom Highlight API", "", "nocode")}}
-- [CSS custom highlight API](/en-US/docs/Web/CSS/CSS_custom_highlight_API) module
+- [CSS custom highlight API](/en-US/docs/Web/CSS/Guides/Custom_highlight_API) module

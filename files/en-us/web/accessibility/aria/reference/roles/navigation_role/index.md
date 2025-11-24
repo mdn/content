@@ -64,7 +64,7 @@ None.
 
 ### Prefer HTML
 
-Using the {{HTMLElement('nav')}} element will automatically communicate a section has a role of `navigation`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('nav')}} element will automatically communicate that the element has a role of `navigation`. If possible, prefer using the semantic `<nav>` element instead of the `navigation` role.
 
 ### Labeling landmarks
 

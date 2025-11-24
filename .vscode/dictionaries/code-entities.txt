@@ -197,6 +197,7 @@ dweb
 ebuttm
 ebutts
 ECLF
+EdgiOS
 ehtml
 EISU
 elementname
@@ -802,6 +803,7 @@ veryverythickmathspace
 veryverythinmathspace
 vfprintf
 videooutput
+viewbox
 viewsource.css
 VIRTUALENVWRAPPER
 virtualkeyboardpolicy

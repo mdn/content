@@ -1,5 +1,5 @@
 ---
-title: Firefox 17 for developers
+title: Firefox 17 release notes for developers
 short-title: Firefox 17
 slug: Mozilla/Firefox/Releases/17
 page-type: firefox-release-notes

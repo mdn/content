@@ -66,7 +66,7 @@ input.addEventListener("keypress", (e) => {
 - Characters entered through an {{glossary("Input method editor")}} do not register through `keyCode` or
   `charCode`.
 - For a list of the `charCode` values associated with particular keys, run
-  [Example 7: Displaying Event Object Properties](/en-US/docs/Web/API/Document_Object_Model/Examples#example_7_displaying_event_object_properties) and view the resulting HTML table.
+  [Displaying event object properties](/en-US/docs/Web/API/Document_Object_Model#displaying_event_object_properties) and view the resulting HTML table.
 
 ## Specifications
 

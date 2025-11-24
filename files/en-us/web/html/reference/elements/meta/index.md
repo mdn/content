@@ -32,7 +32,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     The attribute's name is short for `http-equivalent` because the allowed values are names of equivalent HTTP headers.
 - `media`
   - : The `media` attribute defines which media the theme color defined in the `content` attribute should be applied to.
-    Its value is a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which defaults to `all` if the attribute is missing.
+    Its value is a [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using), which defaults to `all` if the attribute is missing.
     This attribute is only relevant when the element's [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute is set to [`theme-color`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/theme-color).
     Otherwise, it has no effect, and should not be included.
 - [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name)
@@ -154,4 +154,3 @@ The `content="3;url=https://www.mozilla.org"` attribute will redirect page to `h
 
 - [Standard metadata names](/en-US/docs/Web/HTML/Reference/Elements/meta/name)
 - [Learn: `<meta>`](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)
-- [The viewport meta tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)

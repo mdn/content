@@ -69,8 +69,8 @@ const newCredentialInfo = await navigator.credentials.create({
 The web app then serializes the returned credential using `JSON.stringify()` (which in turn calls `toJSON()`) and posts it back to the server.
 
 ```js
-const registration_url = "https://example.com/registration";
-const apiRegOptsResp = await fetch(registration_url, {
+const registrationURL = "https://example.com/registration";
+const apiRegOptsResp = await fetch(registrationURL, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify(newCredentialInfo), // Calls newCredentialInfo.toJSON

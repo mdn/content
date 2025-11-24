@@ -29,26 +29,26 @@ The replaced attribute node, if any, returned by this function.
 
 ## Examples
 
-This example copies the `align` attribute from one element to another.
+This example copies the `lang` attribute from one element to another.
 
 ### HTML
 
 ```html
-<div id="one" align="left">one</div>
+<div id="one" lang="en-US">one</div>
 <div id="two">two</div>
 ```
 
 ### JavaScript
 
 ```js
-let d1 = document.getElementById("one");
-let d2 = document.getElementById("two");
-let a = d1.getAttributeNode("align");
+const d1 = document.getElementById("one");
+const d2 = document.getElementById("two");
+const a = d1.getAttributeNode("lang");
 
 d2.setAttributeNode(a.cloneNode(true));
 
-// Returns: 'left'
-alert(d2.attributes[1].value);
+// Returns: 'en-US'
+console.log(d2.attributes[1].value);
 ```
 
 ## Notes

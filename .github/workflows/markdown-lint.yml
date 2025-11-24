@@ -2,8 +2,6 @@ name: Markdownlint (All files)
 
 on:
   pull_request:
-    branches:
-      - main
     paths:
       - .markdownlint-cli2.jsonc
       - .nvmrc
@@ -21,10 +19,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: ".nvmrc"
           cache: yarn

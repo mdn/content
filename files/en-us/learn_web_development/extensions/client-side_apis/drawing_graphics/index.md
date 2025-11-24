@@ -52,7 +52,7 @@ body {
 }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   height: 100%;
 }
 

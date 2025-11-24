@@ -79,7 +79,7 @@ It is also helpful to include an accessible name to help orient assistive techno
 
 ### Prefer HTML
 
-Using the {{HTMLElement('main')}} element will automatically communicate a section has a role of `main`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('main')}} element will automatically communicate that the element has a role of `main`. If possible, prefer using the semantic `<main>` element instead of the `main` role.
 
 ### Skip navigation
 

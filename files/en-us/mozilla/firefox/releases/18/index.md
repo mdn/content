@@ -1,5 +1,5 @@
 ---
-title: Firefox 18 for developers
+title: Firefox 18 release notes for developers
 short-title: Firefox 18
 slug: Mozilla/Firefox/Releases/18
 page-type: firefox-release-notes
@@ -19,7 +19,7 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 ### CSS
 
 - The {{cssxref("min-width")}} and {{cssxref("min-height")}} now uses the `auto` keyword as _initial value_ (This has an effect only on flex items as it resolves to `0`, the previous initial value, for other items). ([Firefox bug 763689](https://bugzil.la/763689))
-- The cascade has been updated: now author `!important` rules override [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations). ([Firefox bug 783714](https://bugzil.la/783714))
+- The cascade has been updated: now author `!important` rules override [CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using). ([Firefox bug 783714](https://bugzil.la/783714))
 - The {{cssxref("background")}} shorthand property now recognizes CSS3 {{cssxref("background-size")}} property specified inside. ([Firefox bug 570326](https://bugzil.la/570326))
 - Initial support for the CSS Flexbox Module has been landed. It is disabled by default but can be enabled by setting `layout.css.flexbox.enabled` to true ([Firefox bug 666041](https://bugzil.la/666041)).
 
@@ -27,7 +27,7 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 
 - `navigator.mozPay` has been landed. ([Firefox bug 767818](https://bugzil.la/767818))
 - `window.devicePixelRatio` has been landed. ([Firefox bug 564815](https://bugzil.la/564815))
-- The macOS X backend for `window.navigator.battery` has been implemented. ([Firefox bug 696045](https://bugzil.la/696045))
+- The OS X backend for `window.navigator.battery` has been implemented. ([Firefox bug 696045](https://bugzil.la/696045))
 - `MozBlobBuilder` is removed. Developers need to use {{domxref("Blob")}} constructor for creating a `Blob` object. ([Firefox bug 744907](https://bugzil.la/744907))
 - The {{domxref("document.visibilitychange_event", "visibilitychange")}} event and the [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API) has been unprefixed ([Firefox bug 812086](https://bugzil.la/812086)).
 - {{domxref("TextDecoder")}} and {{domxref("TextEncoder")}} have been added. Note that the implementation and spec of these evolved and have been changed in Firefox 19 ([Firefox bug 764234](https://bugzil.la/764234)).

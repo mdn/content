@@ -1,5 +1,5 @@
 ---
-title: Firefox 135 for developers
+title: Firefox 135 release notes for developers
 short-title: Firefox 135
 slug: Mozilla/Firefox/Releases/135
 page-type: firefox-release-notes
@@ -18,7 +18,7 @@ No notable changes
 
 #### Removals
 
-- The [`-moz-user-input`](/en-US/docs/Web/CSS/-moz-user-input) CSS property allowed you to disable input fields. The property is now deprecated and has been removed ([Firefox bug 1935198](https://bugzil.la/1935198)).
+- The [`-moz-user-input`](/en-US/docs/Web/CSS/Reference/Properties/-moz-user-input) CSS property allowed you to disable input fields. The property is now deprecated and has been removed ([Firefox bug 1935198](https://bugzil.la/1935198)).
 
 ### JavaScript
 

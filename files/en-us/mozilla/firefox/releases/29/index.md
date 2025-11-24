@@ -1,5 +1,5 @@
 ---
-title: Firefox 29 for developers
+title: Firefox 29 release notes for developers
 short-title: Firefox 29
 slug: Mozilla/Firefox/Releases/29
 page-type: firefox-release-notes
@@ -26,7 +26,7 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 
 ### CSS
 
-- [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) have been implemented ([Firefox bug 773296](https://bugzil.la/773296)). The [CSS Variables in Firefox Nightly](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/) on Mozilla Hacks contains more details. They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
+- [CSS variables](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) have been implemented ([Firefox bug 773296](https://bugzil.la/773296)). The [CSS Variables in Firefox Nightly](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/) on Mozilla Hacks contains more details. They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
 - Flexboxes now support {{cssxref("visibility", "visibility: collapse")}} ([Firefox bug 783470](https://bugzil.la/783470)).
 - The {{cssxref("box-sizing")}} property has been unprefixed ([Firefox bug 243412](https://bugzil.la/243412)).
 - The {{cssxref("will-change")}} property, a hint to that something will animate has been added. The preference `layout.css.will-change.enabled` must be switched to `true` to enable it. ([Firefox bug 940842](https://bugzil.la/940842))

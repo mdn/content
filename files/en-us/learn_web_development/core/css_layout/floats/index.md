@@ -93,8 +93,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -219,8 +219,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -237,7 +237,7 @@ body {
 
 {{EmbedLiveSample('Visualizing_the_float', '100%', 500)}}
 
-The [line boxes](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#line_boxes) of our following element have been shortened so the text runs around the float, but due to the float being removed from normal flow the box around the paragraph still remains full width.
+The [line boxes](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model#line_boxes) of our following element have been shortened so the text runs around the float, but due to the float being removed from normal flow the box around the paragraph still remains full width.
 
 ## Clearing floats
 
@@ -289,8 +289,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -391,8 +391,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -463,8 +463,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 

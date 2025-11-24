@@ -7,7 +7,7 @@ browser-compat: api.CSSFontFeatureValuesRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSFontFeatureValuesRule`** interface represents an {{cssxref("@font-feature-values")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), letting developers assign for each font face a common name to specify features indices to be used in {{cssxref("font-variant-alternates")}}.
+The **`CSSFontFeatureValuesRule`** interface represents an {{cssxref("@font-feature-values")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules), letting developers assign for each font face a common name to specify features indices to be used in {{cssxref("font-variant-alternates")}}.
 
 {{InheritanceDiagram}}
 
@@ -61,7 +61,7 @@ In this example, we declare two {{cssxref("@font-feature-values")}} one for the 
 
 ```js
 const log = document.getElementById("log");
-const rules = document.styleSheets[document.styleSheets.length - 1].cssRules;
+const rules = document.getElementById("css-output").sheet.cssRules;
 
 const fontOne = rules[0]; // A CSSFontFeatureValuesRule
 log.textContent = `The 1st '@font-feature-values' family: "${fontOne.fontFamily}".\n`;

@@ -10,7 +10,7 @@ sidebar: mathmlref
 
 {{Deprecated_Header}}
 
-The **`mathbackground`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [background-color](/en-US/docs/Web/CSS/background-color) of a MathML element.
+The **`mathbackground`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [background-color](/en-US/docs/Web/CSS/Reference/Properties/background-color) of a MathML element.
 
 > [!NOTE]
 > Use CSS for styling MathML whenever possible. The `mathbackground` attribute should only be included for applications that are not CSS-aware and will be overridden by the CSS `background-color` property value, if set.

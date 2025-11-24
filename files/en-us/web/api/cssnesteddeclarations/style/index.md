@@ -52,4 +52,4 @@ console.log(myRules[0].cssRules[1].style);
 ## See Also
 
 - {{domxref("CSSNestedDeclarations")}}
-- [The Nested Declarations Rule](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#nested_declarations_rule)
+- [The Nested Declarations Rule](/en-US/docs/Web/CSS/Guides/Nesting/Using#nested_declarations_rule)

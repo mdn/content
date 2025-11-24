@@ -1,5 +1,5 @@
 ---
-title: Firefox 40 for developers
+title: Firefox 40 release notes for developers
 short-title: Firefox 40
 slug: Mozilla/Firefox/Releases/40
 page-type: firefox-release-notes

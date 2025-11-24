@@ -203,6 +203,10 @@ These constraints apply to the `video` property of the object passed into {{domx
   - : A [`ConstrainBoolean`](#constrainboolean) value describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.suppressLocalAudioPlayback","suppressLocalAudioPlayback")}} constrainable property.
     This property controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured.
 
+- {{domxref("MediaTrackConstraints.restrictOwnAudio", "restrictOwnAudio")}} {{Experimental_Inline}}
+  - : A [`ConstrainBoolean`](#constrainboolean) value that specifies the requested or mandatory constraints placed on the value of the {{domxref("MediaTrackSettings.restrictOwnAudio","restrictOwnAudio")}} constrainable property.
+    This property controls whether the system audio originating from the capturing tab is filtered out of the screen capture.
+
 ## Specifications
 
 {{Specifications}}

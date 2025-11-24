@@ -18,7 +18,7 @@ Let's get started!
 
 ### Site structure: The HTML
 
-The site's structure is not too complicated. We'll be using [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout) to style and lay out the site, so we can be pretty straightforward here:
+The site's structure is not too complicated. We'll be using [CSS Grid](/en-US/docs/Web/CSS/Guides/Grid_layout) to style and lay out the site, so we can be pretty straightforward here:
 
 ```html
 <div class="wrapper">
@@ -55,7 +55,7 @@ We provide styles for the {{HTMLElement("body")}} and {{HTMLElement("main")}} el
 
 ```css
 body {
-  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   background-color: aliceblue;
 }
 

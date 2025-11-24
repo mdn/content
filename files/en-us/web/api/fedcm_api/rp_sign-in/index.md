@@ -52,7 +52,7 @@ The previous example also includes some optional features:
 - The `nonce` property provides a random nonce value that ensures the response is issued for this specific request, preventing {{glossary("replay attack", "replay attacks")}}.
 - The `loginHint` property provides a hint about the account option(s) the browser should present for user sign-in. This hint is matched against the `login_hints` values that the IdP provides at the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint).
 
-The browser requests the IdP config files and carries out the sign-in flow detailed below. For more information on the kind of interaction a user might expect from the browser-supplied UI, see [Sign in to the relying party with the identity provider](https://privacysandbox.google.com/cookies/fedcm#sign-in).
+The browser requests the IdP config files and carries out the sign-in flow detailed below. For more information on the kind of interaction a user might expect from the browser-supplied UI, see [Implement an identity solution with FedCM on the Relying Party side](https://developer.chrome.com/docs/identity/fedcm/implement/relying-party).
 
 ## FedCM sign-in flow
 
@@ -127,7 +127,7 @@ The default value for `mode` is `passive`. If `mode` is not set, or is set expli
 
 If `mode` is set to `active`, the browser requires the sign-in flow to be initiated via a user action such as clicking a button ({{glossary("transient activation")}} is required), and the `providers` object can only have a length of `1`, otherwise the `get()` promise will reject. This mode is typically used when the RP wishes to provide a separate button for each IdP choice. When the user clicks one of those buttons, a simplified dialog window appears that just requires them to enter the credentials for that account.
 
-See [FedCM UI modes](https://privacysandbox.google.com/cookies/fedcm/why#fedcm_ui_modes) on privacysandbox.google.com for an example of how the different UI modes are presented in Google Chrome.
+See [FedCM UI modes](https://developer.chrome.com/docs/identity/fedcm/overview#fedcm_ui_modes) on developer.chrome.com for an example of how the different UI modes are presented in Google Chrome.
 
 ## Auto-reauthentication
 
@@ -193,4 +193,4 @@ For a `disconnect()` call to work, the IdP must include a [`disconnect_endpoint`
 
 ## See also
 
-- [Federated Credential Management API](https://privacysandbox.google.com/cookies/fedcm) on privacysandbox.google.com (2023)
+- [Federated Credential Management API](https://developer.chrome.com/docs/identity/fedcm/overview) on developer.chrome.com (2023)

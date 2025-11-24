@@ -62,7 +62,7 @@ If you've created a new GitHub account and want to know what to do next, you can
   This is the easiest way to contribute **small changes** described in [Simple changes](#simple-changes).
 - [GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop) - A desktop app for managing interaction with GitHub.
 - [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli) - A command-line wrapper for interacting with GitHub.
-- [`git`](https://git-scm.com/downloads) - You can use `git` from the command line to interact with GitHub.
+- [`git`](https://git-scm.com/downloads/) - You can use `git` from the command line to interact with GitHub.
   The examples in this document assume you are using this method.
   The [`git` cheat sheet](https://training.github.com/) and [Using Git](https://docs.github.com/en/get-started) guide are useful resources for beginners and advanced users.
 
@@ -176,15 +176,15 @@ yarn start
 
 Once started, a live preview is available at `http://localhost:5042/`
 
-Set your preferred editor by adding `EDITOR=...` into a `.env` file in the project root.
-To specify VS Code as your preferred editor, for example, use the following command:
+### Environment variables
+
+Environment variables for the project can be found in [.env-dist](.env-dist). Copy this file to `.env`:
 
 ```bash
-echo 'EDITOR=code' >> .env
+cp .env-dist .env
 ```
 
-You can set the `EDITOR` environment variable to any editor you like.
-When browsing a page server locally, you can press **Open in your editor** to edit the current file in your preferred editor.
+Update values as needed. The file contains comments for guidance.
 
 ### Editing files and tracking changes in git
 

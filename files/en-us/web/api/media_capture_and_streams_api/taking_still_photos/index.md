@@ -110,7 +110,7 @@ We also have an {{HTMLElement("img")}} element into which we will draw the image
 ```html live-sample___photo-capture live-sample___photo-capture-with-filters
 <canvas id="canvas"></canvas>
 <div class="output">
-  <img id="photo" alt="The screen capture will appear in this box." />
+  <img id="photo" src="" alt="The screen capture will appear in this box." />
 </div>
 ```
 

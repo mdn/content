@@ -39,7 +39,7 @@ None ({{jsxref("undefined")}}).
 This example shows the use of the `addElement()` method
 
 ```js
-function change_drag_node(event, node) {
+function changeDragNode(event, node) {
   const dt = event.dataTransfer;
   dt.addElement(node);
 }

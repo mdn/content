@@ -9,7 +9,7 @@ browser-compat: api.Range.Range
 {{ APIRef("DOM") }}
 
 The **`Range()`** constructor returns a newly created
-{{domxref("Range")}} object whose start and end is the global {{domxref("Document")}}
+{{domxref("Range")}} object whose start and end are offset 0 of the the global {{domxref("Window/document", "document")}}
 object.
 
 ## Syntax
@@ -75,4 +75,4 @@ selection.addRange(range);
 
 - [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)
 - {{domxref("Document.createRange()")}}
-- [CSS custom highlight API](/en-US/docs/Web/CSS/CSS_custom_highlight_API) module
+- [CSS custom highlight API](/en-US/docs/Web/CSS/Guides/Custom_highlight_API) module

@@ -1,5 +1,5 @@
 ---
-title: Firefox 32 for developers
+title: Firefox 32 release notes for developers
 short-title: Firefox 32
 slug: Mozilla/Firefox/Releases/32
 page-type: firefox-release-notes

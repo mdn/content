@@ -1,5 +1,5 @@
 ---
-title: Firefox 46 for developers
+title: Firefox 46 release notes for developers
 short-title: Firefox 46
 slug: Mozilla/Firefox/Releases/46
 page-type: firefox-release-notes
@@ -35,7 +35,7 @@ Highlights:
 - The properties {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}} and {{cssxref("text-emphasis-position")}} are now enabled by default ([Firefox bug 1231485](https://bugzil.la/1231485)).
 - Gecko now accepts the `-webkit-` prefixed version of [some properties](https://wiki.mozilla.org/Compatibility/Mobile/Non_Standard_Compatibility); it requires to switch `layout.css.prefixes.webkit` to `true` ([Firefox bug 1213126](https://bugzil.la/1213126)).
 - The experimental support of the {{cssxref("@font-face/font-display", "font-display")}} descriptor (of {{cssxref("@font-face")}}; it requires to switch `layout.css.font-display.enabled` to `true` ([Firefox bug 1157064](https://bugzil.la/1157064)).
-- Added support for [`@media (-webkit-transform-3d)`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d) as a media query for 3D transform support, if about:config pref `layout.css.prefixes.webkit` is set to `true` ([Firefox bug 1239799](https://bugzil.la/1239799)).
+- Added support for [`@media (-webkit-transform-3d)`](/en-US/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d) as a media query for 3D transform support, if about:config pref `layout.css.prefixes.webkit` is set to `true` ([Firefox bug 1239799](https://bugzil.la/1239799)).
 - {{cssxref("gradient/linear-gradient", "linear-gradient()")}} support for the omission of `0deg` units ([Firefox bug 1239153](https://bugzil.la/1239153)).
 - Added `-webkit-filter` for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ([Firefox bug 1236506](https://bugzil.la/1236506)).
 - \[css-align] "unsafe start" (formerly "true start") should serialize to "start" etc ([Firefox bug 1230398](https://bugzil.la/1230398)).

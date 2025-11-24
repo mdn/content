@@ -36,9 +36,9 @@ sidebar: addonsidebar
 
 Use the `host_permissions` key to request access for the APIs in your extension that read or modify host data, such as {{WebExtAPIRef("cookies")}}, {{WebExtAPIRef("webRequest")}}, and {{WebExtAPIRef("tabs")}}. This key is an array of strings, and each string is a request for a permission.
 
-### Requested permissions and user prompts
+## Requested permissions and user prompts
 
-Users can [grant or revoke host permissions](https://support.mozilla.org/en-US/kb/extensions-button#w_website-permissions) on an ad hoc basis. Therefore., most browsers treat `host_permissions` as optional.
+Users can [grant or revoke host permissions](https://support.mozilla.org/en-US/kb/extensions-button#w_website-permissions) on an ad hoc basis. Therefore, most browsers treat `host_permissions` as optional.
 
 On installation, when you request permissions using this key:
 

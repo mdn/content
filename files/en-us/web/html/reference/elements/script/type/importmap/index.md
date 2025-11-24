@@ -315,7 +315,7 @@ The import map must be a valid JSON object that can define any of the optional k
 - `scopes` {{optional_inline}}
   - : Scopes define path-specific [module specifier maps](#module_specifier_map), allowing the choice of map to depend on the path of the code importing the module.
 
-    The scopes object is a valid JSON object where each property is a `<scope key>`, which is an URL path, with a corresponding value that is a `<module specifier map>`.
+    The scopes object is a valid JSON object where each property is a `<scope key>`, which is a URL path, with a corresponding value that is a `<module specifier map>`.
 
     If the URL of a script importing a module matches a `<scope key>` path, then the `<module specifier map>` value associated with the key is checked for matching specifiers first.
     If there are multiple matching scope keys, then the value associated with the most specific/nested scope paths are checked for matching module specifiers first.
