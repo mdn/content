@@ -66,7 +66,6 @@ The `view-timeline` shorthand property can be applied to a container element to 
 
 The names specified in the `<view-timeline-name>` component must be a list of comma-separated {{cssxref("dashed-ident")}} values (which means they must start with `--`) or the keyword `none`.
 
-
 ## Formal definition
 
 {{cssinfo}}
