@@ -6,14 +6,34 @@ browser-compat: css.properties.view-timeline-name
 sidebar: cssref
 ---
 
-The **`view-timeline-name`** [CSS](/en-US/docs/Web/CSS) property is used to define the name of a _named view progress timeline_, which is progressed through based on the change in visibility of an element (known as the _subject_) inside a scrollable element (_scroller_).
+The **`view-timeline-name`** [CSS](/en-US/docs/Web/CSS) property specifies the names for the [named view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline) associated with the element.
 
 ## Syntax
 
 ```css
+/* Keyword value */
 view-timeline-name: none;
+
+/* CSS identifier */
 view-timeline-name: --custom_name_for_timeline;
+
+/* Multiple identifiers */
+view-timeline-name: --first_timeline_name, --another_timeline_name;
+
+/* Global values */
+view-timeline-name: inherit;
+view-timeline-name: initial;
+view-timeline-name: revert;
+view-timeline-name: revert-layer;
+view-timeline-name: unset;
 ```
+
+### Values
+
+- `none`
+  - : The timeline has no name. This is the default.
+- `<dashed-ident>`
+  - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) defining a name for a view progress timeline.
 
 ### Values
 
