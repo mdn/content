@@ -56,7 +56,8 @@ The `view-timeline` shorthand property defines a _named view progress timeline_,
 
 The subject's visibility inside the scroller is tracked — by default, the timeline is at `0%` when the subject is first visible at one edge of the scroller and `100%` when it reaches the opposite edge.
 
-The `view-timeline` can contain three constituent values: a name for the named view progress timeline, a scroll axis value, and up to two timeline inset values.
+The `view-timeline` can contain three constituent values: a name for the named view progress timeline, a scroll axis value, and up to two timeline inset values. 
+If only one value is declared, the value is the `view-timeline-name`. Two values should be included in the `view-timeline-name` and `view-timeline-axis` order. The three value declaration is defined in the order `view-timeline-name`, `view-timeline-inset`, and `view-timeline-axis`.
 The name is then referenced in an {{cssxref("animation-timeline")}} declaration to indicate the element that will be animated as the timeline progresses. This can be the subject element, but it doesn't have to be — you can animate a different element as the subject moves through the scrolling area.
 
 > [!NOTE]
