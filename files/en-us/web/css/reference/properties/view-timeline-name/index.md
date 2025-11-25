@@ -159,7 +159,7 @@ Last, an animation is specified on the element that animates its opacity and sca
 
 ```css hidden
 @layer no-support {
-  @supports not (view-timeline-name: view: none) {
+  @supports not (view-timeline-name: none) {
     body::before {
       content: "Your browser doesn't support the `view-timeline-name` property.";
       background-color: wheat;
