@@ -6,15 +6,7 @@ browser-compat: css.properties.view-timeline
 sidebar: cssref
 ---
 
-The **`view-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) is used to define a _named view progress timeline_, which is progressed through based on the change in visibility of an element (known as the _subject_) inside a scrollable element (_scroller_). `view-timeline` is set on the subject.
-
-The visibility of the subject inside the scroller is tracked — by default, the timeline is at 0% when the subject is first visible at one edge of the scroller and 100% when it reaches the opposite edge.
-
-`view-timeline` can contain two constituent values — a name for the named view progress timeline and an optional scroll axis value.
-The name is then referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline) declaration to indicate the element that will be animated as the timeline progresses. This can be the subject element, but it doesn't have to be — you can animate a different element as the subject moves through the scrolling area.
-
-> [!NOTE]
-> If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
+The **`view-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) defines a [named view progress timeline's](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline) name, direction, and inset values.
 
 ## Constituent properties
 
@@ -27,29 +19,27 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* three values: one each for view-timeline-name, view-timeline-inset and view-timeline-axis */
+/* One component */
+view-timeline: none;
+view-timeline: --custom_name_for_timeline;
+
+/* Two components */
+view-timeline: --custom_name_for_timeline block;
+view-timeline: --custom_name_for_timeline y;
+view-timeline: none inline;
+view-timeline: none x;
+
+/* Three components */
 view-timeline: --custom_name_for_timeline block auto;
 view-timeline: --custom_name_for_timeline block 20% 200px;
 
-/* two values: one each for view-timeline-name and view-timeline-axis */
-view-timeline: --custom_name_for_timeline block;
-view-timeline: --custom_name_for_timeline inline;
-view-timeline: --custom_name_for_timeline y;
-view-timeline: --custom_name_for_timeline x;
-view-timeline: none block;
-view-timeline: none inline;
-view-timeline: none y;
-view-timeline: none x;
-
-/* one value: view-timeline-name */
-view-timeline: none;
-view-timeline: --custom_name_for_timeline;
+/* Global values */
+view-timeline: inherit;
+view-timeline: initial;
+view-timeline: revert;
+view-timeline: revert-layer;
+view-timeline: unset;
 ```
-
-The `view-timeline` shorthand property can be applied to a container element as a combination of the `<view-timeline-name>`, `<view-timeline-inset>` and `<view-timeline-axis>` values. At least one of the values must be specified. If both the values are specified, the order followed must be the `<view-timeline-name>` value followed by the `<view-timeline-axis>` value and/or the `<view-timeline-inset>` value.
-
-> [!NOTE]
-> `<view-timeline-name>`s must be [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
 
 ### Values
 
@@ -59,6 +49,19 @@ The `view-timeline` shorthand property can be applied to a container element as 
   - : See {{cssxref("view-timeline-inset")}}. The default value is `auto`.
 - `<view-timeline-axis>`
   - : See {{cssxref("view-timeline-axis")}}. The default value is `block`.
+
+### Description
+
+The `view-timeline` shorthand property defines a _named view progress timeline_, which progresses based on changes to the visibility of an element (the _subject_) within a scrollable element (_scroller_). The `view-timeline` property is set on the subject. If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
+
+The subject's visibility inside the scroller is tracked — by default, the timeline is at `0%` when the subject is first visible at one edge of the scroller and `100%` when it reaches the opposite edge.
+
+The `view-timeline` can contain three constituent values: a name for the named view progress timeline, a scroll axis value, and up to two timeline inset values.
+If only one value is declared, the value is the `view-timeline-name`. The name is then referenced in an {{cssxref("animation-timeline")}} declaration to indicate the element that will be animated as the timeline progresses. This can be the subject element, but it doesn't have to be — you can animate a different element as the subject moves through the scrolling area.
+
+The `view-timeline` shorthand property can be applied to a container element to set a combination of the `<view-timeline-name>`, `<view-timeline-inset>`, and `<view-timeline-axis>` values. At least one value must be specified. If all values are specified, the order must be `<view-timeline-name>` followed by `<view-timeline-axis>` and/or `<view-timeline-inset>`.
+
+The names specified in the `<view-timeline-name>` component must be a list of comma-separated {{cssxref("dashed-ident")}} values (which means they must start with `--`) or the keyword `none`.
 
 ## Formal definition
 
@@ -147,9 +150,9 @@ p {
 }
 ```
 
-The `<div>` with the class of `subject` is also given a class of `animation` — this is where `view-timeline` is set to define a named view progress timeline. It is also given an `animation-timeline` name with the same value to declare that this will be the element animated as the view progress timeline is progressed.
+The `<div>` with the class of `subject` is also given a class of `animation` — this is where `view-timeline` is set to define a named view progress timeline. It is also given an `animation-timeline` name with the same value to declare that this will be the element animated as the view progress timeline progresses.
 
-Last, an animation is specified on the element that animates its opacity and scale, causing it to fade in and size up as it moves up the scroller.
+Lastly, an animation is specified on the element that animates its opacity and scale, causing it to fade in and grow as it moves up the scroller.
 
 ```css
 .animation {
@@ -174,6 +177,20 @@ Last, an animation is specified on the element that animates its opacity and sca
 }
 ```
 
+```css hidden
+@layer no-support {
+  @supports not (view-timeline: none) {
+    body::before {
+      content: "Your browser doesn't support the `view-timeline` property.";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1em;
+    }
+  }
+}
+```
+
 #### Result
 
 Scroll to see the subject element being animated.
@@ -191,6 +208,7 @@ Scroll to see the subject element being animated.
 ## See also
 
 - {{cssxref("animation-timeline")}}
-- {{cssxref("timeline-scope")}}
 - {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline-inset")}}, {{cssxref("view-timeline-name")}}
+- {{cssxref("view()")}}
+- [Guide: CSS scroll driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
