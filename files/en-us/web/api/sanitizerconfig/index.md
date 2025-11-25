@@ -123,7 +123,7 @@ In a valid sanitizer configuration:
 - If the global `removeAttributes` array is defined:
   - An element may specify either `attributes` or `removeAttributes`, but not both
   - An element's `attributes` or `removeAttributes` array, depending on which (if either) is defined, must not share any values in common with the global `removeAttributes` array.
-  - The global `dataAttributes` array must not be defined.
+  - The `dataAttributes` boolean must not be defined.
 
 The empty object `{}` is a valid configuration.
 
