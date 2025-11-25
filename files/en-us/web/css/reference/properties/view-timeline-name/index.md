@@ -6,34 +6,42 @@ browser-compat: css.properties.view-timeline-name
 sidebar: cssref
 ---
 
-The **`view-timeline-name`** [CSS](/en-US/docs/Web/CSS) property is used to define the name of a _named view progress timeline_, which is progressed through based on the change in visibility of an element (known as the _subject_) inside a scrollable element (_scroller_). `view-timeline` is set on the subject.
-
-The visibility of the subject inside the scroller is tracked — by default, the timeline is at 0% when the subject is first visible at one edge of the scroller and 100% when it reaches the opposite edge.
-The name is then referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline) declaration to indicate the element that will be animated as the timeline progresses. This can be the subject element, but it doesn't have to be — you can animate a different element as the subject moves through the scrolling area.
-
-> [!NOTE]
-> If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
-
-The `view-timeline-name`, {{cssxref("view-timeline-axis")}} and {{cssxref("view-timeline-inset")}} properties can also be set using the {{cssxref("view-timeline")}} shorthand property.
+The **`view-timeline-name`** [CSS](/en-US/docs/Web/CSS) property specifies the names for the [named view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline) associated with the element.
 
 ## Syntax
 
 ```css
+/* Keyword value */
 view-timeline-name: none;
+
+/* CSS identifier */
 view-timeline-name: --custom_name_for_timeline;
+
+/* Multiple identifiers */
+view-timeline-name: --first_timeline_name, --another_timeline_name;
+
+/* Global values */
+view-timeline-name: inherit;
+view-timeline-name: initial;
+view-timeline-name: revert;
+view-timeline-name: revert-layer;
+view-timeline-name: unset;
 ```
 
 ### Values
 
-Allowed values for `view-timeline-name` are:
-
 - `none`
-  - : The timeline has no name.
+  - : The timeline has no name. This is the default.
 - `<dashed-ident>`
-  - : An arbitrary custom identifier defining a name for a view progress timeline, which can then be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline) property.
+  - : A {{cssxref("dashed-ident")}} defining a name for a view progress timeline.
 
-    > [!NOTE]
-    > [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) values must start with `--`, which helps avoid name clashes with standard CSS keywords.
+## Description
+
+The `view-timeline-name` property is used to define the name of a _named view progress timeline_, which is progressed through based on the change in visibility of an element (known as the _subject_) inside a scrollable element (_scroller_). The `view-timeline-name`, {{cssxref("view-timeline-axis")}} and {{cssxref("view-timeline-inset")}} properties can also be set using the {{cssxref("view-timeline")}} shorthand property.
+
+The `view-timeline-name` property is set on the subject. The value is the keyword `none` or a comma-separated list of `<dashed-ident>` custom name identifiers. All `<dashed-ident>` values must start with `--`, which helps avoid name clashes with standard CSS keywords. The names can then be referenced in {{cssxref("animation-timeline")}} declarations to indicate the element that will be animated as the timeline progresses.
+
+If the subject's named scroller element does not overflow its container in the [axis dimension](/en-US/docs/Web/CSS/view-timeline-axis) or if the overflow is hidden or clipped, no scroll progress timeline will be created.
 
 ## Formal definition
 
@@ -166,6 +174,7 @@ Scroll to see the subject element being animated.
 ## See also
 
 - {{cssxref("animation-timeline")}}
-- {{cssxref("timeline-scope")}}
-- {{cssxref("view-timeline")}}, {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline-inset")}}
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
+- {{cssxref("view-timeline")}}
+- [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
