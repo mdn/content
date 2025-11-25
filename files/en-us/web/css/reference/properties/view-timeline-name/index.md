@@ -165,6 +165,7 @@ Last, an animation is specified on the element that animates its opacity and sca
       background-color: wheat;
       display: block;
       text-align: center;
+      padding: 1em;
     }
   }
 }
