@@ -134,7 +134,7 @@ Without content that overflows the container, there would be no scrollbar, and h
 
 ```css hidden
 @layer no-support {
-  @supports not (scroll-timeline:--square-timeline) {
+  @supports not (scroll-timeline: --square-timeline) {
     body::before {
       content: "Your browser doesn't support the `scroll-timeline` property.";
       background-color: wheat;
