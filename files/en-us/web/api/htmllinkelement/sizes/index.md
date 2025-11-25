@@ -19,7 +19,7 @@ A {{domxref("DOMTokenList")}}
 ## Examples
 
 ```html
-<link rel="icon" sizes="72x72 114x114" href="smallish.png" />
+<link rel="icon" sizes="72x72 114x114" href="icon.ico" />
 ```
 
 ```js
