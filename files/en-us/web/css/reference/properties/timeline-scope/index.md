@@ -34,7 +34,7 @@ Allowed values for `timeline-scope` are:
 - `none`
   - : There is no change in timeline scope. This is the default.
 - `all`
-  - : The names of all timelines defined by descendants are in scope for this element and its descendants. 
+  - : The names of all timelines defined by descendants are in scope for this element and its descendants.
 - `<dashed-ident>`
   - : Specifies the name of an existing named timeline (i.e., declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}) defined on a descendant element. This increases the timeline scope to the current element and to any of its descendants.
 
@@ -74,9 +74,9 @@ The HTML includes an element to animate and an element to scroll:
 
 ### CSS
 
-A scroll timeline named `--my-scroller` is defined using the {{cssxref("scroll-timeline-name")}} property on a scrolling element. This scroll timeline name is used in two other places: it is applied as the {{cssxref("animation-timeline")}} on the element we want to animate, and as `timeline-scope` on an ancestor of both the scroller and the animated element, increasing the scope. 
+A scroll timeline named `--my-scroller` is defined using the {{cssxref("scroll-timeline-name")}} property on a scrolling element. This scroll timeline name is used in two other places: it is applied as the {{cssxref("animation-timeline")}} on the element we want to animate, and as `timeline-scope` on an ancestor of both the scroller and the animated element, increasing the scope.
 
-We set the `<body>`'s height to `100vh`, and lay its two child elements out as two equal columns using flexbox.   To increase the timeline scope from the .scroller `<div>` element to the whole `<body>`, we set `timeline-scope: --my-scroller` on it. By doing so, the `--my-scroller` timeline can be set as the controlling timeline for an animation set on the `<body>` or any element nested inside it.
+We set the `<body>`'s height to `100vh`, and lay its two child elements out as two equal columns using flexbox. To increase the timeline scope from the .scroller `<div>` element to the whole `<body>`, we set `timeline-scope: --my-scroller` on it. By doing so, the `--my-scroller` timeline can be set as the controlling timeline for an animation set on the `<body>` or any element nested inside it.
 
 ```css
 body {
@@ -143,7 +143,7 @@ Next, we give the animated element some rudimentary styles and apply an animatio
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1rem 0;
+      padding: 1rem;
     }
   }
 }
