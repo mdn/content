@@ -2,13 +2,11 @@
 title: math-shift
 slug: Web/CSS/Reference/Properties/math-shift
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.math-shift
 sidebar: cssref
 ---
 
-{{SeeCompatTable}}
+
 
 The `math-shift` property indicates whether superscripts inside MathML formulas should be raised by a normal or compact shift.
 
