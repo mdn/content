@@ -22,9 +22,11 @@ A {{domxref("DOMTokenList")}} representing the contents of the element's
 it returns an empty `DOMTokenList`, i.e., a `DOMTokenList` with
 the `length` property equal to `0`.
 
-Although the `classList` property itself is read-only in the sense that the underlying `DOMTokenList` object cannot be replaced, assigning a string to `element.classList` will still update the element’s classes. This is because the property uses `PutForwards="value"` in the specification, meaning that assignments like `element.classList = "foo bar"` are forwarded to the `value` property of the `DOMTokenList`, which updates the element’s `class` attribute.
-> **Note:** Even though `classList` is technically read-only, assigning a string to it works by forwarding the value to `classList.value`, which updates the element’s `class` attribute.
+Although the classList property itself is read-only in the sense that the underlying DOMTokenList object cannot be replaced, assigning a string to element.classList will still update the element’s classes. This is because the property uses PutForwards="value" in the specification, meaning that assignments like element.classList = "foo bar" are forwarded to the value property of the DOMTokenList, which updates the element’s class attribute.
+>[!NOTE]
+Even though classList is technically read-only, assigning a string to it works by forwarding the value to classList.value, which updates the element’s class attribute.
 
+Although the classList property itself is read-only, you can modify its associated DOMTokenList using the add(), remove(), replace(), and toggle() methods. You can also assign to the classList property directly, which is equivalent to assigning to its value property, replacing the whole class attribute.
 
 You can test whether the element contains a given class using the {{domxref("DOMTokenList/contains", "classList.contains()")}} method.
 
