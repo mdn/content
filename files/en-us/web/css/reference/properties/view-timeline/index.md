@@ -52,7 +52,7 @@ view-timeline: unset;
 
 ### Description
 
-The `view-timeline` shorthand property defines a _named view progress timeline_, which progresses based on changes in the visibility of an element (the _subject_) within a scrollable element (_scroller_). The `view-timeline` property is set on the subject.
+The `view-timeline` shorthand property defines a _named view progress timeline_, which progresses based on changes to the visibility of an element (the _subject_) within a scrollable element (_scroller_). The `view-timeline` property is set on the subject.
 
 The subject's visibility inside the scroller is tracked — by default, the timeline is at `0%` when the subject is first visible at one edge of the scroller and `100%` when it reaches the opposite edge.
 
@@ -62,9 +62,9 @@ The name is then referenced in an {{cssxref("animation-timeline")}} declaration 
 > [!NOTE]
 > If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
 
-The `view-timeline` shorthand property can be applied to a container element as a combination of the `<view-timeline-name>`, `<view-timeline-inset>`, and `<view-timeline-axis>` values. At least one value must be specified. If both the values are specified, the order followed must be the `<view-timeline-name>` value followed by the `<view-timeline-axis>` value and/or the `<view-timeline-inset>` value.
+The `view-timeline` shorthand property can be applied to a container element to set a combination of the `<view-timeline-name>`, `<view-timeline-inset>`, and `<view-timeline-axis>` values. At least one value must be specified. If all values are specified, the order must be `<view-timeline-name>` followed by `<view-timeline-axis>` and/or `<view-timeline-inset>`.
 
-The names specified in the `<view-timeline-name>` component must be {{cssxref("dashed-ident")}} values, which means they must start with `--`, or the keyword `none`.
+The names specified in the `<view-timeline-name>` component must be {{cssxref("dashed-ident")}} values (which means they must start with `--`) or the keyword `none`.
 
 If only one value is declared, the value is the `view-timeline-name`. When setting two values, include the `view-timeline-name` and `view-timeline-axis`. The three value declaration is defined in the order `view-timeline-name`, `view-timeline-inset`, and `view-timeline-axis`.
 
