@@ -55,10 +55,10 @@ There are two main ways to use the `<template>` element.
 
 By default, the element's content is not rendered.
 The corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template.
-This fragment can be cloned via either the {{domxref("Document.importNode()", "importNode")}} or the {{domxref("Node.cloneNode", "cloneNode")}} method and inserted into the DOM.
 
-Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior.
-For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
+The {{domxref("Node.cloneNode()")}} and {{domxref("Document.importNode()")}} methods both create a copy of a node. The difference is that `importNode()` clones the node in the context of the calling document, whereas `cloneNode()` uses the document of the node being cloned. The document context determines the {{domxref("CustomElementRegistry")}} for constructing any custom elements. For this reason, use `document.importNode()` to clone the `content` fragment so that custom element descendants are constructed using the definitions in the current document, rather than the separate document that owns the template content. See the {{domxref("Node.cloneNode()")}} page's examples for more details.
+
+Note that the `DocumentFragment` container itself should not have data attached to it. See the [Data on the DocumentFragment is not cloned](#data_on_the_documentfragment_is_not_cloned) example for more details.
 
 ### Declarative Shadow DOM
 
@@ -254,7 +254,7 @@ This also focuses the parent element as shown below.
 
 ![Screenshot of the code where the element has focus](template_with_focus.png)
 
-## Avoiding DocumentFragment pitfalls
+## Data on the DocumentFragment is not cloned
 
 When a {{domxref("DocumentFragment")}} value is passed, {{domxref("Node.appendChild")}} and similar methods move only the _child nodes_ of that value into the target node. Therefore, it is usually preferable to attach event handlers to the children of a `DocumentFragment`, rather than to the `DocumentFragment` itself.
 
@@ -293,7 +293,7 @@ container.appendChild(secondClone);
 
 Since `firstClone` is a `DocumentFragment`, only its children are added to `container` when `appendChild` is called; the event handlers of `firstClone` are not copied. In contrast, because an event handler is added to the first _child node_ of `secondClone`, the event handler is copied when `appendChild` is called, and clicking on it works as one would expect.
 
-{{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
+{{EmbedLiveSample(' Data on the DocumentFragment is not cloned')}}
 
 ## Technical summary
 
