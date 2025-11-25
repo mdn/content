@@ -29,11 +29,11 @@ scroll-timeline: none inline;
 scroll-timeline: none y;
 
 /* Global values */
-corner-shape: inherit;
-corner-shape: initial;
-corner-shape: revert;
-corner-shape: revert-layer;
-corner-shape: unset;
+scroll-timeline: inherit;
+scroll-timeline: initial;
+scroll-timeline: revert;
+scroll-timeline: revert-layer;
+scroll-timeline: unset;
 ```
 
 ### Values
