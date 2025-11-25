@@ -98,6 +98,55 @@ Try showing interest in the button (for example by hovering or focusing it) and 
 
 Now try checking the checkbox and trying the same actions again. This time, the popover should appear after a delay of 2 seconds once interest is shown. The delay once interest is lost should be unaffected.
 
+### Removing `interest-delay-start` after interest has been shown
+
+In this example, we show how to remove the `interest-delay-start` from multiple interest invoker elements once interest has been shown on one of them.
+
+This is a useful technique — having a popover appear as soon as interest is shown on any invoker would create an annoying user experience, which is why the browser adds a small delay by default (see the [`interest-delay` description](/en-US/docs/Web/CSS/Reference/Properties/interest-delay#description) for more details). However, after the user has shown interest in one invoker, it is convenient for them to be able to quickly move between different popovers.
+
+#### HTML
+
+We include three `<button>` elements wrapped in a paragraph with a `class` of `container`, and another paragraph that has been turned into a popover using the `popover` attribute. All three buttons are set up as interest invokers and given the popover as a target using the `interestfor` attribute.
+
+```html live-sample___interest-delay-remove-on-interest
+<p class="container">
+  <button interestfor="mypopover">Button 1</button>
+  <button interestfor="mypopover">Button 2</button>
+  <button interestfor="mypopover">Button 3</button>
+</p>
+<p id="mypopover" popover>A hover toolip</p>
+```
+
+#### CSS
+
+In the CSS, we apply an `interest-delay-start` value of `1s` to the buttons, then position the popover below whatever button is having interest shown on it by giving it a {{cssxref("position-area")}} value of `bottom` (see [Popover anchoring positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more information).
+
+```css live-sample___interest-delay-remove-on-interest
+button {
+  interest-delay-start: 1s;
+}
+
+#mypopover {
+  position-area: bottom;
+}
+```
+
+Finally, we combine the [`:interest-source`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-source) pseudo-class with the {{cssxref(":has()")}} pseudo-class to create a ruleset that applies `interest-delay-start: 0s` to all buttons inside the paragraph, only if the paragraph contains a button that interest has been shown on (that is, has been selected by `button:interest-source`).
+
+```css live-sample___interest-delay-remove-on-interest
+.container:has(button:interest-source) button {
+  interest-delay-start: 0s;
+}
+```
+
+#### Result
+
+This renders as follows:
+
+{{embedlivesample("interest-delay-remove-on-interest", "100%", "100")}}
+
+Try showing interest in any button and notice how, when you then immediately show interest in the other buttons, there is no delay in showing the popover. If you stop showing interest in the buttons then start again, the initial delay will return.
+
 ## Specifications
 
 {{Specifications}}

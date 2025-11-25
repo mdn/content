@@ -121,7 +121,7 @@ Let's look at a simple example that demonstrates their use.
 We specify two buttons and a tooltip, which is shown/hidden when the user shows/loses interest in the `<button>`:
 
 ```html live-sample___interest-invoker-styling
-<p class="container">
+<p>
   <button interestfor="mytooltip">Button 1</button>
   <button interestfor="mytooltip">Button 2</button>
 </p>
@@ -138,8 +138,12 @@ button {
 button:interest-source {
   background-color: orange;
 }
+```
 
-.container:has(:interest-source) {
+Next, we combine the `:interest-source` pseudo-class with the {{cssxref(":has()")}} pseudo-class to create a ruleset that applies `interest-delay-start: 0s` to all buttons inside the paragraph, only if the paragraph contains a button that interest has been shown on (that is, has been selected by `button:interest-source`). This is a useful technique — having the popover appear as soon as interest is shown on any button would create an annoying user experience, but after the user has shown interest in a button, it is convenient for them to be able to quickly move between different popovers.
+
+```css live-sample___interest-invoker-styling
+p:has(button:interest-source) button {
   interest-delay-start: 0s;
 }
 ```
