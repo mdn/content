@@ -70,7 +70,7 @@ The HTML for the example is shown below.
 #### CSS
 
 The CSS for the container sets the <code>:root</code> as the source of a scroll progress timeline named `--my-scroller` using the `scroll-timeline-name` property.
-The scroll axis is set using `scroll-timeline-axis: x;` which causes the _horizontal scrollbar_ position to determine the animation timeline. We also include  `scroll-timeline-axis: horizontal;` for browsers that support the non-standard legacy `horizontal` and `vertical` values and not `x` and `y`.
+The scroll axis is set using `scroll-timeline-axis: x;` which causes the _horizontal scrollbar_ position to determine the animation timeline. We also include `scroll-timeline-axis: horizontal;` for browsers that support the non-standard legacy `horizontal` and `vertical` values and not `x` and `y`.
 
 The width of the `.content` element is set to a large value to make it overflow the `:root` element.
 
