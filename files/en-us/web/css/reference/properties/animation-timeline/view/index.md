@@ -194,6 +194,7 @@ An important point to remember is that the animation lasts as long as the `subje
       background-color: wheat;
       display: block;
       text-align: center;
+      padding: 1em;
     }
   }
 }
