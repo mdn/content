@@ -16,9 +16,11 @@ rewritten.
 
 > [!NOTE]
 > The `upgrade-insecure-requests` directive is evaluated before
-> {{CSP("block-all-mixed-content")}} and if it is set, the latter is effectively a
-> no-op. It is recommended to set either directive, but not both, unless you want to
-> force HTTPS on older browsers that do not force it after a redirect to HTTP.
+> {{CSP("block-all-mixed-content")}}. If `upgrade-insecure-requests` is set, 
+> {{CSP("block-all-mixed-content")}} effectively becomes a no-op. As {{CSP("block-all-mixed-content")}}
+> is now depricated, it is recommended to use `upgrade-insecure-requests` exclusively in most scenarios.
+> Both directives should only be set together if enforcement of HTTPS is required on legacy browsers
+> that do not enforce it following a redirect to HTTP.
 
 The `upgrade-insecure-requests` directive will not ensure that users
 visiting your site via links on third-party sites will be upgraded to HTTPS for the
