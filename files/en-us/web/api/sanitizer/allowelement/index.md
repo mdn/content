@@ -90,7 +90,7 @@ When using a `Sanitizer` with a [remove configuration](/en-US/docs/Web/API/HTML_
 This is because internally the sanitizer doesn't have the `elements` array required to specify per-element attributes.
 For example, the following code won't allow the `<div>` element (at all):
 
-```js
+```js example-bad
 // Define Sanitizer with a remove configuration
 // by specifying removeElements in the configuration
 sanitizer = new Sanitizer({ removeElements: [] });
