@@ -189,6 +189,7 @@ Lastly, an animation is specified on the element that animates its opacity and s
       background-color: wheat;
       display: block;
       text-align: center;
+      padding: 1em;
     }
   }
 }
