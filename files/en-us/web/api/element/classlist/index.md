@@ -35,9 +35,9 @@ You can test whether the element contains a given class using the {{domxref("DOM
 ```js
 // Assigning to classList works due to PutForwards
 const div = document.createElement("div");
-div.classList = "foo bar";  // forwarded to classList.value
+div.classList = "foo bar"; // forwarded to classList.value
+console.log(div.className); // "foo bar"
 
-console.log(div.className);  // "foo bar"
 ```
 ```js
 const div = document.createElement("div");
