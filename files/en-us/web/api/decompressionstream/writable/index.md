@@ -8,7 +8,7 @@ browser-compat: api.DecompressionStream.writable
 
 {{APIRef("Compression Streams API")}}{{AvailableInWorkers}}
 
-The **`writable`** read-only property of the {{domxref("DecompressionStream")}} interface returns a {{domxref("WritableStream")}} that accepts compressed data to be decompressed.
+The **`writable`** read-only property of the {{domxref("DecompressionStream")}} interface returns a {{domxref("WritableStream")}} that accepts compressed data to be decompressed, in the form of {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} chunks.
 
 ## Value
 

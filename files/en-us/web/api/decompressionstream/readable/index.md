@@ -8,7 +8,7 @@ browser-compat: api.DecompressionStream.readable
 
 {{APIRef("Compression Streams API")}}{{AvailableInWorkers}}
 
-The **`readable`** read-only property of the {{domxref("DecompressionStream")}} interface returns a {{domxref("ReadableStream")}} that emits decompressed data.
+The **`readable`** read-only property of the {{domxref("DecompressionStream")}} interface returns a {{domxref("ReadableStream")}} that emits decompressed data as {{jsxref("Uint8Array")}} chunks.
 
 ## Value
 

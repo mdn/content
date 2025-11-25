@@ -8,7 +8,7 @@ browser-compat: api.TextDecoderStream.writable
 
 {{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-The **`writable`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("WritableStream")}} that accepts binary data to be decoded into strings.
+The **`writable`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("WritableStream")}} that accepts binary data, in the form of {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} chunks ({{jsxref("SharedArrayBuffer")}} and its views are also allowed), to be decoded into strings.
 
 ## Value
 

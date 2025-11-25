@@ -8,7 +8,7 @@ browser-compat: api.TextEncoderStream.readable
 
 {{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-The **`readable`** read-only property of the {{domxref("TextEncoderStream")}} interface returns a {{domxref("ReadableStream")}} that emits encoded binary data.
+The **`readable`** read-only property of the {{domxref("TextEncoderStream")}} interface returns a {{domxref("ReadableStream")}} that emits encoded binary data as {{jsxref("Uint8Array")}} chunks.
 
 ## Value
 
