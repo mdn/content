@@ -199,7 +199,6 @@ An important point to remember is that the animation lasts as long as the `subje
 }
 ```
 
-
 #### Result
 
 Scroll to see the subject element being animated.
