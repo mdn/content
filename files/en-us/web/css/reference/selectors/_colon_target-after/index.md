@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`:target-after`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selects elements that come before the **active** scroll marker (the scroll marker of a {{cssxref("scroll-marker-group")}} that is currently scrolled to) in a navigation menu. This [selector](/en-US/docs/Web/CSS/Guides/Selectors) can be used to style navigation items that come before the active navigation position within a scroll marker group.
+The **`:target-after`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selects elements that come after the **active** scroll marker (the scroll marker of a {{cssxref("scroll-marker-group")}} that is currently scrolled to) in a navigation menu. This [selector](/en-US/docs/Web/CSS/Guides/Selectors) can be used to style navigation items that come after the active navigation position within a scroll marker group.
 
 > [!NOTE]
 > The `:target-after` pseudo-class is only valid on {{cssxref("::scroll-marker")}} pseudo-elements and elements that have been designated as scroll markers via the [`scroll-target-group`](/en-US/docs/Web/CSS/Reference/Properties/scroll-target-group) property.
