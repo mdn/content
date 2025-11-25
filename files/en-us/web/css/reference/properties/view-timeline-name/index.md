@@ -157,6 +157,21 @@ Last, an animation is specified on the element that animates its opacity and sca
 }
 ```
 
+```css hidden
+```css hidden
+@layer no-support {
+  @supports not (view-timeline-name: view: none) {
+    body::before {
+      content: "Your browser doesn't support the `view-timeline-name` property.";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+```
+```
+
 #### Result
 
 Scroll to see the subject element being animated.
