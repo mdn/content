@@ -163,6 +163,17 @@ p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
+
+@supports not (animation-range-start: normal) {
+  body::before {
+    content: "Your browser does not support the 'animation-range-start' property.";
+    color: black;
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
 ```
 
 #### Result
