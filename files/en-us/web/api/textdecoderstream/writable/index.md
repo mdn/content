@@ -8,7 +8,7 @@ browser-compat: api.TextDecoderStream.writable
 
 {{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-The **`writable`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("WritableStream")}}.
+The **`writable`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("WritableStream")}} that accepts binary data to be decoded into strings.
 
 ## Value
 
@@ -16,11 +16,29 @@ A {{domxref("WritableStream")}}.
 
 ## Examples
 
-Returning a {{domxref("WritableStream")}} from a `TextDecoderStream`.
+This example creates a `TextDecoderStream` that decodes UTF-8 encoded binary data. It writes some encoded binary data to the `writable` stream, then reads the decoded text from the `readable` stream.
 
 ```js
-stream = new TextDecoderStream();
-console.log(stream.writable); // A WritableStream
+const stream = new TextDecoderStream();
+
+// Write data to be decoded
+const data = Uint8Array.fromBase64("5L2g5aW95LiW55WM");
+const writer = stream.writable.getWriter();
+writer.write(data);
+writer.close();
+
+// Read decoded data
+const reader = stream.readable.getReader();
+let done = false;
+let output = "";
+while (!done) {
+  const result = await reader.read();
+  if (result.value) {
+    output += result.value;
+  }
+  done = result.done;
+}
+console.log(output);
 ```
 
 ## Specifications
@@ -30,3 +48,7 @@ console.log(stream.writable); // A WritableStream
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("TransformStream.writable")}}
