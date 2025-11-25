@@ -1,18 +1,19 @@
 ---
-title: Idempotency-Key header
-short-title: Idempotency-Key
-slug: Web/HTTP/Reference/Headers/Idempotency-Key
+title: Deduplication-Key header
+short-title: Deduplication-Key
+slug: Web/HTTP/Reference/Headers/Deduplication-Key
 page-type: http-header
 status:
   - experimental
-browser-compat: http.headers.Idempotency-Key
-spec-urls: https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-header/
+browser-compat: http.headers.Deduplication-Key
+spec-urls: https://datatracker.ietf.org/doc/draft-ietf-httpapi-deduplication-key-header/
 sidebar: http
 ---
 
 {{SeeCompatTable}}
 
-The HTTP **`Idempotency-Key`** {{glossary("request header")}} can be used to make {{HTTPMethod("POST")}} and {{HTTPMethod("PATCH")}} requests {{glossary("idempotent")}}.
+The HTTP **`Deduplication-Key`** {{glossary("request header")}} can be used to detect if the same request
+was submitted twice. This is useful for non-idempotent methods like {{HTTPMethod("POST")}} and {{HTTPMethod("PATCH")}}.
 
 This allows clients to resend unacknowledged requests without having to be concerned that the request has already been received and acted on by the server.
 
@@ -32,7 +33,7 @@ This allows clients to resend unacknowledged requests without having to be conce
 ## Syntax
 
 ```http
-Idempotency-Key: <key>
+Deduplication-Key: <key>
 ```
 
 ## Directives
@@ -51,43 +52,50 @@ The {{HTTPMethod("POST")}} and {{HTTPMethod("PATCH")}} methods are non-idempoten
 Unlike a `PUT` message, if you send the same `POST` request multiple times, the server may create a new resource for each successful request.
 Similarly, a `PATCH` reflects a change with respect to a particular state, and that state is changed each time the patch is applied.
 
-Idempotence is important in cases where a client does not receive a response, because it means the client can safely resend the request without having to worry about possible side effects.
+Idempotence is important in cases where a client can't know for sure if its request has been processed, because it means the client can safely resend the request without having to worry about possible side effects.
 
-The HTTP `Idempotency-Key` header allows a client to make `POST` and `PATCH` requests idempotent by giving them a unique identifier (a key).
-The client can then resend the same request multiple times, and the server can know that it should only perform the action once.
+The HTTP `Deduplication-Key` header allows safely resubmitting `POST` and `PATCH` requests too, but using different means - by giving them a unique identifier (a key).
+The client can then resend the same request multiple times, and the server can know that it should only perform the action once. However, this doesn't make the endpoints fully idempotent, consider this example:
+
+- Request1 sends state1
+- Request2 sends state2
+- Request1 is resent
+
+An idempotent endpoint ends up with state1, while the deduplicated one ends up with state2 because 3d request
+is dropped.
 
 ### Client responsibilities
 
-Client JavaScript should attach the `Idempotency-Key` header in fetch requests for endpoints that require it, with a key that conforms to the requirements published by the server.
+Client JavaScript should attach the `Deduplication-Key` header in fetch requests for endpoints that require it, with a key that conforms to the requirements published by the server.
 
 A unique key must be used for each new request that is sent, and the same key should be used if that request is resent.
 
 ### Server responsibilities
 
-Servers that support the `Idempotency-Key` header are expected to document and publish their support, including the endpoints that require the header, and any requirements on the key (such as length, computation method, and expiry).
+Servers that support the `Deduplication-Key` header are expected to document and publish their support, including the endpoints that require the header, and any requirements on the key (such as length, computation method, and expiry).
 
 Note that the server may choose to expire received keys over time; the key expiry behavior must be defined and documented so that clients can make conforming requests.
 
-#### Idempotency fingerprint
+#### Deduplication fingerprint
 
 A unique key is expected to be used in each request.
 
-In order to protect against clients reusing keys for new requests, a server may create and store an "idempotency fingerprint" of the request along with the key.
+In order to protect against clients reusing keys for new requests, a server may create and store an "deduplication fingerprint" of the request along with the key.
 This is a hash of all or part of a request that can be compared to other requests with the same key.
 
-If idempotency fingerprinting is supported, the server can send an error response if the same key has a different fingerprint.
+If deduplication fingerprinting is supported, the server can send an error response if the same key has a different fingerprint.
 
 #### Request processing
 
-On receiving a `POST` or `PATCH` request with an `Idempotency-Key` on an endpoint that requires it, the server should check whether it already has received a request with that key.
+On receiving a `POST` or `PATCH` request with an `Deduplication-Key` on an endpoint that requires it, the server should check whether it already has received a request with that key.
 
 - If it hasn't, the server should perform the operation and respond, and then store the key.
 - If it has, it should not perform the operation, but should respond as though it had.
 
-Servers that are using an idempotency fingerprint would also generate and store a fingerprint for each new request.
+Servers that are using an deduplication fingerprint would also generate and store a fingerprint for each new request.
 This would be used to respond with an error if a subsequent key and fingerprint did not match.
 
-If a request is received without an `Idempotency-Key` on an endpoint that requires it, the server should respond with an error.
+If a request is received without an `Deduplication-Key` on an endpoint that requires it, the server should respond with an error.
 
 #### Server error responses
 
@@ -95,7 +103,7 @@ A server should provide error responses in the following cases:
 
 - {{HTTPStatus("400", "400 Bad Request")}}: The header is omitted for an endpoint that is documented as requiring it.
 - {{HTTPStatus("409", "409 Conflict")}}: A request with the same key is currently/still being processed.
-- {{HTTPStatus("422", "422 Unprocessable Content")}}: The key is already being used for a different request payload (if idempotency fingerprinting is supported).
+- {{HTTPStatus("422", "422 Unprocessable Content")}}: The key is already being used for a different request payload (if deduplication fingerprinting is supported).
 
 In the case of a `409 Conflict` response, clients will need to wait before retrying.
 For all the other errors clients will need to amend the requests before resending.
@@ -110,9 +118,9 @@ Content-Type: application/problem+json
 Content-Language: en
 
 {
-    "type": "https://developer.example.com/idempotency/docs",
-    "title": "Idempotency-Key is missing",
-    "detail": "This operation is idempotent and requires correct usage of Idempotency Key.",
+    "type": "https://developer.example.com/deduplication/docs",
+    "title": "Deduplication-Key is missing",
+    "detail": "This operation requires correct usage of Deduplication Key.",
 }
 ```
 
@@ -127,7 +135,7 @@ The key `9c7d2b4a0e1f6c835a2d1b0f4e3c5a7d` is a unique value that matches the re
 POST /api/users HTTP/1.1
 Host: example.com
 Content-Type: application/json
-Idempotency-Key: 9c7d2b4a0e1f6c835a2d1b0f4e3c5a7d
+Deduplication-Key: 9c7d2b4a0e1f6c835a2d1b0f4e3c5a7d
 
 {
   "user_id": "12345",
@@ -147,7 +155,7 @@ Content-Type: application/problem+json
 Content-Language: en
 
 {
-    "type": "https://example.com/idempotency/docs",
+    "type": "https://example.com/deduplication/docs",
     "title": "Server processing previous request.",
     "detail": "A request with the same key is currently/still being processed.",
 }
