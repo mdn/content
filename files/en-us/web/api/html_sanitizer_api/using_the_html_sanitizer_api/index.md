@@ -193,7 +193,7 @@ In both cases you can also specify each attribute as an object with `name` and `
 You can also use set the attribute properties using the same element object passed to {{domxref("Sanitizer.allowElement()")}}.
 
 Note that it is impossible to define per-element attribute behavior on a Sanitizer with a remove configuration, as the (needed) `elements` array is not present.
-Other restrictions on per-element attributes are covered in [valid configurations](/en-US/docs/Web/API/SanitizerConfig#valid_configuration)
+Other restrictions on per-element attributes are covered in [Valid configurations](/en-US/docs/Web/API/SanitizerConfig#valid_configuration)
 
 ### Replacing child elements
 
@@ -297,7 +297,7 @@ sanitizer.removeAttribute("lang");
 
 ## Comments and data attributes
 
-The {{domxref("SanitizerConfig")}} can also be used to specify whether comments will be filtered from injected content, using the [comments](/en-US/docs/Web/API/SanitizerConfig#comments) property, and whether `data-` attributes are allowed without having to add them to the `attributes` array using the [dataAttributes](/en-US/docs/Web/API/SanitizerConfig#dataattributes) boolean property.
+The {{domxref("SanitizerConfig")}} can also be used to specify whether comments will be filtered from injected content, using the [`comments`](/en-US/docs/Web/API/SanitizerConfig#comments) property, and whether `data-` attributes are allowed without having to add them to the `attributes` array using the [`dataAttributes`](/en-US/docs/Web/API/SanitizerConfig#dataattributes) boolean property.
 
 To allow comments and all `data-*` attributes you might use a configuration like this:
 
@@ -308,7 +308,7 @@ const sanitizer = new Sanitizer({
 });
 ```
 
-You can similarly set the comments or data-attributes properties on an existing sanitizer using {{domxref("Sanitizer.setComments()")}} and {{domxref("Sanitizer.setDataAttributes()")}} methods:
+You can similarly set the comments or data-attributes properties on an existing sanitizer using {{domxref("Sanitizer.setComments()")}} and {{domxref("Sanitizer.setDataAttributes()")}}:
 
 ```js
 const sanitizer = new Sanitizer({});

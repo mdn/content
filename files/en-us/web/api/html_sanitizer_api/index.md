@@ -65,7 +65,7 @@ There are two very closely related sanitizer configuration interfaces, either of
 - {{domxref('SanitizerConfig')}} is a dictionary object that defines arrays for the allowed/disallowed elements and attributes and boolean properties that indicate whether comments and data attributes will be allowed or omitted, and so on.
 
   Only a subset of possible configuration options may be specified in a particular configuration in order to reduce redundancy and ambiguity.
-  The allowed subset is described in [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
+  The allowed subset is described in [Valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
 
 - {{domxref('Sanitizer')}} is essentially a wrapper around a {{domxref('SanitizerConfig')}} that provides methods to ergonomically modify the configuration and ensure that it remains valid.
 
@@ -90,8 +90,8 @@ They are useful when you know exactly what HTML entities you want to be able to 
 
 Allow configurations are created by defining a `Sanitizer` that wraps a {{domxref("SanitizerConfig")}} that includes the [`elements`](/en-US/docs/Web/API/SanitizerConfig#elements) and/or [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes) arrays (and not the `removeElements` or `removeAttributes` arrays).
 
-For example, the following configuration is created by passing a {{domxref('SanitizerConfig')}} that allows {{htmlelement("p")}} and {{htmlelement("div")}} elements, and `cite` and `onclick` attributes on any element.
-It will also replace {{htmlelement("b")}} elements with their child nodes, stripping the style from the element's content.
+For example, the following configuration is created by passing a {{domxref('SanitizerConfig')}} that allows {{htmlelement("p")}} and {{htmlelement("div")}} elements, and `cite` and `onclick` attributes on any allowed element.
+It will also replace {{htmlelement("b")}} elements with their child nodes.
 
 ```js
 const sanitizer = new Sanitizer({

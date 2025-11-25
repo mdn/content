@@ -31,10 +31,10 @@ An instance of the {{domxref("Sanitizer")}} object.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : The `configuration` parameter is passed a:
-    - {{domxref("SanitizerConfig")}} that isn't a valid configuration.
+  - : The `configuration` parameter is passed one of the following:
+    - a {{domxref("SanitizerConfig")}} that isn't a valid configuration.
       For example, a configuration that includes both "allowed" and "removed" configuration settings.
-    - String that does not have the value `"default"`.
+    - a string that does not have the value `"default"`.
 
 ## Description
 
@@ -45,13 +45,9 @@ It is created if `"default"` or no object is passed to the constructor.
 
 The constructor can be passed a {{domxref("SanitizerConfig")}} with a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration) to customize the sanitizer behavior.
 
-### Allow and remove configuration is persistent
-
 A valid configuration can specify either `elements` or `removeElements` arrays (but not both) and either the `attributes` or `removeAttributes` arrays (but not both).
-The arrays that are defined when the object is constructed persist for its lifetime, and their contents may be modified by the `Sanitizer` methods.
-In most cases which arrays are defined does not particularly matter because, for example, the {{domxref("Sanitizer/allowAttribute","allowAttribute()")}} method can implement the same behavior by adding the attribute to the `attributes` array or by removing it from the `removeAttributes` array.
-
-The main case to note is that if you have a remove configuration then you cannot have per-element attributes, as these must be defined on the `elements` array.
+In most cases it does not matter which of these arrays you use because, for example, the {{domxref("Sanitizer/allowAttribute","allowAttribute()")}} method can implement the same behavior by adding the attribute to the `attributes` array or by removing it from the `removeAttributes` array.
+The main thing to note is that if you have a configuration with `removeElements` then you cannot have per-element attributes, as these must be defined on the `elements` array.
 
 ## Examples
 
