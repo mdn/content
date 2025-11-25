@@ -128,7 +128,7 @@ img {
 However, the image is distorted as its aspect ratio has been changed — it looks _stretched_. To fix this, you can use the {{cssxref("object-fit")}} property, which sets how the image is resized to fit its container (the `<img>` element). The `object-fit` property can take a few different values, the most useful of which are as follows:
 
 - `cover`: The image completely fills the `<img>` element while maintaining its aspect ratio, therefore some parts of the image are not displayed.
-- `contain` The image completely fits inside the `<img>` element while maintaining its aspect ratio, therefore some parts of the `<img>` element are not filled. This results in "letterboxing".
+- `contain`: The image completely fits inside the `<img>` element while maintaining its aspect ratio, therefore some parts of the `<img>` element are not filled. This results in "letterboxing" or "pillarboxing".
 
 The next example shows the `cover` and `contain` values set on two copies of the image shown in the previous example, so you can see what their effects are:
 
