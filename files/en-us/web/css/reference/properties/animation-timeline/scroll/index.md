@@ -132,7 +132,7 @@ These two together ensure that the container has a vertical scrollbar, which all
 }
 ```
 
-```css
+```css hidden
 @layer no-support {
   @supports not (animation-timeline: scroll) {
     body::before {
