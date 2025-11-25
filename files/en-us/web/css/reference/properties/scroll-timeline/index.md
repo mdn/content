@@ -18,11 +18,11 @@ This property is a shorthand for the following CSS properties, in order:
 ## Syntax
 
 ```css
-/* one value */
+/* One value */
 scroll-timeline: none;
 scroll-timeline: --custom_name_for_timeline;
 
-/* two values */
+/* Two values */
 scroll-timeline: --custom_name_for_timeline block;
 scroll-timeline: --custom_name_for_timeline x;
 scroll-timeline: none inline;
@@ -46,7 +46,7 @@ scroll-timeline: unset;
 
 ## Description
 
-The `scroll-timeline` shorthand property can be applied to a container element to set both the `scroll-timeline-name` and `scroll-timeline-axis` properties. It is set on the scroller that will provide the timeline. If the container has no overflow to scroll, if the scroller does not overflow its container in the `<axis>` dimension, or if the overflow is hidden or clipped, no timeline will be created.
+The `scroll-timeline` shorthand property can be applied to a container element to set both the `scroll-timeline-name` and `scroll-timeline-axis` properties. It is set on the scroller that will provide the timeline. If the container has no overflow to scroll or if the overflow is hidden or clipped, no timeline will be created.
 
 The value for the {{cssxref("scroll-timeline-name")}}, if not set to `none`, must be a [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident), which means it must start with `--`. This helps avoid name clashes with standard CSS keywords. The name can then be used as the value of an element's {{cssxref("animation-timeline")}} property to define the scrolling container element that will define its [animation timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_scroll_progress_timelines), driving the animation progress as it scrolls.
 
@@ -90,7 +90,7 @@ Using the `scroll-timeline` property, we define the container as the source of a
   overflow-y: scroll;
 
   scroll-timeline: --square-timeline y;
-  /* Firefox supports the non-stardard vertical/horizontal syntax */
+  /* Firefox supports the non-standard vertical/horizontal syntax */
   scroll-timeline: --square-timeline vertical;
 
   position: relative;
@@ -140,6 +140,7 @@ Without content that overflows the container, there would be no scrollbar, and h
       background-color: wheat;
       display: block;
       text-align: center;
+      padding: 1em;
     }
   }
 }
