@@ -151,7 +151,7 @@ Scroll the vertical bar to see the square animate as you scroll.
 
 {{EmbedLiveSample("Creating_a_named_scroll_progress_timeline_animation", "100%", "320px")}}
 
-The square animates as you scroll. When using `scroll-timeline`, the duration of the animation depends on how fast you scroll, not the value of the `animation-duration` property. A `1ms` value was included for browsers that require a non-zero `animation-duration`.
+The square animates as you scroll. When using `scroll-timeline`, the duration of the animation depends on how fast you scroll, not the value of the `animation-duration` property.
 
 ## Specifications
 
