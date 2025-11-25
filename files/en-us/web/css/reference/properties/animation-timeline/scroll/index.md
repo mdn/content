@@ -132,6 +132,19 @@ These two together ensure that the container has a vertical scrollbar, which all
 }
 ```
 
+```css
+@layer no-support {
+  @supports not (animation-timeline: scroll) {
+    body::before {
+      content: "Your browser doesn't support the CSS `scroll()` function.";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+```
+
 #### Result
 
 Scroll to see the square element being animated.
