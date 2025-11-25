@@ -600,11 +600,12 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
 let observers = [];
 
 startup = () => {
-  let wrapper = document.querySelector(".wrapper");
+  const wrapper = document.querySelector(".wrapper");
+  const template = document.querySelector("#boxTemplate");
 
   // Options for the observers
 
-  let observerOptions = {
+  const observerOptions = {
     root: null,
     rootMargin: "0px",
     threshold: [],
@@ -615,7 +616,7 @@ startup = () => {
   // since there will be so many of them (for each percentage
   // point).
 
-  let thresholdSets = [
+  const thresholdSets = [
     [],
     [0.5],
     [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
@@ -629,12 +630,10 @@ startup = () => {
   // Add each box, creating a new observer for each
 
   for (let i = 0; i < 4; i++) {
-    let template = document
-      .querySelector("#boxTemplate")
-      .content.cloneNode(true);
-    let boxID = `box${i + 1}`;
-    template.querySelector(".sampleBox").id = boxID;
-    wrapper.appendChild(document.importNode(template, true));
+    const newBox = document.importNode(template.content, true);
+    const boxID = `box${i + 1}`;
+    newBox.querySelector(".sampleBox").id = boxID;
+    wrapper.appendChild(newBox);
 
     // Set up the observer for this box
 
