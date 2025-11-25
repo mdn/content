@@ -53,7 +53,7 @@ allowElement(element)
 
 Note that `false` might be returned if the internal configuration:
 
-- defines the [`elements`](/en-US/docs/Web/API/SanitizerConfig#elements) array and the element is already present (it does not need to be added again)
+- defines the [`elements`](/en-US/docs/Web/API/SanitizerConfig#elements) array and the element is already present (it does not need to be added again).
 - defines the [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) array and the specified element is not present (and is hence already not filtered).
 - defines the [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) array and attempts to allow an element with per-element attributes.
   This operation is not supported because in a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration) you can't have both `removeElements` and `elements` arrays, and per-element attributes are added in the `elements` array.
