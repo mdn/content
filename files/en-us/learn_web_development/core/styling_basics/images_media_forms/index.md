@@ -154,10 +154,6 @@ img {
 
 You could also try the value of `fill`, which will fill the box but not maintain the aspect ratio.
 
-> [!NOTE]
-> For the {{cssxref("object-fit")}} property to be applied successfully to an image, `width` and `height` properties should typically be set to `100%`.
-> In the example above, you can comment out the `height: 100%;` or `width: 100%;` declarations —or both— from the `img` selctor, to observe that the {{cssxref("object-fit")}} property is no longer effective.
-
 ## Replaced elements in layout
 
 When using various CSS layout techniques on replaced elements, you may well find that they behave slightly differently from other elements. For example, in a grid layout, elements are stretched by default to fill their entire [grid areas](/en-US/docs/Glossary/Grid_Areas). Images do not stretch; instead, they are aligned to the start of their grid areas.
