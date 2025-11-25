@@ -77,10 +77,32 @@ While you can use either interface in any of the sanitizing methods, `Sanitizer`
 
 #### Allow and remove configurations
 
-You can build up a configuration in two ways: specifying the set of elements and attributes that you will allow in the output, or specifying the set that must not be present in the output.
+You can build up a configuration in two ways: specifying the set of elements and/or attributes that you will allow in the output, or specifying the set that must not be present in the output.
 
-Note that it is not valid to specify both allowed and removed elements in a configuration, or both allowed and removed attributes.
-You can. however. have a configuration that allows elements and removes attributes, or vice versa.
+These sets are specified as arrays in the configuration object fields: `elements`, `removeElements`, `attributes`, and `removeAttributes`.
+The following table shows the permitted combinations of allowed and removed sets of attributes and elements.
+Note that while almost all combinations of fields are allowed, you may not specify both allow and remove arrays for elements or attributes in the same configuration.
+
+| Element arrays                    | Attribute arrays   | Valid? |
+| --------------------------------- | ------------------ | ------ |
+| `elements`                        | -                  | ✔️     |
+| `elements`                        | `attributes`       | ✔️     |
+| `elements`                        | `removeAttributes` | ✔️     |
+| `removeElements`                  | -                  | ✔️     |
+| `removeElements`                  | `attributes`       | ✔️     |
+| `removeElements`                  | `removeAttributes` | ✔️     |
+| -                                 | `attributes`       | ✔️     |
+| -                                 | `removeAttributes` | ✔️     |
+| `elements` + `removeElements`     | (anything)         | ❌     |
+| `attributes` + `removeAttributes` | (anything)         | ❌     |
+| -                                 | -                  | ✔️     |
+
+An allow configuration can optionally specify whether per-element attributes should be allowed and/or removed in its `elements` array.
+The allowed configuration for these local attributes depends on whether or not global `attributes` or `removedAttributes` is defined.
+The [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration) outlines the restrictions.
+
+In general an "allow configuration" for both the allowed elements and attributes is safer, because you list the elements and/or attributes that you want and know are safe, rather than all the items that are dangerous or might potentially be considered dangerous in future.
+If you specify an empty configuration object then an empty allow configuration is used.
 
 ##### Allow configurations
 
