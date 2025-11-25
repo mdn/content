@@ -175,9 +175,9 @@ As you follow this course, you'll notice that we always ask you to name folders 
 1. Many computer systems, including most web servers, are case-sensitive. So for example, if you put an image on your website at `test-site/images/MyImage.jpg` and then in a different file you try to reference the image with `test-site/images/myimage.jpg`, it may not work.
 2. When you invoke commands on the command line, you have to put quotes around file names with spaces in them, otherwise they will be interpreted as two separate items.
 3. Some programming languages (for example, Python) do not work well with spaces in file names in certain circumstances (for example, if these files are modules to be imported).
-4. File names commonly map to web addresses/URLs. If you, for example, have a file called <code>my&nbsp;file.html</code> in your server's root folder, generally it will be accessible at a URL like `https://example.com/my%20file.html`. Web servers usually replace the spaces in filenames with `%20` (because URLs are {{Glossary("Percent-encoding", "percent-encoded")}}), which can create subtle bugs with some systems if they assume that file names and URLs match perfectly.
+4. File names commonly map to web addresses/URLs. If you, for example, have a file called `my file.html` in your server's root folder, generally it will be accessible at a URL like `https://example.com/my%20file.html`. Web servers usually replace the spaces in filenames with `%20` (because URLs are {{Glossary("Percent-encoding", "percent-encoded")}}), which can create subtle bugs with some systems if they assume that file names and URLs match perfectly.
 
-Instead of spaces, many developers use a separator character such as a hyphen (`-`) rather than a space — for example `my-file.html` rather than <code>my&nbsp;file.html</code>. This is a good practice.
+Instead of spaces, many developers use a separator character such as a hyphen (`-`) rather than a space — for example `my-file.html` rather than `my file.html`. This is a good practice.
 
 It is best to get into the habit of writing your folder and file names in lowercase with no spaces and with words separated by hyphens, at least until you know what you're doing. That way, you'll encounter fewer problems further down the road.
 
