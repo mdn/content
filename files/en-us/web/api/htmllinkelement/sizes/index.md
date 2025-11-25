@@ -8,13 +8,15 @@ browser-compat: api.HTMLLinkElement.sizes
 
 {{APIRef("HTML DOM")}}
 
-The **`sizes`** read-only property of the {{domxref("HTMLLinkElement")}} interfaces defines the sizes of the icons for visual media contained in the resource. It reflects the {{HTMLElement("link")}} element's [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes) attribute, which takes a list of space-separated sizes, each in the format `<width in pixels>x<height in pixels>`, or the keyword `any`.
+The read-only **`sizes`** property of the {{domxref("HTMLLinkElement")}} interface defines the sizes of the icons for visual media contained in the resource. It reflects the {{HTMLElement("link")}} element's [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes) attribute, which takes a list of space-separated sizes, each in the format `<width in pixels>x<height in pixels>`, or the keyword `any`.
 
 It is only relevant if the {{domxref("HTMLLinkElement.rel", "rel")}} is `icon` or a non-standard type like `apple-touch-icon`.
 
 ## Value
 
-A {{domxref("DOMTokenList")}}
+A {{domxref("DOMTokenList")}} object.
+
+Although the `sizes` property itself is read-only in the sense that you can't replace the `DOMTokenList` object, you can still assign to the `sizes` property directly, which is equivalent to assigning to its {{domxref("DOMTokenList/value", "value")}} property. You can also modify the `DOMTokenList` object using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.
 
 ## Examples
 
