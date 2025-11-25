@@ -28,11 +28,18 @@ console.log(someElement.innerHTML); // abc def
 
 The other XSS-safe methods, {{domxref('ShadowRoot.setHTML()')}} and {{domxref('Document/parseHTML_static','Document.parseHTML()')}}, are used in the same way.
 
-### Safe methods can further restrict allowed entities
+## Using a sanitizer configuration
 
-You can specify the HTML entities that you want to allow or remove by passing a {{domxref('Sanitizer')}} in the second argument of all the sanitizer methods.
+All of the sanitization methods can be passed a {{domxref('Sanitizer')}} or {{domxref('SanitizerConfig')}}, which defines what elements, attributes and comments are either allowed, or should be removed, when inserting strings of HTML.
 
-For example, if you know that only {{htmlelement("p")}} and {{htmlelement("a")}} elements are expected in the context of "someElement" below, you might create a sanitizer configuration that allows only those elements:
+The {{domxref('Sanitizer')}} is essentially a wrapper around a {{domxref('SanitizerConfig')}}, performing some optimizations and normalizations that make it easier and safer to use, share and modify,
+
+### Using safe methods with a sanitizer
+
+The XSS-safe methods always remove any unsafe HTML elements or attributes (as discussed in [Safe sanitization by default](#safe_sanitization_by_default) above).
+
+You can pass a sanitizer as the second argument to the safe methods to allow the same or fewer entities than the default configuration.
+For example, if you know that only {{htmlelement("p")}} and {{htmlelement("a")}} elements are expected in the context of `someElement` below, you might create a sanitizer configuration that allows only those elements:
 
 ```js
 const sanitizerOne = new Sanitizer({ elements: ["p", "a"] });
@@ -40,15 +47,12 @@ sanitizerOne.allowAttribute("href");
 someElement.setHTML(untrustedString, { sanitizer: sanitizerOne });
 ```
 
-Note though that the unsafe HTML entities are always removed when using the safe methods.
-When used with the safe methods, a permissive sanitizer configuration, will either allow the same or fewer entities than the default configuration.
+### Allowing unsafe sanitization
 
-## Allowing unsafe sanitization
+Sometimes you might want to inject input that needs to contain potentially unsafe elements or attributes.
+In this case you could use one of the API XSS-unsafe methods: {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}, and {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
 
-Sometimes you might want to inject input needs to contain potentially unsafe elements or attributes.
-In this case you might use one of the API XSS-unsafe methods: {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}, and {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
-
-One options is to first construct the default sanitizer, which only allows XSS-safe elements, and then allow just those unsafe entities that we expect in the input.
+To somewhat reduce the risk, you might first construct the default sanitizer, which only allows XSS-safe elements, and then allow just those unsafe entities that are expected in the input.
 
 For example, in the following sanitizer all safe elements are allowed, and we further allow the unsafe `onclick` handler on `button` elements (only).
 
@@ -64,7 +68,8 @@ someElement.setHTMLUnsafe(untrustedString, { sanitizer: sanitizerOne });
 With this code the `alert(1)` would be allowed, and there is a potential issue that the attribute might be used for malicious purposes.
 However we know that all other XSS unsafe HTML entities have been removed, so we only need to worry about this one case, and can put in other mitigations.
 
-The unsafe methods will use any sanitizer configuration you supply (or none), so you need to be more careful than when using the safe methods.
+The unsafe methods will use any sanitizer configuration you supply (or none), so you need to be careful when using them.
+Minimally you should enforce [Trusted Types](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_and_trusted_types) and pass {{domxref("TrustedHTML")}} instead of strings into the methods.
 
 ## Allow configurations
 
