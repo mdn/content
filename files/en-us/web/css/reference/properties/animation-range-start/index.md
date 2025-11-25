@@ -21,6 +21,13 @@ animation-range-start: cover;
 animation-range-start: contain;
 animation-range-start: cover 20%;
 animation-range-start: contain 100px;
+
+/* Global values */
+animation-range-start: inherit;
+animation-range-start: initial;
+animation-range-start: revert;
+animation-range-start: revert-layer;
+animation-range-start: unset;
 ```
 
 ### Values
