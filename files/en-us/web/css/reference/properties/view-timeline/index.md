@@ -64,7 +64,7 @@ The name is then referenced in an {{cssxref("animation-timeline")}} declaration 
 
 The `view-timeline` shorthand property can be applied to a container element to set a combination of the `<view-timeline-name>`, `<view-timeline-inset>`, and `<view-timeline-axis>` values. At least one value must be specified. If all values are specified, the order must be `<view-timeline-name>` followed by `<view-timeline-axis>` and/or `<view-timeline-inset>`.
 
-The names specified in the `<view-timeline-name>` component must be {{cssxref("dashed-ident")}} values (which means they must start with `--`) or the keyword `none`.
+The names specified in the `<view-timeline-name>` component must be a list of comma-separated {{cssxref("dashed-ident")}} values (which means they must start with `--`) or the keyword `none`.
 
 If only one value is declared, the value is the `view-timeline-name`. When setting two values, include the `view-timeline-name` and `view-timeline-axis`. The three value declaration is defined in the order `view-timeline-name`, `view-timeline-inset`, and `view-timeline-axis`.
 
