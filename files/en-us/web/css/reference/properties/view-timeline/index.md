@@ -52,7 +52,7 @@ view-timeline: unset;
 
 ### Description
 
-The `view-timeline` shorthand property defines a _named view progress timeline_, which progresses based on changes to the visibility of an element (the _subject_) within a scrollable element (_scroller_). The `view-timeline` property is set on the subject.
+The `view-timeline` shorthand property defines a _named view progress timeline_, which progresses based on changes to the visibility of an element (the _subject_) within a scrollable element (_scroller_). The `view-timeline` property is set on the subject. If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
 
 The subject's visibility inside the scroller is tracked — by default, the timeline is at `0%` when the subject is first visible at one edge of the scroller and `100%` when it reaches the opposite edge.
 
