@@ -158,7 +158,6 @@ Last, an animation is specified on the element that animates its opacity and sca
 ```
 
 ```css hidden
-```css hidden
 @layer no-support {
   @supports not (view-timeline-name: view: none) {
     body::before {
@@ -169,7 +168,6 @@ Last, an animation is specified on the element that animates its opacity and sca
     }
   }
 }
-```
 ```
 
 #### Result
