@@ -47,9 +47,11 @@ animation-timeline: scroll(x self);
 
 ## Description
 
-The `scroll()` CSS function can be used as a singe animation timeline value within the comma-separated {{cssxref("animation-timeline")}} property to specify a scroll progress timeline for a {{cssxref("@keyframes")}} animation. It defines the scrollable element (_scroller_) and scrollbar axis that will provide the animation timeline.
+The `scroll()` CSS function can be used as a single value within the comma-separated {{cssxref("animation-timeline")}} property to specify a scroll progress timeline for a {{cssxref("@keyframes")}} animation. It defines the scrollable element (_scroller_) and scrollbar axis that will provide the animation timeline.
 
-By default, `scroll()` references the `block` axis of the `nearest` ancestor scroll container, but these defaults can be modified by the arguments passed by the function. The scroller and axis values can be specified in any order. The following five declarations are equivalent:
+By default, `scroll()` references the `block` axis of the `nearest` ancestor scroll container. The scroller and axis values can be specified in any order.
+
+The following five declarations are equivalent:
 
 ```css
 animation-timeline: scroll();
@@ -140,6 +142,7 @@ These two together ensure that the container has a vertical scrollbar, which all
       background-color: wheat;
       display: block;
       text-align: center;
+      padding: 1em;
     }
   }
 }
