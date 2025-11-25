@@ -59,9 +59,6 @@ The subject's visibility inside the scroller is tracked — by default, the time
 The `view-timeline` can contain three constituent values: a name for the named view progress timeline, a scroll axis value, and up to two timeline inset values.
 If only one value is declared, the value is the `view-timeline-name`. The name is then referenced in an {{cssxref("animation-timeline")}} declaration to indicate the element that will be animated as the timeline progresses. This can be the subject element, but it doesn't have to be — you can animate a different element as the subject moves through the scrolling area.
 
-> [!NOTE]
-> If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
-
 The `view-timeline` shorthand property can be applied to a container element to set a combination of the `<view-timeline-name>`, `<view-timeline-inset>`, and `<view-timeline-axis>` values. At least one value must be specified. If all values are specified, the order must be `<view-timeline-name>` followed by `<view-timeline-axis>` and/or `<view-timeline-inset>`.
 
 The names specified in the `<view-timeline-name>` component must be a list of comma-separated {{cssxref("dashed-ident")}} values (which means they must start with `--`) or the keyword `none`.
