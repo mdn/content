@@ -186,6 +186,20 @@ An important point to remember is that the animation lasts as long as the `subje
 }
 ```
 
+```css hidden
+@layer no-support {
+  @supports not (animation-timeline: view()) {
+    body::before {
+      content: "Your browser doesn't support the CSS `view()` function.";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+```
+
+
 #### Result
 
 Scroll to see the subject element being animated.
