@@ -20,11 +20,11 @@ scroll-timeline-axis: y;
 scroll-timeline-axis: x;
 
 /* Global values */
-corner-shape: inherit;
-corner-shape: initial;
-corner-shape: revert;
-corner-shape: revert-layer;
-corner-shape: unset;
+scroll-timeline-axis: inherit;
+scroll-timeline-axis: initial;
+scroll-timeline-axis: revert;
+scroll-timeline-axis: revert-layer;
+scroll-timeline-axis: unset;
 ```
 
 ### Values
