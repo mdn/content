@@ -157,7 +157,7 @@ This section lists `page-type` values for pages under [WebAssembly/](/en-US/docs
 - `webassembly-instance-property`: an instance property, like [`WebAssembly.Instance.exports`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports).
 - `webassembly-instance-method`: an instance method, like [`WebAssembly.Exception.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg).
 - `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module/exports_static).
-- `webassembly-instruction`: an instruction, or a set of instructions, like [`Wrap`](/en-US/docs/WebAssembly/Reference/Numeric/Wrap).
+- `webassembly-instruction`: an instruction, or a set of instructions, like [`wrap`](/en-US/docs/WebAssembly/Reference/Numeric/wrap).
 
 ### WebDriver page types
 

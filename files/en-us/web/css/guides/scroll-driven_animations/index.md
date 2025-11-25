@@ -128,10 +128,7 @@ Scroll the element in the inline direction to see its background color change. S
 
 ### Data types and values
 
-<!--
-- {{cssxref("axis")}}
-- {{cssxref("scroller")}} -->
-
+- [`<axis>`](/en-US/docs/Web/CSS/Reference/Values/axis)
 - [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Properties/animation-range#timeline-range-name)
 
 ### Functions
