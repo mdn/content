@@ -106,11 +106,9 @@ The HTML for the example is shown below.
 #### CSS
 
 In the CSS, we set the `subject` element as the source of a view progress timeline named `--subject-reveal` using the `view-timeline-name` property.
-The scroll axis is set using `view-timeline-axis: x;` (Chromium) and `view-timeline-axis: horizontal;` (Firefox) — this causes the _horizontal scrollbar_ position of the scrolling ancestor element to determine the animation timeline.
+The scroll axis is set using `view-timeline-axis: x;`. We also include `view-timeline-axis: horizontal;` for browsers that support the non-standard legacy `horizontal` and `vertical` values, rather than `x` and `y`.
 
 The `content` ancestor element is made to overflow horizontally by laying out its contents using `display: flex;` and `flex-flow: column wrap;`.
-
-Also worth noting is that the subject element has an `animation-duration` applied to it so that the example will work in Firefox.
 
 ```css
 .subject {
@@ -143,10 +141,8 @@ p {
   view-timeline-axis: x;
   view-timeline-axis: horizontal;
 
-  animation-name: appear;
-  animation-fill-mode: both;
+  animation: appear 1ms linear both;
   animation-timeline: --subject-reveal;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
 }
 
 @keyframes appear {
