@@ -160,21 +160,21 @@ p {
 
 ```css hidden
 @layer no-support {
+  body::before {
+    display: block;
+    text-align: center;
+    padding: 1em
+  }
   @supports not (view-timeline-axis: inherit) {
     body::before {
       content: "Your browser doesn't support the `view-timeline-axis` property.";
       background-color: wheat;
-      display: block;
-      text-align: center;
     }
   }
-
   @supports (view-timeline-axis: horizontal) {
     body::before {
       content: "Your browser supports legacy values for the `view-timeline-axis` property.";
       background-color: yellow;
-      display: block;
-      text-align: center;
     }
   }
 }
