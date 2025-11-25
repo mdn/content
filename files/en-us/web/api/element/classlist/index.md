@@ -24,6 +24,7 @@ the `length` property equal to `0`.
 
 Although the `classList` property itself is read-only in the sense that the underlying `DOMTokenList` object cannot be replaced, assigning a string to `element.classList` will still update the element’s classes. This is because the property uses `PutForwards="value"` in the specification, meaning that assignments like `element.classList = "foo bar"` are forwarded to the `value` property of the `DOMTokenList`, which updates the element’s `class` attribute.
 
+
 > [!NOTE]
 > Even though `classList` is technically read-only, assigning a string to it works by forwarding the value to `classList.value`, which updates the element’s `class` attribute.
 
