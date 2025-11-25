@@ -134,7 +134,7 @@ These two together ensure that the container has a vertical scrollbar, which all
 
 ```css hidden
 @layer no-support {
-  @supports not (animation-timeline: scroll) {
+  @supports not (animation-timeline: scroll()) {
     body::before {
       content: "Your browser doesn't support the CSS `scroll()` function.";
       background-color: wheat;
