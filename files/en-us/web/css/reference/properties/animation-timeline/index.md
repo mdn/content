@@ -255,6 +255,7 @@ The CSS below defines a square that rotates in alternate directions according to
       background-color: wheat;
       display: block;
       text-align: center;
+      padding: 1em;
     }
   }
 }
@@ -288,6 +289,7 @@ We include all the CSS from the previous example, only setting the `animation-ti
       background-color: wheat;
       display: block;
       text-align: center;
+      padding: 1em;
     }
   }
 }
