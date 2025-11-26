@@ -144,7 +144,7 @@ Scroll the vertical bar on the pink area to see the square animate.
 
 ## See also
 
-- [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)
-- [`scroll-timeline`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-name`](/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
-- [`view-timeline`](/en-US/docs/Web/CSS/Reference/Properties/view-timeline), [`view-timeline-name`](/en-US/docs/Web/CSS/Reference/Properties/view-timeline-name)
+- {{cssxref("animation-timeline")}}
+- {{cssxref("scroll-timeline")}}, {{cssxref("scroll-timeline-name")}}
+- {{cssxref("view-timeline")}}, {{cssxref("view-timeline-name")}}
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
