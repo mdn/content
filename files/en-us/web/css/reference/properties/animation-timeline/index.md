@@ -20,15 +20,16 @@ animation-timeline: --timeline_name;
 
 /* Anonymous scroll progress timeline */
 animation-timeline: scroll();
-animation-timeline: scroll(scroller axis);
+animation-timeline: scroll(x root);
 
 /* Anonymous view progress timeline */
 animation-timeline: view();
-animation-timeline: view(axis inset);
+animation-timeline: view(inline);
+animation-timeline: view(x 200px auto);
 
 /* Multiple values */
 animation-timeline: --progress-bar-timeline, --carousel-timeline;
-animation-timeline: auto, auto, none, --sliding-timeline;
+animation-timeline: auto, view(20% 80%), none, scroll(inline nearest);
 
 /* Global values */
 animation-timeline: inherit;
