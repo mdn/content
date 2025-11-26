@@ -58,7 +58,7 @@ In this example, the `@custom-media` at-rule is used on a responsive website tha
 }
 ```
 
-If the breakpoint changes, by changing one line of code, a single media feature value, all media queries using this custom media query alias in all CSS files are updated accordingly.
+If the breakpoint needs to be changed, it can be updated in one place to adjust all dependent media queries across the whole site.
 
 ### Grouping multiple responsive breakpoints
 
