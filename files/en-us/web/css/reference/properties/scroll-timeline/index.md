@@ -6,7 +6,7 @@ browser-compat: css.properties.scroll-timeline
 sidebar: cssref
 ---
 
-The **`scroll-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) is used to define a [named scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_scroll_progress_timelines), which is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right).
+The **`scroll-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) is used to define a [named scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_scroll_progress_timelines), which is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right).
 
 ## Constituent properties
 
@@ -48,7 +48,7 @@ scroll-timeline: unset;
 
 The `scroll-timeline` shorthand property can be applied to a container element to set both the `scroll-timeline-name` and `scroll-timeline-axis` properties. It is set on the scroller that will provide the timeline. If the container has no overflow to scroll or if the overflow is hidden or clipped, no timeline will be created.
 
-The value for the {{cssxref("scroll-timeline-name")}}, if not set to `none`, must be a [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident), which means it must start with `--`. This helps avoid name clashes with standard CSS keywords. The name can then be used as the value of an element's {{cssxref("animation-timeline")}} property to define the scrolling container element that will define its [animation timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_scroll_progress_timelines), driving the animation progress as it scrolls.
+The value for the {{cssxref("scroll-timeline-name")}}, if not set to `none`, must be a [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident), which means it must start with `--`. This helps avoid name clashes with standard CSS keywords. The name can then be used as the value of an element's {{cssxref("animation-timeline")}} property to define the scrolling container element that will define its [animation timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_scroll_progress_timelines), driving the animation progress as it scrolls.
 
 The optional scroll {{cssxref("axis")}} value defines the {{cssxref("scroll-timeline-axis")}}, which defaults to `block` if omitted. If both a name and axis are specified, the order must be the `<scroll-timeline-name>` value followed by the `<axis>` value. If the `<axis>` is listed first, the declaration is invalid and will be ignored.
 
