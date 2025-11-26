@@ -33,17 +33,17 @@ A generic {{domxref("Event")}}.
 #### HTML
 
 ```html
-<dialog class="example-dialog">
+<dialog id="dialog">
   <form method="dialog">
     <button>Close via method="dialog"</button>
   </form>
-  <button class="close">Close via .close() method</button>
+  <button id="close">Close via .close() method</button>
   <p>Or hit the <kbd>Esc</kbd> key</p>
 </dialog>
 
 <button class="open-dialog">Open dialog</button>
 
-<div class="result"></div>
+<div class="status-text"></div>
 ```
 
 ```css hidden
@@ -56,20 +56,20 @@ div {
 #### JavaScript
 
 ```js
-const result = document.querySelector(".result");
+const dialog = document.getElementById("dialog");
+const openButton = document.getElementById("open");
+const closeButton = document.getElementById("close");
+const statusText = document.getElementById("status-text");
 
-const dialog = document.querySelector(".example-dialog");
 dialog.addEventListener("close", (event) => {
-  result.textContent = "dialog was closed";
+  statusText.textContent = "dialog was closed";
 });
 
-const openDialog = document.querySelector(".open-dialog");
-openDialog.addEventListener("click", () => {
+openButton.addEventListener("click", () => {
   dialog.showModal();
-  result.textContent = "";
+  statusText.textContent = "";
 });
 
-const closeButton = document.querySelector(".close");
 closeButton.addEventListener("click", () => {
   dialog.close();
 });

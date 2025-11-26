@@ -37,27 +37,22 @@ button.
 </dialog>
 
 <p>
-  <button id="openDialog">Open Dialog</button>
+  <button id="open">Open Dialog</button>
 </p>
 
-<p id="dialogStatus">Dialog closed</p>
+<p id="status-text">Dialog closed</p>
 ```
 
 ```js
-const openDialog = document.getElementById("openDialog");
 const dialog = document.getElementById("dialog");
-const text = document.getElementById("dialogStatus");
+const openButton = document.getElementById("open");
+const statusText = document.getElementById("status-text");
 
 function openCheck(dialog) {
-  if (dialog.open) {
-    text.innerText = "Dialog open";
-  } else {
-    text.innerText = "Dialog closed";
-  }
+  statusText.innerText = dialog.open ? "Dialog open" : "Dialog closed";
 }
 
-// Update button opens a modal dialog
-openDialog.addEventListener("click", () => {
+openButton.addEventListener("click", () => {
   dialog.showModal();
   openCheck(dialog);
 });

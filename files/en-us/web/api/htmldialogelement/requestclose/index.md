@@ -48,24 +48,24 @@ Preventing the dialog from closing is demonstrated with a checkbox.
 ```html
 <dialog id="dialog">
   <div>
-    <label><input type="checkbox" id="preventClose" /> Cancel close</label>
+    <label><input type="checkbox" id="prevent-close" /> Cancel close</label>
   </div>
   <button type="button" id="close">Close</button>
-  <button type="button" id="closeWithValue">Close w/ return value</button>
+  <button type="button" id="close-w-value">Close w/ return value</button>
 </dialog>
 
 <button id="open">Open dialog</button>
 
-<p id="statusText"></p>
+<p id="status-text"></p>
 ```
 
 ```js
 const dialog = document.getElementById("dialog");
 const openButton = document.getElementById("open");
 const closeButton = document.getElementById("close");
-const closeWithValueButton = document.getElementById("closeWithValue");
-const preventCloseInput = document.getElementById("preventClose");
-const statusText = document.getElementById("statusText");
+const closeWithValueButton = document.getElementById("close-w-value");
+const preventCloseInput = document.getElementById("prevent-close");
+const statusText = document.getElementById("status-text");
 
 // Update button opens a modal dialog
 openButton.addEventListener("click", () => {

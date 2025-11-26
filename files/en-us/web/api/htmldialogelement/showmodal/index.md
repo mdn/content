@@ -52,9 +52,9 @@ From there you can click the _Close dialog_ button to close the dialog (via the 
 #### JavaScript
 
 ```js
+const dialog = document.getElementById("dialog");
 const openButton = document.getElementById("open");
 const closeButton = document.getElementById("close");
-const dialog = document.getElementById("dialog");
 
 // Open button opens a modeless dialog
 openButton.addEventListener("click", () => {

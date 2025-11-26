@@ -44,7 +44,7 @@ If the `closedby` attribute is absent or invalid, it falls back to the **Auto** 
 ```
 
 ```js
-const dialogElem = document.querySelector("dialog");
+const dialog = document.querySelector("dialog");
 
 // Logs "any" to the console
 console.log(dialogElem.closedBy);
