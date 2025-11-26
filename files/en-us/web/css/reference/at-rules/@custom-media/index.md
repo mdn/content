@@ -72,7 +72,7 @@ The `@custom-media` at-rule is used to set multiple breakpoints in a single plac
 @custom-media --widescreen (min-width: 1441px);
 ```
 
-By grouping all the breakpoints in a single location, it's easier to control the responsive design.
+Grouping all the breakpoints in a single location makes it easier to maintain the responsive design.
 
 ### Complex breakpoints with a list of queries
 
