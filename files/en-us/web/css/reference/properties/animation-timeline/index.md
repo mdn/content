@@ -165,7 +165,7 @@ Because the `animation-timeline` property is included in the {{cssxref("animatio
 
 #### Results
 
-{{EmbedLiveSample("basic usage", "100%", "150px")}}
+{{EmbedLiveSample("basic usage", "100%", "170px")}}
 
 Note that declaring a value of `auto` has the same effect as allowing the `animation-timeline` to default to that value, and that `none` removes all timelines from the element, so no animation in the `none` case.
 
