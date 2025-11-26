@@ -33,7 +33,7 @@ To help address this, the custom media queries at-rule defines named aliases tha
 
 A `@custom-media` rule can refer to other custom media queries and include the alias name within the feature list. However, ensure the custom media query is not defined in terms of itself or of another custom media query that directly or indirectly refers to it as loops are not valid. Any attempt to define a custom media query with a circular dependency will cause all the custom media queries in the loop to fail.
 
-If multiple `@custom-media` rules are declared using the same dashed-identifier, the last declaration defined is used, with all previous declarations using the same name being ignored.
+If multiple `@custom-media` rules are declared with the same `<dashed-ident>` name, the last one in the source order is used, with all previous declarations using the same name being ignored.
 
 ## Formal syntax
 
