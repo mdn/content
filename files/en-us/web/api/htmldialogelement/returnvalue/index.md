@@ -69,7 +69,7 @@ function updateReturnValue() {
 declineButton.addEventListener("click", closeDialog);
 acceptButton.addEventListener("click", closeDialog);
 
-dialog.addEventListener("close", () => updateReturnValue());
+dialog.addEventListener("close", updateReturnValue);
 ```
 
 #### Result
