@@ -287,7 +287,7 @@ Scroll to see the square element being animated.
 
 ### Setting a named view progress timeline
 
-In this example, we demonstrate creating and applying an named view progress timeline. Two elements will be animated, with different elements serving as the scroller.
+In this example, we demonstrate how to create and apply a named view progress timeline. Two elements will be animated, with different elements serving as the scroller.
 
 #### HTML
 
@@ -330,7 +330,7 @@ Our HTML includes a lot of text in a container within a scroller, which we've hi
 
 We create a keyframe animation that changes the opacity and scale of the element, and apply it to both animated elements:
 
-```css live-sample___named_view live-sample___anonymous_view
+```css live-sample___named_view
 @keyframes animationEffect {
   0% {
     opacity: 0;
@@ -362,9 +362,9 @@ The `self` element is explicitly named as the scroller for itself by setting the
 }
 ```
 
-Additional CSS declarations were hidden for the sake of brevity.
+Additional CSS declarations were hidden for brevity.
 
-```css hidden live-sample___named_view live-sample___anonymous_view
+```css hidden live-sample___named_view
 @layer setup {
   main {
     width: 400px;
@@ -402,78 +402,6 @@ Scroll the container to see both elements animate.
 {{EmbedLiveSample("named_view", "100%", "350px")}}
 
 Note how the visibility of the `self` element controls its own animation. In this case, the element is at the `0%` keyframe when the top edge enters the viewport, or visible part of the scrollport, and only reaches the `100%` keyframe when the bottom edge is exiting the viewport. The element that is controlled by the visibility of its parent started becoming visible when that parent was visible, meaning when it comes into view it is already about 25% of the way through the animation, and is only about 75% of the way through the animation when it exits the top of the viewport.
-
-### Setting anonymous view-progress and scroll-progress timelines
-
-In this example, we recreate the previous example, but using the `view()` and `scroll()` functions instead to create anonymous view and scroll progress timelines.
-
-#### HTML
-
-```html-nolint hidden live-sample___anonymous_view
-<main class="scroller">
-  <div class="container">
-    <h1>Directions</h1>
-    <h2>Lincoln Memorial to Martin Luther King, Jr. Memorial</h2>
-    <ol>
-      <li>Head south on Lincoln Memorial Circle</li>
-      <li>Turn right toward Independence Ave</li>
-      <li>Turn left onto Independence Ave</li>
-      <li>Turn right onto West Basin Dr</li>
-      <li>Look up when you reach 64 Independence Ave!</li>
-    </ol>
-```
-
-In the middle of the wall of text, we include two `<div>` elements that we will animate based on the scrolling of its parent in the first case and based on the visibility of the element itself in the second case:
-
-```html live-sample___anonymous_view
-<div class="animatedElement scroll">SCROLL</div>
-<div class="animatedElement view">VIEW</div>
-```
-
-```html hidden live-sample___anonymous_view
-<h2>Martin Luther King, Jr. Memorial to Lincoln Memorial</h2>
-<ol>
-  <li>Head north toward Independence Ave SW</li
-  ><li>Turn left onto Independence Ave</li
-  ><li>Turn right toward the Korean War Veterans Memorial</li
-  ><li>Take a photo of the memorial as you walk past it.</li
-  ><li>Head north on Lincoln Memorial Circle</li
-  ><li>Look up. You can't miss it!</li>
-</ol>
-  </div>
-</main>
-```
-
-#### CSS
-
-```css live-sample___anonymous_view
-.scroll {
-  animation-timeline: scroll();
-}
-
-.view {
-  animation-timeline: view();
-}
-```
-
-```css hidden live-sample___anonymous_view
-@layer no-support {
-  @supports not (animation-timeline: view()) {
-    body::before {
-      content: "Your browser doesn't support the scroll driven animation functions.";
-      background-color: wheat;
-      display: block;
-      text-align: center;
-    }
-  }
-}
-```
-
-#### Result
-
-Scroll to see the subject element being animated.
-
-{{EmbedLiveSample("anonymous_view", "100%", "350px")}}
 
 ## Specifications
 
