@@ -39,7 +39,8 @@ button.
 <p>
   <button id="openDialog">Open Dialog</button>
 </p>
-<p id="dialogStatus"></p>
+
+<p id="dialogStatus">Dialog closed</p>
 ```
 
 ```js

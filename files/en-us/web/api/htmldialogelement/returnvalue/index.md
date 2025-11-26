@@ -56,13 +56,13 @@ openDialogButton.addEventListener("click", () => {
   dialog.showModal();
 });
 
-declineButton.addEventListener("click", closeDialog);
-acceptButton.addEventListener("click", closeDialog);
-
 function closeDialog(event) {
   const button = event.target;
   dialog.close(button.value);
 }
+
+declineButton.addEventListener("click", closeDialog);
+acceptButton.addEventListener("click", closeDialog);
 
 dialog.addEventListener("close", () => {
   statusText.innerText = dialog.returnValue
