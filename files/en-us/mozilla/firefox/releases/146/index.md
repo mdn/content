@@ -49,8 +49,6 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This keyword is an alias for the recently-standardized `stretch` keyword (i.e., [`width: stretch`](/en-US/docs/Web/CSS/Reference/Properties/width#stretch) and [`height: stretch`](/en-US/docs/Web/CSS/Reference/Properties/height#stretch)), which isn't yet supported in Firefox.
   ([Firefox bug 1988938](https://bugzil.la/1988938), [Firefox bug 1789477](https://bugzil.la/1789477)).
 
-- The {{cssxref("@custom-media")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is now supported by default. This enables you to defines aliases/variables for long or complex {{CSSxRef("@media")}} queries. ([Firefox bug 1991105](https://bugzil.la/1744292)).
-
 <!-- #### Removals -->
 
 ### JavaScript
@@ -109,3 +107,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   Nightly builds now support the Navigation API, which provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
   ([Firefox bug 1979288](https://bugzil.la/1979288)).
+
+- **Custom media queries**: `layout.css.custom-media.enabled`
+
+  The CSS {{cssxref("@custom-media")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) can be used to define aliases/variables for long or complex {{CSSxRef("@media")}} queries. ([Firefox bug 1991105](https://bugzil.la/1744292)).
