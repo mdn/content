@@ -60,7 +60,7 @@ The `animation-timeline` property is specified as one or more comma-separated va
 
 ## Description
 
-The default timeline for a CSS keyframe animation is the time-based {{domxref("DocumentTimeline")}}. The `animation-timeline` property can be used to set a named or anonymous scroll progress timeline, a named or anonymous view progress timeline, or explicitly set the default time-based document timeline to control the progress of an element's animation; or you can set a keyframe animation animation on an element to have no timeline at all, and therefore not animate.
+The default timeline for a CSS keyframe animation is the time-based {{domxref("DocumentTimeline")}}. The `animation-timeline` property can be used to set a named or anonymous scroll progress or view progress timeline. Alternatively, it can be used to explicitly set the default time-based document timeline to control the progress of an element's animation or to have no timeline at all, in which case the element does not animate.
 
 The following types of timelines can be set via `animation-timeline`:
 
