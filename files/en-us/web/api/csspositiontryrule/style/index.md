@@ -8,11 +8,13 @@ browser-compat: api.CSSPositionTryRule.style
 
 {{ APIRef("CSSOM") }}
 
-The **`style`** read-only property of the {{domxref("CSSPositionTryRule")}} interface returns a {{domxref("CSSPositionTryDescriptors")}} object representing the declarations set in the body of the `@position-try` at-rule.
+The read-only **`style`** property of the {{domxref("CSSPositionTryRule")}} interface contains a {{domxref("CSSPositionTryDescriptors")}} object representing the descriptors available in the {{cssxref("@position-try")}} rule's body.
 
 ## Value
 
 A {{domxref("CSSPositionTryDescriptors")}} object.
+
+Although the `style` property itself is read-only in the sense that you can't replace the `CSSPositionTryDescriptors` object, you can still assign to the `style` property directly, which is equivalent to assigning to its {{domxref("CSSStyleDeclaration/cssText", "cssText")}} property. You can also modify the `CSSPositionTryDescriptors` object using the {{domxref("CSSStyleDeclaration/setProperty", "setProperty()")}} and {{domxref("CSSStyleDeclaration/removeProperty", "removeProperty()")}} methods.
 
 ## Examples
 

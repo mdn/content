@@ -152,6 +152,7 @@ The [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) and [CSS borders and box dec
 - {{cssxref("alpha-value")}}
 - {{cssxref("angle")}}
 - {{cssxref("angle-percentage")}}
+- {{cssxref("axis")}}
 - {{cssxref("baseline-position")}}
 - {{cssxref("basic-shape")}}
 - {{cssxref("blend-mode")}}
