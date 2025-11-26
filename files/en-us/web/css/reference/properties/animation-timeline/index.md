@@ -121,7 +121,7 @@ We have an {{htmlelement("article")}} with three {{htmlelement("section")}} chil
 
 #### CSS
 
-We use [flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to set the three sections side-by-side. We use [generated content](/en-US/docs/Web/CSS/Guides/Generated_content) to display the `id`. We style all the elements the same, applying the `rotate` {{cssxref("@keyframes")}} animation that rotates the element one full turn. Using the {{cssxref("animation")}} shorthand, we declare infinite, 2-second, linearly progressing iterations of the `rotate` animation, alternating the direction of each animation.
+We use [flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to set the three sections side-by-side. We use [generated content](/en-US/docs/Web/CSS/Guides/Generated_content) to display the `id`. We style all elements the same, applying the `rotate` {{cssxref("@keyframes")}} animation that rotates the element by 1 full turn. Using the {{cssxref("animation")}} shorthand, we declare infinite, 2-second, linearly progressing iterations of the `rotate` animation, alternating the direction of each animation.
 
 ```css
 article {
@@ -158,6 +158,20 @@ The only difference is the `animation-timeline` declaration (or lack thereof in 
 }
 #auto div {
   animation-timeline: auto;
+}
+```
+
+```css hidden
+@layer no-support {
+  @supports not (animation-timeline: none) {
+    body::before {
+      content: "Your browser doesn't support the `animation-timeline` property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1em;
+    }
+  }
 }
 ```
 
