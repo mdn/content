@@ -43,7 +43,7 @@ If multiple `@custom-media` rules are declared with the same `<dashed-ident>` na
 
 ### Updating multiple responsive breakpoints
 
-The `@custom-media` at-rule is used on responsive websites which use a particular breakpoint in several places:
+In this example, the `@custom-media` at-rule is used on a responsive website that uses a particular breakpoint in several places:
 
 ```css
 @custom-media --narrow-window (max-width: 32em);
