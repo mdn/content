@@ -14,6 +14,8 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines alias
 ## Syntax
 
 ```css
+@custom-media <extension-name> <media-query-list>;
+
 @custom-media --media-query-name (max-width: 1200px);
 @custom-media --media-query-name (max-width: 1200px), (orientation: portrait);
 ```
