@@ -21,7 +21,7 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines alias
 ### Values
 
 - `<extension-name>`
-  - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident); the name identifying the custom media.
+  - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident); the name identifying the custom media query.
 - `<media-query-list>`
   - : A comma-separated [list of `<media-query>` values](/en-US/docs/Web/CSS/@media#description).
 
