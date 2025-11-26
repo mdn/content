@@ -40,19 +40,19 @@ animation-timeline: unset;
 
 ### Values
 
-The `animation-timeline` property is specified as one or more comma-separated values:
+The `animation-timeline` property is specified as one or more comma-separated values, each of which can be one of the following:
 
 - `none`
   - : The animation is not associated with a timeline, and no animation occurs.
 
 - `auto`
-  - : The animation's timeline is the document's default {{domxref("DocumentTimeline")}}. This is the default.
+  - : The animation's timeline is the document's default {{domxref("DocumentTimeline")}}. This is the default value.
 
 - {{cssxref("animation-timeline/scroll", "scroll()")}}
-  - : Defines the root, nearest scroller, or self as the anonymous scroll progress timeline, and optionally the scroll direction of the scroller.
+  - : Defines the root element, nearest scroller, or self as an anonymous scroll progress timeline, and optionally the scroll direction of the scroller.
 
 - {{cssxref("animation-timeline/view", "view()")}}
-  - : Defines the nearest ancestor scroll container as the anonymous view progress timeline, optionally overriding the default `baseline` axis direction and the `auto` start and ending insets.
+  - : Defines the nearest ancestor scroll container as an anonymous view progress timeline, optionally overriding the default `baseline` axis direction and the `auto` start and ending insets.
 
 - `<dashed-ident>`
   - : The name of a scroll-driven or view-progress timeline, as defined by the scroll container's {{cssxref('scroll-timeline-name')}} or {{cssxref('view-timeline-name')}} property (or the {{cssxref('scroll-timeline')}} or {{cssxref('view-timeline')}} shorthand property).
@@ -68,23 +68,23 @@ The following types of timelines can be set via `animation-timeline`:
 - [Scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines)
   - : The animation is progressed through by scrolling a scrollable element, or _scroller_, horizontally or vertically. The element that provides the scroll progress timeline can be specified in two ways:
     - [Named scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_scroll_progress_timelines)
-      - : The scroller is explicitly named by setting the {{cssxref("scroll-timeline-name")}} property (or the {{cssxref("scroll-timeline")}} shorthand property) to a {{cssxref("dashed-ident")}} and that `<dashed-ident>` name is set as the value of the `animation-timeline` property.
+      - : The scroller is explicitly named by setting the {{cssxref("scroll-timeline-name")}} property (or the {{cssxref("scroll-timeline")}} shorthand property) to a {{cssxref("dashed-ident")}}; that `<dashed-ident>` name is then set as the value of the `animation-timeline` property.
     - [Anonymous scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_scroll_progress_timelines)
       - : The `animation-timeline` property of the element to animate is set to the {{cssxref("animation-timeline/scroll", "scroll()")}} function. The function's two optional parameters define the scroller providing the scroll progress timeline and the scroll axis to be used.
 - [View progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines)
-  - : A keyframe animation is progressed through based on the change in visibility of an element inside a scroller; this element is known as the _subject_. By default, the timeline is at `0%` when the element first becomes visible at one edge of the scroller, and is at `100%` when it's end edge exits the scroller's opposite edge. A view progress timeline can be specified in two ways:
+  - : A keyframe animation is progressed through based on the change in visibility of an element inside a scroller; this element is known as the _subject_. By default, the timeline is at `0%` when the element first becomes visible at one edge of the scroller, and is at `100%` when its end edge exits the scroller's opposite edge. A view progress timeline can be specified in two ways:
     - [Named view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline)
-      - : The subject is explicitly named by setting the {{cssxref("view-timeline-name")}} property (or the {{cssxref("view-timeline")}} shorthand property) to a `<dashed-ident>`. When you set the `animation-timeline` property of the element to animate the that dashed-name, the subject's visibility controls the progression of the element's animation. Note that the element to animate does not have to be the same as the subject.
+      - : The subject is explicitly named by setting the {{cssxref("view-timeline-name")}} property (or the {{cssxref("view-timeline")}} shorthand property) to a `<dashed-ident>`. When you set the `animation-timeline` property of the element to animate to that `<dashed-ident>`, the subject's visibility controls the progression of the element's animation. Note that the element to animate does not have to be the same as the subject.
     - [Anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function)
-      - : The `animation-timeline` property of the element to animate is set to a {{cssxref("animation-timeline/view", "view()")}} function, causing it to be animated based on its visibility within the viewport of its nearest parent scroller.
+      - : The `animation-timeline` property of the element to animate is set to a {{cssxref("animation-timeline/view", "view()")}} function, causing it to be animated based on its visibility within the scrollport of its nearest parent scroller.
 - No timeline
   - : All animation timelines can be removed by selecting a value of `none`. When `animation-timeline: none` is set, no animation will occur as there is no timeline to follow.
 
 The `animation-timeline` property is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-timeline` value to `auto`. As this component of the shorthand is reset-only, a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines), you need to declare `animation-timeline` after declaring any `animation` shorthand for it to take effect.
 
-If you specify multiple comma-separated values, each `animation-timeline` value is applied to a single animation in the order in which the {{cssxref("animation-name")}} values appear. If number of values in the `animation-timeline` declaration is greater than the number of `animation-name` values, the excess timeline values are ignored. If there are fewer `animation-timeline` values than `animation-name` values, the `animation-timeline` values are repeated, in order, until every `animation-name` has an associated timeline.
+If you specify multiple comma-separated values, each `animation-timeline` value is applied to a single animation in the order in which the {{cssxref("animation-name")}} values appear. If the number of values in the `animation-timeline` declaration is greater than the number of `animation-name` values, the excess timeline values are ignored. If there are fewer `animation-timeline` values than `animation-name` values, the `animation-timeline` values are repeated, in order, until every `animation-name` has an associated timeline.
 
-If two or more timelines share the same `<dashed-ident>` name and same specificity, the last declared within the cascade will be used. If no timeline is found that matches a name included within the `animation-timeline`, the `animation-name` associated with that value is not associated with a timeline.
+If two or more timelines share the same `<dashed-ident>` name and the same specificity, the one last declared within the cascade will be used. If no timeline is found that matches a name included within the `animation-timeline`, the `animation-name` associated with that value is not associated with a timeline.
 
 ## Formal definition
 
@@ -190,7 +190,7 @@ Our container includes three stretcher elements which will be wide enough to ens
 
 We define the container as a flex container, setting a {{cssxref("width")}} on the container that is half the width of it's combined flex children. Adding an {{cssxref("overflow-x")}} value of `scroll` sets it to have a horizontal scrollbar.
 
-Our scroll progress timeline, defined using the {{cssxref("scroll-timeline-name")}} and {{cssxref("scroll-timeline-axis")}} properties, is named `--square-timeline`. This timeline is then applied to our `#square` element using `animation-timeline: --square-timeline`.
+Our scroll progress timeline, defined using the {{cssxref("scroll-timeline-name")}} and {{cssxref("scroll-timeline-axis")}} properties, is named `--square-timeline`. This timeline is applied to our `#square` element using `animation-timeline: --square-timeline`.
 
 ```css live-sample___named_scroll live-sample___anonymous_scroll
 #container {
@@ -253,11 +253,11 @@ Scroll to see the element being animated.
 
 ### Setting an anonymous scroll progress timeline
 
-In this example, we expand on the previous example, applying an anonymous scroll progress timeline using the `scroll()` function.
+This example expands on the previous one, applying an anonymous scroll progress timeline using the `scroll()` function.
 
 #### CSS
 
-We include all the CSS from the previous example, only setting the `animation-timeline` property to override the previous example's value. The timeline is provided by `scroll(inline nearest)` value, which selects the scrollbar in the inline direction of the nearest ancestor element that has scrollbars; which is the vertical scrollbar of the `#container` element, as the `.stretcher` don't have overflowing content, and therefor aren't scroll containers.
+We include all the CSS from the previous example, only setting the `animation-timeline` property to override the previous example's value. The timeline is provided by the `scroll(inline nearest)` value, which selects the scrollbar in the inline direction of the nearest ancestor element that has scrollbars. This is the vertical scrollbar of the `#container` element, as the `.stretcher` elements don't have overflowing content and therefore aren't scroll containers.
 
 ```css live-sample___anonymous_scroll
 #shape {
