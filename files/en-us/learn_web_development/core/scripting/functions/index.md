@@ -269,7 +269,7 @@ The `map()` method takes each item in the array in turn, passing it into the giv
 So in the example above, `item => item * 2` is the arrow function equivalent of:
 
 ```js
-function doubleItem(item) {
+function (item) {
   return item * 2;
 }
 ```
