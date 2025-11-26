@@ -319,6 +319,7 @@ In this example, we demonstrate how to create and apply a named view progress ti
       <li>Turn right onto West Basin Dr</li>
       <li>Look up when you reach 64 Independence Ave!</li>
     </ol>
+    <section>
 ```
 
 Our HTML includes a lot of text in a container within a scroller, which we've hidden for brevity. In the middle of the wall of text, we include two `<div>` elements that we will animate based on the visibility of the element itself in the first case and based on the visibility of its parent in the second case:
@@ -328,7 +329,8 @@ Our HTML includes a lot of text in a container within a scroller, which we've hi
 <div class="animatedElement parent">PARENT</div>
 ```
 
-```html hidden live-sample___named_view
+```html-nolint hidden live-sample___named_view
+</section>
 <h2>Martin Luther King, Jr. Memorial to Lincoln Memorial</h2>
 <ol>
   <li>Head north toward Independence Ave SW</li
@@ -382,6 +384,10 @@ Additional CSS declarations were hidden for brevity.
 
 ```css hidden live-sample___named_view
 @layer setup {
+  section {
+    display: flex;
+    gap: 10px;
+  }
   main {
     width: 400px;
     padding: 1em;
@@ -398,7 +404,7 @@ Additional CSS declarations were hidden for brevity.
 
   .animatedElement {
     height: 200px;
-    width: calc(300px - 2em);
+    width: calc(50% - 2em);
     margin: auto;
     background-color: forestgreen;
     background-image:
