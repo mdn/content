@@ -1,0 +1,29 @@
+---
+title: Introduction to Fuel Nexus API
+slug: /en-US/docs/Fuel_Nexus/Introduction
+tags:
+  - documentation
+  - web dev
+  - api
+  - Fuel Nexus
+---
+
+<h1>Introduction to Fuel Nexus API</h1>
+
+<p>This page introduces the Fuel Nexus API — a hypothetical fuel-delivery service API. It covers endpoints, usage, authentication, and code examples.</p>
+
+<h2>Overview</h2>
+
+<p>The Fuel Nexus API lets developers integrate fuel delivery services into their applications. It currently supports the following endpoints:</p>
+
+<ul>
+  <li><strong>GET /stations</strong> — List nearby fuel stations.</li>
+  <li><strong>POST /order</strong> — Place a fuel order.</li>
+  <li><strong>GET /order/status</strong> — Check the status of a fuel order.</li>
+</ul>
+
+<h2>Getting Started</h2>
+
+```http
+GET /stations?lat=12.3456&long=78.9012
+Authorization: Bearer &lt;token&gt;
