@@ -14,14 +14,6 @@ have been replaced with secure URLs (those served over HTTPS). This directive is
 intended for websites with large numbers of insecure legacy URLs that need to be
 rewritten.
 
-> [!NOTE]
-> The `upgrade-insecure-requests` directive is evaluated before
-> {{CSP("block-all-mixed-content")}}. If `upgrade-insecure-requests` is set,
-> {{CSP("block-all-mixed-content")}} effectively becomes a no-op. As {{CSP("block-all-mixed-content")}}
-> is now depricated, it is recommended to use `upgrade-insecure-requests` exclusively in most scenarios.
-> Both directives should only be set together if enforcement of HTTPS is required on legacy browsers
-> that do not enforce it following a redirect to HTTP.
-
 The `upgrade-insecure-requests` directive will not ensure that users
 visiting your site via links on third-party sites will be upgraded to HTTPS for the
 top-level navigation and thus does not replace the
@@ -104,5 +96,4 @@ monitoring policy is violated and reports insecure resources to your endpoint.
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Upgrade-Insecure-Requests")}} header
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) header
-- {{CSP("block-all-mixed-content")}}
 - [Mixed content](/en-US/docs/Web/Security/Mixed_content)
