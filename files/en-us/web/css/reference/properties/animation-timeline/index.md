@@ -404,7 +404,7 @@ Additional CSS declarations were hidden for brevity.
 
   .animatedElement {
     height: 200px;
-    width: calc(50% - 2em);
+    width: calc(100% - 2em);
     margin: auto;
     background-color: forestgreen;
     background-image:
