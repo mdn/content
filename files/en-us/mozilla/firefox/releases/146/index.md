@@ -110,4 +110,4 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Custom media queries**: `layout.css.custom-media.enabled`
 
-  The CSS {{cssxref("@custom-media")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) can be used to define aliases/variables for long or complex {{CSSxRef("@media")}} queries. ([Firefox bug 1991105](https://bugzil.la/1744292)).
+  The CSS [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) can be used to define aliases/variables for long or complex {{CSSxRef("@media")}} queries. ([Firefox bug 1991105](https://bugzil.la/1744292)).
