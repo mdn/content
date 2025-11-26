@@ -27,7 +27,7 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines alias
 
 ## Description
 
-When designing documents that use media queries, an {{CSSxRef("@media")}} rule may be used in multiple places. Repeating the same media query values multiple times can lead to errors and maintenance issues. If a change needs to be made, every occurrence must be found and updated in the same way, which may be hard to detect, especially when media queries are used in multiple files and multiple teams.
+When designing documents that use media queries, an {{CSSxRef("@media")}} rule may be used in multiple places. Repeating the same media query values multiple times can lead to errors and maintenance issues. If a change needs to be made, every occurrence must be found and updated in the same way, which can be hard to detect, especially in complex projects where media queries are used in multiple files and across multiple teams.
 
 To help address this, the custom media queries at-rule defines named aliases that can be used for long and complex media queries. In this way, a media query used in multiple places can instead be defined as a custom media query, which can be used everywhere. Then, updating the media query requires touching only one line of code.
 
