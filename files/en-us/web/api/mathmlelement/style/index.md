@@ -8,7 +8,7 @@ browser-compat: api.MathMLElement.style
 
 {{APIRef("CSSOM")}}
 
-The read-only **`style`** property of the {{domxref("MathMLElement")}} returns the _inline_ [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) of an element in the form of a live {{domxref("CSSStyleProperties")}} object.
+The read-only **`style`** property of the {{domxref("MathMLElement")}} interface returns the _inline_ [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) of an element in the form of a live {{domxref("CSSStyleProperties")}} object.
 This object can be used to get and set the inline styles of an element.
 
 ## Value
@@ -18,6 +18,8 @@ A live {{domxref("CSSStyleProperties")}} object.
 > [!NOTE]
 > Earlier versions of the specification returned a {{domxref("CSSStyleDeclaration")}} (from which {{domxref("CSSStyleProperties")}} is derived).
 > See the [browser compatibility](#browser_compatibility) table for browser support information.
+
+Although the `style` property itself is read-only in the sense that you can't replace the `CSSStyleProperties` object, you can still assign to the `style` property directly, which is equivalent to assigning to its {{domxref("CSSStyleDeclaration/cssText", "cssText")}} property. You can also modify the `CSSStyleProperties` object using the {{domxref("CSSStyleDeclaration/setProperty", "setProperty()")}} and {{domxref("CSSStyleDeclaration/removeProperty", "removeProperty()")}} methods.
 
 ## Description
 

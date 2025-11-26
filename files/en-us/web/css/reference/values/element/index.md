@@ -82,9 +82,7 @@ The {{HTMLElement("div")}} element with the ID "my-background" is used as the ba
 
 ### Page Preview
 
-This <a href="https://iamvdo.me/en/blog/css-element-function">
-example based on Vincent De Oliveira's</a> creates a preview of
-the `<div id="css-source">` inside `<div id="css-result">`.
+This [example based on Vincent De Oliveira's](https://iamvdo.me/en/blog/css-element-function) creates a preview of the `<div id="css-source">` inside `<div id="css-result">`.
 
 #### HTML
 
