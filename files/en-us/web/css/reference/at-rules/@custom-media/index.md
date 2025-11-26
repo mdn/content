@@ -41,7 +41,7 @@ If multiple `@custom-media` rules are declared with the same `<dashed-ident>` na
 
 ## Examples
 
-### Updating multiple responsive breakpoints
+### Updating multiple media queries
 
 In this example, the `@custom-media` at-rule is used on a responsive website that uses a particular breakpoint in several places:
 
