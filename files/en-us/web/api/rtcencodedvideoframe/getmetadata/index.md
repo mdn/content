@@ -27,9 +27,9 @@ None.
 An object with the following properties:
 
 - `contributingSources`
-  - : An {{jsxref("Array")}} of sources (ssrc) that have contributed to the frame.
+  - : An {{jsxref("Array")}} of contributing sources (csrc) that have contributed to the frame.
     Consider the case of a conferencing application that combines the audio and video from multiple users.
-    The `synchronizationSource` would include the ssrc of the application, while `contributingSources` would include the ssrc values of all the individual video and audio sources.
+    The `synchronizationSource` would include the ssrc of the application, while `contributingSources` would include the csrc values of all the individual video and audio sources.
 - `dependencies`
   - : An {{jsxref("Array")}} of positive integers indicating the frameIds of frames on which this frame depends.
     For a key frame this will be empty, as a key frame contains all the information it needs to construct the image.
