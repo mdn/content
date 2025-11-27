@@ -487,6 +487,6 @@ A few things to remember about specificity:
 - Values: [initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value)
 - [Value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
 - [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
-- [Specificity Calculator](https://specificity.keegan.st/) on specificity.keegan.st: An interactive website to test and understand your own CSS rules
+- [Specificity Calculator](https://specificity.keegan.st/) by Keegan Street: An interactive website to test and understand your own CSS rules
 - [SpeciFISHity](https://specifishity.com/) on specifishity.com: A fun way to learn about CSS specificity
 - [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html): A specificity quiz by Estelle Weyl
