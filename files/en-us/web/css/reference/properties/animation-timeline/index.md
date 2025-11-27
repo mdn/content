@@ -365,7 +365,7 @@ We create a keyframe animation that changes the opacity and scale of the element
 }
 ```
 
-The `self` element is explicitly named as the scroller for itself by setting the `scroll-timeline` shorthand property to a `<dashed-ident>` and also setting that `<dashed-ident>` name as the value of the `animation-timeline` property. In the `parent` case, we set the `container` as the scroller for the animated element:
+The `self` element is explicitly named as the scroller for itself by setting the `view-timeline-name` property to a `<dashed-ident>` and also setting that `<dashed-ident>` name as the value of the `animation-timeline` property. In the `parent` case, we set the `container` as the scroller for the animated element:
 
 ```css live-sample___named_view
 .self {
@@ -423,7 +423,9 @@ Scroll the container to see both elements animate.
 
 {{EmbedLiveSample("named_view", "100%", "350px")}}
 
-Note how the visibility of the `self` element controls its own animation. In this case, the element is at the `0%` keyframe when the top edge enters the viewport, or visible part of the scrollport, and only reaches the `100%` keyframe when the bottom edge is exiting the viewport. The element that is controlled by the visibility of its parent started becoming visible when that parent was visible, meaning when it comes into view it is already about 25% of the way through the animation, and is only about 75% of the way through the animation when it exits the top of the viewport.
+Note how the visibility of the `self` element controls its own animation. In this case, the element is at the `0%` keyframe when the top edge enters the viewport, or visible part of the scrollport, and only reaches the `100%` keyframe when the bottom edge exits the viewport.
+
+The `parent` element only becomes visible when that parent is visible, meaning that when it comes into view, it is already about `25%` of the way through the animation. It is only about `75%` through its animation when it exits the top of the viewport.
 
 ## Specifications
 
