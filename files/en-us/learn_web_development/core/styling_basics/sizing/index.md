@@ -311,7 +311,7 @@ body {
 
 Changing the `vh` and `vw` values will change the size of the box and font, respectively; changing the viewport size will also change the box and font sizes because they are sized relative to the viewport. To see the example change when you adjust the viewport size, {{LiveSampleLink("vw-vh", "load the example in a new tab")}}, resize the browser window, and observe how the box and text size change.
 
-Sizing things according to the viewport can be useful in your designs. For example, if you want a full-page hero section to show before the rest of your content, making that part of your page `100vh` high will push the rest of the content below the viewport, meaning that it will only appear once the document is scrolled.
+Sizing things according to the viewport can be useful in your designs. For example, if you want a full-page banner to show before the rest of your content, making that part of your page `100vh` high will push the rest of the content below the viewport, meaning that it will only appear once the document is scrolled.
 
 ## Summary
 
