@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Values", "Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
-In the various lessons so far, you have come across several ways to size items on a web page using CSS. Understanding how big the different features in your design will be is important. So, in this lesson we will summarize the various ways elements get a size via CSS and define a few terms about sizing that will help you in the future.
+In the various lessons so far, you have come across several ways to size items on a web page using CSS. Understanding how big the different features in your design will be is important. So, in this lesson, we will summarize the various ways elements get a size via CSS and define a few terms about sizing that will help you in the future.
 
 <table>
   <tbody>
@@ -114,7 +114,7 @@ Due to this problem of overflow, fixing the height of elements with lengths or p
 
 ### Using percentages
 
-In many ways, percentages act like length units, and as we [discussed in the lesson on values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#percentages), they can often be used interchangeably with lengths. When using a percentage you need to be aware what it is a percentage _of_. In the case of a box inside another container, if you give the child box a percentage width it will be a percentage of the width of the parent container.
+In many ways, percentages act like length units, and as we [discussed in the lesson on values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#percentages), they can often be used interchangeably with lengths. When using a percentage, you need to be aware of what it is a percentage _of_. In the case of a box inside another container, if you give the child box a percentage width, it will be a percentage of the width of the parent container.
 
 ```html live-sample___percent-width
 <div class="container">
@@ -147,7 +147,7 @@ Try editing the above example:
 
 If you set `margins` and `padding` as a percentage, you may notice some strange behavior.
 
-In the below example we have a box, on which we've set a {{cssxref("margin")}} of 10% and a {{cssxref("padding")}} of `10%`. The padding and margin on the top and bottom of the box are the same size as the padding and margin on the left and right.
+In the below example, we have a box, on which we've set a {{cssxref("margin")}} of 10% and a {{cssxref("padding")}} of `10%`. The padding and margin on the top and bottom of the box are the same size as the padding and margin on the left and right.
 
 ```html live-sample___percent-mp
 <div class="box">I have margin and padding set to 10% on all sides.</div>
@@ -169,7 +169,7 @@ body {
 
 You might expect the percentage top and bottom margins to be a percentage of the element's height, and the percentage left and right margins to be a percentage of the element's width. However, this is not the case!
 
-When you use margin and padding set in percentages, the value is calculated from the **inline size** of the containing block — therefore the width when working in a horizontal language. In our example, all of the margins and padding are `10%` of the width. This means you can have equal-sized margins and padding all around the box. This is a fact worth remembering if you use percentages in this way.
+When you use margin and padding set in percentages, the value is calculated from the **inline size** of the containing block — therefore, the width when working in a horizontal language. In our example, all of the margins and padding are `10%` of the width. This means you can have equal-sized margins and padding all around the box. This is a fact worth remembering if you use percentages in this way.
 
 ## min- and max- sizes
 
@@ -181,7 +181,7 @@ In the next example, you can see two boxes, both with a defined `min-height` of 
 <div class="wrapper">
   <div class="box"></div>
   <div class="box">
-    These boxes both have a min-height set, this box has content in it which
+    These boxes both have a min-height set. This box has content in it, which
     will need more space than the assigned height, and so it grows from the
     minimum.
   </div>
@@ -309,13 +309,13 @@ body {
 
 {{EmbedLiveSample("vw-vh")}}
 
-Changing the `vh` and `vw` values will change the size of the box and font, respectively; changing the viewport size will also change the box and font sizes because they are sized relative to the viewport. To see the example change when you adjust the viewport size, {{LiveSampleLink("vw-vh", "load the example in a new tab")}}, resize the browser window, and observe how the box and text size change.
+Changing the `vh` and `vw` values will change the size of the box and font, respectively; changing the viewport size will also change the box and font sizes because they are sized relative to the viewport. To see the box and text size change when you adjust the viewport size, {{LiveSampleLink("vw-vh", "load the example in a new tab")}} and resize the browser window.
 
 Sizing things according to the viewport can be useful in your designs. For example, if you want a full-page banner to show before the rest of your content, making that part of your page `100vh` high will push the rest of the content below the viewport, meaning that it will only appear once the document is scrolled.
 
 ## Summary
 
-This lesson has given you a rundown of some key issues that you might run into when sizing things on the web. When you move onto [CSS Layout](/en-US/docs/Learn_web_development/Core/CSS_layout), sizing will become very important in mastering the different layout methods, so it is worth understanding the concepts here before moving on.
+This lesson has given you a rundown of some key issues that you might run into when sizing things on the web. When you move on to [CSS Layout](/en-US/docs/Learn_web_development/Core/CSS_layout), sizing will become very important in mastering the different layout methods, so it is worth understanding the concepts here before moving on.
 
 In the next article, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on CSS sizing.
 
