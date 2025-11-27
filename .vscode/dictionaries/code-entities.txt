@@ -256,6 +256,7 @@ Gloc
 glossarysidebar
 gonm
 GPOS
+grba
 Grek
 greklow
 GSUB
@@ -553,6 +554,7 @@ orya
 oscpu
 osfile.jsm
 osma
+otpauth
 otpcredential
 outbound-rtpp
 overlayinfo

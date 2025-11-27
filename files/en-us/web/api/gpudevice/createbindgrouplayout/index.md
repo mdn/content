@@ -84,6 +84,8 @@ The resource layout object can be one of the following (see also {{domxref("GPUD
 
   - `format`
     - : An enumerated value specifying the required format of texture views bound to this binding. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values. Also see [Tier 1 and Tier 2 texture formats](/en-US/docs/Web/API/GPUDevice/createTexture#tier_1_and_tier_2_texture_formats).
+      > [!NOTE]
+      > Use of the `bgra8unorm` format for read-only storage textures is deprecated. The specification explicitly disallows this, as this format is intended for write-only access and is not portable. Any browser support for this combination is considered a bug.
   - `viewDimension` {{optional_inline}}
     - : An enumerated value specifying the required dimension for texture views bound to this binding. Possible values are:
       - `"1d"`: The texture is viewed as a one-dimensional image.

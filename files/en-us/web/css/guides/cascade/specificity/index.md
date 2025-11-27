@@ -476,18 +476,17 @@ A few things to remember about specificity:
 
 ## See also
 
-- ["Specificity" in "Handling conflicts"](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity_2)
-- [SpeciFISHity](https://specifishity.com/)
-- [Specificity Calculator](https://specificity.keegan.st/): An interactive website to test and understand your own CSS rules
-- [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) a specificity quiz
-- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction) guide
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity_2)
+- [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax) module
+- [Introduction to CSS syntax: declarations, rulesets, and statements](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
 - [CSS error handling](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling)
 - [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
-- [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value) values
+- Values: [initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value)
 - [Value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
-- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-- [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
-- [CSS nesting module](/en-US/docs/Web/CSS/Guides/Nesting)
+- [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
+- [Specificity Calculator](https://specificity.keegan.st/) by Keegan Street: An interactive website to test and understand your own CSS rules
+- [SpeciFISHity](https://specifishity.com/) on specifishity.com: A fun way to learn about CSS specificity
+- [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html): A specificity quiz by Estelle Weyl

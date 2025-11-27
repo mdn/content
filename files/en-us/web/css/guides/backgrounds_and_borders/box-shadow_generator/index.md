@@ -31,7 +31,7 @@ The box at the bottom-right contains the CSS for the element and any `::before` 
 
 ## See also
 
-- [Border-image generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
-  - : This interactive tool lets you visually create border images (the {{cssxref("border-image")}} property).
-- [Border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
-  - : This interactive tool lets you visually create rounded corners (the {{cssxref("border-radius")}} property).
+- Other tools:
+  - [Border-image generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
+  - [Border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module

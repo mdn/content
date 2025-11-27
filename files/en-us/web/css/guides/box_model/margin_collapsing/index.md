@@ -77,16 +77,17 @@ p {
 
 ## See also
 
+- [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
 - CSS key concepts:
   - [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
   - [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
   - [Comments](/en-US/docs/Web/CSS/Guides/Syntax/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
   - [Layout modes](/en-US/docs/Glossary/Layout_mode)
   - [Visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model)
-  - Values
+  - Values:
     - [Initial values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value)
     - [Computed values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value)
     - [Used values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value)

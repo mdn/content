@@ -164,5 +164,5 @@ function animate() {
 - {{domxref("Window.cancelAnimationFrame()")}}
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
 - [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
-- [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
+- [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://testufo.com/#test=animation-time-graph)
 - [Firefox switching to uint32_t for the requestAnimationFrame request ID](https://phabricator.services.mozilla.com/rMOZILLACENTRAL149722297f033d5c3ad126d0c72edcb1cb96d72e)

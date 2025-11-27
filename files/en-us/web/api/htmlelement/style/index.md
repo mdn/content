@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.style
 
 {{APIRef("CSSOM")}}
 
-The read-only **`style`** property of the {{domxref("HTMLElement")}} returns the _inline_ [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) of an element in the form of a live {{domxref("CSSStyleProperties")}} object.
+The read-only **`style`** property of the {{domxref("HTMLElement")}} interface returns the _inline_ [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) of an element in the form of a live {{domxref("CSSStyleProperties")}} object.
 This object can be used to get and set the inline styles of an element.
 
 ## Value
@@ -18,6 +18,8 @@ A live {{domxref("CSSStyleProperties")}} object.
 > [!NOTE]
 > Earlier versions of the specification returned a {{domxref("CSSStyleDeclaration")}} (from which {{domxref("CSSStyleProperties")}} is derived).
 > See the [browser compatibility](#browser_compatibility) table for browser support information.
+
+Although the `style` property itself is read-only in the sense that you can't replace the `CSSStyleProperties` object, you can still assign to the `style` property directly, which is equivalent to assigning to its {{domxref("CSSStyleDeclaration/cssText", "cssText")}} property. You can also modify the `CSSStyleProperties` object using the {{domxref("CSSStyleDeclaration/setProperty", "setProperty()")}} and {{domxref("CSSStyleDeclaration/removeProperty", "removeProperty()")}} methods.
 
 ## Description
 
@@ -29,11 +31,6 @@ The values of the inline styles set in the element's [`style`](/en-US/docs/Web/H
 
 Shorthand CSS properties of the element are expanded to their corresponding long-form properties.
 For example, an element with style `"border-top: 1px solid black"` would be represented in the returned object by properties with the names {{cssxref("border-top")}} and `borderTop`, and the corresponding longhand properties {{cssxref("border-top-color")}} and `borderTopColor`, {{cssxref("border-top-style")}} and `borderTopStyle`, and {{cssxref("border-top-width")}} and `borderTopWidth`.
-
-The `style` property is read-only, meaning it is not possible to assign a {{domxref("CSSStyleProperties")}} object to it.
-Nevertheless, it is possible to set an inline style by assigning a _string_ directly to the property.
-In this case the string can be read from {{domxref("CSSStyleDeclaration.cssText","cssText")}}.
-Using `style` in this manner will completely overwrite all inline styles on the element.
 
 To add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the {{domxref("CSSStyleProperties")}} object.
 For example, you can write `element.style.backgroundColor = "red"`.
@@ -124,7 +121,7 @@ We also see that the {{cssxref("border-top")}} property corresponding to the ele
 {{EmbedLiveSample("Basic usage", "100", "280")}}
 
 Note that `font-weight` is defined on the `CSSStyleProperties` (as are all other CSS properties, though we have not logged them).
-However it is not an inline stye for the nested element, so its value is set to the empty string (`""`).
+However it is not an inline style for the nested element, so its value is set to the empty string (`""`).
 
 ### Enumerating style information
 

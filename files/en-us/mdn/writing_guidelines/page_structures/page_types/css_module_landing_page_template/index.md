@@ -12,7 +12,7 @@ sidebar: mdnsidebar
 >
 > **Page front matter:**
 >
-> The front matter at the top of the page is used to define "page metadata".
+> The front matter at the top of the page defines "page metadata".
 > The values should be updated appropriately for the particular module.
 >
 > ```md
@@ -38,12 +38,13 @@ sidebar: mdnsidebar
 > - **page-type**
 >   - : The `page-type` value for CSS module landing pages is always `css-module`.
 > - **spec-urls**
->   - : The `spec-urls` value is a URL of the specification. In case there is more than one version of the specification that is relevant, present them in a bulleted list. For example, the value for `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module landing page is:
+>   - : The `spec-urls` value is a URL of the specification or a bulleted list of the URLs of multiple levels of the same specification in cases where there are multiple versions of a specification, such as levels 1, 2, and 3. Include only the modules that are revisions of a single spec, in descending order. For example, the `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module landing page is as follows:
 >
->     ```plain
+> ```plain
+> spec-urls:
 >     - https://drafts.fxtf.org/filter-effects-2/
 >     - https://drafts.fxtf.org/filter-effects-1/
->     ```
+> ```
 >
 > - **sidebar**
 >   - : This is `cssref` for all CSS guide and reference pages.
@@ -53,57 +54,83 @@ sidebar: mdnsidebar
 >
 > _Remember to remove this note block before publishing._
 
-Begin the content on the page with an introductory paragraph, which names the module and says what it does.
-This should ideally be one or two short sentences.
+Begin the page content with an introductory paragraph that names the module and explains what it does. Briefly provide an overview of the features defined in the specification and, if relevant, describe how they interact with features from related specifications. This description is a quick overview, NOT a tutorial or guide, so keep it brief.
 
 ## NameOfTheModule in action
 
-In this section, include an example that helps demonstrate the usefulness or the power of various properties provided by this module.
-The purpose of this section is to demonstrate a few use cases and to create interest and curiosity in the mind of the readers learning about this module.
+In this section, include an example using `\{{EmbedLiveSample}}` (see [Live examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) for more information) that helps demonstrate the usefulness and power of various properties provided by this module.
+The purpose of this section is to demonstrate use cases and to create interest and curiosity in the minds of the readers learning about this module. Keep the code hidden unless it is essential to understanding the use cases (for example, namespacing or nesting).
 
-Provide a short description of how readers can interact with the example.
-Don't go into a lot of detail to explain the example, and don't include code snippets.
-
-Add a live sample that demonstrates the feature using `\{{EmbedLiveSample}}` (see [Live examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) documentation for more information).
+If relevant, provide a short description of how readers can interact with the example.
 
 ## Reference
 
-Create the relevant subsections to list the related properties, functions, data types, and so on.
+Create the relevant subsections to list the related properties, functions, data types, and so on. The reference section should include only the features introduced in the single specification. If a feature is in the spec but not supported, mention it in a paragraph under the appropriate header. Related features defined in other specifications go under "related concepts", and NOT in this section.
 
 ### Properties
 
-List of all shorthand and longhand properties provided by the module.
+A list of all shorthand and longhand properties provided by the module that are supported in at least one major browser.
+
+Add a paragraph stating the properties introduced by the module that are not yet supported by any browser, if any.
+
+Omit this section if the module does not define any properties.
 
 ### At-rules
 
-List of CSS at-rules provided by the module. Omit this section if there are no relevant CSS at-rules for this module.
+A list of CSS at-rules provided by the module that are supported in at least one major browser.
+
+Add a paragraph stating the at-rules introduced by the module that are not yet supported by any browser, if any.
+
+Omit this section if the module does not define any at-rules.
 
 ### Functions
 
-List of CSS functions provided by the module. Omit this section if there are no relevant CSS functions for this module.
+A list of CSS functions provided by the module that are supported in at least one major browser.
+
+Add a paragraph stating the functions introduced by the module that are not yet supported by any browser, if any.
+
+Omit this section if the module does not define any CSS functions.
 
 ### Data types
 
-List of CSS data types provided by the module. Omit this section if there are no relevant CSS data types for this module.
+A list of CSS data types provided by the module that are supported in at least one major browser.
+
+Add a paragraph stating the data types introduced by the module that are not yet supported by any browser, if any.
+
+Omit this section if the module does not define any data types.
 
 ### Events
 
-List of API events provided by the module. Omit this section if there are no relevant events for this module.
+A list of API events provided by the module that are supported in at least one major browser.
+
+Add a paragraph stating the events introduced by the module that are not yet supported by any browser, if any.
+
+Omit this section if the module does not define any events.
 
 ### Interfaces
 
-List the related API and interfaces provided by the module. Omit this section if there are no relevant API interfaces for this module.
+A list of the related API interfaces provided by the module that are supported in at least one major browser.
+
+Add a paragraph stating the interfaces introduced by the module that are not yet supported by any browser, if any.
+
+Omit this section if the module does not define any API interfaces.
+
+### Glossary terms and definitions
+
+List the related glossary terms and other terms defined within the reference pages listed above. Omit this section if there is nothing relevant to include.
 
 ## Guides
 
+A definition list of the related guides within the module structure, in order of increasing complexity, followed by related guides from other modules. Only include MDN guides.
+
 - LinkToGuide1
-  - : Description of the guide in one or two sentences.
+  - : One-sentence description of the guide.
 - LinkToGuide2
-  - : Description of the guide in one or two sentences.
+  - : One-sentence description of the guide.
 
 ## Related concepts
 
-List all other properties, data types, or glossary terms that may be relevant or related to this module.
+List all other properties, data types, glossary terms, etc. that are related to this module.
 
 ## Specifications
 
@@ -113,7 +140,7 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
-Include links to reference pages and guides related to the current module. Check the [See also](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) section in our _Writing style guide_ for more hints and directions.
+Include links to any other reference pages and other content that is relevant but doesn't fit in the other sections. If there are any relevant external guides worth linking to, place them at the end of the list (not under the "Guides" section, which is limited to MDN guides). Check the [See also](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) section in our _Writing style guide_ for more hints and directions.
 
 - link1
 - link2
