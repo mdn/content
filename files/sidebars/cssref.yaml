@@ -268,8 +268,8 @@ sidebar:
     title: Scroll_anchoring
     details: closed
   - type: listSubPages
-    path: /Web/CSS/Guides/Scroll_driven_animations
-    title: Scroll_driven_animations
+    path: /Web/CSS/Guides/Scroll-driven_animations
+    title: Scroll-driven_animations
     details: closed
   - type: listSubPages
     path: /Web/CSS/Guides/Scroll_snap
@@ -426,7 +426,7 @@ l10n:
     Positioning: Positioning
     Selectors: Selectors
     Scroll_anchoring: Scroll anchoring
-    Scroll_driven_animations: Scroll-driven animations
+    Scroll-driven_animations: Scroll-driven animations
     Scroll_snap: Scroll snap
     Shapes: Shapes
     Syntax: Syntax
