@@ -27,7 +27,7 @@ get(name)
 
 - `name`
   - : The name of the HTTP header whose values you want to retrieve from the
-    `Headers` object. If the given name is not the name of an HTTP header, this
+    `Headers` object. If the given name is not a legal name for an HTTP header, this
     method throws a {{jsxref("TypeError")}}. The name is case-insensitive.
 
 ### Return value
