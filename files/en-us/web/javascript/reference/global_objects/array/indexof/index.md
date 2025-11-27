@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Array.indexOf
 sidebar: jsref
 ---
 
-The **`indexOf()`** method of {{jsxref("Array")}} instances returns the first index at which a
-given element can be found in the array, or -1 if it is not present.
+The **`indexOf()`** method of {{jsxref("Array")}} instances returns the first index at which an element can be found in the array, or -1 if it is not present.
 
 {{InteractiveExample("JavaScript Demo: Array.prototype.indexOf()")}}
 
@@ -36,10 +35,10 @@ indexOf(searchElement, fromIndex)
 ### Parameters
 
 - `searchElement`
-  - : Element to locate in the array.
+  - : The element to locate in the array.
 - `fromIndex` {{optional_inline}}
   - : Zero-based index at which to start searching, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
-    - Negative index counts back from the end of the array — if `-array.length <= fromIndex < 0`, `fromIndex + array.length` is used. Note, the array is still searched from front to back in this case.
+    - Negative index counts back from the end of the array — if `-array.length <= fromIndex < 0`, `fromIndex + array.length` is used. Note: the array is still searched from front to back in this case.
     - If `fromIndex < -array.length` or `fromIndex` is omitted, `0` is used, causing the entire array to be searched.
     - If `fromIndex >= array.length`, the array is not searched and `-1` is returned.
 
@@ -49,7 +48,7 @@ The first index of `searchElement` in the array; `-1` if not found.
 
 ## Description
 
-The `indexOf()` method compares `searchElement` to elements of the array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same algorithm used by the `===` operator). [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) values are never compared as equal, so `indexOf()` always returns `-1` when `searchElement` is `NaN`.
+The `indexOf()` method compares `searchElement` to elements of the array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same algorithm used by the `===` operator). [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) values are never considered equal, so `indexOf()` always returns `-1` when `searchElement` is `NaN`.
 
 The `indexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
