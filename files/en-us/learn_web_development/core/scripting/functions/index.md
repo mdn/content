@@ -274,7 +274,7 @@ map((function (item) {
 });
 ```
 
-You can use the same concise syntax to rewrite the `addEventListener` example.
+You can use the same concise arrow function syntax to rewrite the `addEventListener()` example.
 
 ```js
 textBox.addEventListener("keydown", (event) =>
