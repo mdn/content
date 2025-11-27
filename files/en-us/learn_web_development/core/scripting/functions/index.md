@@ -278,7 +278,7 @@ You can use the same concise arrow function syntax to rewrite the `addEventListe
 
 ```js
 textBox.addEventListener("keydown", (event) =>
-  console.log(`You pressed "${event.key}".`),
+  console.log(`You pressed "${event.key}".`)
 );
 ```
 
