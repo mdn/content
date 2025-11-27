@@ -9,7 +9,7 @@ browser-compat: css.at-rules.custom-media
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines aliases for long or complex [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Instead of using the same hardcoded {{CSSxRef("@media")}} `<media-query-list>` multiple times, it can be defined once in a `@custom-media` block and reused wherever required.
+The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines aliases for long or complex [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Instead of using the same hardcoded [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) with `<media-query-list>` multiple times, it can be defined once in a `@custom-media` block and reused wherever required.
 
 ## Syntax
 

@@ -348,6 +348,20 @@ The CSS `text-decoration-trim` property allows you to specify {{cssxref("text-de
 - `layout.css.text-decoration-trim.enabled`
   - : Set to `true` to enable.
 
+### `@custom-media`
+
+The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS at-rule defines aliases for long or complex media queries. Instead of using the same hardcoded `@media` with `<media-query-list>` multiple times, it can be defined once in a `@custom-media` block and reused wherever required. ([Firefox bug 1991105](https://bugzil.la/1744292)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 146           | No                  |
+| Developer Edition | 146           | No                  |
+| Beta              | 146           | No                  |
+| Release           | 146           | No                  |
+
+- `layout.css.custom-media.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
