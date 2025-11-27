@@ -53,7 +53,7 @@ The `some()` method is an [iterative method](/en-US/docs/Web/JavaScript/Referenc
 
 `callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
-`some()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
+`some()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. However, note that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
 
 - `callbackFn` will not visit any elements added beyond the array's initial length when the call to `some()` began.
 - Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
