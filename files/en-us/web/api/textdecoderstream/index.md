@@ -9,6 +9,7 @@ browser-compat: api.TextDecoderStream
 
 The **`TextDecoderStream`** interface of the {{domxref('Encoding API','','',' ')}} converts a stream of text in a binary encoding, such as UTF-8 etc., to a stream of strings.
 It is the streaming equivalent of {{domxref("TextDecoder")}}.
+It implements the same shape as a {{domxref("TransformStream")}}, allowing it to be used in {{domxref("ReadableStream.pipeThrough()")}} and similar methods.
 
 ## Constructor
 
@@ -43,6 +44,8 @@ It is the streaming equivalent of {{domxref("TextDecoder")}}.
 ## See also
 
 - {{domxref("TextEncoderStream")}}
+- {{domxref("TextDecoder")}}
+- {{domxref("TransformStream")}}
 - [Streams API Concepts](/en-US/docs/Web/API/Streams_API/Concepts)
 - [Experimenting with the Streams API](https://deanhume.com/experimenting-with-the-streams-api/)
 - [Streaming requests with the fetch API](https://developer.chrome.com/docs/capabilities/web-apis/fetch-streaming-requests), developer.chrome.com (2020)

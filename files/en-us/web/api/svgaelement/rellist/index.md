@@ -8,15 +8,13 @@ browser-compat: api.SVGAElement.relList
 
 {{APIRef("SVG")}}
 
-The **`relList`** read-only property of the {{domxref("SVGAElement")}} returns a live {{domxref("DOMTokenList")}} reflecting the space-separated string [`<list-of-Link-Types>`](/en-US/docs/Web/HTML/Reference/Attributes/rel) values of the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/a#rel) attribute of the SVG {{svgelement("a")}} element.
-
-The property itself is read-only, meaning you can't substitute the
-{{domxref("DOMTokenList")}} by another one, but the content of the returned list can be
-changed.
+The read-only **`relList`** property of the {{domxref("SVGAElement")}} returns a live {{domxref("DOMTokenList")}} reflecting the space-separated string [`<list-of-Link-Types>`](/en-US/docs/Web/HTML/Reference/Attributes/rel) values of the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/a#rel) attribute of the SVG {{svgelement("a")}} element.
 
 ## Value
 
 A live {{domxref("DOMTokenList")}}.
+
+Although the `relList` property itself is read-only in the sense that you can't replace the `DOMTokenList` object, you can still assign to the `relList` property directly, which is equivalent to assigning to its {{domxref("DOMTokenList/value", "value")}} property. You can also modify the `DOMTokenList` object using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.
 
 ## Examples
 
