@@ -551,11 +551,11 @@ Try changing the alpha channel values to see how it affects the color output.
 
 ### Using hues to specify a color
 
-If you want to go beyond keywords, hexadecimal, and `rgb()` for colors, you might want to try using [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue).
+If you want to go beyond keywords, hexadecimal, and [`rgb()`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) for colors, you might want to try using [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue).
 Hue is the value type that allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
 The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle) because most of the color models describe hues using a {{glossary("color wheel")}}.
 
-There are several color functions that include a [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue) component, including `hsl()`, `hwb()`, and [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch). Other color functions, like [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab), define colors based on what humans can see.
+There are several color functions that include a [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue) component, including [`hsl()`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb()`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), and [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch). Other color functions, like [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab), define colors based on what humans can see.
 
 If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color) guide, the [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) reference that lists all the different ways you can use colors in CSS, and the [CSS color module](/en-US/docs/Web/CSS/Guides/Colors) that provides an overview of all the color types in CSS and the properties that use color values.
 
@@ -570,14 +570,14 @@ The three parts are:
 
 ### HSL
 
-Similar to the `hwb()` function is the [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) function, which also specifies an `srgb()` color.
+Similar to the [`hwb()`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) function is the [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) function, which also specifies an `srgb()` color.
 HSL uses `Hue`, in addition to `Saturation` and `Lightness`:
 
 - **Hue**: Again, this represents the base shade of the color.
 - **Saturation**: How saturated is the color? This takes a value from `0`–`100%`, where `0` is no color (it will appear as a shade of grey), and `100%` is full color saturation.
 - **Lightness**: How light or bright is the color? This takes a value from `0`–`100%`, where `0` is no light (it will appear completely black) and `100%` is full light (it will appear completely white).
 
-The `hsl()` color value also has an optional fourth value, separated from the color with a slash (`/`), representing the alpha transparency.
+The [`hsl()`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) color value also has an optional fourth value, separated from the color with a slash (`/`), representing the alpha transparency.
 
 Let's update the RGB example to use HSL colors instead:
 
