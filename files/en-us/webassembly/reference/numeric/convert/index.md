@@ -1,11 +1,12 @@
 ---
-title: Convert
-slug: WebAssembly/Reference/Numeric/Convert
+title: "convert: Wasm text instruction"
+short-title: convert
+slug: WebAssembly/Reference/Numeric/convert
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`convert`** instructions, are used for converting integer numbers to floating point numbers. There are signed and unsigned versions of this instruction.
+The **`convert`** instructions are used for converting integer numbers to floating point numbers. There are signed and unsigned versions of this instruction.
 
 {{InteractiveExample("Wat Demo: convert", "tabbed-taller")}}
 

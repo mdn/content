@@ -1,11 +1,12 @@
 ---
-title: Promote
-slug: WebAssembly/Reference/Numeric/Promote
+title: "promote: Wasm text instruction"
+short-title: promote
+slug: WebAssembly/Reference/Numeric/promote
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`promote`** instruction, is used to convert (promote) numbers of type `f32` to type `f64`.
+The **`promote`** instruction is used to convert (promote) numbers of type `f32` to type `f64`.
 
 {{InteractiveExample("Wat Demo: promote", "tabbed-taller")}}
 

@@ -163,7 +163,7 @@ Security aside, OTP has some usability issues:
 
 ## OTP recommendations
 
-OTP, and in particular TOTP, can be useful as an {{glossary("Multi-factor authentication", "additional authentication factor")}} and for confirming user intentions, for example when making a payment. For general authentication purposes, it is better to use [passkeys](/en-US/docs/Web/Security/Authentication/Passwords), which are more resistant to phishing attacks.
+OTP, and in particular TOTP, can be useful as an {{glossary("Multi-factor authentication", "additional authentication factor")}} and for confirming user intentions, for example when making a payment. For general authentication purposes, it is better to use [passkeys](/en-US/docs/Web/Security/Authentication/Passkeys), which are more resistant to phishing attacks.
 
 If you implement OTP, consider the following recommendations:
 
