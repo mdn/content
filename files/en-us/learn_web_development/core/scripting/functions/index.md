@@ -269,7 +269,7 @@ The `map()` method takes each item in the array in turn, passing it into the giv
 The arrow function is very concise; rewriting our `map()` code to use a regular anonymous callback function would look like this:
 
 ```js
-const doubled = originals.map((function (item) {
+const doubled = originals.map(function (item) {
   return item * 2;
 });
 ```
