@@ -118,8 +118,8 @@ In this example, we reduce the duration of the view progress scroll animation by
 
 #### HTML
 
-In the middle of a wall of text, we include an element that we will animate. We added a lot of text in to ensure that our content overflows its container, but this was hidden for the sake of brevity.
-The checkbox included to toggle the demonstration of the effect of the {{cssxref("animation-fill-mode")}} property on shortened animation timelines is also hidden.
+In the middle of a wall of text, we include an element that we will animate. We include a lot of text to ensure that our content overflows its container, but this is hidden for the sake of brevity.
+We also include a checkbox to toggle the {{cssxref("animation-fill-mode")}} property on and off, to demonstrate its effect on shortened animation timelines. This is also hidden.
 
 ```html hidden
 <div class="content">
@@ -168,11 +168,11 @@ The checkbox included to toggle the demonstration of the effect of the {{cssxref
 
 #### CSS
 
-We define an animation that animates an element's opacity, scale, and color, causing it to fade in, size up, and change colors as the animation progresses. We apply this animation to the `animatedElement` with the {{cssxref("animation")}} shorthand.
+We define an animation that animates an element's opacity, scale, and background color, causing it to fade in, scale up, and change color as the animation progresses. We apply this animation to the `animatedElement` with the {{cssxref("animation")}} shorthand.
 
-A view progress timeline is created by setting the [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function as the value of the {{cssxref("animation-timeline")}} property on our `animatedElement`. The result is that the element animates as it moves upwards through the document as it is scrolled. We declared the shorthand before the `animation-timeline`, as the shorthand resets this property.
+A view progress timeline is created by setting the [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function as the value of the {{cssxref("animation-timeline")}} property on our `animatedElement`. The result is that the element animates as it moves upwards through the document as it is scrolled. We declare `animation-timeline` property after the shorthand, as the shorthand resets this property.
 
-Lastly, an `animation-range` declaration is also set to make the animation begin later than expected, and finish earlier.
+Lastly, an `animation-range` declaration is set to make the animation begin later than expected and finish earlier.
 
 ```css
 .animatedElement {
@@ -205,7 +205,7 @@ We also include conditional styling: when the checkbox is checked, the `animatio
 }
 ```
 
-The other styles were hidden for the sake of brevity.
+The other styles are hidden for the sake of brevity.
 
 ```css hidden
 .animatedElement {
@@ -257,7 +257,9 @@ Scroll to see the element being animated.
 
 Note how the `from`, or `0%`, keyframe property values are not applied to the animated element until the top block border edge is `10%` past the container's bottom edge; it is full size, fully opaque, and magenta. At that point, the animation is applied and it is styled with the values defined by the `0%` keyframe selector. When the `animation-range-end` is reached, 25% from the top of the scrollport, it jumps back to its original styling.
 
-Generally, you will want to set `animation-fill-mode: both` when creating [scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations). The jumping to the default state occurs because we did not set the {{cssxref("animation-fill-mode")}} property on the element, which can be used to apply an animation's styles to an element before and after the animation's execution. We initially omitted the property in this example to better enable visualizing the effects of `animation-range`. Check the checkbox to add the `animation-fill-mode` in, then re-scroll to note how the animation animation styles are continuously applied.
+Generally, you will want to set `animation-fill-mode: both` when creating [scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations). The jump to the default state occurs because we did not set the {{cssxref("animation-fill-mode")}} property on the element, which can be used to apply an animation's styles to an element before and after the animation's execution. We initially omitted the property in this example to better enable visualizing the effects of `animation-range`.
+
+Check the checkbox to apply the `animation-fill-mode` property to the animated element in then re-scroll: the animation styles should now be continuously applied.
 
 ## Specifications
 
