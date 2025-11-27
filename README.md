@@ -17,19 +17,19 @@ In addition to English-language articles, over 35 volunteers lead translation an
 
 ## Build the site
 
-To set up the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn](https://classic.yarnpkg.com/) installed.
+To set up the site locally, you need to have [Node.js](https://nodejs.org/) installed, which comes bundled with [npm](https://www.npmjs.com/).
 You can check if these are installed by running the following commands:
 
 ```bash
 node -v
-yarn -v
+npm -v
 ```
 
-After you have installed Node.js and Yarn, you can install the dependencies using `yarn` and start the local preview:
+After you have installed Node.js, you can install the dependencies using `npm` and start the local preview:
 
 ```bash
-yarn
-yarn start
+npm
+npm start
 ```
 
 Once started, a live preview is available at `http://localhost:5042/`.
