@@ -266,7 +266,7 @@ console.log(doubled); // [2, 4, 6]
 
 The `map()` method takes each item in the array in turn, passing it into the given function. It then takes the value returned by that function and adds it to a new array.
 
-So in the example above, `item => item * 2` is the arrow function equivalent of:
+The arrow function is very concise; rewriting our `map()` code to use a regular anonymous callback function would look like this:
 
 ```js
 map((function (item) {
