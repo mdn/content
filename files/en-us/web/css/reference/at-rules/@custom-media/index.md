@@ -111,7 +111,7 @@ The following would be incorrect:
 
 ## See also
 
-- {{CSSxRef("@media")}}
-- {{CSSxRef("@import")}}
+- CSS [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rule
+- CSS [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import) at-rule
 - [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
