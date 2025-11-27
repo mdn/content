@@ -41,8 +41,27 @@ The _Close_ button closes the dialog without a {{domxref("HTMLDialogElement.retu
 </dialog>
 
 <button id="open">Open dialog</button>
+```
 
-<p id="status-text"></p>
+```html hidden
+<pre id="status-text"></pre>
+```
+
+```css hidden
+#status-text {
+  height: 120px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const statusText = document.getElementById("status-text");
+function log(text) {
+  statusText.innerText = `${statusText.innerText}${text}\n`;
+  statusText.scrollTop = statusText.scrollHeight;
+}
 ```
 
 ```js
@@ -50,7 +69,6 @@ const dialog = document.getElementById("dialog");
 const openButton = document.getElementById("open");
 const closeButton = document.getElementById("close");
 const closeWithValueButton = document.getElementById("close-w-value");
-const statusText = document.getElementById("status-text");
 
 // Update button opens a modal dialog
 openButton.addEventListener("click", () => {
@@ -66,13 +84,13 @@ closeButton.addEventListener("click", () => {
 });
 
 // Close button closes the dialog box with a return value
-closeWithReturnValueButton.addEventListener("click", () => {
+closeWithValueButton.addEventListener("click", () => {
   dialog.close("some value");
 });
 
 // Form close button closes the dialog box
 dialog.addEventListener("close", () => {
-  statusText.innerHTML = `Dialog closed. Return value: "<code>${dialog.returnValue}</code>"`;
+  log(`Dialog closed. Return value: "${dialog.returnValue}"`);
 });
 ```
 

@@ -69,7 +69,7 @@ closeButton.addEventListener("click", () => {
 
 #### Result
 
-{{EmbedLiveSample("Opening a modal dialog")}}
+{{EmbedLiveSample("Basic usage")}}
 
 ## Specifications
 

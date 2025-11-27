@@ -36,8 +36,28 @@ If the user dismisses the dialog without clicking a button (for example, by pres
   <button id="decline" value="declined">Decline</button>
   <button id="accept" value="accepted">Accept</button>
 </dialog>
-<button id="open">Review ToS</button>
-<p id="status-text"></p>
+<button id="open">Open dialog</button>
+```
+
+```html hidden
+<pre id="status-text"></pre>
+```
+
+```css hidden
+#status-text {
+  height: 120px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const statusText = document.getElementById("status-text");
+function log(text) {
+  statusText.innerText = `${statusText.innerText}${text}\n`;
+  statusText.scrollTop = statusText.scrollHeight;
+}
 ```
 
 #### JavaScript
@@ -47,7 +67,6 @@ const dialog = document.getElementById("dialog");
 const openButton = document.getElementById("open");
 const declineButton = document.getElementById("decline");
 const acceptButton = document.getElementById("accept");
-const statusText = document.getElementById("status-text");
 
 openButton.addEventListener("click", () => {
   // Reset the return value on each open
@@ -63,7 +82,7 @@ function closeDialog(event) {
 }
 
 function updateReturnValue() {
-  statusText.innerHTML = `Return value: "<code>${dialog.returnValue}</code>"`;
+  log(`Return value: "${dialog.returnValue}"`);
 }
 
 declineButton.addEventListener("click", closeDialog);
@@ -76,7 +95,7 @@ dialog.addEventListener("close", updateReturnValue);
 
 Try clicking "Review ToS", then choosing the "Accept" or "Decline" buttons in the dialog, or dismissing the dialog by pressing the <kbd>Esc</kbd> key, and observe the different status updates.
 
-{{ EmbedLiveSample('Checking the return value', '100%', '200px') }}
+{{ EmbedLiveSample('Checking the return value', '100%', "250px")}}
 
 ## Specifications
 

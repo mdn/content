@@ -55,8 +55,27 @@ Preventing the dialog from closing is demonstrated with a checkbox.
 </dialog>
 
 <button id="open">Open dialog</button>
+```
 
-<p id="status-text"></p>
+```html hidden
+<pre id="status-text"></pre>
+```
+
+```css hidden
+#status-text {
+  height: 120px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const statusText = document.getElementById("status-text");
+function log(text) {
+  statusText.innerText = `${statusText.innerText}${text}\n`;
+  statusText.scrollTop = statusText.scrollHeight;
+}
 ```
 
 ```js
@@ -65,7 +84,6 @@ const openButton = document.getElementById("open");
 const closeButton = document.getElementById("close");
 const closeWithValueButton = document.getElementById("close-w-value");
 const preventCloseInput = document.getElementById("prevent-close");
-const statusText = document.getElementById("status-text");
 
 // Update button opens a modal dialog
 openButton.addEventListener("click", () => {
@@ -88,15 +106,15 @@ closeWithValueButton.addEventListener("click", () => {
 // Fired when requestClose() is called
 // Prevent the dialog from closing by calling event.preventDefault()
 dialog.addEventListener("cancel", (event) => {
-  if (cancelCloseInput.checked) {
-    statusText.innerText = "Dialog close cancelled";
+  if (preventCloseInput.checked) {
+    log("Dialog close cancelled");
     event.preventDefault();
   }
 });
 
 // cancel event is not prevented, dialog will close
 dialog.addEventListener("close", () => {
-  statusText.innerHTML = `Dialog closed. Return value: "<code>${dialog.returnValue}</code>"`;
+  log(`Dialog closed. Return value: "${dialog.returnValue}"`);
 });
 ```
 

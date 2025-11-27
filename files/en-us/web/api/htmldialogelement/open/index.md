@@ -36,20 +36,36 @@ button.
   </form>
 </dialog>
 
-<p>
-  <button id="open">Open Dialog</button>
-</p>
+<button id="open">Open Dialog</button>
+```
 
-<p id="status-text">Dialog closed</p>
+```html hidden
+<pre id="status-text"></pre>
+```
+
+```css hidden
+#status-text {
+  height: 120px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const statusText = document.getElementById("status-text");
+function log(text) {
+  statusText.innerText = `${statusText.innerText}${text}\n`;
+  statusText.scrollTop = statusText.scrollHeight;
+}
 ```
 
 ```js
 const dialog = document.getElementById("dialog");
 const openButton = document.getElementById("open");
-const statusText = document.getElementById("status-text");
 
 function openCheck(dialog) {
-  statusText.innerText = dialog.open ? "Dialog open" : "Dialog closed";
+  log(dialog.open ? "Dialog: open" : "Dialog: closed");
 }
 
 openButton.addEventListener("click", () => {
@@ -64,7 +80,7 @@ dialog.addEventListener("close", () => {
 
 ### Result
 
-{{ EmbedLiveSample('Examples', '100%', '200px') }}
+{{ EmbedLiveSample('Examples', '100%', '250px') }}
 
 ## Specifications
 

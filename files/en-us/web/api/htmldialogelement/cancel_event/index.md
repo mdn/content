@@ -12,7 +12,7 @@ The **`cancel`** event fires on a {{HTMLElement("dialog")}} element when the use
 
 Examples of close requests are:
 
-- Pressing the <kbd>ESC</kbd> key on desktop platforms
+- Pressing the <kbd>Esc</kbd> key on desktop platforms
 - Calling the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method.
 - The back button on mobile platforms
 
@@ -38,7 +38,7 @@ A generic {{domxref("Event")}}.
 
 The following example shows a button that, when clicked, opens a {{htmlelement("dialog")}} via the {{domxref("HTMLDialogElement.showModal()", "showModal()")}} method.
 
-From there you can will trigger the `cancel` event by either clicking _Request Close_ button to close the dialog (via the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method) or press the <kbd>ESC</kbd> key.
+From there you can will trigger the `cancel` event by either clicking _Request Close_ button to close the dialog (via the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method) or press the <kbd>Esc</kbd> key.
 
 Preventing the dialog from closing is demonstrated with a checkbox.
 
@@ -53,8 +53,27 @@ Preventing the dialog from closing is demonstrated with a checkbox.
 </dialog>
 
 <button id="open">Open dialog</button>
+```
 
-<p id="status-text"></p>
+```html hidden
+<pre id="status-text"></pre>
+```
+
+```css hidden
+#status-text {
+  height: 120px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const statusText = document.getElementById("status-text");
+function log(text) {
+  statusText.innerText = `${statusText.innerText}${text}\n`;
+  statusText.scrollTop = statusText.scrollHeight;
+}
 ```
 
 ```js
@@ -62,7 +81,6 @@ const dialog = document.getElementById("dialog");
 const openButton = document.getElementById("open");
 const requestCloseButton = document.getElementById("request-close");
 const preventCloseInput = document.getElementById("prevent-close");
-const statusText = document.getElementById("status-text");
 
 // Update button opens a modal dialog
 openButton.addEventListener("click", () => {
@@ -78,20 +96,20 @@ requestCloseButton.addEventListener("click", () => {
 // Fired when requestClose() is called
 // Prevent the dialog from closing by calling event.preventDefault()
 dialog.addEventListener("cancel", (event) => {
-  if (preventClose.checked) {
-    statusText.innerText = "Dialog close cancelled";
+  if (preventCloseInput.checked) {
+    log("Dialog close cancelled");
     event.preventDefault();
   }
 });
 
 dialog.addEventListener("close", (event) => {
-  statusText.innerText = "Dialog closed";
+  log("Dialog closed");
 });
 ```
 
 #### Result
 
-{{ EmbedLiveSample('Canceling a dialog', '100%', '100px') }}
+{{ EmbedLiveSample('Canceling a dialog', '100%', '250px') }}
 
 ## Specifications
 
