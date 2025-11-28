@@ -1,7 +1,7 @@
 ---
 title: Features restricted to secure contexts
 short-title: Restricted features
-slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
+slug: Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts
 page-type: guide
 sidebar: security
 ---
