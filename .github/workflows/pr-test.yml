@@ -172,4 +172,4 @@ jobs:
           readarray -t files_to_check <<< "$GIT_DIFF_FILES"
 
           export CONTENT_ROOT=$(pwd)/files
-          npm run filecheck -- "${files_to_check[@]}"
+          npm run filecheck "${files_to_check[@]}"

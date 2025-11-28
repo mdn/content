@@ -158,7 +158,7 @@ node -v
 npm -v
 ```
 
-After you have installed Node.js and npm, you can install the dependencies using `npm`:
+After you have installed Node.js, you can install the dependencies using `npm`:
 
 ```bash
 # Assuming your fork is in ~/repos/content
