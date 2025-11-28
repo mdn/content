@@ -441,6 +441,6 @@ The `parent` element only becomes visible when that parent is visible, meaning t
 - {{cssxref("scroll-timeline-name")}}, {{cssxref("scroll-timeline-axis")}}, {{cssxref("scroll-timeline")}}
 - {{cssxref("view-timeline-name")}}, {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline")}}, {{cssxref("view-timeline-inset")}}
 - {{domxref("AnimationTimeline")}}
-- [Guide: Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using_CSS_animations)
+- [Guide: Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module

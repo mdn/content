@@ -56,9 +56,9 @@ The `animation-range` shorthand property is specified as one or more single anim
 ### Values
 
 - `<animation-range-start>`
-  - : The keyword `normal`, a `<length-percentage>`, a [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name), or a `<timeline-range-name> <length-percentage>` pair, representing the [`animation-range-start`](/en-US/docs/Web/CSS/animation-range-start). If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `0%`.
+  - : The keyword `normal`, a `<length-percentage>`, a [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name), or a `<timeline-range-name> <length-percentage>` pair, representing the [`animation-range-start`](/en-US/docs/Web/CSS/Reference/Properties/animation-range-start). If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `0%`.
 - `<animation-range-end>`
-  - : The keyword `normal`, a `<length-percentage>`, a `<timeline-range-name>`, or a `<timeline-range-name> <length-percentage>` pair, representing the [`animation-range-end`](/en-US/docs/Web/CSS/animation-range-end). If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `100%`.
+  - : The keyword `normal`, a `<length-percentage>`, a `<timeline-range-name>`, or a `<timeline-range-name> <length-percentage>` pair, representing the [`animation-range-end`](/en-US/docs/Web/CSS/Reference/Properties/animation-range-end). If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `100%`.
 
 ## Description
 
