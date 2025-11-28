@@ -76,7 +76,7 @@ The HTML includes an element to animate and an element to scroll:
 
 A scroll timeline named `--my-scroller` is defined using the {{cssxref("scroll-timeline-name")}} property on a scrolling element. This scroll timeline name is used in two other places: it is applied as the {{cssxref("animation-timeline")}} on the element we want to animate, and as `timeline-scope` on an ancestor of both the scroller and the animated element, increasing the scope.
 
-We set the `<body>`'s height to `100vh`, and lay its two child elements out as two equal columns using flexbox. To increase the timeline scope from the .scroller `<div>` element to the whole `<body>`, we set `timeline-scope: --my-scroller` on it. By doing so, the `--my-scroller` timeline can be set as the controlling timeline for an animation set on the `<body>` or any element nested inside it.
+We set the `<body>`'s height to `100vh`, and lay its two child elements out as two equal columns using flexbox. To increase the timeline scope from the `<div class="scroller">` element to the whole `<body>`, we set `timeline-scope: --my-scroller` on it. By doing so, the `--my-scroller` timeline can be set as the controlling timeline for an animation set on the `<body>` or any element nested inside it.
 
 ```css
 body {
