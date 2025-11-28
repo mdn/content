@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/scroll-animations/#typedef-timeline-range-na
 sidebar: cssref
 ---
 
-The **`<timeline-range-name>`** {{glossary("enumerated")}} data type is a CSS identifier representing one of the predefined named timeline ranges inside a [view progress timeline](/en-US/docs/Web/CSS/CSS_scroll-driven_animations/Timelines).
+The **`<timeline-range-name>`** {{glossary("enumerated")}} data type is a CSS identifier representing one of the predefined named timeline ranges inside a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines).
 
 The `<timeline-range-name>` keyword values are used in the following longhand and shorthand properties:
 
