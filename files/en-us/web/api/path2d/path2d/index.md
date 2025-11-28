@@ -35,18 +35,18 @@ new Path2D(d)
 
 This example creates and copies a `Path2D` path.
 
-```html hidden
-<canvas id="myCanvas"></canvas>
+```html
+<canvas id="my-canvas"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("myCanvas");
+const canvas = document.getElementById("my-canvas");
 const ctx = canvas.getContext("2d");
 
-let path1 = new Path2D();
+const path1 = new Path2D();
 path1.rect(10, 10, 100, 100);
 
-let path2 = new Path2D(path1);
+const path2 = new Path2D(path1);
 path2.moveTo(220, 60);
 path2.arc(170, 60, 50, 0, 2 * Math.PI);
 
@@ -62,15 +62,15 @@ point (`M10 10`) and then move horizontally 80 points to the right
 (`h 80`), then 80 points down (`v 80`), then 80 points to the left
 (`h -80`), and then back to the start (`Z`).
 
-```html hidden
-<canvas id="myCanvas"></canvas>
+```html
+<canvas id="my-canvas"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("myCanvas");
+const canvas = document.getElementById("my-canvas");
 const ctx = canvas.getContext("2d");
 
-let p = new Path2D("M10 10 h 80 v 80 h -80 Z");
+const p = new Path2D("M10 10 h 80 v 80 h -80 Z");
 ctx.fill(p);
 ```
 
