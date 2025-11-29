@@ -1,6 +1,6 @@
 ---
-title: Features gated by user activation
-slug: Web/Security/User_activation
+title: User activation
+slug: Web/Security/Defenses/User_activation
 page-type: guide
 sidebar: security
 ---

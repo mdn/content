@@ -1,6 +1,6 @@
 ---
 title: Certificate Transparency
-slug: Web/Security/Certificate_Transparency
+slug: Web/Security/Defenses/Certificate_Transparency
 page-type: guide
 sidebar: security
 ---

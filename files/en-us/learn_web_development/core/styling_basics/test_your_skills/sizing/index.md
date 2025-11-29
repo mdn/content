@@ -19,9 +19,9 @@ In this task, you have two boxes.
 
 To complete the task:
 
-1. Size the first box so that the height will be at least `100px`, even if there is less content that would cause it to grow to that height. However, the content should not overflow if there is more content than fits in 100 pixels.
-2. Test this box by removing the content from the HTML to make sure you still get a `100px` tall box even with no content.
-3. Size the second box so that it is fixed at `100px` tall, so that content will overflow if there is too much.
+1. Size the first box so that the height will be at least `100px`, even if there is less content that would cause it to grow to that height. The content should not overflow if it doesn't fit into the box.
+2. To test this, remove the content from the HTML to make sure you still get a `100px` tall box even with no content.
+3. Size the second box so that it is fixed at `100px` tall. In this case, the content should overflow.
 
 Your final result should look like the image below:
 
@@ -71,7 +71,7 @@ body {
 <details>
 <summary>Click here to show the solution</summary>
 
-There are two boxes, the first should be given a minimum height, in which case it will expand to take the additional content but if you remove some content, the box will be at least as tall as the `min-height`. The second is given a fixed height which will cause content to overflow.
+There are two boxes. The first one should be given a `min-height` so it expands to hold the additional content, but will not shrink below `100px` tall if the content is removed. The second box is given a fixed height, which will cause content to overflow.
 
 ```css
 .box1 {
@@ -87,12 +87,12 @@ There are two boxes, the first should be given a minimum height, in which case i
 
 ## Task 2
 
-In this task, you have a box, which contains another box.
+In this task, you have a box that contains another box.
 
 To complete the task:
 
-1. Make the inner box width `60%` of the width of the outer box. The value of the {{cssxref("box-sizing")}} property is set to `border-box`, which means that the total width includes any padding and border.
-2. Give the inner box padding of `10%` using the width (or inline size) as the size from which that percentage is calculated.
+1. Make the inner box width `60%` of the width of the outer box. The {{cssxref("box-sizing")}} property is set to `border-box`, which means that the total width includes any `padding` and `border`.
+2. Give the inner box `10%` padding on all sides.
 
 Your final result should look like the image below:
 
@@ -135,8 +135,8 @@ body {
 <details>
 <summary>Click here to show the solution</summary>
 
-Make the box 60% of the container and give it 10% of padding on all sides.
-All elements already have `box-sizing: border-box` to save you from worrying about which width you are using:
+Set the box `width` to `60%`, and give it a `padding` value of `10%`.
+All elements already have `box-sizing: border-box` set to save you from worrying about calculating the `60%` width value:
 
 ```css
 * {
@@ -152,11 +152,11 @@ All elements already have `box-sizing: border-box` to save you from worrying abo
 
 ## Task 3
 
-In this task, you have two images in boxes. One image is smaller than the box, the other is larger and breaking out of the box.
+In this task, you have two images in boxes. One image is smaller than the box, while the other is larger, causing it to break out of the box.
 
-To complete the task, imagine that the box is responsive and therefore could grow and shrink. Apply a declaration to the image so that the large image shrinks down into the box but the small image does not stretch.
+To complete the task, imagine that the box is responsive and therefore could grow and shrink. Apply a declaration to the images so that the large image shrinks down into the box, but the small image does not stretch.
 
-Your final result should look like the images below:
+Your final result should look like this:
 
 ![Two boxes with images in](mdn-sizing-max-width.png)
 
@@ -195,7 +195,7 @@ img {
 <details>
 <summary>Click here to show the solution</summary>
 
-The example has an image which is breaking out of the box and one which is smaller than the box, you need to use `max-width` set to 100% to cause the larger image to grow only as large as the box. If you use `width: 100%`, the small image will stretch.
+Set the images' `max-width` property to `100%` to contain the large image inside its box. If you use `width: 100%`, the small image will stretch.
 
 ```css
 img {

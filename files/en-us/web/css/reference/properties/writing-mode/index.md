@@ -47,14 +47,12 @@ writing-mode: sideways-lr;
   padding: 0.75em;
   width: 80%;
   max-height: 300px;
-  display: flex;
 }
 
 #example-element > div {
   background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
-  flex: 1;
 }
 ```
 

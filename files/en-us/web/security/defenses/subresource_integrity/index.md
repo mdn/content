@@ -1,6 +1,6 @@
 ---
 title: Subresource Integrity
-slug: Web/Security/Subresource_Integrity
+slug: Web/Security/Defenses/Subresource_Integrity
 page-type: guide
 browser-compat:
   - html.elements.link.integrity

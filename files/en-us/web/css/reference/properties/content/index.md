@@ -299,8 +299,7 @@ This example is useful for print stylesheets. It uses an [attribute selector](/e
 #### CSS
 
 ```css
-a[href^="https://"]::after
-{
+a[href^="https://"]::after {
   content: " (URL: " attr(href) ")";
   color: darkgreen;
 }

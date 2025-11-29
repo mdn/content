@@ -27,7 +27,9 @@ The properties in this module also let you define whether cells inside a {{HTMLE
 - {{cssxref("background-image")}}
 - {{cssxref("background-origin")}}
 - {{cssxref("background-position")}}
-- {{cssxref("background-repeat")}}
+- {{cssxref("background-repeat-x")}}
+- {{cssxref("background-repeat-y")}}
+- {{cssxref("background-repeat")}} shorthand
 - {{cssxref("background-size")}}
 - {{cssxref("background")}} shorthand
 - {{cssxref("background-position-x")}}
@@ -65,7 +67,7 @@ The properties in this module also let you define whether cells inside a {{HTMLE
 - {{cssxref("border-image")}} shorthand
 - {{cssxref("box-shadow")}}
 
-The CSS backgrounds module level 4 also introduces the `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y`, and `background-tbd` properties. Currently, no browsers support these features.
+The CSS backgrounds module level 4 also introduces the `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, and `background-tbd` properties. Currently, no browsers support these features.
 
 ### Data types
 

@@ -1,7 +1,7 @@
 ---
 title: Transport Layer Security (TLS)
 short-title: Transport Layer Security
-slug: Web/Security/Transport_Layer_Security
+slug: Web/Security/Defenses/Transport_Layer_Security
 page-type: guide
 sidebar: security
 ---

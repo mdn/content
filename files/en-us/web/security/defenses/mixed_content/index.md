@@ -1,6 +1,6 @@
 ---
 title: Mixed content
-slug: Web/Security/Mixed_content
+slug: Web/Security/Defenses/Mixed_content
 page-type: guide
 browser-compat: http.mixed-content
 sidebar: security
