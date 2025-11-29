@@ -213,7 +213,7 @@ In particular, it finds that:
 
 - The next most secure pattern is one in which the website uses a web server to handle all OAuth/OIDC interactions, but then returns the access token to the front end, and the front end then makes API requests directly. In this scenario the website can be a confidential client but malicious code running in the browser (for example, through an XSS attack) can potentially steal access tokens. However, the front end doesn't have to store access tokens long-term: it can retrieve them from the backend when it needs them.
 
-- The least secure pattern is one in which OAuth/OIDC interactions and interactions with APIs both take place in the front end. This, for example, would be the natural architecture for a {{glossary("SPA", "Single-page app")}}, where the entire application executes in the browser. In this architecture the RP can't be a confidential client, because it can't reliably keep a client secret. This means that it can't authenticate itself to the IdP. It also has to persistently store tokens, which increases the risk of malicious code stealing them.
+- The least secure pattern is one in which OAuth/OIDC interactions and interactions with APIs both take place in the front end. This, for example, would be the natural architecture for an application that executes entirely in the browser. In this architecture the RP can't be a confidential client, because it can't reliably keep a client secret. This means that it can't authenticate itself to the IdP. It also has to persistently store tokens, which increases the risk of malicious code stealing them.
 
 The specification also includes detailed recommendations for security practices to follow in each of these three scenarios.
 
