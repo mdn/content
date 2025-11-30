@@ -25,6 +25,7 @@ All whitespace, comments, and invalid or malformed constructs are handled accord
 The `<rule-list>` type appears in the specification anywhere CSS is defined to contain a "list of rules."
 
 Examples include:
+
 - The **top level** of a stylesheet
 - The body of **grouping at-rules** like `@media`, `@custom-media`, `@supports`, `@layer`, `@container`
 - The contents of **nesting selectors** (CSS Nesting)
