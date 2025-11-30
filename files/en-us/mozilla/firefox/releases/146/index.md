@@ -107,3 +107,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   Nightly builds now support the Navigation API, which provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
   ([Firefox bug 1979288](https://bugzil.la/1979288)).
+
+- **Relative control points in CSS `shape()` curve commands**: `layout.css.basic-shape-shape.enabled`
+
+  When specifying a [`<curve-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#curve-command) or [`<smooth-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#smooth-command) in a CSS [`shape()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape) function, [`<relative-control-point>`]()s can be used to specify curve control points that are positioned relative to the start point of the current command, end point of the current command, or the top-left (origin) point of the container the shape is being drawn inside.

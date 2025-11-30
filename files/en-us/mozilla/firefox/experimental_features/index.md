@@ -231,6 +231,21 @@ For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `
 - `layout.css.basic-shape-shape.enabled`
   - : Set to `true` to enable.
 
+#### Relative control points in CSS `shape()` curve commands
+
+When specifying a [`<curve-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#curve-command) or [`<smooth-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#smooth-command) in a CSS `shape()` function, [`<relative-control-point>`]()s can be used to specify curve control points that are positioned relative to the start point of the current command, end point of the current command, or the top-left (origin) point of the container the shape is being drawn inside.
+([Firefox bug 1921501](https://bugzil.la/1921501)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 146           | Yes                 |
+| Developer Edition | 146           | No                  |
+| Beta              | 146           | No                  |
+| Release           | 146           | No                  |
+
+- `layout.css.basic-shape-shape.enabled`
+  - : Set to `true` to enable.
+
 ### Symmetrical `letter-spacing`
 
 The CSS {{cssxref("letter-spacing")}} property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side. This approach can improve text spacing, especially in mixed-directional text [Firefox bug 1891446](https://bugzil.la/1891446).
