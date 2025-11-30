@@ -25,7 +25,7 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) de
 - `<extension-name>`
   - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident); the name identifying the custom media query.
 - `<media-query-list>`
-  - : A comma-separated [list of `<media-query>` values](/en-US/docs/Web/CSS/Reference/At-rules/@media#description).
+  - : A comma-separated [list of `<media-query>` values](/en-US/docs/Web/CSS/Reference/At-rules/@media#description), or the `true` or `false` keywords
 
 ## Description
 
@@ -102,6 +102,31 @@ The following would be incorrect:
 @media (color), (hover) and (width > 1024px) {
 }
 ```
+
+### Using `true` and `false` keywords
+
+The `true` keyword evaluates to a media query that always matches, while `false` evaluates to a media query that never matches.
+
+```css
+@custom-media --enabled true;
+@custom-media --disabled false;
+
+@media (--enabled) {
+  /* These styles always apply */
+  body {
+    background-color: blue;
+  }
+}
+
+@media (--disabled) {
+  /* These styles never apply */
+  body {
+    background-color: red;
+  }
+}
+```
+
+This can be useful for feature flags or conditional logic within stylesheets.
 
 ## Specifications
 
