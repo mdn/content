@@ -17,6 +17,12 @@ This allows you to have more control over references to a window than [`rel=noop
 
 The behavior depends on the policies of both the new document and its opener, and whether the new document is opened following a navigation or using {{domxref("Window.open()")}}.
 
+There are two variants of this header:
+- **`Cross-Origin-Opener-Policy`**: Enforces the policy and controls browsing context group behavior.
+- **`Cross-Origin-Opener-Policy-Report-Only`**: Monitors the policy without enforcing it, sending reports when violations would occur.
+
+Both headers can be present simultaneously, and both support a `report-to` parameter for sending violation reports to a specified endpoint.
+
 <table class="properties">
   <tbody>
     <tr>
@@ -29,11 +35,31 @@ The behavior depends on the policies of both the new document and its opener, an
 ## Syntax
 
 ```http
+Cross-Origin-Opener-Policy: <directive-value> [; report-to="<endpoint-name>"]
+Cross-Origin-Opener-Policy-Report-Only: <directive-value> [; report-to="<endpoint-name>"]
+```
+
+### Directive values
+
+The `<directive-value>` can be one of the following:
+
+```http
 Cross-Origin-Opener-Policy: unsafe-none
 Cross-Origin-Opener-Policy: same-origin-allow-popups
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Opener-Policy: noopener-allow-popups
 ```
+
+### Reporting parameter
+
+Both headers support an optional `report-to` parameter that specifies an endpoint to receive violation reports:
+
+```http
+Cross-Origin-Opener-Policy: same-origin; report-to="coop-endpoint"
+Cross-Origin-Opener-Policy-Report-Only: same-origin; report-to="coop-endpoint"
+```
+
+The endpoint name must be defined in a {{HTTPHeader("Reporting-Endpoints")}} header. When a browsing context group switch occurs that would violate the policy, the browser sends a report to the specified endpoint using the [Reporting API](https://w3c.github.io/reporting/).
 
 ### Directives
 
@@ -80,6 +106,18 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
 Generally you should set your policies such that only same-origin and trusted cross-origin resources that need to be able to script each other should be allowed to be opened in the same browser context group.
 Other resources should be cross-origin isolated in their own group.
 
+### Cross-Origin-Opener-Policy vs Cross-Origin-Opener-Policy-Report-Only
+
+The `Cross-Origin-Opener-Policy` header enforces the policy, controlling whether documents are opened in the same or a new browsing context group.
+
+The `Cross-Origin-Opener-Policy-Report-Only` header monitors the policy without enforcing it. When a browsing context group switch would occur that violates the policy specified in `Cross-Origin-Opener-Policy-Report-Only`, the browser sends a report to the specified endpoint (if `report-to` is provided) but still allows the navigation or window opening to proceed according to the actual policy enforcement.
+
+Both headers can be present simultaneously:
+- `Cross-Origin-Opener-Policy` controls the actual behavior
+- `Cross-Origin-Opener-Policy-Report-Only` generates reports based on its policy value
+
+This allows you to test a stricter policy using `Cross-Origin-Opener-Policy-Report-Only` while maintaining a more permissive policy with `Cross-Origin-Opener-Policy`, monitoring what would happen if you were to enforce the stricter policy.
+
 The following sections show whether documents will be opened in the same BCG or a new BCG following a navigation or opening a window programmatically.
 
 > [!NOTE]
@@ -122,7 +160,53 @@ The table below shows how these rules affect whether documents are opened in the
 | `same-origin`              | New           | New                        | Same if same-origin | New                     |
 | `noopener-allow-popups`    | Same          | New                        | New                 | New                     |
 
+## Reporting
+
+When a browsing context group switch occurs that violates a COOP policy (either enforced or report-only), the browser can send a report to a specified endpoint if the `report-to` parameter is included in the header.
+
+### Setting up reporting
+
+To enable reporting, you need to:
+
+1. Define a reporting endpoint in the {{HTTPHeader("Reporting-Endpoints")}} header
+2. Include the `report-to` parameter in your COOP header
+
+```http
+Reporting-Endpoints: coop-endpoint="https://example.com/reports/coop"
+Cross-Origin-Opener-Policy: same-origin; report-to="coop-endpoint"
+```
+
+### Report format
+
+Reports are sent using the [Reporting API](https://w3c.github.io/reporting/) format. A typical COOP violation report includes:
+
+- The type of violation (browsing context group switch)
+- The URL of the document that triggered the violation
+- Information about the navigation or window opening that caused the switch
+- Whether the report is from an enforced policy or report-only policy
+
+Reports are sent via HTTP POST to the specified endpoint. The endpoint should be configured to receive and process these reports for monitoring and debugging purposes.
+
+> [!NOTE]
+> The `report-to` parameter requires the Reporting API to be supported by the browser. For older browsers, you may need to use alternative monitoring methods.
+
 ## Examples
+
+### Using Cross-Origin-Opener-Policy-Report-Only
+
+Use `Cross-Origin-Opener-Policy-Report-Only` to test a policy without enforcing it:
+
+```http
+Cross-Origin-Opener-Policy: unsafe-none
+Cross-Origin-Opener-Policy-Report-Only: same-origin; report-to="coop-endpoint"
+Reporting-Endpoints: coop-endpoint="https://example.com/reports/coop"
+```
+
+In this example:
+- The actual policy is `unsafe-none` (permissive)
+- The report-only policy is `same-origin` (strict)
+- Reports are sent when violations of the `same-origin` policy would occur
+- This allows you to monitor the impact of a stricter policy before enforcing it
 
 ### Features that depend on cross-origin isolation
 
@@ -134,6 +218,14 @@ In addition the feature must not be blocked by {{HTTPHeader("Permissions-Policy/
 ```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
+```
+
+You can also include reporting to monitor violations:
+
+```http
+Cross-Origin-Opener-Policy: same-origin; report-to="coop-endpoint"
+Cross-Origin-Embedder-Policy: require-corp
+Reporting-Endpoints: coop-endpoint="https://example.com/reports/coop"
 ```
 
 You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties to check if a document is cross-origin isolated, and hence whether or not the features are restricted:
@@ -192,3 +284,5 @@ The site would also need to do the following:
 ## See also
 
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
+- {{HTTPHeader("Reporting-Endpoints")}}
+- [Reporting API](https://w3c.github.io/reporting/)
