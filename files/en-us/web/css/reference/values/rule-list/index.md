@@ -15,7 +15,7 @@ A `<rule-list>` is not written directly. Instead, it describes how the CSS parse
 A `<rule-list>` is defined as a sequence of **zero or more**:
 
 - **Style rules** (e.g., `p { color: red; }`)
-- **Qualified at-rules** (e.g., `@media (min-width: 600px) { ... }`)
+- **Qualified at-rules** (e.g., `@media (width < 600px) { ... }`)
 - **Ignored statements** (e.g., parse errors handled by the parser, which the parser automatically skips)
 
 All whitespace, comments, and invalid or malformed constructs are handled according to the CSS parser rules.
@@ -46,7 +46,7 @@ h1 {
   font-size: 2rem;
 }
 
-@media (min-width: 600px) {
+@media (width < 600px) {
   body {
     background: lightgray;
   }
