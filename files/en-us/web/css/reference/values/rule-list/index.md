@@ -25,7 +25,7 @@ All whitespace, comments, and invalid or malformed constructs are handled accord
 The `<rule-list>` type appears in the specification anywhere CSS is defined to contain a "list of rules."
 
 Examples include:
-- The **top level** of a stylesheet  
+- The **top level** of a stylesheet
 - The body of **grouping at-rules** like `@media`, `@custom-media`, `@supports`, `@layer`, `@container`
 - The contents of **nesting selectors** (CSS Nesting)
 
@@ -80,8 +80,10 @@ The block of the `@media` at-rule is a `<rule-list>` containing two style rules.
 
 The invalid token sequence (`!invalid-rule-here`) is simply ignored by the parser. The rest of the rules still form the `<rule-list>`.
 
-```css
-body { color: black; }
+```
+body {
+  color: black;
+}
 
 !invalid-rule-here
 
