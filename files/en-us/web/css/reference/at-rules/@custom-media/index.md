@@ -9,15 +9,15 @@ browser-compat: css.at-rules.custom-media
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines aliases for long or complex [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Instead of using the same hardcoded [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) with `<media-query-list>` multiple times, it can be defined once in a `@custom-media` block and reused wherever required.
+The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines aliases for long or complex [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Instead of repeating the same hardcoded [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) rule with a `<media-query-list>`, it can be defined once in a `@custom-media` and referenced throughout the stylesheet whenever needed.
 
 ## Syntax
 
 ```css
 @custom-media <extension-name> <media-query-list>;
 
-@custom-media --media-query-name (max-width: 1200px);
-@custom-media --media-query-name (max-width: 1200px), (orientation: portrait);
+@custom-media --media-query-name (width < 1200px);
+@custom-media --media-query-name (width < 1200px), (orientation: portrait);
 ```
 
 ### Values
@@ -29,13 +29,15 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines alias
 
 ## Description
 
-When designing documents that use media queries, an {{CSSxRef("@media")}} rule may be used in multiple places. Repeating the same media query values multiple times can lead to errors and maintenance issues. If a change needs to be made, every occurrence must be found and updated in the same way, which can be hard to detect, especially in complex projects where media queries are used in multiple files and across multiple teams.
+When building responsive interfaces, the same [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) query often needs to be repeated across multiple rules, files, or even teams. Duplicating media queries increases the risk of mistakes, makes refactoring harder, and creates unnecessary maintenance overhead. Any time a media-query changes, every instance must be found and updated manually — a process that is both error-prone and difficult to track in large codebases.
 
-To help address this, the custom media queries at-rule defines named aliases that can be used for long and complex media queries. In this way, a media query used in multiple places can instead be defined as a custom media query, which can be used everywhere. Then, updating the media query requires touching only one line of code.
+The `@custom-media` at-rule solves this problem by letting you define **named aliases** for media queries. Instead of repeating the full media query everywhere, you declare it once as a custom media query and reference its alias throughout your stylesheets. Updating the underlying media query then requires a single change in one location.
 
-A `@custom-media` rule can refer to other custom media queries and include the alias name within the feature list. However, ensure the custom media query is not defined in terms of itself or of another custom media query that directly or indirectly refers to it as loops are not valid. Any attempt to define a custom media query with a circular dependency will cause all the custom media queries in the loop to fail.
+Custom media queries can be composed from others by referencing their alias names inside the media query features. This enables building more expressive, layered conditions. However, a custom media query cannot refer to itself, nor can it form part of a circular chain of references. Any circular dependency — direct or indirect — invalidates all custom media queries involved in that loop.
 
-If multiple `@custom-media` rules are declared with the same `<dashed-ident>` name, the last one in the source order is used, with all previous declarations using the same name being ignored.
+If multiple `@custom-media` rules define the same `<dashed-ident>` name, **only the last declaration in source order applies**. All earlier declarations are ignored, ensuring a deterministic and predictable result.
+
+Using `@custom-media` improves maintainability, reusability, and consistency across your styles. Centralizing shared breakpoints and other media conditions reduces duplication and makes responsive design easier to reason about — especially in large projects or design systems.
 
 ## Formal syntax
 
@@ -48,7 +50,7 @@ If multiple `@custom-media` rules are declared with the same `<dashed-ident>` na
 In this example, the `@custom-media` at-rule is used on a responsive website that uses a particular breakpoint in several places:
 
 ```css
-@custom-media --narrow-window (max-width: 32em);
+@custom-media --narrow-window (width < 32em);
 
 @media (--narrow-window) {
 }
@@ -67,11 +69,11 @@ If the breakpoint needs to be changed, it can be updated in one place to adjust 
 Here, the `@custom-media` at-rule is used to set multiple breakpoints in a single place:
 
 ```css
-@custom-media --mobile-screen (max-width: 480px);
-@custom-media --tablet-screen (max-width: 768px);
-@custom-media --laptop-screen (max-width: 1024px);
-@custom-media --desktop-screen (max-width: 1440px);
-@custom-media --widescreen (min-width: 1441px);
+@custom-media --mobile-screen (width < 480px);
+@custom-media --tablet-screen (width < 768px);
+@custom-media --laptop-screen (width < 1024px);
+@custom-media --desktop-screen (width < 1440px);
+@custom-media --widescreen (width > 1441px);
 ```
 
 Grouping all the breakpoints in a single location makes it easier to maintain the responsive design.
