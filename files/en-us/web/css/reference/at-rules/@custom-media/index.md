@@ -66,17 +66,17 @@ If the breakpoint needs to be changed, it can be updated in one place to adjust 
 
 ### Grouping multiple responsive breakpoints
 
-Here, the `@custom-media` at-rule is used to set multiple breakpoints in a single place, improving maintainability and simplifying responsive design management:
+Here, the `@custom-media` at-rule is used to set multiple breakpoints in a single place, improving maintainability and simplifying responsive design management across multiple stylesheets:
 
 ```css
+/* general.css */
+
 @custom-media --mobile-screen (width < 480px);
 @custom-media --tablet-screen (width < 768px);
 @custom-media --laptop-screen (width < 1024px);
 @custom-media --desktop-screen (width < 1440px);
 @custom-media --widescreen (width > 1441px);
 ```
-
-These custom media queries can then be used throughout the stylesheets:
 
 ```css
 /* layout.css */
