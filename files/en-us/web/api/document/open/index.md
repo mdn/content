@@ -51,7 +51,7 @@ An automatic `document.open()` call happens when
 
 ### Content Security
 
-This method is subject to the same [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) as other properties, and does not work if doing so would change the document's origin.
+This method is subject to the same [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy) as other properties, and does not work if doing so would change the document's origin.
 
 ## Three-argument document.open()
 

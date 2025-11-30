@@ -6,7 +6,7 @@ page-type: guide
 sidebar: security
 ---
 
-[Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) (SRI) enables browsers to verify that resources they fetch (for example, from a CDN) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that the fetched resource must match.
+[Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) (SRI) enables browsers to verify that resources they fetch (for example, from a CDN) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that the fetched resource must match.
 
 ## Problem
 
