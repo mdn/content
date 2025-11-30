@@ -33,45 +33,56 @@ A generic {{domxref("Event")}}.
 #### HTML
 
 ```html
-<dialog class="example-dialog">
+<dialog id="dialog">
   <form method="dialog">
-    <button>Close via method="dialog"</button>
+    <button type="submit">Close via method="dialog"</button>
   </form>
-  <button class="close">Close via .close() method</button>
+  <button id="close">Close via .close() method</button>
   <p>Or hit the <kbd>Esc</kbd> key</p>
 </dialog>
 
-<button class="open-dialog">Open dialog</button>
+<button id="open">Open dialog</button>
+```
 
-<div class="result"></div>
+```html hidden
+<pre id="status-text"></pre>
 ```
 
 ```css hidden
-button,
-div {
-  margin: 0.5rem;
+#status-text {
+  height: 120px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const statusText = document.getElementById("status-text");
+function log(text) {
+  statusText.innerText = `${statusText.innerText}${text}\n`;
+  statusText.scrollTop = statusText.scrollHeight;
 }
 ```
 
 #### JavaScript
 
 ```js
-const result = document.querySelector(".result");
+const dialog = document.getElementById("dialog");
+const openButton = document.getElementById("open");
+const closeButton = document.getElementById("close");
 
-const dialog = document.querySelector(".example-dialog");
-dialog.addEventListener("close", (event) => {
-  result.textContent = "dialog was closed";
-});
-
-const openDialog = document.querySelector(".open-dialog");
-openDialog.addEventListener("click", () => {
+openButton.addEventListener("click", () => {
   dialog.showModal();
-  result.textContent = "";
+  log("dialog: opened");
 });
 
-const closeButton = document.querySelector(".close");
 closeButton.addEventListener("click", () => {
   dialog.close();
+});
+
+dialog.addEventListener("close", (event) => {
+  log("dialog: closed");
 });
 ```
 

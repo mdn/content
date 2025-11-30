@@ -16,11 +16,18 @@ The **`closedBy`** property of the
 A string; possible values are:
 
 - `any`
-  - : The dialog can be dismissed with a light dismiss user action, a platform-specific user action, or a developer-specified mechanism.
+  - : The dialog can be dismissed by a [close request](https://html.spec.whatwg.org/multipage/interaction.html#close-request) or clicks outside the dialog.
 - `closerequest`
-  - : The dialog can be dismissed with a platform-specific user action or a developer-specified mechanism.
+  - : The dialog can only be dismissed by a [close request](https://html.spec.whatwg.org/multipage/interaction.html#close-request).
 - `none`
-  - : The dialog can only be dismissed with a developer-specified mechanism.
+  - : No user actions automatically close the dialog. The dialog can only be dismissed with a developer-specified mechanism.
+
+### Default behaviour
+
+If the `closedby` attribute is absent or invalid, it falls back to the **Auto** state. In the **Auto** state:
+
+- when the `<dialog>` is opened with `showModal()`, it behaves as if: `closedby="closerequest"`
+- when the `<dialog>` is opened by any other means, it behaves as if: `closedby="none"`
 
 ## Examples
 
@@ -30,14 +37,14 @@ A string; possible values are:
 <dialog open closedby="any">
   <h2>My dialog</h2>
   <p>
-    Closable using the Esc key, or by clicking outside the dialog. "Light
-    dismiss" behavior.
+    Closable using the <kbd>Esc</kbd> key, or by clicking outside the dialog.
+    "Light dismiss" behavior.
   </p>
 </dialog>
 ```
 
 ```js
-const dialogElem = document.querySelector("dialog");
+const dialog = document.querySelector("dialog");
 
 // Logs "any" to the console
 console.log(dialogElem.closedBy);
