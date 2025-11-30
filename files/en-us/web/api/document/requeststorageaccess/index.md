@@ -70,7 +70,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
     - The `types` parameter is provided and all of its properties are `false`.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
-    - The document's window is not a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+    - The document's window is not a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
     - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - The document or the top-level document has a `null` origin.
     - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.

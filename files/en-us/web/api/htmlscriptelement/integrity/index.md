@@ -42,4 +42,4 @@ console.log(el.integrity); // Output: "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/u
 ## See also
 
 - {{domxref("HTMLLinkElement.integrity")}}
-- [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity)
+- [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity)

@@ -8,9 +8,7 @@ browser-compat: api.HTMLDialogElement.show
 
 {{ APIRef("HTML DOM") }}
 
-The **`show()`** method of the {{domxref("HTMLDialogElement")}}
-interface displays the dialog modelessly, i.e., still allowing interaction with content
-outside of the dialog.
+The **`show()`** method of the {{domxref("HTMLDialogElement")}} interface displays the dialog modelessly, i.e., still allowing interaction with content outside of the dialog.
 
 ## Syntax
 
@@ -33,16 +31,18 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example shows a simple button that, when clicked, opens a
-{{htmlelement("dialog")}} containing a form via the `show()` method. From
-there you can click the _Cancel_ button to close the dialog (via the
-{{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
-button.
+### Basic usage
+
+The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the `show()` method.
+From there you can click the _Cancel_ button ("X") to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit button.
+
+#### HTML
 
 ```html
 <!-- Simple pop-up dialog box, containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
+    <button type="button" id="cancel">X</button>
     <section>
       <p>
         <label for="favAnimal">Favorite animal:</label>
@@ -68,6 +68,8 @@ button.
 <button id="updateDetails">Update details</button>
 ```
 
+#### JavaScript
+
 ```js
 const updateButton = document.getElementById("updateDetails");
 const cancelButton = document.getElementById("cancel");
@@ -78,7 +80,7 @@ function openCheck(dialog) {
   if (dialog.open) {
     console.log("Dialog open");
   } else {
-    console.log("Dialog closed");
+    console.log("Dialog cancelled");
   }
 }
 
@@ -94,6 +96,10 @@ cancelButton.addEventListener("click", () => {
   openCheck(dialog);
 });
 ```
+
+#### Results
+
+{{EmbedLiveSample("Basic usage",100, 200)}}
 
 ## Specifications
 
