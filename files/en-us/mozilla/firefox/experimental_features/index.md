@@ -350,7 +350,7 @@ The CSS `text-decoration-trim` property allows you to specify {{cssxref("text-de
 
 ### `@custom-media`
 
-The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS at-rule defines aliases for long or complex media queries. Instead of using the same hardcoded `@media` with `<media-query-list>` multiple times, it can be defined once in a `@custom-media` block and reused wherever required. ([Firefox bug 1991105](https://bugzil.la/1744292)).
+The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS at-rule defines aliases for long or complex media queries. Instead of repeating the same hardcoded `@media` rule with a `<media-query-list>`, it can be defined once in a `@custom-media` and referenced throughout the stylesheet whenever needed. ([Firefox bug 1991105](https://bugzil.la/1744292)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
