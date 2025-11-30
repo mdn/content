@@ -25,6 +25,9 @@ SVG's `<a>` element is a container, which means you can create a link around tex
 - [`hreflang`](/en-US/docs/Web/HTML/Reference/Elements/a#hreflang)
   - : The human language of the URL or URL fragment that the hyperlink points to.
     _Value type_: **\<string>**; _Default value_: _none_; _Animatable_: **no**
+- [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/a#interestfor) {{experimental_inline}}
+  - : Defines the `<a>` element as an **interest invoker**. Takes as its value the `id` of a target element that will be affected in some way (normally shown or hidden) when interest is shown or lost on the invoker element (for example by hovering/unhovering or focusing/unfocusing it). See [Using interest invokers](/en-US/docs/Web/API/Popover_API/Interest_invokers) for more details and examples.
+    _Value type_: **\<string>**; _Default value_: _none_; _Animatable_: **no**
 - [`ping`](/en-US/docs/Web/HTML/Reference/Elements/a#ping) {{experimental_inline}}
   - : A space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking. For a more widely-supported feature addressing the same use cases, see {{domxref("Navigator.sendBeacon()")}}.
     _Value type_: **[\<list-of-URLs>](/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts)**; _Default value_: _none_; _Animatable_: **no**

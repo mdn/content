@@ -260,6 +260,9 @@ In the below sections, we'll walk through all the important parts of the code.
 >
 > Note also that `popover="hint"` falls back to `popover="manual"` in unsupporting browsers.
 
+> [!NOTE]
+> There is a related feature — **interest invokers** — that can be used to create hover/focus popover functionality conveniently and consistently, without requiring JavaScript. Check out [Using interest invokers](/en-US/docs/Web/API/Popover_API/Interest_invokers) to learn more.
+
 ### Creating the sub-menus with `popover="auto"`
 
 The popup sub-menus are created declaratively, using `auto` popovers.
