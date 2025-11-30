@@ -9,7 +9,7 @@ browser-compat: css.at-rules.custom-media
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines aliases for long or complex [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Instead of repeating the same hardcoded [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) rule with a `<media-query-list>`, it can be defined once in a `@custom-media` and referenced throughout the stylesheet whenever needed.
+The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) defines aliases for long or complex [media queries](/en-US/docs/Web/CSS/Guides/Media_queries). Instead of repeating the same hardcoded [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) rule with a `<media-query-list>`, it can be defined once in a `@custom-media` and referenced throughout the stylesheet whenever needed.
 
 ## Syntax
 
@@ -23,9 +23,9 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines alias
 ### Values
 
 - `<extension-name>`
-  - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident); the name identifying the custom media query.
+  - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident); the name identifying the custom media query.
 - `<media-query-list>`
-  - : A comma-separated [list of `<media-query>` values](/en-US/docs/Web/CSS/@media#description).
+  - : A comma-separated [list of `<media-query>` values](/en-US/docs/Web/CSS/Reference/At-rules/@media#description).
 
 ## Description
 
@@ -116,4 +116,4 @@ The following would be incorrect:
 - CSS [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rule
 - CSS [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import) at-rule
 - [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module
