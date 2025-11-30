@@ -361,7 +361,7 @@ Before moving on, play with the different form controls in your local copy and s
 
 The "Choose hotel room type" buttons are implemented using [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) controls. These render as a set of push button controls where only one of the set can be selected at any one time — you can't select more than one at once. They are named after the buttons found on old-fashioned radios, where you press one button and the previously-selected one pops out again.
 
-Our example code look looks like this:
+Our example code looks like this:
 
 ```html
 <fieldset>
