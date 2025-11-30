@@ -81,18 +81,18 @@ The block of the `@media` at-rule is a `<rule-list>` containing two style rules.
 
 The invalid token sequence (`!invalid-rule`) is simply ignored by the parser. The rest of the rules still form the `<rule-list>`.
 
-```css
+```plain
 body {
   color: black;
 }
+
+!invalid-rule
 
 @supports (display: grid) {
   section {
     display: grid;
   }
 }
-
-!invalid-rule
 ```
 
 ## Specifications
