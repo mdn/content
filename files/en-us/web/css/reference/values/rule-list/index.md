@@ -86,13 +86,13 @@ body {
   color: black;
 }
 
-!invalid-rule
-
 @supports (display: grid) {
   section {
     display: grid;
   }
 }
+
+!invalid-rule
 ```
 
 ## Specifications
