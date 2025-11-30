@@ -194,7 +194,7 @@ This does add an extra maintenance burden: every time the source changes (for ex
 
 The {{htmlelement("link")}} element also supports the `integrity` attribute, so you can (and should) use it for CSS stylesheets as well as scripts.
 
-See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) for more details.
+See [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) for more details.
 
 ## Defense summary checklist
 

@@ -121,7 +121,7 @@ In this example, we reduce the duration of the view progress scroll animation by
 In the middle of a wall of text, we include an element that we will animate. We include a lot of text to ensure that our content overflows its container, but this is hidden for the sake of brevity.
 We also include a checkbox to toggle the {{cssxref("animation-fill-mode")}} property on and off, to demonstrate its effect on shortened animation timelines. This is also hidden.
 
-```html hidden
+```html-nolint hidden
 <div class="content">
   <h1>Content</h1>
 
@@ -140,29 +140,26 @@ We also include a checkbox to toggle the {{cssxref("animation-fill-mode")}} prop
     Sagittis aliquam malesuada bibendum arcu vitae elementum. Malesuada bibendum
     arcu vitae elementum curabitur vitae nunc sed velit.
   </p>
-</div>
 ```
 
 ```html
 <div class="animatedElement"></div>
 ```
 
-```html hidden
-<p>
-  Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
-  cursus vitae congue mauris rhoncus aenean vel. Sit amet cursus sit amet
-  dictum. Augue neque gravida in fermentum et. Gravida rutrum quisque non tellus
-  orci ac auctor augue mauris. Risus quis varius quam quisque id diam vel quam
-  elementum. Nibh praesent tristique magna sit amet purus gravida quis. Duis
-  ultricies lacus sed turpis tincidunt id aliquet. In egestas erat imperdiet sed
-  euismod nisi. Eget egestas purus viverra accumsan in nisl nisi scelerisque.
-  Netus et malesuada fames ac.
-</p>
-<p></p>
-<label>
-  <input type="checkbox" /> Add <code>animation-fill-mode: both;</code>
-</label>
+```html-nolint hidden
+  <p>
+    Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
+    cursus vitae congue mauris rhoncus aenean vel. Sit amet cursus sit amet
+    dictum. Augue neque gravida in fermentum et. Gravida rutrum quisque non
+    tellus orci ac auctor augue mauris. Risus quis varius quam quisque id diam
+    vel quam elementum. Nibh praesent tristique magna sit amet purus gravida
+    quis. Duis ultricies lacus sed turpis tincidunt id aliquet. In egestas erat
+    imperdiet sed euismod nisi. Eget egestas purus viverra accumsan in nisl nisi
+    scelerisque. Netus et malesuada fames ac.
   </p>
+  <label>
+    <input type="checkbox" /> Add <code>animation-fill-mode: both;</code>
+  </label>
 </div>
 ```
 

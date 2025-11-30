@@ -98,4 +98,4 @@ To programmatically determine if a window has either sticky or transient user ac
 - {{Glossary("Transient activation")}}
 - {{Glossary("Sticky activation")}}
 - {{domxref("UserActivation")}} API
-- [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+- [Features restricted to secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)

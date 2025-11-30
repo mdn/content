@@ -77,7 +77,7 @@ So `<img src="http://example.com/image.png">` will be upgraded, but `<img src="h
 
 ## Examples of mixed content requests
 
-Mixed content requests are insecure requests for resources from a [secure context](/en-US/docs/Web/Security/Secure_Contexts):
+Mixed content requests are insecure requests for resources from a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts):
 
 The following examples demonstrate secure, insecure, and mixed content requests:
 
