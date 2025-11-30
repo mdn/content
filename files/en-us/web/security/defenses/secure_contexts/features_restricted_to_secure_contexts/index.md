@@ -6,7 +6,7 @@ page-type: guide
 sidebar: security
 ---
 
-This reference lists the web platform features available only in secure contexts — see [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts) for a definition and more details.
+This reference lists the web platform features available only in secure contexts — see [Secure Contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts) for a definition and more details.
 
 ## Current features available only in secure contexts
 
@@ -72,5 +72,5 @@ In addition, the following methods require a secure context (even if the associa
 
 ## See also
 
-- [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)
+- [Secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts)
 - ["secure context" query on Chrome Platform Status](https://chromestatus.com/features#secure%20context)
