@@ -25,6 +25,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 ### At-rules and descriptors
 
 - {{cssxref("@import")}}
+- {{cssxref("@custom-media")}}
 - {{cssxref("@media")}}
   - {{cssxref("@media/any-hover", "any-hover")}}
   - {{cssxref("@media/any-pointer", "any-pointer")}}
