@@ -103,7 +103,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
     See [Setting headers](/en-US/docs/Web/API/Fetch_API/Using_Fetch#setting_headers) for more details.
 
 - `integrity` {{optional_inline}}
-  - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
+  - : Contains the [subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity)
     value of the request.
 
     This will be checked when the resource is fetched, just as it would be when the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute is set on a {{htmlelement("script")}} element. The browser will compute the {{glossary("hash function", "hash")}} of the fetched resource using the specified algorithm, and if the result does not match the value specified, the browser will reject the fetch request with a network error.

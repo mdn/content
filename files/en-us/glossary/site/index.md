@@ -16,7 +16,7 @@ According to this definition, `support.mozilla.org` and `developer.mozilla.org` 
 In some contexts, the scheme is also considered when differentiating sites. This would make `http://vpl.ca` and `https://vpl.ca` different sites. Including the scheme prevents an insecure (HTTP) site from being treated as the same site as a secure (HTTPS) site. A definition that considers the scheme is sometimes called a _schemeful same-site_. This stricter definition is applied in the rules for handling [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) cookies.
 
 > [!NOTE]
-> Browsers sometimes make security decisions (for example, deciding which resources a script can access) based on the {{Glossary("Origin")}} of a resource. This is a more restrictive concept than the site, encompassing the scheme, the whole domain, and the port. See also [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+> Browsers sometimes make security decisions (for example, deciding which resources a script can access) based on the {{Glossary("Origin")}} of a resource. This is a more restrictive concept than the site, encompassing the scheme, the whole domain, and the port. See also [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
 ## Examples
 
@@ -45,4 +45,4 @@ These are the same site, or different sites if the scheme is considered:
 - [What is a URL](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - Related glossary terms:
   - {{Glossary("Origin")}}
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)

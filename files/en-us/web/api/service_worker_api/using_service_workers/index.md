@@ -95,7 +95,7 @@ A single service worker can control many pages. Each time a page within your sco
 
 A service worker fails to register for one of the following reasons:
 
-- You are not running your application in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) (over HTTPS).
+- You are not running your application in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts) (over HTTPS).
 - The path of the service worker file is incorrect.
   The path must be relative to the origin, not an app's root directory.
   In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`, so the service worker must be specified as `/sw.js`.
