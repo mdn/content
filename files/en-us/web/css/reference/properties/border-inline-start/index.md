@@ -49,9 +49,9 @@ direction: rtl;
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-inline-start-color`](/en-US/docs/Web/CSS/Reference/Properties/border-inline-start-color)
-- [`border-inline-start-style`](/en-US/docs/Web/CSS/Reference/Properties/border-inline-start-style)
-- [`border-inline-start-width`](/en-US/docs/Web/CSS/Reference/Properties/border-inline-start-width)
+- {{cssxref("border-inline-start-color")}}
+- {{cssxref("border-inline-start-style")}}
+- {{cssxref("border-inline-start-width")}}
 
 ## Syntax
 

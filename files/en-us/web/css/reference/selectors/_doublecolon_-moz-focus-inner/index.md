@@ -64,7 +64,7 @@ Not part of any standard.
 
 - [Mozilla CSS extensions](/en-US/docs/Web/CSS/Reference/Mozilla_extensions)
 - Related CSS properties:
-  - [`-moz-user-focus`](/en-US/docs/Web/CSS/Reference/Properties/-moz-user-focus)
+  - {{cssxref("-moz-user-focus")}}
 
 - Related CSS selectors:
   - [`:focus`](/en-US/docs/Web/CSS/Reference/Selectors/:focus)

@@ -52,10 +52,10 @@ Text decorations are drawn across descendant text elements. This means that if a
 
 This property is a shorthand for the following CSS properties:
 
-- [`text-decoration-color`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-color)
-- [`text-decoration-line`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-line)
-- [`text-decoration-style`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-style)
-- [`text-decoration-thickness`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-thickness)
+- {{cssxref("text-decoration-color")}}
+- {{cssxref("text-decoration-line")}}
+- {{cssxref("text-decoration-style")}}
+- {{cssxref("text-decoration-thickness")}}
 
 ## Syntax
 

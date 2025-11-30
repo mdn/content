@@ -91,7 +91,7 @@ Chromium-based browsers support an outdated version of this property — `mask-b
 ```
 
 > [!NOTE]
-> The [`mask-border`](/en-US/docs/Web/CSS/Reference/Properties/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
+> The {{cssxref("mask-border")}} page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
 
 > [!NOTE]
 > The fill keyword needs to be included if you want the element's content to be visible.

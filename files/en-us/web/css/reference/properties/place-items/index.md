@@ -58,8 +58,8 @@ place-items: end center;
 
 This property is a shorthand for the following CSS properties:
 
-- [`align-items`](/en-US/docs/Web/CSS/Reference/Properties/align-items)
-- [`justify-items`](/en-US/docs/Web/CSS/Reference/Properties/justify-items)
+- {{cssxref("align-items")}}
+- {{cssxref("justify-items")}}
 
 ## Syntax
 

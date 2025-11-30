@@ -45,8 +45,8 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of pri
 
 The `@page` at-rule can contain only page descriptors and [margin at-rules](#margin_at-rules). The following descriptors have been implemented by at least one browser:
 
-- [`margin`](/en-US/docs/Web/CSS/Reference/Properties/margin)
-  - : Specifies the page margins. Individual margin properties [`margin-top`](/en-US/docs/Web/CSS/Reference/Properties/margin-top), [`margin-right`](/en-US/docs/Web/CSS/Reference/Properties/margin-right), [`margin-bottom`](/en-US/docs/Web/CSS/Reference/Properties/margin-bottom), and [`margin-left`](/en-US/docs/Web/CSS/Reference/Properties/margin-left) can also be used.
+- {{cssxref("margin")}}
+  - : Specifies the page margins. Individual margin properties {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}} can also be used.
 - [`page-orientation`](/en-US/docs/Web/CSS/Reference/At-rules/@page/page-orientation)
   - : Specifies the orientation of the page. This does not affect the layout of the page; the rotation is applied after the layout in the output medium.
 - [`size`](/en-US/docs/Web/CSS/Reference/At-rules/@page/size)

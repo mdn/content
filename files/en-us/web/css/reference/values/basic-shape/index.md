@@ -68,7 +68,7 @@ The `<basic-shape>` data type is used to create basic shapes including rectangle
 The parameters common across the syntax of some basic shape functions include:
 
 - `round <'border-radius'>`
-  - : Defines rounded corners for [rectangles by container insets](#syntax_for_rectangles_by_container_insets), [rectangles by distance](#syntax_for_rectangles_by_distance), and [rectangles with dimensions](#syntax_for_rectangles_with_dimensions) using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/Reference/Properties/border-radius) shorthand property.
+  - : Defines rounded corners for [rectangles by container insets](#syntax_for_rectangles_by_container_insets), [rectangles by distance](#syntax_for_rectangles_by_distance), and [rectangles with dimensions](#syntax_for_rectangles_with_dimensions) using the same syntax as the CSS {{cssxref("border-radius")}} shorthand property.
 
 - `<shape-radius>`
   - : Defines the radius for a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). Valid values include {{cssxref("length")}}, {{cssxref("percentage")}}, `closest-side` (the default), and `farthest-side`. Negative values are invalid.

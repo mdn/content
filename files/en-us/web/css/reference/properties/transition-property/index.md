@@ -101,7 +101,7 @@ transition-property: unset;
 
 ### Basic example
 
-When the button is hovered or focused, it undergoes a one-second color transition; the `transition-property` is [`background-color`](/en-US/docs/Web/CSS/Reference/Properties/background-color).
+When the button is hovered or focused, it undergoes a one-second color transition; the `transition-property` is {{cssxref("background-color")}}.
 
 #### HTML
 

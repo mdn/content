@@ -40,7 +40,7 @@ Apple has [a description in Safari CSS Reference](https://developer.apple.com/li
 }
 ```
 
-This media feature is only supported by WebKit. The unprefixed [`transform`](/en-US/docs/Web/CSS/Reference/Properties/transform) property is supported in all modern browsers. If possible, use an {{cssxref("@supports")}} feature query instead:
+This media feature is only supported by WebKit. The unprefixed {{cssxref("transform")}} property is supported in all modern browsers. If possible, use an {{cssxref("@supports")}} feature query instead:
 
 ```css
 @supports (-webkit-transform: translate(100px, 100px)) {

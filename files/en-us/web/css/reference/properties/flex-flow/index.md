@@ -59,8 +59,8 @@ flex-flow: column wrap;
 
 This property is a shorthand for the following CSS properties:
 
-- [`flex-direction`](/en-US/docs/Web/CSS/Reference/Properties/flex-direction)
-- [`flex-wrap`](/en-US/docs/Web/CSS/Reference/Properties/flex-wrap)
+- {{cssxref("flex-direction")}}
+- {{cssxref("flex-wrap")}}
 
 ## Syntax
 

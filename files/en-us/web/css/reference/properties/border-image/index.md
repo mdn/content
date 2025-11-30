@@ -63,11 +63,11 @@ border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-image-outset`](/en-US/docs/Web/CSS/Reference/Properties/border-image-outset)
-- [`border-image-repeat`](/en-US/docs/Web/CSS/Reference/Properties/border-image-repeat)
-- [`border-image-slice`](/en-US/docs/Web/CSS/Reference/Properties/border-image-slice)
-- [`border-image-source`](/en-US/docs/Web/CSS/Reference/Properties/border-image-source)
-- [`border-image-width`](/en-US/docs/Web/CSS/Reference/Properties/border-image-width)
+- {{cssxref("border-image-outset")}}
+- {{cssxref("border-image-repeat")}}
+- {{cssxref("border-image-slice")}}
+- {{cssxref("border-image-source")}}
+- {{cssxref("border-image-width")}}
 
 ## Syntax
 

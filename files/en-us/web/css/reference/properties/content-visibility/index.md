@@ -230,7 +230,7 @@ In this example, we have a {{htmlelement("div")}} element, the content of which 
 
 #### CSS
 
-In the CSS we initially set `content-visibility: hidden;` on the `<div>` to hide its content. We then set up `@keyframes` animations and attach them to classes to show and hide the `<div>`, animating `content-visibility` and [`color`](/en-US/docs/Web/CSS/Reference/Properties/color) so that you get a smooth animation effect as the content is shown/hidden.
+In the CSS we initially set `content-visibility: hidden;` on the `<div>` to hide its content. We then set up `@keyframes` animations and attach them to classes to show and hide the `<div>`, animating `content-visibility` and {{cssxref("color")}} so that you get a smooth animation effect as the content is shown/hidden.
 
 ```css
 div {
@@ -319,6 +319,6 @@ The rendered result looks like this:
 ## See also
 
 - [CSS Containment](/en-US/docs/Web/CSS/Guides/Containment)
-- [`contain-intrinsic-size`](/en-US/docs/Web/CSS/Reference/Properties/contain-intrinsic-size)
+- {{cssxref("contain-intrinsic-size")}}
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) (web.dev)
