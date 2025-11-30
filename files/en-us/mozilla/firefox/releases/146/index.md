@@ -24,7 +24,10 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### MathML -->
+### MathML
+
+- Operator mirroring in right-to-left (RTL) modes and stretching now work properly when used in combination.
+  ([Firefox bug 1994172](https://bugzil.la/1994172)).
 
 <!-- #### Removals -->
 
