@@ -8,7 +8,7 @@ sidebar: jsref
 ---
 
 The **`find()`** method of {{jsxref("Array")}} instances returns the first element in the provided array that satisfies the provided testing function.
-If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
+If no values satisfies the testing function, {{jsxref("undefined")}} is returned.
 
 - If you need the **index** of the found element in the array, use {{jsxref("Array/findIndex", "findIndex()")}}.
 - If you need to find the **index of a value**, use {{jsxref("Array/indexOf", "indexOf()")}}.
