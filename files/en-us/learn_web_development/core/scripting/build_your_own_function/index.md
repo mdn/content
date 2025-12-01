@@ -79,7 +79,7 @@ To begin with, let's put together a basic function.
    panel.appendChild(closeBtn);
 
    closeBtn.addEventListener("click", () =>
-     panel.parentNode.removeChild(panel),
+     body.removeChild(panel),
    );
    ```
 
@@ -120,7 +120,7 @@ Finally, we call {{domxref("EventTarget/addEventListener", "addEventListener()")
 Briefly, the `addEventListener()` method is provided by the button (or in fact, any element on the page) that can be passed a function and the name of an event. In this case, the name of the event is 'click', meaning that when the user clicks the button, the function will run. You'll learn a lot more about events in our [events article](/en-US/docs/Learn_web_development/Core/Scripting/Events). The line inside the function uses the {{domxref("Node.removeChild()")}} DOM API function to specify that we want to remove a specific child element of the HTML element — in this case, the panel `<div>`.
 
 ```js
-closeBtn.addEventListener("click", () => panel.parentNode.removeChild(panel));
+closeBtn.addEventListener("click", () => body.removeChild(panel));
 ```
 
 Basically, this whole block of code is generating a block of HTML that looks like so, and inserting it into the page:
