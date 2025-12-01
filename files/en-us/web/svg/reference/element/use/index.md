@@ -70,7 +70,7 @@ Most attributes on `<use>` are ignored if the corresponding attribute is already
 
 Since the cloned nodes are not exposed, care must be taken when using [CSS](/en-US/docs/Web/CSS) to style a `<use>` element and its cloned descendants. CSS properties are not guaranteed to be inherited by the cloned DOM unless you explicitly request them using [CSS inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance).
 
-For security reasons, browsers may apply the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) on `<use>` elements and may refuse to load a cross-origin URL in the {{SVGAttr("href")}} attribute. There is currently no defined way to set a cross-origin policy for `<use>` elements.
+For security reasons, browsers may apply the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy) on `<use>` elements and may refuse to load a cross-origin URL in the {{SVGAttr("href")}} attribute. There is currently no defined way to set a cross-origin policy for `<use>` elements.
 
 ### Loading resources from external files via `<use>`
 

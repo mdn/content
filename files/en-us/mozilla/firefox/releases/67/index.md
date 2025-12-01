@@ -106,7 +106,7 @@ _No changes._
 
 ### Security
 
-- [Notifications](/en-US/docs/Web/API/Notifications_API) are now only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) ([Firefox bug 1429432](https://bugzil.la/1429432)).
+- [Notifications](/en-US/docs/Web/API/Notifications_API) are now only available in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts) ([Firefox bug 1429432](https://bugzil.la/1429432)).
 - Firefox now blocks the loading of external protocol URLs in {{htmlelement("iframe")}}s ([Firefox bug 1527882](https://bugzil.la/1527882)).
 
 ### WebDriver conformance (Marionette)

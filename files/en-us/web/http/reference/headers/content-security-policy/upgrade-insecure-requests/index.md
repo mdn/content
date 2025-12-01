@@ -96,4 +96,4 @@ monitoring policy is violated and reports insecure resources to your endpoint.
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Upgrade-Insecure-Requests")}} header
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) header
-- [Mixed content](/en-US/docs/Web/Security/Mixed_content)
+- [Mixed content](/en-US/docs/Web/Security/Defenses/Mixed_content)

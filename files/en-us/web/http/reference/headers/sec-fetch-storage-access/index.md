@@ -21,7 +21,7 @@ The status can indicate that permission to access [unpartitioned](/en-US/docs/We
 
 Supporting browsers must include this header on cross-site requests when the request credential mode is [`include`](/en-US/docs/Web/API/Request/credentials#include).
 The header should not be sent with same-site requests (since those requests cannot involve cross-site cookies), or if the request's [credentials mode](/en-US/docs/Web/API/Request/credentials) is "omit".
-The requested resource must also have a [potentially trustworthy origin](/en-US/docs/Web/Security/Secure_Contexts#potentially_trustworthy_origins).
+The requested resource must also have a [potentially trustworthy origin](/en-US/docs/Web/Security/Defenses/Secure_Contexts#potentially_trustworthy_origins).
 
 If a storage access permission has been granted but not activated, a server can respond with {{httpheader("Activate-Storage-Access")}} to request activation of the permission for the context.
 For more information see [Storage access headers](/en-US/docs/Web/API/Storage_Access_API#storage_access_headers) in the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) overview.

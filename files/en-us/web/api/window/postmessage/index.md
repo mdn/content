@@ -10,7 +10,7 @@ browser-compat: api.Window.postMessage
 
 The **`window.postMessage()`** method safely enables cross-origin communication between {{domxref("Window")}} objects; _e.g.,_ between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
 
-Normally, scripts on different pages are allowed to access each other if and only if the pages they originate from share the same [origin](/en-US/docs/Web/API/Location/origin) (also known as the "[same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)"). `window.postMessage()` provides a controlled mechanism to securely circumvent this restriction (if used properly).
+Normally, scripts on different pages are allowed to access each other if and only if the pages they originate from share the same [origin](/en-US/docs/Web/API/Location/origin) (also known as the "[same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)"). `window.postMessage()` provides a controlled mechanism to securely circumvent this restriction (if used properly).
 
 Furthermore, an accessing script must have obtained the window object of the accessed document beforehand. This can occur through methods such as [`window.open()`](/en-US/docs/Web/API/Window/open) for popups or [`iframe.contentWindow`](/en-US/docs/Web/API/HTMLIFrameElement/contentWindow) for iframes.
 
