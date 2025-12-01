@@ -54,7 +54,7 @@ The newly inserted rule's index within the stylesheet's rule-list.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if more than one rule is given in the `rule` parameter.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if `rule` is {{cssxref("@namespace")}} and the [rule-list](/en-US/docs/Web/CSS/Reference/Values/rule-list) has more than just `@import` at-rules and/or `@namespace` at-rules.
+  - : Thrown if `rule` is {{cssxref("@namespace")}} and the [rule-list](/en-US/docs/Web/CSS/Reference/Values/rule-list) contains at-rules other than `@import` and `@namespace` at-rules.
 
 ## Examples
 
