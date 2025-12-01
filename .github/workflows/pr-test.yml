@@ -140,7 +140,7 @@ jobs:
           # Workaround, as fred-ssr doesn't copy assets.
           cp -vR node_modules/@mdn/fred/out/. "$BUILD_OUT_ROOT"
 
-          npm run fred-ssr
+          npx fred-ssr
 
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT
