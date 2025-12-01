@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          cache: npm
 
       # This is a "required" workflow so path filtering can not be used:
       # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
@@ -34,16 +34,16 @@ jobs:
               - "files/**"
               - ".github/workflows/pr-check_redirects.yml"
 
-      - name: Install all yarn packages
+      - name: Install
         if: steps.filter.outputs.required_files == 'true'
-        run: yarn --frozen-lockfile
+        run: npm ci
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check redirects file(s)
         if: steps.filter.outputs.required_files == 'true'
-        run: yarn content validate-redirects en-US
+        run: npm run content validate-redirects en-US
         env:
           # Used by the `rari` cli to avoid rate limiting issues
           # when fetching the latest releases info from the GitHub API.
