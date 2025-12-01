@@ -6,7 +6,7 @@ browser-compat: css.properties.view-timeline-name
 sidebar: cssref
 ---
 
-The **`view-timeline-name`** [CSS](/en-US/docs/Web/CSS) property specifies the names for the [named view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline) associated with the element.
+The **`view-timeline-name`** [CSS](/en-US/docs/Web/CSS) property specifies the names of one or more [named view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline) associated with the element.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ The **`view-timeline-name`** [CSS](/en-US/docs/Web/CSS) property specifies the n
 /* Keyword value */
 view-timeline-name: none;
 
-/* CSS identifier */
+/* Custom identifier */
 view-timeline-name: --custom_name_for_timeline;
 
 /* Multiple identifiers */
@@ -31,17 +31,15 @@ view-timeline-name: unset;
 ### Values
 
 - `none`
-  - : The timeline has no name. This is the default.
+  - : Indicates that the timeline has no name. This is the default value.
 - `<dashed-ident>`
-  - : A {{cssxref("dashed-ident")}} defining a name for a view progress timeline.
+  - : Specifies a comma-separated list of {{cssxref("dashed-ident")}} custom name identifiers. All `<dashed-ident>` values must start with `--`, which helps avoid name clashes with standard CSS keywords.
 
 ## Description
 
-The `view-timeline-name` property is used to define the name of a _named view progress timeline_, which is progressed through based on the change in visibility of an element (known as the _subject_) inside a scrollable element (_scroller_). The `view-timeline-name`, {{cssxref("view-timeline-axis")}} and {{cssxref("view-timeline-inset")}} properties can also be set using the {{cssxref("view-timeline")}} shorthand property.
+A view progress timeline is progressed through based on the change in visibility of an element, called the _subject_, inside a scrollable element, called the _scroller_. The `view-timeline-name` property is set on the subject. If the subject's named scroller element does not overflow its container in the [axis dimension](/en-US/docs/Web/CSS/view-timeline-axis) or if the overflow is hidden or clipped, no scroll progress timeline will be created.
 
-The `view-timeline-name` property is set on the subject. The value is the keyword `none` or a comma-separated list of `<dashed-ident>` custom name identifiers. All `<dashed-ident>` values must start with `--`, which helps avoid name clashes with standard CSS keywords. The names can then be referenced in {{cssxref("animation-timeline")}} declarations to indicate the element that will be animated as the timeline progresses.
-
-If the subject's named scroller element does not overflow its container in the [axis dimension](/en-US/docs/Web/CSS/view-timeline-axis) or if the overflow is hidden or clipped, no scroll progress timeline will be created.
+You can also set `view-timeline-name` by using the {{cssxref("view-timeline")}} shorthand property. If you specify `<dashed-ident>` values, the names can be referenced in {{cssxref("animation-timeline")}} declarations to indicate the element that will be animated as the timeline progresses.
 
 ## Formal definition
 
