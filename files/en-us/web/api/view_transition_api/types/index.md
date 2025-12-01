@@ -1,5 +1,5 @@
 ---
-title: Using View Transition types
+title: Using view transition types
 slug: Web/API/View_Transition_API/Types
 page-type: guide
 ---
