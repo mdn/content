@@ -29,13 +29,13 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) de
 
 ## Description
 
-When building responsive interfaces, the same media condition often needs to be repeated across multiple  [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rules, sometimes across different files and teams. Duplicating media queries increases the risk of mistakes, makes refactoring harder, and creates unnecessary maintenance overhead. Any time a media query changes, every instance must be found and updated manually — a process that can be both error-prone and difficult to track in large codebases.
+When building responsive interfaces, the same media condition often needs to be repeated across multiple [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rules, sometimes across different files and teams. Duplicating media queries increases the risk of mistakes, makes refactoring harder, and creates unnecessary maintenance overhead. Any time a media query changes, every instance must be found and updated manually — a process that can be both error-prone and difficult to track in large codebases.
 
 The `@custom-media` at-rule solves this problem by letting you define **named aliases** for media queries. Instead of repeating the full media query everywhere, you declare the media condition once as a custom media query and reference its alias throughout your stylesheets. With this in place, updating the underlying media query requires a single change in one location.
 
 Custom media queries can be composed from others by referencing their alias names inside the media query features. This enables building more expressive, layered conditions. However, a custom media query cannot refer to itself, nor can it form part of a circular chain of references. Any circular dependency — direct or indirect — invalidates all custom media queries involved in that loop.
 
-If multiple `@custom-media` rules define the same `<dashed-ident>` name, **only the last declaration in source order applies**. All earlier declarations are ignored, ensuring a deterministic and predictable result.
+If multiple `@custom-media` rules define the same `<dashed-ident>` name, only the last declaration in the source order applies. All earlier declarations are ignored.
 
 Using `@custom-media` improves maintainability, reusability, and consistency across your styles. Centralizing shared breakpoints and other media conditions reduces duplication and makes responsive design easier to reason about — especially in large projects or design systems.
 
@@ -127,7 +127,7 @@ Here, the `@custom-media` at-rule is used to set multiple breakpoints in a singl
 }
 ```
 
-Grouping all the breakpoints in a single location makes it easier to maintain the responsive design. When a breakpoint needs adjustment, it only requires a single update to the `@custom-media` definition, ensuring consistency across all stylesheets.
+Grouping all the breakpoints in a single location makes it easier to maintain the responsive design. When a breakpoint needs adjustment, it only requires a single update to the associated `@custom-media` definition, ensuring consistency across all stylesheets.
 
 ### Complex breakpoints with a list of queries
 

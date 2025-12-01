@@ -62,7 +62,7 @@ The file contains a `<rule-list>` with:
 
 ### A `<rule-list>` inside `@media` at-rule
 
-The block of the `@media` at-rule is a `<rule-list>` containing two style rules.
+The block contained inside an `@media` at-rule is a `<rule-list>` containing one or more style rules. The following example contains two style rules.
 
 ```css
 @media (prefers-color-scheme: dark) {
@@ -79,7 +79,7 @@ The block of the `@media` at-rule is a `<rule-list>` containing two style rules.
 
 ### Invalid rules inside a `<rule-list>`
 
-The invalid token sequence (`!invalid-rule`) is simply ignored by the parser. The rest of the rules still form the `<rule-list>`.
+The invalid token sequence (`!invalid-rule`) is ignored by the parser. The rest of the rules form a valid `<rule-list>`.
 
 ```plain
 body {
