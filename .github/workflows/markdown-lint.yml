@@ -7,7 +7,7 @@ on:
       - .nvmrc
       - .prettier*
       - package.json
-      - yarn.lock
+      - package-lock.json
       - .github/workflows/markdown-lint.yml
       - .github/workflows/markdownlint-problem-matcher.json
 
@@ -27,10 +27,10 @@ jobs:
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          cache: npm
 
-      - name: Install all yarn packages
-        run: yarn --frozen-lockfile
+      - name: Install
+        run: npm ci
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -38,5 +38,5 @@ jobs:
       - name: Lint markdown files
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          yarn lint:md
-          yarn lint:fm
+          npm run lint:md
+          npm run lint:fm
