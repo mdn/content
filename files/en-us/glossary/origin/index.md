@@ -53,7 +53,7 @@ These are not same origin because they use different ports:
 
 ## See also
 
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
 - Related glossary terms:
   - {{Glossary("Site")}}
 - [HTML specification: origin](https://html.spec.whatwg.org/multipage/origin.html#origin)
