@@ -112,7 +112,7 @@ jobs:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         working-directory: content
-        run: yarn --frozen-lockfile
+        run: npm ci
 
       - name: Analyze PR build
         if: steps.check.outputs.HAS_ARTIFACT

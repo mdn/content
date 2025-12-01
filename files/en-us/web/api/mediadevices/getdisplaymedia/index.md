@@ -117,7 +117,7 @@ For that reason, the specification details measures browsers are required to tak
   Instead, they must be applied after the user chooses a source, in order to generate output that matches the options.
 - The go-ahead permission to use `getDisplayMedia()` cannot be persisted for reuse.
   The user must be prompted for permission every time.
-- [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
+- [Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required.
   The user has to interact with the page or a UI element in order for this feature to work.
 - Browsers are encouraged to provide a warning to users about sharing displays or windows that contain browsers, and to keep a close eye on what other content might be getting captured and shown to other users.
 
