@@ -50,7 +50,7 @@ Either one of these promises rejects if the navigation has failed for some reaso
 ### Exceptions
 
 - `DataCloneError` {{domxref("DOMException")}}
-  - : Thrown if the `state` parameter has values included in it that are not structured-cloneable.
+  - : Thrown if the `state` parameter contains values that are not structured-cloneable.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the document is not currently active.
 - `SyntaxError` {{domxref("DOMException")}}
