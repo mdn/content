@@ -119,7 +119,7 @@ jobs:
 
           echo "Running markdownlint --fix"
           MD_LINT_FAILED=false
-          MD_LINT_LOG=$(npx markdownlint-cli2 -- --fix "${files_to_lint[@]}" 2>&1) || MD_LINT_FAILED=true
+          MD_LINT_LOG=$(npx markdownlint-cli2 --fix "${files_to_lint[@]}" 2>&1) || MD_LINT_FAILED=true
           echo "MD_LINT_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
           echo "${MD_LINT_LOG}" >> "$GITHUB_OUTPUT"
           echo "${EOF}" >> "$GITHUB_OUTPUT"
@@ -135,12 +135,12 @@ jobs:
 
           echo "Running Prettier"
           PRETTIER_FAILED=false
-          PRETTIER_LOG=$(npx prettier -- --check "${files_to_lint[@]}" 2>&1) || PRETTIER_FAILED=true
+          PRETTIER_LOG=$(npx prettier --check "${files_to_lint[@]}" 2>&1) || PRETTIER_FAILED=true
           echo "PRETTIER_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
           echo "${PRETTIER_LOG}" >> "$GITHUB_OUTPUT"
           echo "${EOF}" >> "$GITHUB_OUTPUT"
           echo "PRETTIER_FAILED=${PRETTIER_FAILED}" >> "$GITHUB_OUTPUT"
-          npx prettier -- -w "${files_to_lint[@]}"
+          npx prettier -w "${files_to_lint[@]}"
 
           if [[ -n $(git diff) ]]; then
             echo "FILES_MODIFIED=true" >> "$GITHUB_OUTPUT"
