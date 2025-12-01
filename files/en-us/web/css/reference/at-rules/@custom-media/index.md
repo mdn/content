@@ -42,30 +42,48 @@ Custom media queries can be composed from others by referencing their alias name
 
 If multiple `@custom-media` rules define the same `<dashed-ident>` name, only the last declaration in the source order applies. All earlier declarations are ignored.
 
-### Evaluating complex media queries
+### Evaluating media queries with logical operators
 
-Custom media queries evaluated logically. For instance, the following code snippet:
+Custom media queries accept the full range of CSS logical operators — `not`, `and`, and `or` (comma-separated or using the `or` keyword).
+
+Because a `@custom-media` value is just a normal `<media-query-list>`, you can combine, invert, or group conditions exactly as you would in a regular `@media` rule.
+
+#### Using the `not` operator
+
+The `not` operator negates an entire media condition. This is useful when you want a rule to apply only when a specific condition is false.
 
 ```css
-@custom-media --modern (color), (hover);
+@custom-media --no-script not (script);
 
-@media (--modern) and (width > 1024px) {
+@media (--no-script) {
 }
 ```
 
-Is equivalent to:
+#### Using the `and` operator
+
+The `and` operator lets you combine multiple conditions that must all be `true`.
 
 ```css
-@media ((color) or (hover)) and (width > 1024px) {
+@custom-media --medium-screen (min-width: 40em) and (max-width: 60em);
+
+@media (--medium-screen) {
 }
 ```
 
-The following would be incorrect:
+This alias only matches when the viewport is within the specified width range.
+
+#### Using the `or` operator (comma-separated list)
+
+A comma creates a logical `OR`. The media query matches if any of the listed conditions are `true`.
 
 ```css
-@media (color), (hover) and (width > 1024px) {
+@custom-media --screen-or-print screen, print;
+
+@media (--screen-or-print) {
 }
 ```
+
+This alias activates for both screen and print environments.
 
 ## Formal syntax
 
