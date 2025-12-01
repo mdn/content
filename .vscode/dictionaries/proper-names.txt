@@ -303,9 +303,11 @@ Kahlo
 Kaku
 Kang
 Kaply
+Karmadrome
 Kaspersky
 Katari
 Kazam
+Keegan
 kenji-yamasaki
 Kerckhoffs
 Kersee
@@ -628,6 +630,7 @@ Willee
 Willigers
 Winamp
 Winchelsea
+Winnifred
 Wireshark
 Wirfs
 wisedog
@@ -665,5 +668,6 @@ Zheng
 Zilla
 Zinsser
 Zosia
+zxcvbn
 Émanuel
 Österreich

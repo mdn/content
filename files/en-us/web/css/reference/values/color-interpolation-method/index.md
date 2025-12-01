@@ -2,7 +2,9 @@
 title: <color-interpolation-method>
 slug: Web/CSS/Reference/Values/color-interpolation-method
 page-type: css-type
-browser-compat: css.types.color.color-mix
+browser-compat:
+  - css.types.color.color-mix
+  - css.types.color.color.display-p3-linear
 spec-urls: https://drafts.csswg.org/css-color/#interpolation-space
 sidebar: cssref
 ---

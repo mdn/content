@@ -553,8 +553,8 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 ## See also
 
-- [Custom property syntax](/en-US/docs/Web/CSS/Reference/Properties/--*)
 - {{cssxref("@property")}} at-rule
 - [`var()`](/en-US/docs/Web/CSS/Reference/Values/var)
-- [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module
+- [Custom property syntax](/en-US/docs/Web/CSS/Reference/Properties/--*)
+- [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)

@@ -85,9 +85,9 @@ Content-Type: text/plain
 Transfer-Encoding: chunked
 
 7\r\n
-Mozilla\r\n
-11\r\n
-Developer Network\r\n
+Welcome\r\n
+1c\r\n
+to Mozilla Developer Network\r\n
 0\r\n
 \r\n
 ```

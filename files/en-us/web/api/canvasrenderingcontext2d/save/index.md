@@ -13,7 +13,21 @@ The
 method of the Canvas 2D API saves the entire state of the canvas by pushing the current
 state onto a stack.
 
-### The drawing state
+## Syntax
+
+```js-nolint
+save()
+```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Description
 
 The drawing state that gets saved onto a stack consists of:
 
@@ -47,20 +61,6 @@ The drawing state that gets saved onto a stack consists of:
   - {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}
   - {{domxref("CanvasRenderingContext2D.textRendering", "textRendering")}}
   - {{domxref("CanvasRenderingContext2D.wordSpacing", "wordSpacing")}}
-
-## Syntax
-
-```js-nolint
-save()
-```
-
-### Parameters
-
-None.
-
-### Return value
-
-None ({{jsxref("undefined")}}).
 
 ## Examples
 

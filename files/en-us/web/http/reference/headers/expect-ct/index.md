@@ -11,7 +11,7 @@ sidebar: http
 
 {{Deprecated_Header}}
 
-The `Expect-CT` {{Glossary("response header")}} lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) requirements.
+The `Expect-CT` {{Glossary("response header")}} lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Defenses/Certificate_Transparency) requirements.
 Certificate Transparency (CT) aims to prevent the use of misissued certificates for that site from going unnoticed.
 
 Only Google Chrome and other Chromium-based browsers implemented `Expect-CT`, and Chromium has deprecated the header from version 107, because Chromium now enforces CT by default.
@@ -40,10 +40,6 @@ CT requirements can be satisfied via any one of the following mechanisms:
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -99,7 +95,7 @@ Builds of Chrome are designed to stop enforcing the `Expect-CT` policy 10 weeks 
 
 ## See also
 
-- [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts)
+- [Secure Contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts)
 - Glossary terms:
   - {{glossary('TLS', 'Transport Layer Security (TLS)')}}
   - {{glossary('SSL', 'Secure Sockets Layer (SSL)')}}

@@ -26,10 +26,6 @@ The policy applies to loaded resources, and resources in {{htmlelement("iframe")
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden response header name")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

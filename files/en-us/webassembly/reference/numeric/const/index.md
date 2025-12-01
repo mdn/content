@@ -1,11 +1,12 @@
 ---
-title: Const
-slug: WebAssembly/Reference/Numeric/Const
+title: "const: Wasm text instruction"
+short-title: const
+slug: WebAssembly/Reference/Numeric/const
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`const`** instructions, are used to declare numbers.
+The **`const`** instructions are used to declare numbers.
 
 {{InteractiveExample("Wat Demo: const", "tabbed-standard")}}
 

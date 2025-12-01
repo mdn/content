@@ -149,6 +149,9 @@ The CSS fonts module also defines the {{cssxref("@font-feature-values/font-displ
 - [OpenType font features](/en-US/docs/Web/CSS/Guides/Fonts/OpenType_fonts)
   - : Font features or variants refer to different glyphs or character styles contained within an OpenType font. These include things like ligatures (special glyphs that combine characters like 'fi' or 'ffl'), kerning (adjustments to the spacing between specific letterform pairings), fractions, numeral styles, and a number of others. These are all referred to as OpenType Features, and are made available to use on the web via specific properties and a low-level control property — {{cssxref("font-feature-settings")}}. This article provides you with all you need to know about using OpenType font features in CSS.
 
+- [Web Open Font Format (WOFF)](/en-US/docs/Web/CSS/Guides/Fonts/WOFF)
+  - : WOFF uses a compressed version of the same table-based `sfnt` structure used by TrueType, OpenType, and Open Font Format, but adds metadata and private-use data structures, including predefined fields allowing foundries and vendors to provide license information if desired.
+
 - [Variable fonts](/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts)
   - : This article will help you get started with using variable fonts.
 

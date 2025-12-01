@@ -153,6 +153,10 @@ sidebar:
       - link: /Web/API/CSSOM_view_API/Coordinate_systems
         title: Coordinate_systems
       - /Web/CSS/Guides/CSSOM_view/Viewport_concepts
+  - type: listSubPages
+    path: /Web/CSS/Guides/Custom_functions_and_mixins
+    title: Custom_functions_and_mixins
+    details: closed
   - title: Display
     details: closed
     children:
@@ -167,6 +171,10 @@ sidebar:
       - /Web/CSS/Guides/Inline_layout/Inline_formatting_context
       - /Web/CSS/Guides/Display/Multi-keyword_syntax
       - /Web/CSS/Guides/Display/Visual_formatting_model
+  - type: listSubPages
+    path: /Web/CSS/Guides/Environment_variables
+    title: Environment_variables
+    details: closed
   - type: listSubPages
     path: /Web/CSS/Guides/Filter_effects
     title: Filter_effects
@@ -190,15 +198,15 @@ sidebar:
     children:
       - /Web/CSS/Guides/Grid_layout/Basic_concepts
       - /Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods
-      - /Web/CSS/Guides/Grid_layout/Grid_template_areas
       - /Web/CSS/Guides/Grid_layout/Line-based_placement
+      - /Web/CSS/Guides/Grid_layout/Grid_template_areas
       - /Web/CSS/Guides/Grid_layout/Named_grid_lines
       - /Web/CSS/Guides/Grid_layout/Auto-placement
       - /Web/CSS/Guides/Grid_layout/Box_alignment
       - /Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes
+      - /Web/CSS/Guides/Grid_layout/Accessibility
       - /Web/CSS/Guides/Grid_layout/Common_grid_layouts
       - /Web/CSS/Guides/Grid_layout/Subgrid
-      - /Web/CSS/Guides/Grid_layout/Accessibility
       - /Web/CSS/Guides/Grid_layout/Masonry_layout
   - title: Images
     details: closed
@@ -257,6 +265,10 @@ sidebar:
   - type: listSubPages
     path: /Web/CSS/Guides/Scroll_anchoring
     title: Scroll_anchoring
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Guides/Scroll-driven_animations
+    title: Scroll-driven_animations
     details: closed
   - type: listSubPages
     path: /Web/CSS/Guides/Scroll_snap
@@ -397,7 +409,9 @@ l10n:
     Containment: Containment
     Coordinate_systems: Coordinate systems (API)
     CSSOM_view: CSSOM view
+    Custom_functions_and_mixins: Custom functions and mixins
     Display: Display
+    Environment_variables: Environment variables
     Filter_effects: Filter effects
     Flexbox: Flexbox
     Fonts: Fonts
@@ -411,6 +425,7 @@ l10n:
     Positioning: Positioning
     Selectors: Selectors
     Scroll_anchoring: Scroll anchoring
+    Scroll-driven_animations: Scroll-driven animations
     Scroll_snap: Scroll snap
     Shapes: Shapes
     Syntax: Syntax

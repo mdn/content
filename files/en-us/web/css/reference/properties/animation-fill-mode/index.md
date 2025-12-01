@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`animation-fill-mode`** [CSS](/en-US/docs/Web/CSS) property sets how a CSS animation applies styles to its target before and after its execution.
 
+It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
+
 {{InteractiveExample("CSS Demo: animation-fill-mode")}}
 
 ```css interactive-example-choice
@@ -109,8 +111,6 @@ observer.observe(el, {
 
 update();
 ```
-
-It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 
 ## Syntax
 

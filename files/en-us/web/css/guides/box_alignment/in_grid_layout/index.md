@@ -106,9 +106,9 @@ The grid specification originally contained the definition for the properties {{
 
 ## See also
 
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 - [Box alignment overview](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview)
 - [Box alignment in flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
 - [Box alignment in multiple-column layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout)
-- [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)
-
+- [Box alignment for block, absolutely positioned, and table layouts](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)
 - [Aligning items in CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment)

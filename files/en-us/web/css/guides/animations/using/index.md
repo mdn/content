@@ -521,6 +521,7 @@ The code renders as follows:
 
 ## See also
 
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - {{domxref("AnimationEvent", "AnimationEvent")}}
 - [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
 - [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)

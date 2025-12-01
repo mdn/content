@@ -308,7 +308,7 @@ If you only specify one value, the effect is different depending on which value 
 > [!NOTE]
 > See the [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value) value reference page for a detailed description of all the available values. Mixing a logical value with a physical value will invalidate the declaration.
 
-Let's demonstrate some of these values; this example uses the same HTML and base CSS styes as the previous example, except that we've included a {{htmlelement("select")}} element to enable changing the positioned element's `position-area` value.
+Let's demonstrate some of these values; this example uses the same HTML and base CSS styles as the previous example, except that we've included a {{htmlelement("select")}} element to enable changing the positioned element's `position-area` value.
 
 ```html hidden
 <p>

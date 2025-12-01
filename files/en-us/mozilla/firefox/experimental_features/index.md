@@ -131,20 +131,6 @@ The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cs
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
-### @scope at-rule
-
-The [@scope](/en-US/docs/Web/CSS/Reference/At-rules/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 137           | Yes                 |
-| Developer Edition | 128           | No                  |
-| Beta              | 128           | No                  |
-| Release           | 128           | No                  |
-
-- `layout.css.at-scope.enabled`
-  - : Set to `true` to enable.
-
 ### prefers-reduced-transparency media feature
 
 The CSS [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency) media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
@@ -403,6 +389,21 @@ The {{domxref("CloseWatcher")}} interface allows developers to implement UI comp
 - `dom.closewatcher.enabled`
   - : Set to `true` to enable.
 
+### Navigation API
+
+The Navigation API provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
+([Firefox bug 1979288](https://bugzil.la/1979288)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 146           | Yes                 |
+| Developer Edition | 146           | No                  |
+| Beta              | 146           | No                  |
+| Release           | 146           | No                  |
+
+- `dom.navigation.webidl.enabled`
+  - : Set to `true` to enable.
+
 ### Trusted Types API
 
 The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) provides mechanisms to ensure that functions that can potentially be used as vectors for XSS attacks are only able to be called with data that has been validated or sanitized.
@@ -431,7 +432,7 @@ The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developer
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | No                  |
+| Nightly           | 146           | Yes                 |
 | Developer Edition | 138           | No                  |
 | Beta              | 138           | No                  |
 | Release           | 138           | No                  |
@@ -750,7 +751,7 @@ Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HT
 
 ### Integrity policy for stylesheet resources
 
-The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported for style resources. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for styles or only report violations of the policy, respectively.
+The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported for style resources. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) for styles or only report violations of the policy, respectively.
 Note that Firefox ignores reporting endpoints, and logs violations to the developer console.
 When `Integrity-Policy` is used, the browser blocks the loading of styles referenced in a {{HTMLElement("link")}} element with [`rel="stylesheet"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet) that either lack the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute or have an integrity hash that doesn't match the resource on the server.
 ([Firefox bug 1976656](https://bugzil.la/1976656)).
