@@ -36,7 +36,7 @@ Although authors cannot explicitly write `<rule-list>`, understanding it is cruc
 
 ### A `<rule-list>` in a stylesheet
 
-The entire stylesheet is treated as a `<rule-list>` containing multiple style rules and an at-rule.
+The following stylesheet is treated as a `<rule-list>` containing two style rules and an at-rule.
 
 ```css
 p {
