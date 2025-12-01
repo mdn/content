@@ -200,6 +200,24 @@ The following example shows how the `true` and `false` keywords can be used with
 
 This can be useful for feature flags or conditional logic within stylesheets.
 
+### Overriding existing `@custom-media` rules
+
+In this example, one `@custom-media` rule is overriden by another `@custom-media` rule using the same `<dashed-ident>` name.
+
+```css
+@custom-media --mobile-breakpoint (width < 320px);
+
+@media (--mobile-breakpoint) {
+  .container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@custom-media --mobile-breakpoint (width < 480px);
+```
+
+The initial definition of `--mobile-breakpoint` is overridden and therefore ignored. The final declaration becomes the active value used by all references to that custom media query.
+
 ## Specifications
 
 {{Specifications}}
