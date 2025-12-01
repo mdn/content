@@ -38,7 +38,7 @@ A generic {{domxref("Event")}}.
 
 The following example shows a button that, when clicked, opens a {{htmlelement("dialog")}} via the {{domxref("HTMLDialogElement.showModal()", "showModal()")}} method.
 
-From there you can will trigger the `cancel` event by either clicking _Request Close_ button to close the dialog (via the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method) or press the <kbd>Esc</kbd> key.
+From there you can trigger the `cancel` event by either clicking _Request Close_ button to close the dialog (via the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method), or press the <kbd>Esc</kbd> key.
 
 Preventing the dialog from closing is demonstrated with a checkbox.
 
