@@ -50,7 +50,7 @@ Because a `@custom-media` value is just a normal `<media-query-list>`, you can c
 
 #### Using the `not` operator
 
-The `not` operator negates an entire media condition. This is useful when you want a rule to apply only when a specific condition is false.
+The `not` operator negates an entire media condition. This is useful when you want a rule to apply only when a specific condition is `false`.
 
 ```css
 @custom-media --no-script not (script);
@@ -74,7 +74,7 @@ This alias only matches when the viewport is within the specified width range.
 
 #### Using the `or` operator (comma-separated list)
 
-A comma creates a logical `OR`. The media query matches if any of the listed conditions are `true`.
+A comma creates a logical `or` operator. The media query matches if any of the listed conditions are `true`.
 
 ```css
 @custom-media --screen-or-print screen, print;
