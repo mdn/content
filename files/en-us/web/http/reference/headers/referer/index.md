@@ -72,7 +72,7 @@ Referer: https://example.com/
 ## See also
 
 - {{HTTPHeader("Referrer-Policy")}}
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
 - [Fetch](/en-US/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
 - [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)
 - [HTTP referer on Wikipedia](https://en.wikipedia.org/wiki/HTTP_referer)
