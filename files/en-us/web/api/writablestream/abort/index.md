@@ -23,7 +23,7 @@ abort(reason)
 
 ### Return value
 
-A {{jsxref("Promise")}}, which fulfills with `undefined` value.
+A {{jsxref("Promise")}}, which fulfills with `undefined`.
 
 ### Exceptions
 
