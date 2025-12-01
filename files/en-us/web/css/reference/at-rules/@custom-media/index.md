@@ -42,6 +42,31 @@ Custom media queries can be composed from others by referencing their alias name
 
 If multiple `@custom-media` rules define the same `<dashed-ident>` name, only the last declaration in the source order applies. All earlier declarations are ignored.
 
+### Evaluating complex media queries
+
+Custom media queries evaluated logically. For instance, the following code snippet:
+
+```css
+@custom-media --modern (color), (hover);
+
+@media (--modern) and (width > 1024px) {
+}
+```
+
+Is equivalent to:
+
+```css
+@media ((color) or (hover)) and (width > 1024px) {
+}
+```
+
+The following would be incorrect:
+
+```css
+@media (color), (hover) and (width > 1024px) {
+}
+```
+
 ## Formal syntax
 
 {{csssyntax}}
@@ -131,31 +156,6 @@ Here, the `@custom-media` at-rule is used to set multiple breakpoints in a singl
 ```
 
 Grouping all the breakpoints in a single location makes it easier to maintain the responsive design. When a breakpoint needs adjustment, it only requires a single update to the associated `@custom-media` definition, ensuring consistency across all stylesheets.
-
-### Complex breakpoints with a list of queries
-
-The custom media query is evaluated logically. For instance, the following code snippet:
-
-```css
-@custom-media --modern (color), (hover);
-
-@media (--modern) and (width > 1024px) {
-}
-```
-
-Is equivalent to:
-
-```css
-@media ((color) or (hover)) and (width > 1024px) {
-}
-```
-
-The following would be incorrect:
-
-```css
-@media (color), (hover) and (width > 1024px) {
-}
-```
 
 ### Using `true` and `false` keywords
 
