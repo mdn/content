@@ -14,7 +14,7 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) de
 ## Syntax
 
 ```css
-@custom-media <extension-name> <media-query-list>;
+@custom-media <extension-name> [<media-query-list> | true | false ];
 
 @custom-media --media-query-name (width < 1200px);
 @custom-media --media-query-name (width < 1200px), (orientation: portrait);
@@ -24,7 +24,7 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) de
 
 - `<extension-name>`
   - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident); the name identifying the custom media query.
-- `<media-query-list>` | `true` | `false`
+- Represented value
   - `<media-query-list>`
     - : A comma-separated [list of `<media-query>` values](/en-US/docs/Web/CSS/Reference/At-rules/@media#description).
   - `true`
@@ -72,7 +72,7 @@ The `and` operator lets you combine multiple conditions that must all be `true`.
 
 This alias only matches when the viewport is within the specified width range.
 
-#### Using the `or` operator (comma-separated list)
+#### Using the `or` operator
 
 A comma creates a logical `or` operator. The media query matches if any of the listed conditions are `true`.
 
