@@ -78,7 +78,7 @@ To begin with, let's put together a basic function.
    closeBtn.textContent = "x";
    panel.appendChild(closeBtn);
 
-   closeBtn.addEventListener("click", () => body.removeChild(panel),);
+   closeBtn.addEventListener("click", () => body.removeChild(panel));
    ```
 
 This is quite a lot of code to go through, so we'll walk you through it bit by bit.
