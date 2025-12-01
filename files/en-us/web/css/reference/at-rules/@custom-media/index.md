@@ -24,8 +24,13 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) de
 
 - `<extension-name>`
   - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident); the name identifying the custom media query.
-- `<media-query-list>`
-  - : A comma-separated [list of `<media-query>` values](/en-US/docs/Web/CSS/Reference/At-rules/@media#description), or the `true` or `false` keywords
+- `<media-query-list>` | `true` | `false`
+  - `<media-query-list>`
+    - : A comma-separated [list of `<media-query>` values](/en-US/docs/Web/CSS/Reference/At-rules/@media#description).
+  - `true`
+    - : The `@custom-media` value always evaluates to `true`.
+  - `false`
+    - : The `@custom-media` value always evaluates to `false`.
 
 ## Description
 
@@ -36,8 +41,6 @@ The `@custom-media` at-rule solves this problem by letting you define **named al
 Custom media queries can be composed from others by referencing their alias names inside the media query features. This enables building more expressive, layered conditions. However, a custom media query cannot refer to itself, nor can it form part of a circular chain of references. Any circular dependency — direct or indirect — invalidates all custom media queries involved in that loop.
 
 If multiple `@custom-media` rules define the same `<dashed-ident>` name, only the last declaration in the source order applies. All earlier declarations are ignored.
-
-Using `@custom-media` improves maintainability, reusability, and consistency across your styles. Centralizing shared breakpoints and other media conditions reduces duplication and makes responsive design easier to reason about — especially in large projects or design systems.
 
 ## Formal syntax
 
@@ -156,7 +159,7 @@ The following would be incorrect:
 
 ### Using `true` and `false` keywords
 
-The `true` keyword evaluates to a media query that always matches, while `false` evaluates to a media query that never matches.
+The following example shows how the `true` and `false` keywords can be used with `@custom-media` to create media queries that always or never match, respectively.
 
 ```css
 @custom-media --enabled true;

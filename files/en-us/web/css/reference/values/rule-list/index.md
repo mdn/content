@@ -14,9 +14,9 @@ A `<rule-list>` is not written directly. Instead, it describes how the CSS parse
 
 A `<rule-list>` is defined as a sequence of **zero or more**:
 
-- **Style rules** (e.g., `p { color: red; }`)
-- **Qualified at-rules** (e.g., `@media (width < 600px) { ... }`)
-- **Ignored statements** (e.g., parse errors handled by the parser, which the parser automatically skips)
+- **Style rules** (e.g., `p { color: red; }`).
+- **Qualified at-rules** (e.g., `@media (width < 600px) { ... }`).
+- **Ignored statements** (e.g., parse errors handled by the parser, which the parser automatically skips).
 
 All whitespace, comments, and invalid or malformed constructs are handled according to the CSS parser rules.
 
@@ -26,9 +26,9 @@ The `<rule-list>` type appears in the specification anywhere CSS is defined to c
 
 Examples include:
 
-- The **top level** of a stylesheet
-- The body of **grouping at-rules** like `@media`, `@custom-media`, `@supports`, `@layer`, `@container`
-- The contents of **nesting selectors** (CSS Nesting)
+- The **top level** of a stylesheet.
+- The body of **grouping at-rules** like `@media`, `@custom-media`, `@supports`, `@layer`, `@container`.
+- The contents of **nesting selectors** (CSS Nesting).
 
 Although authors cannot explicitly write `<rule-list>`, understanding it is crucial when interpreting how CSS parses nested structures, how invalid rules are dropped, and how the cascade forms within conditional blocks.
 
@@ -53,12 +53,6 @@ h1 {
   }
 }
 ```
-
-The file contains a `<rule-list>` with:
-
-- A style rule (`p { ... }`)
-- Another style rule (`h1 { ... }`)
-- An at-rule (`@media (...) { ... }`)
 
 ### A `<rule-list>` inside `@media` at-rule
 
