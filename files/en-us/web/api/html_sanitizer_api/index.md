@@ -65,7 +65,7 @@ There are two very closely related sanitizer configuration interfaces, either of
 - {{domxref('SanitizerConfig')}} is a dictionary object that defines arrays for the allowed/disallowed elements and attributes and boolean properties that indicate whether comments and data attributes will be allowed or omitted, and so on.
 
   Only a subset of possible configuration options may be specified in a particular configuration in order to reduce redundancy and ambiguity.
-  The allowed subset is described in [Valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
+  The allowed subset is summarized in the [Allow and remove configurations](#allow_and_remove_configurations) section below, and described in detail in [Valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
 
 - {{domxref('Sanitizer')}} is essentially a wrapper around a {{domxref('SanitizerConfig')}} that provides methods to ergonomically modify the configuration and ensure that it remains valid.
 
@@ -82,29 +82,29 @@ You can build up a configuration in two ways:
 - As an _allow configuration_: specifying the set of elements and/or attributes that you will allow in the output.
 - As a _remove configuration_: specifying the set that must not be present in the output.
 
-These sets are specified as arrays in the configuration object fields: `elements`, `removeElements`, `attributes`, and `removeAttributes`.
-The following table shows the permitted combinations of allowed and removed sets of attributes and elements.
-Note that while almost all combinations of fields are allowed, you may not specify both allow and remove arrays for elements or attributes in the same configuration.
+These sets are specified as arrays in the configuration object fields: `elements` and `attributes`, and `removeElements` and `removeAttributes`.
+You may not specify both allow and remove arrays for elements or attributes in the same configuration, but other combinations of fields are allowed.
+The following table shows the permitted combinations.
 
-| Element arrays                    | Attribute arrays   | Valid? |
-| --------------------------------- | ------------------ | ------ |
-| `elements`                        | -                  | ✔️     |
-| `elements`                        | `attributes`       | ✔️     |
-| `elements`                        | `removeAttributes` | ✔️     |
-| `removeElements`                  | -                  | ✔️     |
-| `removeElements`                  | `attributes`       | ✔️     |
-| `removeElements`                  | `removeAttributes` | ✔️     |
-| -                                 | `attributes`       | ✔️     |
-| -                                 | `removeAttributes` | ✔️     |
-| `elements` + `removeElements`     | (anything)         | ❌     |
-| (anything) | `attributes` + `removeAttributes`         | ❌     |
-| -                                 | -                  | ✔️     |
+| Element arrays                | Attribute arrays                  | Valid? |
+| ----------------------------- | --------------------------------- | ------ |
+| `elements`                    | -                                 | ✔️     |
+| `elements`                    | `attributes`                      | ✔️     |
+| `elements`                    | `removeAttributes`                | ✔️     |
+| `removeElements`              | -                                 | ✔️     |
+| `removeElements`              | `attributes`                      | ✔️     |
+| `removeElements`              | `removeAttributes`                | ✔️     |
+| -                             | `attributes`                      | ✔️     |
+| -                             | `removeAttributes`                | ✔️     |
+| `elements` + `removeElements` | (anything)                        | ❌     |
+| (anything)                    | `attributes` + `removeAttributes` | ❌     |
+| -                             | -                                 | ✔️     |
 
 An allow configuration can optionally specify whether per-element attributes should be allowed and/or removed in its `elements` array.
 The allowed configuration for these local attributes depends on whether or not global `attributes` or `removedAttributes` is defined.
 The [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration) section outlines the restrictions.
 
-In general an "allow configuration" for both the allowed elements and attributes is safer, because you list the elements and/or attributes that you want and know are safe, rather than all the items that are dangerous or might potentially be considered dangerous in future.
+In general an "allow configuration" is safer for both the elements and attributes, because you list the elements and/or attributes that you want and know are safe, rather than all the items that are dangerous or might potentially be considered dangerous in future.
 If you specify an empty configuration object then an empty allow configuration is used.
 
 ##### Allow configurations
@@ -158,7 +158,7 @@ const sanitizer = new Sanitizer({
 ```
 
 The configuration can also be created using {{domxref('Sanitizer')}} methods.
-Note that to make this a "remove configuration" we have to declare the `removeElements` or `removeAttributes` array when constructing the object (if only one array is specified the other will be defined as part of normalization).
+To make this a "remove configuration" we have to declare the `removeElements` or `removeAttributes` array when constructing the object (if only one array is specified the other will be defined as part of normalization).
 
 ```js
 const sanitizer = new Sanitizer({
@@ -170,6 +170,30 @@ sanitizer.replaceElementWithChildren("b");
 sanitizer.removeAttribute("cite");
 sanitizer.removeAttribute("onclick");
 ```
+
+#### Adding and removing from `Sanitizer` configurations
+
+{{domxref("Sanitizer")}} is recommended when you're using a configuration object that you might want to reuse or modify.
+Whether the sanitizer has an allow or remove configuration depends on the {{domxref("SanitizerConfig")}} passed when the object is created.
+For example, if you pass a configuration object that has the `elements` or `attributes` array (or an empty object) the sanitizer will have an allow configuration.
+
+In the examples above we created an allow configuration and then called {{domxref("Sanitizer/allowElement","allowElement()")}}, {{domxref("Sanitizer/allowAttribute","allowAttribute()")}}, and {{domxref("Sanitizer/replaceElementWithChildren","replaceElementWithChildren()")}} to allow additional elements and attributes, and similarly we created a remove configuration and called {{domxref("Sanitizer/removeElement","removeElement()")}} and {{domxref("Sanitizer/removeAttribute","removeAttribute()")}} to specify additional elements to remove.
+
+You can also call the allow methods on a remove configuration, and the remove methods on an allow configuration — but they behave differently.
+When you call the allow methods on an allow sanitizer the specified elements and attributes are added to the underlying `elements` and `attributes` array.
+However if you call those methods on a remove sanitizer there is no `elements` and `attributes` array; instead the specified element is _removed_ from the corresponding `removeElements` or `removeAttributes` array, if present.
+This works because allowing an element in an allow sanitizer is the same as "not removing" an element in a remove sanitizer.
+
+You can call all the `Sanitizer` methods on either an allow or remove sanitizer, and the method will make whatever changes it is able that result in a valid configuration.
+For example, if you add an element the method will either add it to `elements` or remove it from `removeElements` if present, depending on the type of sanitizer, and also remove the same element from the [`replaceWithChildrenElements`](/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements) array, if present.
+
+Some operations that are possible for an allow configuration are not possible for a remove configuration.
+For example, per-element attributes are defined in the `elements` array, which is not present in a remove sanitizer.
+
+The methods return `true` or `false` to indicate whether or not they modified the underlying configuration.
+So if you call `allowElement()` on an allow configuration and the specified element is not present, it will be added to the `elements` array and the method will return `true`.
+But if the element is already present then the method would return `false`.
+Note that if you call the same method to set a per-element attribute, this will return `false` if called on a remove sanitizer, because the change cannot be made.
 
 ### Sanitization and Trusted Types
 
@@ -240,7 +264,7 @@ The following examples show how to use the sanitizer API using the _default_ san
 
 ### Using `Element.setHTML()` with the default sanitizer
 
-In most cases calling `Element.setHTML()` with the default sanitizer can be used as a drop-in replacement for {{domxref("Element.innerHTML")}}.
+In most cases calling `Element.setHTML()` without passing a sanitizer can be used as a drop-in replacement for {{domxref("Element.innerHTML")}}.
 The code below demonstrates how the method is used to sanitize the HTML input before it is injected into an element with id of `target`.
 
 ```js
