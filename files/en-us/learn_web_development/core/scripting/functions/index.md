@@ -464,11 +464,41 @@ Let's look at a real example to demonstrate scoping.
 
    This time the `a()` and `b()` calls will throw that annoying [ReferenceError: _variable name_ is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error into the console — this is because the `output()` calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.
 
-> [!NOTE]
-> Loop (e.g., `for() { }`) and conditional blocks (e.g., `if () { }`) scope acts the same way as function scope when declaring variables with `let` and `const`. This consistency does not apply when using the traditional `var` keyword, which is recommended to be avoided in favor of `let` and `const` unless working on legacy code.
 
 > [!NOTE]
 > The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
+
+#### an aside on loop and conditional scope
+
+It is worth noting that the scope of values declared inside [conditionals](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Conditionals) and [loops](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Loops) works the same as function scope when declaring values with `let` and `const`. For example, if you added the following blocks to the above example:
+
+```js
+if(x === 1) {
+  const c = 4;
+  let d = 5;
+}
+    
+for(let i = 0; i <= 1; i++ ) {
+  const e = 6;
+  let f = 7;
+}
+```
+
+Calling `output(c)`, `output(d)`, `output(e)`, and `output(f)` would result in the same **"ReferenceError: [variable-name] is not defined"** error seen earlier. The `output()` function cannot access these variables because they are locked inside their own scope.
+
+The legacy `var` keyword works differently. If `c` and `e` were declared using `var`:
+```js
+if(x === 1) {
+  var c = 4;
+}
+    
+for(let i = 0; i <= 1; i++ ) {
+  var e = 5;
+}
+```
+they would be hoisted to the global scope; therefore, `output(c)` and `output(e)` would result in their values being output to the console. Variables declared with `var` inside functions, however, still have their scope limited to those functions.
+
+This inconsistency can cause confusion and errors, and is another reason why you should use `let` and `const` instead of `var`.
 
 ## Summary
 
