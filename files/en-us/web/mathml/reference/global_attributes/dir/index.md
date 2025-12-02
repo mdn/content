@@ -20,7 +20,7 @@ The **`dir`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attribu
 - `ltr`
   - : Left to the right rendering of mathematical expressions (e.g., in English or Moroccan).
 - `rtl`
-  - : Right to the left rendering of mathematical expressions (e.g., in Maghreb or Machrek).
+  - : Right to the left rendering of mathematical expressions (e.g., in Arabic, Hebrew, Thaana, Maghreb, Machrek, and so on).
 
 ## Description
 
@@ -42,7 +42,7 @@ Note that effective mirroring and stretching requires a font that includes both 
 
 ### Prefer `dir` to the CSS `direction` property
 
-This attribute can be overridden by the CSS property {{ cssxref("direction") }}, if a CSS page is active and the element supports these properties.
+This attribute can be overridden by the {{ cssxref("direction") }} CSS property, if a CSS page is active and the element supports these properties.
 As the directionality of mathematics is semantically related to its content and not to its presentation, it is recommended that web developers use this attribute instead of the related CSS properties when possible.
 That way, the formulas will display correctly even on a browser that doesn't support CSS or has the CSS deactivated.
 
