@@ -12,7 +12,7 @@ page-type: guide
 
 The Popover API provides the functionality to display a popover when a related control element (the **invoker**) is activated, for example, when it is clicked. This feature is useful for displaying UI elements such as modals and information panels. You can [create popovers declaratively](/en-US/docs/Web/API/Popover_API/Using#creating_declarative_popovers) by using the [`popover`](/en-US/docs/Web/HTML/Reference/Elements/button#popover) attribute together with either [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) or [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor).
 
-But what about displaying popovers when a control is hovered over or focused via the keyboard? This kind of interaction is also very common — most social and community sites have features whereby you can hover over a link to a person's bio page or a group page to get some information about them in a popover before deciding whether or not to commit to navigating to the page. Such popovers might also contain quick actions such as "Subscribe to group", allowing the user to subscribe without losing the current context of where they are.
+In addition to activation-based popovers, there is also a common need to display a popover when a control element is hovered or focused – interactions that indicate user interest. For example, many social and community sites let users hover over a link to a person's profile page or a group page to show a popover with more information, helping users decide whether they want to visit the page. Such popovers may also contain quick actions, such as "Subscribe to group" or "Follow", allowing users to take an action without losing their current context.
 
 Interest invokers enable the browser to provide this functionality in a consistent and accessible way, without requiring JavaScript. The browser determines when a user is showing interest in an element, and therefore, when an action should be taken. "Showing interest" generally occurs when a user hovers, focuses, or long-presses the element (the exact nature of "interest" may vary across browsers), and "losing interest" generally happens when the user stops interacting with the element.
 
@@ -28,10 +28,11 @@ You can also use interest invokers to run custom code in [non-popover cases](#a_
 Creating an interest invoker declaratively has the following two requirements:
 
 - An **invoker element**: This is the element that the user interacts with to indicate interest and trigger an action, such as showing or hiding a popover. The invoker element must have an [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/a#interestfor) attribute whose value is the `id` of the target element. The invoker element can be an HTML {{htmlelement("a")}}, {{htmlelement("button")}}, or {{htmlelement("area")}} element, or an SVG [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a) element.
+
 - A **target element**: This is the element that is affected or controlled when interest is gained or lost. The target element must have an `id`, and it can be just about any element type. Giving this element a `popover` attribute turns it into a popover.
 
-> [!NOTE]
-> You can also set the target element programmatically by setting the invoker element's `interestForElement` DOM property to a reference to the target element. For more information, see [The interest invoker JavaScript API](#the_interest_invoker_javascript_api) section later in this guide.
+  > [!NOTE]
+  > You can also set the target element programmatically by setting the invoker element's `interestForElement` DOM property to a reference to the target element. For more information, see [The interest invoker JavaScript API](#the_interest_invoker_javascript_api) section later in this guide.
 
 Let's look at a simple example. Here, the **invoker element** is a link, and the **target element** is a paragraph with the `popover` attribute.
 
