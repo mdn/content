@@ -27,7 +27,7 @@ setDataAttributes(allow);
 
 ### Return value
 
-`true` if the operation changed the configuration, and `false` if the configuration already set [`dataAttributes`](/en-US/docs/Web/API/SanitizerConfig#dataattributes) to the specified value.
+`true` if the operation changed the configuration, and `false` if the configuration already set [`dataAttributes`](/en-US/docs/Web/API/SanitizerConfig#dataattributes) to the specified value or `dataAttributes` cannot be set `true`.
 
 ## Examples
 
