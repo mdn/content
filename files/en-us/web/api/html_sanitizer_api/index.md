@@ -94,7 +94,7 @@ Note that while almost all combinations of fields are allowed, you may not speci
 | -                                 | `attributes`       | ✔️     |
 | -                                 | `removeAttributes` | ✔️     |
 | `elements` + `removeElements`     | (anything)         | ❌     |
-| `attributes` + `removeAttributes` | (anything)         | ❌     |
+| (anything) | `attributes` + `removeAttributes`         | ❌     |
 | -                                 | -                  | ✔️     |
 
 An allow configuration can optionally specify whether per-element attributes should be allowed and/or removed in its `elements` array.
