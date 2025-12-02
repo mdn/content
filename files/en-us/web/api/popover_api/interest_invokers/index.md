@@ -61,7 +61,7 @@ if (!supported) {
 <p id="mypopover" popover>A short preview with some quick info</p>
 ```
 
-Setting the `popover` attribute on the target element causes it to be hidden (via {{cssxref("display", "display: none")}}) and centered on the screen. Showing interest in the invoker causes the popover to be displayed.
+Setting the `popover` attribute on the target element causes it to be hidden (via {{cssxref("display", "display: none")}}) and centered on the screen. Showing interest in the invoker element (the link) causes the popover to appear.
 
 This renders as follows:
 
