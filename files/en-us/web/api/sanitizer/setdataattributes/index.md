@@ -14,8 +14,8 @@ The **`setDataAttributes()`** method of the {{domxref("Sanitizer")}} interface s
 
 If this is set `true`, then data attributes are automatically allowed and you should not add them individually using {{domxref('Sanitizer.allowAttribute()')}} (or {{domxref('Sanitizer.allowElement()')}} for local attributes).
 
-Note that this method is only useful for [allow configurations](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations), as a remove configuration that doesn't specify any `data-*` attributes already allows all `data-*` attributes.
-If will return `false` for remove configurations.
+Note that this method is useful for [allow configurations](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations) which have a lot of `data-*` attributes that you want to allow.
+The method returns `false` when used with remove configurations, which can allow all `data-*` attributes simply by omitting them.
 
 ## Syntax
 
