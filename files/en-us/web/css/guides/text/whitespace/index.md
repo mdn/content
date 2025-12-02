@@ -141,7 +141,7 @@ Inside this inline formatting context, whitespace characters are processed as fo
 4. Next, all tab characters are transformed into space characters, so the example becomes:
 
    ```html-nolint
-   <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>  
+   <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
    ```
 
 5. After that, any space immediately following another space (even across two separate inline elements) is ignored, so we end up with:
