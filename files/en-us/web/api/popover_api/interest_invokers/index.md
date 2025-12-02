@@ -56,7 +56,7 @@ if (!supported) {
 
 ```html live-sample___basic-interest-invoker
 <p>
-  Some basic text with <a href="#" interestfor="mypopover">a link</a> inside it.
+  Some text with <a href="#" interestfor="mypopover">a link</a>.
 </p>
 <p id="mypopover" popover>A not-very-useful link</p>
 ```
