@@ -27,7 +27,7 @@ You can also use interest invokers to run custom code in [non-popover cases](#a_
 
 Creating an interest invoker declaratively has the following two requirements:
 
-1. An **invoker** element to show interest in, which will trigger some kind of action — in this case showing/hiding a popover. This element is given an [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/a#interestfor) attribute that takes the `id` of the popover element to show as its value. The interest invoker element can be an HTML {{htmlelement("a")}}, {{htmlelement("button")}}, or {{htmlelement("area")}} element, or an SVG [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a) element.
+- An **invoker element**: This is the element that the user interacts with to indicate interest and trigger an action, such as showing or hiding a popover. The invoker element must have an [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/a#interestfor) attribute whose value is the `id` of the target element. The invoker element can be an HTML {{htmlelement("a")}}, {{htmlelement("button")}}, or {{htmlelement("area")}} element, or an SVG [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a) element.
 2. An element with a `id`, which will be the invoker element's **target** — it can be affected or controlled when interest is shown or lost. This can be just about any element type. We also set a `popover` attribute on it to turn it into a popover.
 
 > [!NOTE]
