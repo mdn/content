@@ -16,7 +16,7 @@ But what about displaying popovers when a control is hovered over or focused via
 
 Interest invokers enable the browser to provide this functionality in a consistent and accessible way, without requiring JavaScript. The browser determines when a user is showing interest in an element, and therefore, when an action should be taken. "Showing interest" generally occurs when a user hovers, focuses, or long-presses the element (the exact nature of "interest" may vary across browsers), and "losing interest" generally happens when the user stops interacting with the element.
 
-The browser also fires events when interest is gained or lost so custom code can be run in response, and has various CSS features available for styling interest invokers.
+The browser also fires events when interest is gained or lost, so you can run custom code in response. In addition, the feature includes CSS properties and selectors for styling based on interest.
 
 > [!NOTE]
 > When interest is shown on devices with an <kbd>Esc</kbd> key available, it can be pressed to cancel the interest. This is useful as a general escape machanism in case the interest mechanism ever becomes annoying.
