@@ -77,13 +77,17 @@ This alias only matches when the viewport is within the specified width range.
 A comma creates a logical `or` operator. The media query matches if any of the listed conditions are `true`.
 
 ```css
-@custom-media --screen-or-print screen, print;
+@custom-media --screen-or-print-1 screen, print;
+@custom-media --screen-or-print-2 screen or print;
 
-@media (--screen-or-print) {
+@media (--screen-or-print-1) {
+}
+
+@media (--screen-or-print-2) {
 }
 ```
 
-This alias activates for both screen and print environments.
+The two aliases are identical and they are activated for both screen and print environments.
 
 ## Formal syntax
 
