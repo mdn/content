@@ -16,7 +16,6 @@
 
 import fs from "node:fs/promises";
 import path from "node:path";
-import https from "node:https";
 import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -30,38 +29,11 @@ const CALENDAR_API =
   "https://whattrainisitnow.com/api/firefox/calendar/future/";
 
 /**
- * Fetch JSON from a URL
- */
-async function fetchJSON(url) {
-  return new Promise((resolve, reject) => {
-    https
-      .get(url, (res) => {
-        let data = "";
-
-        res.on("data", (chunk) => {
-          data += chunk;
-        });
-
-        res.on("end", () => {
-          try {
-            const json = JSON.parse(data);
-            resolve(json);
-          } catch (error) {
-            reject(error);
-          }
-        });
-      })
-      .on("error", (error) => {
-        reject(error);
-      });
-  });
-}
-
-/**
  * Fetch release dates from whattrainisitnow.com
  */
 async function fetchReleaseDates() {
-  const futureReleases = await fetchJSON(CALENDAR_API);
+  const response = await fetch(CALENDAR_API);
+  const futureReleases = await response.json();
   const dates = {};
 
   for (const versionData of Object.values(futureReleases)) {
