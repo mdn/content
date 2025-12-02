@@ -21,7 +21,7 @@ The browser also fires events when interest is gained or lost, so you can run cu
 > [!NOTE]
 > On devices with an <kbd>Esc</kbd> key available, pressing it cancels all interest. This provides a general escape mechanism if the interaction becomes distracting or unwanted.
 
-It is possible to use an interest invoker to run custom code in [non-popover cases](#a_non-popover_example), but we'll mostly look at the popover case, as it is the most common use case.
+You can also use interest invokers to run custom code in [non-popover cases](#a_non-popover_example). However, this guide focuses mainly on popovers, since they are the most common use of interest invokers.
 
 ## Creating an interest invoker
 
