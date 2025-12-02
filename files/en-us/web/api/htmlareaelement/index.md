@@ -30,7 +30,7 @@ _Inherits properties from its parent {{domxref("HTMLElement")}}._
 - {{domxref("HTMLAreaElement.href")}}
   - : A string containing that reflects the [`href`](/en-US/docs/Web/HTML/Reference/Elements/area#href) HTML attribute, containing a valid URL of a linked resource.
 - {{domxref("HTMLAreaElement.interestForElement")}} {{experimental_inline}}
-  - : Gets or sets the interest invoker target element, in cases where the associated {{htmlelement("area")}} element is specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers#creating_an_interest_invoker).
+  - : Gets or sets the interest invoker target element, in cases where the associated {{htmlelement("area")}} element is specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers#creating_an_interest_invoker).
 - {{domxref("HTMLAreaElement.noHref")}} {{deprecated_inline}}
   - : A boolean flag indicating if the area is inactive (`true`) or active (`false`).
 - {{domxref("HTMLAreaElement.origin")}} {{ReadOnlyInline}}

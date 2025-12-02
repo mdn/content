@@ -35,7 +35,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLButtonElement.formTarget")}}
   - : A string reflecting a name or keyword indicating where to display the response received after submitting the form. If specified, this attribute overrides the [`target`](/en-US/docs/Web/HTML/Reference/Elements/form#target) attribute of the {{HTMLElement("form")}} element that owns this element.
 - {{domxref("HTMLButtonElement.interestForElement")}} {{experimental_inline}}
-  - : Gets or sets the interest invoker target element, in cases where the associated {{htmlelement("button")}} element is specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers#creating_an_interest_invoker).
+  - : Gets or sets the interest invoker target element, in cases where the associated {{htmlelement("button")}} element is specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers#creating_an_interest_invoker).
 - {{domxref("HTMLButtonElement.labels")}} {{ReadOnlyInline}}
   - : A {{domxref("NodeList")}} that represents a list of {{HTMLElement("label")}} elements that are labels for this button.
 - {{domxref("HTMLButtonElement.name")}}

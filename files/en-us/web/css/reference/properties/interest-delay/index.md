@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`interest-delay`** [CSS](/en-US/docs/Web/CSS) property specifies a delay, both between the user showing interest in an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers) element and the {{domxref("HTMLElement.interest_event", "interest")}} event being fired (which typically starts an effect on the target), and between the user losing interest and the {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} event being fired (which typically ends an effect on the target).
+The **`interest-delay`** [CSS](/en-US/docs/Web/CSS) property specifies a delay, both between the user showing interest in an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) element and the {{domxref("HTMLElement.interest_event", "interest")}} event being fired (which typically starts an effect on the target), and between the user losing interest and the {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} event being fired (which typically ends an effect on the target).
 
 ## Constituent properties
 
@@ -50,7 +50,7 @@ The `interest-delay` property is specified using one or two values, which can be
 
 ## Description
 
-A control element such as an {{htmlelement("a")}} or {{htmlelement("button")}} can be specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers) by giving it an [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/a#interestfor) attribute with a value equal to the `id` of a target element. When this relationship is established, the target element will be affected in some way when the user "shows interest" in the invoker (for example by hovering or focusing it). A common use case is to cause a popover to appear on hover/focus. When the user "loses interest", the effect will stop.
+A control element such as an {{htmlelement("a")}} or {{htmlelement("button")}} can be specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) by giving it an [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/a#interestfor) attribute with a value equal to the `id` of a target element. When this relationship is established, the target element will be affected in some way when the user "shows interest" in the invoker (for example by hovering or focusing it). A common use case is to cause a popover to appear on hover/focus. When the user "loses interest", the effect will stop.
 
 When the user shows/loses interest, the associated effect doesn't start/stop immediately — the browser introduces a short delay, which may vary by vendor. This makes sense — it would be annoying, for example, for preview popovers to appear immediately every time a link is hovered.
 
@@ -131,5 +131,5 @@ Now try checking the checkbox and trying the same actions again. This time, the 
 
 - [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start), [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end)
 - [Popover API](/en-US/docs/Web/API/Popover_API)
-- [Using interest invokers](/en-US/docs/Web/API/Popover_API/Interest_invokers)
+- [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)
 - [CSS basic user interface module](/en-US/docs/Web/CSS/Guides/Basic_user_interface)

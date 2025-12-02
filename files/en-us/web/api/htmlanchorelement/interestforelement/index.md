@@ -10,7 +10,7 @@ browser-compat: api.HTMLAnchorElement.interestForElement
 
 The **`interestForElement`** property of the {{domxref("HTMLAnchorElement")}} interface gets or sets the interest invoker target element, in cases where the associated {{htmlelement("a")}} element is specified as an interest invoker.
 
-See [Creating an interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers#creating_an_interest_invoker) for more details.
+See [Creating an interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers#creating_an_interest_invoker) for more details.
 
 ## Value
 
@@ -62,5 +62,5 @@ Try showing interest in the link (for example, by hovering or focusing it) to ma
 
 ## See also
 
-- [Using interest invokers](/en-US/docs/Web/API/Popover_API/Interest_invokers)
+- [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)
 - [The Popover API](/en-US/docs/Web/API/Popover_API)

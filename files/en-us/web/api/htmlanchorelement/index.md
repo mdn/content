@@ -30,7 +30,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLAnchorElement.hreflang")}}
   - : A string that reflects the [`hreflang`](/en-US/docs/Web/HTML/Reference/Elements/a#hreflang) HTML attribute, indicating the language of the linked resource.
 - {{domxref("HTMLAnchorElement.interestForElement")}} {{experimental_inline}}
-  - : Gets or sets the interest invoker target element, in cases where the associated {{htmlelement("a")}} element is specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers#creating_an_interest_invoker).
+  - : Gets or sets the interest invoker target element, in cases where the associated {{htmlelement("a")}} element is specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers#creating_an_interest_invoker).
 - {{domxref("HTMLAnchorElement.origin")}} {{ReadOnlyInline}}
   - : Returns a string containing the origin of the URL, that is its scheme, its domain and its port.
 - {{domxref("HTMLAnchorElement.password")}}

@@ -6,7 +6,7 @@ browser-compat: css.selectors.interest-source
 sidebar: cssref
 ---
 
-The **`:interest-source`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers) element when interest is being shown in it.
+The **`:interest-source`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) element when interest is being shown in it.
 
 ## Syntax
 
@@ -75,5 +75,5 @@ Try showing interest in the button (for example by hovering or focusing it), and
 
 - [`:interest-target`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-target)
 - [Popover API](/en-US/docs/Web/API/Popover_API)
-- [Using interest invokers](/en-US/docs/Web/API/Popover_API/Interest_invokers)
+- [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)
 - [CSS selectors module](/en-US/docs/Web/CSS/Guides/Selectors)

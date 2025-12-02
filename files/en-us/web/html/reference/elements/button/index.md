@@ -113,7 +113,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
 
 - `interestfor` {{experimental_inline}}
-  - : Defines the `<button>` element as an **interest invoker**. Takes as its value the `id` of a target element that will be affected in some way (normally shown or hidden) when interest is shown or lost on the invoker element (for example by hovering/unhovering or focusing/unfocusing it). See [Using interest invokers](/en-US/docs/Web/API/Popover_API/Interest_invokers) for more details and examples.
+  - : Defines the `<button>` element as an **interest invoker**. Takes as its value the `id` of a target element that will be affected in some way (normally shown or hidden) when interest is shown or lost on the invoker element (for example by hovering/unhovering or focusing/unfocusing it). See [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) for more details and examples.
 
 - `name`
   - : The name of the button, submitted as a pair with the button's `value` as part of the form data, when that button is used to submit the form.

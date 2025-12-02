@@ -1317,7 +1317,7 @@
       "overview": ["Popover API"],
       "guides": [
         "/docs/Web/API/Popover_API/Using",
-        "/docs/Web/API/Popover_API/Interest_invokers"
+        "/docs/Web/API/Popover_API/Using_interest_invokers"
       ],
       "interfaces": ["InterestEvent", "ToggleEvent"],
       "methods": [

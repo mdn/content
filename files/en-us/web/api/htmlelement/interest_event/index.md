@@ -7,7 +7,7 @@ browser-compat: api.HTMLElement.interest_event
 
 {{APIRef("HTML DOM")}}
 
-The **`interest`** event of the {{domxref("HTMLElement")}} interface is fired on an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers)'s target element when interest is shown, allowing code to be run in response.
+The **`interest`** event of the {{domxref("HTMLElement")}} interface is fired on an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)'s target element when interest is shown, allowing code to be run in response.
 
 ## Syntax
 
@@ -83,4 +83,4 @@ Try showing/losing interest in the button (for example, by hovering or focusing 
 ## See also
 
 - [Popover API](/en-US/docs/Web/API/Popover_API)
-- [Using interest invokers](/en-US/docs/Web/API/Popover_API/Interest_invokers)
+- [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)

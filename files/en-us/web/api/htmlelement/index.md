@@ -143,7 +143,7 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
 ### Interest invoker events
 
 - {{domxref("HTMLElement.interest_event", "interest")}} {{experimental_inline}}
-  - : Fired on an [interest invoker](/en-US/docs/Web/API/Popover_API/Interest_invokers)'s target element when interest is shown, allowing code to be run in response.
+  - : Fired on an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)'s target element when interest is shown, allowing code to be run in response.
 - {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} {{experimental_inline}}
   - : Fired on an interest invoker's target element when interest is lost, allowing code to be run in response.
 

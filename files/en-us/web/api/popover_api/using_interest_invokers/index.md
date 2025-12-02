@@ -1,6 +1,6 @@
 ---
 title: Using interest invokers
-slug: Web/API/Popover_API/Interest_invokers
+slug: Web/API/Popover_API/Using_interest_invokers
 page-type: guide
 ---
 

@@ -16,7 +16,7 @@ An {{domxref("Element")}} object instance.
 
 ## Examples
 
-See the [Using interest invokers](/en-US/docs/Web/API/Popover_API/Interest_invokers) guide and the {{domxref("HTMLElement.interest_event", "interest")}} event reference page for examples.
+See the [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) guide and the {{domxref("HTMLElement.interest_event", "interest")}} event reference page for examples.
 
 ## Specifications
 
@@ -29,4 +29,4 @@ See the [Using interest invokers](/en-US/docs/Web/API/Popover_API/Interest_invok
 ## See also
 
 - [Popover API](/en-US/docs/Web/API/Popover_API)
-- [Using interest invokers](/en-US/docs/Web/API/Popover_API/Interest_invokers)
+- [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)
