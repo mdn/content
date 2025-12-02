@@ -87,7 +87,7 @@ A comma creates a logical `or` operator. The media query matches if any of the l
 }
 ```
 
-The two aliases are identical and they are activated for both screen and print environments.
+The two aliases are identical. They are activated for both screen and print environments.
 
 ## Formal syntax
 
