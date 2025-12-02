@@ -80,7 +80,7 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 - {{cssxref(":active-view-transition")}}
   - : Matches elements when a view transition is in progress.
 - {{cssxref(":active-view-transition-type()")}}
-  - : Matches elements when a view transition of a specific type is in progress.
+  - : Matches elements when a view transition with one or more specific types is in progress.
 
 ### Pseudo-elements
 

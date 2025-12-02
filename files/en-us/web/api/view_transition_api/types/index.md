@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("View Transition API")}}
 
-View transition types provide a mechanism by which different **types** can be specified for different active view transitions. CSS can then be used to apply different animations to DOM elements when their content updates, depending on the transition type specified. For example, you might want to apply different animations to an {{htmlelement("img")}} element in an image gallery app as the displayed image changes depending on you are moving forward or backward in the sequence, deleting an image, or adding an image into the sequence.
+View transition types provide a mechanism by which different **types** can be specified for active view transitions. CSS can then be used to apply different animations to DOM elements when their content updates, depending on the transition type specified. For example, you might want to apply different animations to an {{htmlelement("img")}} element in an image gallery app as the displayed image changes depending on whether you are moving forward or backward in the sequence, deleting an image, or adding an image into the sequence.
 
 This article show how to use types along with single-page app (SPA) navigations and cross-document (MPA) navigations.
 
@@ -123,7 +123,7 @@ Further down the stylesheet, we set the {{cssxref("animation-duration")}} of all
 
 ## Using types with cross-document view transitions via `@view-transition`
 
-To apply different types to cross-document view transitions, you can set them in the [`types`](/en-US/docs/Web/CSS/Reference/At-rules/@view-transition#types) descriptor of the {{cssxref("@view-transition")}}, which contains one or more types separated by commas.
+To apply different types to cross-document view transitions, you can set them in the [`types`](/en-US/docs/Web/CSS/Reference/At-rules/@view-transition#types) descriptor of the {{cssxref("@view-transition")}} at-rule, which contains one or more types separated by commas.
 
 For example, in our [MPA transition types example](https://mdn.github.io/dom-examples/view-transitions/mpa-chapter-nav-transition-types/), the `@view-transition` at-rule in the shared stylesheet looks like this:
 
