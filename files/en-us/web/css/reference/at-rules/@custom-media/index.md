@@ -25,12 +25,13 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) de
 - `<extension-name>`
   - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident); the name identifying the custom media query.
 - Represented value
-  - `<media-query-list>`
-    - : A comma-separated [list of `<media-query>` values](/en-US/docs/Web/CSS/Reference/At-rules/@media#description).
-  - `true`
-    - : The `@custom-media` value always evaluates to `true`.
-  - `false`
-    - : The `@custom-media` value always evaluates to `false`.
+  - : The value aliased by the custom media query. Possible values are: 
+    - `<media-query-list>`
+      - : A comma-separated [list of `<media-query>` values](/en-US/docs/Web/CSS/Reference/At-rules/@media#description).
+    - `true`
+      - : The `@custom-media` value always evaluates to `true`.
+    - `false`
+      - : The `@custom-media` value always evaluates to `false`.
 
 ## Description
 
