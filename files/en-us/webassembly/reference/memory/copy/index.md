@@ -1,7 +1,7 @@
 ---
 title: "copy: Wasm text instruction"
 short-title: copy
-slug: WebAssembly/Reference/Memory/Copy
+slug: WebAssembly/Reference/Memory/copy
 page-type: webassembly-instruction
 browser-compat:
   - webassembly.bulk-memory-operations

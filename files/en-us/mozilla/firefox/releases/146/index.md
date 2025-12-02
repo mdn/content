@@ -24,7 +24,10 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### MathML -->
+### MathML
+
+- Operator mirroring in right-to-left (RTL) modes and stretching now work properly when used in combination.
+  ([Firefox bug 1994172](https://bugzil.la/1994172)).
 
 <!-- #### Removals -->
 
@@ -51,7 +54,9 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
+
+- {{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} now accept {{jsxref("Symbol")}} objects as keys, except for those that are [registered](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). ([Firefox bug 1966745](https://bugzil.la/1966745)).
 
 <!-- No notable changes. -->
 
@@ -65,7 +70,9 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
+
+- {{domxref("SubtleCrypto.importKey()")}} now allows you to import keys defined as compressed elliptic curve points when using the [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh) algorithms. ([Firefox bug 1971499](https://bugzil.la/1971499)).
 
 <!-- #### DOM -->
 
@@ -103,3 +110,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   Nightly builds now support the Navigation API, which provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
   ([Firefox bug 1979288](https://bugzil.la/1979288)).
+
+- **Custom media queries**: `layout.css.custom-media.enabled`
+
+  The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS at-rule defines aliases for long or complex media queries. Instead of repeating the same hardcoded `<media-query-list>` in multiple `@media` at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed. ([Firefox bug 1991105](https://bugzil.la/1744292)).

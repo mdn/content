@@ -1,11 +1,12 @@
 ---
-title: Floor
-slug: WebAssembly/Reference/Numeric/Floor
+title: "floor: Wasm text instruction"
+short-title: floor
+slug: WebAssembly/Reference/Numeric/floor
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`floor`** instructions, are used for getting the value of a number rounded down to the next integer.
+The **`floor`** instructions are used for getting the value of a number rounded down to the next integer.
 
 **`floor`** differs from **`trunc`** when used on negative numbers, **`floor`** will round down in those cases while **`trunc`** will round up.
 

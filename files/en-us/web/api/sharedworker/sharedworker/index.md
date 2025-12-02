@@ -10,7 +10,7 @@ browser-compat: api.SharedWorker.SharedWorker
 
 The **`SharedWorker()`** constructor creates a
 {{domxref("SharedWorker")}} object that executes the script at the specified URL. This
-script must obey the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+script must obey the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
 > [!NOTE]
 > There is disagreement among browser manufacturers about

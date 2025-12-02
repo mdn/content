@@ -8,16 +8,17 @@ browser-compat: api.CSSPageRule.style
 
 {{APIRef("CSSOM")}}
 
-The **`style`** read-only property of the {{domxref("CSSPageRule")}} interface returns a {{domxref("CSSPageDescriptors")}} object.
-This represents a [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block) for a CSS {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules), and exposes style information and various style-related methods and properties for the page.
+The read-only **`style`** property of the {{domxref("CSSPageRule")}} interface contains a {{domxref("CSSPageDescriptors")}} object representing the descriptors available in the {{cssxref("@page")}} rule's body.
 
 ## Value
 
-A {{domxref("CSSPageDescriptors")}} object with properties that match the associated {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
+A {{domxref("CSSPageDescriptors")}} object.
 
 > [!NOTE]
 > Earlier versions of the specification defined this property as a {{domxref("CSSStyleDeclaration")}}.
 > Check the compatibility data below for your browser.
+
+Although the `style` property itself is read-only in the sense that you can't replace the `CSSPageDescriptors` object, you can still assign to the `style` property directly, which is equivalent to assigning to its {{domxref("CSSStyleDeclaration/cssText", "cssText")}} property. You can also modify the `CSSPageDescriptors` object using the {{domxref("CSSStyleDeclaration/setProperty", "setProperty()")}} and {{domxref("CSSStyleDeclaration/removeProperty", "removeProperty()")}} methods.
 
 ## Examples
 

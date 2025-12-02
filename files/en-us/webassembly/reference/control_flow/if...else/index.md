@@ -1,5 +1,6 @@
 ---
-title: if...else
+title: "if...else: Wasm text instruction"
+short-title: if...else
 slug: WebAssembly/Reference/Control_flow/if...else
 page-type: webassembly-instruction
 sidebar: webassemblysidebar

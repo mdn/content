@@ -181,7 +181,7 @@ This marks the next step in the journey toward a plugin-free future. HTML is ver
 
 ## Security
 
-- The {{domxref("Window.isSecureContext")}} property, indicating whether a context is capable of using features that require [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), has been implemented ([Firefox bug 1162772](https://bugzil.la/1162772)).
+- The {{domxref("Window.isSecureContext")}} property, indicating whether a context is capable of using features that require [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts), has been implemented ([Firefox bug 1162772](https://bugzil.la/1162772)).
 
 ## Compatibility
 
