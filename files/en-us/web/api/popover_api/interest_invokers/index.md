@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Popover API")}}
 
-**Interest invokers** is a feature that provides an mechanism for updating a user interface or running custom code when the user "shows interest" or "loses interest" in an invoker element (for example by hovering or unhovering it). This is most commonly used to show and hide popovers, but it has other uses. This article explains the concepts behind interest invokers, what their use cases are, and how to use them.
+**Interest invokers** provide a mechanism for updating an interface or running custom code when a user "shows interest" or "loses interest" in an element (for example, by hovering or unhovering it). They are most commonly used to show and hide popovers. This guide explains the concepts behind interest invokers, what their use cases are, and how to use them.
 
 ## Concepts
 
