@@ -29,7 +29,7 @@ Instances of `LayoutShiftAttribution` are returned in an array by calling {{domx
 
 ## Examples
 
-The following example observes layout shifts and identifies the most impactful element. The `sources` array is sorted by impact area in descending order, so the first element (`sources[0]`) represents the element that contributed most to the layout shift. For more detail on this see [Debug Web Vitals in the field](https://web.dev/articles/debug-performance-in-the-field).
+The following example observes layout shifts and identifies the most impactful element. The `sources` array is sorted by impact area, in descending order — so the first element (`sources[0]`) represents the element that contributed most to the layout shift. For more detail on that, see [Debug Web Vitals in the field](https://web.dev/articles/debug-performance-in-the-field).
 
 ```js
 const observer = new PerformanceObserver((list) => {
