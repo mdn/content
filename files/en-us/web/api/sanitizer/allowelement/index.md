@@ -23,31 +23,25 @@ allowElement(element)
 ### Parameters
 
 - `element`
-
   - : A string indicating the name of the allowed element, or an object with the following properties:
-
     - `name`
       - : A string containing the name of the element.
     - `namespace` {{optional_inline}}
       - : A string containing the namespace of the element.
         The default namespace is `"http://www.w3.org/1999/xhtml"`.
     - `attributes` {{optional_inline}}
-
       - : An array indicating the attributes to allow on this (allowed) element when sanitizing HTML.
 
         Each attribute can be specified by name (a string), or as an object with the following properties:
-
         - `name`
           - : A string containing the name of the attribute.
         - `namespace` {{optional_inline}}
           - : A string containing the namespace of the attribute, which defaults to `null`.
 
     - `removeAttributes` {{optional_inline}}
-
       - : An array indicating the attributes to remove on this (allowed) element when sanitizing HTML.
 
         Each attribute can be specified by name (a string), or as an object with the following properties:
-
         - `name`
           - : A string containing the name of the attribute.
         - `namespace` {{optional_inline}}
@@ -72,7 +66,7 @@ The `allowElement()` method sets that the specified element is allowed in the ou
 The method can be used with either an [allow configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations) or a [remove configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#remove_configurations).
 If used with an allow configuration, the specified element is added to the `elements` array.
 If used with a remove configuration, the element is removed from the `removeElements` array (if present).
-If present, it would also be removed from the [`replaceWithChildrenElements`](http://localhost:5042/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements) array.
+If present, it would also be removed from the [`replaceWithChildrenElements`](/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements) array.
 
 For example, the following code creates an allow `Sanitizer` that allows {{htmlelement("span")}} elements and then calls `allowElement()` to additionally allow {{htmlelement("b")}} elements.
 
