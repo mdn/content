@@ -95,7 +95,7 @@ No notable changes.
 
 - **`Integrity-Policy` and `Integrity-Policy-Report-Only`** for scripts (Nightly): `security.integrity_policy.enabled`
 
-  The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported for script resources. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or only report violations of the policy, respectively.
+  The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported for script resources. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) for scripts or only report violations of the policy, respectively.
   ([Firefox bug 1976656](https://bugzil.la/1976656)).
 
 - **`Integrity-Policy` and `Integrity-Policy-Report-Only`** for stylesheets: `security.integrity_policy.stylesheet.enabled`

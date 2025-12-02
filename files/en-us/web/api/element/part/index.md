@@ -8,14 +8,13 @@ browser-compat: api.Element.part
 
 {{ ApiRef("DOM") }}
 
-The **`part`** property of the {{domxref("Element")}} interface
-represents the part identifier(s) of the element (i.e., set using the `part`
-attribute), returned as a {{domxref("DOMTokenList")}}. These can be used to style parts
-of a shadow DOM, via the {{cssxref("::part")}} pseudo-element.
+The read-only **`part`** property of the {{domxref("Element")}} interface contains a {{domxref("DOMTokenList")}} object representing the part identifier(s) of the element. It reflects the element's [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) content attribute. These can be used to style parts of a shadow DOM, via the {{cssxref("::part")}} pseudo-element.
 
 ## Value
 
-A {{domxref("DOMTokenList")}} object.
+A {{domxref("DOMTokenList")}} object. If the `part` attribute is not set or empty, it returns an empty `DOMTokenList`, i.e., a `DOMTokenList` with the `length` property equal to `0`.
+
+Although the `part` property itself is read-only in the sense that you can't replace the `DOMTokenList` object, you can still assign to the `part` property directly, which is equivalent to assigning to its {{domxref("DOMTokenList/value", "value")}} property. You can also modify the `DOMTokenList` object using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.
 
 ## Examples
 
