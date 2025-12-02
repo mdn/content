@@ -45,14 +45,14 @@ When the "Previous" button is pressed, this code is run — the callback functio
 
 ### Applying custom animations in CSS
 
-Over in the CSS, we can customize the transition animation for the specified type using the {{cssxref(":active-view-transition-type()")}} pseudo-class. This allows you to create selectors that match only when a view transition with a certain type is active.
+Over in the CSS, we can customize styles for the active transition using the {{cssxref(":active-view-transition")}} and {{cssxref(":active-view-transition-type()")}} pseudo-classes. Respectively, these allow you to create selectors that match when any view transition is active, or only when a view transition with a certain type is active.
 
-First of all, we define a bunch of styles that are applied when a view transition is active that includes the `forwards`, `backwards`, or `upwards` types. In this nested block, we apply a {{cssxref("view-transition-name")}} value of `none` to the document {{cssxref(":root")}} to turn view transitions off for most of the document. We then apply `view-transition-name` values of `image` and `caption` to the {{htmlelement("img")}} and {{htmlelement("figcaption")}} elements respectively, so changes to their DOM state are captured in separate snapshots and they can be animated independantly.
+First of all, we define a bunch of styles that are applied when a view transition is active, regardless of its type, selected using `:active-view-transition`. In this nested block, we apply a {{cssxref("view-transition-name")}} value of `none` to the document {{cssxref(":root")}} to turn view transitions off for most of the document. We then apply `view-transition-name` values of `image` and `caption` to the {{htmlelement("img")}} and {{htmlelement("figcaption")}} elements respectively, so changes to their DOM state are captured in separate snapshots and they can be animated independantly.
 
-Finally, we use the {{cssxref("::view-transition-old()")}} and {{cssxref("::view-transition-new()")}} pseudo-elements to apply specific animations to the `caption` outgoing and incoming view. We want these animations to be applied to the `<figcaption>` whether the specified types contain `forwards`, `backwards`, or `upwards`.
+Finally, we use the {{cssxref("::view-transition-old()")}} and {{cssxref("::view-transition-new()")}} pseudo-elements to apply specific animations to the `caption` outgoing and incoming view. We want these animations to be applied to the `<figcaption>` regardless of the specified type.
 
 ```css
-html:active-view-transition-type(forwards, backwards, upwards) {
+html:active-view-transition {
   :root {
     view-transition-name: none;
   }
@@ -73,10 +73,9 @@ html:active-view-transition-type(forwards, backwards, upwards) {
 }
 ```
 
-The next stage is to apply different animations to the `image` outgoing and incoming views, dpending on whether the `type` of the active view transition is `forwards` (the "Next" button was pressed), `backwards` (the "Previous" button was pressed), or `upwards` (a thumbnail image was clicked). This is done in a similar way to the previous CSS block, except that this time we use three `:active-view-transition-type()` rules, each applying different {{cssxref("animation-name")}} values to the `::view-transition-old()` and `::view-transition-new()` pseudo-elements for each separate type:
+The next stage is to apply different animations to the `image` outgoing and incoming views, depending on whether the `type` of the active view transition is `forwards` (the "Next" button was pressed), `backwards` (the "Previous" button was pressed), or `upwards` (a thumbnail image was clicked). This is done using three nested `:active-view-transition-type()` rulesets, each applying different {{cssxref("animation-name")}} values to the `::view-transition-old()` and `::view-transition-new()` pseudo-elements for each separate type:
 
 ```css
-/* Animation styles for forwards type only */
 html:active-view-transition-type(forwards) {
   &::view-transition-old(image) {
     animation-name: slide-out-to-left;
@@ -86,7 +85,6 @@ html:active-view-transition-type(forwards) {
   }
 }
 
-/* Animation styles for backwards type only */
 html:active-view-transition-type(backwards) {
   &::view-transition-old(image) {
     animation-name: slide-out-to-right;
@@ -96,7 +94,6 @@ html:active-view-transition-type(backwards) {
   }
 }
 
-/* Animation styles for upwards type only */
 html:active-view-transition-type(upwards) {
   &::view-transition-old(image) {
     animation-name: slide-out-to-top;
@@ -134,7 +131,7 @@ For example, in our [MPA transition types example](https://mdn.github.io/dom-exa
 }
 ```
 
-Over in the CSS, we can customize the animations applied to the active view transition based on its type(s) in the same way as we did in the SPA example:
+Over in the CSS, we can customize the animations applied to the active view transition based on its type in the same way as we did in the SPA example:
 
 ```css
 html:active-view-transition-type(slide) {
@@ -172,7 +169,11 @@ The [MPA multiple transition types example](https://mdn.github.io/dom-examples/v
 
 Let's look at the shared JavaScript file. First of all, we define a custom function, `determineTransitionType()`, which looks at the URL of the outgoing page and incoming page and from those determines whether the navigation type is `backwards` (moving to an earlier chapter) or `forwards` (moving to a later chapter).
 
-The chapter pages are named sequentially (`index.html`, then `index2.html`, `index3.html`, etc.), therefore, we compare the number contained in the filenames to see whether the navigation is `backwards` (outgoing page number is higher than incoming page number) or forwards (outgoing page number is lower than incoming page number). The code you use to determine the type to apply will depend on your project. You can find detailed comments explaining how the below code works in our [source code](https://github.com/mdn/dom-examples/tree/main/view-transitions/mpa-chapter-nav-multiple-transition-types).
+The chapter pages are named sequentially (`index.html`, then `index2.html`, `index3.html`, etc.), therefore, we compare the number contained in the filenames to see whether the navigation is `backwards` (outgoing page number is higher than incoming page number) or forwards (outgoing page number is lower than incoming page number).
+
+Note how we've also included an `else` condition at the end that returns a type of `no-type` if neither of the two conditions are true. This can happen for example when the site first loads, or if the user reloads the page. In this case, we won't apply a type to the view transition.
+
+The code you use to determine the type to apply will depend on your project. You can find detailed comments explaining how the below code works in our [source code](https://github.com/mdn/dom-examples/tree/main/view-transitions/mpa-chapter-nav-multiple-transition-types).
 
 ```js
 const determineTransitionType = (oldNavigationEntry, newNavigationEntry) => {
@@ -199,9 +200,10 @@ const determineTransitionType = (oldNavigationEntry, newNavigationEntry) => {
 
   if (currentPageIndex > destinationPageIndex) {
     return "backwards";
-  }
-  if (currentPageIndex < destinationPageIndex) {
+  } else if (currentPageIndex < destinationPageIndex) {
     return "forwards";
+  } else {
+    return "no-type";
   }
 };
 ```
@@ -220,7 +222,7 @@ window.addEventListener("pageswap", async (e) => {
 });
 ```
 
-Finally, we use a {{domxref("Window.pagereveal_event", "pagereveal")}} event listener to set the transition type for the incoming page. Inside the event handler function, we grab the old and new navigation entries from the {{domxref("Navigation.activation")}} property, pass these to the `determineTransitionType()` function to determine the type, then assign the type to the view transition using the {{domxref("ViewTransition.types")}} property's `add()` method.
+Finally, we use a {{domxref("Window.pagereveal_event", "pagereveal")}} event listener to set the transition type for the incoming page. Inside the event handler function, we grab the old and new navigation entries from the {{domxref("Navigation.activation")}} property and pass these to the `determineTransitionType()` function to determine the type. We assign the type to the view transition using the {{domxref("ViewTransition.types")}} property's `add()` method, unless the type is `no-type`, in which case we skip that step.
 
 ```js
 window.addEventListener("pagereveal", async (e) => {
@@ -230,7 +232,9 @@ window.addEventListener("pagereveal", async (e) => {
   );
 
   console.log(`pageReveal: ${transitionType}`);
-  e.viewTransition.types.add(transitionType);
+  if (transitionType !== "no-type") {
+    e.viewTransition.types.add(transitionType);
+  }
 });
 ```
 
@@ -239,7 +243,7 @@ window.addEventListener("pagereveal", async (e) => {
 Now we've got an appropriate type set on the active view transition depending on the navigation type, we can set different animations for each type over in our CSS, in the same way as we saw in previous examples:
 
 ```css
-html:active-view-transition-type(forwards, backwards) {
+html:active-view-transition {
   nav {
     view-transition-name: none;
   }
