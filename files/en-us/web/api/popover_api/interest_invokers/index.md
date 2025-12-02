@@ -31,7 +31,7 @@ Creating an interest invoker declaratively has the following two requirements:
 - A **target element**: This is the element that is affected or controlled when interest is gained or lost. The target element must have an `id`, and it can be just about any element type. Giving this element a `popover` attribute turns it into a popover.
 
 > [!NOTE]
-> You can also set an invoker element's target element programmatically, by setting its `interestForElement` DOM property equal to a reference to the target element. See [The interest invoker JavaScript API](#the_interest_invoker_javascript_api) for more information.
+> You can also set the target element programmatically by setting the invoker element's `interestForElement` DOM property to a reference to the target element. For more information, see [The interest invoker JavaScript API](#the_interest_invoker_javascript_api) section later in this guide.
 
 Let's look at a simple example:
 
