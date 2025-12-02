@@ -19,7 +19,7 @@ Interest invokers enable the browser to provide this functionality in a consiste
 The browser also fires events when interest is gained or lost, so you can run custom code in response. In addition, the feature includes CSS properties and selectors for styling based on interest.
 
 > [!NOTE]
-> When interest is shown on devices with an <kbd>Esc</kbd> key available, it can be pressed to cancel the interest. This is useful as a general escape machanism in case the interest mechanism ever becomes annoying.
+> On devices with an <kbd>Esc</kbd> key available, pressing it cancels all interest. This provides a general escape mechanism if the interaction becomes distracting or unwanted.
 
 It is possible to use an interest invoker to run custom code in [non-popover cases](#a_non-popover_example), but we'll mostly look at the popover case, as it is the most common use case.
 
