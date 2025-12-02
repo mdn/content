@@ -24,7 +24,7 @@ const __dirname = path.dirname(__filename);
 
 const CONTENT_ROOT = path.join(
   __dirname,
-  "../files/en-us/mozilla/firefox/releases",
+  "../../files/en-us/mozilla/firefox/releases",
 );
 const CALENDAR_API =
   "https://whattrainisitnow.com/api/firefox/calendar/future/";
