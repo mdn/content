@@ -33,7 +33,7 @@ Creating an interest invoker declaratively has the following two requirements:
 > [!NOTE]
 > You can also set the target element programmatically by setting the invoker element's `interestForElement` DOM property to a reference to the target element. For more information, see [The interest invoker JavaScript API](#the_interest_invoker_javascript_api) section later in this guide.
 
-Let's look at a simple example:
+Let's look at a simple example. Here, the **invoker element** is a link, and the **target element** is a paragraph with the `popover` attribute. 
 
 ```css hidden live-sample___basic-interest-invoker live-sample___interest-invoker-popover-interaction live-sample___interest-invoker-styling live-sample___interest-invoker-api live-sample___non-popover live-sample___link-preview-popover
 .no-interest-invokers body::before {
