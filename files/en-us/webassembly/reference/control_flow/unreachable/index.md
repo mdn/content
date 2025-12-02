@@ -1,5 +1,6 @@
 ---
-title: unreachable
+title: "unreachable: Wasm text instruction"
+short-title: unreachable
 slug: WebAssembly/Reference/Control_flow/unreachable
 page-type: webassembly-instruction
 sidebar: webassemblysidebar

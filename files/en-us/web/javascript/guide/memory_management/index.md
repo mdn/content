@@ -212,7 +212,7 @@ If `key` is stored as an actual reference, it would create a cyclic reference an
 As a rough mental model, think of a `WeakMap` as the following implementation:
 
 > [!WARNING]
-> This is not a polyfill nor is anywhere close to how it's implemented in the engine (which hooks into the garbage collection mechanism).
+> This is not a polyfill, nor is it anywhere close to how it's implemented in the engine (which hooks into the garbage collection mechanism).
 
 ```js
 class MyWeakMap {

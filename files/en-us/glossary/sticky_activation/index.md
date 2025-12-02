@@ -19,13 +19,13 @@ The window is not user-activated by events that aren't necessarily caused by int
 
 Sticky activation is used to control access to certain features, blocking them if the user hasn't interacted with the page.
 For example, it can be used to ensure that controlled features in cross-origin frames don't run code on page load.
-See [Features gated by user activation](/en-US/docs/Web/Security/User_activation) for more information.
+See [Features gated by user activation](/en-US/docs/Web/Security/Defenses/User_activation) for more information.
 
 The {{domxref("UserActivation.hasBeenActive")}} property can be used to programmatically check the current window's sticky activation state.
 
 ## See also
 
-- [Comparison between transient and sticky activation](/en-US/docs/Web/Security/User_activation#comparison_between_transient_and_sticky_activation) in _Features gated by user activation_
+- [Comparison between transient and sticky activation](/en-US/docs/Web/Security/Defenses/User_activation#comparison_between_transient_and_sticky_activation) in _Features gated by user activation_
 - Related glossary terms:
   - {{Glossary("Transient activation")}}
 - {{domxref("UserActivation.hasBeenActive")}}

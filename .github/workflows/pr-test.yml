@@ -21,13 +21,13 @@ jobs:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
       # This is the directory where the built files will be placed.
-      # It's also hardcoded in the `yarn build` command in package.json.
+      # It's also hardcoded in the `npm run build` command in package.json.
       # If you change it here, you must also make the same change in
       # package.json.
       BUILD_OUT_ROOT: build
 
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
         with:
           persist-credentials: false
 
@@ -81,11 +81,11 @@ jobs:
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          cache: npm
 
-      - name: Install all yarn packages
+      - name: Install
         if: steps.check.outputs.HAS_FILES == 'true'
-        run: yarn --frozen-lockfile
+        run: npm ci
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -135,12 +135,12 @@ jobs:
             ARGS+=("-f" "$PWD/$file")
           done
 
-          yarn rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
+          npx rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
 
           # Workaround, as fred-ssr doesn't copy assets.
           cp -vR node_modules/@mdn/fred/out/. "$BUILD_OUT_ROOT"
 
-          yarn fred-ssr
+          npx fred-ssr
 
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT
@@ -172,4 +172,4 @@ jobs:
           readarray -t files_to_check <<< "$GIT_DIFF_FILES"
 
           export CONTENT_ROOT=$(pwd)/files
-          yarn filecheck "${files_to_check[@]}"
+          npm run filecheck "${files_to_check[@]}"

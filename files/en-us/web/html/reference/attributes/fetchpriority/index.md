@@ -45,4 +45,4 @@ The attribute should be used sparingly, as excessive or incorrect prioritization
 
 ## See also
 
-- SVG [`fetchpriority`](/en-US/docs/Web/SVG/Reference/Attribute/fetchpriority) attribute
+- SVG {{svgattr("fetchpriority")}} attribute

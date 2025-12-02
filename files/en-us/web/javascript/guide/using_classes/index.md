@@ -314,10 +314,12 @@ class Color {
     this.values = rgbToHSL([r, g, b]);
   }
   getRed() {
-    return this.values[0];
+    return hslToRGB(this.values)[0];
   }
   setRed(value) {
-    this.values[0] = value;
+    const rgb = hslToRGB(this.values);
+    rgb[0] = value;
+    this.values = rgbToHSL(rgb);
   }
 }
 

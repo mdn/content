@@ -258,7 +258,7 @@ Check the below list if you are having trouble getting a request to work:
      In such cases, `requestStorageAccess()` probably doesn't need to be called at all.
 2. The document and top-level document must not have a `null` origin.
 3. Origins that have never been interacted with as a first party do not have a notion of first-party storage. From the user's perspective, they only have a third-party relationship with that origin. Access requests are automatically denied if the browser detects that the user hasn't interacted with the embedded content in a first-party context recently (in Firefox, "recently" means within 30 days).
-4. The document's window must be a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+4. The document's window must be a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 5. Sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons.
    To handle this, the API provides the [`allow-storage-access-by-user-activation`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow-storage-access-by-user-activation) [sandbox token](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox).
    The `<iframe>` needs to include this to enable storage access requests, along with `allow-scripts` and `allow-same-origin` to allow it to execute a script to call the API and execute it in an origin that can have cookies/state:
