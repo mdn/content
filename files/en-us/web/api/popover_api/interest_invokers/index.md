@@ -63,7 +63,7 @@ if (!supported) {
 
 Setting the `popover` attribute on the target element causes it to be hidden (via {{cssxref("display", "display: none")}}) and centered on the screen. Showing interest in the invoker element (the link) causes the popover to appear.
 
-This renders as follows:
+This renders as follows. Try interacting with the link:
 
 {{embedlivesample("basic-interest-invoker", "100%", "150")}}
 
