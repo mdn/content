@@ -75,7 +75,7 @@ This alias only matches when the viewport is within the specified width range.
 
 #### Using the `or` operator
 
-A comma creates a logical `or` operator. The media query matches if any of the listed conditions are `true`.
+The logical `or` operator (or its comma alias) creates a media query that matches if any of the listed conditions are `true`.
 
 ```css
 @custom-media --screen-or-print-1 screen, print;
