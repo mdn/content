@@ -9,9 +9,9 @@
  * 2. Updates the current Nightly (e.g., 146) to Beta
  * 3. Creates a new Nightly page for the next version (e.g., 147)
  *
- * Usage: node scripts/release-firefox.js VERSION
+ * Usage: node scripts/content/release-firefox.js VERSION
  *
- * Example: node scripts/release-firefox.js 145
+ * Example: node scripts/content/release-firefox.js 145
  */
 
 import fs from "node:fs/promises";
@@ -301,8 +301,8 @@ async function main() {
 
   if (args.length === 0) {
     console.error("❌ Error: Version number is required");
-    console.error("\nUsage: node scripts/release-firefox.js VERSION");
-    console.error("Example: node scripts/release-firefox.js 145\n");
+    console.error("\nUsage: node scripts/content/release-firefox.js VERSION");
+    console.error("Example: node scripts/content/release-firefox.js 145\n");
     process.exit(1);
   }
 
