@@ -29,7 +29,6 @@ jobs:
       - name: npm ci
         run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: npm run up-to-date-check
@@ -51,7 +50,6 @@ jobs:
       - name: npm ci
         run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: npm start
@@ -93,7 +91,6 @@ jobs:
       - name: npm ci
         run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: npm run filecheck -- --help
@@ -115,7 +112,6 @@ jobs:
       - name: Install
         run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: npm run content -- --help
@@ -141,7 +137,6 @@ jobs:
       - name: npm ci
         run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: npm run build -- --help
