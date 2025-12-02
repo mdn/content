@@ -41,7 +41,7 @@ document.startViewTransition({
 When the "Previous" button is pressed, this code is run — the callback function updates the displayed image to display the previous image in the sequence (including updating its alt text, `data-id` representing the sequence number, and caption), and the `types` array specifies that the view transition should be run with a type of `backwards`.
 
 > [!NOTE]
-> The types set on the view transition in the `types` array can be accessed via the {{domxref("ViewTransition.types", "types")}} property of the {{domxref("ViewTransition")}} object returned by the `startViewTransition()` method. The `types` property is a [Set-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis), which means you can modify the types applied to a view transition on the fly using methods available on the `types` value such as `clear()`, `add()`, and `delete()`.
+> The types set on the view transition in the `types` array can be accessed via the {{domxref("ViewTransition.types", "types")}} property of the {{domxref("ViewTransition")}} object returned by the `startViewTransition()` method. The `types` property is a {{domxref("ViewTransitionTypeSet")}}. This is a [Set-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis), which means you can modify the types applied to a view transition on the fly using methods available on it such as `clear()`, `add()`, and `delete()`.
 
 ### Applying custom animations in CSS
 

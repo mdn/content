@@ -36,6 +36,7 @@ html:active-view-transition-type(forwards, backwards) {
 - You can also modify the active view transition's types on the fly via the {{domxref("ViewTransition.types", "types")}} property of the corresponding `ViewTransition` object:
   - For SPA view transitions, this is the `ViewTransition` object returned by the `startViewTransition()` method.
   - For cross-document view transitions, the `ViewTransition` object is available in the {{domxref("PageSwapEvent.viewTransition", "viewTransition")}} property of the {{domxref("Window.pageswap_event", "pageswap")}} event object in the case of the outgoing page, and the {{domxref("PageRevealEvent.viewTransition", "viewTransition")}} property of the {{domxref("Window.pagereveal_event", "pagereveal")}} event object in the case of the incoming page.
+  - You can also access the active `ViewTransition` via the {{domxref("Document.activeViewTransition")}} property. This provides a consistent way to access the active view transition in any context.
 
 Once the active view transition has one or more types set on it, the `:active-view-transition-type()` pseudo-class can be applied to the document root element to set custom styles for each type. The pseudo-class takes a comma-separated list of types as its argument to specify the types that need to be set on the active view transition for the selector to be matched.
 
