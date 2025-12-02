@@ -12,6 +12,10 @@ browser-compat: api.Sanitizer.allowAttribute
 
 The **`allowAttribute()`** method of the {{domxref("Sanitizer")}} interface sets an attribute to be allowed on all elements when the sanitizer is used.
 
+The method can be used with either an [allow configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations) or a [remove configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#remove_configurations).
+If used with an allow configuration, the specified attribute is added to the `attributes` array.
+If used with a remove configuration, the attribute is removed from the `removeAttributes` array (if present).
+
 Note that to allow/disallow attributes only on specific elements use {{domxref('Sanitizer.allowElement()')}}.
 
 ## Syntax

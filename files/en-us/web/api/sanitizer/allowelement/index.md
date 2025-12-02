@@ -23,25 +23,31 @@ allowElement(element)
 ### Parameters
 
 - `element`
+
   - : A string indicating the name of the allowed element, or an object with the following properties:
+
     - `name`
       - : A string containing the name of the element.
     - `namespace` {{optional_inline}}
       - : A string containing the namespace of the element.
         The default namespace is `"http://www.w3.org/1999/xhtml"`.
     - `attributes` {{optional_inline}}
+
       - : An array indicating the attributes to allow on this (allowed) element when sanitizing HTML.
 
         Each attribute can be specified by name (a string), or as an object with the following properties:
+
         - `name`
           - : A string containing the name of the attribute.
         - `namespace` {{optional_inline}}
           - : A string containing the namespace of the attribute, which defaults to `null`.
 
     - `removeAttributes` {{optional_inline}}
+
       - : An array indicating the attributes to remove on this (allowed) element when sanitizing HTML.
 
         Each attribute can be specified by name (a string), or as an object with the following properties:
+
         - `name`
           - : A string containing the name of the attribute.
         - `namespace` {{optional_inline}}
@@ -63,19 +69,24 @@ Note that `false` might be returned if the internal configuration:
 
 The `allowElement()` method sets that the specified element is allowed in the output when the sanitizer is used.
 
-For example, the following code creates a `Sanitizer` that allows {{htmlelement("span")}} elements and then calls `allowElement()` to allow {{htmlelement("b")}} elements.
+The method can be used with either an [allow configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations) or a [remove configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#remove_configurations).
+If used with an allow configuration, the specified element is added to the `elements` array.
+If used with a remove configuration, the element is removed from the `removeElements` array (if present).
+If present, it would also be removed from the [`replaceWithChildrenElements`](http://localhost:5042/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements) array.
+
+For example, the following code creates an allow `Sanitizer` that allows {{htmlelement("span")}} elements and then calls `allowElement()` to additionally allow {{htmlelement("b")}} elements.
 
 ```js
-sanitizer = new Sanitizer({ elements: ["span"] });
+const sanitizer = new Sanitizer({ elements: ["span"] });
 sanitizer.allowElement("b");
 ```
 
-When using a `Sanitizer` with an [allow configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations) you can also use the method to specify attributes to be allowed or disallowed on elements of that type.
+When using a `Sanitizer` with an allow configuration you can also use the method to specify attributes to be allowed or disallowed on elements of that type.
 For example, the following code first creates an allow sanitizer configuration by specifying the `elements` array (creating a `Sanitizer` with an empty object or no configuration object would also result in an "allow configuration").
 It then calls `allowElement()` to allow `div` elements, to allow the `class` attribute on `<div>` elements, and to remove the `lang` attribute on `<div>` elements.
 
 ```js
-sanitizer = new Sanitizer({ elements: ["span"] });
+const sanitizer = new Sanitizer({ elements: ["span"] });
 sanitizer.allowElement({
   name: "div",
   attributes: ["class"],
@@ -92,7 +103,7 @@ This is because internally the sanitizer doesn't have the `elements` array requi
 ```js example-bad
 // Define Sanitizer with a remove configuration
 // by specifying removeElements in the configuration
-sanitizer = new Sanitizer({ removeElements: [] });
+const sanitizer = new Sanitizer({ removeElements: [] });
 // Returns false and raises a console warning
 sanitizer.allowElement({
   name: "div",

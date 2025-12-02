@@ -12,6 +12,10 @@ browser-compat: api.Sanitizer.removeElement
 
 The **`removeElement()`** method of the {{domxref("Sanitizer")}} interface sets the specified element be removed from the output when the sanitizer is used.
 
+The method can be used with either an [allow configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations) or a [remove configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#remove_configurations).
+If used with a remove configuration, the specified element is added to the `removeElements` array.
+If used with an allow configuration, the attribute is removed from the `elements` array (if present).
+
 ## Syntax
 
 ```js-nolint

@@ -12,7 +12,10 @@ browser-compat: api.Sanitizer.setDataAttributes
 
 The **`setDataAttributes()`** method of the {{domxref("Sanitizer")}} interface sets whether all [`data-*` attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) will be allowed by the sanitizer, or if they must be individually specified.
 
-If this is set `true`, then data attributes are automatically allowed without needing to add them individually using {{domxref('Sanitizer.allowAttribute()')}} (or {{domxref('Sanitizer.allowElement()')}} for local attributes).
+If this is set `true`, then data attributes are automatically allowed and you should not add them individually using {{domxref('Sanitizer.allowAttribute()')}} (or {{domxref('Sanitizer.allowElement()')}} for local attributes).
+
+Note that this method is only useful for [allow configurations](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations), as a remove configuration that doesn't specify any `data-*` attributes already allows all `data-*` attributes.
+If will return `false` for remove configurations.
 
 ## Syntax
 
@@ -27,7 +30,7 @@ setDataAttributes(allow);
 
 ### Return value
 
-`true` if the operation changed the configuration, and `false` if the configuration already set [`dataAttributes`](/en-US/docs/Web/API/SanitizerConfig#dataattributes) to the specified value or `dataAttributes` cannot be set `true`.
+`true` if the operation changed the configuration, and `false` if the configuration already set [`dataAttributes`](/en-US/docs/Web/API/SanitizerConfig#dataattributes) to the specified value or `dataAttributes` cannot be set `true` because this sanitizer has a remove configuration.
 
 ## Examples
 
