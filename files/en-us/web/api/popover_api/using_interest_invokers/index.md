@@ -140,7 +140,7 @@ button:interest-source {
 }
 ```
 
-Next, we combine the `:interest-source` pseudo-class with the {{cssxref(":has()")}} pseudo-class to create a ruleset that applies `interest-delay-start: 0s` to all buttons inside the paragraph, only if the paragraph contains a button that interest has been shown on (that is, has been selected by `button:interest-source`). This is a useful technique — having the popover appear as soon as interest is shown on any button would create an annoying user experience, but after the user has shown interest in a button, it is convenient for them to be able to quickly move between different popovers.
+Next, we've combined the `:interest-source` pseudo-class with the {{cssxref(":has()")}} pseudo-class to apply `interest-delay-start: 0s` to all buttons inside the paragraph, but only when the paragraph contains a button that interest is shown on (that is, a button matching `button:interest-source`). This is a useful technique — having the popover appear as soon as interest is shown on any button would create an annoying user experience, but after the user has shown interest in a button, it is convenient for them to be able to quickly move between different popovers.
 
 ```css live-sample___interest-invoker-styling
 p:has(button:interest-source) button {
