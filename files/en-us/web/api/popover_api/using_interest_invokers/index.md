@@ -189,7 +189,7 @@ const supported =
   HTMLButtonElement.prototype.hasOwnProperty("interestForElement");
 ```
 
-In all of the examples on this page, we use this exact technique to detect support. If the return value is `false`, indicating no support, we add a class to the {{htmlelement("html")}} element to indicate this:
+All the examples in this guide use this technique to detect support. If the return value is `false`, indicating that the feature is not supported, we add a class to the {{htmlelement("html")}} element:
 
 ```js
 if (!supported) {
