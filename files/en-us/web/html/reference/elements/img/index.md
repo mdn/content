@@ -400,7 +400,7 @@ The `src` attribute is ignored in {{glossary("User agent", "user agents")}} that
 
 ## Security and privacy concerns
 
-Although `<img>` elements have innocent uses, they can have undesirable consequences for user security and privacy. See [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for more information and mitigations.
+Although `<img>` elements have innocent uses, they can have undesirable consequences for user security and privacy. See [Referer header: privacy and security concerns](/en-US/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) for more information and mitigations.
 
 ## Technical summary
 
