@@ -96,7 +96,7 @@ The following `<shape-command>`s can be specified:
 - `<curve-command>`
   - : Specified as `curve [by | to] <end-point> with <control-point> [/ <control-point>]`. This command adds a [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the `<end-point>`, is relative or absolute.
 
-    The `with` keyword specifies the control points of the Bézier curve:
+    The `with` keyword specifies the control points of the Bézier curve as follows.
     - If only a single `<control-point>` is provided, the command draws a [quadratic Bézier curve](/en-US/docs/Web/SVG/Reference/Attribute/d#quadratic_bézier_curve), which is defined by three points (the start point, control point, and end point).
     - If two `<control-point>` values are provided, the command draws a cubic Bézier curve, which is defined by four points (the start point, two control points, and the end point).
 
