@@ -104,7 +104,7 @@ The following `<shape-command>`s can be specified:
     - If the curve end point is absolute (specified using `to`), `<end-point>` can be specified using {{cssxref("&lt;position>")}} keywords or a `<coordinate-value-pair>`.
     - If the curve end point is relative (specified using `by`), `<end-point>` can be specified using a `<coordinate-value-pair>`.
 
-    Valid values for the `<control-point>` components:
+    Valid values for `<control-point>` include:
     - {{cssxref("&lt;position>")}}
       - : Position keywords. Only valid when the curve end point is absolute (specified using `to`).
     - `<coordinate-value-pair>`
