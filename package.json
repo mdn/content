@@ -23,7 +23,7 @@
     "build": "npm run --silent info:rari && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build rari build",
     "content": "npm run --silent info:rari && env-cmd --silent cross-env CONTENT_ROOT=files rari content",
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files node scripts/filecheck/index.js --cwd=.",
-    "fix:fm": "node scripts/front-matter_linter.js --fix true",
+    "fix:fm": "node scripts/front-matter_linter.js --fix",
     "fix:js": "prettier --write --cache \"**/*.(m)?js\"",
     "fix:json": "prettier --write --cache \"**/*.json(c)?\"",
     "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && prettier --write --cache \"**/*.md\"",
@@ -44,7 +44,6 @@
   },
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
-    "@caporal/core": "^2.0.7",
     "@mdn/fred": "1.9.1",
     "@octokit/rest": "^22.0.1",
     "ajv": "^8.17.1",
