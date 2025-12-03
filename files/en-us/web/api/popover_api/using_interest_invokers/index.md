@@ -118,7 +118,7 @@ That said, there are some CSS features specific to interest invokers:
 
 Let's look at a simple example that demonstrates how these features work.
 
-We specify two buttons and a tooltip, which is shown/hidden when the user shows/loses interest in the `<button>`:
+We've defined two buttons and a tooltip. The tooltip is shown or hidden when the user shows or loses interest in either button.
 
 ```html live-sample___interest-invoker-styling
 <p>
