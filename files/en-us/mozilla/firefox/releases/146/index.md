@@ -114,6 +114,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **Relative control points in CSS `shape()` curve commands**: `layout.css.basic-shape-shape.enabled`
 
   When specifying a [`<curve-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#curve-command) or [`<smooth-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#smooth-command) in a CSS [`shape()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape) function, [`<relative-control-point>`]()s can be used to specify curve control points that are positioned relative to the start point of the current command, end point of the current command, or the top-left (origin) point of the container the shape is being drawn inside.
+
 - **Custom media queries**: `layout.css.custom-media.enabled`
 
   The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS at-rule defines aliases for long or complex media queries. Instead of repeating the same hardcoded `<media-query-list>` in multiple `@media` at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed. ([Firefox bug 1991105](https://bugzil.la/1744292)).
