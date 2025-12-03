@@ -178,7 +178,7 @@ Interest invokers have an associated JavaScript API that lets you query the elem
 - The {{domxref("HTMLElement.interest_event", "interest")}} and {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} events, which are fired on an interest invoker's target element when interest is shown and lost, respectively. You can listen for these events to run custom code in response.
 - The {{domxref("InterestEvent")}} interface, which is the event object for the `interest` and `loseinterest` events. This includes a `source` property that contains a reference to the associated interest invoker element.
 
-### Interest invoker feature detection
+### Detecting support for interest invokers
 
 One of the uses of the API is feature detection. The simplest way to check whether interest invokers are supported is to use the {{jsxref("Object.hasOwnProperty()")}} method on one of the interface types to see if the `interestForElement` property is available.
 
