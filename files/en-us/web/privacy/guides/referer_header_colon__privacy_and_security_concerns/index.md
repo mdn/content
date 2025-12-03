@@ -1,8 +1,8 @@
 ---
 title: "Referer header: Privacy and security concerns"
-slug: Web/Security/Referer_header:_privacy_and_security_concerns
+slug: Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns
 page-type: guide
-sidebar: security
+sidebar: privacy
 ---
 
 There are privacy and security risks associated with the [Referer HTTP header](/en-US/docs/Web/HTTP/Reference/Headers/Referer). This article describes them, and offers advice on mitigating those risks.

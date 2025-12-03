@@ -38,7 +38,6 @@ jobs:
         if: steps.filter.outputs.required_files == 'true'
         run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check redirects file(s)

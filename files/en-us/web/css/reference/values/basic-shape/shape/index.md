@@ -72,34 +72,69 @@ clip-path: shape(
 - `<shape-command>`
   - : Specifies a list of one or more comma-separated commands that define the shape, using syntax similar to [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). Commands include `<move-command>`, `<line-command>`, `<hv-line-command>`, `<curve-command>`, `<smooth-command>`, `<arc-command>`, and `close`. Each command's starting point is the previous command's ending point, with the first point of the shape defined by the [`from <coordinate-pair>`](#from_coordinate-pair) parameter.
 
-    The syntax of most shape commands is a keyword providing a directive, such as `move` or `line`, followed by the `by` or `to` keyword, and a set of coordinates.
+#### Shape commands
 
-    `by`: Indicates that the `<coordinate-pair>` is relative to the command's starting point (a "relative" value).
+The syntax of most shape commands is a keyword that provides a directive, such as `move` or `line`, followed by the `by` or `to` keyword, and a set of coordinates.
 
-    `to`: Indicates that the `<coordinate-pair>` is relative to the top-left corner of the reference box (an "absolute" value).
+- `by`: Indicates that the `<coordinate-pair>` is relative to the command's starting point (a "relative" value).
+- `to`: Indicates that the `<coordinate-pair>` is relative to the top-left corner of the reference box (an "absolute" value).
 
-    > [!NOTE]
-    > If a coordinate in a `<coordinate-pair>` is specified as a percentage, the value is calculated relative to the respective width or height of the reference box.
+> [!NOTE]
+> If a coordinate in a `<coordinate-pair>` is specified as a percentage, the value is calculated relative to the respective width or height of the reference box.
 
-    The following `<shape-command>`s can be specified: `<move-command>`, `<line-command>`, `<hv-line-command>`, `<curve-command>`, `<smooth-command>`, `<arc-command>`, and `close`.
+The following `<shape-command>`s can be specified:
 
-    `<move-command>`: Specified as `move [by | to] <coordinate-pair>`. This command adds a [MoveTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#moveto_path_commands) to the list of shape commands. It draws nothing. Rather, it specifies the starting position for the next command. The `by` or `to` keyword specifies whether the `<coordinate-pair>` point is relative or absolute, respectively. If the `<move-command>` follows the `close` command, it identifies the starting point of the next shape or subpath.
+- `<move-command>`
+  - : Specified as `move [by | to] <coordinate-pair>`. This command adds a [MoveTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#moveto_path_commands) to the list of shape commands. It draws nothing; instead, it specifies the starting position for the next command. The `by` or `to` keyword specifies whether the `<coordinate-pair>` point is relative or absolute, respectively. If the `<move-command>` follows the `close` command, it identifies the starting point of the next shape or subpath.
 
-    `<line-command>`: Specified as `line [by | to] <coordinate-pair>`. This command adds a [LineTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands) to the list of shape commands. It draws a straight line from the command's starting point to its ending point. The `by` or `to` keyword specifies whether the ending point specified by `<coordinate-pair>` is relative or absolute, respectively.
+- `<line-command>`
+  - : Specified as `line [by | to] <coordinate-pair>`. This command adds a [LineTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands) to the list of shape commands. It draws a straight line from the command's starting point to its ending point. The `by` or `to` keyword specifies whether the ending point specified by `<coordinate-pair>` is relative or absolute, respectively.
 
-    `<hv-line-command>`: Specified as `[hline | vline] [by | to] <length-percentage>`. This command adds a horizontal (`hline`) or vertical (`vline`) [LineTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands) to the list of shape commands. With `hline`, a horizontal line is drawn from the command's starting point `to` or `by` the `x` position defined by `<length-percentage>`. With `vline`, a vertical line is drawn from the command's starting point `to` or `by` the `y` position defined by `<length-percentage>`. The `by` or `to` keyword determines the relative or absolute ending point, respectively. This command is equivalent to `<line-command>` with one coordinate value set by the single `<length-percentage>` and the other coordinate value remaining unchanged from its starting command.
+- `<hv-line-command>`
+  - : Specified as `[hline | vline] [by | to] <length-percentage>`. This command adds a horizontal (`hline`) or vertical (`vline`) [LineTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands) to the list of shape commands. With `hline`, a horizontal line is drawn from the command's starting point `to` or `by` the `x` position defined by `<length-percentage>`. With `vline`, a vertical line is drawn from the command's starting point `to` or `by` the `y` position defined by `<length-percentage>`. The `by` or `to` keyword determines the relative or absolute ending point, respectively. This command is equivalent to `<line-command>` with one coordinate value set by the single `<length-percentage>` and the other coordinate value remaining unchanged from its starting command.
 
-    `<curve-command>`: Specified as `curve [by | to] <coordinate-pair> with <coordinate-pair> [/ <coordinate-pair>]`. This command adds a [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively. The `with` keyword specifies the control points of the Bézier curve.
-    - If only a single `<coordinate-pair>` is provided, the command draws a [quadratic Bézier curve](/en-US/docs/Web/SVG/Reference/Attribute/d#quadratic_bézier_curve), which is defined by three points (the start point, control point, and end point).
-    - If two `<coordinate-pair>` values are provided, the command draws a cubic Bézier curve, which is defined by four points (the start point, two control points, and the end point).
+- `<curve-command>`
+  - : Specified as `curve [by | to] <end-point> with <control-point> [/ <control-point>]`. This command adds a [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the `<end-point>`, is relative or absolute.
 
-    `<smooth-command>`: Specified as `smooth [by | to] <coordinate-pair> [with <coordinate-pair>]`. This command adds a smooth [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively.
-    - If `with <coordinate-pair>` is omitted, the command draws a smooth quadratic Bézier curve, which uses the previous control point and the current endpoint to define the curve.
-    - If the optional `with` keyword is included, it specifies the control points of the curve through `<coordinate-pair>`, drawing a smooth cubic Bézier curve defined by the previous control point, the current control point, and the current endpoint.
+    The `with` keyword specifies the control points of the Bézier curve as follows.
+    - If only a single `<control-point>` is provided, the command draws a [quadratic Bézier curve](/en-US/docs/Web/SVG/Reference/Attribute/d#quadratic_bézier_curve), which is defined by three points (the start point, control point, and end point).
+    - If two `<control-point>` values are provided, the command draws a cubic Bézier curve, which is defined by four points (the start point, two control points, and the end point).
+
+    Valid values for `<end-point>` include:
+    - {{cssxref("&lt;position>")}} keywords or a `<coordinate-value-pair>`
+      - : Can be used if the curve end point is absolute (specified using `to`).
+    - `<coordinate-value-pair>`
+      - : Can be used if the curve end point is relative (specified using `by`).
+
+    Valid values for `<control-point>` include:
+    - {{cssxref("&lt;position>")}}
+      - : Specifies a position keyword. This value is valid only when the curve end point is absolute (specified using `to`).
+    - `<coordinate-value-pair>`
+      - : Specifies a pair of {{cssxref("&lt;length-percentage>")}} values that define coordinates.
+    - `<relative-control-point>`
+      - : Defines a `<coordinate-value-pair>` followed by the `from` keyword and one of the following keywords:
+        - `start`
+          - : Indicates that the control point is relative to the start point of the current command.
+        - `end`
+          - : Indicates that the control point is relative to the end point of the current command.
+        - `origin`
+          - : Indicates that the control point is relative to the the top-left (origin) point of the container the shape is being drawn inside.
+            > [!NOTE]
+            > If the `<relative-control-point>` keywords are not specified, making the `<control-point>` a regular `<coordinate-value-pair>`, the coordinates are relative to the start of the curve. In other words, `start` is the default setting.
+
+- `<smooth-command>`
+  - : Specified as `smooth [by | to] <end-point> [with <control-point>]`. This command adds a smooth [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the `<end-point>`, is relative or absolute.
+
+    The `with` keyword specifies an optional control point for the Bézier curve:
+    - If `with <control-point>` is omitted, the command draws a smooth quadratic Bézier curve, which uses the previous control point and the current endpoint to define the curve.
+    - If the optional `with` keyword is included, it specifies a control points of the curve through `<control-point>`, drawing a smooth cubic Bézier curve defined by the previous control point, the current control point, and the current endpoint.
 
     Smooth curves ensure a continuous transition from the shape, while quadratic curves do not. Smooth quadratic curves maintain a seamless transition using a single control point, whereas smooth cubic curves provide a more refined transition using two control points.
 
-    `<arc-command>`: Specified as `arc [by | to] <coordinate-pair> of <length-percentage> [<length-percentage>] [<arc-sweep> | <arc-size> | rotate <angle>]`. This command adds an [elliptical arc curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#elliptical_arc_curve) to the list of shape commands. It draws an elliptical arc between a starting point and an ending point. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively.
+    Valid values for the `<end-point>` and `<control-point>` components are the same as those for [`<curve-command>`](#curve-command).
+
+- `<arc-command>`
+  - : Specified as `arc [by | to] <coordinate-pair> of <length-percentage> [<length-percentage>] [<arc-sweep> | <arc-size> | rotate <angle>]`. This command adds an [elliptical arc curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#elliptical_arc_curve) to the list of shape commands. It draws an elliptical arc between a starting point and an ending point. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively.
 
     The elliptical arc curve command defines two possible ellipses, which intersect both the starting and ending points, and each can be traced clockwise or counterclockwise, resulting in four possible arcs depending on the arc size, direction, and angle. The `of` keyword specifies the size of the ellipse from which the arc is taken: the first `<length-percentage>` provides the horizontal radius of the ellipse, and the second `<length-percentage>` provides the vertical radius.
 
@@ -115,7 +150,8 @@ clip-path: shape(
     - If the horizontal and vertical radii don't describe an ellipse large enough to intersect both the starting point and ending points (after rotation by the specified `<angle>`), the radii are scaled up uniformly until the ellipse is just large enough to intersect both points.
     - If the starting and ending points of the arc lie on exactly opposite sides of the ellipse, there is only one possible ellipse and two possible arcs. In this case, `<arc-sweep>` specifies the arc to choose, and `<arc-size>` has no effect.
 
-    `close`: Adds a [ClosePath command](/en-US/docs/Web/SVG/Reference/Attribute/d#closepath) to the list of shape commands, drawing a straight line from the current position (end of the last command) to the first point in the path defined in the `from <coordinate-pair>` parameter. To close the shape without drawing a line, include a `<move-command>` with the originating coordinates before the close command. If the `close` command is immediately followed by a `<move-command>`, it defines the starting point of the next shape or subpath.
+- `close`
+  - : Adds a [ClosePath command](/en-US/docs/Web/SVG/Reference/Attribute/d#closepath) to the list of shape commands, drawing a straight line from the current position (end of the last command) to the first point in the path defined in the `from <coordinate-pair>` parameter. To close the shape without drawing a line, include a `<move-command>` with the originating coordinates before the close command. If the `close` command is immediately followed by a `<move-command>`, it defines the starting point of the next shape or subpath.
 
 ## Description
 
@@ -308,6 +344,103 @@ body {
 #### Result
 
 {{EmbedLiveSample('Using shape() to define the visible part of an element', '100%', 300)}}
+
+### Using `shape()` to draw curves with relative control points
+
+Like previous examples, this example also uses {{cssxref("clip-path")}} to create different shapes for the clipping regions of the elements. The shapes are specified using a combination of [`<curve-command>`](#curve-command) and [`<smooth-command>`](#smooth-command), and the control points are specified using [`<relative-control-point>`](#relative-control-point) values.
+
+The first shape (`shape1`) draws two cubic Bézier curves.
+
+- The first curve starts from the center of the left edge of the box and is drawn to a point `200px` along the x-axis — the center of the box's right edge. It uses one control point relative to the start of the curve and one control point relative to the origin (top-left of the box).
+- The second curve starts from the center right of the box and is drawn `-200px` along the x-axis — the center of the box's left edge. It uses one control point relative to the origin and one control point relative to the start of the curve.
+
+```html hidden live-sample___relative-control-points
+<div class="container">
+  <div id="shape1"></div>
+  <div id="shape2"></div>
+  <div id="shape3"></div>
+</div>
+```
+
+```css hidden live-sample___relative-control-points
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+@supports not (
+  clip-path: shape(
+      from center left,
+      curve by 200px 0 with 50% -50% from start / 50% 0 from origin,
+      curve by -200px 0 with 50% 100% from origin / -50% 50% from start,
+      close
+    )
+) {
+  .container {
+    display: none;
+  }
+  body::after {
+    content: "Your browser doesn't support `shape()` relative control points.";
+  }
+}
+```
+
+```css live-sample___relative-control-points
+#shape1 {
+  width: 200px;
+  height: 200px;
+  background: green;
+  clip-path: shape(
+    from center left,
+    curve by 200px 0 with 50% -50% from start / 50% 0 from origin,
+    curve by -200px 0 with 50% 100% from origin / -50% 50% from start,
+    close
+  );
+}
+```
+
+The second shape (`shape2`) draws one quadratic Bézier curve and one cubic Bézier curve.
+
+- The first curve starts from the center of the left edge of the box and is drawn to an absolute point `200px` from the origin along the x-axis and `100px` from the origin along the y-axis. It uses one control point relative to the start of the curve.
+- The second curve starts from the previous curve's end point and is drawn to the center left of the box. It uses one control point relative to the start of the curve and one control point relative to the end.
+
+```css live-sample___relative-control-points
+#shape2 {
+  width: 200px;
+  height: 200px;
+  background: purple;
+  clip-path: shape(
+    from center left,
+    curve to 200px 100px with 50% -80% from start,
+    curve to center left with 0% 70% from start / 20% 0% from end,
+    close
+  );
+}
+```
+
+The third shape (`shape3`) draws one quadratic Bézier curve and one cubic Bézier curve using a `smooth` command.
+
+- The first curve starts from the center of the left edge of the box and is drawn to a point `200px` along the x-axis. It uses one control point relative to the start of the curve.
+- The second curve starts from the previous curve's end point and is drawn to the center of the box. It uses one control point relative to the start of the curve (the last control point of the previous curve) and one control point relative to the origin.
+
+```css live-sample___relative-control-points
+#shape3 {
+  width: 200px;
+  height: 200px;
+  background: orangered;
+  clip-path: shape(
+    from center left,
+    curve by 200px 0px with 50% -80% from start,
+    smooth to center with 50% 100% from origin,
+    close
+  );
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('relative-control-points', '100%', 200)}}
 
 ## Specifications
 
