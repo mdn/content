@@ -109,7 +109,7 @@ You can show interest in the button to display the tooltip, and click the button
 
 ## Styling interest invokers
 
-When targeting popovers with interest invokers, you can use the same styling techniques as with any other popovers (see [Styling popovers](/en-US/docs/Web/API/Popover_API/Using#styling_popovers)), including [using anchoring positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) to position popovers relative to invokers, and [animating popovers](/en-US/docs/Web/API/Popover_API/Using#animating_popovers).
+When styling popovers used with interest invokers, you can use the same styling techniques as with any other popover (see [Styling popovers](/en-US/docs/Web/API/Popover_API/Using#styling_popovers)), including [using anchoring positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) to position popovers relative to invokers and [animating popovers](/en-US/docs/Web/API/Popover_API/Using#animating_popovers).
 
 That said, there are some interest invoker-specific CSS features that you should know about:
 
