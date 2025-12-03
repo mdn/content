@@ -156,7 +156,7 @@ We've also set a {{cssxref("position-area")}} of `bottom` on the tooltip so that
 }
 ```
 
-Finally, we use the `#mytooltip:interest-target` selector to set a dashed border on the popover only when interest is being shown.
+Finally, we've used the `#mytooltip:interest-target` selector to set a dashed border on the popover when interest is shown.
 
 ```css live-sample___interest-invoker-styling
 #mytooltip:interest-target {
