@@ -209,17 +209,17 @@ Invalid because the redundant attribute `"data-test"` is defined when `dataAttri
 ```js
 const sanitizer3 = new Sanitizer({
   attributes: ["lang", "id", "data-test"],
-  datatAttributes: true,
-}); …
+  dataAttributes: true,
+});
 ```
 
-Invalid because it has `removeAttributes` and `datatAttributes` defined.
+Invalid because it has `removeAttributes` and `dataAttributes` defined.
 
 ```js
 const sanitizer4 = new Sanitizer({
   removeAttributes: ["lang", "id"],
   dataAttributes: true,
-}); …
+});
 ```
 
 ## Specifications
