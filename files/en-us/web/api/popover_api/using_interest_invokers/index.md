@@ -126,7 +126,7 @@ We specify two buttons and a tooltip, which is shown/hidden when the user shows/
   <button interestfor="mytooltip">Button 1</button>
   <button interestfor="mytooltip">Button 2</button>
 </p>
-<p id="mytooltip" popover="hint">A hover toolip</p>
+<p id="mytooltip" popover="hint">A hover tooltip</p>
 ```
 
 In the CSS, we set an `interest-delay` of `1s 2s` on the `<button>` — this creates a delay of 1 second between the user showing interest and the popover appearing, and a delay of 2 seconds between the user losing interest and the popover disappearing. We also use the `button:interest-source` selector to set an `orange` {{cssxref("background-color")}} on the `<button>` only when interest is being shown.
