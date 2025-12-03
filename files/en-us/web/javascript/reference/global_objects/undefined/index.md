@@ -87,7 +87,7 @@ if (x === undefined) {
 
 ### typeof operator and undefined
 
-Alternatively, {{jsxref("Operators/typeof", "typeof")}} can be used:
+{{jsxref("Operators/typeof", "typeof")}} can be used to determine whether a variable is `undefined`:
 
 ```js
 let x;
@@ -96,29 +96,30 @@ if (typeof x === "undefined") {
 }
 ```
 
-One reason to use {{jsxref("Operators/typeof", "typeof")}} is that it does not throw an
-error if the variable has not been declared.
-
-```js
-// x has not been declared before
-// evaluates to true without errors
-if (typeof x === "undefined") {
-  // these statements execute
-}
-
-// Throws a ReferenceError
-if (x === undefined) {
-}
-```
-
-However, there is another alternative. JavaScript is a statically scoped language, so
-knowing if a variable is declared can be read by seeing whether it is declared in an
-enclosing context.
+> [!NOTE]
+> Accessing Lexical Declarations (`const` and `let`) _before_ before initialization
+> produces a `ReferenceError`, even when the check uses `typeof`. This is due
+> to the {{jsxref("Statements/let#temporal_dead_zone_tdz", "temporal dead zone (TDZ)")}}.
+>
+> ```js example-bad
+> if (typeof z === "undefined") {
+>   // Uncaught ReferenceError: Cannot access 'z' before initialization
+> }
+> let z = 1;
+> ```
+>
+> In contrast, `var` declarations are hoisted and initialized to `undefined`, so `typeof` checks work as expected:
+>
+> ```js
+> if (typeof y === "undefined") {
+>   // these statements execute
+> }
+> var y = 1;
+> ```
 
 The global scope is bound to the {{jsxref("globalThis", "global object", "", 1)}}, so
 checking the existence of a variable in the global context can be done by checking the
-existence of a property on the _global object_, using the
-{{jsxref("Operators/in", "in")}} operator, for instance:
+existence of a property on the _global object_, for instance, by using the {{jsxref("Operators/in", "in")}} operator:
 
 ```js
 if ("x" in window) {
