@@ -192,7 +192,7 @@ The following list provides some tips on how to mitigate privacy risks inherent 
 - Where possible, you should block third parties from receiving a {{httpheader("Referer")}} header when you make requests to them. This can be done in a pretty granular way, for example by including [rel="noreferrer"](/en-US/docs/Web/HTML/Reference/Attributes/rel/noreferrer) on external links. Or, you could set this more globally for the page or site, for example by using the {{httpheader("Referrer-Policy")}} header.
 
   > [!NOTE]
-  > See also [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns).
+  > See also [Referer header: privacy and security concerns](/en-US/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns).
 
 - Use the {{httpheader("Permissions-Policy")}} HTTP header to control access to API "powerful features" (such as notifications, geolocation data, accessing media streams from webcams, etc.). This can be useful for privacy because it stops third-party sites from doing unexpected things with these features, and users don't want to be unnecessarily bombarded by permission prompts that they may not understand. You can also control usage of "powerful features" inside third-party sites embedded inside {{htmlelement("iframe")}} elements by specifying permissions policies inside an `allow` attribute on the `<iframe>` itself.
 
