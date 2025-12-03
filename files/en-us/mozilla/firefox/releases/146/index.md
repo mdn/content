@@ -93,7 +93,7 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - Added support for the `context` locator to the `browsingContext.locateNodes` command, which allows to retrieve the container of non-top-level browsing contexts, such as iframe elements. ([Firefox bug 1941270](https://bugzil.la/1941270)).
 - Implemented the `network.setExtraHeaders` command, which can be used to specify request headers which will be automatically added to requests triggered in the provided browsing contexts or user contexts. ([Firefox bug 1979731](https://bugzil.la/1979731)).
 - Updated all our network data collection commands (`network.addDataCollector`, `network.getData` and `network.disownData`) to support the `request` data type, which allows to collect and retrieve request post data. ([Firefox bug 1988955](https://bugzil.la/1988955)).
-- Improved our implementation for `network.getData` to also support requests using the `data:` scheme . ([Firefox bug 1992210](https://bugzil.la/1992210)).
+- Improved our implementation for `network.getData` to also support requests using the `data:` scheme. ([Firefox bug 1992210](https://bugzil.la/1992210)).
 - Fixed a bug for `network.getData` which was not throwing the expected `no such network data` error for unsupported requests. ([Firefox bug 1992214](https://bugzil.la/1992214)).
 - Fixed a bug in our `network` events where different requests were reusing the same id, mostly impacting data URLs or cached requests. ([Firefox bug 1992348](https://bugzil.la/1992348)).
 
