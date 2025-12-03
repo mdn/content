@@ -106,11 +106,11 @@ The following `<shape-command>`s can be specified:
 
     Valid values for `<control-point>` include:
     - {{cssxref("&lt;position>")}}
-      - : Position keywords. Only valid when the curve end point is absolute (specified using `to`).
+      - : Specifies a position keyword. This value is valid only when the curve end point is absolute (specified using `to`).
     - `<coordinate-value-pair>`
-      - : A pair of {{cssxref("&lt;length-percentage>")}} values representing coordinates.
+      - : Specifies a pair of {{cssxref("&lt;length-percentage>")}} values that define coordinates.
     - `<relative-control-point>`
-      - : A `<coordinate-value-pair>` followed by the `from` keyword and one of the following keywords:
+      - : Defines a `<coordinate-value-pair>` followed by the `from` keyword and one of the following keywords:
         - `start`
           - : The control point is relative to the start point of the current command.
         - `end`
