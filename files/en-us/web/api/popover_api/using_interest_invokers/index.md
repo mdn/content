@@ -116,7 +116,7 @@ That said, there are some CSS features specific to interest invokers:
 - The [`interest-delay`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay) shorthand property and its related [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start) and [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end) longhands: These can be used to add a delay between the user gaining or losing interest and the browser acting on that change — for example, showing or hiding a popover.
 - The [`:interest-source`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-source) and [`:interest-target`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-target) pseudo-classes: These can be used to apply styles to the interest invoker and its associated target element, respectively, only when interest is indicated.
 
-Let's look at a simple example that demonstrates their use.
+Let's look at a simple example that demonstrates how these features work.
 
 We specify two buttons and a tooltip, which is shown/hidden when the user shows/loses interest in the `<button>`:
 
