@@ -212,7 +212,7 @@ We then use that class in our CSS to display a "not supported" banner:
 
 ### API example
 
-Now we'll look at a basic example that shows the API features in action. Here we've got three links and a paragraph set to be a popover.
+Let's look at a basic example that shows the API features in action. This example has three links and a paragraph set up as a popover:
 
 ```html live-sample___interest-invoker-api
 <p>
