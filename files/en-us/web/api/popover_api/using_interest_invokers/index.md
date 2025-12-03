@@ -148,7 +148,7 @@ p:has(button:interest-source) button {
 }
 ```
 
-Next, we give the popover a {{cssxref("position-area")}} of `bottom`; this causes the popover to be positioned below the `<button>`. This is possible because associating any kind of popover with its invoker creates an implicit anchor reference between the two (see [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details).
+We've also set a {{cssxref("position-area")}} of `bottom` on the tooltip so that it appears below the button. This is possible because associating any popover with its interest invoker creates an implicit anchor reference between them (see [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details).
 
 ```css live-sample___interest-invoker-styling
 #mytooltip {
