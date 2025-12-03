@@ -72,7 +72,7 @@ The value of the `popover` attribute doesn't affect the popover's behavior in th
 
 ## Combining interest invokers with activation-based popovers
 
-It is possible to combine interest invokers with regular popovers on the same control. In this example, we have a {{htmlelement("button")}} element that is set to be an interest invoker via the `interestfor` attribute, meaning it will show a tooltip when interest is shown in it. However, when it is clicked, it will show/hide a different popover, referenced inside the `commandfor` attribute. The [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) attribute is set to `toggle-popover` so that it can be pressed multiple times to toggle the popover between showing and hidden states.
+You can combine interest invokers with regular popovers on the same control element. In the following example, a {{htmlelement("button")}} element is set up as an interest invoker using the `interestfor` attribute, meaning it will show a tooltip when the user shows interest in it. If the button is clicked, it will show or hide a different popover referenced by the `commandfor` attribute. The [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) attribute is set to `toggle-popover`, allowing the button to be pressed multiple times to toggle the popover between its shown and hidden states.
 
 ```css hidden live-sample___interest-invoker-popover-interaction
 #mytooltip {
