@@ -1,12 +1,12 @@
 ---
 title: IFrame credentialless
-slug: Web/Security/IFrame_credentialless
+slug: Web/HTTP/Guides/IFrame_credentialless
 page-type: guide
 status:
   - experimental
 browser-compat: html.elements.iframe.credentialless
 spec-urls: https://wicg.github.io/anonymous-iframe/
-sidebar: security
+sidebar: http
 ---
 
 {{SeeCompatTable}}
