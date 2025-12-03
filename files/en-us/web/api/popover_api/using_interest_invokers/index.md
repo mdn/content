@@ -246,7 +246,7 @@ Next, we attach `interest` and `loseinterest` event handlers to the popover. Whe
 
 ```js live-sample___interest-invoker-api
 tooltip.addEventListener("interest", (e) => {
-  tooltip.textContent = `Interest gained via ${e.source.textContent}`;
+  tooltip.textContent = `Interest shown on ${e.source.textContent}`;
 });
 
 tooltip.addEventListener("loseinterest", (e) => {
