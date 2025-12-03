@@ -101,8 +101,10 @@ The following `<shape-command>`s can be specified:
     - If two `<control-point>` values are provided, the command draws a cubic Bézier curve, which is defined by four points (the start point, two control points, and the end point).
 
     Valid values for `<end-point>` include:
-    - If the curve end point is absolute (specified using `to`), `<end-point>` can be specified using {{cssxref("&lt;position>")}} keywords or a `<coordinate-value-pair>`.
-    - If the curve end point is relative (specified using `by`), `<end-point>` can be specified using a `<coordinate-value-pair>`.
+    - {{cssxref("&lt;position>")}} keywords or a `<coordinate-value-pair>`
+      - : Can be used if the curve end point is absolute (specified using `to`).
+    - `<coordinate-value-pair>`
+      - : Can be used if the curve end point is relative (specified using `by`).
 
     Valid values for `<control-point>` include:
     - {{cssxref("&lt;position>")}}
@@ -343,24 +345,46 @@ body {
 
 ### Using `shape()` to draw curves with relative control points
 
-This example also uses {{cssxref("clip-path")}} to create different shapes for the clipping region of different elements. The shapes are specified using a combination of [`<curve-command>`](#curve-command) and [`<smooth-command>`](#smooth-command) , with [`<relative-control-point>`](#relative-control-point) values used for the control points. Note how some of the control points are relative to the start of the current curve, some are relative to the end of the current curve, and some are relative to the origin of the containing box.
+Like previous examples, this example also uses {{cssxref("clip-path")}} to create different shapes for the clipping regions of the elements. The shapes are specified using a combination of [`<curve-command>`](#curve-command) and [`<smooth-command>`](#smooth-command), and the control points are specified using [`<relative-control-point>`](#relative-control-point) values.
+
+- The first shape (`shape1`) draws two cubic Bézier curves. The first curve starts from the center of the left edge of the box and is drawn to a point `200px` along the x-axis — the center of the box's right edge. It uses one control point relative to the start of the curve and one control point relative to the origin (top-left of the box). The second curve starts from the center right of the box and is drawn `-200px` along the x-axis. It uses one control point relative to the start of the curve and one control point relative to the origin.
+- The second shape (`shape2`) draws one quadratic Bézier curve and one cubic Bézier curve. The first curve starts from the center of the left edge of the box and is drawn to an absolute point `200px` from the origin along the x-axis and `100px` from the origin along the y-axis. It uses one control point relative to the start of the curve. The second curve starts from the previous curve's end point and is drawn to the center left of the box. It uses one control point relative to the end of the curve and one control point relative to the start.
+- The third shape (`shape3`) draws one quadratic Bézier curve and one cubic Bézier curve using a `smooth` command. The first curve starts from the center of the left edge of the box and is drawn to a point `200px` along the x-axis. It uses one control point relative to the start of the curve. The second curve starts from the previous curve's end point and is drawn to the center of the box. It uses one control point relative to the start of the curve (the last control point of the previous curve) and one control point relative to the origin.
 
 ```html hidden live-sample___relative-control-points
-<div id="one"></div>
-<div id="two"></div>
-<div id="three"></div>
+<div class="container">
+  <div id="shape1"></div>
+  <div id="shape2"></div>
+  <div id="shape3"></div>
+</div>
 ```
 
 ```css hidden live-sample___relative-control-points
-body {
+.container {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
+
+@supports not (
+  clip-path: shape(
+      from center left,
+      curve by 200px 0 with 50% -50% from start / 50% 0 from origin,
+      curve by -200px 0 with 50% 100% from origin / -50% 50% from start,
+      close
+    )
+) {
+  .container {
+    display: none;
+  }
+  body::after {
+    content: "Your browser doesn't support `shape()` relative control points.";
+  }
+}
 ```
 
 ```css live-sample___relative-control-points
-#one {
+#shape1 {
   width: 200px;
   height: 200px;
   background: green;
@@ -372,7 +396,7 @@ body {
   );
 }
 
-#two {
+#shape2 {
   width: 200px;
   height: 200px;
   background: purple;
@@ -384,7 +408,7 @@ body {
   );
 }
 
-#three {
+#shape3 {
   width: 200px;
   height: 200px;
   background: orangered;
