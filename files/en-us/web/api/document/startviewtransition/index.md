@@ -29,7 +29,7 @@ startViewTransition(options)
     - `update` {{optional_inline}}
       - : The same `updateCallback` function described above. Defaults to `null`.
     - `types` {{optional_inline}}
-      - : An array of strings representing the types applied to the view transition. [View transition types](/en-US/docs/Web/API/View_Transition_API/Types) enable selective application of CSS styles or JavaScript logic based on the type of transition occurring. Defaults to an empty sequence.
+      - : An array of strings representing the types applied to the view transition. [View transition types](/en-US/docs/Web/API/View_Transition_API/Using_types) enable selective application of CSS styles or JavaScript logic based on the type of transition occurring. Defaults to an empty sequence.
 
 ### Return value
 
@@ -118,5 +118,5 @@ Otherwise, the background color is set using a fallback method, without any anim
 - {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}} pseudo-class
 - [View Transition API](/en-US/docs/Web/API/View_Transition_API)
 - [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
-- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Types)
+- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types)
 - [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

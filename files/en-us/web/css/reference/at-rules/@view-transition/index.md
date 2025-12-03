@@ -30,7 +30,7 @@ For a cross-document view transition to work, the current and destination docume
       - : The document will not undergo a view transition.
 
 - `types`
-  - : One or more comma-separated {{cssxref("&lt;custom-ident>")}} values representing the [types](/en-US/docs/Web/API/View_Transition_API/Types) to set on the active view transition for the current and destination documents.
+  - : One or more comma-separated {{cssxref("&lt;custom-ident>")}} values representing the [types](/en-US/docs/Web/API/View_Transition_API/Using_types) to set on the active view transition for the current and destination documents.
 
 ## Formal syntax
 
@@ -99,7 +99,7 @@ Our [MPA transition types example](https://mdn.github.io/dom-examples/view-trans
 }
 ```
 
-See [Using types with cross-document view transitions via `@view-transition`](/en-US/docs/Web/API/View_Transition_API/Types#using_types_with_cross-document_view_transitions_via_view-transition) for a walkthrough of the referenced example.
+See [Using types with cross-document view transitions via `@view-transition`](/en-US/docs/Web/API/View_Transition_API/Using_types#using_types_with_cross-document_view_transitions_via_view-transition) for a walkthrough of the referenced example.
 
 ## Specifications
 
@@ -117,6 +117,6 @@ See [Using types with cross-document view transitions via `@view-transition`](/e
 - {{cssxref("::view-transition-group()")}}
 - {{cssxref("::view-transition-image-pair()")}}
 - [View Transition API](/en-US/docs/Web/API/View_Transition_API)
-- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Types)
+- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types)
 - [CSS at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
 - [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)

@@ -108,4 +108,4 @@ changeColorButton.addEventListener("keypress", changeColor);
 - {{domxref("Document.activeViewTransition")}}
 - [View Transition API](/en-US/docs/Web/API/View_Transition_API)
 - [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
-- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Types)
+- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types)

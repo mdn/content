@@ -29,7 +29,7 @@ html:active-view-transition-type(forwards, backwards) {
 
 ## Description
 
-[View transition types](/en-US/docs/Web/API/View_Transition_API/Types) provide a mechanism by which different **types** can be specified for active view transitions. Types can be set on view transitions in multiple ways:
+[View transition types](/en-US/docs/Web/API/View_Transition_API/Using_types) provide a mechanism by which different **types** can be specified for active view transitions. Types can be set on view transitions in multiple ways:
 
 - For single-page app (SPA) view transitions, specify types in the [`types`](/en-US/docs/Web/API/Document/startViewTransition#types) option of the {{domxref("Document.startViewTransition", "startViewTransition()")}} method.
 - For cross-document view transitions, specify types in the [`types`](/en-US/docs/Web/CSS/Reference/At-rules/@view-transition#types) descriptor of the {{cssxref("@view-transition")}} at-rule.
@@ -44,7 +44,7 @@ For example, you might want to apply different transition animations to an {{htm
 
 ## Examples
 
-See also [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Types) for multiple complete examples.
+See also [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types) for multiple complete examples.
 
 ### Basic `:active-view-transition-type()` usage
 
@@ -219,4 +219,4 @@ Try clicking the "Backwards" and "Forwards" buttons, and note how, even though t
 - {{CSSXRef(":active-view-transition")}} pseudo-class
 - [View Transition API](/en-US/docs/Web/API/View_Transition_API)
 - [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
-- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Types)
+- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types)

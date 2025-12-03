@@ -9,7 +9,7 @@ browser-compat: api.ViewTransition.types
 {{APIRef("View Transition API")}}
 
 The **`types`** read-only property of the
-{{domxref("ViewTransition")}} interface is a {{domxref("ViewTransitionTypeSet")}} that allows the [types](/en-US/docs/Web/API/View_Transition_API/Types) set on the view transition to be accessed and modified.
+{{domxref("ViewTransition")}} interface is a {{domxref("ViewTransitionTypeSet")}} that allows the [types](/en-US/docs/Web/API/View_Transition_API/Using_types) set on the view transition to be accessed and modified.
 
 ## Value
 
@@ -197,7 +197,7 @@ Try clicking the different buttons and note how the same DOM changes are transit
 
 Check out our [MPA multiple transition types example](https://mdn.github.io/dom-examples/view-transitions/mpa-chapter-nav-multiple-transition-types/) ([source code](https://github.com/mdn/dom-examples/tree/main/view-transitions/mpa-chapter-nav-multiple-transition-types)), which demonstrates how to apply different animations to cross-document view transitions depending on the navigation type, represented by different transition types. The transition type is determined on the fly with JavaScript during the navigation.
 
-[Applying different cross-document types using pageswap and pagereveal events](/en-US/docs/Web/API/View_Transition_API/Types#applying_different_cross-document_types_using_pageswap_and_pagereveal_events) provides a walkthrough of this example.
+[Applying different cross-document types using pageswap and pagereveal events](/en-US/docs/Web/API/View_Transition_API/Using_types#applying_different_cross-document_types_using_pageswap_and_pagereveal_events) provides a walkthrough of this example.
 
 ## Specifications
 
@@ -212,5 +212,5 @@ Check out our [MPA multiple transition types example](https://mdn.github.io/dom-
 - {{domxref("ViewTransitionTypeSet")}}
 - [View Transition API](/en-US/docs/Web/API/View_Transition_API)
 - [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
-- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Types)
+- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types)
 - [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

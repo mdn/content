@@ -74,5 +74,5 @@ vt.types.forEach((type) => console.log(type));
 - {{domxref("ViewTransition.types")}}
 - [View Transition API](/en-US/docs/Web/API/View_Transition_API)
 - [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
-- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Types)
+- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types)
 - [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)
