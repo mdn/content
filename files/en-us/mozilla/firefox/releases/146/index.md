@@ -86,24 +86,22 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
-
 #### WebDriver BiDi
 
-- Updated the `emulation.setLocaleOverride` command to override the return value of "navigator.language/s" alongside JS APIs. ([Firefox bug 1994396](https://bugzil.la/1994396)).
-- Updated the `emulation.setLocaleOverride` and `emulation.setTimezoneOverride` commands reset behavior to match recent specification changes. When calling this command to reset the override for a specific browsing context, overrides configured for a user context owning this browsing context will still apply now. ([Firefox bug 1988725](https://bugzil.la/1988725)).
-- Added support for the `context` locator for the `browsingContext.locateNodes` command, which allows to retrieve the container of non-top-level browsing contexts, such as iframe elements. ([Firefox bug 1941270](https://bugzil.la/1941270)).
-- Implemented the `network.setExtraHeaders` command, which can be used to specify request headers which will be automatically added to requests triggered in the provided navigables or user contexts. ([Firefox bug 1979731](https://bugzil.la/1979731)).
-- Updated all our network data collection commands (`network.addDataCollector`, `network.getData` and `network.disownData`) to support the “request” data type, which allows to collect and retrieve request post data. ([Firefox bug 1988955](https://bugzil.la/1988955)).
+- Updated the `emulation.setLocaleOverride` command to override the return value of `navigator.language` and `navigator.languages` alongside JS APIs. ([Firefox bug 1994396](https://bugzil.la/1994396)).
+- Updated the `emulation.setLocaleOverride` and `emulation.setTimezoneOverride` commands reset behavior to match recent specification changes. When calling this command to reset the override for a specific browsing context, overrides configured for a user context owning this browsing context will still apply. ([Firefox bug 1988725](https://bugzil.la/1988725)).
+- Added support for the `context` locator to the `browsingContext.locateNodes` command, which allows to retrieve the container of non-top-level browsing contexts, such as iframe elements. ([Firefox bug 1941270](https://bugzil.la/1941270)).
+- Implemented the `network.setExtraHeaders` command, which can be used to specify request headers which will be automatically added to requests triggered in the provided browsing contexts or user contexts. ([Firefox bug 1979731](https://bugzil.la/1979731)).
+- Updated all our network data collection commands (`network.addDataCollector`, `network.getData` and `network.disownData`) to support the `request` data type, which allows to collect and retrieve request post data. ([Firefox bug 1988955](https://bugzil.la/1988955)).
 - Improved our implementation for `network.getData` to also support requests using the `data:` scheme . ([Firefox bug 1992210](https://bugzil.la/1992210)).
-- Fixed a bug for `network.getData` which was not throwing the expected `NoSuchNetworkData` error for unsupported requests. ([Firefox bug 1992214](https://bugzil.la/1992214)).
-- Fixed a bug in our `network` events where different requests might be reusing the same id, mostly impacting data URLs or cached requests. ([Firefox bug 1992348](https://bugzil.la/1992348)).
+- Fixed a bug for `network.getData` which was not throwing the expected `no such network data` error for unsupported requests. ([Firefox bug 1992214](https://bugzil.la/1992214)).
+- Fixed a bug in our `network` events where different requests were reusing the same id, mostly impacting data URLs or cached requests. ([Firefox bug 1992348](https://bugzil.la/1992348)).
 
 #### Marionette
 
-- Fixed a regression in `WebDriver:GetElementText` that caused text containing accented characters (e.g. "ó") to be incorrectly capitalized. ([Firefox bug 1986392](https://bugzil.la/1986392)).
+- Fixed a regression in `WebDriver:GetElementText` that caused text containing accented characters (e.g., "ó") to be incorrectly capitalized. ([Firefox bug 1986392](https://bugzil.la/1986392)).
 - Fixed a bug in the `WebFrame` JSON deserialization that incorrectly raised a `no such window` error instead of `no such frame` when handling invalid frames. ([Firefox bug 1996540](https://bugzil.la/1996540)).
-- Added a WebDriver extension to control the Global Privacy Control signal. ([Firefox bug 1969865](https://bugzil.la/1969865)).
+- Added a WebDriver extension to control the [Global Privacy Control](https://w3c.github.io/gpc/) signal. ([Firefox bug 1969865](https://bugzil.la/1969865)).
 
 ## Changes for add-on developers
 
