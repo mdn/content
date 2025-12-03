@@ -175,7 +175,7 @@ Try showing interest in the button (for example by hovering or focusing it) to o
 Interest invokers have an associated JavaScript API that lets you query the element being targeted by an interest invoker and run custom code when interest is shown or lost. The features of this API are:
 
 - The {{domxref("HTMLButtonElement.interestForElement", "interestForElement")}} property, which is available on the {{domxref("HTMLButtonElement")}}, {{domxref("HTMLAnchorElement")}}, {{domxref("HTMLAreaElement")}}, and {{domxref("SVGAElement")}} interfaces. It returns a reference to the target element for the interest invoker. This is the element whose `id` is referenced in the equivalent HTML or SVG interest invoker's `interestfor` attribute.
-- The {{domxref("HTMLElement.interest_event", "interest")}} and {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} events, which are fired on an interest invoker's target element when interest is shown and lost, respectively, allowing custom code to be run in response.
+- The {{domxref("HTMLElement.interest_event", "interest")}} and {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} events, which are fired on an interest invoker's target element when interest is shown and lost, respectively. You can listen for these events to run custom code in response.
 - The {{domxref("InterestEvent")}} interface, which is the event object for the `interest` and `loseinterest` events. This includes a `source` property that contains a reference to the associated interest invoker element.
 
 ### Interest invoker feature detection
