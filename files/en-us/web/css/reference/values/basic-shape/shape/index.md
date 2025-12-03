@@ -85,7 +85,7 @@ The syntax of most shape commands is a keyword that provides a directive, such a
 The following `<shape-command>`s can be specified:
 
 - `<move-command>`
-  - : Specified as `move [by | to] <coordinate-pair>`. This command adds a [MoveTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#moveto_path_commands) to the list of shape commands. It draws nothing. Rather, it specifies the starting position for the next command. The `by` or `to` keyword specifies whether the `<coordinate-pair>` point is relative or absolute, respectively. If the `<move-command>` follows the `close` command, it identifies the starting point of the next shape or subpath.
+  - : Specified as `move [by | to] <coordinate-pair>`. This command adds a [MoveTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#moveto_path_commands) to the list of shape commands. It draws nothing; instead, it specifies the starting position for the next command. The `by` or `to` keyword specifies whether the `<coordinate-pair>` point is relative or absolute, respectively. If the `<move-command>` follows the `close` command, it identifies the starting point of the next shape or subpath.
 
 - `<line-command>`
   - : Specified as `line [by | to] <coordinate-pair>`. This command adds a [LineTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands) to the list of shape commands. It draws a straight line from the command's starting point to its ending point. The `by` or `to` keyword specifies whether the ending point specified by `<coordinate-pair>` is relative or absolute, respectively.
