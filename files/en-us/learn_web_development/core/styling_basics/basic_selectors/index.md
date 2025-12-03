@@ -411,6 +411,9 @@ article *:first-child {
 
 Although both do the same thing, the readability is significantly improved.
 
+> [!NOTE]
+> Although this technique of preceding pseudo-classes with `*` seems very useful, it is rarely used in real code. It is worth noting that the same thing applies here in MDN docs: we almost never use it. However, that takes nothing from its value, and that shouldn't discourage you from using it in your code if you like.
+
 ## Summary
 
 In this article we've recapped CSS selectors, which enable you to target particular HTML elements, looking at type, class, and ID selectors in a bit more depth than we did previously. In the next article we will dive into attribute selectors.
