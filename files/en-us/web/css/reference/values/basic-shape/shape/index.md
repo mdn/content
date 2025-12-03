@@ -341,7 +341,7 @@ body {
 
 {{EmbedLiveSample('Using shape() to define the visible part of an element', '100%', 300)}}
 
-### Curve examples with relative control points
+### Using `shape()` to draw curves with relative control points
 
 This example also uses {{cssxref("clip-path")}} to create different shapes for the clipping region of different elements. The shapes are specified using a combination of [`<curve-command>`](#curve-command) and [`<smooth-command>`](#smooth-command) , with [`<relative-control-point>`](#relative-control-point) values used for the control points. Note how some of the control points are relative to the start of the current curve, some are relative to the end of the current curve, and some are relative to the origin of the containing box.
 
