@@ -59,6 +59,7 @@
 /SECURITY.md @mdn/engineering
 # Scripts and Tests
 /scripts @mdn/engineering
+/scripts/content @mdn/content-team
 /tests   @mdn/engineering
 
 # Dependencies
