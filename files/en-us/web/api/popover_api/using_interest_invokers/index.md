@@ -66,7 +66,7 @@ This renders as follows. Try interacting with the link:
 
 {{embedlivesample("basic-interest-invoker", "100%", "150")}}
 
-Note how the popover appears when the link is hovered, focused, or long-pressed, and disappears when the interaction stops. If the link is activated (for example, with a mouse click), it functions normally; though in this example the link doesn't go anywhere.
+Note how the popover appears when the link is hovered, focused, or long-pressed, and disappears when the interaction stops. In contrast, if the link is activated instead, such as with a mouse click, it behaves like a normal link – except that in this example it doesn't go anywhere.
 
 The value of the `popover` attribute doesn't affect the popover's behavior in this example. However, it becomes important when you combine interest invoker popovers with regular popovers, as shown in the next section.
 
