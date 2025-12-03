@@ -100,7 +100,7 @@ The following `<shape-command>`s can be specified:
     - If only a single `<control-point>` is provided, the command draws a [quadratic Bézier curve](/en-US/docs/Web/SVG/Reference/Attribute/d#quadratic_bézier_curve), which is defined by three points (the start point, control point, and end point).
     - If two `<control-point>` values are provided, the command draws a cubic Bézier curve, which is defined by four points (the start point, two control points, and the end point).
 
-    Valid values for the `<end-point>` component:
+    Valid values for `<end-point>` include:
     - If the curve end point is absolute (specified using `to`), `<end-point>` can be specified using {{cssxref("&lt;position>")}} keywords or a `<coordinate-value-pair>`.
     - If the curve end point is relative (specified using `by`), `<end-point>` can be specified using a `<coordinate-value-pair>`.
 
