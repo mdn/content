@@ -170,7 +170,7 @@ This renders as follows:
 
 Try showing interest in the button (for example by hovering or focusing it) to observe the behavior described earlier.
 
-## The interest invoker JavaScript API
+## JavaScript API for interest invokers
 
 Interest invokers have an associated JavaScript API that lets you query the element being targeted by an interest invoker and run custom code when interest is shown or lost. The features of this API are:
 
