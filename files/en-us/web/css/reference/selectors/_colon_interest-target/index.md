@@ -78,7 +78,7 @@ Try showing interest in the button (for example by hovering or focusing it), and
 
 ## See also
 
-- [`:interest-source`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-source)
+- {{cssxref(":interest-source")}}
 - [Popover API](/en-US/docs/Web/API/Popover_API)
 - [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)
 - [CSS selectors module](/en-US/docs/Web/CSS/Guides/Selectors)

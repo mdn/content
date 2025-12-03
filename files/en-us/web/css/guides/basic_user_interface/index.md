@@ -91,9 +91,9 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{CSSxRef("caret-color")}}
 - {{CSSxRef("caret-shape")}}
 - {{CSSxRef("cursor")}}
-- [`interest-delay`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay), shorthand for:
-  - [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start)
-  - [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end)
+- {{CSSxRef("interest-delay")}}, shorthand for:
+  - {{CSSxRef("interest-delay-start")}}
+  - {{CSSxRef("interest-delay-end")}}
 - {{CSSxRef("outline")}}, shorthand for:
   - {{CSSxRef("outline-color")}}
   - {{CSSxRef("outline-style")}}

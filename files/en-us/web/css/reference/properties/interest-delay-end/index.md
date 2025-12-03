@@ -12,7 +12,7 @@ sidebar: cssref
 
 The **`interest-delay-end`** [CSS](/en-US/docs/Web/CSS) property specifies a delay between the user losing interest in an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) element and the {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} event being fired, which typically ends an effect on the target.
 
-The `interest-delay-end` and [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start) properties can both be set using the [`interest-delay`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay) shorthand.
+The `interest-delay-end` and {{cssxref("interest-delay-start")}} properties can both be set using the {{cssxref("interest-delay")}} shorthand.
 
 ## Syntax
 
@@ -108,7 +108,7 @@ Now try checking the checkbox and trying the same actions again. This time, the 
 
 ## See also
 
-- [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start), [`interest-delay`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay)
+- {{cssxref("interest-delay-start")}}, {{cssxref("interest-delay")}}
 - [Popover API](/en-US/docs/Web/API/Popover_API)
 - [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)
 - [CSS basic user interface module](/en-US/docs/Web/CSS/Guides/Basic_user_interface)

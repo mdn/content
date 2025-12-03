@@ -12,7 +12,7 @@ sidebar: cssref
 
 The **`interest-delay-start`** [CSS](/en-US/docs/Web/CSS) property specifies a delay between the user showing interest in an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) element and the {{domxref("HTMLElement.interest_event", "interest")}} event being fired, which typically starts an effect on the target.
 
-The `interest-delay-start` and [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end) properties can both be set using the [`interest-delay`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay) shorthand.
+The `interest-delay-start` and {{cssxref("interest-delay-end")}} properties can both be set using the {{cssxref("interest-delay")}} shorthand.
 
 ## Syntax
 
@@ -131,7 +131,7 @@ button {
 }
 ```
 
-Finally, we combine the [`:interest-source`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-source) pseudo-class with the {{cssxref(":has()")}} pseudo-class to create a ruleset that applies `interest-delay-start: 0s` to all buttons inside the paragraph, only if the paragraph contains a button that interest has been shown on (that is, has been selected by `button:interest-source`).
+Finally, we combine the {{cssxref(":interest-source")}} pseudo-class with the {{cssxref(":has()")}} pseudo-class to create a ruleset that applies `interest-delay-start: 0s` to all buttons inside the paragraph, only if the paragraph contains a button that interest has been shown on (that is, has been selected by `button:interest-source`).
 
 ```css live-sample___interest-delay-remove-on-interest
 .container:has(button:interest-source) button {
@@ -157,7 +157,7 @@ Try showing interest in any button and notice how, when you then immediately sho
 
 ## See also
 
-- [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end), [`interest-delay`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay)
+- {{cssxref("interest-delay-end")}}, {{cssxref("interest-delay")}}
 - [Popover API](/en-US/docs/Web/API/Popover_API)
 - [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)
 - [CSS basic user interface module](/en-US/docs/Web/CSS/Guides/Basic_user_interface)

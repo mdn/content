@@ -16,8 +16,8 @@ The **`interest-delay`** [CSS](/en-US/docs/Web/CSS) property specifies a delay, 
 
 The `interest-delay` property is a shorthand for the following properties:
 
-- [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start)
-- [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end)
+- {{cssxref("interest-delay-start")}}
+- {{cssxref("interest-delay-end")}}
 
 ## Syntax
 
@@ -54,11 +54,11 @@ A control element such as an {{htmlelement("a")}} or {{htmlelement("button")}} c
 
 When the user shows/loses interest, the associated effect doesn't start/stop immediately — the browser introduces a short delay, which may vary by vendor. This makes sense — it would be annoying, for example, for preview popovers to appear immediately every time a link is hovered.
 
-The `interest-delay` property allows developers to customize the delay before the interest effect starts (specified individually by the [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start) property) and the delay before the interest effect ends (specified individually by the [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end) property).
+The `interest-delay` property allows developers to customize the delay before the interest effect starts (specified individually by the {{cssxref("interest-delay-start")}} property) and the delay before the interest effect ends (specified individually by the {{cssxref("interest-delay-end")}} property).
 
 The `interest-delay` property can take one or two values. These values can be the keyword `normal`, which sets the default browser delay, or a {{cssxref("&lt;time>")}} value, which sets a custom delay. Custom delays must be positive values, otherwise the property is invalid.
 
-If a single value is specified, that value is set for the [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start) and [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end). If two values are specified, the first value is set for the [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start) and the second value is set for the [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end).
+If a single value is specified, that value is set for the {{cssxref("interest-delay-start")}} and {{cssxref("interest-delay-end")}}. If two values are specified, the first value is set for the {{cssxref("interest-delay-start")}} and the second value is set for the {{cssxref("interest-delay-end")}}.
 
 ## Formal definition
 
@@ -129,7 +129,7 @@ Now try checking the checkbox and trying the same actions again. This time, the 
 
 ## See also
 
-- [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start), [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end)
+- {{cssxref("interest-delay-start")}}, {{cssxref("interest-delay-end")}}
 - [Popover API](/en-US/docs/Web/API/Popover_API)
 - [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)
 - [CSS basic user interface module](/en-US/docs/Web/CSS/Guides/Basic_user_interface)
