@@ -16,7 +16,7 @@ In addition to these activation-based popovers, there is a common need to displa
 
 Interest invokers enable the browser to provide interest-based popover behavior in a consistent and accessible way, without requiring JavaScript. The browser determines when a user is showing interest in an element, and therefore, when an action should be taken. "Showing interest" generally occurs when a user hovers, focuses, or long-presses the element (the exact nature of "interest" may vary across browsers), and "losing interest" generally happens when the user stops interacting with the element.
 
-The browser also fires events when interest is gained or lost, so you can run custom code in response. In addition, the feature includes CSS properties and selectors for styling based on interest.
+The browser also fires events when interest is gained or lost, so you can run custom code in response. In addition, this feature includes CSS properties and selectors for styling elements based on interest.
 
 > [!NOTE]
 > On devices with an <kbd>Esc</kbd> key available, pressing it cancels all interest. This provides a general escape mechanism if the interaction becomes distracting or unwanted.
