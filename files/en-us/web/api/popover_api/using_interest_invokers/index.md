@@ -93,7 +93,6 @@ You can combine interest invokers with regular popovers on the same control elem
     command="toggle-popover">
     button
   </button>
-  inside it.
 </p>
 <p id="mytooltip" popover="hint">A hover toolip</p>
 <p id="myinfobox" popover>
