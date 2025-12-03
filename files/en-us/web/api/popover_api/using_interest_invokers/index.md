@@ -234,7 +234,7 @@ html {
 }
 ```
 
-In our JavaScript, we grab references to our popover and the three links. We then loop through the links, setting the {{domxref("HTMLAnchorElement.interestForElement", "interestForElement")}} property of each one to equal the reference to our popover. This sets up the interest invoker/target relationship between the popover and each of the three links programmatically.
+In the JavaScript, we get references to the popover and the three links. We then loop through the links and set each link's {{domxref("HTMLAnchorElement.interestForElement", "interestForElement")}} property to reference the popover element. This programmatically sets up the interest invoker-target relationship between the popover and each link.
 
 ```js live-sample___interest-invoker-api
 const tooltip = document.getElementById("mytooltip");
