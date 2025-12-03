@@ -111,7 +111,7 @@ You can show interest in the button to display the tooltip, and click the button
 
 When styling popovers used with interest invokers, you can use the same styling techniques as with any other popover (see [Styling popovers](/en-US/docs/Web/API/Popover_API/Using#styling_popovers)), including [using anchoring positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) to position popovers relative to invokers and [animating popovers](/en-US/docs/Web/API/Popover_API/Using#animating_popovers).
 
-That said, there are some interest invoker-specific CSS features that you should know about:
+That said, there are some CSS features specific to interest invokers:
 
 - The [`interest-delay`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay) shorthand property and its related [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start) and [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end) longhands, which can be set to add a delay between the user showing/losing interest and the interest change being acted on by the browser — for example, the popover being shown/hidden.
 - The [`:interest-source`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-source) and [`:interest-target`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-target) pseudo-classes, which can be used to apply styles to the interest invoker and its associated target element, respectively, only when interest is being shown.
