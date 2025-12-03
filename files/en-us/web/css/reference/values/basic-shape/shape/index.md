@@ -74,7 +74,7 @@ clip-path: shape(
 
 #### Shape commands
 
-The syntax of most shape commands is a keyword providing a directive, such as `move` or `line`, followed by the `by` or `to` keyword, and a set of coordinates.
+The syntax of most shape commands is a keyword that provides a directive, such as `move` or `line`, followed by the `by` or `to` keyword, and a set of coordinates.
 
 - `by`: Indicates that the `<coordinate-pair>` is relative to the command's starting point (a "relative" value).
 - `to`: Indicates that the `<coordinate-pair>` is relative to the top-left corner of the reference box (an "absolute" value).
