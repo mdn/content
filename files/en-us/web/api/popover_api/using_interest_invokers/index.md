@@ -105,7 +105,7 @@ This renders as follows:
 
 {{embedlivesample("interest-invoker-popover-interaction", "100%", "150")}}
 
-In this case, you can show interest in the button to reveal the hover tooltip, and then press the button to reveal the infobox. Note that the `popover` values matter here — we've got the tooltip popover set with [`popover="hint"`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state), whereas the infobox is set to just `popover` (which is equivalent to `popover="auto"`). This allows the tooltip to be shown when the infobox is already shown, without hiding it. If both popovers were set to `auto`, you wouldn't be able to see both at the same time. In a UI, it is useful to be able to look at multiple tooltips without hiding parts of the UI that you've previously opened.
+You can show interest in the button to display the tooltip, and click the button to reveal the infobox. Note that the `popover` values matter here — the tooltip popover is set to [`popover="hint"`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state), whereas the infobox is set to just `popover` (equivalent to `popover="auto"`). This allows the tooltip to stay visible even when the infobox is shown. If both popovers were set to `auto`, you wouldn't be able to see both the tooltip and the infobox at the same time. In a UI, it is useful to be able to view multiple tooltips without hiding parts of the UI that you've already opened.
 
 ## Styling interest invokers
 
