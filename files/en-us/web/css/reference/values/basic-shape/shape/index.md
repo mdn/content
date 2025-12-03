@@ -349,9 +349,10 @@ body {
 
 Like previous examples, this example also uses {{cssxref("clip-path")}} to create different shapes for the clipping regions of the elements. The shapes are specified using a combination of [`<curve-command>`](#curve-command) and [`<smooth-command>`](#smooth-command), and the control points are specified using [`<relative-control-point>`](#relative-control-point) values.
 
-- The first shape (`shape1`) draws two cubic Bézier curves. The first curve starts from the center of the left edge of the box and is drawn to a point `200px` along the x-axis — the center of the box's right edge. It uses one control point relative to the start of the curve and one control point relative to the origin (top-left of the box). The second curve starts from the center right of the box and is drawn `-200px` along the x-axis. It uses one control point relative to the start of the curve and one control point relative to the origin.
-- The second shape (`shape2`) draws one quadratic Bézier curve and one cubic Bézier curve. The first curve starts from the center of the left edge of the box and is drawn to an absolute point `200px` from the origin along the x-axis and `100px` from the origin along the y-axis. It uses one control point relative to the start of the curve. The second curve starts from the previous curve's end point and is drawn to the center left of the box. It uses one control point relative to the end of the curve and one control point relative to the start.
-- The third shape (`shape3`) draws one quadratic Bézier curve and one cubic Bézier curve using a `smooth` command. The first curve starts from the center of the left edge of the box and is drawn to a point `200px` along the x-axis. It uses one control point relative to the start of the curve. The second curve starts from the previous curve's end point and is drawn to the center of the box. It uses one control point relative to the start of the curve (the last control point of the previous curve) and one control point relative to the origin.
+The first shape (`shape1`) draws two cubic Bézier curves.
+
+- The first curve starts from the center of the left edge of the box and is drawn to a point `200px` along the x-axis — the center of the box's right edge. It uses one control point relative to the start of the curve and one control point relative to the origin (top-left of the box).
+- The second curve starts from the center right of the box and is drawn `-200px` along the x-axis — the center of the box's left edge. It uses one control point relative to the origin and one control point relative to the start of the curve.
 
 ```html hidden live-sample___relative-control-points
 <div class="container">
@@ -397,7 +398,14 @@ Like previous examples, this example also uses {{cssxref("clip-path")}} to creat
     close
   );
 }
+```
 
+The second shape (`shape2`) draws one quadratic Bézier curve and one cubic Bézier curve.
+
+- The first curve starts from the center of the left edge of the box and is drawn to an absolute point `200px` from the origin along the x-axis and `100px` from the origin along the y-axis. It uses one control point relative to the start of the curve.
+- The second curve starts from the previous curve's end point and is drawn to the center left of the box. It uses one control point relative to the start of the curve and one control point relative to the end.
+
+```css live-sample___relative-control-points
 #shape2 {
   width: 200px;
   height: 200px;
@@ -409,7 +417,14 @@ Like previous examples, this example also uses {{cssxref("clip-path")}} to creat
     close
   );
 }
+```
 
+The third shape (`shape3`) draws one quadratic Bézier curve and one cubic Bézier curve using a `smooth` command.
+
+- The first curve starts from the center of the left edge of the box and is drawn to a point `200px` along the x-axis. It uses one control point relative to the start of the curve.
+- The second curve starts from the previous curve's end point and is drawn to the center of the box. It uses one control point relative to the start of the curve (the last control point of the previous curve) and one control point relative to the origin.
+
+```css live-sample___relative-control-points
 #shape3 {
   width: 200px;
   height: 200px;
