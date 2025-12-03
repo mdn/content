@@ -180,7 +180,7 @@ Interest invokers have an associated JavaScript API that lets you query the elem
 
 ### Interest invoker feature detection
 
-One use of the API is for feature detection. The simplest way to detect support for interest invokers is to use the {{jsxref("Object.hasOwnProperty()")}} method to see if the `interestForElement` property is available on one of the interface types that is supposed to support it.
+One of the uses of the API is feature detection. The simplest way to check whether interest invokers are supported is to use the {{jsxref("Object.hasOwnProperty()")}} method on one of the interface types to see if the `interestForElement` property is available.
 
 For example:
 
