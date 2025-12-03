@@ -210,7 +210,7 @@ We then use that class in our CSS to display a "not supported" banner:
 }
 ```
 
-### API example
+### Interest invoker API in action
 
 Let's look at a basic example that shows the API features in action. This example has three links and a paragraph set up as a popover:
 
