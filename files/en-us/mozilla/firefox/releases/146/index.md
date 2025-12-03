@@ -24,7 +24,10 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### MathML -->
+### MathML
+
+- Operator mirroring in right-to-left (RTL) modes and stretching now work properly when used in combination.
+  ([Firefox bug 1994172](https://bugzil.la/1994172)).
 
 <!-- #### Removals -->
 
@@ -111,3 +114,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **Relative control points in CSS `shape()` curve commands**: `layout.css.basic-shape-shape.enabled`
 
   When specifying a [`<curve-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#curve-command) or [`<smooth-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#smooth-command) in a CSS [`shape()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape) function, [`<relative-control-point>`]()s can be used to specify curve control points that are positioned relative to the start point of the current command, end point of the current command, or the top-left (origin) point of the container the shape is being drawn inside.
+  
+- **Custom media queries**: `layout.css.custom-media.enabled`
+
+  The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS at-rule defines aliases for long or complex media queries. Instead of repeating the same hardcoded `<media-query-list>` in multiple `@media` at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed. ([Firefox bug 1991105](https://bugzil.la/1744292)).
