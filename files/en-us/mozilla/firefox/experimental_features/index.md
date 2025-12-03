@@ -233,7 +233,7 @@ For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `
 
 #### Relative control points in CSS `shape()` curve commands
 
-When specifying a [`<curve-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#curve-command) or [`<smooth-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#smooth-command) in a CSS `shape()` function, [`<relative-control-point>`]()s can be used to specify curve control points that are positioned relative to the start point of the current command, end point of the current command, or the top-left (origin) point of the container the shape is being drawn inside.
+You can use [`<relative-control-point>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#relative-control-point) values when specifying a [`<curve-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#curve-command) or [`<smooth-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#smooth-command) in a CSS `shape()` function. These values let you specify control points that are positioned relative to the start or end point of the current command, or relative to the origin (top-left) of the container the shape is being drawn inside.
 ([Firefox bug 1921501](https://bugzil.la/1921501)).
 
 | Release channel   | Version added | Enabled by default? |
