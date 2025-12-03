@@ -103,7 +103,8 @@ A related feature — **interest invokers** — can be used to show popovers on 
 
 ## Examples
 
-See our [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/) to access multiple popover examples.
+- See our [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/) to access multiple popover examples.
+- See our [Interest invoker examples landing page](https://mdn.github.io/dom-examples/interest-invokers/) for interest invoker examples.
 
 ## Specifications
 

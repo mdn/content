@@ -679,3 +679,7 @@ html {
 The code renders as follows:
 
 {{ EmbedLiveSample("A popover keyframe animation", "100%", "200") }}
+
+## See also
+
+- [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/)
