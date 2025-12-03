@@ -217,9 +217,9 @@ Let's look at a basic example that shows the API features in action. This exampl
 ```html live-sample___interest-invoker-api
 <p>
   Here's some links:
-  <a href="#">Link one</a>
-  <a href="#">Link two</a>
-  <a href="#"">Link three</a>
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#"">Link 3</a>
 </p>
 <p id="mytooltip" popover="hint">A hover toolip</p>
 ```
