@@ -86,7 +86,7 @@ You can combine interest invokers with regular popovers on the same control elem
 
 ```html live-sample___interest-invoker-popover-interaction
 <p>
-  Some basic text with
+  Some content including a
   <button
     interestfor="mytooltip"
     commandfor="myinfobox"
