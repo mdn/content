@@ -109,7 +109,7 @@ Here are some other tips for providing secure logins:
 
 As a general rule, you shouldn't [include sensitive data in URL query strings](https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url) because if a third party intercepts the URL (for example, via the {{httpheader("Referer")}} HTTP header), they could steal that information. Even more serious is the fact that these URLs can be indexed by public web crawlers, HTTP proxies, and archiving tools such as the [internet archive](https://web.archive.org/), meaning that your sensitive data could persist on publicly accessible resources.
 
-Use `POST` requests rather than `GET` requests to avoid these issues. Our article [Referer header policy: Privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) describes in more detail the privacy and security risks associated with the `Referer` header, and offers advice on mitigating those risks.
+Use `POST` requests rather than `GET` requests to avoid these issues. Our article [Referer header policy: Privacy and security concerns](/en-US/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) describes in more detail the privacy and security risks associated with the `Referer` header, and offers advice on mitigating those risks.
 
 > [!NOTE]
 > Steering away from transmitting sensitive data in URLs via `GET` requests can also help protect against {{glossary("CSRF", "cross-site request forgery")}} and [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).

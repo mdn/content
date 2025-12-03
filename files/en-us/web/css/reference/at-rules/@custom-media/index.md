@@ -207,7 +207,7 @@ This can be useful for feature flags or conditional logic within stylesheets.
 
 ### Overriding existing `@custom-media` rules
 
-In this example, one `@custom-media` rule is overriden by another `@custom-media` rule using the same `<dashed-ident>` name.
+In this example, one `@custom-media` rule is overridden by another `@custom-media` rule using the same `<dashed-ident>` name.
 
 ```css
 @custom-media --mobile-breakpoint (width < 320px);
@@ -235,5 +235,5 @@ The initial definition of `--mobile-breakpoint` is overridden and therefore igno
 
 - CSS [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rule
 - CSS [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import) at-rule
-- [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
 - [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module

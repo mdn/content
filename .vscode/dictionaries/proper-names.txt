@@ -187,6 +187,7 @@ Elly
 Emscripten
 Endtest
 Ensatina
+Ente
 Envato
 Ephesis
 Eplepsia
