@@ -242,7 +242,7 @@ const links = document.querySelectorAll("a");
 links.forEach((link) => (link.interestForElement = tooltip));
 ```
 
-We then attach `interest` and `loseinterest` event handlers to the popover. When interest is shown on one of the links, we update the popover's text content to include the text content of the link (retrieved via the event object's `source` property), so you can see which link caused the popover to appear. When interest is lost, we append an asterisk to the `source` element's text content, so you can see how many times each one has been used to show interest.
+Next, we attach `interest` and `loseinterest` event handlers to the popover. When interest is shown on one of the links, we update the popover's text content so it includes the text content of the link that caused the popover to appear (retrieved via the event object's `source` property). When interest is lost, we append an asterisk to the `source` element's text content, so you can see the number of times interest has been shown on it.
 
 ```js live-sample___interest-invoker-api
 tooltip.addEventListener("interest", (e) => {
