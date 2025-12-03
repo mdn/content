@@ -119,7 +119,7 @@ The following `<shape-command>`s can be specified:
           - : Indicates that the control point is relative to the the top-left (origin) point of the container the shape is being drawn inside.
 
 - `<smooth-command>`
-  - : Specified as `smooth [by | to] <end-point> [with <control-point>]`. This command adds a smooth [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the `<end-point>`, is relative or absolute, respectively.
+  - : Specified as `smooth [by | to] <end-point> [with <control-point>]`. This command adds a smooth [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the `<end-point>`, is relative or absolute.
 
     The `with` keyword specifies an optional control point for the Bézier curve:
     - If `with <control-point>` is omitted, the command draws a smooth quadratic Bézier curve, which uses the previous control point and the current endpoint to define the curve.
