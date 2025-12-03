@@ -113,7 +113,7 @@ When styling popovers used with interest invokers, you can use the same styling 
 
 That said, there are some CSS features specific to interest invokers:
 
-- The [`interest-delay`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay) shorthand property and its related [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start) and [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end) longhands, which can be set to add a delay between the user showing/losing interest and the interest change being acted on by the browser — for example, the popover being shown/hidden.
+- The [`interest-delay`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay) shorthand property and its related [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start) and [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end) longhands: These can be used to add a delay between the user gaining or losing interest and the browser acting on that change — for example, showing or hiding a popover.
 - The [`:interest-source`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-source) and [`:interest-target`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-target) pseudo-classes, which can be used to apply styles to the interest invoker and its associated target element, respectively, only when interest is being shown.
 
 Let's look at a simple example that demonstrates their use.
