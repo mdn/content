@@ -284,23 +284,23 @@ Save your code and refresh your browser to see the results.
 Next up, we'll deal with alignment of the different types of data inside their cells. Best practice dictates that you should align text to the left and numbers to the right; the following CSS will achieve that, so add it to the bottom of your CSS file now.
 
 ```css
-tr :nth-child(2),
-tr :nth-child(3) {
+tr *:nth-child(2),
+tr *:nth-child(3) {
   text-align: right;
   width: 15%;
 }
 
-tr :nth-child(1),
-tr :nth-child(4) {
+tr *:nth-child(1),
+tr *:nth-child(4) {
   text-align: left;
   width: 35%;
 }
 
-tfoot tr :nth-child(1) {
+tfoot tr *:nth-child(1) {
   text-align: right;
 }
 
-tfoot tr :nth-child(2) {
+tfoot tr *:nth-child(2) {
   text-align: left;
 }
 ```
