@@ -489,7 +489,7 @@ a[interestfor] {
 }
 ```
 
-Our next CSS rule sets a `position-area` value of `bottom right` on our popover so that it appears at the bottom-right of the link when interest is gained. (We've hidden most of the popover styling for brevity.)
+Next, we set a `position-area` value of `bottom right` on the popover so that it appears at the bottom-right corner of the link when interest is shown. (The rest of the popover styling is hidden here for brevity.)
 
 ```css live-sample___link-preview-popover
 #user-info {
