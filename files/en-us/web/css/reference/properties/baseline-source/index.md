@@ -28,11 +28,11 @@ baseline-source: unset;
 ### Values
 
 - `auto`
-  Specifies [last-baseline](/en-US/docs/Web/CSS/Reference/Values/baseline-position#last_baseline) alignment for inline-block, [first-baseline](/en-US/docs/Web/CSS/Reference/Values/baseline-position#first_baseline) alignment for everything else.
+  Specifies [`last baseline`](/en-US/docs/Web/CSS/Reference/Values/baseline-position#last_baseline) alignment for inline-block, [`first baseline`](/en-US/docs/Web/CSS/Reference/Values/baseline-position#first_baseline) alignment for everything else.
 - `first`
-  Specifies first-baseline alignment.
+  Specifies `first baseline` alignment.
 - `last`
-  Specifies last-baseline alignment.
+  Specifies `last baseline` alignment.
 
 ## Formal definition
 
