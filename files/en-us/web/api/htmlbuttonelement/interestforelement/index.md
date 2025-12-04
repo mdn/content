@@ -20,7 +20,7 @@ An {{domxref("Element")}} object instance, or `null` if the associated `<button>
 
 ### Basic `interestForElement` usage
 
-In this example, we use a `<button>` element's `interestForElement` property to set its interest invoker target element and then retrieve its target element's `tagName`. The `tagName` is then printed into the `<button>` element's text content.
+In this example, we use a `<button>` element's `interestForElement` property to set its target element and then retrieve the target element's `tagName`. The `tagName` is then printed in the `<button>` element's text content.
 
 #### HTML
 
