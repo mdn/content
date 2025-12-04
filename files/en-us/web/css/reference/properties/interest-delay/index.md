@@ -54,7 +54,7 @@ A control element such as an {{htmlelement("a")}} or {{htmlelement("button")}} c
 
 When the user shows/loses interest, the associated effect doesn't start/stop immediately — the browser introduces a short delay, which may vary by vendor. This makes sense — it would be annoying, for example, for preview popovers to appear immediately every time a link is hovered.
 
-The `interest-delay` property allows developers to customize the delay before the interest effect starts (specified individually by the {{cssxref("interest-delay-start")}} property) and the delay before the interest effect ends (specified individually by the {{cssxref("interest-delay-end")}} property).
+The `interest-delay` property allows you to customize these delays. You can control the delay before the interest effect starts (specified by the {{cssxref("interest-delay-start")}} property) and the delay before the interest effect ends (specified by the {{cssxref("interest-delay-end")}} property).
 
 The `interest-delay` property can take one or two values. These values can be the keyword `normal`, which sets the default browser delay, or a {{cssxref("&lt;time&gt;")}} value, which sets a custom delay.
 If a single value is specified, it applies to both {{cssxref("interest-delay-start")}} and {{cssxref("interest-delay-end")}}. If two values are specified, the first value sets {{cssxref("interest-delay-start")}}, and the second value sets {{cssxref("interest-delay-end")}}.
