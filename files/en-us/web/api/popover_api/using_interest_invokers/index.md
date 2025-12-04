@@ -431,7 +431,7 @@ This renders as follows:
 
 Try hovering or focusing a button to preview its style in the panel. Clicking a button applies the style permanently. Note that setting the styles still works in browsers that do not support interest invokers, even though the "preview" functionality doesn't.
 
-## Link preview popover example
+## Using interest invokers for creating preview popovers
 
 As mentioned earlier, a very common use case for interest invokers is progressively enhancing links with preview information about the link target. This can include details such as a person's name, bio, and location displayed on a link to their profile page, or quick actions like subscribing to a group provided on a link to its homepage. These preview popovers are convenient because they help users get the information they need without navigating away and losing context.
 
