@@ -37,7 +37,8 @@ If the `closedby` attribute is absent or invalid, it falls back to the **Auto** 
 <dialog open closedby="any">
   <h2>My dialog</h2>
   <p>
-    Closable using the <kbd>Esc</kbd> key, or by clicking outside the dialog ("light dismiss").
+    Closable using the <kbd>Esc</kbd> key, or by clicking outside the dialog
+    ("light dismiss").
   </p>
 </dialog>
 ```
