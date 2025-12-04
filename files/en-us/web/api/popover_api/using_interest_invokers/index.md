@@ -550,7 +550,7 @@ This renders as follows:
 
 {{embedlivesample("link-preview-popover", "100%", "260", , , , , "allow-popups")}}
 
-Try hovering/focusing the link to show the preview popover. There is also progressive enhancement at play in this example — in non-supporting browsers, the link will still work as expected.
+Try hovering or focusing the link to view the preview popover. There is also progressive enhancement at play in this example — in non-supporting browsers, the link works as expected.
 
 ## See also
 
