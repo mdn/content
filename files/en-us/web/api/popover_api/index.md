@@ -34,7 +34,7 @@ You can create popovers in multiple ways:
 
 - Via a JavaScript API. For example, {{domxref("HTMLElement.togglePopover()")}} can be used to toggle a popover between shown and hidden.
 
-The Popover API also provides events to react to a popover being toggled, and CSS features to aid in styling popovers. See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detailed guide to the API.
+The Popover API also provides events to react to a popover being toggled and CSS features to aid in styling popovers. See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detailed guide to the API.
 
 A related feature — **interest invokers** — can be used to show popovers on hover/focus, without requiring JavaScript. Check out [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) to learn more.
 
