@@ -132,4 +132,4 @@ Now try checking the checkbox and trying the same actions again. This time, the 
 - {{cssxref("interest-delay-start")}}, {{cssxref("interest-delay-end")}}
 - [Popover API](/en-US/docs/Web/API/Popover_API)
 - [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)
-- [CSS basic user interface module](/en-US/docs/Web/CSS/Guides/Basic_user_interface)
+- [CSS basic user interface](/en-US/docs/Web/CSS/Guides/Basic_user_interface) module
