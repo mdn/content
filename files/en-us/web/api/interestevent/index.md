@@ -9,7 +9,7 @@ browser-compat: api.InterestEvent
 
 The **`InterestEvent`** interface represents an event that fires when interest is shown or lost on an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers).
 
-This is the event object for the {{domxref("HTMLElement.interest_event", "interest")}} and {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} events, which fire on interest invoker target elements when interest is shown or lost, respectively.
+This is the event object for the {{domxref("HTMLElement.interest_event", "interest")}} and {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} events, which fire on the target element when interest is shown or lost, respectively.
 
 {{InheritanceDiagram}}
 
