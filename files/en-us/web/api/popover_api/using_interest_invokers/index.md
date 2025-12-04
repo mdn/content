@@ -439,7 +439,7 @@ Let's look at how to implement a preview popover using interest invokers.
 
 ### HTML
 
-In the markup, we include a link to my GitHub profile inside a short paragraph, and a `<div>` containing a limited user profile with a fake "Follow" button. The link has `interestfor` set to the `id` of the user profile, and the user profile has a `popover` attribute set to turn it into a popover element (this hides it by default).
+The markup includes a link to a GitHub profile inside a short paragraph and a `<div>` containing a limited user profile with a fake "Follow" button. The link's `interestfor` attribute points to the `id` of the user profile. Additionally, the user profile has a `popover` attribute, which turns it into a popover element and hides it by default.
 
 ```html live-sample___link-preview-popover
 <p>
