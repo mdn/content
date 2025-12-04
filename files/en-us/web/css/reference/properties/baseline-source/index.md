@@ -85,8 +85,6 @@ body {
 }
 
 .box {
-  display: inline-flex;
-  flex-direction: column;
   border: 2px solid #888;
   width: 50px;
 }
@@ -95,18 +93,23 @@ span {
   padding: 0.4rem;
 }
 ```
-
+We  define all the boxes to be inline flex containers. We then set the `first` one to use the `first` baseline, the `auto` is set to the default baseline (`first` for inline flex containers), and the `last` one is set to the `last` baseline.
 ```css
+.box {
+  display: inline-flex;
+  flex-direction: column;
+  }
+  
 .first {
   baseline-source: first;
 }
 
-.last {
-  baseline-source: last;
-}
-
 .auto {
   baseline-source: auto;
+}
+
+.last {
+  baseline-source: last;
 }
 ```
 
