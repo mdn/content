@@ -33,7 +33,7 @@ We include a `<button>` element and a `<div>` element. We turn the `<div>` eleme
 
 #### JavaScript
 
-We grab references to the `<button>` and `<div>` elements in script, then declare an interest invoker/target relationship between the `<button>` and the `<div>` by setting the `<button>` element's `interestForElement` property equal to a reference to the `<div>`. We then set the button's text content equal to a string containing the target element's `tagName`, retrieved via `invoker.interestForElement.tagName`.
+We get references to the `<button>` and `<div>` elements in script, then declare an interest invoker-target relationship between the `<button>` and the `<div>` by setting the `<button>` element's `interestForElement` property equal to a reference to the `<div>`. We then set the button's text content equal to a string containing the target element's `tagName`, retrieved via `invoker.interestForElement.tagName`.
 
 ```js live-sample___basic-interest-invoker
 const invoker = document.querySelector("button");
