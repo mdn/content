@@ -682,4 +682,4 @@ The code renders as follows:
 
 ## See also
 
-- [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/)
+- Collection of [Popover API examples](https://mdn.github.io/dom-examples/popover-api/)
