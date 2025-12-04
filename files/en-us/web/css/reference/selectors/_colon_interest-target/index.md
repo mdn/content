@@ -6,7 +6,7 @@ browser-compat: css.selectors.interest-target
 sidebar: cssref
 ---
 
-The **`:interest-target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) element's target element, when interest is being shown in the interest invoker.
+The **`:interest-target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents the target element associated with an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) when interest is shown on that invoker.
 
 ## Syntax
 
