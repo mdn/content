@@ -18,7 +18,7 @@ The **`:interest-target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs
 
 ## Examples
 
-### Selecting an interest target element
+### Selecting the target element associated with an interest invoker
 
 In this example, we demonstrate how `:interest-target` can be used to apply styles to an interest invoker element's target element, only when interest is being shown in the invoker.
 
