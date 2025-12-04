@@ -24,7 +24,7 @@ In this example, we use an `<a>` element's `interestForElement` property to set 
 
 #### HTML
 
-We include an `<a>` element and a `<div>` element. We turn the `<div>` element into a popover by setting a `popover` attribute on it.
+The markup includes an `<a>` element and a `<div>` element. We turn the `<div>` element into a popover by setting a `popover` attribute on it.
 
 ```html live-sample___basic-interest-invoker
 <a href="#">a link</a>
