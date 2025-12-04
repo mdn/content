@@ -260,7 +260,7 @@ This renders as follows:
 
 ## A non-popover example
 
-Let's look at a non-popover example, in which we create a style preview panel. You can activate various color scheme buttons to apply different schemes to the style panel, but we've progressively enhanced it using interest invokers. If you show interest in a button, its color scheme is applied to the panel so you can preview it before you select it. When interest is lost, the panel reverts to the previously-applied scheme.
+Let's look at an example that uses interest invokers without popovers. In this example, we create a style preview panel. You can activate various color scheme buttons to apply different styles to the panel. We've progressively enhanced the interaction using interest invokers so you can preview the style before selecting it. When interest is shown on a button, its color scheme is applied to the panel, and when interest is lost, the panel reverts to the previously-applied style.
 
 ### HTML
 
