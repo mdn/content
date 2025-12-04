@@ -14,7 +14,7 @@ See [Creating an interest invoker](/en-US/docs/Web/API/Popover_API/Using_interes
 
 ## Value
 
-An {{domxref("Element")}} object instance, or `null` if the associated `<area>` element has no interest invoker target.
+An {{domxref("Element")}} object instance, or `null` if the associated `<area>` element does not have a target element set.
 
 ## Examples
 
