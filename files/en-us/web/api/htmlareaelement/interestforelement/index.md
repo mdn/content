@@ -44,7 +44,7 @@ map {
 
 #### JavaScript
 
-We grab references to the `<area>` and `<div>` elements in script, then declare an interest invoker/target relationship between the `<area>` and the `<div>` by setting the `<area>` element's `interestForElement` property equal to a reference to the `<div>`. We then set the `<area>` element's text content equal to a string containing the target element's `tagName`, retrieved via `invoker.interestForElement.tagName`.
+We get references to the `<area>` and `<div>` elements in script, then declare an interest invoker-target relationship between the `<area>` and the `<div>` by setting the `<area>` element's `interestForElement` property equal to a reference to the `<div>`. We then set the `<area>` element's text content equal to a string containing the target element's `tagName`, retrieved via `invoker.interestForElement.tagName`.
 
 ```js live-sample___basic-interest-invoker
 const invoker = document.querySelector("area");
