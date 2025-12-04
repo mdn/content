@@ -114,9 +114,9 @@ This renders as follows:
 
 {{embedlivesample("interest-invoker-delay", "100%", "100")}}
 
-Try showing interest in the button (for example by hovering or focusing it) and then losing interest to observe the popover showing and hiding. By default these actions should happen after a very short delay.
+Try showing interest in the button (for example, by hovering or focusing it) and then losing interest to observe the popover showing and hiding. By default, the popover shows and hides after a very short delay.
 
-Now try checking the checkbox and trying the same actions again. This time, the popover should appear after a delay of 1 second once interest is shown, and hide after a delay of 2 seconds when interest is lost.
+Now check the checkbox and try the same actions again. This time, the popover should appear after a delay of `1s` when interest is shown, and hide after a delay of `2s` when interest is lost.
 
 ## Specifications
 
