@@ -375,7 +375,7 @@ button:interest-source {
 }
 ```
 
-Last of all, we apply a {{cssxref("transition")}} to the style panel so that `all` property values that change on the element will animate smoothly over a duration of `0.7s`. This means that all color scheme changes applied to the panel will animate.
+Lastly, we apply a {{cssxref("transition")}} to the style panel so that `all` property values that change on the element animate smoothly over a duration of `0.7s`. This means that all color scheme changes applied to the panel will animate.
 
 ```css live-sample___non-popover
 #style-panel {
