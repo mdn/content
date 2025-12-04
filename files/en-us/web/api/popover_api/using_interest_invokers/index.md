@@ -385,7 +385,7 @@ Lastly, we apply a {{cssxref("transition")}} to the style panel so that `all` pr
 
 ### JavaScript
 
-In our script, we start by grabbing references to the style panel and all the buttons. We also set a variable called `prevStyle` to a value of `black-white`. This is the initial color scheme set on the style panel, and it will also be the color scheme initially reverted back to when the user loses interest in a style option.
+In this part of the code, we start by getting references to the style panel and all the buttons. We also create a variable called `prevStyle` and set it to `black-white`. This is the initial color scheme applied to the panel and also the style the panel returns to when interest is lost.
 
 ```js live-sample___non-popover
 const stylePanel = document.getElementById("style-panel");
