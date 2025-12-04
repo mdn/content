@@ -33,7 +33,7 @@ The markup includes a {{htmlelement("button")}} and a {{htmlelement("p")}}. We s
 
 #### CSS
 
-In the CSS, we specify a rule with an `:interest-source` selector, which will apply a specific combination of {{cssxref("background-color")}} and {{cssxref("color")}} to the `<button>` when interest is shown in it. We also apply some other styles to the `<button>`, which we've hidden for brevity.
+In the CSS, we specify a rule with an `:interest-source` selector to apply a specific combination of {{cssxref("background-color")}} and {{cssxref("color")}} to the `<button>` when interest is shown on it. We also apply some other styles to the `<button>`, which are hidden for brevity.
 
 ```css hidden live-sample___interest-source
 button {
