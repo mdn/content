@@ -11,10 +11,11 @@ browser-compat: api.Element.scrollTo
 The **`scrollTo()`** method of the {{domxref("Element")}}
 interface scrolls to a particular set of coordinates inside a given element.
 
-> **Note:** `Element.scrollTo()` is an alias for `Element.scroll()`.  
+> [!NOTE]
+> `Element.scrollTo()` is an alias for `Element.scroll()`.
 > Invoking `scrollTo()` has the same effect as calling `scroll()` with the same arguments.
-
-See also: [Element.scroll()](https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll)
+>
+> See also: [Element.scroll()](/en-US/docs/Web/API/Element/scroll)
 
 ## Syntax
 
