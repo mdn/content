@@ -23,7 +23,7 @@ Popovers created using the Popover API are always non-modal. If you want to crea
 
 Typical use cases for the popover API include user-interactive elements like action menus, custom "toast" notifications, form element suggestions, content pickers, or teaching UI.
 
-You can create popovers in multiple different ways:
+You can create popovers in multiple ways:
 
 - Via a set of new HTML attributes. A simple popover with a toggle button can be created using the following code:
 
