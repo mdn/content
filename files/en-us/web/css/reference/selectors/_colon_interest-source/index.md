@@ -20,7 +20,7 @@ The **`:interest-source`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs
 
 ### Selecting an interest invoker element
 
-In this example, we demonstrate how `:interest-source` can be used to apply styles to an interest invoker element only when interest is being shown in it.
+In this example, we demonstrate how `:interest-source` can be used to apply styles to an interest invoker element when interest is shown on it.
 
 #### HTML
 
