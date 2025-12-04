@@ -365,7 +365,7 @@ p {
 }
 ```
 
-Next, we apply some styles to the buttons, only when interest is being shown, using the {{cssxref(":interest-source")}} pseudo-class. This allows users to easily see which button interest is being shown on at any point:
+Next, we apply styles to any button on which interest is shown, using the {{cssxref(":interest-source")}} pseudo-class. This allows users to easily see which button is currently drawing interest.
 
 ```css live-sample___non-popover
 button:interest-source {
