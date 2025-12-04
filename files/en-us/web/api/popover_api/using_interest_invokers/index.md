@@ -522,7 +522,7 @@ Next, we set a `position-area` value of `bottom right` on the popover so that it
 }
 ```
 
-In our last CSS block, we to animate the popover's {{cssxref("opacity")}} property smoothly as it appears (when interest is shown, as specified by the {{cssxref(":interest-target")}} pseudo-class). Because the popover is animating from being hidden (via `display: none`), there are a few extra features required to achieve this. We need to animate the {{cssxref("overlay")}} and {{cssxref("display")}} properties, setting [`allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) as we do so to allow discrete animations, and we need to use a {{cssxref("@starting-style")}} block to set the starting styles for the popover in the "interest target" state, as it has not previously been rendered visually.
+In the final CSS block, we animate the popover's {{cssxref("opacity")}} property so that it fades in smoothly when interest is shown (as matched by the {{cssxref(":interest-target")}} pseudo-class). Because the popover starts hidden (via `display: none`), there are a few additional rules required to animate it correctly. We need to set [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) on the {{cssxref("overlay")}} and {{cssxref("display")}} properties to enable discrete animations. We also need to use a {{cssxref("@starting-style")}} block to define the initial state of the popover in the `interest-target` state, as it has not previously been rendered.
 
 ```css hidden live-sample___link-preview-popover
 [popover]:interest-target {
