@@ -21,7 +21,7 @@ The browser also fires events when interest is gained or lost, so you can run cu
 > [!NOTE]
 > On devices with an <kbd>Esc</kbd> key available, pressing it cancels all interest. This provides a general escape mechanism if the interaction becomes distracting or unwanted.
 
-You can also use interest invokers to run custom code in [non-popover cases](#a_non-popover_example). However, this guide focuses mainly on popovers, since they are the most common use of interest invokers.
+You can also use interest invokers to run custom code in [non-popover cases](#using_interest_invokers_without_popovers). However, this guide focuses mainly on popovers, since they are the most common use of interest invokers.
 
 ## Creating an interest invoker
 
@@ -258,7 +258,128 @@ This renders as follows:
 
 {{embedlivesample("interest-invoker-api", "100%", "150")}}
 
-## A non-popover example
+## Using interest invokers for creating preview popovers
+
+As mentioned earlier, a very common use case for interest invokers is progressively enhancing links with preview information about the link target. This can include details such as a person's name, bio, and location displayed on a link to their profile page, or quick actions like subscribing to a group provided on a link to its homepage. These preview popovers are convenient because they help users get the information they need without navigating away and losing context.
+
+Let's look at how to implement a preview popover using interest invokers.
+
+### HTML
+
+The markup includes a link to a GitHub profile inside a short paragraph and a `<div>` containing a limited user profile with a fake "Follow" button. The link's `interestfor` attribute points to the `id` of the user profile. Additionally, the user profile has a `popover` attribute, which turns it into a popover element and hides it by default.
+
+```html live-sample___link-preview-popover
+<p>
+  I think
+  <a
+    href="https://github.com/chrisdavidmills/"
+    interestfor="user-info"
+    target="_blank">
+    @chrisdavidmills
+  </a>
+  should know about this.
+</p>
+
+<div id="user-info" popover="hint">
+  <div class="wrapper">
+    <img src="chris-mills.jpg" alt="chris mills" />
+    <section>
+      <p><strong>Chris Mills</strong></p>
+      <p>
+        Independent tech writer and web technology tinkerer, working on MDN on
+        behalf of Google and Mozilla. A11y and open standards advocate. Heavy
+        metal drummer. <button>Follow</button>
+      </p>
+      <p>🌍 Greenfield, UK</p>
+    </section>
+  </div>
+</div>
+```
+
+### CSS
+
+We start by setting an {{cssxref("interest-delay-start")}} value of `1s` on the link (the `a[interestfor]` selector is useful for selecting only the links that are interest invokers). This creates a slight delay before the preview popover appears. It can get annoying when popovers appear too quickly on a dense, link-heavy page; in such cases, this technique is useful.
+
+```css hidden live-sample___link-preview-popover
+html {
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+```
+
+```css live-sample___link-preview-popover
+a[interestfor] {
+  interest-delay-start: 1s;
+}
+```
+
+Next, we set a `position-area` value of `bottom right` on the popover so that it appears at the bottom-right corner of the link when interest is shown. (The rest of the popover styling is hidden here for brevity.)
+
+```css live-sample___link-preview-popover
+#user-info {
+  position-area: bottom right;
+}
+```
+
+```css hidden live-sample___link-preview-popover
+#user-info {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 5px;
+  background-color: white;
+  font-size: 0.8rem;
+}
+
+#user-info .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 480px;
+  font-size: 0.8rem;
+}
+
+#user-info img {
+  margin: 10px 0;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+```
+
+In the final CSS block, we animate the popover's {{cssxref("opacity")}} property so that it fades in smoothly when interest is shown (as matched by the {{cssxref(":interest-target")}} pseudo-class). Because the popover starts hidden (via `display: none`), there are a few additional rules required to animate it correctly. We need to set [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) on the {{cssxref("overlay")}} and {{cssxref("display")}} properties to enable discrete animations. We also need to use a {{cssxref("@starting-style")}} block to define the initial state of the popover in the `interest-target` state, as it has not previously been rendered.
+
+```css hidden live-sample___link-preview-popover
+[popover]:interest-target {
+  opacity: 1;
+}
+
+[popover] {
+  opacity: 0;
+  transition:
+    opacity 0.7s,
+    overlay 0.7s allow-discrete,
+    display 0.7s allow-discrete;
+}
+
+@starting-style {
+  [popover]:interest-target {
+    opacity: 0;
+  }
+}
+```
+
+### Result
+
+This renders as follows:
+
+{{embedlivesample("link-preview-popover", "100%", "260", , , , , "allow-popups")}}
+
+Try hovering or focusing the link to view the preview popover. There is also progressive enhancement at play in this example — in non-supporting browsers, the link works as expected.
+
+## Using interest invokers without popovers
 
 Let's look at an example that uses interest invokers without popovers. In this example, we create a style preview panel. You can activate various color scheme buttons to apply different styles to the panel. We've progressively enhanced the interaction using interest invokers so you can preview the style before selecting it. When interest is shown on a button, its color scheme is applied to the panel, and when interest is lost, the panel reverts to the previously-applied style.
 
@@ -308,6 +429,7 @@ button {
   flex: 1;
   padding: 5px;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 #style-panel {
@@ -430,127 +552,6 @@ This renders as follows:
 {{embedlivesample("non-popover", "100%", "260")}}
 
 Try hovering or focusing a button to preview its style in the panel. Clicking a button applies the style permanently. Note that setting the styles still works in browsers that do not support interest invokers, even though the "preview" functionality doesn't.
-
-## Using interest invokers for creating preview popovers
-
-As mentioned earlier, a very common use case for interest invokers is progressively enhancing links with preview information about the link target. This can include details such as a person's name, bio, and location displayed on a link to their profile page, or quick actions like subscribing to a group provided on a link to its homepage. These preview popovers are convenient because they help users get the information they need without navigating away and losing context.
-
-Let's look at how to implement a preview popover using interest invokers.
-
-### HTML
-
-The markup includes a link to a GitHub profile inside a short paragraph and a `<div>` containing a limited user profile with a fake "Follow" button. The link's `interestfor` attribute points to the `id` of the user profile. Additionally, the user profile has a `popover` attribute, which turns it into a popover element and hides it by default.
-
-```html live-sample___link-preview-popover
-<p>
-  I think
-  <a
-    href="https://github.com/chrisdavidmills/"
-    interestfor="user-info"
-    target="_blank">
-    @chrisdavidmills
-  </a>
-  should know about this.
-</p>
-
-<div id="user-info" popover="hint">
-  <div class="wrapper">
-    <img src="chris-mills.jpg" alt="chris mills" />
-    <section>
-      <p><strong>Chris Mills</strong></p>
-      <p>
-        Independent tech writer and web technology tinkerer, working on MDN on
-        behalf of Google and Mozilla. A11y and open standards advocate. Heavy
-        metal drummer. <button>Follow</button>
-      </p>
-      <p>🌍 Greenfield, UK</p>
-    </section>
-  </div>
-</div>
-```
-
-### CSS
-
-We start by setting an {{cssxref("interest-delay-start")}} value of `1s` on the link (the `a[interestfor]` selector is useful for selecting only the links that are interest invokers). This creates a slight delay before the preview popover appears. It can get annoying when popovers appear too quickly on a dense, link-heavy page; in such cases, this technique is useful.
-
-```css hidden live-sample___link-preview-popover
-html {
-  font-family: sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-```
-
-```css live-sample___link-preview-popover
-a[interestfor] {
-  interest-delay-start: 1s;
-}
-```
-
-Next, we set a `position-area` value of `bottom right` on the popover so that it appears at the bottom-right corner of the link when interest is shown. (The rest of the popover styling is hidden here for brevity.)
-
-```css live-sample___link-preview-popover
-#user-info {
-  position-area: bottom right;
-}
-```
-
-```css hidden live-sample___link-preview-popover
-#user-info {
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  padding: 0 10px;
-  margin: 5px;
-  background-color: white;
-  font-size: 0.8rem;
-}
-
-#user-info .wrapper {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  width: 480px;
-  font-size: 0.8rem;
-}
-
-#user-info img {
-  margin: 10px 0;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-}
-```
-
-In the final CSS block, we animate the popover's {{cssxref("opacity")}} property so that it fades in smoothly when interest is shown (as matched by the {{cssxref(":interest-target")}} pseudo-class). Because the popover starts hidden (via `display: none`), there are a few additional rules required to animate it correctly. We need to set [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) on the {{cssxref("overlay")}} and {{cssxref("display")}} properties to enable discrete animations. We also need to use a {{cssxref("@starting-style")}} block to define the initial state of the popover in the `interest-target` state, as it has not previously been rendered.
-
-```css hidden live-sample___link-preview-popover
-[popover]:interest-target {
-  opacity: 1;
-}
-
-[popover] {
-  opacity: 0;
-  transition:
-    opacity 0.7s,
-    overlay 0.7s allow-discrete,
-    display 0.7s allow-discrete;
-}
-
-@starting-style {
-  [popover]:interest-target {
-    opacity: 0;
-  }
-}
-```
-
-### Result
-
-This renders as follows:
-
-{{embedlivesample("link-preview-popover", "100%", "260", , , , , "allow-popups")}}
-
-Try hovering or focusing the link to view the preview popover. There is also progressive enhancement at play in this example — in non-supporting browsers, the link works as expected.
 
 ## See also
 
