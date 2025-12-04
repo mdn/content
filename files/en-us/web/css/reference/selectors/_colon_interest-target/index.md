@@ -24,7 +24,7 @@ In this example, we demonstrate how `:interest-target` can be used to apply styl
 
 #### HTML
 
-We include a {{htmlelement("button")}} and a {{htmlelement("p")}}. We specify the `<button>` as an interest invoker by giving it an `interestfor` attribute; its value is given as the `id` of the `<p>` element, therefore the paragraph is the invoker target.
+The markup includes a {{htmlelement("button")}} and a {{htmlelement("p")}}. We specify the `<button>` as an interest invoker by giving it the `interestfor` attribute whose value matches the `id` of the `<p>` element, making the paragraph the target element.
 
 ```html live-sample___interest-target
 <button interestfor="mytarget">A button</button>
