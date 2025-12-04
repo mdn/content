@@ -41,7 +41,7 @@ A related feature — **interest invokers** — can be used to show popovers on 
 ## HTML attributes
 
 - [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/button#interestfor) {{experimental_inline}}
-  - : Defines an HTML {{htmlelement("a")}}, {{htmlelement("button")}}, or {{htmlelement("area")}} element, or an SVG [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a) element, as an interest invoker. Takes as its value the `id` of a target element that will be affected in some way (normally shown or hidden) when interest is shown or lost on the invoker element.
+  - : Defines an HTML {{htmlelement("a")}}, {{htmlelement("button")}}, or {{htmlelement("area")}} element, or an SVG [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a) element, as an interest invoker. Its value is the `id` of the target element, which will be affected in some way (normally shown or hidden) when interest is shown or lost on the invoker element.
 - [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover)
   - : A global attribute that turns an element into a popover element; takes a popover state (`"auto"`, `"hint"`, or `"manual"`) as its value.
 - [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget)
