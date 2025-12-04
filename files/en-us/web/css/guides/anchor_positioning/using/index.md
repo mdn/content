@@ -119,9 +119,76 @@ For example, to stop a customizable `<select>` element's picker from being ancho
 }
 ```
 
+## Anchor scoping
+
+When multiple anchor elements on a page are given the same {{cssxref("anchor-name")}} value and a positioned element is associated with that anchor name (by specifying the name as its {{cssxref("position-anchor")}} property value), the positioned element will be associated with the _last_ anchor element in the source order with that anchor name.
+
+This can be a problem in certain situations. For example, when you have multiple HTML components repeated on a page, and each one features a positioned element anchored to the component, all of the positioned elements will be anchored to the last component on the page, unless each component uses a different anchor name.
+
+The {{cssxref("anchor-scope")}} property can fix this problem by making it so that each positioned element can only be anchored to an element within the same subtree of the element that has the scope set on it:
+
+- `anchor-scope: all` sets the scope so that _any_ `anchor-name` values set in the subtree can only be bound to by positioned elements in the same subtree.
+- `anchor-scope: --my-anchor` sets the scope so that the specified `anchor-name` value, when set in the subtree, can only be bound to by positioned elements in the same subtree.
+
+For example, let's say you have an anchor and a anchor-positioned element inside a scoped container, and another positioned element outside the container:
+
+```html live-sample___anchor-scope
+<section class="scoped">
+  <div class="anchor">⚓︎</div>
+  <div class="positioned">Positioned 1</div>
+</section>
+
+<div class="positioned">Positioned 2</div>
+```
+
+We scope the container using `anchor-scope: --my-anchor`:
+
+```css hidden live-sample___anchor-scope
+.scoped {
+  padding: 20px;
+  background: #eee;
+}
+
+.anchor {
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background-color: blue;
+  width: fit-content;
+  padding: 3px;
+}
+
+.positioned {
+  background: orange;
+  width: fit-content;
+  padding: 3px;
+  position: absolute;
+  position-anchor: --my-anchor;
+  position-area: right;
+}
+
+.anchor {
+  anchor-name: --my-anchor;
+}
+```
+
+```css live-sample___anchor-scope
+.scoped {
+  anchor-scope: --my-anchor;
+}
+```
+
+This results in the following positioning behavior:
+
+{{ EmbedLiveSample("anchor-scope", "100%", "225") }}
+
+The first positioned element is positioned relative to the anchor. It is in scope for positioning relative to the `--my-anchor` anchor, as it is inside the `<section>` element where `anchor-scope: --my-anchor` is set. The second positioned element is not positioned relative to the anchor. It is not a descendant of the `<section>` element, so it is outside the anchor scope.
+
+See the {{cssxref("anchor-scope")}} reference page for additional information and examples.
+
 ## Positioning elements relative to their anchor
 
-As we saw above, associating a positioned element with an anchor is not really much use on its own. Our goal is to place the positioned element relative to its associated anchor element. This is done either by setting a [CSS `anchor()` function](#using_inset_properties_with_anchor_function_values) value on an [inset property](/en-US/docs/Glossary/Inset_properties), [specifying a `position-area`](#setting_a_position-area), or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
+As we saw earlier, associating a positioned element with an anchor is not really much use on its own. Our goal is to place the positioned element relative to its associated anchor element. This is done either by setting a [CSS `anchor()` function](#using_inset_properties_with_anchor_function_values) value on an [inset property](/en-US/docs/Glossary/Inset_properties), [specifying a `position-area`](#setting_a_position-area), or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
 
 > [!NOTE]
 > CSS anchor positioning also provides mechanisms for specifying fallback positions if the positioned element's default position causes it to overflow the viewport. See the [Fallback options and conditional hiding](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide for details.
