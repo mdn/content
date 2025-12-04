@@ -61,7 +61,7 @@ This renders as follows:
 
 {{embedlivesample("interest-source", "100%", "100")}}
 
-Try showing interest in the button (for example by hovering or focusing it), and note how the pink and purple color combination is only applied when interest is being shown.
+Try showing interest in the button (for example, by hovering or focusing it), and note how the `hotpink` and `purple` color combination is applied only when interest is shown.
 
 ## Specifications
 
