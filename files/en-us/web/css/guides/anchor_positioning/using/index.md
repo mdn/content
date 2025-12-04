@@ -184,8 +184,6 @@ This results in the following positioning behavior:
 
 The first positioned element is positioned relative to the anchor. It is in scope for positioning relative to the `--my-anchor` anchor, as it is inside the `<section>` element where `anchor-scope: --my-anchor` is set. The second positioned element is not positioned relative to the anchor. It is not a descendant of the `<section>` element, so it is outside the anchor scope.
 
-See the {{cssxref("anchor-scope")}} reference page for additional information and examples.
-
 ## Positioning elements relative to their anchor
 
 As we saw earlier, associating a positioned element with an anchor is not really much use on its own. Our goal is to place the positioned element relative to its associated anchor element. This is done either by setting a [CSS `anchor()` function](#using_inset_properties_with_anchor_function_values) value on an [inset property](/en-US/docs/Glossary/Inset_properties), [specifying a `position-area`](#setting_a_position-area), or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
