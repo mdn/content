@@ -471,7 +471,7 @@ The markup includes a link to a GitHub profile inside a short paragraph and a `<
 
 ### CSS
 
-We begin our styles by setting an {{cssxref("interest-delay-start")}} value of `1s` on the link (the `a[interestfor]` selector is useful for selecting only links that are interest invokers). We are setting this to increase the delay between a user pausing over a link and the popover appearing. It could be annoying to have popovers appearing too quickly on a dense, link-heavy page.
+We start by setting an {{cssxref("interest-delay-start")}} value of `1s` on the link (the `a[interestfor]` selector is useful for selecting only the links that are interest invokers). This creates a slight delay before the preview popover appears. It can get annoying when popovers appear too quickly on a dense, link-heavy page; in such cases, this technique is useful.
 
 ```css hidden live-sample___link-preview-popover
 html {
