@@ -81,7 +81,7 @@ Let's look at an example. To make the whitespace characters more salient, we've 
 
 ```html-nolint live-sample___ex-inline
 <h1>   Hello
-				          <span> World!</span>	  </h1>
+				<span> World!</span>	  </h1>
 
 <!--
 <h1>◦◦◦Hello◦⏎
@@ -126,7 +126,7 @@ Inside this inline formatting context, whitespace characters are processed as fo
 3. Next, lines in the source code are joined into single lines by removing any remaining line break characters. They are either transformed into spaces (U+0020) or simply removed, depending on the context before and after the break. The exact choice between the two is browser- and language-dependent. In our example here in English (where spaces separate words), we can expect all line breaks to be "transformed" into spaces. So we end up with:
 
    ```html-nolint
-   <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
+   <h1>◦◦◦Hello◦<span>◦World!</span>⇥◦◦</h1>
    ```
 
    Notably, in languages that have no word separators, such as Chinese, lines are joined with no intervening space. So:
