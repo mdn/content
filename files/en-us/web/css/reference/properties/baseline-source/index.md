@@ -6,7 +6,7 @@ browser-compat: css.properties.baseline-source
 sidebar: cssref
 ---
 
-The **`baseline-source`** [CSS](/en-US/docs/Web/CSS) property defines which [baseline](/en-US/docs/Web/CSS/Reference/Values/baseline-position) to use when inline-level boxes have multiple possible baselines, such as multi-line inline blocks or inline flex containers.
+The **`baseline-source`** [CSS](/en-US/docs/Web/CSS) property defines which [baseline](/en-US/docs/Web/CSS/Reference/Values/baseline-position) to use when inline-level boxes have multiple possible baselines, such as multi-line [inline blocks](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout) or inline [flex containers](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts#the_flex_container).
 The values allow for choosing between aligning to the box's first baseline, last baseline, or letting the browser decide automatically based on the box type.
 
 ## Syntax
@@ -24,7 +24,6 @@ baseline-source: revert;
 baseline-source: revert-layer;
 baseline-source: unset;
 ```
-
 
 ### Values
 
@@ -47,7 +46,7 @@ baseline-source: unset;
 
 ### Baseline selection in inline flex containers
 
-In the following example, the inline flex container on the left uses the `first` baseline, `auto` uses the default baseline (`first` for inline flex containers), and the one on the right uses the `last` baseline.
+This example demonstrates how to control alignment baseline of inline flex containers.
 
 #### HTML
 
@@ -92,13 +91,16 @@ span {
   padding: 0.4rem;
 }
 ```
-We  define all the boxes to be inline flex containers. We then set the `first` one to use the `first` baseline, the `auto` is set to the default baseline (`first` for inline flex containers), and the `last` one is set to the `last` baseline.
+
+We define all the boxes to be inline flex containers.
+We set the `.first` box to use the first baseline, the `.auto` box uses the default baseline (which is `first` for inline flex containers), and the `.last` box uses the last baseline.
+
 ```css
 .box {
   display: inline-flex;
   flex-direction: column;
-  }
-  
+}
+
 .first {
   baseline-source: first;
 }
