@@ -264,7 +264,7 @@ Let's look at an example that uses interest invokers without popovers. In this e
 
 ### HTML
 
-Our HTML contains five `<button>` elements and an {{htmlelement("article")}} element representing the style preview panel. Each link has the same `interestfor` value, referencing the `id` of the `<article>`, and a `class` that is used to apply each separate color scheme. Note that in this case we are not setting a `popover` attribute on the `<article>`; it isn't a requirement for using interest invokers.
+The HTML contains five `<button>` elements and an {{htmlelement("article")}} element representing the style preview panel. Each button has the same `interestfor` value, referencing the `id` of the `<article>`, and each has a `class` that represents a different color scheme. Note that the `<article>` does not have a `popover` attribute set (popovers are not a requirement for using interest invokers).
 
 ```html live-sample___non-popover
 <div>
