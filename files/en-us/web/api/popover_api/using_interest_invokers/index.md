@@ -394,7 +394,7 @@ const buttons = document.querySelectorAll("button");
 let prevStyle = "black-white";
 ```
 
-Next, we set an `interest` and a `loseinterest` event listener on the style panel to run appropriate functions to preview and revert styles as interest is shown and lost on the various buttons (`sampleStyle()` and `revertStyle()`, respectively). We also loop through the `buttons` {{domxref("NodeList")}} and add a `click` event listener to each button so that when it is activated, the `setStyle()` function is run.
+Next, we set `interest` and `loseinterest` event listeners on the style panel. These events call the `sampleStyle()` and `revertStyle()` functions to apply and revert styles as interest is shown and lost on the buttons. We also loop through the `buttons` {{domxref("NodeList")}} and add a `click` event listener to each one so that when a button is activated, the `setStyle()` function is run.
 
 ```js live-sample___non-popover
 stylePanel.addEventListener("interest", sampleStyle);
