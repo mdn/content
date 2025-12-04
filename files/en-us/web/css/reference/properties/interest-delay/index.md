@@ -50,7 +50,7 @@ The `interest-delay` property accepts one or two values. The first value sets th
 
 ## Description
 
-A control element such as an {{htmlelement("a")}} or {{htmlelement("button")}} can be specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) by giving it an [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/a#interestfor) attribute with a value equal to the `id` of a target element. When this relationship is established, the target element will be affected in some way when the user "shows interest" in the invoker (for example by hovering or focusing it). A common use case is to cause a popover to appear on hover/focus. When the user "loses interest", the effect will stop.
+A control element such as an {{htmlelement("a")}} or {{htmlelement("button")}} can be set as an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) by giving it the [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/a#interestfor) attribute. Its value should be the `id` of a target element. When this relationship is established, the target element is affected when the user "shows interest" in the invoker (for example, by hovering or focusing it). A common use case is to display a popover on hover or focus. When the user "loses interest", the effect stops.
 
 When the user shows/loses interest, the associated effect doesn't start/stop immediately — the browser introduces a short delay, which may vary by vendor. This makes sense — it would be annoying, for example, for preview popovers to appear immediately every time a link is hovered.
 
