@@ -127,4 +127,4 @@ We  define all the boxes to be inline flex containers. We then set the `first` o
 ## See also
 
 - [`vertical-align`](/en-US/docs/Web/CSS/Reference/Properties/vertical-align) property
-- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview)
+- [CSS box alignment overview](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview)
