@@ -429,7 +429,7 @@ This renders as follows:
 
 {{embedlivesample("non-popover", "100%", "260")}}
 
-Try hovering/focusing the buttons to preview the styles on the style panel, and activating them to apply styles permanently. Note that setting the styles will still work on non-supporting browsers, even though the "preview" functionality doesn't.
+Try hovering or focusing a button to preview its style in the panel. Clicking a button applies the style permanently. Note that setting the styles still works in browsers that do not support interest invokers, even though the "preview" functionality doesn't.
 
 ## Link preview popover example
 
