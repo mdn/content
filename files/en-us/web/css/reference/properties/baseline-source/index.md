@@ -25,7 +25,6 @@ baseline-source: revert-layer;
 baseline-source: unset;
 ```
 
-The `baseline-source` property is specified as one of the keywords listed below.
 
 ### Values
 
