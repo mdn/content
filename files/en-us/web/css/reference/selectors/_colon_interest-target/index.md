@@ -66,7 +66,7 @@ This renders as follows:
 
 {{embedlivesample("interest-target", "100%", "150")}}
 
-Try showing interest in the button (for example by hovering or focusing it), and note how this results in the styles shown earlier being applied to the paragraph.
+Try showing interest in the button (for example, by hovering or focusing it), and note how this results in the styles shown earlier being applied to the paragraph.
 
 ## Specifications
 
