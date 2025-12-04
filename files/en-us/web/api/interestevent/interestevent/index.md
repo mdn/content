@@ -19,11 +19,11 @@ new InterestEvent(type, init)
 ### Parameters
 
 - `type`
-  - : A string representing the type of event. In the case of `InterestEvent` this is always `interest` or `loseinterest`.
+  - : A string representing the type of event. For `InterestEvent`, this is always `interest` or `loseinterest`.
 - `init` {{optional_inline}}
-  - : An object containing the following properties:
+  - : An object containing the following property:
     - `source` {{optional_inline}}
-      - : An {{domxref("Element")}} representing the interest invoker element that interest was shown or lost on to fire the event.
+      - : An {{domxref("Element")}} representing the interest invoker element on which interest was shown or lost.
 
 ## Examples
 
