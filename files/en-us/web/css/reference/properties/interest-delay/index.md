@@ -69,7 +69,7 @@ If a single value is specified, it applies to both {{cssxref("interest-delay-sta
 
 ## Examples
 
-### Basic `interest-delay` effect
+### Creating a basic `interest-delay` effect
 
 In this example, we demonstrate how `interest-delay` affects interest invoker behavior.
 
