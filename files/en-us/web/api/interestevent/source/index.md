@@ -8,7 +8,7 @@ browser-compat: api.InterestEvent.source
 
 {{APIRef("Popover API")}}
 
-The **`source`** read-only property of the {{domxref("InterestEvent")}} interface is an {{domxref("Element")}} object instance representing the interest invoker element that interest was shown or lost on to fire the event.
+The **`source`** read-only property of the {{domxref("InterestEvent")}} interface is an {{domxref("Element")}} object instance that represents the interest invoker element on which interest was shown or lost to fire the event.
 
 ## Value
 
