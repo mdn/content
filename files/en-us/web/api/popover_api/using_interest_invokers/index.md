@@ -282,7 +282,7 @@ The HTML contains five `<button>` elements and an {{htmlelement("article")}} ele
 
 ### CSS
 
-In our CSS, we start off by defining the styles for each `class` applied to the `<button>` elements:
+First, we define the styles for each `class` that's applied to a `<button>` element:
 
 ```css hidden live-sample___non-popover
 html {
