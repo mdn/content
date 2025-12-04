@@ -404,9 +404,9 @@ buttons.forEach((button) => button.addEventListener("click", setStyle));
 
 Finally, we define the functions mentioned previously:
 
-- `sampleStyle()`: When interest is shown via a button, the `class` set on it is accessed via `e.source.className` (`InterestEvent.source` contains a reference to the interest invoker that interest was shown on) and applied to the style panel via `e.target.className`.
-- `revertStyle()`: When interest is lost, the style panel is reverted back to its previous style by setting the class stored in `prevStyle` as its `className`.
-- `setStyle()`: When a button is actually clicked, its `className` is set as the style panel's `className`. We also set `prevStyle` to equal the clicked button's `className` so that, next time a style is previewed, it will revert back to the _new_ previously-set style.
+- `sampleStyle()`: When interest is shown on a button, its `class` is obtained from `e.source.className` (`InterestEvent.source` contains a reference to the interest invoker on which interest was shown) and applied to the style panel via `e.target.className`.
+- `revertStyle()`: When interest is lost, the style panel reverts to its previous style stored in `prevStyle`.
+- `setStyle()`: When a button is clicked, its `className` is applied to the style panel. We also update `prevStyle` to the clicked button's `className` so that the next time a style is previewed, the panel can revert to the _new_ previously-set style.
 
 ```js live-sample___non-popover
 function sampleStyle(e) {
