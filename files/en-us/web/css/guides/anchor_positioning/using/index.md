@@ -121,9 +121,9 @@ For example, to stop a customizable `<select>` element's picker from being ancho
 
 ## Anchor scoping
 
-When multiple anchor elements on a page are given the same {{cssxref("anchor-name")}} value and a positioned element is associated with that anchor name (by specifying the name as its {{cssxref("position-anchor")}} property value), the positioned element will be associated with the _last_ anchor element in the source order with that anchor name.
+When multiple anchor elements are given the same {{cssxref("anchor-name")}} value and a positioned element is associated with that anchor name (by specifying the name as its {{cssxref("position-anchor")}} property value), the positioned element will be associated with the _last_ anchor element in the source order with that anchor name.
 
-This can be a problem in certain situations. For example, when you have multiple HTML components repeated on a page, and each one features a positioned element anchored to the component, all of the positioned elements will be anchored to the last component on the page, unless each component uses a different anchor name.
+For example, if a document contains multiple repeated components, each with a positioned element tethered to an anchor, all the positioned elements will be anchored to the last anchor on the page unless each component uses a different anchor name. This is likely not the desired behavior.
 
 The {{cssxref("anchor-scope")}} property can fix this problem by making it so that each positioned element can only be anchored to an element within the same subtree of the element that has the scope set on it:
 
