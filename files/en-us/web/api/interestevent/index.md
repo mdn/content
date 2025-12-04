@@ -23,7 +23,7 @@ This is the event object for the {{domxref("HTMLElement.interest_event", "intere
 _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 
 - {{DOMxRef("InterestEvent.source")}} {{ReadOnlyInline}}
-  - : An {{domxref("Element")}} object instance representing the interest invoker element that interest was shown or lost on to fire the event.
+  - : An {{domxref("Element")}} object instance that represents the interest invoker element on which interest was shown or lost to fire the event.
 
 ## Examples
 
