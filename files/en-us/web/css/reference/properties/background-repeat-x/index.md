@@ -74,7 +74,7 @@ The `background-repeat-x` property is specified as one or more values, separated
   - : The image is repeated as much as possible without clipping. The first and last images are pinned to the left and right of the element, and whitespace is distributed evenly between the images. The {{cssxref("background-position-x")}} property is ignored unless only one image can be displayed without clipping. The only case where clipping happens using `space` is when the width of the image is wider than the element, so there isn't enough room to display one image.
 
 - `round`
-  - : As the allowed space increases in size, the repeated images will stretch (leaving no gaps) until there is room for another one to be added. If If the image doesn’t fit a whole number of times, it is rescaled so that it does.
+  - : As the allowed space increases in size, the repeated images will stretch (leaving no gaps) until there is room for another one to be added. If If the image doesn't fit a whole number of times, it is rescaled so that it does.
 
 ## Description
 
