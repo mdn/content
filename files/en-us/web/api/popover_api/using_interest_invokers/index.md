@@ -433,7 +433,7 @@ Try hovering or focusing a button to preview its style in the panel. Clicking a 
 
 ## Link preview popover example
 
-As mentioned earlier, a very common use case for interest invokers is to progressively enhance links to show some preview information about the link target, such as the name, bio, and location of a user on a link to their profile page, or quick actions like subscribing to a group on a link to the group's homepage. Such popovers are convenient, as they often give the user what they need without forcing them to lose context by making an additional navigation.
+As mentioned earlier, a very common use case for interest invokers is progressively enhancing links with preview information about the link target. This can include details such as a person's name, bio, and location displayed on a link to their profile page, or quick actions like subscribing to a group provided on a link to its homepage. These preview popovers are convenient because they help users get the information they need without navigating away and losing context.
 
 Let's look at how to implement a preview popover using interest invokers.
 
