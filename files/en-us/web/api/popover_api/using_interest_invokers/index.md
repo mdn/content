@@ -276,7 +276,7 @@ The HTML contains five `<button>` elements and an {{htmlelement("article")}} ele
 </div>
 <article id="style-panel" class="black-white">
   <h2>Style preview panel</h2>
-  <p>This is kinda fun, no?</p>
+  <p>This is fun, right?</p>
 </article>
 ```
 
