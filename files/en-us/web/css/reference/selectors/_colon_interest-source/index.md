@@ -27,7 +27,7 @@ In this example, we demonstrate how `:interest-source` can be used to apply styl
 The markup includes a {{htmlelement("button")}} and a {{htmlelement("p")}}. We specify the `<button>` as an interest invoker by giving it the `interestfor` attribute whose value matches the `id` of the `<p>` element, making the paragraph the target element. The paragraph is turned into a popover by giving it the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute, which hides it initially.
 
 ```html live-sample___interest-source
-<button interestfor="mypopover">A button</button>
+<button interestfor="mypopover">Button</button>
 <p id="mypopover" popover>A hover toolip</p>
 ```
 
