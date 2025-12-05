@@ -142,7 +142,7 @@ This renders as follows:
 
 {{embedlivesample("interest-delay-remove-on-interest", "100%", "100")}}
 
-Try showing interest in any button and notice how, when you then immediately show interest in the other buttons, there is no delay in showing the popover. If you stop showing interest in the buttons then start again, the initial delay will return.
+Try showing interest in any button and notice how, when you then immediately show interest in another button, the popover appears without delay. If you stop showing interest in the buttons and then start again, the initial delay will return.
 
 ## Specifications
 
