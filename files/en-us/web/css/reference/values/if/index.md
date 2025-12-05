@@ -17,12 +17,14 @@ The **`if()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Referen
 ```css-nolint
 /* Single <if-test> */
 if(style(--scheme: dark): #eeeeee;)
+if(style(--reference-size < 2em): 10px;);
 if(media(print): black;)
 if(media(width > 700px): 0 auto;)
 if(supports(color: lch(7.1% 60.23 300.16)): lch(7.1% 60.23 300.16);)
 
 /* <if-test> with else */
 if(style(--size: "2xl"): 1em; else: 0.25em;)
+if(style(--reference-size <= 2em): 10px; else: 20px);
 if(media(print): white; else: black;)
 if(media(width < 700px): 0 auto; else: 20px auto)
 if(
@@ -150,7 +152,9 @@ An `<if-test>` accepts one of three query types. This section looks at each one 
 
 #### Style queries
 
-A [style query](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) `<if-test>` allows you to test whether a particular property value is set on an element, and apply a value to a different property as a result. We walked through several style query examples earlier on; let's look at another example:
+A [style query](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) `<if-test>` allows you to test whether a particular property value is set on an element, or whether its value falls within a particular range, and apply a value to a different property as a result. We walked through several style query examples earlier on; let's look at another couple of examples:
+
+In this example, if the `--scheme` custom property is set to a value of `ice` on the same element, the {{cssxref("background-image")}} property is set to the provided `linear-gradient()`. If not, it is set to `none`.
 
 ```css-nolint
 background-image: if(
@@ -159,7 +163,23 @@ background-image: if(
 );
 ```
 
-If the `--scheme` custom property is set to a value of `ice` on the same element, the provided `linear-gradient()` value is returned. If not, then `none` is returned.
+In this example, if the `--reference-size` custom property values is less than `1.5em`, the {{cssxref("border-radius")}} property is set to `5px`. If `--reference-size` is `1.5em` or greater but less than `2.5em`, `border-radius` is set to `10px`. If neither of these conditions are true, `border-radius` is set to `15px`:
+
+```css-nolint
+border-radius: if(
+  style(--reference-size < 1.5em): 5px;
+  style(1.5em <= --reference-size < 2.5em): 10px;
+  else: 15px;
+);
+```
+
+When using range syntax for style queries, you can use comparison operators (`<`, `<=`, `>`, `>=`) to compare:
+
+- Custom property values, for example `style(--inner-padding > 1em)`.
+- Literal values, for example `style(1em < 20px)`.
+- Values from substitution functions such as [`attr()`](/en-US/docs/Web/CSS/Reference/Values/attr), for example `style(attr(data-columns, type<number>) > 2)`.
+
+The following numeric types can be compared: {{cssxref("&lt;length>")}}, {{cssxref("&lt;number>")}}, {{cssxref("&lt;percentage>")}}, {{cssxref("&lt;angle>")}}, {{cssxref("&lt;time>")}}, {{cssxref("&lt;frequency>")}}, and {{cssxref("&lt;resolution>")}}. Both sides of the comparison must resolve to the same data type, otherwise the query is invalid.
 
 Using style queries inside `if()` statements has an advantage over {{cssxref("@container")}} queries — you can target an element with styles directly, based on whether a custom property is set on it, rather than having to check set styles on a container parent element.
 
@@ -174,8 +194,8 @@ background-color: if(
   style((--scheme: dark) and (--contrast: hi)): black;
 );
 
-background-color: if(
-  not style(--scheme: light): black;
+font-size: if(
+  not style(--reference-size < 1.5em): 2em;
 );
 ```
 
@@ -426,6 +446,103 @@ Note how the styling is applied. Test out the conditional styling for the first 
 
 - Remove the `<section>` element's `style` attribute and note how the apple emojis are no longer rendered.
 - Change the `height` attribute of the embedding `<iframe>` to `1200px`. This will change the orientation from landscape to portrait. Note how the layout changes as a result.
+
+### Styling a heading based on reference size value ranges
+
+In this example, we set a `--reference-size` [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) on a container, and then set properties on a descendant heading dynamically, based which value range the custom property value is within.
+
+#### HTML
+
+We include an {{htmlelement("article")}} element with an [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) nested inside it. The `--reference-size` custom property is set on the `<article>` element and given an initial value of `1em`. We also include a {{htmlelement("form")}} containing a [range slider](/en-US/docs/Web/HTML/Reference/Elements/input/range) that will be wired up (via JavaScript) to allow the `--reference-size` to be adjusted live, plus an {{htmlelement("output")}} element to report the currently-selected size.
+
+```html live-sample___style-query-example
+<article style="--reference-size: 1em">
+  <h1>A heading with a border</h1>
+</article>
+<form>
+  <label for="size-slider">Set reference size</label>
+  <input type="range" min="1" step="0.1" max="3.5" value="1" id="size-slider" />
+  <output>1em</output>
+</form>
+```
+
+#### CSS
+
+In our styles, we set some static styles on our `<h1>` that will be applied if the `--reference-size` custom property isn't set, or if the browser doesn't support the CSS `if()` function with style queries.
+
+```css hidden live-sample___style-query-example
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 10px;
+}
+```
+
+```css live-sample___style-query-example
+h1 {
+  font-size: 2em;
+  padding: 15px;
+  border: 5px solid black;
+  border-radius: 15px;
+}
+```
+
+In the final part of our CSS, we set the `<h1>` element's:
+
+- {{cssxref("font-size")}} equal to the `--reference-size` value.
+- {{cssxref("padding")}} equal to `10px` if the `--reference-size` is less than `2em`, or `20px` otherwise.
+- {{cssxref("border")}} equal to `2px solid black` if the `--reference-size` is less than `1.5em`, `5px solid black` if the `--reference-size` is `1.5em` or greater but less than `2.5em`, or `10px solid black` otherwise.
+- {{cssxref("border-radius")}} equal to `5px` if the `--reference-size` is less than `1.5em`, `10px` if the `--reference-size` is `1.5em` or greater but less than `2.5em`, or `15px` otherwise.
+
+```css-nolint live-sample___style-query-example
+h1 {
+  font-size: var(--reference-size);
+  padding: if(
+    style(--reference-size < 2em): 10px;
+    else: 20px
+  );
+  border: if(
+    style(--reference-size < 1.5em): 2px solid black;
+    style(1.5em <= --reference-size < 2.5em): 5px solid black;
+    else: 10px solid black;
+  );
+  border-radius: if(
+    style(--reference-size < 1.5em): 5px;
+    style(1.5em <= --reference-size < 2.5em): 10px;
+    else: 15px;
+  );
+}
+```
+
+#### JavaScript
+
+In our script, we grab references to the `<article>`, range `<input>`, and `<output>` elements. We set an event listener on the slider so that, when it is moved to input a different value, that value has an `em` unit added to it and is both printed to the `<output>` element and set as the value of `--reference-size` on the `<article>` element.
+
+```js live-sample___style-query-example
+const articleElem = document.querySelector("article");
+const inputElem = document.querySelector("input");
+const outputElem = document.querySelector("output");
+
+inputElem.addEventListener("input", () => {
+  newValue = `${inputElem.value}em`;
+  outputElem.textContent = newValue;
+  articleElem.style.setProperty("--reference-size", newValue);
+});
+```
+
+#### Result
+
+The rendered example looks like this:
+
+{{EmbedLiveSample("Setting_styles_based_on_a_container's_size", "100%", 250)}}
+
+Try moving the range slider to see how that affects the styling of the heading. The padding, border, and border-radius should adjust when the font size reaches different thresholds.
 
 ### Controlling a color scheme with `if()`
 
