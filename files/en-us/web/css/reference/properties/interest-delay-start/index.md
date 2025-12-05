@@ -157,4 +157,4 @@ Try showing interest in any button and notice how, when you then immediately sho
 - {{cssxref("interest-delay-end")}}, {{cssxref("interest-delay")}}
 - [Popover API](/en-US/docs/Web/API/Popover_API)
 - [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)
-- [CSS basic user interface module](/en-US/docs/Web/CSS/Guides/Basic_user_interface)
+- [CSS basic user interface](/en-US/docs/Web/CSS/Guides/Basic_user_interface) module
