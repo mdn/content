@@ -8,8 +8,7 @@ browser-compat: api.Element.setAttributeNS
 
 {{ APIRef("DOM") }}
 
-`setAttributeNS` adds a new attribute or changes the value of an attribute
-with the given namespace and name.
+`setAttributeNS` adds a new attribute or changes the value of an attribute with the given namespace and name.
 
 If you are working with HTML documents and you don't need to specify the requested attribute as being part of a specific namespace, use the {{domxref("Element.setAttribute()", "setAttribute()")}} method instead.
 
@@ -24,8 +23,7 @@ setAttributeNS(namespace, name, value)
 - `namespace`
   - : A string specifying the namespace of the attribute.
 - `name`
-  - : A string identifying the attribute by its qualified name;
-    that is, a namespace prefix followed by a colon followed by a local name.
+  - : A string identifying the attribute by its qualified name; that is, a namespace prefix followed by a colon followed by a local name.
 - `value`
   - : The desired string value of the new attribute.
 
@@ -46,8 +44,7 @@ d.setAttributeNS(
 
 ## Notes
 
-`setAttributeNS` is the only method for namespaced attributes which expects
-the fully qualified name, i.e., `"namespace:local-name"`.
+`setAttributeNS` is the only method for namespaced attributes which expects the fully qualified name, i.e., `"namespace:local-name"`.
 
 ## Specifications
 
@@ -62,3 +59,4 @@ the fully qualified name, i.e., `"namespace:local-name"`.
 - {{domxref("Element.hasAttributeNS()")}}
 - {{domxref("Element.getAttributeNS()")}}
 - {{domxref("Element.removeAttributeNS()")}}
+- {{domxref("Element.setAttribute())}}

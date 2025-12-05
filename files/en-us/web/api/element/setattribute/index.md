@@ -8,7 +8,8 @@ browser-compat: api.Element.setAttribute
 
 {{APIRef("DOM")}}
 
-The **`setAttribute()`** method of the {{domxref("Element")}} interface sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.
+The **`setAttribute()`** method of the {{domxref("Element")}} interface sets the value of an attribute on the specified element.
+If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.
 
 To get the current value of an attribute, use {{domxref("Element.getAttribute", "getAttribute()")}}; to remove an attribute, call {{domxref("Element.removeAttribute", "removeAttribute()")}}.
 
@@ -23,22 +24,19 @@ setAttribute(name, value)
 ### Parameters
 
 - `name`
-  - : A string specifying the name of the attribute whose value is to be
-    set. The attribute name is automatically converted to all lower-case when
-    `setAttribute()` is called on an HTML element in an HTML document.
+  - : A string specifying the name of the attribute whose value is to be set.
+    The attribute name is automatically converted to all lower-case when `setAttribute()` is called on an HTML element in an HTML document.
 - `value`
-  - : A string containing the value to assign to the attribute. Any
-    non-string value specified is converted automatically into a string.
+  - : A string containing the value to assign to the attribute.
+    Any non-string value specified is converted automatically into a string.
 
-Boolean attributes are considered to be `true` if they're present on the
-element at all. You should set `value` to the empty string (`""`)
-or the attribute's name, with no leading or trailing whitespace. See the [example](#examples) below for a practical demonstration.
+Boolean attributes are considered to be `true` if they're present on the element at all.
+You should set `value` to the empty string (`""`) or the attribute's name, with no leading or trailing whitespace.
+See the [example](#examples) below for a practical demonstration.
 
-Since the specified `value` gets converted into a string, specifying
-`null` doesn't necessarily do what you expect. Instead of removing the
-attribute or setting its value to be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it instead sets the attribute's
-value to the string `"null"`. If you wish to remove an attribute, call
-{{domxref("Element.removeAttribute", "removeAttribute()")}}.
+Since the specified `value` gets converted into a string, specifying `null` doesn't necessarily do what you expect.
+Instead of removing the attribute or setting its value to be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it instead sets the attribute's value to the string `"null"`.
+If you wish to remove an attribute, call {{domxref("Element.removeAttribute", "removeAttribute()")}}.
 
 ### Return value
 
@@ -47,12 +45,12 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : Thrown if the [`name`](#name) value is not a valid [XML name](https://www.w3.org/TR/xml/#dt-name); for example, it starts with a number, a hyphen, or a period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
+  - : Thrown if the [`name`](#name) value is not a valid [XML name](https://www.w3.org/TR/xml/#dt-name).
+    For example, if it starts with a number, a hyphen, or a period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
 
 ## Examples
 
-In the following example, `setAttribute()` is used to set attributes on a
-{{HTMLElement("button")}}.
+In the following example, `setAttribute()` is used to set attributes on a {{HTMLElement("button")}}.
 
 ### HTML
 
@@ -87,7 +85,8 @@ This demonstrates two things:
 - To set the value of a Boolean attribute, such as `disabled`, you can specify any value.
   An empty string or the name of the attribute are recommended values.
   All that matters is that if the attribute is present at all, _regardless of its actual value_, its value is considered to be `true`.
-  The absence of the attribute means its value is `false`. By setting the value of the `disabled` attribute to the empty string (`""`), we are setting `disabled` to `true`, which results in the button being disabled.
+  The absence of the attribute means its value is `false`.
+  By setting the value of the `disabled` attribute to the empty string (`""`), we are setting `disabled` to `true`, which results in the button being disabled.
 
 ## Specifications
 
