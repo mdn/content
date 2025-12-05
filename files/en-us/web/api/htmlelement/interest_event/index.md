@@ -33,7 +33,7 @@ In this example, we use the `interest` and `loseinterest` events to report when 
 
 #### HTML
 
-We set up a relationship between the `<button>` element interest invoker and its target `<p>` element by setting the `<button>` element's `interestfor` attribute equal to the `<p>` element's `id`.
+We set up the relationship between the `<button>` element interest invoker and its target `<p>` element by setting the value of the `<button>` element's `interestfor` attribute equal to the `<p>` element's `id`.
 
 ```html live-sample___basic-interest-invoker
 <button href="#" interestfor="mytarget">Interest invoker</button>
