@@ -72,6 +72,8 @@ Here the results array contains the string `"my result"` as an element.
 
 The script result must be a [structured cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) value in Firefox or a [JSON-serializable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description) value in Chrome. The [Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities) article discusses this difference in more detail in the [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm) section.
 
+**Note:** If the injected script returns a Promise, the `executeScript()` API awaits the Promise then applies structured cloning to the result. This behavior matches Chrome's implementation, where the returned Promise is awaited.
+
 ## Examples
 
 This example executes a one-line code snippet in the active tab:
