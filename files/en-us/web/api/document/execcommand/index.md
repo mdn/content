@@ -79,7 +79,16 @@ execCommand(commandName, showDefaultUI, valueArgument)
     - `insertHorizontalRule`
       - : Inserts a {{HTMLElement("hr")}} element at the insertion point, or replaces the selection with it.
     - `insertHTML`
-      - : Inserts an HTML string at the insertion point (deletes selection). Requires a valid HTML string as a value argument.
+      - : Inserts an {{domxref("TrustedHTML")}} instance or string of HTML markup at the insertion point (deletes selection).
+        This requires valid HTML markup.
+
+        > [!WARNING]
+        > The input is parsed as HTML and written into the DOM.
+        > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
+        >
+        > You can mitigate this risk by always assigning {{domxref("TrustedHTML")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+        > See the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) for more information.
+
     - `insertImage`
       - : Inserts an image at the insertion point (deletes selection). Requires a URL string for the image's `src` as a value argument. The requirements for this string are the same as `createLink`.
     - `insertOrderedList`
