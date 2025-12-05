@@ -20,7 +20,7 @@ An {{domxref("Element")}} object instance, or `null` if the associated `<a>` ele
 
 ### Basic `interestForElement` usage
 
-In this example, we use an SVG `<a>` element's `interestForElement` property to set its interest invoker target element and then retrieve its target element's `tagName`. The `tagName` is then printed into the `<a>` element's text content.
+In this example, we use an SVG `<a>` element's `interestForElement` property to set its target element and then retrieve the target element's `tagName`. The `tagName` is then included in the `<a>` element's text content.
 
 #### HTML
 
