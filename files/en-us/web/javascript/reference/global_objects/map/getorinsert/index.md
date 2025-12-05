@@ -3,13 +3,11 @@ title: Map.prototype.getOrInsert()
 short-title: getOrInsert()
 slug: Web/JavaScript/Reference/Global_Objects/Map/getOrInsert
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Map.getOrInsert
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
+
 
 The **`getOrInsert()`** method of {{jsxref("Map")}} instances returns the value corresponding to the specified key in this `Map`. If the key is not present, it inserts a new entry with the key and a given default value, and returns the inserted value.
 

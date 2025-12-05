@@ -3,13 +3,11 @@ title: Temporal.PlainTime.from()
 short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/from
 page-type: javascript-static-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainTime.from
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
+
 
 The **`Temporal.PlainTime.from()`** static method creates a new `Temporal.PlainTime` object from another `Temporal.PlainTime` object, an object with time properties, or an [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#rfc_9557_format) string.
 

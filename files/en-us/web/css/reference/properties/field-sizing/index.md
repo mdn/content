@@ -2,13 +2,11 @@
 title: field-sizing
 slug: Web/CSS/Reference/Properties/field-sizing
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.field-sizing
 sidebar: cssref
 ---
 
-{{seecompattable}}
+
 
 The **`field-sizing`** [CSS](/en-US/docs/Web/CSS) property enables you to control the sizing behavior of elements that are given a default preferred size, such as form control elements. This property enables you to override the default sizing behavior, allowing form controls to adjust in size to fit their contents.
 

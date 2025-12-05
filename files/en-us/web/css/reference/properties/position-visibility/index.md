@@ -2,13 +2,11 @@
 title: position-visibility
 slug: Web/CSS/Reference/Properties/position-visibility
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.position-visibility
 sidebar: cssref
 ---
 
-{{seecompattable}}
+
 
 The **`position-visibility`** [CSS](/en-US/docs/Web/CSS) property enables conditionally hiding an anchor-positioned element depending on, for example, whether it is overflowing its containing element or the viewport.
 

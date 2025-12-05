@@ -2,13 +2,11 @@
 title: Temporal.Now
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Now
 page-type: javascript-namespace
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.Now
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
+
 
 The **`Temporal.Now`** namespace object contains static methods for getting the current time in various formats.
 
@@ -53,17 +51,17 @@ Temporal.Now.instant().epochMilliseconds;
 
 ## Static methods
 
-- {{jsxref("Temporal/Now/instant", "Temporal.Now.instant()")}} {{experimental_inline}}
+- {{jsxref("Temporal/Now/instant", "Temporal.Now.instant()")}}
   - : Returns the current time as a {{jsxref("Temporal.Instant")}} object.
-- {{jsxref("Temporal/Now/plainDateISO", "Temporal.Now.plainDateISO()")}} {{experimental_inline}}
+- {{jsxref("Temporal/Now/plainDateISO", "Temporal.Now.plainDateISO()")}}
   - : Returns the current date as a {{jsxref("Temporal.PlainDate")}} object, in the ISO 8601 calendar and the specified time zone.
-- {{jsxref("Temporal/Now/plainDateTimeISO", "Temporal.Now.plainDateTimeISO()")}} {{experimental_inline}}
+- {{jsxref("Temporal/Now/plainDateTimeISO", "Temporal.Now.plainDateTimeISO()")}}
   - : Returns the current date and time as a {{jsxref("Temporal.PlainDateTime")}} object, in the ISO 8601 calendar and the specified time zone.
-- {{jsxref("Temporal/Now/plainTimeISO", "Temporal.Now.plainTimeISO()")}} {{experimental_inline}}
+- {{jsxref("Temporal/Now/plainTimeISO", "Temporal.Now.plainTimeISO()")}}
   - : Returns the current time as a {{jsxref("Temporal.PlainTime")}} object, in the specified time zone.
-- {{jsxref("Temporal/Now/timeZoneId", "Temporal.Now.timeZoneId()")}} {{experimental_inline}}
+- {{jsxref("Temporal/Now/timeZoneId", "Temporal.Now.timeZoneId()")}}
   - : Returns a [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) representing the system's current time zone.
-- {{jsxref("Temporal/Now/zonedDateTimeISO", "Temporal.Now.zonedDateTimeISO()")}} {{experimental_inline}}
+- {{jsxref("Temporal/Now/zonedDateTimeISO", "Temporal.Now.zonedDateTimeISO()")}}
   - : Returns the current date and time as a {{jsxref("Temporal.ZonedDateTime")}} object, in the ISO 8601 calendar and the specified time zone.
 
 ## Specifications

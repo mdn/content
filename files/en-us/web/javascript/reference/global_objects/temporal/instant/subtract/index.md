@@ -3,13 +3,11 @@ title: Temporal.Instant.prototype.subtract()
 short-title: subtract()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/subtract
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.Instant.subtract
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
+
 
 The **`subtract()`** method of {{jsxref("Temporal.Instant")}} instances returns a new `Temporal.Instant` object representing this instant moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 

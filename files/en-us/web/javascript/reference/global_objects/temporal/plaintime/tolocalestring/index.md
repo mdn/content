@@ -3,13 +3,11 @@ title: Temporal.PlainTime.prototype.toLocaleString()
 short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/toLocaleString
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainTime.toLocaleString
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
+
 
 The **`toLocaleString()`** method of {{jsxref("Temporal.PlainTime")}} instances returns a string with a language-sensitive representation of this time. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method delegates to `Intl.DateTimeFormat`.
 

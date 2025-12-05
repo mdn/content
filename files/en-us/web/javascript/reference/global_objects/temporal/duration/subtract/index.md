@@ -3,13 +3,11 @@ title: Temporal.Duration.prototype.subtract()
 short-title: subtract()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/subtract
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.Duration.subtract
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
+
 
 The **`subtract()`** method of {{jsxref("Temporal.Duration")}} instances returns a new `Temporal.Duration` object with the difference between this duration and a given duration. It is equivalent to [adding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add) the [negated](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated) value of the other duration.
 

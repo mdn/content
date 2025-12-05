@@ -3,13 +3,11 @@ title: Temporal.PlainMonthDay.prototype.equals()
 short-title: equals()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/equals
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainMonthDay.equals
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
+
 
 The **`equals()`** method of {{jsxref("Temporal.PlainMonthDay")}} instances returns `true` if this month-day is equivalent in value to another month-day (in a form convertible by {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}}), and `false` otherwise. They are compared both by their underlying ISO date values and their calendars.
 

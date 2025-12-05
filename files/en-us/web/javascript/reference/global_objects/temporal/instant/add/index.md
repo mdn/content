@@ -3,13 +3,11 @@ title: Temporal.Instant.prototype.add()
 short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/add
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.Instant.add
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
+
 
 The **`add()`** method of {{jsxref("Temporal.Instant")}} instances returns a new `Temporal.Instant` object representing this instant moved forward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 

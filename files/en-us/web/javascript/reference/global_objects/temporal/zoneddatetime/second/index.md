@@ -3,13 +3,11 @@ title: Temporal.ZonedDateTime.prototype.second
 short-title: second
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/second
 page-type: javascript-instance-accessor-property
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.second
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
+
 
 The **`second`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns an integer from 0 to 59 representing the second component of this time.
 
