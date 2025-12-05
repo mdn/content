@@ -28,11 +28,11 @@ baseline-source: unset;
 ### Values
 
 - `auto`
-  Specifies [`last baseline`](/en-US/docs/Web/CSS/Reference/Values/baseline-position#last_baseline) alignment for inline-block, [`first baseline`](/en-US/docs/Web/CSS/Reference/Values/baseline-position#first_baseline) alignment for everything else.
+  - : Specifies [`last baseline`](/en-US/docs/Web/CSS/Reference/Values/baseline-position#last_baseline) alignment for inline-block, [`first baseline`](/en-US/docs/Web/CSS/Reference/Values/baseline-position#first_baseline) alignment for everything else.
 - `first`
-  Specifies `first baseline` alignment.
+  - : Specifies `first baseline` alignment.
 - `last`
-  Specifies `last baseline` alignment.
+  - : Specifies `last baseline` alignment.
 
 ## Formal definition
 
@@ -46,9 +46,10 @@ baseline-source: unset;
 
 ### Baseline selection in inline flex containers
 
-This example demonstrates how to control alignment baseline of inline flex containers.
+This example demonstrates using the `baseline-source` property to control the baseline alignment of inline flex containers.
 
 #### HTML
+Our HTML includes several {{htmlelement("span")}} elements, which are  generic inline container for phrasing content, including three continaining four nested `<span>` children.
 
 ```html
 <span>Baseline ___</span>
