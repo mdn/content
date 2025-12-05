@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.interestForElement
 
 {{ApiRef("HTML DOM")}}
 
-The **`interestForElement`** property of the {{domxref("SVGAElement")}} interface gets or sets the interest invoker target element, in cases where the associated {{svgelement("a")}} element is specified as an interest invoker.
+The **`interestForElement`** property of the {{domxref("SVGAElement")}} interface gets or sets the target element of an interest invoker, in cases where the associated {{svgelement("a")}} element is specified as an interest invoker.
 
 See [Creating an interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers#creating_an_interest_invoker) for more details.
 
