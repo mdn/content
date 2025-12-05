@@ -29,7 +29,7 @@ An {{domxref("InterestEvent")}}. Inherits from {{domxref("Event")}}.
 
 ### Basic interest invoker event usage
 
-In this example, we use the `interest` and `loseinterest` events to report when interest is being shown and lost on a {{htmlelement("button")}} element interest invoker. We do this by printing messages into the {{htmlelement("p")}} target element's text content.
+In this example, we use the `interest` and `loseinterest` events to report when interest is shown and lost on a {{htmlelement("button")}} element that acts as an interest invoker. We do this by printing messages into the target {{htmlelement("p")}} element's text content.
 
 #### HTML
 
