@@ -47,7 +47,7 @@ interest-delay-end: unset;
 
 ## Examples
 
-### Basic `interest-delay-end` effect
+### Creating a basic `interest-delay-end` effect
 
 In this example, we demonstrate how `interest-delay-end` affects interest invoker behavior.
 
