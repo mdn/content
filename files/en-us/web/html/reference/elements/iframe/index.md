@@ -82,6 +82,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - `name`
   - : A targetable name for the embedded browsing context. This can be used in the `target` attribute of the {{HTMLElement("a")}}, {{HTMLElement("form")}}, or {{HTMLElement("base")}} elements; the `formtarget` attribute of the {{HTMLElement("input")}} or {{HTMLElement("button")}} elements; or the `windowName` parameter in the {{domxref("Window.open()","window.open()")}} method. In addition, the name becomes a property of the {{domxref("Window")}} and {{domxref("Document")}} objects, containing a reference to the embedded window or the element itself.
+
+- `privateToken` {{experimental_inline}}
+  - : Contains a string representation of an options object representing a [private state token](/en-US/docs/Web/API/Private_State_Token_API/Using) operation; this object has the same structure as the `RequestInit` dictionary's [`privateToken`](/en-US/docs/Web/API/RequestInit#privatetoken) property. IFrames containing this attribute can initiate operations such as issuing or redeeming tokens when their embedded content is loaded.
+
 - `referrerpolicy`
   - : Indicates which [referrer](/en-US/docs/Web/API/Document/referrer) to send when fetching the frame's resource:
     - `no-referrer`
