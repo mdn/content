@@ -44,7 +44,7 @@ svg {
 
 #### JavaScript
 
-We grab references to the `<a>`, `<text>`, and `<div>` elements in script, then declare an interest invoker/target relationship between the `<a>` and the `<div>` by setting the `<a>` element's `interestForElement` property equal to a reference to the `<div>`. We then set the `<text>` content equal to a string containing the invoker target element's `tagName`, retrieved via `invoker.interestForElement.tagName`.
+We get references to the `<a>`, `<text>`, and `<div>` elements in script. We then create the interest invoker-target relationship between the `<a>` and the `<div>` by setting the `<a>` element's `interestForElement` property equal to a reference to the `<div>`. We then update the `<text>` content to display the target element's `tagName`, retrieved via `invoker.interestForElement.tagName`.
 
 ```js live-sample___basic-interest-invoker
 const invoker = document.querySelector("a");
