@@ -24,7 +24,7 @@ In this example, we use an SVG `<a>` element's `interestForElement` property to 
 
 #### HTML
 
-We include an SVG `<a>` element with a `<text>` element inside it, and an HTML `<div>` element. We turn the `<div>` element into a popover by setting a `popover` attribute on it, and include some link text inside a {{svgelement("text")}} element.
+The markup contains an SVG {{svgelement("a")}} element with a {{svgelement("text")}} element, and the link text is included within the `<text>` element. There's also an HTML `<div>` element. We turn the `<div>` element into a popover by setting the `popover` attribute on it.
 
 ```html live-sample___basic-interest-invoker
 <svg>
