@@ -100,7 +100,7 @@ If you include two values and the first value is the keyword `normal` or a `<len
 
 ### Multiple animations
 
-When specifying ranges for multiple animations, the `animation-range` shorthand property is specified as one or more single animation ranges, separated by commas. Each animation-range is applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and the `animation-range` property values do not match, if there are more `animation-range` value than animations, the extra ranges are ignore. If there are more animations than ranges, the list of `animation-range` values are repeated until there is a corresponding range for each animation. For example, if we set `animation-range: 25% 75%, normal;`, the animation range of all the odd numbered animations `25% 75%` and all the even animations will be be `0% 100%`.
+When specifying ranges for multiple animations, the `animation-range` shorthand property is specified as one or more single animation ranges, separated by commas. Each animation-range is applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and the `animation-range` property values do not match, if there are more `animation-range` value than animations, the extra ranges are ignore. If there are more animations than ranges, the list of `animation-range` values are repeated until there is a corresponding range for each animation. For example, if we set `animation-range: 25% 75%, normal;`, the animation range of all the odd numbered animations `25% 75%` and all the even animations will be `0% 100%`.
 
 ## Formal definition
 
