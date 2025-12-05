@@ -39,7 +39,7 @@ selector::details-content
 
 ### Basic example
 
-This example demonstrates the basic usage  of the `::details-content` pseudo-element to stayle the content of a {{HTMLElement("details")}} element.
+This example demonstrates the basic usage of the `::details-content` pseudo-element to stayle the content of a {{HTMLElement("details")}} element.
 
 #### HTML
 
