@@ -52,6 +52,7 @@ Resources can opt in using either:
 ```http
 Cross-Origin-Resource-Policy: cross-origin
 ```
+
 **or CORS:**
 
 ```http
