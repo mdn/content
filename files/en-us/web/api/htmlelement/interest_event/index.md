@@ -56,7 +56,7 @@ We then set two event listeners on the target element, for the `interest` and `l
 
 ```js live-sample___basic-interest-invoker
 target.addEventListener("interest", (e) => {
-  target.textContent = `Interest being shown via the ${e.source.tagName} element.`;
+  target.textContent = `Interest shown via the ${e.source.tagName} element.`;
 });
 
 target.addEventListener("loseinterest", () => {
