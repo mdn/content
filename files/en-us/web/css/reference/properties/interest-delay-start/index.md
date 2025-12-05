@@ -111,7 +111,7 @@ The markup includes three `<button>` elements wrapped in a paragraph with a `con
   <button interestfor="mypopover">Button 2</button>
   <button interestfor="mypopover">Button 3</button>
 </p>
-<p id="mypopover" popover>A hover toolip</p>
+<p id="mypopover" popover>Hover tooltip</p>
 ```
 
 #### CSS
