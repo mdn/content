@@ -78,9 +78,9 @@ const popover = document.getElementById("mypopover");
 
 popover.addEventListener("toggle", (event) => {
   if (event.newState === "open") {
-    console.log("Popover has been shown");
+    log("Popover has been shown");
   } else {
-    console.log("Popover has been hidden");
+    log("Popover has been hidden");
   }
 });
 ```

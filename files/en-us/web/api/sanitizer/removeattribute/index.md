@@ -10,10 +10,11 @@ browser-compat: api.Sanitizer.removeAttribute
 
 {{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
-The **`removeAttribute()`** method of the {{domxref("Sanitizer")}} interface sets an attribute to be disallowed on all elements.
+The **`removeAttribute()`** method of the {{domxref("Sanitizer")}} interface sets an attribute to be removed from all elements when the sanitizer is used.
 
-The specified attribute is added to the list of [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes_2) in this sanitizer's configuration.
-The attribute is removed from the [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes_2) list if present.
+The method can be used with either an [allow configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations) or a [remove configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#remove_configurations).
+If used with a remove configuration, the specified attribute is added to the `removeAttributes` array.
+If used with an allow configuration, the attribute is removed from the `attributes` array (if present).
 
 Note that to allow/disallow attributes only on specific elements use {{domxref('Sanitizer.allowElement()')}}.
 
@@ -34,7 +35,12 @@ removeAttribute(attribute)
 
 ### Return value
 
-None (`undefined`).
+`true` if the operation changed the configuration to disallow the attribute, and `false` if the attribute was already disallowed.
+
+Note that `false` might be returned if the internal configuration:
+
+- defines a [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes) array that already contains the specified attribute (and is hence already filtered)
+- instead defines a [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes) array that already omits the attribute (and is hence already disallowed)
 
 ## Examples
 

@@ -8,17 +8,13 @@ browser-compat: api.Document.importNode
 
 {{APIRef("DOM")}}
 
-The {{domxref("Document")}} object's **`importNode()`** method creates a copy of a
-{{domxref("Node")}} or {{domxref("DocumentFragment")}} from another document, to be
-inserted into the current document later.
+The **`importNode()`** method of the {{domxref("Document")}} interface creates a copy of a {{domxref("Node")}} or {{domxref("DocumentFragment")}} from another document, to be inserted into the current document later.
 
-The imported node is not yet included in the document tree. To include it, you need to
-call an insertion method such as {{domxref("Node.appendChild", "appendChild()")}} or
-{{domxref("Node.insertBefore", "insertBefore()")}} with a node that _is_
-currently in the document tree.
+The imported node is not yet included in the document tree. To include it, you need to call an insertion method such as {{domxref("Node.appendChild", "appendChild()")}} or {{domxref("Node.insertBefore", "insertBefore()")}} with a node that _is_ currently in the document tree.
 
-Unlike {{domxref("document.adoptNode()")}}, the original node is not removed from its
-original document. The imported node is a clone of the original.
+Unlike {{domxref("document.adoptNode()")}}, the original node is not removed from its original document. The imported node is a clone of the original.
+
+The {{domxref("Node.cloneNode()")}} method also creates a copy of a node. The difference is that `importNode()` clones the node in the context of the calling document, whereas `cloneNode()` uses the document of the node being cloned. The document context determines the {{domxref("CustomElementRegistry")}} for constructing any custom elements. For this reason, to clone nodes to be used in another document, use `importNode()` on the target document. The {{domxref("HTMLTemplateElement.content")}} is owned by a separate document, so it should also be cloned using `document.importNode()` so that custom element descendants are constructed using the definitions in the current document. See the {{domxref("Node.cloneNode()")}} page's examples for more details.
 
 ## Syntax
 
@@ -49,6 +45,8 @@ The copied `importedNode` in the scope of the importing document.
 > `importedNode`'s {{domxref("Node.parentNode")}} is `null`, since it has not yet been inserted into the document tree!
 
 ## Examples
+
+### Using importNode()
 
 ```js
 const iframe = document.querySelector("iframe");

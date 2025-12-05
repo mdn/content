@@ -150,28 +150,28 @@ This section describes how to build the project locally and how to prepare your 
 
 ### Preparing the project
 
-To serve the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn 1 (Classic)](https://classic.yarnpkg.com/) installed.
+To serve the site locally, you need to have [Node.js](https://nodejs.org/) installed, which comes bundled with [npm](https://www.npmjs.com/).
 You can check if these are installed by running the following commands:
 
 ```bash
 node -v
-yarn -v
+npm -v
 ```
 
-After you have installed Node.js and Yarn, you can install the dependencies using `yarn`:
+After you have installed Node.js, you can install the dependencies using `npm install`:
 
 ```bash
 # Assuming your fork is in ~/repos/content
 cd ~/repos/content
-yarn
+npm install
 ```
 
 ### Running the project
 
-After you have installed all dependencies, you can start the local preview using `yarn start`:
+After you have installed all dependencies, you can start the local preview using `npm start`:
 
 ```bash
-yarn start
+npm start
 ```
 
 Once started, a live preview is available at `http://localhost:5042/`
@@ -218,7 +218,7 @@ This will make it easier to submit a pull request for your changes.
 
 To ensure that all MDN documents follow the same formatting, we use both [Prettier](https://prettier.io/) and [MarkdownLint](https://github.com/DavidAnson/markdownlint) to format and lint Markdown files. This helps us enforce uniform styling across all documents with minimal reviewer intervention.
 
-If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev/), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow while authoring, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/editors.html). Alternatively, you may run `yarn fix:md` in the command line to manually format all Markdown files.
+If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev/), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow while authoring, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/editors.html). Alternatively, you may run `npm run fix:md` in the command line to manually format all Markdown files.
 
 > [!NOTE]
 > Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes).
@@ -237,21 +237,21 @@ There are a few things to keep in mind:
 
 ### Moving documents
 
-Moving one or more documents (or an entire tree of documents) is made easier with the `yarn content move` command.
+Moving one or more documents (or an entire tree of documents) is made easier with the `npm run content move` command.
 This command moves the file and fixes up redirects automatically. You can use this command as shown below:
 
 ```bash
-yarn content move <from-slug> <to-slug> [locale]
+npm run content move <from-slug> <to-slug> [locale]
 ```
 
 > [!WARNING]
 > Don't edit the `_redirects.txt` file manually.
 > See the [Redirecting a document](#redirecting-a-document) section for more information.
 
-To use `yarn content move`, provide the slug of the document you'd like to move (e.g., `Learn/Accessibility`), and the slug of its new location (e.g., `Learn/A11y`).
+To use `npm run content move`, provide the slug of the document you'd like to move (e.g., `Learn/Accessibility`), and the slug of its new location (e.g., `Learn/A11y`).
 The locale of the existing document can be provided as an optional third argument (this defaults to `en-US`). For other locales,
 `CONTENT_TRANSLATED_ROOT` has to be set correctly in your environment.
-If the document you'd like to move contains child documents (i.e., it represents a document tree), the `yarn content move` command will move the entire tree.
+If the document you'd like to move contains child documents (i.e., it represents a document tree), the `npm run content move` command will move the entire tree.
 
 Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-US/Learn/A11y`, you can do so as follows:
 
@@ -267,11 +267,11 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
    git checkout -b moving-a11y
    ```
 
-2. Move files with `yarn content move`.
+2. Move files with `npm run content move`.
    This will delete and modify existing files, as well as create new files.
 
    ```bash
-   yarn content move Learn/Accessibility Learn/A11y
+   npm run content move Learn/Accessibility Learn/A11y
    ```
 
 3. Once files are moved we need to update references to those files in the other content files as well. Use following command to update all the references automatically in one go:
@@ -291,22 +291,22 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 
 ### Deleting a document
 
-Similar to moving files, you can delete documents or a tree of documents easily by using the `yarn content delete` command.
+Similar to moving files, you can delete documents or a tree of documents easily by using the `npm run content delete` command.
 
 > [!WARNING]
-> Don't delete files or directories from the repository manually; the `yarn content delete` command handles the necessary changes such as updating the `_wikihistory.json` file.
+> Don't delete files or directories from the repository manually; the `npm run content delete` command handles the necessary changes such as updating the `_wikihistory.json` file.
 
 You can use this command as shown below:
 
 ```bash
-yarn content delete <document-slug> [locale] --redirect <redirect-slug-or-url>
+npm run content delete <document-slug> [locale] -- --redirect <redirect-slug-or-url>
 ```
 
-To use `yarn content delete`, provide the slug of the document you'd like to delete (e.g., `Learn/Accessibility`), and the locale as an optional second argument (this defaults to `en-US`).
+To use `npm run content delete`, provide the slug of the document you'd like to delete (e.g., `Learn/Accessibility`), and the locale as an optional second argument (this defaults to `en-US`).
 If the slug of the page you wish to delete contains special characters, include it in quotes. For example:
 
 ```bash
-yarn content delete "Glossary/Round_Trip_Time_(RTT)" --redirect Glossary/Latency
+npm run content delete "Glossary/Round_Trip_Time_(RTT)" -- --redirect Glossary/Latency
 ```
 
 If the document has child documents (i.e., the document represents a document tree), you must specify the `-r, --recursive` option, else the command will fail.
@@ -324,10 +324,10 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
    git checkout -b deleting-a11y
    ```
 
-2. Run the `yarn content delete` command and redirect all deleted documents.
+2. Run the `npm run content delete` command and redirect all deleted documents.
 
    ```bash
-   yarn content delete Learn/Accessibility --recursive --redirect Web/Accessibility
+   npm run content delete Learn/Accessibility -- --recursive --redirect Web/Accessibility
    ```
 
    > [!WARNING]
@@ -348,7 +348,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 If you are [moving a document](#moving-documents) as shown above you don't need to create a redirect.
 However, you may need to do so when fixing a broken link or after [deleting a document](#deleting-a-document) without the `--redirect` flag.
 
-You may do this by using the `yarn content add-redirect` command.
+You may do this by using the `npm run content add-redirect` command.
 
 1. Start a fresh branch to work in:
 
@@ -362,10 +362,10 @@ You may do this by using the `yarn content add-redirect` command.
    git checkout -b deleting-a11y
    ```
 
-2. Add a redirect with `yarn content add-redirect`. The target page can be a page on MDN or an external URL:
+2. Add a redirect with `npm run content add-redirect`. The target page can be a page on MDN or an external URL:
 
    ```bash
-   yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
+   npm run content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
    ```
 
 3. Commit all of the changed files and pushing your branch to your fork:

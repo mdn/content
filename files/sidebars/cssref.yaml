@@ -227,7 +227,6 @@ sidebar:
       - /Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning
       - /Web/CSS/Guides/Logical_properties_and_values/Margins_borders_padding
       - /Web/CSS/Guides/Logical_properties_and_values/Sizing
-      - /Web/CSS/Guides/Logical_properties_and_values/Houdini
   - title: Masking
     details: closed
     children:

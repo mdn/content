@@ -589,7 +589,7 @@ To complete the exercise:
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
 2. Add code to loop from 10 down to 0. We've provided you with an initializer — `let i = 10;`.
-3. For each iteration, create a new paragraph and append it to the output `<div>`, which we've selected using `const output = document.querySelector('.output');`. We've provided you with three code lines inside comment that need to be used somewhere inside the loop:
+3. For each iteration, create a new paragraph and append it to the output `<div>`, which we've selected using `const output = document.querySelector('.output');`. We've provided you with three code lines inside comments that need to be used somewhere inside the loop:
    1. `const para = document.createElement('p');` — creates a new paragraph.
    2. `output.appendChild(para);` — appends the paragraph to the output `<div>`.
    3. `para.textContent =` — makes the text inside the paragraph equal to whatever you put on the right-hand side, after the equals sign.
