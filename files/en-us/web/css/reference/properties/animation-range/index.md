@@ -12,8 +12,8 @@ The **`animation-range`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US
 
 This property is a shorthand for the following CSS properties:
 
-- [`animation-range-start`](/en-US/docs/Web/CSS/Reference/Properties/animation-range-start)
-- [`animation-range-end`](/en-US/docs/Web/CSS/Reference/Properties/animation-range-end)
+- {{cssxref("animation-range-start")}}
+- {{cssxref("animation-range-end")}}
 
 ## Syntax
 

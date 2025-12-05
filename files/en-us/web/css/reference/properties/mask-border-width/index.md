@@ -68,7 +68,7 @@ The `mask-border-width` property may be specified using one, two, three, or four
 
 ### Basic usage
 
-`mask-border-width` defines the width of the border mask — setting this to a different value to [`mask-border-slice`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-slice) will cause the slices to be scaled to fit the border mask.
+`mask-border-width` defines the width of the border mask — setting this to a different value to {{cssxref("mask-border-slice")}} will cause the slices to be scaled to fit the border mask.
 
 ```css
 /* Final mask scaled down to 20px wide */
@@ -83,7 +83,7 @@ Chromium-based browsers support an outdated version of this property — `mask-b
 ```
 
 > [!NOTE]
-> The [`mask-border`](/en-US/docs/Web/CSS/Reference/Properties/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
+> The {{cssxref("mask-border")}} page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
 
 ## Specifications
 
