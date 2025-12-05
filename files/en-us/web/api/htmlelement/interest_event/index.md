@@ -70,7 +70,7 @@ The example renders like this:
 
 {{embedlivesample("basic-interest-invoker", "100%", "100")}}
 
-Try showing/losing interest in the button (for example, by hovering or focusing it) to see how the `<p>` text changes.
+Try showing or losing interest in the button (for example, by hovering or focusing it) to see how the `<p>` text changes.
 
 ## Specifications
 
