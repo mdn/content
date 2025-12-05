@@ -147,7 +147,7 @@ Here are some popular editors:
           rel="external">Discourse</a>, <a href="irc://irc.gnome.org/%23gedit">IRC</a>
       </td>
       <td>
-        <a href="https://help.gnome.org/users/gedit/stable/">Online Manual</a>
+        <a href="https://gedit-text-editor.org/user-manuals/gedit/">Online Manual</a>
       </td>
       <td><a href="https://wiki.gnome.org/Apps/Gedit/ThirdPartyPlugins">Yes</a></td>
     </tr>
@@ -415,7 +415,7 @@ When you install a new text editor, your OS will probably continue to open text 
 
 - Linux
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
-  - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
+  - [GNOME](https://unix.stackexchange.com/questions/41372/changing-file-associations-in-gnome)
   - [KDE](https://userbase.kde.org/System_Settings/File_Associations)
 
 ## Next steps

@@ -7,7 +7,7 @@ browser-compat: http.headers.Referrer-Policy
 sidebar: http
 ---
 
-The HTTP **`Referrer-Policy`** {{Glossary("response header")}} controls how much [referrer information](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (sent with the {{HTTPHeader("Referer")}} header) should be included with requests.
+The HTTP **`Referrer-Policy`** {{Glossary("response header")}} controls how much [referrer information](/en-US/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) (sent with the {{HTTPHeader("Referer")}} header) should be included with requests.
 Aside from the HTTP header, you can [set this policy in HTML](#integration_with_html).
 
 <table class="properties">
@@ -186,8 +186,8 @@ All of these settings take the same set of values: `0 = no-referrer`, `1 = same-
 
 ## See also
 
-- [Web security > Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
+- [Web security > Referer header: privacy and security concerns](/en-US/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns)
 - When using [Fetch](/en-US/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
 - [HTTP referer on Wikipedia](https://en.wikipedia.org/wiki/HTTP_referer)
 - [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

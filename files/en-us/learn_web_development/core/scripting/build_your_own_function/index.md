@@ -78,9 +78,7 @@ To begin with, let's put together a basic function.
    closeBtn.textContent = "x";
    panel.appendChild(closeBtn);
 
-   closeBtn.addEventListener("click", () =>
-     panel.parentNode.removeChild(panel),
-   );
+   closeBtn.addEventListener("click", () => body.removeChild(panel));
    ```
 
 This is quite a lot of code to go through, so we'll walk you through it bit by bit.
@@ -117,10 +115,10 @@ panel.appendChild(closeBtn);
 
 Finally, we call {{domxref("EventTarget/addEventListener", "addEventListener()")}} to add a function that will be called when the user clicks the "close" button. The code will delete the whole panel from the page — to close the message box.
 
-Briefly, the `addEventListener()` method is provided by the button (or in fact, any element on the page) that can be passed a function and the name of an event. In this case, the name of the event is 'click', meaning that when the user clicks the button, the function will run. You'll learn a lot more about events in our [events article](/en-US/docs/Learn_web_development/Core/Scripting/Events). The line inside the function uses the {{domxref("Node.removeChild()")}} DOM API function to specify that we want to remove a specific child element of the HTML element — in this case, the panel `<div>`.
+Briefly, the `addEventListener()` method can be called on any element on the page, and is usually passed two arguments: the name of an event and a function to run when the event occurs. In this case, the event name is `click`, meaning that when the user clicks the button, the function will run. You'll learn a lot more about events in our [events article](/en-US/docs/Learn_web_development/Core/Scripting/Events). The line inside the function uses the {{domxref("Node.removeChild()", "removeChild()")}} method to specify that we want to remove a specific child element of the `<body>` element: in this case, the panel `<div>`.
 
 ```js
-closeBtn.addEventListener("click", () => panel.parentNode.removeChild(panel));
+closeBtn.addEventListener("click", () => body.removeChild(panel));
 ```
 
 Basically, this whole block of code is generating a block of HTML that looks like so, and inserting it into the page:

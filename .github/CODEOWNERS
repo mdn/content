@@ -59,9 +59,10 @@
 /SECURITY.md @mdn/engineering
 # Scripts and Tests
 /scripts @mdn/engineering
+/scripts/content @mdn/content-team
 /tests   @mdn/engineering
 
-# These are @mdn-bot because the auto-merge GHA workflow uses the PAT of this account.
-# If another reviewer is specified, update the PAT token or auto-merge will cease to be automatic.
-/package.json @mdn/engineering @mdn-bot
-/yarn.lock    @mdn/engineering @mdn-bot
+# Dependencies
+/package.json      @mdn/engineering @mdn-bot
+/package-lock.json @mdn/engineering @mdn-bot
+/yarn.lock         @mdn/engineering @mdn-bot

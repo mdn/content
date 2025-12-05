@@ -5,7 +5,7 @@ on:
     paths:
       - .nvmrc
       - package.json
-      - yarn.lock
+      - package-lock.json
       - .github/workflows/pr-check_scripts.yml
 
 # No GITHUB_TOKEN permissions, as we only use it to increase API limit.
@@ -24,15 +24,14 @@ jobs:
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          cache: npm
 
-      - name: yarn install
-        run: yarn --frozen-lockfile
+      - name: npm ci
+        run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: yarn up-to-date-check
+      - run: npm run up-to-date-check
 
   start:
     runs-on: ubuntu-latest
@@ -46,16 +45,17 @@ jobs:
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          cache: npm
 
-      - name: yarn install
-        run: yarn --frozen-lockfile
+      - name: npm ci
+        run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: yarn start
-        run: yarn start > /tmp/stdout.log 2> /tmp/stderr.log &
+      - name: npm start
+        run: npm start > /tmp/stdout.log 2> /tmp/stderr.log &
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Wait for Rari (localhost:8083)
         run: curl --retry-connrefused --retry 5 -I http://localhost:8083/en-US/
@@ -88,15 +88,14 @@ jobs:
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          cache: npm
 
-      - name: yarn install
-        run: yarn --frozen-lockfile
+      - name: npm ci
+        run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: yarn filecheck --help
+      - run: npm run filecheck -- --help
 
   content:
     runs-on: ubuntu-latest
@@ -110,19 +109,18 @@ jobs:
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          cache: npm
 
-      - name: Install all yarn packages
-        run: yarn --frozen-lockfile
+      - name: Install
+        run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: yarn content --help
+      - run: npm run content -- --help
 
-      - run: yarn content fix-redirects en-US
+      - run: npm run content fix-redirects en-US
 
-      - run: yarn content validate-redirects en-US
+      - run: npm run content validate-redirects en-US
 
   build:
     runs-on: ubuntu-latest
@@ -136,12 +134,11 @@ jobs:
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          cache: npm
 
-      - name: yarn install
-        run: yarn --frozen-lockfile
+      - name: npm ci
+        run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: yarn build --help
+      - run: npm run build -- --help

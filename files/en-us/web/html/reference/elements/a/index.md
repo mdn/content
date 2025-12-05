@@ -64,7 +64,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
     > [!NOTE]
     >
-    > - `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy), or the `blob:` and `data:` schemes.
+    > - `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Defenses/Same-origin_policy), or the `blob:` and `data:` schemes.
     > - How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
     > - If the `Content-Disposition` header has different information from the `download` attribute, resulting behavior may differ:
     >   - If the header specifies a `filename`, it takes priority over a filename specified in the `download` attribute.
@@ -453,7 +453,7 @@ document
 
 ## Security and privacy
 
-`<a>` elements can have consequences for users' security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
+`<a>` elements can have consequences for users' security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) for information.
 
 Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks, although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
 

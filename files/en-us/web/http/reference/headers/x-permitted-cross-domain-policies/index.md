@@ -49,7 +49,7 @@ X-Permitted-Cross-Domain-Policies: <permitted-cross-domain-policy>
 ## Description
 
 Web clients such as Adobe Acrobat or Apache Flex can load web documents, which may in turn load resources from the same site or other sites.
-Access is restricted to same-site resources by default, due to the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), but cross-origin sites may choose to make some or all of their resources available to clients cross-origin using special files, referred to as a cross-domain policy files.
+Access is restricted to same-site resources by default, due to the [same origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy), but cross-origin sites may choose to make some or all of their resources available to clients cross-origin using special files, referred to as a cross-domain policy files.
 
 A "master" cross-domain policy file may be defined as `crossdomain.xml` file in the root of the domain, for example: `http://example.com/crossdomain.xml`.
 The master file defines the _meta-policy_ for the whole site using the `permitted-cross-domain-policies` attribute of the `<site-control>` tag.

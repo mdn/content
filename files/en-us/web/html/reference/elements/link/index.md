@@ -227,7 +227,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch.
     The browser can use this to verify that the fetched resource has been delivered without unexpected manipulation.
     The attribute must only be specified when the `rel` attribute is specified to `stylesheet`, `preload`, or `modulepreload`.
-    See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
+    See [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
 - `media`
   - : This attribute specifies the media that the linked resource applies to. Its value must be a media type / [media query](/en-US/docs/Web/CSS/Guides/Media_queries).
     This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.
