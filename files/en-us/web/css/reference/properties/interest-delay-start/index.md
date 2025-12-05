@@ -103,7 +103,7 @@ This is a useful technique. Having a popover appear as soon as interest is shown
 
 #### HTML
 
-We include three `<button>` elements wrapped in a paragraph with a `class` of `container`, and another paragraph that has been turned into a popover using the `popover` attribute. All three buttons are set up as interest invokers and given the popover as a target using the `interestfor` attribute.
+The markup includes three `<button>` elements wrapped in a paragraph with a `container` class, and another paragraph that has been turned into a popover using the `popover` attribute. All three buttons are set up as interest invokers and reference the popover as their target using the `interestfor` attribute.
 
 ```html live-sample___interest-delay-remove-on-interest
 <p class="container">
