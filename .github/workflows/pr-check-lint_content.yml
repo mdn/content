@@ -88,7 +88,6 @@ jobs:
         if: steps.check.outputs.HAS_FILES == 'true'
         run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint and format markdown files

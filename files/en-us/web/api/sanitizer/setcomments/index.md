@@ -12,8 +12,6 @@ browser-compat: api.Sanitizer.setComments
 
 The **`setComments()`** method of the {{domxref("Sanitizer")}} interface sets whether comments will be allowed or removed by the sanitizer.
 
-The method sets the [`comments`](/en-US/docs/Web/API/SanitizerConfig#comments) property in this sanitizer's configuration.
-
 ## Syntax
 
 ```js-nolint
@@ -27,7 +25,7 @@ setComments(allow);
 
 ### Return value
 
-None (`undefined`).
+`true` if the operation changed the configuration, and `false` if the configuration already set [`comments`](/en-US/docs/Web/API/SanitizerConfig#comments) to the specified value.
 
 ## Examples
 
