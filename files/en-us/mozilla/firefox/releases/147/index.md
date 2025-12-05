@@ -72,6 +72,8 @@ Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for add-on developers
 
+- When using [navigator.clipboard.readText()](/en-US/docs/Web/API/Clipboard/readText) or [navigator.clipboard.read()](/en-US/docs/Web/API/Clipboard/read) without the `clipboardRead` permission, a clipboard paste button is displayed to obtain user confirmation. If the extension has `clipboardRead` permission, it reads the clipboard data without user confirmation. For more information on working with the clipboard in extensions, see [Interact with the clipboard](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard). ([Firefox bug 1773681](https://bugzil.la/1773681))
+
 <!-- ### Removals -->
 
 <!-- ### Other -->
