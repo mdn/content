@@ -75,7 +75,7 @@ In the CSS, we specify a rule with a `.delay` selector that applies an `interest
 
 #### JavaScript
 
-In our script, we grab references to the `<button>` and the checkbox, then create an event listener that toggles setting and unsetting the `delay` class on the `<button>` when the checkbox value changes (is checked or unchecked).
+In our script, we get references to the `<button>` and the checkbox, then create an event listener that toggles the `delay` class on the `<button>` whenever the checkbox value changes (when it is checked or unchecked).
 
 ```js live-sample___interest-invoker-delay
 const btn = document.querySelector("button");
