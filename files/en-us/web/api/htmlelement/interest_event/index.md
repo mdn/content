@@ -37,7 +37,7 @@ We set up the relationship between the `<button>` element interest invoker and i
 
 ```html live-sample___basic-interest-invoker
 <button href="#" interestfor="mytarget">Interest invoker</button>
-<p id="mytarget">Interest not being shown.</p>
+<p id="mytarget">No interest being shown currently.</p>
 ```
 
 #### JavaScript
