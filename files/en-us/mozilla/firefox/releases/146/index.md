@@ -16,7 +16,10 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
+
+- In the Rule view of the Inspector, when a displayed ruleset declares 10 or more [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) that are unused, those properties are hidden by default. This reduces clutter, and in some cases also speeds up the rendering of the Inspector panel. In such cases, the hidden properties can be displayed via a "Show..." button provided at the bottom of the ruleset.
+  ([Firefox bug 1719461](https://bugzil.la/1719461)).
 
 <!-- ### HTML -->
 
