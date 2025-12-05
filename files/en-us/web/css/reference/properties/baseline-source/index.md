@@ -49,7 +49,9 @@ baseline-source: unset;
 This example demonstrates using the `baseline-source` property to control the baseline alignment of inline flex containers.
 
 #### HTML
-Our HTML includes several {{htmlelement("span")}} elements, which are  generic inline container for phrasing content, including three continaining four nested `<span>` children.
+
+Our HTML includes several {{htmlelement("span")}} elements, which are generic inline containers for phrasing content.
+Three of the `<span>` elements contain nested `<span>` children.
 
 ```html
 <span>Baseline ___</span>
