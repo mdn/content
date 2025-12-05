@@ -48,7 +48,7 @@ interest-delay-start: unset;
 
 ## Examples
 
-### Basic `interest-delay-start` effect
+### Creating a basic `interest-delay-start` effect
 
 In this example, we demonstrate how `interest-delay-start` affects interest invoker behavior.
 
