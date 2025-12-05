@@ -32,12 +32,11 @@ interest-delay-start: unset;
 
 ### Values
 
-The `interest-delay-start` property value is specified using the keyword `normal` or a {{cssxref("&lt;time>")}} value:
 
 - `normal`
-  - : The initial value; specifies that the delay should be set to the browser's default value.
+  - : Sets the delay to the browser's default delay. This is the initial value.
 - {{cssxref("&lt;time>")}}
-  - : Sets the delay to a specific duration.
+  - : Sets the delay to a specific duration. The value must be positive, otherwise the property becomes invalid.
 
 ## Formal definition
 
