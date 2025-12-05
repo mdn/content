@@ -48,6 +48,7 @@ A page using `Cross-Origin-Embedder-Policy`: `require-corp` may only load resour
 Resources can opt in using either:
 
 **Cross-Origin-Resource-Policy (CORP):**
+
 ```http
 Cross-Origin-Resource-Policy: cross-origin
 ```
