@@ -40,6 +40,11 @@ svg {
   width: 200px;
   height: 100px;
 }
+
+svg a text {
+  fill: blue;
+  text-decoration: underline;
+}
 ```
 
 #### JavaScript

@@ -60,8 +60,11 @@ The markup includes a {{htmlelement("button")}}, a {{htmlelement("p")}}, and an 
 <p id="mypopover" popover>Hover tooltip</p>
 <form>
   <input type="checkbox" id="apply-delay" />
-  <label for="apply-delay">Apply an <code>interest-delay-end</code> of <code>2s</code></label>
+  <label for="apply-delay">
+    Apply an <code>interest-delay-end</code> of <code>2s</code>
+  </label>
 </form>
+```
 
 #### CSS
 
@@ -91,9 +94,9 @@ This renders as follows:
 
 {{embedlivesample("interest-invoker-delay", "100%", "100")}}
 
-Try showing interest in the button (for example by hovering or focusing it) and then losing interest to observe the popover showing and hiding. By default these actions should happen after a very short delay.
+Try showing interest in the button (for example, by hovering or focusing it) and then losing interest to observe the popover showing and hiding. By default, the popover shows and hides after a very short delay.
 
-Now try checking the checkbox and trying the same actions again. This time, the delay between interest being shown and the popover being shown is unaffected, but the delay between interest being lost and the popover disappearing should be increased to 2 seconds.
+Now check the checkbox and try the same actions again. This time, the delay between showing interest and the popover appearing is unaffected, but the delay between losing interest and the popover disappearing should be increased to `2s`.
 
 ## Specifications
 

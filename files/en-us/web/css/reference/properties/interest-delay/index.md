@@ -82,7 +82,9 @@ The markup includes a {{htmlelement("button")}}, a {{htmlelement("p")}}, and an 
 <p id="mypopover" popover>Hover tooltip</p>
 <form>
   <input type="checkbox" id="apply-delay" />
-  <label for="apply-delay">Apply an <code>interest-delay</code> of <code>1s 2s</code></label>
+  <label for="apply-delay">
+    Apply an <code>interest-delay</code> of <code>1s 2s</code>
+  </label>
 </form>
 ```
 

@@ -51,8 +51,8 @@ const target = invoker.interestForElement;
 
 We then set two event listeners on the target element, for the `interest` and `loseinterest` events.
 
-- When interest is shown, we print a message into the target `<p>` element's text context to say that interest has been shown via the `<button>` element. Note how you can get a reference to the interest invoker via the event object's {{domxref("InterestEvent.source", "source")}} property.
-- When interest is lost, we report that, again via a message printed to the paragraph text.
+- When interest is shown, we update the target `<p>` element's text content to report the event and include the element that triggered it; in this example, that's the `<button>` element. Note how you can get a reference to the interest invoker via the event object's {{domxref("InterestEvent.source", "source")}} property.
+- When interest is lost, we update the paragraph text to report that interest is no longer being shown.
 
 ```js live-sample___basic-interest-invoker
 target.addEventListener("interest", (e) => {
@@ -70,7 +70,7 @@ The example renders like this:
 
 {{embedlivesample("basic-interest-invoker", "100%", "100")}}
 
-Try showing or losing interest in the button (for example, by hovering or focusing it) to see how the `<p>` text changes.
+Try showing and losing interest in the button (for example, by hovering or focusing it) to see how the `<p>` text changes.
 
 ## Specifications
 
@@ -82,5 +82,6 @@ Try showing or losing interest in the button (for example, by hovering or focusi
 
 ## See also
 
+- {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} event
 - [Popover API](/en-US/docs/Web/API/Popover_API)
 - [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)
