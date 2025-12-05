@@ -36,27 +36,39 @@ button.
   </form>
 </dialog>
 
-<p>
-  <button id="openDialog">Open Dialog</button>
-</p>
-<p id="dialogStatus"></p>
+<button id="open">Open Dialog</button>
+```
+
+```html hidden
+<pre id="status-text"></pre>
+```
+
+```css hidden
+#status-text {
+  height: 120px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const statusText = document.getElementById("status-text");
+function log(text) {
+  statusText.innerText = `${statusText.innerText}${text}\n`;
+  statusText.scrollTop = statusText.scrollHeight;
+}
 ```
 
 ```js
-const openDialog = document.getElementById("openDialog");
 const dialog = document.getElementById("dialog");
-const text = document.getElementById("dialogStatus");
+const openButton = document.getElementById("open");
 
 function openCheck(dialog) {
-  if (dialog.open) {
-    text.innerText = "Dialog open";
-  } else {
-    text.innerText = "Dialog closed";
-  }
+  log(dialog.open ? "Dialog: open" : "Dialog: closed");
 }
 
-// Update button opens a modal dialog
-openDialog.addEventListener("click", () => {
+openButton.addEventListener("click", () => {
   dialog.showModal();
   openCheck(dialog);
 });
@@ -68,7 +80,7 @@ dialog.addEventListener("close", () => {
 
 ### Result
 
-{{ EmbedLiveSample('Examples', '100%', '200px') }}
+{{ EmbedLiveSample('Examples', '100%', '250px') }}
 
 ## Specifications
 
