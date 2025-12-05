@@ -42,7 +42,7 @@ We set up the relationship between the `<button>` element interest invoker and i
 
 #### JavaScript
 
-We grab a reference to the `<button>` element and its target element (via its {{domxref("HTMLButtonElement.interestForElement", "interestForElement")}} property).
+We get a reference to the `<button>` element and its target element via the {{domxref("HTMLButtonElement.interestForElement", "interestForElement")}} property.
 
 ```js live-sample___basic-interest-invoker
 const invoker = document.querySelector("[interestfor]");
