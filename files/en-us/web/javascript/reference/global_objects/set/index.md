@@ -157,6 +157,7 @@ The following are examples of writable `Set`-like browser objects:
 - {{domxref("CustomStateSet")}}
 - {{domxref("FontFaceSet")}}
 - {{domxref("Highlight")}}
+- {{domxref("ViewTransitionTypeSet")}}
 
 ## Constructor
 
