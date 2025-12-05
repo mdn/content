@@ -17,7 +17,7 @@ The `interest-delay-end` and {{cssxref("interest-delay-start")}} properties can 
 ## Syntax
 
 ```css
-/* Single value */
+/* Keyword or custom delay */
 interest-delay-end: normal;
 interest-delay-end: 2s;
 interest-delay-end: 250ms;
