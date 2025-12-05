@@ -65,7 +65,7 @@ The markup includes a {{htmlelement("button")}}, a {{htmlelement("p")}}, and an 
 
 #### CSS
 
-In the CSS, we specify a rule with a `.delay` selector, which will apply an `interest-delay-end` value of `2s` to any interest invoker the `delay` class is set on. We will set this on the `<button>` when the checkbox is checked using JavaScript.
+In the CSS, we specify a rule with a `.delay` selector that applies an `interest-delay-end` value of `2s` to any interest invoker the `delay` class is set on. We will set this on the `<button>` when the checkbox is checked using JavaScript.
 
 ```css live-sample___interest-invoker-delay
 .delay {
