@@ -128,7 +128,7 @@ button {
 }
 ```
 
-Finally, we combine the {{cssxref(":interest-source")}} pseudo-class with the {{cssxref(":has()")}} pseudo-class to create a ruleset that applies `interest-delay-start: 0s` to all buttons inside the paragraph, only if the paragraph contains a button that interest has been shown on (that is, has been selected by `button:interest-source`).
+Finally, we combine the {{cssxref(":interest-source")}} pseudo-class with the {{cssxref(":has()")}} pseudo-class to apply `interest-delay-start: 0s` to all buttons inside the paragraph, but only when the paragraph contains a button on which interest has been shown (that is, matched by `button:interest-source`).
 
 ```css live-sample___interest-delay-remove-on-interest
 .container:has(button:interest-source) button {
