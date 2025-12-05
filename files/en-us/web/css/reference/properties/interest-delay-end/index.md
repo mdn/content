@@ -56,13 +56,12 @@ In this example, we demonstrate how `interest-delay-end` affects interest invoke
 The markup includes a {{htmlelement("button")}}, a {{htmlelement("p")}}, and an {{htmlelement("input")}} of type `checkbox`. We specify the `<button>` as an interest invoker by giving it the `interestfor` attribute, whose value matches the `id` of the `<p>` element. This makes the paragraph the target element. The paragraph is turned into a popover by giving it the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute, which hides it initially.
 
 ```html live-sample___interest-invoker-delay
-<button interestfor="mypopover">a button</button>
-<p id="mypopover" popover>A hover toolip</p>
+<button interestfor="mypopover">Button</button>
+<p id="mypopover" popover>Hover tooltip</p>
 <form>
-  <label for="apply-delay">Apply <code>interest-delay-end: 2s</code></label>
   <input type="checkbox" id="apply-delay" />
+  <label for="apply-delay">Apply an <code>interest-delay-end</code> of <code>2s</code></label>
 </form>
-```
 
 #### CSS
 
