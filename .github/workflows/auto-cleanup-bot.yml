@@ -25,18 +25,17 @@ jobs:
           node-version-file: ".nvmrc"
           package-manager-cache: false
 
-      - name: Install all yarn packages
-        run: yarn --frozen-lockfile
+      - name: Install
+        run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LEFTHOOK: 0
 
       - name: Lint markdown files
         run: |
-          yarn content fix-flaws
-          yarn fix:md
-          yarn fix:fm
+          npm run content fix-flaws
+          npm run fix:md
+          npm run fix:fm
           node scripts/sort_and_unique_file_lines.js .vscode/dictionaries
         env:
           # Used by the `rari` cli to avoid rate limiting issues

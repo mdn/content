@@ -126,7 +126,7 @@ Inside this inline formatting context, whitespace characters are processed as fo
 3. Next, lines in the source code are joined into single lines by removing any remaining line break characters. They are either transformed into spaces (U+0020) or simply removed, depending on the context before and after the break. The exact choice between the two is browser- and language-dependent. In our example here in English (where spaces separate words), we can expect all line breaks to be "transformed" into spaces. So we end up with:
 
    ```html-nolint
-   <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
+   <h1>◦◦◦Hello◦<span>◦World!</span>⇥◦◦</h1>
    ```
 
    Notably, in languages that have no word separators, such as Chinese, lines are joined with no intervening space. So:
@@ -141,8 +141,7 @@ Inside this inline formatting context, whitespace characters are processed as fo
 4. Next, all tab characters are transformed into space characters, so the example becomes:
 
    ```html-nolint
-   <h1>◦◦◦Hello⏎
-   <span>◦World!</span>◦◦◦</h1>
+   <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
    ```
 
 5. After that, any space immediately following another space (even across two separate inline elements) is ignored, so we end up with:
@@ -368,7 +367,7 @@ There are a few ways of getting around this problem:
   }
   ```
 
-- If you need to rely on `inline-block`, you could set the [`font-size`](/en-US/docs/Web/CSS/Reference/Properties/font-size) of the list to `0`. This only works if the blocks are not sized with `em` units (since `em` is based on `font-size`, the block size would also end up being sized as `0`). Using `rem` units would be a good choice here:
+- If you need to rely on `inline-block`, you could set the {{cssxref("font-size")}} of the list to `0`. This only works if the blocks are not sized with `em` units (since `em` is based on `font-size`, the block size would also end up being sized as `0`). Using `rem` units would be a good choice here:
 
   ```css
   ul {
