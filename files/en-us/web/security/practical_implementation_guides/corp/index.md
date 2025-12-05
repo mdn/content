@@ -37,14 +37,27 @@ Instruct browsers to disallow cross-origin requests made in `no-cors` mode:
 Cross-Origin-Resource-Policy: same-origin
 ```
 
-Instruct browsers to allow cross-origin resource access, including access to features with unthrottled timers (such as {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}}):
+To enable {{jsxref("SharedArrayBuffer")}} and {{domxref("Performance.now()")}}, the document must be cross-origin isolated environment. Include the following headers on the document:
 
 ```http
-Cross-Origin-Resource-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
-This also permits such resources to be embedded.
+A page using `Cross-Origin-Embedder-Policy`: `require-corp` may only load resources that explicitly allow being embedded.
+Resources can opt in using either:
+
+**Cross-Origin-Resource-Policy (CORP):**
+```http
+Cross-Origin-Resource-Policy: cross-origin
+```
+**or CORS:**
+
+```http
+Access-Control-Allow-Origin: https://example.com
+```
+
+CORP and CORS do not themselves enable SharedArrayBuffer they only allow resources to be loaded under COEP so that isolation is maintained.
 
 ## See also
 
