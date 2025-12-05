@@ -32,7 +32,6 @@ interest-delay-start: unset;
 
 ### Values
 
-
 - `normal`
   - : Sets the delay to the browser's default delay. This is the initial value.
 - {{cssxref("&lt;time>")}}
