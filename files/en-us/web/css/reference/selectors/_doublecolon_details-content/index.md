@@ -43,7 +43,7 @@ This example demonstrates the basic usage of the `::details-content` pseudo-elem
 
 #### HTML
 
-Our `<details>` element includes a {{HTMLElement("summary")}} element, whose contents will always be visible. The content details includes a {{HTMLElement("p")}} element.  
+Our `<details>` element includes a {{HTMLElement("summary")}} element, whose contents will always be visible. The content details includes a {{HTMLElement("p")}} element.
 
 ```html
 <details>
