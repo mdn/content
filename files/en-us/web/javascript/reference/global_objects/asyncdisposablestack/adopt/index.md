@@ -45,7 +45,7 @@ This function creates a file handle (as a Node.js [`FileHandle`](https://nodejs.
 async function readFile(path) {
   await using disposer = new AsyncDisposableStack();
   const handle = disposer.adopt(
-    fs.open(path),
+    await fs.open(path),
     async (handle) => await handle.close(),
   );
   const data = await handle.read();

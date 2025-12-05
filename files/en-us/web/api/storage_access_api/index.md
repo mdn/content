@@ -88,7 +88,7 @@ Third party content embedded in an {{htmlelement("iframe")}} that needs to acces
    That means that even if permission is granted, the page will need to load and call `requestStorageAccess()` to activate the permission.
    If permission has already been granted then a call to `requestStorageAccess()` will not require transient activation and the promise will fulfill automatically.
 
-   The only exception to the "blocked by default" behavior is if an embed performs a same-origin navigation to reload itself after after being granted permission or activating a permission.
+   The only exception to the "blocked by default" behavior is if an embed performs a same-origin navigation to reload itself after being granted permission or activating a permission.
    In such cases, the storage access is carried over from the previous navigation.
    This allows the embedded resource to reload itself and gain access to its cookies.
 
@@ -101,7 +101,7 @@ Third party content embedded in an {{htmlelement("iframe")}} that needs to acces
 
 ### Storage access headers
 
-The API requires that a resource must must call `requestStorageAccess()` for each new context to opt-in to activating the storage-access permission, which must already have been granted.
+The API requires that a resource must call `requestStorageAccess()` for each new context to opt-in to activating the storage-access permission, which must already have been granted.
 This in turn means that the embedded resource must first be requested without cookies and loaded so it can call the method.
 
 The storage access headers enable a workflow where the server can request that the permission is activated for the context, avoiding an unnecessary additional load of the embedded resource if permission has already been granted.
@@ -258,7 +258,7 @@ Check the below list if you are having trouble getting a request to work:
      In such cases, `requestStorageAccess()` probably doesn't need to be called at all.
 2. The document and top-level document must not have a `null` origin.
 3. Origins that have never been interacted with as a first party do not have a notion of first-party storage. From the user's perspective, they only have a third-party relationship with that origin. Access requests are automatically denied if the browser detects that the user hasn't interacted with the embedded content in a first-party context recently (in Firefox, "recently" means within 30 days).
-4. The document's window must be a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+4. The document's window must be a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 5. Sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons.
    To handle this, the API provides the [`allow-storage-access-by-user-activation`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow-storage-access-by-user-activation) [sandbox token](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox).
    The `<iframe>` needs to include this to enable storage access requests, along with `allow-scripts` and `allow-same-origin` to allow it to execute a script to call the API and execute it in an origin that can have cookies/state:

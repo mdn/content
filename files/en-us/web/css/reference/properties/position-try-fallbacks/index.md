@@ -64,7 +64,7 @@ The `position-try-fallbacks` property may be specified as either the keyword val
       - : Flips the element's position along the inline axis.
     - `flip-start`
       - : Flips both the inline and block axis values, swapping the `start` properties with each other, and the `end` properties with each other.
-- [`position-area`](/en-US/docs/Web/CSS/Reference/Properties/position-area) value
+- {{cssxref("position-area")}} value
   - : Positions the element relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 [position area grid](/en-US/docs/Web/CSS/Reference/Properties/position-area#description) based on the specified {{cssxref("position-area_value","&lt;position-area>")}} value; the effect is the same as a custom {{cssxref("@position-try")}} fallback option containing only a {{cssxref("position-area")}} descriptor.
 - {{cssxref("dashed-ident")}}
   - : Adds a custom {{cssxref("@position-try")}} option to the fallback options list, the identifying name of which matches the specified `dashed-ident`. If no custom position option exists with that name, the option is ignored.
