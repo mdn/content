@@ -3,12 +3,10 @@ title: "Navigation: currentEntry property"
 short-title: currentEntry
 slug: Web/API/Navigation/currentEntry
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Navigation.currentEntry
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`currentEntry`** read-only property of the
 {{domxref("Navigation")}} interface returns a {{domxref("NavigationHistoryEntry")}} object representing the location the user is currently navigated to right now.

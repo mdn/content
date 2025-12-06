@@ -3,12 +3,10 @@ title: "NavigateEvent: navigationType property"
 short-title: navigationType
 slug: Web/API/NavigateEvent/navigationType
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigateEvent.navigationType
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`navigationType`** read-only property of the
 {{domxref("NavigateEvent")}} interface returns the type of the navigation — `push`, `reload`, `replace`, or `traverse`.

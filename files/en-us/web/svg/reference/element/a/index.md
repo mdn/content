@@ -25,7 +25,7 @@ SVG's `<a>` element is a container, which means you can create a link around tex
 - [`hreflang`](/en-US/docs/Web/HTML/Reference/Elements/a#hreflang)
   - : The human language of the URL or URL fragment that the hyperlink points to.
     _Value type_: **\<string>**; _Default value_: _none_; _Animatable_: **no**
-- [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/a#interestfor) {{experimental_inline}}
+- [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/a#interestfor) {{experimental_inline}} {{non-standard_inline}}
   - : Defines the `<a>` element as an **interest invoker**. Its value is the `id` of a target element that will be affected in some way (normally shown or hidden) when interest is shown or lost on the invoker element (for example, by hovering/unhovering or focusing/unfocusing it). See [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) for more details and examples.
     _Value type_: **\<string>**; _Default value_: _none_; _Animatable_: **no**
 - [`ping`](/en-US/docs/Web/HTML/Reference/Elements/a#ping) {{experimental_inline}}

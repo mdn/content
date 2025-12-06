@@ -3,13 +3,9 @@ title: Temporal.PlainDate.prototype.toLocaleString()
 short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/toLocaleString
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.toLocaleString
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`toLocaleString()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a string with a language-sensitive representation of this date. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method delegates to `Intl.DateTimeFormat`.
 

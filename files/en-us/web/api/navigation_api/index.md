@@ -2,8 +2,6 @@
 title: Navigation API
 slug: Web/API/Navigation_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat:
   - api.Navigation
   - api.NavigationDestination
@@ -12,7 +10,7 @@ browser-compat:
 spec-urls: https://html.spec.whatwg.org/multipage/nav-history-apis.html#navigation-api
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Navigation API")}}
+{{DefaultAPISidebar("Navigation API")}}
 
 The **Navigation API** provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
 
@@ -55,15 +53,15 @@ As the user navigates through your application, each new location navigated to r
 
 The `Navigation` object contains all the methods you'll need to update and traverse through the navigation history:
 
-- {{domxref("Navigation.navigate", "navigate()")}} {{Experimental_Inline}}
+- {{domxref("Navigation.navigate", "navigate()")}}
   - : Navigates to a new URL, creating a new navigation history entry.
-- {{domxref("Navigation.reload", "reload()")}} {{Experimental_Inline}}
+- {{domxref("Navigation.reload", "reload()")}}
   - : Reloads the current navigation history entry.
-- {{domxref("Navigation.back", "back()")}} {{Experimental_Inline}}
+- {{domxref("Navigation.back", "back()")}}
   - : Navigates to the previous navigation history entry, if that is possible.
-- {{domxref("Navigation.forward", "forward()")}} {{Experimental_Inline}}
+- {{domxref("Navigation.forward", "forward()")}}
   - : Navigates to the next navigation history entry, if that is possible.
-- {{domxref("Navigation.traverseTo", "traverseTo()")}} {{Experimental_Inline}}
+- {{domxref("Navigation.traverseTo", "traverseTo()")}}
   - : Navigates to a specific navigation history entry identified by its key value, which is obtained via the relevant entry's {{domxref("NavigationHistoryEntry.key")}} property.
 
 Each one of the above methods returns an object containing two promises — `{ committed, finished }`. This allows the invoking function to wait on taking further action until:

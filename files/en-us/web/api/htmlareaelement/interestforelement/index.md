@@ -3,10 +3,13 @@ title: "HTMLAreaElement: interestForElement property"
 short-title: interestForElement
 slug: Web/API/HTMLAreaElement/interestForElement
 page-type: web-api-instance-property
+status:
+  - experimental
+  - non-standard
 browser-compat: api.HTMLAreaElement.interestForElement
 ---
 
-{{ApiRef("HTML DOM")}}
+{{ApiRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`interestForElement`** property of the {{domxref("HTMLAreaElement")}} interface gets or sets the target element of an interest invoker, in cases where the associated {{htmlelement("area")}} element is specified as an interest invoker.
 

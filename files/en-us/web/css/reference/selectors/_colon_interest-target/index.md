@@ -2,9 +2,13 @@
 title: :interest-target
 slug: Web/CSS/Reference/Selectors/:interest-target
 page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.interest-target
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`:interest-target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents the target element associated with an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) when interest is shown on that invoker.
 
