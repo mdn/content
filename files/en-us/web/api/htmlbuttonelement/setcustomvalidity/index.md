@@ -16,6 +16,11 @@ The **`setCustomValidity()`** method of the {{DOMxRef("HTMLButtonElement")}} int
 setCustomValidity(string)
 ```
 
+> [!NOTE]
+> Visible constraint-validation feedback is only displayed when the button is of type `submit`.
+>
+> Other button types (such as `button` and `reset`) still receive the validity state internally, and their status can be inspected programmatically using properties like `validity` and methods like `checkValidity()`, but browsers do not present any user-interface validation feedback for them.
+
 ### Parameters
 
 - `string`

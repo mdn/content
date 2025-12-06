@@ -44,12 +44,13 @@ A {{domxref("ReadableStreamDefaultReader")}} or {{domxref("ReadableStreamBYOBRea
 
 In the following simple example, a previously-created custom `ReadableStream` is read using a {{domxref("ReadableStreamDefaultReader")}} created using `getReader()`.
 (see our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code).
-Each chunk is read sequentially and output to the UI, until the stream has finished being read, at which point we return out of the recursive function and print the entire stream to another part of the UI.
+Each chunk is read sequentially and output to the UI, until the stream has finished being read, at which point we return out of the recursive function and display the accumulated stream output to another part of the UI.
 
 ```js
 function fetchStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
+  let result = "";
 
   // read() returns a promise that resolves
   // when a value has been received
@@ -59,7 +60,9 @@ function fetchStream() {
     // value - some data. Always undefined when done is true.
     if (done) {
       console.log("Stream complete");
-      para.textContent = value;
+      // Output the accumulated stream content instead of `value`,
+      // which is undefined when `done` is true.
+      para.textContent = result;
       return;
     }
 
