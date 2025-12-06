@@ -50,7 +50,7 @@ You can use CSS to style the disclosure widget, and you can programmatically ope
 
 By default, when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
 
-The {{cssxref("::details-content")}}  CSS pseudo-element represents the expandable and collapsible contents of `<details>` element. This can be used with CSS {{cssxref("transition")}} properties to smoothly animate between open and closed states.
+The {{cssxref("::details-content")}} CSS pseudo-element represents the expandable and collapsible contents of the `<details>` element. It can be used with CSS {{cssxref("transition")}} properties to smoothly animate between open and closed states.
 
 Fully standards-compliant implementations automatically apply the CSS `{{cssxref("display")}}: list-item` to the {{HTMLElement("summary")}} element. You can use this or the {{cssxref("::marker")}} pseudo-element to [customize the disclosure widget](/en-US/docs/Web/HTML/Reference/Elements/summary#changing_the_summarys_icon).
 
