@@ -743,6 +743,10 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           </li>
           <li><code>/&#x3C;.*?>/</code> will match "&#x3C;foo>"</li>
         </ul>
+       <p>
+         <strong>Note:</strong> Adding <code>?</code> after <code>{n}</code> doesn't change the match.
+         Since <code>{n}</code> always matches exactly n times, <code>x{n}?</code> behaves the same as <code>x{n}</code>.
+       </p>
       </td>
     </tr>
   </tbody>
