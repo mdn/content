@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Instant.toString
 sidebar: jsref
 ---
 
-
-
 The **`toString()`** method of {{jsxref("Temporal.Instant")}} instances returns a string representing this instant in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#rfc_9557_format) using the specified time zone.
 
 ## Syntax

@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Instant.subtract
 sidebar: jsref
 ---
 
-
-
 The **`subtract()`** method of {{jsxref("Temporal.Instant")}} instances returns a new `Temporal.Instant` object representing this instant moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 
 If you want to subtract two instants and get a duration, use {{jsxref("Temporal/Instant/since", "since()")}} or {{jsxref("Temporal/Instant/until", "until()")}} instead.

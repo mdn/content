@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Now.instant
 sidebar: jsref
 ---
 
-
-
 The **`Temporal.Now.instant()`** static method returns the current time as a {{jsxref("Temporal.Instant")}} object.
 
 ## Syntax

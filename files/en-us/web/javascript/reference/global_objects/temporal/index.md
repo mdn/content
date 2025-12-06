@@ -6,8 +6,6 @@ browser-compat: javascript.builtins.Temporal
 sidebar: jsref
 ---
 
-
-
 The **`Temporal`** object enables date and time management in various scenarios, including built-in time zone and calendar representation, wall-clock time conversions, arithmetics, formatting, and more. It is designed as a full replacement for the {{jsxref("Date")}} object.
 
 ## Description

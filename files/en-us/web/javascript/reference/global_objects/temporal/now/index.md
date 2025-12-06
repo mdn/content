@@ -6,8 +6,6 @@ browser-compat: javascript.builtins.Temporal.Now
 sidebar: jsref
 ---
 
-
-
 The **`Temporal.Now`** namespace object contains static methods for getting the current time in various formats.
 
 ## Description

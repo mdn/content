@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Instant.compare
 sidebar: jsref
 ---
 
-
-
 The **`Temporal.Instant.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first instant comes before, is the same as, or comes after the second instant. It is equivalent to comparing the {{jsxref("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}} of the two instants.
 
 ## Syntax

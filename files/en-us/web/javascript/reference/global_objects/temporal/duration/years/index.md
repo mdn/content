@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Duration.years
 sidebar: jsref
 ---
 
-
-
 The **`years`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of years in the duration.
 
 You can know the sign of `years` by checking the duration's [`sign`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/sign) property.

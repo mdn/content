@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Now.plainDateISO
 sidebar: jsref
 ---
 
-
-
 The **`Temporal.Now.plainDateISO()`** static method returns the current date as a {{jsxref("Temporal.PlainDate")}} object, in the ISO 8601 calendar and the specified time zone.
 
 ## Syntax

@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Duration.weeks
 sidebar: jsref
 ---
 
-
-
 The **`weeks`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of weeks in the duration.
 
 Unless the duration is [balanced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_balancing), you cannot assume the range of this value, but you can know its sign by checking the duration's [`sign`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/sign) property. If it is balanced to a unit above weeks, the `weeks` absolute value's range depends on the calendar (how many weeks are in a month or year).
