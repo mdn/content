@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainDate.daysInYear
 sidebar: jsref
 ---
 
-
-
 The **`daysInYear`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the number of days in the year of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
 For the ISO 8601 calendar, this is 365, or 366 in a leap year. In other calendar systems, it likely differs, especially in non-solar calendars.

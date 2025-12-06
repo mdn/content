@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainDate.subtract
 sidebar: jsref
 ---
 
-
-
 The **`subtract()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a new `Temporal.PlainDate` object representing this date moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 
 If you want to subtract two dates and get a duration, use {{jsxref("Temporal/PlainDate/since", "since()")}} or {{jsxref("Temporal/PlainDate/until", "until()")}} instead.

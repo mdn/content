@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainDate.day
 sidebar: jsref
 ---
 
-
-
 The **`day`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the 1-based day index in the month of this date, which is the same day number you would see on a calendar. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
 It generally starts at 1 and is continuous, but not always. If you want to loop through all the days in a month, first use {{jsxref("Temporal/PlainDate/with", "with()")}} with `{ day: 1 }` (which sets to the beginning of the month, even if the actual number is not `1`), then repeatedly use {{jsxref("Temporal/PlainDate/add", "add()")}} with `{ days: 1 }`, until the month changes.

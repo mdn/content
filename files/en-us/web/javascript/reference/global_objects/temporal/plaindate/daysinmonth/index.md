@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainDate.daysInMonth
 sidebar: jsref
 ---
 
-
-
 The **`daysInMonth`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the number of days in the month of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
 Note that the days in month is not always equal to the {{jsxref("Temporal/PlainDate/day", "day")}} of the last day of the month, in the rare case where a month may have a few days skipped.
