@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Map.getOrInsert
 sidebar: jsref
 ---
 
-
-
 The **`getOrInsert()`** method of {{jsxref("Map")}} instances returns the value corresponding to the specified key in this `Map`. If the key is not present, it inserts a new entry with the key and a given default value, and returns the inserted value.
 
 If the computation of the default value is expensive, consider using {{jsxref("Map.prototype.getOrInsertComputed()")}} instead, which takes a callback to compute the default value only if it's actually needed.

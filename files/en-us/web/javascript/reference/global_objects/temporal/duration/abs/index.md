@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Duration.abs
 sidebar: jsref
 ---
 
-
-
 The **`abs()`** method of {{jsxref("Temporal.Duration")}} instances returns a new `Temporal.Duration` object with the absolute value of this duration (all fields have the same magnitude, but sign becomes positive).
 
 ## Syntax

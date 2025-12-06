@@ -6,8 +6,6 @@ browser-compat: css.types.sibling-index
 sidebar: cssref
 ---
 
-
-
 The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) returns an integer representing the position of the current element in the DOM tree relative to all its sibling elements. The returned value is the index number of the contextual child's position among all the sibling elements within a parent element, with the first child returning `1` and the last child, returning the `length` of {{domxref("Element.children")}}.
 
 > [!NOTE]

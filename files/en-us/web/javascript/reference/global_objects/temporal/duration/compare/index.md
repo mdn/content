@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Duration.compare
 sidebar: jsref
 ---
 
-
-
 The **`Temporal.Duration.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first duration is shorter, equal to, or longer than the second duration.
 
 ## Syntax

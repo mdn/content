@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Duration.add
 sidebar: jsref
 ---
 
-
-
 The **`add()`** method of {{jsxref("Temporal.Duration")}} instances returns a new `Temporal.Duration` object with the sum of this duration and a given duration. The result is [balanced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_balancing).
 
 ## Syntax

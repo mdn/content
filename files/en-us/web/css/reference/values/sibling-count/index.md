@@ -6,8 +6,6 @@ browser-compat: css.types.sibling-count
 sidebar: cssref
 ---
 
-
-
 The **`sibling-count()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) returns an integer representing the total number of sibling DOM elements (direct children of the parent) of the element on which it is used, including itself.
 
 > [!NOTE]

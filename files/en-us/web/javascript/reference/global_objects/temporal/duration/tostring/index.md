@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Duration.toString
 sidebar: jsref
 ---
 
-
-
 The **`toString()`** method of {{jsxref("Temporal.Duration")}} instances returns a string representing this duration in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#iso_8601_duration_format).
 
 ## Syntax

@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Duration.seconds
 sidebar: jsref
 ---
 
-
-
 The **`seconds`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of seconds in the duration.
 
 Unless the duration is [balanced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_balancing), you cannot assume the range of this value, but you can know its sign by checking the duration's [`sign`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/sign) property. If it is balanced to a unit above seconds, the `seconds` absolute value will be between 0 and 59, inclusive.

@@ -6,8 +6,6 @@ browser-compat: javascript.builtins.Temporal.Duration.Duration
 sidebar: jsref
 ---
 
-
-
 The **`Temporal.Duration()`** constructor creates {{jsxref("Temporal.Duration")}} objects.
 
 This constructor allows you to create instances by directly supplying the underlying data. Like all other `Temporal` classes, you should usually construct `Temporal.Duration` objects using the {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}} static method, which can handle a variety of input types.

@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Duration.months
 sidebar: jsref
 ---
 
-
-
 The **`months`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of months in the duration.
 
 Unless the duration is [balanced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_balancing), you cannot assume the range of this value, but you can know its sign by checking the duration's [`sign`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/sign) property. If it is balanced to a unit above months, the `months` absolute value's range depends on the calendar (how many months are in a year).

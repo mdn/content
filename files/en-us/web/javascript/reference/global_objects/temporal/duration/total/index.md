@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.Duration.total
 sidebar: jsref
 ---
 
-
-
 The **`total()`** method of {{jsxref("Temporal.Duration")}} instances returns a number representing the total duration in the given unit.
 
 ## Syntax
