@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.daysInWeek
 sidebar: jsref
 ---
 
-
-
 The **`daysInWeek`** accessor property of {{jsxref("Temporal.PlainDateTime")}} instances returns a positive integer representing the number of days in the week of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
 The set accessor of `daysInWeek` is `undefined`. You cannot change this property directly.

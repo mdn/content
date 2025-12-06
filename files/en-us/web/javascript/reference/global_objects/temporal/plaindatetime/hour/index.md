@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.hour
 sidebar: jsref
 ---
 
-
-
 The **`hour`** accessor property of {{jsxref("Temporal.PlainDateTime")}} instances returns an integer from 0 to 23 representing the hour component of this time.
 
 The set accessor of `hour` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainDateTime/with", "with()")}} method to create a new `Temporal.PlainDateTime` object with the desired new value.

@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.add
 sidebar: jsref
 ---
 
-
-
 The **`add()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns a new `Temporal.PlainDateTime` object representing this date-time moved forward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 
 ## Syntax

@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.equals
 sidebar: jsref
 ---
 
-
-
 The **`equals()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns `true` if this date-time is equivalent in value to another date-time (in a form convertible by {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDateTime.from()")}}), and `false` otherwise. They are compared both by their date and time values and their calendars, so two date-times from different calendars may be considered equal by {{jsxref("Temporal/PlainDateTime/compare", "Temporal.PlainDateTime.compare()")}} but not by `equals()`.
 
 ## Syntax

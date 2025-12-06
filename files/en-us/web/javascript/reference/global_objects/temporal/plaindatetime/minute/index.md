@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.minute
 sidebar: jsref
 ---
 
-
-
 The **`minute`** accessor property of {{jsxref("Temporal.PlainDateTime")}} instances returns an integer from 0 to 59 representing the minute component of this time.
 
 The set accessor of `minute` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainDateTime/with", "with()")}} method to create a new `Temporal.PlainDateTime` object with the desired new value.

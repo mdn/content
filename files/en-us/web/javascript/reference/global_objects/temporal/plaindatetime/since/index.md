@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.since
 sidebar: jsref
 ---
 
-
-
 The **`since()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns a new {{jsxref("Temporal.Duration")}} object representing the duration from another date-time (in a form convertible by {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}) to this date-time. The duration is positive if the other date-time is before this date-time, and negative if after.
 
 This method does `this - other`. To do `other - this`, use the {{jsxref("Temporal/PlainDateTime/until", "until()")}} method.
