@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.since
 sidebar: jsref
 ---
 
-
-
 The **`since()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new {{jsxref("Temporal.Duration")}} object representing the duration from another date-time (in a form convertible by {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}) to this date-time. The duration is positive if the other date-time is before this date-time, and negative if after.
 
 This method does `this - other`. To do `other - this`, use the {{jsxref("Temporal/ZonedDateTime/until", "until()")}} method.

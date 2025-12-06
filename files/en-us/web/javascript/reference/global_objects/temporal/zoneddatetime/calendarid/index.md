@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.calendarId
 sidebar: jsref
 ---
 
-
-
 The **`calendarId`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a string representing the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) used to interpret the internal ISO 8601 date.
 
 See [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for a list of commonly supported calendar types.

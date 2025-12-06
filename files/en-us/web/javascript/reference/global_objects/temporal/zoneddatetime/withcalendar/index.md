@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.withCalendar
 sidebar: jsref
 ---
 
-
-
 The **`withCalendar()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new `Temporal.ZonedDateTime` object representing this date-time interpreted in the new calendar system. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the date-time's {{jsxref("Temporal/ZonedDateTime/calendarId", "calendarId")}} property.
 
 To replace the date-time component properties, use the {{jsxref("Temporal/ZonedDateTime/with", "with()")}} method. To replace its time zone, use the {{jsxref("Temporal/ZonedDateTime/withTimeZone", "withTimeZone()")}} method.

@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.epochNanoseconds
 sidebar: jsref
 ---
 
-
-
 The **`epochNanoseconds`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a {{jsxref("BigInt")}} representing the number of nanoseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant.
 
 The set accessor of `epochNanoseconds` is `undefined`. You cannot change this property directly. To create a new `Temporal.ZonedDateTime` object with the desired new `epochNanoseconds` value, use the {{jsxref("Temporal/ZonedDateTime/ZonedDateTime", "new Temporal.ZonedDateTime()")}} constructor instead.

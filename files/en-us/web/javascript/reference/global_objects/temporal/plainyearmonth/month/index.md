@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.month
 sidebar: jsref
 ---
 
-
-
 The **`month`** accessor property of {{jsxref("Temporal.PlainYearMonth")}} instances returns a positive integer representing the 1-based month index in the year of this year-month. The first month of this year is `1`, and the last month is the {{jsxref("Temporal/PlainYearMonth/monthsInYear", "monthsInYear")}}. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
 The set accessor of `month` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainYearMonth/with", "with()")}} method to create a new `Temporal.PlainYearMonth` object with the desired new value.

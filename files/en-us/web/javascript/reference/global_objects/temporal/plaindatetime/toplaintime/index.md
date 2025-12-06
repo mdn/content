@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.toPlainTime
 sidebar: jsref
 ---
 
-
-
 The **`toPlainTime()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns a new {{jsxref("Temporal.PlainTime")}} object representing the time part (hour, minute, second, and subsecond components) of this date-time.
 
 ## Syntax

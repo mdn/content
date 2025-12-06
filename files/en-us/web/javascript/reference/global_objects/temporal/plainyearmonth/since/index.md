@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.since
 sidebar: jsref
 ---
 
-
-
 The **`since()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns a new {{jsxref("Temporal.Duration")}} object representing the duration from another year-month (in a form convertible by {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}) to this year-month. The duration is positive if the other month is before this month, and negative if after.
 
 This method does `this - other`. To do `other - this`, use the {{jsxref("Temporal/PlainYearMonth/until", "until()")}} method.

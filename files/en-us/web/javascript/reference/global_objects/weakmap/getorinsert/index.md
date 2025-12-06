@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.WeakMap.getOrInsert
 sidebar: jsref
 ---
 
-
-
 The **`getOrInsert()`** method of {{jsxref("WeakMap")}} instances returns the value corresponding to the specified key in this `WeakMap`. If the key is not present, it inserts a new entry with the key and a given default value, and returns the inserted value.
 
 If the computation of the default value is expensive, consider using {{jsxref("WeakMap.prototype.getOrInsertComputed()")}} instead, which takes a callback to compute the default value only if it's actually needed.

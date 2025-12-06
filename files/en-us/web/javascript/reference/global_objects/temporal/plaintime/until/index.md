@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainTime.until
 sidebar: jsref
 ---
 
-
-
 The **`until()`** method of {{jsxref("Temporal.PlainTime")}} instances returns a new {{jsxref("Temporal.Duration")}} object representing the duration from this time to another time (in a form convertible by {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}). The duration is positive if the other time is after this time, and negative if before.
 
 This method does `other - this`. To do `this - other`, use the {{jsxref("Temporal/PlainTime/since", "since()")}} method.

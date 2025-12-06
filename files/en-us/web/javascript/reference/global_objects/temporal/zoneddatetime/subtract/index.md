@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.subtract
 sidebar: jsref
 ---
 
-
-
 The **`subtract()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new `Temporal.ZonedDateTime` object representing this date-time moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 
 If you want to subtract two date-times and get a duration, use {{jsxref("Temporal/ZonedDateTime/since", "since()")}} or {{jsxref("Temporal/ZonedDateTime/until", "until()")}} instead.

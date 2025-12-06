@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.toPlainDate
 sidebar: jsref
 ---
 
-
-
 The **`toPlainDate()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns a new {{jsxref("Temporal.PlainDate")}} object representing this year-month and a supplied day in the same calendar system.
 
 ## Syntax

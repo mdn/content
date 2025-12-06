@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainTime.subtract
 sidebar: jsref
 ---
 
-
-
 The **`subtract()`** method of {{jsxref("Temporal.PlainTime")}} instances returns a new `Temporal.PlainTime` object representing this time moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}), wrapping around the clock if necessary.
 
 If you want to subtract two times and get a duration, use {{jsxref("Temporal/PlainTime/since", "since()")}} or {{jsxref("Temporal/PlainTime/until", "until()")}} instead.

@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.toPlainTime
 sidebar: jsref
 ---
 
-
-
 The **`toPlainTime()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new {{jsxref("Temporal.PlainTime")}} object representing the time portion of this date-time.
 
 > [!WARNING]

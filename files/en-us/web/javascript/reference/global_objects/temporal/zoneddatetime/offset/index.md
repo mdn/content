@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.offset
 sidebar: jsref
 ---
 
-
-
 The **`offset`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a string representing the [offset](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) used to interpret the internal instant, in the form `±HH:mm` (or `±HH:mm:ss.sssssssss` with as much subminute precision as necessary). This offset is guaranteed to be valid for the given instant and time zone at construction time.
 
 The set accessor of `offset` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/ZonedDateTime/with", "with()")}} method to create a new `Temporal.ZonedDateTime` object with the desired new value (usually also changing the date/time), or use the {{jsxref("Temporal/ZonedDateTime/withTimeZone", "withTimeZone()")}} method to create a new `Temporal.ZonedDateTime` object in another time zone.

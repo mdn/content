@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.timeZoneId
 sidebar: jsref
 ---
 
-
-
 The **`timeZoneId`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a string representing the [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) used to interpret the internal instant. The string is either a named identifier in the preferred case (such as `"America/New_York"`), or an offset in the form `"±hh:mm"`. If the time zone has aliases, the `timeZoneId` is the identifier used to create the `ZonedDateTime`, without canonicalization to the primary identifier.
 
 The set accessor of `timeZoneId` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/ZonedDateTime/withTimeZone", "withTimeZone()")}} method to create a new `Temporal.ZonedDateTime` object with the desired new value.

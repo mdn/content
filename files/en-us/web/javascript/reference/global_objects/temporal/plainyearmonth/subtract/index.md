@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.subtract
 sidebar: jsref
 ---
 
-
-
 The **`subtract()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns a new `Temporal.PlainYearMonth` object representing this year-month moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 
 If you want to subtract two year-months and get a duration, use {{jsxref("Temporal/PlainYearMonth/since", "since()")}} or {{jsxref("Temporal/PlainYearMonth/until", "until()")}} instead.

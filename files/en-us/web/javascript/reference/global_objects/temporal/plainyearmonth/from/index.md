@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.from
 sidebar: jsref
 ---
 
-
-
 The **`Temporal.PlainYearMonth.from()`** static method creates a new `Temporal.PlainYearMonth` object from another `Temporal.PlainYearMonth` object, an object with year and month properties, or an [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth#rfc_9557_format) string.
 
 ## Syntax

@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.getTimeZoneTransition
 sidebar: jsref
 ---
 
-
-
 The **`getTimeZoneTransition()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a {{jsxref("Temporal.ZonedDateTime")}} object representing the closest instant after or before this instant at which the time zone's UTC offset changes (the returned instant is the first instant after the change), or `null` if there is no such transition. This is useful for finding out the offset rules of a time zone, such as its daylight saving time pattern.
 
 Note that instants returned about the future may be unreliable, for example due to changes to the time zone definitions.

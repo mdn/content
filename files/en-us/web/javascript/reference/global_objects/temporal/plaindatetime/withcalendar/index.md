@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.withCalendar
 sidebar: jsref
 ---
 
-
-
 The **`withCalendar()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns a new `Temporal.PlainDateTime` object representing this date-time interpreted in the new calendar system. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the date-time's {{jsxref("Temporal/PlainDateTime/calendarId", "calendarId")}} property.
 
 To replace the date-time component properties, use the {{jsxref("Temporal/PlainDateTime/with", "with()")}} method instead.

@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainTime.from
 sidebar: jsref
 ---
 
-
-
 The **`Temporal.PlainTime.from()`** static method creates a new `Temporal.PlainTime` object from another `Temporal.PlainTime` object, an object with time properties, or an [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#rfc_9557_format) string.
 
 ## Syntax

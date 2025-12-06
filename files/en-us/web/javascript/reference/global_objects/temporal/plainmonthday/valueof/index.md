@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainMonthDay.valueOf
 sidebar: jsref
 ---
 
-
-
 The **`valueOf()`** method of {{jsxref("Temporal.PlainMonthDay")}} instances throws a {{jsxref("TypeError")}}, which prevents `Temporal.PlainMonthDay` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
 
 ## Syntax

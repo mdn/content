@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.offsetNanoseconds
 sidebar: jsref
 ---
 
-
-
 The **`offsetNanoseconds`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns an integer representing the [offset](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) used to interpret the internal instant, as a number of nanoseconds (positive or negative). The value is a safe integer because it's less than a day, which is 8.64e15 nanoseconds.
 
 The set accessor of `offsetNanoseconds` is `undefined`. You cannot change this property directly. Change {{jsxref("Temporal/ZonedDateTime/offset", "offset")}} to change this property too.

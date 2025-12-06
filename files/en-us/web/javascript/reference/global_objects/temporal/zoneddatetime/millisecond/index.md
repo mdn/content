@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.millisecond
 sidebar: jsref
 ---
 
-
-
 The **`millisecond`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns an integer from 0 to 999 representing the millisecond (10<sup>-3</sup> second) component of this time.
 
 The set accessor of `millisecond` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/ZonedDateTime/with", "with()")}} method to create a new `Temporal.ZonedDateTime` object with the desired new value.

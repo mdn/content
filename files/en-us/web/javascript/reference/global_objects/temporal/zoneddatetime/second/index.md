@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.second
 sidebar: jsref
 ---
 
-
-
 The **`second`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns an integer from 0 to 59 representing the second component of this time.
 
 The set accessor of `second` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/ZonedDateTime/with", "with()")}} method to create a new `Temporal.ZonedDateTime` object with the desired new value.

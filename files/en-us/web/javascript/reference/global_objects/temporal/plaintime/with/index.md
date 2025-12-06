@@ -7,8 +7,6 @@ browser-compat: javascript.builtins.Temporal.PlainTime.with
 sidebar: jsref
 ---
 
-
-
 The **`with()`** method of {{jsxref("Temporal.PlainTime")}} instances returns a new `Temporal.PlainTime` object representing this time with some fields replaced by new values. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the time's fields.
 
 ## Syntax

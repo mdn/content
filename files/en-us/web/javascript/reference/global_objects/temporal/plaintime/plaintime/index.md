@@ -6,8 +6,6 @@ browser-compat: javascript.builtins.Temporal.PlainTime.PlainTime
 sidebar: jsref
 ---
 
-
-
 The **`Temporal.PlainTime()`** constructor creates {{jsxref("Temporal.PlainTime")}} objects.
 
 This constructor allows you to create instances by directly supplying the underlying data. Like all other `Temporal` classes, you should usually construct `Temporal.PlainTime` objects using the {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}} static method, which can handle a variety of input types.
