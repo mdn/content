@@ -77,13 +77,13 @@ Browser vendors are aware of the need to protect user privacy and the negative e
 
 ### HTTPS by default
 
-[Transport Layer Security (TLS)](/en-US/docs/Web/Security/Transport_Layer_Security) provides security and privacy by encrypting data during transport over the network and is the technology behind the [HTTPS](/en-US/docs/Glossary/HTTPS) protocol. TLS is good for privacy because it stops third parties from being able to intercept transmitted data and use it maliciously, for example for tracking.
+[Transport Layer Security (TLS)](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security) provides security and privacy by encrypting data during transport over the network and is the technology behind the [HTTPS](/en-US/docs/Glossary/HTTPS) protocol. TLS is good for privacy because it stops third parties from being able to intercept transmitted data and use it maliciously, for example for tracking.
 
 All browsers are moving towards requiring HTTPS by default; this is practically the case already because you can't do much on the web without this protocol.
 
 Related topics are as follows:
 
-- [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency)
+- [Certificate Transparency](/en-US/docs/Web/Security/Defenses/Certificate_Transparency)
   - : An open standard for monitoring and auditing certificates, creating a database of public logs that can be used to help identify incorrect or malicious certificates.
 - [HTTP Strict Transport Security (HSTS)](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : HSTS is used by servers to let them protect themselves from protocol downgrade and cookie hijack attacks by letting sites tell clients that they can only use HTTPS to communicate with the server.
@@ -92,7 +92,7 @@ Related topics are as follows:
 
 ### Opt-in for "powerful features"
 
-So-called "powerful" web API features that provide access to potentially sensitive data and operations are available only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which basically means HTTPS-only. Not only that, but these web features are gated behind a system of user permissions. Users have to explicitly opt in to features like allowing notifications, accessing geolocation data, making the browser go into fullscreen mode, accessing media streams from webcams, using web payments, etc.
+So-called "powerful" web API features that provide access to potentially sensitive data and operations are available only in [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts), which basically means HTTPS-only. Not only that, but these web features are gated behind a system of user permissions. Users have to explicitly opt in to features like allowing notifications, accessing geolocation data, making the browser go into fullscreen mode, accessing media streams from webcams, using web payments, etc.
 
 ### Anti-tracking technology
 
@@ -172,7 +172,7 @@ Of course, it would be easy to manage privacy if you were only worried about res
 
 Third-party resources are an essential part of modern web development, they provide a lot of power. However, any third-party resource you allow onto your site potentially has the same permissions as your own resources; it all depends on how it is included on your site:
 
-- JavaScript running inside third-party content embedded in your site via an `<iframe>` is separated by [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy), meaning that it wouldn't have access to other scripts and data included in the top-level browsing context.
+- JavaScript running inside third-party content embedded in your site via an `<iframe>` is separated by [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy), meaning that it wouldn't have access to other scripts and data included in the top-level browsing context.
 - However, a third-party script included directly in your page via a {{htmlelement("script")}} element _would_ have access to your other scripts and data, whether it was hosted on your site or another site. It would effectively be first-party code. A malicious script included in this way could secretly steal your users' data, for example sending it off to a third-party server.
 
 It is important to audit all of the third-party resources you use on your site. Make sure you know what data they collect, what requests they make and to whom, and what their privacy policies are. Your carefully designed privacy policy is useless if you use a third-party script that violates it.
@@ -192,7 +192,7 @@ The following list provides some tips on how to mitigate privacy risks inherent 
 - Where possible, you should block third parties from receiving a {{httpheader("Referer")}} header when you make requests to them. This can be done in a pretty granular way, for example by including [rel="noreferrer"](/en-US/docs/Web/HTML/Reference/Attributes/rel/noreferrer) on external links. Or, you could set this more globally for the page or site, for example by using the {{httpheader("Referrer-Policy")}} header.
 
   > [!NOTE]
-  > See also [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns).
+  > See also [Referer header: privacy and security concerns](/en-US/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns).
 
 - Use the {{httpheader("Permissions-Policy")}} HTTP header to control access to API "powerful features" (such as notifications, geolocation data, accessing media streams from webcams, etc.). This can be useful for privacy because it stops third-party sites from doing unexpected things with these features, and users don't want to be unnecessarily bombarded by permission prompts that they may not understand. You can also control usage of "powerful features" inside third-party sites embedded inside {{htmlelement("iframe")}} elements by specifying permissions policies inside an `allow` attribute on the `<iframe>` itself.
 

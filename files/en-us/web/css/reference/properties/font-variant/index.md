@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **`font-variant`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) allows you to set all the font variants for a font.
 
-You can also set the `<font-variant-css2>` values of `font-variant` defined in CSS Level 2.1, (that is, `normal` or `small-caps`), by using the [`font`](/en-US/docs/Web/CSS/Reference/Properties/font) shorthand.
+You can also set the `<font-variant-css2>` values of `font-variant` defined in CSS Level 2.1, (that is, `normal` or `small-caps`), by using the {{cssxref("font")}} shorthand.
 
 {{InteractiveExample("CSS Demo: font-variant")}}
 
@@ -79,13 +79,13 @@ section {
 
 This property is a shorthand for the following CSS properties:
 
-- [`font-variant-alternates`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates)
-- [`font-variant-caps`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-caps)
-- [`font-variant-east-asian`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
-- [`font-variant-emoji`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-emoji)
-- [`font-variant-ligatures`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
-- [`font-variant-numeric`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric)
-- [`font-variant-position`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-position)
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
 
 ## Syntax
 
@@ -107,28 +107,28 @@ font-variant: unset;
   - : Specifies a normal font face. Each longhand property has an initial value of `normal`.
 
 - `none`
-  - : Sets the value of the [`font-variant-ligatures`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures) as `none` and the values of the other longhand properties as `normal`, their initial value.
+  - : Sets the value of the {{cssxref("font-variant-ligatures")}} as `none` and the values of the other longhand properties as `normal`, their initial value.
 
 - `<common-lig-values>`, `<discretionary-lig-values>`, `<historical-lig-values>`, `<contextual-alt-values>`
-  - : Specifies the keywords related to the [`font-variant-ligatures`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures) longhand property. The possible values are `common-ligatures`, `no-common-ligatures`, `discretionary-ligatures`, `no-discretionary-ligatures`, `historical-ligatures`, `no-historical-ligatures`, `contextual`, and `no-contextual`.
+  - : Specifies the keywords related to the {{cssxref("font-variant-ligatures")}} longhand property. The possible values are `common-ligatures`, `no-common-ligatures`, `discretionary-ligatures`, `no-discretionary-ligatures`, `historical-ligatures`, `no-historical-ligatures`, `contextual`, and `no-contextual`.
 
 - `stylistic()`, `historical-forms`, `styleset()`, `character-variant()`, `swash()`, `ornaments()`, `annotation()`
-  - : Specifies the keywords and functions related to the [`font-variant-ligatures`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures) longhand property.
+  - : Specifies the keywords and functions related to the {{cssxref("font-variant-ligatures")}} longhand property.
 
 - `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`
-  - : Specifies the keywords and functions related to the [`font-variant-caps`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-caps) longhand property. The `small-caps` value is the only non-`normal` font variant valid within the {{cssxref("font")}} shorthand property.
+  - : Specifies the keywords and functions related to the {{cssxref("font-variant-caps")}} longhand property. The `small-caps` value is the only non-`normal` font variant valid within the {{cssxref("font")}} shorthand property.
 
 - `<numeric-figure-values>`, `<numeric-spacing-values>`, `<numeric-fraction-values>`, `ordinal`, `slashed-zero`
-  - : Specifies the keywords related to the [`font-variant-numeric`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric) longhand property. The possible values are `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, and `slashed-zero`.
+  - : Specifies the keywords related to the {{cssxref("font-variant-numeric")}} longhand property. The possible values are `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, and `slashed-zero`.
 
 - `<east-asian-variant-values>`, `<east-asian-width-values>`, `ruby`
-  - : Specifies the keywords related to the [`font-variant-east-asian`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-east-asian) longhand property. The possible values are `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width`, and `ruby`.
+  - : Specifies the keywords related to the {{cssxref("font-variant-east-asian")}} longhand property. The possible values are `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width`, and `ruby`.
 
 - `sub`, `super`
-  - : Specifies the keywords and functions related to the [`font-variant-position`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-position) longhand property.
+  - : Specifies the keywords and functions related to the {{cssxref("font-variant-position")}} longhand property.
 
 - `text`, `emoji`, `unicode`
-  - : Specifies the keywords and functions related to the [`font-variant-emoji`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-emoji) longhand property.
+  - : Specifies the keywords and functions related to the {{cssxref("font-variant-emoji")}} longhand property.
 
 ## Formal definition
 

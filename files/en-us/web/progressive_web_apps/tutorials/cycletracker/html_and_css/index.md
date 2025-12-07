@@ -342,4 +342,4 @@ Before adding the [JavaScript functionality](/en-US/docs/Web/Progressive_web_app
 
 Until then, you can view the [static CycleTracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css/) and download the [CycleTracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker/html_and_css) from GitHub.
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}

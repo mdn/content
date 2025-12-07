@@ -38,7 +38,7 @@ jobs:
           # Get files as newline-separated list
           FILTERED_FILES=$(gh api repos/{owner}/{repo}/compare/${BASE_SHA}...${HEAD_SHA} \
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename' | \
-            egrep -i "^files/.*\.md$")
+            egrep -i "^files/.*\.md$" || true)
 
           # Store as multiline output
           EOF="$(openssl rand -hex 8)"
@@ -82,13 +82,12 @@ jobs:
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          cache: npm
 
-      - name: Install all yarn packages
+      - name: Install
         if: steps.check.outputs.HAS_FILES == 'true'
-        run: yarn --frozen-lockfile
+        run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint and format markdown files
@@ -119,7 +118,7 @@ jobs:
 
           echo "Running markdownlint --fix"
           MD_LINT_FAILED=false
-          MD_LINT_LOG=$(yarn markdownlint-cli2 --fix "${files_to_lint[@]}" 2>&1) || MD_LINT_FAILED=true
+          MD_LINT_LOG=$(npx markdownlint-cli2 --fix "${files_to_lint[@]}" 2>&1) || MD_LINT_FAILED=true
           echo "MD_LINT_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
           echo "${MD_LINT_LOG}" >> "$GITHUB_OUTPUT"
           echo "${EOF}" >> "$GITHUB_OUTPUT"
@@ -135,12 +134,12 @@ jobs:
 
           echo "Running Prettier"
           PRETTIER_FAILED=false
-          PRETTIER_LOG=$(yarn prettier --check "${files_to_lint[@]}" 2>&1) || PRETTIER_FAILED=true
+          PRETTIER_LOG=$(npx prettier --check "${files_to_lint[@]}" 2>&1) || PRETTIER_FAILED=true
           echo "PRETTIER_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
           echo "${PRETTIER_LOG}" >> "$GITHUB_OUTPUT"
           echo "${EOF}" >> "$GITHUB_OUTPUT"
           echo "PRETTIER_FAILED=${PRETTIER_FAILED}" >> "$GITHUB_OUTPUT"
-          yarn prettier -w "${files_to_lint[@]}"
+          npx prettier -w "${files_to_lint[@]}"
 
           if [[ -n $(git diff) ]]; then
             echo "FILES_MODIFIED=true" >> "$GITHUB_OUTPUT"
