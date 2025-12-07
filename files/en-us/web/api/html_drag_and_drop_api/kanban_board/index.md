@@ -196,6 +196,7 @@ function movePlaceholder(event) {
   const column = event.currentTarget;
   const tasks = column.children[1];
   const existingPlaceholder = column.querySelector(".placeholder");
+}
 ```
 
 If there's already a placeholder, and the cursor is still inside it, we don't need to change anything. Note that we don't remove the existing placeholder at this point, because that would change the page's layout and potentially cause a flicker. We only change the layout once we've fully determined the new position.
