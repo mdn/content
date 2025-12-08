@@ -129,7 +129,7 @@ p {
 }
 ```
 
-To aid the understanding of the result, extra elements `subject-container`, `top`, and `bottom` have been used. The `subject-container` shows the bounds of the animation. And semi-transparent `top` and `bottom` overlays mark inset offsetted scrollport.
+To help show the result, we've defined a few extra classes. The `subject-container` class shows the bounds of the animation. And the semi-transparent `top` and `bottom` overlays mark inset-adjusted scrollport.
 
 ```css
 .subject-container {
