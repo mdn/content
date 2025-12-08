@@ -47,7 +47,7 @@ Cross-Origin-Embedder-Policy: require-corp
 A page using `Cross-Origin-Embedder-Policy`: `require-corp` may only load resources that explicitly opt in to being embedded.
 Resources can opt in using either:
 
-**Cross-Origin-Resource-Policy (CORP):**
+`Cross-Origin-Resource-Policy`:
 
 ```http
 Cross-Origin-Resource-Policy: cross-origin
