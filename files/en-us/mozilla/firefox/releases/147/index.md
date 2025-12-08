@@ -36,6 +36,8 @@ Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 - The `-webkit-` prefixed version of the {{cssxref("perspective")}} property is now supported with unitless values — for example `-webkit-perspective: 800` — for increased compatibility.
   ([Firefox bug 1362499](https://bugzil.la/1362499)).
+- [View transition types](/en-US/docs/Web/API/View_Transition_API/Using_types) are now supported, which provide a mechanism by which different **types** can be specified for active view transitions. CSS can then be used to apply different animations to DOM elements when their content updates, depending on the transition type specified. Firefox 147 adds support for single-page app (SPA) view transition types only, not cross-document view transition types.
+  ([Firefox bug 2001878](https://bugzil.la/2001878)).
 
 <!-- #### Removals -->
 
