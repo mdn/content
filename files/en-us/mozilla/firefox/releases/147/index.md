@@ -52,6 +52,10 @@ Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- ### APIs -->
 
+- The [Navigation API](/en-US/docs/Web/API/Navigation_API) is now supported.
+  This provides the ability to initiate, intercept, and manage browser navigation actions, and to examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
+  ([Firefox bug 1997962](https://bugzil.la/1997962)).
+
 <!-- #### DOM -->
 
 <!-- #### Media, WebRTC, and Web Audio -->

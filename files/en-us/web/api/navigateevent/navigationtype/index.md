@@ -19,10 +19,14 @@ An enumerated value representing the type of navigation.
 
 The possible values are:
 
-- `push`: A new location is navigated to, causing a new entry to be pushed onto the history list.
-- `reload`: The {{domxref("Navigation.currentEntry")}} is reloaded.
-- `replace`: The {{domxref("Navigation.currentEntry")}} is replaced with a new history entry. This new entry will reuse the same {{domxref("NavigationHistoryEntry.key", "key")}}, but be assigned a different {{domxref("NavigationHistoryEntry.id", "id")}}.
-- `traverse`: The browser navigates from one existing history entry to another existing history entry.
+- `push`
+  - : A new location is navigated to, causing a new entry to be pushed onto the history list.
+- `reload`
+  - : The {{domxref("Navigation.currentEntry")}} is reloaded.
+- `replace`
+  - : The {{domxref("Navigation.currentEntry")}} is replaced with a new history entry. This new entry will reuse the same {{domxref("NavigationHistoryEntry.key", "key")}}, but be assigned a different {{domxref("NavigationHistoryEntry.id", "id")}}.
+- `traverse`
+  - : The browser navigates from one existing history entry to another existing history entry.
 
 ## Examples
 

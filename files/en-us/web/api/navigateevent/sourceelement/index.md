@@ -26,6 +26,8 @@ An {{domxref("Element")}} object representing the element that initiated the nav
 
 ## Examples
 
+### Getting the `sourceElement` for an event
+
 ```js
 navigation.addEventListener("navigate", (event) => {
   console.log(event.sourceElement);
