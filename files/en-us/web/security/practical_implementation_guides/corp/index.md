@@ -59,7 +59,7 @@ or [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS):
 Access-Control-Allow-Origin: https://example.com
 ```
 
-CORP and CORS do not themselves enable SharedArrayBuffer they only allow resources to be loaded under COEP so that isolation is maintained.
+CORP and CORS do not enable `SharedArrayBuffer`; instead, they allow resources to be loaded under COEP so that isolation is maintained.
 
 ## See also
 
