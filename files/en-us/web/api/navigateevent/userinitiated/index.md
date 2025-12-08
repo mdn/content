@@ -20,6 +20,8 @@ A boolean value—`true` if the navigation is user-initiated, `false` if not.
 
 ## Examples
 
+### Getting `userInitiated` for an event
+
 ```js
 navigation.addEventListener("navigate", (event) => {
   console.log(event.userInitiated);

@@ -58,6 +58,10 @@ Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/
 - The {{domxref("Document.activeViewTransition")}} property is now supported, which returns a {{domxref("ViewTransition")}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on the document. This provides a consistent way to access an active view transition in any context without having to manually store a reference to it for later use. ([Firefox bug 2001836](https://bugzil.la/2001836)).
 - [WebGPU API](/en-US/docs/Web/API/WebGPU_API) support is now enabled for all macOS versions on devices with Apple Silicon processors (previously only macOS Tahoe support was enabled). ([Firefox bug 1993341](https://bugzil.la/1993341)).
 
+- The [Navigation API](/en-US/docs/Web/API/Navigation_API) is now supported.
+  This provides the ability to initiate, intercept, and manage browser navigation actions, and to examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
+  ([Firefox bug 1997962](https://bugzil.la/1997962)).
+
 <!-- #### DOM -->
 
 <!-- #### Media, WebRTC, and Web Audio -->

@@ -22,7 +22,7 @@ The API is accessed via the {{domxref("Window.navigation")}} property, which ret
 
 ### Handling navigations
 
-The `navigation` interface has several associated events, the most notable being the {{domxref("Navigation/navigate_event", "navigate")}} event. This is fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, meaning that you can control all page navigations from one central place, ideal for routing functionality in SPA frameworks. (This is not the case with the {{domxref("History API", "", "", "nocode")}}, where it is sometimes hard to figure out responding to all navigations.) The `navigate` event handler is passed a {{domxref("NavigateEvent")}} object, which contains detailed information including details around the navigation's destination, type, whether it contains `POST` form data or a download request, and more.
+The `navigation` interface has several associated events, the most notable being the {{domxref("Navigation/navigate_event", "navigate")}} event. This is fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, meaning that you can control all page navigations from one central place, ideal for routing functionality in SPA frameworks. (This is not the case with the {{domxref("History API", "", "", "nocode")}}, where it is sometimes hard to detect and respond to all navigations.) The `navigate` event handler is passed a {{domxref("NavigateEvent")}} object, which contains detailed information including details around the navigation's destination, type, whether it contains `POST` form data or a download request, and more.
 
 The `NavigationEvent` object also provides two methods:
 
@@ -121,9 +121,14 @@ There are a few perceived limitations with the Navigation API:
 
 ```js
 navigation.addEventListener("navigate", (event) => {
-  // Exit early if this navigation shouldn't be intercepted,
-  // e.g. if the navigation is cross-origin, or a download request
-  if (shouldNotIntercept(event)) {
+  // We can't intercept some navigations, e.g. cross-origin navigations.
+  // Return early and let the browser handle them normally.
+  if (!event.canIntercept) {
+    return;
+  }
+
+  // We shouldn't intercept fragment navigations or downloads.
+  if (event.hashChange || event.downloadRequest !== null) {
     return;
   }
 
@@ -151,9 +156,15 @@ In this example of intercepting a navigation, the `handler()` function starts by
 
 ```js
 navigation.addEventListener("navigate", (event) => {
-  if (shouldNotIntercept(event)) {
+  // Return early if we can't/shouldn't intercept
+  if (
+    !event.canIntercept ||
+    event.hashChange ||
+    event.downloadRequest !== null
+  ) {
     return;
   }
+
   const url = new URL(event.destination.url);
 
   if (url.pathname.startsWith("/articles/")) {
