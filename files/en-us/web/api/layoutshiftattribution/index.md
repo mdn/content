@@ -29,23 +29,22 @@ Instances of `LayoutShiftAttribution` are returned in an array by calling {{domx
 
 ## Examples
 
-The following example finds the element with the highest layout shift score, and returns the element in that entry with the largest size prior to the shift (`previousRect`). For more detail on this see [Debug Web Vitals in the field](https://web.dev/articles/debug-performance-in-the-field).
+The following example observes layout shifts and identifies the most impactful element. The `sources` array is sorted by impact area, in descending order — so the first element (`sources[0]`) represents the element that contributed most to the layout shift. For more detail on that, see [Debug Web Vitals in the field](https://web.dev/articles/debug-performance-in-the-field).
 
 ```js
-function getCLSDebugTarget(entries) {
-  const largestEntry = entries.reduce((a, b) =>
-    a && a.value > b.value ? a : b,
-  );
-  if (largestEntry?.sources?.length) {
-    const largestSource = largestEntry.sources.reduce((a, b) => {
-      const area = (el) => el.previousRect.width * el.previousRect.height;
-      return a.node && area(a) > area(b) ? a : b;
-    });
-    if (largestSource) {
-      return largestSource.node;
-    }
+const observer = new PerformanceObserver((list) => {
+  for (const entry of list.getEntries()) {
+    if (!entry.sources || entry.sources.length === 0) continue;
+
+    const mostImpactfulSource = entry.sources[0];
+    console.log("Layout shift score:", entry.value);
+    console.log("Most impactful element:", largestShiftSource.node);
+    console.log("Previous position:", largestShiftSource.previousRect);
+    console.log("Current position:", largestShiftSource.currentRect);
   }
-}
+});
+
+observer.observe({ type: "layout-shift", buffered: true });
 ```
 
 ## Specifications

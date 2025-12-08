@@ -121179,6 +121179,18 @@
       "antoinegrant"
     ]
   },
+  "Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns": {
+    "modified": "2020-07-22T14:05:46.803Z",
+    "contributors": [
+      "mfuji09",
+      "bradyhanna",
+      "chrisdavidmills",
+      "..",
+      "vriojtg",
+      "cg",
+      "wbamberg"
+    ]
+  },
   "Web/Progressive_web_apps": {
     "modified": "2020-12-14T07:30:15.695Z",
     "contributors": [
@@ -124731,18 +124743,6 @@
       "VicMan",
       "Pmsyyz",
       "Mathieu Deaudelin"
-    ]
-  },
-  "Web/Security/Referer_header:_privacy_and_security_concerns": {
-    "modified": "2020-07-22T14:05:46.803Z",
-    "contributors": [
-      "mfuji09",
-      "bradyhanna",
-      "chrisdavidmills",
-      "..",
-      "vriojtg",
-      "cg",
-      "wbamberg"
     ]
   },
   "Web/URI": {

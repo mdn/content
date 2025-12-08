@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout BASE
-        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           persist-credentials: false
 
@@ -38,7 +38,7 @@ jobs:
           # Get files as newline-separated list
           FILTERED_FILES=$(gh api repos/{owner}/{repo}/compare/${BASE_SHA}...${HEAD_SHA} \
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename' | \
-            egrep -i "^files/.*\.md$")
+            egrep -i "^files/.*\.md$" || true)
 
           # Store as multiline output
           EOF="$(openssl rand -hex 8)"
@@ -55,7 +55,7 @@ jobs:
 
       - name: Checkout HEAD
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr_head
@@ -79,7 +79,7 @@ jobs:
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version-file: ".nvmrc"
           cache: npm
@@ -88,7 +88,6 @@ jobs:
         if: steps.check.outputs.HAS_FILES == 'true'
         run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint and format markdown files
