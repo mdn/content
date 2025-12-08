@@ -53,7 +53,7 @@ Resources can opt in using either:
 Cross-Origin-Resource-Policy: cross-origin
 ```
 
-**or CORS:**
+or [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS):
 
 ```http
 Access-Control-Allow-Origin: https://example.com
