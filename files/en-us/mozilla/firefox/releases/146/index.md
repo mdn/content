@@ -24,7 +24,12 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### MathML -->
+### MathML
+
+- Operator mirroring in right-to-left (RTL) modes and stretching now work properly when used in combination.
+  ([Firefox bug 1994172](https://bugzil.la/1994172)).
+- The {{cssxref("math-shift")}} property is now supported. This allows developers to indicate whether superscript rendering in MathML formulas should be normal or compact, affecting the height to which superscript text is shifted.
+  ([Firefox bug 1994171](https://bugzil.la/1994171)).
 
 <!-- #### Removals -->
 
@@ -81,13 +86,24 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### WebDriver BiDi
 
-<!-- #### WebDriver BiDi -->
+- Updated the `emulation.setLocaleOverride` command to override the return value of `navigator.language` and `navigator.languages` alongside JS APIs. ([Firefox bug 1994396](https://bugzil.la/1994396)).
+- Updated the `emulation.setLocaleOverride` and `emulation.setTimezoneOverride` commands reset behavior to match recent specification changes. When calling this command to reset the override for a specific browsing context, overrides configured for a user context owning this browsing context will still apply. ([Firefox bug 1988725](https://bugzil.la/1988725)).
+- Added support for the `context` locator to the `browsingContext.locateNodes` command, which allows to retrieve the container of non-top-level browsing contexts, such as iframe elements. ([Firefox bug 1941270](https://bugzil.la/1941270)).
+- Implemented the `network.setExtraHeaders` command, which can be used to specify request headers which will be automatically added to requests triggered in the provided browsing contexts or user contexts. ([Firefox bug 1979731](https://bugzil.la/1979731)).
+- Updated all our network data collection commands (`network.addDataCollector`, `network.getData` and `network.disownData`) to support the `request` data type, which allows to collect and retrieve request post data. ([Firefox bug 1988955](https://bugzil.la/1988955)).
+- Improved our implementation for `network.getData` to also support requests using the `data:` scheme. ([Firefox bug 1992210](https://bugzil.la/1992210)).
+- Fixed a bug for `network.getData` which was not throwing the expected `no such network data` error for unsupported requests. ([Firefox bug 1992214](https://bugzil.la/1992214)).
+- Fixed a bug in our `network` events where different requests were reusing the same id, mostly impacting data URLs or cached requests. ([Firefox bug 1992348](https://bugzil.la/1992348)).
 
-<!-- #### Marionette -->
+#### Marionette
+
+- Fixed a regression in `WebDriver:GetElementText` that caused text containing accented characters (e.g., "ó") to be incorrectly capitalized. ([Firefox bug 1986392](https://bugzil.la/1986392)).
+- Fixed a bug in the `WebFrame` JSON deserialization that incorrectly raised a `no such window` error instead of `no such frame` when handling invalid frames. ([Firefox bug 1996540](https://bugzil.la/1996540)).
+- Added a WebDriver extension to control the [Global Privacy Control](https://w3c.github.io/gpc/) signal. ([Firefox bug 1969865](https://bugzil.la/1969865)).
 
 ## Changes for add-on developers
 
@@ -107,3 +123,11 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   Nightly builds now support the Navigation API, which provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
   ([Firefox bug 1979288](https://bugzil.la/1979288)).
+
+- **Relative control points in CSS `shape()` curve commands**: `layout.css.basic-shape-shape.enabled`
+
+  You can use [`<relative-control-point>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#relative-control-point) values when specifying a [`<curve-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#curve-command) or [`<smooth-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#smooth-command) in a CSS `shape()` function. These values let you specify control points that are positioned relative to the start or end point of the current command, or relative to the origin (top-left) of the container the shape is being drawn inside.
+
+- **Custom media queries**: `layout.css.custom-media.enabled`
+
+  The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS at-rule defines aliases for long or complex media queries. Instead of repeating the same hardcoded `<media-query-list>` in multiple `@media` at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed. ([Firefox bug 1991105](https://bugzil.la/1744292)).
