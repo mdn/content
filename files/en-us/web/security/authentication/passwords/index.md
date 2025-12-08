@@ -47,7 +47,7 @@ Looking at this overview, we can see some of the ways an attacker can impersonat
   - : An attacker could buy a collection of username/password pairs from a previous data breach on a different site, and then try them on the target site in the hope that a user has used the same password for both sites.
 
 - **Interception**
-  - : An attacker could intercept the username and password while it is in transit from the browser to the server. One practical way to do this is to set up free Wifi hotspots in cafes or airports, and wait for victims to connect and then sign in to the target website.
+  - : An attacker could intercept the username and password while it is in transit from the browser to the server. One practical way to do this is to set up free Wi-Fi hotspots in cafes or airports, and wait for victims to connect and then sign in to the target website.
 
 - **Database compromise**
   - : An attacker could break into the server and retrieve the database of stored records.
