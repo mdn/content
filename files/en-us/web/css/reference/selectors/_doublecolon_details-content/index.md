@@ -39,11 +39,11 @@ selector::details-content
 
 ### Basic example
 
-This example demonstrates the basic usage of the `::details-content` pseudo-element to stayle the content of a {{HTMLElement("details")}} element.
+This example demonstrates basic usage of the `::details-content` pseudo-element to style the content of a {{HTMLElement("details")}} element.
 
 #### HTML
 
-Our `<details>` element includes a {{HTMLElement("summary")}} element, whose contents will always be visible. The content details includes a {{HTMLElement("p")}} element.
+Our `<details>` element includes a {{HTMLElement("summary")}} element, whose contents will always be visible. The details content includes a {{HTMLElement("p")}} element.
 
 ```html
 <details>
@@ -54,7 +54,7 @@ Our `<details>` element includes a {{HTMLElement("summary")}} element, whose con
 
 #### CSS
 
-We set a {{cssxref("background-color")}} on the `::details-content` pseudo-element
+We set a {{cssxref("background-color")}} on the `::details-content` pseudo-element:
 
 ```css
 details::details-content {
