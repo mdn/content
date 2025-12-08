@@ -3,12 +3,10 @@ title: "NavigateEvent: NavigateEvent() constructor"
 short-title: NavigateEvent()
 slug: Web/API/NavigateEvent/NavigateEvent
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.NavigateEvent.NavigateEvent
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`NavigateEvent()`** constructor creates a new {{domxref("NavigateEvent")}} object instance.
 

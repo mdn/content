@@ -83,7 +83,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   - : The hyperlink target for the area.
     Its value is a valid URL.
     This attribute may be omitted; if so, the `<area>` element does not represent a hyperlink.
-- `interestfor` {{experimental_inline}}
+- `interestfor` {{experimental_inline}} {{non-standard_inline}}
   - : Defines the `<area>` element as an **interest invoker**. Its value is the `id` of the target element, which will be affected in some way (normally shown or hidden) when interest is shown or lost on the invoker element (for example, by hovering/unhovering or focusing/unfocusing it). See [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) for more details and examples.
 - `ping`
   - : Contains a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background).

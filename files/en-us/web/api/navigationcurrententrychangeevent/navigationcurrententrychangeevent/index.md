@@ -3,12 +3,10 @@ title: "NavigationCurrentEntryChangeEvent: NavigationCurrentEntryChangeEvent() c
 short-title: NavigationCurrentEntryChangeEvent()
 slug: Web/API/NavigationCurrentEntryChangeEvent/NavigationCurrentEntryChangeEvent
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.NavigationCurrentEntryChangeEvent.NavigationCurrentEntryChangeEvent
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`NavigationCurrentEntryChangeEvent()`** constructor creates a new {{domxref("NavigationCurrentEntryChangeEvent")}} object.
 
