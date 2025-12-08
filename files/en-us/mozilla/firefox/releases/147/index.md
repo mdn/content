@@ -32,7 +32,10 @@ Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The `-webkit-` prefixed version of the {{cssxref("perspective")}} property is now supported with unitless values — for example `-webkit-perspective: 800` — for increased compatibility.
+  ([Firefox bug 1362499](https://bugzil.la/1362499)).
 
 <!-- #### Removals -->
 
