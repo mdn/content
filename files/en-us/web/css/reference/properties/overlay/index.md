@@ -128,7 +128,7 @@ html {
 }
 ```
 
-The two properties we want to animate are [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity) and [`transform`](/en-US/docs/Web/CSS/Reference/Properties/transform)): we want the popover to fade in and out while growing and shrinking in the horizontal direction. We set a starting state for these properties on the default hidden state of the popover element (selected via `[popover]`), and an end state on the open state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/Reference/Selectors/:popover-open) pseudo-class). We then set a [`transition`](/en-US/docs/Web/CSS/Reference/Properties/transition) property to animate between the two.
+The two properties we want to animate are {{cssxref("opacity")}} and {{cssxref("transform")}}): we want the popover to fade in and out while growing and shrinking in the horizontal direction. We set a starting state for these properties on the default hidden state of the popover element (selected via `[popover]`), and an end state on the open state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/Reference/Selectors/:popover-open) pseudo-class). We then set a {{cssxref("transition")}} property to animate between the two.
 
 Because the animated element is being promoted to the [top layer](/en-US/docs/Glossary/Top_layer) when shown and removed from the top layer when hidden, `overlay` is added to the list of transitioned elements. This ensures that the removal of the element from the top layer is deferred until the animation has ended. This doesn't make a huge difference for basic animations such as this one, but in more complex cases not doing this can result in the element being removed from the overlay too quickly, meaning the animation is not smooth or effective. Note that the [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) value is also set in the shorthand to enable discrete transitions.
 
@@ -162,5 +162,5 @@ The code renders as follows:
 
 - [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions) module
 - [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style)
-- [`transition-behavior`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior)
+- {{cssxref("transition-behavior")}}
 - [Four new CSS features for smooth entry and exit animations](https://developer.chrome.com/blog/entry-exit-animations/) on developer.chrome.com (2023)

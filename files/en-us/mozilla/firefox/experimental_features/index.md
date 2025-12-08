@@ -463,8 +463,8 @@ The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developer
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 146           | Yes                 |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
+| Developer Edition | 147           | Yes                 |
+| Beta              | 147           | Yes                 |
 | Release           | 138           | No                  |
 
 - `dom.security.sanitizer.enabled`
