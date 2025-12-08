@@ -66,9 +66,9 @@ None ({{jsxref("undefined")}}).
 If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.
 
 To set the value of a Boolean attribute, such as `disabled`, you can specify any value.
-It doesn't matter what value you use, if the attribute is present its value is considered to be `true`.
+It doesn't matter what value you use; if the attribute is present, its value is considered to be `true`.
 By convention we enable boolean attributes by setting their value to either the name of the attribute or the empty string (`""`).
-The absence of a boolean attribute means its value is `false`: must call {{domxref("Element.removeAttribute()")}} to "undo" the effect of enabling a boolean attribute
+The absence of a boolean attribute means its value is `false`; you must call {{domxref("Element.removeAttribute()")}} to "undo" the effect of enabling a boolean attribute
 
 To get the current value of an attribute, use {{domxref("Element.getAttribute", "getAttribute()")}}; to remove an attribute, call {{domxref("Element.removeAttribute", "removeAttribute()")}}.
 
@@ -84,10 +84,10 @@ const potentiallyUnsafeString = "alert(1)";
 button.setAttribute("onclick", potentiallyUnsafeString);
 ```
 
-You might similarly inject untrusted HTML into the DOM by setting the {{domxref("HTMLIFrameElement.srcdoc")}} attribute, or supply an untrusted URL to the {{domxref("HTMLScriptElement.src")}} or {{domxref("SVGScriptElement.href")}} attributes.
+You might similarly inject untrusted HTML into the DOM by setting the {{domxref("HTMLIFrameElement.srcdoc")}} attribute, or by supplying an untrusted URL to the {{domxref("HTMLScriptElement.src")}} or {{domxref("SVGScriptElement.href")}} attributes.
 
 You can mitigate these issues by always assigning the appropriate trusted type object ({{domxref("TrustedHTML")}}, {{domxref("TrustedScript")}}, or {{domxref("TrustedScriptURL")}}) for each property instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
-This ensures that the input is passed through a transformation function, and potentially remove potentially dangerous markup before it is injected.
+This ensures that the input is passed through a transformation function which might, for example, remove potentially dangerous markup from HTML before it is injected.
 
 ## Examples
 
@@ -180,7 +180,7 @@ if (typeof trustedTypes === "undefined")
 ```
 
 Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createHTML", "createHTML()")}} for transforming an input string into {{domxref("TrustedHTML")}} instances.
-Commonly implementations of `createHTML()` use a library such as [DOMPurify](https://github.com/cure53/DOMPurify) to sanitize the input as shown below:
+Commonly, implementations of `createHTML()` use a library such as [DOMPurify](https://github.com/cure53/DOMPurify) to sanitize the input, as shown below:
 
 ```js
 const policy = trustedTypes.createPolicy("my-policy", {

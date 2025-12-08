@@ -63,7 +63,7 @@ d.setAttributeNS(
 
 ### Trusted types
 
-The [Setting unsafe attributes](/en-US/docs/Web/API/Element/setAttribute#setting_unsafe_attributes) example in `setAttribute()` shows how you might use for `setAttributeNS()` with the [trusted types](/en-US/docs/Web/API/Trusted_Types_API).
+The [Setting unsafe attributes](/en-US/docs/Web/API/Element/setAttribute#setting_unsafe_attributes) example in `setAttribute()` shows how you might use `setAttributeNS()` with the [trusted types](/en-US/docs/Web/API/Trusted_Types_API).
 
 ## Specifications
 
