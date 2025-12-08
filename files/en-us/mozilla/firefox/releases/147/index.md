@@ -50,7 +50,9 @@ Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
+
+- The {{domxref("Document.activeViewTransition")}} property is now supported, which returns a {{domxref("ViewTransition")}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on the document. This provides a consistent way to access the active view transition in any context, without having to worry about saving it for easy access later on. ([Firefox bug 2001836](https://bugzil.la/2001836)).
 
 <!-- #### DOM -->
 
