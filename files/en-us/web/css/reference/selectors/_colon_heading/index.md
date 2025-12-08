@@ -41,7 +41,10 @@ The document contains headings at three different levels, along with {{htmleleme
 ```html
 <h1>Mastering CSS</h1>
 <h2>Chapter 1: Selectors</h2>
-<p>A CSS selector is the part of a CSS rule that describes what elements in a document the rule will match.</p>
+<p>
+  A CSS selector is the part of a CSS rule that describes what elements in a
+  document the rule will match.
+</p>
 <h3>1.1 Pseudo-classes</h3>
 <p>CSS pseudo classes enable selecting elements based on information that lies outside of the document tree.</p>
 ```
