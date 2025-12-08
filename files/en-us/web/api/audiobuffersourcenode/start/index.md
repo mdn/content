@@ -43,7 +43,7 @@ start(when, offset, duration)
   - : The duration of the audio data to be played, specified as seconds of total buffer content.
     If this parameter isn't specified, the sound plays until it reaches its natural conclusion or
     is stopped using the {{domxref("AudioScheduledSourceNode.stop", "stop()")}} method. The
-    value is independent of the {{domxref("AudioBufferSourceNode.playbackRate")}}, so e.g. a
+    value is independent of the {{domxref("AudioBufferSourceNode.playbackRate")}}, so e.g., a
     `duration` of 2 seconds with a `playbackRate` of `2` will play 2 seconds of the source,
     producing a 1 second audio output.
 
