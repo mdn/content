@@ -195,7 +195,7 @@ const sanitizer1 = new Sanitizer({
 });
 ```
 
-Invalid because {{htmlelement("span")}} is in both `elements` and `removeElements`.
+Invalid because {{htmlelement("span")}} is in both `elements` and `replaceWithChildrenElements`:
 
 ```js
 const sanitizer2 = new Sanitizer({
@@ -213,7 +213,7 @@ const sanitizer3 = new Sanitizer({
 });
 ```
 
-Invalid because it has `removeAttributes` and `dataAttributes` defined.
+Invalid because it has `removeAttributes` and `dataAttributes` defined:
 
 ```js
 const sanitizer4 = new Sanitizer({
