@@ -60,9 +60,9 @@ The axis and inset components can be specified in any order. Within the inset co
 
 ## Examples
 
-### Setting an anonymous view progress timeline
+### Creating an anonymous view progress timeline using `view()`
 
-An anonymous view progress timeline is set on an element with class `subject` using `animation-timeline: view()`. The result is that the `subject` element animates as it moves upwards through the document as it is scrolled.
+In this example, we create an anonymous view progress timeline for the element with the `subject` and `animation` classes using `animation-timeline: view()`. The result is that as you scroll the document, this element animates as it moves upward through the document.
 
 #### HTML
 
@@ -204,7 +204,7 @@ An important point to remember is that the animation lasts only as long as the `
 
 Scroll to see the element with the `subject` class animate as it enters and leaves the adjusted inset view.
 
-{{EmbedLiveSample("Setting an anonymous view progress timeline", "100%", "480px")}}
+{{EmbedLiveSample("Examples", "100%", "480px")}}
 
 ## Specifications
 
