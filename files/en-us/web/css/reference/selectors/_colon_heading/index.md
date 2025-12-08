@@ -46,7 +46,10 @@ The document contains headings at three different levels, along with {{htmleleme
   document the rule will match.
 </p>
 <h3>1.1 Pseudo-classes</h3>
-<p>CSS pseudo classes enable selecting elements based on information that lies outside of the document tree.</p>
+<p>
+  CSS pseudo classes enable selecting elements based on information that lies
+  outside of the document tree.
+</p>
 ```
 
 #### CSS
