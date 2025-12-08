@@ -16,7 +16,10 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
+
+- In the Rule view of the Inspector, when a displayed ruleset declares 10 or more [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) that are unused, those properties are hidden by default. This reduces clutter, and in some cases also speeds up the rendering of the Inspector panel. In such cases, the hidden properties can be displayed via a "Show..." button provided at the bottom of the ruleset.
+  ([Firefox bug 1719461](https://bugzil.la/1719461)).
 
 <!-- ### HTML -->
 
@@ -118,6 +121,11 @@ Firefox 146 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 146 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`<meta name="rating">`** (Nightly): `security.restrict_to_adults.always` and `security.restrict_to_adults.respect_platform`
+
+  The `<meta name="rating">` element allows websites to self-identify as restricted/adult content. Browsers that recognise this element can then take steps to restrict users from viewing the content. See [Restricting adult content with `<meta name="rating">`](/en-US/docs/Mozilla/Firefox/Experimental_features#restricting_adult_content_with_meta_namerating) for more details.
+  ([Firefox bug 1991135](https://bugzil.la/1991135)).
 
 - **Navigation API** (Nightly): `dom.navigation.webidl.enabled`
 

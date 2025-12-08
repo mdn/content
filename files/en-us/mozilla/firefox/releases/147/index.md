@@ -32,7 +32,10 @@ Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The `-webkit-` prefixed version of the {{cssxref("perspective")}} property is now supported with unitless values — for example `-webkit-perspective: 800` — for increased compatibility.
+  ([Firefox bug 1362499](https://bugzil.la/1362499)).
 
 <!-- #### Removals -->
 
@@ -50,7 +53,9 @@ Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
+
+- The {{domxref("Document.activeViewTransition")}} property is now supported, which returns a {{domxref("ViewTransition")}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on the document. This provides a consistent way to access an active view transition in any context without having to manually store a reference to it for later use. ([Firefox bug 2001836](https://bugzil.la/2001836)).
 
 <!-- #### DOM -->
 

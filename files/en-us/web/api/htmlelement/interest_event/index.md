@@ -2,10 +2,13 @@
 title: "HTMLElement: interest event"
 slug: Web/API/HTMLElement/interest_event
 page-type: web-api-event
+status:
+  - experimental
+  - non-standard
 browser-compat: api.HTMLElement.interest_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`interest`** event of the {{domxref("HTMLElement")}} interface is fired on an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers)'s target element when interest is shown, allowing code to be run in response.
 
