@@ -37,21 +37,19 @@ animation-range-start: unset;
 - {{cssxref("length-percentage")}}
   - : Specifies a length or percentage value measured from the beginning of the timeline.
 - [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name)
-  - : Specifies a specific named timeline range within the overall timeline. The range starts at `0%`.
+  - : Specifies a named timeline range within the overall timeline. The range starts at `0%`.
 - `<timeline-range-name> <length-percentage>`
   - : Specifies a length or percentage value measured from the beginning of the specified named timeline range.
 
 ## Description
 
-In the case of [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values that do not include a `<length-percentage>`, the percentage defaults to `0%`.
-
-Allowed values for the `animation-range-start` property are `normal`, a {{cssxref("length-percentage")}}, a `<timeline-range-name>`, or a `<timeline-range-name>` with a `<length-percentage>` following it. See [`animation-range`](/en-US/docs/Web/CSS/animation-range) for a detailed description of the available values.
-
-Also check out the [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/), which shows exactly what the different values mean in an easy visual format.
-
-The `animation-range-start` and {{cssxref("animation-range-end")}} properties can also be set using the {{cssxref("animation-range")}} shorthand property.
+Allowed values for the `animation-range-start` property are `normal`, a {{cssxref("length-percentage")}}, a `<timeline-range-name>`, or a `<timeline-range-name>` followed by a `<length-percentage>`. If the [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) value does not include a `<length-percentage>`, the percentage defaults to `0%`.
+See [`animation-range`](/en-US/docs/Web/CSS/animation-range) for a detailed description of the available values.
+Also check out the [View progress timeline visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/), which shows what the different values mean in an easy-to-follow visual format.
 
 The `animation-range-start` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that using the `animation` shorthand resets any previously declared `animation-range-start` value of equal or lower specificity to `normal`; the shorthand cannot be used to set a new `animation-range-start` value. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you should declare `animation-range-start` _after_ declaring any `animation` shorthand to avoid resetting the value to `normal`.
+
+The `animation-range-start`, along with the {{cssxref("animation-range-end")}} property, can also be set using the {{cssxref("animation-range")}} shorthand.
 
 ## Formal definition
 
@@ -65,7 +63,7 @@ The `animation-range-start` is included in the {{cssxref("animation")}} shorthan
 
 ### Creating a scroll view progress timeline with range start
 
-In this example, the `animation-range-start` is applied to an element animated via a scroll progress timeline. This makes the animation to begin animating well before the element enters the scrollport.
+In this example, the `animation-range-start` is applied to an element animated via a scroll progress timeline. This makes the animation start well before the element enters the scrollport.
 
 #### HTML
 
@@ -91,7 +89,7 @@ In this example, the `animation-range-start` is applied to an element animated v
 </div>
 ```
 
-In the middle of a long block of text, we've includes an element that we'll animate. We've added a lot of text to ensure that the content overflows its container; the extra text is hidden here for brevity.
+In the middle of a long block of text, we've included an element that we'll animate. We've added a lot of text to ensure that the content overflows its container; the extra text is hidden here for brevity.
 
 ```html
 <div class="animatedElement"></div>
@@ -142,7 +140,7 @@ We've also set `animation-range-start` to make the animation start earlier than 
 }
 ```
 
-The other styles applied in this example has been hidden here for brevity.
+Other styles applied in this example have been hidden here for brevity.
 
 ```css hidden
 .animatedElement {
@@ -185,7 +183,7 @@ p {
 
 #### Result
 
-Scroll to see the element animate. Notice how the element is 25% of the width of it's final state and semi-opaque as it enters the viewport. This is because the element started animating well before it entered the viewport.
+Scroll to see the element animate. Notice how the element is already scaled and semi-opaque as it enters the viewport. This is because the element started animating well before it entered the viewport.
 
 {{EmbedLiveSample("Creating a named view progress timeline with range start", "100%", "480px")}}
 

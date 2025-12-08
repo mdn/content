@@ -37,13 +37,13 @@ animation-range-end: unset;
 - {{cssxref("length-percentage")}}
   - : Specifies a length or percentage value measured from the beginning of the timeline.
 - [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name)
-  - : Specifies a specific named timeline range within the overall timeline. The range starts at `0%`.
+  - : Specifies a named timeline range within the overall timeline. The range starts at `0%`.
 - `<timeline-range-name> <length-percentage>`
   - : Specifies a length or percentage value measured from the beginning of the specified named timeline range.
 
 ## Description
 
-The `animation-range-end` property specifies the end of the animation's attachment range, potentially shifting the end time of the animation (i.e., where keyframes mapped to `100%` progress are attached when the iteration count is 1) and/or reducing the duration of the animation.
+The `animation-range-end` property specifies the end of the animation's attachment range. Changing the end of the attachment range can potentially shift the end of the animation, that is, the point where keyframes mapped to `100%` progress land when the iteration count is `1`, and can also reduce the effective duration of the animation.
 
 The property value can be `normal`, a `<length-percentage>`, or a {{cssxref("timeline-range-name")}} with an optional `<length-percentage>`. If the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `100%`.
 
@@ -89,7 +89,7 @@ In this example, the `animation-range-end` is applied to an element animated via
 </div>
 ```
 
-In the middle of a long block of text, we've includes an element that we'll animate. We've added a lot of text to ensure that the content overflows its container; the extra text is hidden here for brevity.
+In the middle of a long block of text, we've included an element that we'll animate. We've added a lot of text to ensure that the content overflows its container; the extra text is hidden here for brevity.
 
 ```html
 <div class="animatedElement"></div>
@@ -151,7 +151,7 @@ We've also set `animation-range-end` to make the animation end earlier than expe
 }
 ```
 
-We also include conditional styling: when the checkbox is checked, the `animation-fill-mode` property gets applied to the animated element:
+When the checkbox is checked, the `animation-fill-mode` property gets applied to the animated element:
 
 ```css
 :has(:checked) .animatedElement {
