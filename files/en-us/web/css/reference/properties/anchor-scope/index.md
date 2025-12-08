@@ -128,7 +128,7 @@ To test this out, we declare the `anchor` `<div>` as an anchor element by settin
 
 #### Result
 
-The examples renders like so:
+The example renders like so:
 
 {{ EmbedLiveSample("basic_usage", "100%", "225") }}
 
@@ -270,9 +270,9 @@ sections.forEach((section) => (section.style.anchorScope = "all"));
 
 #### Result
 
-The examples renders like so:
+The example renders as follows:
 
-{{ EmbedLiveSample("basic_usage", "100%", "225") }}
+{{ EmbedLiveSample("comparing-values", "100%", "225") }}
 
 Check out the initial positioning effect applied to the positioned elements with `anchor-scope: all` set on the `<section>` elements, and then try selecting the other available `anchor-scope` values to see what their effect is. You should observe the following:
 
