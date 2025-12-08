@@ -65,26 +65,28 @@ The `background-repeat-x` property is specified as one or more values, separated
 ## Values
 
 - `repeat`
-  - : The default value. The image is repeated as many times as needed to cover the entire width of the background image painting area, with the edge image being clipped if the width of the painting area is not a multiple of the width of your background image.
+  - : The default value. The image is repeated as many times as needed to cover the entire width of the background image painting area. The edge image is clipped if multiple images do not fit exactly into the background width.
 
 - `no-repeat`
   - : The image is not repeated. The position of the non-repeated background image is defined by the {{cssxref("background-position")}} CSS property.
 
 - `space`
-  - : The image is repeated as much as possible without clipping. The first and last images are pinned to the left and right of the element, and whitespace is distributed evenly between the images. The {{cssxref("background-position-x")}} property is ignored unless only one image can be displayed without clipping. The only case where clipping happens using `space` is when the width of the image is wider than the element, so there isn't enough room to display one image.
+  - : The image is repeated as much as possible without clipping. The first and last images are pinned to the left and right of the element, and the whitespace is evenly distributed between them. The {{cssxref("background-position-x")}} property is ignored unless one or more images can be displayed without clipping. If the image is wider than the element, it is clipped, as there isn't enough room to display it.
 
 - `round`
-  - : As the allowed space increases in size, the repeated images will stretch (leaving no gaps) until there is room for another one to be added. If If the image doesn't fit a whole number of times, it is rescaled so that it does.
+  - : The image is repeated horizontally. As the available space increases in size, the repeated images will stretch (leaving no gaps) until there is room for another one to be added. If multiple images don't fit the background exactly, they are rescaled to fit.
 
 ## Description
 
-The `background-repeat-x` property accepts a comma-separated list of [`<repetition`](#values) keyterms, which define how the background image(s) should repeat horizontally, or not repeat at all.
+The `background-repeat-x` property accepts a comma-separated list of [`<repetition>`](#values) keyterms, which define how the background image(s) should repeat horizontally, or not repeat at all.
 
 The default value is `repeat`. With this value, the background image repeats horizontally, covering the entire width of the background paint area, with edge images being clipped to the size of the element. Whether the left, right, or both edges are clipped depends on the value of the corresponding {{cssxref("background-position")}} value. How many times images are repeated and how much the images on the edges are clipped depends on the size of the background painting area and width value of the corresponding {{cssxref("background-size")}} property.
 
 The repeating images can be evenly spaced apart, ensuring the repeated images aren't clipped in the horizontal direction. With the `space` value, if the width of the background paint area is not a multiple of the width of the image or does not otherwise have a size that is a multiple of the background size in the width direction, there will be areas not covered by the background image.
 
-Alternatively, the repeated background image can be stretched to cover the entire width of the background area without clipping. With `round`, the repeated image is stretched to fill all the available space until there is room to add an additional repeated image. For example, given a background image that is 100px x 100px and a background paint area that is 1099px wide, the image will be repeated 10 times in the horizontal direction with each image stretched in to be 109.9px wide, possibly altering the images {{glossary("aspect ratio")}} and distorting it. If the width of the paint area increases by 1px, becoming 1100px wide, an 11th image will fit horizontally, with each image being painted at 100px wide, and no longer stretched in the horizontal direction.
+Alternatively, the repeated background image can be stretched to cover the entire width of the background area without clipping. With `round`, the repeated image is stretched to fill all the available space until there is room to add an additional repeated image.
+
+For example, given a background image that is `100px` x `100px` and a background paint area that is `1099px` wide, the image will be resized to `109.9px wide` and repeated 10 times in the horizontal direction. This will alter the image's {{glossary("aspect ratio")}} and distort it. If the width of the paint area increases by `1px` to `1100px`, an 11th image will fit horizontally, with each image being painted at `100px` wide, and no longer distorted horizontally.
 
 ## Formal definition
 
