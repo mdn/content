@@ -511,15 +511,16 @@ When this preference is enabled, any WebGL extensions currently in "draft" statu
 
 The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer.
 From version 142 this is enabled in on Windows in all contexts except service workers.
-For other platforms it is enabled in nightly.
+From version 147 this is enabled in on macOS on Apple Silicon in all browsing contexts except service workers.
+For other platforms such as Linux and macOS on Intel Silicon it is enabled in nightly.
 See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
 
-| Release channel   | Version added | Enabled by default?                                |
-| ----------------- | ------------- | -------------------------------------------------- |
-| Nightly           | 141           | Yes                                                |
-| Developer Edition | 141           | No (Yes on Windows, not including service workers) |
-| Beta              | 141           | No (Yes on Windows, not including service workers) |
-| Release           | 141           | No (Yes on Windows, not including service workers) |
+| Release channel   | Version added | Enabled by default?                                                           |
+| ----------------- | ------------- | ----------------------------------------------------------------------------- |
+| Nightly           | 141           | Yes                                                                           |
+| Developer Edition | 141           | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
+| Beta              | 141           | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
+| Release           | 141           | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
 
 - `dom.webgpu.enabled`
   - : Set to `true` to enable (enabled in Nightly and on Windows in all releases)
