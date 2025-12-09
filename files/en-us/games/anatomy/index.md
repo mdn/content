@@ -19,7 +19,7 @@ Other games demand control over each of the smallest possible individual timesli
 
 But it might not need per-frame control. Your game loop might be similar to the _find the differences_ example and base itself on input events. It might require both input and simulated time. It might even loop based on something else entirely.
 
-Modern JavaScript — as described in the next sections — thankfully makes it easy to develop an efficient, execute-once-per-frame main loop. Of course, your game will only be as optimized as you make it. If something looks like it should be attached to a more infrequent event then it is often a good idea to break it out of the main loop (but not always).
+Modern JavaScript — as described in the next sections — thankfully makes it less difficult to develop an efficient, execute-once-per-frame main loop. Of course, your game will only be as optimized as you make it. If something looks like it should be attached to a more infrequent event then it is often a good idea to break it out of the main loop (but not always).
 
 ## Building a main loop in JavaScript
 
@@ -50,7 +50,7 @@ But do not immediately assume animations require frame-by-frame control. Simple 
 
 ## Building a better main loop in JavaScript
 
-There are two obvious issues with our previous main loop: `main()` pollutes the {{ domxref("window") }} object (where all global variables are stored) and the example code did not leave us with a way to _stop_ the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need easy (direct) access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).
+There are two obvious issues with our previous main loop: `main()` pollutes the {{ domxref("window") }} object (where all global variables are stored) and the example code did not leave us with a way to _stop_ the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need direct access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).
 
 <!-- prettier-ignore-start -->
 ```js
