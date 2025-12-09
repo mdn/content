@@ -191,7 +191,7 @@ The example is rendered like so:
 
 {{EmbedLiveSample("basic-usage", "100%", 200)}}
 
-Try clicking the different buttons and note how the same DOM changes are transitioned between in each case, but the animation is different. This is because a different transition type is set depending on which button is pressed (none is set in the "Default" case).
+Try clicking each button and note how the DOM changes are identical in each case, but the animation is different. This is because a different transition type is set depending on which button is pressed (or no transition type in the "Default" case).
 
 ### Applied example
 
