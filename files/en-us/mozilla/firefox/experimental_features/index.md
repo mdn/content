@@ -366,7 +366,7 @@ The CSS `text-decoration-trim` property allows you to specify {{cssxref("text-de
 
 ### `@custom-media` at-rule
 
-The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS at-rule defines aliases for long or complex media queries. Instead of repeating the same hardcoded `<media-query-list>` in multiple `@media` at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed. ([Firefox bug 1991105](https://bugzil.la/1744292)).
+The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS at-rule defines aliases for long or complex media queries. Instead of repeating the same hardcoded `<media-query-list>` in multiple `@media` at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed. ([Firefox bug 1744292](https://bugzil.la/1744292)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -417,21 +417,6 @@ The {{domxref("CloseWatcher")}} interface allows developers to implement UI comp
 | Release           | 132           | No                           |
 
 - `dom.closewatcher.enabled`
-  - : Set to `true` to enable.
-
-### Navigation API
-
-The Navigation API provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
-([Firefox bug 1979288](https://bugzil.la/1979288)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 146           | Yes                 |
-| Developer Edition | 146           | No                  |
-| Beta              | 146           | No                  |
-| Release           | 146           | No                  |
-
-- `dom.navigation.webidl.enabled`
   - : Set to `true` to enable.
 
 ### Trusted Types API
@@ -511,15 +496,16 @@ When this preference is enabled, any WebGL extensions currently in "draft" statu
 
 The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer.
 From version 142 this is enabled in on Windows in all contexts except service workers.
-For other platforms it is enabled in nightly.
+From version 147 this is enabled in on macOS on Apple Silicon in all browsing contexts except service workers.
+For other platforms such as Linux and macOS on Intel Silicon it is enabled in nightly.
 See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
 
-| Release channel   | Version added | Enabled by default?                                |
-| ----------------- | ------------- | -------------------------------------------------- |
-| Nightly           | 141           | Yes                                                |
-| Developer Edition | 141           | No (Yes on Windows, not including service workers) |
-| Beta              | 141           | No (Yes on Windows, not including service workers) |
-| Release           | 141           | No (Yes on Windows, not including service workers) |
+| Release channel   | Version added | Enabled by default?                                                           |
+| ----------------- | ------------- | ----------------------------------------------------------------------------- |
+| Nightly           | 141           | Yes                                                                           |
+| Developer Edition | 141           | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
+| Beta              | 141           | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
+| Release           | 141           | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
 
 - `dom.webgpu.enabled`
   - : Set to `true` to enable (enabled in Nightly and on Windows in all releases)

@@ -37,7 +37,7 @@ The markup includes a {{htmlelement("button")}} and a {{htmlelement("p")}}. We s
 
 #### CSS
 
-In the CSS, we specify a rule with an `:interest-target` selector, which will apply a specific set of sttyles to the `<p>` element when interest is shown in the `<button>`. We also apply some other styles to the `<button>`, which we've hidden for brevity.
+In the CSS, we specify a rule with an `:interest-target` selector, which will apply a specific set of styles to the `<p>` element when interest is shown in the `<button>`. We also apply some other styles to the `<button>`, which we've hidden for brevity.
 
 ```css hidden live-sample___interest-target
 body {

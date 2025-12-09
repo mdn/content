@@ -32,7 +32,7 @@ The markup includes a {{htmlelement("button")}} and a {{htmlelement("p")}}. We s
 
 ```html live-sample___interest-source
 <button interestfor="mypopover">Button</button>
-<p id="mypopover" popover>A hover toolip</p>
+<p id="mypopover" popover>A hover tooltip</p>
 ```
 
 #### CSS

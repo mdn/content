@@ -30,8 +30,8 @@ In this example, we use an `<area>` element's `interestForElement` property to s
 We include an `<area>` element and a `<div>` element. We turn the `<div>` element into a popover by setting a `popover` attribute on it.
 
 ```html live-sample___basic-interest-invoker
-<map>
-  <area href="#" shape="default" />
+<map name="example-map" id="example-map">
+  <area href="#" shape="default" alt="Example area" />
 </map>
 <div id="mypopover" popover>I am a <code>&lt;div&gt;</code> element.</div>
 ```

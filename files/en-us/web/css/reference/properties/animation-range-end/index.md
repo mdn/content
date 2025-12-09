@@ -91,11 +91,11 @@ In this example, the `animation-range-end` is applied to an element animated via
 
 In the middle of a long block of text, we've included an element that we'll animate. We've added a lot of text to ensure that the content overflows its container; the extra text is hidden here for brevity.
 
-```html
-<div class="animatedElement"></div>
+```html-nolint
+<div class="animatedElement">
 ```
 
-```html hidden
+```html-nolint hidden
 <p>
   Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
   cursus vitae congue mauris rhoncus aenean vel. Sit amet cursus sit amet
@@ -106,7 +106,7 @@ In the middle of a long block of text, we've included an element that we'll anim
   euismod nisi. Eget egestas purus viverra accumsan in nisl nisi scelerisque.
   Netus et malesuada fames ac.
 </p>
-<p></p>
+<p>
 ```
 
 We've also included a checkbox that will toggle the {{cssxref("animation-fill-mode")}} property, so you can see how this property affects animations with shortened timelines.
