@@ -10,7 +10,7 @@ page-type: guide
 
 ## Concepts
 
-The Popover API provides the functionality to display a popover when a related control element (the **invoker**) is activated, for example, when it is clicked. This feature is useful for displaying UI elements such as modals and information panels. You can [create popovers declaratively](/en-US/docs/Web/API/Popover_API/Using#creating_declarative_popovers) by using the [`popover`](/en-US/docs/Web/HTML/Reference/Elements/button#popover) attribute together with either [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) or [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor).
+The Popover API provides the functionality to display a popover when a related control element (the **invoker**) is activated, for example, when it is clicked. This feature is useful for displaying UI elements such as modals and information panels. You can [create popovers declaratively](/en-US/docs/Web/API/Popover_API/Using#creating_declarative_popovers) by using the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute together with either [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) or [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor).
 
 In addition to these activation-based popovers, there is a common need to display a popover when a control element is hovered or focused – interactions that indicate user interest. For example, many social and community sites let users hover over a link to a person's or group's profile page to show a popover with more information. This quick preview helps users decide whether they want to visit the full page. Such popovers may also contain quick actions, such as "Follow" or "Subscribe to group", allowing users to take an action without losing their current context.
 
@@ -32,7 +32,7 @@ Creating an interest invoker declaratively has the following two requirements:
 - A **target element**: This is the element that is affected or controlled when interest is gained or lost. The target element must have an `id`, and it can be just about any element type. Giving this element a `popover` attribute turns it into a popover.
 
   > [!NOTE]
-  > You can also set the target element programmatically by setting the invoker element's `interestForElement` DOM property to a reference to the target element. For more information, see [The interest invoker JavaScript API](#the_interest_invoker_javascript_api) section later in this guide.
+  > You can also set the target element programmatically by setting the invoker element's `interestForElement` DOM property to a reference to the target element. For more information, see [JavaScript API for interest invokers](#javascript_api_for_interest_invokers) section later in this guide.
 
 Let's look at a simple example. Here, the **invoker element** is a link, and the **target element** is a paragraph with the `popover` attribute.
 
@@ -48,8 +48,10 @@ Let's look at a simple example. Here, the **invoker element** is a link, and the
 ```
 
 ```js hidden live-sample___basic-interest-invoker live-sample___interest-invoker-popover-interaction live-sample___interest-invoker-styling live-sample___interest-invoker-api live-sample___non-popover live-sample___link-preview-popover
-const supported =
-  HTMLButtonElement.prototype.hasOwnProperty("interestForElement");
+const supported = Object.hasOwn(
+  HTMLButtonElement.prototype,
+  "interestForElement",
+);
 if (!supported) {
   document.querySelector("html").classList.add("no-interest-invokers");
 }
@@ -180,13 +182,15 @@ Interest invokers have an associated JavaScript API that lets you query the elem
 
 ### Detecting support for interest invokers
 
-One of the uses of the API is feature detection. The simplest way to check whether interest invokers are supported is to use the {{jsxref("Object.hasOwnProperty()")}} method on one of the interface types to see if the `interestForElement` property is available.
+One of the uses of the API is feature detection. The simplest way to check whether interest invokers are supported is to use the {{jsxref("Object.hasOwn()")}} method on one of the interface types to see if the `interestForElement` property is available.
 
 For example:
 
 ```js
-const supported =
-  HTMLButtonElement.prototype.hasOwnProperty("interestForElement");
+const supported = Object.hasOwn(
+  HTMLButtonElement.prototype,
+  "interestForElement",
+);
 ```
 
 All the examples in this guide use this technique to detect support. If the return value is `false`, indicating that the feature is not supported, we add a class to the {{htmlelement("html")}} element:
@@ -219,7 +223,7 @@ Let's look at a basic example that shows the API features in action. This exampl
   Here's some links:
   <a href="#">Link 1</a>
   <a href="#">Link 2</a>
-  <a href="#"">Link 3</a>
+  <a href="#">Link 3</a>
 </p>
 <p id="my-tooltip" popover="hint">A hover tooltip</p>
 ```
