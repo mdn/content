@@ -75,11 +75,11 @@ The value of the `popover` attribute doesn't affect the popover's behavior in th
 You can combine interest invokers with regular popovers on the same control element. In the following example, a {{htmlelement("button")}} element is set up as an interest invoker using the `interestfor` attribute, meaning it will show a tooltip when the user shows interest in it. If the button is clicked, it will show or hide a different popover referenced by the `commandfor` attribute. The [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) attribute is set to `toggle-popover`, allowing the button to be pressed multiple times to toggle the popover between its shown and hidden states.
 
 ```css hidden live-sample___interest-invoker-popover-interaction
-#mytooltip {
+#my-tooltip {
   position-area: right;
 }
 
-#myinfobox {
+#my-infobox {
   position-area: bottom;
 }
 ```
@@ -88,14 +88,14 @@ You can combine interest invokers with regular popovers on the same control elem
 <p>
   Some content including a
   <button
-    interestfor="mytooltip"
-    commandfor="myinfobox"
+    interestfor="my-tooltip"
+    commandfor="my-infobox"
     command="toggle-popover">
     button
   </button>
 </p>
-<p id="mytooltip" popover="hint">A hover tooltip</p>
-<p id="myinfobox" popover>
+<p id="my-tooltip" popover="hint">A hover tooltip</p>
+<p id="my-infobox" popover>
   An infobox that also contains some control buttons<br />
   <button>Button 1</button> <button>Button 2</button>
 </p>
@@ -122,10 +122,10 @@ We've defined two buttons and a tooltip. The tooltip is shown or hidden when the
 
 ```html live-sample___interest-invoker-styling
 <p>
-  <button interestfor="mytooltip">Button 1</button>
-  <button interestfor="mytooltip">Button 2</button>
+  <button interestfor="my-tooltip">Button 1</button>
+  <button interestfor="my-tooltip">Button 2</button>
 </p>
-<p id="mytooltip" popover="hint">A hover tooltip</p>
+<p id="my-tooltip" popover="hint">A hover tooltip</p>
 ```
 
 In the CSS, we've set an `interest-delay` of `1s 2s` on the `<button>` — this creates a delay of 1 second before the tooltip appears when the user shows interest, and a delay of 2 seconds before it disappears when the user loses interest. We've also used the `button:interest-source` selector to change the {{cssxref("background-color")}} of the buttons to `orange` when interest is shown.
@@ -151,15 +151,15 @@ p:has(button:interest-source) button {
 We've also set a {{cssxref("position-area")}} of `bottom` on the tooltip so that it appears below the button. This is possible because associating any popover with its interest invoker creates an implicit anchor reference between them (see [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details).
 
 ```css live-sample___interest-invoker-styling
-#mytooltip {
+#my-tooltip {
   position-area: bottom;
 }
 ```
 
-Finally, we've used the `#mytooltip:interest-target` selector to set a dashed border on the popover when interest is shown.
+Finally, we've used the `#my-tooltip:interest-target` selector to set a dashed border on the popover when interest is shown.
 
 ```css live-sample___interest-invoker-styling
-#mytooltip:interest-target {
+#my-tooltip:interest-target {
   border-style: dashed;
 }
 ```
@@ -221,7 +221,7 @@ Let's look at a basic example that shows the API features in action. This exampl
   <a href="#">Link 2</a>
   <a href="#"">Link 3</a>
 </p>
-<p id="mytooltip" popover="hint">A hover toolip</p>
+<p id="my-tooltip" popover="hint">A hover tooltip</p>
 ```
 
 ```css hidden live-sample___interest-invoker-api
@@ -229,7 +229,7 @@ html {
   font-family: sans-serif;
 }
 
-#mytooltip {
+#my-tooltip {
   position-area: bottom;
 }
 ```
@@ -237,7 +237,7 @@ html {
 In the JavaScript, we get references to the popover and the three links. We then loop through the links and set each link's {{domxref("HTMLAnchorElement.interestForElement", "interestForElement")}} property to reference the popover element. This programmatically sets up the interest invoker-target relationship between the popover and each link.
 
 ```js live-sample___interest-invoker-api
-const tooltip = document.getElementById("mytooltip");
+const tooltip = document.getElementById("my-tooltip");
 const links = document.querySelectorAll("a");
 links.forEach((link) => (link.interestForElement = tooltip));
 ```
