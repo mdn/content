@@ -80,7 +80,7 @@ The available attributes depend on the language and runtime environment (the ECM
 The HTML specification [defines the `type` attribute](https://html.spec.whatwg.org/multipage/webappapis.html#module-type-allowed), which is supported in browser environments.
 This has allowed values `"json"` and `"css"`.
 
-##### JSON Modules (`{ type: "json" }`)
+#### JSON Modules (`{ type: "json" }`)
 
 The `json` type indicates that the imported file must contain JSON.
 You can load JSON from a file into the `data` object using the following code:
@@ -106,7 +106,7 @@ In other words, if you omit the `type` and attempt to import a file as `"applica
 Failed to load module script: Expected a JavaScript module script but the server responded with a MIME type of "application/json". Strict MIME type checking is enforced for module scripts per HTML spec.
 ```
 
-##### CSS Modules (`{ type: "css" }`)
+#### CSS Modules (`{ type: "css" }`)
 
 The HTML spec defines the `css` type, which imports a stylesheet into a script as an {{domxref("CSSStyleSheet")}} object.
 
