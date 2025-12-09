@@ -1,13 +1,13 @@
 ---
-title: Firefox 147 release notes for developers (Nightly)
-short-title: Firefox 147 (Nightly)
+title: Firefox 147 release notes for developers (Beta)
+short-title: Firefox 147 (Beta)
 slug: Mozilla/Firefox/Releases/147
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 147 that affect developers.
-Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [January 13, 2026](https://whattrainisitnow.com/release/?version=147).
+Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [January 13, 2026](https://whattrainisitnow.com/release/?version=147).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
