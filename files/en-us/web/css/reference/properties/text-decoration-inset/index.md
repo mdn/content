@@ -77,7 +77,7 @@ One or two {{cssxref("&lt;length>")}} values, or the keyword `auto`.
 - {{cssxref("&lt;length>")}}
   - : Specifies the amount to adjust the text decoration position by. Positive values inset the text decoration (make it shorter) while negative values outset the text decoration (make it longer). If one value is specified, it applies to both the text decoration start and end points. If two values are specified, the first one applies to the text decoration start point and the second one applies to the text decoration end point.
 - `auto`
-  - : The browser chooses a start and end inset amount to ensure that, if two decorated text boxes appear side-by-side, the appearence of a gap is created between their text decorations so they do not appear to have a single text decoration.
+  - : The browser chooses a start and end inset amount to ensure that, if two decorated text boxes appear side-by-side, the appearance of a gap is created between their text decorations so they do not appear to have a single text decoration.
 
 ## Description
 

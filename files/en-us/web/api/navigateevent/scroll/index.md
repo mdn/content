@@ -3,12 +3,10 @@ title: "NavigateEvent: scroll() method"
 short-title: scroll()
 slug: Web/API/NavigateEvent/scroll
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.NavigateEvent.scroll
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`scroll()`** method of the
 {{domxref("NavigateEvent")}} interface can be called to manually trigger the browser-driven scrolling behavior that occurs in response to the navigation, if you want it to happen before the navigation handling has completed.

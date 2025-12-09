@@ -293,6 +293,7 @@ holodeck
 homescreen
 homothetic
 hotlinking
+HOTP
 hotspot
 hotspots
 hoverable
@@ -469,6 +470,7 @@ OOJS
 OPFS
 optimizability
 opto-electronic
+OTAC
 outdents
 outsetting
 overengineering
@@ -500,6 +502,7 @@ phonorecord
 phonorecords
 pilcrow
 pillarboxed
+pillarboxing
 pingback
 pingbacks
 pingpong
@@ -858,6 +861,7 @@ ungroup
 ungrouping
 unguaranteed
 unhovered
+unhovering
 uninterpolated
 unintuitively
 unioned

@@ -645,7 +645,7 @@ console.log(result.hostname); // {"groups": {"0": "cdn"}, "input": "cdn.example.
 
 ### Accessing matched named group values
 
-The following example shows how groups can be given custom names which can be used to accessed the matched value in the result object.
+The following example shows how groups can be given custom names which can be used to access the matched value in the result object.
 
 The match patterns in the pattern are indicated by the `:` symbol followed by a name.
 The same names then appear as keys in the `groups` property, with the matching values being the matched part of the test URL.
@@ -734,8 +734,8 @@ console.log(pattern3.test({ pathname: "/product/" })); // true
 
 ### Making matching groups repeated
 
-The following example shows how a matching group can be made repeated by placing `+` modifier after it.
-In the `pathname` component this also treats the `/` prefix as special, so that it effectively the start of the repeating group.
+The following example shows how a matching group can be made repeated by placing a `+` modifier after it.
+In the `pathname` component this also treats the `/` prefix as special, so that it is effectively the start of the repeating group.
 
 ```js
 const pattern = new URLPattern({ pathname: "/product/:action+" });
@@ -803,7 +803,7 @@ console.log(result.hostname);
 
 The following example shows how curly braces can be used to denote fixed text values as optional or repeated without using a matching group.
 
-The pattern below matches either `/product` or `/products/` but because [group delimiter](#group_delimiters) are non-capturing by default, the result is not found in a corresponding match group.
+The pattern below matches either `/product` or `/product/` but because [group delimiter](#group_delimiters) are non-capturing by default, the result is not found in a corresponding match group.
 
 ```js
 const pattern = new URLPattern({ pathname: "/product{/}?" });
