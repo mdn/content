@@ -239,7 +239,7 @@ window.addEventListener("pagereveal", async (e) => {
 
 ### Applying custom animations in CSS
 
-Now we've got an appropriate type set on the active view transition depending on the navigation type, we can set different animations for each type over in our CSS, in the same way as we saw in previous examples:
+Now we've got an appropriate type set on the active view transition depending on the navigation type, we can set different animations for each type in our CSS, in the same way as we saw in previous examples:
 
 ```css
 html:active-view-transition {
