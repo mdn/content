@@ -27,7 +27,7 @@ const CONTENT_ROOT = path.join(
 );
 const RELEASES_API = "https://whattrainisitnow.com/api/firefox/releases/";
 const FUTURE_RELEASES_API =
-  "https://whattrainisitnow.com/api/firefox/calendar/future/";
+  "https://whattrainisitnow.com/api/firefox/releases/future/";
 
 /**
  * Fetch release dates from whattrainisitnow.com
@@ -43,19 +43,7 @@ async function fetchReleaseDates() {
   const releases = await releasesResponse.json();
   const futureReleases = await futureResponse.json();
 
-  const dates = {};
-
-  // Add past releases (format: {"version": "YYYY-MM-DD"})
-  for (const [version, releaseDate] of Object.entries(releases)) {
-    dates[parseFloat(version)] = releaseDate;
-  }
-
-  // Add future releases (format: {"key": {version, release_date}})
-  for (const versionData of Object.values(futureReleases)) {
-    dates[versionData.version] = versionData.release_date;
-  }
-
-  return dates;
+  return { ...releases, ...futureReleases };
 }
 
 /**
@@ -238,9 +226,9 @@ async function main() {
     console.log("📡 Fetching release dates...");
     const releaseDates = await fetchReleaseDates();
 
-    const stableDate = releaseDates[newStableVersion];
-    const betaDate = releaseDates[newBetaVersion];
-    const nightlyDate = releaseDates[newNightlyVersion];
+    const stableDate = releaseDates[`${newStableVersion}.0`];
+    const betaDate = releaseDates[`${newBetaVersion}.0`];
+    const nightlyDate = releaseDates[`${newNightlyVersion}.0`];
 
     if (!stableDate || !betaDate || !nightlyDate) {
       console.warn("⚠️  Warning: Could not find all release dates.");
