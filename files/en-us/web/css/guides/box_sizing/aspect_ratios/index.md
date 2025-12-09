@@ -97,7 +97,7 @@ This is a `220px` square image with no CSS applied; it is displayed at its intri
 
 If replaced content is auto-sized or you provide a size for only one dimension, such as setting a value for `width`, the browser will automatically resize the other dimension, in this case, the height, while maintaining the media's original aspect ratio.
 
-In this example, only the {{cssxref("width")}} is set on the image, so the user agent preserves its aspect ratio. The same image is repeated three times, displayed at different widths: `55px`, `110px`, and at its natural size of `220px` via the [`width: auto`](/en-US/docs/Web/CSS/Reference/Properties/width) value.
+In this example, only the {{cssxref("width")}} is set on the image, so the user agent preserves its aspect ratio. The same image is repeated three times, displayed at different widths: `55px`, `110px`, and at its natural size of `220px` via the {{cssxref("width", "width: auto", "#auto")}} value.
 
 ```html hidden live-sample___image
 <img
@@ -401,7 +401,7 @@ p {
 
 {{EmbedLiveSample("circle", "100", "250")}}
 
-To make the `<div>` a circle, we can set the `height` and `width` to the same value, or set `aspect-ratio: 1` and set the `overflow` to `auto` or `hidden`. Alternatively, we can simply remove the margins on the paragraph with [`margin-block: 0`](/en-US/docs/Web/CSS/Reference/Properties/margin-block). Both these options are shown below.
+To make the `<div>` a circle, we can set the `height` and `width` to the same value, or set `aspect-ratio: 1` and set the `overflow` to `auto` or `hidden`. Alternatively, we can simply remove the margins on the paragraph with {{cssxref("margin-block", "margin-block: 0")}}. Both these options are shown below.
 
 ```html live-sample___circle2
 <div><p>Hello world</p></div>

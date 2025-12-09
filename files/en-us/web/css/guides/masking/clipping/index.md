@@ -36,7 +36,7 @@ With the `clip-path` property, you can make complex shapes by clipping an elemen
 
 ### Values of the `clip-path` property
 
-To visually clip an element, the `clip-path` property is set to either a [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Properties/clip-path#geometry-box), a {{cssxref("url_value", "url")}} to a {{svgElement("clipPath")}} clip source, or a {{cssxref("basic-shape")}} created with [shape function](/en-US/docs/Web/CSS/Reference/Values/Functions#shape_functions).
+To visually clip an element, the `clip-path` property is set to either a {{cssxref("clip-path", "&lt;geometry-box&gt;", "#geometry-box")}}, a {{cssxref("url_value", "url")}} to a {{svgElement("clipPath")}} clip source, or a {{cssxref("basic-shape")}} created with [shape function](/en-US/docs/Web/CSS/Reference/Values/Functions#shape_functions).
 
 ### Geometry boxes
 

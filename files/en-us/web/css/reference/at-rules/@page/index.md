@@ -280,7 +280,7 @@ Named pages enable performing per-page layout and adding [page-breaks](/en-US/do
 
 Named pages can be applied using the {{Cssxref("page")}} property. This allows the user to create different page configurations for use in print layouts.
 
-An example of this can be found on the [`page`](/en-US/docs/Web/CSS/Reference/Properties/page#examples) examples.
+An example of this can be found on the {{cssxref("page", "page", "#examples")}} examples.
 
 ## Examples
 

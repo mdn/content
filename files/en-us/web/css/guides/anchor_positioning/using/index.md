@@ -127,7 +127,7 @@ As we saw above, associating a positioned element with an anchor is not really m
 > CSS anchor positioning also provides mechanisms for specifying fallback positions if the positioned element's default position causes it to overflow the viewport. See the [Fallback options and conditional hiding](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide for details.
 
 > [!NOTE]
-> The anchor element must be a visible DOM node for the association and positioning to work. If it is hidden (for example via [`display: none`](/en-US/docs/Web/CSS/Reference/Properties/display#none)), the positioned element will be positioned relative to its nearest positioned ancestor. We discuss how to hide an anchor-positioned element when its anchor disappears in [Conditional hiding using `position-visibility`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements).
+> The anchor element must be a visible DOM node for the association and positioning to work. If it is hidden (for example via {{cssxref("display", "display: none", "#none")}}), the positioned element will be positioned relative to its nearest positioned ancestor. We discuss how to hide an anchor-positioned element when its anchor disappears in [Conditional hiding using `position-visibility`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements).
 
 ### Using inset properties with `anchor()` function values
 
@@ -681,7 +681,7 @@ left: anchor-size(width);
 inset-inline-end: anchor-size(--my-anchor height, 100px);
 ```
 
-This doesn't position an element relative to the position of its anchor like the [`anchor()`](/en-US/docs/Web/CSS/Reference/Values/anchor) function or {{cssxref("position-area")}} property do (see [Positioning elements relative to their anchor](#positioning_elements_relative_to_their_anchor), above); the element won't change its position when its anchor does. Instead, the element will be positioned according to the normal rules of [`absolute`](/en-US/docs/Web/CSS/Reference/Properties/position#absolute) or [`fixed`](/en-US/docs/Web/CSS/Reference/Properties/position#fixed) positioning.
+This doesn't position an element relative to the position of its anchor like the [`anchor()`](/en-US/docs/Web/CSS/Reference/Values/anchor) function or {{cssxref("position-area")}} property do (see [Positioning elements relative to their anchor](#positioning_elements_relative_to_their_anchor), above); the element won't change its position when its anchor does. Instead, the element will be positioned according to the normal rules of {{cssxref("position", "absolute", "#absolute")}} or {{cssxref("position", "fixed", "#fixed")}} positioning.
 
 This can be useful in some situations. For example, if your anchor element can only move vertically, and always remains next to the edge of its closest positioned ancestor horizontally, you could use `left: anchor-size(width)` to cause the anchor-positioned element to always be positioned to the right of its anchor, even if the anchor width changes.
 

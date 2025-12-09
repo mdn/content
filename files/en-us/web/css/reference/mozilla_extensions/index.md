@@ -175,7 +175,7 @@ Support for the prefixed version is typically dropped eventually, so use the sta
 
 **Property:** {{CSSxRef("image-rendering")}}
 
-- `-moz-crisp-edges` {{deprecated_inline}}: Use [`crisp-edges`](/en-US/docs/Web/CSS/Reference/Properties/image-rendering#crisp-edges).
+- `-moz-crisp-edges` {{deprecated_inline}}: Use {{cssxref("image-rendering", "crisp-edges", "#crisp-edges")}}.
 
 ### &lt;length&gt;
 
@@ -213,7 +213,7 @@ See [Browser Compatibility](/en-US/docs/Web/CSS/Reference/Properties/list-style-
 - `-moz-min-content`: See {{CSSxRef("min-content")}}.
 - `-moz-fit-content`: See {{CSSxRef("fit-content")}}.
 - `-moz-max-content`: See {{CSSxRef("max-content")}}.
-- `-moz-available`: See [`stretch`](/en-US/docs/Web/CSS/Reference/Properties/width#stretch).
+- `-moz-available`: See {{cssxref("width", "stretch", "#stretch")}}.
 
 ## Pseudo-classes
 

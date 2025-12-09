@@ -100,7 +100,7 @@ div::before {
 
 {{EmbedLiveSample("generated_content", "", "400px")}}
 
-The HTML for this sample is a single, empty {{HTMLElement("div")}} inside an otherwise empty {{HTMLElement("body")}}. The snowman was created with [CSS images](/en-US/docs/Web/CSS/Guides/Images) and [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders). The carrot nose was added using generated content: an empty box with a wide orange [left border](/en-US/docs/Web/CSS/Reference/Properties/border-left) added to the {{cssxref("::before")}} pseudo-element. The text is also generated content: "only one &lt;div>" was generated with the {{cssxref("content")}} property applied to the {{cssxref("::after")}} pseudo-element.
+The HTML for this sample is a single, empty {{HTMLElement("div")}} inside an otherwise empty {{HTMLElement("body")}}. The snowman was created with [CSS images](/en-US/docs/Web/CSS/Guides/Images) and [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders). The carrot nose was added using generated content: an empty box with a wide orange [left border](/en-US/docs/Web/CSS/Reference/Properties/border-left) added to the {{cssxref("::before")}} pseudo-element. The text is also generated content: "only one &lt;div&gt;" was generated with the {{cssxref("content")}} property applied to the {{cssxref("::after")}} pseudo-element.
 
 Click "Play" in the example above to see or edit the code in the MDN Playground.
 
@@ -115,16 +115,16 @@ The CSS generated content module also introduces four at-risk properties: `strin
 
 ### Functions
 
-The CSS generated content module introduces six yet-to-be implemented CSS functions including `content()`, `string()`, and `leader()`, and the three [`<target>`](/en-US/docs/Web/CSS/Reference/Properties/content#target) functions `target-counter()`, `target-counters()`, and `target-text()`.
+The CSS generated content module introduces six yet-to-be implemented CSS functions including `content()`, `string()`, and `leader()`, and the three {{cssxref("content", "&lt;target&gt;", "#target")}} functions `target-counter()`, `target-counters()`, and `target-text()`.
 
 ### Data types
 
-- [`<content-list>`](/en-US/docs/Web/CSS/Reference/Properties/content)
+- {{cssxref("content", "&lt;content-list&gt;", "#values")}}
 - `<content-replacement>` (see {{cssxref("image")}})
 - {{cssxref("image")}}
-- [`<counter>`](/en-US/docs/Web/CSS/Reference/Properties/content#counter)
-- [`<quote>`](/en-US/docs/Web/CSS/Reference/Properties/content#quote)
-- [`<target>`](/en-US/docs/Web/CSS/Reference/Properties/content#target)
+- {{cssxref("content", "&lt;counter&gt;", "#counter")}}
+- {{cssxref("content", "&lt;quote&gt;", "#quote")}}
+- {{cssxref("content", "&lt;target&gt;", "#target")}}
 
 ## Guides
 

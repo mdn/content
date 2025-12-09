@@ -266,7 +266,7 @@ See the [compatibility table](#browser_compatibility) to check which browsers su
 
 ## Accessibility
 
-Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style-type` value of `none`. This can be resolved by adding `role="list"` to the list's opening tag. To learn more about this and potential workarounds, see [`list-style`](/en-US/docs/Web/CSS/Reference/Properties/list-style#accessibility).
+Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style-type` value of `none`. This can be resolved by adding `role="list"` to the list's opening tag. To learn more about this and potential workarounds, see {{cssxref("list-style", "list-style", "#accessibility")}}.
 
 ## Formal definition
 

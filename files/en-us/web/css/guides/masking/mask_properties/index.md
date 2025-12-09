@@ -541,7 +541,7 @@ or, expanding on the example using the `mask` shorthand:
 }
 ```
 
-In the `mask` shorthand, if only one [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Properties/clip-path#geometry-box) value is given, it sets both the `mask-origin` and `mask-clip` property values. If two `<geometry-box>` values are present, the first defines the `mask-origin` and the second defines the `mask-clip`.
+In the `mask` shorthand, if only one {{cssxref("clip-path", "&lt;geometry-box&gt;", "#geometry-box")}} value is given, it sets both the `mask-origin` and `mask-clip` property values. If two `<geometry-box>` values are present, the first defines the `mask-origin` and the second defines the `mask-clip`.
 
 For mask layer images that do not reference an SVG {{svgelement("mask")}} element, the `mask-clip` property defines whether the mask painting area, or the area affected by the mask, is the border, padding, or content box. The painted content of the element will be restricted to this area.
 
@@ -659,7 +659,7 @@ or, expanding on the example using the `mask` shorthand, with the `mask-size` co
 
 The {{cssxref("mask-repeat")}} property defines how mask images are repeated, or tiled, after the initial mask image has been sized and positioned. The `mask-repeat` property defines if and how that mask image is repeated along the horizontal and vertical axes. In most of the previous examples, you may have noticed the star mask repeated along the X and Y axes. This is because `repeat` is the default value.
 
-The `mask-repeat` property is analogous to the {{cssxref("background-repeat")}} property, accepting the same [`<repeat-style>`](/en-US/docs/Web/CSS/Reference/Properties/mask-repeat#values) values. As is the case with `background-repeat`, the first (and possibly only) mask-image repetition is positioned by [the `*-position` property](#the_mask-position_property) and sized by [the `*-size` property](#the_mask-size_property). The positions of the repeated background or mask images are based on this initial image instance.
+The `mask-repeat` property is analogous to the {{cssxref("background-repeat")}} property, accepting the same {{cssxref("mask-repeat", "&lt;repeat-style&gt;", "#values")}} values. As is the case with `background-repeat`, the first (and possibly only) mask-image repetition is positioned by [the `*-position` property](#the_mask-position_property) and sized by [the `*-size` property](#the_mask-size_property). The positions of the repeated background or mask images are based on this initial image instance.
 
 Continuing with the `masked-element` example, if we don't explicitly set the `mask-repeat` property, it will default to `repeat` for each layer, as if we had set the following:
 

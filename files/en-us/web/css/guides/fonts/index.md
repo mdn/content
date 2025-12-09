@@ -93,44 +93,44 @@ The CSS fonts module also defines the {{cssxref("@font-feature-values/font-displ
 
 `font-feature-settings` type:
 
-- [`<feature-tag-value>`](/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings#values)
+- {{cssxref("font-feature-settings", "&lt;feature-tag-value&gt;", "#feature-tag-value")}}
 
 `font-format` type:
 
-- [`<font-format>`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-format)
+- [`font-format`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-format)
 
 `font-stretch` type:
 
-- [`<font-stretch-css3>`](/en-US/docs/Web/CSS/Reference/Properties/font-stretch#values)
+- {{cssxref("font-stretch", "&lt;font-stretch-css3&gt;", "#values")}}
 
 `font-tech` types:
 
-- [`<color-font-tech>`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
-- [`<font-features-tech>`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
-- [`<font-tech>`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
+- [`color-font-tech`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
+- [`font-features-tech`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
+- [`font-tech`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
 
 `font-variant` types:
 
-- [`<font-variant-css2>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant)
-- [`<east-asian-variant-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant#values)
-- [`<east-asian-width-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant#values)
+- {{cssxref("font-variant", "&lt;font-variant-css2&gt;", "#values")}}
+- {{cssxref("font-variant", "&lt;east-asian-variant-values&gt;", "#east-asian-variant-values")}}
+- {{cssxref("font-variant", "&lt;east-asian-width-values&gt;", "#east-asian-variant-values")}}
 
 `font-variant-ligatures` types:
 
-- [`<common-lig-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
-- [`<contextual-alt-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
-- [`<discretionary-lig-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
-- [`<historical-lig-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
+- {{cssxref("font-variant-ligatures", "&lt;common-lig-values&gt;", "#common-lig-values")}}
+- {{cssxref("font-variant-ligatures", "&lt;contextual-alt-values&gt;", "#contextual-alt-values")}}
+- {{cssxref("font-variant-ligatures", "&lt;discretionary-lig-values&gt;", "#discretionary-lig-values")}}
+- {{cssxref("font-variant-ligatures", "&lt;historical-lig-values&gt;", "#historical-lig-values")}}
 
 `font-variant-numeric` types:
 
-- [`<numeric-figure-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
-- [`<numeric-fraction-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
-- [`<numeric-spacing-values>`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
+- {{cssxref("font-variant-numeric", "&lt;numeric-figure-values&gt;", "#numeric-figure-values")}}
+- {{cssxref("font-variant-numeric", "&lt;numeric-fraction-values&gt;", "#numeric-fraction-values")}}
+- {{cssxref("font-variant-numeric", "&lt;numeric-spacing-values&gt;", "#numeric-spacing-values")}}
 
 `font-weight` type:
 
-- [`<font-weight-absolute>`](/en-US/docs/Web/CSS/Reference/Properties/font-weight#values)
+- {{cssxref("font-weight", "&lt;font-weight-absolute&gt;", "#values")}}
 
 ### Interfaces
 
