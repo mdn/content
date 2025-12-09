@@ -16,7 +16,10 @@ Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
+
+- In the Rule view of the Inspector, [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) selectors can now be edited in the same way as other selector types.
+  ([Firefox bug 1998704](https://bugzil.la/1998704)).
 
 <!-- ### HTML -->
 
