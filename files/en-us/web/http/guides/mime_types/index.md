@@ -150,7 +150,7 @@ JavaScript content should always be served with the MIME type `text/javascript`.
 For historic reasons, browsers may support some [legacy JavaScript types](#legacy_javascript_mime_types) listed below, but you should not assume scripts served with any MIME type other than `text/javascript` will always load or run.
 
 Note that in HTML the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute for {{htmlelement("script")}} elements may only contain the **JavaScript MIME type essence**: `text/javascript`.
-Including any parameter, such as `charset=utf-8`, is the same as setting the `type` to any other MIME type: the script content is treated as a data block and is not executed as JavaScript.
+Including any parameter, such as `charset=utf-8`, is the same as setting the `type` to [an unrecognized value](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script/type#any_other_value): the script content is treated as a data block and is not executed as JavaScript.
 (Note that setting the `type` to a JavaScript MIME type is a deprecated feature itself: you should omit the `type` in this case.)
 In contrast, when using the HTTP {{httpheader("Content-Type")}} header you may optionally specify the `charset` parameter as usual.
 
