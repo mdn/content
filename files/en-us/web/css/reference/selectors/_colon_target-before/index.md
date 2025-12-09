@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`:target-before`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selects elements that come before the **active** scroll marker (the scroll marker of a {{cssxref("scroll-marker-group")}} that is currently scrolled to) in a navigation menu. This [selector](/en-US/docs/Web/CSS/Guides/Selectors) can be used to style navigation items that come before the active navigation position within a scroll marker group.
+The **`:target-before`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selects scroll markers that come before the **active** scroll marker (the one that currently matches {{cssxref(":target-current")}}) within a scroll marker group. You can use this selector to style navigation items that come before the current navigation position within a scroll marker group.
 
 > [!NOTE]
 > The `:target-before` pseudo-class is only valid on {{cssxref("::scroll-marker")}} pseudo-elements and elements that have been designated as scroll markers via the {{cssxref("scroll-target-group")}} property.
@@ -25,13 +25,13 @@ The **`:target-before`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/W
 
 ## Examples
 
-### Targeting navigation items before and after the active scroll marker
+### Styling navigation items before and after the active scroll marker
 
-In this example, we use the `:target-before` and {{cssxref(":target-after")}} pseudo-classes to highlight the scroll markers before and after the active scroll marker appropriately, giving the user an indication of what items have already been viewed, and which are still to come.
+In this example, we use the `:target-before` and {{cssxref(":target-after")}} pseudo-classes to highlight the scroll markers before and after the active one, indicating which items the user has already viewed and which are still to come.
 
 #### HTML
 
-Our markup has a series of {{htmlelement("section")}} elements containing content, and a table of contents created using an ordered list ({{htmlelement("ol")}}/{{htmlelement("li")}}) and {{htmlelement("a")}} elements.
+The markup contains a table of contents created using an ordered list ({{htmlelement("ol")}}/{{htmlelement("li")}}) and {{htmlelement("a")}} elements. This is followed by a series of {{htmlelement("section")}} elements containing content.
 
 ```html
 <nav id="toc">
@@ -166,7 +166,7 @@ Our markup has a series of {{htmlelement("section")}} elements containing conten
 
 #### CSS
 
-We've set `scroll-target-group: auto` on the `<ol>` to turn it into a scroll marker group container and trigger the browser's algorithm for calculating which `<a>` element is the active scroll marker at any given time (that is, which link's target is currently in view). We then style the `:target-current` pseudo-class with a `red` {{cssxref("color")}} so that it stands out clearly.
+We've set `scroll-target-group: auto` on the `<ol>` to turn it into a scroll marker group container and let the browser determine which `<a>` element is the active scroll marker at any given time (that is, which link's target is currently in view). We then style the `:target-current` pseudo-class with a `red` {{cssxref("color")}} so that it stands out clearly.
 
 ```css hidden live-sample___targeting-before-and-after
 body {
@@ -235,7 +235,7 @@ a:target-after {
 
 #### Result
 
-Try navigating by activating the links and by scrolling. You'll see that in each case, the red highlight moves between the links to match the section currently being shown, and the links before and after the current red link update to adopt the styles defined in our `a:target-before` and `a:target-after` rules.
+Try navigating either by clicking the links or by scrolling. You'll see that in each case, the red text color moves between the links to match the section currently in view, and the links before and after the current red link update to adopt the styles defined in the `a:target-before` and `a:target-after` rules.
 
 {{EmbedLiveSample("targeting-before-and-after", "100%", 500)}}
 
