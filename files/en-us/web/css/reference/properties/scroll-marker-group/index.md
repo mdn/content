@@ -187,8 +187,8 @@ Note the placement of the scroll marker group container. Check out how the keybo
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref(":target-current")}}
-- [`:target-before`](/en-US/docs/Web/CSS/Reference/Selectors/:target-before)
-- [`:target-after`](/en-US/docs/Web/CSS/Reference/Selectors/:target-after)
+- {{cssxref(":target-before")}}
+- {{cssxref(":target-after")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

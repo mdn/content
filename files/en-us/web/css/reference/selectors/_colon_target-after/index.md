@@ -13,7 +13,7 @@ sidebar: cssref
 The **`:target-after`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selects elements that come after the **active** scroll marker (the scroll marker of a {{cssxref("scroll-marker-group")}} that is currently scrolled to) in a navigation menu. This [selector](/en-US/docs/Web/CSS/Guides/Selectors) can be used to style navigation items that come after the active navigation position within a scroll marker group.
 
 > [!NOTE]
-> The `:target-after` pseudo-class is only valid on {{cssxref("::scroll-marker")}} pseudo-elements and elements that have been designated as scroll markers via the [`scroll-target-group`](/en-US/docs/Web/CSS/Reference/Properties/scroll-target-group) property.
+> The `:target-after` pseudo-class is only valid on {{cssxref("::scroll-marker")}} pseudo-elements and elements that have been designated as scroll markers via the {{cssxref("scroll-target-group")}} property.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ The **`:target-after`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/We
 
 ### Targeting navigation items before and after the active scroll marker
 
-In this example, we use the [`:target-before`](/en-US/docs/Web/CSS/Reference/Selectors/:target-before) and `:target-after` pseudo-classes to highlight the scroll markers before and after the active scroll marker appropriately, giving the user an indication of what items have already been viewed, and which are still to come.
+In this example, we use the {{cssxref(":target-before")}} and `:target-after` pseudo-classes to highlight the scroll markers before and after the active scroll marker appropriately, giving the user an indication of what items have already been viewed, and which are still to come.
 
 #### HTML
 
@@ -250,8 +250,8 @@ Try navigating by activating the links and by scrolling. You'll see that in each
 ## See also
 
 - {{cssxref("scroll-marker-group")}}
-- [`scroll-target-group`](/en-US/docs/Web/CSS/Reference/Properties/scroll-target-group)
-- [`:target-current`](/en-US/docs/Web/CSS/Reference/Selectors/:target-current), [`:target-before`](/en-US/docs/Web/CSS/Reference/Selectors/:target-before)
+- {{cssxref("scroll-target-group")}}
+- {{cssxref(":target-current")}}, {{cssxref(":target-before")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::scroll-marker-group")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)

@@ -39,7 +39,7 @@ The CSS carousel features provide pseudo-elements and pseudo-classes that enable
   - : Generated inside the children of a scroll container ancestor or within a scroll container's columns, to represent their scroll markers. These can be selected to scroll the container to their associated child elements or column, and are collected inside the scroll container's {{cssxref("::scroll-marker-group")}} for layout purposes.
 - {{cssxref(":target-current")}}
   - : This pseudo-class can be used to select the currently-active scroll marker. It can be used to provide a highlight style to the currently active marker, which is important for usability and accessibility.
-- [`:target-before`](/en-US/docs/Web/CSS/Reference/Selectors/:target-before) and [`:target-after`](/en-US/docs/Web/CSS/Reference/Selectors/:target-after)
+- {{cssxref(":target-before")}} and {{cssxref(":target-after")}}
   - : These pseudo-classes can be used to select scroll markers before and after the currently-active scroll marker, respectively. This is useful for styling navigation items that come before and after the active navigation position, to help give the user an indication of what they've already looked at, and what is still to come.
 - {{cssxref("::column")}}
   - : This pseudo-element represents the individual columns generated when a container is set to display its content in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). It can be used in conjunction with {{cssxref("::scroll-marker")}} to generate a scroll marker for each column.
@@ -537,7 +537,7 @@ ul::column::scroll-marker {
 }
 ```
 
-Finally, we again use the `:target-current` pseudo-element to mark the active scroll marker, providing the user with an idea of where they are in the navigation. However, we also use the [`:target-before`](/en-US/docs/Web/CSS/Reference/Selectors/:target-before) and [`:target-after`](/en-US/docs/Web/CSS/Reference/Selectors/:target-after) pseudo-classes to give the scroll markers before and after the active scroll marker some custom styling. We also set a {{cssxref("transition")}} on the `ul::column::scroll-marker:target-current` ruleset, so that the style changes between the different states animate smoothly.
+Finally, we again use the `:target-current` pseudo-element to mark the active scroll marker, providing the user with an idea of where they are in the navigation. However, we also use the {{cssxref(":target-before")}} and {{cssxref(":target-after")}} pseudo-classes to give the scroll markers before and after the active scroll marker some custom styling. We also set a {{cssxref("transition")}} on the `ul::column::scroll-marker:target-current` ruleset, so that the style changes between the different states animate smoothly.
 
 ```css live-sample___second-example
 ul::column::scroll-marker:target-before {

@@ -13,7 +13,7 @@ sidebar: cssref
 The **`:target-current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selects the **active** scroll marker — the scroll marker of a {{cssxref("scroll-marker-group")}} that is currently scrolled to. This [selector](/en-US/docs/Web/CSS/Guides/Selectors) can be used to style the active navigation position within a scroll marker group.
 
 > [!NOTE]
-> The `:target-current` pseudo-class is only valid on {{cssxref("::scroll-marker")}} pseudo-elements and elements that have been designated as scroll markers using the [`scroll-target-group`](/en-US/docs/Web/CSS/Reference/Properties/scroll-target-group) property.
+> The `:target-current` pseudo-class is only valid on {{cssxref("::scroll-marker")}} pseudo-elements and elements that have been designated as scroll markers using the {{cssxref("scroll-target-group")}} property.
 
 ## Syntax
 
@@ -50,8 +50,8 @@ See [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels) and 
 ## See also
 
 - {{cssxref("scroll-marker-group")}}
-- [`scroll-target-group`](/en-US/docs/Web/CSS/Reference/Properties/scroll-target-group)
-- [`:target-before`](/en-US/docs/Web/CSS/Reference/Selectors/:target-before), [`:target-after`](/en-US/docs/Web/CSS/Reference/Selectors/:target-after)
+- {{cssxref("scroll-target-group")}}
+- {{cssxref(":target-before")}}, {{cssxref(":target-after")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::scroll-marker-group")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
