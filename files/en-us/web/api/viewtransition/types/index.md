@@ -62,7 +62,7 @@ Finally, we define the `changeContent()` function. We start by invoking the {{do
 In the second part of the `changeContent()` function, we check the value of the `click` event target:
 
 - If it is the "Slide" button, we add a `slide` type to the active view transition's types using `vt.types.add("slide")`.
-- If it is the "Flip" button, we add a `slide` type to the active view transition's types using `vt.types.add("flip")`.
+- If it is the "Flip" button, we add a `flip` type to the active view transition's types using `vt.types.add("flip")`.
 - We don't do anything if the "Default" button was pressed. In this case, we just want to use the default view transition cross-fade animation.
 
 ```js live-sample___basic_usage
