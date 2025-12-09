@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-**CSS Houdini** is a set of APIs that expose parts of the CSS engine. This makes it easier for developers to create extensions for CSS. These extensions might be to polyfill features that are not yet available in a browser, experiment with new ways of doing layout, or add creative borders or other effects.
+**CSS Houdini** is a set of APIs that expose parts of the CSS engine enabling developers to create CSS extensions. These extensions might be to polyfill features that are not yet available in a browser, experiment with new ways of doing layout, or add creative borders or other effects.
 
 While many Houdini examples showcase the creative possibilities of the APIs, there are many practical use cases. For example, you can use Houdini to create advanced custom properties with type checking and default values.
 
