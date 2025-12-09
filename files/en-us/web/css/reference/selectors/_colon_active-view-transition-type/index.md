@@ -84,7 +84,7 @@ The markup includes a single {{htmlelement("p")}} element to contain the content
 
 #### JavaScript
 
-In our script, we grab references to both buttons and the content paragraph, and then store our two different pieces of content in two constants.
+In our script, we create references to both buttons and the content paragraph, and then store our two different pieces of content in two constants.
 
 ```js live-sample___basic_usage
 const backBtn = document.getElementById("backwards");
