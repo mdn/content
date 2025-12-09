@@ -11,9 +11,21 @@ Firefox 146 was released on [December 9, 2025](https://whattrainisitnow.com/rele
 
 ## Changes for web developers
 
+### Developer Tools
+
+- In the Rule view of the Inspector, when a displayed ruleset declares 10 or more [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) that are unused, those properties are hidden by default. This reduces clutter, and in some cases also speeds up the rendering of the Inspector panel. In such cases, the hidden properties can be displayed via a "Show..." button provided at the bottom of the ruleset.
+  ([Firefox bug 1719461](https://bugzil.la/1719461)).
+
 ### HTML
 
 No notable changes.
+
+### MathML
+
+- Operator mirroring in right-to-left (RTL) modes and stretching now work properly when used in combination.
+  ([Firefox bug 1994172](https://bugzil.la/1994172)).
+- The {{cssxref("math-shift")}} property is now supported. This allows developers to indicate whether superscript rendering in MathML formulas should be normal or compact, affecting the height to which superscript text is shifted.
+  ([Firefox bug 1994171](https://bugzil.la/1994171)).
 
 ### CSS
 
@@ -40,13 +52,6 @@ No notable changes.
 
 - {{domxref("SubtleCrypto.importKey()")}} now allows you to import keys defined as compressed elliptic curve points when using the [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh) algorithms. ([Firefox bug 1971499](https://bugzil.la/1971499)).
 
-### MathML
-
-- Operator mirroring in right-to-left (RTL) modes and stretching now work properly when used in combination.
-  ([Firefox bug 1994172](https://bugzil.la/1994172)).
-- The {{cssxref("math-shift")}} property is now supported. This allows developers to indicate whether superscript rendering in MathML formulas should be normal or compact, affecting the height to which superscript text is shifted.
-  ([Firefox bug 1994171](https://bugzil.la/1994171)).
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### WebDriver BiDi
@@ -65,11 +70,6 @@ No notable changes.
 - Fixed a regression in `WebDriver:GetElementText` that caused text containing accented characters (e.g., "ó") to be incorrectly capitalized. ([Firefox bug 1986392](https://bugzil.la/1986392)).
 - Fixed a bug in the `WebFrame` JSON deserialization that incorrectly raised a `no such window` error instead of `no such frame` when handling invalid frames. ([Firefox bug 1996540](https://bugzil.la/1996540)).
 - Added a WebDriver extension to control the [Global Privacy Control](https://w3c.github.io/gpc/) signal. ([Firefox bug 1969865](https://bugzil.la/1969865)).
-
-### Developer Tools
-
-- In the Rule view of the Inspector, when a displayed ruleset declares 10 or more [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) that are unused, those properties are hidden by default. This reduces clutter, and in some cases also speeds up the rendering of the Inspector panel. In such cases, the hidden properties can be displayed via a "Show..." button provided at the bottom of the ruleset.
-  ([Firefox bug 1719461](https://bugzil.la/1719461)).
 
 ## Changes for add-on developers
 
