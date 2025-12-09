@@ -19,7 +19,7 @@ A {{domxref("ViewTransitionTypeSet")}}. This is a [Set-like object](/en-US/docs/
 
 ### Basic usage
 
-This example includes a simple document that transitions between two different pieces of content. We provide three different buttons, each of which triggers the transition, but with a different `type` setting to apply a different animation to the transition.
+This example includes a basic document that transitions between two different pieces of content. We provide three buttons, each of which triggers the transition, but with a different `type` to apply a different kind of animation to the transition.
 
 #### HTML
 
