@@ -53,6 +53,8 @@ The CSS selectors module also introduces the [column combinator](/en-US/docs/Web
 - {{CSSXref(":hover")}}
 - {{CSSXref(":in-range")}}
 - {{CSSXref(":indeterminate")}}
+- {{CSSXref(":interest-source")}}
+- {{CSSXref(":interest-target")}}
 - {{CSSXref(":invalid")}}
 - {{CSSXref(":is", ":is()")}}
 - {{CSSXref(":lang", ":lang()")}}

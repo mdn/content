@@ -434,7 +434,7 @@ if (this.audioStatus) {
 }
 ```
 
-That's all — loading and playing the sounds is easy with Phaser.
+That's all — loading and playing the sounds is achieved with Phaser.
 
 #### Implementing the Vibration API
 
