@@ -108,7 +108,7 @@ The HTML for the example is shown below.
 
 #### CSS
 
-The `subject` element and `content` elements are minimally styled and the text content is given some basic font settings:
+The `subject` and `content` classes are minimally styled, and the text content has some basic font settings:
 
 ```css
 .subject {
