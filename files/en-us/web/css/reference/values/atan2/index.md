@@ -8,7 +8,6 @@ sidebar: cssref
 
 The **`atan2()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is a trigonometric function that returns the inverse tangent of two values between `-infinity` and `infinity`. The function accepts two arguments and returns an {{cssxref("angle")}} between `-180deg` and `180deg`, without implying any specific unit such as radians.
 
-
 ## Syntax
 
 ```css
