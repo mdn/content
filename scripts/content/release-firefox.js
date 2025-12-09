@@ -25,17 +25,32 @@ const CONTENT_ROOT = path.join(
   __dirname,
   "../../files/en-us/mozilla/firefox/releases",
 );
-const CALENDAR_API =
+const RELEASES_API = "https://whattrainisitnow.com/api/firefox/releases/";
+const FUTURE_RELEASES_API =
   "https://whattrainisitnow.com/api/firefox/calendar/future/";
 
 /**
  * Fetch release dates from whattrainisitnow.com
+ * Fetches both past releases and future scheduled releases
+ * Returns an object mapping version numbers to release dates
  */
 async function fetchReleaseDates() {
-  const response = await fetch(CALENDAR_API);
-  const futureReleases = await response.json();
+  const [releasesResponse, futureResponse] = await Promise.all([
+    fetch(RELEASES_API),
+    fetch(FUTURE_RELEASES_API),
+  ]);
+
+  const releases = await releasesResponse.json();
+  const futureReleases = await futureResponse.json();
+
   const dates = {};
 
+  // Add past releases (format: {"version": "YYYY-MM-DD"})
+  for (const [version, releaseDate] of Object.entries(releases)) {
+    dates[parseFloat(version)] = releaseDate;
+  }
+
+  // Add future releases (format: {"key": {version, release_date}})
   for (const versionData of Object.values(futureReleases)) {
     dates[versionData.version] = versionData.release_date;
   }
