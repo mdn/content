@@ -84,13 +84,13 @@ div {
   }
 
   a {
-    color: darkmagenta;
+    color: indigo;
   }
 }
 
 @scope (.dark-scheme) {
   :scope {
-    background-color: darkmagenta;
+    background-color: indigo;
     color: antiquewhite;
   }
 
