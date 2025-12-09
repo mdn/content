@@ -83,6 +83,9 @@ attachShadow(options)
       - : A boolean that, when set to `true`, specifies behavior that mitigates custom element issues around focusability.
         When a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling. Its default value is `false`.
 
+    - `referenceTarget` {{Optional_Inline}} {{Experimental_Inline}}
+      - : A string specifying the _reference target_ of any element references made against the host element of the shadow DOM tree. The reference target must be an element held within the shadow DOM.
+
     - `serializable` {{Optional_Inline}}
       - : A boolean that, when set to `true`, indicates that the shadow root is serializable.
         If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
