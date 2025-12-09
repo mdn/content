@@ -51,7 +51,7 @@ const vt = document.startViewTransition({
 // Add another type
 vt.types.add("flipHorizontal");
 
-// Delete a conflicting type
+// Delete a type
 vt.types.delete("flipVertical");
 
 // Return the number of types in the set
