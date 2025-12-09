@@ -18,7 +18,7 @@ Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ### Developer Tools
 
-- In the Rule view of the Inspector, [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) selectors can now be edited in the same way as other selector types.
+- When [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) nodes are selected in the HTML pane of the Inspector — for example, those representing generated content created by {{cssxref("::before")}} and {{cssxref("::after")}} rules — you can now edit the selectors of the corresponding rules in the Rule view.
   ([Firefox bug 1998704](https://bugzil.la/1998704)).
 
 <!-- ### HTML -->
