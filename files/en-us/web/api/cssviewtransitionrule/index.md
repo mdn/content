@@ -33,7 +33,7 @@ A stylesheet includes a {{cssxref("@view-transition")}} [at-rule](/en-US/docs/We
 ```css
 @view-transition {
   navigation: auto;
-  types: slide;
+  types: slide, rotate;
 }
 ```
 
@@ -43,7 +43,7 @@ In script, we grab a reference to the `@view-transition` at-rule using `document
 let myRule = document.styleSheets[0].cssRules;
 console.log(myRule[0]); // a CSSViewTransitionRule representing the @view-transition at-rule
 console.log(myRule[0].navigation); // "auto"
-console.log(myRule[0].types); // ["slide"]
+console.log(myRule[0].types); // ["slide", "rotate"]
 ```
 
 ## Specifications

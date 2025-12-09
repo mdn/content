@@ -14,8 +14,8 @@ For a cross-document view transition to work, the current and destination docume
 
 ```css
 @view-transition {
-  navigation: auto;
-  types: <custom-ident>#;
+  navigation: auto | none;
+  types: none | <custom-ident>#;
 }
 ```
 
@@ -25,12 +25,15 @@ For a cross-document view transition to work, the current and destination docume
   - : A keyword specifying the effect this at-rule will have on the document's view transition behavior. Possible values are:
     - `auto`
       - : The document will undergo a view transition when taking part in a navigation, provided the navigation is same-origin, without cross-origin redirects, and its {{domxref("NavigateEvent.navigationType", "navigationType")}} is `traverse`, `push`, or `replace`. In the case of `push` or `replace`, the navigation must be initiated by a user interacting with the page content, not by a browser UI feature.
-
     - `none`
       - : The document will not undergo a view transition.
 
 - `types`
-  - : One or more comma-separated {{cssxref("&lt;custom-ident>")}} values representing the [types](/en-US/docs/Web/API/View_Transition_API/Using_types) to set on the active view transition for the current and destination documents.
+  - : Specifies the view transition [types](/en-US/docs/Web/API/View_Transition_API/Using_types) to set on the active view transition for the current and destination documents. Possible values are:
+    - `<custom-ident>#`
+      - : One or more comma-separated {{cssxref("&lt;custom-ident>")}} values representing the types to set.
+    - `none`
+      - : No types are set.
 
 ## Formal syntax
 

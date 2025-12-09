@@ -45,14 +45,14 @@ The property and method links below link to the JavaScript {{jsxref("Set")}} obj
 // Start a view transition
 const vt = document.startViewTransition({
   update: updateTheDOMSomehow,
-  types: ["slideLeft", "slideRight", "flipVertical"],
+  types: ["slideLeft", "fadeOut", "flipVertical"],
 });
 
 // Add another type
 vt.types.add("flipHorizontal");
 
-// Delete a type
-vt.types.delete("slideLeft");
+// Delete a conflicting type
+vt.types.delete("flipVertical");
 
 // Return the number of types in the set
 console.log(vt.types.size);

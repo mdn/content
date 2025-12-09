@@ -8,7 +8,7 @@ page-type: guide
 
 View transition types provide a mechanism by which different **types** can be specified for active view transitions. CSS can then be used to apply different animations to DOM elements when their content updates, depending on the transition type specified. For example, you might want to apply different animations to an {{htmlelement("img")}} element in an image gallery app as the displayed image changes depending on whether you are moving forward or backward in the sequence, deleting an image, or adding an image into the sequence.
 
-This article show how to use types along with single-page app (SPA) navigations and cross-document (MPA) navigations.
+This article show how to use types along with same-document view transitions and cross-document view transitions.
 
 ## Examples
 
@@ -18,7 +18,7 @@ We'll demonstrate what you need to know about view transition types by walking t
 - [MPA transition types example](https://mdn.github.io/dom-examples/view-transitions/mpa-chapter-nav-transition-types/) ([source code](https://github.com/mdn/dom-examples/tree/main/view-transitions/mpa-chapter-nav-transition-types)): A story app with a chapter on each page. Demonstrates how to apply view transition animations across pages selectively with a transition type.
 - [MPA multiple transition types example](https://mdn.github.io/dom-examples/view-transitions/mpa-chapter-nav-multiple-transition-types/) ([source code](https://github.com/mdn/dom-examples/tree/main/view-transitions/mpa-chapter-nav-multiple-transition-types)): Builds on the previous example by demonstrating how to apply different view transition animations across pages selectively with different transition types. The transition type is determined on the fly with JavaScript during the navigation.
 
-We won't explain how all the code works, just the bits relevant to view tranasition types. We've provided comments in the code to explain what each part is doing.
+We won't explain how all the code works, just the bits relevant to view transition types. We've provided comments in the code to explain what each part is doing.
 
 ## Using types with SPA view transitions
 
@@ -73,7 +73,7 @@ html:active-view-transition {
 }
 ```
 
-The next stage is to apply different animations to the `image` outgoing and incoming views, depending on whether the `type` of the active view transition is `forwards` (the "Next" button was pressed), `backwards` (the "Previous" button was pressed), or `upwards` (a thumbnail image was clicked). This is done using three nested `:active-view-transition-type()` rulesets, each applying different {{cssxref("animation-name")}} values to the `::view-transition-old()` and `::view-transition-new()` pseudo-elements for each separate type:
+The next stage is to apply different animations to the `image` outgoing and incoming views, depending on whether the `type` of the active view transition is `forwards` (the "Next" button was pressed), `backwards` (the "Previous" button was pressed), or `upwards` (a thumbnail image was clicked). This is done using three `:active-view-transition-type()` rulesets, each applying different {{cssxref("animation-name")}} values to the `::view-transition-old()` and `::view-transition-new()` pseudo-elements for each separate type:
 
 ```css
 html:active-view-transition-type(forwards) {
@@ -171,8 +171,6 @@ Let's look at the shared JavaScript file. First of all, we define a custom funct
 
 The chapter pages are named sequentially (`index.html`, then `index2.html`, `index3.html`, etc.), therefore, we compare the number contained in the filenames to see whether the navigation is `backwards` (outgoing page number is higher than incoming page number) or forwards (outgoing page number is lower than incoming page number).
 
-Note how we've also included an `else` condition at the end that returns a type of `no-type` if neither of the two conditions are true. This can happen for example when the site first loads, or if the user reloads the page. In this case, we won't apply a type to the view transition.
-
 The code you use to determine the type to apply will depend on your project. You can find detailed comments explaining how the below code works in our [source code](https://github.com/mdn/dom-examples/tree/main/view-transitions/mpa-chapter-nav-multiple-transition-types).
 
 ```js
@@ -202,8 +200,6 @@ const determineTransitionType = (oldNavigationEntry, newNavigationEntry) => {
     return "backwards";
   } else if (currentPageIndex < destinationPageIndex) {
     return "forwards";
-  } else {
-    return "no-type";
   }
 };
 ```
@@ -222,7 +218,7 @@ window.addEventListener("pageswap", async (e) => {
 });
 ```
 
-Finally, we use a {{domxref("Window.pagereveal_event", "pagereveal")}} event listener to set the transition type for the incoming page. Inside the event handler function, we grab the old and new navigation entries from the {{domxref("Navigation.activation")}} property and pass these to the `determineTransitionType()` function to determine the type. We assign the type to the view transition using the {{domxref("ViewTransition.types")}} property's `add()` method, unless the type is `no-type`, in which case we skip that step.
+Finally, we use a {{domxref("Window.pagereveal_event", "pagereveal")}} event listener to set the transition type for the incoming page. Inside the event handler function, we grab the old and new navigation entries from the {{domxref("Navigation.activation")}} property and pass these to the `determineTransitionType()` function to determine the type. We assign the type to the view transition using the {{domxref("ViewTransition.types")}} property's `add()` method, unless the type is `undefined`, in which case we skip that step.
 
 ```js
 window.addEventListener("pagereveal", async (e) => {
@@ -232,11 +228,14 @@ window.addEventListener("pagereveal", async (e) => {
   );
 
   console.log(`pageReveal: ${transitionType}`);
-  if (transitionType !== "no-type") {
+  if (transitionType !== undefined) {
     e.viewTransition.types.add(transitionType);
   }
 });
 ```
+
+> [!NOTE]
+> The `determineTransitionType()` function can return `undefined` if neither the `backwards` or `forwards` conditions are true. This can occur if the user reloads the page, in which case the current page and destination page are the same page, therefore the index values are the same.
 
 ### Applying custom animations in CSS
 
