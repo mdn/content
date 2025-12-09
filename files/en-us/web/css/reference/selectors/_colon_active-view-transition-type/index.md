@@ -68,7 +68,7 @@ See also [Using view transition types](/en-US/docs/Web/API/View_Transition_API/U
 
 ### Basic `:active-view-transition-type()` usage
 
-This example includes a simple document that transitions between two different pieces of content via two different buttons, "Backwards" and "Forwards". We demonstrate how view transition types can be used to animate the transition differently depending on which button was pressed.
+This example includes a basic document that transitions between two different pieces of content via two different buttons, "Backwards" and "Forwards". We demonstrate how view transition types can be used to animate the transition differently depending on which button was pressed.
 
 #### HTML
 
