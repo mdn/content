@@ -158,10 +158,10 @@ Next, we use `::view-transition-old(chapter)` and `::view-transition-new(chapter
 
 The above works OK, but it's not ideal — when a new page is navigated to, the old page content always disappears to the left, and the new page content always appears from the right. This animation is fine when you are moving to a later chapter, but (at least, for users of left-to-right languages like English) it feels counter-intuitive when moving to an earlier chapter. For later-to-earlier chapter movements, it would be better to reverse the animation direction.
 
-To apply different types to the active view transition based on different navigation types, we need to manipulate the {{domxref("ViewTransition.types", "types")}} property of the corresponding `ViewTransition` object. This is available:
+To apply different types to the active view transition based on different navigation types, we need to manipulate the {{domxref("ViewTransition.types", "types")}} property of the corresponding `ViewTransition` object. This is available in the:
 
-- in the {{domxref("PageSwapEvent.viewTransition")}} event object property of the {{domxref("Window.pageswap_event", "pageswap")}} event in the case of the outgoing page.
-- in the {{domxref("PageRevealEvent.viewTransition")}} event object property of the {{domxref("Window.pagereveal_event", "pagereveal")}} event in the case of the incoming page.
+- {{domxref("PageSwapEvent.viewTransition")}} event object property of the {{domxref("Window.pageswap_event", "pageswap")}} event in the case of the outgoing page.
+- {{domxref("PageRevealEvent.viewTransition")}} event object property of the {{domxref("Window.pagereveal_event", "pagereveal")}} event in the case of the incoming page.
 
 The [MPA multiple transition types example](https://mdn.github.io/dom-examples/view-transitions/mpa-chapter-nav-multiple-transition-types/) demonstrates how to use this technique. This is similar to the previous example, but with some notable differences, which we'll explain below.
 
