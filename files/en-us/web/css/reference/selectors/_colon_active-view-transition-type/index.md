@@ -33,7 +33,7 @@ html:active-view-transition-type(forwards, backwards) {
 
 - For same-document (SPA) view transitions, specify types in the [`types`](/en-US/docs/Web/API/Document/startViewTransition#types) option of the {{domxref("Document.startViewTransition", "startViewTransition()")}} method.
 - For cross-document view transitions, specify types in the [`types`](/en-US/docs/Web/CSS/Reference/At-rules/@view-transition#types) descriptor of the {{cssxref("@view-transition")}} at-rule.
-- You can also modify the active view transition's types on the fly via the {{domxref("ViewTransition.types", "types")}} property of the corresponding `ViewTransition` object:
+- You can also modify the active view transition's types on-the-fly via the {{domxref("ViewTransition.types", "types")}} property of the corresponding `ViewTransition` object:
   - For same-document view transitions, this is the `ViewTransition` object returned by the `startViewTransition()` method.
   - For cross-document view transitions, the `ViewTransition` object is available in the {{domxref("PageSwapEvent.viewTransition", "viewTransition")}} property of the {{domxref("Window.pageswap_event", "pageswap")}} event object in the case of the outgoing page, and the {{domxref("PageRevealEvent.viewTransition", "viewTransition")}} property of the {{domxref("Window.pagereveal_event", "pagereveal")}} event object in the case of the incoming page.
   - You can also access the active `ViewTransition` via the {{domxref("Document.activeViewTransition")}} property. This provides a consistent way to access the active view transition in any context.

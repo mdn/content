@@ -13,7 +13,7 @@ The **`types`** read-only property of the
 
 ## Value
 
-A {{domxref("ViewTransitionTypeSet")}}. This is a [Set-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis), which means you can modify the types applied to a view transition on the fly using methods available on it such as `clear()`, `add()`, and `delete()`.
+A {{domxref("ViewTransitionTypeSet")}}. This is a [Set-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis), which means you can modify the types applied to a view transition on-the-fly using methods available on it such as `clear()`, `add()`, and `delete()`.
 
 ## Examples
 
@@ -195,7 +195,7 @@ Try clicking each button and note how the DOM changes are identical in each case
 
 ### Applied example
 
-Check out our [MPA multiple transition types example](https://mdn.github.io/dom-examples/view-transitions/mpa-chapter-nav-multiple-transition-types/) ([source code](https://github.com/mdn/dom-examples/tree/main/view-transitions/mpa-chapter-nav-multiple-transition-types)), which demonstrates how to apply different animations to cross-document view transitions depending on the navigation type, represented by different transition types. The transition type is determined on the fly with JavaScript during the navigation.
+Check out our [MPA multiple transition types example](https://mdn.github.io/dom-examples/view-transitions/mpa-chapter-nav-multiple-transition-types/) ([source code](https://github.com/mdn/dom-examples/tree/main/view-transitions/mpa-chapter-nav-multiple-transition-types)), which demonstrates how to apply different animations to cross-document view transitions depending on the navigation type, represented by different transition types. The transition type is determined on-the-fly with JavaScript during the navigation.
 
 [Applying different cross-document types using pageswap and pagereveal events](/en-US/docs/Web/API/View_Transition_API/Using_types#applying_different_cross-document_types_using_pageswap_and_pagereveal_events) provides a walkthrough of this example.
 
