@@ -77,5 +77,6 @@
     "tempy": "^3.1.0",
     "yaml": "^2.8.2",
     "yargs": "^18.0.0"
-  }
+  },
+  "packageManager": "npm@11.6.2"
 }
