@@ -20,7 +20,7 @@ The **`:active-view-transition`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-
 
 ### Styling an active view transition
 
-This example extends the [Basic view transition example](/en-US/docs/Web/API/Document/startViewTransition#basic_example) on the `startViewTransition` page.
+This example extends the [Basic view transition example](/en-US/docs/Web/API/Document/startViewTransition#basic_usage) on the `startViewTransition` page.
 
 ```html
 <main>

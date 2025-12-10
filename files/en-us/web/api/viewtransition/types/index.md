@@ -68,7 +68,7 @@ In the second part of the `changeContent()` function, we check the value of the 
 ```js live-sample___basic_usage
 function changeContent(e) {
   const vt = document.startViewTransition({
-    update: () => {
+    update() {
       content.textContent === first
         ? (content.textContent = second)
         : (content.textContent = first);

@@ -67,7 +67,7 @@ In this example, the `animation-range-start` is applied to an element animated v
 
 #### HTML
 
-```html hidden
+```html-nolint hidden
 <div class="content">
   <h1>Content</h1>
 
@@ -86,7 +86,6 @@ In this example, the `animation-range-start` is applied to an element animated v
     Sagittis aliquam malesuada bibendum arcu vitae elementum. Malesuada bibendum
     arcu vitae elementum curabitur vitae nunc sed velit.
   </p>
-</div>
 ```
 
 In the middle of a long block of text, we've included an element that we'll animate. We've added a lot of text to ensure that the content overflows its container; the extra text is hidden here for brevity.

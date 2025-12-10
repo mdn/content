@@ -112,7 +112,7 @@ Finally, we define the `changeContent()` function. We start by declaring a `type
 function changeContent(e) {
   const type = e.target === backBtn ? "backwards" : "forwards";
   document.startViewTransition({
-    update: () => {
+    update() {
       content.textContent === first
         ? (content.textContent = second)
         : (content.textContent = first);
