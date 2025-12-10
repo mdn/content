@@ -13,7 +13,7 @@ The [source code for this example is available on GitHub](https://github.com/mdn
 
 In a suitable location, such as the `Documents` directory, create a directory named `borderify`, then navigate to it. You can do this using your computer's file explorer or command line terminal.
 
-Understanding how to use the command line terminal is a handy skill, as it helps with your more advanced extension development. If you need to get started with terminal, check out the [Command line crash course](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line).
+Understanding how to use the command line terminal is a handy skill for software development. If you need help getting started with the terminal, check out the [Command line crash course](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line).
 
 Using the terminal, create the directory like this:
 
@@ -40,7 +40,7 @@ Using a suitable [text editor](/en-US/docs/Learn_web_development/Howto/Tools_and
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "@borderifyexample.mozilla",
+      "id": "beastify@mozilla.org",
       "data_collection_permissions": {
         "required": ["none"]
       }
@@ -57,11 +57,12 @@ Using a suitable [text editor](/en-US/docs/Learn_web_development/Howto/Tools_and
 ```
 
 - The first three keys—[`manifest_version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), and [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)—are mandatory and contain basic metadata for the extension.
-- [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) is optional, but recommended: it's displayed in the add-ons manager (`about:addons`).
+ [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) is required in Safari, otherwise it's optional. However, it's a good idea to set this property, as it's displayed in the browser's extension manager(for example, `about:addons` in Firefox).
 - [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) is optional, but recommended: it enables you to specify an icon for the extension.
-- [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is required. The `gecko` property provides addons.mozilla.org and Firefox with extra configuration information about the extension:
-  - [`id`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#id) defines a unique identifier for the extension. This ID is needed before an extension can be published on addons.mozilla.org (AMO).
-  - [`data_collection_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#data_collection_permissions) provides information on whether the extension collects and transmits personally identifiable information. This example doesn't collect or transmit any data.
+- [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is required by Firefox.
+  - The `gecko` property provides addons.mozilla.org and Firefox with extra configuration information about the extension.
+    - [`id`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#id) defines a unique identifier for the extension. This property must be declared to publish the extension on addons.mozilla.org (AMO).
+    - [`data_collection_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#data_collection_permissions) provides information on whether the extension collects and transmits personally identifiable information. This property must be declared to publish the extension on addons.mozilla.org (AMO). This example doesn't collect or transmit any data.
 
 So far, these `manifest.json` keys have been providing information about the extension. The next key, [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), starts to define the extension's functionality. This key tells Firefox to load a script into web pages whose URL matches a specific pattern. In this case, the extension is asking Firefox to load a script called "borderify.js" into all HTTP or HTTPS pages served from "mozilla.org" or any of its subdomains.
 
