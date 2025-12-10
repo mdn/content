@@ -97,7 +97,7 @@ The CSS fonts module also defines the {{cssxref("@font-feature-values/font-displ
 
 `font-format` type:
 
-- [`font-format`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-format)
+- [`<font-format>`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-format)
 
 `font-stretch` type:
 
@@ -105,9 +105,9 @@ The CSS fonts module also defines the {{cssxref("@font-feature-values/font-displ
 
 `font-tech` types:
 
-- [`color-font-tech`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
-- [`font-features-tech`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
-- [`font-tech`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
+- [`<color-font-tech>`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
+- [`<font-features-tech>`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
+- [`<font-tech>`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
 
 `font-variant` types:
 
