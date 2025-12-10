@@ -54,7 +54,7 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 
 ## Specifications
 
-Not part of any standard. The standard way to do reflection in CSS is to use the CSS {{CSSxRef("element", "element()")}} function.
+Not part of any standard. The standard way to do reflection in CSS is to use the CSS {{cssxref("element()")}} function.
 
 ## Browser compatibility
 

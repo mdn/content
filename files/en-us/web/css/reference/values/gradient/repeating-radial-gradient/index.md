@@ -220,6 +220,6 @@ The box on the left uses [shorter interpolation](/en-US/docs/Web/CSS/Reference/V
 - {{cssxref("color-interpolation-method")}}
 - {{cssxref("image")}}
 - {{cssxref("image/image","image()")}}
-- {{cssxref("element", "element()")}}
+- {{cssxref("element()")}}
 - {{cssxref("image/image-set","image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}

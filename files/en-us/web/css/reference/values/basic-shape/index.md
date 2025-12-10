@@ -191,7 +191,7 @@ The values in a `<basic-shape>` function are computed as specified, with the fol
 
 When animating between two `<basic-shape>` functions, the {{Glossary("interpolation")}} rules listed below are followed. The parameter values of each `<basic-shape>` function form a list. For interpolation to occur between two shapes, both shapes must use the same reference box and the number and type of values in both `<basic-shape>` lists must match.
 
-Each value in the lists of the two `<basic-shape>` functions is interpolated based on its computed value as a {{cssxref("number")}}, {{cssxref("length")}}, {{cssxref("percentage")}}, {{cssxref("angle")}}, or {{cssxref("calc", "calc()")}} where possible. Interpolation can still occur if the values are not one of those data types but are identical between the two interpolating basic shape functions, such as `nonzero`.
+Each value in the lists of the two `<basic-shape>` functions is interpolated based on its computed value as a {{cssxref("number")}}, {{cssxref("length")}}, {{cssxref("percentage")}}, {{cssxref("angle")}}, or {{cssxref("calc()")}} where possible. Interpolation can still occur if the values are not one of those data types but are identical between the two interpolating basic shape functions, such as `nonzero`.
 
 - **Both shapes are of type `ellipse()` or type `circle()`**: Interpolation is applied between each corresponding value if their radii are specified as either a {{cssxref("length")}} or a {{cssxref("percentage")}} (rather than keywords such as `closest-side` or `farthest-side`).
 

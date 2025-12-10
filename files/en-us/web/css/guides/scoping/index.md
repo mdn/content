@@ -24,7 +24,7 @@ Sometimes it's useful to be able to style a host from inside the shadow tree con
 
 - {{CSSXref(":host")}}
 - {{CSSXref(":host()")}}
-- {{CSSXref(":host-context", ":host-context()")}}
+- {{cssxref(":host-context()")}}
 - {{CSSXref("::slotted")}}
 
 ## Guides

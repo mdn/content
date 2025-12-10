@@ -127,7 +127,7 @@ In the next example the `type()` function is used to serve the image in AVIF and
 
 - {{cssxref("image")}}
 - {{cssxref("image/image", "image()")}}
-- {{cssxref("element", "element()")}}
+- {{cssxref("element()")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}
 - {{cssxref("gradient")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}

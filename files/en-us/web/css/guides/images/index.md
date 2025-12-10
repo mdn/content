@@ -32,8 +32,8 @@ The CSS images module also defines the {{CSSxRef("image-resolution")}} property.
 - {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}
 - {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- {{CSSxRef("cross-fade", "cross-fade()")}}
-- {{CSSxRef("element", "element()")}}
+- {{cssxref("cross-fade()")}}
+- {{cssxref("element()")}}
 - {{CSSxRef("image/image-set", "image-set()")}}
 
 The CSS images module also defines the {{CSSxRef("image/image", "image()")}} function. Currently, no browsers support this feature.
