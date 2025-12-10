@@ -232,7 +232,7 @@ In the following example, two layers are created with no rules applied, then CSS
 
 ## See also
 
-- [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import)
+- {{cssxref("@import")}}
 - {{domxref("CSSLayerBlockRule")}}
 - {{domxref("CSSLayerStatementRule")}}
 - [`!important`](/en-US/docs/Web/CSS/Reference/Values/important)

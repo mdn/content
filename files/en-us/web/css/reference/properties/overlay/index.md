@@ -134,7 +134,7 @@ Because the animated element is being promoted to the [top layer](/en-US/docs/Gl
 
 The following steps are also required to get the animation working in both directions:
 
-- A starting state for the animation is set inside the [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style) at-rule. This is needed to avoid unexpected behavior. By default transitions are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type. `@starting-style` allows you to override that default in a specific controlled fashion. Without this, the entry animation would not occur and the popover would just appear.
+- A starting state for the animation is set inside the {{cssxref("@starting-style")}} at-rule. This is needed to avoid unexpected behavior. By default transitions are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type. `@starting-style` allows you to override that default in a specific controlled fashion. Without this, the entry animation would not occur and the popover would just appear.
 - `display` is also added to the list of transitioned elements so that the animated element is visible (set to `display: block`) throughout both the entry and exit animation. Without this, the exit animation would not be visible; in effect, the popover would just disappear. Again, `transition-behavior: allow-discrete` is required in this case for the animation to occur.
 
 You'll note that we've also included a transition on the {{cssxref("::backdrop")}} that appears behind the popover when it opens, to provide a nice darkening animation. `[popover]:popover-open::backdrop` is needed to select the backdrop when the popover is open.
@@ -161,6 +161,6 @@ The code renders as follows:
 ## See also
 
 - [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions) module
-- [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style)
+- {{cssxref("@starting-style")}}
 - {{cssxref("transition-behavior")}}
 - [Four new CSS features for smooth entry and exit animations](https://developer.chrome.com/blog/entry-exit-animations/) on developer.chrome.com (2023)
