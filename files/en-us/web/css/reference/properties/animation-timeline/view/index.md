@@ -6,7 +6,7 @@ browser-compat: css.properties.animation-timeline.view
 sidebar: cssref
 ---
 
-The **`view()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used with the {{cssxref("animation-timeline")}} property to create an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timelines_the_view_function) based on when an element comes into view inside its nearest {{glossary("scroll container")}}. You can adjust the tracking axis and the optional insets to control when the element is considered "in view".
+The **`view()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used with the {{cssxref("animation-timeline")}} property to create an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) based on when an element comes into view inside its nearest {{glossary("scroll container")}}. You can adjust the tracking axis and the optional insets to control when the element is considered "in view".
 
 ## Syntax
 
