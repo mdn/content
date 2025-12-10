@@ -220,9 +220,9 @@ The CSS borders and box decorations module level 4 also introduces the `border-s
 - {{cssxref("box-decoration-break")}} property
 - {{cssxref("text-shadow")}} property
 - {{cssxref("url_value", "&lt;url&gt;")}} data type
-- {{cssxref("color_value", "&lt;color&gt;")}} data type
+- {{cssxref("&lt;color&gt;")}} data type
 - {{cssxref("&lt;image&gt;")}} data type
-- {{cssxref("position_value", "&lt;position&gt;")}} data type
+- {{cssxref("&lt;position&gt;")}} data type
 - [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) keyword
 
 [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
