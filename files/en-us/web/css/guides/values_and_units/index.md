@@ -83,7 +83,7 @@ The CSS values and units module also introduces the `calc-mix()`, `crossorigin()
 - [`<syntax>`](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
 - {{cssxref("time-percentage")}}
 - {{cssxref("time")}}
-- [`<url>`](/en-US/docs/Web/CSS/Reference/Values/url_value)
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - [`<url-modifier>`](/en-US/docs/Web/CSS/Reference/Values/url_function#url-modifier)
 
 The CSS values and units module also introduces the {{cssxref("frequency")}} and {{cssxref("frequency-percentage")}} data types. Currently, no browsers support these features.

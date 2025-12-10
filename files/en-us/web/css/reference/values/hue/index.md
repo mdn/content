@@ -245,5 +245,5 @@ div {
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value)
+- {{cssxref("&lt;color&gt;")}}
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}}

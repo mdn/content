@@ -74,7 +74,7 @@ The following code uses the CSS `@property` at-rule to define a custom property 
 }
 ```
 
-We define a second custom property, `--item-color`, using [JavaScript](/en-US/docs/Web/JavaScript) instead of CSS. The JavaScript {{domxref('CSS.registerProperty_static', 'registerProperty()')}} method is equivalent to `@property` at-rule. The property is defined to have an initial value of `aqua`, to accept only [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, and is not inherited.
+We define a second custom property, `--item-color`, using [JavaScript](/en-US/docs/Web/JavaScript) instead of CSS. The JavaScript {{domxref('CSS.registerProperty_static', 'registerProperty()')}} method is equivalent to `@property` at-rule. The property is defined to have an initial value of `aqua`, to accept only {{cssxref("&lt;color&gt;")}} values, and is not inherited.
 
 ```js
 window.CSS.registerProperty({
