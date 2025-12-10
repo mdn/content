@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`:target-before`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selects scroll markers that come before the **active** scroll marker (the one that currently matches {{cssxref(":target-current")}}) within a scroll marker group. You can use this selector to style navigation items that come before the current navigation position within a scroll marker group.
+The **`:target-before`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selects scroll markers that come _before_ the active scroll marker (the one that currently matches {{cssxref(":target-current")}}) within a scroll marker group. You can use this selector to style navigation items that come before the current navigation position within a scroll marker group.
 
 > [!NOTE]
 > The `:target-before` pseudo-class is only valid on {{cssxref("::scroll-marker")}} pseudo-elements and elements that have been designated as scroll markers via the {{cssxref("scroll-target-group")}} property.
@@ -27,7 +27,7 @@ The **`:target-before`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/W
 
 ### Styling navigation items before and after the active scroll marker
 
-In this example, we use the `:target-before` and {{cssxref(":target-after")}} pseudo-classes to highlight the scroll markers before and after the active one, indicating which items the user has already viewed and which are still to come.
+In this example, we use the `:target-before` and {{cssxref(":target-after")}} pseudo-classes to highlight the scroll markers before and after the active one, indicating items the user has already viewed and those that are still to come.
 
 #### HTML
 
@@ -208,6 +208,21 @@ ol {
   margin: 0;
   background: white;
 }
+
+@supports not selector(:target-before) {
+  body::before {
+    content: "Your browser does not support the :target-before and :target-after pseudo-classes.";
+    color: black;
+    background-color: #ffcd33;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
 ```
 
 ```css live-sample___targeting-before-and-after
@@ -235,7 +250,7 @@ a:target-after {
 
 #### Result
 
-Try navigating either by clicking the links or by scrolling. You'll see that in each case, the red text color moves between the links to match the section currently in view, and the links before and after the current red link update to adopt the styles defined in the `a:target-before` and `a:target-after` rules.
+Try navigating either by clicking the links or by scrolling. In both cases, you'll see that the red text color moves between the links to match the section currently in view. The links before and after the current red link also update to use the styles defined in the `a:target-before` and `a:target-after` rules.
 
 {{EmbedLiveSample("targeting-before-and-after", "100%", 500)}}
 

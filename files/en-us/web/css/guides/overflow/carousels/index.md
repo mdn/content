@@ -40,7 +40,7 @@ The CSS carousel features provide pseudo-elements and pseudo-classes that enable
 - {{cssxref(":target-current")}}
   - : Used to select the currently active scroll marker and style it. The ability to style the active scroll marker is important for both usability and accessibility.
 - {{cssxref(":target-before")}} and {{cssxref(":target-after")}}
-  - : Used to select and style scroll markers before and after the currently active scroll marker, respectively. They are useful for styling navigation items that come before and after the active navigation position, indicating what users have already viewed and what is still to come.
+  - : Used to select and style scroll markers before and after the currently active scroll marker, respectively. They are useful for styling navigation items that come before and after the active navigation position, indicating items the user has already viewed and those that are still to come.
 - {{cssxref("::column")}}
   - : Represents the individual columns generated when a container is set to display its content in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). The `::column` pseudo-element can be used in conjunction with {{cssxref("::scroll-marker")}} to generate a scroll marker for each column.
 
