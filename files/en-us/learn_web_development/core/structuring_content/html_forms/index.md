@@ -255,8 +255,10 @@ There are other button behaviors that can be specified via the `<button>` elemen
 - `<button type="reset">` creates a _reset button_ — this immediately deletes all data out of the form, resetting it to its initial state. **Don't use reset buttons** — they used to be popular in the early days of the web, but they are usually more annoying than they are helpful. Most people have experienced filling out a long form only to click the reset button by accident instead of the submit button, meaning they have to start again.
 - `<button type="button">` creates a button with the same behavior as buttons specified outside of `<form>` elements. As we saw earlier, they do absolutely nothing by default, and JavaScript is needed to give them functionality.
 
+Be aware that it is possible to create the above button types using an `<input>` element with the same `type` values specified — [`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit), [`<input type="reset">`](/en-US/docs/Web/HTML/Reference/Elements/input/reset), and [`<input type="button">`](/en-US/docs/Web/HTML/Reference/Elements/input/button). However, these have many disadvantages compared to their `<button>` counterparts. You should use `<button>` instead.
+
 > [!NOTE]
-> You can also create the above button types using an `<input>` element with the same `type` values specified — [`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit), [`<input type="reset">`](/en-US/docs/Web/HTML/Reference/Elements/input/reset), and [`<input type="button">`](/en-US/docs/Web/HTML/Reference/Elements/input/button). However, these have many disadvantages compared to their `<button>` counterparts. You should use `<button>` instead.
+> Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> has a free lesson — [The very basics of forms](https://scrimba.com/learn-responsive-web-design-c029/~031?via=mdn) — which provides a useful interactive recap of the form basics we covered previously in this article.
 
 ## An aside on accessibility
 
