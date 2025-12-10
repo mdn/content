@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{seecompattable}}
 
-The **`calc-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) allows you to perform calculations on [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) values such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/Reference/Values/fit-content), and [`max-content`](/en-US/docs/Web/CSS/Reference/Values/max-content); this is not supported by the regular {{cssxref("calc()")}} function.
+The **`calc-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) allows you to perform calculations on {{glossary("intrinsic size")}} values such as `auto`, {{cssxref("fit-content")}}, and {{cssxref("max-content")}}; this is not supported by the regular {{cssxref("calc()")}} function.
 
 `calc-size()` return values can also be [interpolated](/en-US/docs/Glossary/Interpolation), enabling size keyword values to be used in [animations](/en-US/docs/Web/CSS/Guides/Animations) and [transitions](/en-US/docs/Web/CSS/Guides/Transitions). In effect, including `calc-size()` in a property value automatically applies [`interpolate-size: allow-keywords`](/en-US/docs/Web/CSS/Reference/Properties/interpolate-size) to the selection.
 
