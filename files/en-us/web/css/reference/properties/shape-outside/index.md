@@ -110,10 +110,10 @@ The `shape-outside` property is specified using the values from the list below, 
     - `content-box`
       - : Defines the shape enclosed by the outside content edge. Each corner radius of this box is the larger of `0` or `border-radius - border-width - padding`.
 
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape")}}
   - : The float area is computed based on the shape created by an {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/circle","circle()")}}, {{cssxref("basic-shape/ellipse","ellipse()")}}, or {{cssxref("basic-shape/polygon","polygon()")}} function; other `<basic-shape>` functions are invalid. If a `<shape-box>` is also supplied, it defines the reference box for the `<basic-shape>` function. Otherwise, the reference box defaults to `margin-box`.
-- {{cssxref("&lt;image&gt;")}}
-  - : The float area is extracted and computed based on the alpha channel of the specified {{cssxref("&lt;image&gt;")}} as defined by {{cssxref("shape-image-threshold")}}.
+- {{cssxref("image")}}
+  - : The float area is extracted and computed based on the alpha channel of the specified {{cssxref("image")}} as defined by {{cssxref("shape-image-threshold")}}.
 
 > [!NOTE]
 > If the image is invalid, the effect is as if the keyword `none` had been specified. Additionally, the image must be served with {{Glossary("CORS")}} headers allowing its use.
@@ -191,6 +191,6 @@ p {
 
 - [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes)
 - [Overview of shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview)
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape")}}
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-image-threshold")}}

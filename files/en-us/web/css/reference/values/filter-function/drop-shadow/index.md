@@ -6,7 +6,7 @@ browser-compat: css.types.filter-function.drop-shadow
 sidebar: cssref
 ---
 
-The **`drop-shadow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+The **`drop-shadow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies a drop shadow effect to the input image. Its result is a {{cssxref("filter-function")}}.
 
 {{InteractiveExample("CSS Demo: drop-shadow()")}}
 
@@ -142,7 +142,7 @@ In the absence of a `<color>` value in the `drop-shadow()` function in the first
 
 ## See also
 
-- {{cssxref("&lt;filter-function&gt;")}} functions:
+- {{cssxref("filter-function")}} functions:
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/brightness", "brightness()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}

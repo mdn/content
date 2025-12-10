@@ -105,8 +105,8 @@ The keywords and data types mentioned above are described in more detail below:
 - {{cssxref("&lt;string&gt;")}}
   - : A sequence of characters enclosed in matching single or double quotes. Multiple string values will be concatenated (there is no concatenation operator in CSS).
 
-- {{cssxref("&lt;image&gt;")}}
-  - : An {{cssxref("&lt;image&gt;")}}, representing an image to display. This can be equal to a {{cssxref("url_value", "&lt;url&gt;")}}, {{cssxref("image/image-set", "image-set()")}}, or {{cssxref("&lt;gradient&gt;")}} data type, or a part of the webpage itself, defined by the {{cssxref("element", "element()")}} function.
+- {{cssxref("image")}}
+  - : An {{cssxref("image")}}, representing an image to display. This can be equal to a {{cssxref("url_value", "&lt;url&gt;")}}, {{cssxref("image/image-set", "image-set()")}}, or {{cssxref("gradient")}} data type, or a part of the webpage itself, defined by the {{cssxref("element", "element()")}} function.
 
 - `<counter>`
   - : The `<counter>` value is a [CSS counter](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters), generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function.

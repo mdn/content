@@ -339,7 +339,7 @@ The output is as follows:
 To make channel value calculations work in relative colors, all origin color channel values resolve to appropriate {{cssxref("&lt;number&gt;")}} values. For example, in the `lch()` examples above, we are calculating new lightness values by adding or subtracting numbers from the origin color's `l` channel value. If we tried to do `calc(l + 20%)`, that would result in an invalid color — `l` is a `<number>` and cannot have a {{cssxref("&lt;percentage&gt;")}} added to it.
 
 - Channel values originally specified as a `<percentage>` resolve to a `<number>` appropriate for the output color function.
-- Channel values originally specified as a {{cssxref("&lt;hue&gt;")}} angle resolve to a number of degrees in a range of `0` to `360`, inclusive.
+- Channel values originally specified as a {{cssxref("hue")}} angle resolve to a number of degrees in a range of `0` to `360`, inclusive.
 
 Check the different [color function pages](/en-US/docs/Web/CSS/Guides/Colors#functions) for the specifics of what their origin channel values resolve to.
 
@@ -364,7 +364,7 @@ For example:
 
 This example allows you to choose a base color and a color palette type. The browser will then show an appropriate palette of colors based on the chosen base color. The color palette choices are as follows:
 
-- **Complementary**: Includes two colors that are at opposite sides of a color wheel, or to put it another way, _opposite hues_ (see the {{cssxref("&lt;hue&gt;")}} data type for more information on hues and color wheels). The two colors are defined as a base color, and the base color with hue channel +180 degrees.
+- **Complementary**: Includes two colors that are at opposite sides of a color wheel, or to put it another way, _opposite hues_ (see the {{cssxref("hue")}} data type for more information on hues and color wheels). The two colors are defined as a base color, and the base color with hue channel +180 degrees.
 - **Triadic**: Includes three colors equal distances apart around the color wheel. The three colors are defined as a base color, base color with hue channel -120 degrees, and base color with hue channel +120 degrees.
 - **Tetradic**: Includes four colors equal distances apart around the color wheel. The four colors are defined as a base color, and base color with hue channel +90, +180, and +270 degrees.
 - **Monochrome**: Includes multiple colors with the same hue but varying lightness values. In our example we've defined five colors in a monochrome palette — base color, and base color with lightness channel -20, -10, +10, and +20.

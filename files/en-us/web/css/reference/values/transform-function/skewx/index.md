@@ -55,7 +55,7 @@ skewX(a)
 ### Values
 
 - `a`
-  - : Is an {{cssxref("&lt;angle&gt;")}} representing the angle to use to distort the element along the abscissa (horizontal, x-coordinate).
+  - : Is an {{cssxref("angle")}} representing the angle to use to distort the element along the abscissa (horizontal, x-coordinate).
 
 <table class="standard-table">
   <thead>

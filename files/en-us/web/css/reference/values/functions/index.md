@@ -159,7 +159,7 @@ Each of the pages below contains detailed information about a math function's sy
 
 ## Filter functions
 
-The {{CSSxRef("&lt;filter-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a graphical effect that can change the appearance of an input image. It is used in the {{CSSxRef("filter")}} and {{CSSxRef("backdrop-filter")}} properties.
+The {{cssxref("filter-function")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a graphical effect that can change the appearance of an input image. It is used in the {{CSSxRef("filter")}} and {{CSSxRef("backdrop-filter")}} properties.
 
 - {{CSSxRef("filter-function/blur", "blur()")}}
   - : Increases the image gaussian blur.
@@ -215,7 +215,7 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
 
 ## Image functions
 
-The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) provides graphical representation of images or gradients.
+The {{cssxref("image")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) provides graphical representation of images or gradients.
 
 ### Gradient functions
 
@@ -235,15 +235,15 @@ The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/Reference/V
 ### Image functions
 
 - {{CSSxRef("image/image","image()")}}
-  - : Defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{cssxref("url_value", "&lt;url&gt;")}} type, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
+  - : Defines an {{cssxref("image")}} in a similar fashion to the {{cssxref("url_value", "&lt;url&gt;")}} type, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
 - {{CSSxRef("image/image-set","image-set()")}}
   - : Picks the most appropriate CSS image from a given set, primarily for high pixel density screens.
 - {{CSSxRef("cross-fade", "cross-fade()")}}
   - : Blends two or more images at a defined transparency.
 - {{CSSxRef("element", "element()")}}
-  - : Defines an {{CSSxRef("&lt;image&gt;")}} value generated from an arbitrary HTML element.
+  - : Defines an {{cssxref("image")}} value generated from an arbitrary HTML element.
 - {{CSSxRef("image/paint", "paint()")}}
-  - : Defines an {{CSSxRef("&lt;image&gt;")}} value generated with a PaintWorklet.
+  - : Defines an {{cssxref("image")}} value generated with a PaintWorklet.
 
 ## Counter functions
 
@@ -260,7 +260,7 @@ CSS counter functions are generally used with the {{CSSxRef("content")}} propert
 
 ### Basic shapes
 
-The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a graphical shape. It is used in the {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, and {{CSSxRef("shape-outside")}} properties.
+The {{cssxref("basic-shape")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a graphical shape. It is used in the {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, and {{CSSxRef("shape-outside")}} properties.
 
 - {{CSSxRef("basic-shape/circle","circle()")}}
   - : Defines a circle shape.
@@ -331,7 +331,7 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 
 ## Easing functions
 
-The {{CSSxRef("&lt;easing-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a mathematical function. It is used in transition and animation properties:
+The {{cssxref("easing-function")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a mathematical function. It is used in transition and animation properties:
 
 - {{cssxref("easing-function/linear", "linear()")}}
   - : Easing function that interpolates linearly between its points.

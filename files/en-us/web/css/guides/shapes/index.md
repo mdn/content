@@ -62,7 +62,7 @@ The CSS shapes module also introduces the `shape-inside` and `shape-padding` pro
 
 ### Data types
 
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape")}}
 
 ### Functions
 

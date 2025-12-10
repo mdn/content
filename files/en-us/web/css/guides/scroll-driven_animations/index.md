@@ -124,8 +124,8 @@ Scroll the element in the inline direction to see its background color change. S
 
 ### Data types and values
 
-- {{cssxref("&lt;axis&gt;")}}
-- {{cssxref("&lt;timeline-range-name&gt;")}}
+- {{cssxref("axis")}}
+- {{cssxref("timeline-range-name")}}
 
 ### Functions
 

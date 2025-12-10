@@ -23,11 +23,11 @@ A {{cssxref("&lt;dimension&gt;")}} is a `<number>` with a unit attached to it, f
 CSS uses dimensions to specify:
 
 - {{cssxref("&lt;length&gt;")}} (Distance units)
-- {{cssxref("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
 - {{cssxref("&lt;time&gt;")}}
 - {{cssxref("&lt;frequency&gt;")}}
 - {{cssxref("&lt;flex&gt;")}}
-- {{cssxref("&lt;resolution&gt;")}}
+- {{cssxref("resolution")}}
 
 These are all covered in subsections below.
 
@@ -117,7 +117,7 @@ When including a length value, if the length is `0`, the unit identifier is not 
 
 #### Angle units
 
-Angle values are represented by the type {{cssxref("&lt;angle&gt;")}} and accept the following values:
+Angle values are represented by the type {{cssxref("angle")}} and accept the following values:
 
 | Unit   | Name     | Description                              |
 | ------ | -------- | ---------------------------------------- |
@@ -156,7 +156,7 @@ Flex units are represented by the type {{cssxref("&lt;flex&gt;")}}. It accepts t
 
 #### Resolution units
 
-Resolution units are represented by the type {{cssxref("&lt;resolution&gt;")}}. They represent the size of a single dot in a graphical representation, such as a screen, by indicating how many of these dots fit in a CSS inch, centimeter, or pixel. It accepts the following values:
+Resolution units are represented by the type {{cssxref("resolution")}}. They represent the size of a single dot in a graphical representation, such as a screen, by indicating how many of these dots fit in a CSS inch, centimeter, or pixel. It accepts the following values:
 
 | Unit        | Description          |
 | ----------- | -------------------- |
@@ -189,7 +189,7 @@ Some properties accept a dimension that could be either one of two types, for ex
 ## Special data types (defined in other specs)
 
 - {{cssxref("&lt;color&gt;")}}
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
 - {{cssxref("&lt;position&gt;")}}
 
 ### Color
@@ -198,7 +198,7 @@ The {{cssxref("&lt;color&gt;")}} value specifies the color of an element feature
 
 ### Image
 
-The {{cssxref("&lt;image&gt;")}} value specifies all the different types of image that can be used in CSS, and is defined in the [CSS Image Values and Replaced Content Module](https://drafts.csswg.org/css-images-4/).
+The {{cssxref("image")}} value specifies all the different types of image that can be used in CSS, and is defined in the [CSS Image Values and Replaced Content Module](https://drafts.csswg.org/css-images-4/).
 
 ### Position
 

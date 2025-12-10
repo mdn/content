@@ -153,5 +153,5 @@ Comparing the second and third boxes shows the difference between {{cssxref("hue
 
 ## See also
 
-- {{CSSXref("&lt;color&gt;")}}, {{CSSXref("&lt;gradient&gt;")}}
+- {{CSSXref("&lt;color&gt;")}}, {{cssxref("gradient")}}
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}}

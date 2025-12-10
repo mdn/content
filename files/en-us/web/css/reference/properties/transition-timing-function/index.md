@@ -52,7 +52,7 @@ transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
 
 This, in essence, lets you establish an acceleration curve so that the speed of the transition can vary over its duration.
 
-This acceleration curve is defined using one {{cssxref("&lt;easing-function&gt;")}} for each property to be transitioned.
+This acceleration curve is defined using one {{cssxref("easing-function")}} for each property to be transitioned.
 
 You may specify multiple easing functions; each one will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a `transition-property` list. If there are fewer easing functions specified than in the `transition-property` list, the user agent must calculate which value is used by repeating the list of values until there is one for each transition property. If there are more easing functions, the list is truncated to the right size. In both cases, the CSS declaration stays valid.
 
@@ -94,7 +94,7 @@ transition-timing-function: unset;
 ### Values
 
 - `<easing-function>`
-  - : Each {{cssxref("&lt;easing-function&gt;")}} represents the easing function to link to the corresponding property to transition, as defined in {{ cssxref("transition-property") }}.
+  - : Each {{cssxref("easing-function")}} represents the easing function to link to the corresponding property to transition, as defined in {{ cssxref("transition-property") }}.
 
     The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step easing functions divide the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.
     - `ease`
