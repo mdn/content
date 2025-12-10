@@ -69,7 +69,7 @@ The following syntax component names are supported:
 - `"<length>"`
   - : Accepts any valid {{cssxref("&lt;length&gt;")}} value.
 - `"<length-percentage>"`
-  - : Accepts any valid {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value and any valid {{cssxref("calc", "calc()")}} expression combining `<length>` and `<percentage>` values.
+  - : Accepts any valid {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value and any valid {{cssxref("calc()")}} expression combining `<length>` and `<percentage>` values.
 - `"<number>"`
   - : Accepts any valid {{cssxref("&lt;number&gt;")}} value.
 - `"<percentage>"`

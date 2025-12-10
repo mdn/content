@@ -164,10 +164,10 @@ Currently, no browsers support this feature.
 ## See also
 
 - {{cssxref("image")}}
-- {{CSSxRef("element", "element()")}}
+- {{cssxref("element()")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}
 - {{CSSxRef("clip-path")}}
 - {{cssxref("gradient")}}
 - {{CSSxRef("image/image-set", "image-set()")}}
-- {{CSSxRef("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}
 - [CSS images](/en-US/docs/Web/CSS/Guides/Images) module

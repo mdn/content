@@ -62,7 +62,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
 
 - Web Video Text Tracks Format (WebVTT) cues:
   - {{cssxref("::cue")}}
-  - {{cssxref("::cue", "::cue()")}}
+  - {{cssxref("::cue()")}}
 
 - [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module
   - {{cssxref("::column")}}
@@ -76,8 +76,8 @@ The specification also defines the `::details-content` and `::search-text` pseud
 - [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
   - {{CSSXref(":host")}}
   - {{cssxref(":host()")}}
-  - {{CSSXref(":host-context", ":host-context()")}}
-  - {{CSSXref("::slotted", "::slotted()")}}
+  - {{cssxref(":host-context()")}}
+  - {{cssxref("::slotted()")}}
 
 - [CSS shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) module
   - {{CSSXref("::part")}}

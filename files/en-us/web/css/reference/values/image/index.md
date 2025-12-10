@@ -40,7 +40,7 @@ CSS determines an object's _concrete size_ using (1) its _intrinsic dimensions_;
 | {{CSSxRef("mask-image")}}                                                                    | ?                                                                                                             |
 | {{CSSxRef("shape-outside")}}                                                                 | ?                                                                                                             |
 | {{CSSxRef("mask-border-source")}}                                                            | ?                                                                                                             |
-| {{CSSxRef("symbols", "symbols()")}} for @counter-style                                       | At risk feature. If supported, the browser-defined size matching the usual cursor size on the client's system |
+| {{cssxref("symbols()")}} for @counter-style                                                  | At risk feature. If supported, the browser-defined size matching the usual cursor size on the client's system |
 | {{CSSxRef("content")}} for a pseudo-element ({{CSSxRef("::after")}}/{{CSSxRef("::before")}}) | A 300px × 150px rectangle                                                                                     |
 
 The concrete object size is calculated using the following algorithm:

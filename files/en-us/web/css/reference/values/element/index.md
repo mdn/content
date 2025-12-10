@@ -123,5 +123,5 @@ This [example based on Vincent De Oliveira's](https://iamvdo.me/en/blog/css-elem
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("image")}}
 - {{cssxref("gradient")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}
 - {{domxref("document.mozSetImageElement()")}}
