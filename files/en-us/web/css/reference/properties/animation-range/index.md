@@ -167,7 +167,7 @@ We also include a checkbox to toggle the {{cssxref("animation-fill-mode")}} prop
 
 We define an animation that animates an element's opacity, scale, and background color, causing it to fade in, scale up, and change color as the animation progresses. We apply this animation to the `animatedElement` with the {{cssxref("animation")}} shorthand.
 
-A view progress timeline is created by setting the [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function as the value of the {{cssxref("animation-timeline")}} property on our `animatedElement`. The result is that the element animates as it moves upwards through the document as it is scrolled. We declare `animation-timeline` property after the shorthand, as the shorthand resets this property.
+A view progress timeline is created by setting the {{cssxref("animation-timeline/view", "view()")}} function as the value of the {{cssxref("animation-timeline")}} property on our `animatedElement`. The result is that the element animates as it moves upwards through the document as it is scrolled. We declare `animation-timeline` property after the shorthand, as the shorthand resets this property.
 
 Lastly, an `animation-range` declaration is set to make the animation begin later than expected and finish earlier.
 
