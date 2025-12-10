@@ -22,7 +22,7 @@ suffix: url("bullet.png");
 The **`suffix`** descriptor takes as its value a single `<symbol>`:
 
 - `<symbol>`
-  - : Specifies a `<symbol>` that is appended to the marker representation. It may be a {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, or {{cssxref("&lt;custom-ident&gt;")}}.
+  - : Specifies a `<symbol>` that is appended to the marker representation. It may be a {{cssxref("&lt;string&gt;")}}, {{cssxref("image")}}, or {{cssxref("&lt;custom-ident&gt;")}}.
 
 ## Formal definition
 

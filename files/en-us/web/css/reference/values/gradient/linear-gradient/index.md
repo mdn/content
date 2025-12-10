@@ -6,7 +6,7 @@ browser-compat: css.types.gradient.linear-gradient
 sidebar: cssref
 ---
 
-The **`linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the {{CSSxRef("&lt;gradient&gt;")}} data type, which is a special kind of {{CSSxRef("&lt;image&gt;")}}.
+The **`linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the {{cssxref("gradient")}} data type, which is a special kind of {{cssxref("image")}}.
 
 {{InteractiveExample("CSS Demo: linear-gradient()")}}
 
@@ -95,7 +95,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 
     The values `to top`, `to bottom`, `to left`, and `to right` are equivalent to the angles `0deg`, `180deg`, `270deg`, and `90deg`, respectively. The other values are translated into an angle.
 
-- {{CSSxRef("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
   - : The gradient line's angle of direction. A value of `0deg` is equivalent to `to top`; increasing values rotate clockwise from there.
 - `<linear-color-stop>`
   - : A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (each being either a {{CSSxRef("&lt;percentage&gt;")}} or a {{CSSxRef("&lt;length&gt;")}} along the gradient's axis).
@@ -288,5 +288,5 @@ Please see [using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradien
 - Other gradient functions: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{cssxref("hue-interpolation-method")}}
 - {{cssxref("color-interpolation-method")}}
-- {{CSSxRef("&lt;image&gt;")}}
+- {{cssxref("image")}}
 - [CSS images module](/en-US/docs/Web/CSS/Guides/Images)

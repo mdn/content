@@ -6,7 +6,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-CSS shapes can be defined using the {{cssxref("&lt;basic-shape&gt;")}} type. In this guide, we discuss creating rectangles, circles, ellipses, and polygons with the {{cssxref("shape-outside")}} property. These are features defined in the [CSS shapes module](/en-US/docs/Web/CSS/Guides/Shapes).
+CSS shapes can be defined using the {{cssxref("basic-shape")}} type. In this guide, we discuss creating rectangles, circles, ellipses, and polygons with the {{cssxref("shape-outside")}} property. These are features defined in the [CSS shapes module](/en-US/docs/Web/CSS/Guides/Shapes).
 
 Before looking at shapes, it is worth understanding two pieces of information that go together to make these shapes possible:
 
@@ -15,7 +15,7 @@ Before looking at shapes, it is worth understanding two pieces of information th
 
 ## The \<basic-shape> type
 
-The {{cssxref("&lt;basic-shape&gt;")}} type is used as the value for all of our basic shapes. This type is a functional notation: the function parentheses contain arguments used to describe the shape.
+The {{cssxref("basic-shape")}} type is used as the value for all of our basic shapes. This type is a functional notation: the function parentheses contain arguments used to describe the shape.
 
 The accepted arguments vary depending on the shape you are creating. We will cover these in the examples below.
 

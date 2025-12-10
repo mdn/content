@@ -57,13 +57,13 @@ The syntax component names can be used alone or multiplied and combined in diffe
 The following syntax component names are supported:
 
 - `"<angle>"`
-  - : Accepts any valid {{cssxref("&lt;angle&gt;")}} value.
+  - : Accepts any valid {{cssxref("angle")}} value.
 - `"<color>"`
   - : Accepts any valid {{cssxref("&lt;color&gt;")}} value.
 - `"<custom-ident>"`
   - : Accepts any valid {{cssxref("&lt;custom-ident&gt;")}} value.
 - `"<image>"`
-  - : Accepts any valid {{cssxref("&lt;image&gt;")}} value.
+  - : Accepts any valid {{cssxref("image")}} value.
 - `"<integer>"`
   - : Accepts any valid {{cssxref("&lt;integer&gt;")}} value.
 - `"<length>"`
@@ -75,7 +75,7 @@ The following syntax component names are supported:
 - `"<percentage>"`
   - : Accepts any valid {{cssxref("&lt;percentage&gt;")}} value.
 - `"<resolution>"`
-  - : Accepts any valid {{cssxref("&lt;resolution&gt;")}} value.
+  - : Accepts any valid {{cssxref("resolution")}} value.
 - `"<string>"`
   - : Accepts any valid {{cssxref("&lt;string&gt;")}} value.
 - `"<time>"`

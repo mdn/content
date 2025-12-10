@@ -746,8 +746,8 @@ The cube in the above example is comprised of six `<div>` elements, all of which
   - {{cssxref("percentage")}}
   - {{cssxref("position")}}
 - Glossary terms:
-  - {{cssxref("Interpolation")}}
-  - {{cssxref("Stacking context")}}
+  - {{glossary("Interpolation")}}
+  - {{glossary("Stacking context")}}
 - [SVG](/en-US/docs/Web/SVG) concepts:
   - [`<animate>`](/en-US/docs/Web/SVG/Reference/Element/animate) element
   - [`<animateTransform>`](/en-US/docs/Web/SVG/Reference/Element/animateTransform) element

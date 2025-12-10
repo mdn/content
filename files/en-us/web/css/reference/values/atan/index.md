@@ -6,7 +6,7 @@ browser-compat: css.types.atan
 sidebar: cssref
 ---
 
-The **`atan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is a trigonometric function that returns the inverse tangent of a number between `-∞` and `+∞`. The function contains a single calculation that returns an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
+The **`atan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is a trigonometric function that returns the inverse tangent of a number between `-∞` and `+∞`. The function contains a single calculation that returns an {{cssxref("angle")}} between `-90deg` and `90deg`.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ The `atan(number)` function accepts only one value as its parameter.
 
 ### Return value
 
-The inverse tangent of a `number` will always return an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
+The inverse tangent of a `number` will always return an {{cssxref("angle")}} between `-90deg` and `90deg`.
 
 - If `number` is `0⁻`, the result is `0⁻`.
 - If `number` is `+∞` the result is `90deg`.
@@ -51,7 +51,7 @@ That is:
 
 ### Rotate elements
 
-The `atan()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("&lt;angle&gt;")}}.
+The `atan()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("angle")}}.
 
 #### HTML
 

@@ -221,7 +221,7 @@ The CSS borders and box decorations module level 4 also introduces the `border-s
 - {{cssxref("text-shadow")}} property
 - {{cssxref("url_value", "&lt;url&gt;")}} data type
 - {{cssxref("&lt;color&gt;")}} data type
-- {{cssxref("&lt;image&gt;")}} data type
+- {{cssxref("image")}} data type
 - {{cssxref("&lt;position&gt;")}} data type
 - [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) keyword
 

@@ -41,7 +41,7 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
   - : Are keywords indicating in which direction the reflection is to happen.
 - {{CSSxRef("&lt;length&gt;")}}
   - : Indicates the size of the reflection.
-- {{CSSxRef("&lt;image&gt;")}}
+- {{cssxref("image")}}
   - : Describes the mask to be applied to the reflection.
 
 ## Formal definition

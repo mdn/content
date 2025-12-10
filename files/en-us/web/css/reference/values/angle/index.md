@@ -6,7 +6,7 @@ browser-compat: css.types.angle
 sidebar: cssref
 ---
 
-The **`<angle>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents an angle value expressed in degrees, gradians, radians, or turns. It is used, for example, in {{cssxref("&lt;gradient&gt;")}}s and in some {{cssxref("transform")}} functions.
+The **`<angle>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents an angle value expressed in degrees, gradians, radians, or turns. It is used, for example, in {{cssxref("gradient")}}s and in some {{cssxref("transform")}} functions.
 
 {{InteractiveExample("CSS Demo: &lt;angle&gt;")}}
 

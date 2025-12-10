@@ -60,13 +60,13 @@ The `<syntax>` parameter is an expression defining the data type. This can take 
 - `<syntax-type>`
   - : A type name, written in angle brackets, representing a CSS data type. The following data types are supported:
     - `<angle>`
-      - : Accepts any valid {{cssxref("&lt;angle&gt;")}} value.
+      - : Accepts any valid {{cssxref("angle")}} value.
     - `<color>`
       - : Accepts any valid {{cssxref("&lt;color&gt;")}} value.
     - `<custom-ident>`
       - : Accepts any valid {{cssxref("&lt;custom-ident&gt;")}} value.
     - `<image>`
-      - : Accepts any valid {{cssxref("&lt;image&gt;")}} value.
+      - : Accepts any valid {{cssxref("image")}} value.
     - `<integer>`
       - : Accepts any valid {{cssxref("&lt;integer&gt;")}} value.
     - `<length>`
@@ -78,7 +78,7 @@ The `<syntax>` parameter is an expression defining the data type. This can take 
     - `<percentage>`
       - : Accepts any valid {{cssxref("&lt;percentage&gt;")}} value.
     - `<resolution>`
-      - : Accepts any valid {{cssxref("&lt;resolution&gt;")}} value.
+      - : Accepts any valid {{cssxref("resolution")}} value.
     - `<string>`
       - : Accepts any valid {{cssxref("&lt;string&gt;")}} value.
     - `<time>`

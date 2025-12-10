@@ -24,7 +24,7 @@ prefix: url("bullet.png");
 The **`prefix`** descriptor takes as its value a single `<symbol>`:
 
 - `<symbol>`
-  - : Specifies a `<symbol>` — a {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, or {{cssxref("&lt;custom-ident&gt;")}} — that is prepended to the marker representation.
+  - : Specifies a `<symbol>` — a {{cssxref("&lt;string&gt;")}}, {{cssxref("image")}}, or {{cssxref("&lt;custom-ident&gt;")}} — that is prepended to the marker representation.
 
 ## Formal definition
 

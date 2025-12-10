@@ -371,7 +371,7 @@ The SVG rectangle that defines the path shape is shown here only to visually dem
 
 ### Different shapes
 
-This example involves different {{cssxref("&lt;basic-shape&gt;")}} values: {{cssxref("basic-shape/circle", "circle()")}}, {{cssxref("basic-shape/ellipse", "ellipse()")}}, {{cssxref("basic-shape/inset", "inset()")}}, {{cssxref("basic-shape/polygon", "polygon()")}}.
+This example involves different {{cssxref("basic-shape")}} values: {{cssxref("basic-shape/circle", "circle()")}}, {{cssxref("basic-shape/ellipse", "ellipse()")}}, {{cssxref("basic-shape/inset", "inset()")}}, {{cssxref("basic-shape/polygon", "polygon()")}}.
 
 ```html
 <div class="container">

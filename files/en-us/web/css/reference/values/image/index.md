@@ -13,7 +13,7 @@ The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Ref
 The `<image>` data type can be represented with any of the following:
 
 - An image denoted by the {{cssxref("url_value", "&lt;url&gt;")}} data type
-- A {{CSSxRef("&lt;gradient&gt;")}} data type
+- A {{cssxref("gradient")}} data type
 - A part of the webpage, defined by the {{CSSxRef("element","element()")}} function
 - An image, image fragment or solid patch of color, defined by the {{CSSxRef("image/image","image()")}} function
 - A blending of two or more images defined by the {{CSSxRef("cross-fade","cross-fade()")}} function.
@@ -103,7 +103,7 @@ image-set("cat.jpg" 1x, "dog.jpg" 1x) /* every image in an image set must have a
 
 ## See also
 
-- {{CSSxRef("&lt;gradient&gt;")}}
+- {{cssxref("gradient")}}
 - {{CSSxRef("element","element()")}}
 - {{CSSxRef("image/image", "image()")}}
 - {{CSSxRef("image/image-set","image-set()")}}

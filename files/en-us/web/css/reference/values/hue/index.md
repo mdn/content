@@ -20,7 +20,7 @@ A `<hue>` can be either an `<angle>` or a `<number>`.
 
 ### Values
 
-- {{CSSXref("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
   - : An angle expressed in degrees, gradians, radians, or turns using the `deg`, `grad`, `rad`, or `turn`, respectively.
 - `<number>`
   - : A real number, representing degrees of the hue angle.
@@ -122,7 +122,7 @@ The following table lists typical colors at various angles in the sRGB (used by 
 
 ## Interpolation of `<hue>` values
 
-`<hue>` values are interpolated as {{CSSXref("&lt;angle&gt;")}} values, and the default interpolation algorithm is [`shorter`](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method#values). In some color-related CSS functions, this can be overridden by the {{CSSXref("&lt;hue-interpolation-method&gt;")}} component.
+`<hue>` values are interpolated as {{cssxref("angle")}} values, and the default interpolation algorithm is [`shorter`](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method#values). In some color-related CSS functions, this can be overridden by the {{CSSXref("&lt;hue-interpolation-method&gt;")}} component.
 
 ## Formal syntax
 
