@@ -2,10 +2,13 @@
 title: "HTMLElement: loseinterest event"
 slug: Web/API/HTMLElement/loseinterest_event
 page-type: web-api-event
+status:
+  - experimental
+  - non-standard
 browser-compat: api.HTMLElement.loseinterest_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`loseinterest`** event of the {{domxref("HTMLElement")}} interface is fired on the target element of an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) when interest is lost, allowing code to be run in response.
 

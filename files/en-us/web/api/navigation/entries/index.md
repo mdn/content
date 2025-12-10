@@ -3,12 +3,10 @@ title: "Navigation: entries() method"
 short-title: entries()
 slug: Web/API/Navigation/entries
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Navigation.entries
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`entries()`** method of the
 {{domxref("Navigation")}} interface returns an array of {{domxref("NavigationHistoryEntry")}} objects representing all existing history entries.
