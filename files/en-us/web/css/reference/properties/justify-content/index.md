@@ -113,7 +113,7 @@ justify-content: unset;
   - : The items are packed flush to each other toward the center of the alignment container along the main axis.
 
 - `left`
-  - : The items are packed flush to each other toward the left edge of the alignment container. When the property's horizontal axis is not parallel with the inline axis, such as when [`flex-direction: column;`](/en-US/docs/Web/CSS/Reference/Properties/flex-direction) is set, this value behaves like `start`.
+  - : The items are packed flush to each other toward the left edge of the alignment container. When the property's horizontal axis is not parallel with the inline axis, such as when {{cssxref("flex-direction", "flex-direction: column", "#column")}} is set, this value behaves like `start`.
 
 - `right`
   - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property's axis is not parallel with the inline axis (in a grid container) or the main-axis (in a flexbox container), this value behaves like `start`.

@@ -62,14 +62,14 @@ If two `auto [<length> | none]` pairs are specified, the first pair applies to t
 
 ## Description
 
-The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/Reference/Properties/contain) and {{cssxref("content-visibility")}}.
+The property is commonly applied alongside elements that can trigger size containment, such as {{cssxref("contain", "contain: size", "#size")}} and {{cssxref("content-visibility")}}.
 
 Size containment allows a user agent to lay out an element as though it had a fixed size, preventing unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
 By default, size containment treats elements as though they had no contents, and may collapse the layout in the same way as if the contents had no width or height.
 The `contain-intrinsic-size` property allows authors to specify an appropriate value to be used as the size for layout.
 
 The `auto <length>` value allows the size of the element to be stored if the element is ever "normally rendered" (with its child elements), and then used instead of the specified length when the element is skipping its contents.
-This allows offscreen elements with [`content-visibility: auto`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility) to benefit from size containment without developers having to be as precise in their estimates of element size.
+This allows offscreen elements with {{cssxref("content-visibility", "content-visibility: auto", "#auto")}} to benefit from size containment without developers having to be as precise in their estimates of element size.
 The remembered value is not used if the child elements are being rendered (if size containment is enabled, the `<length>` will be used).
 
 In grid and multi column layouts, an explicit size is treated differently than implicit content-based height.

@@ -111,7 +111,7 @@ In the middle of a long block of text, we've included an element that we'll anim
 
 #### CSS
 
-A scroll progress timeline is defined using setting a [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) function as the value of the {{cssxref("animation-timeline")}} property. This is declared **after** the {{cssxref("animation")}} shorthand to avoid resetting the longhand property value.
+A scroll progress timeline is defined using setting a {{cssxref("animation-timeline/scroll", "scroll()")}} function as the value of the {{cssxref("animation-timeline")}} property. This is declared **after** the {{cssxref("animation")}} shorthand to avoid resetting the longhand property value.
 
 We've also set `animation-range-start` to make the animation start earlier than expected.
 

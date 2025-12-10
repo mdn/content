@@ -64,7 +64,7 @@ alignment-baseline: unset;
   - : Matches the box's mathematical baseline to that of its parent, corresponding to the center baseline around which mathematical characters are designed.
 
 - `middle`
-  - : Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent. Uses the x-middle baselines; except under [`text-orientation: upright;`](/en-US/docs/Web/CSS/Reference/Properties/text-orientation) (where the alphabetic and x-height baselines are essentially meaningless), in which case it uses the `central` baseline instead.
+  - : Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent. Uses the x-middle baselines; except under {{cssxref("text-orientation", "text-orientation: upright")}} (where the alphabetic and x-height baselines are essentially meaningless), in which case it uses the `central` baseline instead.
 
 - `text-bottom`
   - : Matches the bottom of the box to the top of the parent's content area, using the line-under edge of an inline's content box.

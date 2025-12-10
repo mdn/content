@@ -113,7 +113,7 @@ The result of this looks like so:
 
 In older browsers that do not support the creation of vertical form controls with `writing-mode` and `direction`, there are limited alternatives available. The following only work on `<input type="range">`, causing the text to flow from bottom to top — they have no effect on `<meter>` and `<progress>` elements:
 
-- The non-standard [`appearance: slider-vertical`](/en-US/docs/Web/CSS/Reference/Properties/appearance) property can be used in older versions of Safari and Chrome.
+- The non-standard {{cssxref("appearance", "appearance: slider-vertical")}} property can be used in older versions of Safari and Chrome.
 - The non-standard `orient="vertical"` attribute can be added to the `<input type="range">` element itself in older versions of Firefox.
 
 The HTML for this example includes an [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) slider only, with `orient="vertical"` added to make it display vertically in older Firefox versions:

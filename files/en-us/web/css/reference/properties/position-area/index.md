@@ -105,7 +105,7 @@ For example, if the `writing-mode` is set to `horizontal-tb`, `position-area: to
 
 #### inset properties and values
 
-When an anchor-positioned element is positioned using the `position-area` property, any {{glossary("inset properties")}} set, such as {{cssxref("top")}} or {{cssxref("inset-inline-end")}}, specify offsets from the position-area. Some other property values, like [`max-block-size: 100%`](/en-US/docs/Web/CSS/Reference/Properties/max-block-size), will also be relative to the position-area. Any inset properties set or defaulting to `auto` will behave as if their value was set to `0`.
+When an anchor-positioned element is positioned using the `position-area` property, any {{glossary("inset properties")}} set, such as {{cssxref("top")}} or {{cssxref("inset-inline-end")}}, specify offsets from the position-area. Some other property values, like {{cssxref("max-block-size", "max-block-size: 100%")}}, will also be relative to the position-area. Any inset properties set or defaulting to `auto` will behave as if their value was set to `0`.
 
 ### An aside on positioned element width
 

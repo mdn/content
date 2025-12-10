@@ -42,14 +42,14 @@ The following values may be specified for an element.
 
 ## Description
 
-The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/Reference/Properties/contain) and {{cssxref("content-visibility")}}, and may also be set using the {{cssxref("contain-intrinsic-size")}} [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties).
+The property is commonly applied alongside elements that can trigger size containment, such as {{cssxref("contain", "contain: size", "#size")}} and {{cssxref("content-visibility")}}, and may also be set using the {{cssxref("contain-intrinsic-size")}} [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties).
 
 Size containment allows a user agent to lay out an element as though it had a fixed size, preventing unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
 By default, size containment treats elements as though they had no contents, and may collapse the layout in the same way as if the contents had no height (or width).
 The `contain-intrinsic-height` property allows authors to specify an appropriate value to be used as the height for layout.
 
 The `auto <length>` value allows the height of the element to be stored if the element is ever "normally rendered" (with its child elements), and then used instead of the specified height when the element is skipping its contents.
-This allows offscreen elements with [`content-visibility: auto`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility) to benefit from size containment without developers having to be as precise in their estimates of element size.
+This allows offscreen elements with {{cssxref("content-visibility", "content-visibility: auto", "#auto")}} to benefit from size containment without developers having to be as precise in their estimates of element size.
 The remembered value is not used if the child elements are being rendered (if size containment is enabled, the `<length>` will be used).
 
 ## Formal definition
