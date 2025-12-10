@@ -27,7 +27,7 @@ The following sections describe how to use these two methods.
 
 A custom property prefixed with two dashes begins with `--`, followed by the property name (e.g., `--my-property`), and a property value that can be any [valid CSS value](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 Like any other property, this is written inside a ruleset.
-The following example shows how to create a custom property `--main-bg-color` and uses a [`<named-color>`](/en-US/docs/Web/CSS/Reference/Values/named-color) value of `brown`:
+The following example shows how to create a custom property `--main-bg-color` and uses a {{cssxref("&lt;named-color&gt;")}} value of `brown`:
 
 ```css
 section {

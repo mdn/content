@@ -23,7 +23,7 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) de
 ### Values
 
 - `<extension-name>`
-  - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident); the name identifying the custom media query.
+  - : A {{cssxref("dashed-ident")}}; the name identifying the custom media query.
 - Represented value
   - : The value aliased by the custom media query. Possible values are:
     - `<media-query-list>`

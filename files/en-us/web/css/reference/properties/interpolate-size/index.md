@@ -35,13 +35,13 @@ interpolate-size: unset;
 ### Values
 
 - `allow-keywords`
-  - : Enables [interpolation](/en-US/docs/Glossary/Interpolation) between a [`<length-percentage>`](/en-US/docs/Web/CSS/Reference/Values/length-percentage) value and an intrinsic size value, to allow animation between the two.
+  - : Enables [interpolation](/en-US/docs/Glossary/Interpolation) between a {{cssxref("length-percentage")}} value and an intrinsic size value, to allow animation between the two.
 - `numeric-only`
   - : The default behavior — intrinsic size values cannot be interpolated.
 
 ## Description
 
-Setting `interpolate-size: allow-keywords` enables interpolation between a [`<length-percentage>`](/en-US/docs/Web/CSS/Reference/Values/length-percentage) value and an intrinsic size value. Note that it does not enable animating between two intrinsic size values. One end of the animation must be a `<length-percentage>`.
+Setting `interpolate-size: allow-keywords` enables interpolation between a {{cssxref("length-percentage")}} value and an intrinsic size value. Note that it does not enable animating between two intrinsic size values. One end of the animation must be a `<length-percentage>`.
 
 The `interpolate-size` value is inherited, so animating to (or from) an intrinsic size value can be enabled for an entire document by setting it on the document root:
 

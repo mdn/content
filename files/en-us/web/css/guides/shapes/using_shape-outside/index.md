@@ -15,7 +15,7 @@ Before looking at shapes, it is worth understanding two pieces of information th
 
 ## The \<basic-shape> type
 
-The [`<basic-shape>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape) type is used as the value for all of our basic shapes. This type is a functional notation: the function parentheses contain arguments used to describe the shape.
+The {{cssxref("&lt;basic-shape&gt;")}} type is used as the value for all of our basic shapes. This type is a functional notation: the function parentheses contain arguments used to describe the shape.
 
 The accepted arguments vary depending on the shape you are creating. We will cover these in the examples below.
 

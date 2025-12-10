@@ -36,7 +36,7 @@ animation-range-end: unset;
   - : Represents the end of the timeline. This is the default value.
 - {{cssxref("length-percentage")}}
   - : Specifies a length or percentage value measured from the beginning of the timeline.
-- [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name)
+- {{cssxref("timeline-range-name")}}
   - : Specifies a named timeline range within the overall timeline. The range starts at `0%`.
 - `<timeline-range-name> <length-percentage>`
   - : Specifies a length or percentage value measured from the beginning of the specified named timeline range.
