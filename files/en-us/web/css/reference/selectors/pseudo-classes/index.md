@@ -187,7 +187,7 @@ These pseudo-classes relate to the shadow DOM.
 
 - {{CSSxRef(":host")}}
   - : Matches the shadow tree's shadow host.
-- {{CSSxRef(":host_function", ":host()")}}
+- {{cssxref(":host()")}}
   - : Matches an element that matches {{CSSxRef(":host")}} and matches any of the selectors in the list provided.
 - {{CSSxRef(":host-context", ":host-context()")}}
   - : Selects elements outside of the shadow tree in the context of the shadow host.
@@ -316,7 +316,7 @@ H
 - {{CSSXRef(":heading")}}
 - {{CSSXRef(":heading_function", ":heading()")}}
 - {{CSSxRef(":host")}}
-- {{CSSxRef(":host_function", ":host()")}}
+- {{cssxref(":host()")}}
 - {{CSSxRef(":host-context", ":host-context()")}}
 - {{CSSxRef(":hover")}}
 

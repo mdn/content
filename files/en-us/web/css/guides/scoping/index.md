@@ -23,7 +23,7 @@ Sometimes it's useful to be able to style a host from inside the shadow tree con
 ### Selectors
 
 - {{CSSXref(":host")}}
-- {{CSSXref(":host_function", ":host()")}}
+- {{CSSXref(":host()")}}
 - {{CSSXref(":host-context", ":host-context()")}}
 - {{CSSXref("::slotted")}}
 

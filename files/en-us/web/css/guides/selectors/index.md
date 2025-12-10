@@ -147,7 +147,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
   - [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 - [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
   - {{CSSXref(":host")}} pseudo-class
-  - {{CSSXref(":host_function", ":host()")}} pseudo-class
+  - {{cssxref(":host()")}} pseudo-class
   - {{CSSXref(":host-context", ":host-context()")}} pseudo-class
   - {{CSSXref(":has-slotted")}} pseudo-class
   - {{CSSXref("::slotted")}} pseudo-element

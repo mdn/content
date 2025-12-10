@@ -76,7 +76,7 @@ The parameters common across the syntax of some basic shape functions include:
     The `closest-side` keyword value uses the length from the center of the shape to the closest side of the reference box to create the radius length. The `farthest-side` keyword value uses the length from the center of the shape to the farthest side of the reference box.
 
 - `<position>`
-  - : Defines the center [`<position>`](/en-US/docs/Web/CSS/Reference/Values/position_value) of a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). It defaults to `center` if omitted.
+  - : Defines the center {{cssxref("&lt;position&gt;")}} of a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). It defaults to `center` if omitted.
 
 - `<fill-rule>`
   - : Sets the {{SVGAttr("fill-rule")}} that is used to determine how the interior of the shape defined by the basic shapes [polygon](#syntax_for_polygons), [path](#syntax_for_paths), and [shape](#syntax_for_shapes) is to be filled. Possible values are `nonzero` (the default) and `evenodd`.

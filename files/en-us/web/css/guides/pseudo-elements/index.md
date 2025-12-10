@@ -75,7 +75,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
 
 - [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
   - {{CSSXref(":host")}}
-  - {{CSSXref(":host_function", ":host()")}}
+  - {{cssxref(":host()")}}
   - {{CSSXref(":host-context", ":host-context()")}}
   - {{CSSXref("::slotted", "::slotted()")}}
 
