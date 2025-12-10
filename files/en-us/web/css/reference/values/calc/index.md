@@ -97,7 +97,7 @@ The resulting value of `calc()` must be compatible with the context in which it 
 
 When an {{cssxref("&lt;integer&gt;")}} is expected, the `calc()` expression can also evaluate to a `<number>`, which gets rounded to the nearest integer. So, `calc(1.4)` will result in a value of `1`. If the fractional part of the value is exactly `0.5`, the value is rounded towards positive infinity. For example, `calc(1.5)` will result in a value of `2`, while `calc(-1.5)` will round to `-1`.
 
-`calc()` performs floating point math following the IEEE-754 standard, which results in some considerations concerning the `infinity` and `NaN` values. For more details on how constants are serialized, see the [`calc-keyword`](/en-US/docs/Web/CSS/Reference/Values/calc-keyword) page.
+`calc()` performs floating point math following the IEEE-754 standard, which results in some considerations concerning the `infinity` and `NaN` values. For more details on how constants are serialized, see the {{cssxref("calc-keyword")}} page.
 
 ### Input considerations
 
