@@ -28,7 +28,7 @@ Let's look at an example from our [SPA transition types gallery](https://mdn.git
 
 ```js
 document.startViewTransition({
-  update: () => {
+  update() {
     displayedImage.src = `${baseURL}${images[newId].filename}`;
     displayedImage.alt = images[newId].alt;
     displayedImage.setAttribute("data-id", newId);
@@ -183,14 +183,12 @@ const determineTransitionType = (oldNavigationEntry, newNavigationEntry) => {
     const slug = array[array.length - 1];
     if (slug.indexOf("html") === -1) {
       return 0;
-    } else {
-      const pageIndex = slug.replace("index", "").replace(".html", "");
-      if (pageIndex === "") {
-        return 0;
-      } else {
-        return parseInt(pageIndex);
-      }
     }
+    const pageIndex = slug.replace("index", "").replace(".html", "");
+    if (pageIndex === "") {
+      return 0;
+    }
+    return parseInt(pageIndex, 10);
   }
 
   const currentPageIndex = determinePageIndex(currentURL);
