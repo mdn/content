@@ -33,7 +33,7 @@ page: unset;
 - `auto`
   - : Default value. Use the value of the nearest ancestor with a non-`auto` value. If no ancestor has a named page value set, the used value for auto is the empty string.
 - {{cssxref("custom-ident")}}
-  - : Case-sensitive name defined in a [`@page`](/en-US/docs/Web/CSS/Reference/At-rules/@page) at-rule.
+  - : Case-sensitive name defined in a {{cssxref("@page")}} at-rule.
 
 ## Formal definition
 

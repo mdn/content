@@ -153,7 +153,7 @@ Because the animated element is being promoted to the [top layer](/en-US/docs/Gl
 - `display`: Required so that the animated element is visible (set to `display: block`) throughout both the entry and exit animation. Without this, the exit animation would not be visible; in effect, the popover would just disappear.
 - {{cssxref("overlay")}}: Required to make sure that the removal of the element from the top layer is deferred until the animation has been completed. This doesn't make a huge difference for basic animations such as this one, but in more complex cases not doing this can result in the element being removed from the overlay too quickly, meaning the animation is not smooth or effective.
 
-In addition, a starting state for the animation is set inside the [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style) at-rule. This is needed to avoid unexpected behavior. By default transitions are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type. `@starting-style` allows you to override that default in a specific controlled fashion. Without this, the entry animation would not occur and the popover would just appear.
+In addition, a starting state for the animation is set inside the {{cssxref("@starting-style")}} at-rule. This is needed to avoid unexpected behavior. By default transitions are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type. `@starting-style` allows you to override that default in a specific controlled fashion. Without this, the entry animation would not occur and the popover would just appear.
 
 #### Result
 
@@ -177,6 +177,6 @@ The code renders as follows:
 ## See also
 
 - {{cssxref("overlay")}}
-- [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style)
+- {{cssxref("@starting-style")}}
 - [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions) module
 - [Four new CSS features for smooth entry and exit animations](https://developer.chrome.com/blog/entry-exit-animations/) on developer.chrome.com (2023)
