@@ -94,7 +94,7 @@ img {
 
 ### JavaScript
 
-We add an event listener to the slider that updates the value of the `--boxSize` custom property when the user interacts with it. To increase the zoom-in effect when the slider is moved to the right, the slider's value is inverted by subtracting it from `500px`, as reducing the view box size increases the zoom-in effect.
+We add an event listener to the slider that updates the value of the `--box-size` custom property when the user interacts with it. To increase the zoom-in effect when the slider is moved to the right, the slider's value is inverted by subtracting it from `500px`, as reducing the view box size increases the zoom-in effect.
 
 ```js
 const img = document.querySelector("img");
