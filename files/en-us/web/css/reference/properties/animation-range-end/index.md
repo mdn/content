@@ -124,7 +124,7 @@ We've also included a checkbox that will toggle the {{cssxref("animation-fill-mo
 
 #### CSS
 
-We've defined a view progress timeline by setting a [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function as the value of the {{cssxref("animation-timeline")}} property. This is declared **after** the {{cssxref("animation")}} shorthand to avoid resetting the longhand property value.
+We've defined a view progress timeline by setting a {{cssxref("animation-timeline/view", "view()")}} function as the value of the {{cssxref("animation-timeline")}} property. This is declared **after** the {{cssxref("animation")}} shorthand to avoid resetting the longhand property value.
 
 We've also set `animation-range-end` to make the animation end earlier than expected.
 
