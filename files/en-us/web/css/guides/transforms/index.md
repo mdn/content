@@ -739,15 +739,15 @@ The cube in the above example is comprised of six `<div>` elements, all of which
   - {{cssxref("transition")}}
   - {{cssxref("visibility")}}
 - Data types:
-  - [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle)
+  - {{cssxref("angle")}}
   - {{cssxref("length-percentage")}}
   - {{cssxref("length")}}
-  - [`<number>`](/en-US/docs/Web/CSS/Reference/Values/number)
+  - {{cssxref("number")}}
   - {{cssxref("percentage")}}
-  - [`<position>`](/en-US/docs/Web/CSS/Reference/Values/position_value)
+  - {{cssxref("position")}}
 - Glossary terms:
-  - [Interpolation](/en-US/docs/Glossary/Interpolation)
-  - [Stacking context](/en-US/docs/Glossary/Stacking_context)
+  - {{cssxref("Interpolation")}}
+  - {{cssxref("Stacking context")}}
 - [SVG](/en-US/docs/Web/SVG) concepts:
   - [`<animate>`](/en-US/docs/Web/SVG/Reference/Element/animate) element
   - [`<animateTransform>`](/en-US/docs/Web/SVG/Reference/Element/animateTransform) element

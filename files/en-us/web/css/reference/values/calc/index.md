@@ -220,7 +220,7 @@ After all variables are expanded, `--width-c`'s value will be `calc(calc(100px /
 
 The `calc()` function can be used to adjust individual color channels in [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) without the need for storing color channel values as variables.
 
-In the example below, the first paragraph uses a [`<named-color>`](/en-US/docs/Web/CSS/Reference/Values/named-color).
+In the example below, the first paragraph uses a {{cssxref("named-color")}}.
 In the paragraphs that follow, `calc()` is used with the [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) and [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) functions to adjust the values of each color channel relative to the original named color.
 
 ```html
