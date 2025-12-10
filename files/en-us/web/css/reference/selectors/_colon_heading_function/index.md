@@ -67,4 +67,4 @@ In this example, a comma-separated list of values is used to target headings at 
 
 ## See also
 
-- [`:heading`](/en-US/docs/Web/CSS/Reference/Selectors/:heading)
+- {{cssxref(":heading")}}
