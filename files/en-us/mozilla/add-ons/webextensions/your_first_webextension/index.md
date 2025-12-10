@@ -57,7 +57,7 @@ Using a suitable [text editor](/en-US/docs/Learn_web_development/Howto/Tools_and
 ```
 
 - The first three keys—[`manifest_version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), and [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)—are mandatory and contain basic metadata for the extension.
- [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) is required in Safari, otherwise it's optional. However, it's a good idea to set this property, as it's displayed in the browser's extension manager(for example, `about:addons` in Firefox).
+- [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) is required in Safari, otherwise it's optional. However, it's a good idea to set this property, as it's displayed in the browser's extension manager(for example, `about:addons` in Firefox).
 - [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) is optional, but recommended: it enables you to specify an icon for the extension.
 - [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is required by Firefox.
   - The `gecko` property provides addons.mozilla.org and Firefox with extra configuration information about the extension.

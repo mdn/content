@@ -96,9 +96,11 @@ Now create a file called "manifest.json", and give it this content:
 ```
 
 - The first three keys—[`manifest_version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), and [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)—are mandatory and contain basic metadata for the extension.
-- [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) and [`homepage_url`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) are optional, but recommended: they provide useful information about the extension.
+- [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) is required in Safari, otherwise it's optional. However, it's a good idea to set this property, as it's displayed in the browser's extension manager(for example, `about:addons` in Firefox).
+- [`homepage_url`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) is optional, but recommended: it provide useful information about the extension.
 - [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) is optional but recommended; it lets you specify an icon for the extension.
-- [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is required. The `gecko` property provides addons.mozilla.org and Firefox with extra configuration information about the extension:
+- [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is required.
+  - The `gecko` property provides addons.mozilla.org and Firefox with extra configuration information about the extension:
   - [`id`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#id) defines a unique identifier for the extension. This ID is needed before an extension can be published on addons.mozilla.org (AMO).
   - [`data_collection_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#data_collection_permissions) provides information on whether the extension collects and transmits personally identifiable information. This example doesn't collect or transmit any data.
 - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) lists permissions the extension needs. In this example, the extension asks for the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
@@ -226,18 +228,10 @@ Here's the JavaScript for the popup:
 ```js
 /**
  * CSS to hide everything on the page,
- * except for elements that have the "beastify-image" class.
- */
-const hidePage = `body > :not(.beastify-image) {
-                    display: none;
-                  }`;
-
-/**
- * CSS to hide everything on the page,
  * except for elements that have the ".beastify-image" class.
  */
 const hidePage = `body > :not(.beastify-image) {
-                    display: none;
+                    display: none !important;
                   }`;
 
 /**
@@ -245,7 +239,7 @@ const hidePage = `body > :not(.beastify-image) {
  * the content script in the page.
  */
 function listenForClicks() {
-  document.addEventListener("click", (e) => {
+  document.addEventListener("click", async (e) => {
     /**
      * Given the name of a beast, get the URL for the corresponding image.
      */
@@ -265,38 +259,28 @@ function listenForClicks() {
      * get the beast URL, and
      * send a "beastify" message to the content script in the active tab.
      */
-    function beastify(tabs) {
-      const tabId = tabs[0].id;
-      browser.scripting
-        .insertCSS({
-          target: { tabId },
-          css: hidePage,
-        })
-        .then(() => {
-          const url = beastNameToURL(e.target.textContent);
-          browser.tabs.sendMessage(tabId, {
-            command: "beastify",
-            beastURL: url,
-          });
-        });
+    async function beastify(tab) {
+      await browser.scripting.insertCSS({
+        target: { tabId: tab.id },
+        css: hidePage,
+      });
+      const url = beastNameToURL(e.target.textContent);
+      browser.tabs.sendMessage(tab.id, {
+        command: "beastify",
+        beastURL: url,
+      });
     }
 
     /**
      * Remove the page-hiding CSS from the active tab and
      * send a "reset" message to the content script in the active tab.
      */
-    function reset(tabs) {
-      const tabId = tabs[0].id;
-      browser.scripting
-        .removeCSS({
-          target: { tabId },
-          css: hidePage,
-        })
-        .then(() => {
-          browser.tabs.sendMessage(tabId, {
-            command: "reset",
-          });
-        });
+    async function reset(tab) {
+      await browser.scripting.removeCSS({
+        target: { tabId: tab.id },
+        css: hidePage,
+      });
+      browser.tabs.sendMessage(tab.id, { command: "reset" });
     }
 
     /**
@@ -314,16 +298,20 @@ function listenForClicks() {
       // Ignore when click is not on a button within <div id="popup-content">.
       return;
     }
-    if (e.target.type === "reset") {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
-        .then(reset)
-        .catch(reportError);
-    } else {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
-        .then(beastify)
-        .catch(reportError);
+
+    try {
+      const [tab] = await browser.tabs.query({
+        active: true,
+        currentWindow: true,
+      });
+
+      if (e.target.type === "reset") {
+        await reset(tab);
+      } else {
+        await beastify(tab);
+      }
+    } catch (error) {
+      reportError(error);
     }
   });
 }
@@ -343,16 +331,22 @@ function reportExecuteScriptError(error) {
  * and add a click handler.
  * If the extension couldn't inject the script, handle the error.
  */
-browser.tabs
-  .query({ active: true, currentWindow: true })
-  .then(([tab]) =>
-    browser.scripting.executeScript({
+(async function runOnPopupOpened() {
+  try {
+    const [tab] = await browser.tabs.query({
+      active: true,
+      currentWindow: true,
+    });
+
+    await browser.scripting.executeScript({
       target: { tabId: tab.id },
       files: ["/content_scripts/beastify.js"],
-    }),
-  )
-  .then(listenForClicks)
-  .catch(reportExecuteScriptError);
+    });
+    listenForClicks();
+  } catch (e) {
+    reportExecuteScriptError(e);
+  }
+})();
 ```
 
 The popup script executes [the content script](#the-content-script) in the active tab as soon as the popup is loaded, using the [`browser.scripting.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/executeScript) API. If the content script execution is successful, it stays loaded in the page until the tab is closed or the user navigates to a different page.
@@ -401,7 +395,10 @@ Create a directory, under the extension root, called "content_scripts" and creat
     removeExistingBeasts();
     let beastImage = document.createElement("img");
     beastImage.setAttribute("src", beastURL);
-    beastImage.style.height = "100vh";
+    beastImage.style.objectFit = "contain";
+    beastImage.style.position = "fixed";
+    beastImage.style.height = "100%";
+    beastImage.style.width = "100%";
     beastImage.className = "beastify-image";
     document.body.appendChild(beastImage);
   }
