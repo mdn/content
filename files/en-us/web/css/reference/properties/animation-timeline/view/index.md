@@ -218,7 +218,7 @@ Scroll to see the element with the `subject` class animate as it enters and leav
 
 - {{cssxref("animation-timeline")}}
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
-- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - {{domxref("ViewTimeline")}}
