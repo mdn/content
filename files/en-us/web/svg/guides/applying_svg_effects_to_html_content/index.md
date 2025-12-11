@@ -11,7 +11,7 @@ Modern browsers support using [SVG](/en-US/docs/Web/SVG) within [CSS](/en-US/doc
 You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: [`mask`](/en-US/docs/Web/CSS/Reference/Properties/mask), [`clip-path`](/en-US/docs/Web/CSS/Reference/Properties/clip-path), and [`filter`](/en-US/docs/Web/CSS/Reference/Properties/filter).
 
 > [!NOTE]
-> References to SVG in external files must be to the [same origin](/en-US/docs/Web/Security/Same-origin_policy) as the referencing document.
+> References to SVG in external files must be to the [same origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) as the referencing document.
 
 ## Using embedded SVG
 

@@ -10,7 +10,7 @@ sidebar: http
 
 An example of a cross-origin request: the front-end JavaScript code served from `https://domain-a.com` uses {{domxref("Window/fetch", "fetch()")}} to make a request for `https://domain-b.com/data.json`.
 
-For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, `fetch()` and {{domxref("XMLHttpRequest")}} follow the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
+For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, `fetch()` and {{domxref("XMLHttpRequest")}} follow the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy). This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
 
 ![Diagrammatic representation of CORS mechanism](https://mdn.github.io/shared-assets/images/diagrams/http/cors/fetching-page-cors.svg)
 

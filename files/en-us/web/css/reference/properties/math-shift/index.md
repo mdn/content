@@ -40,29 +40,29 @@ math-shift: unset;
 
 ## Examples
 
-### CSS
+### Normal and compact shift
+
+The following MathML displays two versions of "x squared" using a font with an OpenType MATH table.
+The `math-shift` property is used to raise the superscripts using the `normal` and `compact` shift.
+
+#### CSS
 
 ```css
 math {
-  math-shift: compact;
   font-size: 64pt;
-}
-
-.normal-shift {
   math-shift: normal;
 }
+
 .compact-shift {
   math-shift: compact;
 }
 ```
 
-### MathML
-
-The following MathML displays two versions of "x squared" using a font with an OpenType MATH table. Browser implementing the `math-shift` property should raise the superscripts using slightly different shifts.
+#### MathML
 
 ```html
 <math>
-  <msup class="normal-shift">
+  <msup>
     <mi>x</mi>
     <mn>2</mn>
   </msup>
@@ -73,7 +73,11 @@ The following MathML displays two versions of "x squared" using a font with an O
 </math>
 ```
 
-{{EmbedLiveSample("math-shift-example", 700, 200, "", "")}}
+#### Results
+
+Note that the second "2" has a more compact (lower) shift.
+
+{{EmbedLiveSample("math-shift-example", "100%", "150px")}}
 
 ## Specifications
 
