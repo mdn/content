@@ -6,7 +6,7 @@ browser-compat: css.properties.scroll-timeline-axis
 sidebar: cssref
 ---
 
-The **`scroll-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property is used to specify the scrollbar direction that will be used to provide the [timeline for a scroll driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines) animation, which is progressed through by scrolling a scrollable element (_scroller_).
+The **`scroll-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property is used to specify the scrollbar direction that will be used to provide the [timeline for a scroll driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines), which is progressed through by scrolling a scrollable element (_scroller_).
 
 ## Syntax
 

@@ -6,12 +6,7 @@ browser-compat: css.properties.animation-range-end
 sidebar: cssref
 ---
 
-The **`animation-range-end`** [CSS](/en-US/docs/Web/CSS) property is used to set the end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will end.
-
-The `animation-range-end` and {{cssxref("animation-range-start")}} properties can also be set using the {{cssxref("animation-range")}} shorthand property.
-
-> [!NOTE]
-> `animation-range-end` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-range-end` value to `normal`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare `animation-range-end` after declaring any `animation` shorthand for it to take effect.
+The **`animation-range-end`** [CSS](/en-US/docs/Web/CSS) property sets the point on the timeline where an animation should end.
 
 ## Syntax
 
@@ -26,13 +21,35 @@ animation-range-end: cover;
 animation-range-end: contain;
 animation-range-end: cover 80%;
 animation-range-end: contain 700px;
+
+/* Global values */
+animation-range-end: inherit;
+animation-range-end: initial;
+animation-range-end: revert;
+animation-range-end: revert-layer;
+animation-range-end: unset;
 ```
 
 ### Values
 
-Allowed values for `animation-range-end` are `normal`, a {{cssxref("length-percentage")}}, a `<timeline-range-name>`, or a `<timeline-range-name>` with a `<length-percentage>` following it. See {{cssxref("animation-range")}} for a detailed description of the available values.
+- `normal`
+  - : Represents the end of the timeline. This is the default value.
+- {{cssxref("length-percentage")}}
+  - : Specifies a length or percentage value measured from the beginning of the timeline.
+- [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name)
+  - : Specifies a named timeline range within the overall timeline. The range starts at `0%`.
+- `<timeline-range-name> <length-percentage>`
+  - : Specifies a length or percentage value measured from the beginning of the specified named timeline range.
 
-Also check out the [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/), which shows exactly what the different values mean in an easy visual format.
+## Description
+
+The `animation-range-end` property specifies the end of the animation's attachment range. Changing the end of the attachment range can potentially shift the end of the animation, that is, the point where keyframes mapped to `100%` progress land when the iteration count is `1`, and can also reduce the effective duration of the animation.
+
+The property value can be `normal`, a `<length-percentage>`, or a {{cssxref("timeline-range-name")}} with an optional `<length-percentage>`. If the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `100%`.
+
+The `animation-range-end` property is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that using the `animation` shorthand resets any previously declared `animation-range-end` value to `normal`; the shorthand cannot be used to set a new `animation-range-end` value. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you should declare `animation-range-end` _after_ declaring any `animation` shorthand to avoid resetting the value to `normal`.
+
+The `animation-range-end` property, along with the {{cssxref("animation-range-start")}} property, can also be set by using the {{cssxref("animation-range")}} shorthand.
 
 ## Formal definition
 
@@ -44,18 +61,13 @@ Also check out the [View Timeline Ranges Visualizer](https://scroll-driven-anima
 
 ## Examples
 
-### Creating a named view progress timeline with range end
+### Creating a view progress timeline with a range end
 
-A view progress timeline named `--subject-reveal` is defined using the `view-timeline` property on a subject element with a `class` of `animation`.
-This is then set as the timeline for the same element using `animation-timeline: --subject-reveal;`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
-
-An `animation-range-end` declaration is also set to make the animation end earlier than expected.
+In this example, the `animation-range-end` is applied to an element animated via a view progress timeline. This makes the animation reach its last keyframe well before the element reaches the end of it's containing viewport.
 
 #### HTML
 
-The HTML for the example is shown below.
-
-```html
+```html hidden
 <div class="content">
   <h1>Content</h1>
 
@@ -74,32 +86,91 @@ The HTML for the example is shown below.
     Sagittis aliquam malesuada bibendum arcu vitae elementum. Malesuada bibendum
     arcu vitae elementum curabitur vitae nunc sed velit.
   </p>
+</div>
+```
 
-  <div class="subject animation"></div>
+In the middle of a long block of text, we've included an element that we'll animate. We've added a lot of text to ensure that the content overflows its container; the extra text is hidden here for brevity.
 
-  <p>
-    Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
-    cursus vitae congue mauris rhoncus aenean vel. Sit amet cursus sit amet
-    dictum. Augue neque gravida in fermentum et. Gravida rutrum quisque non
-    tellus orci ac auctor augue mauris. Risus quis varius quam quisque id diam
-    vel quam elementum. Nibh praesent tristique magna sit amet purus gravida
-    quis. Duis ultricies lacus sed turpis tincidunt id aliquet. In egestas erat
-    imperdiet sed euismod nisi. Eget egestas purus viverra accumsan in nisl nisi
-    scelerisque. Netus et malesuada fames ac.
+```html-nolint
+<div class="animatedElement">
+```
+
+```html-nolint hidden
+<p>
+  Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
+  cursus vitae congue mauris rhoncus aenean vel. Sit amet cursus sit amet
+  dictum. Augue neque gravida in fermentum et. Gravida rutrum quisque non tellus
+  orci ac auctor augue mauris. Risus quis varius quam quisque id diam vel quam
+  elementum. Nibh praesent tristique magna sit amet purus gravida quis. Duis
+  ultricies lacus sed turpis tincidunt id aliquet. In egestas erat imperdiet sed
+  euismod nisi. Eget egestas purus viverra accumsan in nisl nisi scelerisque.
+  Netus et malesuada fames ac.
+</p>
+<p>
+```
+
+We've also included a checkbox that will toggle the {{cssxref("animation-fill-mode")}} property, so you can see how this property affects animations with shortened timelines.
+
+```html
+<label>
+  <input type="checkbox" /> Add <code>animation-fill-mode: forwards;</code>
+</label>
+```
+
+```html hidden
   </p>
 </div>
 ```
 
 #### CSS
 
-The `subject` element and its containing `content` element are styled minimally, and the text content is given some basic font settings:
+We've defined a view progress timeline by setting a [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function as the value of the {{cssxref("animation-timeline")}} property. This is declared **after** the {{cssxref("animation")}} shorthand to avoid resetting the longhand property value.
+
+We've also set `animation-range-end` to make the animation end earlier than expected.
 
 ```css
-.subject {
+.animatedElement {
+  background-color: deeppink;
+  animation: appear 1ms linear;
+  animation-timeline: view();
+  animation-range-end: exit 25%;
+}
+
+@keyframes appear {
+  from {
+    background-color: rebeccapurple;
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  to {
+    background-color: darkturquoise;
+    opacity: 0.75;
+    transform: scaleX(0.75);
+  }
+}
+```
+
+When the checkbox is checked, the `animation-fill-mode` property gets applied to the animated element:
+
+```css
+:has(:checked) .animatedElement {
+  animation-fill-mode: forwards;
+}
+```
+
+The other styles applied in this example has been hidden here for brevity.
+
+```css hidden
+.animatedElement {
   width: 300px;
   height: 200px;
   margin: 0 auto;
   background-color: deeppink;
+}
+
+:has(:checked) .animatedElement {
+  animation-fill-mode: both;
 }
 
 .content {
@@ -121,41 +192,23 @@ p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
-```
-
-The `<div>` with the class of `subject` is also given a class of `animation` — this is where `view-timeline` is set to define a named view progress timeline. It is also given an `animation-timeline` name with the same value to declare that this will be the element animated as the view progress timeline is progressed. We also give it an `animation-range-end` declaration to make the animation end earlier than expected.
-
-Last, an animation is specified on the element that animates its opacity and scale, causing it to fade in and size up as it moves up the scroller.
-
-```css
-.animation {
-  view-timeline: --subject-reveal block;
-  animation-timeline: --subject-reveal;
-
-  animation-name: appear;
-  animation-range-end: contain 50%;
-  animation-fill-mode: both;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: scaleX(0);
-  }
-
-  to {
-    opacity: 1;
-    transform: scaleX(1);
+@supports not (animation-range-end: normal) {
+  body::before {
+    content: "Your browser does not support the 'animation-range-end' property.";
+    color: black;
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```
 
 #### Result
 
-Scroll to see the subject element being animated.
+Scroll to see the element animate. Then toggle the checkbox at the end of the block of text and scroll again. Notice how the element finishes animating when it is 75% of the way through the viewport, and how it returns to its default state at that point when the `animation-fill-mode` property is not applied.
 
-{{EmbedLiveSample("Creating a named view progress timeline with range end", "100%", "480px")}}
+{{EmbedLiveSample("Creating a view progress timeline with a range end", "100%", "480px")}}
 
 ## Specifications
 
@@ -168,9 +221,10 @@ Scroll to see the subject element being animated.
 ## See also
 
 - {{cssxref("animation-timeline")}}
-- {{cssxref("animation-range")}}, {{cssxref("animation-range-start")}}
-- {{cssxref("scroll-timeline")}}, {{cssxref("scroll-timeline-axis")}}, {{cssxref("scroll-timeline-name")}}
-- {{cssxref("timeline-scope")}}
+- {{cssxref("animation-range")}}
+- {{cssxref("animation-range-start")}}
 - {{cssxref("view-timeline-inset")}}
-- The JavaScript equivalent: The `rangeEnd` property available in {{domxref("Element.animate()")}} calls
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
+- {{domxref("Element.animate()")}} `rangeStart` property
+- [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
+- [View progress timeline: Ranges and animation progress visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

@@ -2,9 +2,13 @@
 title: :interest-source
 slug: Web/CSS/Reference/Selectors/:interest-source
 page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.interest-source
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`:interest-source`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) element when interest is shown on it.
 
@@ -28,7 +32,7 @@ The markup includes a {{htmlelement("button")}} and a {{htmlelement("p")}}. We s
 
 ```html live-sample___interest-source
 <button interestfor="mypopover">Button</button>
-<p id="mypopover" popover>A hover toolip</p>
+<p id="mypopover" popover>A hover tooltip</p>
 ```
 
 #### CSS
