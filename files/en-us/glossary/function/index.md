@@ -9,7 +9,7 @@ A **function** is a code snippet that can be called by other code or by itself, 
 
 A function name is an {{Glossary("identifier")}} included as part of a function declaration or function expression. The function name's {{Glossary("scope")}} depends on whether the function name is a declaration or expression.
 
-### Different types of functions
+## Different types of functions
 
 An **anonymous function** is a function without a function name. Only function expressions can be anonymous, function declarations must have a name:
 

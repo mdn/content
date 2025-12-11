@@ -35,7 +35,7 @@ The [SVG guides](/en-US/docs/Web/SVG/Guides) help you work with SVG on the web, 
   - : Namespaces are essential to user agents that support multiple XML dialects.
     Browsers must be very strict; taking the time to understand namespaces now will save you from future headaches.
 - [Scripting](/en-US/docs/Web/SVG/Guides/Scripting)
-  - : There are several ways to create an manipulate SVG using JavaScript.
+  - : There are several ways to create and manipulate SVG using JavaScript.
     This document describes event handling, interactivity and working with embedded SVG content.
 - [SVG animation with SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
   - : SMIL is an XML-based language for writing interactive multimedia presentations.

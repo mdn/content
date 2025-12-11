@@ -23,7 +23,7 @@ AbortSignal.any(iterable)
 
 ### Return value
 
-A {{domxref("AbortSignal")}} that is:
+An {{domxref("AbortSignal")}} that is:
 
 - **Already aborted**, if any of the abort signals given is already aborted. The returned {{domxref("AbortSignal")}}'s reason will be already set to the {{domxref("AbortSignal.reason", "reason")}} of the first abort signal that was already aborted.
 - **Asynchronously aborted**, when any abort signal in `iterable` aborts. The {{domxref("AbortSignal.reason", "reason")}} will be set to the reason of the first abort signal that is aborted.

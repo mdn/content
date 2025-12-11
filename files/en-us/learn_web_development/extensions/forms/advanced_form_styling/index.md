@@ -47,7 +47,7 @@ To recap what we said in the previous article, we have:
 - [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file)
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
-Let's first talk about the [`appearance`](/en-US/docs/Web/CSS/appearance) property, which is useful for making all of the above more stylable.
+Let's first talk about the [`appearance`](/en-US/docs/Web/CSS/Reference/Properties/appearance) property, which is useful for making all of the above more stylable.
 
 ## `appearance`: controlling OS-level styling
 
@@ -509,7 +509,7 @@ select {
 }
 ```
 
-We then created our own icon using generated content. We put an extra wrapper around the control, because [`::before`](/en-US/docs/Web/CSS/::before)/[`::after`](/en-US/docs/Web/CSS/::after) don't work on `<select>` elements (their content is fully controlled by the browser):
+We then created our own icon using generated content. We put an extra wrapper around the control, because [`::before`](/en-US/docs/Web/CSS/Reference/Selectors/::before)/[`::after`](/en-US/docs/Web/CSS/Reference/Selectors/::after) don't work on `<select>` elements (their content is fully controlled by the browser):
 
 ```html
 <label for="select">Select a fruit</label>

@@ -475,30 +475,34 @@ Even when a table could be written in GFM it is sometimes better to use HTML, be
 
 ```html
 <table>
-  <tr>
-    <th>A heading 1</th>
-    <th>A heading 2</th>
-    <th>A heading 3</th>
-    <th>A heading 4</th>
-    <th>A heading 5</th>
-    <th>A heading 6</th>
-  </tr>
-  <tr>
-    <td>Something shortish</td>
-    <td>
-      Something much longer that really goes into a lot of detail about
-      something, so much so that the table formatting starts to look bad in GFM
-      format.
-    </td>
-    <td>Something shortish</td>
-    <td>
-      Another cell with lots of text in it, that also really goes into a lot of
-      detail about something, so much so that the table formatting starts to
-      look bad in GFM format.
-    </td>
-    <td>Something shortish</td>
-    <td>Something shortish</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>A heading 1</th>
+      <th>A heading 2</th>
+      <th>A heading 3</th>
+      <th>A heading 4</th>
+      <th>A heading 5</th>
+      <th>A heading 6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Something shortish</td>
+      <td>
+        Something much longer that really goes into a lot of detail about
+        something, so much so that the table formatting starts to look bad in
+        GFM format.
+      </td>
+      <td>Something shortish</td>
+      <td>
+        Another cell with lots of text in it, that also really goes into a lot
+        of detail about something, so much so that the table formatting starts
+        to look bad in GFM format.
+      </td>
+      <td>Something shortish</td>
+      <td>Something shortish</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

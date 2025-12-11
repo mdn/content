@@ -29,7 +29,7 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Refer
 We also define a `button` that will be used to display the current style and change the style.
 
 ```html
-<button></button>
+<button>Media unknown</button>
 <svg
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">

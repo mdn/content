@@ -71,13 +71,11 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super(); // Always call super first in constructor
-      const cardComponent = document.getElementById(
-        "card-component-template",
-      ).content;
+      const template = document.getElementById("card-component-template");
       const shadowRoot = this.attachShadow({
         mode: "open",
       });
-      shadowRoot.appendChild(cardComponent.cloneNode(true));
+      shadowRoot.appendChild(document.importNode(template.content, true));
     }
   },
 );
@@ -162,13 +160,11 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super(); // Always call super first in constructor
-      const cardComponent = document.getElementById(
-        "card-component-template",
-      ).content;
+      const template = document.getElementById("card-component-template");
       const shadowRoot = this.attachShadow({
         mode: "open",
       });
-      shadowRoot.appendChild(cardComponent.cloneNode(true));
+      shadowRoot.appendChild(document.importNode(template.content, true));
     }
   },
 );
@@ -180,11 +176,11 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super(); // Always call super first in constructor
-      const cardWrapper = document.getElementById("card-wrapper").content;
+      const template = document.getElementById("card-wrapper");
       const shadowRoot = this.attachShadow({
         mode: "open",
       });
-      shadowRoot.appendChild(cardWrapper.cloneNode(true));
+      shadowRoot.appendChild(document.importNode(template.content, true));
     }
   },
 );
@@ -269,13 +265,11 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super(); // Always call super first in constructor
-      const cardComponent = document.getElementById(
-        "card-component-template",
-      ).content;
+      const template = document.getElementById("card-component-template");
       const shadowRoot = this.attachShadow({
         mode: "open",
       });
-      shadowRoot.appendChild(cardComponent.cloneNode(true));
+      shadowRoot.appendChild(document.importNode(template.content, true));
     }
   },
 );
@@ -287,11 +281,11 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super(); // Always call super first in constructor
-      const cardWrapper = document.getElementById("card-wrapper").content;
+      const template = document.getElementById("card-wrapper");
       const shadowRoot = this.attachShadow({
         mode: "open",
       });
-      shadowRoot.appendChild(cardWrapper.cloneNode(true));
+      shadowRoot.appendChild(document.importNode(template.content, true));
     }
   },
 );
@@ -334,4 +328,4 @@ In targeting the parts of the `<card-component>` from within the `<card-wrapper>
 - [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) interface
 - {{DOMxRef("Element.part")}} property
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
-- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module

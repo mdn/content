@@ -269,7 +269,7 @@ For the first problem there is a straightforward CSS solution. We need to set th
 }
 ```
 
-This has the effect that pointer events are going "through" the overlay (see [reference documentation for point events](/en-US/docs/Web/CSS/pointer-events) for more details).
+This has the effect that pointer events are going "through" the overlay (see [reference documentation for point events](/en-US/docs/Web/CSS/Reference/Properties/pointer-events) for more details).
 
 The caption user interface problem is a bit harder to solve. Although we can listen to events, activating a track using the caption user interface will also activate the rendering of corresponding WebVTT. As we are using VTTCues for IMSC rendering, this can course undesired presentation behavior. The text property of the VTTCue has always the empty string as value but in some browser this may lead nonetheless to the rendering of artifacts.
 

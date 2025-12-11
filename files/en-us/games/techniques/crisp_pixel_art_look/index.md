@@ -224,7 +224,7 @@ image.src = "cat.png";
 
 {{EmbedLiveSample("Canvas context scale", "", 520)}}
 
-To fix this, you have to ensure that the image pixels are always drawn at integer multiples of canvas pixels. That is, when you call `drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)`, `dWidth` needs to be equal to `sWidth / xScale * n`, where `xScale` is the x scale factor for the context (1.0 if you haven't called `scale()`), and `n` is an integer (1, 2, 3, ...). The same applies to `dHeight`. So if you want to draw a 128x128 pixel image on a canvas that has been scaled by 0.8, you can only draw it at sizes like 160 (128 / 0.8 \* 1), 320 (128 / 0.8 \* 2), etc.
+To fix this, you have to ensure that the image pixels are always drawn at integer multiples of canvas pixels. That is, when you call `drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)`, `dWidth` needs to be equal to `sWidth / xScale * n`, where `xScale` is the x scale factor for the context (1.0 if you haven't called `scale()`), and `n` is an integer (1, 2, 3, ...). The same applies to `dHeight`. So if you want to draw a 128x128 pixel image on a canvas that has been scaled by 0.8, you can only draw it at sizes like 160 (128 / 0.8 × 1), 320 (128 / 0.8 × 2), etc.
 
 ```html hidden live-sample___canvas_context_scale_correct
 <canvas id="game" width="128" height="128">A cat</canvas>

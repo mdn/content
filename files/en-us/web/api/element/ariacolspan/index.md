@@ -20,15 +20,19 @@ In this example the `aria-colspan` attribute on the element with an ID of `spann
 
 ```html
 <table>
-  <tr>
-    <th>Heading 1</th>
-    <th>Heading 2</th>
-    <th>Heading 3</th>
-  </tr>
-  <tr>
-    <td colspan="2" aria-colspan="2" id="spanning-column">Spanning</td>
-    <td>One</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Heading 1</th>
+      <th>Heading 2</th>
+      <th>Heading 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" aria-colspan="2" id="spanning-column">Spanning</td>
+      <td>One</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

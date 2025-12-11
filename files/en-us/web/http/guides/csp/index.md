@@ -79,7 +79,10 @@ If sanitization does fail, there are various forms the injected malicious code c
 - An inline event handler:
 
   ```html
-  <img onmouseover="console.log(`You've been hacked!`)" />
+  <img
+    onmouseover="console.log(`You've been hacked!`)"
+    src="thumbnail.jpg"
+    alt="" />
   ```
 
 - A `javascript:` URL:
@@ -291,7 +294,7 @@ If a CSP contains either a `default-src` or a `script-src` directive, then inlin
 - JavaScript in a `javascript:` URL:
 
   ```html
-  <a href="javascript:console.log('Hello from a javascript: URL')"></a>
+  <a href="javascript:console.log('Hello from a javascript: URL')">Click me</a>
   ```
 
 The `unsafe-inline` keyword can be used to override this restriction. For example, the following directive requires all resources to be same-origin, but allows inline JavaScript:
@@ -329,7 +332,11 @@ Like inline JavaScript, if a CSP contains either a `default-src` or a `script-sr
   setTimeout("console.log('hello from setTimeout')", 1);
   ```
 
-The `unsafe-eval` keyword can be used to override this behavior, and as with `unsafe-inline`, and for the same reasons: **developers should avoid `unsafe-eval`**. Sometimes it can be difficult to remove usages of `eval()`: in these situations, the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) can make it safer, by ensuring that the input meets a defined policy.
+The `unsafe-eval` keyword can be used to override this behavior, and as with `unsafe-inline`, and for the same reasons: **developers should avoid `unsafe-eval`**.
+
+Sometimes it can be difficult to remove usages of `eval()` and the other methods: in these situations, the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) can make it safer, by ensuring that the input meets a defined policy.
+The `trusted-types-eval` keyword should be used to override the behavior in this case.
+Unlike `unsafe-inline` it only overrides the behavior in browser when trusted types are supported and enabled; which ensures that the methods will remain blocked on browsers that don't support trusted types.
 
 Unlike `unsafe-inline`, the `unsafe-eval` keyword does still work in a directive that contains nonce or hash expressions.
 
@@ -460,7 +467,7 @@ Web developers are strongly encouraged to serve all their content over HTTPS. In
 <script src="http://example.org/my-cat.js"></script>
 ```
 
-This is called _mixed content_, and the presence of insecure resources greatly weakens the protection afforded by HTTPS. Under the [mixed content algorithm](/en-US/docs/Web/Security/Mixed_content) that browsers implement, if a document is served over HTTPS, insecure resources are categorized into "upgradable content" and "blockable content". Upgradable content is upgraded to HTTPS, and blockable content is blocked, potentially breaking the page.
+This is called _mixed content_, and the presence of insecure resources greatly weakens the protection afforded by HTTPS. Under the [mixed content algorithm](/en-US/docs/Web/Security/Defenses/Mixed_content) that browsers implement, if a document is served over HTTPS, insecure resources are categorized into "upgradable content" and "blockable content". Upgradable content is upgraded to HTTPS, and blockable content is blocked, potentially breaking the page.
 
 The ultimate solution to mixed content is for developers to load all resources over HTTPS. However, even if a site is actually able to serve all content over HTTPS, it can still be very difficult (or even effectively impossible, where archived content is concerned) for a developer to rewrite all the URLs the site uses to load resources.
 

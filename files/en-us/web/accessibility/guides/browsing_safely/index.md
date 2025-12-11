@@ -20,7 +20,7 @@ The user can do much to protect himself by learning his operating system, its pe
 
 ### Use modern browsers. Learn personalization and accessibility settings
 
-Modern browsers support the CSS media feature [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion). Browsers can detect whether a user has requested a reduced motion experience. The user would access this through an accessibility interface, as seen below.
+Modern browsers support the CSS media feature [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion). Browsers can detect whether a user has requested a reduced motion experience. The user would access this through an accessibility interface, as seen below.
 
 ![Screen shot showing how to turn off animations in Windows 10.](android-remove-animations.png)
 

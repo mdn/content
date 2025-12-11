@@ -30,7 +30,7 @@ Sample usage:
 transition: all 4s ease;
 ```
 
-If you encounter the above code in a code base, you can safely remove all but the last line. All browsers support [transitions](/en-US/docs/Web/CSS/transition#browser_compatibility) without vendor prefixes:
+If you encounter the above code in a code base, you can safely remove all but the last line. All browsers support [transitions](/en-US/docs/Web/CSS/Reference/Properties/transition#browser_compatibility) without vendor prefixes:
 
 ```css
 transition: all 4s ease;

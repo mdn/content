@@ -303,22 +303,33 @@ Similarly, a negative value will mean that the intersection is detected once ima
   <div class="flex-container">
     <div class="carousel">
       <img
+        src=""
         data-src="ballon-portrait.jpg"
         class="lazy-carousel-img"
         alt="Balloon portrait" />
       <img
+        src=""
         data-src="balloon-small.jpg"
         class="lazy-carousel-img"
         alt="balloon-small" />
-      <img data-src="surfer.jpg" class="lazy-carousel-img" alt="surfer" />
       <img
+        src=""
+        data-src="surfer.jpg"
+        class="lazy-carousel-img"
+        alt="surfer" />
+      <img
+        src=""
         data-src="border-diamonds.png"
         class="lazy-carousel-img"
         alt="border-diamonds" />
-      <img data-src="fire.png" class="lazy-carousel-img" alt="fire" />
-      <img data-src="puppy-header.jpg" class="lazy-carousel-img" alt="puppy" />
-      <img data-src="moon.jpg" class="lazy-carousel-img" alt="moon" />
-      <img data-src="rhino.jpg" class="lazy-carousel-img" alt="rhino" />
+      <img src="" data-src="fire.png" class="lazy-carousel-img" alt="fire" />
+      <img
+        src=""
+        data-src="puppy-header.jpg"
+        class="lazy-carousel-img"
+        alt="puppy" />
+      <img src="" data-src="moon.jpg" class="lazy-carousel-img" alt="moon" />
+      <img src="" data-src="rhino.jpg" class="lazy-carousel-img" alt="rhino" />
     </div>
     <div id="margin-indicator"></div>
   </div>
@@ -589,11 +600,12 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
 let observers = [];
 
 startup = () => {
-  let wrapper = document.querySelector(".wrapper");
+  const wrapper = document.querySelector(".wrapper");
+  const template = document.querySelector("#boxTemplate");
 
   // Options for the observers
 
-  let observerOptions = {
+  const observerOptions = {
     root: null,
     rootMargin: "0px",
     threshold: [],
@@ -604,7 +616,7 @@ startup = () => {
   // since there will be so many of them (for each percentage
   // point).
 
-  let thresholdSets = [
+  const thresholdSets = [
     [],
     [0.5],
     [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
@@ -618,12 +630,10 @@ startup = () => {
   // Add each box, creating a new observer for each
 
   for (let i = 0; i < 4; i++) {
-    let template = document
-      .querySelector("#boxTemplate")
-      .content.cloneNode(true);
-    let boxID = `box${i + 1}`;
-    template.querySelector(".sampleBox").id = boxID;
-    wrapper.appendChild(document.importNode(template, true));
+    const newBox = document.importNode(template.content, true);
+    const boxID = `box${i + 1}`;
+    newBox.querySelector(".sampleBox").id = boxID;
+    wrapper.appendChild(newBox);
 
     // Set up the observer for this box
 
@@ -708,7 +718,7 @@ The HTML for this example is very short, with a primary element which is the box
 
 ### CSS
 
-The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), which we'll use to affect the changes to the element as it becomes more or less obscured.
+The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions), which we'll use to affect the changes to the element as it becomes more or less obscured.
 
 ```css
 #box {

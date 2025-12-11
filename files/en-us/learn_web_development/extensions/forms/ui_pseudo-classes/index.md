@@ -42,7 +42,7 @@ You may already be familiar with the following pseudo-classes:
 - {{cssxref(":focus")}}: Selects an element only when it is focused (i.e., by being tabbed to via the keyboard).
 - {{cssxref(":active")}}: selects an element only when it is being activated (i.e., while it is being clicked on, or when the <kbd>Return</kbd> / <kbd>Enter</kbd> key is being pressed down in the case of a keyboard activation).
 
-[CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) provide several other pseudo-classes related to HTML forms. These provide several useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
+[CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) provide several other pseudo-classes related to HTML forms. These provide several useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
 
 - {{cssxref(':required')}} and {{cssxref(':optional')}}: Target elements that can be required (e.g., elements that support the [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) HTML attribute)), based on whether they are required or optional.
 - {{cssxref(":valid")}} and {{cssxref(":invalid")}}, and {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}: Target form controls that are valid/invalid according to form validation constraints set on them, or in-range/out-of-range.
@@ -171,9 +171,9 @@ In the next section, we'll look at a better example of indicating required field
 
 ## Using generated content with pseudo-classes
 
-In previous articles, we've seen the usage of [generated content](/en-US/docs/Web/CSS/CSS_generated_content), but we thought now would be a good time to talk about it in a bit more detail.
+In previous articles, we've seen the usage of [generated content](/en-US/docs/Web/CSS/Guides/Generated_content), but we thought now would be a good time to talk about it in a bit more detail.
 
-The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/::before) and [`::after`](/en-US/docs/Web/CSS/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it may be invisible to some screen readers. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
+The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/Reference/Selectors/::before) and [`::after`](/en-US/docs/Web/CSS/Reference/Selectors/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/Reference/Properties/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it may be invisible to some screen readers. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
 
 This is really useful when you want to add a visual indicator to an element, such as a label or icon, when alternative indicators are also available to ensure accessibility for all users. For example, we can use generated content to handle the placement and animation of the custom radio button's inner circle when a radio button is selected:
 
@@ -814,7 +814,7 @@ label:has(+ :disabled) {
 }
 ```
 
-We've directly selected the inputs we want to disable using `input[type="text"]:disabled`, but we also wanted to gray out the corresponding text labels. As the labels are right before their inputs, we selected those using the pseudo-class [`:has`](/en-US/docs/Web/CSS/:has).
+We've directly selected the inputs we want to disable using `input[type="text"]:disabled`, but we also wanted to gray out the corresponding text labels. As the labels are right before their inputs, we selected those using the pseudo-class [`:has`](/en-US/docs/Web/CSS/Reference/Selectors/:has).
 
 Now finally, we've used some JavaScript to toggle the disabling of the billing address fields:
 
@@ -1144,7 +1144,7 @@ As we've seen in earlier articles in the module, {{HTMLElement("input/radio", "r
 
 When checked, they will be matched by the {{cssxref(":checked")}} pseudo-class.
 
-The most common use of this is to add a different style onto the checkbox or radio button when it is checked, in cases where you've removed the system default styling with [`appearance: none;`](/en-US/docs/Web/CSS/appearance) and want to build the styles back up yourself. We saw examples of this in the previous article when we talked about [Styling checkboxes and radio buttons using `appearance`](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#styling_checkboxes_and_radio_buttons_using_appearance).
+The most common use of this is to add a different style onto the checkbox or radio button when it is checked, in cases where you've removed the system default styling with [`appearance: none;`](/en-US/docs/Web/CSS/Reference/Properties/appearance) and want to build the styles back up yourself. We saw examples of this in the previous article when we talked about [Styling checkboxes and radio buttons using `appearance`](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#styling_checkboxes_and_radio_buttons_using_appearance).
 
 As a recap, the `:checked` code from our Styled radio buttons example looks like so:
 
@@ -1232,7 +1232,7 @@ input[type="radio"]:checked::before {
 
 {{EmbedLiveSample("radios-styled", "100%", 200, , , , , "allow-forms")}}
 
-Basically, we build the styling for a radio button's "inner circle" using the `::before` pseudo-element, but set a `scale(0)` [`transform`](/en-US/docs/Web/CSS/transform) on it. We then use a [`transition`](/en-US/docs/Web/CSS/transition) to make the generated content on the label nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning [`width`](/en-US/docs/Web/CSS/width)/[`height`](/en-US/docs/Web/CSS/height) is that you can use [`transform-origin`](/en-US/docs/Web/CSS/transform-origin) to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner, and there is no jumping behavior as no box model property values are updated.
+Basically, we build the styling for a radio button's "inner circle" using the `::before` pseudo-element, but set a `scale(0)` [`transform`](/en-US/docs/Web/CSS/Reference/Properties/transform) on it. We then use a [`transition`](/en-US/docs/Web/CSS/Reference/Properties/transition) to make the generated content on the label nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning [`width`](/en-US/docs/Web/CSS/Reference/Properties/width)/[`height`](/en-US/docs/Web/CSS/Reference/Properties/height) is that you can use [`transform-origin`](/en-US/docs/Web/CSS/Reference/Properties/transform-origin) to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner, and there is no jumping behavior as no box model property values are updated.
 
 ### :default and :indeterminate
 
@@ -1478,7 +1478,7 @@ There are a number of other pseudo-classes of interest, and we don't have space 
 The following are also interesting, but as yet not well-supported in browsers:
 
 - The {{cssxref(":blank")}} pseudo-class selects empty form controls. {{cssxref(":empty")}} also matches elements that have no children, like {{HTMLElement("input")}}, but it is more general — it also matches other {{glossary("void element", "void elements")}} like {{HTMLElement("br")}} and {{HTMLElement("hr")}}. `:empty` has reasonable browser support; the `:blank` pseudo-class's specification is not yet finished, so it is not yet supported in any browser.
-- The [`:user-invalid`](/en-US/docs/Web/CSS/:user-invalid) pseudo-class, when supported, will be similar to {{cssxref(":invalid")}}, but with better user experience. If the value is valid when the input receives focus, the element may match `:invalid` as the user enters data if the value is temporarily invalid, but will only match `:user-invalid` when the element loses focus. If the value was originally invalid, it will match both `:invalid` and `:user-invalid` for the whole duration of the focus. In a similar manner to `:invalid`, it will stop matching `:user-invalid` if the value does become valid.
+- The [`:user-invalid`](/en-US/docs/Web/CSS/Reference/Selectors/:user-invalid) pseudo-class, when supported, will be similar to {{cssxref(":invalid")}}, but with better user experience. If the value is valid when the input receives focus, the element may match `:invalid` as the user enters data if the value is temporarily invalid, but will only match `:user-invalid` when the element loses focus. If the value was originally invalid, it will match both `:invalid` and `:user-invalid` for the whole duration of the focus. In a similar manner to `:invalid`, it will stop matching `:user-invalid` if the value does become valid.
 
 ## Summary
 

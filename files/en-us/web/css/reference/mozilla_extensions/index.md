@@ -47,13 +47,13 @@ Support for the prefixed version is typically dropped eventually, so use the sta
 - {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{deprecated_inline}}: Prefixed version still supported.
 - `-moz-background-clip` {{deprecated_inline}}: Not supported; use {{CSSxRef("background-clip")}}.
 - `-moz-background-origin` {{deprecated_inline}}: Not supported; use {{CSSxRef("background-origin")}}.
-- `-moz-box-align` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("align-items")}}.
+- `-moz-box-align` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("align-items")}}.
 - `-moz-background-inline-policy` {{deprecated_inline}}: Not supported; use {{CSSxRef("box-decoration-break")}}.
-- `-moz-box-direction` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-direction")}}.
-- `-moz-box-flex` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-grow")}}.
-- `-moz-box-ordinal-group` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("order")}}.
-- `-moz-box-orient` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-direction")}}.
-- `-moz-box-pack` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("justify-content")}}.
+- `-moz-box-direction` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-direction")}}.
+- `-moz-box-flex` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-grow")}}.
+- `-moz-box-ordinal-group` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("order")}}.
+- `-moz-box-orient` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-direction")}}.
+- `-moz-box-pack` {{deprecated_inline}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("justify-content")}}.
 - `-moz-background-size` {{deprecated_inline}}: Not supported; use {{CSSxRef("background-size")}}.
 - `-moz-border-end` {{deprecated_inline}}: Not supported; use {{CSSxRef("border-inline-end")}}.
 - `-moz-border-end-color` {{deprecated_inline}}: Not supported; use {{CSSxRef("border-inline-end-color")}}.
@@ -175,7 +175,7 @@ Support for the prefixed version is typically dropped eventually, so use the sta
 
 **Property:** {{CSSxRef("image-rendering")}}
 
-- `-moz-crisp-edges` {{deprecated_inline}}: Use [`crisp-edges`](/en-US/docs/Web/CSS/image-rendering#crisp-edges).
+- `-moz-crisp-edges` {{deprecated_inline}}: Use [`crisp-edges`](/en-US/docs/Web/CSS/Reference/Properties/image-rendering#crisp-edges).
 
 ### &lt;length&gt;
 
@@ -188,7 +188,7 @@ Support for the prefixed version is typically dropped eventually, so use the sta
 **Property:** {{CSSxRef("list-style-type")}}
 
 Several vendor-prefixed values for `list-style-type` are now supported as standard values without a `-moz-` prefix, except for those in the following list.
-See [Browser Compatibility](/en-US/docs/Web/CSS/list-style-type#browser_compatibility) for details.
+See [Browser Compatibility](/en-US/docs/Web/CSS/Reference/Properties/list-style-type#browser_compatibility) for details.
 
 - `-moz-ethiopic-halehame`
 - `-moz-ethiopic-halehame-am`
@@ -213,7 +213,7 @@ See [Browser Compatibility](/en-US/docs/Web/CSS/list-style-type#browser_compatib
 - `-moz-min-content`: See {{CSSxRef("min-content")}}.
 - `-moz-fit-content`: See {{CSSxRef("fit-content")}}.
 - `-moz-max-content`: See {{CSSxRef("max-content")}}.
-- `-moz-available`: See [`stretch`](/en-US/docs/Web/CSS/width#stretch).
+- `-moz-available`: See [`stretch`](/en-US/docs/Web/CSS/Reference/Properties/width#stretch).
 
 ## Pseudo-classes
 

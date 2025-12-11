@@ -34,20 +34,26 @@ This example uses JavaScript to delete a table's footer.
 ```html
 <table>
   <thead>
-    <th>Name</th>
-    <th>Score</th>
+    <tr>
+      <th>Name</th>
+      <th>Score</th>
+    </tr>
   </thead>
-  <tr>
-    <td>Bob</td>
-    <td>541</td>
-  </tr>
-  <tr>
-    <td>Jim</td>
-    <td>225</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Bob</td>
+      <td>541</td>
+    </tr>
+    <tr>
+      <td>Jim</td>
+      <td>225</td>
+    </tr>
+  </tbody>
   <tfoot>
-    <th>Average</th>
-    <td>383</td>
+    <tr>
+      <th>Average</th>
+      <td>383</td>
+    </tr>
   </tfoot>
 </table>
 ```

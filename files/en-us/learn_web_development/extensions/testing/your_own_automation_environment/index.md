@@ -137,8 +137,8 @@ There is also nothing to stop you running the test on multiple browsers simultan
    ```js
    const { Builder, Browser, By, Key } = require("selenium-webdriver");
 
-   const driver_fx = new Builder().forBrowser(Browser.FIREFOX).build();
-   const driver_chr = new Builder().forBrowser(Browser.CHROME).build();
+   const driverFx = new Builder().forBrowser(Browser.FIREFOX).build();
+   const driverChr = new Builder().forBrowser(Browser.CHROME).build();
 
    async function searchTest(driver) {
      try {
@@ -156,8 +156,8 @@ There is also nothing to stop you running the test on multiple browsers simultan
      }
    }
 
-   searchTest(driver_fx);
-   searchTest(driver_chr);
+   searchTest(driverFx);
+   searchTest(driverChr);
    ```
 
 3. In terminal, make sure you are inside your project folder, then enter the following command:

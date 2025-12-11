@@ -56,7 +56,7 @@ Styling `<option>` elements has historically been highly limited. [Customizable 
 
 ### Legacy option styling
 
-In browsers that don't support the modern customization features (or legacy codebases where they can't be used), the styling available on `<option>` elements depends on the browser and operating system. Depending on the operating system, the [`font-size`](/en-US/docs/Web/CSS/font-size) of the owning `<select>` is respected in Firefox and Chromium. Chromium may additionally allow [`color`](/en-US/docs/Web/CSS/color), [`background-color`](/en-US/docs/Web/CSS/background-color), [`font-family`](/en-US/docs/Web/CSS/font-family), [`font-variant`](/en-US/docs/Web/CSS/font-variant), and [`text-align`](/en-US/docs/Web/CSS/text-align) to be set.
+In browsers that don't support the modern customization features (or legacy codebases where they can't be used), the styling available on `<option>` elements depends on the browser and operating system. Depending on the operating system, the {{cssxref("font-size")}} of the owning `<select>` is respected in Firefox and Chromium. Chromium may additionally allow {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("font-family")}}, {{cssxref("font-variant")}}, and {{cssxref("text-align")}} to be set.
 
 You can find more details about legacy `<option>` styling in [our guide to advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling).
 

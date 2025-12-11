@@ -14,7 +14,7 @@ This includes any portion of the document not currently visible.
 Being based on the edge of the document as it is, this property takes into account any horizontal scrolling of the page.
 For example, if the page is scrolled such that 200 pixels of the left side of the document are scrolled out of view, and the mouse is clicked 100 pixels inward from the left edge of the view, the value returned by `pageX` will be 300.
 
-Originally, this property was defined as a `long` integer. The [CSSOM View Module](/en-US/docs/Web/CSS/CSSOM_view) redefined it as a
+Originally, this property was defined as a `long` integer. The [CSSOM View Module](/en-US/docs/Web/CSS/Guides/CSSOM_view) redefined it as a
 `double` float. See the [Browser compatibility](#browser_compatibility) section for
 details.
 

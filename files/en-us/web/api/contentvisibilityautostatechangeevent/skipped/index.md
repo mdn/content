@@ -8,7 +8,7 @@ browser-compat: api.ContentVisibilityAutoStateChangeEvent.skipped
 
 {{APIRef("CSS Containment")}}
 
-The `skipped` read-only property of the {{ domxref("ContentVisibilityAutoStateChangeEvent") }} interface returns `true` if the user agent [skips the element's contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents), or `false` otherwise.
+The `skipped` read-only property of the {{ domxref("ContentVisibilityAutoStateChangeEvent") }} interface returns `true` if the user agent [skips the element's contents](/en-US/docs/Web/CSS/Guides/Containment/Using#skips_its_contents), or `false` otherwise.
 
 ## Value
 
@@ -52,6 +52,6 @@ function stopCanvasUpdates(canvas) {
 ## See also
 
 - The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event
-- [CSS Containment](/en-US/docs/Web/CSS/CSS_containment)
+- [CSS Containment](/en-US/docs/Web/CSS/Guides/Containment)
 - The {{cssxref("content-visibility")}} property
 - The {{cssxref("contain")}} property

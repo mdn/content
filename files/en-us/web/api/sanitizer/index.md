@@ -29,7 +29,7 @@ Note that `Sanitizer` is expected to be more efficient to reuse and modify when 
 - {{domxref('Sanitizer.allowElement()')}} {{experimental_inline}}
   - : Sets an element as allowed by the sanitizer, optionally with an array of attributes that are allowed or disallowed.
 - {{domxref('Sanitizer.get()')}} {{experimental_inline}}
-  - : Returns the current `Sanitizer` configuration as an {{domxref('SanitizerConfig')}} dictionary instance.
+  - : Returns the current `Sanitizer` configuration as a {{domxref('SanitizerConfig')}} dictionary instance.
 - {{domxref('Sanitizer.removeElement()')}} {{experimental_inline}}
   - : Sets an element to be removed by the sanitizer.
 - {{domxref('Sanitizer.removeUnsafe()')}} {{experimental_inline}}

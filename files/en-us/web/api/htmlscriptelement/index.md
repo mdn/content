@@ -46,16 +46,16 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
   - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Reference/Elements/script#referrerpolicy) HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
 - {{domxref("HTMLScriptElement.src")}}
-  - : A string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document.
+  - : A {{domxref("TrustedScriptURL")}} or string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document.
     It reflects the `src` attribute of the {{HTMLElement("script")}} element.
 - {{domxref("HTMLScriptElement.text")}}
   - : A property that represents the inline text content of the {{HTMLElement("script")}} element.
     The property accepts either a {{domxref("TrustedScript")}} object or a string.
-    It acts the same way as the [textContent](#textcontent) property.
+    It acts the same way as the [`textContent`](/en-US/docs/Web/API/HTMLScriptElement/textContent) property.
 - {{domxref("HTMLScriptElement.textContent")}}
   - : A property that represents the inline text content of the {{HTMLElement("script")}} element.
     The property is redefined from {{domxref("Node/textContent","Node")}} to support {{domxref("TrustedScript")}} as an input.
-    On this element it behaves exactly like the [text](#text) property.
+    On this element it behaves exactly like the [`text`](/en-US/docs/Web/API/HTMLScriptElement/text) property.
 - {{domxref("HTMLScriptElement.type")}}
   - : A string representing the type of the script.
     It reflects the `type` attribute of the {{HTMLElement("script")}} element.

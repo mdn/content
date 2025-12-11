@@ -45,7 +45,7 @@ This event is not cancelable and does not bubble.
 
 ### Use cases
 
-You can use this event to react to the ending of an WebXR session. You may want to display a UI element informing about the termination of the session, for example.
+You can use this event to react to the ending of a WebXR session. You may want to display a UI element informing about the termination of the session, for example.
 
 ## Examples
 

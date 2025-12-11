@@ -16,7 +16,7 @@ This is the event object for the `HTMLElement` {{domxref("HTMLElement.command_ev
 ## Constructor
 
 - {{domxref("CommandEvent.CommandEvent", "CommandEvent()")}}
-  - : Creates an `CommandEvent` object.
+  - : Creates a `CommandEvent` object.
 
 ## Instance properties
 

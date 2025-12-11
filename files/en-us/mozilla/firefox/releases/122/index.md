@@ -19,11 +19,11 @@ This article provides information about the changes in Firefox 122 that affect d
 
 - The CSS {{cssxref("offset-position")}} property is now available by default. It defines the initial position of an element on a path. ([Firefox bug 1598152](https://bugzil.la/1598152))
 
-- The various methods for defining a CSS {{cssxref("offset-path")}} — including [`<basic-shape>`](/en-US/docs/Web/CSS/offset-path#basic-shape), [`<coord-box>`](/en-US/docs/Web/CSS/offset-path#coord-box), and [`url()`](/en-US/docs/Web/CSS/offset-path#url) — are now enabled by default. ([Firefox bug 1598159](https://bugzil.la/1598159))
+- The various methods for defining a CSS {{cssxref("offset-path")}} — including [`<basic-shape>`](/en-US/docs/Web/CSS/Reference/Properties/offset-path#basic-shape), [`<coord-box>`](/en-US/docs/Web/CSS/Reference/Properties/offset-path#coord-box), and [`url()`](/en-US/docs/Web/CSS/Reference/Properties/offset-path#url) — are now enabled by default. ([Firefox bug 1598159](https://bugzil.la/1598159))
 
 - The CSS {{cssxref("ray")}} function is now available by default. You can use this function to define an {{cssxref("offset-path")}} as a line segment that begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle. ([Firefox bug 1598151](https://bugzil.la/1598151))
 
-- The {{CSSxref("clip-path")}} and {{CSSxref("offset-path")}} properties now accept [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) shape functions. These {{CSSXref("basic-shape")}} values allow the clipping and offsetting of elements with a rectangle defined by distance from the edge of the element (`rect()`) or coordinates and size (`xywh()`). ([Firefox bug 1868722](https://bugzil.la/1868722)).
+- The {{CSSxref("clip-path")}} and {{CSSxref("offset-path")}} properties now accept [`rect()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/xywh) shape functions. These {{CSSXref("basic-shape")}} values allow the clipping and offsetting of elements with a rectangle defined by distance from the edge of the element (`rect()`) or coordinates and size (`xywh()`). ([Firefox bug 1868722](https://bugzil.la/1868722)).
 
 ### JavaScript
 
@@ -49,7 +49,7 @@ This article provides information about the changes in Firefox 122 that affect d
 
 #### Removals
 
-- Removed support for the CSS [`-moz-user-focus`](/en-US/docs/Web/CSS/-moz-user-focus) property ([Firefox bug 1871745](https://bugzil.la/1871745) and [Firefox bug 1868552](https://bugzil.la/1868552)).
+- Removed support for the CSS [`-moz-user-focus`](/en-US/docs/Web/CSS/Reference/Properties/-moz-user-focus) property ([Firefox bug 1871745](https://bugzil.la/1871745) and [Firefox bug 1868552](https://bugzil.la/1868552)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -85,7 +85,7 @@ These features are newly shipped in Firefox 122 but are disabled by default. To 
 
 - **Popover API:** `dom.element.popover.enabled`.
 
-  Displaying popovers on top of page content is now supported via HTML attributes or JavaScript API, including styling with the CSS [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class and extended support for the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) pseudo-element. See the [Popover API](/en-US/docs/Web/API/Popover_API) reference for more details. ([Firefox bug 1823757](https://bugzil.la/1823757))
+  Displaying popovers on top of page content is now supported via HTML attributes or JavaScript API, including styling with the CSS [`:popover-open`](/en-US/docs/Web/CSS/Reference/Selectors/:popover-open) pseudo-class and extended support for the [`::backdrop`](/en-US/docs/Web/CSS/Reference/Selectors/::backdrop) pseudo-element. See the [Popover API](/en-US/docs/Web/API/Popover_API) reference for more details. ([Firefox bug 1823757](https://bugzil.la/1823757))
 
 - **Clipboard read and write:** `dom.events.asyncClipboard.clipboardItem`, `dom.events.asyncClipboard.readText` and `dom.events.asyncClipboard.writeText`.
 

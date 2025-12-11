@@ -51,7 +51,7 @@ sidebar: firefox
 
 - The blink effect for `text-decoration: blink;` has no more effect, but is still a valid value ([Firefox bug 857820](https://bugzil.la/857820)).
 - In-flow {{cssxref("::after")}} and {{cssxref("::before")}} pseudo-elements are now flex items ([Firefox bug 867454](https://bugzil.la/867454)).
-- The way to compute [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) has been changed. In conjunction with `overflow:auto`, space taken by eventual scrollbars is not subtracted from the viewport, whereas in the case of `overflow:scroll`, it is. ([Firefox bug 811403](https://bugzil.la/811403))
+- The way to compute [viewport units](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport) has been changed. In conjunction with `overflow:auto`, space taken by eventual scrollbars is not subtracted from the viewport, whereas in the case of `overflow:scroll`, it is. ([Firefox bug 811403](https://bugzil.la/811403))
 
 ### MathML
 
