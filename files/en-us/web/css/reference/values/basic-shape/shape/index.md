@@ -118,7 +118,7 @@ The following `<shape-command>`s can be specified:
         - `end`
           - : Indicates that the control point is relative to the end point of the current command.
         - `origin`
-          - : Indicates that the control point is relative to the the top-left (origin) point of the container the shape is being drawn inside.
+          - : Indicates that the control point is relative to the top-left (origin) point of the container the shape is being drawn inside.
             > [!NOTE]
             > If the `<relative-control-point>` keywords are not specified, making the `<control-point>` a regular `<coordinate-value-pair>`, the coordinates are relative to the start of the curve. In other words, `start` is the default setting.
 

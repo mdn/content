@@ -112,7 +112,7 @@ nav li {
 
 Another way to align items on the main axis is to use auto margins. This enables the design pattern of a navigation bar where one group of items are aligned left and another group aligned right. Here we are using the auto margins technique described in [Using auto margins for main axis alignment](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items#using_auto_margins_for_main_axis_alignment).
 
-The items are aligned on the main axis with `normal`, which behaves as `start`, as this is the initial behavior of flexbox. The [`gap`](/en-US/docs/Web/CSS/Reference/Properties/gap) property creates gaps between items. And we are aligning the last item to the right by giving it a `margin-left` value of `auto`. You can move the class from one item to another to change where the split happens.
+The items are aligned on the main axis with `normal`, which behaves as `start`, as this is the initial behavior of flexbox. The {{cssxref("gap")}} property creates gaps between items. And we are aligning the last item to the right by giving it a `margin-left` value of `auto`. You can move the class from one item to another to change where the split happens.
 
 ```html live-sample___split-navigation
 <nav>

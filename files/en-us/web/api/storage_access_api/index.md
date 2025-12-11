@@ -88,7 +88,7 @@ Third party content embedded in an {{htmlelement("iframe")}} that needs to acces
    That means that even if permission is granted, the page will need to load and call `requestStorageAccess()` to activate the permission.
    If permission has already been granted then a call to `requestStorageAccess()` will not require transient activation and the promise will fulfill automatically.
 
-   The only exception to the "blocked by default" behavior is if an embed performs a same-origin navigation to reload itself after after being granted permission or activating a permission.
+   The only exception to the "blocked by default" behavior is if an embed performs a same-origin navigation to reload itself after being granted permission or activating a permission.
    In such cases, the storage access is carried over from the previous navigation.
    This allows the embedded resource to reload itself and gain access to its cookies.
 
@@ -101,7 +101,7 @@ Third party content embedded in an {{htmlelement("iframe")}} that needs to acces
 
 ### Storage access headers
 
-The API requires that a resource must must call `requestStorageAccess()` for each new context to opt-in to activating the storage-access permission, which must already have been granted.
+The API requires that a resource must call `requestStorageAccess()` for each new context to opt-in to activating the storage-access permission, which must already have been granted.
 This in turn means that the embedded resource must first be requested without cookies and loaded so it can call the method.
 
 The storage access headers enable a workflow where the server can request that the permission is activated for the context, avoiding an unnecessary additional load of the embedded resource if permission has already been granted.

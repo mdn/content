@@ -298,6 +298,7 @@ indexeddb-examples
 indexifembedded
 inputreport
 inputsourceschange
+interestfor
 intitle
 intl.uidirection.locale
 intrinsicsize
@@ -383,6 +384,7 @@ localecho
 localstore
 longdiv
 longtask
+loseinterest
 lowdelay
 lowp
 lquote
@@ -521,6 +523,8 @@ ondispose
 ondownloadprogress
 onefive
 ongesturestart
+oninterest
+onloseinterest
 onnavigate
 onnavigateerror
 onnavigatesuccess

@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_Accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
 
 Next, we turn our attention to accessibility tooling, providing information on the kinds of tools you can use to help solve accessibility issues, and helping you understand the **assistive technologies** used by people with disabilities to help them browse the web. You'll be using the tools described here throughout subsequent articles.
 
@@ -444,4 +444,4 @@ Hopefully this article has given you an idea of the kinds of tools you can use t
 
 In the next article we'll look how to write accessible HTML.
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_Accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}

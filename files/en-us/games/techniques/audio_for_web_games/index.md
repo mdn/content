@@ -122,7 +122,7 @@ myAudio.addEventListener("timeupdate", () => {
 
 Music in games can have a powerful emotional effect. You can mix and match various music samples and assuming you can control the volume of your audio element you could cross-fade different musical pieces. Using the [`playbackRate()`](/en-US/docs/Web/API/HTMLMediaElement/playbackRate) method you can even adjust the speed of your music without affecting the pitch, to sync it up better with the action.
 
-All this is possible using the standard {{htmlelement("audio")}} element and associated {{domxref("HTMLMediaElement")}}, but it becomes much easier and more flexible with the more advanced [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). Let's look at this next.
+All this is possible using the standard {{htmlelement("audio")}} element and associated {{domxref("HTMLMediaElement")}}, but it becomes more flexible with the more advanced [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). Let's look at this next.
 
 ### Web Audio API for games
 

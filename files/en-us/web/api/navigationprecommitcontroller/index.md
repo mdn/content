@@ -2,12 +2,10 @@
 title: NavigationPrecommitController
 slug: Web/API/NavigationPrecommitController
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.NavigationPrecommitController
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`NavigationPrecommitController`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} defines redirect behavior for a navigation [precommit handler](/en-US/docs/Web/API/NavigateEvent/intercept#precommithandler).
 
@@ -15,7 +13,7 @@ The **`NavigationPrecommitController`** interface of the {{domxref("Navigation A
 
 ## Instance methods
 
-- {{domxref("NavigationPrecommitController.redirect", "redirect()")}} {{Experimental_Inline}}
+- {{domxref("NavigationPrecommitController.redirect", "redirect()")}}
   - : Redirects the browser to a specified URL and specifies history behavior and any desired state information.
 
 ## Description

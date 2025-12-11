@@ -6,7 +6,7 @@ browser-compat: css.types.atan2
 sidebar: cssref
 ---
 
-The **`atan2()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is a trigonometric function that returns the inverse tangent of two values between `-infinity` and `infinity`. The function accepts two arguments and returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-180deg` and `180deg`.
+The **`atan2()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is a trigonometric function that returns the inverse tangent of two values between `-infinity` and `infinity`. The function accepts two arguments and returns an {{cssxref("angle")}} between `-180deg` and `180deg`, without implying any specific unit such as radians.
 
 ## Syntax
 
@@ -36,7 +36,7 @@ The `atan2(y, x)` function accepts two comma-separated values as its parameters.
 
 ### Return value
 
-Given two values `x` and `y`, the function `atan2(y, x)` calculates and returns the {{cssxref("&lt;angle&gt;")}} between the positive x-axis and the ray from the origin to the point `(x, y)`.
+Given two values `x` and `y`, the function `atan2(y, x)` calculates and returns the {{cssxref("angle")}} between the positive x-axis and the ray from the origin to the point `(x, y)`.
 
 ## Formal syntax
 
@@ -46,7 +46,7 @@ Given two values `x` and `y`, the function `atan2(y, x)` calculates and returns 
 
 ### Rotate elements
 
-The `atan2()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("&lt;angle&gt;")}}.
+The `atan2()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("angle")}} .
 
 #### HTML
 

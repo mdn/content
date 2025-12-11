@@ -3,12 +3,10 @@ title: "Navigation: reload() method"
 short-title: reload()
 slug: Web/API/Navigation/reload
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Navigation.reload
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`reload()`** method of the
 {{domxref("Navigation")}} interface reloads the current URL, updating any provided state in the history entries list.

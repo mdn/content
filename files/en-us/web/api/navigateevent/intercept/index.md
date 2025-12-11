@@ -3,12 +3,10 @@ title: "NavigateEvent: intercept() method"
 short-title: intercept()
 slug: Web/API/NavigateEvent/intercept
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.NavigateEvent.intercept
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`intercept()`** method of the
 {{domxref("NavigateEvent")}} interface intercepts this navigation, turning it into a same-document navigation to the {{domxref("NavigationDestination.url", "destination")}} URL.

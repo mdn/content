@@ -54,7 +54,7 @@ this.paddle = this.add.sprite(
 
 We can use the `scale.width` and `scale.height` values to position the paddle exactly where we want it: `this.scale.width * 0.5` will be right in the middle of the screen. In our case, the world is the same as the canvas, but for other types of games, like side-scrollers, the world will be bigger, and you can tinker with it to create interesting effects.
 
-As you'll notice, if you reload your `index.html` at this point, the paddle is currently at the complete bottom of the screen, too low for the paddle. Why? Because the origin from which the position is calculated starts from the center of the object. We can change that to have the origin in the middle of the paddle's width and at the bottom of its height, so it's easier to position it against the bottom edge. Add the following line below the previous new one:
+As you'll notice, if you reload your `index.html` at this point, the paddle is currently at the complete bottom of the screen, too low for the paddle. Why? Because the origin from which the position is calculated starts from the center of the object. We can change that to have the origin in the middle of the paddle's width and at the bottom of its height, so it' more straightforward to position it against the bottom edge. Add the following line below the previous new one:
 
 ```js
 this.paddle.setOrigin(0.5, 1);

@@ -861,6 +861,7 @@ ungroup
 ungrouping
 unguaranteed
 unhovered
+unhovering
 uninterpolated
 unintuitively
 unioned

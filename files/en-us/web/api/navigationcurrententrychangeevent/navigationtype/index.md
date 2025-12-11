@@ -3,12 +3,10 @@ title: "NavigationCurrentEntryChangeEvent: navigationType property"
 short-title: navigationType
 slug: Web/API/NavigationCurrentEntryChangeEvent/navigationType
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigationCurrentEntryChangeEvent.navigationType
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`navigationType`** read-only property of the {{domxref("NavigationCurrentEntryChangeEvent")}} interface returns the type of the navigation that resulted in the change. The property may be `null` if the change occurs due to {{domxref("Navigation.updateCurrentEntry()")}}.
 

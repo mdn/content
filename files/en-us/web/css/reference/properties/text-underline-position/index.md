@@ -123,7 +123,7 @@ p {
 
 In this example we set both the paragraphs to have a thick underline. In the horizontal text we use `text-underline-position: under;` to put the underline below all the descenders.
 
-In the text with a vertical [`writing-mode`](/en-US/docs/Web/CSS/Reference/Properties/writing-mode) set, we can then use values of `left` or `right` to make the underline appear on the left or right of the text as required.
+In the text with a vertical {{cssxref("writing-mode")}} set, we can then use values of `left` or `right` to make the underline appear on the left or right of the text as required.
 
 The live example looks like this:
 

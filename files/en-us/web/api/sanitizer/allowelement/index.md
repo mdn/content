@@ -89,7 +89,7 @@ sanitizer.allowElement({
 ```
 
 If you need both per-element add-attribute and remove-attribute arrays as shown above, they must be added in a single call to this method.
-If you were to do this in two calls the the second call would replace the element definition added in the first call.
+If you were to do this in two calls the second call would replace the element definition added in the first call.
 
 When using a `Sanitizer` with a [remove configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#remove_configurations), similar code to add per-element attribute allow or remove arrays will generate a console warning and return `false`.
 This is because internally the sanitizer doesn't have the `elements` array required to specify per-element attributes and won't change the configuration.

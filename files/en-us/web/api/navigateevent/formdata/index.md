@@ -3,12 +3,10 @@ title: "NavigateEvent: formData property"
 short-title: formData
 slug: Web/API/NavigateEvent/formData
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigateEvent.formData
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`formData`** read-only property of the
 {{domxref("NavigateEvent")}} interface returns the {{domxref("FormData")}} object representing the submitted data in the case of a [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) form submission, or `null` otherwise.

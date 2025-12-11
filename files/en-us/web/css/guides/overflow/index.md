@@ -239,6 +239,8 @@ The CSS overflow level 4 module also introduces the `block-ellipsis`, `continue`
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::scroll-marker-group")}}
+- {{cssxref(":target-after")}}
+- {{cssxref(":target-before")}}
 - {{cssxref(":target-current")}}
 
 ### Data types

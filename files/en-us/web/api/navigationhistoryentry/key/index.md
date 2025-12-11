@@ -3,12 +3,10 @@ title: "NavigationHistoryEntry: key property"
 short-title: key
 slug: Web/API/NavigationHistoryEntry/key
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigationHistoryEntry.key
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`key`** read-only property of the {{domxref("NavigationHistoryEntry")}} interface returns the `key` of the history entry, or an empty string if current document is not fully active. This is a unique, UA-generated value that represents the history entry's slot in the entries list. It is used to navigate that particular slot via {{domxref("Navigation.traverseTo()")}}. The `key` will be reused by other entries that replace the entry in the list (that is, if the {{domxref("NavigateEvent.navigationType")}} is `replace`).
 

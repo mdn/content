@@ -49,9 +49,9 @@ direction: rtl;
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-inline-end-color`](/en-US/docs/Web/CSS/Reference/Properties/border-inline-end-color)
-- [`border-inline-end-style`](/en-US/docs/Web/CSS/Reference/Properties/border-inline-end-style)
-- [`border-inline-end-width`](/en-US/docs/Web/CSS/Reference/Properties/border-inline-end-width)
+- {{cssxref("border-inline-end-color")}}
+- {{cssxref("border-inline-end-style")}}
+- {{cssxref("border-inline-end-width")}}
 
 ## Syntax
 
