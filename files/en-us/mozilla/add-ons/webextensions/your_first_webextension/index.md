@@ -67,7 +67,7 @@ Using a suitable [text editor](/en-US/docs/Learn_web_development/Howto/Tools_and
 So far, these `manifest.json` keys have been providing information about the extension. The next key, [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), starts to define the extension's functionality. This key tells Firefox to load a script into web pages whose URL matches a specific pattern. In this case, the extension is asking Firefox to load a script called "borderify.js" into all HTTP or HTTPS pages served from "mozilla.org" or any of its subdomains.
 
 - [Learn more about content scripts.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
-- [Learn more about match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
+- [Learn more about match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
 ### icons/border-48.png
 
@@ -88,7 +88,7 @@ If you choose to supply an icon, it should be 48x48 pixels. You could also suppl
 
 Alternatively, you can supply an SVG file, which Firefox automatically scales as needed. (Tip: If you're using SVG and your icon includes text, use your SVG editor's "convert to path" tool to flatten the text, so that it scales with a consistent size and position.)
 
-[Learn more about specifying icons.](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
+[Learn more about specifying icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
 
 ### borderify.js
 
@@ -100,7 +100,7 @@ document.body.style.border = "5px solid red";
 
 Firefox loads this script into the pages that match the pattern given in the `content_scripts` manifest.json key. The script has direct access to the document, just as scripts loaded by the page itself do.
 
-[Learn more about content scripts.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+[Learn more about content script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 
 ## Trying it out
 
@@ -150,4 +150,4 @@ Now you've had an introduction to the process of developing a WebExtension for F
 - [Read more about the anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [Explore the extension examples](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)
 - [Find out what you need to develop, test, and publish your extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next)
-- [Take your learning further](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience).
+- [Take your learning further](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience)

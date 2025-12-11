@@ -497,4 +497,4 @@ Now that you've created a more advanced Web extension for Firefox:
 - [Read about the anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [Explore the extension examples](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)
 - [Find out what you need to develop, test, and publish your extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next)
-- [Take your learning further](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience).
+- [Take your learning further](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience)
