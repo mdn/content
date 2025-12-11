@@ -3,11 +3,11 @@ title: Shared Storage API
 slug: Web/API/Shared_Storage_API
 page-type: web-api-overview
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SharedStorage
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Shared Storage API")}}
+{{deprecated_header}}{{DefaultAPISidebar("Shared Storage API")}}
 
 > [!WARNING]
 > This feature is currently opposed by one browser vendor.
