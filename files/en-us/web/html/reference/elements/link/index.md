@@ -162,7 +162,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
           <td>style</td>
           <td>
             <code>&#x3C;link rel=stylesheet></code> elements, CSS
-            <code>@import</code>, and `modulepreload` destinations.
+            <code>@import</code> and <code>modulepreload</code> destinations.
           </td>
         </tr>
         <tr>
