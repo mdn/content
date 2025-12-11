@@ -145,7 +145,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         <tr>
           <td>json</td>
           <td>
-            `modulepreload` destinations.
+            <code>modulepreload</code> destinations.
           </td>
         </tr>
         <tr>
