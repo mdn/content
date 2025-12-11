@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/mdn/content.git"
   },
+  "packageManager": "npm@11.6.2",
   "engines": {
     "node": ">=24"
   },
