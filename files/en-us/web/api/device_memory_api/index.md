@@ -48,4 +48,4 @@ You may also use the [Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints) HT
 
 ## See also
 
-- {{HTTPHeader("Device-Memory")}} header
+- {{HTTPHeader("Sec-CH-Device-Memory")}} header
