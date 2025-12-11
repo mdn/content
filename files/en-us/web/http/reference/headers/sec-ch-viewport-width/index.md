@@ -1,27 +1,24 @@
 ---
-title: Viewport-Width header
-short-title: Viewport-Width
-slug: Web/HTTP/Reference/Headers/Viewport-Width
+title: Sec-CH-Viewport-Width header
+short-title: Sec-CH-Viewport-Width
+slug: Web/HTTP/Reference/Headers/Sec-CH-Viewport-Width
 page-type: http-header
-status:
-  - deprecated
-  - non-standard
-browser-compat: http.headers.Viewport-Width
+browser-compat: http.headers.Sec-CH-Viewport-Width
 sidebar: http
 ---
 
-{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{SecureContext_header}}
 
-> [!WARNING]
-> The `Viewport-Width` header was renamed to {{HTTPHeader("Sec-CH-Viewport-Width")}} and the new name is now preferred as support for the old header may be removed in future.
-
-The HTTP **`Viewport-Width`** {{Glossary("request header")}} is a [device client hint](/en-US/docs/Web/HTTP/Guides/Client_hints) which provides the client's layout viewport width in {{Glossary("CSS pixel", "CSS pixels")}}.
+The HTTP **`Sec-CH-Viewport-Width`** {{Glossary("request header")}} is a [device client hint](/en-US/docs/Web/HTTP/Guides/Client_hints) which provides the client's layout viewport width in {{Glossary("CSS pixel", "CSS pixels")}}.
 The value is rounded up to the smallest following integer (i.e., ceiling value).
 
-The hint can be used with other screen-specific hints to deliver images optimized for a specific screen size, or to omit resources that are not needed for a particular screen width.
-If the `Viewport-Width` header appears more than once in a message the last occurrence is used.
+> [!NOTE]
+> A previous version of this header was named {{HTTPHeader("Viewport-Width")}} without the `Sec-CH-` prefix. This is now deprecated and the `Sec-CH-Viewport-Height` version is recommended.
 
-A server has to opt-in to receive the `Viewport-Width` header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.
+The hint can be used with other screen-specific hints to deliver images optimized for a specific screen size, or to omit resources that are not needed for a particular screen width.
+If the `Sec-CH-Viewport-Width` header appears more than once in a message the last occurrence is used.
+
+A server has to opt-in to receive the `Sec-CH-Viewport-Width` header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.
 Servers that opt-in will typically also specify it in the {{HTTPHeader("Vary")}} header which informs caches that the server may send different responses based on the header value in a request.
 
 <table class="properties">
@@ -43,7 +40,7 @@ Servers that opt-in will typically also specify it in the {{HTTPHeader("Vary")}}
 ## Syntax
 
 ```http
-Viewport-Width: <number>
+Sec-CH-Viewport-Width: <number>
 ```
 
 ## Directives
@@ -53,18 +50,18 @@ Viewport-Width: <number>
 
 ## Examples
 
-### Using Viewport-Width
+### Using Sec-CH-Viewport-Width
 
-A server must first opt-in to receive the `Viewport-Width` header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive `Viewport-Width`.
+A server must first opt-in to receive the `Sec-CH-Viewport-Width` header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive `Sec-CH-Viewport-Width`.
 
 ```http
-Accept-CH: Viewport-Width
+Accept-CH: Sec-CH-Viewport-Width
 ```
 
-In subsequent requests, the client might send `Viewport-Width` header:
+In subsequent requests, the client might send `Sec-CH-Viewport-Width` header:
 
 ```http
-Viewport-Width: 320
+Sec-CH-Viewport-Width: 320
 ```
 
 ## Browser compatibility
@@ -74,6 +71,6 @@ Viewport-Width: 320
 ## See also
 
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
-- {{HTTPHeader("Sec-CH-Viewport-Width")}}, {{HTTPHeader("Sec-CH-Viewport-Height")}}, {{HTTPHeader("Sec-CH-Device-Memory")}}, {{HTTPHeader("Sec-CH-DPR")}} device client hints
+- {{HTTPHeader("Sec-CH-Device-Memory")}}, {{HTTPHeader("Sec-CH-DPR")}}, {{HTTPHeader("Sec-CH-Viewport-Height")}} device client hints
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}} header

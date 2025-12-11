@@ -69,7 +69,7 @@ Width: 1920
 
 ## See also
 
-- {{HTTPHeader("Content-DPR")}}, {{HTTPHeader("Device-Memory")}}, {{HTTPHeader("DPR")}}, {{HTTPHeader("Viewport-Width")}} device client hints
+- {{HTTPHeader("Sec-CH-Device-Memory")}}, {{HTTPHeader("Sec-CH-DPR")}}, {{HTTPHeader("Sec-CH-Viewport-Height")}}, {{HTTPHeader("Sec-CH-Viewport-Width")}} device client hints
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}} header
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
