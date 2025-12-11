@@ -12,6 +12,9 @@ sidebar: http
 The HTTP **`Sec-CH-Device-Memory`** {{Glossary("request header")}} is used in [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) to indicate the approximate amount of available RAM on the client device, in gigabytes.
 The header is part of the {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}.
 
+> [!NOTE]
+> A previous version of this header was named `Device-Memory` without the `Sec-CH` prefix. This is now deprecated and the `Sec-CH-Device-Memory` version is recommended.
+
 Client hints are accessible only on secure origins.
 A server has to opt in to receive the `Sec-CH-Device-Memory` header from the client, by first sending the {{HTTPHeader("Accept-CH")}} response header.
 Servers that opt in to the `Sec-CH-Device-Memory` client hint will typically also specify it in the {{HTTPHeader("Vary")}} header to inform caches that the server may send different responses based on the header value in a request.

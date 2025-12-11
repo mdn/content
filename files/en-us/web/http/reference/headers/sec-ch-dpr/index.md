@@ -12,6 +12,9 @@ sidebar: http
 The HTTP **`Sec-CH-DPR`** {{Glossary("request header")}} provides [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) about the client device pixel ratio (DPR).
 This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
 
+> [!NOTE]
+> A previous version of this header was named `DPR` without the `Sec-CH` prefix. This is now deprecated and the `Sec-CH-DPR` version is recommended.
+
 The hint is useful when selecting image sources that best correspond to a screen's pixel density.
 This is similar to the role played by `x` descriptors in the `<img>` [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute to allow user agents to select a preferred image.
 
