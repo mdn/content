@@ -13,7 +13,7 @@ The HTTP **`Sec-CH-Device-Memory`** {{Glossary("request header")}} is used in [d
 The header is part of the {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}.
 
 > [!NOTE]
-> A previous version of this header was named `Device-Memory` without the `Sec-CH` prefix. This is now deprecated and the `Sec-CH-Device-Memory` version is recommended.
+> A previous version of this header was named `Device-Memory` without the `Sec-CH-` prefix. This is now deprecated and the `Sec-CH-Device-Memory` version is recommended.
 
 Client hints are accessible only on secure origins.
 A server has to opt in to receive the `Sec-CH-Device-Memory` header from the client, by first sending the {{HTTPHeader("Accept-CH")}} response header.

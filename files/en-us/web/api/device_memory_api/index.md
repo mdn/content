@@ -5,7 +5,7 @@ page-type: web-api-overview
 browser-compat:
   - api.Navigator.deviceMemory
   - api.WorkerNavigator.deviceMemory
-  - http.headers.Device-Memory
+  - http.headers.Sec-CH-Device-Memory
 spec-urls: https://www.w3.org/TR/device-memory/
 ---
 
