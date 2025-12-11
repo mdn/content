@@ -39,7 +39,7 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 ## Events
 
-- {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}} {{Experimental_Inline}}
+- {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}}
   - : Fires when the entry is no longer part of the history entry list.
 
 ## Examples

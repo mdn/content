@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/mdn/content.git"
   },
+  "packageManager": "npm@11.6.2",
   "engines": {
     "node": ">=24"
   },
@@ -44,7 +45,7 @@
   },
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
-    "@mdn/fred": "1.9.6",
+    "@mdn/fred": "1.9.7",
     "@octokit/rest": "^22.0.1",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
