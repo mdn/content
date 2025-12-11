@@ -181,6 +181,42 @@
     "zh-TW": "預設值"
   },
 
+  "xref_cssappliesto": {
+    "de": "Anwendbar auf",
+    "en-US": "Applies to",
+    "fr": "Applicabilité",
+    "ja": "適用対象",
+    "ko": "적용대상",
+    "pl": "Stosowana do",
+    "pt-BR": "Aplica-se a",
+    "ru": "Применяется к",
+    "zh-CN": "适用元素"
+  },
+
+  "xref_cssanimationtype": {
+    "de": "Animationstyp",
+    "en-US": "Animation type",
+    "fr": "Type d'animation",
+    "ja": "アニメーションの種類",
+    "zh-CN": "动画类型"
+  },
+
+  "xref_csspercentages": {
+    "de": "Prozentwerte",
+    "en-US": "Percentages",
+    "fr": "Pourcentages",
+    "ja": "パーセント値",
+    "ru": "Проценты"
+  },
+
+  "xref_cssrelated_at_rule": {
+    "de": "Zugehörige @-Regel",
+    "en-US": "Related at-rule",
+    "fr": "En lien avec les règles @",
+    "ja": "関連するアット規則",
+    "ru": "Связано с @-правила"
+  },
+
   "readonly_badge_abbreviation": {
     "de": "Schreibgeschützt",
     "en-US": "Read only",

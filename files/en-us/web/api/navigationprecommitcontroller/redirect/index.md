@@ -3,12 +3,10 @@ title: "NavigationPrecommitController: redirect() method"
 short-title: redirect()
 slug: Web/API/NavigationPrecommitController/redirect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.NavigationPrecommitController.redirect
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`redirect()`** method of the
 {{domxref("NavigationPrecommitController")}} interface redirects the browser to a specified URL and specifies history behavior and any desired state information.
