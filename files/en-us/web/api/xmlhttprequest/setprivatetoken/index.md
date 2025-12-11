@@ -58,9 +58,12 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const hasToken = await Document.hasPrivateToken(`issuer.example`);
-if (hasToken) {
+if (!hasToken) {
   const request = new XMLHttpRequest();
-  request.open("POST", "/.well-known/private-state-token/issuance");
+  request.open(
+    "POST",
+    "https://issuer.example/.well-known/private-state-token/issuance",
+  );
   request.setPrivateToken({
     version: 1,
     operation: "token-request",
@@ -73,7 +76,10 @@ if (hasToken) {
 
 ```js
 const request = new XMLHttpRequest();
-request.open("POST", "/.well-known/private-state-token/redemption");
+request.open(
+  "POST",
+  "https://issuer.example/.well-known/private-state-token/redemption",
+);
 request.setPrivateToken({
   version: 1,
   operation: "token-redemption",
@@ -92,7 +98,7 @@ if (hasRR) {
   request.setPrivateToken({
     version: 1,
     operation: "send-redemption-record",
-    issuers: [`issuer.example`],
+    issuers: ["https://issuer.example"],
   });
   req.send();
 }

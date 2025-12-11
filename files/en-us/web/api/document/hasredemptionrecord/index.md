@@ -44,7 +44,7 @@ if (hasRR) {
     privateToken: {
       version: 1,
       operation: "send-redemption-record",
-      issuers: [`issuer.example`],
+      issuers: ["https://issuer.example"],
     },
   });
 }

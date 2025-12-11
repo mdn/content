@@ -40,14 +40,17 @@ A {{jsxref("Promise")}} that resolves with a boolean value indicating whether th
 
 ```js
 const hasToken = await Document.hasPrivateToken(`issuer.example`);
-if (hasToken) {
-  await fetch("/.well-known/private-state-token/issuance", {
-    method: "POST",
-    privateToken: {
-      version: 1,
-      operation: "token-request",
+if (!hasToken) {
+  await fetch(
+    "https://issuer.example/.well-known/private-state-token/issuance",
+    {
+      method: "POST",
+      privateToken: {
+        version: 1,
+        operation: "token-request",
+      },
     },
-  });
+  );
 }
 ```
 

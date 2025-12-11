@@ -94,14 +94,17 @@ You can handle this using a {{domxref("fetch()")}} call with the `method` set to
 
 ```js
 const hasToken = await Document.hasPrivateToken(`issuer.example`);
-if (hasToken) {
-  await fetch("/.well-known/private-state-token/issuance", {
-    method: "POST",
-    privateToken: {
-      version: 1,
-      operation: "token-request",
+if (!hasToken) {
+  await fetch(
+    "https://issuer.example/.well-known/private-state-token/issuance",
+    {
+      method: "POST",
+      privateToken: {
+        version: 1,
+        operation: "token-request",
+      },
     },
-  });
+  );
 }
 ```
 
@@ -155,14 +158,17 @@ With the redeemer server set up, your redeemer website can now redeem a previous
 You can handle this using a {{domxref("fetch()")}} call with the `method` set to `POST`, and a `privateToken` option specified.
 
 ```js
-await fetch("/.well-known/private-state-token/redemption", {
-  method: "POST",
-  privateToken: {
-    version: 1,
-    operation: "token-redemption",
-    refreshPolicy: "none",
+await fetch(
+  "https://issuer.example/.well-known/private-state-token/redemption",
+  {
+    method: "POST",
+    privateToken: {
+      version: 1,
+      operation: "token-redemption",
+      refreshPolicy: "none",
+    },
   },
-});
+);
 ```
 
 Here we also set the `refreshPolicy` property to `none`, which means that, if there is a previously-set, non-expired redemption record for this user and site, this redemption record should be used, and a new one should not be issued. If we set `refreshPolicy: "refresh"`, a new redemption record would always be issued. Note that `none` is the default value, as this is the behavior you'll want in most cases, but we wanted to draw attention to it.
@@ -191,7 +197,7 @@ if (hasRR) {
     privateToken: {
       version: 1,
       operation: "send-redemption-record",
-      issuers: [`issuer.example`],
+      issuers: ["https://issuer.example"],
     },
   });
 }
