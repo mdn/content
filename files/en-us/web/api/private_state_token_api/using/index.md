@@ -155,7 +155,7 @@ As per the Privacy Pass protocol, you will need to implement at least one HTTP e
 
 With the redeemer server set up, your redeemer website can now redeem a previously-stored token by making a fetch request to your token redemption endpoint. The fetch request needs to include a `privateToken` object, the same as in the token issuing request, except that the specified `operation` should be `token-redemption`.
 
-You can handle this using a {{domxref("fetch()")}} call with the `method` set to `POST`, and a `privateToken` option specified.
+You can handle this using a {{domxref("fetch()")}} call with the `method` set to {{httpmethod("POST")}}, and a `privateToken` option specified.
 
 ```js
 await fetch(
