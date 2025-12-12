@@ -84,7 +84,7 @@ attachShadow(options)
         When a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling. Its default value is `false`.
 
     - `referenceTarget` {{Optional_Inline}} {{Experimental_Inline}}
-      - : A string specifying the _reference target_ of any element references made against the host element of the shadow DOM tree. The reference target must be an element held within the shadow DOM.
+      - : A string value that indicates the effective target of any element reference made against the shadow host from outside the host element. The value should be the ID of an element inside the shadow DOM. If set, target references to the host element from outside the shadow DOM will cause the referenced target element to become the effective target of the reference to the host element.
 
     - `serializable` {{Optional_Inline}}
       - : A boolean that, when set to `true`, indicates that the shadow root is serializable.
