@@ -20,13 +20,6 @@ Firefox 146 was released on [December 9, 2025](https://whattrainisitnow.com/rele
 
 No notable changes.
 
-### MathML
-
-- Operator mirroring in right-to-left (RTL) modes and stretching now work properly when used in combination.
-  ([Firefox bug 1994172](https://bugzil.la/1994172)).
-- The {{cssxref("math-shift")}} property is now supported. This allows developers to indicate whether superscript rendering in MathML formulas should be normal or compact, affecting the height to which superscript text is shifted.
-  ([Firefox bug 1994171](https://bugzil.la/1994171)).
-
 ### CSS
 
 - The {{cssxref("color_value/contrast-color()")}} function is now supported. This function takes a [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) value and returns a contrasting color that ensures at least [WCAG AA minimum contrast](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum).
@@ -47,6 +40,13 @@ No notable changes.
 ### JavaScript
 
 - {{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} now accept {{jsxref("Symbol")}} objects as keys, except for those that are [registered](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). ([Firefox bug 1966745](https://bugzil.la/1966745)).
+
+### MathML
+
+- Operator mirroring in right-to-left (RTL) modes and stretching now work properly when used in combination.
+  ([Firefox bug 1994172](https://bugzil.la/1994172)).
+- The {{cssxref("math-shift")}} property is now supported. This allows developers to indicate whether superscript rendering in MathML formulas should be normal or compact, affecting the height to which superscript text is shifted.
+  ([Firefox bug 1994171](https://bugzil.la/1994171)).
 
 ### APIs
 

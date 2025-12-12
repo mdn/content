@@ -17,20 +17,14 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ## Changes for web developers
 
 <!-- ### Developer Tools -->
+<!-- Delete entire Developer Tools section if no updates -->
 
 <!-- ### HTML -->
 
 <!-- No notable changes. -->
 
 <!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
+<!-- Delete if empty -->
 
 ### CSS
 
@@ -42,20 +36,38 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2000404](https://bugzil.la/2000404)).
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### JavaScript -->
 
 <!-- No notable changes. -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### HTTP -->
+<!-- Delete entire HTTP section if no updates -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
+
+<!-- ### SVG -->
+<!-- Delete entire SVG section if no updates -->
+
+<!-- #### Removals -->
+<!-- Delete if empty -->
+
+<!-- ### MathML -->
+<!-- Delete entire MathML section if no updates -->
+
+<!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### Security -->
+<!-- Delete entire Security section if no updates -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 ### APIs
 
@@ -71,10 +83,13 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 <!-- #### Media, WebRTC, and Web Audio -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### WebAssembly -->
+<!-- Delete entire WebAssembly section if no updates -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
 
@@ -86,7 +101,10 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
+<!-- No notable changes. -->
+
 <!-- ### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### Other -->
 
