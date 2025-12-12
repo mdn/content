@@ -9,43 +9,69 @@ By default, scroll-driven animations start and end at the edges of the scrollpor
 
 ## Animation timelines primer
 
-In CSS, animations are created by attaching {{cssxref("@keyframes")}} animations to an element using the {{cssxref("animation-name")}} property (or {{cssxref("animation")}} shorthand). The element is the thing on the page that will be animated. The keyframes define what happens to that element during the animation. The animation moves from the keyframes based on the timeline, which determines when and how the animation takes place.
+In CSS, animations are created by attaching {{cssxref("@keyframes")}} animations to an element using the {{cssxref("animation-name")}} property (or {{cssxref("animation")}} shorthand). The element is the thing on the page that will be animated. The keyframes define what happens to that element during the animation. When and how the element moves through the animation is based on the {{cssxref("animation-timeline")}}.
 
-The animation moves from the `from` or `0%` keyframe to the `to` or `100%` keyframe based on the {{cssxref("animation-timeline")}}. By default, this is the [DocumentTimeline](/en-US/docs/Web/API/DocumentTimeline), with each {{cssxref("animation-iteration-count", "animation iteration", "", "nocode")}} taking as long as the time defined by the {{cssxref("animation-duration")}} property. When applying [CSS scroll-driven animations'](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), animations progress based on user scroll rather than with time. With [scroll-progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) the timeline progresses or reverses based on the scrolling of the scrollable element. With [view-progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines), the progression of an animation's keyframes is based on the visibility of the subject inside the scroller: as the view progress element comes into or moves out of view, the timeline progresses or reverses, respectively. The moment scrolling stops, the animation pauses.
+By default, the timeline is the [DocumentTimeline](/en-US/docs/Web/API/DocumentTimeline), with each {{cssxref("animation-iteration-count", "animation iteration", "", "nocode")}} taking as long as the time defined by the {{cssxref("animation-duration")}} property. When applying [CSS scroll-driven animations'](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), animations progress is based on user scroll and element visibility rather than with time.
 
-## View progress timeline basics
+With [scroll-progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) the timeline progresses or reverses based on the scrolling of the scrollable element. With [view-progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines), the progression of an animation's keyframes is based on the visibility of the subject inside the scroller: as the view progress element comes into or moves out of view, the timeline progresses or reverses, respectively. In both cases, the moment scrolling stops, the animation pauses.
 
-A view progress timeline animation only occurs when the element is visible within its scrollport. By default, when the {{cssxref("animation-iteration-count")}} is set to or defaults to `1`, the timeline progress starts at `0%` when the tracked subject's start edge starts intersecting the scrollport at the block or inline end edge. The `100%` occurs when the subject end edge exits the scrollport at the block or inline start edge.
+## Basic view progress timeline
 
-In this example, we have directions to and from two monuments, with a fake map between them that we want to animated in from fully transparent and scaled down to fully opaque and full size as we scroll down the page. We've added a semi-opaque box to denote the map's default (non-animated) location and size.
+A view progress timeline animation only occurs when the element is visible within its scrollport. By default (when the {{cssxref("animation-iteration-count")}} defaults to `1`, the {{cssxref("animation-direction")}} defaults to normal, and no ranges are set on the timeline), the view timeline progress starts when the tracked subject's start edge starts intersects the scrollport at the block or inline end edge and ends when its end edge exits the scrollport at the block or inline start edge. Let's demonstrate!
 
-To create an animation effect, we start by defining the keyframe animation that makes the element on which it is applied go from fully transparent and scaled down, to fully opaque and at 90% of it's default size:
+### View progress timeline default progression
 
-```css live-sample___default live-sample___range live-sample___range_both
-@keyframes someChangeEffect {
+In this example, we have directions to and from two monuments, with two fake `yellow` maps between them. We want to animate one as we scroll it into view; the comparison element we animate using the default time-based document timeline.
+
+#### The @keyframes animation
+
+To create an animation effect, the first step is defining a keyframe animation. We want our map to be fully transparent `brown` as it enter the viewport, then to is scaled in to be fully opaque `forestgreen` and full-size as it comes into view:
+
+```css live-sample___default live-sample___range live-sample___range_both live-sample___view-inset live-sample___selector30 live-sample___reverse
+@keyframes originalChangeEffect {
   0% {
     opacity: 0;
-    scale: 0;
+    scale: 0 1;
+    background-color: brown;
   }
   100% {
     opacity: 1;
-    scale: 0.9;
+    scale: 1 1;
+    background-color: forestgreen;
   }
 }
 ```
 
-We set `scale: 0.9` instead of `scale: 1.0` to enable differentiating when the animation is applied.
+#### Anonymous view progress timeline
 
-We apply the animation and an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) to the element we want to animate:
+We apply the animation to both elements, and then add an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) to the element we want to animate as the user scrolls it into view:
 
-```css live-sample___default  live-sample___selector30 live-sample___selector
+```css live-sample___default live-sample___selector30 live-sample___reverse live-sample___view-inset
+.animatedElement,
+.comparisonElement {
+  animation-name: originalChangeEffect;
+  animation-duration: 1ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
 .animatedElement {
-  animation: someChangeEffect 1ms linear;
   animation-timeline: view();
 }
 ```
 
-```html hidden live-sample___default  live-sample___selector30 live-sample___selector live-sample___range  live-sample___range_both
+We include a `1ms` {{cssxref("animation-duration")}} and the {{cssxref("animation-fill-mode")}} property to ensure both animations occur and retains the styles defined in the `to` keyframe. This also ensure both animations occur even in browsers that don't support scroll driven animations.
+
+We could have included all these properties in a single {{cssxref("animation")}} shorthand declaration, but if we do so, remember to declare the `animation-timeline` after the shorthand so it doesn't get reset to the default `auto`.
+
+```css
+.animatedElement {
+  animation: originalChangeEffect 1ms linear forwards;
+
+  animation-timeline: view();
+}
+```
+
+```html hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset
 <main class="scroller">
   <div class="container">
     <h1>Directions</h1>
@@ -57,7 +83,10 @@ We apply the animation and an [anonymous view progress timeline](/en-US/docs/Web
       <li>Turn right onto West Basin Dr</li>
       <li>Look up when you reach 64 Independence Ave!</li>
     </ol>
-    <section><div class="animatedElement"></div></section>
+    <section>
+      <div class="animatedElement">DEMO</div>
+      <div class="comparisonElement">COMPARISON</div>
+    </section>
     <h2>Martin Luther King, Jr. Memorial to Lincoln Memorial</h2>
     <ol>
       <li>Head north toward Independence Ave SW</li>
@@ -71,42 +100,256 @@ We apply the animation and an [anonymous view progress timeline](/en-US/docs/Web
 </main>
 ```
 
-```css hidden live-sample___default  live-sample___selector30 live-sample___selector live-sample___range  live-sample___range_both
-main {
-  width: 400px;
-  padding: 0;
-  height: 300px;
-  overflow: scroll;
-  border: 1px solid;
-  background-color: hsl(from beige h s l / 0.5);
-  font-family: sans-serif;
+We added stripes and a semi-opaque box to denote the map's default (non-animated) location and size. The CSS for the stripes, the box, and other styles have been hidden for brevity.
+
+{{EmbedLiveSample("default", "100%", "350")}}
+
+Scroll down from the first set of directions to the second set, and you'll notice the animated element appearing as you scroll.
+
+The DEMO map doesn't finish animating until it has reached the top of the viewport. An animation that goes through the entire length of the viewport is generally not the user experience you want.
+
+For a better user experience, we want the map to finish animating part way through the viewport, and stay as defined by the 100% keyframe. Let's fix this! We can do this a few ways: by editing the `@keyframes` definition, by setting insets, or by defining a range for the timeline.
+
+## Controlling insets with @keyframe selectors
+
+With default values, as seen in the previous [basic view progress timeline](#basic_view_progress_timeline), the `100%` keyframe is reached when the element leaves the viewport. One way to make our final effect visible earlier is to set the ending values of our animation in an earlier keyframe selector block. We can set the values to reach their final values, and stay that way, by setting the completed effect earlier, such as 30% through the animation, and maintaining the applied styles by adding the `100%` keyframe to that selector list:
+
+```css live-sample___selector30 live-sample___reverse live-sample___view-inset
+@keyframes endsAtThirty {
+  0% {
+    opacity: 0;
+    scale: 0 1;
+    background-color: brown;
+  }
+  30%,
+  100% {
+    opacity: 1;
+    scale: 1 1;
+    background-color: forestgreen;
+  }
 }
 
-ol,
-h1,
-h2 {
-  padding: 0 0 1rem 1rem;
-}
-
-li {
-  margin-bottom: 0.75lh;
-  margin-left: 1rem;
-}
-
-section {
-  height: 200px;
-  width: calc(300px - 2em);
-  margin: auto;
-  border: 1px solid #dedede;
-  background-color: #ededed99;
-}
 .animatedElement {
-  height: 100%;
-  width: 100%;
-  background-color: forestgreen;
-  background-image:
-    repeating-linear-gradient(37deg, transparent 0 52px, beige 52px 57px),
-    repeating-linear-gradient(94deg, transparent 0 52px, beige 52px 57px);
+  animation-name: endsAtThirty;
+}
+```
+
+0 l0 l
+
+```css hidden live-sample___selector30 live-sample___reverse
+.comparisonElement {
+  animation-timeline: view();
+}
+```
+
+{{EmbedLiveSample("selector30", "100%", "350")}}
+
+When both map element comes into view as you scroll, the map-like elements animate in. With the updated keyframes, the DEMO map reaches it's full size 30% of the way through the viewport. By putting our final effects in an earlier keyframe block, and not limiting ourselves to the `to` or `100%` keyframe like in the COMPARISON map which is using the original animation effect, the element finishes animating while still in view.
+
+There are a few things to note here. The first is that the updated animation doesn't end when the the top edge is 30% of the way through the viewport. Rather, it ends when that edge is 30% of the way through the [timeline attachment range](#controlling-insets-with-animation-range), which by default includes 100% of the scroll container in the axis dimension plus the size of the subject in that same dimension.
+
+![the image](animation-range-explainer.png)
+
+The `0%` occurs when the top edge of the map crosses the bottom edge of the viewport. The `100%` is when the bottom edge of the map exits the top of the element's viewport. In this case, the element is `150px` tall and the scrollport is `300px` tall, making the timeline attachment range `450px` tall; this is why the `30%` endpoint animation keyframe occurs when the top of the map `135px` from the bottom edge of the scroll container.
+
+Also note that even though the animation effect ends 30% of the way through the viewport, the {{domxref("Element/animationend_event", "animationend")}} event only happens when the `100%` keyframe is reached, which still occurs when the bottom edge of the subject reaches the top edge of the scroll container, as the element scrolls out of view.
+
+### Reversing an animation
+
+To make the animated element fade in as it enters the viewport and fade out as the user scrolls the element out of view, we can set the {{cssxref("animation-iteration-count")}} so the animation occurs twice, alternating the {{cssxref("animation-direction")}} so the second iteration goes in the reverse direction, from `100%` to `0%`.
+
+```css live-sample___reverse
+.animatedElement,
+.comparisonElement {
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+```
+
+{{EmbedLiveSample("reverse", "100%", "350")}}
+
+When the elements comes into view as you scroll, the map-like elements animate in, with the DEMO map reaching it's full size 15% of the way through the animation timeline range and starts fading out when it reaches 85% of that range. While this effect is better than the comparison map, which starts fading out as soon as it finally faded in, the fade in (and out) is now twice as fast, and still partially out of view, which is not a great effect.
+
+While we realize we are focusing on the technology and not the (lack of) design, this demonstrates an issue with using `@keyframes` to control our animation ranges: this method requires redefining `@keyframe` animations. To make the animation with an intro and outro both 30% of the timeline range, matching the intro of the previous example, we would have to redefine another keyframe animation. This conundrum demonstrates how controlling the range of the animation using keyframes is brittle; it can require defining multiple similar animation definitions to create the same effect to handle the different ranges. Fortunately, there are other solutions.
+
+## View timeline insets
+
+The {{cssxref("view()"}} functions accepts two optional parameters: a {{cssxref("&lt;axis>"}} and a `<view-timeline-inset>`. The `<view-timeline-inset>` is the keyword `auto`, or one or two `<length-percentage>` values that specify the inset area that defines when an element is considered "in view". The default value is `auto`. This parameter is used to adjust the view progress visibility range.
+
+With this inset, we can virtually move the edges of the edges of the animation's timeline attachment range, with positive values creating an inward adjustment and negative values an outward adjustment. Percentages are relative to the scrollport size, `300px` in this case, not the size of the default timeline attachment range, which is `450px` tall.
+
+For example:
+
+```css
+.map {
+  animation: originalChangeEffect 1ms linear forwards;
+  animation-timeline: view(block 70% 0%);
+}
+```
+
+This `animation-timeline` value of `view(block 70% 0%)` states "the timeline is a view progress timeline in the block direction. The animation range ends 70% of the block size of the scroll view port from the start edge of the default animation timeline attachment range (not the start edge of the scroll view port) and starts 0% from the bottom of the range."
+
+In the `30%` keyframe example, the map animated fully in `135px` when the top edge of the map was `135px` from the bottom edge of the scroll viewport's end edge and animation timeline attachment range, which is `315px` from the top of the default timeline attachment range. As the animation timeline attachment range is `450px` tall and the scroll viewport is `300px` tall, to create the `30%` keyframe effect, we would need to declare the top inset to be `315px`, which is `105%` of the scroll viewport's height. We set the COMPARISON element to the `endsAtThirty` animation for comparison.
+
+```css live-sample___view-inset
+.animatedElement {
+  animation-name: originalChangeEffect;
+  animation-timeline: view(block 105% 0%);
+}
+.comparisonElement {
+  animation-name: endsAtThirty;
+  animation-timeline: view();
+}
+```
+
+{{EmbedLiveSample("view-inset", "100%", "350")}}
+
+This method worked, but it is brittle. If we change the size of the animating element or the container, we would have to update parameter. We we could use [CSS custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) for the height of the subject element, the height of scroll viewport container, and then calculate the parameters with the CSS {{cssxref("calc()")}} function.
+
+```md
+topOffset = percentFromTopOfScroller \* (subjectHeight + scrollerHeight) / scrollerHeight
+```
+
+The equation to get to `105%` is the percent from the top of the scroller top edge multiplied by the full height of the attachment range, divided by the height of the scroller. Imagine your future self trying to decipher your CSS:
+
+```css
+.animatedElement {
+  animation-name: originalChangeEffect;
+  --topOffset: calc((1 - var(--bottomOffset)) * (var(--subjectHeight) + var(--scrollerHeight)) / var(--scrollerHeight);
+  animation-timeline: view(block var(--topOffset) 0%);
+}
+```
+
+Fortunately, the [CSS scroll driven animations module](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) defines animation range values and properties that provide a more robust solution.
+
+## Controlling insets with animation-range
+
+While you can control the insets of the effects of an animation via the keyframe selectors themselves or via the `view()` function parameters, as we just saw, these method of controlling insets have clear limitations. CSS scroll driven animations module defined properties and values enable defining when to start and stop animation along the timeline, effectively controlling when the animation effects occur without having to declare multiple different `@keyframe` animations or calculate complex attachment range sizes.
+
+As we saw earlier, the default keyframe animation attachment range is the same as the entirety of the timeline defined by the {{cssxref("animation-timeline")}}. The default range is `0%`, when the target element starts to enter our viewport, to `100%`, when the target element completely exits the viewport.
+
+This range can be restricted, or inset. Animation keyframes can be attached in reference to an animation attachment range, restricting the animation's active interval to that range of a timeline, with the {{cssxref("animation-range")}} property, which is shorthand for {{cssxref("animation-range-start")}} and {{cssxref("animation-range-end")}}, in that order.
+
+The position in the scroll range is converted into a percentage of the scroll progress of the scroller. By default, the `0%` is the start and `100%` is the end. The animation range properties control this by setting the start and end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start and end.
+
+Prior examples let the `animation-range` default to `normal`, meaning as soon as the first pixel of the element entered the viewport, the animation began and it didn't end until the last pixel exited the viewport.
+
+To make the animation stop when we are 30% of the way through the viewport, and remain at that keyframe, we set the start of the range at `0%`, which is where it has always been, and end at `30%`:
+
+```css live-sample___range live-sample___range_both
+.animatedElement {
+  animation: originalChangeEffect 1ms linear;
+  animation-timeline: view();
+
+  animation-range: 0% 30%;
+}
+```
+
+{{EmbedLiveSample("range", "100%", "350")}}
+
+## Applying styles outside of the animation range
+
+The `animation-range` limits the application of the animation to the defined range. In the previous example, the animation completed and ended 30% of the way through the viewport. The animation applied the `brown` background which transitioned to `forestgreen` as the animation progressed, but once the animation ended, the {{cssxref("background-color")}} values set by the animation no longer applied. We can ensure the property values defined in the `to` keyframe get applied after the animation ends with the {{cssxref("animation-fill-mode")}} property.
+
+In the previous example, we intentionally omitted the {{cssxref("animation-fill-mode")}} property, which is used to CSS animation applies styles to an element before and after the animation execution, so you can better see when the animation is applied. Generally, you will include the `animation-fill-mode` property when using `animation-range` to prevent this jumping effect:
+
+```css live-sample___range_both
+.animatedElement {
+  animation-fill-mode: both;
+}
+```
+
+{{EmbedLiveSample("range_both", "100%", "350")}}
+Scroll the scroll port and notice how it no longer "jumps". With `both`, the `0%` keyframe is applied until the animation range start, which is not visible, here. Importantly in this case, the `100%` keyframe gets applied once were reach the animation range end, 30% in this case, and continues to be applied after we scroll past that mark.
+
+```css
+.animatedElement {
+  animation: originalChangeEffect 1ms linear;
+  animation-timeline: view();
+
+  animation-range-start: entry 20%;
+  animation-range-end: exit 80%;
+}
+```
+
+The declaration `animation-range-start: entry 20%` represents the point in a view progress timeline from `20%` of the way through the scroll port from the point where the subject element's top edge first starts to enter the scroll port.
+
+Initially, from `0%` to `20%`, the element is at it's full size.It disappears at the 20% mark, then grows to 90% of it's original size as it fades it. At the `80%` mark it jumps back to it's original size, as the the animation-timeline has reached the end of its range.
+
+## View progress timelines
+
+You can also progress an animation based on the change in visibility of an element inside a scroller — this is done via _view progress timelines_. Instead of tracking the scroll offset of a scroll container, view progress timelines track the relative position of an element, called the _subject_, within a scrollport. The progression of an animation's keyframes is based on the _visibility_ of the subject inside the scroller. Unlike scroll progress timelines, with view progress timelines, you can't specify the scroller — the subject's visibility is always tracked within its nearest ancestor scroller.
+
+A view progress timeline animation only occurs when the element is visible within its scrollport. Timeline progress starts at `0%` when the tracked subject starts intersecting the scrollport at the block or inline end edge. The `100%` occurs when the subject exits the scrollport at the block or inline start edge.
+
+Because the `100%` is generally reached when the element leaves the viewport, you likely want to set the final effect of your animation in a keyframe block that occurs well before the end of the animation. You can set your completed effect within the `20%`, `50%`, or `80%` keyframe block rather than using the `to` or `100%` keyframe to ensure the element finishes animating while still in view.
+
+With view progress timelines, you can adjust the view progress visibility range.
+Use {{cssxref("view-timeline-inset")}}, part of the {{cssxref("view-timeline")}} shorthand, to adjust when the subject is considered to be in view. The default value is `auto`. The effect of any non-`auto` inset value is as if you moved the edges of the scroll port: a positive inset value creates an inward adjustment, and a negative value creates an outward adjustment.
+
+Similar to scroll progress timelines, the view progress timeline can be named or anonymous.
+
+## Reversing animations
+
+The effect we've created is still t lgood user experience. The element should be fully
+
+```css hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset
+@layer basicStyles {
+  t l main {
+    width: 400px;
+    padding: 0;
+    height: 300px;
+    overflow: scroll;
+    border: 1px solid;
+    background-color: hsl(from beige h s l / 0.5);
+    font-family: sans-serif;
+  }
+
+  ol,
+  h1,
+  h2 {
+    padding: 0 0 1rem 1rem;
+  }
+
+  li {
+    margin-bottom: 0.75lh;
+    margin-left: 1rem;
+  }
+
+  section {
+    height: 150px;
+    margin: auto;
+    border: 1px solid #dedede;
+    background-color: #ededed99;
+    display: flex;
+    gap: 10px;
+  }
+  section div {
+    width: calc(50% - 7px);
+    color: white;
+    text-shadow:
+      1px 1px black,
+      -1px -1px black,
+      -1px 1px black,
+      1px -1px black;
+    line-height: 3em;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    height: calc(100% - 2px);
+    background-color: yellow;
+    border: 1px solid;
+    background-image:
+      repeating-linear-gradient(39deg, transparent 0 52px, beige 52px 57px),
+      repeating-linear-gradient(119deg, transparent 0 52px, beige 52px 57px);
+  }
+  .container {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0 29px,
+      #dedede 29px 30px
+    );
+  }
 }
 
 @layer no-support {
@@ -126,268 +369,6 @@ section {
   }
 }
 ```
-
-{{EmbedLiveSample("default", "100%", "350")}}
-
-Scroll down from the first set of directions to the second set, and you'll notice the animated element appearing as you scroll. You may note the main problem with the animation: the element is only fully opaque at (almost) full size when it exits the screen. Let's fix this!
-
-Notice how the map doesn't finish animating until has reached the top of the viewport. Our element is animating the entire length of the viewport, which generally isn't the user experience you want. We want the map to become and remain opaque and large earlier, and remain so, for the user to access the information conveyed. We can do this a few ways: by editing the `@keyframes` definition, but setting a range for the animation, or by setting insets.
-
-## Controlling insets with @keyframe selectors
-
-If we only have a single animation iteration, and let the animation-range default to `normal`, the `100%` keyframe is reached when the element leaves the viewport. We can set the final effect of our animation in an earlier keyframe selector block, ensuring the element becomes opaque and large earlier, and remains so through the end of the animation. We do this by setting the completed effect earlier, such as 30% through the animation:
-
-```css live-sample___selector30
-@keyframes someChangeEffect {
-  0% {
-    opacity: 0;
-    scale: 0;
-  }
-  30% {
-    opacity: 1;
-    scale: 0.9;
-  }
-}
-```
-
-{{EmbedLiveSample("selector30", "100%", "350")}}
-
-keyframe block, rather than limiting it to the `to` or `100%` keyframe, to ensure the element finishes animating while still in view.
-
-To make the map element full size and fully visible earlier, and then have it reverse the animation as we scroll past the element and have it begin fading out as it reaches the top of the scroll port, we change the keyframe selector values and then set the animation two occur twice, with the second iteration going from 100% to 0%.
-
-Here we set the element to be fully visible 40% through the animation, which is 20% through the scoll, and stay visible through 100% by default, which is 50% of the way through the scroll's progression. We then make the animation occur twice during the scroll by setting the {{cssxref("animation-iteration-count")}} to `2` and set the second iteration to occur in the reverse direction by setting the {{cssxref("animation-direction")}} to `alternate`. These are included as part of the {{cssxref("animation")}} shorthand:
-
-```css live-sample___selector
-@keyframes someChangeEffect {
-  0% {
-    opacity: 0;
-    scale: 0;
-  }
-  40% {
-    opacity: 1;
-    scale: 1;
-  }
-}
-.animatedElement {
-  animation: someChangeEffect 1ms linear 2 alternate;
-  animation-timeline: scroll();
-}
-```
-
-The quick fade in and out may also not be a great effect; realize we are focusing on the technology, not (the lack of) design.
-
-{{EmbedLiveSample("selector", "100%", "350")}}
-
-When the element comes into view as you scroll down the page, the map-like element animates in, reaching it's full size 20% of the way through the scroll port and starts fading out when it reaches 80%.
-
-While you can control the insets of the effects of an animation via the keyframe selectors themselves, this method of controlling insets is not very robust. As this method requires redefining your keyframe animations and your `animation` declaration, you may need to define multiple similar animation definitions creating the effect but at different points in the scrolling. Fortunately, there are other solutions.
-
-## Controlling insets with animation-range
-
-By default, a keyframe animation's range is the same as the entirety of the timeline defined by the {{cssxref("animation-timeline")}}. This range can be restricted, or inset. Animation keyframes can be attached in reference to an animation attachment range, restricting the animation’s active interval to that range of a timeline, with the {{cssxref("animation-range")}} property, which is shorthand for {{cssxref("animation-range-start")}} and {{cssxref("animation-range-end")}}, in that order.
-
-The position in the scroll range is converted into a percentage of the scroll progress of the scroller. By default, the `0%` is the start and `100%` is the end. The animation range properties control this by setting the start and end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start and end.
-
-```css live-sample___range live-sample___range_both
-.animatedElement {
-  animation: someChangeEffect 1ms linear;
-  animation-timeline: scroll();
-
-  animation-range-start: entry 20%;
-  animation-range-end: exit 80%;
-}
-```
-
-The declaration `animation-range-start: entry 20%` represents the point in a view progress timeline from 20% of the way through the scroll port from the point where the subject element's top edge first starts to enter the scroll port.
-
-```css hidden live-sample___selector live-sample___range  live-sample___range_both
-main {
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0 calc(10% - 1px),
-    #dedede calc(10% - 1px) 10%
-  );
-}
-```
-
-{{EmbedLiveSample("range", "100%", "350")}}
-
-## Applying styles outside of the animation range
-
-In the previous example, we intentionally omitted the {{cssxref("animation-fill-mode")}} property, which is used to CSS animation applies styles to an element before and after the animation execution, so you can better see when the animation is applied. Initially, from `0%` to `20%`, the element is at it's full size.It disappears at the 20% mark, then grows to 90% of it's original size as it fades it. At the `80%` mark it jumps back to it's original size, as the the animation-timeline has reached the end of its range.
-
-Generally, you will include the `animation-fill-mode` property when using `animation-range` to prevent this jumping effect:
-
-```css live-sample___range_both
-.animatedElement {
-  animation-fill-mode: both;
-}
-```
-
-{{EmbedLiveSample("range_both", "100%", "350")}}
-
-Scroll the scroll port and notice how it no longer "jumps". Here, the `0%` keyframe is applied until the animation range start and the `100%` keyframe continues to be applied after we've reached the animation range end.
-
-## View progress timelines
-
-You can also progress an animation based on the change in visibility of an element inside a scroller — this is done via _view progress timelines_. Instead of tracking the scroll offset of a scroll container, view progress timelines track the relative position of an element, called the _subject_, within a scrollport. The progression of an animation's keyframes is based on the _visibility_ of the subject inside the scroller. Unlike scroll progress timelines, with view progress timelines, you can't specify the scroller — the subject's visibility is always tracked within its nearest ancestor scroller.
-
-A view progress timeline animation only occurs when the element is visible within its scrollport. Timeline progress starts at `0%` when the tracked subject starts intersecting the scrollport at the block or inline end edge. The `100%` occurs when the subject exits the scrollport at the block or inline start edge.
-
-Because the `100%` is generally reached when the element leaves the viewport, you likely want to set the final effect of your animation in a keyframe block that occurs well before the end of the animation. You can set your completed effect within the `20%`, `50%`, or `80%` keyframe block rather than using the `to` or `100%` keyframe to ensure the element finishes animating while still in view.
-
-With view progress timelines, you can adjust the view progress visibility range.
-Use {{cssxref("view-timeline-inset")}}, part of the {{cssxref("view-timeline")}} shorthand, to adjust when the subject is considered to be in view. The default value is `auto`. The effect of any non-`auto` inset value is as if you moved the edges of the scroll port: a positive inset value creates an inward adjustment, and a negative value creates an outward adjustment.
-
-Similar to scroll progress timelines, the view progress timeline can be named or anonymous.
-
-## Reversing animations
-
-The effect we've created is still not good user experience. The element should be fully
-
-### Named view progress timeline
-
-A _named view progress timeline_ is one where the subject is explicitly named using the {{cssxref("view-timeline-name")}} property, a component of the `view-timeline` shorthand. The `<dashed-ident>` name is then linked to the element to animate by specifying it as the value of that element's `animation-timeline` property.
-
-With named view progress timelines, the element to animate does not have to be the same as the subject. In other words, the element controlling the timeline doesn't have to be the same as the element being animated. This means you can animate one element based on another element's movement within its scrollable container.
-
-Here we use the {{cssxref("view-timeline-name")}} property to name an element, identifying the element itself as the source of a view progress timeline. We then set that name as the value of the `animation-timeline` property.
-
-```css live-sample___named_view
-.item {
-  animation: action 1ms linear;
-
-  view-timeline-name: --a-name;
-  animation-timeline: --a-name;
-}
-```
-
-We applied the animation **before** the animation timeline, as the `animation` resets the `animation-timeline` to `auto`.
-
-The animation is slightly different from the previous examples in that the spinning effect starts at `20%` and ends at `80%` of the way through the animation; this means the element will not be actively spinning when it first comes into view and will stop spinning before it is completely out of view.
-
-```css live-sample___named_view live-sample___anon_view
-@keyframes action {
-  0%,
-  20% {
-    rotate: 45deg;
-  }
-  80%,
-  100% {
-    rotate: 720deg;
-  }
-}
-```
-
-```css hidden live-sample___named_view live-sample___anon_view live-sample___anon_view_args
-.scroller {
-  width: 400px;
-  height: 200px;
-  line-height: 2;
-  overflow: scroll;
-  border: 1px solid;
-  background-color: palegoldenrod;
-}
-.item {
-  --size: 50px;
-  height: var(--size);
-  width: var(--size);
-  background-color: magenta;
-  border: 1px solid;
-  left: calc(50% - (var(--size) / 2));
-  top: calc(50% - (var(--size) / 2));
-}
-```
-
-```html hidden live-sample___named_view live-sample___anon_view live-sample___anon_view_args
-<main class="scroller">
-  <p>Scroll down to view the animation</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <div class="item"></div>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>Scroll up to view the animation</p>
-</main>
-```
-
-{{EmbedLiveSample("named_view", "100%", "250")}}
-
-Scroll the element into view. Note that the element animates through the `@keyframes` animation as it moves through the visible area of its ancestor scroller.
-
-### Anonymous view progress timeline: the `view()` function
-
-Alternatively, a {{cssxref("animation-timeline/view", "view()")}} function can be set as the value of the `animation-timeline` property to specify that an element's animation timeline is an _anonymous view progress timeline_. This causes the element to be animated based on its position inside its nearest parent scroller.
-
-The `view()` function creates a view timeline. You attach the timeline to the element you want to animate using the `animation-timeline` property. The function creates a view timeline for each element matched by the selector.
-
-In this example, we again define the `animation` before the `animation-timeline`, so the timeline is not reset. We then include an argument-less `view()` function. We don't specify a scroller, as, by definition, the subject's visibility is tracked by its nearest ancestor scroller.
-
-```css live-sample___anon_view
-.item {
-  animation: action 1ms linear;
-  animation-timeline: view();
-}
-```
-
-{{EmbedLiveSample("anon_view", "100%", "250")}}
-
-### Parameters of the `view()` function
-
-The `view()` function takes up to three optional values as arguments:
-
-- Zero or one `<axis>` parameters. If set, this specifies the scroll axis along which the animation progresses.
-- Either the keyword `auto` or zero, one, or two {{cssxref("length-percentage")}} inset values. If set, these values specify offsets for the scrollport start and/or end.
-
-Declaring `view()` is equivalent to `view(block auto)`, which defines `block` as the axis of the parent element that supplies the timeline and the {{cssxref("scroll-padding")}}, which generally defaults to `0`, as the insets within the visible area at which the animation starts and ends.
-
-The function sets the values of the {{cssxref("view-timeline-axis")}} and {{cssxref("view-timeline-inset")}} properties.
-
-The {{cssxref("view-timeline-inset")}} arguments specify insets (if positive) or outsets (if negative) that adjust the start and end of the scrollport. They are used to determine the scroll positions at which the element is considered "in view", which determines the length of the animation timeline. In other words, instead of starting at the start edge and ending at the end edge of the scrollport, the animation occurs at the start and end of the inset-adjusted view.
-
-Unlike the scroll timeline's `scroll()` function, there is no `<scroller>` argument in the `view()` function, as the view timeline always tracks the subject within its nearest ancestor scroll container.
-
-In this example, as we are using inset values, we can use the `from` and `to` keyframe selectors.
-
-```css live-sample___anon_view_args
-@keyframes action {
-  from {
-    rotate: 45deg;
-  }
-  to {
-    rotate: 720deg;
-  }
-}
-
-.item {
-  animation: action 1ms linear;
-  animation-timeline: view(block 20% 20%);
-}
-```
-
-{{EmbedLiveSample("anon_view_args", "100%", "250")}}
-
-## Accessibility concerns
-
-As with all animations and transitions, always take any user's [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) preference into account.
-
-### Removing an animation's timeline
-
-Setting `animation-timeline: none` disassociates the element from all animation timelines, including the default time-based document timeline, meaning the element will not animate. While some animations may be necessary, you can remove animations based on the user's `prefers-reduced-motion` setting with:
-
-```css
-@media (prefers-reduced-motion: reduce) {
-  .optionalAnimations {
-    animation-timeline: none;
-  }
-}
-```
-
-Because the `animation` shorthand sets the `animation-timeline` to `auto`, use a selector with enough specificity to ensure your `animation-timeline` isn't overridden by your `animation` shorthand declarations.
 
 ## See also
 
