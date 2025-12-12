@@ -17,6 +17,7 @@ Firefox {{VERSION}} is the current [Nightly version of Firefox](https://www.fire
 ## Changes for web developers
 
 <!-- ### Developer Tools -->
+<!-- Delete entire Developer Tools section if no updates -->
 
 <!-- ### HTML -->
 
@@ -25,17 +26,9 @@ Firefox {{VERSION}} is the current [Nightly version of Firefox](https://www.fire
 <!-- #### Removals -->
 <!-- Delete if empty -->
 
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-<!-- Delete if empty -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
-<!-- Delete if empty -->
-
 <!-- ### CSS -->
+
+<!-- No notable changes. -->
 
 <!-- #### Removals -->
 <!-- Delete if empty -->
@@ -48,11 +41,25 @@ Firefox {{VERSION}} is the current [Nightly version of Firefox](https://www.fire
 <!-- Delete if empty -->
 
 <!-- ### HTTP -->
+<!-- Delete entire HTTP section if no updates -->
+
+<!-- #### Removals -->
+<!-- Delete if empty -->
+
+<!-- ### SVG -->
+<!-- Delete entire SVG section if no updates -->
+
+<!-- #### Removals -->
+<!-- Delete if empty -->
+
+<!-- ### MathML -->
+<!-- Delete entire MathML section if no updates -->
 
 <!-- #### Removals -->
 <!-- Delete if empty -->
 
 <!-- ### Security -->
+<!-- Delete entire Security section if no updates -->
 
 <!-- #### Removals -->
 <!-- Delete if empty -->
@@ -67,6 +74,7 @@ Firefox {{VERSION}} is the current [Nightly version of Firefox](https://www.fire
 <!-- Delete if empty -->
 
 <!-- ### WebAssembly -->
+<!-- Delete entire WebAssembly section if no updates -->
 
 <!-- #### Removals -->
 <!-- Delete if empty -->
