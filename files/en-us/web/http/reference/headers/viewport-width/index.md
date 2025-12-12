@@ -55,7 +55,7 @@ Viewport-Width: <number>
 A server must first opt-in to receive the `Viewport-Width` header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive `Viewport-Width`.
 
 ```http
-Sec-Accept-CH: Viewport-Width
+Accept-CH: Viewport-Width
 ```
 
 In subsequent requests, the client might send `Viewport-Width` header:

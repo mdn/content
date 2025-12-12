@@ -430,6 +430,17 @@ The [UA client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client
 - {{HTTPHeader("Sec-CH-Viewport-Width")}} {{experimental_inline}}
   - : Request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}.
 
+##### Deprecated device client hints
+
+- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Renamed to {{HTTPHeader("Sec-CH-Device-Memory")}}
+- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Renamed to {{HTTPHeader("Sec-CH-DPR")}}
+- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Renamed to {{HTTPHeader("Sec-CH-Viewport-Width")}}
+- {{HTTPHeader("Width")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Renamed to `Sec-CH-Width`
+
 #### Network client hints
 
 Network client hints allow a server to choose what information is sent based on the user choice and network bandwidth and latency.

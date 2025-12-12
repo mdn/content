@@ -13,7 +13,7 @@ The HTTP **`Sec-CH-Viewport-Width`** {{Glossary("request header")}} is a [device
 The value is rounded up to the smallest following integer (i.e., ceiling value).
 
 > [!NOTE]
-> A previous version of this header was named `Viewport-Height` without the `Sec-CH-` prefix. This is now deprecated and the `Sec-CH-Viewport-Height` version is recommended.
+> A previous version of this header was named {{HTTPHeader("Viewport-Width")}} without the `Sec-CH-` prefix. This is now deprecated and the `Sec-CH-Viewport-Height` version is recommended.
 
 The hint can be used with other screen-specific hints to deliver images optimized for a specific screen size, or to omit resources that are not needed for a particular screen width.
 If the `Sec-CH-Viewport-Width` header appears more than once in a message the last occurrence is used.
@@ -55,7 +55,7 @@ Sec-CH-Viewport-Width: <number>
 A server must first opt-in to receive the `Sec-CH-Viewport-Width` header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive `Sec-CH-Viewport-Width`.
 
 ```http
-Sec-Accept-CH: Sec-CH-Viewport-Width
+Accept-CH: Sec-CH-Viewport-Width
 ```
 
 In subsequent requests, the client might send `Sec-CH-Viewport-Width` header:
