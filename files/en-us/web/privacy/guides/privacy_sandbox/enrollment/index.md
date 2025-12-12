@@ -24,7 +24,7 @@ The following features require enrollment to be usable:
 - [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
 - Protected Audience API
 - [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
-- [Topics API](/en-US/docs/Web/API/Topics_API)
+- [Topics API](/en-US/docs/Web/API/Topics_API) {{deprecated_inline}}
 
 The documentation of each feature includes more details on exactly which sub-features will fail if enrollment is not completed, and how.
 
