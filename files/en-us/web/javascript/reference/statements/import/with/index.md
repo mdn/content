@@ -61,16 +61,21 @@ Content-Type: application/json; charset=utf-8
 {"name":"Maria"}
 ```
 
-Modules are identified and parsed only according to their served [media type (MIME type)](/en-US/docs/Web/HTTP/Guides/MIME_types) — the file extension in the URL cannot be used to identify a file's type. In this case, the MIME type is `application/json`, which tells the browser that the file is JSON and must be parsed as JSON. If, for some reason (e.g., the server is hijacked or bogus), the MIME type in the server response is set to `text/javascript` (for JavaScript source), then the file would be parsed and executed as code. If the "JSON" file actually contains malicious code, the `import` declaration would unintentionally execute external code, posing a serious security threat.
+Modules are identified and parsed only according to their served [media type (MIME type)](/en-US/docs/Web/HTTP/Guides/MIME_types) — the file extension in the URL cannot be used to identify a file's type. In this case, the MIME type is `application/json`, which tells the browser that the file is JSON and must be parsed as JSON. If, for some reason (e.g., the server is hijacked or bogus), the media type in the server response is set to `text/javascript` (for JavaScript source), then the file would be parsed and executed as code. If the "JSON" file actually contains malicious code, the `import` declaration would unintentionally execute external code, posing a serious security threat.
 
 Import attributes fix this problem by allowing the author to explicitly specify how a module should be validated.
-When using import attributes the code above would be written as shown below, and would fail if the file was served with any media type other than `application/json`:
+In particular, the `type` attribute allows you to validate that the file is served with a particular media type, and fails the import if a different media type is used.
+
+For example, the code above can be written to specify that the expected type is `"json"` and the import would fail if it was served with the `text/javascript` (or any media type other than `application/json`):
 
 ```js
 import data from "https://example.com/data.json" with { type: "json" };
 ```
 
-All attributes you specify must be understood by the runtime — a runtime will throw a syntax error an unknown attribute is used.
+The `type` attribute allows you to specify that modules are served as JSON or CSS (and implicitly as JavaScript).
+
+Other attributes may also be supported, and [can affect the behaviour of different parts of the loading process](#intended_semantics_for_import_attributes).
+A syntax error is thrown if an unknown attribute is used.
 
 ### Standard attributes
 
