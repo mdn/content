@@ -18,10 +18,6 @@ If the `Sec-Private-State-Token-Lifetime` header is omitted, the lifetime of the
       <td>{{Glossary("Response Header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>Yes (<code>Sec-</code> prefix)</td>
-    </tr>
-    <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted request header")}}
       </th>
