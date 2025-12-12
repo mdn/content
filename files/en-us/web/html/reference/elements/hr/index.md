@@ -39,6 +39,45 @@ hr::after {
 
 Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.
 
+## Styling `<hr>` with CSS
+
+Below are examples of “appropriate CSS” for drawing horizontal lines:
+
+### Simple 1px line
+
+```css
+hr {
+  border: none;
+  border-top: 1px solid #000;
+}
+
+
+hr {
+  border: none;
+  border-top: 3px solid #555;
+}
+
+hr {
+  border: none;
+  border-top: 2px dashed #666;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #999;
+  position: relative;
+}
+
+hr::after {
+  content: "§";
+  position: absolute;
+  top: -0.7em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 0 0.3em;
+}
+```
 ## Attributes
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
