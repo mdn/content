@@ -215,7 +215,7 @@ Behind the scenes, The redemption record(s) will be included on a {{httpheader("
 
 You can opt out of token issuance or redemption for specific pages on your site by including `private-state-token-issuance=()` and `private-state-token-redemption=()` in the `Permissions-Policy` header for each page.
 
-You can also use the `Permissions-Policy` header to control third-party access to token operations. As parameters to the header origin list, use self and any origins you would like to allow access to the API. For example, to completely disable use of PST within all browsing contexts except for your own origin and `https://example.com`, set the following HTTP response header:
+You can also use the `Permissions-Policy` header to control third-party access to token operations. As parameters to the header origin list, use self and any origins you would like to allow access to the API. For example, to completely disable use of private state tokens within all browsing contexts except for your own origin and `https://example.com`, set the following HTTP response header:
 
 ```http
 Permissions-Policy: private-state-token-issuance=(self "https://example.com"), private-state-token-redemption=(self "https://example.com")
