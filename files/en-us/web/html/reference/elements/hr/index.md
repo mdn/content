@@ -41,7 +41,7 @@ Historically, this has been presented as a horizontal rule or line. While it may
 
 ## Styling `<hr>` with CSS
 
-Below are examples of “appropriate CSS” for drawing horizontal lines:
+Below are examples of "appropriate CSS" for drawing horizontal lines:
 
 ### Simple 1px line
 
@@ -50,7 +50,6 @@ hr {
   border: none;
   border-top: 1px solid #000;
 }
-
 
 hr {
   border: none;
