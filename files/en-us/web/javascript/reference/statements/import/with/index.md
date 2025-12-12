@@ -75,10 +75,10 @@ However, you cannot use unknown attributes — a runtime will throw a syntax err
 
 ### Standard attributes
 
-The available attributes depend on the language and runtime environment (the ECMAScript standard does not define any attributes).
+The available attributes depend on the language and runtime environment.
+The ECMAScript standard [defines the `type` attribute with the value of `"json"`](https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-HostLoadImportedModule).
 
-The HTML specification [defines the `type` attribute](https://html.spec.whatwg.org/multipage/webappapis.html#module-type-allowed), which is supported in browser environments.
-This has allowed values `"json"` and `"css"`.
+The HTML specification also [defines the `type` attribute with values `"json"` and `"css"`](https://html.spec.whatwg.org/multipage/webappapis.html#module-type-allowed) — these are the attributes that are supported in browser environments.
 
 #### JSON Modules (`{ type: "json" }`)
 
