@@ -14736,9 +14736,9 @@
 /en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy	/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy
 /en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy	/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy
 /en-US/docs/Web/HTTP/Headers/DNT	/en-US/docs/Web/HTTP/Reference/Headers/DNT
-/en-US/docs/Web/HTTP/Headers/DPR	/en-US/docs/Web/HTTP/Reference/Headers/Sec-CH-DPR
+/en-US/docs/Web/HTTP/Headers/DPR	/en-US/docs/Web/HTTP/Reference/Headers/DPR
 /en-US/docs/Web/HTTP/Headers/Date	/en-US/docs/Web/HTTP/Reference/Headers/Date
-/en-US/docs/Web/HTTP/Headers/Device-Memory	/en-US/docs/Web/HTTP/Reference/Headers/Sec-CH-Device-Memory
+/en-US/docs/Web/HTTP/Headers/Device-Memory	/en-US/docs/Web/HTTP/Reference/Headers/Device-Memory
 /en-US/docs/Web/HTTP/Headers/Digest	/en-US/docs/Web/HTTP/Reference/Headers/Content-Digest
 /en-US/docs/Web/HTTP/Headers/Downlink	/en-US/docs/Web/HTTP/Reference/Headers/Downlink
 /en-US/docs/Web/HTTP/Headers/ECT	/en-US/docs/Web/HTTP/Reference/Headers/ECT
