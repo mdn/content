@@ -22,7 +22,7 @@ Permissions-Policy: private-state-token-issuance=<allowlist>;
 ```
 
 - `<allowlist>`
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#syntax) for more details.
+  - : A list of [origins](/en-US/docs/Glossary/Origin) for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
