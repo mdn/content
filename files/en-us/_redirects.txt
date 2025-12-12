@@ -14909,8 +14909,7 @@
 /en-US/docs/Web/HTTP/Headers/User-Agent/Firefox	/en-US/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox
 /en-US/docs/Web/HTTP/Headers/Vary	/en-US/docs/Web/HTTP/Reference/Headers/Vary
 /en-US/docs/Web/HTTP/Headers/Via	/en-US/docs/Web/HTTP/Reference/Headers/Via
-/en-US/docs/Web/HTTP/Headers/Viewport-Height	/en-US/docs/Web/HTTP/Reference/Headers/Sec-CH-Viewport-Height
-/en-US/docs/Web/HTTP/Headers/Viewport-Width	/en-US/docs/Web/HTTP/Reference/Headers/Sec-CH-Viewport-Width
+/en-US/docs/Web/HTTP/Headers/Viewport-Width	/en-US/docs/Web/HTTP/Reference/Headers/Viewport-Width
 /en-US/docs/Web/HTTP/Headers/WWW-Authenticate	/en-US/docs/Web/HTTP/Reference/Headers/WWW-Authenticate
 /en-US/docs/Web/HTTP/Headers/Want-Content-Digest	/en-US/docs/Web/HTTP/Reference/Headers/Want-Content-Digest
 /en-US/docs/Web/HTTP/Headers/Want-Digest	/en-US/docs/Web/HTTP/Reference/Headers/Want-Content-Digest
@@ -14954,8 +14953,6 @@
 /en-US/docs/Web/HTTP/Public_Key_Pinning	/en-US/docs/Web/Security/Defenses/Certificate_Transparency
 /en-US/docs/Web/HTTP/Range_requests	/en-US/docs/Web/HTTP/Guides/Range_requests
 /en-US/docs/Web/HTTP/Redirections	/en-US/docs/Web/HTTP/Guides/Redirections
-/en-US/docs/Web/HTTP/Reference/Headers/DPR	/en-US/docs/Web/HTTP/Reference/Headers/Sec-CH-DPR
-/en-US/docs/Web/HTTP/Reference/Headers/Device-Memory	/en-US/docs/Web/HTTP/Reference/Headers/Sec-CH-Device-Memory
 /en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy
 /en-US/docs/Web/HTTP/Resources_and_URIs	/en-US/docs/Web/HTTP/Guides/MIME_types
 /en-US/docs/Web/HTTP/Resources_and_specifications	/en-US/docs/Web/HTTP/Reference/Resources_and_specifications

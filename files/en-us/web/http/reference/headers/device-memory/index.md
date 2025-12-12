@@ -1,23 +1,23 @@
 ---
-title: Sec-CH-Device-Memory header
-short-title: Sec-CH-Device-Memory
-slug: Web/HTTP/Reference/Headers/Sec-CH-Device-Memory
+title: Device-Memory header
+short-title: Device-Memory
+slug: Web/HTTP/Reference/Headers/Device-Memory
 page-type: http-header
-browser-compat: http.headers.Sec-CH-Device-Memory
+browser-compat: http.headers.Device-Memory
 sidebar: http
 ---
 
-{{securecontext_header}}
+{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
 
-The HTTP **`Sec-CH-Device-Memory`** {{Glossary("request header")}} is used in [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) to indicate the approximate amount of available RAM on the client device, in gigabytes.
+> [!WARNING]
+> The `Device-Memory` header was renamed to {{HTTPHeader("Sec-CH-Device-Memory")}} and the new name is now preferred as support for the old header may be removed in future.
+
+The HTTP **`Device-Memory`** {{Glossary("request header")}} is used in [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) to indicate the approximate amount of available RAM on the client device, in gigabytes.
 The header is part of the {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}.
 
-> [!NOTE]
-> A previous version of this header was named `Device-Memory` without the `Sec-CH-` prefix. This is now deprecated and the `Sec-CH-Device-Memory` version is recommended.
-
 Client hints are accessible only on secure origins.
-A server has to opt in to receive the `Sec-CH-Device-Memory` header from the client, by first sending the {{HTTPHeader("Accept-CH")}} response header.
-Servers that opt in to the `Sec-CH-Device-Memory` client hint will typically also specify it in the {{HTTPHeader("Vary")}} header to inform caches that the server may send different responses based on the header value in a request.
+A server has to opt in to receive the `Device-Memory` header from the client, by first sending the {{HTTPHeader("Accept-CH")}} response header.
+Servers that opt in to the `Device-Memory` client hint will typically also specify it in the {{HTTPHeader("Vary")}} header to inform caches that the server may send different responses based on the header value in a request.
 
 <table class="properties">
   <tbody>
@@ -38,7 +38,7 @@ Servers that opt in to the `Sec-CH-Device-Memory` client hint will typically als
 ## Syntax
 
 ```http
-Sec-CH-Device-Memory: <number>
+Device-Memory: <number>
 ```
 
 ## Directives
@@ -49,16 +49,16 @@ Sec-CH-Device-Memory: <number>
 
 ## Examples
 
-The server first needs to opt in to receive `Sec-CH-Device-Memory` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `Sec-CH-Device-Memory`:
+The server first needs to opt in to receive `Device-Memory` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `Device-Memory`:
 
 ```http
-Accept-CH: Sec-CH-Device-Memory
+Accept-CH: Device-Memory
 ```
 
-Then on subsequent requests the client might send `Sec-CH-Device-Memory` header back:
+Then on subsequent requests the client might send `Device-Memory` header back:
 
 ```http
-Sec-CH-Device-Memory: 1
+Device-Memory: 1
 ```
 
 ## Specifications
@@ -76,6 +76,7 @@ Sec-CH-Device-Memory: 1
 - {{DOMxRef("Navigator.deviceMemory")}}
 - {{DOMxRef("WorkerNavigator.deviceMemory")}}
 - Device client hints
+  - {{HTTPHeader("Sec-CH-Device-Memory")}}
   - {{HTTPHeader("Sec-CH-DPR")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
