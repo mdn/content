@@ -70,7 +70,7 @@ In the example implementation:
 
 1. The issuer app is a [Node.js server that uses the Express framework](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) to host the issuer HTTP endpoints. Check out the [app sample code](https://github.com/GoogleChromeLabs/private-state-token-demo/blob/main/src/index.js).
 2. The token issuer cryptographic component doesn't require any specific language but due to the performance requirements of this component, we're providing a C implementation as an example, which uses the [Boring SSL](https://boringssl.googlesource.com/boringssl/) library to manage tokens. Check out the [cryptographic component code example and more information about the installation](https://github.com/GoogleChromeLabs/private-state-token-demo/tree/main?tab=readme-ov-file#private-state-token-demo).
-3. The token issuer component uses custom EC keys to encrypt tokens. These keys must be protected and stored in secure storage.
+3. The token issuer component uses custom elliptic curve (EC) keys to encrypt tokens. These keys must be protected and stored in secure storage.
 
 #### Issuer server technical requirements
 
