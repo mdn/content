@@ -4,11 +4,11 @@ short-title: worklet
 slug: Web/API/WindowSharedStorage/worklet
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.WindowSharedStorage.worklet
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`worklet`** read-only property of the
 {{domxref("WindowSharedStorage")}} interface contains the {{domxref("SharedStorageWorklet")}} instance representing the shared storage worklet for the current origin.
