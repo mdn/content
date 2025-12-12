@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 39 was released on July 2, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 

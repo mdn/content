@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 30 was released on [June 10th, 2014](https://whattrainisitnow.com/release/?version=30). This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
