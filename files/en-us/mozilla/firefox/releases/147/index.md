@@ -1,13 +1,13 @@
 ---
-title: Firefox 147 release notes for developers (Nightly)
-short-title: Firefox 147 (Nightly)
+title: Firefox 147 release notes for developers (Beta)
+short-title: Firefox 147 (Beta)
 slug: Mozilla/Firefox/Releases/147
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 147 that affect developers.
-Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [January 13, 2026](https://whattrainisitnow.com/release/?version=147).
+Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [January 13, 2026](https://whattrainisitnow.com/release/?version=147).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -38,6 +38,8 @@ Firefox 147 is the current [Nightly version of Firefox](https://www.firefox.com/
   ([Firefox bug 1362499](https://bugzil.la/1362499)).
 - [View transition types](/en-US/docs/Web/API/View_Transition_API/Using_types) are now supported, which provide a mechanism by which different **types** can be specified for active view transitions. CSS can then be used to apply animations to DOM elements when their content updates, depending on the transition type specified. Firefox 147 adds support for single-page app (SPA) view transition types only, not cross-document view transition types.
   ([Firefox bug 2001878](https://bugzil.la/2001878)).
+- The {{cssxref("counter-increment")}}, {{cssxref("counter-reset")}}, {{cssxref("counter-set")}}, and {{cssxref("quotes")}} properties are now supported on the {{cssxref("::marker")}} pseudo-element.
+  ([Firefox bug 2000404](https://bugzil.la/2000404)).
 
 <!-- #### Removals -->
 
