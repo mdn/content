@@ -64,122 +64,18 @@ MIDDLEWARE = [
     # …
 ```
 
-## Creating a Django registration form
+## For Django Registration
 
-First, define a registration URL in the urls.py of the users app:
-
-```python
-from django.urls import path
-from . import views
-
-urlpatterns = [
-    path('login/', views.sign_in, name='login'),
-    path('logout/', views.sign_out, name='logout'),
-    path('register/', views.sign_up, name='register'),
-]
-```
-
-Second, define a RegisterForm class in the forms.py of the users.py file:
-
-```python
-from django import forms
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
-
-
-class LoginForm(forms.Form):
-    username = forms.CharField(max_length=65)
-    password = forms.CharField(max_length=65, widget=forms.PasswordInput)
-
-
-class RegisterForm(UserCreationForm):
-    class Meta:
-        model=User
-        fields = ['username','email','password1','password2']
-```
-
-The RegisterForm uses the built-in User model and includes four fields including username, email, password1, and password2, which the user needs to fill in for registration.
-
-Third, define the sign_up() view function in the views.py of the users app:
-
-```python
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from django.contrib.auth import login, authenticate, logout
-from .forms import LoginForm, RegisterForm
-
-def sign_up(request):
-    if request.method == 'GET':
-        form = RegisterForm()
-        return render(request, 'users/register.html', { 'form': form})
-```
-
-The sign_up() view function creates the RegisterForm object and renders it in the register.html template.
-
-Fourth, create a register.html template in the templates/users directory of the users application:
-
-```html
-{% extends 'base.html' %} {% block content %}
-
-<form method="POST" novalidate>
-  {% csrf_token %}
-  <h2>Sign Up</h2>
-  {{ form.as_p }}
-  <input type="submit" value="Register" />
-</form>
-
-{% endblock content%}
-```
-
-Code language: HTML, XML (xml)
-The registerl.html extends the base.html template of the project. It renders the RegisterForm (form).
-
-Note that the novalidate property removes the HTML5 validation. Once completing the project, you can remove this property to enable HTML5 validation.
-
-Finally, open the registration URL:
-http://127.0.0.1:8000/register/
-
-…you'll see the registration form as follows:
-![alt text](image.png)
-
-## Customize the Django register form
-
-The registration form has four fields with a lot of information. This information comes from the default User model.
-
-If you want to customize the information displayed on the form, you can modify the register.html template as follows:
-
-```html
-{% extends 'base.html' %}
-
-{% block content %}
-<form method="POST" novalidate>
-  {% csrf_token %}
-  <h2>Sign Up</h2>
-
-  {% for field in form %}
-  <p>
-    {% if field.errors %}
-    <ul class="errorlist">
-      {% for error in field.errors %}
-      <li>{{ error }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-     {{ field.label_tag }} {{ field }}
-  </p>
-  {% endfor %}
-  <input type="submit" value="Register" />
-</form>
-{% endblock content%}
-```
-
-Code language: HTML, XML (xml)
-The template iterates over fields of the form and outputs each field individually. For each field, it displays the error list if the validation fails.
-
-The new form will look like this:
-![alt text](image-1.png)
-
-If you fill out the information and click register, you'll get an error because we haven't added the code that handles the HTTP POST request.
+> [!NOTE]
+> Django does not include a built-in signup (user registration) view.
+> Some web frameworks provide a "create account" page automatically, but Django leaves
+> this for developers to implement if needed.
+>
+> In this tutorial, the absence of a public registration page is intentional.
+> Real-world libraries do not allow users to self-register — instead, librarians create
+> accounts after verifying a patron's identity.
+> For the LocalLibrary project, new users should therefore be created using the Django
+> admin interface, which is accessible only to librarian (staff) accounts.
 
 ## Creating users and groups
 
