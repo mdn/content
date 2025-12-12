@@ -34,6 +34,8 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### CSS
 
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) is now enabled by default.
+  ([Firefox bug 1988225](https://bugzil.la/1988225)).
 - The `-webkit-` prefixed version of the {{cssxref("perspective")}} property is now supported with unitless values — for example `-webkit-perspective: 800` — for increased compatibility.
   ([Firefox bug 1362499](https://bugzil.la/1362499)).
 - [View transition types](/en-US/docs/Web/API/View_Transition_API/Using_types) are now supported, which provide a mechanism by which different **types** can be specified for active view transitions. CSS can then be used to apply animations to DOM elements when their content updates, depending on the transition type specified. Firefox 147 adds support for single-page app (SPA) view transition types only, not cross-document view transition types.
