@@ -70,7 +70,7 @@ When using import attributes the code above would be written as shown below, and
 import data from "https://example.com/data.json" with { type: "json" };
 ```
 
-A runtime can read and process any attributes that it understands.
+All attributes you specify must be understood by the runtime, otherwise a syntax error is thrown.
 However, you cannot use unknown attributes — a runtime will throw a syntax error if it encounters an unknown attribute.
 
 ### Standard attributes
