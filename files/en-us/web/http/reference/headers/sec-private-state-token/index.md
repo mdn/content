@@ -52,13 +52,13 @@ Servers should ignore this header if it contains any other value.
 Sample request header sent during token issuance:
 
 ```http
-Sec-Private-State-Token: AAEEBCM9WGWUx398Pdr0SFE7NDo...
+Sec-Private-State-Token: AEB9WGWUx398Pdr0SFE7NDo…
 ```
 
 Sample response header:
 
 ```http
-Sec-Private-State-Token: AAEAAAAABNj1085Cukqmty...
+Sec-Private-State-Token: AEB9WGWUxj1085Cuk2qmt3y…
 ```
 
 ## Specifications
