@@ -115,13 +115,13 @@ The import will throw an exception if `example_styles.css` is served with any me
 
 ```js
 import exampleStyles from "https://example.com/example_styles.css" with { type: "css" };
-document.adoptedStyleSheets = [exampleStyles];
+
+document.adoptedStyleSheets.push(exampleStyles);
 ```
 
-Note that importing CSS modules into workers is not usually supported.
-It is allowed by the HTML specification if `CSSStyleSheet` is exposed to workers, but the CSSOM specification only exposes `CSSStyleSheet` in the main window thread.
+Note that importing CSS modules into workers is usually not supported, because  the CSSOM specification only exposes `CSSStyleSheet` in the window context.
 
-### Attributes modify runtime behavior
+### Intended semantics for import attributes
 
 An attribute can change the runtime's behavior at every stage of the module loading process:
 
