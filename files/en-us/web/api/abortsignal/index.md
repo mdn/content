@@ -185,10 +185,7 @@ Otherwise it completes normally and then resolves the promise.
 function myCoolPromiseAPI(/* …, */ { signal }) {
   return new Promise((resolve, reject) => {
     // If the signal is already aborted, immediately throw in order to reject the promise.
-    if (signal.aborted) {
-      reject(signal.reason);
-      return;
-    }
+    signal.throwIfAborted();
 
     // Perform the main purpose of the API
     // Call resolve(result) when done.
