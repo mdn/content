@@ -192,11 +192,15 @@ function myCoolPromiseAPI(/* …, */ { signal }) {
 
     // Watch for 'abort' signals
     // Passing `once: true` ensures the Promise can be garbage collected after abort is called
-    signal.addEventListener("abort", () => {
-      // Stop the main operation
-      // Reject the promise with the abort reason.
-      reject(signal.reason);
-    }, { once: true });
+    signal.addEventListener(
+      "abort",
+        () => {
+        // Stop the main operation
+        // Reject the promise with the abort reason.
+        reject(signal.reason);
+      },
+      { once: true },
+    );
   });
 }
 ```

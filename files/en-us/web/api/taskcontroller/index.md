@@ -71,9 +71,13 @@ We can also listen for [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event) ev
 This same approach would be used if the controller was an `AbortController`.
 
 ```js
-controller.signal.addEventListener("abort", (event) => {
-  console.log("Task aborted");
-}, { once: true });
+controller.signal.addEventListener(
+  "abort",
+  (event) => {
+    console.log("Task aborted");
+  },
+  { once: true },
+);
 ```
 
 Next we post the task, passing the controller signal in the optional argument.
