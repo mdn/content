@@ -23,32 +23,39 @@ Firefox {{VERSION}} is the current [Nightly version of Firefox](https://www.fire
 <!-- No notable changes. -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### MathML -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### SVG -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### CSS -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### JavaScript -->
 
 <!-- No notable changes. -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### HTTP -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### Security -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### APIs -->
 
@@ -57,10 +64,12 @@ Firefox {{VERSION}} is the current [Nightly version of Firefox](https://www.fire
 <!-- #### Media, WebRTC, and Web Audio -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### WebAssembly -->
 
 <!-- #### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
 
@@ -72,7 +81,10 @@ Firefox {{VERSION}} is the current [Nightly version of Firefox](https://www.fire
 
 ## Changes for add-on developers
 
+<!-- No notable changes. -->
+
 <!-- ### Removals -->
+<!-- Delete if empty -->
 
 <!-- ### Other -->
 
