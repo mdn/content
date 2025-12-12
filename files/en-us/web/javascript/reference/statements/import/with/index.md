@@ -70,8 +70,7 @@ When using import attributes the code above would be written as shown below, and
 import data from "https://example.com/data.json" with { type: "json" };
 ```
 
-All attributes you specify must be understood by the runtime, otherwise a syntax error is thrown.
-However, you cannot use unknown attributes — a runtime will throw a syntax error if it encounters an unknown attribute.
+All attributes you specify must be understood by the runtime — a runtime will throw a syntax error an unknown attribute is used.
 
 ### Standard attributes
 
@@ -119,7 +118,7 @@ import exampleStyles from "https://example.com/example_styles.css" with { type: 
 document.adoptedStyleSheets.push(exampleStyles);
 ```
 
-Note that importing CSS modules into workers is usually not supported, because  the CSSOM specification only exposes `CSSStyleSheet` in the window context.
+Note that importing CSS modules into workers is usually not supported, because the CSSOM specification only exposes `CSSStyleSheet` in the window context.
 
 ### Intended semantics for import attributes
 
