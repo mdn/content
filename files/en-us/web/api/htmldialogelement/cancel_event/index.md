@@ -8,11 +8,15 @@ browser-compat: api.HTMLDialogElement.cancel_event
 
 {{APIRef("HTML DOM")}}
 
-The **`cancel`** event fires on a {{HTMLElement("dialog")}} element when the user instructs the browser that they wish to dismiss the current open dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key.
+The **`cancel`** event fires on a {{HTMLElement("dialog")}} element when the user sends a [close request](https://html.spec.whatwg.org/multipage/interaction.html#close-request) to the user agent.
+
+Examples of close requests are:
+
+- Pressing the <kbd>Esc</kbd> key on desktop platforms
+- Calling the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method.
+- The back button on mobile platforms
 
 This event is cancelable but can not bubble.
-
-When a `<dialog>` is dismissed with the <kbd>Esc</kbd> key, both the `cancel` and {{domxref("HTMLDialogElement/close_event", "close")}} events are fired.
 
 ## Syntax
 
@@ -32,55 +36,80 @@ A generic {{domxref("Event")}}.
 
 ### Canceling a dialog
 
+The following example shows a button that, when clicked, opens a {{htmlelement("dialog")}} via the {{domxref("HTMLDialogElement.showModal()", "showModal()")}} method.
+
+From there you can trigger the `cancel` event by either clicking _Request Close_ button to close the dialog (via the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method), or press the <kbd>Esc</kbd> key.
+
+Preventing the dialog from closing is demonstrated with a checkbox.
+
 #### HTML
 
 ```html
-<dialog class="example-dialog">
-  <button class="close">Close</button>
+<dialog id="dialog">
+  <div>
+    <label><input type="checkbox" id="prevent-close" /> prevent close</label>
+  </div>
+  <button type="button" id="request-close">Request Close</button>
 </dialog>
 
-<button class="open-dialog">Open dialog</button>
+<button id="open">Open dialog</button>
+```
 
-<div class="result"></div>
+```html hidden
+<pre id="status-text"></pre>
 ```
 
 ```css hidden
-button,
-div {
-  margin: 0.5rem;
+#status-text {
+  height: 120px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
 }
 ```
 
-#### JavaScript
+```js hidden
+const statusText = document.getElementById("status-text");
+function log(text) {
+  statusText.innerText = `${statusText.innerText}${text}\n`;
+  statusText.scrollTop = statusText.scrollHeight;
+}
+```
 
 ```js
-const result = document.querySelector(".result");
+const dialog = document.getElementById("dialog");
+const openButton = document.getElementById("open");
+const requestCloseButton = document.getElementById("request-close");
+const preventCloseInput = document.getElementById("prevent-close");
 
-const dialog = document.querySelector(".example-dialog");
-
-dialog.addEventListener("cancel", (event) => {
-  result.textContent = "dialog was canceled";
+// Update button opens a modal dialog
+openButton.addEventListener("click", () => {
+  dialog.showModal();
 });
 
-const openDialog = document.querySelector(".open-dialog");
-openDialog.addEventListener("click", () => {
-  if (typeof dialog.showModal === "function") {
-    dialog.showModal();
-    result.textContent = "";
-  } else {
-    result.textContent = "The dialog API is not supported by this browser";
+// Request close
+requestCloseButton.addEventListener("click", () => {
+  // Triggers the cancel event
+  dialog.requestClose();
+});
+
+// Fired when requestClose() is called
+// Prevent the dialog from closing by calling event.preventDefault()
+dialog.addEventListener("cancel", (event) => {
+  if (preventCloseInput.checked) {
+    log("Dialog close cancelled");
+    event.preventDefault();
   }
 });
 
-const closeButton = document.querySelector(".close");
-closeButton.addEventListener("click", () => {
-  dialog.close();
+dialog.addEventListener("close", (event) => {
+  log("Dialog closed");
 });
 ```
 
 #### Result
 
-{{ EmbedLiveSample('Canceling a dialog', '100%', '100px') }}
+{{ EmbedLiveSample('Canceling a dialog', '100%', '250px') }}
 
 ## Specifications
 
