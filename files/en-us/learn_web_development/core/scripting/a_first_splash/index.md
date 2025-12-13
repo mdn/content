@@ -28,6 +28,9 @@ Now you've learned something about the theory of JavaScript and what you can do 
   </tbody>
 </table>
 
+> [!NOTE]
+> Starting from [Write your first JavaScript variable](https://scrimba.com/learn-javascript-c0v/~04?via=mdn), Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides some useful interactive lessons that take you through the real basics of JavaScript.
+
 We want to set really clear expectations here: You won't be expected to learn JavaScript by the end of this article, or even understand all the code we are asking you to write. Instead, we want to give you an idea of how JavaScript's features work together, and what writing JavaScript feels like. In subsequent articles you'll revisit all the features shown here in a lot more detail, so don't worry if you don't understand it all immediately!
 
 > [!NOTE]

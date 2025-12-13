@@ -679,6 +679,12 @@ Notice how the different columns receive the styles specified in the classes.
 > [!NOTE]
 > Even though `<colgroup>` and `<col>` mainly facilitate styling, they are an HTML feature, therefore we've covered them here rather than in our CSS modules. Is it also fair to say that they are a _limited_ feature — as shown on the [`<colgroup>` reference page](/en-US/docs/Web/HTML/Reference/Elements/colgroup#usage_notes), only a limited subset of styles can be applied to a `<col>` element, and most of the other settings that were historically available have been deprecated (removed, or flagged for removal).
 
+## Interactive table basics summary
+
+The following embedded content from Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides an interactive lesson summarizing most of the techniques taught in this article. Check it out for a recap of the most important points and some extra practice.
+
+<mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~03s" scrimtitle="HTML tables"></scrim-inline>
+
 ## Summary
 
 That wraps up the basics of HTML tables. In the next article, we'll look at some further features that can be used to make HTML tables more accessible to visually impaired people.
