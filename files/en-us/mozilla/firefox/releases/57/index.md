@@ -17,7 +17,7 @@ Firefox 57 has been given the release name **Quantum**, after the [Firefox Quant
 
 [Firefox's new parallel CSS engine](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/) — also known as **Quantum CSS** or **Stylo** — is enabled by default in Firefox 57 for desktop, with Mobile versions of Firefox to follow later on. Developers shouldn't notice anything significantly different, aside from a whole host of performance improvements. There are however a number of minor functional differences in Stylo, implemented to fix non-standard Gecko behavior that should be eliminated. We will report on such differences on reference pages and in the release notes as appropriate (see [Quantum CSS notes](#quantum_css_notes)).
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
