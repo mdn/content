@@ -1,29 +1,26 @@
 ---
-title: DPR header
-short-title: DPR
-slug: Web/HTTP/Reference/Headers/DPR
+title: Sec-CH-DPR header
+short-title: Sec-CH-DPR
+slug: Web/HTTP/Reference/Headers/Sec-CH-DPR
 page-type: http-header
-status:
-  - deprecated
-  - non-standard
-browser-compat: http.headers.DPR
+browser-compat: http.headers.Sec-CH-DPR
 sidebar: http
 ---
 
-{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}
 
-> [!WARNING]
-> The `DPR` header was renamed to {{HTTPHeader("Sec-CH-DPR")}} and the new name is now preferred as support for the old header may be removed in future.
-
-The HTTP **`DPR`** {{Glossary("request header")}} provides [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) about the client device pixel ratio (DPR).
+The HTTP **`Sec-CH-DPR`** {{Glossary("request header")}} provides [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) about the client device pixel ratio (DPR).
 This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
+
+> [!NOTE]
+> A previous version of this header was named {{HTTPHeader("DPR")}} without the `Sec-CH-` prefix. This is now deprecated and the `Sec-CH-DPR` version is recommended.
 
 The hint is useful when selecting image sources that best correspond to a screen's pixel density.
 This is similar to the role played by `x` descriptors in the `<img>` [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute to allow user agents to select a preferred image.
 
-If the `DPR` header appears more than once in a message the last occurrence is used.
+If the `Sec-CH-DPR` header appears more than once in a message the last occurrence is used.
 
-Servers that opt in to the `DPR` client hint will typically also specify it in the {{HTTPHeader("Vary")}} header to inform caches that the server may send different responses based on the header value in a request.
+Servers that opt in to the `Sec-CH-DPR` client hint will typically also specify it in the {{HTTPHeader("Vary")}} header to inform caches that the server may send different responses based on the header value in a request.
 
 <table class="properties">
   <tbody>
@@ -44,7 +41,7 @@ Servers that opt in to the `DPR` client hint will typically also specify it in t
 ## Syntax
 
 ```http
-DPR: <number>
+Sec-CH-DPR: <number>
 ```
 
 ## Directives
@@ -54,16 +51,16 @@ DPR: <number>
 
 ## Examples
 
-A server must first opt in to receive the `DPR` header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive `DPR`.
+A server must first opt in to receive the `Sec-CH-DPR` header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive `Sec-CH-DPR`.
 
 ```http
-Accept-CH: DPR
+Accept-CH: Sec-CH-DPR
 ```
 
-Then on subsequent requests the client might send `DPR` header to the server:
+Then on subsequent requests the client might send `Sec-CH-DPR` header to the server:
 
 ```http
-DPR: 2.0
+Sec-CH-DPR: 2.0
 ```
 
 ## Browser compatibility
@@ -73,7 +70,6 @@ DPR: 2.0
 ## See also
 
 - Device client hints
-  - {{HTTPHeader("Sec-CH-DPR")}}
   - {{HTTPHeader("Sec-CH-Device-Memory")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
