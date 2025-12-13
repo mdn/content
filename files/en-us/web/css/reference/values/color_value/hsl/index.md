@@ -86,10 +86,10 @@ hsl(H S L[ / A])
 The parameters are as follows:
 
 - `H`
-  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the color's {{CSSXref("&lt;hue&gt;")}} angle.
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{cssxref("angle")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the color's {{cssxref("hue")}} angle.
 
     > [!NOTE]
-    > The angles corresponding to particular hues differ across the sRGB (used by `hsl()` and {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces. See the {{CSSXref("&lt;hue&gt;")}} reference page for more detail and examples.
+    > The angles corresponding to particular hues differ across the sRGB (used by `hsl()` and {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces. See the {{cssxref("hue")}} reference page for more detail and examples.
 
 - `S`
   - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none` (equivalent to `0%` in this case). This value represents the color's saturation. Here `100%` is completely saturated, while `0%` is completely unsaturated (gray).
@@ -115,7 +115,7 @@ The parameters are as follows:
 - `from <color>`
   - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**. This is the original color that the relative color is based on. The origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
 - `H`
-  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the output color's {{CSSXref("&lt;hue&gt;")}} angle.
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{cssxref("angle")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the output color's {{cssxref("hue")}} angle.
 - `S`
   - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none` (equivalent to `0%` in this case). This represents the saturation of the output color. Here `100%` is completely saturated, while `0%` is completely unsaturated (gray).
 - `L`
@@ -130,7 +130,7 @@ The parameters are as follows:
 
 When using relative color syntax inside an `hsl()` function, the browser converts the origin color into an equivalent HSL color (if it is not already specified as such). The color is defined as three distinct color channel values — `h` (hue), `s` (saturation), and `l` (lightness) — plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
 
-- The `h` value is resolved to a {{cssxref("&lt;number&gt;")}} between `0` and `360`, inclusive, that represents the origin color's {{cssxref("&lt;hue&gt;")}} degree value.
+- The `h` value is resolved to a {{cssxref("&lt;number&gt;")}} between `0` and `360`, inclusive, that represents the origin color's {{cssxref("hue")}} degree value.
 - The `s` and `l` values are each resolved to a `<number>` between `0` and `100`, inclusive, where `100` is equivalent to `100%`.
 - The `alpha` value is resolved to a `<number>` between `0` and `1`, inclusive.
 
@@ -397,7 +397,7 @@ div.legacyHSLA {
 
 ## See also
 
-- {{CSSXref("&lt;hue&gt;")}} data type
+- {{cssxref("hue")}} data type
 - [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch) and [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) color functions
 - [Hue interpolation in `color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix#using_hue_interpolation_in_color-mix)
 - [List of all color notations](/en-US/docs/Web/CSS/Reference/Values/color_value)

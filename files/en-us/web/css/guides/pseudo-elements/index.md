@@ -62,7 +62,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
 
 - Web Video Text Tracks Format (WebVTT) cues:
   - {{cssxref("::cue")}}
-  - {{cssxref("::cue", "::cue()")}}
+  - {{cssxref("::cue()")}}
 
 - [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module
   - {{cssxref("::column")}}
@@ -75,9 +75,9 @@ The specification also defines the `::details-content` and `::search-text` pseud
 
 - [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
   - {{CSSXref(":host")}}
-  - {{CSSXref(":host_function", ":host()")}}
-  - {{CSSXref(":host-context", ":host-context()")}}
-  - {{CSSXref("::slotted", "::slotted()")}}
+  - {{cssxref(":host()")}}
+  - {{cssxref(":host-context()")}}
+  - {{cssxref("::slotted()")}}
 
 - [CSS shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) module
   - {{CSSXref("::part")}}
@@ -99,7 +99,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
   - [Universal selectors](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 
 - [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute of the `<input>` element
-- [`:placeholder-shown`](/en-US/docs/Web/CSS/Reference/Selectors/:placeholder-shown) selector
+- {{cssxref(":placeholder-shown")}} selector
 
 - [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content)
   - {{cssxref("content")}} property

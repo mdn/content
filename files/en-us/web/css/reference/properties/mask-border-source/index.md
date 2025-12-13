@@ -32,7 +32,7 @@ mask-border-source: unset;
 
 - `none`
   - : No mask border is used.
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
   - : Image reference to use for the mask border.
 
 ## Formal definition

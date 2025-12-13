@@ -6,7 +6,7 @@ browser-compat: css.at-rules.import.layer
 sidebar: cssref
 ---
 
-The **`layer()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used along with the [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) to put the imported resource in a separate named [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer).
+The **`layer()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used along with the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) to put the imported resource in a separate named [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer).
 
 ## Syntax
 

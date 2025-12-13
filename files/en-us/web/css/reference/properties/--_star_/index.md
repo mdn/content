@@ -6,7 +6,7 @@ browser-compat: css.properties.custom-property
 sidebar: cssref
 ---
 
-Property names that are prefixed with `--`, like `--example-name`, represent _custom properties_ that contain a value that can be used in other declarations using the {{cssxref("var", "var()")}} function.
+Property names that are prefixed with `--`, like `--example-name`, represent _custom properties_ that contain a value that can be used in other declarations using the {{cssxref("var()")}} function.
 
 Custom properties are scoped to the element(s) they are declared on, and participate in the cascade: the value of such a custom property is that from the declaration decided by the cascading algorithm.
 
@@ -86,7 +86,7 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 
 ## See also
 
-- The {{cssxref("var", "var()")}} function
+- The {{cssxref("var()")}} function
 - {{cssxref("@property")}} at-rule
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) guide
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module

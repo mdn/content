@@ -54,8 +54,8 @@ The values includes the `<image>` to be used as the mask border, and optionally 
 
 ### Values
 
-- {{cssxref("&lt;image&gt;")}}
-  - : The location of the image resource to be used as a mask image, {{cssxref("&lt;gradient&gt;")}}, or other {{cssxref("&lt;image&gt;")}} value.
+- {{cssxref("image")}}
+  - : The location of the image resource to be used as a mask image, {{cssxref("gradient")}}, or other {{cssxref("image")}} value.
 - `none`
   - : Used to specify that a border box is to have no mask image.
 - {{cssxref("length")}}
