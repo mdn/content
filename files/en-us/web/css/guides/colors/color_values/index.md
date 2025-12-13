@@ -145,7 +145,7 @@ The color functions that have a [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/h
 
 ### HSL functional notation
 
-The `hsl()` CSS color function was the first hue-based color function to be supported in browsers. `hsl()` is more intuitive than `rgb()` — it is easier to determine the effect of varying hue (`h`), saturation (`s`), and lightness (`l`) values than it is to declare specific colors via red, green, and blue channel values. In addition, HSL is similar to the HSB (hue, saturation, and brightness) color picker in Photoshop, which made it immediately familiar to many people when first supported.
+The `hsl()` CSS color function was the first hue-based color function to be supported in browsers. `hsl()` is more intuitive than `rgb()` — it is generally easier to determine the effect of varying hue (`h`), saturation (`s`), and lightness (`l`) values than it is to declare specific colors via red, green, and blue channel values. In addition, HSL is similar to the HSB (hue, saturation, and brightness) color picker in Photoshop, which made it immediately familiar to many people when first supported.
 
 The `hsl()` and `hwb()` sRGB color functions are both cylindrical. Hue defines the color as an [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle) on a circular {{glossary("color wheel")}}. The diagram below shows an HSL color cylinder. Saturation is a percentage that defines how far the color is along a scale between completely grayscale and having the maximum possible amount of the given hue.
 As the value of lightness increases, the color transitions from the darkest to the lightest possible color (from black to white).

@@ -125,7 +125,7 @@ If you are using flexbox and find yourself disabling some of the flexibility, yo
 
 ### Box alignment
 
-Most grid alignment features were originally defined is the [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout). These features provided proper alignment control for the first time and made it easy to center a box on the page. Flex items can stretch to the height of the flex container, meaning that equal height columns were possible. These properties are now defined in the [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module, and are used in multiple layout modes, including grid layout.
+Most grid alignment features were originally defined is the [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout). These features provided proper alignment control for the first time and enabled centering a box on the page. Flex items can stretch to the height of the flex container, meaning that equal height columns were possible. These properties are now defined in the [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module, and are used in multiple layout modes, including grid layout.
 
 We will be taking a proper look at [Aligning items in CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Box_alignment) later. For now, here is a comparison between examples of flexbox and grid.
 

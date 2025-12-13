@@ -232,7 +232,7 @@ The value of {{cssxref("grid-template-areas")}} must show a complete grid, other
 
 ## Redefining the grid using media queries
 
-As our layout is now contained in one part of the CSS, this makes it very easy to make changes at different breakpoints. You can do this by redefining the grid, the position of items on the grid, or both at once.
+As our layout is now contained in one part of the CSS, we can make changes for different breakpoints in one location in our codebase. You can do this by redefining the grid, the position of items on the grid, or both at once.
 
 When doing this, define the names for your areas outside of any media queries. That way the content area would always be called `main` no matter where on the grid it is placed.
 
@@ -320,7 +320,7 @@ We can then redefine that layout inside [media queries](/en-US/docs/Web/CSS/Guid
 
 ## Using `grid-template-areas` for UI elements
 
-Many of the grid examples you will find online make the assumption that you will use grid for main page layout, however grid can be just as useful for small elements as those larger ones. Using {{cssxref("grid-template-areas")}} can be especially nice as it is easy to see in the code what your element looks like.
+Many of the grid examples you will find online make the assumption that you will use grid for main page layout, however grid can be just as useful for small elements as those larger ones. Using {{cssxref("grid-template-areas")}} can be especially nice as it enables seeing in the code what your element looks like.
 
 ### Media object example
 

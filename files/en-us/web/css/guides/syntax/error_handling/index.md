@@ -140,7 +140,7 @@ If the content between the last semi-colon and the end of the stylesheet is vali
 </style>
 ```
 
-Here the `move` animation is valid. Failing to properly close CSS statements doesn't necessarily make the statements invalid. That said, do not take advantage of CSS's forgiving nature. Always close all of your statements and style blocks. It makes your CSS easier to read and maintain and ensures that the browser parses the CSS as you intended.
+Here the `move` animation is valid. Failing to properly close CSS statements doesn't necessarily make the statements invalid. That said, do not take advantage of CSS's forgiving nature. Always close all of your statements and style blocks. It makes your CSS more readable and maintainable and ensures that the browser parses the CSS as you intended.
 
 #### Unclosed comments
 

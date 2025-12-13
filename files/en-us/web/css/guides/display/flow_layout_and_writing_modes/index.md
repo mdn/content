@@ -177,7 +177,7 @@ body {
 
 {{EmbedLiveSample("inline-change-mode", "", "240px")}}
 
-A block-level box will establish a new block formatting context, meaning that if its inner display type would be `flow`, it will get a computed display type of `flow-root`. This is shown in the next example where the box which displays as `horizontal-tb` contains a float which is contained due to its parent establishing a new BFC.
+A block-level box will establish a new [block formatting context (BFC)](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context), meaning that if its inner display type would be `flow`, it will get a computed display type of `flow-root`. This is shown in the next example where the box which displays as `horizontal-tb` contains a float which is contained due to its parent establishing a new BFC.
 
 ```html live-sample___block-change-mode
 <div class="box">
@@ -288,7 +288,7 @@ body {
 
 {{EmbedLiveSample("width")}}
 
-Therefore, we have new properties of {{cssxref("block-size")}} and {{cssxref("inline-size")}}. If we give our block an `inline-size` of 100px, it doesn't matter whether we are in a horizontal or a vertical writing mode, `inline-size` will always mean the size in the inline direction.
+Therefore, we have the properties of {{cssxref("block-size")}} and {{cssxref("inline-size")}}. If we give our block an `inline-size` of 100px, it doesn't matter whether we are in a horizontal or a vertical writing mode, `inline-size` will always mean the size in the inline direction.
 
 ```html live-sample___inline-size
 <div class="box">
@@ -321,7 +321,7 @@ The [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_prope
 
 ## Summary
 
-In most cases, flow layout works as you would expect it to when changing the writing mode of the document or parts of the document. This can be used to properly typeset vertical languages or for creative reasons. CSS is making this easier by way of introducing logical properties and values so that when working in a vertical writing mode sizing can be based on element's inline and block size. This will be useful when creating components which can work in different writing-modes.
+In most cases, flow layout works as you would expect it to when changing the writing mode of the document or parts of the document. This can be used to properly typeset vertical languages or for creative reasons. With CSS logical properties and values, vertical writing mode sizing can be based on element's inline and block size. This is useful when creating components which can work in different writing-modes.
 
 ## See also
 
