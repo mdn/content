@@ -7,8 +7,6 @@ browser-compat: http.headers.Sec-Fetch-Storage-Access
 sidebar: http
 ---
 
-
-
 The HTTP **`Sec-Fetch-Storage-Access`** {{Glossary("fetch metadata request header")}} provides the "storage access status" for the current fetch context.
 
 The status can indicate that permission to access [unpartitioned](/en-US/docs/Web/Privacy/Guides/State_Partitioning#state_partitioning) third-party cookies:
