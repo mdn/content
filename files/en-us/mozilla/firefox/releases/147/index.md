@@ -40,6 +40,8 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2001878](https://bugzil.la/2001878)).
 - The {{cssxref("counter-increment")}}, {{cssxref("counter-reset")}}, {{cssxref("counter-set")}}, and {{cssxref("quotes")}} properties are now supported on the {{cssxref("::marker")}} pseudo-element.
   ([Firefox bug 2000404](https://bugzil.la/2000404)).
+- The {{cssxref("position-anchor")}} value `none` is now supported, which enables an implicit or explicit association between a [CSS anchor](/en-US/docs/Web/CSS/Guides/Anchor_positioning) and a positioned element to be removed.
+  ([Firefox bug 1999972](https://bugzil.la/1999972)).
 
 <!-- #### Removals -->
 
