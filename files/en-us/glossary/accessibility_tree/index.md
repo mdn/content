@@ -22,7 +22,7 @@ There are four properties in an accessibility tree object:
 
 Additionally, the accessibility tree often contains information on what can be done with an element: a link can be _followed_, a text input can be _typed into_, etc.
 
-While still in draft form within the Web Incubator Community Group as of April 2022, the **[Accessibility Object Model](https://wicg.github.io/aom/explainer.html) (AOM)** intends to incubate APIs that make it easier to express accessibility semantics and potentially allow read access to the computed accessibility tree.
+While still in draft form within the Web Incubator Community Group as of April 2022, the **[Accessibility Object Model](https://wicg.github.io/aom/explainer.html) (AOM)** intends to incubate APIs that enable expressing accessibility semantics and potentially allow read access to the computed accessibility tree.
 
 ## See also
 
