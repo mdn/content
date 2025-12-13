@@ -13,18 +13,21 @@ The **`<article>`** [HTML](/en-US/docs/Web/HTML) element represents a self-conta
 ```html interactive-example
 <article class="forecast">
   <h1>Weather forecast for Seattle</h1>
-  <article class="day-forecast">
+
+  <section class="day-forecast">
     <h2>03 March 2018</h2>
     <p>Rain.</p>
-  </article>
-  <article class="day-forecast">
+  </section>
+
+  <section class="day-forecast">
     <h2>04 March 2018</h2>
     <p>Periods of rain.</p>
-  </article>
-  <article class="day-forecast">
+  </section>
+
+  <section class="day-forecast">
     <h2>05 March 2018</h2>
     <p>Heavy rain.</p>
-  </article>
+  </section>
 </article>
 ```
 
