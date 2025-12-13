@@ -59,6 +59,14 @@ map.set(key, map.get(key) ?? defaultValue);
 
 ## Examples
 
+### Multimap
+
+In a map where each key is mapped to an array of values, you can use `getOrInsert()` to ensure that the array exists for a given key before attempting to push a new value to the array.
+
+```js
+map.getOrInsert(key, []).push(value);
+```
+
 ### Applying default values
 
 You can use `getOrInsert()` to ensure that a key exists in a map, even if you currently don't need its value. This is usually to normalize user input.

@@ -113,13 +113,13 @@
   },
 
   "secure_context_header_copy": {
-    "de": "Diese Funktion ist nur in <a href='/de/docs/Web/Security/Secure_Contexts'>sicheren Kontexten</a> (HTTPS) in einigen oder allen <a href='#browser-kompatibilität'>unterstützenden Browsern</a> verfügbar.",
-    "en-US": "This feature is available only in <a href='/en-US/docs/Web/Security/Secure_Contexts'>secure contexts</a> (HTTPS), in some or all <a href='#browser_compatibility'>supporting browsers</a>.",
-    "es": "Esta función está disponible solo en <a href='/es/docs/Web/Security/Secure_Contexts'>contextos seguros</a> (HTTPS), en algunos o todos los <a href='#browser_compatibility'>navegadores que lo soportan</a>.",
-    "fr": "Cette fonctionnalité est uniquement disponible dans des <a href='/fr/docs/Web/Security/Secure_Contexts'>contextes sécurisés</a> (HTTPS), pour certains <a href='#compatibilité_des_navigateurs'>navigateurs qui la prennent en charge</a>.",
-    "ja": "この機能は一部またはすべての<a href='#browser_compatibility'>対応しているブラウザー</a>において、<a href='/ja/docs/Web/Security/Secure_Contexts'>安全なコンテキスト</a> (HTTPS) でのみ利用できます。",
-    "ko": "이 기능은 일부 또는 모든 <a href='#브라우저_호환성'>지원 브라우저</a>의 <a href='/ko/docs/Web/Security/Secure_Contexts'>보안 컨텍스트</a> (HTTPS)에서만 사용할 수 있습니다.",
-    "zh-CN": "此特性仅在一些<a href='#浏览器兼容性'>支持的浏览器</a>的<a href='/zh-CN/docs/Web/Security/Secure_Contexts'>安全上下文</a>（HTTPS）中可用。"
+    "de": "Diese Funktion ist nur in <a href='/de/docs/Web/Security/Defenses/Secure_Contexts'>sicheren Kontexten</a> (HTTPS) in einigen oder allen <a href='#browser-kompatibilität'>unterstützenden Browsern</a> verfügbar.",
+    "en-US": "This feature is available only in <a href='/en-US/docs/Web/Security/Defenses/Secure_Contexts'>secure contexts</a> (HTTPS), in some or all <a href='#browser_compatibility'>supporting browsers</a>.",
+    "es": "Esta función está disponible solo en <a href='/es/docs/Web/Security/Defenses/Secure_Contexts'>contextos seguros</a> (HTTPS), en algunos o todos los <a href='#browser_compatibility'>navegadores que lo soportan</a>.",
+    "fr": "Cette fonctionnalité est uniquement disponible dans des <a href='/fr/docs/Web/Security/Defenses/Secure_Contexts'>contextes sécurisés</a> (HTTPS), pour certains <a href='#compatibilité_des_navigateurs'>navigateurs qui la prennent en charge</a>.",
+    "ja": "この機能は一部またはすべての<a href='#browser_compatibility'>対応しているブラウザー</a>において、<a href='/ja/docs/Web/Security/Defenses/Secure_Contexts'>安全なコンテキスト</a> (HTTPS) でのみ利用できます。",
+    "ko": "이 기능은 일부 또는 모든 <a href='#브라우저_호환성'>지원 브라우저</a>의 <a href='/ko/docs/Web/Security/Defenses/Secure_Contexts'>보안 컨텍스트</a> (HTTPS)에서만 사용할 수 있습니다.",
+    "zh-CN": "此特性仅在一些<a href='#浏览器兼容性'>支持的浏览器</a>的<a href='/zh-CN/docs/Web/Security/Defenses/Secure_Contexts'>安全上下文</a>（HTTPS）中可用。"
   },
 
   "interactive_example_cta": {
