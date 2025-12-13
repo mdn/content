@@ -3,11 +3,14 @@ title: Device-Memory header
 short-title: Device-Memory
 slug: Web/HTTP/Reference/Headers/Device-Memory
 page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Device-Memory
 sidebar: http
 ---
 
-{{securecontext_header}}
+{{securecontext_header}}{{deprecated_header}}{{non-standard_header}}
 
 The HTTP **`Device-Memory`** {{Glossary("request header")}} is used in [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) to indicate the approximate amount of available RAM on the client device, in gigabytes.
 The header is part of the {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}.
