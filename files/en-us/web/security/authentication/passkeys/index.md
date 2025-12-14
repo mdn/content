@@ -111,7 +111,7 @@ The RP's front-end code passes the challenge into the `create()` or `get()` call
 
 When the web server verifies the response from the authenticator, the web server needs to check that the challenge is the same value it originally provided.
 
-The web server should also invalidate the challenge value about 10 minutes, and reject any responses containing the challenge that have arrived after this time.
+The web server should also invalidate the challenge value after about 10 minutes, and reject any responses containing the challenge that have arrived after this time.
 
 The challenge represents evidence that the authenticator's response was a response to _this_ request, and not an old response to some previous request that an attacker has managed to steal. This kind of attack is known as a _replay attack_.
 
