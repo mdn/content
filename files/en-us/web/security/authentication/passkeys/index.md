@@ -96,7 +96,8 @@ To create a discoverable credential, the RP should set the `residentKey` option 
 
 _Passkeys must always be discoverable credentials, so RPs implementing passkey-based authentication should always set these options_.
 
-> [!NOTE]: Technically, the difference between the two credential types is that with a discoverable credential, all the signing key material is stored in the authenticator, so the authenticator is able to generate signatures without needing any input from the RP.
+> [!NOTE]
+> Technically, the difference between the two credential types is that with a discoverable credential, all the signing key material is stored in the authenticator, so the authenticator is able to generate signatures without needing any input from the RP.
 >
 > Non-discoverable credentials may not store the signing key itself in the authenticator, but may instead generate the signing key every time it is needed, from an internal seed and the credential ID value. This means that they need the RP to provide the credential ID value for them to generate a signature. One advantage of this is that the keys take up less storage space, but this is not an issue for passkey authenticators.
 >
