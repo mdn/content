@@ -86,6 +86,10 @@ Content-DPR: 2.0
   - {{HTTPHeader("Sec-CH-Device-Memory")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
+  - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}
+  - {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}
+  - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}
+  - {{HTTPHeader("Width")}} {{deprecated_inline}}
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}}
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

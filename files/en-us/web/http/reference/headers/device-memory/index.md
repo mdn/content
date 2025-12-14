@@ -83,5 +83,9 @@ Device-Memory: 1
   - {{HTTPHeader("Sec-CH-DPR")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
+  - {{HTTPHeader("DPR")}} {{deprecated_inline}}
+  - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}
+  - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}
+  - {{HTTPHeader("Width")}} {{deprecated_inline}}
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}}
