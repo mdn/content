@@ -119,7 +119,7 @@ The following sections describe token and auth parameters for some common auth s
   - : A server-specified quoted string that the server can use to control the lifetime in which particular credentials will be considered valid.
     This must be uniquely generated each time a 401 response is made, and may be regenerated more often (for example, allowing a digest to be used only once).
     The specification contains advice on possible algorithms for generating this value.
-    The nonce value is opaque to the client.
+    The {{Glossary("Nonce", "nonce")}} value is opaque to the client.
 - `opaque`
   - : A server-specified quoted string that should be returned unchanged in the {{HTTPHeader("Authorization")}}.
     This is opaque to the client. The server is recommended to include Base64 or hexadecimal data.
