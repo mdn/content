@@ -1,5 +1,5 @@
 ---
-title: "Nonce"
+title: Nonce
 slug: Glossary/Nonce
 page-type: glossary-definition
 sidebar: glossarysidebar
