@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-In cryptography and computer security, a **`nonce`** is an arbitrary number that is used **only once** in a cryptographic communication. The term is derived from “number used once” and is commonly employed to prevent replay attacks, ensure message freshness, and add randomness to cryptographic protocols.
+In cryptography and computer security, a **`nonce`** is an arbitrary number that is used **only once** in a cryptographic communication. The term is derived from "number used once" and is commonly employed to prevent replay attacks, ensure message freshness, and add randomness to cryptographic protocols.
 
 Nonces are frequently used in authentication protocols, encryption schemes, hashing, and digital signatures. They may be generated randomly or pseudo-randomly, or derived deterministically, depending on the application and security requirements.
 
