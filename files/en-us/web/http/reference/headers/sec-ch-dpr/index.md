@@ -12,9 +12,6 @@ sidebar: http
 The HTTP **`Sec-CH-DPR`** {{Glossary("request header")}} provides [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) about the client device pixel ratio (DPR).
 This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
 
-> [!NOTE]
-> A previous version of this header was named {{HTTPHeader("DPR")}} without the `Sec-CH-` prefix. This is now deprecated and the `Sec-CH-DPR` version is recommended.
-
 The hint is useful when selecting image sources that best correspond to a screen's pixel density.
 This is similar to the role played by `x` descriptors in the `<img>` [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute to allow user agents to select a preferred image.
 
@@ -73,6 +70,7 @@ Sec-CH-DPR: 2.0
   - {{HTTPHeader("Sec-CH-Device-Memory")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
+  - {{HTTPHeader("DPR")}} {{deprecated_inline}}
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}}
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
