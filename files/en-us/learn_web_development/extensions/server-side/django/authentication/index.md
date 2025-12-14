@@ -64,19 +64,6 @@ MIDDLEWARE = [
     # …
 ```
 
-## For Django Registration
-
-> [!NOTE]
-> Django does not include a built-in signup (user registration) view.
-> Some web frameworks provide a "create account" page automatically, but Django leaves
-> this for developers to implement if needed.
->
-> In this tutorial, the absence of a public registration page is intentional.
-> Real-world libraries do not allow users to self-register — instead, librarians create
-> accounts after verifying a patron's identity.
-> For the LocalLibrary project, new users should therefore be created using the Django
-> admin interface, which is accessible only to librarian (staff) accounts.
-
 ## Creating users and groups
 
 You already created your first user when we looked at the [Django admin site](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site) in tutorial 4 (this was a superuser, created with the command `python manage.py createsuperuser`).
@@ -153,7 +140,11 @@ That's it! Now you have a "normal library member" account that you will be able 
 
 Django provides almost everything you need to create authentication pages to handle login, log out, and password management "out of the box". This includes a URL mapper, views and forms, but it does not include the templates — we have to create our own!
 
-In this section, we show how to integrate the default system into the _LocalLibrary_ website and create the templates. We'll put them in the main project URLs.
+In this section, we show how to integrate the default system into the _LocalLibrary_ website and create the templates.
+
+> [!NOTE]
+> Django does not include a built-in authentication view for initial user registration ("signup").
+> You can create one yourself if needed, but for this tutorial we assume that only librarians are allowed to register users, and that they would do so using the Django admin interface.
 
 > [!NOTE]
 > You don't have to use any of this code, but it is likely that you'll want to because it makes things a lot easier.
