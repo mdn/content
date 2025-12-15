@@ -162,7 +162,7 @@ Most of these services are easy to use, so we won't cover them in great detail. 
 3. Click on a font to open its details page.
 4. When you find a font you like, click on the **Get font** button in its details page to add it to the selected fonts page. If you wish to add another font, click your browser's back button and search again.
 5. Once you are done selecting fonts, click the **Get embed code** button on the selected fonts page and copy the provided `<link>` elements.
-6. Paste the `<link>` element into the `<head>` of your HTML document, above any existing stylesheet links.
+6. Paste the `<link>` elements into the `<head>` of your HTML document, above any existing stylesheet links.
 7. Copy the `font-family` CSS rules shown and use them in your CSS to apply the font.
 
 > [!NOTE]
