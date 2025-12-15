@@ -158,11 +158,12 @@ Online font services generally store and serve fonts for you so you don't have t
 Most of these services are easy to use, so we won't cover them in great detail. Let's have a quick look at Google Fonts so you can get the idea. Again, use copies of `web-font-start.html` and `web-font-start.css` as your starting point.
 
 1. Go to [Google Fonts](https://fonts.google.com/).
-2. Search for your favorite fonts or use the filters at the top of the page to display the kinds of fonts you want to choose and select a couple of fonts that you like.
-3. To select a font family, click on the font preview and press the ⊕ button alongside the font.
-4. When you've chosen the font families, press the _View your selected families_ button in the top right corner of the page.
-5. In the resulting screen, you first need to copy the line of HTML code shown and paste it into the head of your HTML file. Put it above the existing {{htmlelement("link")}} element, so that the font is imported before you try to use it in your CSS.
-6. You then need to copy the CSS declarations listed into your CSS as appropriate, to apply the custom fonts to your HTML.
+2. Browse or search for fonts using the filters and search bar.
+3. Click on a font family to open its details page.
+4. Use the controls to select the styles you want, then click **Get font**.
+5. In the panel that appears, choose **Get embed code** and copy the provided `<link>` element.
+6. Paste the `<link>` element into the `<head>` of your HTML document, above any existing stylesheet links.
+7. Copy the `font-family` CSS rules shown and use them in your CSS to apply the font.
 
 > [!NOTE]
 > You can find a completed version at [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html) and [google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css), if you need to check your work against ours ([see it live](https://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)).
