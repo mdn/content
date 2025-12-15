@@ -40,7 +40,7 @@ Currently, the {{glossary("RGB", "RGB color space")}} predominates as the space 
 
 ## The sRGB color space
 
-Color has many ways of being defined, as is apparent in the [`<color>` data type](/en-US/docs/Web/CSS/Reference/Values/color_value), including RGB, RGB decimal, RGB percent, HSL, HWB, LCH, Lab, and CMYK, among others.
+Color has many ways of being defined, as is apparent in the {{cssxref("&lt;color&gt;")}} data type, including RGB, RGB decimal, RGB percent, HSL, HWB, LCH, Lab, and CMYK, among others.
 
 For digital concerns, much of the technology has historically resided in the RGB color space. The RGB color model is extended to include "alpha" — RGBA — to allow specification of the opacity of a color. Other methods for measuring color involve measurements using other color spaces and are supported in modern displays and browsers. Still, color measurements in the RGB color space predominate, including in video production.
 
@@ -95,7 +95,7 @@ color: color(xyz-d65 0.59 0.28 0.96);
 color: color(xyz-d65 0.59 0.28 0.96 / 1);
 ```
 
-The first example uses one of the defined [named colors](/en-US/docs/Web/CSS/Reference/Values/named-color).
+The first example uses one of the defined {{cssxref("named-color")}}s.
 
 We can set the sRGB values directly as a percentage, with 0% being off (black) and 100% being the full value for that color. The values are in the order of red, green, and blue. We can also set the sRGB values directly by a number from 0 to 255.
 
@@ -262,7 +262,7 @@ The nature of blue light causes it to focus at a different location on the retin
 
 ## The special case of red
 
-Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimic the grayscale setting, use the CSS {{cssxref("filter")}} property with a {{cssxref("filter-function/grayscale", "grayscale()")}} or {{cssxref("filter-function/saturate", "saturate()")}} [`<filter-function>`](/en-US/docs/Web/CSS/Reference/Values/filter-function).
+Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimic the grayscale setting, use the CSS {{cssxref("filter")}} property with a {{cssxref("filter-function/grayscale", "grayscale()")}} or {{cssxref("filter-function/saturate", "saturate()")}} {{cssxref("filter-function")}}.
 
 ### Saturated red
 
