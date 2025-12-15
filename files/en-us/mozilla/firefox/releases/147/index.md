@@ -66,9 +66,9 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 1997962](https://bugzil.la/1997962)).
 - Brotli compression is now supported for both [`CompressionStream`](/en-US/docs/Web/API/CompressionStream/CompressionStream#brotli) and [`DecompressionStream`](/en-US/docs/Web/API/DecompressionStream/DecompressionStream#brotli).
   ([Firefox bug 1921583](https://bugzil.la/1921583)).
-- Service workers can now be ECMAScript module scripts.
+- Service workers can now be ECMAScript [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules).
   To load a service worker module, specify a [`type`](/en-US/docs/Web/API/ServiceWorkerContainer/register#type) of `'module'` when calling {{domxref("ServiceWorkerContainer.register()")}}.
-  ([Firefox bug 1360870](https://bugzil.la/1997962)).
+  ([Firefox bug 1360870](https://bugzil.la/1360870)).
 
 <!-- #### DOM -->
 
