@@ -37,10 +37,12 @@ export { names } from "module-name" with { key: "data", key2: "data2", /* …, *
 ### Exceptions
 
 - {{jsxref("SyntaxError")}}
-  - : An unsupported `key` was specified.
+  - : An unsupported `key` was specified in a _static import_.
 
 - {{jsxref("TypeError")}}
-  - : An unsupported value was used with a supported `key`.
+  - : An unsupported `key` was specified in a _dynamic import_.
+  
+Note that the behaviour for unsupported keys is undefined, but might result in an exception on some browsers.
 
 ## Description
 
