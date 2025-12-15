@@ -82,7 +82,7 @@ Let's create two classes: one for boring paragraphs and one for exciting ones. W
 ```html
 <p class="boring-text">Here is some plain old boring text.</p>
 <p>Here is some normal text that is neither boring nor exciting.</p>
-<p class="exciting-text">Contributing to MDN is easy and fun.</p>
+<p class="exciting-text">Contributing to MDN is fun.</p>
 ```
 
 #### CSS
