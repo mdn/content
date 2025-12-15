@@ -47,6 +47,10 @@ Computers connected to the internet are called **clients** and **servers**. A si
 - Clients are the typical web user's internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected to your mobile network) and web-accessing software available on those devices (usually a web browser like Firefox or Chrome).
 - Servers are computers that store webpages, sites, or apps. When a client wants to access a webpage, a copy of the webpage code is downloaded from the server onto the client machine to be rendered by the browser and displayed to the user.
 
+The following embedded content from Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a interactive deeper dive into what clients and servers are, including a quiz and some discussion.
+
+<mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~0lq" scrimtitle="Clients and servers"></scrim-inline>
+
 ## The other parts of the toolbox
 
 The client and server we've described above don't tell the whole story. There are many other parts involved, and we'll describe them below.
