@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-By default, scroll-driven animations start and end at the edges of the scrollport or viewport, depending on the animation type. However, this isn't always what you want. Often, effective animations either occur when the element being animated is in the center of it's container or is done animating by the time it reaches that point. In this guide, we look at controlling the start and ends of scroll-driven animations via @keyframe definitions, animation range properties, and setting insets. An basic understanding of CSS animations and scroll-driven animations is assumed.
+By default, with a view progress timeline, you track an element as it crosses the entire viewport. Often, you only want an animation to run during a specific section—for example, only while an element is entering the viewport or only within the first third of a scroll container viewport. In this guide we look at three ways of animating through just a section of the viewport: via `@keyframes` definitions, the `view()` function parameters, and the animation-range properties and values. An basic understanding of [CSS animations]() and [scroll-driven animations]() is assumed.
 
 ## Animation timelines primer
 
@@ -133,8 +133,6 @@ With default values, as seen in the previous [basic view progress timeline](#bas
   animation-name: endsAtThirty;
 }
 ```
-
-0 l0 l
 
 ```css hidden live-sample___selector30 live-sample___reverse
 .comparisonElement {
@@ -295,7 +293,7 @@ The effect we've created is still t lgood user experience. The element should be
 
 ```css hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset
 @layer basicStyles {
-  t l main {
+  main {
     width: 400px;
     padding: 0;
     height: 300px;
