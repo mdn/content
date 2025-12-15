@@ -20,7 +20,7 @@ The intention is for information about each company that completes enrollment to
 
 The following features require enrollment to be usable:
 
-- [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API)
+- [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) {{deprecated_inline}}
 - [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
 - Protected Audience API
 - [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
