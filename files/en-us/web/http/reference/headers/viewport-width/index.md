@@ -13,7 +13,7 @@ sidebar: http
 {{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 > [!WARNING]
-> The `Viewport-Width` header was renamed to {{HTTPHeader("Sec-CH-Viewport-Width")}} and the new name is now preferred as support for the old header may be removed in future.
+> The `Viewport-Width` header was renamed to {{HTTPHeader("Sec-CH-Viewport-Width")}} and the new name is now preferred.
 
 The HTTP **`Viewport-Width`** {{Glossary("request header")}} is a [device client hint](/en-US/docs/Web/HTTP/Guides/Client_hints) which provides the client's layout viewport width in {{Glossary("CSS pixel", "CSS pixels")}}.
 The value is rounded up to the smallest following integer (i.e., ceiling value).
