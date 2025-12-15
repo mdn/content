@@ -188,7 +188,7 @@ An RP can use this information to help a user manage their credentials. For exam
 
 - If the passkey is not backup eligible, then the RP might respond by inviting the user to create another passkey in an authenticator that is backup eligible.
 
-- If the RP is migrating users away from passwords, and the user has an old password, and the assertion indicates that the passkey has been backed up, then the RP might invite the user to delete their old password, since they don't need it as a backup any more.
+- If the RP is migrating users away from passwords, and the user has an old password as well as a passkey, and the assertion indicates that the passkey has been backed up, then the RP might invite the user to delete their old password, since they don't need it as a backup any more.
 
 ## Migrating from passwords
 
