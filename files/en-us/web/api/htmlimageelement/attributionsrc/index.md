@@ -4,11 +4,11 @@ short-title: attributionSrc
 slug: Web/API/HTMLImageElement/attributionSrc
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.HTMLImageElement.attributionSrc
 ---
 
-{{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{deprecated_header}}
 
 The **`attributionSrc`** property of the {{domxref("HTMLImageElement")}} interface that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the image request. It reflects the `<img>` element's [`attributionsrc`](/en-US/docs/Web/HTML/Reference/Elements/img#attributionsrc) content attribute.
 

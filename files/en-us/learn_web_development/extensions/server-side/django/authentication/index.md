@@ -140,7 +140,11 @@ That's it! Now you have a "normal library member" account that you will be able 
 
 Django provides almost everything you need to create authentication pages to handle login, log out, and password management "out of the box". This includes a URL mapper, views and forms, but it does not include the templates — we have to create our own!
 
-In this section, we show how to integrate the default system into the _LocalLibrary_ website and create the templates. We'll put them in the main project URLs.
+In this section, we show how to integrate the default system into the _LocalLibrary_ website and create the templates.
+
+> [!NOTE]
+> Django does not include a built-in authentication view for initial user registration ("signup").
+> You can create one yourself if needed, but for this tutorial we assume that only librarians are allowed to register users, and that they would do so using the Django admin interface.
 
 > [!NOTE]
 > You don't have to use any of this code, but it is likely that you'll want to because it makes things a lot easier.

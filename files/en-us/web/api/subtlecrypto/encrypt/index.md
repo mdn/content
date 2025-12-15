@@ -85,7 +85,7 @@ A given counter block value must never be used more than once with the same key:
 
 Typically this is achieved by splitting the initial counter block value into two concatenated parts:
 
-- A [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) (that is, a number that may only be used once). The nonce part of the block stays the same for every block in the message. Each time a new message is to be encrypted, a new nonce is chosen. Nonces don't have to be secret, but they must not be reused with the same key.
+- A {{Glossary("Nonce", "nonce")}} (that is, a number that may only be used once). The nonce part of the block stays the same for every block in the message. Each time a new message is to be encrypted, a new nonce is chosen. Nonces don't have to be secret, but they must not be reused with the same key.
 - A counter. This part of the block gets incremented each time a block is encrypted.
 
 Essentially: the nonce should ensure that counter blocks are not reused from one message to the next, while the counter should ensure that counter blocks are not reused within a single message.
