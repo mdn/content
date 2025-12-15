@@ -107,7 +107,7 @@ The example also shows the legacy syntax for both [`rgb()` and `rgba()`](/en-US/
 
 The following examples show "HSL", which stands for _Hue, Saturation, and Lightness_. HSL color values are considered by many to be more intuitive than RGB values. The color produced from the settings are still in the sRGB colorspace, but {{cssxref("color_value/hsl")}} is an intuitive syntax for many. The hue is adjusted as an angle, and it is easy to create a user interface using a knob or circular control to adjust the hue. Do note that HSL colors incorporate _lightness_, not _luminance_, which is a significant consideration.
 
-The next examples shows "HWB" which stands for _Hue, Whiteness, and Blackness_. With both `hsl()` and {{cssxref("color_value/hwb", "hwb()")}} the first value can be a [`<number>`](/en-US/docs/Web/CSS/Reference/Values/number) or an {{cssxref("angle")}} value. When unitless, the value is interpreted as `deg` degrees.
+The next examples shows "HWB" which stands for _Hue, Whiteness, and Blackness_. With both `hsl()` and {{cssxref("color_value/hwb", "hwb()")}} the first value can be a {{cssxref("number")}} or an {{cssxref("angle")}} value. When unitless, the value is interpreted as `deg` degrees.
 
 There are several other color functions and color spaces. The last three examples demonstrate representing magenta using the {{cssxref("color_value/lab", "lab()")}}, {{cssxref("color_value/oklch", "oklch()")}}, and {{cssxref("color_value/color", "color()")}} color functions.
 
@@ -262,7 +262,7 @@ The nature of blue light causes it to focus at a different location on the retin
 
 ## The special case of red
 
-Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimic the grayscale setting, use the CSS {{cssxref("filter")}} property with a [`grayscale()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/grayscale) or [`saturate()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/saturate) [`<filter-function>`](/en-US/docs/Web/CSS/Reference/Values/filter-function).
+Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimic the grayscale setting, use the CSS {{cssxref("filter")}} property with a {{cssxref("filter-function/grayscale", "grayscale()")}} or {{cssxref("filter-function/saturate", "saturate()")}} [`<filter-function>`](/en-US/docs/Web/CSS/Reference/Values/filter-function).
 
 ### Saturated red
 
