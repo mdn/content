@@ -3,12 +3,12 @@ title: Topics API
 slug: Web/API/Topics_API
 page-type: web-api-overview
 status:
-  - experimental
+  - deprecated
   - non-standard
 browser-compat: api.Document.browsingTopics
 ---
 
-{{DefaultAPISidebar("Topics API")}}{{SeeCompatTable}}{{non-standard_header}}
+{{DefaultAPISidebar("Topics API")}}{{non-standard_header}}{{deprecated_header}}
 
 > [!WARNING]
 > This feature is currently opposed by two browser vendors.

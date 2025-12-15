@@ -4,12 +4,12 @@ short-title: browsingTopics
 slug: Web/API/HTMLIFrameElement/browsingTopics
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
   - non-standard
 browser-compat: api.HTMLIFrameElement.browsingTopics
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
+{{APIRef("HTML DOM")}}{{non-standard_header}}{{deprecated_header}}
 
 > [!WARNING]
 > This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section for details of opposition.

@@ -340,21 +340,7 @@ The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS 
 
 ## JavaScript
 
-### CSS module scripts
-
-CSS module scripts are now supported, allowing a stylesheet to be loaded into a script as a {{domxref("CSSStyleSheet")}} instance using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement.
-The `import` statement must also specify the `type` [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) and set it to `"css"`, and the stylesheet must be served with the [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) of `text/css`.
-([Firefox bug 1720570](https://bugzil.la/1720570)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 145           | No                  |
-| Developer Edition | No            | No                  |
-| Beta              | No            | No                  |
-| Release           | No            | No                  |
-
-- `layout.css.module-scripts.enabled`
-  - : Set to `true` to enable.
+**No experimental features in this release cycle.**
 
 ## APIs
 
@@ -699,7 +685,7 @@ The following `<meta>` elements are equivalent:
 <meta name="rating" content="RTA-5042-1996-1400-1577-RTA" />
 ```
 
-Browsers that recognise this element can then take steps to restrict users from viewing the content. Firefox's implementation replaces the page with the content found at `about:restricted`, which explains to the user that they are trying to view restricted content, explains why they cannot view it, and gives them a back button to return from whence they came.
+Browsers that recognize this element can then take steps to restrict users from viewing the content. Firefox's implementation replaces the page with the content found at `about:restricted`, which explains to the user that they are trying to view restricted content, explains why they cannot view it, and gives them a back button to return from whence they came.
 
 See [Firefox bug 1991135](https://bugzil.la/1991135) for more details.
 

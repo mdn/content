@@ -25,6 +25,7 @@ arcseconds
 ARGB
 arsinh
 artanh
+ASACP
 ASCAP
 ascendingly
 ASCIIID
