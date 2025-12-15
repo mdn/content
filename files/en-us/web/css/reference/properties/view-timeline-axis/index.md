@@ -6,7 +6,7 @@ browser-compat: css.properties.view-timeline-axis
 sidebar: cssref
 ---
 
-The **`view-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property is used to specify the scrollbar direction that will be used to provide the timeline for a [named view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/timelines#named_view_progress_timeline) animation.
+The **`view-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property specifies the scroll direction to be  used for a [named view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline).
 
 ## Syntax
 
@@ -30,19 +30,19 @@ view-timeline-axis: unset;
 ### Values
 
 - `<axis>`
-  - : An {{ cssxref("axis") }} keyword value describing the direction, or axis, of the scrollport that controls the scroll-driven animation. The default value is `block`.
+  - : Specifies the scroll direction used by the view progress timeline. The value can be one of the {{cssxref("axis")}} keywords: `block`, `inline`, `x`, or `y`. The default value is `block`.
 
 ## Description
 
-The `view-timeline-axis` property specifies the direction, or `<axis>`, of [named view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline) derived from the element's box.
+The `view-timeline-axis` property specifies the direction, or `<axis>`, of [named view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline) that are based on the element's box.
 
-When applying CSS {{cssxref("@keyframes")}} animations to elements using [CSS animations](/en-US/docs/Web/CSS/Guides/Animations), by default, the animations progress based on the time-based default timeline. When setting the animation progress via a view progress timeline, `view-timeline-axis` specifies the direction (axis) that controls the timeline progression.
+By default, CSS {{cssxref("@keyframes")}} animations progress along the time-based default timeline. When you set the animation progress via a view progress timeline instead, `view-timeline-axis` specifies the direction that controls the timeline progression.
 
-When animating based on view progress timelines, progression of the animation along the timelines is based on visibility of the element, or _subject_. The `view-timeline-axis` property is set on the subject.
+For view progress timelines, progression of the animation along the timelines is based on the visibility of the element, or _subject_. The `view-timeline-axis` property is set on the subject.
 
 The subject must be nested inside a scrollable element. If the scrollable element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
 
-The `view-timeline-axis`, along with the {{cssxref("view-timeline-inset")}} and {{cssxref("view-timeline-name")}} properties are components of the {{cssxref("view-timeline")}} shorthand property.
+The `view-timeline-axis`, along with the {{cssxref("view-timeline-inset")}} and {{cssxref("view-timeline-name")}} properties, is a component of the {{cssxref("view-timeline")}} shorthand property.
 
 ## Formal definition
 
