@@ -7,7 +7,7 @@ sidebar: glossarysidebar
 
 Continuous integration (CI) is a software development practice in which changes to the source are frequently integrated into the main codebase.
 
-It's an important practice whenever a team of developers is working on a shared codebase. In this situation, different developers might be making overlapping changes to the code at the same time, each in their personal branches. Frequent integration of each developer's changes makes it much less likely that conflicts will occur, and much more intuitive to resolve them when they do.
+It's an important practice whenever a team of developers is working on a shared codebase. In this situation, different developers might be making overlapping changes to the code at the same time, each in their personal branches. Frequent integration of each developer's changes makes conflicts less likely to occur and more intuitive to resolve.
 
 As [Martin Fowler observes](https://martinfowler.com/articles/continuousIntegration.html#EveryonePushesCommitsToTheMainlineEveryDay):
 

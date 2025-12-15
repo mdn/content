@@ -9,7 +9,7 @@ A **color wheel**, or a _color circle_, represents a palette of colors in chart 
 
 Color wheels are convenient for comparing colors expressed in polar or cylindrical coordinates, like [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), or [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch).
 
-In such cases, _complementary colors_ are often found opposite on the same diameter. Similarly, _monochromatic colors_ – colors of the same _tone_ but of different _shades_ – are located on the same radius, and _triadic colors_ – three colors evenly spaced around the color wheel that lead to colors that work well together.
+In such cases, _complementary colors_ are often found at opposite positions on the same diameter, and _triadic colors_ (a set of three colors that complement each other) are evenly spaced around the color wheel. Similarly, _monochromatic colors_ – colors of the same _tone_ but of different _shades_ – are located on the same radius.
 
 Color wheels are used in real life when we want to choose between different hues. For example, when selecting wall paint or the color for a piece of furniture.
 
