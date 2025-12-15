@@ -36,7 +36,6 @@ bufferSubData(target, offset, srcData)
   - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that views an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}
     that will be copied into the data store.
 
-
 ### Return value
 
 None ({{jsxref("undefined")}}).
