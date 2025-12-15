@@ -2484,6 +2484,10 @@
       "inh": "Sensor",
       "impl": []
     },
+    "Origin": {
+      "inh": "",
+      "impl": []
+    },
     "OscillatorNode": {
       "inh": "AudioScheduledSourceNode",
       "impl": []
@@ -2625,6 +2629,10 @@
       "impl": []
     },
     "PerformanceTiming": {
+      "inh": "",
+      "impl": []
+    },
+    "PerformanceTimingConfidence": {
       "inh": "",
       "impl": []
     },
