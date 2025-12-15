@@ -10,7 +10,7 @@ sidebar: cssref
 
 There are three key advantages to CSS animations over traditional script-driven animation techniques:
 
-1. With just a few lines of you define basic animations; you can create them without even having to know JavaScript.
+1. You can create basic animations with a few lines of CSS; no JavaScript required.
 2. The animations run well, even under moderate system load. Simple animations can often perform poorly in JavaScript. The rendering engine can use frame-skipping and other techniques to keep the performance as smooth as possible.
 3. Letting the browser control the animation sequence lets the browser optimize performance and efficiency by, for example, reducing the update frequency of animations running in tabs that aren't currently visible.
 

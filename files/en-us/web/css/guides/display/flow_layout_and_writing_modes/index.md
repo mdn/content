@@ -288,7 +288,7 @@ body {
 
 {{EmbedLiveSample("width")}}
 
-Therefore, we have the properties of {{cssxref("block-size")}} and {{cssxref("inline-size")}}. If we give our block an `inline-size` of 100px, it doesn't matter whether we are in a horizontal or a vertical writing mode, `inline-size` will always mean the size in the inline direction.
+Therefore, we have the {{cssxref("block-size")}} and {{cssxref("inline-size")}} properties. If we give our block an `inline-size` of 100px, it doesn't matter whether we are in a horizontal or vertical writing mode; `inline-size` will always mean the size in the inline direction.
 
 ```html live-sample___inline-size
 <div class="box">
@@ -321,7 +321,7 @@ The [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_prope
 
 ## Summary
 
-In most cases, flow layout works as you would expect it to when changing the writing mode of the document or parts of the document. This can be used to properly typeset vertical languages or for creative reasons. With CSS logical properties and values, vertical writing mode sizing can be based on element's inline and block size. This is useful when creating components which can work in different writing-modes.
+In most cases, flow layout works as expected when changing the writing mode of whole documents or individual sections. This can be used to properly typeset vertical languages or for creative reasons. With CSS logical properties and values, vertical writing mode sizing can be based on an element's inline and block size. This is useful for creating components that work in different writing modes.
 
 ## See also
 

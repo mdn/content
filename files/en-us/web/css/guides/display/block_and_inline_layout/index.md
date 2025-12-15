@@ -255,7 +255,7 @@ strong {
 
 ## Summary
 
-In this guide, we have looked at how elements display in normal flow, as block and inline elements. Due to the default behavior of these elements, an HTML document with no CSS styling at all, will display in a readable way. By understanding how normal flow works you will better understand layout, which is an important starting point when making changes to how elements are displayed.
+In this guide, we have looked at how elements display in normal flow, as block and inline elements. An HTML document with no CSS styling at all will display in a readable way due to this default behavior. Understanding how normal flow works is an important starting point for understanding CSS layout as a whole.
 
 ## See also
 

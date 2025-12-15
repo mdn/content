@@ -320,7 +320,7 @@ We can then redefine that layout inside [media queries](/en-US/docs/Web/CSS/Guid
 
 ## Using `grid-template-areas` for UI elements
 
-Many of the grid examples you will find online make the assumption that you will use grid for main page layout, however grid can be just as useful for small elements as those larger ones. Using {{cssxref("grid-template-areas")}} can be especially nice as it enables seeing in the code what your element looks like.
+Many of the grid examples you will find online assume you are using grid for whole page layouts; however, grid can be just as useful for laying out small sections. Using {{cssxref("grid-template-areas")}} can be especially nice as it allows you to visualize what your element looks like in the code.
 
 ### Media object example
 
