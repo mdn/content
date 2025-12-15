@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.browsingTopics
 ---
 
-{{DefaultAPISidebar("Topics API")}}{{deprecated_header}}{{non-standard_header}}
+{{DefaultAPISidebar("Topics API")}}{{non-standard_header}}{{deprecated_header}}
 
 > [!WARNING]
 > This feature is currently opposed by two browser vendors.

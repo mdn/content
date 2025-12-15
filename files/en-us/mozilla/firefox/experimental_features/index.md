@@ -275,50 +275,6 @@ The CSS [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function can now p
 - `layout.css.relative-color-syntax.enabled`
   - : Set to `true` to enable.
 
-### CSS Anchor Positioning
-
-The [CSS Anchor Positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module defines a number of features that allow elements to be defined as anchor elements, and for other elements to be positioned relative to anchor elements.
-This allows, for example, tooltips to be displayed alongside associated content as it scrolls through the viewport, moving as needed when it would overflow the viewport, and disappearing when the anchor moves offscreen.
-The set of features are being progressively rolled out behind a preference (general: [Firefox bug 1988224](https://bugzil.la/1988224), {{cssxref("position-area")}}: [Firefox bug 1924086](https://bugzil.la/1924086), custom {{cssxref("@position-try")}} fallbacks: [Firefox bug 1962598](https://bugzil.la/1962598)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 145           | Yes                 |
-| Developer Edition | 131           | No                  |
-| Beta              | 131           | No                  |
-| Release           | 131           | No                  |
-
-- `layout.css.anchor-positioning.enabled`
-  - : Set to `true` to enable.
-
-#### `anchor-size()` function
-
-The CSS {{CSSXRef("anchor-size")}} function lets you set an anchor-positioned element's size, position, and margins relative to the dimensions of its anchor element. ([Firefox bug 1972610](https://bugzil.la/1972610)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 145           | Yes                 |
-| Developer Edition | 142           | No                  |
-| Beta              | 142           | No                  |
-| Release           | 142           | No                  |
-
-- `layout.css.anchor-positioning.enabled`
-  - : Set to `true` to enable.
-
-#### `position-area` property
-
-The CSS {{CSSXRef("position-area")}} property allows you to position an anchor-positioned element relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 grid, where the anchoring element is the center cell. ([Firefox bug 1924086](https://bugzil.la/1924086)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 145           | Yes                 |
-| Developer Edition | 145           | No                  |
-| Beta              | 145           | No                  |
-| Release           | 145           | No                  |
-
-- `layout.css.anchor-positioning.enabled`
-  - : Set to `true` to enable.
-
 ### Allow pseudo-elements after element-backed pseudo-elements
 
 Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
@@ -384,21 +340,7 @@ The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS 
 
 ## JavaScript
 
-### CSS module scripts
-
-CSS module scripts are now supported, allowing a stylesheet to be loaded into a script as a {{domxref("CSSStyleSheet")}} instance using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement.
-The `import` statement must also specify the `type` [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) and set it to `"css"`, and the stylesheet must be served with the [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) of `text/css`.
-([Firefox bug 1720570](https://bugzil.la/1720570)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 145           | No                  |
-| Developer Edition | No            | No                  |
-| Beta              | No            | No                  |
-| Release           | No            | No                  |
-
-- `layout.css.module-scripts.enabled`
-  - : Set to `true` to enable.
+**No experimental features in this release cycle.**
 
 ## APIs
 
@@ -743,7 +685,7 @@ The following `<meta>` elements are equivalent:
 <meta name="rating" content="RTA-5042-1996-1400-1577-RTA" />
 ```
 
-Browsers that recognise this element can then take steps to restrict users from viewing the content. Firefox's implementation replaces the page with the content found at `about:restricted`, which explains to the user that they are trying to view restricted content, explains why they cannot view it, and gives them a back button to return from whence they came.
+Browsers that recognize this element can then take steps to restrict users from viewing the content. Firefox's implementation replaces the page with the content found at `about:restricted`, which explains to the user that they are trying to view restricted content, explains why they cannot view it, and gives them a back button to return from whence they came.
 
 See [Firefox bug 1991135](https://bugzil.la/1991135) for more details.
 

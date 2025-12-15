@@ -56,7 +56,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     > [!NOTE]
     > This attribute is considered a legacy attribute and redefined as `allow="payment"`.
 
-- `browsingtopics` {{Deprecated_Inline}} {{non-standard_inline}}
+- `browsingtopics` {{non-standard_inline}} {{deprecated_inline}}
   - : A boolean attribute that, if present, specifies that the selected topics for the current user should be sent with the request for the `<iframe>`'s source. See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 
 - `credentialless` {{Experimental_Inline}}

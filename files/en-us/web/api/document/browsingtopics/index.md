@@ -4,12 +4,12 @@ short-title: browsingTopics()
 slug: Web/API/Document/browsingTopics
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
   - non-standard
 browser-compat: api.Document.browsingTopics
 ---
 
-{{APIRef("Topics API")}}{{SeeCompatTable}}{{non-standard_header}}
+{{APIRef("Topics API")}}{{non-standard_header}}{{deprecated_header}}
 
 > [!WARNING]
 > This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section below for details of opposition.
