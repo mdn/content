@@ -263,7 +263,7 @@ This is useful in the situation where you have a listing of articles, for exampl
 
 ## Summary
 
-Whether you are in continuous media on the web or in a Paged Media format such as print or EPUB, understanding how content overflows is useful when dealing with any layout method. By understanding how overflow works in normal flow, you should find it easier to understand the implications of overflow content in layout methods such as grid and flexbox.
+Whether you are in continuous media on the web or in a Paged Media format such as print or EPUB, understanding how content overflows is useful when dealing with any layout method. Understanding how overflow works in normal flow enables a greater understanding of the implications of overflow content in layout methods such as grid and flexbox.
 
 ## See also
 

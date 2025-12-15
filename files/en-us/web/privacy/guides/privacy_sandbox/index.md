@@ -13,7 +13,7 @@ Google's **privacy sandbox** project is a series of proposals to satisfy cross-s
 
 ## Privacy sandbox features
 
-- [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API)
+- [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) {{deprecated_inline}}
   - : Enables developers to measure conversions — for example when a user clicks an ad embedded on one site and then proceeds to purchase the item over on the vendor's site — and then access reports on those conversions. It does this without relying on third-party tracking cookies.
 - [Bounce tracking mitigations](/en-US/docs/Web/Privacy/Guides/Bounce_tracking_mitigations)
   - : Bounce tracking mitigations protect users against bounce tracking by identifying tracker sites via a heuristic and periodically deleting cookies and other state data associated with them.
@@ -25,9 +25,9 @@ Google's **privacy sandbox** project is a series of proposals to satisfy cross-s
   - : Provides a mechanism for conveying trust in a user's authenticity from one browsing context to another, without sharing the user's identity or allowing their activity across websites to be tracked.
 - [Related website sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets)
   - : A mechanism for a company to declare relationships between different sites. Supporting browsers will then allow limited third-party cookie access across those sites for specific purposes, via the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
-- [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
+- [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) {{deprecated_inline}}
   - : A client-side storage mechanism that enables unpartitioned, cross-site data access while preserving privacy (i.e., without relying on tracking cookies).
-- [Topics API](/en-US/docs/Web/API/Topics_API)
+- [Topics API](/en-US/docs/Web/API/Topics_API) {{deprecated_inline}}
   - : Provides a mechanism for developers to implement use cases such as **interest-based advertising (IBA)** based on topics collected by the browser as the user navigates different pages, rather than collected by the developer by tracking the user's journey around different sites with third-party cookies.
 
 ## Other topics
