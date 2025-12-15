@@ -29,32 +29,13 @@ bufferSubData(target, offset, srcData)
     - `gl.ELEMENT_ARRAY_BUFFER`
       - : Buffer used for element indices.
 
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-    the following values are available additionally:
-    - `gl.COPY_READ_BUFFER`
-      - : Buffer for copying from one buffer object to another.
-    - `gl.COPY_WRITE_BUFFER`
-      - : Buffer for copying from one buffer object to another.
-    - `gl.TRANSFORM_FEEDBACK_BUFFER`
-      - : Buffer for transform feedback operations.
-    - `gl.UNIFORM_BUFFER`
-      - : Buffer used for storing uniform blocks.
-    - `gl.PIXEL_PACK_BUFFER`
-      - : Buffer used for pixel transfer operations.
-    - `gl.PIXEL_UNPACK_BUFFER`
-      - : Buffer used for pixel transfer operations.
-
-- `dstByteOffset`
+- `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in bytes where the data replacement
     will start.
 - `srcData` {{optional_inline}}
   - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that views an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}
     that will be copied into the data store.
-- `srcOffset`
-  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading
-    the buffer.
-- `length` {{optional_inline}}
-  - : A {{domxref("WebGL_API/Types", "GLuint")}} defaulting to 0.
+
 
 ### Return value
 
