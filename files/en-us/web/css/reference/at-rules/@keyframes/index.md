@@ -156,7 +156,7 @@ See [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using) and [scr
 
 ## See also
 
-- {{cssxref("animation-range")}}
+- {{cssxref("animation-name")}}
 - [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [CSS scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
