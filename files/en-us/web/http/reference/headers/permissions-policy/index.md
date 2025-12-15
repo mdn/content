@@ -88,7 +88,7 @@ You can specify
 - {{httpheader('Permissions-Policy/bluetooth','bluetooth')}} {{Experimental_Inline}}
   - : Controls whether the use of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) is allowed. When this policy is disabled, the methods of the {{DOMxRef("Bluetooth")}} object returned by {{DOMxRef("Navigator.bluetooth")}} will either return `false` or reject the returned {{JSxRef("Promise")}} with a `SecurityError` {{DOMxRef("DOMException")}}.
 
-- {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} {{Experimental_Inline}} {{non-standard_inline}}
+- {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} {{Experimental_Inline}} {{non-standard_inline}} {{deprecated_inline}}
   - : Controls access to the [Topics API](/en-US/docs/Web/API/Topics_API). Where a policy specifically disallows the use of the Topics API, any attempts to call the {{domxref("Document.browsingTopics()")}} method or send a request with a {{httpheader("Sec-Browsing-Topics")}} header will fail with a `NotAllowedError` {{domxref("DOMException")}}.
 
 - {{httpheader('Permissions-Policy/camera', 'camera')}} {{experimental_inline}}
