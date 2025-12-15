@@ -56,7 +56,8 @@ There are restrictions on the policy you can specify with this manifest key:
 - The {{CSP("object-src")}} keyword may be required, see [object-src directive](#object-src_directive) for details.
 - Directives that reference code – {{CSP("script-src")}}, {{CSP("script-src-elem")}}, {{CSP("worker-src")}}, and {{CSP("default-src")}} (if used as a fallback) – share the same secure source requirement. There are no restrictions on CSP directives that cover non-script content, such as {{CSP("img-src")}}.
 
-In Manifest V3, all CSP sources that refer to external or non-static content are forbidden. The only permitted values are `'none'`, `'self'`, and `'wasm-unsafe-eval'`.
+In Manifest V3, all CSP sources that refer to external or non-static content are forbidden. The only permitted values are `'none'`, `'self'`, and `'wasm-unsafe-eval'`. However, during development, you can access the localhost for unpacked extensions from Chrome 110 and temporarily loaded extensions from Firefox 147 by setting the origin as `localhost` or `127.0.0.1`.
+
 In Manifest V2, a source for a script directive is considered secure if it meets these criteria:
 
 - Wildcard hosts are not permitted, such as `"script-src 'self' *"`.
@@ -164,7 +165,13 @@ Allow remote scripts from any subdomain of "jquery.com":
   "content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"
   ```
 
-- Manifest V3 does not allow remote URLs in `script-src` of `extension_pages`.
+- Manifest V3 does not allow remote URLs in `script-src` of `extension_pages`. However, the localhost can be accessed during development for unpacked extensions from Chrome 110 and temporarily loaded extensions from Firefox 147:
+
+  ```json
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' http://localhost:3000"
+  }
+  ```
 
 Allow [`eval()` and friends](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval_and_friends):
 
