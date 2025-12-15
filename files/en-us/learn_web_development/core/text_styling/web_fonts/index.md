@@ -158,7 +158,7 @@ Online font services generally store and serve fonts for you so you don't have t
 Most of these services are easy to use, so we won't cover them in great detail. Let's have a quick look at Google Fonts so you can get the idea. Again, use copies of `web-font-start.html` and `web-font-start.css` as your starting point.
 
 1. Go to [Google Fonts](https://fonts.google.com/).
-2. Browse or search for fonts using the filters and search bar.
+2. Find a couple of fonts you like using the filters and search bar.
 3. Click on a font family to open its details page.
 4. Use the controls to select the styles you want, then click **Get font**.
 5. In the panel that appears, choose **Get embed code** and copy the provided `<link>` element.
