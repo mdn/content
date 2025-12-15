@@ -384,21 +384,7 @@ The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS 
 
 ## JavaScript
 
-### CSS module scripts
-
-CSS module scripts are now supported, allowing a stylesheet to be loaded into a script as a {{domxref("CSSStyleSheet")}} instance using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement.
-The `import` statement must also specify the `type` [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) and set it to `"css"`, and the stylesheet must be served with the [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) of `text/css`.
-([Firefox bug 1720570](https://bugzil.la/1720570)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 145           | No                  |
-| Developer Edition | No            | No                  |
-| Beta              | No            | No                  |
-| Release           | No            | No                  |
-
-- `layout.css.module-scripts.enabled`
-  - : Set to `true` to enable.
+**No experimental features in this release cycle.**
 
 ## APIs
 
