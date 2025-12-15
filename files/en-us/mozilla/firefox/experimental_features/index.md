@@ -729,7 +729,7 @@ The following `<meta>` elements are equivalent:
 <meta name="rating" content="RTA-5042-1996-1400-1577-RTA" />
 ```
 
-Browsers that recognise this element can then take steps to restrict users from viewing the content. Firefox's implementation replaces the page with the content found at `about:restricted`, which explains to the user that they are trying to view restricted content, explains why they cannot view it, and gives them a back button to return from whence they came.
+Browsers that recognize this element can then take steps to restrict users from viewing the content. Firefox's implementation replaces the page with the content found at `about:restricted`, which explains to the user that they are trying to view restricted content, explains why they cannot view it, and gives them a back button to return from whence they came.
 
 See [Firefox bug 1991135](https://bugzil.la/1991135) for more details.
 

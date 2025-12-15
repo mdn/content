@@ -83,7 +83,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **`<meta name="rating">`** (Nightly): `security.restrict_to_adults.always` and `security.restrict_to_adults.respect_platform`
 
-  The `<meta name="rating">` element allows websites to self-identify as restricted/adult content. Browsers that recognise this element can then take steps to restrict users from viewing the content. See [Restricting adult content with `<meta name="rating">`](/en-US/docs/Mozilla/Firefox/Experimental_features#restricting_adult_content_with_meta_namerating) for more details.
+  The `<meta name="rating">` element allows websites to self-identify as restricted/adult content. Browsers that recognize this element can then take steps to restrict users from viewing the content. See [Restricting adult content with `<meta name="rating">`](/en-US/docs/Mozilla/Firefox/Experimental_features#restricting_adult_content_with_meta_namerating) for more details.
   ([Firefox bug 1991135](https://bugzil.la/1991135)).
 
 - **Navigation API** (Nightly): `dom.navigation.webidl.enabled`
