@@ -55,7 +55,8 @@ in the callback list. You should not make any assumptions about its value. You c
 > While unlikely to cause issues for short-lived applications, you should avoid `0` as a sentinel value for invalid request identifier IDs and instead prefer unattainable values such as `null`.
 > The spec doesn't specify the overflowing behavior, so browsers have divergent behaviors. When overflowing, the value would either wrap around to 0, to a negative value, or fail with an error.
 > Unless overflow throws, request IDs are also not truly unique because there are only finitely many 32-bit integers for possibly infinitely many callbacks.
-> Note, however, that it would take ~500 days to reach the issue when rendering at 60Hz with 100 calls to `requestAnimationFrame()` per frame.
+>
+> > Note, however, that it would take approximately ~8 days to reach this issue when rendering at 60Hz with 100 calls to `requestAnimationFrame()` per frame.
 
 ## Examples
 
