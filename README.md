@@ -24,6 +24,7 @@ You can check if these are installed by running the following commands:
 node -v
 npm -v
 ```
+> ⚠️ Note: This project requires **Node.js version 24 or higher**.
 
 After you have installed Node.js, you can install the dependencies using `npm install` and start the local preview:
 
