@@ -34,7 +34,7 @@ field-sizing: unset;
 
 ## Description
 
-`field-sizing: content` overrides the default preferred sizing of form elements. This setting provides an easy way to configure text inputs to shrinkwrap their content and grow as more text is entered. They stop expanding when they reach maximum size limits (defined by the size of their containing element or set via CSS), at which point scrolling is required to view all the content.
+`field-sizing: content` overrides the default preferred sizing of form elements. This setting provides a way to configure text inputs to shrinkwrap their content and grow as more text is entered. They stop expanding when they reach maximum size limits (defined by the size of their containing element or set via CSS), at which point scrolling is required to view all the content.
 
 ### Elements affected by `field-sizing: content`
 

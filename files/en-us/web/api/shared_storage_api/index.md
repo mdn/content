@@ -7,7 +7,7 @@ status:
 browser-compat: api.SharedStorage
 ---
 
-{{deprecated_header}}{{DefaultAPISidebar("Shared Storage API")}}
+{{DefaultAPISidebar("Shared Storage API")}}{{deprecated_header}}
 
 > [!WARNING]
 > This feature is currently opposed by one browser vendor.

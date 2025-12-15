@@ -26,7 +26,7 @@ Named colors consists of standard colors, the [`transparent`](#transparent) and 
 
 #### Standard colors
 
-Basic colors have standard, easy-to-remember names:
+Basic colors have standard, memorable names:
 
 <table>
   <thead>
