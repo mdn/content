@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-By default, with a view progress timeline, you track an element as it crosses the entire viewport. Often, you only want an animation to run during a specific section—for example, only while an element is entering the viewport or only within the first third of a scroll container viewport. In this guide, we look at three ways of animating through partial sections of the viewport: via `@keyframes` definitions, the `view()` function parameters, and the animation-range properties and values.
+By default, with a view progress timeline, you track an element as it crosses the entire viewport. Often, you only want an animation to run during a specific section—for example, only while an element is entering the viewport or only within the first third of a scroll container viewport. In this guide, we look at three ways of animating through partial sections of the viewport: via `@keyframes` definitions, the `view()` function parameters, and the animation-range properties and values. While the most robust and best way to inset scroll driven animations is via the animation range properties, it is a topic that may be difficult to grok. We discuss insetting animations via updating `@keyframes` selectors and via the `view()` inset parameters to help you better understand why animation-range properties are useful and how they work.
 
 ## CSS animations and scroll driven timelines primer
 
@@ -27,7 +27,7 @@ In this example, we have directions to and from two monuments, with two fake `ye
 
 To create an animation, the first step is defining a keyframe animation. Here we define the `originalChangeEffect` animation that progresses from having a brown {{cssxref("background-color")}}, being fully transparent, and scaled down to zero width to being fully opaque, `forestgreen`, and full-size as it the animation ends:
 
-```css live-sample___default live-sample___range live-sample___range_both live-sample___view-inset live-sample___selector30 live-sample___reverse
+```css live-sample___default live-sample___range live-sample___range_both live-sample___view-inset live-sample___selector30 live-sample___reverse live-sample___contain_cover live-sample___contain_cover_tall
 @keyframes originalChangeEffect {
   0% {
     opacity: 0;
@@ -71,7 +71,7 @@ We could have included all these properties in a single {{cssxref("animation")}}
 }
 ```
 
-```html hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset live-sample___selector_success
+```html hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset live-sample___selector_success live-sample___contain_cover live-sample___contain_cover_tall
 <main class="scroller">
   <div class="container">
     <h1>Directions</h1>
@@ -84,8 +84,9 @@ We could have included all these properties in a single {{cssxref("animation")}}
       <li>Look up when you reach 64 Independence Ave!</li>
     </ol>
     <section>
-      <div class="animatedElement">DEMO</div>
-      <div class="comparisonElement">COMPARISON</div>
+      <div class="animatedElement"></div>
+      <div class="comparisonElement"></div>
+      <div class="thirdElement"></div>
     </section>
     <h2>Martin Luther King, Jr. Memorial to Lincoln Memorial</h2>
     <ol>
@@ -230,8 +231,10 @@ In the `30%` keyframe example, the map animated fully in `135px` when the top ed
 
 This method worked, but it is brittle. If we change the size of the animating element or the container, we would have to update parameter. We we could use [CSS custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) for the height of the subject element, the height of scroll viewport container, and then calculate the parameters with the CSS {{cssxref("calc()")}} function.
 
-```md
-topOffset = percentFromTopOfScroller \* (subjectHeight + scrollerHeight) / scrollerHeight
+```js
+topOffset =
+  (percentFromTopOfScroller * (subjectHeight + scrollerHeight)) /
+  scrollerHeight;
 ```
 
 The equation to get to `105%` is the percent from the top of the scroller top edge multiplied by the full height of the attachment range, divided by the height of the scroller. Imagine your future self trying to decipher your CSS:
@@ -277,23 +280,110 @@ What we skipped over is that to make the element fade in between the `0`, the st
 
 This animation fades in from `0%` to `20%` of the 450px attachment range, animating from the 0 to 90px mark, and fades out from 46.67% to 66.67% of that attachment range, `210px` to `300px` from the start edge. In other words, controlling the range of the animation using keyframes is brittle, requiring defining multiple similar animation definitions to create the same effect to handle the different ranges.
 
-Fortunately, there are other solutions. The [CSS scroll driven animations module](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) defines animation range values and properties that provide a more robust solution.
+Fortunately, there are other solutions.
 
 ## Controlling insets with animation-range
 
-In the previous examples, the animation attachment range was the sum of the height of the scroll container and the height of the subject element. While our scroll container was 300px tall, we had to base our keyframes and `view()` function parameters on a `450px` range. The `animation-range` properties allow us to define insets, such as `30%` or `100px`, while also defining the edges of the attachment range.
+In the previous examples, the animation attachment range was the sum of the height of the scroll container and the height of the subject element. While our scroll container was `300px` tall, we had to base our keyframe selectors and `view()` function parameters on a `450px` tall range. We shouldn't need to know the exact dimensions of our scroll containers and the dimensions of our subjects. And we shouldn't have to do math! The [CSS scroll driven animations module](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module provides us with robust properties and values that allow us to define insets, such as `30%` or `100px`, while also defining the edges of the attachment range.
 
-We can use the `animation-range` properties to limit the application of the animation to the defined range while defining the basis of the animation attachment range's starting and end edges. Animation keyframes can be attached in reference to an animation attachment range, restricting the animation's active interval to that range of a timeline, with the {{cssxref("animation-range-start")}} and {{cssxref("animation-range-end")}} properties, or the {{cssxref("animation-range")}} shorthand. Each of these properties accepts the keyword `auto`, a timeline-name, a `{{cssxref("length-percentage")}}, or a timeline-name and length-percentage.
+The {{cssxref("animation-range")}} properties can be used to limit the application of the animation to a defined range while also setting the basis of the animation attachment range's starting and end edges. The {{cssxref("animation-range-start")}} and {{cssxref("animation-range-end")}} properties, the two components of the `animation-range` shorthand, define an animation's attachment range, restricting any attached animation keyframes active interval to that range of a timeline. These properties accept the keyword `normal`, a {{cssxref("timeline-range-name")}}, a {{cssxref("length-percentage")}}, or both a `<timeline-range-name>` and a `<length-percentage>`.
 
 Before insetting the range with a length-percentage, let's learn how to control where the `0%` and `100%` points of the range are located with timeline names.
 
-### Timeline names
+### Defining the timeline range endpoints
 
-To keep the `100%` as the point where the end edge of the subject crosses the start edge of the scroll container that we've seen in all the previous examples, we use the keyword `cover`. To make it so the `100%` mark of our attachment range is when the start edge of our subject reaches the start edge of the scroll container, we can set the animation range name to `contain`.
+The `<timeline-range-name>` value type are six keywords, `cover`, `contain`, `entry`, `exit`, `entry-crossing`, and `exit-crossing`, each representing a predefined named timeline ranges. A _named timeline range_ is a named segment of an animation timeline. The start of the segment is represented as `0%` progress through the range; the end of the segment is represented as `100%` progress through the range.
+
+To keep the `100%` as the point where the end edge of the subject crosses the start edge of the scroll container that we've seen in all the previous examples, we use the keyword `cover`. To fully _contain_ the animation within the scrollport, making it so the range starts when the subject is fully visible, with the `0%` being when the end edge subject aligns with the end edge of the scroll container, and ending while the element is still visible, with the `100%` end of the range mark of our attachment range being when the start edge of our subject reaches the start edge of the scroll container, we use the `contain` value.
+
+#### Cover versus contain
+
+The `cover` value represents the full range of a view progress timeline, from the point where the subject element's start border edge first enters the scrollport's view progress visibility range (`0%` progress) to the point where the end border edge has completely left it (`100%` progress).
+The `contain` value represents the range of a view progress timeline where the subject element is fully contained by, or fully contains, the view progress visibility range within the scrollport. When the subject is smaller than the scroll container, the `contain` value ranges from the point where the subject element is first completely contained by the scroll port (`0%`), to the point where it is no longer completely contained by the scroll port (`100%`).
+
+In this example, we give three elements (we added a map) the same animation and timeline. The only different between the three is the `animation-range`.
+
+```css live-sample___contain_cover live-sample___contain_cover_tall
+.animatedElement,
+.comparisonElement,
+.thirdElement {
+  animation: originalChangeEffect 1ms linear forwards;
+  animation-timeline: view();
+}
+.animatedElement {
+  animation-range: contain;
+}
+.comparisonElement {
+  animation-range: cover;
+}
+.thirdElement {
+  animation-range: normal;
+}
+```
+
+```css hidden live-sample___contain_cover live-sample___contain_cover_tall
+.animatedElement::before {
+  content: "CONTAIN";
+}
+.comparisonElement::before {
+  content: "COVER";
+}
+.thirdElement::before {
+  content: "NORMAL";
+}
+section div {
+  width: calc(33% - 7px);
+}
+```
+
+{{EmbedLiveSample("contain_cover", "100%", "350")}}
+
+#### When the element isn't contained
+
+In the previous example, the subject fit neatly within the viewport. What if the subject isn't contained by the scroll container?
+
+With `contain`, if the subject element is larger than the scrollport, the animation range is from the point where the subject element first completely covers the scroll port, with the `0%` occurring when the start edge reaches the start edge of the container, to the point where it no longer completely covers the scrollport, with the `100%` occurring when the end edge crosses the containers end edge. If the subject is the same size as the scroll container, the animation still occurs, but over `0px`, so is not perceivable to the user.
+
+In this demonstration, all the maps are set to `animation-range: contain`, just their heights differ.
+
+```css hidden live-sample___contain_cover_tall
+section {
+  height: 300px;
+  margin-bottom: calc(200px + 1rem);
+}
+.animatedElement,
+.comparisonElement,
+.thirdElement {
+  animation-range: contain;
+}
+
+.animatedElement {
+  height: 500px;
+}
+.comparisonElement {
+  height: 300px;
+}
+.thirdElement {
+  height: 150px;
+}
+.animatedElement::before {
+  content: "500";
+}
+.comparisonElement::before {
+  content: "300";
+}
+.thirdElement::before {
+  content: "150";
+}
+```
+
+{{EmbedLiveSample("contain_cover_tall", "100%", "350")}}
+
+Multiple named timeline ranges can be associated with a given timeline, and multiple such ranges can overlap. For example, the `contain` range of a view progress timeline overlaps with its `cover` range.
 
 While you can control the insets of the effects of an animation via the keyframe selectors themselves or via the `view()` function parameters, as we just saw, these method of controlling insets have clear limitations. CSS scroll driven animations module defined properties and values enable defining when to start and stop animation along the timeline, effectively controlling when the animation effects occur without having to declare multiple different `@keyframe` animations or calculate complex attachment range sizes.
 
-As we saw earlier, the default keyframeanimation attachment range is the same as the entirety of the timeline defined by the {{cssxref("animation-timeline")}}. The default range is `0%`, when the target element starts to enter our viewport, to `100%`, when the target element completely exits the viewport.
+As we saw earlier, the default keyframe animation attachment range is the same as the entirety of the timeline defined by the {{cssxref("animation-timeline")}}. The default range is `0%`, when the target element starts to enter our viewport, to `100%`, when the target element completely exits the viewport.
 
 This range can be restricted, or inset.
 
@@ -355,7 +445,7 @@ Similar to scroll progress timelines, the view progress timeline can be named or
 The effect we've created is still good user experience. The element should be fully
 t l
 
-```css hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset live-sample___selector_success
+```css hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset live-sample___selector_success live-sample___contain_cover live-sample___contain_cover_tall
 @layer basicStyles {
   main {
     width: 400px;
@@ -387,7 +477,6 @@ t l
     gap: 10px;
   }
   section div {
-    width: calc(50% - 7px);
     color: white;
     text-shadow:
       1px 1px black,
@@ -429,6 +518,21 @@ t l
       margin-bottom: 1rem;
     }
   }
+}
+```
+
+```css hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset live-sample___selector_success
+.animatedElement::before {
+  content: "DEMO";
+}
+.comparisonElement::before {
+  content: "COMPARISON";
+}
+.thirdElement {
+  display: none;
+}
+section div {
+  width: calc(50% - 7px);
 }
 ```
 
