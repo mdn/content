@@ -25,7 +25,7 @@ Various operating systems do support such preferences and user agents are likely
 
 ## Examples
 
-This example has an annoying low contrast by default.
+This example has a box that uses a low-contrast dotted outline by default. When the **`prefers-contrast`** media feature is set to `more`, the outline is solid instead.
 
 ### HTML
 
