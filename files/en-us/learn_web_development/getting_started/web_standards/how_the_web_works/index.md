@@ -9,7 +9,7 @@ sidebar: learnsidebar
 
 _How the web works_ provides a high-level description of what happens when you use a web browser to navigate to a web page, explaining the magic that goes on behind the scenes to deliver the relevant code to your computer for the browser to assemble into something you can look at.
 
-This theory is not essential to writing web code in the short term, but before long you'll really start to benefit from understanding what's happening in the background.
+This theory is not essential to writing web code in the short term, but before long, you'll really start to benefit from understanding what's happening in the background.
 
 > [!NOTE]
 > This article does not cover how web browsers actually render code into web pages. That's covered in [How browsers load websites](/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites).
@@ -27,7 +27,7 @@ This theory is not essential to writing web code in the short term, but before l
       <td>
         <ul>
           <li>Clients and servers and their roles in the web.</li>
-          <li>DNS and how it works at a high level.</li>
+          <li>DNS and how it works, at a high level.</li>
           <li>The purpose of TCP/IP, HTTP, and packets.</li>
           <li>HTTP syntax at a basic level.</li>
           <li>Common HTTP response codes (e.g., 200, 301, 403, 404, and 500).</li>
@@ -45,7 +45,7 @@ Computers connected to the internet are called **clients** and **servers**. A si
 ![Two circles representing client and server. An arrow labelled request is going from client to server, and an arrow labelled responses is going from server to client](simple-client-server.png)
 
 - Clients are the typical web user's internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected to your mobile network) and web-accessing software available on those devices (usually a web browser like Firefox or Chrome).
-- Servers are computers that store webpages, sites, or apps. When a client wants to access a webpage, a copy of the webpage code is downloaded from the server onto the client machine to be rendered by the browser and displayed to the user.
+- Servers are computers that store webpages, sites, or apps. When a client wants to access a webpage, a copy of the webpage code is downloaded from the server to the client machine to be rendered by the browser and displayed to the user.
 
 ## The other parts of the toolbox
 
@@ -55,7 +55,7 @@ For now, let's imagine that the internet is a road. On one end of the road is th
 
 ![A black-and-white photo of a person crossing a road at a crosswalk](road.jpg)
 
-In order for data to get back and forth, we need the following things:
+For data to get back and forth, we need the following things:
 
 - **Your internet connection**: Allows you to send and receive data on the internet. It's basically like the street between your house and the shop.
 - **TCP/IP**: **Transmission Control Protocol** and **Internet Protocol** (TCP/IP) are communication protocols that define how data should travel across the internet. This is like the transport mechanisms that let you place an order, go to the shop, and buy your goods. In our example, this is like a car or a bike (or however else you might travel along the road).
@@ -81,15 +81,9 @@ When you type a web address (which is technically part of a [URL](#components_of
 
 Real web addresses ([URLs](#components_of_a_url)) aren't the nice, memorable strings you type into your address bar to find your favorite websites. They are special numbers that look like this: `192.0.2.172`.
 
-This is called an {{Glossary("IP Address", "IP address")}}, and it represents a unique location on the web. However, it's not very easy to remember, is it? That's why the Domain Name System was invented. This system uses special servers that match up a web address you type into your browser (like "mozilla.org") to the website's real (IP) address.
+This is called an {{Glossary("IP Address", "IP address")}}, and it represents a unique location on the web. However, it's not very easy to remember, is it? That's why the Domain Name System was invented. This system uses special servers that match up a web address you type into your browser (like `mozilla.org`) to the website's real (IP) address, which may vary depending on where you are in the world. Large websites are commonly made available on multiple servers, so that they load efficiently for different users worldwide.
 
-Websites can be reached directly via their IP addresses. You can use a DNS lookup tool to find the IP address of a website.
-
-Let's look up the MDN IP address now, and prove that it points to the same place as the web address:
-
-1. Go to the [NsLookup.io DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/), type in `developer.mozilla.org`, and press the button.
-2. In the results screen, copy the IP Address (the IPv4 address) to your system clipboard.
-3. Open a new browser tab, paste the IP Address into the address bar and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should see MDN load up, proving that the IP address points to it.
+You can use a DNS lookup tool to find the IP addresses of a website. For example, go to the [NsLookup.io DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/), type in `developer.mozilla.org`, and press the button.
 
 ## Packets explained
 
