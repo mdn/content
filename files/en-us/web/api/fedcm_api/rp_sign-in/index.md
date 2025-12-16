@@ -24,7 +24,7 @@ The FedCM API does not define the structure of the `token` object or what the RP
 
 For example, in the [FedCM for OAuth](https://github.com/aaronpk/oauth-fedcm-profile) profile, which describes how the [OpenID Connect (OIDC)](/en-US/docs/Web/Security/Authentication/Federated_identity#openid_connect) protocol could be implemented using FedCM, the token returned by `CredentialsContainer.get()` is an OAuth authorization code. The RP uses this code to retrieve the identity token from the IdP's token endpoint.
 
-When an RP chooses to work with a particular IdP, they will provide instructions for how to use the returned `token` value.
+When an RP chooses to work with a particular IdP, the IdP will provide instructions for how to use the returned `token` value.
 
 ### Example request
 
