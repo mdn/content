@@ -18,14 +18,14 @@ This is the event object for the {{domxref("HTMLElement.interest_event", "intere
 
 ## Constructor
 
-- {{DOMxRef("InterestEvent.InterestEvent", "InterestEvent()")}} {{experimental_inline}}
+- {{DOMxRef("InterestEvent.InterestEvent", "InterestEvent()")}} {{experimental_inline}} {{non-standard_inline}}
   - : Creates an `InterestEvent` object.
 
 ## Instance properties
 
 _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 
-- {{DOMxRef("InterestEvent.source")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{DOMxRef("InterestEvent.source")}} {{ReadOnlyInline}} {{experimental_inline}} {{non-standard_inline}}
   - : An {{domxref("Element")}} object instance that represents the interest invoker element on which interest was shown or lost to fire the event.
 
 ## Examples
