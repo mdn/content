@@ -8,7 +8,6 @@ sidebar: cssref
 
 The **`acos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is a trigonometric function that returns the inverse cosine of a number between `-1` and `1`. The function contains a single calculation that returns an {{cssxref("&lt;angle&gt;")}} between `0deg` and `180deg`.
 
-
 ## Syntax
 
 ```css
