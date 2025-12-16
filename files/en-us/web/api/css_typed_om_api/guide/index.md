@@ -232,7 +232,7 @@ Had the `width` or `height` been defined in a `<length>` or `<percent>`, the [`C
 There are other types available:
 
 - An [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) will return a {{domxref('CSSImageValue')}}.
-- A [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) would return a {{domxref('CSSStyleValue')}}.
+- A {{cssxref("&lt;color&gt;")}} would return a {{domxref('CSSStyleValue')}}.
 - A {{cssxref('transform')}} returns a `CSSTransformValue`.
 - A [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) returns a {{domxref('CSSUnparsedValue')}}.
 
