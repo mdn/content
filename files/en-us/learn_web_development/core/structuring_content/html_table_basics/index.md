@@ -681,7 +681,7 @@ Notice how the different columns receive the styles specified in the classes.
 
 ## Interactive table basics summary
 
-The following embedded content from Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides an interactive lesson summarizing most of the techniques taught in this article. Check it out for a recap of the most important points and some extra practice.
+The following embedded content from Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides an interactive lesson summarizing most of the techniques covered in this article. Check it out for a recap of the key points and some extra practice.
 
 <mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~03s" scrimtitle="HTML tables"></scrim-inline>
 
