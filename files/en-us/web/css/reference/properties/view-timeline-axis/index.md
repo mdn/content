@@ -6,7 +6,7 @@ browser-compat: css.properties.view-timeline-axis
 sidebar: cssref
 ---
 
-The **`view-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property specifies the scroll direction to be  used for a [named view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline).
+The **`view-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property specifies the scroll direction to be used for a [named view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline).
 
 ## Syntax
 
