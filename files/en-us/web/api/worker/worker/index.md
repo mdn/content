@@ -15,9 +15,7 @@ browser-compat: api.Worker.Worker
 > You can mitigate this risk by having a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that restricts the locations from which scripts can be loaded, and by always assigning {{domxref("TrustedScriptURL")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
 > See [Security considerations](#security_considerations) for more information.
 
-The **`Worker()`** constructor creates a {{domxref("Worker")}} object that executes the script at the specified URL.
-
-This script must obey the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+The **`Worker()`** constructor creates a {{domxref("Worker")}} object that executes the classic script or module at the specified URL.
 
 ## Syntax
 
@@ -29,11 +27,12 @@ new Worker(url, options)
 ### Parameters
 
 - `url`
-  - : A {{domxref("TrustedScriptURL")}} object or a string representing the URL of the script the worker will execute.
-    It must obey the same-origin policy.
+  - : A {{domxref("TrustedScriptURL")}} object or a string representing the URL of the script or module that the worker will execute.
+    This must be same-origin with the associated document (`blob:` URLs are same-origin), or a `data:` URL.
     The URL is resolved relative to the current HTML page's location.
 - `options` {{optional_inline}}
-  - : An object containing option properties that can be set when creating the object instance. Available properties are as follows:
+  - : An object containing option properties that can be set when creating the object instance.
+    Available properties are as follows:
     - `credentials`
       - : A string specifying the type of credentials to use for the worker.
         The value can be `omit`, `same-origin`, or _`include`.
@@ -56,9 +55,52 @@ new Worker(url, options)
   - : Thrown if `url` cannot be parsed.
 - `TypeError`
   - : Thrown if the `url` parameter is set with a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
-    <!-- This is also thrown if the fetched URL cannot be successfully parsed as its indicated type. -->
 
 ## Description
+
+The **`Worker()`** constructor creates a {{domxref("Worker")}} object that executes the classic script or module at the specified URL.
+
+The specified script must be [same-origin](/en-US/docs/Web/Security/Same-origin_policy) with the assocated document, but may itself import scripts or modules that are cross-origin (if permitted by CORS and other restrictions).
+
+### Module and classic workers
+
+Workers can be classic workers or module workers.
+The type of worker affects the worker constructor options, how the worker script is fetched, and how it is executed.
+
+The code below shows two ways you can construct a classic worker, and also how you specify the `type` of `"module"` to create a module worker.
+In both cases the script must be same-origin with the loading document and is resolved relative to the location of the launching document.
+
+```js
+// Construct a classic worker
+const worker = new Worker("worker_classic.js");
+
+// Construct a classic worker specifying the tyype
+const worker = new Worker("worker_classic.js", {
+  type: "classic",
+});
+
+// Construct a module worker
+const worker = new Worker("worker_module.js", {
+  type: "module",
+});
+```
+
+Module workers and their dependencies are loaded and executed using ECMAScript module semantics:
+
+- Fetched using [CORS](/en-US/docs/Web/HTTP/Guides/CORS)
+- All modules are resolved before any code is executed
+- Must be served with the media type `Content-Type: text/javascript`
+- Executed in {{glossary("Strict mode")}}
+- Dependencies are loaded via static [`import` statements](../en-US/docs/Web/JavaScript/Reference/Statements/import)
+- Dependencies are restricted by the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), in particular the `script-src` and `worker-src` directives
+  These can be used to control the locations from which modules can be fetched
+
+Classic workers are executed as scripts and import other scripts using {{domxref("WorkerGlobalScope.importScripts()")}}, not import statements.
+The are served in `no-cors` mode.
+
+As a result, both kinds of workers can load same-origin scripts by default.
+Cross-origin scripts are easier to load than cross-origin modules as they are not blocked by CORS by default.
+To import these modules they must be served with the {{httpheader("Access-Control-Allow-Origin")}} header and any document CSP must allow the `worker-src` location.
 
 ### `data:` and `blob:` URLs
 
@@ -84,7 +126,7 @@ This makes the path relative to the current script instead of the current HTML p
 
 ### Security considerations
 
-The script specified by the `url` argument is executed in the context of the current page.
+The script or module specified by the `url` argument is executed in the context of the current page.
 If the `url` is provided by a user, this is a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 
 It is extremely risky to accept and execute arbitrary URLs from untrusted origins.
@@ -93,8 +135,6 @@ This can restrict scripts to those from the current origin, or a specific set of
 
 If you're using this property and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) (using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive), you will need to always assign {{domxref("TrustedScriptURL")}} objects instead of strings.
 This ensures that the input is passed through a transformation function, which has the chance to reject or modify the URL before it is injected.
-
-<!-- Need to check COORs/COEP rules.-->
 
 ## Examples
 
