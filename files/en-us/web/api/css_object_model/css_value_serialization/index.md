@@ -31,13 +31,13 @@ Different APIs return `CSSStyleDeclaration` objects at different stages of [valu
 Each CSS value type has an associated serialization format defined by the CSS specifications. Some common rules include:
 
 - Keywords (like `auto`, `block`, `none`) serialize to all lowercase.
-- [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle): serialized to some angle unit, depending on the context (unspecified). For `element.style` and `getComputedStyle()`, this is `deg`.
+- {{cssxref("angle")}}: serialized to some angle unit, depending on the context (unspecified). For `element.style` and `getComputedStyle()`, this is `deg`.
 - {{cssxref("&lt;color&gt;")}}:
   - For sRGB colors ({{cssxref("named-color")}}, `transparent`, {{cssxref("system-color")}}, {{cssxref("hex-color")}}, `rgb`, `hsl`, `hwb`): serialized as legacy comma-separated syntax `rgb(R, G, B)` or `rgba(R, G, B, A)`, where all arguments are numbers. The `rgb` form is selected if the alpha is exactly `1`.
   - For `lab()`, `lch()`, `oklab()`, `oklch()`, and `color()` colors: the function form is preserved, with numeric arguments.
   - The keyword `currentColor` serializes as `currentcolor`.
-- [`<percentage>`](/en-US/docs/Web/CSS/Reference/Values/percentage): preserved as a percentage.
-- [`<ratio>`](/en-US/docs/Web/CSS/Reference/Values/ratio): serialized to two numbers separated by `" / "`.
+- {{cssxref("percentage")}}: preserved as a percentage.
+- {{cssxref("ratio")}}: serialized to two numbers separated by `" / "`.
 - {{cssxref("url_value", "&lt;url&gt;")}}: serialized as a quoted {{cssxref("url_value", "&lt;url&gt;")}} (`url("...")`), with the URL resolved to an absolute URL.
 
 Note that `<percentage>` values often get computed into absolute dimensions (like `<length>`) during value processing, so they may not appear as percentages when serialized from computed styles. For dimensions with units, such as {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;resolution&gt;")}}, and {{cssxref("&lt;time&gt;")}}, the serialized unit depends on the context and is not well-specified. `getComputedStyle()` and `element.style` serialize them into `Hz`, `px`, `dppx`, and `s` respectively.
