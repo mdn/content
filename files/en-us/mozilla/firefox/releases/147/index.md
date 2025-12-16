@@ -28,7 +28,11 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### SVG -->
+### SVG
+
+- When an SVG file is used as an [image source](/en-US/docs/Web/SVG/Guides/SVG_as_an_image) (for example, embedded into a page via an {{htmlelement("img")}} element or as a CSS {{cssxref("background-image")}}), the SVG URL now supports [media fragments](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments). ([Firefox bug 1999989](https://bugzil.la/1999989)). This means that:
+  - When the SVG includes a [SMIL animation](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL), you can use [temporal dimension](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments#temporal_dimension_fragment_syntax) syntax to play a portion of the animation from a specific start time to a specific end time, after which the animation will pause.
+  - You can use [spatial dimension](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments#spatial_dimension_fragment_syntax) syntax to display a specific area of the SVG document.
 
 <!-- #### Removals -->
 
