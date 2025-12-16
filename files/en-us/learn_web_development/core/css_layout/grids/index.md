@@ -157,7 +157,7 @@ You should see that the items have rearranged themselves such that there's one i
 
 ## Interactive grid lesson
 
-The following embedded content from Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides an interactive lesson summarizing the basics of CSS Grid, which also allows you to play with a live grid example and familiarize yourself with how the code works.
+The following embedded content from Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides an interactive lesson on the basics of CSS grid. It also includes a live grid example that you can play with to see how the code works.
 
 <mdn-scrim-inline url="https://scrimba.com/learn-css-grid-c02k/~01" scrimtitle="Your first grid"></scrim-inline>
 
