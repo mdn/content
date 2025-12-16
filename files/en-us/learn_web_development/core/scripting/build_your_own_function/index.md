@@ -179,7 +179,7 @@ and saving and reloading, you'll see that the message box appears without the bu
 If you tried the last experiment, make sure to undo the last change before carrying on.
 
 > [!NOTE]
-> For an extra bit of function practice before you move on, check out the Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> challenge [Write your first function](https://scrimba.com/fullstack-path-c0fullstack/~04h?via=mdn).
+> For more practice with functions, check out the Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> challenge [Write your first function](https://scrimba.com/fullstack-path-c0fullstack/~04h?via=mdn).
 
 ## Improving the function with parameters
 
