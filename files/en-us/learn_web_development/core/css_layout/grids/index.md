@@ -155,7 +155,7 @@ You should see that the items have rearranged themselves such that there's one i
 
 {{EmbedLiveSample('simple-grid_2', '100%', "130") }}
 
-## Interactive grid lesson
+## Interactive recap of grid concepts
 
 The following embedded content from Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides an interactive lesson on the basics of CSS grid. It also includes a live grid example that you can play with to see how the code works.
 
