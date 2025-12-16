@@ -7,6 +7,7 @@ sidebar: cssref
 ---
 
 The **`atan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is a trigonometric function that returns the inverse tangent of a number between `-∞` and `+∞`. The function contains a single calculation that returns an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
+
 ## Syntax
 
 ```css
