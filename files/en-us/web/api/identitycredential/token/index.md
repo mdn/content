@@ -12,18 +12,13 @@ browser-compat: api.IdentityCredential.token
 
 The **`token`** read-only property of the {{domxref("IdentityCredential")}} interface returns the token used to validate the associated sign-in.
 
-The token includes user identity information that has been signed with the {{glossary("Identity provider", "IdP")}}'s {{glossary("digital certificate")}}.
+The FedCM API does not define the structure of the `token` object or what the RP should do with it: this depends entirely on the federated identity protocol that the IdP implements.
 
-The {{glossary("Relying party", "relying party")}} (RP) sends the token to its server to validate the certificate, and on success can use the (now trusted) identity information in the token to sign them into their service (starting a new session), sign them up to their service if they are a new user, etc.
-
-If the user has never signed into the IdP or is logged out, the associated {{domxref("CredentialsContainer.get", "get()")}} call rejects with an error and the RP can direct the user to the IdP login page to sign in or create an account.
-
-> [!NOTE]
-> The exact structure and content of the validation token is opaque to the FedCM API, and to the browser. The IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see [Verify the Google ID token on your server side](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token), for example) to make sure they are using it correctly.
+When an RP chooses to work with a particular IdP, they will provide instructions for how to interpret and use the returned `token` value.
 
 ## Value
 
-A string.
+Any type.
 
 ## Examples
 
