@@ -53,7 +53,7 @@ A related feature — **interest invokers** — can be used to show popovers on 
 
 - {{cssxref("::backdrop")}}
   - : The `::backdrop` pseudo-element is a full-screen element placed directly behind popover elements, allowing effects to be added to the page content behind the popover(s) if desired (for example blurring it out).
-- [`interest-delay`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay), [`interest-delay-start`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-start), and [`interest-delay-end`](/en-US/docs/Web/CSS/Reference/Properties/interest-delay-end) {{experimental_inline}}
+- {{cssxref("interest-delay")}}, {{cssxref("interest-delay-start")}}, and {{cssxref("interest-delay-end")}} {{experimental_inline}}
   - : The `interest-delay` shorthand property and its related `interest-delay-start` and `interest-delay-end` longhands can be used to add a delay between the user showing or losing interest and the browser acting on that change.
 - [`:interest-source`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-source) and [`:interest-target`](/en-US/docs/Web/CSS/Reference/Selectors/:interest-target)
   - : These selectors can be used to apply styles to the interest invoker and its associated target element, respectively, only when interest is indicated.

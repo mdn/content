@@ -30,7 +30,7 @@ A {{jsxref('String')}}.
 
 ## Examples
 
-We create an element with a [`width`](/en-US/docs/Web/CSS/Reference/Properties/width)
+We create an element with a {{cssxref("width")}}
 determined using a [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function,
 then {{domxref("console/log_static", "console.log()")}} the
 `operator`.
