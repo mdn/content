@@ -57,7 +57,6 @@ in the callback list. You should not make any assumptions about its value. You c
 > Unless overflow throws, request IDs are also not truly unique because there are only finitely many 32-bit integers for possibly infinitely many callbacks.
 > Note, however, that it would take ~500 days to reach the issue when rendering at 60Hz with 100 calls to requestAnimationFrame() per frame.
 
-
 ## Examples
 
 In this example, an element is animated for 2 seconds (2000 milliseconds). The element
