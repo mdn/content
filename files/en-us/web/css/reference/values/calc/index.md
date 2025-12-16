@@ -146,7 +146,7 @@ This ensures that text size will scale if the page is zoomed.
 
 ### Positioning an object on screen with a margin
 
-`calc()` makes it easy to position an object with a set margin. In this example, the CSS creates a banner that stretches across the window, with a 40-pixel gap between both sides of the banner and the edges of the window:
+`calc()` enables positioning an object with a set margin. In this example, the CSS creates a banner that stretches across the window, with a 40-pixel gap between both sides of the banner and the edges of the window:
 
 ```css
 .banner {
