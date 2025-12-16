@@ -94,7 +94,7 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) and [
 
 [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
 
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape")}}
 - {{cssxref("basic-shape/circle","circle()")}}
 - {{cssxref("basic-shape/ellipse","ellipse()")}}
 - {{cssxref("basic-shape/inset","inset()")}}
@@ -120,7 +120,7 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) and [
 ## See also
 
 - {{cssxref("position_value", "&lt;position&gt;")}}
-- [`<easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function)
+- {{cssxref("easing-function")}}
 - {{cssxref("radial-gradient")}} function
 - [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media query
 - {{cssxref("will-change")}} CSS property

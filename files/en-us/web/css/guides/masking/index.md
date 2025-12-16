@@ -9,7 +9,7 @@ sidebar: cssref
 
 The **CSS masking** module defines masking and clipping, two different graphical operations that are used to partially or fully hide portions of visual elements.
 
-**Clipping** involves defining a closed vector path, shape, or polygon as a **clipping path**. Everything inside the clipping path region remains visible while everything outside is hidden, or "clipped out". The {{cssxref("clip-path")}} property specifies a {{cssxref("&lt;basic-shape&gt;")}} or references an SVG {{SVGElement("clipPath")}} element to be used as a clipping path.
+**Clipping** involves defining a closed vector path, shape, or polygon as a **clipping path**. Everything inside the clipping path region remains visible while everything outside is hidden, or "clipped out". The {{cssxref("clip-path")}} property specifies a {{cssxref("basic-shape")}} or references an SVG {{SVGElement("clipPath")}} element to be used as a clipping path.
 
 CSS **masking** properties are used to apply a mask to an element or its border. A graphical object is then painted onto the background or border, completely or partially masking out parts of the element or its border, depending on the opacity or luminance of the mask.
 
@@ -75,7 +75,7 @@ While masking provides more control and options, clipping can perform better if 
 ## Related concepts
 
 - [`<coord-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#values)
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
 - {{cssxref("&lt;position&gt;")}}
 - {{cssxref("&lt;url&gt;")}}
 
@@ -93,7 +93,7 @@ While masking provides more control and options, clipping can perform better if 
   - [`<repeat-style>`](/en-US/docs/Web/CSS/Reference/Properties/background-repeat#values) data type
 
 - [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
-  - {{cssxref("&lt;basic-shape&gt;")}} data type
+  - {{cssxref("basic-shape")}} data type
   - {{cssxref("basic-shape/polygon","polygon()")}} function
   - [`<shape-box>`](/en-US/docs/Web/CSS/Reference/Properties/shape-outside#shape-box) data type
 
