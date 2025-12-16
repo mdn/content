@@ -66,14 +66,6 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### SVG -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
 <!-- ### Security -->
 
 <!-- #### Removals -->
