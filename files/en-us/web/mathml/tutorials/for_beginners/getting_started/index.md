@@ -161,7 +161,7 @@ In this article, we have taken a look at how to use the `<math>` element to inse
 - [The `<math>` element](/en-US/docs/Web/MathML/Reference/Element/math)
 - [The `<mfrac>` element](/en-US/docs/Web/MathML/Reference/Element/mfrac)
 - [The `<mrow>` element](/en-US/docs/Web/MathML/Reference/Element/mrow)
-- [The `math-style` property](/en-US/docs/Web/CSS/Reference/Properties/math-style)
-- [The `math-depth` property](/en-US/docs/Web/CSS/Reference/Properties/math-depth)
+- {{cssxref("math-style")}} property
+- {{cssxref("math-depth")}} property
 
 {{NextMenu("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners")}}
