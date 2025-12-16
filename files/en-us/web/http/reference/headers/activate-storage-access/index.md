@@ -59,8 +59,9 @@ If granted by the user, the permission is stored by the browser in a key associa
 The browser must then reload the resource, which it can now request with cookies because it has the `active` permission state for the current context.
 
 The permission is granted for a particular embedder/embedded site, but only activated for a particular context, such as an `<iframe>` or browser tab.
+
 This means that if you load the same page in a new tab or `<iframe>`, the permission state of that context will be `inactive`; it won't become `active` until the permission is activated.
-The normal storage access flow is to again request the resource without cookies, call `Document.requestStorageAccess()` to activate the existing permission, then reload the resource with cookies.
+The normal storage access flow is to again request the resource without cookies, call `Document.requestStorageAccess()` to activate the existing permission, then reload the resource with cookies. The resource's cross-origin requests follow the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy), therefore third-party cookies are sent only with requests to the resource's exact origin. Other origins within the same site wishing to access third-party cookies will need to activate the storage-access permission separately.
 
 The resource has to be loaded at least once to be granted the storage-access permission.
 However, once granted, a server can use `Activate-Storage-Access` to activate the permission for other contexts.

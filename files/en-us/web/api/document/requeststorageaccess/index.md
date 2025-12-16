@@ -12,6 +12,8 @@ The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface
 
 To check whether permission to access third-party cookies has already been granted, you can call {{domxref("Permissions.query()")}}, specifying the feature name `"storage-access"`.
 
+After an embed has activated `storage-access` permission via `requestStorageAccess()`, it should reload itself. The browser will re-request the resource with third-party cookies included, and make them available to the embedded resource once it has loaded. The embed's cross-origin requests follow the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy), therefore third-party cookies are sent only with requests to the embedded resource's exact origin. Other origins within the same site wishing to access third-party cookies will need to activate the storage-access permission separately.
+
 > [!NOTE]
 > Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) heuristics, or prompting the user for explicit permission.
 
