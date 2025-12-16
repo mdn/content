@@ -38,7 +38,7 @@ Each CSS value type has an associated serialization format defined by the CSS sp
   - The keyword `currentColor` serializes as `currentcolor`.
 - [`<percentage>`](/en-US/docs/Web/CSS/Reference/Values/percentage): preserved as a percentage.
 - [`<ratio>`](/en-US/docs/Web/CSS/Reference/Values/ratio): serialized to two numbers separated by `" / "`.
-- [`<url>`](/en-US/docs/Web/CSS/Reference/Values/url_value): serialized as a quoted {{cssxref("&lt;url&gt;")}} (`url("...")`), with the URL resolved to an absolute URL.
+- {{cssxref("url_value", "&lt;url&gt;")}}: serialized as a quoted {{cssxref("url_value", "&lt;url&gt;")}} (`url("...")`), with the URL resolved to an absolute URL.
 
 Note that `<percentage>` values often get computed into absolute dimensions (like `<length>`) during value processing, so they may not appear as percentages when serialized from computed styles. For dimensions with units, such as {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;resolution&gt;")}}, and {{cssxref("&lt;time&gt;")}}, the serialized unit depends on the context and is not well-specified. `getComputedStyle()` and `element.style` serialize them into `Hz`, `px`, `dppx`, and `s` respectively.
 
