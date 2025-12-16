@@ -6,7 +6,7 @@ browser-compat: css.types.filter-function.saturate
 sidebar: cssref
 ---
 
-The **`saturate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) super-saturates or desaturates the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+The **`saturate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) super-saturates or desaturates the input image. Its result is a {{cssxref("filter-function")}}.
 
 > [!NOTE]
 > `saturate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the hue or lightness of the original color.
@@ -123,7 +123,7 @@ for (let i = 0; i <= 200; i++) {
 
 ## See also
 
-The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+The other {{cssxref("filter-function")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
 
 - {{cssxref("filter-function/blur", "blur()")}}
 - {{cssxref("filter-function/brightness", "brightness()")}}

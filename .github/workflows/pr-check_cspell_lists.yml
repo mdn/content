@@ -19,6 +19,7 @@ jobs:
             .vscode/dictionaries/*
             .nvmrc
             package.json
+            package-lock.json
             scripts/sort_and_unique_file_lines.js
           persist-credentials: false
 

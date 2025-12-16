@@ -51,7 +51,7 @@ skewY(a)
 ### Values
 
 - `a`
-  - : Is an {{cssxref("&lt;angle&gt;")}} representing the angle to use to distort the element along the ordinate (vertical, y-coordinate).
+  - : Is an {{cssxref("angle")}} representing the angle to use to distort the element along the ordinate (vertical, y-coordinate).
 
 <table class="standard-table">
   <thead>

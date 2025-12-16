@@ -155,6 +155,12 @@ You should see that the items have rearranged themselves such that there's one i
 
 {{EmbedLiveSample('simple-grid_2', '100%', "130") }}
 
+## Interactive recap of grid concepts
+
+The following embedded content from Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides an interactive lesson on the basics of CSS grid. It also includes a live grid example that you can play with to see how the code works.
+
+<mdn-scrim-inline url="https://scrimba.com/learn-css-grid-c02k/~01" scrimtitle="Your first grid"></scrim-inline>
+
 ### Flexible grids with the fr unit
 
 In addition to creating grids using lengths and percentages, we can use [`fr`](/en-US/docs/Web/CSS/Reference/Values/flex_value). The `fr` unit represents one fraction of the available space in the grid container to flexibly size grid rows and columns.
@@ -867,8 +873,8 @@ In the next article, we'll give you some tests that you can use to check how wel
 
 ## See also
 
-- [CSS Grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout#guides)
-  - : Main CSS Grid Layout module page, containing lots of further resources
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout)
+  - : The main CSS grid layout module page, containing lots of further resources.
 - [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
   - : A visual guide on CSS-Tricks (2023).
 - [Grid Garden](https://cssgridgarden.com/)
