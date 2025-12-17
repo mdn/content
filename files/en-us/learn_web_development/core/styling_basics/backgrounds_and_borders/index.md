@@ -268,7 +268,7 @@ Use the example below to play around with these values and move the star around 
 
 A gradient — when used for a background — acts just like an image and is also set by using the {{cssxref("background-image")}} property.
 
-You can find out about the different types of gradient value and things you can do with them on the MDN page for the [`<gradient>`](/en-US/docs/Web/CSS/Reference/Values/gradient) data type.
+You can find out about the different types of gradient value and things you can do with them on the MDN page for the {{cssxref("gradient")}} data type.
 
 Try some different gradient values in the example below. Initially, we have a linear gradient that is stretched over the whole first box, and a radial gradient with a set size, repeating over the second box.
 
