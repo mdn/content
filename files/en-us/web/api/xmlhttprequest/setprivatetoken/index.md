@@ -3,10 +3,12 @@ title: "XMLHttpRequest: setPrivateToken() method"
 short-title: setPrivateToken()
 slug: Web/API/XMLHttpRequest/setPrivateToken
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XMLHttpRequest.setPrivateToken
 ---
 
-{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}{{SeeCompatTable}}
 
 The {{domxref("XMLHttpRequest")}} method **`setPrivateToken()`** adds [private state token](/en-US/docs/Web/API/Private_State_Token_API/Using) information to an `XMLHttpRequest` call, to initiate private state token operations.
 
