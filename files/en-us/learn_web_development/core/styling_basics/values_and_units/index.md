@@ -43,9 +43,9 @@ In this lesson, we will take a look at some of the most frequently used value ty
 
 CSS values define what types of value are valid for each CSS property. For example, you can specify colors for the values of {{cssxref("color")}} or {{cssxref("border-color")}}, but not lengths or percentages.
 
-In CSS specifications, and on the property pages here on MDN, you will be able to spot value types as they will be surrounded by angle brackets (`<`, `>`) — such as [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) or {{cssxref("length")}}. When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) reference page.
+In CSS specifications, and on the property pages here on MDN, you will be able to spot value types as they will be surrounded by angle brackets (`<`, `>`) — such as {{cssxref("&lt;color&gt;")}} or {{cssxref("length")}}. When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the {{cssxref("&lt;color&gt;")}} reference page.
 
-Sometimes value types and properties can have the same, or similar names — For example, there is a {{cssxref("color")}} property and a [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type. You can use the angle brackets to determine which one you are studying in each case. HTML elements also use angle brackets, but it should be clear from the context which one you are looking at. If you are not sure, try searching for it on MDN.
+Sometimes value types and properties can have the same, or similar names — For example, there is a {{cssxref("color")}} property and a {{cssxref("&lt;color&gt;")}} data type. You can use the angle brackets to determine which one you are studying in each case. HTML elements also use angle brackets, but it should be clear from the context which one you are looking at. If you are not sure, try searching for it on MDN.
 
 > [!NOTE]
 > You'll see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
@@ -59,7 +59,7 @@ h1 {
 }
 ```
 
-A value type in CSS defines a collection of allowable values. This means that if you see `<color>` as valid you don't need to wonder which of the different types of color value can be used — keywords, hex values, `rgb()` functions, etc. You can use _any_ available `<color>` values, assuming they are supported by your browser. The page on MDN for each value will give you information about browser support. For example, if you look at the page for [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) you will see that the browser compatibility section lists different types of color values and support for them.
+A value type in CSS defines a collection of allowable values. This means that if you see `<color>` as valid you don't need to wonder which of the different types of color value can be used — keywords, hex values, `rgb()` functions, etc. You can use _any_ available `<color>` values, assuming they are supported by your browser. The page on MDN for each value will give you information about browser support. For example, if you look at the page for {{cssxref("&lt;color&gt;")}} you will see that the browser compatibility section lists different types of color values and support for them.
 
 Let's have a look at some of the types of values and units you may frequently encounter, with examples so that you can try out different possible values.
 
@@ -557,7 +557,7 @@ The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/
 
 There are several color functions that include a [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue) component, including [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), and [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch). Other color functions, like [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab), define colors based on what humans can see.
 
-If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color) guide, the [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) reference that lists all the different ways you can use colors in CSS, and the [CSS color module](/en-US/docs/Web/CSS/Guides/Colors) that provides an overview of all the color types in CSS and the properties that use color values.
+If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color) guide, the {{cssxref("&lt;color&gt;")}} reference that lists all the different ways you can use colors in CSS, and the [CSS color module](/en-US/docs/Web/CSS/Guides/Colors) that provides an overview of all the color types in CSS and the properties that use color values.
 
 ### HWB
 

@@ -37,11 +37,11 @@ In this lesson, we will take a look at some of the creative things you can do wi
 
 ## Background colors
 
-The {{cssxref("background-color")}} property defines the background color on any element in CSS. The property accepts any valid [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value). A `background-color` extends underneath the content and padding box of the element.
+The {{cssxref("background-color")}} property defines the background color on any element in CSS. The property accepts any valid {{cssxref("&lt;color&gt;")}}. A `background-color` extends underneath the content and padding box of the element.
 
 In the example below, we have used various color values to add a background color to the box, a heading, and a {{htmlelement("span")}} element.
 
-Try editing the example and swapping out the specified colors with any available [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values.
+Try editing the example and swapping out the specified colors with any available {{cssxref("&lt;color&gt;")}} values.
 
 ```html live-sample___color
 <div class="box">
