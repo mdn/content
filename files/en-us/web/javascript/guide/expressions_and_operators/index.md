@@ -61,7 +61,7 @@ For example, `x++` or `++x`. The `operator operand` form is called a _prefix_ un
 ## Assignment operators
 
 An assignment operator assigns a value to its left operand based on the value of its right operand.
-The simple assignment operator is equal (`=`), which assigns the value of its right operand to its left operand.
+The simplest assignment operator is equal (`=`), which assigns the value of its right operand to its left operand.
 That is, `x = f()` is an assignment expression that assigns the value of `f()` to `x`.
 
 There are also compound assignment operators that are shorthand for the operations listed in the following table:
