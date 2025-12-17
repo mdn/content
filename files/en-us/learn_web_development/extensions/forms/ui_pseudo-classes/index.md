@@ -173,7 +173,7 @@ In the next section, we'll look at a better example of indicating required field
 
 In previous articles, we've seen the usage of [generated content](/en-US/docs/Web/CSS/Guides/Generated_content), but we thought now would be a good time to talk about it in a bit more detail.
 
-The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/Reference/Selectors/::before) and [`::after`](/en-US/docs/Web/CSS/Reference/Selectors/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/Reference/Properties/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it may be invisible to some screen readers. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
+The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/Reference/Selectors/::before) and [`::after`](/en-US/docs/Web/CSS/Reference/Selectors/::after) pseudo-elements along with the {{cssxref("content")}} property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it may be invisible to some screen readers. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
 
 This is really useful when you want to add a visual indicator to an element, such as a label or icon, when alternative indicators are also available to ensure accessibility for all users. For example, we can use generated content to handle the placement and animation of the custom radio button's inner circle when a radio button is selected:
 
@@ -1232,7 +1232,7 @@ input[type="radio"]:checked::before {
 
 {{EmbedLiveSample("radios-styled", "100%", 200, , , , , "allow-forms")}}
 
-Basically, we build the styling for a radio button's "inner circle" using the `::before` pseudo-element, but set a `scale(0)` [`transform`](/en-US/docs/Web/CSS/Reference/Properties/transform) on it. We then use a [`transition`](/en-US/docs/Web/CSS/Reference/Properties/transition) to make the generated content on the label nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning [`width`](/en-US/docs/Web/CSS/Reference/Properties/width)/[`height`](/en-US/docs/Web/CSS/Reference/Properties/height) is that you can use [`transform-origin`](/en-US/docs/Web/CSS/Reference/Properties/transform-origin) to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner, and there is no jumping behavior as no box model property values are updated.
+Basically, we build the styling for a radio button's "inner circle" using the `::before` pseudo-element, but set a `scale(0)` {{cssxref("transform")}} on it. We then use a {{cssxref("transition")}} to make the generated content on the label nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning {{cssxref("width")}}/{{cssxref("height")}} is that you can use {{cssxref("transform-origin")}} to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner, and there is no jumping behavior as no box model property values are updated.
 
 ### :default and :indeterminate
 
