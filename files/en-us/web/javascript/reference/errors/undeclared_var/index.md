@@ -22,7 +22,7 @@ ReferenceError: Can't find variable: x (Safari)
 ## What went wrong?
 
 A value has been assigned to an undeclared variable.
-In other words, there was an assignment without the `var` keyword.
+In other words, there was an assignment without the `var`, `let` or `const` keyword.
 There are some differences between declared and undeclared variables, which might lead to unexpected results and that's why JavaScript presents an error in strict mode.
 
 Three things to note about declared and undeclared variables:
