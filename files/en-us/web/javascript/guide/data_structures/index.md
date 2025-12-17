@@ -57,7 +57,7 @@ The Null type is inhabited by exactly one value: [`null`](/en-US/docs/Web/JavaSc
 
 The Undefined type is inhabited by exactly one value: [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 
-Conceptually, `undefined` indicates the absence of a _value_, while `null` indicates the absence of an _object_ (which could also make up an excuse for [`typeof null === "object"`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null)). The language usually defaults to `undefined` when something is devoid of a value:
+Conceptually, `undefined` indicates the absence of a _value_, while `null` indicates the absence of an _object_ (which aligns with [`typeof null === "object"`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null)). The language usually defaults to `undefined` when something is devoid of a value:
 
 - A [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement with no value (`return;`) implicitly returns `undefined`.
 - Accessing a nonexistent [object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) property (`obj.iDontExist`) returns `undefined`.
