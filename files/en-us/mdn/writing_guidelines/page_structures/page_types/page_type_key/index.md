@@ -63,7 +63,7 @@ This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/
 - `css-combinator`: a combinator, like the [descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator).
 - `css-function`: a [function](/en-US/docs/Web/CSS/Reference/Values/Functions), like {{cssxref("max")}}.
 - `css-keyword`: a keyword, like {{cssxref("inherit")}}.
-- `css-media-feature`: a [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features), like [`hover`](/en-US/docs/Web/CSS/Reference/At-rules/@media/hover).
+- `css-media-feature`: a [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features), like {{cssxref("@media/hover")}}.
 - `css-module`: a module, like [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations).
 - `css-property`: a property, like {{cssxref("background-color")}}.
 - `css-pseudo-class`: a [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), like {{cssxref(":enabled")}}.
