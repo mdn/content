@@ -37,6 +37,7 @@ This example includes a box with a dashed {{cssxref("outline")}} set on it by de
 
 ```css
 .contrast {
+  margin: 5px;
   width: 100px;
   height: 100px;
   outline: 2px dashed black;
