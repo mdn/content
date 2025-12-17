@@ -149,7 +149,7 @@ Objects can also be created using the {{jsxref("Object.create()")}} method. This
 
 ```js
 // Animal properties and method encapsulation
-const animal = {
+const animalProto = {
   type: "Invertebrates", // Default value of properties
   displayType() {
     // Method which will display the type of animal
@@ -158,11 +158,11 @@ const animal = {
 };
 
 // Create a new animal type called `animal`
-const animal = Object.create(animal);
+const animal = Object.create(animalProto);
 animal.displayType(); // Logs: Invertebrates
 
 // Create new animal type called fish
-const fish = Object.create(animal);
+const fish = Object.create(animalProto);
 fish.type = "Fishes";
 fish.displayType(); // Logs: Fishes
 ```
