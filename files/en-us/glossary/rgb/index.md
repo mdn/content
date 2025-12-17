@@ -21,7 +21,7 @@ RGB is not the only color model that can represent the `sRGB` {{glossary("color 
 
 ## See also
 
-- [CSS data type: `<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value)
+- {{cssxref("&lt;color&gt;")}} CSS data type
 - [ColorAide: sRGB color space](https://facelessuser.github.io/coloraide/colors/srgb/)
 - [RGB color model](https://en.wikipedia.org/wiki/RGB_color_model) on Wikipedia
 - [sRGB color space](https://en.wikipedia.org/wiki/SRGB) on Wikipedia
