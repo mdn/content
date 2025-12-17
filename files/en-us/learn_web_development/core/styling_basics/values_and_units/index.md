@@ -472,7 +472,7 @@ In the next example, try changing the values to see how the colors vary:
 
 ### RGB values
 
-To create RGB values directly, the [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) function takes three parameters representing **red**, **green**, and **blue** channel values of the colors, with an optional fourth value separated by a slash (`/`) representing opacity, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number ranging from `0` and `255` or a percentage ranging from `0%` and `100%` (but not a mixture of the two).
+To create RGB values directly, the {{cssxref("color_value/rgb")}} function takes three parameters representing **red**, **green**, and **blue** channel values of the colors, with an optional fourth value separated by a slash (`/`) representing opacity, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number ranging from `0` and `255` or a percentage ranging from `0%` and `100%` (but not a mixture of the two).
 
 Let's rewrite our last example to use RGB colors:
 
@@ -551,17 +551,17 @@ Try changing the alpha channel values to see how it affects the color output.
 
 ### Using hues to specify a color
 
-If you want to go beyond keywords, hexadecimal, and [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) for colors, you might want to try using [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue).
+If you want to go beyond keywords, hexadecimal, and {{cssxref("color_value/rgb")}} for colors, you might want to try using [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue).
 Hue is the value type that allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
 The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle) because most of the color models describe hues using a {{glossary("color wheel")}}.
 
-There are several color functions that include a [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue) component, including [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), and [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch). Other color functions, like [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab), define colors based on what humans can see.
+There are several color functions that include a [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue) component, including {{cssxref("color_value/hsl")}}, {{cssxref("color_value/hwb")}}, and {{cssxref("color_value/lch")}}. Other color functions, like {{cssxref("color_value/lab")}}, define colors based on what humans can see.
 
 If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color) guide, the {{cssxref("&lt;color&gt;")}} reference that lists all the different ways you can use colors in CSS, and the [CSS color module](/en-US/docs/Web/CSS/Guides/Colors) that provides an overview of all the color types in CSS and the properties that use color values.
 
 ### HWB
 
-A great starting point for using hues in CSS is the [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) function, which specifies an `srgb()` color.
+A great starting point for using hues in CSS is the {{cssxref("color_value/hwb")}} function, which specifies an `srgb()` color.
 The three parts are:
 
 - **Hue**: The base shade of the color. This takes a [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue) value between `0` and `360`, representing the angles around a color wheel.
@@ -570,14 +570,14 @@ The three parts are:
 
 ### HSL
 
-Similar to the [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb) function is the [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) function, which also specifies an `srgb()` color.
+Similar to the {{cssxref("color_value/hwb")}} function is the {{cssxref("color_value/hsl")}} function, which also specifies an `srgb()` color.
 HSL uses `Hue`, in addition to `Saturation` and `Lightness`:
 
 - **Hue**: Again, this represents the base shade of the color.
 - **Saturation**: How saturated is the color? This takes a value from `0`–`100%`, where `0` is no color (it will appear as a shade of grey), and `100%` is full color saturation.
 - **Lightness**: How light or bright is the color? This takes a value from `0`–`100%`, where `0` is no light (it will appear completely black) and `100%` is full light (it will appear completely white).
 
-The [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) color value also has an optional fourth value, separated from the color with a slash (`/`), representing the alpha transparency.
+The {{cssxref("color_value/hsl")}} color value also has an optional fourth value, separated from the color with a slash (`/`), representing the alpha transparency.
 
 Let's update the RGB example to use HSL colors instead:
 
@@ -751,7 +751,7 @@ Functions are useful because you can write code once then reuse it many times in
 Most programming languages not only support functions but also come with convenient built-in functions for common tasks so you don't have to write them yourself from scratch.
 
 CSS also has [functions](/en-US/docs/Web/CSS/Reference/Values/Functions), which work in a similar way to functions in other languages.
-In fact, we've already seen CSS functions in the [Color](#color) section above, such as [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) and [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl).
+In fact, we've already seen CSS functions in the [Color](#color) section above, such as {{cssxref("color_value/rgb")}} and {{cssxref("color_value/hsl")}}.
 
 Aside from applying colors, you can use functions in CSS to do a lot of other things.
 For example, [Transform functions](/en-US/docs/Web/CSS/Reference/Values/Functions#transform_functions) are a common way to move, rotate, and scale elements on a page.
