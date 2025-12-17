@@ -795,6 +795,23 @@ The good news is that you probably won't need any third-party frameworks to help
 
 This has a container with a 12-column grid defined, using `grid-template-columns: repeat(12, 1fr);`, and the same markup we used in the previous two examples. We can now use line-based placement to place our content on the 12-column grid.
 
+## What are grid frameworks?
+
+Grid frameworks are pre-built CSS systems that provide ready-made grid structures
+to help developers create layouts more quickly.
+
+They usually offer:
+- A predefined column system (for example, 12-column layouts)
+- Utility classes for spacing and alignment
+- Responsive behavior through breakpoints
+
+Examples include grid systems provided by larger CSS frameworks such as Bootstrap.
+These frameworks were more common before native CSS Grid was widely supported.
+
+Today, modern CSS Grid is built directly into the browser and provides greater
+flexibility without requiring additional libraries. For learning purposes, this
+module focuses on native CSS Grid rather than framework-based solutions.
+
 ```html hidden live-sample___grid-frameworks
 <div class="container">
   <header>Header</header>
