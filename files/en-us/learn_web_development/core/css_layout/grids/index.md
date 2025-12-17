@@ -801,6 +801,7 @@ Grid frameworks are pre-built CSS systems that provide ready-made grid structure
 to help developers create layouts more quickly.
 
 They usually offer:
+
 - A predefined column system (for example, 12-column layouts)
 - Utility classes for spacing and alignment
 - Responsive behavior through breakpoints
