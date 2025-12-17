@@ -107,21 +107,21 @@ The example also shows the legacy syntax for both [`rgb()` and `rgba()`](/en-US/
 
 The following examples show "HSL", which stands for _Hue, Saturation, and Lightness_. HSL color values are considered by many to be more intuitive than RGB values. The color produced from the settings are still in the sRGB colorspace, but {{cssxref("color_value/hsl")}} is an intuitive syntax for many. The hue is adjusted as an angle, and it is easy to create a user interface using a knob or circular control to adjust the hue. Do note that HSL colors incorporate _lightness_, not _luminance_, which is a significant consideration.
 
-The next examples shows "HWB" which stands for _Hue, Whiteness, and Blackness_. With both `hsl()` and {{cssxref("color_value/hwb", "hwb()")}} the first value can be a {{cssxref("number")}} or an {{cssxref("angle")}} value. When unitless, the value is interpreted as `deg` degrees.
+The next example shows "HWB" which stands for _Hue, Whiteness, and Blackness_. With both `hsl()` and {{cssxref("color_value/hwb")}} the first value can be a {{cssxref("number")}} or an {{cssxref("angle")}} value. When unitless, the value is interpreted as `deg` degrees.
 
-There are several other color functions and color spaces. The last three examples demonstrate representing magenta using the {{cssxref("color_value/lab", "lab()")}}, {{cssxref("color_value/oklch", "oklch()")}}, and {{cssxref("color_value/color", "color()")}} color functions.
+There are several other color functions and color spaces. The last three examples demonstrate representing magenta using the {{cssxref("color_value/lab")}}, {{cssxref("color_value/oklch")}}, and {{cssxref("color_value/color")}} color functions.
 
 ### Conversions
 
 As we saw, one color within the same color space may be expressed in many ways. Looking at how the RGB color space is used to describe the color "magenta", you can see that the same color may be expressed in a shorthand, three-digit hex number that converts to an rgb value as a six-digit hex number that also converts to the same rgb value, or as a rgba value, expressed in percentages.
 
-RGB is hardware-oriented, reflecting the use of CRTs. Many developers and designers prefer the intuitiveness of {{cssxref("color_value/hsl", "hsl()")}} notation. Fortunately, browsers convert from RGB to HSL automatically, and shift-clicking on colors in browser developer tools provides conversion functionality.
+RGB is hardware-oriented, reflecting the use of CRTs. Many developers and designers prefer the intuitiveness of {{cssxref("color_value/hsl")}} notation. Fortunately, browsers convert from RGB to HSL automatically, and shift-clicking on colors in browser developer tools provides conversion functionality.
 
 In addition to developer tools, many tools can convert RGB to HSL for you and provide both the RGB hexadecimal and CSS function syntax. A great example of a tool that converts colors for you is Tom Jewett's "[mini color selector](https://colortutorial.design/microColorsC.html)" with HSL, RGB, and Hex options for checking contrast in the browser. Note that developer tools color pickers and this tool all provide WCAG [color contrast](https://webaim.org/resources/contrastchecker/) values.
 
 ![Color picker with HSL and RGB, with color contrast values.](microcolorsc.jpg)
 
-As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/Guides/Colors) includes adding additional colorspaces, including {{cssxref("color_value/lch", "lch()")}} and {{cssxref("color_value/oklch", "oklch()")}} functional color notation and the {{cssxref("color_value/lab", "lab()")}} and {{cssxref("color_value/oklab", "oklab()")}} color coordinate systems, which can specify any visible color. That said, sRGB is still the default and preferred colorspace for accessibility because of its ubiquity.
+As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/Guides/Colors) includes adding additional colorspaces, including {{cssxref("color_value/lch")}} and {{cssxref("color_value/oklch")}} functional color notation and the {{cssxref("color_value/lab")}} and {{cssxref("color_value/oklab")}} color coordinate systems, which can specify any visible color. That said, sRGB is still the default and preferred colorspace for accessibility because of its ubiquity.
 
 Where accessibility is concerned, however, standards and guidelines are currently written predominantly using the sRGB color space, especially as it applies to color contrast ratios.
 
@@ -228,7 +228,7 @@ Saturation is sometimes described as the "purity" or "intensity" of a color. Alt
 
 When it comes to color on a monitor, saturated colors are of a particular wavelength. While the definition of saturation for each color space may differ, saturation is readily measured. The key is to know which color space you are working in and be ready to convert it if necessary.
 
-The color spaces most frequently considered when discussing photosensitivity are the RGB, HSL, and HSV, also known as HSB, color spaces. The HSV color space, which stands for _hue_, _saturation_, and _value_, and the synonym HSB, which stands for _hue_, _saturation_, and _brightness_, are represented in CSS as {{cssxref("color_value/hwb", "hwb()")}} for _hue_, _whiteness_, and _blackness_.
+The color spaces most frequently considered when discussing photosensitivity are the RGB, HSL, and HSV, also known as HSB, color spaces. The HSV color space, which stands for _hue_, _saturation_, and _value_, and the synonym HSB, which stands for _hue_, _saturation_, and _brightness_, are represented in CSS as {{cssxref("color_value/hwb")}} for _hue_, _whiteness_, and _blackness_.
 
 It's important to know what color space you're working with. For example, saturated colors have a lightness of `0.5` in HSL, while in HWB, they have a value `1`. Saturation in the RGB color space is usually indicated by an RGB value of `255` or `100%` for the color in question. For example, a saturated red of hex value `#ff0000` has an RGB value of `rgb(255 0 0)` and an HSL value of `hsl(0 100% 50%)`. A different saturated red with a hex value of `#ff3300` has an RGB value of `rgb(255 51 0)` and an HSL value of `hsl(12 100% 50%)`. Both are "saturated" reds. They are two different "hues" but are both considered to be a saturated color.
 
@@ -262,7 +262,7 @@ The nature of blue light causes it to focus at a different location on the retin
 
 ## The special case of red
 
-Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimic the grayscale setting, use the CSS {{cssxref("filter")}} property with a {{cssxref("filter-function/grayscale", "grayscale()")}} or {{cssxref("filter-function/saturate", "saturate()")}} {{cssxref("filter-function")}}.
+Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimic the grayscale setting, use the CSS {{cssxref("filter")}} property with a {{cssxref("filter-function/grayscale")}} or {{cssxref("filter-function/saturate")}} {{cssxref("filter-function")}}.
 
 ### Saturated red
 
