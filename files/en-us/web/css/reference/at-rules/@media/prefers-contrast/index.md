@@ -25,7 +25,7 @@ Various operating systems do support such preferences and user agents are likely
 
 ## Examples
 
-This example has a box that uses a low-contrast dashed outline by default. When the **`prefers-contrast`** media feature is set to `more`, the outline is solid instead.
+This example includes a box with a dashed {{cssxref("outline")}} set on it by default. When the `prefers-contrast: more` media query matches, the applied outline is given a higher contrast `solid` style instead.
 
 ### HTML
 
