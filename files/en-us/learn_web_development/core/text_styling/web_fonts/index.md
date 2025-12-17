@@ -202,6 +202,3 @@ Now that you have worked through our articles on text styling fundamentals, it's
 - [Fonts knowledge](https://fonts.google.com/knowledge), Google Fonts
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}
-- [Fonts knowledge](https://fonts.google.com/knowledge), Google Fonts
-
-{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}
