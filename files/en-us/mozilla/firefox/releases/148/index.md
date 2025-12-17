@@ -24,6 +24,14 @@ Firefox 148 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
+<!-- ### MathML -->
+
+<!-- #### Removals -->
+
+<!-- ### SVG -->
+
+<!-- #### Removals -->
+
 <!-- ### CSS -->
 
 <!-- No notable changes. -->
@@ -37,14 +45,6 @@ Firefox 148 is the current [Nightly version of Firefox](https://www.firefox.com/
 <!-- #### Removals -->
 
 <!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
 
 <!-- #### Removals -->
 
@@ -73,8 +73,6 @@ Firefox 148 is the current [Nightly version of Firefox](https://www.firefox.com/
 <!-- #### Marionette -->
 
 ## Changes for add-on developers
-
-<!-- No notable changes. -->
 
 <!-- ### Removals -->
 

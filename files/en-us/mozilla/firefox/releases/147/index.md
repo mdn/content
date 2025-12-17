@@ -103,8 +103,6 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
-<!-- No notable changes. -->
-
 <!-- ### Removals -->
 
 <!-- ### Other -->

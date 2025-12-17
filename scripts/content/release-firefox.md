@@ -24,6 +24,14 @@ Firefox {{VERSION}} is the current [Nightly version of Firefox](https://www.fire
 
 <!-- #### Removals -->
 
+<!-- ### MathML -->
+
+<!-- #### Removals -->
+
+<!-- ### SVG -->
+
+<!-- #### Removals -->
+
 <!-- ### CSS -->
 
 <!-- No notable changes. -->
@@ -37,14 +45,6 @@ Firefox {{VERSION}} is the current [Nightly version of Firefox](https://www.fire
 <!-- #### Removals -->
 
 <!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
 
 <!-- #### Removals -->
 
@@ -73,8 +73,6 @@ Firefox {{VERSION}} is the current [Nightly version of Firefox](https://www.fire
 <!-- #### Marionette -->
 
 ## Changes for add-on developers
-
-<!-- No notable changes. -->
 
 <!-- ### Removals -->
 
