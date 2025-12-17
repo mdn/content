@@ -13,7 +13,7 @@ sidebar: mdnsidebar
 > **Page front matter:**
 >
 > The front matter at the top of the page is used to define "page metadata".
-> The values should be updated appropriately for the particular WebExtension API property.
+> The values must be updated appropriately for the WebExtension API property.
 >
 > ```md
 > ---
@@ -34,11 +34,8 @@ sidebar: mdnsidebar
 > - **page-type**
 >   - : The `page-type` key for WebExtension API properties is always `webextension-api-property`.
 > - **browser-compat**
->   - : Replace the placeholder value `webextensions.api.Namespace.propertyName` with the query string for the property in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->     The toolchain automatically uses the key to populate the compatibility section (replacing the `\{{Compat}}` macros).
->
->     Note that you may first need to create/update an entry for the API property in our [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>   - : Replace the placeholder value `webextensions.api.Namespace.propertyName` with the query string for the property in the [browser-compat-data repo](https://github.com/mdn/browser-compat-data). For guidance on creating this data, see the [Browser Compatibility tables and Browser Compatibility Data (BCD)](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>     The toolchain uses the key to populate the compatibility section (replacing the `\{{Compat}}` macros).
 >
 > ---
 >
@@ -72,7 +69,7 @@ This should ideally be one or two short sentences.
 
 Explain the type and meaning of the property's value.
 
-- If the property is a simple value (for example, a string or boolean), describe the type and possible values.
+- If the property is a value (for example, a string or boolean), describe the type and possible values.
 - If the property is an object (for example, a `BrowserSetting`), describe or link to the relevant type using `{{WebExtAPIRef}}`.
 - If the property is read-only, make that clear here.
 
