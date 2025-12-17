@@ -155,6 +155,12 @@ You should see that the items have rearranged themselves such that there's one i
 
 {{EmbedLiveSample('simple-grid_2', '100%', "130") }}
 
+## Interactive recap of grid concepts
+
+The following embedded content from Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides an interactive lesson on the basics of CSS grid. It also includes a live grid example that you can play with to see how the code works.
+
+<mdn-scrim-inline url="https://scrimba.com/learn-css-grid-c02k/~01" scrimtitle="Your first grid"></scrim-inline>
+
 ### Flexible grids with the fr unit
 
 In addition to creating grids using lengths and percentages, we can use [`fr`](/en-US/docs/Web/CSS/Reference/Values/flex_value). The `fr` unit represents one fraction of the available space in the grid container to flexibly size grid rows and columns.
@@ -790,28 +796,18 @@ We've added `subgrid` to inherit the parent grid's column tracks while adding a 
 
 ## Grid frameworks
 
-Numerous grid frameworks are available, offering a 12 or 16-column grid, to help with laying out your content.
-The good news is that you probably won't need any third-party frameworks to help you create grid-based layouts — grid functionality is already included in the specification and is supported by most modern browsers.
+Numerous grid frameworks are available — these are prebuilt CSS systems that
+provide 12- or 16-column grids, utility classes for spacing and alignment, and
+responsive design via breakpoints. Popular examples include grid systems provided
+by larger CSS frameworks such as Bootstrap.
+
+The good news is that you probably won't need any proprietary workarounds to help
+you create grid-based layouts — all modern browsers support the CSS Grid standard.
+
+The following example shows a simplified version of what such code might look
+like.
 
 This has a container with a 12-column grid defined, using `grid-template-columns: repeat(12, 1fr);`, and the same markup we used in the previous two examples. We can now use line-based placement to place our content on the 12-column grid.
-
-## What are grid frameworks?
-
-Grid frameworks are pre-built CSS systems that provide ready-made grid structures
-to help developers create layouts more quickly.
-
-They usually offer:
-
-- A predefined column system (for example, 12-column layouts)
-- Utility classes for spacing and alignment
-- Responsive behavior through breakpoints
-
-Examples include grid systems provided by larger CSS frameworks such as Bootstrap.
-These frameworks were more common before native CSS Grid was widely supported.
-
-Today, modern CSS Grid is built directly into the browser and provides greater
-flexibility without requiring additional libraries. For learning purposes, this
-module focuses on native CSS Grid rather than framework-based solutions.
 
 ```html hidden live-sample___grid-frameworks
 <div class="container">
@@ -885,8 +881,8 @@ In the next article, we'll give you some tests that you can use to check how wel
 
 ## See also
 
-- [CSS Grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout#guides)
-  - : Main CSS Grid Layout module page, containing lots of further resources
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout)
+  - : The main CSS grid layout module page, containing lots of further resources.
 - [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
   - : A visual guide on CSS-Tricks (2023).
 - [Grid Garden](https://cssgridgarden.com/)
