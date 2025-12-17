@@ -34,8 +34,6 @@ Firefox 148 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- ### CSS -->
 
-<!-- No notable changes. -->
-
 <!-- #### Removals -->
 
 <!-- ### JavaScript -->

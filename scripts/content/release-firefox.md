@@ -34,8 +34,6 @@ Firefox {{VERSION}} is the current [Nightly version of Firefox](https://www.fire
 
 <!-- ### CSS -->
 
-<!-- No notable changes. -->
-
 <!-- #### Removals -->
 
 <!-- ### JavaScript -->
