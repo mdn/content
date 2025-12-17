@@ -139,9 +139,9 @@ The ability to create nested layers also removes the worry of having conflicting
 
 Layers can be created using any one of the following methods:
 
-- The [`@layer`](/en-US/docs/Web/CSS/Reference/At-rules/@layer) statement at-rule, declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
+- The {{cssxref("@layer")}} statement at-rule, declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
 - The `@layer` block at-rule, in which all styles within a block are added to a named or unnamed layer.
-- The [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import) rule with the `layer` keyword or `layer()` function, which assigns the contents of the imported file into that layer.
+- The {{cssxref("@import")}} rule with the `layer` keyword or `layer()` function, which assigns the contents of the imported file into that layer.
 
 All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` at-rule or `@import` with `layer()`, a new anonymous (unnamed) layer is created.
 
@@ -154,7 +154,7 @@ Let's cover the three ways of creating a layer in a little more detail before di
 
 The order of layers is set by the order in which the layers appear in your CSS. Declaring layers using `@layer` followed by the names of one or more layers without assigning any styles is one way to define the [layer order](#determining_the_precedence_based_on_the_order_of_layers).
 
-The [`@layer`](/en-US/docs/Web/CSS/Reference/At-rules/@layer) CSS at-rule is used to declare a cascade layer and to define the order of precedence when there are multiple cascade layers. The following at-rule declares three layers, in the order listed:
+The {{cssxref("@layer")}} CSS at-rule is used to declare a cascade layer and to define the order of precedence when there are multiple cascade layers. The following at-rule declares three layers, in the order listed:
 
 ```css
 @layer theme, layout, utilities;
@@ -294,9 +294,9 @@ In wide screens, the `site` layer is declared in the first line, meaning `site` 
 
 ### Importing style sheets into named and anonymous layers with @import
 
-The [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import) rule allows users to import style rules from other style sheets either directly into a CSS file or into a {{htmlelement('style')}} element.
+The {{cssxref("@import")}} rule allows users to import style rules from other style sheets either directly into a CSS file or into a {{htmlelement('style')}} element.
 
-When importing stylesheets, the `@import` statement must be defined before any CSS styles within the stylesheet or `<style>` block. The `@import` statement must come first, before any styles, but can be preceded by an `@layer` at-rule that creates one or more layers without assigning any styles to the layers. (`@import` can also be preceded by an [`@charset`](/en-US/docs/Web/CSS/Reference/At-rules/@charset) rule.)
+When importing stylesheets, the `@import` statement must be defined before any CSS styles within the stylesheet or `<style>` block. The `@import` statement must come first, before any styles, but can be preceded by an `@layer` at-rule that creates one or more layers without assigning any styles to the layers. (`@import` can also be preceded by an {{cssxref("@charset")}} rule.)
 
 You can import a stylesheet into a named layer, a nested named layer, or an anonymous layer. The following layer imports the style sheets into a `components` layer, a nested `dialog` layer within the `components` layer, and an un-named layer, respectively:
 

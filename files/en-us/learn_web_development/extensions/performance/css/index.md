@@ -197,7 +197,7 @@ In general, think carefully about the fonts you use on your site. Some font file
 
 ### Font loading
 
-Bear in mind that a font is only loaded when it is actually applied to an element using the {{cssxref("font-family")}} property, not when it is first referenced using the [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face) at-rule:
+Bear in mind that a font is only loaded when it is actually applied to an element using the {{cssxref("font-family")}} property, not when it is first referenced using the {{cssxref("@font-face")}} at-rule:
 
 ```css
 /* Font not loaded here */
