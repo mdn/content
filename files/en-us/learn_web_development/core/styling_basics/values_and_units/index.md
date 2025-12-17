@@ -394,9 +394,9 @@ You can mix and match color models, but it's usually best if your entire project
 
 ### Color keywords
 
-You will see the color keywords (or "named colors") used in many MDN code examples. Because the [`<named-color>`](/en-US/docs/Web/CSS/Reference/Values/named-color) data type contains a very finite number of color values, they are not commonly used on production websites with a sophisticated design language. On the other hand, named colors are used in code examples to clearly tell the user what color is expected so the learner can focus on the content being taught.
+You will see the color keywords (or "named colors") used in many MDN code examples. Because the {{cssxref("named-color")}} data type contains a very finite number of color values, they are not commonly used on production websites with a sophisticated design language. On the other hand, named colors are used in code examples to clearly tell the user what color is expected so the learner can focus on the content being taught.
 
-In the next example, try playing with different color keywords, to get more of an idea how they work. You can look them up using the [`<named-color>`](/en-US/docs/Web/CSS/Reference/Values/named-color) reference page.
+In the next example, try playing with different color keywords, to get more of an idea how they work. You can look them up using the {{cssxref("named-color")}} reference page.
 
 ```html live-sample___color-keywords
 <div class="wrapper">
@@ -551,11 +551,11 @@ Try changing the alpha channel values to see how it affects the color output.
 
 ### Using hues to specify a color
 
-If you want to go beyond keywords, hexadecimal, and {{cssxref("color_value/rgb")}} for colors, you might want to try using [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue).
+If you want to go beyond keywords, hexadecimal, and {{cssxref("color_value/rgb")}} for colors, you might want to try using {{cssxref("hue")}}.
 Hue is the value type that allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
-The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle) because most of the color models describe hues using a {{glossary("color wheel")}}.
+The key concept is that you can specify a hue in an {{cssxref("angle")}} because most of the color models describe hues using a {{glossary("color wheel")}}.
 
-There are several color functions that include a [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue) component, including {{cssxref("color_value/hsl")}}, {{cssxref("color_value/hwb")}}, and {{cssxref("color_value/lch")}}. Other color functions, like {{cssxref("color_value/lab")}}, define colors based on what humans can see.
+There are several color functions that include a {{cssxref("hue")}} component, including {{cssxref("color_value/hsl")}}, {{cssxref("color_value/hwb")}}, and {{cssxref("color_value/lch")}}. Other color functions, like {{cssxref("color_value/lab")}}, define colors based on what humans can see.
 
 If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color) guide, the {{cssxref("&lt;color&gt;")}} reference that lists all the different ways you can use colors in CSS, and the [CSS color module](/en-US/docs/Web/CSS/Guides/Colors) that provides an overview of all the color types in CSS and the properties that use color values.
 
@@ -564,7 +564,7 @@ If you want to find out more about these functions and color spaces, see the [Ap
 A great starting point for using hues in CSS is the {{cssxref("color_value/hwb")}} function, which specifies an `srgb()` color.
 The three parts are:
 
-- **Hue**: The base shade of the color. This takes a [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue) value between `0` and `360`, representing the angles around a color wheel.
+- **Hue**: The base shade of the color. This takes a {{cssxref("hue")}} value between `0` and `360`, representing the angles around a color wheel.
 - **Whiteness**: How white is the color? This takes a value from `0%` (no whiteness) to `100%` (full whiteness).
 - **Blackness**: How black is the color? This takes a value from `0%` (no blackness) to `100%` (full blackness).
 
@@ -652,7 +652,7 @@ Before you move on, try modifying the previous two examples to use some hue-base
 
 ## Images
 
-The [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) value type is used wherever an image is a valid value. This can be an actual image file pointed to via a `url()` function, or a gradient.
+The {{cssxref("image")}} value type is used wherever an image is a valid value. This can be an actual image file pointed to via a `url()` function, or a gradient.
 
 In the example below, we are using an image and a gradient as values for the CSS `background-image` property.
 
@@ -685,7 +685,7 @@ In the example below, we are using an image and a gradient as values for the CSS
 {{EmbedLiveSample("image", "", "380px")}}
 
 > [!NOTE]
-> There are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) data type if you want to read about them.
+> There are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the {{cssxref("image")}} data type if you want to read about them.
 
 You'll learn about image values in more depth in our [Background and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) article later on.
 
@@ -800,7 +800,7 @@ Knowing about CSS functions is useful so you recognize them when you see them. Y
 
 This has been a quick run-through of the most common types of values and units you might encounter. You can have a look at all of the different types on the [CSS Values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module page — you will encounter many of these in use as you work through these lessons.
 
-The key thing to remember is that each property has a defined list of allowed value types, and each value type has a definition explaining what the values are. You can then look up the specifics here on MDN. For example, understanding that [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) also allows you to create a color gradient is useful but perhaps non-obvious knowledge to have!
+The key thing to remember is that each property has a defined list of allowed value types, and each value type has a definition explaining what the values are. You can then look up the specifics here on MDN. For example, understanding that {{cssxref("image")}} also allows you to create a color gradient is useful but perhaps non-obvious knowledge to have!
 
 In the next article, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on values and units.
 
