@@ -3,9 +3,13 @@ title: Sec-Redemption-Record header
 short-title: Sec-Redemption-Record
 slug: Web/HTTP/Reference/Headers/Sec-Redemption-Record
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Sec-Redemption-Record
 sidebar: http
 ---
+
+{{SeeCompatTable}}
 
 The HTTP **`Sec-Redemption-Record`** {{Glossary("Fetch Metadata Request Header")}} is used by the [Private State Token API](/en-US/docs/Web/API/Private_State_Token_API) when [forwarding redemption records](/en-US/docs/Web/API/Private_State_Token_API/Using#redemption_record_usage_2). The header contains a list of issuer and redemption record pairs corresponding to each redemption record.
 

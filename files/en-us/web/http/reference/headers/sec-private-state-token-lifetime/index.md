@@ -3,9 +3,13 @@ title: Sec-Private-State-Token-Lifetime header
 short-title: Sec-Private-State-Token-Lifetime
 slug: Web/HTTP/Reference/Headers/Sec-Private-State-Token-Lifetime
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Sec-Private-State-Token-Lifetime
 sidebar: http
 ---
+
+{{SeeCompatTable}}
 
 The HTTP **`Sec-Private-State-Token-Lifetime`** {{Glossary("Response Header")}} is used by the [Private State Token API](/en-US/docs/Web/API/Private_State_Token_API) during [token redemption](/en-US/docs/Web/API/Private_State_Token_API/Using#redeeming_tokens_2). It is sent by the redeemer server to indicate to the browser how long (in seconds) a redemption record should be cached for. The redemption record itself is sent in a {{httpheader("Sec-Private-State-Token")}} response header.
 

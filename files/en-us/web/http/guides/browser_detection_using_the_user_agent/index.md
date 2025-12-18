@@ -94,7 +94,7 @@ if ("virtualKeyboard" in navigator) {
 }
 ```
 
-For styles, you can also do feature detection in CSS using the [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) at-rule, combined with the `not` keyword if you want to check for the absence of a feature.
+For styles, you can also do feature detection in CSS using the {{cssxref("@supports")}} at-rule, combined with the `not` keyword if you want to check for the absence of a feature.
 See [Using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries) for information on using this in CSS.
 
 ```css
