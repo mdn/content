@@ -19,6 +19,7 @@ The diagram illustrates how inline-level content is laid out inside a block cont
 - Each horizontal dashed row represents a **line box**, which is created by the layout engine to group inline content that fits on the same line.
 
 Inline-level elements generate **inline boxes**:
+
 - When an inline element fits entirely on one line, it occupies a single line box.
 - When inline content wraps, the same inline box is **fragmented across multiple line boxes**.
 
