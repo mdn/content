@@ -23,7 +23,7 @@ Inline-level elements generate **inline boxes**:
 - When an inline element fits entirely on one line, it occupies a single line box.
 - When inline content wraps, the same inline box is **fragmented across multiple line boxes**.
 
-The large “Big Text” element demonstrates that inline boxes can have varying heights.  
+The large "Big Text" element demonstrates that inline boxes can have varying heights.
 Line boxes expand vertically to accommodate the tallest inline box they contain, while alignment is typically performed using text baselines.
 
 The floated element on the left does **not** participate in line box construction.  
