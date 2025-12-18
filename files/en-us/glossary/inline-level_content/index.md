@@ -11,7 +11,7 @@ In inline layout, a mixed stream of text, {{ glossary("replaced elements")}}, an
 
 ![inline layout](inline_layout.png)
 
-### Interpreting the inline layout diagram
+## Interpreting the inline layout diagram
 
 The diagram illustrates how inline-level content is laid out inside a block container.
 
