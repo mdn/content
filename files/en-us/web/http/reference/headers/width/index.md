@@ -17,6 +17,8 @@ sidebar: http
 
 The HTTP **`Width`** {{Glossary("request header")}} is a [device client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) which indicates the desired resource width in physical pixels — the intrinsic size of an image. The provided pixel value is a number rounded to the smallest following integer (i.e., ceiling value).
 
+The hint is only sent on image requests and not on the HTML document request nor other non-image resources.
+
 The hint allows the client to request a resource that is optimal for both the screen and the layout: taking into account both the density-corrected width of the screen and the image's extrinsic size within the layout.
 
 If the desired resource width is not known at the time of the request or the resource does not have a display width, the `Width` header field can be omitted.
