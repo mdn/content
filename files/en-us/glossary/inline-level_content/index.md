@@ -26,7 +26,7 @@ Inline-level elements generate **inline boxes**:
 The large "Big Text" element demonstrates that inline boxes can have varying heights.
 Line boxes expand vertically to accommodate the tallest inline box they contain, while alignment is typically performed using text baselines.
 
-The floated element on the left does **not** participate in line box construction.  
+The floated element on the left does **not** participate in line box construction.
 Instead, it reduces the available horizontal space, causing inline content to wrap around it rather than include it.
 
 > [!NOTE]
