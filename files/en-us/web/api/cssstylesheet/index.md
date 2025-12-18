@@ -29,7 +29,7 @@ See the [Obtaining a StyleSheet](#obtaining_a_stylesheet) section for the variou
 To apply a constructed or obtained `CSSStyleSheet` to a document or shadow root, assign it to the
 [`Document.adoptedStyleSheets`](https://developer.mozilla.org/en-US/docs/Web/API/Document/adoptedStyleSheets)
 or
-[`ShadowRoot.adoptedStyleSheets`](https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/adoptedStyleSheets)
+[`ShadowRoot.adoptedStyleSheets`](/en-US/docs/Web/API/ShadowRoot/adoptedStyleSheets)
 property.
 
 ## Constructor
