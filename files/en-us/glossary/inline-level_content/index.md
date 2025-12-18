@@ -11,6 +11,23 @@ In inline layout, a mixed stream of text, {{ glossary("replaced elements")}}, an
 
 ![inline layout](inline_layout.png)
 
+### Interpreting the inline layout diagram
+
+The diagram illustrates how inline-level content is laid out inside a block container.
+
+- The outer blue rectangle represents the block formatting context (for example, a `<p>` element).
+- Each horizontal dashed row represents a **line box**, which is created by the layout engine to group inline content that fits on the same line.
+
+Inline-level elements generate **inline boxes**:
+- When an inline element fits entirely on one line, it occupies a single line box.
+- When inline content wraps, the same inline box is **fragmented across multiple line boxes**.
+
+The large “Big Text” element demonstrates that inline boxes can have varying heights.  
+Line boxes expand vertically to accommodate the tallest inline box they contain, while alignment is typically performed using text baselines.
+
+The floated element on the left does **not** participate in line box construction.  
+Instead, it reduces the available horizontal space, causing inline content to wrap around it rather than include it.
+
 > [!NOTE]
 > HTML (_HyperText Markup Language_) elements historically were categorized as either "block-level" elements or "inline" elements. As a presentational characteristic, this is now specified by CSS.
 
