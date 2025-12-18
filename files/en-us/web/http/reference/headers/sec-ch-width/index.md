@@ -1,26 +1,22 @@
 ---
-title: Width header
-short-title: Width
-slug: Web/HTTP/Reference/Headers/Width
+title: Sec-CH-Width header
+short-title: Sec-CH-Width
+slug: Web/HTTP/Reference/Headers/Sec-CH-Width
 page-type: http-header
-status:
-  - deprecated
-  - non-standard
-browser-compat: http.headers.Width
+browser-compat: http.headers.Sec-CH-Width
 sidebar: http
 ---
 
-{{Deprecated_Header}}{{SecureContext_header}}{{Non-standard_Header}}
+{{SecureContext_header}}
 
-> [!WARNING]
-> The `Width` header was renamed to {{HTTPHeader("Sec-CH-Width")}} and the new name is now preferred.
+The HTTP **`Sec-CH-Width`** {{Glossary("request header")}} is a [device client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) which indicates the desired resource width in physical pixels — the intrinsic size of an image. The provided pixel value is a number rounded to the smallest following integer (i.e., ceiling value).
 
-The HTTP **`Width`** {{Glossary("request header")}} is a [device client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) which indicates the desired resource width in physical pixels — the intrinsic size of an image. The provided pixel value is a number rounded to the smallest following integer (i.e., ceiling value).
+The hint is only sent on image requests and not on the HTML document request nor other non-image resources.
 
 The hint allows the client to request a resource that is optimal for both the screen and the layout: taking into account both the density-corrected width of the screen and the image's extrinsic size within the layout.
 
-If the desired resource width is not known at the time of the request or the resource does not have a display width, the `Width` header field can be omitted.
-If the `Width` header appears more than once in a message the last occurrence is used.
+If the desired resource width is not known at the time of the request or the resource does not have a display width, the `Sec-CH-Width` header field can be omitted.
+If the `Sec-CH-Width` header appears more than once in a message the last occurrence is used.
 
 <table class="properties">
   <tbody>
@@ -51,13 +47,13 @@ Width: <number>
 
 ## Examples
 
-The server first needs to opt in to receive the `Width` header by sending the response headers {{HTTPHeader("Accept-CH")}} containing `Width`.
+The server first needs to opt in to receive the `Sec-CH-Width` header by sending the response headers {{HTTPHeader("Accept-CH")}} containing `Sec-CH-Width`.
 
 ```http
-Accept-CH: Width
+Accept-CH: Sec-CH-Width
 ```
 
-Then on subsequent requests the client might send `Width` header back:
+Then on subsequent requests the client might send `Sec-CH-Width` header back:
 
 ```http
 Width: 1920
@@ -69,7 +65,7 @@ Width: 1920
 
 ## See also
 
-- {{HTTPHeader("Sec-CH-Width")}}
+- {{HTTPHeader("Width")}} {{deprecated_inline}}
 - Device client hints
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
