@@ -59,7 +59,7 @@ The server first needs to opt in to receive the `Width` header by sending the re
 Accept-CH: Width
 ```
 
-Then on subsequent requests the client might send `Width` header back:
+Then on subsequent image requests the client might send `Width` header back:
 
 ```http
 Width: 1920
@@ -72,7 +72,7 @@ Width: 1920
 ## See also
 
 - {{HTTPHeader("Sec-CH-Width")}}
-- Device client hints
+- Deprecated device and responsive image client hints
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Device-Memory")}}

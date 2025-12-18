@@ -74,11 +74,12 @@ Viewport-Width: 320
 ## See also
 
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
-- Device client hints
+- Deprecated device and responsive image client hints
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Device-Memory")}}
   - {{HTTPHeader("Sec-CH-DPR")}}
+  - {{HTTPHeader("Sec-CH-Width")}}
   - {{HTTPHeader("DPR")}} {{deprecated_inline}}
   - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}
   - {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}

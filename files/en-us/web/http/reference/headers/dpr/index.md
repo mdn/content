@@ -81,11 +81,12 @@ Content-DPR: 2.0
 
 ## See also
 
-- Device client hints
+- Deprecated device and responsive image client hints
   - {{HTTPHeader("Sec-CH-DPR")}}
   - {{HTTPHeader("Sec-CH-Device-Memory")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
+  - {{HTTPHeader("Sec-CH-Width")}}
   - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}
   - {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}
   - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}

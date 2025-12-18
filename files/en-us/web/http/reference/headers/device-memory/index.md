@@ -78,11 +78,12 @@ Device-Memory: 1
 - {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}
 - {{DOMxRef("Navigator.deviceMemory")}}
 - {{DOMxRef("WorkerNavigator.deviceMemory")}}
-- Device client hints
+- Deprecated device and responsive image client hints
   - {{HTTPHeader("Sec-CH-Device-Memory")}}
   - {{HTTPHeader("Sec-CH-DPR")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
+  - {{HTTPHeader("Sec-CH-Width")}}
   - {{HTTPHeader("DPR")}} {{deprecated_inline}}
   - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}
   - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}

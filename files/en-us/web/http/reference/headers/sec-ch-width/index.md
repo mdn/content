@@ -53,7 +53,7 @@ The server first needs to opt in to receive the `Sec-CH-Width` header by sending
 Accept-CH: Sec-CH-Width
 ```
 
-Then on subsequent requests the client might send `Sec-CH-Width` header back:
+Then on subsequent image requests the client might send `Sec-CH-Width` header back:
 
 ```http
 Width: 1920
@@ -65,8 +65,8 @@ Width: 1920
 
 ## See also
 
-- {{HTTPHeader("Width")}} {{deprecated_inline}}
-- Device client hints
+- Deprecated device and responsive image client hints
+  - {{HTTPHeader("Width")}} {{deprecated_inline}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Device-Memory")}}
