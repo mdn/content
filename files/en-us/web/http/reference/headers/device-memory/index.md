@@ -10,7 +10,10 @@ browser-compat: http.headers.Device-Memory
 sidebar: http
 ---
 
-{{securecontext_header}}{{deprecated_header}}{{non-standard_header}}
+{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
+
+> [!WARNING]
+> The `Device-Memory` header was renamed to {{HTTPHeader("Sec-CH-Device-Memory")}} and the new name is now preferred.
 
 The HTTP **`Device-Memory`** {{Glossary("request header")}} is used in [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) to indicate the approximate amount of available RAM on the client device, in gigabytes.
 The header is part of the {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}.
@@ -76,9 +79,13 @@ Device-Memory: 1
 - {{DOMxRef("Navigator.deviceMemory")}}
 - {{DOMxRef("WorkerNavigator.deviceMemory")}}
 - Device client hints
-  - {{HTTPHeader("Content-DPR")}}
-  - {{HTTPHeader("DPR")}}
-  - {{HTTPHeader("Viewport-Width")}}
-  - {{HTTPHeader("Width")}}
+  - {{HTTPHeader("Sec-CH-Device-Memory")}}
+  - {{HTTPHeader("Sec-CH-DPR")}}
+  - {{HTTPHeader("Sec-CH-Viewport-Height")}}
+  - {{HTTPHeader("Sec-CH-Viewport-Width")}}
+  - {{HTTPHeader("DPR")}} {{deprecated_inline}}
+  - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}
+  - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}
+  - {{HTTPHeader("Width")}} {{deprecated_inline}}
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}}

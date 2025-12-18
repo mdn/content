@@ -118,7 +118,7 @@ offset-path: unset;
 
 ### Values
 
-The `offset-path` property takes as its value an `<offset-path>` value, a [`<coord-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#values) value, or both, or the `none` keyword. The `<offset-path>` value is a {{cssxref("ray","ray()")}} function, a {{cssxref("url_value", "&lt;url&gt;")}} value, or a [`<basic-shape>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape) value.
+The `offset-path` property takes as its value an `<offset-path>` value, a [`<coord-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#values) value, or both, or the `none` keyword. The `<offset-path>` value is a {{cssxref("ray","ray()")}} function, a {{cssxref("url_value", "&lt;url&gt;")}} value, or a {{cssxref("basic-shape")}} value.
 
 - `none`
   - : Specifies that the element does not follow any offset path. The `none` value is equivalent to the element not having any [offset transform](/en-US/docs/Web/CSS/Reference/Properties/offset). The element's movement in this case is determined by its default position properties, such as {{cssxref("top")}} and {{cssxref("left")}}, instead of an offset path. This is the default value.
@@ -371,7 +371,7 @@ The SVG rectangle that defines the path shape is shown here only to visually dem
 
 ### Different shapes
 
-This example involves different {{cssxref("&lt;basic-shape&gt;")}} values: {{cssxref("basic-shape/circle", "circle()")}}, {{cssxref("basic-shape/ellipse", "ellipse()")}}, {{cssxref("basic-shape/inset", "inset()")}}, {{cssxref("basic-shape/polygon", "polygon()")}}.
+This example involves different {{cssxref("basic-shape")}} values: {{cssxref("basic-shape/circle", "circle()")}}, {{cssxref("basic-shape/ellipse", "ellipse()")}}, {{cssxref("basic-shape/inset", "inset()")}}, {{cssxref("basic-shape/polygon", "polygon()")}}.
 
 ```html
 <div class="container">

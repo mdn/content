@@ -22,7 +22,7 @@ For example, the value of `containerName` for the {{cssxref("@container")}} belo
 
 ## Value
 
-A string that contains the [`container-name`](/en-US/docs/Web/CSS/Reference/Properties/container-name) of the {{cssxref("@container")}} associated with this {{domxref("CSSContainerRule")}}.
+A string that contains the {{cssxref("container-name")}} of the {{cssxref("@container")}} associated with this {{domxref("CSSContainerRule")}}.
 If the `@container` is not [named](/en-US/docs/Web/API/CSSContainerRule#unnamed_container_rule), the function returns the empty string (`""`).
 
 ## Examples

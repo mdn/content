@@ -66,7 +66,7 @@ background-image: revert-layer;
 background-image: unset;
 ```
 
-Each background image is specified either as the keyword `none` or as an {{cssxref("&lt;image&gt;")}} value.
+Each background image is specified either as the keyword `none` or as an {{cssxref("image")}} value.
 
 To specify multiple background images, supply multiple values, separated by a comma.
 
@@ -75,7 +75,7 @@ To specify multiple background images, supply multiple values, separated by a co
 - `none`
   - : Is a keyword denoting the absence of images.
 - `<image>`
-  - : Is an {{cssxref("&lt;image&gt;")}} denoting the image to display. There can be several of them, separated by commas, as [multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds) are supported.
+  - : Is an {{cssxref("image")}} denoting the image to display. There can be several of them, separated by commas, as [multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds) are supported.
 
 ## Description
 
