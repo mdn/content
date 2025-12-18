@@ -3,9 +3,13 @@ title: Sec-Private-State-Token-Crypto-Version header
 short-title: Sec-Private-State-Token-Crypto-Version
 slug: Web/HTTP/Reference/Headers/Sec-Private-State-Token-Crypto-Version
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Sec-Private-State-Token-Crypto-Version
 sidebar: http
 ---
+
+{{SeeCompatTable}}
 
 The HTTP **`Sec-Private-State-Token-Crypto-Version`** {{Glossary("Fetch Metadata Request Header")}} is used by the [Private State Token API](/en-US/docs/Web/API/Private_State_Token_API) during [token issuance](/en-US/docs/Web/API/Private_State_Token_API/Using#issuing_tokens_2) to indicate to the issuer server which cryptographic protocol version should be used to sign blinded nonces when generating tokens.
 
