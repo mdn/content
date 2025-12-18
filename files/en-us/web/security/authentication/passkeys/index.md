@@ -173,13 +173,15 @@ When the RP server verifies the assertion, it should check that these values are
 
 This provides a layer of protection against [phishing](/en-US/docs/Web/Security/Attacks/Phishing) attacks, in addition to that provided by [passkey scope](#passkey_scope).
 
-### Handling lost passkeys
+## Handling lost passkeys
 
-If a user loses their authenticator, whether it's a separate module or integrated into their phone, they lose all the passkeys it contains.
+If a user loses an authenticator, whether it's a separate module or integrated into their phone, they lose all the passkeys it contains.
 
 To ensure that such a user is not locked out of their account, a website can encourage users to create multiple passkeys, in different authenticators, for the same account. For example, the user could have one passkey in an authenticator integrated into the device, and another on a removable authenticator, which they could use as a backup in case they lose their device.
 
-Additionally, some authenticators support backup by various methods, such as cloud sync or manual export. The signed assertion returned from a call to `get()` indicates whether the passkey:
+Note that this is an important difference between passkeys and passwords: the user should have only one password for each account, but may (and even should, if possible) have multiple passkeys for each account.
+
+Additionally, some authenticators support backup by various methods, such as cloud sync or manual export. The signed assertion returned from a call to `get()` includes a set of [flags](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data#flags), which, among other things, indicates whether the passkey:
 
 - Is _backup eligible_: that is, whether it is stored in an authenticator that supports backup
 - Has in fact been backed up.
