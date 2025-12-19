@@ -755,7 +755,7 @@ In fact, we've already seen CSS functions in the [Color](#color) section above, 
 
 Aside from applying colors, you can use functions in CSS to do a lot of other things.
 For example, [Transform functions](/en-US/docs/Web/CSS/Reference/Values/Functions#transform_functions) are a common way to move, rotate, and scale elements on a page.
-You might see {{cssxref("transform-function/translate")}} for moving something horizontally or vertically, {{cssxref("rotate()")}} to rotate something, or {{cssxref("scale()")}} to make something bigger or smaller.
+You might see {{cssxref("transform-function/translate")}} for moving something horizontally or vertically, {{cssxref("transform-function/rotate")}} to rotate something, or {{cssxref("transform-function/scale")}} to make something bigger or smaller.
 
 ### Math functions
 
