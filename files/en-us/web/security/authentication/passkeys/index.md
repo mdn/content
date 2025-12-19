@@ -204,14 +204,12 @@ In this section we'll discuss two strategies for dealing with authenticator loss
 
 ### Creating multiple passkeys
 
-An RP can create multiple passkeys for a single user account, including:
+In contrast to the advice regarding passwords, RPs are encouraged to create multiple passkeys for a single account. A common pattern would be to have:
 
-- One in a [platform authenticator](#platform_and_roaming_authenticators), that contains their everyday passkey for the site
-- One in a [roaming authenticator](#platform_and_roaming_authenticators), that contains a backup passkey in case the user loses their device.
+- One passkey in a [platform authenticator](#platform_and_roaming_authenticators), that is their everyday passkey for the site
+- One passkey in a [roaming authenticator](#platform_and_roaming_authenticators), that the user keeps somewhere safe, as a backup in case the user loses their device.
 
-Note that this reflects the principle that unlike passwords, RPs are encouraged to create multiple passkeys for a single account.
-
-The [`excludeCredentials`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#excludecredentials) option, passed to {{domxref("CredentialsContainer.create()")}}, lists credential IDs, and tells the browser that the new passkey may not be created in an authenticator which contains any of the listed keys. That is, it is a way for the RP to ensure that the new passkey is created in a new authenticator.
+The [`excludeCredentials`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#excludecredentials) option, passed to {{domxref("CredentialsContainer.create()")}}, lists credential IDs, and tells the browser that the authenticators containing the listed keys must not be used for the new key. That is, it is a way for the RP to ensure that the new passkey is created in a new authenticator.
 
 ### Passkey backup
 
