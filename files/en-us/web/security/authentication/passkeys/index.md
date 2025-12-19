@@ -84,6 +84,17 @@ The RP's front-end sends the assertion to the server, which verifies the signatu
 
 ## Features of WebAuthn
 
+### Platform and roaming authenticators
+
+The WebAuthn API distinguishes two main types of authenticator:
+
+- <i id="platform_authenticator">platform authenticators</i>, that are not removable from the device. For example, authenticators built into the device's operating system are platform authenticators.
+- <i id="roaming_authenticator">roaming authenticators</i>, that can be removed from the device and attached to a different device. The classic example of this is an authenticator implemented in a USB key.
+
+When an RP creates a new passkey it can ask which type of authenticator it wants to use, as part of the [`authenticatorSelection`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#authenticatorselection) it passes to {{domxref("CredentialsContainer.create()")}}.
+
+The main advantage of a platform authenticator is that it's convenient for the user: they don't have to keep track of a separate piece of hardware. The main disadvantage is that it can only be used with this device.
+
 ### Discoverable and non-discoverable credentials
 
 The WebAuthn specification distinguishes between _discoverable_ and _non-discoverable_ credentials.
@@ -96,12 +107,17 @@ To create a discoverable credential, the RP should set the `residentKey` option 
 
 _Passkeys must always be discoverable credentials, so RPs implementing passkey-based authentication should always set these options_.
 
-> [!NOTE]
-> Technically, the difference between the two credential types is that with a discoverable credential, all the signing key material is stored in the authenticator, so the authenticator is able to generate signatures without needing any input from the RP.
->
-> Non-discoverable credentials may not store the signing key itself in the authenticator, but may instead generate the signing key every time it is needed, from an internal seed and the credential ID value. This means that they need the RP to provide the credential ID value for them to generate a signature. One advantage of this is that the keys take up less storage space, but this is not an issue for passkey authenticators.
->
-> "Resident key" is an old, deprecated term for "discoverable credential", but the old term is still used in the WebAuthn API for backwards compatibility.
+#### Resident keys and non-resident keys
+
+Discoverable and non-discoverable credentials are also known as "resident" and "non-resident" keys, and this term is still used in the [WebAuthn JavaScript API](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey).
+
+This alternative terminology reflects the reason why non-discoverable credentials need to be passed a credential ID.
+
+With a discoverable credential, all the signing key material is stored in the authenticator, so the authenticator is able to generate signatures without needing any input from the RP.
+
+Non-discoverable credentials do not store the signing key itself in the authenticator, but instead generate the signing key every time it is needed, from an internal seed and the credential ID value. That is, the account key is not resident in the authenticator.
+
+The advantage of this method is that an authenticator can support a potentially unlimited number of accounts, because the key material for each account is not stored in the authenticator.
 
 ### Challenges
 
@@ -129,7 +145,7 @@ Not all authenticators support attestation, and RPs can indicate that they are n
 
 When a website calls {{domxref("CredentialsContainer.create()")}} to create a new passkey, or calls {{domxref("CredentialsContainer.get()")}} to create an assertion, the authenticator will always ask the user to consent to the operation.
 
-The RP can also ask the authenticator to perform _user verification_, which means the user will be asked to authenticate themselves, for example with a PIN or a biometric such as a fingerprint.
+The RP can also ask the authenticator to perform _user verification_, which means the user will be asked to authorize the use of their credential, for example by entering a PIN or a biometric such as a fingerprint.
 
 When this happens, it's considered to be a form of {{glossary("multi-factor authentication")}}: the authenticator itself is "something the user has" while the PIN or biometric are respectively "something they know" or "something they are".
 
@@ -177,9 +193,18 @@ This provides a layer of protection against [phishing](/en-US/docs/Web/Security/
 
 If a user loses an authenticator, whether it's a separate module or integrated into their phone, they lose all the passkeys it contains.
 
-To ensure that such a user is not locked out of their account, a website can encourage users to create multiple passkeys, in different authenticators, for the same account. For example, the user could have one passkey in an authenticator integrated into the device, and another on a removable authenticator, which they could use as a backup in case they lose their device.
+### Creating multiple passkeys
 
-Note that this is an important difference between passkeys and passwords: the user should have only one password for each account, but may (and even should, if possible) have multiple passkeys for each account.
+To ensure that such a user is not locked out of their account, a common pattern is for an RP to create multiple passkeys for a single user account, including:
+
+- One in a [platform authenticator](#platform_authenticator), that contains their everyday passkey for the site
+- One in a [roaming authenticator](#roaming_authenticator), that contains a backup passkey in case the user loses their device.
+
+Note that this reflects the principle that unlike passwords, it's encouraged for an RP to create multiple passkeys for a single account.
+
+The [`excludeCredentials`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#excludecredentials), passed to {{domxref("CredentialsContainer.create()")}}, lists credential IDs, and tells the browser that the new passkey may not be created in an authenticator which contains any of the listed keys: that is, it is a way for the RP to ensure that the new passkey is created in a new authenticator.
+
+### Passkey backup
 
 Additionally, some authenticators support backup by various methods, such as cloud sync or manual export. The signed assertion returned from a call to `get()` includes a set of [flags](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data#flags), which, among other things, indicates whether the passkey:
 
