@@ -435,13 +435,13 @@ The [UA client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client
 ##### Deprecated device and responsive image client hints
 
 - {{HTTPHeader("Device-Memory")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Renamed to {{HTTPHeader("Sec-CH-Device-Memory")}}
+  - : Standardized as {{HTTPHeader("Sec-CH-Device-Memory")}}
 - {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Renamed to {{HTTPHeader("Sec-CH-DPR")}}
+  - : Standardized as {{HTTPHeader("Sec-CH-DPR")}}
 - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Renamed to {{HTTPHeader("Sec-CH-Viewport-Width")}}
+  - : Standardized as {{HTTPHeader("Sec-CH-Viewport-Width")}}
 - {{HTTPHeader("Width")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Renamed to {{HTTPHeader("Sec-CH-Width")}}
+  - : Standardized as {{HTTPHeader("Sec-CH-Width")}}
 
 #### Network client hints
 

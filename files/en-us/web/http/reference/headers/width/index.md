@@ -13,11 +13,11 @@ sidebar: http
 {{Deprecated_Header}}{{SecureContext_header}}{{Non-standard_Header}}
 
 > [!WARNING]
-> The `Width` header was renamed to {{HTTPHeader("Sec-CH-Width")}} and the new name is now preferred.
+> The `Width` header was standardized as {{HTTPHeader("Sec-CH-Width")}} and the new name is now preferred.
 
 The HTTP **`Width`** {{Glossary("request header")}} is a [device client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) which indicates the desired resource width in physical pixels — the intrinsic size of an image. The provided pixel value is a number rounded to the smallest following integer (i.e., ceiling value).
 
-The hint is only sent on image requests and not on the HTML document request nor other non-image resources.
+The hint is only sent on image requests.
 
 The hint allows the client to request a resource that is optimal for both the screen and the layout: taking into account both the density-corrected width of the screen and the image's extrinsic size within the layout.
 
@@ -71,8 +71,8 @@ Width: 1920
 
 ## See also
 
-- {{HTTPHeader("Sec-CH-Width")}}
-- Deprecated device and responsive image client hints
+- Device and responsive image client hints
+  - {{HTTPHeader("Sec-CH-Width")}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Device-Memory")}}

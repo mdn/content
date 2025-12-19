@@ -13,7 +13,7 @@ sidebar: http
 {{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 > [!WARNING]
-> The `Viewport-Width` header was renamed to {{HTTPHeader("Sec-CH-Viewport-Width")}} and the new name is now preferred.
+> The `Viewport-Width` header was standardized as {{HTTPHeader("Sec-CH-Viewport-Width")}} and the new name is now preferred.
 
 The HTTP **`Viewport-Width`** {{Glossary("request header")}} is a [device client hint](/en-US/docs/Web/HTTP/Guides/Client_hints) which provides the client's layout viewport width in {{Glossary("CSS pixel", "CSS pixels")}}.
 The value is rounded up to the smallest following integer (i.e., ceiling value).
@@ -74,7 +74,7 @@ Viewport-Width: 320
 ## See also
 
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
-- Deprecated device and responsive image client hints
+- Device and responsive image client hints
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Device-Memory")}}

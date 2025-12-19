@@ -72,7 +72,7 @@ Sec-CH-Device-Memory: 1
 - {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}
 - {{DOMxRef("Navigator.deviceMemory")}}
 - {{DOMxRef("WorkerNavigator.deviceMemory")}}
-- Deprecated device and responsive image client hints
+- Device and responsive image client hints
   - {{HTTPHeader("Sec-CH-DPR")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}

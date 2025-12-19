@@ -66,7 +66,7 @@ Sec-CH-DPR: 2.0
 
 ## See also
 
-- Deprecated device and responsive image client hints
+- Device and responsive image client hints
   - {{HTTPHeader("Sec-CH-Device-Memory")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
