@@ -50,6 +50,8 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2001878](https://bugzil.la/2001878)).
 - The {{cssxref("counter-increment")}}, {{cssxref("counter-reset")}}, {{cssxref("counter-set")}}, and {{cssxref("quotes")}} properties are now supported on the {{cssxref("::marker")}} pseudo-element.
   ([Firefox bug 2000404](https://bugzil.la/2000404)).
+- The following [Relative length units based on root element's font](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_root_elements_font) are now supported: `rcap`, `rch`, `rex`, and `ric`. These units allow you define `<length>` values based upon the the size of a particular character or font attribute of the [root](/en-US/docs/Web/CSS/Reference/Selectors/:root) element.
+  ([Firefox bug 1740584](https://bugzil.la/1740584)).
 
 <!-- #### Removals -->
 
