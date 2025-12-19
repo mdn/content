@@ -91,7 +91,7 @@ Module workers and their dependencies are loaded and executed using ECMAScript m
 - All modules are resolved before any code is executed
 - Must be served with the media type `Content-Type: text/javascript`
 - Executed in {{glossary("Strict mode")}}
-- Dependencies are loaded via static [`import` statements](../en-US/docs/Web/JavaScript/Reference/Statements/import)
+- Dependencies are loaded via static [`import` statements](/en-US/docs/Web/JavaScript/Reference/Statements/import)
 - Dependencies are restricted by the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), in particular the `script-src` and `worker-src` directives
   These can be used to control the locations from which modules can be fetched
 
