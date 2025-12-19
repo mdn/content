@@ -3,10 +3,12 @@ title: "Document: hasPrivateToken() method"
 short-title: hasPrivateToken()
 slug: Web/API/Document/hasPrivateToken
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Document.hasPrivateToken
 ---
 
-{{APIRef("Storage Access API")}}
+{{APIRef("Storage Access API")}}{{SeeCompatTable}}
 
 The **`hasPrivateToken()`** method of the {{domxref("Document")}} interface returns a promise that fulfills with a boolean indicating whether the browser has a [private state token](/en-US/docs/Web/API/Private_State_Token_API) stored from a particular issuer server.
 
