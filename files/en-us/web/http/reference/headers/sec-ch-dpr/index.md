@@ -3,11 +3,13 @@ title: Sec-CH-DPR header
 short-title: Sec-CH-DPR
 slug: Web/HTTP/Reference/Headers/Sec-CH-DPR
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-DPR
 sidebar: http
 ---
 
-{{SecureContext_Header}}
+{{SecureContext_Header}}{{SeeCompatTable}}
 
 The HTTP **`Sec-CH-DPR`** {{Glossary("request header")}} provides [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) about the client device pixel ratio (DPR).
 This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.

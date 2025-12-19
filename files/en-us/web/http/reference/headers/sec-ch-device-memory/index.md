@@ -3,11 +3,13 @@ title: Sec-CH-Device-Memory header
 short-title: Sec-CH-Device-Memory
 slug: Web/HTTP/Reference/Headers/Sec-CH-Device-Memory
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-Device-Memory
 sidebar: http
 ---
 
-{{SecureContext_Header}}
+{{SecureContext_Header}}{{SeeCompatTable}}
 
 The HTTP **`Sec-CH-Device-Memory`** {{Glossary("request header")}} is used in [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) to indicate the approximate amount of available RAM on the client device, in gigabytes.
 The header is part of the {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}.

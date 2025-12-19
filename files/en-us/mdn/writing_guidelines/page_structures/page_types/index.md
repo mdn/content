@@ -198,9 +198,9 @@ A **CSS reference page** lists all the available syntax for a CSS feature such a
 
 #### Examples
 
-- [`background-color` property](/en-US/docs/Web/CSS/Reference/Properties/background-color)
-- [`:hover` pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/:hover)
-- [`@media` at-rule](/en-US/docs/Web/CSS/Reference/At-rules/@media)
+- {{cssxref("background-color")}} property
+- {{cssxref(":hover")}} pseudo-class
+- {{cssxref("@media")}} at-rule
 
 #### Templates
 

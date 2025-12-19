@@ -3,11 +3,13 @@ title: Sec-CH-Viewport-Width header
 short-title: Sec-CH-Viewport-Width
 slug: Web/HTTP/Reference/Headers/Sec-CH-Viewport-Width
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-Viewport-Width
 sidebar: http
 ---
 
-{{SecureContext_header}}
+{{SecureContext_header}}{{SeeCompatTable}}
 
 The HTTP **`Sec-CH-Viewport-Width`** {{Glossary("request header")}} is a [device client hint](/en-US/docs/Web/HTTP/Guides/Client_hints) which provides the client's layout viewport width in {{Glossary("CSS pixel", "CSS pixels")}}.
 The value is rounded up to the smallest following integer (i.e., ceiling value).

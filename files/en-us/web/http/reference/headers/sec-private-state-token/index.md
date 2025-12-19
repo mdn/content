@@ -3,9 +3,13 @@ title: Sec-Private-State-Token header
 short-title: Sec-Private-State-Token
 slug: Web/HTTP/Reference/Headers/Sec-Private-State-Token
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Sec-Private-State-Token
 sidebar: http
 ---
+
+{{SeeCompatTable}}
 
 The HTTP **`Sec-Private-State-Token`** header exists both as a request and a response header. It is used by the [Private State Token API](/en-US/docs/Web/API/Private_State_Token_API) during issuance and redemption requests to transmit request data and response data.
 
