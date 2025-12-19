@@ -91,9 +91,9 @@ The WebAuthn API distinguishes two main types of authenticator:
 - _platform authenticators_, that are not removable from the device. For example, authenticators built into the device's operating system are platform authenticators.
 - _roaming authenticators_, that can be removed from the device and attached to a different device. The classic example of this is an authenticator implemented in a USB key.
 
-When an RP creates a new passkey it can ask which type of authenticator it wants to use, as part of the [`authenticatorSelection`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#authenticatorselection) it passes to {{domxref("CredentialsContainer.create()")}}.
+When an RP creates a new passkey it can ask which type of authenticator it wants to use, as part of the [`authenticatorSelection`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#authenticatorselection) option that it passes to {{domxref("CredentialsContainer.create()")}}.
 
-The main advantage of a platform authenticator is that it's convenient for the user: they don't have to keep track of a separate piece of hardware. The main disadvantage is that it can only be used with this device.
+The main advantage of a platform authenticator is that it's convenient for the user: they don't have to keep track of a separate piece of hardware. The main disadvantage is that it can only be used with its host device.
 
 Platform authenticators can sometimes function as roaming authenticators: for example, a platform authenticator on a mobile device might be available to a laptop as a roaming authenticator, via a Bluetooth connection.
 
@@ -189,7 +189,7 @@ The signed [assertion](#assertions) returned by an authenticator includes inform
 - If the caller was embedded as an {{htmlelement("iframe")}}, whether the caller had the same origin as the top-level document.
 - The origin of the top-level document, if the caller was embedded as an {{htmlelement("iframe")}} and was not same-origin with the caller.
 
-When the RP server verifies the assertion, it should check that these values are what it expects to see.
+When the RP server verifies the assertion, it must check that these values are what it expects to see.
 
 This provides a layer of protection against [phishing](/en-US/docs/Web/Security/Attacks/Phishing) attacks, in addition to that provided by [passkey scope](#passkey_scope).
 
@@ -197,16 +197,21 @@ This provides a layer of protection against [phishing](/en-US/docs/Web/Security/
 
 If a user loses an authenticator, whether it's a separate module or integrated into their phone, they lose all the passkeys it contains.
 
+In this section we'll discuss two strategies for dealing with authenticator loss:
+
+- Creating multiple passkeys for a single account
+- Backing up passkeys
+
 ### Creating multiple passkeys
 
-To ensure that such a user is not locked out of their account, a common pattern is for an RP to create multiple passkeys for a single user account, including:
+An RP can create multiple passkeys for a single user account, including:
 
 - One in a [platform authenticator](#platform_and_roaming_authenticators), that contains their everyday passkey for the site
 - One in a [roaming authenticator](#platform_and_roaming_authenticators), that contains a backup passkey in case the user loses their device.
 
 Note that this reflects the principle that unlike passwords, RPs are encouraged to create multiple passkeys for a single account.
 
-The [`excludeCredentials`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#excludecredentials), passed to {{domxref("CredentialsContainer.create()")}}, lists credential IDs, and tells the browser that the new passkey may not be created in an authenticator which contains any of the listed keys. That is, it is a way for the RP to ensure that the new passkey is created in a new authenticator.
+The [`excludeCredentials`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#excludecredentials) option, passed to {{domxref("CredentialsContainer.create()")}}, lists credential IDs, and tells the browser that the new passkey may not be created in an authenticator which contains any of the listed keys. That is, it is a way for the RP to ensure that the new passkey is created in a new authenticator.
 
 ### Passkey backup
 
