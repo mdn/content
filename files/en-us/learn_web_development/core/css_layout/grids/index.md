@@ -801,7 +801,7 @@ provide features such as 12- or 16-column grids, utility classes for spacing and
 responsive design via breakpoints. Popular examples include grid systems provided
 
 The good news is that you probably won't need any proprietary workarounds to help
-you create grid-based layouts — all modern browsers support the CSS Grid standard.
+you create grid-based layouts — all modern browsers support the CSS grid standard.
 
 The following example shows a simplified version of what such code might look
 like.
