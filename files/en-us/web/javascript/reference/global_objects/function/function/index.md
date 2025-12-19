@@ -7,7 +7,16 @@ browser-compat: javascript.builtins.Function.Function
 sidebar: jsref
 ---
 
-The **`Function()`** constructor creates {{jsxref("Function")}} objects. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues as {{jsxref("Global_Objects/eval", "eval()")}}. However, unlike `eval` (which may have access to the local scope), the `Function` constructor creates functions which execute in the global scope only.
+> [!WARNING]
+> The arguments passed this method are dynamically evaluated and executed as JavaScript.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+>
+> You can mitigate this risk by always passing {{domxref("TrustedScript")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+>
+> See [Security considerations](#security_considerations) for more information.
+
+The **`Function()`** constructor creates {{jsxref("Function")}} objects.
+Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues as {{jsxref("Global_Objects/eval", "eval()")}}. However, unlike `eval` (which may have access to the local scope), the `Function` constructor creates functions which execute in the global scope only.
 
 {{InteractiveExample("JavaScript Demo: Function() constructor", "shorter")}}
 
@@ -38,12 +47,15 @@ Function(arg1, arg2, /* …, */ argN, functionBody)
 ### Parameters
 
 - `arg1`, …, `argN` {{optional_inline}}
-  - : Names to be used by the function as formal argument names. Each must be a string that corresponds to a valid JavaScript parameter (any of plain [identifier](/en-US/docs/Glossary/Identifier), [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) parameter, optionally with a [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)), or a list of such strings separated with commas.
+  - : {{domxref("TrustedScript")}} instances or strings specifying names to be used by the function as formal argument names.
+    The value must correspond to a valid JavaScript parameter (any of plain [identifier](/en-US/docs/Glossary/Identifier), [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) parameter, optionally with a [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)), or a list of such strings separated with commas.
 
-    As the parameters are parsed in the same way as function expressions, whitespace and comments are accepted. For example: `"x", "theValue = 42", "[a, b] /* numbers */"` — or `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` is also correct, though very confusing to read.)
+    As the parameters are parsed in the same way as function expressions, whitespace and comments are accepted.
+    For example: `"x", "theValue = 42", "[a, b] /* numbers */"` — or `"x, theValue = 42, [a, b] /* numbers */"`.
+    (`"x, theValue = 42", "[a, b]"` is also correct, though very confusing to read.)
 
 - `functionBody`
-  - : A string containing the JavaScript statements comprising the function definition.
+  - : A {{domxref("TrustedScript")}} or a string containing the JavaScript statements comprising the function definition.
 
 ## Description
 
@@ -84,6 +96,36 @@ new Function("/*", "*/) {");
 // SyntaxError: Unexpected end of arg string
 // Doesn't become "function anonymous(/*) {*/) {}"
 ```
+
+### Security considerations
+
+The method can be used to execute arbitrary input passed to any parameter.
+If the input is a potentially unsafe string provided by a user, this is a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+For example, the following example assumes the `untrustedCode` was provided by a user:
+
+```js example-bad
+const untrustedCode = "alert('Potentially evil code!');";
+const adder = new Function("a", "b", untrustedCode);
+```
+
+Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that specifies [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) will prevent such code running by default.
+
+You can specify [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) in your CSP to allow it to execute without any further restriction, but this is unsafe as it disables one of the main protections of CSP.
+
+If you must allow the scripts to run via `Function()` you can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+This ensures that the input is passed through a transformation function.
+Instead of specifying `unsafe-eval` you will instead use the CSP [`trusted-types-eval` keyword](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval).
+This acts in the same way as `unsafe-eval`, but _only_ allows the method to evaluate if trusted types are enabled (if you were to use `unsafe-eval` it would allow execution even on browsers that do not support trusted types).
+
+For example, the required CSP for your site might look like this:
+
+```http
+Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_allowlist>' 'trusted-types-eval'
+```
+
+The behavior of the transformation function will depend on the specific use case that requires a user provided script.
+If possible you should lock the allowed scripts to exactly the code that you trust to run.
+If that is not possible, you might allow or block the use of certain functions within the provided string.
 
 ## Examples
 
