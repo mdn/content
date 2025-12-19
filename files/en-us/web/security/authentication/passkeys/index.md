@@ -95,6 +95,10 @@ When an RP creates a new passkey it can ask which type of authenticator it wants
 
 The main advantage of a platform authenticator is that it's convenient for the user: they don't have to keep track of a separate piece of hardware. The main disadvantage is that it can only be used with this device.
 
+Platform authenticators can sometimes function as roaming authenticators: for example, a platform authenticator on a mobile device might be available to a laptop as a roaming authenticator, via a Bluetooth connection.
+
+Although platform authenticators can't be removed from their device, they might be able to share their passkeys with other authenticators via cloud sync or import/export functions. For example, a platform provider might enable users to share their passkeys across all the devices belonging to their product family.
+
 ### Discoverable and non-discoverable credentials
 
 The WebAuthn specification distinguishes between _discoverable_ and _non-discoverable_ credentials.
@@ -200,7 +204,7 @@ To ensure that such a user is not locked out of their account, a common pattern 
 - One in a [platform authenticator](#platform_and_roaming_authenticators), that contains their everyday passkey for the site
 - One in a [roaming authenticator](#platform_and_roaming_authenticators), that contains a backup passkey in case the user loses their device.
 
-Note that this reflects the principle that unlike passwords, it's encouraged for an RP to create multiple passkeys for a single account.
+Note that this reflects the principle that unlike passwords, RPs are encouraged to create multiple passkeys for a single account.
 
 The [`excludeCredentials`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#excludecredentials), passed to {{domxref("CredentialsContainer.create()")}}, lists credential IDs, and tells the browser that the new passkey may not be created in an authenticator which contains any of the listed keys. That is, it is a way for the RP to ensure that the new passkey is created in a new authenticator.
 
