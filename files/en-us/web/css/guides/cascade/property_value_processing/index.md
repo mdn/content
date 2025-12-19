@@ -16,7 +16,7 @@ When there are multiple [declared values](#declared_value), with multiple declar
 
 To determine which [declared value](#declared_value) is applied, the user agent gathers and processes all the styles from different sources, such as inline styles, and internal and external stylesheets.
 
-The [cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction) determines which value should be applied when multiple conflicting styles target the same element. The [cascade algorithm](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#cascading_order) defines how user agents combine property values originating from different sources, scopes, and/or [layers](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#cascade_layers). When a selector matches an element, the property's [declared value](#declared_value) from the [origin](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#origin_types) with the highest precedence gets applied, even if a selector from a lower precedence [origin](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#origin_types) or [layers](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#cascade_layers) has greater {{cssxref("specificity")}}.
+The [cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction) determines which value should be applied when multiple conflicting styles target the same element. The [cascade algorithm](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#cascading_order) defines how user agents combine property values originating from different sources, scopes, and/or [layers](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#cascade_layers). When a selector matches an element, the property's [declared value](#declared_value) from the [origin](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#origin_types) with the highest precedence gets applied, even if a selector from a lower precedence [origin](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#origin_types) or [layers](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#cascade_layers) has greater [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
 
 Certain properties inherit values from their parent elements unless explicitly overridden. [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance) may occur when no style information exists for a specific property on an element. If the property is inherited, the value is set to the [computed value](#computed_value) of the parent element. If the property is not inherited, its value is set to the [initial value](#initial_value) for that element.
 
@@ -53,7 +53,7 @@ When filtering is complete, every element has zero or more [declared values](#de
 
 [Cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction) resolves conflicts when multiple declarations apply to the same property on the same element. Cascade sorts declarations using [the cascade sorting order](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#cascading_order) algorithm.
 
-For example, both {{cssxref("font-size")}} declarations match `<p class="large">CSS is fun!</p>`, but the second declaration gets applied because it has higher {{cssxref("specificity")}}. Both declarations have author origin, but the second selector has specificity of `0-1-1` while the first has `0-0-1`:
+For example, both {{cssxref("font-size")}} declarations match `<p class="large">CSS is fun!</p>`, but the second declaration gets applied because it has higher [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity). Both declarations have author origin, but the second selector has specificity of `0-1-1` while the first has `0-0-1`:
 
 ```css
 p {
@@ -85,12 +85,22 @@ All elements that are part of the document's flattened element tree have [declar
 
 The value processing stages are:
 
-- [Declared value](#declared_value)
-- [Cascaded value](#cascaded_value)
-- [Specified value](#specified_value)
-- [Computed value](#computed_value)
-- [Used value](#used_value)
-- [Actual value](#actual_value)
+- [Property values](#property-values)
+- [Processing overview](#processing-overview)
+  - [Filtering](#filtering)
+  - [Cascading](#cascading)
+  - [Defaulting](#defaulting)
+- [Processing stages](#processing-stages)
+  - [Declared value](#declared-value)
+  - [Cascaded value](#cascaded-value)
+  - [Specified value](#specified-value)
+    - [Initial value](#initial-value)
+  - [Computed value](#computed-value)
+  - [Used value](#used-value)
+- [Rendered values](#rendered-values)
+  - [Actual value](#actual-value)
+  - [Resolved value](#resolved-value)
+- [See also](#see-also)
 
 These values are used to determine the final [rendered value](#rendered_values).
 
