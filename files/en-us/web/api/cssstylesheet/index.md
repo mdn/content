@@ -26,11 +26,7 @@ Another rule might be an _at-rule_ such as {{cssxref("@import")}} or {{cssxref("
 
 See the [Obtaining a StyleSheet](#obtaining_a_stylesheet) section for the various ways a `CSSStyleSheet` object can be obtained. A `CSSStyleSheet` object can also be directly constructed. The constructor, and the {{domxref("CSSStyleSheet.replace()")}}, and {{domxref("CSSStyleSheet.replaceSync()")}} methods are newer additions to the specification, enabling _Constructable Stylesheets_.
 
-To apply a constructed or obtained `CSSStyleSheet` to a document or shadow root, assign it to the
-[`Document.adoptedStyleSheets`](/en-US/docs/Web/API/Document/adoptedStyleSheets)
-or
-[`ShadowRoot.adoptedStyleSheets`](/en-US/docs/Web/API/ShadowRoot/adoptedStyleSheets)
-property.
+To apply a `CSSStyleSheet` to a document or shadow root, assign it to the {{domxref("Document.adoptedStyleSheets")}} or {{domxref("ShadowRoot.adoptedStyleSheets")}}  property, respectively.
 
 ## Constructor
 
