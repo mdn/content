@@ -47,14 +47,14 @@ A grid will typically have **columns**, **rows**, and then gaps between each row
 
 ## Creating your grid in CSS
 
-Having decided on the grid that your design needs, you can use CSS grid layout to create it. We'll look at the basic features of grid layout first and then explore how to create a simple grid system for your project.
+Having decided on the grid that your design needs, you can use CSS grid layout to create it. We'll examine the basic features of grid layout first, and then explore how to create a simple grid system for your project.
 The following video provides a nice visual explanation of using CSS grid:
 
 {{EmbedYouTube("KOvGeFUHAC0")}}
 
 ### Defining a grid
 
-Let's try out grid layouts, here is an example with a container, which has some child items. By default, these items are displayed in a normal flow, causing them to appear one below the other.
+Let's try out grid layouts. Here is an example with a container, which has some child items. By default, these items are displayed in a normal flow, causing them to appear one below the other.
 
 ```html live-sample___simple-grid_0
 <div class="container">
@@ -237,7 +237,7 @@ body {
 
 {{EmbedLiveSample('grid-fr-unit_1', '100%', "130") }}
 
-The first track gets `2fr` of the available space and the other two tracks get `1fr`, making the first track larger. You can mix `fr` units with fixed length units. In this case, the space needed for the fixed tracks is used up first before the remaining space is distributed to the other tracks.
+The first track gets `2fr` of the available space and the other two tracks get `1fr`, making the first track larger. You can mix `fr` units with fixed-length units. In this case, the space needed for the fixed tracks is used up first before the remaining space is distributed to the other tracks.
 
 > [!NOTE]
 > The `fr` unit distributes _available_ space, not _all_ space. Therefore, if one of your tracks has something large inside it, there will be less free space to share.
@@ -337,7 +337,7 @@ Here's a bit more about the difference between the two types of grids:
 - **Explicit grid** is created using `grid-template-columns` or `grid-template-rows`.
 - **Implicit grid** extends the defined explicit grid when content is placed outside of that grid, such as into the rows by drawing additional grid lines.
 
-By default, tracks created in the implicit grid are `auto` sized, which in general means that they're large enough to contain their content. If you wish to give implicit grid tracks a size, you can use the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties. If you add `grid-auto-rows` with a value of `100px` to your CSS, you'll see that those created rows are now 100 pixels tall.
+By default, tracks created in the implicit grid are `auto`-sized, which in general means that they're large enough to contain their content. If you wish to give implicit grid tracks a size, you can use the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties. If you add `grid-auto-rows` with a value of `100px` to your CSS, you'll see that those created rows are now 100 pixels tall.
 
 ```html hidden live-sample___grid-auto
 <div class="container">
@@ -376,7 +376,7 @@ body {
 
 ### The minmax() function
 
-Our 100-pixel tall tracks won't be very useful if we add content into those tracks that is taller than 100 pixels, in which case it would cause an overflow. It might be better to have tracks that are _at least_ 100 pixels tall and can still expand if more content becomes added. A fairly basic fact about the web is that you never really know how tall something is going to be — additional content or larger font sizes can cause problems with designs that attempt to be pixel perfect in every dimension.
+Our 100-pixel tall tracks won't be very useful if we add content into those tracks that is taller than 100 pixels, in which case it would cause an overflow. It might be better to have tracks that are _at least_ 100 pixels tall and can still expand if more content becomes added. A fairly basic fact about the web is that you never really know how tall something is going to be — additional content or larger font sizes can cause problems with designs that attempt to be pixel-perfect in every dimension.
 
 The {{cssxref("minmax", "minmax()")}} function lets us set a minimum and maximum size for a track, for example, `minmax(100px, auto)`. The minimum size is 100 pixels, but the maximum is `auto`, which will expand to accommodate more content. Here we change the `grid-auto-rows` to use a `minmax()` value:
 
@@ -419,7 +419,7 @@ If you add extra content, you'll see that the track expands to allow it to fit. 
 
 ### As many columns as will fit
 
-We can combine some of the lessons we've learned about track listing, repeat notation, and {{cssxref("minmax", "minmax()")}} to create a useful pattern. Sometimes it's helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of `grid-template-columns` using the {{cssxref("repeat", "repeat()")}} function, but instead of passing in a number, pass in the keyword [`auto-fit`](/en-US/docs/Web/CSS/Reference/Values/repeat#auto-fit). For the second parameter of the function we use `minmax()` with a minimum value equal to the minimum track size that we would like to have and a maximum of `1fr`.
+We can combine some of the lessons we've learned about track listing, repeat notation, and {{cssxref("minmax", "minmax()")}} to create a useful pattern. Sometimes it's helpful to be able to ask CSS grid to create as many columns as will fit into the container. We do this by setting the value of `grid-template-columns` using the {{cssxref("repeat", "repeat()")}} function, but instead of passing in a number, pass in the keyword [`auto-fit`](/en-US/docs/Web/CSS/Reference/Values/repeat#auto-fit). For the second parameter of the function we use `minmax()` with a minimum value equal to the minimum track size that we would like to have and a maximum of `1fr`.
 
 ```html hidden live-sample___grid-minmax_1
 <div class="container">
@@ -456,7 +456,7 @@ body {
 
 {{EmbedLiveSample('grid-minmax_1', '100%', "210") }}
 
-This works because grid is creating as many 230-pixel columns as will fit into the container, then sharing whatever space is leftover among all the columns. The maximum is `1fr` which, as we already know, distributes space evenly between tracks.
+This works because grid is creating as many 230-pixel columns as will fit into the container, then sharing whatever space is left over among all the columns. The maximum is `1fr` which, as we already know, distributes space evenly between tracks.
 
 ## Line-based placement
 
@@ -796,10 +796,13 @@ We've added `subgrid` to inherit the parent grid's column tracks while adding a 
 
 ## Grid frameworks
 
-Numerous grid frameworks are available, offering a 12 or 16-column grid, to help with laying out your content.
-The good news is that you probably won't need any third-party frameworks to help you create grid-based layouts — grid functionality is already included in the specification and is supported by most modern browsers.
+Numerous grid frameworks are available — these are prebuilt CSS systems that
+provide features such as 12- or 16-column grids, utility classes for spacing and alignment, and
+responsive design via breakpoints.
 
-This has a container with a 12-column grid defined, using `grid-template-columns: repeat(12, 1fr);`, and the same markup we used in the previous two examples. We can now use line-based placement to place our content on the 12-column grid.
+The good news is that you probably won't need any proprietary workarounds to create grid-based layouts — all modern browsers support the CSS grid standard.
+
+The following example shows a simplified version of what such code might look like. It features a container with a 12-column grid defined, using `grid-template-columns: repeat(12, 1fr);`, and the same markup we used in the previous two examples. We can now use line-based placement to place our content on the 12-column grid.
 
 ```html hidden live-sample___grid-frameworks
 <div class="container">
