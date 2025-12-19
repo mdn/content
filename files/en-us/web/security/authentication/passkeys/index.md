@@ -88,8 +88,8 @@ The RP's front-end sends the assertion to the server, which verifies the signatu
 
 The WebAuthn API distinguishes two main types of authenticator:
 
-- <i id="platform_authenticator">platform authenticators</i>, that are not removable from the device. For example, authenticators built into the device's operating system are platform authenticators.
-- <i id="roaming_authenticator">roaming authenticators</i>, that can be removed from the device and attached to a different device. The classic example of this is an authenticator implemented in a USB key.
+- _platform authenticators_, that are not removable from the device. For example, authenticators built into the device's operating system are platform authenticators.
+- _roaming authenticators_, that can be removed from the device and attached to a different device. The classic example of this is an authenticator implemented in a USB key.
 
 When an RP creates a new passkey it can ask which type of authenticator it wants to use, as part of the [`authenticatorSelection`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#authenticatorselection) it passes to {{domxref("CredentialsContainer.create()")}}.
 
@@ -197,23 +197,23 @@ If a user loses an authenticator, whether it's a separate module or integrated i
 
 To ensure that such a user is not locked out of their account, a common pattern is for an RP to create multiple passkeys for a single user account, including:
 
-- One in a [platform authenticator](#platform_authenticator), that contains their everyday passkey for the site
-- One in a [roaming authenticator](#roaming_authenticator), that contains a backup passkey in case the user loses their device.
+- One in a [platform authenticator](#platform_and_roaming_authenticators), that contains their everyday passkey for the site
+- One in a [roaming authenticator](#platform_and_roaming_authenticators), that contains a backup passkey in case the user loses their device.
 
 Note that this reflects the principle that unlike passwords, it's encouraged for an RP to create multiple passkeys for a single account.
 
-The [`excludeCredentials`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#excludecredentials), passed to {{domxref("CredentialsContainer.create()")}}, lists credential IDs, and tells the browser that the new passkey may not be created in an authenticator which contains any of the listed keys: that is, it is a way for the RP to ensure that the new passkey is created in a new authenticator.
+The [`excludeCredentials`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#excludecredentials), passed to {{domxref("CredentialsContainer.create()")}}, lists credential IDs, and tells the browser that the new passkey may not be created in an authenticator which contains any of the listed keys. That is, it is a way for the RP to ensure that the new passkey is created in a new authenticator.
 
 ### Passkey backup
 
-Additionally, some authenticators support backup by various methods, such as cloud sync or manual export. The signed assertion returned from a call to `get()` includes a set of [flags](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data#flags), which, among other things, indicates whether the passkey:
+Some authenticators support backup by various methods, such as cloud sync or manual export. The signed assertion returned from a call to `get()` includes a set of [flags](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data#flags), which, among other things, indicates whether the passkey:
 
 - Is _backup eligible_: that is, whether it is stored in an authenticator that supports backup
 - Has in fact been backed up.
 
 An RP can use this information to help a user manage their credentials. For example:
 
-- If the passkey is not backup eligible, then the RP might respond by inviting the user to create another passkey in an authenticator that is backup eligible.
+- If the passkey is not backup eligible, then the RP might respond by inviting the user to create another passkey in another authenticator that could be used as a backup.
 
 - If the RP is migrating users away from passwords, and the user has an old password as well as a passkey, and the assertion indicates that the passkey has been backed up, then the RP might invite the user to delete their old password, since they don't need it as a backup any more.
 
