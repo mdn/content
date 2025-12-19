@@ -11,7 +11,7 @@ The **`ValidityState`** interface represents the _validity states_ that an eleme
 
 ## Instance properties
 
-For each of these Boolean properties, a value of `true` indicates that the specified reason validation may have failed is true, with the exception of the `valid` property, which is `true` if the element's value obeys all constraints.
+Each validity state is represented by a Boolean property. A value of `true` indicates that the corresponding validation constraint has failed, except for the `valid` property, which is `true` when the element’s value obeys all constraints.
 
 - {{domxref("ValidityState.badInput", "badInput")}} {{ReadOnlyInline}}
   - : A boolean value that is `true` if the user has provided input that the browser is unable to convert.
