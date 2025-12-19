@@ -56,7 +56,7 @@ There is also a `marker-side` property, which is yet to be fully defined or impl
   - {{cssxref("@counter-style")}} at-rule
   - [`<counter-style-name>`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style#counter-style-name) data type
   - [`<symbol>`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#values) data type
-  - {{cssxref("symbols", "symbols()")}} function
+  - {{cssxref("symbols()")}} function
 
 - {{HTMLElement("ol")}} `start`, `reversed`, and `type` attributes
 - {{HTMLElement("ul")}} `type` attribute

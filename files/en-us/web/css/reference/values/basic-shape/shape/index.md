@@ -6,7 +6,7 @@ browser-compat: css.types.basic-shape.shape
 sidebar: cssref
 ---
 
-The **`shape()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to define a shape for the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. It combines an initial starting point with a series of shape commands that define the path of the shape. The `shape()` function is a member of the {{cssxref("&lt;basic-shape&gt;")}} data type.
+The **`shape()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to define a shape for the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. It combines an initial starting point with a series of shape commands that define the path of the shape. The `shape()` function is a member of the {{cssxref("basic-shape")}} data type.
 
 ## Syntax
 
@@ -118,7 +118,7 @@ The following `<shape-command>`s can be specified:
         - `end`
           - : Indicates that the control point is relative to the end point of the current command.
         - `origin`
-          - : Indicates that the control point is relative to the the top-left (origin) point of the container the shape is being drawn inside.
+          - : Indicates that the control point is relative to the top-left (origin) point of the container the shape is being drawn inside.
             > [!NOTE]
             > If the `<relative-control-point>` keywords are not specified, making the `<control-point>` a regular `<coordinate-value-pair>`, the coordinates are relative to the start of the curve. In other words, `start` is the default setting.
 

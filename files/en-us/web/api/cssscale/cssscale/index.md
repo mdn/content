@@ -9,7 +9,7 @@ browser-compat: api.CSSScale.CSSScale
 {{APIRef("CSS Typed OM")}}
 
 The **`CSSScale()`** constructor creates a new
-{{domxref("CSSScale")}} object representing the [scale()](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale) and [scale3d()](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale3d) values of the
+{{domxref("CSSScale")}} object representing the {{cssxref("transform-function/scale", "scale()")}} and {{cssxref("transform-function/scale3d", "scale3d()")}} values of the
 individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax

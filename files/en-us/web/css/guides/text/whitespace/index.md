@@ -53,7 +53,7 @@ Note that:
 - Other text nodes may have whitespace at the beginning or the end.
 
 > [!NOTE]
-> [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) supports highlighting text nodes, making it easier to see exactly which nodes contain whitespace characters. Pure whitespace nodes are marked with a "whitespace" label.
+> [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) supports highlighting text nodes, enabling you to see exactly which nodes contain whitespace characters. Pure whitespace nodes are marked with a "whitespace" label.
 
 Conserving whitespace characters in the DOM is useful in many ways, but it can also make certain layouts more difficult to implement and may cause problems for developers who want to iterate over DOM nodes. We'll look at these issues and some solutions later on, in the [solving common problems with whitespace nodes](#solving_common_problems_with_whitespace_nodes) section.
 
@@ -367,7 +367,7 @@ There are a few ways of getting around this problem:
   }
   ```
 
-- If you need to rely on `inline-block`, you could set the [`font-size`](/en-US/docs/Web/CSS/Reference/Properties/font-size) of the list to `0`. This only works if the blocks are not sized with `em` units (since `em` is based on `font-size`, the block size would also end up being sized as `0`). Using `rem` units would be a good choice here:
+- If you need to rely on `inline-block`, you could set the {{cssxref("font-size")}} of the list to `0`. This only works if the blocks are not sized with `em` units (since `em` is based on `font-size`, the block size would also end up being sized as `0`). Using `rem` units would be a good choice here:
 
   ```css
   ul {
@@ -410,7 +410,7 @@ As mentioned previously, whitespace is [collapsed and trimmed](#collapsing_and_t
 
 As another example, if you want to do something to a subset of elements based on whether they are empty (have no child nodes), you could use [`Node.hasChildNodes()`](/en-US/docs/Web/API/Node/hasChildNodes). But if any of those elements contain text nodes, you could end up with false results.
 
-The following JavaScript code shows several functions that make it easier to deal with whitespace in the DOM:
+The following JavaScript code shows several functions that deal with whitespace in the DOM:
 
 ```js
 /**

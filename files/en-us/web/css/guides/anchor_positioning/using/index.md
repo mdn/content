@@ -107,15 +107,15 @@ In some cases, an implicit anchor reference will be made between two elements, d
 If you wish to remove an explicit anchor association previously made between an anchor element and a positioned element, you can do one of the following:
 
 1. Set the anchor's `anchor-name` property value to `none`, or to a different `<dashed-ident>`, if you want a different element to be anchored to it.
-2. Set the `position-anchor` property of the positioned element to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`.
+2. Set the `position-anchor` property of the positioned element to `none`, or to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`.
 
-However, in the case of implicit anchor associations, you'll need to use the second method — the first method doesn't work. This is because the association is controlled internally, and you can't remove the `anchor-name` via CSS.
+In the case of implicit anchor associations, you'll need to use the second method — the first method doesn't work. This is because the association is controlled internally, and you can't remove the `anchor-name` via CSS.
 
 For example, to stop a customizable `<select>` element's picker from being anchored to the `<select>` element itself, you could use the following rule:
 
 ```css
 ::picker(select) {
-  position-anchor: --not-an-anchor-name;
+  position-anchor: none;
 }
 ```
 
@@ -142,7 +142,7 @@ anchor(<anchor-name> <anchor-side>, <fallback>)
 ```
 
 - `<anchor-name>`
-  - : The [`anchor-name`](/en-US/docs/Web/CSS/Reference/Properties/anchor-name) property value of the anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor** is used. This is the anchor referenced in its [`position-anchor`](/en-US/docs/Web/CSS/Reference/Properties/position-anchor) property, or associated with the element via the non-standard [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) HTML attribute.
+  - : The {{cssxref("anchor-name")}} property value of the anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor** is used. This is the anchor referenced in its {{cssxref("position-anchor")}} property, or associated with the element via the non-standard [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) HTML attribute.
     > [!NOTE]
     > Specifying an `<anchor-name>` positions the element relative to that anchor, but does not provide element association. While you can position an element's sides relative to multiple anchors by specifying [different `<anchor-name>` values](/en-US/docs/Web/CSS/Reference/Values/anchor#positioning_an_element_relative_to_multiple_anchors) inside different `anchor()` functions on the same element, the positioned element is only associated with a single anchor.
 
@@ -553,7 +553,7 @@ anchor-size(<anchor-name> <anchor-size>, <length-percentage>)
 ```
 
 - `<anchor-name>`
-  - : The `<dashed-ident>` name set as the value of the [`anchor-name`](/en-US/docs/Web/CSS/Reference/Properties/anchor-name) property of the anchor element you want to size the element relative to. If omitted, the element's **default anchor**, which is the anchor referenced in the [`position-anchor`](/en-US/docs/Web/CSS/Reference/Properties/position-anchor) property, is used.
+  - : The `<dashed-ident>` name set as the value of the {{cssxref("anchor-name")}} property of the anchor element you want to size the element relative to. If omitted, the element's **default anchor**, which is the anchor referenced in the {{cssxref("position-anchor")}} property, is used.
 - [`<anchor-size>`](/en-US/docs/Web/CSS/Reference/Values/anchor-size#anchor-size)
   - : Specifies the dimension of the anchor element that the positioned element will be sized relative to. This can be expressed using physical (`width` or `height`) or logical (`inline`, `block`, `self-inline`, or `self-block`) values.
 - {{cssxref("length-percentage")}}
