@@ -9,7 +9,8 @@ sidebar: http
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`require-trusted-types-for`** directive instructs user agents to control the data passed to DOM XSS sink functions, like {{DOMxRef("Element.innerHTML")}} setter.
 
-When used, those functions only accept non-spoofable, typed values created by Trusted Type policies, and reject strings. Together with **[`trusted-types`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types)** directive, which guards creation of Trusted Type policies, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review.
+When used, those functions only accept non-spoofable, typed values created by [Trusted Type](/en-US/docs/Web/API/Trusted_Types_API) policies, and reject strings.
+Together with **[`trusted-types`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types)** directive, which guards creation of Trusted Type policies, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review.
 
 ## Syntax
 
@@ -51,8 +52,10 @@ if (typeof trustedTypes !== "undefined") {
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
+  - [`trusted-types` directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types)
+  - [`trusted-types-eval` keyword](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)
+- [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API)
+  - [Injection sink interfaces](/en-US/docs/Web/API/Trusted_Types_API#injection_sink_interfaces)
 - [Cross-Site Scripting (XSS)](/en-US/docs/Glossary/Cross-site_scripting)
-- [DOM XSS injection sinks covered by Trusted Types](https://w3c.github.io/trusted-types/dist/spec/#injection-sinks)
 - [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)
 - Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
-- [Trusted Types polyfill](https://github.com/w3c/trusted-types#polyfill)

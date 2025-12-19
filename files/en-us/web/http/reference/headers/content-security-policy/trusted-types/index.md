@@ -7,9 +7,13 @@ browser-compat: http.headers.Content-Security-Policy.trusted-types
 sidebar: http
 ---
 
-The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-types`** directive instructs user agents to restrict the creation of Trusted Types policies - functions that build non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings.
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-types`** directive is used to specify an allowlist of [Trusted Type policy names](/en-US/docs/Web/API/Trusted_Types_API) that a website can create using [`trustedTypes.createPolicy()`](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy).
 
-Together with **[`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for)** directive, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review. This directive declares an allowlist of trusted type policy names created with `trustedTypes.createPolicy` from Trusted Types API.
+This prevents website code from creating unexpected policies, making it easier to audit trusted type code (`createPolicy()` will throw an exception if it is passed a name which was not listed in `trusted-types`).
+
+Note that the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) directive must be set to enable enforcement of trusted types (at all), and the [`trusted-types-eval` keyword](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) is used to relax restrictions on [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) when trusted types are enabled.
+
+See [Trusted Type API](/en-US/docs/Web/API/Trusted_Types_API) for more information.
 
 ## Syntax
 
@@ -50,7 +54,8 @@ if (typeof trustedTypes !== "undefined") {
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
+  - [`require-trusted-types-for` directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for)
+  - [`trusted-types-eval` keyword](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)
+- [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API)
+  - [Injection sink interfaces](/en-US/docs/Web/API/Trusted_Types_API#injection_sink_interfaces)
 - [Cross-Site Scripting (XSS)](/en-US/docs/Glossary/Cross-site_scripting)
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)
-- Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
-- [Trusted Types polyfill](https://github.com/w3c/trusted-types#polyfill)
