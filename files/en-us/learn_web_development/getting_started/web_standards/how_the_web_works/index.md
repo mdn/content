@@ -81,7 +81,7 @@ When you type a web address (which is technically part of a [URL](#components_of
 
 Real web addresses ([URLs](#components_of_a_url)) aren't the nice, memorable strings you type into your address bar to find your favorite websites. They are special numbers that look like this: `192.0.2.172`.
 
-This is called an {{Glossary("IP Address", "IP address")}}, and it represents a unique location on the web. However, it's not very easy to remember, is it? That's why the Domain Name System was invented. This system uses special servers that match up a web address you type into your browser (like `mozilla.org`) to the website's real (IP) address. Large websites are commonly made available on multiple servers, so that they load efficiently for different users worldwide. As a result, the IP address may vary depending on where you are. 
+This is called an {{Glossary("IP Address", "IP address")}}, and it represents a unique location on the web. However, it's not very easy to remember, is it? That's why the Domain Name System was invented. This system uses special servers that match up a web address you type into your browser (like `mozilla.org`) to the website's real (IP) address. Large websites are commonly made available on multiple servers, so that they load efficiently for different users worldwide. As a result, the IP address may vary depending on where you are.
 
 You can use a DNS lookup tool to find the IP addresses of a website. For example, go to the [NsLookup.io DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/), type in `developer.mozilla.org`, and press the button.
 
