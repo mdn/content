@@ -83,26 +83,7 @@ Note that explicit defaulting keywords ({{cssxref("initial")}}, {{cssxref("inher
 
 All elements that are part of the document's flattened element tree have [declared](#declared_value), [cascaded](#cascaded_value), [specified](#specified_value), [computed](#computed_value), [used](#used_value), and [actual](#actual_value) values. For a specific property, these values may or may not be the same. For example, if your large code base includes the CSS `p { font-size: 1.25em; }` and your HTML includes `<p class="large">CSS is fun!</p>`, what size will the paragraph be? The {{cssxref("font-size")}} value moves through a few stages to go from the `em` specified value to the rendered `px` value.
 
-The value processing stages are:
-
-- [Property values](#property-values)
-- [Processing overview](#processing-overview)
-  - [Filtering](#filtering)
-  - [Cascading](#cascading)
-  - [Defaulting](#defaulting)
-- [Processing stages](#processing-stages)
-  - [Declared value](#declared-value)
-  - [Cascaded value](#cascaded-value)
-  - [Specified value](#specified-value)
-    - [Initial value](#initial-value)
-  - [Computed value](#computed-value)
-  - [Used value](#used-value)
-- [Rendered values](#rendered-values)
-  - [Actual value](#actual-value)
-  - [Resolved value](#resolved-value)
-- [See also](#see-also)
-
-These values are used to determine the final [rendered value](#rendered_values).
+The value processing stages are [Declared value](#declared_value), [Cascaded value](#cascaded_value), [Specified value](#specified_value), [Computed value](#computed_value), [Used value](#used_value), and [Actual value](#actual_value). These values are used to determine the final [rendered value](#rendered_values).
 
 ### Declared value
 
