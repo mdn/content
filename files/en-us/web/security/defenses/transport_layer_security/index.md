@@ -6,103 +6,97 @@ page-type: guide
 sidebar: security
 ---
 
-Transport Layer Security (TLS) is a protocol which enables a client to communicate securely with a server across an untrusted network. Most notably, on the web, it's used to secure HTTP connections: the resulting protocol is called {{glossary("HTTPS")}}.
+The security of any connection using Transport Layer Security (TLS) is heavily dependent upon the cipher suites and security parameters selected. This article's goal is to help you make these decisions to ensure the confidentiality and integrity of communication between client and server. The Mozilla Operations Security (OpSec) team [maintains a wiki entry](https://wiki.mozilla.org/Security/Server_Side_TLS) with reference configurations for servers.
 
-TLS secures a network connection in three ways:
+The Transport Layer Security (TLS) protocol is the standard for enabling two networked applications or devices to exchange information privately and robustly. Applications that use TLS can choose their security parameters, which can have a substantial impact on the security and reliability of data. This article provides an overview of TLS and the kinds of decisions you need to make when securing your content.
 
-- **Encryption**: the data exchanged between client and server is encrypted while in transit, so it can't be read by any attackers.
-- **Integrity**: an attacker can't, without detection, modify data while it is in transit between client and server.
-- **Authentication**: client and server are each able to prove to the other party that they are the entity they claim to be.
+## History
 
-In particular, HTTPS is the defense against a [manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM) attack, in which the attacker inserts themselves between the user's browser and the server they are connecting to, and can read and modify the traffic exchanged.
+When HTTPS was introduced, it was based on Secure Sockets Layer (SSL) 2.0, a technology introduced by Netscape. It was updated to SSL 3.0 not long after, and as its usage expanded, it became clear that a common, standard encryption technology needed to be specified to ensure interoperability among all web browsers and servers. The [Internet Engineering Task Force](https://www.ietf.org/) (IETF) specified TLS 1.0 in {{RFC(2246)}} in January 1999. The current version of TLS is 1.3 ({{RFC(8446)}}).
 
-Browsers consider pages delivered over HTTPS as providing a [secure context](/en-US/docs/Web/Security/Secure_Contexts). Many powerful web APIs are only available to code running in a secure context.
+Despite the fact that the web now uses TLS for encryption, many people still refer to it as "SSL" out of habit.
 
-All websites should serve all their pages and subresources over HTTPS, and implement server authentication.
+Although TLS can be used on top of any low-level transport protocol, the original goal of the protocol was to encrypt HTTP traffic. HTTP encrypted using TLS is commonly referred to as {{Glossary("HTTPS")}}. TLS-encrypted web traffic is by convention exchanged on port 443 by default, while unencrypted HTTP uses port 80 by default. HTTPS remains an important use case for TLS.
 
-## TLS handshake
+## HTTP over TLS
 
-The first step in creating a TLS connection is the _handshake_, in which:
+TLS provides three primary services that help ensure the safety and security of data exchanged with it:
 
-- Client and server agree on which version of TLS to use. The current version of TLS is 1.3 ({{RFC(8446)}}), and this is the most widely-used version, although TLS 1.2 is still used in some websites. TLS 1.1 and 1.0 should no longer be used.
-- Client and server agree on the {{glossary("cipher suite")}} that they will use: this defines the algorithms that they will use for key agreement, authentication, encryption, and message authentication.
-- Optionally, client and server authenticate each other. Client authentication, in which the client proves who they are to the server, is rare on the web outside some specialized applications. However, server authentication, in which the server proves who they are to the client, is a fundamental part of web security.
-- Client and server agree on a {{glossary("Symmetric-key cryptography", "secret key")}} that they will use to encrypt and decrypt messages.
+- Authentication
+  - : Authentication lets each party to the communication verify that the other party is who they claim to be.
+- Encryption
+  - : Data is encrypted while being transmitted between the user agent and the server, in order to prevent it from being read and interpreted by unauthorized parties.
+- Integrity
+  - : TLS ensures that between encrypting, transmitting, and decrypting the data, no information is lost, damaged, tampered with, or falsified.
 
-After the handshake, client and server use the secret key to encrypt and decrypt any messages, including HTTP headers as well as bodies.
+A TLS connection starts with a handshake phase where a client and server agree on a shared secret and important parameters, like cipher suites, are negotiated. Once parameters and a data exchange mode where application data, such HTTP, is exchanged.
 
-## Configuring TLS
+### Cipher suites
 
-Choosing the right TLS server configuration has a big impact on the security of the connection. In particular, it determines the TLS version and cryptographic algorithms that will be used. If you need to configure your own server, consult a resource such as Mozilla's [TLS Recommended Configurations](https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_configurations).
+The primary parameters that the TLS handshake negotiates is a [cipher suite](https://en.wikipedia.org/wiki/Cipher_suite).
 
-Mozilla also provides a [TLS configuration generator](https://ssl-config.mozilla.org/) that will generate configuration files for a wide range of web servers.
+In TLS 1.2 and earlier, the negotiated cipher suite includes a set of cryptographic algorithms that together provide the negotiation of the shared secret, the means by which a server is authenticated, and the method that will be used to encrypt data.
 
-## Server authentication
+The cipher suite in TLS 1.3 primarily governs the encryption of data, separate negotiation methods are used for key agreement and authentication.
 
-To support server authentication, your website must have a {{glossary("digital certificate")}}, which contains a {{glossary("digital signature", "digitally signed")}} copy of the public key which is the counterpart of the website's private key. This binds the website's keys to their domain name, so the browser knows that it really is connecting to, for example, "https://example.com".
+Different software might use different names for the same cipher suites. For instance, the names used in OpenSSL and GnuTLS differ from those in the TLS standards. The [cipher names correspondence table](https://wiki.mozilla.org/Security/Server_Side_TLS#Cipher_names_correspondence_table) on the Mozilla OpSec team's article on TLS configurations lists these names as well as information about compatibility and security levels.
 
-[Let's Encrypt](https://letsencrypt.org/) is a widely used nonprofit Certification Authority which issues free TLS certificates.
+### Configuring your server
 
-Modern web hosting services support HTTPS for you, either by default or through a configuration setting. In this situation, the hosting service is likely to manage your certificate and configure the server on your behalf.
+Correctly configuring your server is crucial. In general, you should try to limit cipher support to the newest ciphers possible which are compatible with the browsers you want to be able to connect to your site. The [Mozilla OpSec guide to TLS configurations](https://wiki.mozilla.org/Security/Server_Side_TLS) provides more information on recommended configurations.
 
-## Mixed content
+To assist you in configuring your site, Mozilla provides a helpful [TLS configuration generator](https://ssl-config.mozilla.org/) that will generate configuration files for the following Web servers:
 
-If a page is loaded over HTTPS and it attempts to load subresources (such as scripts, images, or fonts) over HTTP, this is called _mixed content_.
+- Apache
+- Nginx
+- Lighttpd
+- HAProxy
+- Amazon Web Services CloudFormation Elastic Load Balancer
 
-Mixed content is unsafe because the subresources don't get the protection that HTTPS offers, so an attacker can not only read them but potentially modify them, and this can undermine the integrity of the page as a whole. For example, we could imagine an attacker modifying a script to behave harmfully. Other resources are less dangerous than scripts but still potentially dangerous: for example, an attacker could modify images so as to confuse or mislead users.
+Using the [configurator](https://ssl-config.mozilla.org/) is a recommended way to create the configuration to meet your needs; then copy and paste it into the appropriate file on your server and restart the server to pick up the changes. The configuration file may need some adjustments to include custom settings, so be sure to review the generated configuration before using it; installing the configuration file without ensuring any references to domain names and the like are correct will result in a server that just doesn't work.
 
-For this reason, browsers don't allow secure pages to load insecure subresources. Instead, they either upgrade the load request to use HTTPS, or block the request entirely.
+## TLS 1.3
 
-### Upgradable and blockable content
+{{RFC("8446", "TLS 1.3")}} is a major revision to TLS. TLS 1.3 includes numerous changes that improve security and performance. The goals of TLS 1.3 are:
 
-When a browser encounters mixed content, it categorises it as _upgradable content_ or _blockable content_.
+- Remove unused and unsafe features of TLS 1.2.
+- Include strong security analysis in the design.
+- Improve privacy by encrypting more of the protocol.
+- Reduce the time needed to complete a handshake.
 
-When the browser encounters upgradable mixed content, it will attempt to load the content over HTTPS, and if that fails, will block the content. When the browser encounters blockable mixed content, it blocks it.
+TLS 1.3 changes much of the protocol fundamentals, but preserves almost all of the basic capabilities of previous TLS versions. For the web, TLS 1.3 can be enabled without affecting compatibility with some rare exceptions (see below).
 
-The following elements are treated as upgradable (except where the URL host is specified as an IP address — see the following section):
+The major changes in TLS 1.3 are:
 
-- {{HTMLElement("img")}} where origin is set via `src` attribute, including SVG documents (but not when setting resources with `srcset` or `<picture>`).
-- CSS image elements such as: `background-image`, `border-image`, etc.
-- {{HTMLElement("audio")}} where origin is set with `src` attribute.
-- {{HTMLElement("video")}} where origin is set with `src` attribute
-- {{HTMLElement("source")}} where video or origin resource is set.
+- The TLS 1.3 handshake completes in one round trip in most cases, reducing handshake latency.
+- A server can enable a 0-RTT (zero round trip time) handshake. Clients that reconnect to the server can send requests immediately, eliminating the latency of the TLS handshake entirely. Though the performance gains from 0-RTT can be significant, they come with some risk of replay attack, so some care is needed before enabling this feature.
+- TLS 1.3 supports forward-secure modes only, unless the connection is resumed or it uses a pre-shared key.
+- TLS 1.3 defines a new set of cipher suites that are exclusive to TLS 1.3. These cipher suites all use modern Authenticated Encryption with Associated Data (AEAD) algorithms.
+- The TLS 1.3 handshake is encrypted, except for the messages that are necessary to establish a shared secret. In particular, this means that server and client certificates are encrypted. Note however that the server identity (the server_name or SNI extension) that a client sends to the server is not encrypted.
+- Numerous mechanisms have been disabled: renegotiation, generic data compression, [Digital Signature Algorithm](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm) (DSA) certificates, static RSA key exchange, and key exchange with custom Diffie–Hellman (DH) groups.
 
-All other types are blockable. This includes (not exhaustively):
+Implementations of draft versions of TLS 1.3 are available. TLS 1.3 is enabled in some browsers, including the 0-RTT mode. Web servers that enable TLS 1.3 might need to adjust configuration to allow TLS 1.3 to operate successfully.
 
-- {{HTMLElement("script")}} where origin is set via `src` attribute
-- {{HTMLElement("link")}} where the origin is set in the `href` attribute, and includes stylesheets
-- {{HTMLElement("iframe")}} where origin is set via `src` attribute
-- {{domxref("Window/fetch", "fetch()")}} requests
-- {{domxref("XMLHttpRequest")}} requests
-- All cases in CSS where a {{CSSXref("url_value", "&lt;url&gt;")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
-- {{HTMLElement("object")}} (`data` attribute)
-- {{domxref("Navigator.sendBeacon")}} (`url` attribute)
-- {{HTMLElement("img")}} where origin is set via `srcset` or `<picture>`.
-- Web fonts
+TLS 1.3 adds just one significant new use case. The 0-RTT handshake can provide significant performance gains for latency sensitive applications, like the web. Enabling 0-RTT requires additional steps, both to ensure successful deployment and to manage the risks of replay attacks.
 
-Mixed content requests that would otherwise be upgraded are blocked if the URL's host is an IP address rather than a domain name.
-So `<img src="http://example.com/image.png">` will be upgraded, but `<img src="http://93.184.215.14/image.png">` is blocked.
+The removal of renegotiation in TLS 1.3 might affect some web servers that rely on client authentication using certificates. Some web servers use renegotiation to either ensure that client certificates are encrypted, or to request client certificates only when certain resources are requested. For the privacy of client certificates, the encryption of the TLS 1.3 handshake ensures that client certificates are encrypted; however this might require some software changes. Reactive client authentication using certificates is supported by TLS 1.3 but not widely implemented. Alternative mechanisms are in the process of being developed, which will also support HTTP/2.
 
-### Avoiding mixed content
+## Retiring old TLS versions
 
-You should avoid serving mixed content, instead serving all content, including subresources, over HTTPS.
+To help with working towards a more modern, more secure web, all major browsers began removing support for TLS 1.0 and 1.1 in early 2020. You'll need to make sure your web server supports TLS 1.2 or 1.3 going forward.
 
-If it's not possible for you to update your code to load resources from HTTPS URLs (for example, because your HTML has been archived) your server can set a [content security policy](/en-US/docs/Web/HTTP/Guides/CSP) that contains the [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Guides/CSP#upgrading_insecure_requests) directive, and the browser will automatically upgrade these requests to HTTPS.
+From version 74 onwards, Firefox will return a [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) error when connecting to servers using the older TLS versions ([Firefox bug 1606734](https://bugzil.la/1606734)).
 
-## Upgrading HTTP connections
+## TLS handshake timeout values
 
-Even if a site is only served over HTTPS, users may still request it over HTTP: for example, by typing `http://example.org` into the address bar. To enable the site to work in cases like this, listen for HTTP requests and use a [301 Moved Permanently](/en-US/docs/Web/HTTP/Reference/Status/301) response to redirect to the HTTPS version.
+If the TLS handshake starts to become slow or unresponsive for some reason, the user's experience can be affected significantly. To mitigate this problem, modern browsers have implemented handshake timeouts:
 
-However, this gives attackers the opportunity to intercept the initial exchange, and then prevent the upgrade to HTTPS from happening. This is sometimes called an _SSL stripping_ attack ({{glossary("SSL")}} is the precursor to TLS).
-
-To reduce the risk of this attack, the server should also send the {{httpheader("Strict-Transport-Security")}} HTTP response header (also known as HSTS): this informs clients that the sites wishes them to use HTTPS, and will cause the browser to connect using HTTPS directly for any subsequent visits, even those made using HTTP URLs.
-
-With HSTS, SSL stripping is prevented except for the first time the browser tries to connect to your site (or, since HSTS has an expiry, the first time after an HSTS record in the browser has expired). To protect the site even on first connection or HSTS record expiry, Chrome maintains a list of domains called the [HSTS preload list](https://hstspreload.org/): if a domain is on this list, then Chrome will always upgrade HTTP request to HTTPS, effectively behaving as if the server has already sent the HSTS header. Safari and Firefox have similar behavior, using a list that is derived from the Chrome list.
+- Since version 58, Firefox implements a TLS handshake timeout with a default value of 30 seconds. The timeout value can be varied by editing the `network.http.tls-handshake-timeout` pref in about:config.
 
 ## See also
 
 - The [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/) and [Cipherlist.eu](https://cipherlist.eu/) can help you generate configuration files for your server to secure your site.
 - The Mozilla Operations Security (OpSec) team maintains a wiki page with [reference TLS configurations](https://wiki.mozilla.org/Security/Server_Side_TLS).
 - Use [HTTP Observatory](/en-US/observatory) and [SSL Labs](https://www.ssllabs.com/ssltest/) to test how secure a site's HTTP/TLS configuration is.
-- [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts)
+- [Secure Contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts)
 - [Strict-Transport-Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP header
