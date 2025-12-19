@@ -799,7 +799,6 @@ We've added `subgrid` to inherit the parent grid's column tracks while adding a 
 Numerous grid frameworks are available — these are prebuilt CSS systems that
 provide features such as 12- or 16-column grids, utility classes for spacing and alignment, and
 responsive design via breakpoints. Popular examples include grid systems provided
-by larger CSS frameworks such as Bootstrap.
 
 The good news is that you probably won't need any proprietary workarounds to help
 you create grid-based layouts — all modern browsers support the CSS Grid standard.
