@@ -45,7 +45,7 @@ Computers connected to the internet are called **clients** and **servers**. A si
 ![Two circles representing client and server. An arrow labelled request is going from client to server, and an arrow labelled responses is going from server to client](simple-client-server.png)
 
 - Clients are the typical web user's internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected to your mobile network) and web-accessing software available on those devices (usually a web browser like Firefox or Chrome).
-- Servers are computers that store webpages, sites, or apps. When a client wants to access a webpage, a copy of the webpage code is downloaded from the server to the client machine to be rendered by the browser and displayed to the user.
+- Servers are computers that store webpages, sites, or apps. When a client wants to access a webpage, a copy of the webpage code is downloaded from the server to the client machine, where it is rendered by the browser and displayed to the user.
 
 ## The other parts of the toolbox
 
@@ -81,7 +81,7 @@ When you type a web address (which is technically part of a [URL](#components_of
 
 Real web addresses ([URLs](#components_of_a_url)) aren't the nice, memorable strings you type into your address bar to find your favorite websites. They are special numbers that look like this: `192.0.2.172`.
 
-This is called an {{Glossary("IP Address", "IP address")}}, and it represents a unique location on the web. However, it's not very easy to remember, is it? That's why the Domain Name System was invented. This system uses special servers that match up a web address you type into your browser (like `mozilla.org`) to the website's real (IP) address, which may vary depending on where you are in the world. Large websites are commonly made available on multiple servers, so that they load efficiently for different users worldwide.
+This is called an {{Glossary("IP Address", "IP address")}}, and it represents a unique location on the web. However, it's not very easy to remember, is it? That's why the Domain Name System was invented. This system uses special servers that match up a web address you type into your browser (like `mozilla.org`) to the website's real (IP) address. Large websites are commonly made available on multiple servers, so that they load efficiently for different users worldwide. As a result, the IP address may vary depending on where you are. 
 
 You can use a DNS lookup tool to find the IP addresses of a website. For example, go to the [NsLookup.io DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/), type in `developer.mozilla.org`, and press the button.
 
