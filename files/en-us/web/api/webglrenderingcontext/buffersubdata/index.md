@@ -8,9 +8,7 @@ browser-compat: api.WebGLRenderingContext.bufferSubData
 
 {{APIRef("WebGL")}}{{AvailableInWorkers}}
 
-The **`WebGLRenderingContext.bufferSubData()`** method of the
-[WebGL API](/en-US/docs/Web/API/WebGL_API) updates a subset of a buffer
-object's data store.
+The **`WebGLRenderingContext.bufferSubData()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) updates a subset of a buffer object's data store.
 
 ## Syntax
 
@@ -24,17 +22,14 @@ bufferSubData(target, offset, srcData)
 - `target`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
     - `gl.ARRAY_BUFFER`
-      - : Buffer containing vertex attributes, such as
-        vertex coordinates, texture coordinate data, or vertex color data.
+      - : Buffer containing vertex attributes, such as vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`
       - : Buffer used for element indices.
 
 - `offset`
-  - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in bytes where the data replacement
-    will start.
+  - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in bytes where the data replacement will start.
 - `srcData` {{optional_inline}}
-  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that views an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}
-    that will be copied into the data store.
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that views an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} that will be copied into the data store.
 
 ### Return value
 
@@ -42,10 +37,8 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- A `gl.INVALID_VALUE` error is thrown if the data would be written past
-  the end of the buffer or if `data` is `null`.
-- A `gl.INVALID_ENUM` error is thrown if `target` is not one of
-  the allowed enums.
+- A `gl.INVALID_VALUE` error is thrown if the data would be written past the end of the buffer or if `data` is `null`.
+- A `gl.INVALID_ENUM` error is thrown if `target` is not one of the allowed enums.
 
 ## Examples
 
