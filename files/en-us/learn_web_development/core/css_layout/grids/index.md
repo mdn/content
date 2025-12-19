@@ -807,7 +807,7 @@ you create grid-based layouts — all modern browsers support the CSS Grid stand
 The following example shows a simplified version of what such code might look
 like.
 
-This has a container with a 12-column grid defined, using `grid-template-columns: repeat(12, 1fr);`, and the same markup we used in the previous two examples. We can now use line-based placement to place our content on the 12-column grid.
+It features a container with a 12-column grid defined, using `grid-template-columns: repeat(12, 1fr);`, and the same markup we used in the previous two examples. We can now use line-based placement to place our content on the 12-column grid.
 
 ```html hidden live-sample___grid-frameworks
 <div class="container">
