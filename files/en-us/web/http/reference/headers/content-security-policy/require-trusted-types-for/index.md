@@ -57,5 +57,3 @@ if (typeof trustedTypes !== "undefined") {
 - [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API)
   - [Injection sink interfaces](/en-US/docs/Web/API/Trusted_Types_API#injection_sink_interfaces)
 - [Cross-Site Scripting (XSS)](/en-US/docs/Glossary/Cross-site_scripting)
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)
-- Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
