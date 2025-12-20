@@ -9,6 +9,14 @@ sidebar: glossarysidebar
 
 In other words, it tells the browser that changing the protocol from HTTP to HTTPS in a URL works (and is more secure) and asks the browser to do it for every request.
 
+## Example
+
+The following header tells the browser to use HTTPS for 1 year (31536000 seconds) and include all subdomains:
+
+```http
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+```
+
 ## See also
 
 - {{HTTPHeader("Strict-Transport-Security")}}

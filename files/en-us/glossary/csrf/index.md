@@ -15,6 +15,20 @@ A CSRF attack is possible if a website:
 
 There are several defenses against CSRF attacks, including [CSRF tokens](/en-US/docs/Web/Security/Attacks/CSRF#csrf_tokens), using [fetch metadata](/en-US/docs/Web/Security/Attacks/CSRF#fetch_metadata) to block certain cross-site requests, and [setting the `SameSite` attribute](/en-US/docs/Web/Security/Attacks/CSRF#defense_in_depth_samesite_cookies) on cookies used to authenticate sensitive requests.
 
+## CSRF Token Example
+
+A typical implementation includes a hidden token in forms:
+
+```html
+<form action="/transfer" method="POST">
+  <input type="hidden" name="csrf_token" value="a1b2c3d4e5f6..." />
+  <input type="text" name="amount" />
+  <button type="submit">Transfer</button>
+</form>
+```
+
+The server validates this token before processing the request.
+
 ## See also
 
 - [Cross-site request forgery](/en-US/docs/Web/Security/Attacks/CSRF)

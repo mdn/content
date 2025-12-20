@@ -15,6 +15,22 @@ All XSS attacks depend on a website doing two things:
 1. Accepting some input that could have been crafted by an attacker
 2. Including this input in a page without sanitizing it: that is, without ensuring that it won't be executable as JavaScript
 
+## Example
+
+Vulnerable code that directly inserts user input:
+
+```js example-bad
+// Dangerous: directly inserting user input
+element.innerHTML = userInput;
+```
+
+Secure code that sanitizes the input:
+
+```js example-good
+// Safe: escaping user input before insertion
+element.textContent = userInput;
+```
+
 ## See also
 
 - [Cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS)

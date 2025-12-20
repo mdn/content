@@ -9,6 +9,14 @@ A **CSP** ([Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP)) is used t
 
 The implementation is based on an {{Glossary("HTTP")}} header called {{HTTPHeader("Content-Security-Policy")}}.
 
+## Example
+
+The following CSP header allows scripts only from the same origin and blocks inline scripts:
+
+```http
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'
+```
+
 ## See also
 
 - [Content Security Policy documentation](/en-US/docs/Web/HTTP/Guides/CSP)

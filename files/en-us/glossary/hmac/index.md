@@ -11,6 +11,31 @@ It can use any kind of {{Glossary("Hash function", "cryptographic hash function"
 
 HMAC is used to ensure both integrity and authentication.
 
+## Example
+
+The following JavaScript example creates an HMAC-SHA256 signature:
+
+```js
+async function createHMAC(message, secretKey) {
+  const encoder = new TextEncoder();
+  const keyData = encoder.encode(secretKey);
+  const messageData = encoder.encode(message);
+
+  const key = await crypto.subtle.importKey(
+    "raw",
+    keyData,
+    { name: "HMAC", hash: "SHA-256" },
+    false,
+    ["sign"]
+  );
+
+  const signature = await crypto.subtle.sign("HMAC", key, messageData);
+  return Array.from(new Uint8Array(signature))
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+```
+
 ## See also
 
 - [HMAC](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) on Wikipedia
