@@ -362,7 +362,6 @@ In this assessment we are presenting you with a mostly-finished splash page abou
 
 Just below the `<h1>`, add a `<video>` element that embeds our header video into the page. We'd like it to do the following:
 
-- If you provide multiple video sources, specify the media type using <source> elements.
 - Autoplay the video on load (for this to work in at least some browsers, you'll also need to specify that the video should be muted).
 - Loop endlessly rather than playing once.
 - Preload the video content.
