@@ -17,7 +17,7 @@ object's data store.
 ```js-nolint
 bufferSubData(target, dstByteOffset, srcData)
 bufferSubData(target, dstByteOffset, srcData, srcOffset)
-bufferSubData(target, dstByteOffset, srcData, srcOffset, length) 
+bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
 ```
 
 ### Parameters
