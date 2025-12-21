@@ -5,11 +5,24 @@ page-type: guide
 sidebar: addonsidebar
 ---
 
-Extensions can use the [`fetch()`](/en-US/docs/Web/API/Fetch_API) API to send and receive data from remote servers. A [content script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) can initiate requests on behalf of the web origin it's injected into and is subject to the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), meaning that it can only make a request to the same origin as the web page. However, extension origins aren't so limited. A script executing in an extension background page or foreground tab can communicate with remote servers outside of its origin as long as the extension requests the necessary cross-origin permissions.
+Extension scripts can send and receive data from remote servers using the [`fetch()`](/en-US/docs/Web/API/Fetch_API) Web API. This guide provides a comprehensive overview to using that API in various extension scripts. 
+
+> [!NOTE]
+> If you're familiar with using the [`fetch()`] API in web development, network requests in web extensions may not behave as you expect, leading to functional or security issues. This guide provides the information you need to avoid issues.
+
+If the request is made from a [content script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts), the request behaves differently depending on the world the script runs in. If the script is running in the:
+
+- MAIN world, the request must be allowed by the page's cross-origin rules.
+- ISOLATED world, the request must be allowed by the browser's default content security policy (CSP) for isolated world scripts.
+
+If the request is made from an extension context, i.e., an extension background page or foreground tab, when the context:
+
+- Has host permissions, the Origin header isn't included in GET and HEAD requests, mirroring the behavior of a same-origin request.
+- Doesn't have host permissions, the extension's origin is included in the Origin header, meaning it's treated as a cross-origin request.
 
 ## Extension origin
 
-Extension execute in their own security origin. An extension can call `fetch()` to get resources within its installation without requesting additional privileges. For example, if an extension contains a JSON file named `config.json` in the `config_resources/` folder, the extension can retrieve the file's contents like this:
+A script is executed within the extension's security origins. An extension can call `fetch()` to get resources within its installation without requesting additional privileges. For example, if an extension contains a JSON file named `config.json` in the `config_resources/` folder, the extension can retrieve the file's contents like this:
 
 ```js
 const response = await fetch("/config_resources/config.json");
@@ -47,20 +60,23 @@ Or match patterns like these:
 A match pattern of `"https://*/"` allows HTTPS access to all reachable domains. Only the host portion of the
 match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) is applied; any path information is ignored.
 
-Also, note that access is granted by host and scheme. If an extension wants secure and non-secure HTTP access to a host or hosts, it must declare the permissions separately:
+Also, note that access is granted by host and scheme. If an extension wants secure and non-secure HTTP access to a host or hosts, it can declare the permissions using a wildcard (e.g., `*://www.mozilla.org/`) or, more broadly, `<all_urls>`.
 
-```json
-"host_permissions": [
-  "http://www.mozilla.org/",
-  "https://www.mozilla.org/"
-]
-```
+> [!NOTE]
+> In Chrome, if an extension wants secure and non-secure HTTP access to a host or hosts, it must declare the permissions separately:
+>
+> ```json
+> "host_permissions": [
+>   "http://www.google.com/",
+>   "https://www.google.com/"
+> ]
+> ```
 
 ## Security considerations
 
 ### Avoid cross-site scripting vulnerabilities
 
-When using resources retrieved with `fetch()`, your offscreen document, side panel, or popup must be careful to avoid [cross-site scripting](/en-US/docs/Web/Security/Attacks/XSS) attacks. Specifically, avoid using APIs, such as `innerHTML`, that can be used to enable such attacks. For example:
+When using resources retrieved with `fetch()`, your offscreen document, side panel, or popup must be careful to avoid [cross-site scripting](/en-US/docs/Web/Security/Attacks/XSS) attacks. Specifically, avoid using APIs, such as `innerHTML`, that can enable such attacks. For example:
 
 ```js
 const response = await fetch("https://api.example.com/data.json");
@@ -70,23 +86,16 @@ document.getElementById("resp").innerHTML = jsonData;
 ...
 ```
 
-Instead, use APIs that do not run scripts. So, safer versions of the previous code example are:
-
-```js
-const response = await fetch("https://api.example.com/data.json");
-const jsonData = await response.json();
-// JSON.parse does not evaluate the attacker's scripts.
-let resp = JSON.parse(jsonData);
-```
-
-or
+Instead, use APIs that do not run scripts. So, a safer version of the previous code example is:
 
 ```js
 const response = await fetch("https://api.example.com/data.json");
 const jsonData = response.json();
-// textContent does not let the attacker inject HTML elements.
+// textContent prevents the attacker from injecting HTML elements.
 document.getElementById("resp").textContent = jsonData;
 ```
+
+See [Safely insert external content into a page](en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page) for more information.
 
 ### Limit content script access to cross-origin requests
 
@@ -113,7 +122,7 @@ browser.runtime.onMessage.addListener(
 );
 ```
 
-Then. in the content script:
+Then in the content script:
 
 ```js
 browser.runtime.sendMessage(
@@ -160,4 +169,7 @@ Take care with resources retrieved using HTTP. If your extension is used on a ho
 
 ### Adjust the content security policy
 
-If you modify the default [Content Security Policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for your extension by adding a `content_security_policy` attribute to your manifest, you must ensure that any hosts you want to connect are allowed. While the default policy doesn't restrict connections to hosts, be careful when adding the `connect-src` or `default-src` directives.
+If you modify the default [Content Security Policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for your extension by adding a `content_security_policy` attribute to your manifest, you must ensure that any hosts you want to connect to are allowed. While the default policy doesn't restrict connections to hosts, be careful when adding the `connect-src` or `default-src` directives.
+
+> [!NOTE]
+> It's dangerous to remove Content Security Policy headers and other related security mechanisms. Make the minimum changes possible to allow extension scripts, such as adding the extension's origin or random nonces to the `script-src` list.

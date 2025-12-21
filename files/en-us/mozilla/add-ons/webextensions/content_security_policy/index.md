@@ -132,9 +132,9 @@ Manifest V3 Extensions that need to make `http:` or `ws:` requests can opt out o
 
 ## CSP for content scripts
 
-In Manifest V2, content scripts have no CSP.
-As of Manifest V3, content scripts share the default CSP as extensions. It is currently not possible to specify a separate CSP for content scripts ([source](https://bugzil.la/1581611#c10)).
+In Manifest V2, content scripts have no CSP. As of Manifest V3, content scripts share the default CSP as extensions. It's not possible to specify a separate CSP for content scripts ([source](https://bugzil.la/1581611#c10)).
 
-The extent to which the CSP controls loads from content scripts varies by browser.
-In Firefox, JavaScript features such as eval are restricted by the extension CSP. Generally, most DOM-based APIs are subjected to the CSP of the web page.
-In Chrome, many DOM APIs are covered by the extension CSP instead of the web page's CSP ([crbug 896041](https://crbug.com/896041)).
+The extent to which the CSP controls loads from content scripts varies by browser. In Firefox, JavaScript features such as eval are restricted by the extension CSP. Generally, most DOM-based APIs are subjected to the CSP of the web page. In Chrome, many DOM APIs are covered by the extension CSP instead of the web page's CSP ([crbug 896041](https://crbug.com/896041)).
+
+
+See [Make network requests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Make_network_requests) for more information.
