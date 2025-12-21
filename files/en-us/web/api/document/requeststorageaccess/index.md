@@ -14,7 +14,7 @@ This is relevant to user agents that, by default, block access to third-party, [
 To check whether permission to access third-party cookies has already been granted, you can call {{domxref("Permissions.query()")}}, specifying the feature name `"storage-access"`.
 
 After an embed has activated `storage-access` permission via `requestStorageAccess()`, it should reload itself.
-The browser will re-request the resource with [same-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) third-party cookies included, and make them available to the embedded resource once it has loaded.
+The browser will re-request the resource with third-party unpartitioned cookies included, and make them available to the embedded resource once it has loaded.
 
 Third-party cookies are sent only with requests to the embedded resource's exact origin.
 Other origins within the same site that wish to access their third-party cookies will need to _activate_ the granted storage-access permission.

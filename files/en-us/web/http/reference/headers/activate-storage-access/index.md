@@ -52,12 +52,11 @@ Activate-Storage-Access: load
     The browser should respond by activating an _already-granted_ storage-access permission, and retrying the request with unpartitioned cookies included.
 
 - `load`
-  - : The server uses this token to indicate that it is serving the browser a HTML document that has an already granted storage-access permission, and the document needs to access its third party unpartitioned cookies while it loads.
+  - : The server uses this token to indicate that it is sending the browser a HTML document that needs to activate a pre-existing `storage-access` permission grant — in order to access unpartiioned cookies while it loads.
 
     The server should check for `Sec-Fetch-Storage-Access: inactive` or `Sec-Fetch-Storage-Access: active` in the request before responding with `load`, in order to confirm that the permission has already been granted.
 
     The browser should respond by loading the resource and granting it access to its unpartitioned cookies.
-    If the storage access permission is granted but not activated, it should also first be activated.
 
 ## Description
 
