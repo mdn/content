@@ -7,7 +7,7 @@ browser-compat: api.CSSPerspective
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSPerspective`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the [perspective()](/en-US/docs/Web/CSS/Reference/Values/transform-function/perspective) value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
+The **`CSSPerspective`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the {{cssxref("transform-function/perspective", "perspective()")}} value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
 
 {{InheritanceDiagram}}
 

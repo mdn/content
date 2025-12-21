@@ -13,10 +13,10 @@ The `<axis>` keyword values are used in the following [CSS functions](/en-US/doc
 
 - {{cssxref("scroll-timeline-axis")}}
 - {{cssxref("scroll-timeline")}} shorthand
-- [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
+- {{cssxref("animation-timeline/scroll", "scroll()")}}
 - {{cssxref("view-timeline-axis")}}
 - {{cssxref("view-timeline")}} shorthand
-- [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view)
+- {{cssxref("animation-timeline/view", "view()")}}
 
 ## Syntax
 

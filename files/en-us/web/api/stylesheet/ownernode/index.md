@@ -39,7 +39,7 @@ console.log(document.styleSheets[0].ownerNode);
 ## Notes
 
 For style sheets that are included by other style sheets, such as with
-[`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import), the value of this
+{{cssxref("@import")}}, the value of this
 property is `null`.
 
 ## Specifications

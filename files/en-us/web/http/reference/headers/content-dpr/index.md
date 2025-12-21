@@ -68,10 +68,10 @@ See the [`DPR`](/en-US/docs/Web/HTTP/Reference/Headers/DPR#examples) header exam
 ## See also
 
 - Device client hints
-  - {{HTTPHeader("Device-Memory")}}
-  - {{HTTPHeader("DPR")}}
-  - {{HTTPHeader("Viewport-Width")}}
-  - {{HTTPHeader("Width")}}
+  - {{HTTPHeader("Sec-CH-Device-Memory")}}
+  - {{HTTPHeader("Sec-CH-DPR")}}
+  - {{HTTPHeader("Sec-CH-Viewport-Height")}}
+  - {{HTTPHeader("Sec-CH-Viewport-Width")}}
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}}
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) on developer.chrome.com (2020)
