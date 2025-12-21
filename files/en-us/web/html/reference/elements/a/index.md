@@ -389,6 +389,13 @@ To save a {{HTMLElement("canvas")}} element's contents as an image, you can crea
 
 #### Example painting app with save link
 
+> [!NOTE]
+> The download link in this example may not work when viewed on MDN.
+> MDN interactive examples run inside a sandboxed iframe with strict
+> Content Security Policy (CSP) restrictions, which prevent file downloads.
+> This example will work as expected when used in a regular web page
+> outside of the MDN environment.
+
 ##### HTML
 
 ```html
