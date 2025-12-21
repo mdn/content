@@ -387,6 +387,9 @@ See {{RFC(3966)}} for syntax, additional features, and other details about the `
 
 To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link where the `href` is the canvas data as a `data:` URL created with JavaScript and the `download` attribute provides the file name for the downloaded PNG file:
 
+> **Note:** The "Download my painting" link will not work in MDN live examples because downloads are disabled in sandboxed iframes. 
+> To test it, run the example in a normal HTML page.
+
 #### Example painting app with save link
 
 ##### HTML
