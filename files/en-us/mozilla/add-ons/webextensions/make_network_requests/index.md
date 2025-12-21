@@ -47,7 +47,7 @@ To request access to servers outside an extension's origin, add hosts, [match pa
 
 ```
 
-Cross-origin permission values can be fully qualified host names like these:
+Host permissions values can be base URLs like these:
 
 - `"https://www.mozilla.org/"`
 - `"https://www.gmail.com/"`
@@ -55,6 +55,7 @@ Cross-origin permission values can be fully qualified host names like these:
 Or match patterns like these:
 
 - `"https://*.mozilla.org/"`
+- `"https://mozilla.org/*"`
 - `"https://*/"`
 
 A match pattern of `"https://*/"` allows HTTPS access to all reachable domains. Only the host portion of the
@@ -142,6 +143,10 @@ Instead, design message handlers that limit the resources fetched. In this more 
 browser.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.contentScriptQuery == 'queryPrice') {
+      // Validate the itemId's type
+      if (typeof request.itemId !== 'number') {
+        throw new TypeError(`queryPrice expected a value of type 'number' but received '${typeof request.itemId}'`);
+      }
       const url = `https://another-site.com/price-query?itemId=${encodeURIComponent(request.itemId)}`
       fetch(url)
         .then(response => response.text())
@@ -167,7 +172,7 @@ browser.runtime.sendMessage(
 
 Take care with resources retrieved using HTTP. If your extension is used on a hostile network, a network attacker (a.k.a. the ["man-in-the-middle"](/en-US/docs/Glossary/MitM)) could modify the response and, potentially, attack your extension. Instead, use HTTPS whenever possible.
 
-### Adjust the content security policy
+### Adjust the extension's content security policy
 
 If you modify the default [Content Security Policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for your extension by adding a `content_security_policy` attribute to your manifest, you must ensure that any hosts you want to connect to are allowed. While the default policy doesn't restrict connections to hosts, be careful when adding the `connect-src` or `default-src` directives.
 
