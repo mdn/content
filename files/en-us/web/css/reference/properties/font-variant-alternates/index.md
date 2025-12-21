@@ -133,5 +133,5 @@ p {
 - {{cssxref("font-variant-ligatures")}}
 - {{cssxref("font-variant-numeric")}}
 - {{cssxref("font-variant-position")}}
-- [`@font-feature-values`](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values)
+- {{cssxref("@font-feature-values")}}
 - {{cssxref("font-feature-settings")}}

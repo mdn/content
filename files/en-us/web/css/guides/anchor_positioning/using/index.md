@@ -107,15 +107,15 @@ In some cases, an implicit anchor reference will be made between two elements, d
 If you wish to remove an explicit anchor association previously made between an anchor element and a positioned element, you can do one of the following:
 
 1. Set the anchor's `anchor-name` property value to `none`, or to a different `<dashed-ident>`, if you want a different element to be anchored to it.
-2. Set the `position-anchor` property of the positioned element to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`.
+2. Set the `position-anchor` property of the positioned element to `none`, or to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`.
 
-However, in the case of implicit anchor associations, you'll need to use the second method — the first method doesn't work. This is because the association is controlled internally, and you can't remove the `anchor-name` via CSS.
+In the case of implicit anchor associations, you'll need to use the second method — the first method doesn't work. This is because the association is controlled internally, and you can't remove the `anchor-name` via CSS.
 
 For example, to stop a customizable `<select>` element's picker from being anchored to the `<select>` element itself, you could use the following rule:
 
 ```css
 ::picker(select) {
-  position-anchor: --not-an-anchor-name;
+  position-anchor: none;
 }
 ```
 
