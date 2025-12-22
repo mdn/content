@@ -77,8 +77,8 @@ if (typeof trustedTypes === "undefined")
 ```
 
 Next we define a policy named `some-content-policy` to create {{domxref("TrustedHTML")}} objects from the input (we should also enforce the `some-content-policy` using CSP).
-The code implements no-op policy in order to allow this example to work without a third-party dependency.
-Your own application code should use a third party library such as the "DOMPurify" library to return sanitized content from the untrusted input.
+The code implements a no-op policy in order to allow this example to work without a third-party dependency.
+Your own application code should use a third-party library such as the "DOMPurify" library to return sanitized content from the untrusted input.
 
 ```js
 const policy = trustedTypes.createPolicy("some-content-policy", {
