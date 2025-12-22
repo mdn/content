@@ -31,20 +31,20 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 - {{domxref("Response.status")}} {{ReadOnlyInline}}
   - : The status code of the response. (This will be `200` for a success).
 - {{domxref("Response.statusText")}} {{ReadOnlyInline}}
-  - : The status message corresponding to the status code. (e.g., `OK` for `200`).
+  - : The status message corresponding to the status code. (e. g., `OK` for `200`).
 - {{domxref("Response.type")}} {{ReadOnlyInline}}
   - : The type of the response (e.g., `basic`, `cors`).
 - {{domxref("Response.url")}} {{ReadOnlyInline}}
-  - : The URL of the response.
+  - : The URL of the response. 
 
 ## Static methods
 
 - {{domxref("Response.error_static","Response.error()")}}
-  - : Returns a new `Response` object associated with a network error.
-- {{domxref("Response.redirect_static", "Response.redirect()")}}
-  - : Returns a new response with a different URL.
-- {{domxref("Response.json_static", "Response.json()")}}
-  - : Returns a new `Response` object for returning the provided JSON encoded data.
+  - : Returns a new `Response` object associated with a network error. 
+- {{domxref("Response. redirect_static", "Response.redirect()")}}
+  - : Returns a new response with a different URL. 
+- {{domxref("Response.json_static", "Response. json()")}}
+  - : Returns a new `Response` object for returning the provided JSON encoded data. 
 
 ## Instance methods
 
@@ -70,7 +70,10 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 In our [basic fetch example](https://github.com/mdn/dom-examples/tree/main/fetch/basic-fetch) ([run example live](https://mdn.github.io/dom-examples/fetch/basic-fetch/)) we use a simple `fetch()` call to grab an image and display it in an {{htmlelement("img")}} element.
 The `fetch()` call returns a promise, which resolves to the `Response` object associated with the resource fetch operation.
 
-You'll notice that since we are requesting an image, we need to run {{domxref("Response.blob")}} to give the response its correct MIME type.
+> [!NOTE]
+> The `fetch()` promise only rejects on network errors (such as connection failures). HTTP error responses (like 404 or 500) still resolve successfully. You should check {{domxref("Response.ok")}} or {{domxref("Response.status")}} to handle HTTP errors.
+
+You'll notice that since we are requesting an image, we need to run {{domxref("Response.blob")}} to give the response its correct MIME type. 
 
 ```js
 const image = document.querySelector(".my-image");
