@@ -156,7 +156,7 @@ Now that you have worked through our articles on CSS layout, it's time to test y
 
 ## See also
 
-- [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) at-rule
+- {{cssxref("@supports")}} at-rule
 - [CSS at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module
