@@ -138,6 +138,9 @@ If that is not possible, you might allow or block the use of certain functions w
 
 ## Examples
 
+Note that these examples omit the use of trusted types for brevity.
+For code showing the usual approach, see [Using `TrustedScript`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#using_trustedscript) in `eval()`.
+
 ### Specifying arguments with the Function constructor
 
 The following code creates a `Function` object that takes two arguments.
