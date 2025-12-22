@@ -57,6 +57,15 @@ Function(arg1, arg2, /* …, */ argN, functionBody)
 - `functionBody`
   - : A {{domxref("TrustedScript")}} or a string containing the JavaScript statements comprising the function definition.
 
+### Exceptions
+
+- {{jsxref("SyntaxError")}}
+  - : Function parameter arguments can't be evaluated as valid identifiers, or the `functionBody` can't be parsed as a script.
+- {{jsxref("TypeError")}}
+  - : Any parameter is passed a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
+
+The methods also throws any exception that occurs during evaluation of the code.
+
 ## Description
 
 `Function` objects created with the `Function` constructor are parsed when the function is created. This is less efficient than creating a function with a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) or [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function) and calling it within your code, because such functions are parsed with the rest of the code.
@@ -109,12 +118,12 @@ const adder = new Function("a", "b", untrustedCode);
 ```
 
 Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that specifies [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) will prevent such code running by default.
-
-You can specify [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) in your CSP to allow it to execute without any further restriction, but this is unsafe as it disables one of the main protections of CSP.
+You can specify [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) in your CSP to allow `Function()` to execute, but this is unsafe as it disables one of the main protections of CSP.
 
 If you must allow the scripts to run via `Function()` you can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 This ensures that the input is passed through a transformation function.
-Instead of specifying `unsafe-eval` you will instead use the CSP [`trusted-types-eval` keyword](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval).
+
+To allow `Function()` to run, you will additionally need to specify the [`trusted-types-eval` keyword](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) in your CSP `script-src` directive.
 This acts in the same way as `unsafe-eval`, but _only_ allows the method to evaluate if trusted types are enabled (if you were to use `unsafe-eval` it would allow execution even on browsers that do not support trusted types).
 
 For example, the required CSP for your site might look like this:
@@ -189,6 +198,7 @@ sayHello("world");
 
 ## See also
 
+- [Using the function constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#using_the_function_constructor) in `eval()`
 - [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function)
 - [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
 - {{jsxref("Functions", "Functions", "", 1)}}

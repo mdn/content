@@ -7,7 +7,12 @@ sidebar: jssidebar
 ---
 
 > [!WARNING]
-> Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use `eval()`. See [Never use direct eval()!](#never_use_direct_eval!), below.
+> The argument passed to this method is dynamically evaluated and executed as JavaScript.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+>
+> You can mitigate this risk by always passing {{domxref("TrustedScript")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+>
+> See [Security considerations](#security_considerations) for more information.
 
 The **`eval()`** function evaluates JavaScript code represented as a string and returns its completion value. The source is parsed as a script.
 
@@ -36,15 +41,22 @@ eval(script)
 ### Parameters
 
 - `script`
-  - : A string representing a JavaScript expression, statement, or sequence of statements. The expression can include variables and properties of existing objects. It will be parsed as a script, so [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations (which can only exist in modules) are not allowed.
+  - : A {{domxref("TrustedScript")}} instance or string representing a JavaScript expression, statement, or sequence of statements.
+    The expression can include variables and properties of existing objects. It will be parsed as a script, so [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations (which can only exist in modules) are not allowed.
 
 ### Return value
 
-The completion value of evaluating the given code. If the completion value is empty, {{jsxref("undefined")}} is returned. If `script` is not a string primitive, `eval()` returns the argument unchanged.
+The completion value of evaluating the given code. If the completion value is empty, {{jsxref("undefined")}} is returned.
+If `script` is not a {{domxref("TrustedScript")}} or string primitive, `eval()` returns the argument unchanged.
 
 ### Exceptions
 
-Throws any exception that occurs during evaluation of the code, including {{jsxref("SyntaxError")}} if `script` fails to be parsed as a script.
+- {{jsxref("SyntaxError")}}
+  - : The `script` parameter cannot be parsed as a script.
+- {{jsxref("TypeError")}}
+  - : `script` is passed a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
+
+The methods also throws any exception that occurs during evaluation of the code.
 
 ## Description
 
@@ -60,7 +72,8 @@ In strict mode, declaring a variable named `eval` or re-assigning `eval` is a {{
 const eval = 1; // SyntaxError: Unexpected eval or arguments in strict mode
 ```
 
-If the argument of `eval()` is not a string, `eval()` returns the argument unchanged. In the following example, passing a `String` object instead of a primitive causes `eval()` to return the `String` object rather than evaluating the string.
+If the argument of `eval()` is not a {{domxref("TrustedScript")}} or string, `eval()` returns the argument unchanged.
+In the following example, passing a `String` object instead of a primitive causes `eval()` to return the `String` object rather than evaluating the string.
 
 ```js
 eval(new String("2 + 2")); // returns a String object containing "2 + 2"
@@ -345,7 +358,84 @@ Note that since JSON syntax is limited compared to JavaScript syntax, many valid
 
 Passing carefully constrained data instead of arbitrary code is a good idea in general. For example, an extension designed to scrape contents of web-pages could have the scraping rules defined in [XPath](/en-US/docs/Web/XML/XPath) instead of JavaScript code.
 
+### Security considerations
+
+The method can be used to execute arbitrary input with the privileges of the caller.
+If the input is a potentially unsafe string provided by a user, this is a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+
+For example, the following code shows how `eval()` might execute `untrustedCode` provided by a user:
+
+```js example-bad
+const untrustedCode = "alert('Potentially evil code!');";
+const adder = eval(untrustedCode);
+```
+
+Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that specifies [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) will prevent such code running by default.
+You can specify [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) in your CSP to allow `eval()` to execute, but this is unsafe as it disables one of the main protections of CSP.
+
+If you must allow the scripts to run via `eval()` you can mitigate the risks by always assigning a {{domxref("TrustedScript")}} instance instead of a string, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+This ensures that the input is passed through a transformation function.
+
+To allow `eval()` to run, you will additionally need to specify the [`trusted-types-eval` keyword](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) in your CSP `script-src` directive.
+This acts in the same way as `unsafe-eval`, but _only_ allows the method to evaluate if trusted types are enabled (if you were to use `unsafe-eval` it would allow execution even on browsers that do not support trusted types).
+
+For example, the required CSP for your site might look like this:
+
+```http
+Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_allowlist>' 'trusted-types-eval'
+```
+
+The behavior of the transformation function will depend on the specific use case that requires a user provided script.
+If possible you should lock the allowed scripts to exactly the code that you trust to run.
+If that is not possible, you might allow or block the use of certain functions within the provided input.
+
 ## Examples
+
+Note that the first example shows how to use the method with trusted types.
+The other examples omit this step for brevity.
+
+### Using TrustedScript
+
+To mitigate the risk of XSS, we should always assign `TrustedScript` instances to the `script` parameter.
+We also need to do this if we're enforcing trusted types for other reasons and we want to allow some script sources that have been permitted (by `CSP: script-src`).
+
+Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
+This acts as a transparent replacement for the trusted types JavaScript API:
+
+```js
+if (typeof trustedTypes === "undefined")
+  trustedTypes = { createPolicy: (n, rules) => rules };
+```
+
+Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createScript", "createScript()")}} method for transforming input strings into {{domxref("TrustedScript")}} instances.
+
+For the purpose of this example we'll assume that we have a function `transformedScript()` that defines our tranformation/filtering logic.
+
+```js
+const policy = trustedTypes.createPolicy("script-policy", {
+  createScript(input) {
+    const transformed = transformedScript(input); // Our filter method
+    return transformed;
+  },
+});
+```
+
+Then we use the `policy` object to create a `trustedScript` object from a potentially unsafe input string:
+
+```js
+// The potentially malicious string
+// We won't be including untrustedScript in our scriptAllowList array
+const untrustedScript = "alert('Potentially evil code!');";
+
+// Create a TrustedScriptURL instance using the policy
+const trustedScript = policy.createScript(untrustedScript);
+```
+
+The `trustedScriptURL` property can now be used in `eval()`
+
+```js
+eval(trustedScriptURL);
+```
 
 ### Using eval()
 
