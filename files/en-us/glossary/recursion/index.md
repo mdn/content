@@ -65,12 +65,7 @@ const factorial = (n) => {
   return n * factorial(n - 1);
 };
 console.log(factorial(10));
-```
-
-Output:
-
-```plain
-3628800
+// 3628800
 ```
 
 #### Fibonacci
@@ -78,12 +73,7 @@ Output:
 ```js
 const fibonacci = (n) => (n <= 2 ? 1 : fibonacci(n - 1) + fibonacci(n - 2));
 console.log(fibonacci(10));
-```
-
-Output:
-
-```plain
-55
+// 55
 ```
 
 #### Reduce
@@ -92,12 +82,7 @@ Output:
 const reduce = (fn, acc, [cur, ...rest]) =>
   cur === undefined ? acc : reduce(fn, fn(acc, cur), rest);
 console.log(reduce((a, b) => a + b, 0, [1, 2, 3, 4, 5, 6, 7, 8, 9]));
-```
-
-Output:
-
-```plain
-45
+// 45
 ```
 
 ## See also
