@@ -18,7 +18,12 @@ The browser will re-request the resource with third-party unpartitioned cookies 
 
 Third-party cookies are sent only with requests to the embedded resource's exact origin.
 Other origins within the same site that wish to access their third-party cookies will need to _activate_ the granted storage-access permission.
-The [storage access headers](/en-US/docs/Web/API/Storage_Access_API#storage_access_headers) can be used to activate an already granted storage-access permission (you can also activate a granted permission by calling this method, but this is less efficient as the page has to be loaded).
+The [storage access headers](/en-US/docs/Web/API/Storage_Access_API#storage_access_headers) should be used for activating a granted `storage-access` permission.
+Note that the headers can activate a granted permission for any embedded resource, such as credentialed images, not just code embedded in an {{htmlelement("iframe")}}.
+
+It is also possible to activate a granted permission for a cross-origin, same-site endpoint by calling `requestStorageAccess()` (this time without the requirement for transient activation).
+However this only works to activate permission for embedded code.
+It is also less efficient than using the headers, because the resource needs to be loaded in order to activate the permission.
 
 > [!NOTE]
 > Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) heuristics, or prompting the user for explicit permission.
