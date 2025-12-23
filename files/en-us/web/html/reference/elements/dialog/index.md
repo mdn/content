@@ -44,12 +44,38 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     > [!NOTE]
     > While you can toggle between the open and closed states of non-modal dialog boxes by toggling the presence of the `open` attribute, this approach is not recommended. See {{domxref("HTMLDialogElement.open", "open")}} for more information.
 
-## Usage notes
+## Description
+
 
 - HTML {{HTMLElement("form")}} elements can be used to close a dialog box if they have the attribute `method="dialog"` or if the button used to submit the form has [`formmethod="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/input#formmethod) set. When a `<form>` within a `<dialog>` is submitted via the `dialog` method, the dialog box closes, the states of the form controls are saved but not submitted, and the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property gets set to the value of the button that was activated.
 - The CSS {{cssxref('::backdrop')}} pseudo-element can be used to style the backdrop of a modal dialog, which is displayed behind the `<dialog>` element when the dialog is displayed using the {{domxref("HTMLDialogElement.showModal()")}} method. For example, this pseudo-element could be used to blur, darken, or otherwise obfuscate the inert content behind the modal dialog.
 - The [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus) attribute should be added to the element the user is expected to interact with immediately upon opening a modal dialog. If no other element involves more immediate interaction, it is recommended to add `autofocus` to the close button inside the dialog, or the dialog itself if the user is expected to click/activate it to dismiss.
 - Do not add the `tabindex` property to the `<dialog>` element as it is not interactive and does not receive focus. The dialog's contents, including the close button contained in the dialog, can receive focus and be interactive.
+
+## Invoker commands and dialogs
+
+Dialogs can be opened and closed using invoker commands defined on interactive elements such as `<button>`.
+The `command` attribute allows a button to invoke actions on a dialog without requiring custom JavaScript event listeners.
+
+This mechanism was originally designed for popovers and later extended to dialogs, which is why related information may also appear in popover documentation.
+
+For more details, see:
+- [Invoker Commands API](/en-US/docs/Web/API/Invoker_Commands_API)
+- [Popover API](/en-US/docs/Web/API/Popover_API)
+
+### Example: Opening a dialog using `command`
+
+```html
+<button command="show-modal" commandfor="my-dialog">
+  Open dialog
+</button>
+
+<dialog id="my-dialog">
+  <p>Hello from the dialog</p>
+  <button command="close" commandfor="my-dialog">Close</button>
+</dialog>
+
+
 
 ## Accessibility
 
