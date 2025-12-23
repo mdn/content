@@ -45,7 +45,7 @@ The three layers build on top of one another nicely. Let's take a button as an e
 
 ```html live-sample___string-concat-name
 <button type="button">Player 1: Chris</button>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 ```
 
 ![Button showing Player 1: Chris with no styling](just-html.png)
