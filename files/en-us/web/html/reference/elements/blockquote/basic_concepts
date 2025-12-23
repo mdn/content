@@ -1,0 +1,57 @@
+---
+title: Basic concepts of `<blockquote>`
+slug: Web/HTML/Reference/Elements/Blockquote/Basic_concepts
+page-type: guide
+sidebar: htmlsidebar
+---
+
+The `<blockquote>` HTML element represents a **section of content that is a quotation from another source**. It is generally displayed as an indented block and is used for **longer quotations**.
+
+This article explains the main features of `<blockquote>` and shows how to use it effectively.
+## Content and structure
+
+A `<blockquote>` can contain **any block-level content**, including paragraphs, lists, and other elements. The source of the quotation is usually cited using `<p>` and `<cite>`.
+
+Example:
+
+```html live-sample___blockquote-basic
+<div>
+  <blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>
+      Words can be like X-rays, if you use them properly—they’ll go through
+      anything. You read and you’re pierced.
+    </p>
+  </blockquote>
+  <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+</div>
+```
+{{EmbedLiveSample("blockquote-basic")}}
+## `cite` attribute
+
+The `cite` attribute provides the URL or reference of the source. It **does not affect the visual rendering**, but is useful for semantics and accessibility.
+
+Example:
+
+```html live-sample___blockquote-cite
+<div>
+  <blockquote cite="https://example.com/famous-quote">
+    <p>"Practice makes perfect."</p>
+  </blockquote>
+  <p>—Example Author, <cite>Example Work</cite></p>
+</div>
+```
+{{EmbedLiveSample("blockquote-cite")}}
+## Best practices
+
+- Use `<blockquote>` only for **quotations from other sources**.
+- Combine `<blockquote>` with `<p>` for authorship and `<cite>` for the work’s title.
+- Avoid using `<blockquote>` purely for visual indentation; use CSS for styling instead.
+- For short inline quotations, prefer `<q>` instead of `<blockquote>`.
+
+Summary:
+- `<blockquote>`: long quotations.
+- `<q>`: short inline quotations.
+- `cite`: URL of the source.
+- `<p>`: paragraph of quote or author.
+- `<div>`: container block.
+- `<cite>`: title of the work.
