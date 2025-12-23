@@ -12,7 +12,7 @@ browser-compat: api.SVGScriptElement.href
 > The [`href.baseVal`](/en-US/docs/Web/API/SVGAnimatedString/baseVal) property represents the URL of an external script loaded into the SVG script element.
 > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 >
-> You can mitigate this risk by having a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that restricts the locations from which scripts can be loaded, and by always assigning {{domxref("TrustedScriptURL")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+> You can mitigate this risk by having a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that restricts the locations from which scripts can be loaded, and by always assigning {{domxref("TrustedScriptURL")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
 > See [Security considerations](#security_considerations) for more information.
 
 The **`href`** read-only property of the {{domxref("SVGScriptElement")}} interface reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("script")}} element.
@@ -37,7 +37,7 @@ A website should control what scripts that are allowed to run using a [Content S
 This can restrict scripts to those from the current origin, or a specific set of origins, or even particular files.
 
 If you're using this property and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) (using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive), you will need to always assign {{domxref("TrustedScriptURL")}} objects instead of strings.
-This ensures that the input is passed through a transformation function, which has the chance to reject or modify the URL before he resource is fetched.
+This ensures that the input is passed through a transformation function, which has the chance to reject or modify the URL before the resource is fetched.
 
 ## Examples
 
@@ -71,7 +71,7 @@ if (typeof trustedTypes === "undefined")
 
 Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createScriptURL", "createScriptURL()")}} method for transforming input strings into {{domxref("TrustedScriptURL")}} instances.
 
-For the purpose of this example we'll assume that we want to allow a predefined set of URLs in the `scriptAllowList` array and log any other scripts.
+For the purpose of this example we'll assume that we want to allow a predefined set of URLs in the `scriptAllowList` array, and log any other scripts.
 
 ```js
 const scriptAllowList = [
@@ -88,7 +88,7 @@ const policy = trustedTypes.createPolicy("script-url-policy", {
 });
 ```
 
-Next we define a similar SVG and script element as in the previous example and get the element we're going to inject the URL into.
+Next we define a similar SVG and script element, as in the previous example, and get the element we're going to inject the URL into.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
