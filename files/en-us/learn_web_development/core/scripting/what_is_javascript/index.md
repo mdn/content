@@ -45,6 +45,7 @@ The three layers build on top of one another nicely. Let's take a button as an e
 
 ```html live-sample___string-concat-name
 <button type="button">Player 1: Chris</button>
+<script src="script.js"></script>
 ```
 
 ![Button showing Player 1: Chris with no styling](just-html.png)
@@ -71,12 +72,12 @@ button {
 And finally, we can add some JavaScript to implement dynamic behavior:
 
 ```js live-sample___string-concat-name
+const button = document.querySelector("button");
+
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
 }
-
-const button = document.querySelector("button");
 
 button.addEventListener("click", updateName);
 ```
