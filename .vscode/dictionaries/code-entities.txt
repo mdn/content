@@ -891,3 +891,4 @@ xpidl
 xpinstall
 xywh
 zoomlevelchange
+bgtest
