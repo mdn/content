@@ -95,8 +95,8 @@ Module workers and their dependencies are loaded and executed using ECMAScript m
 - Dependencies are restricted by the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), in particular the `script-src` and `worker-src` directives
   These can be used to control the locations from which modules can be fetched
 
-Classic workers are executed as scripts and import other scripts using {{domxref("WorkerGlobalScope.importScripts()")}}, not import statements.
-The are served in `no-cors` mode.
+Classic workers are executed as scripts and import other scripts using {{domxref("WorkerGlobalScope.importScripts()")}}, not `import` statements.
+The are requested in `no-cors` mode.
 
 As a result, both kinds of workers can load same-origin scripts by default.
 Cross-origin scripts are easier to load than cross-origin modules as they are not blocked by CORS by default.
@@ -122,23 +122,74 @@ For example:
 const myWorker = new Worker(new URL("worker.js", import.meta.url));
 ```
 
-This makes the path relative to the current script instead of the current HTML page, which allows the bundler to safely do optimizations like renaming (because otherwise the `worker.js` URL may point to a file not controlled by the bundler, so it cannot make any assumptions.
+This makes the path relative to the current script instead of the current HTML page, which allows the bundler to safely do optimizations like renaming (because otherwise the `worker.js` URL may point to a file not controlled by the bundler, so it cannot make any assumptions).
 
 ### Security considerations
 
-The script or module specified by the `url` argument is executed in the context of the current page.
+The script or module specified by the `url` argument is executed in the web worker context.
 If the `url` is provided by a user, this is a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 
-It is extremely risky to accept and execute arbitrary URLs from untrusted origins.
+While web workers do not have direct access to the owning document or window, it is still extremely risky to accept and execute arbitrary URLs from untrusted origins.
 A website should control what scripts that are allowed to run using a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) with the [`worker-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src) directive (or a fallback defined in [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src)).
 This can restrict scripts to those from the current origin, or a specific set of origins, or even particular files.
 
 If you're using this property and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) (using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive), you will need to always assign {{domxref("TrustedScriptURL")}} objects instead of strings.
-This ensures that the input is passed through a transformation function, which has the chance to reject or modify the URL before it is injected.
+This ensures that the input is passed through a transformation function, which has the chance to reject or modify URLs needed by the worker before they are fetched.
 
 ## Examples
 
-The following code snippet shows creation of a {{domxref("Worker")}} object using the `Worker()` constructor and subsequent usage of the object:
+For brevity, only the first example below uses trusted types.
+In production your code should always use trusted types when passing data originating from users into injection sinks.
+
+### Using Trusted Types
+
+To mitigate the risk of XSS, we should always pass `TrustedScriptURL` instances to the worker URL instead of strings.
+We also need to do this if we're enforcing trusted types for other reasons and we want to allow some sources that have been permitted (by `CSP: worker-src`).
+
+Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
+This acts as a transparent replacement for the trusted types JavaScript API:
+
+```js
+if (typeof trustedTypes === "undefined")
+  trustedTypes = { createPolicy: (n, rules) => rules };
+```
+
+Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createScriptURL", "createScriptURL()")}} method for transforming input strings into {{domxref("TrustedScriptURL")}} instances.
+
+For the purpose of this example we'll assume that we want to allow a predefined set of URLs in the `workerScriptAllowList` array and log any other scripts.
+
+```js
+const workerScriptAllowList = [
+  // Some list of allowed URLs
+];
+const policy = trustedTypes.createPolicy("worker-url-policy", {
+  createScriptURL(input) {
+    if (workerScriptAllowList.includes(input)) {
+      return input; // allow the script
+    }
+    console.log(`Script not in workerScriptAllowList: ${input}`);
+    return ""; // Block the script
+  },
+});
+```
+
+Next we use our `policy` object to create a `trustedScriptURL` object from a potentially unsafe input string and pass this to the worker.
+
+```js
+// The potentially malicious worker URL
+// We won't be including untrustedScript in our workerScriptAllowList array
+const untrustedScriptURL = "https://evil.example.com/naughty.js";
+
+// Create a TrustedScriptURL instance using the policy
+const trustedScriptURL = policy.createScriptURL(untrustedScriptURL);
+
+// Construct the worker with the trusted URL
+const myWorker = new Worker(trustedScriptURL);
+```
+
+### Creating a classic worker
+
+The following code snippet shows creation of a classic {{domxref("Worker")}} object using the `Worker()` constructo, and subsequent usage of the object:
 
 ```js
 const myWorker = new Worker("worker.js");
