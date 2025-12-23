@@ -8,11 +8,15 @@ browser-compat: api.HTMLDialogElement.cancel_event
 
 {{APIRef("HTML DOM")}}
 
-The **`cancel`** event fires on a {{HTMLElement("dialog")}} element when the user instructs the browser that they wish to dismiss the current open dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key.
+The **`cancel`** event fires on a {{HTMLElement("dialog")}} element when the user triggers a close request.
+
+Close requests might be triggered by:
+
+- Pressing the <kbd>Esc</kbd> key on desktop platforms
+- Calling the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method.
+- The back button on mobile platforms
 
 This event is cancelable but can not bubble.
-
-When a `<dialog>` is dismissed with the <kbd>Esc</kbd> key, both the `cancel` and {{domxref("HTMLDialogElement/close_event", "close")}} events are fired.
 
 ## Syntax
 
@@ -32,55 +36,81 @@ A generic {{domxref("Event")}}.
 
 ### Canceling a dialog
 
+The following example shows a button that, when clicked, opens a {{htmlelement("dialog")}} via the {{domxref("HTMLDialogElement.showModal()", "showModal()")}} method.
+
+From there you can trigger the `cancel` event by either clicking _Request Close_ button to close the dialog (via the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method) or press the <kbd>Esc</kbd> key.
+
 #### HTML
 
 ```html
-<dialog class="example-dialog">
-  <button class="close">Close</button>
+<dialog id="dialog">
+  <button type="button" id="request-close">Request Close</button>
 </dialog>
 
-<button class="open-dialog">Open dialog</button>
+<button id="open">Open dialog</button>
+```
 
-<div class="result"></div>
+```html hidden
+<pre id="log"></pre>
 ```
 
 ```css hidden
-button,
-div {
-  margin: 0.5rem;
+#log {
+  height: 170px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
 }
 ```
 
-#### JavaScript
+```js hidden
+const logElement = document.getElementById("log");
+function log(text, clear = false) {
+  if (clear) {
+    logElement.innerText = "";
+  }
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
 
 ```js
-const result = document.querySelector(".result");
+const dialog = document.getElementById("dialog");
+const openButton = document.getElementById("open");
+const requestCloseButton = document.getElementById("request-close");
 
-const dialog = document.querySelector(".example-dialog");
+// Update button opens a modal dialog
+openButton.addEventListener("click", () => {
+  log("open button click event fired", true);
+  log("dialog showModal() called");
+  dialog.showModal();
+});
 
+// Request close
+requestCloseButton.addEventListener("click", () => {
+  log("request close button click event fired");
+  log("dialog requestClose() called");
+  // Triggers the cancel event
+  dialog.requestClose();
+});
+
+// Fired when requestClose() is called
+// Prevent the dialog from closing by calling event.preventDefault()
 dialog.addEventListener("cancel", (event) => {
-  result.textContent = "dialog was canceled";
+  log("dialog cancel event fired");
+  // Uncomment the next two lines to prevent the dialog from closing
+  // log("dialog close cancelled");
+  // event.preventDefault();
 });
 
-const openDialog = document.querySelector(".open-dialog");
-openDialog.addEventListener("click", () => {
-  if (typeof dialog.showModal === "function") {
-    dialog.showModal();
-    result.textContent = "";
-  } else {
-    result.textContent = "The dialog API is not supported by this browser";
-  }
-});
-
-const closeButton = document.querySelector(".close");
-closeButton.addEventListener("click", () => {
-  dialog.close();
+dialog.addEventListener("close", (event) => {
+  log("dialog close event fired");
 });
 ```
 
 #### Result
 
-{{ EmbedLiveSample('Canceling a dialog', '100%', '100px') }}
+{{ EmbedLiveSample('Canceling a dialog', '100%', '250px') }}
 
 ## Specifications
 
@@ -93,3 +123,4 @@ closeButton.addEventListener("click", () => {
 ## See also
 
 - HTML {{HTMLElement("dialog")}} element
+- The [`Event`](/en-US/docs/Web/API/Event) interface

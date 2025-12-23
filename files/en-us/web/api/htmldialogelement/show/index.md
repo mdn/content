@@ -33,73 +33,50 @@ None ({{jsxref("undefined")}}).
 
 ### Basic usage
 
-The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the `show()` method.
-From there you can click the _Cancel_ button ("X") to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit button.
+The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} via the `show()` method.
+
+When the dialog is open, you can still interact with the rest of the page, including clicking the _Click me_ button that triggers an alert.
+
+From there you can click the _Close dialog_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()", "close()")}} method).
 
 #### HTML
 
 ```html
-<!-- Simple pop-up dialog box, containing a form -->
-<dialog id="favDialog">
-  <form method="dialog">
-    <button type="button" id="cancel">X</button>
-    <section>
-      <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal" name="favAnimal">
-          <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
-      </p>
-    </section>
-    <menu>
-      <li>
-        <button type="reset">Reset</button>
-      </li>
-      <li>
-        <button type="submit">Confirm</button>
-      </li>
-    </menu>
-  </form>
+<dialog id="dialog">
+  <button type="button" id="close">Close dialog</button>
 </dialog>
 
-<button id="updateDetails">Update details</button>
+<p><button id="open">Open dialog</button></p>
+<p><button id="alert">Trigger alert</button></p>
 ```
 
 #### JavaScript
 
 ```js
-const updateButton = document.getElementById("updateDetails");
-const cancelButton = document.getElementById("cancel");
-const dialog = document.getElementById("favDialog");
-dialog.returnValue = "favAnimal";
+const dialog = document.getElementById("dialog");
+const openButton = document.getElementById("open");
+const closeButton = document.getElementById("close");
+const alertButton = document.getElementById("alert");
 
-function openCheck(dialog) {
-  if (dialog.open) {
-    console.log("Dialog open");
-  } else {
-    console.log("Dialog cancelled");
-  }
-}
-
-// Update button opens a modeless dialog
-updateButton.addEventListener("click", () => {
+// Open button opens a modeless dialog
+openButton.addEventListener("click", () => {
   dialog.show();
-  openCheck(dialog);
 });
 
-// Form cancel button closes the dialog box
-cancelButton.addEventListener("click", () => {
-  dialog.close("animalNotChosen");
-  openCheck(dialog);
+// Alert button triggers an alert
+alertButton.addEventListener("click", () => {
+  alert("you clicked me!");
+});
+
+// Close button closes the dialog box
+closeButton.addEventListener("click", () => {
+  dialog.close();
 });
 ```
 
 #### Results
 
-{{EmbedLiveSample("Basic usage",100, 200)}}
+{{EmbedLiveSample("Basic usage", '100%', "250px")}}
 
 ## Specifications
 
@@ -111,4 +88,4 @@ cancelButton.addEventListener("click", () => {
 
 ## See also
 
-- The HTML element implementing this interface: {{ HTMLElement("dialog") }}.
+- HTML {{htmlelement("dialog")}} element
