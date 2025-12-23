@@ -18,8 +18,9 @@ This simple example draws a green rectangle onto a canvas.
 ### HTML
 
 ```html
-<canvas id="canvas"></canvas>
+<canvas id="drawingCanvas"></canvas>
 ```
+Use a descriptive ID to make it clear what the canvas element is used for.
 
 ### JavaScript
 
@@ -28,7 +29,7 @@ The {{domxref("Document.getElementById()")}} method gets a reference to the HTML
 The actual drawing is done using the {{domxref("CanvasRenderingContext2D")}} interface. The {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property makes the rectangle green. The {{domxref("CanvasRenderingContext2D.fillRect()", "fillRect()")}} method places its top-left corner at (10, 10), and gives it a size of 150 units wide by 100 tall.
 
 ```js
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("drawingCanvas");
 const ctx = canvas.getContext("2d");
 
 ctx.fillStyle = "green";
