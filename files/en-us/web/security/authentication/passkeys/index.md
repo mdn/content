@@ -5,11 +5,11 @@ page-type: guide
 sidebar: security
 ---
 
-Passkeys enable websites to authenticate users without the user having to enter any passwords or other secret codes on the site itself. They're considered [the most secure authentication method available to websites](#security_properties_of_passkeys), and we recommend that sites should adopt passkeys as their preferred authentication method, and phase out the use of passwords.
+Passkeys enable websites to authenticate users without the user having to enter any passwords or other secret codes on the site itself. They're considered [the most secure authentication method available to websites](#security_properties_of_passkeys), and we recommend that sites should adopt passkeys as their preferred authentication method, and [phase out the use of passwords](#migrating_from_passwords).
 
 Instead of a shared secret, passkeys depend on public key cryptography. A passkey is a {{glossary("Public-key cryptography", "public/private key pair")}} that's specific to a particular user's account on a particular website.
 
-The private key is stored in a module called an _authenticator_, that's [in, or attached to, the user's device](#platform*and_roaming_authenticators). The public key is stored in the website's server. When the user signs in, the authenticator uses the private key to {{glossary("digital signature", "digitally sign")}} a statement about the user's identity, which is called an _assertion_. The website's server can use the public key to verify the assertion's signature, and sign the user in.
+The private key is stored in a module called an _authenticator_, that's [in, or attached to, the user's device](#platform_and_roaming_authenticators). The public key is stored in the website's server. When the user signs in, the authenticator uses the private key to {{glossary("digital signature", "digitally sign")}} a statement about the user's identity, which is called an _assertion_. The website's server can use the public key to verify the assertion's signature, and sign the user in.
 
 In this guide we'll:
 
