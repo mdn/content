@@ -75,6 +75,8 @@ beforeinstallprompt
 beforematch
 beforescriptexecute
 beforexrselect
+beforexrselect
+bgtest
 BGRX
 bhks
 biske
