@@ -75,9 +75,8 @@ beforeinstallprompt
 beforematch
 beforescriptexecute
 beforexrselect
-beforexrselect
-bgtest
 BGRX
+bgtest
 bhks
 biske
 bmatrix

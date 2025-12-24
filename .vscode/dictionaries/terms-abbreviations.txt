@@ -909,6 +909,7 @@ Videobridge
 Viewmodel
 virosa
 virtualizes
+VOPRF
 WAAPI
 wallclock
 WAMP
@@ -960,4 +961,3 @@ zoomable
 ZQSD
 ZWNBSP
 ZWSP
-VOPRF
