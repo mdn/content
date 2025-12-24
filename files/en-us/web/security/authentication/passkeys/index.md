@@ -5,17 +5,19 @@ page-type: guide
 sidebar: security
 ---
 
-Passkeys enable websites to authenticate users without the user having to enter any passwords or other secret codes on the site itself. They're considered [the most secure authentication method available to websites](#security_features_of_passkeys), and we recommend that sites should adopt passkeys as their preferred authentication method, and phase out the use of passwords.
+Passkeys enable websites to authenticate users without the user having to enter any passwords or other secret codes on the site itself. They're considered [the most secure authentication method available to websites](#security_properties_of_passkeys), and we recommend that sites should adopt passkeys as their preferred authentication method, and phase out the use of passwords.
 
 Instead of a shared secret, passkeys depend on public key cryptography. A passkey is a {{glossary("Public-key cryptography", "public/private key pair")}} that's specific to a particular user's account on a particular website.
 
-The private key is stored in a module called an _authenticator_, that's in, or attached to, the user's device. The public key is stored in the website's server. When the user signs in, the authenticator uses the private key to {{glossary("digital signature", "digitally sign")}} a statement about the user's identity, which is called an _assertion_. The website's server can use the public key to verify the assertion's signature, and sign the user in.
+The private key is stored in a module called an _authenticator_, that's [in, or attached to, the user's device](#platform*and_roaming_authenticators). The public key is stored in the website's server. When the user signs in, the authenticator uses the private key to {{glossary("digital signature", "digitally sign")}} a statement about the user's identity, which is called an _assertion_. The website's server can use the public key to verify the assertion's signature, and sign the user in.
 
-## Authenticators
+In this guide we'll:
 
-An authenticator generates and securely stores passkeys, and can generate the digital signatures used to sign assertions. Usually, an authenticator also has a means to authenticate users, often with a {{glossary("biometric")}} such as a fingerprint.
-
-An authenticator might be integrated into the device's operating system, like the [Touch ID](https://en.wikipedia.org/wiki/Touch_ID) system in Apple devices or the [Windows Hello](https://en.wikipedia.org/wiki/Windows_10#System_security) system, or it might be a removable module like a [YubiKey](https://en.wikipedia.org/wiki/YubiKey), or it might be an app the user installs, like [Bitwarden](https://bitwarden.com/) or [LastPass](https://www.lastpass.com/).
+- Introduce the [Web Authentication API (WebAuthn)](/en-US/docs/Web/API/Web_Authentication_API), which enables web apps to use passkeys.
+- Go through the two main flows supported by WebAuthn: [registration](#registration) and [sign-in](#sign_in).
+- Explore some of the main [features of the WebAuthn API](#features_of_webauthn).
+- Summarise the [security properties of passkeys](#security_properties_of_passkeys).
+- Explore some good practices to help prevent users from being locked out if they [lose their passkeys](#handling_lost_passkeys), and to help users [migrate from passwords](#migrating_from_passwords).
 
 ## The WebAuthn API
 
@@ -84,14 +86,16 @@ The RP's front-end sends the assertion to the server, which verifies the signatu
 
 ## Features of WebAuthn
 
+In this section we'll go into some more detail about various aspects of the WebAuthn API.
+
 ### Platform and roaming authenticators
 
 The WebAuthn API distinguishes two main types of authenticator:
 
 - **Platform authenticators**
-  - : These authenticators are not removable from the device. For example, authenticators built into the device's operating system are platform authenticators.
+  - : These authenticators are not removable from the device. For example, authenticators built into the device's operating system, like the [Touch ID](https://en.wikipedia.org/wiki/Touch_ID) system in Apple devices or the [Windows Hello](https://en.wikipedia.org/wiki/Windows_10#System_security) system.
 - **Roaming authenticators**
-  - : These authenticators can be removed from the device and attached to a different device. The classic example of this is an authenticator implemented in a USB key.
+  - : These authenticators can be removed from the device and attached to a different device. The classic example of this is an authenticator implemented in a USB key, like a [YubiKey](https://en.wikipedia.org/wiki/YubiKey).
 
 When an RP creates a new passkey it can ask which type of authenticator it wants to use, as part of the [`authenticatorSelection`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#authenticatorselection) option that it passes to {{domxref("CredentialsContainer.create()")}}.
 
@@ -195,6 +199,14 @@ When the RP server verifies the assertion, it must check that these values are w
 
 This provides a layer of protection against [phishing](/en-US/docs/Web/Security/Attacks/Phishing) attacks, in addition to that provided by [passkey scope](#passkey_scope).
 
+## Security properties of passkeys
+
+We can note some features of this design that make it inherently more secure than passwords:
+
+- The user never has to remember any secret or enter any secret on the site.
+- The server doesn't have to store any secrets: if an attacker steals the user's public key, they can't do anything damaging with it.
+- When the user tries to sign in, the browser will only look for passkeys whose scope matches the requesting site, and the RP's server can verify that the origin of the requester was what they expected. This makes passkeys resistant to [phishing](/en-US/docs/Web/Security/Attacks/Phishing) attacks, because front-end code served from a phishing site like `https://examp1e.com` is not able to use the passkey associated with `https://example.com`.
+
 ## Handling lost passkeys
 
 If a user loses an authenticator, whether it's a separate module or integrated into their phone, they lose all the passkeys it contains.
@@ -296,20 +308,23 @@ const assertion = await navigator.credentials.get({
 });
 ```
 
-The effect of this is that the call waits until the user interacts with the username field, and when they do, the browser looks for passkeys that can be used to sign into the RP, and displays then to the user as autofill values. If the user selects one, then the selected passkey is used to, and the RP can use the resulting assertion to sign the user in.
+The effect of this is that the call waits until the user interacts with the username field. When the user interacts with the field, the browser looks for passkeys that can be used to sign into the RP, and displays them to the user as autofill values. If the user selects one, then the selected passkey is used, and the RP can use the resulting assertion to sign the user in.
 
-If the user doesn't have a passkey for the site, then they can enter their username and password, or have it autofilled by their password manager.
+If the user doesn't have a passkey for the site, or they don't select one of the offered passkeys, then they can enter their username and password, or have it autofilled by their password manager.
 
 This means that you can support users who may have passwords or passkeys, or both, without any special UI, and without the user having to remember whether they actually do have a passkey for your site.
 
 ### Retiring passwords
 
-## Security properties of passkeys
+Even if a user has a passkey for your site, and uses it in preference to their password, they are still vulnerable to attacks such as [credential stuffing](/en-US/docs/Web/Security/Authentication/Passwords#credential_stuffing), [guessing](/en-US/docs/Web/Security/Authentication/Passwords#guessing), and [phishing](/en-US/docs/Web/Security/Attacks/Phishing) for as long as you retain a password for their account.
 
-[wip]
+So as a final step, you might want a user to delete their password entirely. You can offer this as an option in their account settings, and potentially nudge them to delete their password if they haven't used it in a long time (but have used their passkeys regularly).
 
-We can note some features of this design that make it inherently more secure than passwords:
+However, you should also consider that having a password helps protect a user against being locked out of their account if they lose access to their passkey. Before encouraging users to delete their password, you can check that they have alternative protection, such as [multiple passkeys on different authenticators](#creating_multiple_passkeys), and/or passkeys that have been [backed up](#passkey_backup).
 
-- The user never has to remember any secret or enter any secret on the site.
-- The server doesn't have to store any secrets: if an attacker steals the user's public key, they can't do anything damaging with it.
-- When the user tries to sign in, the browser will only look for passkeys that are associated with the current site. This makes passkeys resistant to [phishing](/en-US/docs/Web/Security/Attacks/Phishing) attacks, because front-end code served from a phishing site like `https://examp1e.com` is not able to use the passkey associated with `https://example.com`.
+## See also
+
+- [The Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)
+- [Passkey Central](https://www.passkeycentral.org/home)
+- [passkeys.dev](https://passkeys.dev/)
+- [Passkeys](https://developers.google.com/identity/passkeys/) (developers.google.com)
