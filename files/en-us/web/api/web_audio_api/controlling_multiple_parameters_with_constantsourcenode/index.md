@@ -190,7 +190,7 @@ function togglePlay(event) {
 }
 ```
 
-If the `playButton` widget is checked, we're already playing the oscillators, and we call `stopOscillators()` to shut down the oscillators. See [Stopping the oscillators](#stopping_the_oscillators) below for that code.
+If the `playButton` widget is unchecked, we're already playing the oscillators, and we call `stopOscillators()` to shut down the oscillators. See [Stopping the oscillators](#stopping_the_oscillators) below for that code.
 
 If the `playButton` widget is checked, indicating that we're currently paused, we call `startOscillators()` to start the oscillators playing their tones. Below, we describe that code under [Starting the oscillators](#starting_the_oscillators).
 
