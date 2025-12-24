@@ -13,7 +13,7 @@ sidebar: http
 {{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 > [!WARNING]
-> The `DPR` header was renamed to {{HTTPHeader("Sec-CH-DPR")}} and the new name is now preferred.
+> The `DPR` header was standardized as {{HTTPHeader("Sec-CH-DPR")}} and the new name is now preferred.
 
 The HTTP **`DPR`** {{Glossary("request header")}} provides [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) about the client device pixel ratio (DPR).
 This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
@@ -81,11 +81,12 @@ Content-DPR: 2.0
 
 ## See also
 
-- Device client hints
+- Device and responsive image client hints
   - {{HTTPHeader("Sec-CH-DPR")}}
   - {{HTTPHeader("Sec-CH-Device-Memory")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}
+  - {{HTTPHeader("Sec-CH-Width")}}
   - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}
   - {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}
   - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}
