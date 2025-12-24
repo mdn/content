@@ -216,7 +216,7 @@ When the user clicks the play/pause toggle button while the oscillators aren't p
 function startOscillators() {
   oscNode1 = new OscillatorNode(context, {
     type: "sine",
-    frequency: 261.6255653005986, // middle C$
+    frequency: 261.6255653005986, // middle C
   });
   oscNode1.connect(gainNode1);
 
