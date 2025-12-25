@@ -277,7 +277,7 @@ With this option:
 
 - Otherwise, the `create()` call will fail.
 
-From the user's point of view, if the create failed, they don't know it was made, and if it succeeds, the RP can inform them that they havce a passkey that they can use to sign in next time.
+From the user's point of view, if the create failed, they don't know it was made, and if it succeeds, the RP can inform them that they have a passkey that they can use to sign in next time.
 
 The theory here is that if the user is relying on a credentials manager for sign-in already, then they implicitly trust it to look after their sign-in credentials _in general_, so they can trust it to create a new credential form for them.
 
