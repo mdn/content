@@ -90,7 +90,7 @@ In this section we'll go into some more detail about various aspects of the WebA
 
 ### Platform and roaming authenticators
 
-The WebAuthn API distinguishes two main types of authenticator:
+The WebAuthn API distinguishes two types of authenticator:
 
 - **Platform authenticators**
   - : These authenticators are not removable from the device. For example, authenticators built into the device's operating system, like the [Touch ID](https://en.wikipedia.org/wiki/Touch_ID) system in Apple devices or the [Windows Hello](https://en.wikipedia.org/wiki/Windows_10#System_security) system.
