@@ -74,7 +74,7 @@ Create an `index.html` file. This file will invoke a script that will ping the s
 ```
 
 ```js
-const wsUri = "ws://127.0.0.1/";
+const wsUri = "ws://127.0.0.1:8080/";
 const output = document.querySelector("#output");
 const websocket = new WebSocket(wsUri);
 let pingInterval;
