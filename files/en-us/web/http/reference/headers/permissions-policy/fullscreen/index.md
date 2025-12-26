@@ -37,27 +37,25 @@ The default allowlist for `fullscreen` is `self`.
 
 ### General example
 
+FastCorp Inc. wants to allow `fullscreen` for a specific cross-origin child frame. It can do so by including an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
+
+```html
+<iframe src="https://other.com/videoplayer" allow="fullscreen"></iframe>
+```
+
+### With a Permissions-Policy header
+
 SecureCorp Inc. wants to disable the Fullscreen API within all browsing contexts except for its own origin and those whose origin is `https://example.com`. It can do so by delivering the following HTTP response header to define a Permissions Policy:
 
 ```http
 Permissions-Policy: fullscreen=(self "https://example.com")
 ```
 
-### With an \<iframe> element
-
-FastCorp Inc. wants to disable `fullscreen` for all cross-origin child frames, except for a specific `<iframe>`. It can do so by delivering the following HTTP response header to define a Permissions Policy:
-
-```http
-Permissions-Policy: fullscreen=(self)
-```
-
 Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
 
 ```html
-<iframe src="https://other.com/videoplayer" allow="fullscreen"></iframe>
+<iframe src="https://example.com/presentation" allow="fullscreen"></iframe>
 ```
-
-iframe attributes can selectively enable features in certain frames, and not in others, even if those frames contain documents from the same origin.
 
 ## Specifications
 
