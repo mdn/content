@@ -100,7 +100,7 @@ dialog.addEventListener("close", (event) => {
 
 #### Result
 
-{{ EmbedLiveSample('Triggering `close` events via different methods', '100%', '250px') }}
+{{ EmbedLiveSample('Handling `close` events', '100%', '250px') }}
 
 ## Specifications
 

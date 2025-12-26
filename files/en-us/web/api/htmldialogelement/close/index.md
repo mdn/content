@@ -80,9 +80,9 @@ const closeWithValueButton = document.getElementById("close-w-value");
 
 // Update button opens a modal dialog
 openButton.addEventListener("click", () => {
-  // Reset the[index.md](../cancel_event/index.md) return value
+  // Reset the return value
   dialog.returnValue = "";
-  // Rhow the dialog[index.md](../cancel_event/index.md)
+  // Show the dialog
   dialog.showModal();
 });
 

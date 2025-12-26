@@ -61,7 +61,7 @@ const openButton = document.getElementById("open");
 const closeButton = document.getElementById("close");
 const alertButton = document.getElementById("alert");
 
-// Open button opens a modeless dialog
+// Open button opens a modal dialog
 openButton.addEventListener("click", () => {
   dialog.showModal();
 });

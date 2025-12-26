@@ -16,7 +16,7 @@ Close requests might be triggered by:
 - Calling the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method.
 - The back button on mobile platforms
 
-This event is cancelable but can not bubble.
+This event is cancelable but cannot bubble.
 
 ## Syntax
 
@@ -38,7 +38,7 @@ A generic {{domxref("Event")}}.
 
 The following example shows a button that, when clicked, opens a {{htmlelement("dialog")}} via the {{domxref("HTMLDialogElement.showModal()", "showModal()")}} method.
 
-From there you can trigger the `cancel` event by either clicking _Request Close_ button to close the dialog (via the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method) or press the <kbd>Esc</kbd> key.
+From there you can trigger the `cancel` event by either clicking the _Request Close_ button to close the dialog (via the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method) or press the <kbd>Esc</kbd> key.
 
 #### HTML
 
@@ -79,7 +79,7 @@ const dialog = document.getElementById("dialog");
 const openButton = document.getElementById("open");
 const requestCloseButton = document.getElementById("request-close");
 
-// Update button opens a modal dialog
+// Open button opens a modal dialog
 openButton.addEventListener("click", () => {
   log("open button click event fired", true);
   log("dialog showModal() called");

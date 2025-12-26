@@ -85,7 +85,7 @@ const closeButton = document.getElementById("close");
 const closeWithValueButton = document.getElementById("close-w-value");
 const preventCloseInput = document.getElementById("prevent-close");
 
-// Update button opens a modal dialog
+// Open button opens a modal dialog
 openButton.addEventListener("click", () => {
   // Reset the return value
   dialog.returnValue = "";

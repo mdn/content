@@ -74,7 +74,7 @@ closeButton.addEventListener("click", () => {
 });
 ```
 
-#### Results
+#### Result
 
 {{EmbedLiveSample("Basic usage", '100%', "250px")}}
 
