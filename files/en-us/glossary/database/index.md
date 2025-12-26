@@ -19,3 +19,5 @@ Browsers also have their own database system called {{glossary("IndexedDB")}}.
 - Related glossary terms:
   - {{Glossary("IndexedDB")}}
   - {{Glossary("SQL")}}
+  - {{Glossary("Checksum")}}
+  - {{Glossary("CRC")}}
