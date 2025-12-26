@@ -26,7 +26,7 @@ Permissions-Policy: gamepad=<allowlist>;
 
 ## Default policy
 
-The default allowlist for `gamepad` is `self`.
+The default allowlist for `gamepad` is `*`.
 
 ## Examples
 
