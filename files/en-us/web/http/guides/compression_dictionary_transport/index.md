@@ -155,6 +155,8 @@ Use-As-Dictionary: match="/js/app.*.js"
 
 From here the process is similar to the previous example when a matching resources is requested.
 
+Note: if the website has a [Content-Security-Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), the `connect-src` directive must permit the location of your dictionary to avoid the request being blocked.
+
 ## Creating dictionary-compressed responses
 
 Dictionary-compressed responses can use either the Brotli or ZStandard algorithms, with two extra requirements: they must also include a magic header and embedded dictionary hash.
