@@ -62,11 +62,11 @@ In toolbars with multiple rows of controls, allow the left and right arrows to w
 
 If the toolbar is vertical, ensure `aria-orientation="vertical"` is set, and the following keyboard interactions are implemented:
 
-- <kbd>Down Arrow</kbd> (For a horizontal toolbar (the default)
-  - : Moves focus to the previous control. Optionally, focus movement may wrap from the first element to the last element.
-
-- <kbd>Up Arrow</kbd> (For a horizontal toolbar (the default)
+- <kbd>Down Arrow</kbd>
   - : Moves focus to the next control. Optionally, focus movement may wrap from the last element to the first element.
+
+- <kbd>Up Arrow</kbd>
+  - : Moves focus to the previous control. Optionally, focus movement may wrap from the first element to the last element.
 
 ### Required JavaScript features
 
