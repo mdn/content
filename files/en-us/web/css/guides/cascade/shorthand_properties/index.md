@@ -15,7 +15,11 @@ There are a few edge cases to keep in mind when using shorthand properties.
 
 ### Omitting properties
 
-A value which is not specified is set to its initial value. That means that it **overrides** previously set values. For example:
+A value which is not specified is set to a default value defined by the shorthand,
+which may differ from the property's initial value.
+
+That means that it **overrides** previously set values.
+For example:
 
 ```css
 p {
