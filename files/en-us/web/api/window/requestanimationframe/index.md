@@ -146,7 +146,7 @@ function animate() {
   const value = (performance.now() - zero) / duration;
   if (value < 1) {
     element.style.opacity = value;
-    requestAnimationFrame((t) => animate(t));
+    requestAnimationFrame(animate);
   } else element.style.opacity = 1;
 }
 ```
