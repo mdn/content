@@ -31,51 +31,71 @@ If the user dismisses the dialog without clicking a button (for example, by pres
 #### HTML
 
 ```html
-<dialog id="termsDialog">
+<dialog id="dialog">
   <p>Do you agree to the Terms of Service (link)?</p>
-  <button id="declineButton" value="declined">Decline</button>
-  <button id="acceptButton" value="accepted">Accept</button>
+  <button id="decline" value="declined">Decline</button>
+  <button id="accept" value="accepted">Accept</button>
 </dialog>
-<p>
-  <button id="openDialogButton">Review ToS</button>
-</p>
-<p id="statusText"></p>
+<button id="open">Open dialog</button>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 170px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const logElement = document.getElementById("log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
 ```
 
 #### JavaScript
 
 ```js
-const dialog = document.getElementById("termsDialog");
-const statusText = document.getElementById("statusText");
+const dialog = document.getElementById("dialog");
+const openButton = document.getElementById("open");
+const declineButton = document.getElementById("decline");
+const acceptButton = document.getElementById("accept");
 
-const openDialogButton = document.getElementById("openDialogButton");
-const declineButton = document.getElementById("declineButton");
-const acceptButton = document.getElementById("acceptButton");
-
-openDialogButton.addEventListener("click", () => {
+openButton.addEventListener("click", () => {
+  // Reset the return value on each open
+  dialog.returnValue = "";
+  updateReturnValue();
+  // Show the dialog
   dialog.showModal();
 });
-
-declineButton.addEventListener("click", closeDialog);
-acceptButton.addEventListener("click", closeDialog);
 
 function closeDialog(event) {
   const button = event.target;
   dialog.close(button.value);
 }
 
-dialog.addEventListener("close", () => {
-  statusText.innerText = dialog.returnValue
-    ? `Return value: ${dialog.returnValue}`
-    : "There was no return value";
-});
+function updateReturnValue() {
+  log(`Return value: "${dialog.returnValue}"`);
+}
+
+declineButton.addEventListener("click", closeDialog);
+acceptButton.addEventListener("click", closeDialog);
+
+dialog.addEventListener("close", updateReturnValue);
 ```
 
 #### Result
 
 Try clicking "Review ToS", then choosing the "Accept" or "Decline" buttons in the dialog, or dismissing the dialog by pressing the <kbd>Esc</kbd> key, and observe the different status updates.
 
-{{ EmbedLiveSample('Checking the return value', '100%', '200px') }}
+{{ EmbedLiveSample('Checking the return value', '100%', "250px")}}
 
 ## Specifications
 
@@ -87,4 +107,4 @@ Try clicking "Review ToS", then choosing the "Accept" or "Decline" buttons in th
 
 ## See also
 
-- The HTML element implementing this interface: {{ HTMLElement("dialog") }}.
+- HTML {{htmlelement("dialog")}} element

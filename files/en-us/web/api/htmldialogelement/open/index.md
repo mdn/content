@@ -36,27 +36,39 @@ button.
   </form>
 </dialog>
 
-<p>
-  <button id="openDialog">Open Dialog</button>
-</p>
-<p id="dialogStatus"></p>
+<button id="open">Open Dialog</button>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 170px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const logElement = document.getElementById("log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
 ```
 
 ```js
-const openDialog = document.getElementById("openDialog");
 const dialog = document.getElementById("dialog");
-const text = document.getElementById("dialogStatus");
+const openButton = document.getElementById("open");
 
 function openCheck(dialog) {
-  if (dialog.open) {
-    text.innerText = "Dialog open";
-  } else {
-    text.innerText = "Dialog closed";
-  }
+  log(dialog.open ? "Dialog: open" : "Dialog: closed");
 }
 
-// Update button opens a modal dialog
-openDialog.addEventListener("click", () => {
+openButton.addEventListener("click", () => {
   dialog.showModal();
   openCheck(dialog);
 });
@@ -68,7 +80,7 @@ dialog.addEventListener("close", () => {
 
 ### Result
 
-{{ EmbedLiveSample('Examples', '100%', '200px') }}
+{{ EmbedLiveSample('Examples', '100%', '250px') }}
 
 ## Specifications
 
@@ -80,4 +92,4 @@ dialog.addEventListener("close", () => {
 
 ## See also
 
-- The HTML element implementing this interface: {{ HTMLElement("dialog") }}.
+- HTML {{htmlelement("dialog")}} element
