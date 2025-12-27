@@ -16,7 +16,10 @@ More precisely, an _activation triggering input event_ is an event which:
 
 - has the [`isTrusted`](/en-US/docs/Web/API/Event/isTrusted) attribute set to `true`, and
 - is one of the following types:
-  - [`keydown`](/en-US/docs/Web/API/Element/keydown_event) (except for the <kbd>Esc</kbd> key nor a shortcut key reserved by the user agent)
+  - [`keydown`](/en-US/docs/Web/API/Element/keydown_event) (except for the Esc key, browser-reserved shortcuts,
+    and certain keys that do not produce user activation such as CapsLock, NumLock,
+    PrintScreen, and other non-character keys; behavior may vary by browser)
+
   - [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event)
   - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event) (if `pointerType` is "mouse")
   - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event) (if `pointerType` is not "mouse")
