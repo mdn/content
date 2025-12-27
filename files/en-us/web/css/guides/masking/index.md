@@ -77,7 +77,7 @@ While masking provides more control and options, clipping can perform better if 
 - [`<coord-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#values)
 - {{cssxref("image")}}
 - {{cssxref("&lt;position&gt;")}}
-- {{cssxref("&lt;url&gt;")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
   - {{cssxref("background")}} shorthand

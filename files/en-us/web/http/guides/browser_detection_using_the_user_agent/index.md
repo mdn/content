@@ -203,7 +203,7 @@ Unfortunately, there is no uniformity of the different part of the user agent st
 
 ### Rendering engine
 
-Browsers sharing a common {{glossary("rendering engine")}} will display a page in the same way: it's often a fair assumption that what will work in one browser will work in the other.
+Browsers sharing a common {{glossary("engine/rendering", "rendering engine")}} will display a page in the same way: it's often a fair assumption that what will work in one browser will work in the other.
 There are three active major rendering engines: {{glossary("Blink")}}, {{glossary("Gecko")}}, and {{glossary("WebKit")}}.
 
 The rendering engine is the string `Gecko/20100101` in the following example, indicating the rendering engine is `Gecko`, and the "gecko-Trail" is the fixed string `20100101`, which means "desktop":
