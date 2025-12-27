@@ -24,10 +24,16 @@ copyTo(destination, options)
   - : An object containing the following:
     - `planeIndex`
       - : The index of the plane to copy from.
+    - `format` {{optional_inline}}
+      - : The sample format to use when copying audio data.
+        Possible values include `"f32"` and `"s16"`.
+        If omitted, the format of the destination buffer is used.
     - `frameOffset` {{optional_inline}}
-      - : An integer giving an offset into the plane data indicating which plane to begin copying from. Defaults to `0`.
+      - : An integer giving an offset into the plane data indicating which plane to begin copying from.
+        Defaults to `0`.
     - `frameCount` {{optional_inline}}
-      - : An integer giving the number of frames to copy. If omitted then all frames in the plane will be copied, beginning with the frame specified in `frameOffset`.
+      - : An integer giving the number of frames to copy.
+        If omitted then all frames in the plane will be copied, beginning with the frame specified in `frameOffset`.
 
 ### Return value
 
