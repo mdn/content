@@ -6,6 +6,7 @@ page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.gamepad
+spec-urls: https://www.w3.org/TR/gamepad/#permission-policy
 sidebar: http
 ---
 
