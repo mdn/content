@@ -23,7 +23,7 @@ In this guide we'll:
 
 To interact with an authenticator, a website uses the [Web Authentication API (WebAuthn)](/en-US/docs/Web/API/Web_Authentication_API). In the WebAuthn specification, a website that uses passkeys to authenticate users is called a _Relying Party_ (RP), and we'll use that term in this guide.
 
-WebAuthn is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API), which is a framework for managing {{glossary("credential", "credentials")}} for various authentication methods, including passwords and federated identity, as well as passkeys.
+WebAuthn is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API), which is a framework for managing {{glossary("credential", "credentials")}} for various authentication methods, including [passwords](/en-US/docs/Web/Security/Authentication/Passwords) and [federated identity](/en-US/docs/Web/Security/Authentication/Federated_identity), as well as passkeys.
 
 The two main APIs are:
 
