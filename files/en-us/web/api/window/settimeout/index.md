@@ -72,7 +72,7 @@ However, separate global environments maintain their own independent pools of ti
 ## Description
 
 The `setTimeout()` function is commonly used to call a function that is executed just once, after a delay.
-The timeout can be cancelled before it completes using {{domxref("Window.clearTimeout()")}}.
+You can call {{domxref("Window.clearTimeout()")}} to cancel the timeout before it completes.
 
 If you wish to call a function repeatedly (e.g., every _N_ milliseconds), you can use {{domxref("Window.setInterval", "setInterval()")}}.
 
