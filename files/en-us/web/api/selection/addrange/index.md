@@ -28,7 +28,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-Only Firefox supports multiple selection ranges. Other browsers will not add new ranges to the selection if it already contains one.
+Note that only Firefox supports multiple selection ranges. In this example, other browsers will not add new ranges to the selection if it already contains one.
 
 ### HTML
 
