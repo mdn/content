@@ -78,7 +78,7 @@ If you wish to call a function repeatedly (e.g., every _N_ milliseconds), you ca
 
 ### Working with asynchronous functions
 
-`setTimeout()` is an asynchronous function, meaning that it completes immediately, and does not block the execution of the following code.
+`setTimeout()` is an asynchronous function, meaning that it completes immediately, and does not block the execution of the code that follows it.
 In other words, you cannot use `setTimeout()` to create a "pause" before the next line is executed.
 
 See the following example:
@@ -119,7 +119,7 @@ This problem is explained in detail in the [JavaScript reference](/en-US/docs/We
 The following example demonstrates how this can cause unexpected behavior:
 
 ```js
-myArray = ["zero", "one", "two"];
+const myArray = ["zero", "one", "two"];
 
 myArray.myMethod = function (sProperty) {
   alert(arguments.length > 0 ? this[sProperty] : this);
@@ -367,8 +367,9 @@ const untrustedCode = "alert('Potentially evil code!');";
 const id = setTimeout(untrustedCode, 1000);
 ```
 
-Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that specifies [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) will prevent such code running by default.
+Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that specifies [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) or [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) will prevent such code running by default.
 You can specify [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) in your CSP to allow `setTimeout()` to execute, but this is unsafe as it disables one of the main protections of CSP.
+See [Inline JavaScript](/en-US/docs/Web/HTTP/Guides/CSP#inline_javascript) in the CSP guide.
 
 If you must allow the scripts to run via `setTimeout()` you can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 This ensures that the input is passed through a transformation function.
