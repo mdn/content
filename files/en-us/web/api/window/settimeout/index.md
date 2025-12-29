@@ -78,10 +78,10 @@ If you wish to call a function repeatedly (e.g., every _N_ milliseconds), you ca
 
 ### Working with asynchronous functions
 
-`setTimeout()` is an asynchronous function, meaning that it completes immediately, and does not block the execution of the code that follows it.
-In other words, you cannot use `setTimeout()` to create a "pause" before the next line is executed.
+`setTimeout()` is an asynchronous function, meaning that it returns immediately after scheduling the callback function or code to run.
+It does not "wait", blocking execution of the lines of code after `setTimeout()` until the scheduled code has run.
 
-See the following example:
+Consider the following example:
 
 ```js
 setTimeout(() => {
@@ -101,14 +101,12 @@ setTimeout(() => {
 // this is the first message
 ```
 
-Notice that the first function does not create a 5-second "pause" before calling the second function.
-Instead, the first function is called, but waits 5 seconds to execute.
-While the first function is waiting to execute, the second function is called, and a 3-second wait is applied to the second function before it executes.
-Since neither the first nor the second function's timers have completed, the third function is called and completes its execution first.
-Then the second follows.
-Then finally the first function is executed after its timer finally completes.
+The `setTimeout()` method is called three times, passing a callback function that logs the order in which `setTimeout()` was called.
+Because the earlier methods calls have larger delays, the callback methods are executed in reverse order to which they were scheduled.
+If `setTimeout()` blocked until the callback completed, the output would display the messages in order.
 
-To create a progression in which one function only fires after the completion of another function, see the documentation on [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Asynchronous methods are useful because they allow tasks to be run in parallel when the order of execution does not matter.
+If the order that an asynchronous method completes does matter, then you can use [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) (promise chaining) to wait on the completion of a task.
 
 ### Functions are called with the global `this`
 
