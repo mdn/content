@@ -128,12 +128,18 @@ myObject.log(); // myProperty: 12
 setTimeout(myObject.log, 1000); // myProperty: undefined
 ```
 
-You can use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to adopt the `this` of the function in which `setTimeout()` is called (arrow functions have a lexical `this`).
+You can use a wrapper function, such as an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), to adopt the `this` of the function in which `setTimeout()` is called (arrow functions have a lexical `this`).
 
-You can test this with the following code.
+You can test this with the following code:
 
 ```js
+// Arrow function callback
 setTimeout(() => myObject.log(), 2000); // myProperty: 12 after 2 seconds
+
+// Anonymous function callback
+setTimeout(function () {
+  myObject.log();
+}, 3000); // myProperty: 12 after 3 seconds
 ```
 
 You might also use the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function.
