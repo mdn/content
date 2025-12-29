@@ -163,7 +163,7 @@ Had we not used `counter-reset` (or {{cssxref("counter-set")}}) to create the co
 
 - Counter properties: {{cssxref("counter-set")}}, {{cssxref("counter-reset")}}
 - Counter at-rule: {{cssxref("@counter-style")}}
-- Counter functions: {{cssxref("counter", "counter()")}}, {{cssxref("counters", "counters()")}}
+- Counter functions: {{cssxref("counter()")}}, {{cssxref("counters()")}}
 - [Using CSS counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) guide
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

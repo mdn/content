@@ -159,7 +159,7 @@ This can be seen in the below example (thanks to [CSS Tricks](https://css-tricks
 
 So in this case the `indeterminate` state is used to state that collecting the ingredients has started, but the recipe is not yet complete.
 
-```js
+```js live-sample___indeterminate_state
 const overall = document.querySelector("#enchantment");
 const ingredients = document.querySelectorAll("ul input");
 
@@ -192,7 +192,41 @@ function updateDisplay() {
 }
 ```
 
-{{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
+```html live-sample___indeterminate_state
+<form>
+  <fieldset>
+    <legend>Complete the recipe</legend>
+    <div>
+      <input type="checkbox" id="enchantment" name="enchantment" />
+      <label for="enchantment">Enchantment table</label>
+      <ul>
+        <li>
+          <input type="checkbox" id="book" name="ingredient" value="book" />
+          <label for="book">Book</label>
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            id="diamonds"
+            name="ingredient"
+            value="diamonds" />
+          <label for="diamonds">Diamonds (x2)</label>
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            id="obsidian"
+            name="ingredient"
+            value="obsidian" />
+          <label for="obsidian">Obsidian (x4)</label>
+        </li>
+      </ul>
+    </div>
+  </fieldset>
+</form>
+```
+
+{{EmbedLiveSample("indeterminate_state", "", 200)}}
 
 ## Validation
 

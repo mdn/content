@@ -191,7 +191,7 @@ This example demonstrates how `shadowrootdelegatesfocus` is applied to a shadow 
 
 The code first declares a shadow root inside a `<div>` element, using the `<template>` element with the `shadowrootmode` attribute.
 This displays both a non-focusable `<div>` containing text and a focusable `<input>` element.
-It also uses CSS to style elements with [`:focus`](/en-US/docs/Web/CSS/Reference/Selectors/:focus) to blue, and to set the normal styling of the host element.
+It also uses CSS to style elements with {{cssxref(":focus")}} to blue, and to set the normal styling of the host element.
 
 ```html
 <div>

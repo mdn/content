@@ -6,7 +6,7 @@ browser-compat: css.types.basic-shape.circle
 sidebar: cssref
 ---
 
-The **`circle()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines a circle using a radius and a position. It is one of the {{cssxref("&lt;basic-shape&gt;")}} data types.
+The **`circle()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines a circle using a radius and a position. It is one of the {{cssxref("basic-shape")}} data types.
 
 {{InteractiveExample("CSS Demo: circle()")}}
 

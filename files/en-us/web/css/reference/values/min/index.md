@@ -6,7 +6,7 @@ browser-compat: css.types.min
 sidebar: cssref
 ---
 
-The **`min()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) lets you set the smallest (most negative) value from a list of comma-separated expressions as the value of a CSS property value. The `min()` function can be used anywhere a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} is allowed.
+The **`min()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) lets you set the smallest (most negative) value from a list of comma-separated expressions as the value of a CSS property value. The `min()` function can be used anywhere a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{cssxref("angle")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} is allowed.
 
 {{InteractiveExample("CSS Demo: min()")}}
 
@@ -46,7 +46,7 @@ min(1px, 2px, 3px)
 
 The `min()` function takes one or more comma-separated expressions as its parameter, with the smallest (most negative) expression value result used as the value.
 
-The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{CSSxRef("attr", "attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}).
+The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{cssxref("attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}).
 
 You can use different units for each value in your expression, if you wish. You may also use parentheses to establish computation order when needed.
 
@@ -115,7 +115,7 @@ Here, the form itself, along with the margin, border, and padding, will be 100% 
 
 ## See also
 
-- {{CSSxRef("calc", "calc()")}}
-- {{CSSxRef("clamp", "clamp()")}}
-- {{CSSxRef("max", "max()")}}
+- {{cssxref("calc()")}}
+- {{cssxref("clamp()")}}
+- {{cssxref("max()")}}
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
