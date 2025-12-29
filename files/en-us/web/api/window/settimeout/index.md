@@ -117,16 +117,15 @@ This problem is explained in detail in the [JavaScript reference](/en-US/docs/We
 The following example demonstrates how this can cause unexpected behavior:
 
 ```js
-const myArray = ["zero", "one", "two"];
-
-myArray.myMethod = function (sProperty) {
-  alert(arguments.length > 0 ? this[sProperty] : this);
+const myObject = {
+  log() {
+    console.log(`myProperty: ${this.myProperty}`);
+  },
+  myProperty: 12,
 };
 
-myArray.myMethod(); // prints "zero,one,two"
-myArray.myMethod(1); // prints "one"
-setTimeout(myArray.myMethod, 1000); // Alerts "[object Window]" after 1 second
-setTimeout(myArray.myMethod, 1500, "1"); // Alerts "undefined" after 1.5 seconds
+myObject.log(); // myProperty: 12
+setTimeout(myObject.log, 1000); // myProperty: undefined
 ```
 
 You can use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to adopt the `this` of the function in which `setTimeout()` is called (arrow functions have a lexical `this`).
@@ -134,9 +133,7 @@ You can use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arr
 You can test this with the following code.
 
 ```js
-setTimeout(() => myArray.myMethod(), 1000); // Alert "zero,one,two" after 1 second
-setTimeout(() => myArray.myMethod(1), 1500); // Alert "one" after 1.5 seconds
-setTimeout(() => myArray.myMethod(2), 3000); // Alert "one" after 3 seconds
+setTimeout(() => myObject.log(), 2000); // myProperty: 12 after 2 seconds
 ```
 
 You might also use the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function.
