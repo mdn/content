@@ -68,7 +68,7 @@ The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API c
 {{domxref('CSSStyleValue')}} is the base class through which all CSS values are expressed. Subclasses include:
 
 - {{domxref('CSSImageValue')}}
-  - : An interface representing values for properties that take an image, for example [`background-image`](/en-US/docs/Web/CSS/Reference/Properties/background-image), [`list-style-image`](/en-US/docs/Web/CSS/Reference/Properties/list-style-image), or [`border-image-source`](/en-US/docs/Web/CSS/Reference/Properties/border-image-source).
+  - : An interface representing values for properties that take an image, for example {{cssxref("background-image")}}, {{cssxref("list-style-image")}}, or {{cssxref("border-image-source")}}.
 - {{domxref('CSSKeywordValue')}}
   - : An interface which creates an object to represent CSS keywords and other identifiers. When used where a string is expected, it will return the value of `CSSKeyword.value`.
 - {{domxref('CSSMathValue')}}
@@ -97,7 +97,7 @@ The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API c
 - {{domxref('CSSPositionValue')}}
   - : Represents values for properties that take a position, for example object-position.
 - {{domxref('CSSTransformValue')}}
-  - : An interface representing a list of [`transform`](/en-US/docs/Web/CSS/Reference/Properties/transform) list values. They "contain" one or more {{domxref('CSSTransformComponent')}}s, which represent individual `transform` function values.
+  - : An interface representing a list of {{cssxref("transform")}} list values. They "contain" one or more {{domxref('CSSTransformComponent')}}s, which represent individual `transform` function values.
 - {{domxref('CSSUnitValue')}}
   - : An interface representing numeric values that can be represented as a single unit, or a named number and percentage.
 - {{domxref('CSSUnparsedValue')}}

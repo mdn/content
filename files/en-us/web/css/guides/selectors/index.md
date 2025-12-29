@@ -38,7 +38,7 @@ The CSS selectors module also introduces the [column combinator](/en-US/docs/Web
 - {{CSSXref(":checked")}}
 - {{CSSXref(":default")}}
 - {{CSSXref(":defined")}}
-- {{CSSXref(":dir", ":dir()")}}
+- {{cssxref(":dir()")}}
 - {{CSSXref(":disabled")}}
 - {{CSSXref(":empty")}}
 - {{CSSXref(":enabled")}}
@@ -49,26 +49,26 @@ The CSS selectors module also introduces the [column combinator](/en-US/docs/Web
 - {{CSSXref(":focus-within")}}
 - {{CSSXref(":fullscreen")}}
 - {{CSSXref(":future")}}
-- {{CSSXref(":has", ":has()")}}
+- {{cssxref(":has()")}}
 - {{CSSXref(":hover")}}
 - {{CSSXref(":in-range")}}
 - {{CSSXref(":indeterminate")}}
 - {{CSSXref(":interest-source")}}
 - {{CSSXref(":interest-target")}}
 - {{CSSXref(":invalid")}}
-- {{CSSXref(":is", ":is()")}}
-- {{CSSXref(":lang", ":lang()")}}
+- {{cssxref(":is()")}}
+- {{cssxref(":lang()")}}
 - {{CSSXref(":last-child")}}
 - {{CSSXref(":last-of-type")}}
 - {{CSSXref(":link")}}
 - `:matches()` (obsolete legacy selector alias for {{CSSXref( ":is", ":is()")}})
 - {{CSSXref(":modal")}}
 - {{CSSXref(":muted")}}
-- {{CSSXref(":not", ":not()")}}
-- {{CSSXref(":nth-child", ":nth-child()")}}
-- {{CSSXref(":nth-of-type", ":nth-of-type()")}}
-- {{CSSXref(":nth-last-child", ":nth-last-child()")}}
-- {{CSSXref(":nth-last-of-type", ":nth-last-of-type()")}}
+- {{cssxref(":not()")}}
+- {{cssxref(":nth-child()")}}
+- {{cssxref(":nth-of-type()")}}
+- {{cssxref(":nth-last-child()")}}
+- {{cssxref(":nth-last-of-type()")}}
 - {{CSSXref(":only-child")}}
 - {{CSSXref(":only-of-type")}}
 - {{CSSXref(":open")}}
@@ -93,7 +93,7 @@ The CSS selectors module also introduces the [column combinator](/en-US/docs/Web
 - {{CSSXref(":valid")}}
 - {{CSSXref(":visited")}}
 - {{CSSXref(":volume-locked")}}
-- {{CSSXref(":where", ":where()")}}
+- {{cssxref(":where()")}}
 - [`:-webkit-` pseudo-classes](/en-US/docs/Web/CSS/Reference/Webkit_extensions#pseudo-classes)
 - [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
 - [Class selector](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors)
@@ -147,8 +147,8 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
   - [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 - [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
   - {{CSSXref(":host")}} pseudo-class
-  - {{CSSXref(":host_function", ":host()")}} pseudo-class
-  - {{CSSXref(":host-context", ":host-context()")}} pseudo-class
+  - {{cssxref(":host()")}} pseudo-class
+  - {{cssxref(":host-context()")}} pseudo-class
   - {{CSSXref(":has-slotted")}} pseudo-class
   - {{CSSXref("::slotted")}} pseudo-element
 

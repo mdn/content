@@ -222,8 +222,8 @@ div {
 - {{cssxref("min-height")}}, {{cssxref("max-height")}}
 - {{cssxref("block-size")}}, {{cssxref("inline-size")}}
 - {{cssxref("anchor-size()")}}
-- {{cssxref("clamp", "clamp()")}}
-- {{cssxref("minmax", "minmax()")}}
+- {{cssxref("clamp()")}}
+- {{cssxref("minmax()")}}
 - SVG {{SVGAttr("height")}} attribute
 - [Introduction to the CSS box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction)
 - [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module

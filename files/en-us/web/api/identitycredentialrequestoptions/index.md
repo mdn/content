@@ -63,8 +63,12 @@ When an `identity` option is provided in a `get()` call made on a {{glossary("Re
       - : A string providing a hint about the account option(s) the browser should provide for the user to sign in with. This is useful in cases where the user has already signed in and the site asks them to reauthenticate. Otherwise, the reauthentication process can be confusing when a user has multiple accounts and can't remember which one they used to sign in previously. The value for the `loginHint` property can be taken from the user's previous sign-in, and is matched against the `login_hints` values provided by the IdP in the array of user information returned from the IdP's [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint).
     - `nonce` {{optional_inline}}
       - : A random string that can be included to ensure the response is issued specifically for this request and prevent {{glossary("replay attack", "replay attacks")}}.
+
+        > [!NOTE]
+        > This property has been removed from the specification, because not all the protocols that use the FedCM API require a nonce. If the RP does need to include a nonce, it should be provided in the [`params`](#params) property.
+
     - `params` {{optional_inline}}
-      - : A custom object used to specify any additional key-value parameters that RP needs to send to the IdP. This will vary by IdP and could include, for example, additional permission requests such as `admin: true`, or `calendar: "readonly"`.
+      - : Any additional parameters that the RP needs to pass to the IdP.
 
 ## Specifications
 

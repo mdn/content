@@ -134,7 +134,7 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
 </div>
 ```
 
-There is some basic styling applied that restyles the buttons and changes the [`z-index`](/en-US/docs/Web/CSS/Reference/Properties/z-index) of `tab` elements to give the illusion of it connecting to the `tabpanel` for active elements, and the illusion that inactive elements are behind the active `tabpanel`. You need to clearly distinguish the active tab from the inactive tabs, such as thicker borders or larger size.
+There is some basic styling applied that restyles the buttons and changes the {{cssxref("z-index")}} of `tab` elements to give the illusion of it connecting to the `tabpanel` for active elements, and the illusion that inactive elements are behind the active `tabpanel`. You need to clearly distinguish the active tab from the inactive tabs, such as thicker borders or larger size.
 
 ```css hidden
 .tabs {
