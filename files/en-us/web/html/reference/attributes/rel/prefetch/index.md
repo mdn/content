@@ -8,7 +8,8 @@ sidebar: htmlsidebar
 
 The **`prefetch`** keyword for the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/link#rel) attribute of the {{HTMLElement("link")}} element provides a hint to browsers that the user is likely to need the target resource for future navigations, and therefore the browser can likely improve the user experience by preemptively fetching and caching the resource. `<link rel="prefetch">` is used for same-site navigation resources, or for subresources used by same-site pages.
 
-The result is kept in the HTTP cache on disk. Because of this it is useful for prefetching subresources, even if they are not used by the current page. You could also use it to prefetch the next document the user will likely visit on the site. However, as a result you need to be careful with headers — for example certain [Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) headers could block prefetching (for example `no-cache` or `no-store`).
+The result is kept in the HTTP cache on disk. Because of this it is useful for prefetching subresources, even if they are not used by the current page. While it is technically possible to prefetch HTML documents for future navigation, this is no longer recommended in modern browsers.
+However, as a result you need to be careful with headers — for example certain [Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) headers could block prefetching (for example `no-cache` or `no-store`).
 
 > [!NOTE]
 > Because of such limitations, you are advised to use the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) for document prefetches instead, where it is supported.
