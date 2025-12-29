@@ -5,11 +5,19 @@ page-type: guide
 sidebar: cssref
 ---
 
-By default, with a view progress timeline, you track an element as it crosses the entire viewport. Often, you only want an animation to run during a specific section—for example, only while an element is entering the viewport or only within the first third of a scroll container viewport. In this guide, we look at three ways of animating through partial sections of the viewport: via `@keyframes` definitions, the `view()` function parameters, and the animation-range properties and values. While the most robust and best way to inset scroll driven animations is via the animation range properties, it is a topic that may be difficult to grok. We discuss insetting animations via updating `@keyframes` selectors and via the `view()` inset parameters to help you better understand why animation-range properties are useful and how they work.
+By default, [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) track elements across the entire viewport, from when the element's starting edge's first pixel crosses the viewport's ending edge to when the element's end edge crosses the viewport's starting edge. Often, you only want an animation to run during a specific section—for example, only while an element is entering the viewport or only within the first third of a scroll container viewport.
+
+In this guide, we look at three ways of animating through partial sections of the viewport:
+
+1. [Insetting with `@keyframes` selectors](#controlling_insets_with_keyframe_selectors)
+2. [Timeline insets via `view()` function parameters](#view_timeline_insets)
+3. [Controlling insets with animation-range properties and values](#controlling_insets_with_animation-range).
+
+While the most robust and best way to inset scroll driven animations is via the [animation range properties](#controlling_insets_with_animation-range), it is a topic that may be difficult to grok. We discuss insetting animations via updating `@keyframes` selectors and via the `view()` inset parameters to help you better understand why animation-range properties are useful and how they work.
 
 ## CSS animations and scroll driven timelines primer
 
-[CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using) are created by attaching {{cssxref("@keyframes")}} animations to an element using the {{cssxref("animation-name")}} property (or {{cssxref("animation")}} shorthand). The element is the thing on the page that will be animated. The keyframes define what happens to that element during the animation. When and how the element moves through the animation is based on the {{cssxref("animation-timeline")}}.
+[CSS animations](/en-US/docs/Web/CSS/Guides/Animations) are created by attaching {{cssxref("@keyframes")}} animations to an element using the {{cssxref("animation-name")}} property (or {{cssxref("animation")}} shorthand). The [keyframes]() define what happens to that element during the animation. When and how the element moves through the animation is based on the {{cssxref("animation-timeline")}}.
 
 By default, the timeline is the [DocumentTimeline](/en-US/docs/Web/API/DocumentTimeline), with each {{cssxref("animation-iteration-count", "animation iteration", "", "nocode")}} taking as long as the time defined by the {{cssxref("animation-duration")}} property. With [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines), the animation's progress is based on user scroll and element visibility rather than elapsing time.
 
@@ -48,7 +56,7 @@ We apply the `originalChangeEffect` animation to both elements using the {{cssxr
 
 We then set the {{cssxref("animation-timeline")}} of the demonstration `animatedElement` to an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function). While the comparison element will animate to the `100%` keyframe and maintain the property values of that keyframe after the conclusion of the animation, the demonstration element will animate as the user scrolls it into view:
 
-```css live-sample___default live-sample___selector30 live-sample___reverse live-sample___view-inset live-sample___selector_success
+```css live-sample___default live-sample___selector30 live-sample___reverse live-sample___view-inset
 .animatedElement,
 .comparisonElement {
   animation-name: originalChangeEffect;
@@ -71,7 +79,7 @@ We could have included all these properties in a single {{cssxref("animation")}}
 }
 ```
 
-```html hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset live-sample___selector_success live-sample___contain_cover live-sample___contain_cover_tall live-sample___entry_exit live-sample___entry_exit_tall
+```html hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset live-sample___contain_cover live-sample___contain_cover_tall live-sample___entry_exit live-sample___entry_exit_tall
 <main class="scroller">
   <div class="container">
     <h1>Directions</h1>
@@ -231,11 +239,7 @@ In the `30%` keyframe example, the map animated fully in `135px` when the top ed
 
 This method worked, but it is brittle. If we change the size of the animating element or the container, we would have to update parameter. We we could use [CSS custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) for the height of the subject element, the height of scroll viewport container, and then calculate the parameters with the CSS {{cssxref("calc()")}} function.
 
-```js
-topOffset =
-  (percentFromTopOfScroller * (subjectHeight + scrollerHeight)) /
-  scrollerHeight;
-```
+`topOffset = (percentFromTopOfScroller * (subjectHeight + scrollerHeight)) / scrollerHeight`
 
 The equation to get to `105%` is the percent from the top of the scroller top edge multiplied by the full height of the attachment range, divided by the height of the scroller. Imagine your future self trying to decipher your CSS:
 
@@ -255,7 +259,7 @@ In the alternating keyframe animation example, the animated element was "`15%` o
 
 What we skipped over is that to make the element fade in between the `0`, the start edge, and the `90px` mark and fade out between the `210px` mark and `300px` end edge (from the block edge to 30% of the way from the edge), we would have had create new keyframe animations for every subject and scrollport size combination which would require us to do a lot of math.
 
-```css live-sample___selector_success
+```css
 @keyframes actuallyDoesWhatWeWant {
   0%,
   66.67%,
@@ -388,9 +392,8 @@ section {
 }
 ```
 
-```html live-sample___contain_cover_tall live-sample___entry_exit  live-sample___entry_exit_tall
+```html live-sample___contain_cover_tall live-sample___entry_exit live-sample___entry_exit_tall
 <p>
-  t l t ll l
   <label
     ><input name="fill-mode" type="checkbox" /> Toggle the
     <code>animation-fill-mode</code> property between <code>forwards</code> and
@@ -510,7 +513,7 @@ Because the `100%` is generally reached when the element leaves the viewport, yo
 With view progress timelines, you can adjust the view progress visibility range.
 Use {{cssxref("view-timeline-inset")}}, part of the {{cssxref("view-timeline")}} shorthand, to adjust when the subject is considered to be in view. The default value is `auto`. The effect of any non-`auto` inset value is as if you moved the edges of the scroll port: a positive inset value creates an inward adjustment, and a negative value creates an outward adjustment.
 
-```css hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset live-sample___selector_success live-sample___contain_cover live-sample___contain_cover_tall live-sample___entry_exit live-sample___entry_exit_tall
+```css hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset live-sample___contain_cover live-sample___contain_cover_tall live-sample___entry_exit live-sample___entry_exit_tall
 @keyframes originalChangeEffect {
   0% {
     opacity: 0;
@@ -598,7 +601,7 @@ Use {{cssxref("view-timeline-inset")}}, part of the {{cssxref("view-timeline")}}
 }
 ```
 
-```css hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset live-sample___selector_success live-sample___entry_exit
+```css hidden live-sample___default live-sample___selector30 live-sample___reverse live-sample___range live-sample___range_both live-sample___view-inset live-sample___entry_exit
 @layer hideThirdElement {
   .animatedElement::before {
     content: "DEMO";
