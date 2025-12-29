@@ -63,6 +63,10 @@ In subsequent requests, the client might send `Sec-CH-Viewport-Height` header:
 Sec-CH-Viewport-Height: 480
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

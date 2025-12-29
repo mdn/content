@@ -70,7 +70,7 @@ Some developers will choose the increased flexibility provided by IaaS over PaaS
 
 ## Choosing a hosting provider
 
-There are many hosting providers that are known to either actively support or work well with Django, including: [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/), [Railway](https://railway.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us/), [Google Cloud](https://cloud.google.com/), [Hetzner](https://www.hetzner.com/), and [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan) — to name just a few.
+There are many hosting providers that are known to either actively support or work well with Django, including: [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/), [Railway](https://railway.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us), [Google Cloud](https://cloud.google.com/), [Hetzner](https://www.hetzner.com/), and [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan) — to name just a few.
 These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.
 
 Some of the things to consider when choosing a host:
