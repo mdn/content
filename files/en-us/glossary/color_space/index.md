@@ -36,7 +36,7 @@ The `rgb()` color function is not the only color function that can represent the
   - : The predefined linear-light sRGB color space, `srgb-linear`, is the same as `srgb` except that the transfer function is linear-light with no gamma-encoding. The `srgb-linear` color space accepts the three `r`, `g`, and `b` values as numeric parameters, with in-gamut colors ranging from `0` to `1`. The whitepoint is D65.
 
 - `display-p3` color space
-  - : Defined by Apple, the [**Display P3**](https://www.color.org/chardata/rgb/DisplayP3.xalter), color space combines the DCI-P3 color gamut, the D65 whitepoint, and sRGB gamma curve. It is a wide gamut space typical of current wide-gamut monitors, enabling more vibrant greens and reds than the sRGB color gamut. The `display-p3` space is based on `r`, `g`, and `b` channels, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
+  - : Defined by Apple, the [**Display P3**](https://registry.color.org/rgb-registry/displayp3), color space combines the DCI-P3 color gamut, the D65 whitepoint, and sRGB gamma curve. It is a wide gamut space typical of current wide-gamut monitors, enabling more vibrant greens and reds than the sRGB color gamut. The `display-p3` space is based on `r`, `g`, and `b` channels, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
 
 - `display-p3-linear` color space
   - : The `display-p3-linear` predefined color space is similar to `display-p3`, except that it uses a linear-light transfer function and has no gamma-encoding, which allows for a higher precision in the colors displayed. The `display-p3-linear` space is based on `r`, `g`, and `b` channels, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
