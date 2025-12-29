@@ -56,7 +56,7 @@ CSS guides are organized by modules and are there to help you learn what you can
 - [Box-shadow generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)
   - : Add {{cssxref("box-shadow")}} effects to your CSS objects.
 - [Color format converter](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)
-  - : Enter or pick a color and copy its corresponding value in any CSS {{cssxref("color_value", "color format")}}.
+  - : Enter or pick a color and copy its corresponding value in any CSS [color format](/en-US/docs/Web/CSS/Reference/Values/color_value).
 - [Color mixer](/en-US/docs/Web/CSS/Guides/Colors/Color_mixer)
   - : Mix two colors in any color space using the {{cssxref("color_value/color-mix", "color-mix()")}} function and copy the resulting color in any CSS color format.
 - [Shape generator](/en-US/docs/Web/CSS/Guides/Shapes/Shape_generator)
