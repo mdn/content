@@ -155,8 +155,6 @@ Use-As-Dictionary: match="/js/app.*.js"
 
 From here the process is similar to the previous example when a matching resources is requested.
 
-Note: if the website has a [Content-Security-Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), the `connect-src` directive must permit the location of your dictionary to avoid the request being blocked.
-
 ## Creating dictionary-compressed responses
 
 Dictionary-compressed responses can use either the Brotli or ZStandard algorithms, with two extra requirements: they must also include a magic header and embedded dictionary hash.
@@ -191,6 +189,8 @@ Compression algorithms are at risk of security attacks, so there are a number of
 - Dictionaries are bound by the usual HTTP Cache partitioning and so cannot be shared between origins even if they download the same resources. The dictionary will need to be downloaded again for each origin.
 
 Additionally, dictionaries could themselves become tracking vectors so browsers may restrict this feature when cookies are disabled or when other extra privacy protections are enabled.
+
+As with other resources, when using [separate (standalone) dictionaries](#separate_dictionary) if the website has a {{HTTPHeader("Content-Security-Policy")}} header, the `connect-src` directive (or `default-src`, if `connect-src` is not set) must permit the location of the dictionary to avoid the request being blocked.
 
 ## Specifications
 
