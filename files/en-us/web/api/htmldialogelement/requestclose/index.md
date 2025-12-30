@@ -11,7 +11,7 @@ browser-compat: api.HTMLDialogElement.requestClose
 The **`requestClose()`** method of the {{domxref("HTMLDialogElement")}} interface requests to close the {{htmlelement("dialog")}}.
 An optional string may be passed as an argument, updating the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} of the dialog.
 
-This method differs from the {{domxref("HTMLDialogElement.close()", "close()")}} method in that it fires a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} event before firing the {{domxref("HTMLDialogElement.close_event", "close")}} event.
+This method differs from {{domxref("HTMLDialogElement.close()", "close()")}} in that it fires a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} event before firing the {{domxref("HTMLDialogElement.close_event", "close")}} event.
 Authors can call {{domxref("Event.preventDefault()")}} in the handler for the {{domxref("HTMLDialogElement.cancel_event", "cancel")}} event to prevent the dialog from closing.
 
 This method exposes the same behavior as the dialog's internal close watcher.
@@ -34,10 +34,10 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-### Using requestClose()
+### Using `requestClose()`
 
-The following example shows a button that, when clicked, opens a {{htmlelement("dialog")}} via the {{domxref("HTMLDialogElement.showModal()", "showModal()")}} method.
-From there you can click the either _Close_ button to close the dialog (via the `requestClose()` method).
+The following example shows a button that, when clicked, opens a {{htmlelement("dialog")}} using the {{domxref("HTMLDialogElement.showModal()", "showModal()")}} method.
+From there you can click the either _Close_ button to call the `requestClose()` method and close the dialog.
 
 The _Close_ button closes the dialog without a {{domxref("HTMLDialogElement.returnValue", "returnValue")}}, while the _Close w/ return value_ button closes the dialog with a {{domxref("HTMLDialogElement.returnValue", "returnValue")}}.
 
@@ -120,7 +120,7 @@ dialog.addEventListener("close", () => {
 
 #### Result
 
-{{ EmbedLiveSample('Examples', '100%', '250px') }}
+{{ EmbedLiveSample('Using `requestClose()`', '100%', '250px') }}
 
 ## Specifications
 

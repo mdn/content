@@ -8,7 +8,9 @@ browser-compat: api.HTMLDialogElement.show
 
 {{ APIRef("HTML DOM") }}
 
-The **`show()`** method of the {{domxref("HTMLDialogElement")}} interface displays the dialog modelessly, i.e., still allowing interaction with content outside of the dialog.
+The **`show()`** method of the {{domxref("HTMLDialogElement")}} interface displays the dialog as a non-modal dialog.
+
+A non-modal dialog is one where users can interact with content outside/behind the open dialog.
 
 ## Syntax
 
@@ -33,11 +35,11 @@ None ({{jsxref("undefined")}}).
 
 ### Basic usage
 
-The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} via the `show()` method.
+The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} using the `show()` method.
 
 When the dialog is open, you can still interact with the rest of the page, including clicking the _Click me_ button that triggers an alert.
 
-From there you can click the _Close dialog_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()", "close()")}} method).
+You can click the _Close dialog_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()", "close()")}} method).
 
 #### HTML
 
@@ -89,3 +91,4 @@ closeButton.addEventListener("click", () => {
 ## See also
 
 - HTML {{htmlelement("dialog")}} element
+- {{domxref("HTMLDialogElement.showModal()")}}
