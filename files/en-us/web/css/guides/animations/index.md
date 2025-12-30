@@ -250,6 +250,7 @@ The CSS animations module level 2 also introduces the `animation-trigger`, `anim
 ### At-rules and descriptors
 
 - {{cssxref("@keyframes")}}
+- [`<keyframe-selectors>`](/en-us/web/css/reference/selectors/keyframe)
 
 ### Events
 

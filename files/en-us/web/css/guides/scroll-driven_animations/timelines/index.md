@@ -320,7 +320,7 @@ The {{cssxref("view-timeline-inset")}} arguments specify insets (if positive) or
 
 Unlike the scroll timeline's `scroll()` function, there is no `<scroller>` argument in the `view()` function, as the view timeline always tracks the subject within its nearest ancestor scroll container.
 
-In this example, as we are using inset values, we can use the `from` and `to` keyframe selectors.
+In this example, as we are using inset values, we can use the `from` and `to` [keyframe selectors](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe).
 
 ```css live-sample___anon_view_args
 @keyframes action {

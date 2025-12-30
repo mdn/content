@@ -8,7 +8,7 @@ browser-compat: api.CSSKeyframeRule.keyText
 
 {{APIRef("CSSOM") }}
 
-The **`keyText`** property of the {{domxref("CSSKeyframeRule")}} interface represents the keyframe selector as a comma-separated list of percentage values. The from and to keywords map to 0% and 100%, respectively.
+The **`keyText`** property of the {{domxref("CSSKeyframeRule")}} interface represents the [keyframe selector](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe) as a comma-separated list of percentage values. The from and to keywords map to 0% and 100%, respectively.
 
 ## Value
 

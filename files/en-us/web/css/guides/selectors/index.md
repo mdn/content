@@ -189,6 +189,9 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 - Other [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
   - {{CSSxRef("::cue")}}
 
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations)
+  - {{cssxref("keyframe")}} selectors
+
 - {{CSSXref("@namespace")}} at-rule
 
 - {{cssxref("important", "!important")}}
