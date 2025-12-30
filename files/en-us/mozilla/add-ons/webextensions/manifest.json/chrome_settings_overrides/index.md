@@ -47,8 +47,8 @@ The `chrome_settings_overrides` key is an object that may have the following pro
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><code>homepage</code></td>
+    <tr id="homepage">
+      <td><a href="#homepage" style="color: inherit"><code>homepage</code></a></td>
       <td><code>String</code></td>
       <td>
         <p>Defines the page to be used as the browser's homepage.</p>
@@ -79,8 +79,8 @@ The `chrome_settings_overrides` key is an object that may have the following pro
         </p>
       </td>
     </tr>
-    <tr>
-      <td><code>search_provider</code></td>
+    <tr id="search_provider">
+      <td><a href="#search_provider" style="color: inherit"><code>search_provider</code></a></td>
       <td><code>Object</code></td>
       <td>
         <p>Defines a search provider to add to the browser.</p>
