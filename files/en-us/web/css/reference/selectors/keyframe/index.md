@@ -1,5 +1,5 @@
 ---
-title: Keyframe selector
+title: Keyframe selectors
 slug: Web/CSS/Reference/Selectors/Keyframe
 page-type: css-selector
 browser-compat: css.at-rules.keyframes.selectors
