@@ -11,6 +11,9 @@ browser-compat: api.HTMLDialogElement.close
 The **`close()`** method of the {{domxref("HTMLDialogElement")}} interface closes the {{htmlelement("dialog")}}.
 An optional string may be passed as an argument, updating the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} of the dialog.
 
+The {{domxref("HTMLDialogElement.close_event", "close")}} event is fired after the dialog has closed.
+Unlike when calling {{domxref("HTMLDialogElement.requestClose()")}}, the close operation cannot be cancelled.
+
 ## Syntax
 
 ```js-nolint
@@ -21,26 +24,22 @@ close(returnValue)
 ### Parameters
 
 - `returnValue` {{optional_inline}}
-  - : A string representing an updated value for the {{domxref("HTMLDialogElement.returnValue")}} of the dialog.
+  - : A string that replaces the existing value of {{domxref("HTMLDialogElement.returnValue")}}.
 
 ### Return value
 
 None ({{jsxref("undefined")}}).
 
-### Usage notes
-
-`close()` fires a {{domxref("HTMLDialogElement.close_event", "close")}} event after the dialog is closed. This event is not cancelable and does not bubble.
-
 ## Examples
 
 ### Closing a dialog
-
-The _Close_ button closes the dialog without a {{domxref("HTMLDialogElement.returnValue", "returnValue")}}, while the _Close w/ return value_ button closes the dialog with a {{domxref("HTMLDialogElement.returnValue", "returnValue")}}.
 
 The following example shows a button that, when clicked, opens a {{htmlelement("dialog")}} via the {{domxref("HTMLDialogElement.showModal()", "showModal()")}} method.
 From there you can click the either _Close_ button to close the dialog (via the `close()` method).
 
 The _Close_ button closes the dialog without a {{domxref("HTMLDialogElement.returnValue", "returnValue")}}, while the _Close w/ return value_ button closes the dialog with a {{domxref("HTMLDialogElement.returnValue", "returnValue")}}.
+
+#### HTML
 
 ```html
 <dialog id="dialog">
@@ -63,6 +62,8 @@ The _Close_ button closes the dialog without a {{domxref("HTMLDialogElement.retu
   border: 1px solid black;
 }
 ```
+
+#### JavaScript
 
 ```js hidden
 const logElement = document.getElementById("log");
@@ -122,3 +123,4 @@ dialog.addEventListener("close", () => {
 
 - HTML {{htmlelement("dialog")}} element
 - The {{domxref("HTMLDialogElement.close_event", "close")}} event
+- {{domxref("HTMLDialogElement.requestClose()")}}

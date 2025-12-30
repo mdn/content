@@ -93,7 +93,8 @@ dialog.addEventListener("close", updateReturnValue);
 
 #### Result
 
-Try clicking "Review ToS", then choosing the "Accept" or "Decline" buttons in the dialog, or dismissing the dialog by pressing the <kbd>Esc</kbd> key, and observe the different status updates.
+Click "Open Dialog", then choose the "Accept" or "Decline" buttons in the dialog, or dismiss the dialog by pressing the <kbd>Esc</kbd> key.
+Observe the different status updates.
 
 {{ EmbedLiveSample('Checking the return value', '100%', "250px")}}
 

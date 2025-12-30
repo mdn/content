@@ -10,13 +10,16 @@ browser-compat: api.HTMLDialogElement.cancel_event
 
 The **`cancel`** event fires on a {{HTMLElement("dialog")}} element when the user triggers a close request.
 
+The `cancel` event handler can be used to override the default behavior on receiving a close request, and prevent the dialog from closing.
+If the default behavior is not prevented, the dialog will close and fire a {{domxref("HTMLDialogElement/close_event", "close")}} event.
+
 Close requests might be triggered by:
 
 - Pressing the <kbd>Esc</kbd> key on desktop platforms
-- Calling the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method.
+- Calling the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method
 - The back button on mobile platforms
 
-This event is cancelable but cannot bubble.
+This event is cancelable and does not bubble.
 
 ## Syntax
 
@@ -36,9 +39,12 @@ A generic {{domxref("Event")}}.
 
 ### Canceling a dialog
 
-The following example shows a button that, when clicked, opens a {{htmlelement("dialog")}} via the {{domxref("HTMLDialogElement.showModal()", "showModal()")}} method.
+The following example shows a button that, when clicked, opens a {{htmlelement("dialog")}} using the {{domxref("HTMLDialogElement.showModal()", "showModal()")}} method.
 
-From there you can trigger the `cancel` event by either clicking the _Request Close_ button to close the dialog (via the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method) or press the <kbd>Esc</kbd> key.
+You can trigger the `cancel` event by either clicking the _Request Close_ button to close the dialog (via the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method) or by pressing the <kbd>Esc</kbd> key.
+
+Note that the `cancel` event handler logs the event and then returns, allowing the dialog to close (which in turn causes the `close` event to be emitted).
+You can uncomment the line containing `event.preventDefault()` to cancel the event.
 
 #### HTML
 
@@ -62,6 +68,8 @@ From there you can trigger the `cancel` event by either clicking the _Request Cl
   border: 1px solid black;
 }
 ```
+
+#### JavaScript
 
 ```js hidden
 const logElement = document.getElementById("log");
@@ -123,4 +131,3 @@ dialog.addEventListener("close", (event) => {
 ## See also
 
 - HTML {{HTMLElement("dialog")}} element
-- The [`Event`](/en-US/docs/Web/API/Event) interface

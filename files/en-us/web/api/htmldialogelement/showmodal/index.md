@@ -8,10 +8,11 @@ browser-compat: api.HTMLDialogElement.showModal
 
 {{ APIRef("HTML DOM") }}
 
-The **`showModal()`** method of the
-{{domxref("HTMLDialogElement")}} interface displays the dialog as a modal, over the top
-of any other dialogs that might be present. It displays in the {{glossary("top layer")}}, along with a
-{{cssxref('::backdrop')}} pseudo-element. Elements inside the same document as the dialog, except the dialog and its descendants, become _inert_ (as if the [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute is specified). Only the containing document becomes blocked; if the dialog is rendered inside an iframe, the rest of the page remains interactive.
+The **`showModal()`** method of the {{domxref("HTMLDialogElement")}} interface displays the dialog as a modal dialog, over the top of any other dialogs or elements that might be visible.
+
+A modal dialog displays in the {{glossary("top layer")}}, along with a {{cssxref('::backdrop')}} pseudo-element.
+Elements inside the same document as the dialog, except the dialog and its descendants, become _inert_ (as if the [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute is specified).
+Only the containing document becomes blocked; if the dialog is rendered inside an iframe, the rest of the page remains interactive.
 
 ## Syntax
 
@@ -36,11 +37,11 @@ None ({{jsxref("undefined")}}).
 
 ### Basic usage
 
-The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} via the `showModal()` method.
+The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} using the `showModal()` method.
 
-When the dialog is open, you cannot interact with the rest of the page, including clicking the _Click me_ button that triggers an alert.
+When the dialog is open, you cannot interact with the rest of the page, including clicking the _Click me_ button that would otherwise trigger an alert.
 
-From there you can click the _Close dialog_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} method).
+You can click the _Close dialog_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} method).
 
 #### HTML
 
@@ -92,3 +93,4 @@ closeButton.addEventListener("click", () => {
 ## See also
 
 - HTML {{htmlelement("dialog")}} element
+- {{domxref("HTMLDialogElement.show()")}}

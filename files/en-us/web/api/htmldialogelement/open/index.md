@@ -18,15 +18,20 @@ available for interaction.
 A boolean value representing the state of the [`open`](/en-US/docs/Web/HTML/Reference/Elements/dialog#open) HTML attribute. A value of `true` means that the dialog is showing, while `false` means it's not showing.
 
 > [!WARNING]
-> While the `open` property is technically not read-only and can be set directly, doing so is strongly discouraged by [the HTML specification](https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-dialog-closedby), as it can break normal dialog interactions in unexpected ways. For example, the [`close`](/en-US/docs/Web/API/HTMLDialogElement/close_event) event won't fire when programmatically setting `open` to `false`, and subsequent calls to the [`close()`](/en-US/docs/Web/API/HTMLDialogElement/close) and [`requestClose()`](/en-US/docs/Web/API/HTMLDialogElement/requestClose) methods will have no effect. Instead, it's better to use methods such as [`show()`](/en-US/docs/Web/API/HTMLDialogElement/show), [`showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal), `close()`, and `requestClose()` to change the value of the `open` attribute.
+> While the `open` property is technically not read-only and can be set directly, doing so is strongly discouraged by [the HTML specification](https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-dialog-closedby), as it can break normal dialog interactions in unexpected ways.
+> For example, the [`close`](/en-US/docs/Web/API/HTMLDialogElement/close_event) event won't fire when programmatically setting `open` to `false`, and subsequent calls to the [`close()`](/en-US/docs/Web/API/HTMLDialogElement/close) and [`requestClose()`](/en-US/docs/Web/API/HTMLDialogElement/requestClose) methods will have no effect.
+> Instead, it's better to use methods such as [`show()`](/en-US/docs/Web/API/HTMLDialogElement/show), [`showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal), `close()`, and `requestClose()` to change the value of the `open` attribute.
 
 ## Examples
 
-The following example shows a simple button that, when clicked, opens a
-{{htmlelement("dialog")}} containing a form via the `showModal()` method.
-From there you can click the _Cancel_ button to close the dialog (via the
-{{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
-button.
+### Opening a dialog
+
+The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the `showModal()` method.
+From there you can click the _Cancel_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit button.
+
+The code logs the value of `open` when the dialog state changes.
+
+#### HTML
 
 ```html
 <!-- Simple pop-up dialog box -->
@@ -51,6 +56,8 @@ button.
   border: 1px solid black;
 }
 ```
+
+#### JavaScript
 
 ```js hidden
 const logElement = document.getElementById("log");
@@ -80,7 +87,7 @@ dialog.addEventListener("close", () => {
 
 ### Result
 
-{{ EmbedLiveSample('Examples', '100%', '250px') }}
+{{ EmbedLiveSample('Opening a dialog', '100%', '250px') }}
 
 ## Specifications
 

@@ -30,11 +30,12 @@ A generic {{domxref("Event")}}.
 
 ### Handling `close` events
 
-This example demonstrates how to listen for `close` events triggered by different methods of closing a dialog:
+This example demonstrates how to listen for `close` events triggered by several different methods for closing a dialog:
 
-1. calling the {{domxref("HTMLDialogElement.close()", "close()")}} method
-2. a form with `method="dialog"`. Submitting the form closes the `dialog` and causes a {{domxref("HTMLFormElement/submit_event", "submit")}} event to be fired, without submitting data or clearing the form.
-3. the <kbd>Esc</kbd> key. See: {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event
+- Calling the {{domxref("HTMLDialogElement.close()", "close()")}} method
+- A form with `method="dialog"`. Submitting the form closes the `dialog` and causes a {{domxref("HTMLFormElement/submit_event", "submit")}} event to be fired, without submitting data or clearing the form
+- The <kbd>Esc</kbd> key.
+  See {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event
 
 #### HTML
 
@@ -113,4 +114,3 @@ dialog.addEventListener("close", (event) => {
 ## See also
 
 - HTML {{htmlelement("dialog")}} element
-- The [`Event`](/en-US/docs/Web/API/Event) interface
