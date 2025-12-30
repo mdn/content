@@ -33,7 +33,7 @@ The HTTP **`Prefer`** header allows clients to indicate preferences for specific
 ## Syntax
 
 ```http
-Prefer: <preference>
+Prefer: <preference>, <preference>, ...
 ```
 
 ## Directives
