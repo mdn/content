@@ -81,7 +81,7 @@ This doesn't load the requested resource: it fails silently, and any object that
 
 #### Scripts from localhost
 
-The default CSP blocks all remote scripts, including scripts from localhost. Howewer, to support local extension development, the CSP accepts localhost sources as an exception. You can use this feature for unpacked Manifest V3 extensions from Chrome 110 and temporarily loaded extensions from Firefox 147, by specifying CSP sources based at `http://localhost` or `http://127.0.0.1` in the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key. For example:
+The default CSP blocks all remote scripts, including scripts from localhost. However, to support local extension development, the CSP accepts localhost sources as an exception. You can use this feature for unpacked Manifest V3 extensions from Chrome 110 and temporarily loaded extensions from Firefox 147, by specifying CSP sources based at `http://localhost` or `http://127.0.0.1` in the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key. For example:
 
 ```json
 {
