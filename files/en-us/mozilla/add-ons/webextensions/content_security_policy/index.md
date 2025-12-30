@@ -79,9 +79,9 @@ This doesn't load the requested resource: it fails silently, and any object that
 > [!NOTE]
 > If your modified CSP allows remote script injection, your extension will get rejected from addons.mozilla.org (AMO) during the review. For more information, see details about [security best practices](https://extensionworkshop.com/documentation/develop/build-a-secure-extension/).
 
-#### Development access to localhosts
+#### Scripts from localhost
 
-Where you need access to the localhost during development, you can do this for unpacked Manifest V3 extensions from Chrome 110 and temporarily loaded Manifest V3 extensions from Firefox 147, by setting the origin as `localhost` or `127.0.0.1` in the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key. For example:
+The default CSP blocks all remote scripts, including scripts from localhost. Howewer, to support local extension development, the CSP accepts localhost sources as an exception. You can use this feature for unpacked Manifest V3 extensions from Chrome 110 and temporarily loaded extensions from Firefox 147, by specifying CSP sources based at `http://localhost` or `http://127.0.0.1` in the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key. For example:
 
 ```json
 {

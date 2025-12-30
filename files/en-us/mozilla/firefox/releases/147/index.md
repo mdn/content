@@ -86,7 +86,7 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
-- You can gain access to the local host in temporarily loaded Manifest V3 extensions by setting the origin as `localhost` or `127.0.0.1` in the manifest.json [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key. ([Firefox bug 1864284](https://bugzil.la/1864284))
+- Temporarily loaded Manifest Version 3 extensions can now load scripts from localhost, as explained at [scripts from localhost in the Content Security Policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#scripts_from_localhost). ([Firefox bug 1864284](https://bugzil.la/1864284))
 
 <!-- ### Removals -->
 
