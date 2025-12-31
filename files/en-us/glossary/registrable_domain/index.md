@@ -36,5 +36,7 @@ Because this is a matter of the registrar's policies, it's impossible to tell al
 
 ## See also
 
+- Related glossary terms:
+  - {{Glossary("Site")}}
 - [Registrable domain definition in the URL specification](https://url.spec.whatwg.org/#host-registrable-domain)
 - [Public Suffix List](https://publicsuffix.org/)
