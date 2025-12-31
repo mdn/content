@@ -45,7 +45,7 @@ promiseInstance.finally(onFinally)
 ### Parameters
 
 - `onFinally`
-  - : A function to asynchronously execute when this promise becomes settled. Its return value is ignored unless the returned value is a rejected promise; however, if the function returns a promise, the                resulting promise will wait for that promise to settle before continuing. If the returned promise is rejected, the resulting promise is rejected with the same reason.
+  - : A function to asynchronously execute when this promise becomes settled. Its return value is ignored unless the returned value is a rejected promise; however, if the function returns a promise, the resulting promise will wait for that promise to settle before continuing. If the returned promise is rejected, the resulting promise is rejected with the same reason.
 
 ### Return value
 
