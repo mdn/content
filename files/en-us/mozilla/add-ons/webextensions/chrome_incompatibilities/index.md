@@ -162,7 +162,7 @@ When calling `tabs.remove()`:
 
 #### Debugger API
 
-- **In Firefox:** Chrome's [debugger](https://developer.chrome.com/docs/extensions/reference/api/debugger) API [is not implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=1316741).
+- **In Firefox:** Chrome's [debugger](https://developer.chrome.com/docs/extensions/reference/api/debugger) API [is not implemented](https://bugzil.la/1316741).
 
 #### DeclarativeContent API
 
