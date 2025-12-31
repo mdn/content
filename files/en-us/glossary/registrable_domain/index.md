@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-A **registrable domain** is a domain that can be (or has already been) registered by an individual or an organization through a domain name registrar. It's the top-level domain for a single {{glossary("site")}} on the web.
+A **registrable domain** is a domain that can be (or has already been) registered by an individual or an organization through a domain name registrar. It's the highest level domain for a single {{glossary("site")}} on the web.
 
 Registrable domains are created directly underneath an _effective top-level domain_ (eTLD), such as `.org`, `.com`, or `.ac.uk`. For this reason a registrable domain is sometimes called an "eTLD+1".
 
