@@ -1,6 +1,6 @@
 ---
-title: eTLD
-slug: Glossary/eTLD
+title: Registrable domain
+slug: Glossary/Registrable_domain
 page-type: glossary-definition
 sidebar: glossarysidebar
 ---
