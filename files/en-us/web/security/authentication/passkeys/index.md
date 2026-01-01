@@ -27,7 +27,7 @@ To interact with an authenticator, a website uses the [Web Authentication API (W
 
 WebAuthn is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API), which is a framework for managing {{glossary("credential", "credentials")}} for various authentication methods, including [passwords](/en-US/docs/Web/Security/Authentication/Passwords) and [federated identity](/en-US/docs/Web/Security/Authentication/Federated_identity), as well as passkeys.
 
-The two main APIs are:
+The two main functions used by RPs are:
 
 - {{domxref("CredentialsContainer.create()")}}, which you use to create a new passkey when a user registers on your site.
 - {{domxref("CredentialsContainer.get()")}}, which you use to generate an assertion from the user's stored passkey, when the user signs into your site.
