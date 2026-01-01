@@ -7,7 +7,11 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Research_and_learning", "Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Getting_started/Soft_skills")}}
 
-As a professional in the web industry, you are going to have to work with other people on projects during multiple phases — brainstorming ideas, writing proposals, implementing code, and more. This article looks at how to work together with others.
+As a professional in the web industry, you are going to have to work with other people on projects during multiple phases — brainstorming ideas, writing proposals, implementing code, and more. 
+
+In web development teams, collaboration often happens through tools such as version control systems (for example, Git and GitHub). Developers typically work on separate branches, review each other's code through pull requests, and discuss changes using comments. This workflow helps teams catch bugs early, maintain code quality, and ensure everyone understands the changes being made.
+
+This article looks at how to work together with others.
 
 <table>
   <tbody>
@@ -122,11 +126,11 @@ It is also a good idea to start doing peer reviews — colleagues will review ea
 
 ## Learn to embrace failure
 
-A very common issue that causes students and new developers to shy away from experimentation and taking risks (for example when starting new projects or exploring new ideas) is fear of failure, and how it will be judged by peers/team mates. You should spend some time learning about the value that can be gleaned from making mistakes.
+A common reason students and new developers shy away from experimentation and taking risks (for example, when starting new projects or exploring new ideas) is fear of failure and how it might be judged by peers or teammates. You should spend some time reflecting on mistakes and identifying the lessons they provide.
 
 Failure is really only a small step on the road to success. All of the most successful developers have failed many times, and it is not the actual failure that matters, but how you handle that failure, and the lessons you learn from it.
 
-Here are some tips:
+Here are some practical tips to help create a safe environment for learning from failure:
 
 - Define a safe space/peer group where people are free to ask questions — remember that there are no "stupid questions", only people who fail to question. Foster a culture where peers support each other and failure is not judged harshly.
 - Look to your network and try to find online or in-person groups who can either give you help and advice or are facing the same issues you are and can provide moral support or experiment together.
