@@ -62,10 +62,10 @@ ideas you submitted we were most intrigued by are as follows, in order of
 priority:
 
 Turning H2O into wine, and the health benefits of Resveratrol
-(C14H12O3.)
+(C14H12O3).
 Measuring the effect on performance of funk bass players at temperatures
 exceeding 30°C (86°F), when the audience size exponentially increases
-(effect of 3 × 103 increasing to 3 × 104.)
+(effect of 3 × 103 increasing to 3 × 104).
 HTML, Hypertext Markup Language, and CSS,
 Cascading Style Sheets, constructs for representing musical scores.
 
