@@ -111,25 +111,19 @@ Although platform authenticators can't be removed from their device, they can of
 
 The WebAuthn specification distinguishes between _discoverable_ and _non-discoverable_ credentials.
 
-- Discoverable credentials are those that can be used without the RP first needing to identify the user who is being authenticated: that is, the "allowed credentials" array passed into {{domxref("CredentialsContainer.get()")}} can be empty.
+- **Discoverable credentials**, also known as _resident keys_, are those that can be used without the RP first needing to identify the user who is being authenticated: that is, the "allowed credentials" array passed into {{domxref("CredentialsContainer.get()")}} can be empty. With a discoverable credential, all the signing key material is stored in the authenticator, so the authenticator is able to generate signatures without needing any input from the RP.
 
-- Non-discoverable credentials are those for which the RP must first identify the user who is being authenticated (for example, by having them enter their username), and then pass the associated credential ID into {{domxref("CredentialsContainer.get()")}}, in the "allowed credentials" array.
+- **Non-discoverable credentials**, also known as _non-resident keys_, are those for which the RP must first identify the user who is being authenticated (for example, by having them enter their username), and then pass the associated credential ID into {{domxref("CredentialsContainer.get()")}}, in the "allowed credentials" array.
+
+  Non-discoverable credentials need the credential ID because they do not store the signing key itself in the authenticator, but instead generate the signing key every time it is needed, from an internal seed and the credential ID value. That is, the account key is not resident in the authenticator.
+
+The advantage of using non-discoverable credentials is that an authenticator with limited storage can support a potentially unlimited number of accounts, because the key material for each account is not stored in the authenticator.
+
+The advantage of using discoverable credentials is that they enable a browser to implement [autofill](/en-US/docs/Web/Security/Authentication/Passkeys#autofill_ui) with public key credentials, which makes it much easier for users to sign in, especially when they might have both public key credentials and passwords for a given site.
+
+**For this reason, passkeys must always be discoverable credentials, so RPs implementing passkey-based authentication should always make them discoverable**.
 
 To create a discoverable credential, the RP should set the `residentKey` option to `"required"` and the `requireResidentKey` option to `true` when it creates a new credential in the {{domxref("CredentialsContainer.create()")}} call.
-
-_Passkeys must always be discoverable credentials, so RPs implementing passkey-based authentication should always set these options_.
-
-#### Resident keys and non-resident keys
-
-Discoverable and non-discoverable credentials are also known as "resident" and "non-resident" keys, and this term is still used in the [WebAuthn JavaScript API](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey).
-
-This alternative terminology reflects the reason why non-discoverable credentials need to be passed a credential ID.
-
-With a discoverable credential, all the signing key material is stored in the authenticator, so the authenticator is able to generate signatures without needing any input from the RP.
-
-Non-discoverable credentials do not store the signing key itself in the authenticator, but instead generate the signing key every time it is needed, from an internal seed and the credential ID value. That is, the account key is not resident in the authenticator.
-
-The advantage of this method is that an authenticator can support a potentially unlimited number of accounts, because the key material for each account is not stored in the authenticator.
 
 ### Challenges
 
