@@ -20,7 +20,7 @@ For [HTML](/en-US/docs/Web/HTML) documents, browsers use a doctype in the beginn
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Hello World!</title>
   </head>
   <body></body>
