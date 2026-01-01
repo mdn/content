@@ -250,7 +250,7 @@ The first step here is to offer users the opportunity to create a passkey when t
 
 #### Conditional create
 
-An additional step is a feature called _conditional create_. This allows an RP to create a new passkey for a user's account without requiring any user interaction, when certain conditions are met.
+An additional step towards increasing passkey adoption is a feature called _conditional create_. This allows an RP to create a new passkey for a user's account without requiring any user interaction, when certain conditions are met.
 
 To enable conditional create, the RP calls {{domxref("CredentialsContainer.create()")}}, passing the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/create#mediation) option set to `"conditional"`:
 
