@@ -283,7 +283,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample("Selector lists and initial values","100%","65")}}
+{{EmbedLiveSample("Selector lists and initial values","100%","125")}}
 
 By using a selector list with multiple comma-separated keyframe selectors, the animation "pauses" from the `25%` keyframe until it reaches the `75%` keyframe.
 The `black` is only set in the `25%, 75%` keyframe, so the element animates from and to `rebeccapurple`, it's original `background-color`.
