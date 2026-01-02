@@ -17,7 +17,7 @@ Values of this type are objects. They contain the following properties:
     - `"direct"`: don't proxy the request. If this value is given, all other properties of this object are ignored. However, this setting doesn't override any [proxy set by the user](https://support.mozilla.org/en-US/kb/connection-settings-firefox). Use {{WebExtAPIRef("proxy.settings")}} to check whether a manual proxy is being used and, if necessary, monitor those settings for changes using [`BrowserSetting.onChange`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange).
     - `"http"`: HTTP proxy (or SSL CONNECT for HTTPS)
     - `"https"`: HTTP proxying over TLS connection to proxy
-    - `"masque"`: MASQUE (Multiplexed Application Substrate over QUIC Encryption) proxy
+    - `"masque"`: MASQUE proxy (tunnel over QUIC as defined in [RFC 9298](https://www.rfc-editor.org/rfc/rfc9298.html))
     - `"socks"`: SOCKS v5 proxy
     - `"socks4"`: SOCKS v4 proxy
 
