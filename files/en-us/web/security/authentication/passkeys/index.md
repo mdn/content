@@ -19,7 +19,7 @@ In this guide we'll:
 - Go through the two main flows supported by WebAuthn: [registration](#registration) and [sign-in](#sign_in).
 - Explore some of the main [features of the WebAuthn API](#features_of_webauthn).
 - Summarise the [security properties of passkeys](#security_properties_of_passkeys).
-- Explore some good practices to help prevent users from being locked out if they [lose their passkeys](#handling_lost_passkeys), and to help users [migrate from passwords](#migrating_from_passwords).
+- Explore some good practices to help prevent users from being locked out if they [lose their passkeys](#handling_lost_passkeys), to help users [manage their passkeys](#managing_passkeys), and to help users [migrate from passwords](#migrating_from_passwords).
 
 ## The WebAuthn API
 
@@ -234,9 +234,46 @@ An RP can use this information to help a user manage their credentials. For exam
 
 - If the RP is migrating users away from passwords, and the user has an old password as well as a passkey, and the assertion indicates that the passkey has been backed up, then the RP might invite the user to delete their old password, since they don't need it as a backup any more.
 
+## Managing passkeys
+
+We've seen that a user may have multiple passkeys for a single account, spread across multiple authenticators and multiple devices. Each passkey is represented as a private key stored in the authenticator, and a corresponding public key stored in the RP's server as part of the user's account information.
+
+Sometimes the user might need to delete a passkey for their account: this essentially means, deleting the public key stored in the RP's server, so that the corresponding private key can't be used to sign the user in any more. This is generally needed when the user doesn't have control of the authenticator any more, for example because they have lost the device containing it.
+
+This means that an RP must implement a means for an authenticated user to view the registered passkeys for their account and delete specific public keys. For each key, it should display information to help a user understand which key it is and which authenticator it is associated with. This can include:
+
+- **Passkey name**: The name of the passkey provider, such as "Windows Hello" or "Bitwarden".
+
+  > [!NOTE]
+  > To determine this value, find the [AAGUID](https://w3c.github.io/webauthn/#aaguid) value in the data returned by the browser from a successful call to {{domxref("CredentialsContainer.create()")}}, and use this to look up the corresponding name in the [Passkey Provider AAGUIDs](https://github.com/passkeydeveloper/passkey-authenticator-aaguids) list.
+  >
+  > See also [Determine the passkey provider with AAGUID](https://web.dev/articles/webauthn-aaguid).
+
+- **Timestamp**: The time the passkey was last used to sign in.
+
+- **Backup status**: An indicator of whether the passkey has been backed up (see [Passkey backup](#passkey_backup)).
+
+Additionally, the user should be able to edit the passkey name and delete the passkey.
+
+If the user tries to delete the last passkey, the RP should inform them of the implications of this: the RP might allow the user to sign in with a different method such as a [one-time code](/en-US/docs/Web/Security/Authentication/OTP), or they might not be able to access their account any more.
+
+See also [Help users manage passkeys effectively](https://web.dev/articles/passkey-management).
+
+### Synchronizing server and authenticators
+
+Note that if the user deletes a passkey on the RP's server, this introduces an asymmetry between the server and the authenticator that contains the corresponding private key. The authenticator still thinks the passkey is valid, so the browser may offer it to the user as a sign-in option, but the RP will no longer accept its assertions.
+
+To reduce the chance of problems like this, the WebAuthn API defines a set of static methods of {{domxref("PublicKeyCredential")}} that enable an RP to tell authenticators about server-side changes:
+
+- {{domxref("PublicKeyCredential.signalUnknownCredential_static", "PublicKeyCredential.signalUnknownCredential()")}} tells the browser that a specific passkey was not recognized by the RP, and is typically called by the RP immediately after the user tried to sign in with this passkey. The most common scenario here is that the user deleted this passkey on the server, and then mistakenly tried to sign in with it.
+
+- {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "PublicKeyCredential.signalAllAcceptedCredentials()")}} gives the browser the identifiers of all the passkeys that the RP currently accepts as valid, to enable all attached authenticators to update their stored keys. It could be called every time the user successfully authenticates. This API must only be called for authenticated users, because it exposes the user's credential IDs.
+
+- {{domxref("PublicKeyCredential.signalCurrentUserDetails_static", "PublicKeyCredential.signalCurrentUserDetails()")}} tells the browser the user's current username and display name, and should be called when an authenticated user changes these values. This API must only be called for authenticated users, because it exposes uses data.
+
 ## Migrating from passwords
 
-In reality, most websites that add passkey support will already support password-based authentication, and will have an existing base of users with passwords. These users are not safe from the [weaknesses of passwords](/en-US/docs/Web/Security/Authentication/Passwords#weaknesses_of_password-based_authentication) until they not only have and use passkeys on your site, but no longer even possess passwords associated with their accounts.
+Most websites that add passkey support will already support password-based authentication, and will have an existing base of users with passwords. These users are not safe from the [weaknesses of passwords](/en-US/docs/Web/Security/Authentication/Passwords#weaknesses_of_password-based_authentication) until they not only have and use passkeys on your site, but no longer even possess passwords associated with their accounts.
 
 You can implement a three-step process to migrating users from passwords:
 
