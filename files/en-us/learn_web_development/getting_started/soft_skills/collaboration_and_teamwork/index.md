@@ -7,7 +7,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Research_and_learning", "Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Getting_started/Soft_skills")}}
 
-As a professional in the web industry, you are going to have to work with other people on projects during multiple phases — brainstorming ideas, writing proposals, implementing code, and more. 
+As a professional in the web industry, you are going to have to work with other people on projects during multiple phases — brainstorming ideas, writing proposals, implementing code, and more.
 
 In web development teams, collaboration often happens through tools such as version control systems (for example, Git and GitHub). Developers typically work on separate branches, review each other's code through pull requests, and discuss changes using comments. This workflow helps teams catch bugs early, maintain code quality, and ensure everyone understands the changes being made.
 
