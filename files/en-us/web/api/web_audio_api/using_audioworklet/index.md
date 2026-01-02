@@ -250,6 +250,7 @@ class MyAudioProcessor extends AudioWorkletProcessor {
   }
 }
 ```
+
 If `automationRate` is not specified in a parameter descriptor, it defaults to
 `"a-rate"` (sample-accurate updates).
 
