@@ -246,12 +246,15 @@ We've seen that a user may have multiple passkeys for a single account, spread a
 
 Sometimes the user might need to delete a passkey for their account: this essentially means, deleting the public key stored in the RP's server, so that the corresponding private key can't be used to sign the user in any more. This is generally needed when the user doesn't have control of the authenticator any more, for example because they have lost the device containing it.
 
-This means that an RP must implement a means for an authenticated user to view the registered passkeys for their account and delete specific public keys. For each key, it should display information to help a user understand which key it is and which authenticator it is associated with. This can include:
+This means that an RP must implement a means for an authenticated user to view the registered passkeys for their account and delete specific public keys. For each key, the RP should display information to help a user understand which key it is and which authenticator it is associated with. This can include:
 
-- **Passkey name**: The name of the passkey provider, such as "Windows Hello" or "Bitwarden".
+- **Passkey provider name**: The name of the passkey provider, such as "Windows Hello" or "Bitwarden".
 
   > [!NOTE]
-  > To determine this value, find the [AAGUID](https://w3c.github.io/webauthn/#aaguid) value in the data returned by the browser from a successful call to {{domxref("CredentialsContainer.create()")}}, and use this to look up the corresponding name in the [Passkey Provider AAGUIDs](https://github.com/passkeydeveloper/passkey-authenticator-aaguids) list.
+  > To determine this value:
+  >
+  > - Find the _AAGUID_ value in the [`attestedCredentialData`](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data#attestedcredentialdata) returned by the browser from a successful call to {{domxref("CredentialsContainer.create()")}}.
+  > - Use this to look up the corresponding name in the [Passkey Provider AAGUIDs](https://github.com/passkeydeveloper/passkey-authenticator-aaguids) list.
   >
   > See also [Determine the passkey provider with AAGUID](https://web.dev/articles/webauthn-aaguid).
 
