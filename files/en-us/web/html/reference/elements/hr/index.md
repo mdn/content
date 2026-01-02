@@ -82,12 +82,6 @@ The following example adds a thematic break between paragraph-level elements.
 
 The `<hr>` tag can be placed within a list item for visual separation, to create a separator between sections of a list.
 
-There are three primary types of lists in HTML, all of which use `<li>` elements for the individual list items:
-
-* Unordered List (`<ul>`): Used for grouping items where the order does not matter. Items are typically displayed with bullet points.
-* Ordered List (`<ol>`): Used for items where the order is meaningful (e.g., steps in a recipe). Items are typically displayed with a numerical or alphabetical marker.
-* Description List (`<dl>`): Used for term/description pairs, using `<dt>` for the term and `<dd>` for the description. 
-
 #### HTML
 
 ```html
