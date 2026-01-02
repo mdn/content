@@ -15,7 +15,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
 ## Instance properties
 
-- `attributionReporting` {{optional_inline}} {{experimental_inline}}
+- `attributionReporting` {{optional_inline}} {{deprecated_inline}}
   - : Indicates that you want the request's response to be able to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers). `attributionReporting` is an object containing the following properties:
     - `eventSourceEligible`
       - : A boolean. If set to `true`, the request's response is eligible to register an attribution source. If set to `false`, it isn't.
@@ -38,7 +38,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
     See [Setting a body](/en-US/docs/Web/API/Fetch_API/Using_Fetch#setting_a_body) for more details.
 
-- `browsingTopics` {{optional_inline}} {{experimental_inline}}
+- `browsingTopics` {{optional_inline}} {{deprecated_inline}}
   - : A boolean specifying that the selected topics for the current user should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the associated request.
 
     See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
@@ -166,6 +166,27 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
         It is used if no value is set or if an invalid value is set.
 
     Defaults to `auto`.
+
+- `privateToken` {{optional_inline}}
+  - : An object containing options for initiating a [private state token](/en-US/docs/Web/API/Private_State_Token_API/Using) operation. Possible properties include:
+    - `issuers`
+      - : An array of strings containing the URLs of issuers that you want to forward redemption records for. This setting is ignored unless `operation` is set to `send-redemption-record`, in which case the `issuers` array must be included.
+    - `operation`
+      - : A string representing the type of token operation you want to initiate. When specifying the `privateToken` option, this property is mandatory. Possible values are:
+        - `token-request`
+          - : Initiates a [token request](/en-US/docs/Web/API/Private_State_Token_API/Using#issuing_a_token_via_your_server) operation.
+        - `token-redemption`
+          - : Initiates a [token redemption](/en-US/docs/Web/API/Private_State_Token_API/Using#redeeming_a_token_via_your_server) operation.
+        - `send-redemption-record`
+          - : Initiates a [send redemption record](/en-US/docs/Web/API/Private_State_Token_API/Using#redemption_record_usage_2) operation.
+    - `refreshPolicy`
+      - : An enumerated value that specifies the expected behavior when a non-expired redemption record for the current user and site has previously been set. This setting is ignored unless `operation` is set to `token-redemption`. Possible values are:
+        - `none`
+          - : The previously-set redemption record should be used, and a new one should not be issued. This is the default value.
+        - `refresh`
+          - : A new redemption record is always issued.
+    - `version`
+      - : A number indicating the version of the cryptographic protocol you wish to use when generating a token. Currently this is always set to `1`, which is the only version that the specification supports. When specifying the `privateToken` option, this property is mandatory.
 
 - `redirect` {{optional_inline}}
   - : Determines the browser's behavior in case the server replies with a [redirect status](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages). One of the following values:

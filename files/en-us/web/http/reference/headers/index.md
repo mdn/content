@@ -419,18 +419,29 @@ The [UA client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client
 > [!NOTE]
 > User-agent client hints are not available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) because they rely on [permissions policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) delegation, which could be used to leak data.
 
-#### Device client hints
+#### Device and responsive image client hints
 
-- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Response header used to confirm the image device to pixel ratio (DPR) in requests where the screen {{HTTPHeader("DPR")}} client hint was used to select an image resource.
-- {{HTTPHeader("Device-Memory")}}
+- {{HTTPHeader("Sec-CH-Device-Memory")}} {{experimental_inline}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
-- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{HTTPHeader("Sec-CH-DPR")}} {{experimental_inline}}
   - : Request header that provides the client device pixel ratio (the number of physical {{glossary("device pixel", "device pixels")}} for each {{Glossary("CSS pixel")}}).
-- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{HTTPHeader("Sec-CH-Viewport-Height")}} {{experimental_inline}}
+  - : Request header provides the client's layout viewport height in {{Glossary("CSS pixel","CSS pixels")}}.
+- {{HTTPHeader("Sec-CH-Viewport-Width")}} {{experimental_inline}}
   - : Request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}.
+- {{HTTPHeader("Sec-CH-Width")}} {{experimental_inline}}
+  - : Request header provides the image's width in {{Glossary("CSS pixel","CSS pixels")}}.
+
+##### Deprecated device and responsive image client hints
+
+- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Standardized as {{HTTPHeader("Sec-CH-Device-Memory")}}
+- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Standardized as {{HTTPHeader("Sec-CH-DPR")}}
+- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Standardized as {{HTTPHeader("Sec-CH-Viewport-Width")}}
 - {{HTTPHeader("Width")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Request header indicates the desired resource width in physical pixels (the intrinsic size of an image).
+  - : Standardized as {{HTTPHeader("Sec-CH-Width")}}
 
 #### Network client hints
 

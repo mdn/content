@@ -408,5 +408,5 @@ With `longer hue` the increments or decrements between colors will always be the
 
 - {{CSSXref("&lt;color&gt;")}}
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
-- {{cssxref("&lt;hue&gt;")}}
+- {{cssxref("hue")}}
 - [CSS relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)

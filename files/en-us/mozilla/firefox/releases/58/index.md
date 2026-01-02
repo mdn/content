@@ -8,7 +8,7 @@ sidebar: firefox
 
 This article provides information about the changes in Firefox 58 that will affect developers. Firefox 58 was released on January 23, 2018.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 

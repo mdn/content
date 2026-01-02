@@ -17,7 +17,7 @@ Relative URLs, if used, are relative to the URL of the stylesheet (not to the UR
 
 The **`url()`** function can be included as a value for
 {{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
-[src](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/src) as part of a [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face) block, and [@counter-style/`symbol`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style/symbols)
+[src](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/src) as part of a {{cssxref("@font-face")}} block, and [@counter-style/`symbol`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style/symbols)
 
 ## Syntax
 
@@ -177,8 +177,8 @@ When a URL is used as a path for a filter, the URL must be one of the following:
 
 ## See also
 
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element", "element()")}}
+- {{cssxref("gradient")}}
+- {{cssxref("element()")}}
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}

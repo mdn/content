@@ -74,6 +74,7 @@ No notable changes.
 ## Changes for add-on developers
 
 - {{WebExtAPIRef("browsingData.removeLocalStorage")}} and {{WebExtAPIRef("browsingData.remove")}} (when `localStorage` is set in {{WebExtAPIRef("browsingData.DataTypeSet")}}) now delete objects from [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage). ([Firefox bug 1886894](https://bugzil.la/1886894))
+- The {{WebExtAPIRef("proxy.onRequest")}} API adds support for MASQUE proxies (proxy tunnel over QUIC) in the {{WebExtAPIRef("proxy.ProxyInfo")}} return type. ([Firefox bug 1988988](https://bugzil.la/1988988) and Firefox bug 1998894](https://bugzil.la/1998894))
 
 ## Experimental web features
 
@@ -83,12 +84,12 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **`<meta name="rating">`** (Nightly): `security.restrict_to_adults.always` and `security.restrict_to_adults.respect_platform`
 
-  The `<meta name="rating">` element allows websites to self-identify as restricted/adult content. Browsers that recognise this element can then take steps to restrict users from viewing the content. See [Restricting adult content with `<meta name="rating">`](/en-US/docs/Mozilla/Firefox/Experimental_features#restricting_adult_content_with_meta_namerating) for more details.
+  The `<meta name="rating">` element allows websites to self-identify as restricted/adult content. Browsers that recognize this element can then take steps to restrict users from viewing the content. See [Restricting adult content with `<meta name="rating">`](/en-US/docs/Mozilla/Firefox/Experimental_features#restricting_adult_content_with_meta_namerating) for more details.
   ([Firefox bug 1991135](https://bugzil.la/1991135)).
 
 - **Navigation API** (Nightly): `dom.navigation.webidl.enabled`
 
-  Nightly builds now support the Navigation API, which provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
+  Nightly builds now support the [Navigation API](/en-US/docs/Web/API/Navigation_API), which provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
   ([Firefox bug 1979288](https://bugzil.la/1979288)).
 
 - **Relative control points in CSS `shape()` curve commands**: `layout.css.basic-shape-shape.enabled`

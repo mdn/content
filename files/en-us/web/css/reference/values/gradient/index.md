@@ -6,7 +6,7 @@ browser-compat: css.types.gradient
 sidebar: cssref
 ---
 
-The **`<gradient>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) is a special type of {{cssxref("&lt;image&gt;")}} that consists of a progressive transition between two or more colors.
+The **`<gradient>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) is a special type of {{cssxref("image")}} that consists of a progressive transition between two or more colors.
 
 {{InteractiveExample("CSS Demo: &lt;gradient&gt;")}}
 

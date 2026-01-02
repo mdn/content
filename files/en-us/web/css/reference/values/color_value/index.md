@@ -66,7 +66,7 @@ light-dark(rgb(255 255 255), rgb(0 0 0))
 
 A `<color>` value can be specified using one of the methods listed below:
 
-- By keywords: {{CSSXref("&lt;named-color&gt;")}} (such as `blue` or `pink`), {{CSSXref("&lt;system-color&gt;")}}, and [`currentColor`](#currentcolor_keyword).
+- By keywords: {{cssxref("named-color")}} (such as `blue` or `pink`), {{CSSXref("&lt;system-color&gt;")}}, and [`currentColor`](#currentcolor_keyword).
 - By hexadecimal notations: {{CSSXref("&lt;hex-color&gt;")}} (such as `#ff0000`).
 - By `<color-function>`, with parameters in a {{glossary("color space")}} using functional notations:
   - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, and {{CSSXref("color_value/rgb", "rgb()")}}.
@@ -457,7 +457,7 @@ div:nth-child(6) {
 ## See also
 
 - {{CSSXref("opacity")}}: the property defining transparency at the element level
-- {{CSSXref("&lt;hue&gt;")}}: the data type representing the hue angle of a color
+- {{cssxref("hue")}}: the data type representing the hue angle of a color
 - {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}: common properties that use `<color>`
 - {{CSSXref("color_value/color")}} function
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color)

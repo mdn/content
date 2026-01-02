@@ -432,7 +432,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `colorspace` {{experimental_inline}}
   - : Valid for the `color` input type only, the `colorspace` attribute specifies the [color space](/en-US/docs/Glossary/Color_space) that is used by the `type="color"` input. Possible {{Glossary("enumerated")}} values are:
-    - `"limited-srgb"`: The color is in the {{glossary("RGB", "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
+    - `"limited-srgb"`: The color is in the {{glossary("RGB", "sRGB")}} color space. This includes {{cssxref("color_value/rgb", "rgb()")}}, {{cssxref("color_value/hsl", "hsl()")}}, {{cssxref("color_value/hwb", "hwb()")}}, and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
     - `"display-p3"`: The [Display P3 color space](/en-US/docs/Glossary/Color_space#display-p3), e.g., `color(display-p3 1.84 -0.19 0.72 / 0.6)`
 
 - [`dirname`](/en-US/docs/Web/HTML/Reference/Attributes/dirname)
