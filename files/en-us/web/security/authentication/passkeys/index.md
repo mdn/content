@@ -215,8 +215,8 @@ If a user loses an authenticator, whether it's a separate module or integrated i
 
 In this section we'll discuss two strategies for dealing with authenticator loss:
 
-- Creating multiple passkeys for a single account
-- Backing up passkeys
+- [Creating multiple passkeys for a single account](#creating_multiple_passkeys)
+- [Backing up passkeys](#passkey_backup)
 
 ### Creating multiple passkeys
 
