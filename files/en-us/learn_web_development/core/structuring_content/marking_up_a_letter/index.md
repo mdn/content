@@ -265,12 +265,12 @@ Your finished HTML should look like this:
     <ol>
       <li>
         Turning H<sub>2</sub>O into wine, and the health benefits of Resveratrol
-        (C<sub>14</sub>H<sub>12</sub>O<sub>3</sub>.)
+        (C<sub>14</sub>H<sub>12</sub>O<sub>3</sub>).
       </li>
       <li>
         Measuring the effect on performance of funk bass players at temperatures
         exceeding 30°C (86°F), when the audience size exponentially increases
-        (effect of 3 × 10<sup>3</sup> increasing to 3 × 10<sup>4</sup>.)
+        (effect of 3 × 10<sup>3</sup> increasing to 3 × 10<sup>4</sup>).
       </li>
       <li>
         <abbr>HTML</abbr>, Hypertext Markup Language, and <abbr>CSS</abbr>,
