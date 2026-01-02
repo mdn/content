@@ -19,9 +19,9 @@ The non-standard prefixed **`-webkit-mask-box-image`** [shorthand](/en-US/docs/W
 
 This property is a shorthand for the following CSS properties:
 
-- [`-webkit-mask-box-image-source`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-source)
-- [`-webkit-mask-box-image-outset`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-outset)
-- [`-webkit-mask-box-image-repeat`](/en-US/docs/Web/CSS/Reference/Properties/mask-border-repeat)
+- {{cssxref("mask-border-source", "-webkit-mask-border-source")}}
+- {{cssxref("mask-border-outset", "-webkit-mask-border-outset")}}
+- {{cssxref("mask-border-repeat", "-webkit-mask-border-repeat")}}
 
 The values includes the `<image>` to be used as the mask border, and optionally four border outset values and up to two border repeat styles.
 
@@ -54,8 +54,8 @@ The values includes the `<image>` to be used as the mask border, and optionally 
 
 ### Values
 
-- {{cssxref("&lt;image&gt;")}}
-  - : The location of the image resource to be used as a mask image, {{cssxref("&lt;gradient&gt;")}}, or other {{cssxref("&lt;image&gt;")}} value.
+- {{cssxref("image")}}
+  - : The location of the image resource to be used as a mask image, {{cssxref("gradient")}}, or other {{cssxref("image")}} value.
 - `none`
   - : Used to specify that a border box is to have no mask image.
 - {{cssxref("length")}}

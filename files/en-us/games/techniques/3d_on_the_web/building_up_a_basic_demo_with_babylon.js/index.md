@@ -169,7 +169,7 @@ The `StandardMaterial` takes two parameters: a name, and the scene you want to a
 
 ## Babylon.js shapes example
 
-Congratulations, you've created your first object in a 3D environment using Babylon.js! It was easier than you thought, right?
+Congratulations, you've created your first object in a 3D environment using Babylon.js! It was less painful than you thought, right?
 Here's what we have created so far in a live sample.
 You can click "Play" to edit the code in the MDN Playground:
 
@@ -283,7 +283,7 @@ The `t` variable will be incremented on every rendered frame.
 
 ### Rotation
 
-Applying rotation is as easy as adding this line at the end of the `renderLoop` function:
+Applying rotation requires adding this line at the end of the `renderLoop` function:
 
 ```js
 box.rotation.y = t * 2;

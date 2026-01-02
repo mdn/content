@@ -47,7 +47,7 @@ svg {
     r="100"
     fx="100"
     fy="100"
-    gradientTransform="skewX(20) translate(-35, 0)">
+    gradientTransform="skewX(20) translate(185, 0)">
     <stop offset="0%" stop-color="darkblue" />
     <stop offset="50%" stop-color="skyblue" />
     <stop offset="100%" stop-color="darkblue" />

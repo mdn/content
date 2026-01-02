@@ -309,7 +309,8 @@
         "/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block",
         "/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements",
         "/docs/Web/API/CSS_Object_Model/Managing_screen_orientation",
-        "/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information"
+        "/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information",
+        "/docs/Web/API/CSS_Object_Model/CSS_value_serialization"
       ],
       "interfaces": [
         "CaretPosition",
@@ -1140,6 +1141,7 @@
         "NavigationCurrentEntryChangeEvent",
         "NavigationDestination",
         "NavigationHistoryEntry",
+        "NavigationPrecommitController",
         "NavigationTransition"
       ],
       "methods": [],
@@ -1313,8 +1315,11 @@
     },
     "Popover API": {
       "overview": ["Popover API"],
-      "guides": ["/docs/Web/API/Popover_API/Using"],
-      "interfaces": ["ToggleEvent"],
+      "guides": [
+        "/docs/Web/API/Popover_API/Using",
+        "/docs/Web/API/Popover_API/Using_interest_invokers"
+      ],
+      "interfaces": ["InterestEvent", "ToggleEvent"],
       "methods": [
         "HTMLElement.hidePopover()",
         "HTMLElement.showPopover()",
@@ -1325,9 +1330,18 @@
         "HTMLButtonElement.popoverTargetElement",
         "HTMLElement.popover",
         "HTMLInputElement.popoverTargetAction",
-        "HTMLInputElement.popoverTargetElement"
+        "HTMLInputElement.popoverTargetElement",
+        "HTMLAnchorElement.interestForElement",
+        "HTMLAreaElement.interestForElement",
+        "HTMLButtonElement.interestForElement",
+        "SVGAElement.interestForElement"
       ],
-      "events": ["HTMLElement: beforetoggle", "HTMLElement: toggle"]
+      "events": [
+        "HTMLElement: beforetoggle",
+        "HTMLElement: toggle",
+        "HTMLElement: interest",
+        "HTMLElement: loseinterest"
+      ]
     },
     "Presentation API": {
       "overview": ["Presentation API"],
@@ -1361,6 +1375,18 @@
         "Window.scheduler",
         "WorkerGlobalScope.scheduler"
       ],
+      "events": []
+    },
+    "Private State Token API": {
+      "overview": ["Private State Token API"],
+      "guides": ["/docs/Web/API/Private_State_Token_API/Using"],
+      "methods": [
+        "Document.hasPrivateToken()",
+        "Document.hasRedemptionRecord()",
+        "Window.fetch()",
+        "XMLHttpRequest.setPrivateToken()"
+      ],
+      "properties": ["HTMLIFrameElement.privateToken"],
       "events": []
     },
     "Push API": {
@@ -1870,8 +1896,15 @@
     },
     "View Transition API": {
       "overview": ["View Transition API"],
-      "guides": ["/docs/Web/API/View_Transition_API/Using"],
-      "interfaces": ["ViewTransition"],
+      "guides": [
+        "/docs/Web/API/View_Transition_API/Using",
+        "/docs/Web/API/View_Transition_API/Using_types"
+      ],
+      "interfaces": [
+        "CSSViewTransitionRule",
+        "ViewTransition",
+        "ViewTransitionTypeSet"
+      ],
       "methods": ["Document.startViewTransition()"],
       "properties": [],
       "events": ["Window: pagereveal", "Window: pageswap"]

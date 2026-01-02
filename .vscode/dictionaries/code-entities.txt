@@ -76,6 +76,7 @@ beforematch
 beforescriptexecute
 beforexrselect
 BGRX
+bgtest
 bhks
 biske
 bmatrix
@@ -256,6 +257,7 @@ Gloc
 glossarysidebar
 gonm
 GPOS
+grba
 Grek
 greklow
 GSUB
@@ -297,6 +299,7 @@ indexeddb-examples
 indexifembedded
 inputreport
 inputsourceschange
+interestfor
 intitle
 intl.uidirection.locale
 intrinsicsize
@@ -382,6 +385,7 @@ localecho
 localstore
 longdiv
 longtask
+loseinterest
 lowdelay
 lowp
 lquote
@@ -520,6 +524,8 @@ ondispose
 ondownloadprogress
 onefive
 ongesturestart
+oninterest
+onloseinterest
 onnavigate
 onnavigateerror
 onnavigatesuccess
@@ -553,6 +559,7 @@ orya
 oscpu
 osfile.jsm
 osma
+otpauth
 otpcredential
 outbound-rtpp
 overlayinfo
@@ -643,6 +650,7 @@ rquote
 rspadd
 RTCICECandidatePairStats
 rtctransform
+rtlm
 rtpmap
 runserver
 rustc

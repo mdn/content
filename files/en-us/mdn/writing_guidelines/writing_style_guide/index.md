@@ -606,8 +606,8 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 - For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.
 - On MDN, you can optionally use a macro to link to a page, as is explained in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section on the _Commonly used macros_ page. The use of macro will add code formatting to the keyword in the link text, as shown in the next example.
 - No article ("A", "An", "The") is needed at the beginning of the link list item. No punctuation is required at the end of the list item because it will invariably be a term or a phrase.
-  - **Correct**: [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer)
-  - **Incorrect**: The [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer) keyword.
+  - **Correct**: {{cssxref("revert-layer")}}
+  - **Incorrect**: The {{cssxref("revert-layer")}} keyword.
   - **Correct**: [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API)
   - **Incorrect**: The [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API)
 - As shown in the previous examples, add code formatting using backticks (`` ` ``) to keywords and literals in the link text, even though the formatting is not used in page and section titles. For example, for the page title "Array() constructor", the link text will be [`Array()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).
@@ -695,7 +695,6 @@ If you have questions about usage and style not covered in this guide, we recomm
 If you're interested in improving your writing and editing skills, you may find the following resources to be helpful.
 
 - [Common errors in English usage](https://brians.wsu.edu/common-errors-in-english-usage/) on brians.wsu.edu
-- [English grammar FAQ](https://websites.umich.edu/~jlawler/aue.html) on alt-usage-english.org
 - [English language and usage](https://english.stackexchange.com/) on english.stackexchange.com: Question and answer site for English language usage
 - [Merriam-Webster's Concise Dictionary of English Usage](https://books.google.com/books?id=UDIjAQAAIAAJ) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
 - [On Writing Well](https://www.harpercollins.com/products/on-writing-well-william-zinsser) by William Zinsser on harpercollins.com (published 2016)

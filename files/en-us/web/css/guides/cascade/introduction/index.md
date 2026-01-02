@@ -39,7 +39,7 @@ In most browsers, the user (or reader) of the website can choose to override sty
 
 ### Cascade layers
 
-The cascade order is based on origin type. The cascade within each origin type is based on the declaration order of [cascade layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer) within that type. For all origins - user-agent, author, or user - styles can be declared within or outside of named or anonymous layers. When declared using [`layer`, `layer()`](/en-US/docs/Web/CSS/Reference/At-rules/@import) or [`@layer`](/en-US/docs/Web/CSS/Reference/At-rules/@layer), styles are placed into the specified named layer, or into an anonymous layer if no name is provided. Styles declared outside of a layer are treated as being part of an anonymous last declared layer.
+The cascade order is based on origin type. The cascade within each origin type is based on the declaration order of [cascade layers](/en-US/docs/Web/CSS/Reference/At-rules/@layer) within that type. For all origins - user-agent, author, or user - styles can be declared within or outside of named or anonymous layers. When declared using [`layer`, `layer()`](/en-US/docs/Web/CSS/Reference/At-rules/@import) or {{cssxref("@layer")}}, styles are placed into the specified named layer, or into an anonymous layer if no name is provided. Styles declared outside of a layer are treated as being part of an anonymous last declared layer.
 
 Let's take a look at cascading origin type before diving into cascade layers within each origin type.
 
@@ -415,11 +415,11 @@ After your content has finished altering styles, it may find itself in a situati
 
 ## See also
 
-- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-- [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
 - [Specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
 - [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
-- [Initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value) values
+- Values: [initial](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [computed](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [used](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value), and [actual](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value)

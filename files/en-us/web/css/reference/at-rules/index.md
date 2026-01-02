@@ -25,6 +25,7 @@ sidebar: cssref
   - {{cssxref("@counter-style/suffix")}}
   - {{cssxref("@counter-style/symbols")}}
   - {{cssxref("@counter-style/system")}}
+- {{cssxref("@custom-media")}}
 - {{cssxref("@document")}} {{non-standard_inline}} {{deprecated_inline}}
 - {{cssxref("@font-face")}}
   - {{cssxref("@font-face/ascent-override")}}

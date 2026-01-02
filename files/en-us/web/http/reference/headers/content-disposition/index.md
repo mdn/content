@@ -51,11 +51,16 @@ You may want to avoid percent escape sequences in `filename`, because they are h
 Browsers may apply transformations to conform to the file system requirements, such as converting path separators (`/` and `\`) to underscores (`_`).
 
 > [!NOTE]
-> Chrome, and Firefox 82 and later, prioritize the HTML [`<a>` element's](/en-US/docs/Web/HTML/Reference/Elements/a) `download` attribute over the `Content-Disposition: inline` parameter (for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy)). Earlier Firefox versions prioritize the header and will display the content inline.
+> Chrome, and Firefox 82 and later, prioritize the HTML [`<a>` element's](/en-US/docs/Web/HTML/Reference/Elements/a) `download` attribute over the `Content-Disposition: inline` parameter (for [same-origin URLs](/en-US/docs/Web/Security/Defenses/Same-origin_policy)). Earlier Firefox versions prioritize the header and will display the content inline.
 
 ### As a header for a multipart body
 
-A `multipart/form-data` body requires a `Content-Disposition` header to provide information about each subpart of the form (e.g., for every form field and any files that are part of field data). The first directive is always `form-data`, and the header must also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the `=` sign. Multiple parameters are separated by a semicolon (`;`).
+A `multipart/form-data` body requires a `Content-Disposition` header to provide information about each subpart of the form (e.g., for every form field and any files that are part of field data).
+The first directive is always `form-data`, and the header must also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive.
+The value of any arguments (after the `=` sign) may be a either token or a quoted string.
+Quoted strings are recommended, and many server implementations require the values to be quoted.
+This is because a token must be US-ASCII for MIME type headers like `Content-Disposition`, and US-ASCII does not allow some characters that are common in filenames and other values.
+Multiple parameters are separated by a semicolon (`;`).
 
 ```http
 Content-Disposition: form-data; name="fieldName"

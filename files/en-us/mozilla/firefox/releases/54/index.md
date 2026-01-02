@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 54 was released on June 13, 2017. This article lists key changes that are useful for web developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 

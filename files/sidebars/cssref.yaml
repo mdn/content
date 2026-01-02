@@ -5,65 +5,6 @@ sidebar:
     link: /Web/CSS
     title: CSS
   - type: section
-    link: /Web/CSS/Reference
-  - type: listSubPagesGrouped
-    path: /Web/CSS/Reference/Properties
-    tags:
-      - css-property
-      - css-shorthand-property
-    link: /Web/CSS/Reference/Properties
-    title: Properties
-    details: closed
-  - type: listSubPages
-    path: /Web/CSS/Reference/Selectors
-    tags: css-selector
-    link: /Web/CSS/Reference/Selectors
-    title: Selectors
-    details: closed
-  - type: listSubPages
-    path: /Web/CSS/Reference/Selectors
-    tags: css-combinator
-    link: /Web/CSS/Reference/Selectors/Combinators
-    title: Combinators
-    details: closed
-  - type: listSubPagesGrouped
-    path: /Web/CSS/Reference/Selectors
-    tags: css-pseudo-class
-    link: /Web/CSS/Reference/Selectors/Pseudo-classes
-    title: Pseudo-classes
-    details: closed
-  - type: listSubPagesGrouped
-    path: /Web/CSS/Reference/Selectors
-    tags: css-pseudo-element
-    link: /Web/CSS/Reference/Selectors/Pseudo-elements
-    title: Pseudo-elements
-    details: closed
-  - type: listSubPages
-    path: /Web/CSS/Reference/At-rules
-    tags: css-at-rule
-    link: /Web/CSS/Reference/At-rules
-    title: At-rules
-    details: closed
-  - type: listSubPages
-    path: /Web/CSS/Reference/Values
-    tags: css-keyword
-    link: /Web/CSS/Reference/Values
-    title: Values
-    details: closed
-  - type: listSubPages
-    path: /Web/CSS/Reference/Values
-    tags: css-type
-    link: /Web/CSS/Reference/Values/Data_types
-    title: Types
-    details: closed
-  - type: listSubPages
-    path: /Web/CSS/Reference/Values
-    tags: css-function
-    depth: 2
-    link: /Web/CSS/Reference/Values/Functions
-    title: Functions
-    details: closed
-  - type: section
     link: /Web/CSS/Guides
     title: Guides
   - type: listSubPages
@@ -153,6 +94,10 @@ sidebar:
       - link: /Web/API/CSSOM_view_API/Coordinate_systems
         title: Coordinate_systems
       - /Web/CSS/Guides/CSSOM_view/Viewport_concepts
+  - type: listSubPages
+    path: /Web/CSS/Guides/Custom_functions_and_mixins
+    title: Custom_functions_and_mixins
+    details: closed
   - title: Display
     details: closed
     children:
@@ -167,6 +112,10 @@ sidebar:
       - /Web/CSS/Guides/Inline_layout/Inline_formatting_context
       - /Web/CSS/Guides/Display/Multi-keyword_syntax
       - /Web/CSS/Guides/Display/Visual_formatting_model
+  - type: listSubPages
+    path: /Web/CSS/Guides/Environment_variables
+    title: Environment_variables
+    details: closed
   - type: listSubPages
     path: /Web/CSS/Guides/Filter_effects
     title: Filter_effects
@@ -190,15 +139,15 @@ sidebar:
     children:
       - /Web/CSS/Guides/Grid_layout/Basic_concepts
       - /Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods
-      - /Web/CSS/Guides/Grid_layout/Grid_template_areas
       - /Web/CSS/Guides/Grid_layout/Line-based_placement
+      - /Web/CSS/Guides/Grid_layout/Grid_template_areas
       - /Web/CSS/Guides/Grid_layout/Named_grid_lines
       - /Web/CSS/Guides/Grid_layout/Auto-placement
       - /Web/CSS/Guides/Grid_layout/Box_alignment
       - /Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes
+      - /Web/CSS/Guides/Grid_layout/Accessibility
       - /Web/CSS/Guides/Grid_layout/Common_grid_layouts
       - /Web/CSS/Guides/Grid_layout/Subgrid
-      - /Web/CSS/Guides/Grid_layout/Accessibility
       - /Web/CSS/Guides/Grid_layout/Masonry_layout
   - title: Images
     details: closed
@@ -257,6 +206,10 @@ sidebar:
   - type: listSubPages
     path: /Web/CSS/Guides/Scroll_anchoring
     title: Scroll_anchoring
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Guides/Scroll-driven_animations
+    title: Scroll-driven_animations
     details: closed
   - type: listSubPages
     path: /Web/CSS/Guides/Scroll_snap
@@ -343,6 +296,65 @@ sidebar:
       - /Web/CSS/Guides/Colors/Color_format_converter
       - /Web/CSS/Guides/Colors/Color_mixer
       - /Web/CSS/Guides/Shapes/Shape_generator
+  - type: section
+    link: /Web/CSS/Reference
+  - type: listSubPagesGrouped
+    path: /Web/CSS/Reference/Properties
+    tags:
+      - css-property
+      - css-shorthand-property
+    link: /Web/CSS/Reference/Properties
+    title: Properties
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Selectors
+    tags: css-selector
+    link: /Web/CSS/Reference/Selectors
+    title: Selectors
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Selectors
+    tags: css-combinator
+    link: /Web/CSS/Reference/Selectors/Combinators
+    title: Combinators
+    details: closed
+  - type: listSubPagesGrouped
+    path: /Web/CSS/Reference/Selectors
+    tags: css-pseudo-class
+    link: /Web/CSS/Reference/Selectors/Pseudo-classes
+    title: Pseudo-classes
+    details: closed
+  - type: listSubPagesGrouped
+    path: /Web/CSS/Reference/Selectors
+    tags: css-pseudo-element
+    link: /Web/CSS/Reference/Selectors/Pseudo-elements
+    title: Pseudo-elements
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/At-rules
+    tags: css-at-rule
+    link: /Web/CSS/Reference/At-rules
+    title: At-rules
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Values
+    tags: css-keyword
+    link: /Web/CSS/Reference/Values
+    title: Values
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Values
+    tags: css-type
+    link: /Web/CSS/Reference/Values/Data_types
+    title: Types
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Values
+    tags: css-function
+    depth: 2
+    link: /Web/CSS/Reference/Values/Functions
+    title: Functions
+    details: closed
 l10n:
   de:
     Guides: Leitfäden
@@ -397,7 +409,9 @@ l10n:
     Containment: Containment
     Coordinate_systems: Coordinate systems (API)
     CSSOM_view: CSSOM view
+    Custom_functions_and_mixins: Custom functions and mixins
     Display: Display
+    Environment_variables: Environment variables
     Filter_effects: Filter effects
     Flexbox: Flexbox
     Fonts: Fonts
@@ -411,6 +425,7 @@ l10n:
     Positioning: Positioning
     Selectors: Selectors
     Scroll_anchoring: Scroll anchoring
+    Scroll-driven_animations: Scroll-driven animations
     Scroll_snap: Scroll snap
     Shapes: Shapes
     Syntax: Syntax

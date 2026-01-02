@@ -21,10 +21,6 @@ For more information, see the main [Permissions Policy](/en-US/docs/Web/HTTP/Gui
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>yes</td>
-    </tr>
   </tbody>
 </table>
 
@@ -83,7 +79,7 @@ You can specify
 - {{httpheader("Permissions-Policy/aria-notify", "aria-notify")}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Controls whether the current document is allowed to use the {{domxref("Document.ariaNotify", "ariaNotify()")}} method to fire {{glossary("screen reader")}} announcements.
 
-- {{httpheader('Permissions-Policy/attribution-reporting','attribution-reporting')}} {{Experimental_Inline}}
+- {{httpheader('Permissions-Policy/attribution-reporting','attribution-reporting')}} {{deprecated_inline}}
   - : Controls whether the current document is allowed to use the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
 
 - {{httpheader('Permissions-Policy/autoplay','autoplay')}} {{Experimental_Inline}}
@@ -92,7 +88,7 @@ You can specify
 - {{httpheader('Permissions-Policy/bluetooth','bluetooth')}} {{Experimental_Inline}}
   - : Controls whether the use of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) is allowed. When this policy is disabled, the methods of the {{DOMxRef("Bluetooth")}} object returned by {{DOMxRef("Navigator.bluetooth")}} will either return `false` or reject the returned {{JSxRef("Promise")}} with a `SecurityError` {{DOMxRef("DOMException")}}.
 
-- {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} {{Experimental_Inline}} {{non-standard_inline}}
+- {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} {{deprecated_inline}} {{non-standard_inline}}
   - : Controls access to the [Topics API](/en-US/docs/Web/API/Topics_API). Where a policy specifically disallows the use of the Topics API, any attempts to call the {{domxref("Document.browsingTopics()")}} method or send a request with a {{httpheader("Sec-Browsing-Topics")}} header will fail with a `NotAllowedError` {{domxref("DOMException")}}.
 
 - {{httpheader('Permissions-Policy/camera', 'camera')}} {{experimental_inline}}
@@ -169,6 +165,12 @@ You can specify
 
 - {{httpheader('Permissions-Policy/picture-in-picture', 'picture-in-picture')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.
+
+- {{httpheader('Permissions-Policy/private-state-token-issuance','private-state-token-issuance')}} {{Experimental_Inline}}
+  - : Controls usage of [private state token](/en-US/docs/Web/API/Private_State_Token_API) `token-request` operations.
+
+- {{httpheader('Permissions-Policy/private-state-token-redemption','private-state-token-redemption')}} {{Experimental_Inline}}
+  - : Controls usage of [private state token](/en-US/docs/Web/API/Private_State_Token_API) `token-redemption` and `send-redemption-record` operations.
 
 - {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to create new asymmetric key credentials, i.e., via {{domxref("CredentialsContainer.create", "navigator.credentials.create({publicKey: ..., ...})")}}.

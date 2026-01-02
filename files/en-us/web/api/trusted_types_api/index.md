@@ -136,7 +136,7 @@ element.innerHTML = userInput;
 
 ### Injection sink interfaces
 
-This section provides an list of "direct" injection sink interfaces.
+This section provides a list of "direct" injection sink interfaces.
 
 Note that there are cases where untrusted strings may be "indirectly injected", such as when an untrusted string is added as the child node of a script element, and then the element is added to the document.
 These cases are evaluated the untrusted script is added to the document.

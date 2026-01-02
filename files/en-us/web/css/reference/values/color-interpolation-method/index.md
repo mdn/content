@@ -2,7 +2,9 @@
 title: <color-interpolation-method>
 slug: Web/CSS/Reference/Values/color-interpolation-method
 page-type: css-type
-browser-compat: css.types.color.color-mix
+browser-compat:
+  - css.types.color.color-mix
+  - css.types.color.color.display-p3-linear
 spec-urls: https://drafts.csswg.org/css-color/#interpolation-space
 sidebar: cssref
 ---
@@ -83,7 +85,7 @@ The following example shows the effect of using different interpolation color sp
 The following example shows how to specify a color space when interpolating colors in repeating gradients.
 Three boxes show different types of repeating gradients using the [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient), [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient), and [`repeating-radial-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient) functions.
 The first box uses the Lab color space to interpolate between two color values.
-The second and third boxes use OkLCh and additionally provide a [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method) to specify how to interpolate between hue values.
+The second and third boxes use OkLCh and additionally provide a {{cssxref("hue-interpolation-method")}} to specify how to interpolate between hue values.
 
 #### HTML
 
@@ -95,7 +97,7 @@ The second and third boxes use OkLCh and additionally provide a [`<hue-interpola
 
 #### CSS
 
-We used the same two colors in each gradient to demonstrate the different effects of [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method) and {{glossary("color space")}} on color interpolation in gradients.
+We used the same two colors in each gradient to demonstrate the different effects of {{cssxref("hue-interpolation-method")}} and {{glossary("color space")}} on color interpolation in gradients.
 
 ```css hidden
 .gradient {
@@ -139,7 +141,7 @@ We used the same two colors in each gradient to demonstrate the different effect
 {{EmbedLiveSample("hue_interpolation_in_repeating_gradients", "100%", 250)}}
 
 Comparing the first and second boxes demonstrates the difference of interpolating between two colors in differing color spaces.
-Comparing the second and third boxes shows the difference between [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method)s, with the linear gradient using the shorter method (default) and the radial gradient using the longer method.
+Comparing the second and third boxes shows the difference between {{cssxref("hue-interpolation-method")}}s, with the linear gradient using the shorter method (default) and the radial gradient using the longer method.
 
 ## Specifications
 
@@ -151,5 +153,5 @@ Comparing the second and third boxes shows the difference between [`<hue-interpo
 
 ## See also
 
-- {{CSSXref("&lt;color&gt;")}}, {{CSSXref("&lt;gradient&gt;")}}
+- {{CSSXref("&lt;color&gt;")}}, {{cssxref("gradient")}}
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}}

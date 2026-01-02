@@ -12,7 +12,7 @@ sidebar: htmlsidebar
 
 The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes.
 
-The HTML `<marquee>` element is deprecated and its use is strongly discouraged. If you must create the effect of scrolling text or continuous elements, consider using [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) with [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using) instead of `<marquee>` elements to smoothly animate content. Additionally, include the [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) CSS {{cssxref("@media")}} query to stop the animation based on user preference, thereby improving user experience and accessibility.
+The HTML `<marquee>` element is deprecated and its use is strongly discouraged. If you must create the effect of scrolling text or continuous elements, consider using [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) with [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using) instead of `<marquee>` elements to smoothly animate content. Additionally, include the {{cssxref("@media/prefers-reduced-motion")}} CSS {{cssxref("@media")}} query to stop the animation based on user preference, thereby improving user experience and accessibility.
 
 ## Attributes
 

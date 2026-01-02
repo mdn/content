@@ -96,11 +96,7 @@ div::after {
       content: "Your browser doesn't support scroll-driven animations.";
       background-color: wheat;
       display: block;
-      width: 100%;
       text-align: center;
-    }
-    body > * {
-      display: none;
     }
   }
 }
@@ -128,16 +124,13 @@ Scroll the element in the inline direction to see its background color change. S
 
 ### Data types and values
 
-<!--
 - {{cssxref("axis")}}
-- {{cssxref("scroller")}} -->
-
-- [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Properties/animation-range#timeline-range-name)
+- {{cssxref("timeline-range-name")}}
 
 ### Functions
 
-- [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
-- [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view)
+- {{cssxref("animation-timeline/scroll", "scroll()")}}
+- {{cssxref("animation-timeline/view", "view()")}}
 
 ### Interfaces
 

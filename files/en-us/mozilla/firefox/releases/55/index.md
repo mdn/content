@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 55 was released on August 8, 2017. This article lists key changes that are useful for web developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -119,8 +119,8 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ### Security
 
-- The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) is now available only to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts) ([Firefox bug 1072859](https://bugzil.la/1072859)).
-- The [Storage API](/en-US/docs/Web/API/Storage_API) is now available only to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts) ([Firefox bug 1268804](https://bugzil.la/1268804)).
+- The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) is now available only to [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts) ([Firefox bug 1072859](https://bugzil.la/1072859)).
+- The [Storage API](/en-US/docs/Web/API/Storage_API) is now available only to [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts) ([Firefox bug 1268804](https://bugzil.la/1268804)).
 - The loading of mixed content is now allowed on localhost ([Firefox bug 903966](https://bugzil.la/903966)).
 - Loading of remote JAR files has been disabled again ([Firefox bug 1329336](https://bugzil.la/1329336)).
 

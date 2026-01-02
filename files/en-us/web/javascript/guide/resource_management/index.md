@@ -293,7 +293,7 @@ async function readUntil(stream, text) {
 }
 ```
 
-Suppose that `chunk` turns out to be `null`. Then `toUpperCase()` will throw a `TypeError`, causing the function to terminate. Before the function exits, `stream[Symbol.dispose]()` is called, which releases the lock on the stream.
+Suppose that `chunk` turns out to be `null`. Then `!chunk.done` will throw a `TypeError`, causing the function to terminate. Before the function exits, `stream[Symbol.dispose]()` is called, which releases the lock on the stream.
 
 ```js
 const stream = new ReadableStream({
