@@ -9,7 +9,7 @@ sidebar: learnsidebar
 
 As a professional in the web industry, you are going to have to work with other people on projects during multiple phases — brainstorming ideas, writing proposals, implementing code, and more.
 
-In web development teams, collaboration often happens through tools such as version control systems (for example, Git and GitHub). Developers typically work on separate branches, review each other's code through pull requests, and discuss changes using comments. This workflow helps teams catch bugs early, maintain code quality, and ensure everyone understands the changes being made.
+In web development teams, collaboration often happens through tools such as version control systems (for example, [Git](https://git-scm.com) and [GitHub](https://github.com)). Developers typically work on separate copies of a project, review each other's code, and discuss changes using comments. Such a workflow helps teams catch bugs early, maintain code quality, and ensure everyone understands the changes being made.
 
 This article looks at how to work together with others.
 
