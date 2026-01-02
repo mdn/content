@@ -161,11 +161,10 @@ Changing between `display: flow-root` and `display: block flow-root` will achiev
 const parentDiv = document.getElementById("parent");
 const siblingDiv = document.getElementById("sibling");
 const displayTypeSelect = document.getElementById("displayType");
-const displayType = displayTypeSelect.value;
 
 function changeDisplayType() {
-  parentDiv.style.display = displayType;
-  siblingDiv.style.display = displayType;
+  parentDiv.style.display = displayTypeSelect.value;
+  siblingDiv.style.display = displayTypeSelect.value;
 }
 
 displayTypeSelect.addEventListener("change", changeDisplayType);
