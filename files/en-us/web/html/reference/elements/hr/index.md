@@ -6,7 +6,7 @@ browser-compat: html.elements.hr
 sidebar: htmlsidebar
 ---
 
-The **`<hr>`** [HTML](/en-US/docs/Web/HTML) element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.
+The **`<hr>`** [HTML](/en-US/docs/Web/HTML) element represents a thematic break between elements: for example, a change of scene in a story, or a shift of topic within a section.
 
 {{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}
 
@@ -56,25 +56,84 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
 ## Example
 
-### HTML
+### Thematic break between paragraphs
+
+The following example adds a thematic break between paragraph-level elements.
+
+#### HTML
 
 ```html
 <p>
   This is the first paragraph of text. This is the first paragraph of text. This
   is the first paragraph of text. This is the first paragraph of text.
 </p>
-
 <hr />
-
 <p>
   This is the second paragraph of text. This is the second paragraph of text.
   This is the second paragraph of text. This is the second paragraph of text.
 </p>
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Thematic break between paragraphs")}}
+
+### Thematic break between list items
+
+The `<hr>` tag can be placed within a list item for visual separation, to create a separator between sections of a list.
+
+There are three primary types of lists in HTML, all of which use `<li>` elements for the individual list items:
+
+* Unordered List (`<ul>`): Used for grouping items where the order does not matter. Items are typically displayed with bullet points.
+* Ordered List (`<ol>`): Used for items where the order is meaningful (e.g., steps in a recipe). Items are typically displayed with a numerical or alphabetical marker.
+* Description List (`<dl>`): Used for term/description pairs, using `<dt>` for the term and `<dd>` for the description. 
+
+#### HTML
+
+```html
+<h2>My To-Do List</h2>
+<ul>
+  <li>Task 1</li>
+  <li>Task 2</li>
+  <li>Task 3</li>
+  <li><hr></li> <!-- Thematic break -->
+  <li>Completed Task A</li>
+  <li>Completed Task B</li>
+</ul>
+
+<h2>Steps in a Recipe</h2>
+<ol>
+  <li>Mix dry ingredients thoroughly.</li>
+  <li>Pour in wet ingredients.</li>
+  <li><hr style="background-color: blue;"></li> <!-- Thematic break with inline style -->
+  <li>Mix for 10 minutes.</li>
+  <li>Bake for one hour at 300 degrees.</li>
+</ol>
+```
+
+#### Result
+
+{{EmbedLiveSample("Thematic break between list items")}}
+
+### Thematic break between select options
+
+The `<hr>` element is allowed inside a `<select>` element to create a visual separator between `<option>` elements.
+
+#### HTML
+
+```html
+<select>
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <hr>
+  <option value="option3">Option 3</option>
+  <option value="option4">Option 4</option>
+</select>
+```
+
+#### Result
+
+{{EmbedLiveSample("Thematic break between select options")}}
 
 ## Technical summary
 
