@@ -18,7 +18,7 @@ The `readyState` of a document can be one of following:
 - `loading`
   - : The {{domxref("document")}} is still loading (that is, the HTML parser is still working).
 - `interactive`
-  - : The document has been parsed but sub-resources such as deferred and module scripts, images, stylesheets, and frames are still loading. Once in this state, and the deferred and module scripts have executed, the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event fires.
+  - : The document has been parsed but sub-resources such as {{domxref("HTMLScriptElement/defer", "deferred")}} and [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), images, stylesheets, and frames are still loading. Once in this state, and the deferred and module scripts have executed, the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event fires.
 - `complete`
   - : The document and all sub-resources have finished loading. The state indicates that the {{domxref("Window/load_event", "load")}} event is about to fire.
 
