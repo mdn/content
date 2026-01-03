@@ -99,7 +99,7 @@ The `<hr>` tag can be placed within a list item for visual separation, to create
 <ol>
   <li>Mix dry ingredients thoroughly.</li>
   <li>Pour in wet ingredients.</li>
-  <li><hr style="background-color: blue;" /></li>
+  <li><hr /></li>
   <li>Mix for 10 minutes.</li>
   <li>Bake for one hour at 300 degrees.</li>
 </ol>
