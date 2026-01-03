@@ -84,13 +84,13 @@ The `<hr>` tag can be placed within a list item for visual separation, to create
 
 #### HTML
 
-```html
+```html-nolint
 <h2>My To-Do List</h2>
 <ul>
   <li>Task 1</li>
   <li>Task 2</li>
   <li>Task 3</li>
-  <li><hr /></li>
+  <li><hr /> <!-- Thematic break --></li>
   <li>Completed Task A</li>
   <li>Completed Task B</li>
 </ul>
@@ -99,7 +99,7 @@ The `<hr>` tag can be placed within a list item for visual separation, to create
 <ol>
   <li>Mix dry ingredients thoroughly.</li>
   <li>Pour in wet ingredients.</li>
-  <li><hr /></li>
+  <li><hr /> <!-- Thematic break --></li>
   <li>Mix for 10 minutes.</li>
   <li>Bake for one hour at 300 degrees.</li>
 </ol>
@@ -117,6 +117,8 @@ The `<hr>` element is allowed inside a `<select>` element to create a visual sep
 
 ```html
 <select>
+  <option value="">--Choose an option--</option>
+  <hr />
   <option value="option1">Option 1</option>
   <option value="option2">Option 2</option>
   <hr />
