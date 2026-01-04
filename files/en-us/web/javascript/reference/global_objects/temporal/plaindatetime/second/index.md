@@ -3,15 +3,11 @@ title: Temporal.PlainDateTime.prototype.second
 short-title: second
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/second
 page-type: javascript-instance-accessor-property
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDateTime.second
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
-
-The **`second`** accessor property of {{jsxref("Temporal.PlainDateTime")}} instances returns a integer from 0 to 59 representing the second component of this time.
+The **`second`** accessor property of {{jsxref("Temporal.PlainDateTime")}} instances returns an integer from 0 to 59 representing the second component of this time.
 
 The set accessor of `second` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainDateTime/with", "with()")}} method to create a new `Temporal.PlainDateTime` object with the desired new value.
 

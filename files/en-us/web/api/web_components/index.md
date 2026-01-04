@@ -60,12 +60,12 @@ The basic approach for implementing a web component generally looks something li
     - `attributeChangedCallback()`
       - : Invoked when one of the custom element's attributes is added, removed, or changed.
 
-- Extensions for creating custom built-in elements
+- Extensions for creating customized built-in elements
   - : The following extensions are defined:
     - The [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) global HTML attribute
-      - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element.
+      - : Allows you to specify that a standard HTML element should behave like a registered customized built-in element.
     - The "is" option of the {{domxref("Document.createElement()")}} method
-      - : Allows you to create an instance of a standard HTML element that behaves like a given registered custom built-in element.
+      - : Allows you to create an instance of a standard HTML element that behaves like a given registered customized built-in element.
 
 - CSS pseudo-classes
   - : Pseudo-classes relating specifically to custom elements:

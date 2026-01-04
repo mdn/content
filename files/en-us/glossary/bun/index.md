@@ -17,4 +17,4 @@ Unlike [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), Bun is buil
 
 ## See also
 
-- [Bun website](https://bun.sh/)
+- [Bun website](https://bun.com/)

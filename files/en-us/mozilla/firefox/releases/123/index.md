@@ -1,5 +1,5 @@
 ---
-title: Firefox 123 for developers
+title: Firefox 123 release notes for developers
 short-title: Firefox 123
 slug: Mozilla/Firefox/Releases/123
 page-type: firefox-release-notes
@@ -9,8 +9,6 @@ sidebar: firefox
 This article provides information about the changes in Firefox 123 that affect developers. Firefox 123 was released on [February 20, 2024](https://whattrainisitnow.com/release/?version=123).
 
 ## Changes for web developers
-
-### Developer Tools
 
 ### HTML
 

@@ -201,11 +201,13 @@ l10n:
   zh-CN:
     WebAssembly_concepts: WebAssembly 概念
     Compiling_to_Wasm: 将 C/C++ 编译为 WebAssembly
-    Existing_C_to_Wasm: Compiling an existing C module to WebAssembly
+    Existing_C_to_Wasm: 将已有的 C 文件编译为 WebAssembly
     Compiling_Rust_to_Wasm: 将 Rust 编译为 WebAssembly
     JavaScript_API: 使用 WebAssembly JavaScript API
     Text_format: 理解 WebAssembly 文本格式
-    Text_format_to_Wasm: Converting WebAssembly text format
+    Text_format_to_Wasm: 编译 WebAssembly 文本格式
     Loading_and_running: 加载和运行 WebAssembly 代码
     Exported_functions: 导出的 WebAssembly 函数
+    JavaScript_builtins: JavaScript 内置函数
+    Imported_string_constants: 导入的全局字符串常量
     JavaScript_interface: JavaScript 接口

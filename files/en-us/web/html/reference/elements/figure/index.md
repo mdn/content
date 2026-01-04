@@ -35,7 +35,7 @@ img {
 }
 
 figcaption {
-  background-color: #222;
+  background-color: #222222;
   color: white;
   font: italic smaller sans-serif;
   padding: 3px;

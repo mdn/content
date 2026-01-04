@@ -129,6 +129,10 @@ playButton.addEventListener("click", () => {
 });
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

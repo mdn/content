@@ -54,10 +54,14 @@ Listen to this event using {{domxref("EventTarget.addEventListener", "addEventLi
 
 The following snippet shows how we might use a signal to abort downloading a video using the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
-We first create an abort controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated `AbortSignal` object using the {{domxref("AbortController.signal")}} property.
+We first define a variable for our `AbortController`.
 
-When the [fetch request](/en-US/docs/Web/API/Window/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request, and allows us to abort it by calling {{domxref("AbortController.abort()")}}.
-Below you can see that the fetch operation is aborted in the second event listener, which triggered when the abort button (`abortBtn`) is clicked.
+Before each [fetch request](/en-US/docs/Web/API/Window/fetch) we create a new controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated `AbortSignal` object using the {{domxref("AbortController.signal")}} property.
+
+> [!NOTE]
+> An `AbortSignal` can only be used once. After it is aborted, any fetch call using the same signal will be immediately rejected.
+
+When the [fetch request](/en-US/docs/Web/API/Window/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{ signal }` below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.
 
 When `abort()` is called, the `fetch()` promise rejects with a `DOMException` named `AbortError`.
 
@@ -181,20 +185,22 @@ Otherwise it completes normally and then resolves the promise.
 function myCoolPromiseAPI(/* …, */ { signal }) {
   return new Promise((resolve, reject) => {
     // If the signal is already aborted, immediately throw in order to reject the promise.
-    if (signal.aborted) {
-      reject(signal.reason);
-      return;
-    }
+    signal.throwIfAborted();
 
     // Perform the main purpose of the API
     // Call resolve(result) when done.
 
     // Watch for 'abort' signals
-    signal.addEventListener("abort", () => {
-      // Stop the main operation
-      // Reject the promise with the abort reason.
-      reject(signal.reason);
-    });
+    // Passing `once: true` ensures the Promise can be garbage collected after abort is called
+    signal.addEventListener(
+      "abort",
+      () => {
+        // Stop the main operation
+        // Reject the promise with the abort reason.
+        reject(signal.reason);
+      },
+      { once: true },
+    );
   });
 }
 ```

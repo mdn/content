@@ -13,7 +13,7 @@ The **`type`** read-only property of the
 
 ## Value
 
-A enumerated value. Possible values are:
+An enumerated value. Possible values are:
 
 - `"error"`
   - : A shader-creation error, which stops successful compilation.

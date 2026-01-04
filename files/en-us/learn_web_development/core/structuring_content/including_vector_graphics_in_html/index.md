@@ -73,7 +73,7 @@ This creates the following output:
 
 {{ EmbedLiveSample('What_is_SVG', 300, 240, "", "") }}
 
-From the example above, you may get the impression that SVG is easy to hand code. Yes, you can hand code simple SVG in a text editor, but for a complex image this quickly starts to get very difficult. For creating SVG images, most people use a vector graphics editor like [Inkscape](https://inkscape.org/) or [Illustrator](https://en.wikipedia.org/wiki/Adobe_Illustrator). These packages allow you to create a variety of illustrations using various graphics tools, and create approximations of photos (for example Inkscape's Trace Bitmap feature.)
+From the example above, you may get the impression that SVG is easy to hand-code. Yes, you can hand-code simple SVG in a text editor, but for a complex image this quickly starts to get very difficult. For creating SVG images, most people use a vector graphics editor like [Inkscape](https://inkscape.org/) or [Illustrator](https://en.wikipedia.org/wiki/Adobe_Illustrator). These packages allow you to create a variety of illustrations using various graphics tools, and create approximations of photos (for example Inkscape's Trace Bitmap feature.)
 
 SVG has some additional advantages besides those described so far:
 
@@ -171,158 +171,45 @@ You can open SVG images in your browser just like webpages. So embedding an SVG 
 Here's a quick review:
 
 ```html
-<iframe src="triangle.svg" width="500" height="500" sandbox>
-  <img src="triangle.png" alt="Triangle with three unequal sides" />
-</iframe>
+<iframe src="triangle.svg" width="500" height="500" sandbox></iframe>
 ```
 
 This is definitely not the best method to choose:
 
 #### Cons
 
-- `iframe`s do have a fallback mechanism, as you can see, but browsers only display the fallback if they lack support for `iframe`s altogether.
+- `<iframe>` elements can include fallback content between their opening and closing tags, but this is only displayed in browsers that don't support `<iframe>`s, not when the image fails to load.
 - Moreover, unless the SVG and your current webpage have the same {{glossary('origin')}}, you cannot use JavaScript on your main webpage to manipulate the SVG.
 
-## Active Learning: Playing with SVG
+## Playing with SVG
 
-In this active learning section we'd like you to have a go at playing with some SVG for fun. In the _Input_ section below you'll see that we've already provided you with some samples to get you started. You can also go to the [SVG Element Reference](/en-US/docs/Web/SVG/Reference/Element), find out more details about other toys you can use in SVG, and try those out too. This section is all about practising your research skills, and having some fun.
+In this exercise we'd like you to have a go at playing with some SVG. Press the **Play** button to open the next example in the MDN Playground and edit it there.
 
-If you get stuck and can't get your code working, you can always reset it using the _Reset_ button.
+Go to the [SVG Element Reference](/en-US/docs/Web/SVG/Reference/Element) to see what other elements you can use that bring a lot of built-in functionality.
+There are other shapes you can try, like ellipses, or you can experiment with [patterns](/en-US/docs/Web/SVG/Reference/Element/pattern), or even [filter effects](/en-US/docs/Web/SVG/Reference/Element/filter).
+This section is all about your research skills, trying something new, and having some fun.
 
-```html hidden
-<h2>Live output</h2>
+If you get stuck and can't get your code working, you can always reset it using the _Reset_ button in the Playground.
 
-<div class="output" style="min-height: 50px;"></div>
-
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
-
-<textarea id="code" class="input" style="width: 95%;min-height: 200px;">
-  <svg width="100%" height="100%">
-    <rect width="100%" height="100%" fill="red" />
-    <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
-    <polygon points="120,0 240,225 0,225" fill="green"/>
-    <text x="50" y="100" font-family="Verdana" font-size="55"
-          fill="white" stroke="black" stroke-width="2">
-            Hello!
-    </text>
-  </svg>
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" disabled />
-</div>
+```html live-sample___playing-with-svg
+<svg width="100%" height="100%">
+  <rect width="100%" height="100%" fill="red" />
+  <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
+  <polygon points="120,0 240,225 0,225" fill="green" />
+  <text
+    x="50"
+    y="100"
+    font-family="Verdana"
+    font-size="55"
+    fill="white"
+    stroke="black"
+    stroke-width="2">
+    Hello!
+  </text>
+</svg>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
-
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-let code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-const htmlSolution = "";
-let solutionEntry = htmlSolution;
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_Learning_Playing_with_SVG', 700, 540) }}
+{{ EmbedLiveSample('playing-with-SVG', 700, 300) }}
 
 ## Summary
 

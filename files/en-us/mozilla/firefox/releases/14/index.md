@@ -1,5 +1,5 @@
 ---
-title: Firefox 14 for developers
+title: Firefox 14 release notes for developers
 short-title: Firefox 14
 slug: Mozilla/Firefox/Releases/14
 page-type: firefox-release-notes
@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 14 shipped on July 17, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### HTML
 
@@ -72,4 +72,4 @@ _No change._
 
 ### Spellchecking
 
-- Dictionary names are now parsed as full [BCP 47](https://www.rfc-editor.org/info/bcp47) language tags ([bug 730209](https://bugzil.la/730209), [bug 741842](https://bugzil.la/741842)). Developers are encouraged to not hard-code the name of their language in their dictionary names.
+- Dictionary names are now parsed as full {{glossary("BCP 47 language tag","BCP 47 language tags")}} ([bug 730209](https://bugzil.la/730209), [bug 741842](https://bugzil.la/741842)). Developers are encouraged to not hard-code the name of their language in their dictionary names.

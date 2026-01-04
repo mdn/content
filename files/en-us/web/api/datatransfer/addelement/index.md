@@ -39,7 +39,7 @@ None ({{jsxref("undefined")}}).
 This example shows the use of the `addElement()` method
 
 ```js
-function change_drag_node(event, node) {
+function changeDragNode(event, node) {
   const dt = event.dataTransfer;
   dt.addElement(node);
 }
@@ -57,4 +57,4 @@ This method is not defined in any Web standard.
 
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Working with the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.XSLTProcessor.XSLTProcessor
 ---
 
-{{APIRef("XSLT")}}
+{{APIRef("DOM")}}
 
 The **`XSLTProcessor()`** constructor creates a new {{domxref("XSLTProcessor")}} object instance.
 

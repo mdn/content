@@ -62,15 +62,11 @@ const processor = {
     this.c1 = document.getElementById("my-canvas");
     this.ctx1 = this.c1.getContext("2d");
 
-    this.video.addEventListener(
-      "play",
-      () => {
-        this.width = this.video.width;
-        this.height = this.video.height;
-        this.timerCallback();
-      },
-      false,
-    );
+    this.video.addEventListener("play", () => {
+      this.width = this.video.width;
+      this.height = this.video.height;
+      this.timerCallback();
+    });
   },
 
   computeFrame() {
@@ -131,7 +127,7 @@ Note that the `playbackRate` property works with both `<audio>` and `<video>`, b
   <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
   <source src="/shared-assets/videos/flower.webm" type="video/webm" />
 </video>
-<label for="rate">Playback rate <output id="rate-value">1.0</output></label>
+<label for="rate">Playback rate <span id="rate-value">1.0</span></label>
 <input type="range" id="rate" name="rate" min="0" max="4" value="1" step=".2" />
 ```
 
@@ -187,7 +183,7 @@ The Web Audio API has a lot of different filter/effects that can be applied to a
 <video id="my-video" controls loop>
   <source src="/shared-assets/videos/friday.mp4" type="video/mp4" />
 </video>
-<label for="freq">Filter freq. <output id="freq-value">1.0</output>hz</label>
+<label for="freq">Filter freq. <span id="freq-value">1.0</span>hz</label>
 <input type="range" id="freq" name="freq" max="20000" value="1000" step="100" />
 ```
 

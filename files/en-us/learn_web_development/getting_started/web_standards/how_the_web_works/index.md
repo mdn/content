@@ -9,7 +9,7 @@ sidebar: learnsidebar
 
 _How the web works_ provides a high-level description of what happens when you use a web browser to navigate to a web page, explaining the magic that goes on behind the scenes to deliver the relevant code to your computer for the browser to assemble into something you can look at.
 
-This theory is not essential to writing web code in the short term, but before long you'll really start to benefit from understanding what's happening in the background.
+This theory is not essential to writing web code in the short term, but before long, you'll really start to benefit from understanding what's happening in the background.
 
 > [!NOTE]
 > This article does not cover how web browsers actually render code into web pages. That's covered in [How browsers load websites](/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites).
@@ -27,7 +27,7 @@ This theory is not essential to writing web code in the short term, but before l
       <td>
         <ul>
           <li>Clients and servers and their roles in the web.</li>
-          <li>DNS and how it works at a high level.</li>
+          <li>DNS and how it works, at a high level.</li>
           <li>The purpose of TCP/IP, HTTP, and packets.</li>
           <li>HTTP syntax at a basic level.</li>
           <li>Common HTTP response codes (e.g., 200, 301, 403, 404, and 500).</li>
@@ -45,7 +45,11 @@ Computers connected to the internet are called **clients** and **servers**. A si
 ![Two circles representing client and server. An arrow labelled request is going from client to server, and an arrow labelled responses is going from server to client](simple-client-server.png)
 
 - Clients are the typical web user's internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected to your mobile network) and web-accessing software available on those devices (usually a web browser like Firefox or Chrome).
-- Servers are computers that store webpages, sites, or apps. When a client wants to access a webpage, a copy of the webpage code is downloaded from the server onto the client machine to be rendered by the browser and displayed to the user.
+- Servers are computers that store webpages, sites, or apps. When a client wants to access a webpage, a copy of the webpage code is downloaded from the server to the client machine, where it is rendered by the browser and displayed to the user.
+
+The following embedded content from Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides further information on clients and servers, including a quiz and discussion.
+
+<mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~0lq" scrimtitle="Clients and servers"></scrim-inline>
 
 ## The other parts of the toolbox
 
@@ -55,7 +59,7 @@ For now, let's imagine that the internet is a road. On one end of the road is th
 
 ![A black-and-white photo of a person crossing a road at a crosswalk](road.jpg)
 
-In order for data to get back and forth, we need the following things:
+For data to get back and forth, we need the following things:
 
 - **Your internet connection**: Allows you to send and receive data on the internet. It's basically like the street between your house and the shop.
 - **TCP/IP**: **Transmission Control Protocol** and **Internet Protocol** (TCP/IP) are communication protocols that define how data should travel across the internet. This is like the transport mechanisms that let you place an order, go to the shop, and buy your goods. In our example, this is like a car or a bike (or however else you might travel along the road).
@@ -72,33 +76,32 @@ In order for data to get back and forth, we need the following things:
 
 When you type a web address (which is technically part of a [URL](#components_of_a_url)) into your browser address bar, the following steps occur:
 
-1. The browser goes to the DNS server and finds the real address of the server that the website lives on (you look up the address of the shop).
-2. The browser sends an HTTP request message to the server, asking it to send a copy of the website to the client (you go to the shop and order your goods). This message, and all other data sent between the client and the server, is sent across your internet connection using TCP/IP.
-3. If the server approves the client's request, the server sends the client a "200 OK" message, which means "Of course you can look at that website! Here it is", and then starts sending the website's files to the browser as a series of small chunks called [data packets](#packets_explained) (the shop gives you your goods, and you bring them back to your house).
-4. The browser assembles the small chunks into a complete web page and displays it to you (you get the goods home — new shiny stuff, awesome!).
+1. The browser goes to the DNS server and finds the real address of the server that the website lives on.
+2. The browser sends an HTTP request message to the server, asking it to send a copy of the website to the client. This message, and all other data sent between the client and the server, is sent across your internet connection using TCP/IP.
+3. If the server approves the client's request, the server sends the client a "200 OK" message, which means "Of course you can look at that website! Here it is", and then starts sending the website's files to the browser as a series of small chunks called [packets](#packets_explained).
+4. The browser assembles the small chunks into a complete web page and displays it to you.
 
 ## DNS explained
 
 Real web addresses ([URLs](#components_of_a_url)) aren't the nice, memorable strings you type into your address bar to find your favorite websites. They are special numbers that look like this: `192.0.2.172`.
 
-This is called an {{Glossary("IP Address", "IP address")}}, and it represents a unique location on the web. However, it's not very easy to remember, is it? That's why the Domain Name System was invented. This system uses special servers that match up a web address you type into your browser (like "mozilla.org") to the website's real (IP) address.
+This is called an {{Glossary("IP Address", "IP address")}}, and it represents a unique location on the web. However, it's not very easy to remember, is it? That's why the Domain Name System was invented. This system uses special servers that match up a web address you type into your browser (like `mozilla.org`) to the website's real (IP) address. Large websites are commonly made available on multiple servers, so that they load efficiently for different users worldwide. As a result, the IP address may vary depending on where you are.
 
-Websites can be reached directly via their IP addresses. You can use a DNS lookup tool to find the IP address of a website.
-
-Let's look up the MDN IP address now, and prove that it points to the same place as the web address:
-
-1. Go to the [NsLookup.io DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/), type in `developer.mozilla.org`, and press the button.
-2. In the results screen, copy the IP Address (the IPv4 address) to your system clipboard.
-3. Open a new browser tab, paste the IP Address into the address bar and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should see MDN load up, proving that the IP address points to it.
+You can use a DNS lookup tool to find the IP addresses of a website. For example, go to the [NsLookup.io DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/), type in `developer.mozilla.org`, and press the button.
 
 ## Packets explained
 
-Earlier we used the term "packets" to describe the format in which the data is transferred between the client and server. What do we mean here?
+Earlier, we used the term "packets" to describe the format in which the data is transferred between the client and server. What do we mean here?
 
-Basically, when data is sent across the web, it is sent in thousands of small chunks. There are multiple reasons why data is sent in small packets, but most significantly:
+When data is sent across the web, it is sent in multiple small chunks called packets. Each packet contains:
 
-- They are sometimes dropped or corrupted and, when this happens, it's quicker and easier to replace small chunks than entire files.
-- Additionally, the packets can be routed along different paths, making the exchange faster and allowing many different users to download the same website at the same time. If each website was sent as a single big chunk, only one user could download it at a time, which would make the web very inefficient and not much fun to use.
+- A **header**, which includes details such as the server and client IP address, the packet number, the total number of packets in the transmission, and details of the protocols used in the transmission.
+- A **payload**, which contains the actual data sent in the packet.
+
+There are multiple reasons why data is sent in small packets, but most significantly:
+
+- They are sometimes dropped or corrupted, and when this happens, it's quicker and easier for the client to request the missing packets rather than an entire file.
+- The packets can be routed along different paths, making the transmission as efficient as possible and reducing the possibility of slowing down the network — especially when many users are requesting the same resource simultaneously. The packets may arrive out of sequence, but the client can use the information in the packet headers to make sure they are assembled in the correct order.
 
 ## HTTP basics
 

@@ -1,5 +1,6 @@
 ---
-title: block
+title: "block: Wasm text instruction"
+short-title: block
 slug: WebAssembly/Reference/Control_flow/block
 page-type: webassembly-instruction
 sidebar: webassemblysidebar

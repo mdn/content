@@ -70,7 +70,7 @@ returned. The rejection handler receives one of the following exception values:_
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Usage notes
 
@@ -145,12 +145,13 @@ document.addEventListener("keydown", (event) => {
 
 ```css hidden
 body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-family:
+    "Benton Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   margin: 2em;
 }
 
 video::backdrop {
-  background-color: #448;
+  background-color: #444488;
 }
 button {
   display: block;

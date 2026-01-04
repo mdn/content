@@ -3,12 +3,10 @@ title: "Navigator: mimeTypes property"
 short-title: mimeTypes
 slug: Web/API/Navigator/mimeTypes
 page-type: web-api-instance-property
-status:
-  - deprecated
 browser-compat: api.Navigator.mimeTypes
 ---
 
-{{ ApiRef("HTML DOM") }}{{deprecated_header}}
+{{ ApiRef("HTML DOM") }}
 
 Returns a {{domxref("MimeTypeArray")}} object, which contains a list of {{domxref("MimeType")}} objects representing the MIME types recognized and supported by the browser.
 The array can be queried for information about the enabled plugin that is used to handle a file of the specified type.

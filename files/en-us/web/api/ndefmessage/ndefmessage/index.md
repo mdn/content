@@ -29,7 +29,7 @@ new NDEFMessage(records)
     - `id` {{optional_inline}}
       - : A developer-defined identifier for the record.
     - `lang` {{optional_inline}}
-      - : A valid language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+      - : A valid {{glossary("BCP 47 language tag")}}.
     - `mediaType` {{optional_inline}}
       - : A valid [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
     - `recordType`

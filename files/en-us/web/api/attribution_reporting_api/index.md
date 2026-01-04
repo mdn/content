@@ -3,11 +3,11 @@ title: Attribution Reporting API
 slug: Web/API/Attribution_Reporting_API
 page-type: web-api-overview
 status:
-  - experimental
+  - deprecated
 browser-compat: html.elements.a.attributionsrc
 ---
 
-{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Attribution Reporting API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Attribution Reporting API")}}{{deprecated_header}}
 
 The **Attribution Reporting API** enables developers to measure conversions — for example when a user clicks an ad embedded on one site and then proceeds to purchase the item over on the vendor's site — and then access reports on those conversions. It does this without relying on third-party tracking cookies.
 
@@ -33,7 +33,7 @@ The Attribution Reporting API provides a way to measure ad conversions in a way 
 
 Let's illustrate how the Attribution Reporting API works via an example.
 
-Say we have a online shop, `shop.example` (aka the advertiser), which embeds an ad for one of its products on a content site, `news.example` (aka the publisher). The ad content is found at `ad.shop.example`.
+Say we have an online shop, `shop.example` (aka the advertiser), which embeds an ad for one of its products on a content site, `news.example` (aka the publisher). The ad content is found at `ad.shop.example`.
 
 The online shop owners want to measure how many conversions they get from users interacting with the ad, viewing the product page on their site, and putting the product into their shopping cart.
 

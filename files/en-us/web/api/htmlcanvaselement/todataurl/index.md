@@ -90,8 +90,6 @@ You can use this technique in coordination with mouse events in order to dynamic
 #### JavaScript
 
 ```js
-window.addEventListener("load", removeColors);
-
 function showColorImg() {
   this.style.display = "none";
   this.nextSibling.style.display = "inline";
@@ -132,6 +130,8 @@ function removeColors() {
     colorImg.parentNode.insertBefore(grayImg, colorImg);
   }
 }
+
+removeColors();
 ```
 
 ## Specifications

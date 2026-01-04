@@ -2,8 +2,6 @@ name: Check Redirects
 
 on:
   pull_request:
-    branches:
-      - main
 
 # No GITHUB_TOKEN permissions, as we only use it to increase API limit.
 permissions: {}
@@ -13,13 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          cache: npm
 
       # This is a "required" workflow so path filtering can not be used:
       # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
@@ -34,16 +34,15 @@ jobs:
               - "files/**"
               - ".github/workflows/pr-check_redirects.yml"
 
-      - name: Install all yarn packages
+      - name: Install
         if: steps.filter.outputs.required_files == 'true'
-        run: yarn --frozen-lockfile
+        run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check redirects file(s)
         if: steps.filter.outputs.required_files == 'true'
-        run: yarn content validate-redirects en-US
+        run: npm run content validate-redirects en-US
         env:
           # Used by the `rari` cli to avoid rate limiting issues
           # when fetching the latest releases info from the GitHub API.

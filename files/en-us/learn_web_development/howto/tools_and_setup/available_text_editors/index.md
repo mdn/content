@@ -138,19 +138,6 @@ Here are some popular editors:
       <td>Yes</td>
     </tr>
     <tr>
-      <td><a href="https://espressoapp.com/">Espresso</a></td>
-      <td>Closed source</td>
-      <td>$99</td>
-      <td>Mac</td>
-      <td>
-        <a href="mailto:hello@espressoapp.com">Email</a>
-      </td>
-      <td>
-        <a href="https://help.espressoapp.com/">Online Manual</a>
-      </td>
-      <td>Yes</td>
-    </tr>
-    <tr>
       <td><a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a></td>
       <td>GPL</td>
       <td>Free</td>
@@ -160,7 +147,7 @@ Here are some popular editors:
           rel="external">Discourse</a>, <a href="irc://irc.gnome.org/%23gedit">IRC</a>
       </td>
       <td>
-        <a href="https://help.gnome.org/users/gedit/stable/">Online Manual</a>
+        <a href="https://gedit-text-editor.org/user-manuals/gedit/">Online Manual</a>
       </td>
       <td><a href="https://wiki.gnome.org/Apps/Gedit/ThirdPartyPlugins">Yes</a></td>
     </tr>
@@ -333,9 +320,9 @@ Here are some popular editors:
   </tbody>
 </table>
 
-## Active Learning
+## Installing and using a text editor
 
-In this active learning section, we would like you to try using and/or installing a text editor of your choice. Your computer may already be installed with one of the editors suggested above (e.g., Gedit if you use GNOME desktop, Kate if you use KDE etc.), if not then you should try installing one or more text editors of your choosing.
+We would like you to try using and/or installing a text editor of your choice. Your computer may already be installed with one of the editors suggested above (e.g., Gedit if you use GNOME desktop, Kate if you use KDE etc.), if not then you should try installing one or more text editors of your choosing.
 
 Try digging through the settings of your editor and read the manual or documentation to see what its capabilities are. In particular (if possible in your editor), try to:
 
@@ -428,7 +415,7 @@ When you install a new text editor, your OS will probably continue to open text 
 
 - Linux
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
-  - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
+  - [GNOME](https://unix.stackexchange.com/questions/41372/changing-file-associations-in-gnome)
   - [KDE](https://userbase.kde.org/System_Settings/File_Associations)
 
 ## Next steps

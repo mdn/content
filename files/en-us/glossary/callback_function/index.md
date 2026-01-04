@@ -20,12 +20,24 @@ doSomething(() => {
   value = 2;
 });
 
-console.log(value);
+console.log(value); // 1 or 2?
 ```
 
 If `doSomething` calls the callback synchronously, then the last statement would log `2` because `value = 2` is synchronously executed; otherwise, if the callback is asynchronous, the last statement would log `1` because `value = 2` is only executed after the `console.log` statement.
 
-Examples of synchronous callbacks include the callbacks passed to {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.forEach()")}}, etc. Examples of asynchronous callbacks include the callbacks passed to {{domxref("Window.setTimeout", "setTimeout()")}} and {{jsxref("Promise.prototype.then()")}}.
+Examples of synchronous callbacks include the callbacks passed to {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.forEach()")}}, etc. Examples of asynchronous callbacks include the callbacks passed to {{domxref("Window.setTimeout", "setTimeout()")}} and {{jsxref("Promise.prototype.then()")}}. Here are example implementations of `doSomething` that call the callback synchronously and asynchronously:
+
+```js
+// Synchronous
+function doSomething(callback) {
+  callback();
+}
+
+// Asynchronous
+function doSomething(callback) {
+  setTimeout(callback, 0);
+}
+```
 
 The [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises#timing) guide has more information on the timing of asynchronous callbacks.
 

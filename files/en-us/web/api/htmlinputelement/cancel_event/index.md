@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLInputElement.cancel_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`cancel`** event fires on an {{HTMLElement("input")}} element when the user cancels the file picker dialog via the <kbd>Esc</kbd> key or the cancel button and when the user re-selects the same files that were previously selected of `type="file"`.
 

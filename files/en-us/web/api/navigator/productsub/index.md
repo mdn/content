@@ -3,12 +3,10 @@ title: "Navigator: productSub property"
 short-title: productSub
 slug: Web/API/Navigator/productSub
 page-type: web-api-instance-property
-status:
-  - deprecated
 browser-compat: api.Navigator.productSub
 ---
 
-{{ ApiRef("HTML DOM") }} {{Deprecated_Header}}
+{{ ApiRef("HTML DOM") }}
 
 The **`Navigator.productSub`** read-only property that returns either the string "20030107", or the string "20100101".
 

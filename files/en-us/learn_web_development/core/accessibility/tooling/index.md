@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_Accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
 
 Next, we turn our attention to accessibility tooling, providing information on the kinds of tools you can use to help solve accessibility issues, and helping you understand the **assistive technologies** used by people with disabilities to help them browse the web. You'll be using the tools described here throughout subsequent articles.
 
@@ -95,7 +95,7 @@ Make sure you have a screen reader or two installed on your development machine,
 
 There are several screen readers available:
 
-- Some are paid-for commercial products, like [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows).
+- Some are paid-for commercial products, like [JAWS](https://vispero.com/jaws-screen-reader-software/) (Windows).
 - Some are free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome, Windows, and macOS), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
 - Some are built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/features/?vision) (macOS and iOS), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (on Chromebooks), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
@@ -404,7 +404,7 @@ A switch control setup usually involves two parts:
 - A physical switch or button for activating options on the device. You can also assign switch functionality to regular device buttons (such as volume controls) or keys on a keyboard.
 - A device mode or third-party software add-on that makes the device compatible with the switch or button control. For example, Switch Access on Android is a mode whereby the different options in various situations (for example, apps on the home screen) are cycled through and then the one you want can be selected with a button or switch when reached.
 
-## Planing for accessibility
+## Planning for accessibility
 
 You should think carefully about accessibility near the start of each project. Make sure accessibility is considered during the initial design phase, so that you can:
 
@@ -444,4 +444,4 @@ Hopefully this article has given you an idea of the kinds of tools you can use t
 
 In the next article we'll look how to write accessible HTML.
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_Accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}

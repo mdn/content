@@ -237,13 +237,13 @@ The below example shows a very basic drawing app created using a {{htmlelement("
 
 ```css hidden
 body {
-  background: #ccc;
+  background: #cccccc;
   margin: 0;
   overflow: hidden;
 }
 
 .toolbar {
-  background: #ccc;
+  background: #cccccc;
   width: 150px;
   height: 75px;
   padding: 5px;

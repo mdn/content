@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.drop_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML Drag and Drop API")}}
 
 The **`drop`** event is fired when an element or text selection is dropped on a valid drop target. To ensure that the `drop` event always fires as expected, you should always include a [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) call in the part of your code which handles the [`dragover`](/en-US/docs/Web/API/HTMLElement/dragover_event) event.
 

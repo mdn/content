@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Test_your_skills/Conditionals", "Learn_web_development/Core/Scripting")}}
 
 In any programming language, the code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is nighttime. In this article, we'll explore how so-called conditional statements work in JavaScript.
 
@@ -693,13 +693,9 @@ function update(bgColor, textColor) {
 
 </details>
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals).
-
 ## Summary
 
-That's all you really need to know about conditional structures in JavaScript right now! Next up, we'll look at looping through code.
+That's all you really need to know about conditional structures in JavaScript right now! In the next article, we'll give you some tests that you can use to check how well you've understood and retained this information.
 
 ## See also
 
@@ -708,4 +704,4 @@ That's all you really need to know about conditional structures in JavaScript ri
 - [if...else reference](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Conditional (ternary) operator reference](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Test_your_skills/Conditionals", "Learn_web_development/Core/Scripting")}}

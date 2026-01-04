@@ -464,13 +464,9 @@ There are several steps here:
 We also need to set up an event listener to watch for the "Start Video" button to be clicked:
 
 ```js
-document.getElementById("startButton").addEventListener(
-  "click",
-  () => {
-    startVideo();
-  },
-  false,
-);
+document.getElementById("startButton").addEventListener("click", () => {
+  startVideo();
+});
 ```
 
 ### Applying constraint set updates
@@ -483,37 +479,33 @@ Next, we set up an event listener for the "Apply Constraints" button. If it's cl
 4. If an error occurs applying either set of constraints, `handleError()` is used to output a message into the log.
 
 ```js
-document.getElementById("applyButton").addEventListener(
-  "click",
-  () => {
-    if (!videoTrack && !audioTrack) {
-      startVideo();
-    } else {
-      buildConstraints();
+document.getElementById("applyButton").addEventListener("click", () => {
+  if (!videoTrack && !audioTrack) {
+    startVideo();
+  } else {
+    buildConstraints();
 
-      const prettyJson = (obj) => JSON.stringify(obj, null, 2);
+    const prettyJson = (obj) => JSON.stringify(obj, null, 2);
 
-      if (videoTrack) {
-        videoTrack
-          .applyConstraints(videoConstraints)
-          .then(() => {
-            videoSettingsText.value = prettyJson(videoTrack.getSettings());
-          })
-          .catch(handleError);
-      }
-
-      if (audioTrack) {
-        audioTrack
-          .applyConstraints(audioConstraints)
-          .then(() => {
-            audioSettingsText.value = prettyJson(audioTrack.getSettings());
-          })
-          .catch(handleError);
-      }
+    if (videoTrack) {
+      videoTrack
+        .applyConstraints(videoConstraints)
+        .then(() => {
+          videoSettingsText.value = prettyJson(videoTrack.getSettings());
+        })
+        .catch(handleError);
     }
-  },
-  false,
-);
+
+    if (audioTrack) {
+      audioTrack
+        .applyConstraints(audioConstraints)
+        .then(() => {
+          audioSettingsText.value = prettyJson(audioTrack.getSettings());
+        })
+        .catch(handleError);
+    }
+  }
+});
 ```
 
 ### Handling the stop button
@@ -557,8 +549,8 @@ function keyDownHandler(event) {
   }
 }
 
-videoConstraintEditor.addEventListener("keydown", keyDownHandler, false);
-audioConstraintEditor.addEventListener("keydown", keyDownHandler, false);
+videoConstraintEditor.addEventListener("keydown", keyDownHandler);
+audioConstraintEditor.addEventListener("keydown", keyDownHandler);
 ```
 
 ### Show constrainable properties the browser supports

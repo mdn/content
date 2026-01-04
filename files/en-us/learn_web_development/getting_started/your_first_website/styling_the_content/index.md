@@ -51,7 +51,7 @@ This renders as follows on its own:
 
 {{EmbedLiveSample("basic-html", "100%", "140px")}}
 
-If we add some CSS into the mix, we can change how the HTML looks. The following snippet selects the {{htmlelement("p")}} element and gives it a different [font](/en-US/docs/Web/CSS/font-family) and a red text {{cssxref("color")}}. It then selects all the {{htmlelement("li")}} elements and gives each one a greeny-yellow {{cssxref("background-color")}}, a 1-pixel solid black {{cssxref("border")}}, and a 5-pixel [bottom margin](/en-US/docs/Web/CSS/margin-bottom):
+If we add some CSS into the mix, we can change how the HTML looks. The following snippet selects the {{htmlelement("p")}} element and gives it a different [font](/en-US/docs/Web/CSS/Reference/Properties/font-family) and a red text {{cssxref("color")}}. It then selects all the {{htmlelement("li")}} elements and gives each one a greeny-yellow {{cssxref("background-color")}}, a 1-pixel solid black {{cssxref("border")}}, and a 5-pixel [bottom margin](/en-US/docs/Web/CSS/Reference/Properties/margin-bottom):
 
 ```css live-sample___basic-css
 p {
@@ -257,6 +257,20 @@ The above code sets new values for several properties of the {{htmlelement("body
 - `padding: 0 20px 20px 20px;`: This sets four values for padding. The goal is to put some space around the content. In this example, there is no padding on the top of the body, and 20 pixels on the right, bottom, and left. The values set top, right, bottom, and left padding, in that order.
 - `border: 5px solid black;`: This sets values for the width, style, and color of the border. In this case, it's a 5-pixel-wide solid black border around all sides of the body.
 
+### An aside on shorthand properties
+
+CSS property values that set multiple properties in one go are called **shorthand properties**. For example, `padding: 0 20px 20px 20px` is equivalent to the following four properties:
+
+```css
+padding-top: 0;
+padding-right: 20px;
+padding-bottom: 20px;
+padding-left: 20px;
+```
+
+> [!NOTE]
+> Scrimba's [Margin/padding shorthand](https://scrimba.com/frontend-path-c0j/~0g?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> is an interactive lesson providing a practical walkthrough of margin and padding shorthand usage.
+
 ## Positioning and styling the main page title
 
 Now add this:
@@ -308,7 +322,7 @@ If you followed all the instructions in this article, you should have a page tha
 
 ![A Mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
 
-You can [view our version here](https://mdn.github.io/beginner-html-site-styled/). If you get stuck, you can always compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
+You can [view our version here](https://mdn.github.io/beginner-html-site-styled/). If you get stuck, you can always compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-styled/blob/main/styles/style.css).
 
 In this article, we've only scratched the surface of CSS. You'll learn a lot more in our [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) Core module later in the course.
 

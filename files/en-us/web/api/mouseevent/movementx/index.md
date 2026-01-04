@@ -31,6 +31,8 @@ This example logs the amount of mouse movement using `movementX` and {{domxref("
 ### JavaScript
 
 ```js
+const log = document.getElementById("log");
+
 function logMovement(event) {
   log.insertAdjacentHTML(
     "afterbegin",
@@ -39,7 +41,6 @@ function logMovement(event) {
   while (log.childNodes.length > 128) log.lastChild.remove();
 }
 
-const log = document.getElementById("log");
 document.addEventListener("mousemove", logMovement);
 ```
 

@@ -410,7 +410,7 @@ Paste the following styles into `item.component.css`.
 .sm-text-input {
   width: 100%;
   padding: 0.5rem;
-  border: 2px solid #555;
+  border: 2px solid #555555;
   display: block;
   box-sizing: border-box;
   font-size: 1rem;
@@ -442,7 +442,7 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   top: 0;
   width: 1.25em;
   height: 1.25em;
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
   background: white;
 }
 
@@ -457,7 +457,7 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   line-height: 0.8;
   color: #0d8dee;
   transition: all 0.2s;
-  font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
+  font-family: "Lucida Sans Unicode", "Arial Unicode MS", "Arial";
 }
 /* checked mark aspect changes */
 [type="checkbox"]:not(:checked) + label::after {

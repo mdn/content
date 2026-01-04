@@ -1,5 +1,5 @@
 ---
-title: Firefox 34 for developers
+title: Firefox 34 release notes for developers
 short-title: Firefox 34
 slug: Mozilla/Firefox/Releases/34
 page-type: firefox-release-notes
@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 34 was released on December 1st, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 

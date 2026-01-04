@@ -498,12 +498,12 @@ If only a single value is specified (from each category: hour, minute, second), 
 #### Examples
 
 ```js-nolint
-timerange(12); // returns true from noon to 1pm
-timerange(12, 13) // returns true from noon to 1pm
-timerange(12, "GMT") // returns true from noon to 1pm, in the GMT timezone
-timerange(9, 17) // returns true from 9am to 5pm
-timerange(8, 30, 17, 0) // returns true from 8:30am to 5:00pm
-timerange(0, 0, 0, 0, 0, 30) // returns true between midnight and 30 seconds past midnight
+timeRange(12); // returns true from noon to 1pm
+timeRange(12, 13) // returns true from noon to 1pm
+timeRange(12, "GMT") // returns true from noon to 1pm, in the GMT timezone
+timeRange(9, 17) // returns true from 9am to 5pm
+timeRange(8, 30, 17, 0) // returns true from 8:30am to 5:00pm
+timeRange(0, 0, 0, 0, 0, 30) // returns true between midnight and 30 seconds past midnight
 ```
 
 ### alert()
@@ -584,7 +584,7 @@ function FindProxyForURL(url, host) {
   if (isResolvable(host)) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.example.com:8080";
 }
 ```
 
@@ -594,12 +594,12 @@ The above requires consulting the DNS every time; it can be grouped intelligentl
 function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
-    dnsDomainIs(host, ".mydomain.com") ||
+    dnsDomainIs(host, ".example.com") ||
     isResolvable(host)
   ) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.example.com:8080";
 }
 ```
 
@@ -614,7 +614,7 @@ function FindProxyForURL(url, host) {
   if (isInNet(host, "192.0.2.172", "255.255.0.0")) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.example.com:8080";
 }
 ```
 
@@ -624,12 +624,12 @@ Again, use of the DNS server in the above can be minimized by adding redundant r
 function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
-    dnsDomainIs(host, ".mydomain.com") ||
+    dnsDomainIs(host, ".example.com") ||
     isInNet(host, "192.0.2.0", "255.255.0.0")
   ) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.example.com:8080";
 }
 ```
 
@@ -650,14 +650,14 @@ All local accesses are desired to be direct. All proxy servers run on the port 8
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com")) {
+  if (isPlainHostName(host) || dnsDomainIs(host, ".example.com")) {
     return "DIRECT";
   } else if (shExpMatch(host, "*.com")) {
-    return "PROXY proxy1.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+    return "PROXY proxy1.example.com:8080; PROXY proxy4.example.com:8080";
   } else if (shExpMatch(host, "*.edu")) {
-    return "PROXY proxy2.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+    return "PROXY proxy2.example.com:8080; PROXY proxy4.example.com:8080";
   }
-  return "PROXY proxy3.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  return "PROXY proxy3.example.com:8080; PROXY proxy4.example.com:8080";
 }
 ```
 
@@ -670,13 +670,13 @@ Most of the standard JavaScript functionality is available for use in the `FindP
 ```js
 function FindProxyForURL(url, host) {
   if (url.startsWith("http:")) {
-    return "PROXY http-proxy.mydomain.com:8080";
+    return "PROXY http-proxy.example.com:8080";
   } else if (url.startsWith("ftp:")) {
-    return "PROXY ftp-proxy.mydomain.com:8080";
+    return "PROXY ftp-proxy.example.com:8080";
   } else if (url.startsWith("gopher:")) {
-    return "PROXY gopher-proxy.mydomain.com:8080";
+    return "PROXY gopher-proxy.example.com:8080";
   } else if (url.startsWith("https:") || url.startsWith("snews:")) {
-    return "PROXY security-proxy.mydomain.com:8080";
+    return "PROXY security-proxy.example.com:8080";
   }
   return "DIRECT";
 }
@@ -689,7 +689,7 @@ For example:
 
 ```js
 if (shExpMatch(url, "http:*")) {
-  return "PROXY http-proxy.mydomain.com:8080";
+  return "PROXY http-proxy.example.com:8080";
 }
 ```
 
@@ -702,7 +702,7 @@ if (shExpMatch(url, "http:*")) {
 
 Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, at the same time when JavaScript was introduced. Open-sourcing Netscape eventually lead to Firefox itself.
 
-The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h). Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://searchfox.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a `console.log` directive to print it.
+The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h). Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://searchfox.org/firefox-main/source/netwerk/base/ProxyAutoConfig.cpp) as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a `console.log` directive to print it.
 
 Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://learn.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzil.la/558253)).
 

@@ -27,7 +27,7 @@ Modern web hosting services support HTTPS for you, either by default or through 
 
 ### Load subresources over HTTPS
 
-When a page loads resources (scripts, stylesheets, fonts, images, and so on), these resources should also be served over HTTPS. If a page is loaded over HTTPS and it attempts to load resources over HTTP, then the browser will either try to upgrade the load request to use HTTPS or will block the request: this is called [mixed content blocking](/en-US/docs/Web/Security/Mixed_content).
+When a page loads resources (scripts, stylesheets, fonts, images, and so on), these resources should also be served over HTTPS. If a page is loaded over HTTPS and it attempts to load resources over HTTP, then the browser will either try to upgrade the load request to use HTTPS or will block the request: this is called [mixed content blocking](/en-US/docs/Web/Security/Defenses/Mixed_content).
 
 If it's not possible for you to update your code to load resources from HTTPS URLs (for example, because your HTML has been archived) your server can set a [content security policy](/en-US/docs/Web/HTTP/Guides/CSP) that contains the [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Guides/CSP#upgrading_insecure_requests) directive, and the browser will automatically upgrade these requests to HTTPS.
 
@@ -41,7 +41,7 @@ To reduce the risk of this attack, your server should also send the {{httpheader
 
 With HSTS, SSL stripping is prevented except for the first time the browser tries to connect to your site (or, since HSTS has an expiry, the first time after an HSTS record in the browser has expired). To protect your site even on first connection or HSTS record expiry, Chrome maintains a list of domains called the [HSTS preload list](https://hstspreload.org/): if a domain is on this list, then Chrome will always upgrade HTTP request to HTTPS, effectively behaving as if the server has already sent the HSTS header. Safari and Firefox have similar behavior, using a list that is derived from the Chrome list.
 
-### Defense summary checklist
+## Defense summary checklist
 
 - Serve all your site's pages and subresources over HTTPS.
 - If you want to redirect HTTP requests to HTTPS, use HSTS, and consider adding your site to the HSTS preload list.

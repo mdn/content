@@ -47,12 +47,12 @@ To have more control over content and website appearance, most professionals/bus
 - Web hosting is rented file space on a hosting company's [web server](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server). You put website files on the web server. The web server provides website content to website visitors.
 - A [domain name](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) is the unique web address where people find your website, such as `https://www.mozilla.org` or `https://www.bbc.co.uk`. You can rent your domain name for as many years as you want from a **domain registrar**.
 
-If you get your web hosting _and_ domain name from the same company, they tend to be configured automatically to talk to one another. However, If you get them from separate companies, or want to change your hosting to a different company, you need to do a bit of setup to point the domain name to the correct server. This is so that people will see your website when they navigate to that web address. This is usually done by logging into your domain registrar's website, and setting your domain's [nameservers](https://kinsta.com/knowledgebase/what-is-a-nameserver/) to the ones provided by your hosting company.
+If you get your web hosting _and_ domain name from the same company, they tend to be configured automatically to talk to one another. However, If you get them from separate companies, or want to change your hosting to a different company, you need to do a bit of setup to point the domain name to the correct server. This is so that people will see your website when they navigate to that web address. This is usually done by logging into your domain registrar's website, and setting your domain's [nameservers](https://kinsta.com/blog/what-is-a-nameserver/) to the ones provided by your hosting company.
 
 Companies use various mechanisms to transfer files to their web servers. Many will have more than one option; typical options include:
 
 - A drag and drop interface (you'll see an example of this in [Publishing via GitHub](#publishing_via_github), later on).
-- An {{Glossary("FTP", "File Transfer Protocol (FTP)")}} program. FTP programs vary widely, but generally, you have to connect to your web server using details provided by your hosting company (typically username, password, hostname). Then the program shows you your local files and the web server's files in two windows, and provides a way for you to transfer files back and forth.
+- A {{Glossary("FTP", "File Transfer Protocol (FTP)")}} program. FTP programs vary widely, but generally, you have to connect to your web server using details provided by your hosting company (typically username, password, hostname). Then the program shows you your local files and the web server's files in two windows, and provides a way for you to transfer files back and forth.
 - Keeping website source code in a GitHub repo (see below) and granting the hosting company access so they can fetch the source, build it if necessary, and publish it.
 - Some companies will provide [command line tools](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) for you to use to transfer your files.
 
@@ -62,12 +62,13 @@ Companies use various mechanisms to transfer files to their web servers. Many wi
 - Your home or office {{Glossary("ISP", "internet service provider")}} may provide some limited hosting for a small website. The available feature set will be limited, but it might be perfect for your first experiments.
 - There are also free services available like [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/), and [WordPress](https://wordpress.com/). Such services can be limited in scope, but they are good enough for initial experiments.
 
-### Using an online tool like GitHub or Google App Engine
+### Using an online tool
 
 Some tools let you publish your website online:
 
 - [GitHub](https://github.com/) is a "social coding" site. It allows you to upload code repositories for storage in the [Git](https://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. GitHub has a very useful feature called [GitHub Pages](https://pages.github.com/), which allows you to expose website code live on the web.
-- [Google App Engine](https://cloud.google.com/appengine) is a powerful platform that lets you build and run applications on Google's infrastructure — whether you need to build a multi-tiered web application from scratch or host a static website. See [How do you host your website on Google App Engine?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) for more information.
+- [Netlify](https://www.netlify.com/) is a web hosting platform that provides hosting for static websites directly from your GitHub repository. It also provides a number of additional features, such as deployment preview, serverless functions, and form handling.
+- [Fly.io](https://fly.io/) is a platform that allows you to deploy applications and databases close to your users. This is more suitable if you have a web application that requires backend services.
 
 These options are generally free, with a limited feature-set.
 

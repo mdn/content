@@ -97,4 +97,4 @@ xrSession.updateRenderState({
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
 - [Getting started with WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)
-- [Handling lost context in WebGL](https://www.khronos.org/webgl/wiki/HandlingContextLost): Khronos WebGL wiki
+- [Handling lost context in WebGL](https://wikis.khronos.org/webgl/HandlingContextLost): Khronos WebGL wiki

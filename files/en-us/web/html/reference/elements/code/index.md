@@ -19,9 +19,9 @@ The **`<code>`** [HTML](/en-US/docs/Web/HTML) element displays its contents styl
 
 ```css interactive-example
 code {
-  background-color: #eee;
+  background-color: #eeeeee;
   border-radius: 3px;
-  font-family: courier, monospace;
+  font-family: "Courier New", monospace;
   padding: 0 3px;
 }
 ```

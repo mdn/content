@@ -1,5 +1,5 @@
 ---
-title: Firefox 44 for developers
+title: Firefox 44 release notes for developers
 short-title: Firefox 44
 slug: Mozilla/Firefox/Releases/44
 page-type: firefox-release-notes
@@ -9,7 +9,7 @@ sidebar: firefox
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/).
 Firefox 44 was released on January 26, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer tools
 
@@ -207,7 +207,7 @@ _No change._
 
 ### XPCOM
 
-- The `nsIDOMWindow` interface is now empty. Its contents were either no longer used, had moved elsewhere, or were only used from C++. The items available from C++ code now reside in the [nsPIDOMWindow](https://searchfox.org/mozilla-central/source/dom/base/nsPIDOMWindow.h) interface ([Firefox bug 1216401](https://bugzil.la/1216401)).
+- The `nsIDOMWindow` interface is now empty. Its contents were either no longer used, had moved elsewhere, or were only used from C++. The items available from C++ code now reside in the [nsPIDOMWindow](https://searchfox.org/firefox-main/source/dom/base/nsPIDOMWindow.h) interface ([Firefox bug 1216401](https://bugzil.la/1216401)).
 
 ### Other
 

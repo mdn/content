@@ -20,7 +20,56 @@ The main differences to the {{jsxref("Set")}} object are:
   > [!NOTE]
   > This also means that there is no list of current values stored in the collection. `WeakSets` are not enumerable.
 
-### Use case: Detecting circular references
+### Key equality
+
+Like regular `Set`, value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm, which is the same as the `===` operator because `WeakSet` can only hold object and symbol values. This means that for object values, equality is based on object identity. They are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
+
+## Constructor
+
+- {{jsxref("WeakSet/WeakSet", "WeakSet()")}}
+  - : Creates a new `WeakSet` object.
+
+## Instance properties
+
+These properties are defined on `WeakSet.prototype` and shared by all `WeakSet` instances.
+
+- {{jsxref("Object/constructor", "WeakSet.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `WeakSet` instances, the initial value is the {{jsxref("WeakSet/WeakSet", "WeakSet")}} constructor.
+- `WeakSet.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakSet"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
+## Instance methods
+
+- {{jsxref("WeakSet.prototype.add()")}}
+  - : Inserts the specified value into this set, if it is not already present.
+- {{jsxref("WeakSet.prototype.delete()")}}
+  - : Removes the specified value from this set, if it is in the set.
+- {{jsxref("WeakSet.prototype.has()")}}
+  - : Returns a boolean indicating whether the specified value exists in this `WeakSet` or not.
+
+## Examples
+
+### Using the WeakSet object
+
+```js
+const ws = new WeakSet();
+const foo = {};
+const bar = {};
+
+ws.add(foo);
+ws.add(bar);
+
+ws.has(foo); // true
+ws.has(bar); // true
+
+ws.delete(foo); // removes foo from the set
+ws.has(foo); // false, foo has been removed
+ws.has(bar); // true, bar is retained
+```
+
+Note that `foo !== bar`. While they are similar objects, _they are not **the same object**_. And so they are both added to the set.
+
+### Detecting circular references
 
 Functions that call themselves recursively need a way of guarding against circular data structures by tracking which objects have already been processed.
 
@@ -58,51 +107,6 @@ execRecursively((obj) => console.log(obj), foo);
 Here, a `WeakSet` is created on the first run, and passed along with every subsequent function call (using the internal `_refs` parameter).
 
 The number of objects or their traversal order is immaterial, so a `WeakSet` is more suitable (and performant) than a {{jsxref("Set")}} for tracking object references, especially if a very large number of objects is involved.
-
-## Constructor
-
-- {{jsxref("WeakSet/WeakSet", "WeakSet()")}}
-  - : Creates a new `WeakSet` object.
-
-## Instance properties
-
-These properties are defined on `WeakSet.prototype` and shared by all `WeakSet` instances.
-
-- {{jsxref("Object/constructor", "WeakSet.prototype.constructor")}}
-  - : The constructor function that created the instance object. For `WeakSet` instances, the initial value is the {{jsxref("WeakSet/WeakSet", "WeakSet")}} constructor.
-- `WeakSet.prototype[Symbol.toStringTag]`
-  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakSet"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
-
-## Instance methods
-
-- {{jsxref("WeakSet.prototype.add()")}}
-  - : Appends `value` to the `WeakSet` object.
-- {{jsxref("WeakSet.prototype.delete()")}}
-  - : Removes `value` from the `WeakSet`. `WeakSet.prototype.has(value)` will return `false` afterwards.
-- {{jsxref("WeakSet.prototype.has()")}}
-  - : Returns a boolean asserting whether `value` is present in the `WeakSet` object or not.
-
-## Examples
-
-### Using the WeakSet object
-
-```js
-const ws = new WeakSet();
-const foo = {};
-const bar = {};
-
-ws.add(foo);
-ws.add(bar);
-
-ws.has(foo); // true
-ws.has(bar); // true
-
-ws.delete(foo); // removes foo from the set
-ws.has(foo); // false, foo has been removed
-ws.has(bar); // true, bar is retained
-```
-
-Note that `foo !== bar`. While they are similar objects, _they are not **the same object**_. And so they are both added to the set.
 
 ## Specifications
 

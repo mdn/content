@@ -20,12 +20,14 @@ new ToggleEvent(type, init)
 
 - `type`
   - : A string representing the type of event. In the case of `ToggleEvent` this is always `beforetoggle` or `toggle`.
-- `init`
+- `init` {{optional_inline}}
   - : An object containing the following properties:
-    - `newState`
-      - : A string representing the state the element is transitioning to. Possible values are `"open"` and `"closed"`.
-    - `oldState`
-      - : A string representing the state the element is transitioning from. Possible values are `"open"` and `"closed"`.
+    - `newState` {{optional_inline}}
+      - : A string representing the state the element is transitioning to. Can be any value, but events fired by the browser set this to `"open"` or `"closed"`. Defaults to `""`.
+    - `oldState` {{optional_inline}}
+      - : A string representing the state the element is transitioning from. Can be any value, but events fired by the browser set this to `"open"` or `"closed"`. Defaults to `""`.
+    - `source` {{optional_inline}}
+      - : An {{domxref("Element")}} representing the HTML popover control element that initiated the toggle. Defaults to `null`.
 
 ## Examples
 
@@ -41,6 +43,9 @@ const popover = document.getElementById("mypopover");
 popover.addEventListener("beforetoggle", (event) => {
   if (event.newState === "open") {
     console.log("Popover is being shown");
+    if (event.source) {
+      console.log("Initiated by:", event.source);
+    }
   } else {
     console.log("Popover is being hidden");
   }

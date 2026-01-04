@@ -35,13 +35,15 @@ new ImageData(dataArray, width, height, settings)
     array is given: the height will be inferred from the array's size and the given width.
 - `settings` {{optional_inline}}
   - : An object with the following properties:
-    - `colorSpace`: Specifies the color space of the image data. Can be set to `"srgb"` for the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) or `"display-p3"` for the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
-    - `pixelFormat`: Specifies the pixel format. Possible values:
-      - `"rgba-unorm8"`, for RGBA with 8 bit per component unsigned normalized format, using a {{jsxref("Uint8ClampedArray")}}.
-      - `"rgba-float16"`, for RGBA with 16 bits per component, using a {{jsxref("Float16Array")}}. Floating-point pixel values allow representing colors in arbitrarily wide gamuts and high dynamic range (HDR).
+    - `colorSpace`
+      - : Specifies the color space of the image data. Can be set to `"srgb"` for the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) or `"display-p3"` for the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
+    - `pixelFormat`
+      - : Specifies the pixel format. Possible values:
+        - `"rgba-unorm8"`, for RGBA with 8 bit per component unsigned normalized format, using a {{jsxref("Uint8ClampedArray")}}. This is the default.
+        - `"rgba-float16"`, for RGBA with 16 bits per component, using a {{jsxref("Float16Array")}}. Floating-point pixel values allow representing colors in arbitrarily wide gamuts and high dynamic range (HDR).
 
 - `dataArray`
-  - : A {{jsxref("Uint8ClampedArray")}} containing the underlying pixel representation of the image. If no such array is given, an image with a transparent black rectangle of the specified `width` and `height` will be created.
+  - : A {{jsxref("Uint8ClampedArray")}} or {{jsxref("Float16Array")}} containing the underlying pixel representation of the image. If no such array is given, an image with a transparent black rectangle of the specified `width` and `height` will be created. The type of the `dataArray` must match `settings.pixelFormat`.
 
 ### Return value
 
@@ -50,11 +52,9 @@ A new {{domxref('ImageData')}} object.
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
-  - : Thrown if `dataArray` is specified, but its length is not a multiple of `(4 * width)` or `(4 * width * height)`.
+  - : Thrown if `dataArray` is specified, but its length is not `(bytesPerPixel * width * height)`, or a multiple of `(bytesPerPixel * width)` if `height` is not specified. `bytesPerPixel` is `4` when `pixelFormat` is `"rgba-unorm8"` and `8` otherwise.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if `dataArray` is of type {{jsxref("Uint8ClampedArray")}} and `pixelFormat` is not set to `"rgba-unorm8"`.
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if `dataArray` is of type {{jsxref("Float16Array")}} and `pixelFormat` is not set to `"rgba-float16"`.
+  - : Thrown if `dataArray` is of type {{jsxref("Uint8ClampedArray")}} and `pixelFormat` is not set to `"rgba-unorm8"`, or if `dataArray` is of type {{jsxref("Float16Array")}} and `pixelFormat` is not set to `"rgba-float16"`.
 
 ## Examples
 

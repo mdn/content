@@ -8,129 +8,88 @@ browser-compat: api.WebGLRenderingContext.texSubImage2D
 
 {{APIRef("WebGL")}}{{AvailableInWorkers}}
 
-The **`WebGLRenderingContext.texSubImage2D()`** method of the
-[WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a sub-rectangle of the
-current texture.
+The **`texSubImage2D()`** method of the {{domxref("WebGLRenderingContext")}} interface of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a two-dimensional sub-rectangle for a texture image.
 
 ## Syntax
 
 ```js-nolint
-// WebGL1
-texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels) // pixels is a TypedArray or a DataView
-texSubImage2D(target, level, xoffset, yoffset, format, type, pixels)
+// WebGL 1:
+texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, srcData)
+texSubImage2D(target, level, xoffset, yoffset, format, type, source)
 
-// WebGL2
-texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, offset)
+// Additionally available in WebGL 2:
+texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, srcData, srcOffset)
 texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, source)
-texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels, srcOffset)
+texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, offset)
 ```
 
 ### Parameters
 
 - `target`
-  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
-    Possible values:
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture. Possible values:
     - `gl.TEXTURE_2D`: A two-dimensional texture.
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_X`: Positive X face for a cube-mapped
-      texture.
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_X`: Negative X face for a cube-mapped
-      texture.
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Y`: Positive Y face for a cube-mapped
-      texture.
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Y`: Negative Y face for a cube-mapped
-      texture.
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Z`: Positive Z face for a cube-mapped
-      texture.
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Z`: Negative Z face for a cube-mapped
-      texture.
+    - `gl.TEXTURE_CUBE_MAP_POSITIVE_X`: Positive X face for a cube-mapped texture.
+    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_X`: Negative X face for a cube-mapped texture.
+    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Y`: Positive Y face for a cube-mapped texture.
+    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Y`: Negative Y face for a cube-mapped texture.
+    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Z`: Positive Z face for a cube-mapped texture.
+    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Z`: Negative Z face for a cube-mapped texture.
 
 - `level`
-  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the n-th mipmap reduction level.
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image level and level _n_ is the n-th mipmap reduction level.
 - `xoffset`
-  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the lower left texel x coordinate of a width-wide
-    by height-wide rectangular subregion of the texture array.
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the lower left texel x coordinate of a width-wide by height-wide rectangular subregion of the texture array.
 - `yoffset`
-  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the lower left texel y coordinate of a width-wide
-    by height-wide rectangular subregion of the texture array.
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the lower left texel y coordinate of a width-wide by height-wide rectangular subregion of the texture array.
 - `width`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture in texels.
 - `height`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture in texels.
 - `format`
-  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the texel data. Possible values:
-    - `gl.ALPHA`: Discards the red, green and blue components and reads the
-      alpha component.
-    - `gl.RGB`: Discards the alpha components and reads the red, green and
-      blue components.
-    - `gl.RGBA`: Red, green, blue and alpha components are read from the
-      color buffer.
-    - `gl.LUMINANCE`: Each color component is a luminance component, alpha
-      is 1.0.
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying how each integer element in the raw texel data should be interpreted as color components. Possible values:
+    - `gl.ALPHA`: Discards the red, green and blue components and reads the alpha component.
+    - `gl.RGB`: Discards the alpha components and reads the red, green and blue components.
+    - `gl.RGBA`: Red, green, blue and alpha components are read from the color buffer.
+    - `gl.LUMINANCE`: Each color component is a luminance component, alpha is 1.0.
     - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
 
     When using the {{domxref("EXT_sRGB")}} extension:
     - `ext.SRGB_EXT`
     - `ext.SRGB_ALPHA_EXT`
 
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-    the following values are available additionally:
+    When using a {{domxref("WebGL2RenderingContext")}}, the following values are available additionally:
     - `gl.RED`
-    - `gl.RG`
     - `gl.RED_INTEGER`
+    - `gl.RG`
     - `gl.RG_INTEGER`
     - `gl.RGB_INTEGER`
     - `gl.RGBA_INTEGER`
+    - `gl.DEPTH_COMPONENT`
+    - `gl.DEPTH_STENCIL`
 
 - `type`
-  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the texel data. Possible values:
-    - `gl.UNSIGNED_BYTE`: 8 bits per channel for `gl.RGBA`
-    - `gl.UNSIGNED_SHORT_5_6_5`: 5 red bits, 6 green bits, 5 blue bits.
-    - `gl.UNSIGNED_SHORT_4_4_4_4`: 4 red bits, 4 green bits, 4 blue bits, 4
-      alpha bits.
-    - `gl.UNSIGNED_SHORT_5_5_5_1`: 5 red bits, 5 green bits, 5 blue bits, 1
-      alpha bit.
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the size of each integer element in the raw texel data. For the combinations of `format` and `type` available, see {{domxref("WebGLRenderingContext.texImage2D()")}}.
 
-    When using the {{domxref("OES_texture_float")}} extension:
-    - `gl.FLOAT`
+The texture source can be provided in one of three ways: from an {{jsxref("ArrayBuffer")}} (possibly shared) using `srcData` and `srcOffset`; from a DOM pixel `source`; or, in WebGL 2, from `gl.PIXEL_UNPACK_BUFFER` using `offset`.
 
-    When using the {{domxref("OES_texture_half_float")}} extension:
-    - `gl.HALF_FLOAT_OES`
+- `srcData`
+  - : A {{jsxref("TypedArray")}} or {{jsxref("DataView")}} containing the compressed texture data. Its type must match the `type` parameter; see {{domxref("WebGLRenderingContext.texImage2D()")}}.
+- `srcOffset` {{optional_inline}}
+  - : (WebGL 2 only) An integer specifying the index of `srcData` to start reading from. Defaults to `0`.
+- `source`
+  - : Read from a DOM pixel source, which can be one of:
+    - {{domxref("ImageBitmap")}}
+    - {{domxref("ImageData")}}
+    - {{domxref("HTMLImageElement")}}
+    - {{domxref("HTMLCanvasElement")}}
+    - {{domxref("HTMLVideoElement")}}
+    - {{domxref("OffscreenCanvas")}}
+    - {{domxref("VideoFrame")}}
 
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-    the following values are available additionally:
-    - `gl.BYTE`
-    - `gl.UNSIGNED_SHORT`
-    - `gl.SHORT`
-    - `gl.UNSIGNED_INT`
-    - `gl.INT`
-    - `gl.HALF_FLOAT`
-    - `gl.FLOAT`
-    - `gl.UNSIGNED_INT_2_10_10_10_REV`
-    - `gl.UNSIGNED_INT_10F_11F_11F_REV`
-    - `gl.UNSIGNED_INT_5_9_9_9_REV`
-    - `gl.UNSIGNED_INT_24_8`
-    - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be
-      [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
-
-- `pixels`
-  - : One of the following objects can be used as a pixel source for the texture:
-    - {{jsxref("Uint8Array")}} (Must be used if `type` is `gl.UNSIGNED_BYTE`)
-    - {{jsxref("Uint16Array")}} (Must be used if `type` is either
-      `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`,
-      `gl.UNSIGNED_SHORT_5_5_5_1`, or `ext.HALF_FLOAT_OES`)
-    - {{jsxref("Float32Array")}} (Must be used if `type` is `gl.FLOAT`)
-    - {{domxref("ImageData")}},
-    - {{domxref("HTMLImageElement")}},
-    - {{domxref("HTMLCanvasElement")}},
-    - {{domxref("HTMLVideoElement")}},
-    - {{domxref("ImageBitmap")}}.
+    In WebGL 1, the `width` and `height` are always inferred from the source. In WebGL 2, they can also be explicitly specified.
 
 - `offset`
-  - : (WebGL 2 only) A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the
-    {{domxref("WebGLBuffer")}}'s data store. Used to upload data to the currently bound
-    {{domxref("WebGLTexture")}} from the `WebGLBuffer` bound to the
-    `PIXEL_UNPACK_BUFFER` target.
+  - : (WebGL 2 only) A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the starting address in the buffer bound to `gl.PIXEL_UNPACK_BUFFER`.
 
 ### Return value
 

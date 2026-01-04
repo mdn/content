@@ -11,6 +11,11 @@ The **`SpeechRecognitionErrorEvent`** interface of the [Web Speech API](/en-US/d
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("SpeechRecognitionErrorEvent.SpeechRecognitionErrorEvent", "SpeechRecognitionErrorEvent()")}}
+  - : Creates a new `SpeechRecognitionErrorEvent` object.
+
 ## Instance properties
 
 _`SpeechRecognitionErrorEvent` also inherits properties from its parent interface, {{domxref("Event")}}._

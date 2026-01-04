@@ -80,7 +80,7 @@ visited.
 
 ### Printing the contents of a Map object
 
-The following code logs a line for each element in an `Map` object:
+The following code logs a line for each element in a `Map` object:
 
 ```js
 function logMapElements(value, key, map) {

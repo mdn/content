@@ -48,13 +48,13 @@ customElements.define(
       let templateContent = template.content;
 
       const shadowRoot = this.attachShadow({ mode: "open" });
-      shadowRoot.appendChild(templateContent.cloneNode(true));
+      shadowRoot.appendChild(document.importNode(templateContent, true));
     }
   },
 );
 ```
 
-The key point to note here is that we append a clone of the template content to the shadow root, created using the {{domxref("Node.cloneNode()")}} method.
+The key point to note here is that we append a clone of the template content to the shadow root, created using the {{domxref("Document.importNode()")}} method.
 
 And because we are appending its contents to a shadow DOM, we can include some styling information inside the template in a {{htmlelement("style")}} element, which is then encapsulated inside the custom element.
 This wouldn't work if we just appended it to the standard DOM.
@@ -66,7 +66,7 @@ So for example:
   <style>
     p {
       color: white;
-      background-color: #666;
+      background-color: #666666;
       padding: 5px;
     }
   </style>
@@ -129,7 +129,7 @@ The `name` and `slot` attributes both default to the empty string, so elements w
   <style>
     p {
       color: white;
-      background-color: #666;
+      background-color: #666666;
       padding: 5px;
     }
   </style>
@@ -180,7 +180,7 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
 <template id="element-details-template">
   <style>
     details {
-      font-family: "Open Sans Light", Helvetica, Arial;
+      font-family: "Open Sans Light", "Helvetica", "Arial";
     }
     .name {
       font-weight: bold;
@@ -192,7 +192,7 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
     }
     h4 span {
       background: #217ac0;
-      padding: 2px 6px 2px 6px;
+      padding: 2px 6px;
     }
     h4 span {
       border: 1px solid #cee9f9;
@@ -255,7 +255,7 @@ customElements.define(
         "element-details-template",
       ).content;
       const shadowRoot = this.attachShadow({ mode: "open" });
-      shadowRoot.appendChild(template.cloneNode(true));
+      shadowRoot.appendChild(document.importNode(template, true));
     }
   },
 );
@@ -304,7 +304,7 @@ dl {
 }
 dt {
   color: #217ac0;
-  font-family: Consolas, "Liberation Mono", Courier;
+  font-family: "Consolas", "Liberation Mono", "Courier New";
   font-size: 110%;
   font-weight: bold;
 }

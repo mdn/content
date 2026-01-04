@@ -1,5 +1,5 @@
 ---
-title: Firefox 98 for developers
+title: Firefox 98 release notes for developers
 short-title: Firefox 98
 slug: Mozilla/Firefox/Releases/98
 page-type: firefox-release-notes

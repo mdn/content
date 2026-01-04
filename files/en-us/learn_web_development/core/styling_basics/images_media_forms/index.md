@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics")}}
 
 In this lesson we will take a look at how certain special elements are treated in CSS. Images, other media, and form elements behave a little differently from regular boxes in terms of your ability to style them with CSS. Understanding what is and isn't possible can save some frustration, and this lesson will highlight some of the main things that you need to know.
 
@@ -95,13 +95,42 @@ As we learned in [Sizing items in CSS](/en-US/docs/Learn_web_development/Core/St
 
 Try adding `max-width: 100%` to the `<img>` element rule in the example above. You will see that the smaller image remains unchanged, but the larger one becomes smaller to fit into the box.
 
-### Handling image overflow with `object-fit`
+### Handling image display issues with `object-fit`
 
-You can make other choices about images inside containers. For example, you may want to size an image so it completely covers a box.
+The above example uncovers another set of issues with displaying images inside containers. You'll notice that, after you set `max-width: 100%` on the images, the second image doesn't quite fill its container; there's a gap left at the bottom. This is because giving an image a specific width causes its height to be set so that its {{glossary("aspect ratio")}} is preserved.
 
-The {{cssxref("object-fit")}} property can help you here. When using `object-fit` the replaced element can be sized to fit a box in a variety of ways.
+How can we size the image so it completely covers its container? We could set the container to have a fixed `width` _and_ `height`, and then give the image a `width` and `height` of `100%`, as shown in the next example:
 
-Below, the first example uses the value `cover`, which sizes the image down, maintaining the aspect ratio so that it neatly fills the box. As the aspect ratio is maintained, some parts of the image will be cropped by the box. The second example uses `contain` as a value: this scales the image down until it is small enough to fit inside the box. This results in "letterboxing" as it is not the same aspect ratio as the box.
+```html live-sample___object-fit1
+<div class="box">
+  <img
+    alt="balloons"
+    src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+</div>
+```
+
+```css live-sample___object-fit1
+.box {
+  border: 5px solid darkblue;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+```
+
+{{EmbedLiveSample("object-fit1", "", "250px")}}
+
+However, the image is distorted as its aspect ratio has been changed — it looks _stretched_. To fix this, you can use the {{cssxref("object-fit")}} property, which sets how the image is resized to fit its container (the `<img>` element). The `object-fit` property can take a few different values, the most useful of which are as follows:
+
+- `cover`: The image completely fills the `<img>` element while maintaining its aspect ratio, therefore some parts of the image are not displayed.
+- `contain`: The image completely fits inside the `<img>` element while maintaining its aspect ratio, therefore some parts of the `<img>` element are not filled. This results in "letterboxing" or "pillarboxing".
+
+The next example shows the `cover` and `contain` values set on two copies of the image shown in the previous example, so you can see what their effects are:
 
 ```html live-sample___object-fit
 <div class="wrapper">
@@ -152,7 +181,13 @@ img {
 
 {{EmbedLiveSample("object-fit", "", "250px")}}
 
-You could also try the value of `fill`, which will fill the box but not maintain the aspect ratio.
+> [!NOTE]
+> Key takeaway points here are:
+>
+> 1. The `object-fit` property resizes the image itself to fit inside the `<img>` element that is embedding it onto the page
+> 2. The `<img>` needs to be resized for `object-fit` to have any effect.
+>
+> If the `<img>` element is not resized, the image will be shown at its original (or _intrinsic_) size and aspect ratio, therefore `object-fit` will have no effect.
 
 ## Replaced elements in layout
 
@@ -235,14 +270,14 @@ label {
 input[type="text"],
 input[type="email"] {
   border: 2px solid black;
-  margin: 0 0 1em 0;
+  margin-bottom: 1em;
   padding: 10px;
   width: 80%;
 }
 
 input[type="submit"] {
-  border: 3px solid #333;
-  background-color: #999;
+  border: 3px solid #333333;
+  background-color: #999999;
   border-radius: 5px;
   padding: 10px 2em;
   font-weight: bold;
@@ -251,7 +286,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background-color: #333;
+  background-color: #333333;
 }
 ```
 
@@ -331,19 +366,15 @@ textarea {
 > [!NOTE]
 > Normalizing stylesheets are used by many developers to create a set of baseline styles to use on all projects. Typically these do similar things to those described above, making sure that anything different across browsers is set to a consistent default before you do your own work on the CSS. They are not as important as they once were, as browsers are typically more consistent than in the past. However, if you want to take a look at an example, check out [Normalize.css](https://necolas.github.io/normalize.css/), which is a very popular stylesheet used as a base by many projects.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and form elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images).
-
 ## Summary
 
 This lesson has highlighted some of the differences you will encounter when working with images, media, and other unusual elements in CSS.
 
-In the next article, we'll learn how to style HTML tables.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on handling images and form elements in CSS.
 
 ## See also
 
 - [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - [Advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics")}}

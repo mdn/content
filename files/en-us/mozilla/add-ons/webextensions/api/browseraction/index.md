@@ -67,6 +67,8 @@ With the `browserAction` API, you can:
 
 - {{WebExtAPIRef("browserAction.onClicked")}}
   - : Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.
+- {{WebExtAPIRef("browserAction.onUserSettingsChanged")}}
+  - : Fired when a change occurs in the user-specified settings that affect an extension's browser action.
 
 {{WebExtExamples("h2")}}
 

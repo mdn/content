@@ -300,7 +300,7 @@ label {
 #image {
   object-position: right top;
   object-fit: contain;
-  background-color: #ddd;
+  background-color: #dddddd;
 }
 ```
 

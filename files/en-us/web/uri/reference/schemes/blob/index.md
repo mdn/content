@@ -57,6 +57,10 @@ In older versions of the Media Source specification, attaching a stream to a {{H
 > [!WARNING]
 > If you still have code that relies on `createObjectURL()` to attach streams to media elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject", "srcObject")}} to the `MediaStream` directly.
 
+### Fetching with the Range header
+
+Blob URLs support fetching with the [`Range`](/en-US/docs/Web/HTTP/Reference/Headers/Range) header to request partial content. This is particularly useful when working with large blobs, allowing you to fetch only the necessary parts of the blob instead of the entire content. For an example, see [fetching a range from a blob URL](/en-US/docs/Web/HTTP/Reference/Headers/Range#fetching_a_range_from_a_blob_url).
+
 ## Examples
 
 ### Valid blob URLs

@@ -16,7 +16,7 @@ An example of synthetic monitoring is [WebPageTest.org](https://www.webpagetest.
 
 Controlling for environmental variables is helpful in understanding where performance bottlenecks have been occurring and identifying the source of any performance issues. For example, but it isn't reflective of the actual experience of users, especially the long tail.
 
-Synthetic monitoring can be an important component of regression testing and production site monitoring. Test the site at every stage of development and regularly in production. Changes from baseline performance as part of continuous integration should fail a push. If an issue arises in production, synthetic monitoring can provide insight, helping identify, isolate, and resolve problems before they negatively user experience.
+Synthetic monitoring can be an important component of regression testing and production site monitoring. Test the site at every stage of development and regularly in production. Changes from baseline performance as part of {{glossary("continuous integration")}} should fail a push. If an issue arises in production, synthetic monitoring can provide insight, helping identify, isolate, and resolve problems before they negatively user experience.
 
 ## Real User Monitoring
 

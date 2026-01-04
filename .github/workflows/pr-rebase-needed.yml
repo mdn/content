@@ -3,6 +3,8 @@ name: "PR conflicts"
 on:
   push:
   pull_request_target:
+    branches:
+      - main
     types: [synchronize]
 
 permissions:

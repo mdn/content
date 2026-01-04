@@ -41,13 +41,9 @@ function f(a) {
 } // allocates a function (which is a callable object)
 
 // function expressions also allocate an object
-someElement.addEventListener(
-  "click",
-  () => {
-    someElement.style.backgroundColor = "blue";
-  },
-  false,
-);
+someElement.addEventListener("click", () => {
+  someElement.style.backgroundColor = "blue";
+});
 ```
 
 #### Allocation via function calls
@@ -64,7 +60,7 @@ Some methods allocate new values or objects:
 
 ```js
 const s = "string";
-const s2 = s.substr(0, 3); // s2 is a new string
+const s2 = s.substring(0, 3); // s2 is a new string
 // Since strings are immutable values,
 // JavaScript may decide to not allocate memory,
 // but just store the [0, 3] range.
@@ -216,7 +212,7 @@ If `key` is stored as an actual reference, it would create a cyclic reference an
 As a rough mental model, think of a `WeakMap` as the following implementation:
 
 > [!WARNING]
-> This is not a polyfill nor is anywhere close to how it's implemented in the engine (which hooks into the garbage collection mechanism).
+> This is not a polyfill, nor is it anywhere close to how it's implemented in the engine (which hooks into the garbage collection mechanism).
 
 ```js
 class MyWeakMap {

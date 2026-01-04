@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.copy_event
 ---
 
-{{APIRef}}
+{{APIRef("Clipboard API")}}
 
 The **`copy`** event of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) fires when the user initiates a copy action through the browser's user interface.
 

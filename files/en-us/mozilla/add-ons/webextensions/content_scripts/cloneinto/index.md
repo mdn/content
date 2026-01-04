@@ -61,13 +61,9 @@ Scripts running in the page can access the object:
 
 ```js
 // page script
-button.addEventListener(
-  "click",
-  () => {
-    console.log(window.addonScriptObject.greeting); // "hello from your extension"
-  },
-  false,
-);
+button.addEventListener("click", () => {
+  console.log(window.addonScriptObject.greeting); // "hello from your extension"
+});
 ```
 
 Of course, you don't have to assign the clone to the window itself; you can assign it to some other object in the target scope:
@@ -113,13 +109,9 @@ window.addonScriptObject = cloneInto(addonScriptObject, window, {
 ```js
 // page script
 const test = document.getElementById("test");
-test.addEventListener(
-  "click",
-  () => {
-    window.addonScriptObject.greetMe();
-  },
-  false,
-);
+test.addEventListener("click", () => {
+  window.addonScriptObject.greetMe();
+});
 ```
 
 ### Cloning objects that contain DOM elements
@@ -139,13 +131,9 @@ window.addonScriptObject = cloneInto(addonScriptObject, window, {
 ```js
 // page script
 const test = document.getElementById("test");
-test.addEventListener(
-  "click",
-  () => {
-    console.log(window.addonScriptObject.body.innerHTML);
-  },
-  false,
-);
+test.addEventListener("click", () => {
+  console.log(window.addonScriptObject.body.innerHTML);
+});
 ```
 
 Access to these objects in the target scope is subject to the normal [script security checks](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/index.html).

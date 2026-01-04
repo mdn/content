@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.auxclick_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`auxclick`** event is fired at an {{domxref("Element")}} when a non-primary pointing device button (any mouse button other than the primary—usually leftmost—button) has been pressed and released both within the same element.
 
@@ -105,7 +105,7 @@ Notice that in addition to capturing the `auxclick` event using `onauxclick`, th
 ### HTML
 
 ```html
-<button><h1>Click me!</h1></button>
+<button>Click me!</button>
 ```
 
 ```css hidden
@@ -129,9 +129,6 @@ button {
   display: block;
   width: 100%;
   height: 100%;
-}
-
-h1 {
   letter-spacing: 0.5rem;
 }
 ```

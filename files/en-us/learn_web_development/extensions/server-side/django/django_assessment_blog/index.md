@@ -280,7 +280,7 @@ Some general hints:
              """
              Add author and associated blog to form data before setting it as valid (so it is saved to model)
              """
-             #Add logged-in user as author of comment
+             # Add logged-in user as author of comment
              form.instance.author = self.request.user
              #Associate comment with blog based on passed id
              form.instance.blog=get_object_or_404(Blog, pk = self.kwargs['pk'])

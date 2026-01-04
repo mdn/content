@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Map.set
 sidebar: jsref
 ---
 
-The **`set()`** method of {{jsxref("Map")}} instances adds or updates an entry in this map with a specified key and a value.
+The **`set()`** method of {{jsxref("Map")}} instances adds a new entry with a specified key and value to this `Map`, or updates an existing entry if the key already exists.
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
 
@@ -31,9 +31,9 @@ set(key, value)
 ### Parameters
 
 - `key`
-  - : The key of the element to add to the `Map` object. The key may be any [JavaScript type](/en-US/docs/Web/JavaScript/Guide/Data_structures) (any [primitive value](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Guide/Data_structures#objects)).
+  - : The key of the entry to add to or modify within the `Map` object. Can be any value. Object keys are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 - `value`
-  - : The value of the element to add to the `Map` object. The value may be any [JavaScript type](/en-US/docs/Web/JavaScript/Guide/Data_structures) (any [primitive value](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Guide/Data_structures#objects)).
+  - : The value of the entry to add to or modify within the `Map` object. Can be any value.
 
 ### Return value
 
@@ -56,8 +56,7 @@ myMap.set("bar", "baz");
 
 ### Using the set() with chaining
 
-Since the `set()` method returns back the same `Map` object, you can chain the
-method call like below:
+Since the `set()` method returns back the same `Map` object, you can chain the method call like below:
 
 ```js
 // Add new elements to the map with chaining.
@@ -75,5 +74,6 @@ myMap.set("bar", "foo").set(1, "foobar").set(2, "baz");
 ## See also
 
 - {{jsxref("Map")}}
+- {{jsxref("Map.prototype.delete()")}}
 - {{jsxref("Map.prototype.get()")}}
 - {{jsxref("Map.prototype.has()")}}

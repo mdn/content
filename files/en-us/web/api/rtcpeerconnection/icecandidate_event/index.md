@@ -105,18 +105,14 @@ This example creates a simple handler for the `icecandidate` event that uses a f
 First, an example using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-pc.addEventListener(
-  "icecandidate",
-  (ev) => {
-    if (ev.candidate !== null) {
-      sendMessage({
-        type: "new-ice-candidate",
-        candidate: ev.candidate,
-      });
-    }
-  },
-  false,
-);
+pc.addEventListener("icecandidate", (ev) => {
+  if (ev.candidate !== null) {
+    sendMessage({
+      type: "new-ice-candidate",
+      candidate: ev.candidate,
+    });
+  }
+});
 ```
 
 You can also set the `onicecandidate` event handler property directly:

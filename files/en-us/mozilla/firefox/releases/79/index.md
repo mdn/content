@@ -1,5 +1,5 @@
 ---
-title: Firefox 79 for developers
+title: Firefox 79 release notes for developers
 short-title: Firefox 79
 slug: Mozilla/Firefox/Releases/79
 page-type: firefox-release-notes
@@ -45,7 +45,7 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 #### Removals
 
-- The [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media feature's `no-preference` value has been removed from the [media queries spec](https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-color-scheme), and from Firefox ([Firefox bug 1643656](https://bugzil.la/1643656)).
+- The [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media feature's `no-preference` value has been removed from the [media queries spec](https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-color-scheme), and from Firefox ([Firefox bug 1643656](https://bugzil.la/1643656)).
 
 ### JavaScript
 

@@ -3,15 +3,11 @@ title: Temporal.ZonedDateTime.prototype.minute
 short-title: minute
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/minute
 page-type: javascript-instance-accessor-property
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.minute
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
-
-The **`minute`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a integer from 0 to 59 representing the minute component of this time.
+The **`minute`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns an integer from 0 to 59 representing the minute component of this time.
 
 The set accessor of `minute` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/ZonedDateTime/with", "with()")}} method to create a new `Temporal.ZonedDateTime` object with the desired new value.
 

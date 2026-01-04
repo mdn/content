@@ -302,7 +302,7 @@ These properties are own properties of each `Array` instance.
 - {{jsxref("Array.prototype.entries()")}}
   - : Returns a new [_array iterator_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) object that contains the key/value pairs for each index in an array.
 - {{jsxref("Array.prototype.every()")}}
-  - : Returns `true` if every element in the calling array satisfies the testing function.
+  - : Returns `false` if it finds one element in the array that does not satisfy the provided testing function. Otherwise, it returns `true`.
 - {{jsxref("Array.prototype.fill()")}}
   - : Fills all the elements of an array from a start index to an end index with a static value.
 - {{jsxref("Array.prototype.filter()")}}
@@ -348,7 +348,7 @@ These properties are own properties of each `Array` instance.
 - {{jsxref("Array.prototype.slice()")}}
   - : Extracts a section of the calling array and returns a new array.
 - {{jsxref("Array.prototype.some()")}}
-  - : Returns `true` if at least one element in the calling array satisfies the provided testing function.
+  - : Returns `true` if it finds one element in the array that satisfies the provided testing function. Otherwise, it returns `false`.
 - {{jsxref("Array.prototype.sort()")}}
   - : Sorts the elements of an array in place and returns the array.
 - {{jsxref("Array.prototype.splice()")}}

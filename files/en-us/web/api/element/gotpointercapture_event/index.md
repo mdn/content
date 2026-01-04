@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.gotpointercapture_event
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Events")}}
 
 The **`gotpointercapture`** event is fired when an element captures a pointer using [`setPointerCapture()`](/en-US/docs/Web/API/Element/setPointerCapture).
 

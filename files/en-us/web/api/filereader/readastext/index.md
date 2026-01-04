@@ -57,14 +57,10 @@ function previewFile() {
   const file = fileInput.files[0];
   const reader = new FileReader();
 
-  reader.addEventListener(
-    "load",
-    () => {
-      // this will then display a text file
-      content.innerText = reader.result;
-    },
-    false,
-  );
+  reader.addEventListener("load", () => {
+    // this will then display a text file
+    content.innerText = reader.result;
+  });
 
   if (file) {
     reader.readAsText(file);

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.createConicGradient
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.createConicGradient()`** method of the Canvas 2D API creates a gradient around a point with given coordinates.
 
@@ -32,8 +32,7 @@ createConicGradient(startAngle, x, y)
 
 ### Return value
 
-- {{domxref("CanvasGradient")}}
-  - : A conic `CanvasGradient`.
+A conic {{domxref("CanvasGradient")}}.
 
 ## Examples
 

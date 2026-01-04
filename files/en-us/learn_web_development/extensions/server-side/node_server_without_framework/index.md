@@ -1,5 +1,6 @@
 ---
 title: Node.js server without a framework
+short-title: Plain Node.js server
 slug: Learn_web_development/Extensions/Server-side/Node_server_without_framework
 page-type: guide
 sidebar: learnsidebar

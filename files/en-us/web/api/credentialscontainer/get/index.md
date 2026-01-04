@@ -100,7 +100,7 @@ If a single credential cannot be unambiguously obtained, the promise resolves wi
 - `AbortError` {{domxref("DOMException")}}
   - : The request was aborted by a call to the {{domxref("AbortController.abort", "abort()")}} method of the {{domxref("AbortController")}} associated with this method's [`signal`](#signal) option.
 
-- `IdentityCredentialError` {{domxref("DOMException")}}
+- {{domxref("IdentityCredentialError")}}
   - : When requesting an {{domxref("IdentityCredential")}}, the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, and rejects with an error response containing information about the reason.
 
 - `NetworkError` {{domxref("DOMException")}}
@@ -134,7 +134,9 @@ async function signIn() {
         {
           configURL: "https://accounts.idp.example/config.json",
           clientId: "********",
-          nonce: "******",
+          params: {
+            /* IdP-specific parameters */
+          },
         },
       ],
     },
@@ -155,7 +157,9 @@ async function signIn() {
         {
           configURL: "https://accounts.idp.example/config.json",
           clientId: "********",
-          nonce: "******",
+          params: {
+            /* IdP-specific parameters */
+          },
           loginHint: "user1@example.com",
         },
       ],
@@ -175,7 +179,9 @@ async function signIn() {
           {
             configURL: "https://accounts.idp.example/config.json",
             clientId: "********",
-            nonce: "******",
+            params: {
+              /* IdP-specific parameters */
+            },
           },
         ],
       },

@@ -3,12 +3,10 @@ title: "Element: moveBefore() method"
 short-title: moveBefore()
 slug: Web/API/Element/moveBefore
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Element.moveBefore
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`moveBefore()`** method of the {{domxref("Element")}} interface moves a given {{domxref("Node")}} inside the invoking node as a direct child, before a given reference node.
 
@@ -46,7 +44,7 @@ None ({{jsxref("undefined")}}).
 
 The `moveBefore()` method moves a given node to a new place in the DOM. It provides similar functionality to the {{domxref("Node.insertBefore()")}} method, except that it doesn't remove and then reinsert the node. This means that the state of the node (which would be reset if moving it with `insertBefore()` and similar mechanisms) is preserved after the move. This includes:
 
-- [Animation](/en-US/docs/Web/CSS/CSS_animations) and [transition](/en-US/docs/Web/CSS/CSS_transitions) state.
+- [Animation](/en-US/docs/Web/CSS/Guides/Animations) and [transition](/en-US/docs/Web/CSS/Guides/Transitions) state.
 - {{htmlelement("iframe")}} loading state.
 - Interactivity states (for example, {{cssxref(":focus")}} and {{cssxref(":active")}}).
 - [Fullscreen](/en-US/docs/Web/API/Fullscreen_API) element state.
@@ -100,7 +98,7 @@ The HTML features an {{htmlelement("article")}} element containing a {{htmleleme
 
 #### CSS
 
-We provide some rudimentary styling for the look and feel and spacing of the boxes, and use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to center their content.
+We provide some rudimentary styling for the look and feel and spacing of the boxes, and use [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to center their content.
 
 ```css live-sample___movebefore-basic
 #section1,
@@ -170,7 +168,6 @@ The HTML features an {{htmlelement("article")}} element containing two {{htmlele
         height="200"
         src="https://www.youtube.com/embed/XvoENpR9cCQ?si=o2i6MvxugD-O5yyv"
         title="YouTube video player"
-        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
@@ -187,7 +184,7 @@ The HTML features an {{htmlelement("article")}} element containing two {{htmlele
 
 #### CSS
 
-We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) for the layout to make the two `<section>` elements sit side-by-side, and space the buttons evenly inside the `controls` `<div>`.
+We use [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) for the layout to make the two `<section>` elements sit side-by-side, and space the buttons evenly inside the `controls` `<div>`.
 
 ```css live-sample___movebefore-state
 #wrapper,
@@ -198,6 +195,10 @@ We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) for the layout to 
 
 #wrapper {
   margin-bottom: 10px;
+}
+
+iframe {
+  border: none;
 }
 
 section {

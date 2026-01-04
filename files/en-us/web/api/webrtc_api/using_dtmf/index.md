@@ -78,9 +78,6 @@ let mediaConstraints = {
   audio: true,
   video: false,
 };
-
-let dialButton = null;
-let logElement = null;
 ```
 
 These are, in order:
@@ -95,20 +92,15 @@ These are, in order:
   - : Because some browsers have not yet implemented {{domxref("RTCPeerConnection.addTrack()")}}, therefore requiring the use of the obsolete {{domxref("RTCPeerConnection.addStream", "addStream()")}} method, we use this Boolean to determine whether or not the user agent supports `addTrack()`; if it doesn't, we'll fall back to `addStream()`. This gets figured out in `connectAndDial()`, as shown in [Starting the connection process](#starting_the_connection_process).
 - `mediaConstraints`
   - : An object specifying the constraints to use when starting the connection. We want an audio-only connection, so `video` is `false`, while `audio` is `true`.
-- `dialButton` and `logElement`
-  - : These variables will be used to store references to the dial button and the {{HTMLElement("div")}} into which logging information will be written. They'll get set up when the page is first loaded. See [Initialization](#initialization) below.
 
 #### Initialization
 
-When the page loads, we do some basic setup: we fetch references to the dial button and the log output box elements, and we use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add an event listener to the dial button so that clicking it calls the `connectAndDial()` function to begin the connection process.
+We fetch references to the dial button and the log output box elements, and we use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add an event listener to the dial button so that clicking it calls the `connectAndDial()` function to begin the connection process.
 
 ```js
-window.addEventListener("load", () => {
-  logElement = document.querySelector(".log");
-  dialButton = document.querySelector("#dial");
-
-  dialButton.addEventListener("click", connectAndDial, false);
-});
+const dialButton = document.querySelector("#dial");
+const logElement = document.querySelector(".log");
+dialButton.addEventListener("click", connectAndDial);
 ```
 
 #### Starting the connection process

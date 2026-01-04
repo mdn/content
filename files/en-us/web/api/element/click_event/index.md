@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.click_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 An element receives a **`click`** event when any of the following occurs:
 

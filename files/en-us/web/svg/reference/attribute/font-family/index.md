@@ -49,7 +49,7 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS `font-family`](/en-US/docs/Web/CSS/font-family#values) property.
+For a description of the values, please refer to the [CSS `font-family`](/en-US/docs/Web/CSS/Reference/Properties/font-family#values) property.
 
 ## Specifications
 

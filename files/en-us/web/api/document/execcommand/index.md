@@ -25,12 +25,12 @@ Most commands affect the document's [selection](/en-US/docs/Web/API/Selection). 
 ## Syntax
 
 ```js-nolint
-execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+execCommand(commandName, showDefaultUI, valueArgument)
 ```
 
 ### Parameters
 
-- `aCommandName`
+- `commandName`
   - : A string specifying the name of the command to execute. The following commands are specified:
     - `backColor`
       - : Changes the document background color. In `styleWithCss` mode, it affects the background color of the containing block instead. This requires a {{cssxref("&lt;color&gt;")}} value string to be passed in as a value argument.
@@ -41,7 +41,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `copy`
       - : Copies the current selection to the clipboard. Conditions of having this behavior enabled vary from one browser to another, and have evolved over time. Check the compatibility table to determine if you can use it in your case.
     - `createLink`
-      - : Creates an hyperlink from the selection, but only if there is a selection. Requires a {{Glossary("URI")}} string as a value argument for the hyperlink's `href`. The URI must contain at least a single character, which may be whitespace.
+      - : Creates a hyperlink from the selection, but only if there is a selection. Requires a {{Glossary("URI")}} string as a value argument for the hyperlink's `href`. The URI must contain at least a single character, which may be whitespace.
     - `cut`
       - : Removes the current selection and copies it to the clipboard. When this behavior is enabled varies between browsers, and its conditions have evolved over time. Check [the compatibility table](#browser_compatibility) for usage details.
     - `decreaseFontSize`
@@ -79,7 +79,16 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `insertHorizontalRule`
       - : Inserts a {{HTMLElement("hr")}} element at the insertion point, or replaces the selection with it.
     - `insertHTML`
-      - : Inserts an HTML string at the insertion point (deletes selection). Requires a valid HTML string as a value argument.
+      - : Inserts an {{domxref("TrustedHTML")}} instance or string of HTML markup at the insertion point (deletes selection).
+        This requires valid HTML markup.
+
+        > [!WARNING]
+        > The input is parsed as HTML and written into the DOM.
+        > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
+        >
+        > You can mitigate this risk by always assigning {{domxref("TrustedHTML")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+        > See the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) for more information.
+
     - `insertImage`
       - : Inserts an image at the insertion point (deletes selection). Requires a URL string for the image's `src` as a value argument. The requirements for this string are the same as `createLink`.
     - `insertOrderedList`
@@ -132,9 +141,9 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `AutoUrlDetect`
       - : Changes the browser auto-link behavior.
 
-- `aShowDefaultUI`
+- `showDefaultUI`
   - : A boolean value indicating whether the default user interface should be shown. This is not implemented in Mozilla.
-- `aValueArgument`
+- `valueArgument`
   - : For commands which require an input argument, is a string providing that information. For example, `insertImage` requires the URL of the image to insert. Specify `null` if no argument is needed.
 
 ### Return value

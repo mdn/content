@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Conditionals","Learn_web_development/Core/Scripting/Test_your_skills/Loops", "Learn_web_development/Core/Scripting")}}
 
 Programming languages are very useful for rapidly completing repetitive tasks, from multiple basic calculations to just about any other situation where you've got a lot of similar items of work to complete. Here we'll look at the loop structures available in JavaScript that handle such needs.
 
@@ -46,7 +46,7 @@ Suppose we wanted to draw 100 random circles on a {{htmlelement("canvas")}} elem
 html {
   width: 100%;
   height: inherit;
-  background: #ddd;
+  background: #dddddd;
 }
 
 canvas {
@@ -73,10 +73,8 @@ const btn = document.querySelector("button");
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-document.addEventListener("DOMContentLoaded", () => {
-  canvas.width = document.documentElement.clientWidth;
-  canvas.height = document.documentElement.clientHeight;
-});
+canvas.width = document.documentElement.clientWidth;
+canvas.height = document.documentElement.clientHeight;
 
 function random(number) {
   return Math.floor(Math.random() * number);
@@ -248,6 +246,9 @@ Here we have:
       It usually serves to increment (or in some cases decrement) the counter variable, to bring it closer to the point where the condition is no longer `true`.
 
 3. Some curly braces that contain a block of code — this code will be run each time the loop iterates.
+
+> [!NOTE]
+> [Aside: Loops](https://scrimba.com/learn-javascript-c0v/~02a?via=mdn) from Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a useful interactive breakdown of the `for` loop syntax.
 
 ### Calculating squares
 
@@ -591,7 +592,7 @@ To complete the exercise:
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
 2. Add code to loop from 10 down to 0. We've provided you with an initializer — `let i = 10;`.
-3. For each iteration, create a new paragraph and append it to the output `<div>`, which we've selected using `const output = document.querySelector('.output');`. We've provided you with three code lines inside comment that need to be used somewhere inside the loop:
+3. For each iteration, create a new paragraph and append it to the output `<div>`, which we've selected using `const output = document.querySelector('.output');`. We've provided you with three code lines inside comments that need to be used somewhere inside the loop:
    1. `const para = document.createElement('p');` — creates a new paragraph.
    2. `output.appendChild(para);` — appends the paragraph to the output `<div>`.
    3. `para.textContent =` — makes the text inside the paragraph equal to whatever you put on the right-hand side, after the equals sign.
@@ -850,16 +851,12 @@ do {
 > [!NOTE]
 > There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced [Loops and iteration guide](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration).
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Loops](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops).
-
 ## Summary
 
 This article has revealed to you the basic concepts behind, and different options available when looping code in JavaScript.
 You should now be clear on why loops are a good mechanism for dealing with repetitive code and raring to use them in your own examples!
 
-Next up, we'll look at functions.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained this information.
 
 ## See also
 
@@ -869,4 +866,4 @@ Next up, we'll look at functions.
 - [while](/en-US/docs/Web/JavaScript/Reference/Statements/while) and [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) references
 - [break](/en-US/docs/Web/JavaScript/Reference/Statements/break) and [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) references
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Conditionals","Learn_web_development/Core/Scripting/Test_your_skills/Loops", "Learn_web_development/Core/Scripting")}}

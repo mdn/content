@@ -138,35 +138,31 @@ This example registers a handler for every event type for the given element.
 ```
 
 ```js
-function over_handler(event) {}
-function enter_handler(event) {}
-function down_handler(event) {}
-function move_handler(event) {}
-function up_handler(event) {}
-function cancel_handler(event) {}
-function out_handler(event) {}
-function leave_handler(event) {}
-function rawUpdate_handler(event) {}
-function gotCapture_handler(event) {}
-function lostCapture_handler(event) {}
+function overHandler(event) {}
+function enterHandler(event) {}
+function downHandler(event) {}
+function moveHandler(event) {}
+function upHandler(event) {}
+function cancelHandler(event) {}
+function outHandler(event) {}
+function leaveHandler(event) {}
+function rawUpdateHandler(event) {}
+function gotCaptureHandler(event) {}
+function lostCaptureHandler(event) {}
 
-function init() {
-  const el = document.getElementById("target");
-  // Register pointer event handlers
-  el.onpointerover = over_handler;
-  el.onpointerenter = enter_handler;
-  el.onpointerdown = down_handler;
-  el.onpointermove = move_handler;
-  el.onpointerup = up_handler;
-  el.onpointercancel = cancel_handler;
-  el.onpointerout = out_handler;
-  el.onpointerleave = leave_handler;
-  el.onpointerrawupdate = rawUpdate_handler;
-  el.ongotpointercapture = gotCapture_handler;
-  el.onlostpointercapture = lostCapture_handler;
-}
-
-document.addEventListener("DOMContentLoaded", init);
+const el = document.getElementById("target");
+// Register pointer event handlers
+el.onpointerover = overHandler;
+el.onpointerenter = enterHandler;
+el.onpointerdown = downHandler;
+el.onpointermove = moveHandler;
+el.onpointerup = upHandler;
+el.onpointercancel = cancelHandler;
+el.onpointerout = outHandler;
+el.onpointerleave = leaveHandler;
+el.onpointerrawupdate = rawUpdateHandler;
+el.ongotpointercapture = gotCaptureHandler;
+el.onlostpointercapture = lostCaptureHandler;
 ```
 
 ### Event properties
@@ -180,67 +176,63 @@ This example illustrates accessing all of a pointer event's properties.
 ```js
 const id = -1;
 
-function process_id(event) {
+function processId(event) {
   // Process this event based on the event's identifier
 }
-function process_mouse(event) {
+function processMouse(event) {
   // Process the mouse pointer event
 }
-function process_pen(event) {
+function processPen(event) {
   // Process the pen pointer event
 }
-function process_touch(event) {
+function processTouch(event) {
   // Process the touch pointer event
 }
-function process_tilt(tiltX, tiltY) {
+function processTilt(tiltX, tiltY) {
   // Tilt data handler
 }
-function process_pressure(pressure) {
+function processPressure(pressure) {
   // Pressure handler
 }
-function process_non_primary(event) {
+function processNonPrimary(event) {
   // Non primary handler
 }
 
-function down_handler(ev) {
+function downHandler(ev) {
   // Calculate the touch point's contact area
   const area = ev.width * ev.height;
 
   // Compare cached id with this event's id and process accordingly
-  if (id === ev.identifier) process_id(ev);
+  if (id === ev.identifier) processId(ev);
 
   // Call the appropriate pointer type handler
   switch (ev.pointerType) {
     case "mouse":
-      process_mouse(ev);
+      processMouse(ev);
       break;
     case "pen":
-      process_pen(ev);
+      processPen(ev);
       break;
     case "touch":
-      process_touch(ev);
+      processTouch(ev);
       break;
     default:
       console.log(`pointerType ${ev.pointerType} is not supported`);
   }
 
   // Call the tilt handler
-  if (ev.tiltX !== 0 && ev.tiltY !== 0) process_tilt(ev.tiltX, ev.tiltY);
+  if (ev.tiltX !== 0 && ev.tiltY !== 0) processTilt(ev.tiltX, ev.tiltY);
 
   // Call the pressure handler
-  process_pressure(ev.pressure);
+  processPressure(ev.pressure);
 
   // If this event is not primary, call the non primary handler
-  if (!ev.isPrimary) process_non_primary(ev);
+  if (!ev.isPrimary) processNonPrimary(ev);
 }
 
-function init() {
-  const el = document.getElementById("target");
-  // Register pointerdown handler
-  el.onpointerdown = down_handler;
-}
-
-document.addEventListener("DOMContentLoaded", init);
+const el = document.getElementById("target");
+// Register pointerdown handler
+el.onpointerdown = downHandler;
 ```
 
 ## Determining the Primary Pointer
@@ -294,12 +286,8 @@ function downHandler(ev) {
   el.setPointerCapture(ev.pointerId);
 }
 
-function init() {
-  const el = document.getElementById("target");
-  el.onpointerdown = downHandler;
-}
-
-document.addEventListener("DOMContentLoaded", init);
+const el = document.getElementById("target");
+el.onpointerdown = downHandler;
 ```
 
 The following example shows a pointer capture being released (when a {{domxref("Element/pointercancel_event", "pointercancel")}} event occurs. The browser does this automatically when a {{domxref("Element/pointerup_event", "pointerup")}} or {{domxref("Element/pointercancel_event", "pointercancel")}} event occurs.
@@ -321,14 +309,10 @@ function cancelHandler(ev) {
   el.releasePointerCapture(ev.pointerId);
 }
 
-function init() {
-  const el = document.getElementById("target");
-  // Register pointerdown and pointercancel handlers
-  el.onpointerdown = downHandler;
-  el.onpointercancel = cancelHandler;
-}
-
-document.addEventListener("DOMContentLoaded", init);
+const el = document.getElementById("target");
+// Register pointerdown and pointercancel handlers
+el.onpointerdown = downHandler;
+el.onpointercancel = cancelHandler;
 ```
 
 ## touch-action CSS property

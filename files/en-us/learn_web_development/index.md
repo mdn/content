@@ -5,8 +5,6 @@ page-type: landing-page
 sidebar: learnsidebar
 ---
 
-## The essential skill set for new front-end developers
-
 Welcome to MDN **Learning Web Development** (also known as **Learn**). This resource provides a structured set of tutorials teaching the essential skills and practices for being a successful front-end developer, along with challenges and further recommended resources.
 
 ## About Learn web development
@@ -18,7 +16,15 @@ Welcome to MDN **Learning Web Development** (also known as **Learn**). This reso
 - Designed to take you from "beginner" to "comfortable" (not "beginner" to "expert"), giving you enough knowledge to use more advanced resources (such as [the rest of MDN](/en-US/)).
 
 > [!NOTE]
-> Last updated: December 2024 ([see changelog](/en-US/docs/Learn_web_development/Changelog)).
+> Last updated: August 2025 ([see changelog](/en-US/docs/Learn_web_development/Changelog)).
+
+> [!CALLOUT]
+>
+> ### Try our partner video courses
+>
+> Interested in an interactive video course to complement our articles? Scrimba's [Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> also teaches the topics contained in the MDN Curriculum.
+>
+> <mdn-scrim-inline url="https://scrimba.com/s06icdv" scrimtitle="Scrimba + MDN"></scrim-inline>
 
 ## Don't know where to get started?
 
@@ -29,7 +35,7 @@ Welcome to MDN **Learning Web Development** (also known as **Learn**). This reso
 - Beyond the basics?
   - : Our [Extension modules](/en-US/docs/Learn_web_development/Extensions) cover useful additional skills to learn as you start to expand your knowledge and develop specialisms. Go onto these after you finish our Core.
 - Working at a school?
-  - : Use our modules to guide your teaching, check out our [Educators page](/en-US/docs/Learn_web_development/Educators) for more ideas, or enroll your students in Scrimba's [Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>.
+  - : Use our modules to guide your teaching, check out our [Educators page](/en-US/docs/Learn_web_development/Educators) for more ideas.
 
 ## Test your skills
 

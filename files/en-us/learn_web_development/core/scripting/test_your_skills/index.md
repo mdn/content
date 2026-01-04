@@ -1,6 +1,6 @@
 ---
 title: "Test your skills: JavaScript"
-short-title: Test your skills
+short-title: "Test: JavaScript tests index"
 slug: Learn_web_development/Core/Scripting/Test_your_skills
 page-type: learn-module-assessment
 sidebar: learnsidebar

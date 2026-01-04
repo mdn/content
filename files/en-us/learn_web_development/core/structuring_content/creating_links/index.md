@@ -5,7 +5,7 @@ page-type: tutorial-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Test_your_skills/Links", "Learn_web_development/Core/Structuring_content")}}
 
 Links (also known as hyperlinks) are really important — they are what makes the Web _a web_.
 This article shows the syntax required to make a link, and discusses link best practices.
@@ -44,10 +44,10 @@ This article shows the syntax required to make a link, and discusses link best p
 
 ## What is a hyperlink?
 
+Hyperlinks are features of an HTML document that, when clicked or otherwise activated, cause the browser to navigate to other documents or resources, sometimes specific parts of documents.
 Hyperlinks are one of the most exciting innovations the Web has to offer.
 They've been a feature of the Web since the beginning, and are what makes the Web _a web._
-Hyperlinks allow us to link documents to other documents or resources, link to specific parts of documents, or make apps available at a web address.
-Almost any web content can be converted to a link so that when clicked or otherwise activated the web browser goes to another web address ({{glossary("URL")}}).
+Each resource on the web has an address, known as a {{glossary("URL")}} (Uniform Resource Locator), which hyperlinks point to.
 
 > [!NOTE]
 > A URL can point to HTML files, text files, images, text documents, video and audio files, or anything else that lives on the Web.
@@ -118,17 +118,17 @@ This makes the MDN logo a link:
 
 ### Adding supporting information with the title attribute
 
-Another attribute you may want to add to your links is `title`.
+You may also want to add a `title` attribute to your links.
 The title contains additional information about the link, such as which kind of information the page contains, or things to be aware of on the website.
 
-```html-nolint
+```html
 <p>
   I'm creating a link to
   <a
     href="https://www.mozilla.org/en-US/"
-    title="The best place to find more information about Mozilla's
-          mission and how to contribute">
-    the Mozilla homepage</a>.
+    title="The best place to find more information about Mozilla's mission and how to contribute">
+    the Mozilla homepage</a
+  >.
 </p>
 ```
 
@@ -217,62 +217,135 @@ Your finished HTML should look like this:
 
 ## A quick primer on URLs and paths
 
-To fully understand link targets, you need to understand URLs and file paths. This section gives you the information you need to achieve this.
+Link targets are URLs. A URL, or Uniform Resource Locator, is a string of text that defines where something is located on the Web. For example, Mozilla's English homepage is located at `https://www.mozilla.org/en-US/`.
 
-A URL, or Uniform Resource Locator is a string of text that defines where something is located on the Web. For example, Mozilla's English homepage is located at `https://www.mozilla.org/en-US/`.
+A [web server](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) receives requests for URLs and responds with the appropriate resource. Most resources are stored as files on the server's file system, so the URLs for these resources often resemble file paths.
 
-URLs use paths to find files. Paths specify where the file you're interested in is located in the filesystem. Let's look at an example of a directory structure, see the `creating-hyperlinks` directory structure shown below:
+> [!NOTE]
+> File paths and URLs are not the same thing, but for now, we'll talk about them like they are to facilitate understanding. We'll discuss more about the differences in the [how do URLs translate into file paths?](#how_do_urls_translate_into_file_paths) section.
+
+Let's look at an example server directory structure:
 
 ![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](simple-directory.png)
 
-The **root** of this directory structure is called `creating-hyperlinks`. When working locally with a website, you'll have one directory that contains the entire site. Inside the **root**, we have an `index.html` file and a `contacts.html`. In a real website, `index.html` would be our home page or landing page (a web page that serves as the entry point for a website or a particular section of a website.).
+The **root** of this directory structure is called `creating-hyperlinks`. When working locally with a website, you'll have one directory that contains the entire site. Inside the **root**, we have an `index.html` file and a `contacts.html`. In a real website, `index.html` would be our home page or landing page (a web page that serves as the entry point for a website or a particular section of a website).
 
-There are also two directories inside our root — `pdfs` and `projects`. These each have a single file inside them — a PDF (`project-brief.pdf`) and an `index.html` file, respectively. Note that you can have two `index.html` files in one project, as long as they're in different filesystem locations. The second `index.html` would perhaps be the main landing page for project-related information.
+There are also two directories inside our root — `pdfs` and `projects`. These each have a single file inside them — a PDF (`project-brief.pdf`) and an `index.html` file, respectively. Note that you can have multiple `index.html` files in one project, as long as they're in different filesystem locations. The second `index.html` would perhaps be the main landing page for project-related information.
 
-Let's look at some examples of links between some different files in this directory structure to demonstrate different link types:
+Let's look at some examples of links between some different files in this directory structure to demonstrate different path types.
 
-- **Same directory**: If you wanted to include a hyperlink inside `index.html` (the top level `index.html`) pointing to `contacts.html`, you would specify the filename that you want to link to, because it's in the same directory as the current file. The URL you would use is `contacts.html`:
+### Same directory
 
-  ```html
-  <p>
-    Want to contact a specific staff member? Find details on our
-    <a href="contacts.html">contacts page</a>.
-  </p>
-  ```
+If you want to include a hyperlink inside the top level `index.html` pointing to `contacts.html`, you can specify the path as just the filename that you want to link to, because it's in the same directory as the current file. The URL you would use is `contacts.html`:
 
-- **Moving down into subdirectories**: If you wanted to include a hyperlink inside `index.html` (the top level `index.html`) pointing to `projects/index.html`, you would need to go down into the `projects` directory before indicating the file you want to link to.
-  This is done by specifying the directory's name, then a forward slash, then the name of the file. The URL you would use is `projects/index.html`:
+```html
+<p>
+  Want to contact a specific staff member? Find details on our
+  <a href="contacts.html">contacts page</a>.
+</p>
+```
 
-  ```html
-  <p>Visit my <a href="projects/index.html">project homepage</a>.</p>
-  ```
+You can also start a path to a file inside the same directory using a single dot followed by a slash: `./`. The following example is equivalent to the previous one, but some people like to include the `./` anyway because they feel it provides more clarity:
 
-- **Moving back up into parent directories**: If you wanted to include a hyperlink inside `projects/index.html` pointing to `pdfs/project-brief.pdf`, you'd have to go up a directory level, then back down into the `pdfs` directory.
-  To go up a directory, use two dots — `..` — so the URL you would use is `../pdfs/project-brief.pdf`:
-
-  ```html
-  <p>A link to my <a href="../pdfs/project-brief.pdf">project brief</a>.</p>
-  ```
+```html
+<p>
+  Want to contact a specific staff member? Find details on our
+  <a href="./contacts.html">contacts page</a>.
+</p>
+```
 
 > [!NOTE]
-> You can combine multiple instances of these features into complex URLs, if needed, for example: `../../../complex/path/to/my/file.html`.
+> There are some instances in which including `./` in your path will make a difference, for example when specifying paths for [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules) imports, but you don't need to worry about this for static HTML and CSS links.
+
+### Moving down into subdirectories
+
+If you want to include a hyperlink inside the top level `index.html` pointing to `projects/index.html`, you need to go down into the `projects` directory before indicating the file you want to link to. This is done by specifying the directory's name, then a forward slash, then the name of the file. The URL you can use is `projects/index.html`:
+
+```html
+<p>Visit my <a href="projects/index.html">project homepage</a>.</p>
+```
+
+### Moving back up into parent directories
+
+If you want to include a hyperlink inside `projects/index.html` pointing to `pdfs/project-brief.pdf`, you have to go up a directory level, then back down into the `pdfs` directory. To go up a directory, you use two dots — `..` — so the URL is `../pdfs/project-brief.pdf`:
+
+```html
+<p>A link to my <a href="../pdfs/project-brief.pdf">project brief</a>.</p>
+```
+
+> [!NOTE]
+> You can combine multiple instances of these features into complex paths, if needed, for example: `../../../complex/path/to/my/file.html`.
+
+### Linking relative to the root directory
+
+The above URLs work, but bear in mind that if you move either the linking file or the linked file to a different location, you will break the link.
+
+If you want to create a link to a specific location that won't break if you move the linking file, you can do so by putting a single slash at the start of the path — this indicates that the path starts in the root directory of the site. For example, the previous link inside `projects/index.html` could be rewritten as:
+
+```html
+<p>A link to my <a href="/pdfs/project-brief.pdf">project brief</a>.</p>
+```
+
+Now the path will always start from the root directory (`creating-hyperlinks`), travel to the `pdfs` directory, and find the `project-brief.pdf` file. This will still work if you move the linking file to a different location, for example `a/b/c/d/e/index.html`.
+
+If you move the linked `project-brief.pdf` file to a different location, you will still break the link.
+
+Two terms you'll come across on the web are **absolute path** and **relative path**.
+
+- Absolute path: Points to a location defined by its absolute location in your site (or elsewhere on the web). For example, you can create an absolute link that always points to the same location relative to the site root directory using the single slash at the start of the path, as we saw earlier: `/pdfs/project-brief.pdf`.
+- Relative path: Points to a location that is _relative_ to the file you are linking from. In our earlier example, we used `projects/index.html` to create a relative link between the current file and a file called `index.html` that is inside a `projects` subdirectory. If you were to move the current file to a different location, the path would still be relative to that file, but it would point to a different absolute location.
+
+These terms are not always used consistently. For example, `/pdfs/project-brief.pdf` is absolute with respect to the current file's location, but relative to the [domain name](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name). A URL that includes the full domain name, such as `https://example.com/pdfs/project-brief.pdf`, is absolute with respect to the entire web.
+
+### Linking with full URLs
+
+You can specify a full URL as your path, which will always point to the same location on the web, no matter where it's used. For example:
+
+```html
+<a href="https://www.example.com/projects/">projects</a>
+```
+
+This link will always link to `https://www.example.com/projects/`, even if your site is moved to a different domain.
+
+### Internal and external links
+
+When a link points to a resource on _your_ site, it is referred to as an **internal link**. When a link points to a resource on a _different_ site, it is called an **external link**.
+
+When specifying an external link, you always have to include the full URL as the path, for example:
+
+```html
+<a href="https://www.some-other-site.com">projects</a>
+```
+
+You can't reference a location on a different site with a path like `/pdfs/project-brief.pdf` or `projects/index.html`, as they are both relative to a location on your own site, and the browser needs the website's domain name to be able to find it.
+
+When specifying an internal link, you can use a relative or absolute path, or a full URL. In our example, these links are equivalent:
+
+```html
+<a href="https://www.example.com/projects/">projects</a>
+
+<a href="projects">projects</a>
+```
+
+We recommend the latter without the full domain name, because of portability. As we said earlier, if you specify `https://www.example.com/projects/`, it will always link to `https://www.example.com/projects/`. If you then move your website to a different domain, for example `another-example.com`, your full URL links will all need to be changed. If you specify paths such as `/projects`, they will still work, as they are still relative to the directory structure.
 
 ### Document fragments
 
 It's possible to link to a specific part of an HTML document, known as a **document fragment**, rather than just to the top of the document.
-To do this you first have to assign an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute to the element you want to link to.
-It normally makes sense to link to a specific heading, so this would look something like the following:
+Elements with an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute in the document automatically create a document fragment that can be linked to.
+
+The most typical use case is linking to a specific heading, which looks like this:
 
 ```html
-<h2 id="Mailing_address">Mailing address</h2>
+<h2 id="mailing_address">Mailing address</h2>
 ```
 
-Then to link to that specific `id`, you'd include it at the end of the URL, preceded by a hash/pound symbol (`#`), for example:
+To link to that specific `id`, you include it at the end of the path, preceded by a hash/pound symbol (`#`), for example:
 
 ```html
 <p>
   Want to write us a letter? Use our
-  <a href="contacts.html#Mailing_address">mailing address</a>.
+  <a href="contacts.html#mailing_address">mailing address</a>.
 </p>
 ```
 
@@ -280,26 +353,39 @@ You can even use the document fragment reference on its own to link to _another 
 
 ```html
 <p>
-  The <a href="#Mailing_address">company mailing address</a> can be found at the
+  The <a href="#mailing_address">company mailing address</a> can be found at the
   bottom of this page.
 </p>
 ```
 
-### Absolute versus relative URLs
+### How do URLs translate into file paths?
 
-Two terms you'll come across on the web are **absolute URL** and **relative URL:**
+All the link targets we've seen so far are _URLs_, which get processed by a web server to find the relevant resource.
+**No web content can directly see the server's file system.**
 
-**Absolute URL**: Points to a location defined by its absolute location on the web, including {{glossary("protocol")}} and {{glossary("domain name")}}.
-For example, if an `index.html` page is uploaded to a directory called `projects` that sits inside the **root** of a web server, and the website's domain is `https://www.example.com`, the page would be available at `https://www.example.com/projects/index.html` (or even just `https://www.example.com/projects/`, as most web servers just look for a landing page such as `index.html` to load if it isn't specified in the URL.)
+The server example we've looked at so far creates a [static website](/en-US/docs/Glossary/SSG).
+The server just takes the [pathname](/en-US/docs/Web/API/URL/pathname) part of the URL and directly looks for the corresponding file in its file system.
 
-An absolute URL will always point to the same location, no matter where it's used.
+> [!NOTE]
+> Many servers generate content for a URL on-the-fly rather than retrieving it from a static file. If you use a [web framework](/en-US/docs/Learn_web_development/Core/Frameworks_libraries), your source code directory may also be very different from what gets deployed to the server. When working with your own website, you need to understand your build tools and server setup to know how URLs get mapped to your source files.
 
-**Relative URL**: Points to a location that is _relative_ to the file you are linking from, more like what we looked at in the previous section.
-For example, if we wanted to link from our example file at `https://www.example.com/projects/index.html` to a PDF file in the same directory, the URL would just be the filename — `project-brief.pdf` — no extra information needed. If the PDF was available in a subdirectory inside `projects` called `pdfs`, the relative link would be `pdfs/project-brief.pdf` (the equivalent absolute URL would be `https://www.example.com/projects/pdfs/project-brief.pdf`.)
+If we start a web server (see [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)) using our sample site directory as the root, and the website {{glossary("domain name")}} is set to `example.com`, our `pdfs/project-brief.pdf` file would be available at `https://www.example.com/pdfs/project-brief.pdf`.
 
-A relative URL will point to different places depending on the actual location of the file you refer from — for example if we moved our `index.html` file out of the `projects` directory and into the **root** of the website (the top level, not in any directories), the `pdfs/project-brief.pdf` relative URL link inside it would now point to a file located at `https://www.example.com/pdfs/project-brief.pdf`, not a file located at `https://www.example.com/projects/pdfs/project-brief.pdf`.
+All links are resolved relative to the current document's URL, so:
 
-Of course, the location of the `project-brief.pdf` file and `pdfs` folder won't suddenly change because you moved the `index.html` file — this would make your link point to the wrong place, so it wouldn't work if clicked on. You need to be careful!
+- For all pages on the `https://example.com` domain, a link to `/pdfs/project-brief.pdf` always creates a link to `https://www.example.com/pdfs/project-brief.pdf`, whose pathname is `/pdfs/project-brief.pdf`. The server looks for the `pdfs` directory in the root directory, then looks for the `project-brief.pdf` file inside that directory.
+- A link to `projects/index.html` would create a link to `https://www.example.com/projects/index.html`, but only when included in a file inside the root directory, such as the top-level `index.html` file, or `contacts.html`. If you included it, for example, inside an HTML file at `pdfs/index.html`, it would link to `https://www.example.com/pdfs/projects/index.html`, whose path name is `/pdfs/projects/index.html`, which doesn't exist, so you'd end up with a broken link.
+
+#### The default `index.html` page
+
+When referencing an `index.html` file, you generally don't need to include the `index.html` in the URL/path, because web servers look for a default landing page called `index.html` when a filename isn't specified.
+
+Looking again at our `projects/index.html` path example, we could just write the path as `projects`, and this would create a link to `https://www.example.com/projects/index.html`. When navigating to the page, we could write the URL as `https://www.example.com/projects/` and it would still get us to the right place.
+
+> [!NOTE]
+> The trailing slash (`/`) at the end of the URL is important. With it, a relative link to `contacts.html` inside `projects/index.html` would resolve to `https://www.example.com/projects/contacts.html` (which is in the same directory). Without it, the URL would be treated as a file, and the relative link would resolve to `https://www.example.com/contacts.html` (which is one directory up).
+>
+> [Different web servers handle a URL like `https://www.example.com/projects` differently](https://github.com/slorber/trailing-slash-guide) — some automatically redirect to the URL with a trailing slash, while some serve the same `index.html` without redirecting. The latter behavior can break relative links.
 
 ## Link best practices
 
@@ -466,12 +552,8 @@ Here are a few other sample `mailto` URLs:
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org>
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org&subject=This%20is%20the%20subject>
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Links](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links).
-
 ## Summary
 
-That's it for links, for now anyway! You'll return to links later on in the course when you start to look at styling them. Next up for HTML, you're going to work through a couple of challenges that will test your comprehension of the topics you've covered so far.
+That's it for links, for now anyway! You'll return to links later on in the course when you start to look at styling them. Next up, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on links.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Test_your_skills/Links", "Learn_web_development/Core/Structuring_content")}}

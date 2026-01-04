@@ -35,7 +35,7 @@ const results = await detector.detect(myTextString);
 This method returns an array of objects representing the detected potential language matches.
 Each one contains:
 
-- A string containing the [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) representing the detected language.
+- A string containing a {{glossary("BCP 47 language tag")}} representing the detected language.
 - A number between 0 and 1 representing a confidence score for that match.
 
 So for example:
@@ -131,14 +131,14 @@ const translator = await Translator.create({
 controller.abort();
 ```
 
-Once a `Translator` or `LanguageDetector` instance has been created, you can destroy it when it is finished with using the {{domxref("Translator.destroy()")}}/{{domxref("LanguageDetector.destroy()")}} methods:
+After a `LanguageDetector` or `Translator` instance has been created, you can release its assigned resources and stop any further activity by calling its {{domxref("LanguageDetector.destroy()")}}/{{domxref("Translator.destroy()")}} method. You are encouraged to do this after you've finished with the object as it can consume a lot of resources.
 
 ```js
 translator.destroy();
 detector.destroy();
 ```
 
-It makes sense to destroy these objects if they are no longer going to be used, as they tie up significant resources in their handling.
+If a `create()` call has an associated {{domxref("AbortController")}}, and you call its {{domxref("AbortController.abort()")}} method after the `create()` call has succeeded, it will have the same effect as calling `destroy()` on the resulting `LanguageDetector` or `Translator` object.
 
 ## Monitoring download progress
 
@@ -244,7 +244,7 @@ The second half of our markup includes a {{htmlelement("p")}} element to display
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {

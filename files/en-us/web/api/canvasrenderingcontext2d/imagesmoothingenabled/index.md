@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.imageSmoothingEnabled
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`imageSmoothingEnabled`** property of the
 {{domxref("CanvasRenderingContext2D")}} interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), determines whether scaled images

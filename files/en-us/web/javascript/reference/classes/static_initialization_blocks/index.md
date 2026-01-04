@@ -2,7 +2,7 @@
 title: Static initialization blocks
 slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
 page-type: javascript-language-feature
-browser-compat: javascript.classes.static_initialization_blocks
+browser-compat: javascript.classes.static.initialization_blocks
 sidebar: jssidebar
 ---
 

@@ -21,7 +21,7 @@ The **`contenteditable`** [global attribute](/en-US/docs/Web/HTML/Reference/Glob
 
 ```css interactive-example
 blockquote {
-  background: #eee;
+  background: #eeeeee;
   border-radius: 5px;
   margin: 16px 0;
 }
@@ -116,7 +116,7 @@ h2 {
   margin-bottom: 0;
 }
 .copying {
-  font-family: Georgia, serif;
+  font-family: "Georgia", serif;
   margin: 1rem;
   padding: 1rem;
   border: solid black 1px;

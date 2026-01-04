@@ -67,10 +67,6 @@ console.log(test);
 The [`InteractiveExample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/interactive_example.rs) macro is used to embed interactive examples at the top of MDN reference pages.
 They are for readers who want to try an example without having to read through the full article for a topic or feature.
 
-> [!WARNING]
-> Currently **only JavaScript** examples are supported.
-> See https://github.com/orgs/mdn/discussions/782 for implementation details.
-
 The `InteractiveExample` macro accepts a title for the example as a string, followed by a keyword to specify the height of the example.
 The code blocks to include in the example appear after the macro call and contain the keyword `interactive-example` in the info string after the code block's language.
 The [JavaScript `Array.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat#try_it) usage is a good example of this macro, which looks like this in the markdown source:

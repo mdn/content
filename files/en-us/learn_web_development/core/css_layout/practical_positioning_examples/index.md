@@ -162,7 +162,7 @@ Next, we'll style the buttons to look like tabs. Add the following CSS:
 
 ```css
 .info-box [role="tab"] {
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem;
   line-height: 3rem;
   background: white;
   color: #b60000;

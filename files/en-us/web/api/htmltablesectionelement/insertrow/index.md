@@ -50,9 +50,11 @@ In this example, two buttons allow you to add and remove rows from the table bod
 ```html
 <table>
   <thead>
-    <th>Col 1</th>
-    <th>Col 2</th>
-    <th>Col 3</th>
+    <tr>
+      <th>Col 1</th>
+      <th>Col 2</th>
+      <th>Col 3</th>
+    </tr>
   </thead>
   <tbody>
     <tr>

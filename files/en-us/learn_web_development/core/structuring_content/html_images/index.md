@@ -6,7 +6,7 @@ page-type: tutorial-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content")}}
 
 In the beginning, the web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. In this article we'll look at how to use the {{htmlelement("img")}} element in depth, including the basics, annotating it with captions using {{htmlelement("figure")}}, and detailing how it relates to {{glossary("CSS")}} background images.
 
@@ -118,12 +118,15 @@ What exactly should you write inside your `alt` attribute? It depends on _why_ t
 - **Decoration.** You should use [CSS background images](#css_background_images) for decorative images, but if you must use HTML, add a blank `alt=""`. If the image isn't part of the content, a screen reader shouldn't waste time reading it.
 - **Content.** If your image provides significant information, provide the same information in a _brief_ `alt` text – or even better, in the main text which everybody can see. Don't write redundant `alt` text. How annoying would it be for a sighted user if all paragraphs were written twice in the main content? If the image is described adequately by the main text body, you can just use `alt=""`.
 - **Link.** If you put an image inside {{htmlelement("a")}} tags, to turn an image into a link, you still must provide [accessible link text](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#use_clear_link_wording). In such cases you may, either, write it inside the same `<a>` element, or inside the image's `alt` attribute – whichever works best in your case.
-- **Text.** You should not put your text into images. If your main heading needs a drop shadow, for example, [use CSS](/en-US/docs/Web/CSS/text-shadow) for that rather than putting the text into an image. However, If you _really can't avoid doing this_, you should supply the text inside the `alt` attribute.
+- **Text.** You should not put your text into images. If your main heading needs a drop shadow, for example, [use CSS](/en-US/docs/Web/CSS/Reference/Properties/text-shadow) for that rather than putting the text into an image. However, If you _really can't avoid doing this_, you should supply the text inside the `alt` attribute.
 
 Essentially, the key is to deliver a usable experience, even when the images can't be seen. This ensures all users are not missing any of the content. Try turning off images in your browser and see how things look. You'll soon realize how helpful alt text is if the image cannot be seen.
 
 > [!NOTE]
 > See our guide to [Text Alternatives](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives) and [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to learn how to use an `alt` attribute for images in various situations.
+
+> [!NOTE]
+> [HTML tags](https://scrimba.com/html-css-crash-course-c02l/~0d?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba is an interactive lesson providing information on images, and mini-challenges.
 
 ### Width and height
 
@@ -172,9 +175,9 @@ Once the image is loaded, the browser adds the image to the page. Because the im
 
 ![Comparison of page layout while the browser is loading a page and when it has finished, when no size is specified for the image.](no-size.png)
 
-Moving the text like this is extremely distracting to users, especially if they have already started to read it.
+Moving the text like this is extremely distracting to users, especially if they have already started to read it, and it also causes the browser to re-render the page, which is bad for performance.
 
-If you specify the actual size of the image in your HTML, using the `width` and `height` attributes, then the browser knows, before it has downloaded the image, how much space it has to allow for it.
+If you specify the actual size of the image in your HTML using the `width` and `height` attributes, then the browser knows how much space to allow for the image, before it has downloaded.
 
 This means that when the image has been downloaded, the browser doesn't have to move the surrounding content.
 
@@ -182,12 +185,15 @@ This means that when the image has been downloaded, the browser doesn't have to 
 
 For an excellent article on the history of this feature, see [Setting height and width on images is important again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/).
 
-> [!NOTE]
-> Although, as we have said, it is good practice to specify the _actual_ size of your images using HTML attributes, you should not use them to _resize_ images.
->
-> If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct {{glossary("aspect ratio")}}. You should use an image editor to put your image at the correct size before putting it on your webpage.
->
-> If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics) instead.
+Note that if there's no content below the image, re-rendering isn't a problem because resizing the image won't cause other elements to shift. In that case, you can set the image's `width` only. If you set a `width` but don't set a `height`, the `height` defaults to `auto` which means it is set to a value that maintains the image's [aspect ratio](/en-US/docs/Glossary/Aspect_ratio).
+
+#### Resizing images
+
+Although, as we have said, it is good practice to specify the _actual_ size of your images using HTML attributes, you should not use them to _resize_ images.
+
+If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct {{glossary("aspect ratio")}}. You should use an image editor to put your image at the correct size before putting it on your webpage.
+
+If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics) instead.
 
 ### Image titles
 
@@ -417,12 +423,10 @@ The resulting embedded image is arguably easier to position and control than HTM
 
 Summing up: if an image has meaning, in terms of your content, you should use an HTML image. If an image is purely decoration, you should use CSS background images (we'll cover these in detail later in the Core modules).
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images).
-
 ## Summary
 
-That's all for now. We have covered images and captions in detail. In the next article, we'll move it up a gear, looking at how to use HTML to embed video and audio content into web pages.
+That's all for now. We have covered images and captions in detail.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on HTML images.
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content")}}

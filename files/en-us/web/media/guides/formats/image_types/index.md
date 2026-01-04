@@ -939,7 +939,7 @@ SVG files are ideal for diagrams, icons, and other images which can be accuratel
 As such, SVG is popular for user interface elements in modern Web design.
 
 SVG files are text files containing source code that, when interpreted, draws the desired image.
-For instance, this example defines an drawing area with initial size 100 by 100 units, containing a line drawn diagonally through the box:
+For instance, this example defines a drawing area with initial size 100 by 100 units, containing a line drawn diagonally through the box:
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -984,7 +984,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
       <th scope="row">Supported color modes</th>
       <td>
         Colors in SVG are specified using
-        <a href="/en-US/docs/Web/CSS/color_value">CSS color syntax</a>.
+        <a href="/en-US/docs/Web/CSS/Reference/Values/color_value">CSS color syntax</a>.
       </td>
     </tr>
     <tr>
@@ -1383,7 +1383,7 @@ If you do choose a lossy format, such as JPEG or lossy WebP, carefully weigh the
 ## Providing image fallbacks
 
 While the standard HTML {{HTMLElement("img")}} element doesn't support compatibility fallbacks for images, the {{HTMLElement("picture")}} element does.
-`<picture>` is used as a wrapper for a number of {{HTMLElement("source")}} elements, each specifying a version of the image in a different format or under different [media conditions](/en-US/docs/Web/CSS/@media), as well as an `<img>` element which defines where to display the image and the fallback to the default or "most compatible" version.
+`<picture>` is used as a wrapper for a number of {{HTMLElement("source")}} elements, each specifying a version of the image in a different format or under different [media conditions](/en-US/docs/Web/CSS/Reference/At-rules/@media), as well as an `<img>` element which defines where to display the image and the fallback to the default or "most compatible" version.
 
 For example, if you're displaying a diagram best displayed with SVG, but wish to offer a fallback to a PNG or GIF of the diagram, you would do something like this:
 

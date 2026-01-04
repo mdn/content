@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.scroll_event
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`scroll`** event fires when an element has been scrolled.
 To detect when scrolling has completed, see the {{domxref("Element/scrollend_event", "scrollend")}} event of `Element`.

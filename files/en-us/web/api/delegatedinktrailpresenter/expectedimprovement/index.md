@@ -13,7 +13,7 @@ browser-compat: api.DelegatedInkTrailPresenter.expectedImprovement
 
 The **`expectedImprovement`** read-only property of the {{domxref("DelegatedInkTrailPresenter")}} interface returns a value, in milliseconds, indicating the latency improvement that can be expected using this presenter.
 
-### Value
+## Value
 
 A number.
 

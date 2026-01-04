@@ -17,14 +17,15 @@ sidebar: addonsidebar
       <td>
         <ul>
           <li>In Firefox:
+            <br/>
+            Must be provided with details specified for <a href="#data_collection_permissions"><code>browser_specific_settings.gecko.data_collection_permissions</code></a> for new extension submitted to addons.mozilla.org from November 3, 2025.
+            <br/>
+            Otherwise:
             <ul>
               <li>Manifest V3: Mandatory for signing extensions, i.e., distribution through addons.mozilla.org (AMO) or self-distribution, to provide an extension ID.</li>
               <li>Manifest V2: Not required unless an extension ID must be specified. However, setting the ID is recommended.</li>
             </ul>
-            See <a href="#id"
-              ><code>browser_specific_settings.gecko.id</code></a
-            >
-            for more information.</li>
+            See <a href="#id"><code>browser_specific_settings.gecko.id</code></a> for more information.</li>
           <li>In Safari, not required.</li>
         </ul>
       </td>
@@ -58,6 +59,15 @@ Firefox stores browser-specific settings in these properties:
 - `gecko_android` for the Android version of Firefox.
 
 The `gecko` sub-key supports these properties:
+
+- `data_collection_permissions`
+  - : The optional and required data types that the extension collects and transmits for storage and processing outside the extension. These are represented by the properties:
+    - `required`
+      - : The data that the extension requires to be collected and transmitted for its operation. Must contain the value `none`, or one or more of `authenticationInfo`, `bookmarksInfo`, `browsingActivity`, `financialAndPaymentInfo`, `healthInfo`, `locationInfo`, `personalCommunications`, `personallyIdentifyingInfo`, `searchTerms`, `websiteActivity`, or `websiteContent`.
+    - `optional` {{optional_inline}}
+      - : The data that the user can opt to provide. Can contain one or more of `authenticationInfo`, `bookmarksInfo`, `browsingActivity`, `financialAndPaymentInfo`, `healthInfo`, `locationInfo`, `personalCommunications`, `personallyIdentifyingInfo`, `searchTerms`, `technicalAndInteraction`, `websiteActivity`, or `websiteContent`.
+
+    For more information, see the Extension Workshop article [Firefox built-in consent for data collection and transmission](https://extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/).
 
 - `id`
   - : The extension ID. Optional for Manifest V2 (although setting an ID is recommended) and required for signing Manifest V3 extensions. If you don't provide a value for Manifest V2 extensions, AMO assigns a GUID to the extension when it is signed. You must create an ID for signing Manifest V3 extensions; AMO does not assign an ID. When provided, this property must be a:

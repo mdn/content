@@ -95,7 +95,7 @@ There are three special entries that should always be present, representing unde
     One possible value is `video/ulpfec` (a generic error connection model).
     There may also be multiple FEC entries if more than one form is supported.
 - RTX (Retransmission)
-  - : This component is responsible for retransmission of data; it's media type should be `video/rtx`.
+  - : This component is responsible for retransmission of data; its media type should be `video/rtx`.
     There will only be one entry for RTX, and it will not have an [`sdpFmtpLine`](#sdpfmtpline) property.
 
 These entries should be ignored if only codecs related to the media are of interest.

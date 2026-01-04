@@ -25,7 +25,7 @@ These errors are asynchronous, meaning that they can't be handled via [`try...ca
     For example, you will get this error if you try to add a new key that already exists in the store.
 - `NotReadableError`
   - : Received for unrecoverable read failure errors. Specifically, this error signals that the record is present in the database, but the value could not be retrieved. See [Transient and unrecoverable read errors](#transient_and_unrecoverable_read_errors) below for more details.
-- `QuotaExceededError`
+- {{domxref("QuotaExceededError")}}
   - : Received if the application runs out of disk quota. In some cases, browsers prompt the user for more space, and the error is received if they decline the request. In other cases, the browser uses heuristics to determine whether more space can be assigned.
 - `UnknownError`
   - : Received for transient read failure errors, including general disk IO errors. See [Transient and unrecoverable read errors](#transient_and_unrecoverable_read_errors) below for more details.

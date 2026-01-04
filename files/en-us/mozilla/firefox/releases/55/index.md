@@ -1,5 +1,5 @@
 ---
-title: Firefox 55 for developers
+title: Firefox 55 release notes for developers
 short-title: Firefox 55
 slug: Mozilla/Firefox/Releases/55
 page-type: firefox-release-notes
@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 55 was released on August 8, 2017. This article lists key changes that are useful for web developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -29,7 +29,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 - Implemented the {{cssxref("text-justify")}} property ([Firefox bug 1343512](https://bugzil.la/1343512), [Firefox bug 276079](https://bugzil.la/276079)).
 - \[css-grid] {{cssxref("fit-content")}} unexpectedly reserves space for full clamp size in {{cssxref("repeat", "repeat()")}} ([Firefox bug 1359060](https://bugzil.la/1359060)).
 - The {{cssxref("float")}} / {{cssxref("clear")}} logical values — `inline-start` and `inline-end` — which were previously implemented but preffed off in release channels, are now available in all channels by default ([Firefox bug 1253919](https://bugzil.la/1253919)).
-- The `layout.css.variables.enabled` preference has been removed completely meaning that the [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) feature is enabled all the time and can no longer be disabled ([Firefox bug 1312328](https://bugzil.la/1312328)).
+- The `layout.css.variables.enabled` preference has been removed completely meaning that the [CSS variables](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) feature is enabled all the time and can no longer be disabled ([Firefox bug 1312328](https://bugzil.la/1312328)).
 - Implemented the proprietary `-moz-context-properties` property ([Firefox bug 1058040](https://bugzil.la/1058040)).
 - Zero (0) angle value without degree unit is not correctly interpreted in {{cssxref("gradient/linear-gradient")}} ([Firefox bug 1363292](https://bugzil.la/1363292)).
 - The {{cssxref("::cue")}} pseudo-element is now supported; it matches on text cues presented within a media element ([Firefox bug 1318542](https://bugzil.la/1318542)).
@@ -119,8 +119,8 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ### Security
 
-- The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) is now available only to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts) ([Firefox bug 1072859](https://bugzil.la/1072859)).
-- The [Storage API](/en-US/docs/Web/API/Storage_API) is now available only to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts) ([Firefox bug 1268804](https://bugzil.la/1268804)).
+- The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) is now available only to [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts) ([Firefox bug 1072859](https://bugzil.la/1072859)).
+- The [Storage API](/en-US/docs/Web/API/Storage_API) is now available only to [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts) ([Firefox bug 1268804](https://bugzil.la/1268804)).
 - The loading of mixed content is now allowed on localhost ([Firefox bug 903966](https://bugzil.la/903966)).
 - Loading of remote JAR files has been disabled again ([Firefox bug 1329336](https://bugzil.la/1329336)).
 

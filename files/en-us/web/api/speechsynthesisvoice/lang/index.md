@@ -8,7 +8,7 @@ browser-compat: api.SpeechSynthesisVoice.lang
 
 {{APIRef("Web Speech API")}}
 
-The **`lang`** read-only property of the {{domxref("SpeechSynthesisVoice")}} interface returns a BCP 47 language tag indicating the language of the voice.
+The **`lang`** read-only property of the {{domxref("SpeechSynthesisVoice")}} interface returns a {{glossary("BCP 47 language tag")}} indicating the language of the voice.
 
 ## Value
 

@@ -360,7 +360,7 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Lang tag (`<lang></lang>`)
-  - : Used to highlight text that has been marked up as belonging to a particular language or language variant using the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+  - : Used to highlight text that has been marked up as belonging to a particular language or language variant using the {{glossary("BCP 47 language tag")}} format.
 
     ```xml
     <lang en-GB>English text as spoken in Great Britain!</lang>
@@ -623,4 +623,4 @@ Transcribed by Célestes™
 
 ## See also
 
-- The CSS [`::cue` and `::cue()`](/en-US/docs/Web/CSS/::cue) pseudo-elements
+- The CSS [`::cue` and `::cue()`](/en-US/docs/Web/CSS/Reference/Selectors/::cue) pseudo-elements

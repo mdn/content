@@ -29,7 +29,7 @@ The following example shows how to use the `textformatupdate` event's `rangeStar
 ```css hidden
 #editor {
   height: 200px;
-  background: #eee;
+  background: #eeeeee;
 }
 ```
 

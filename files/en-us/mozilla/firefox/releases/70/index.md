@@ -1,5 +1,5 @@
 ---
-title: Firefox 70 for developers
+title: Firefox 70 release notes for developers
 short-title: Firefox 70
 slug: Mozilla/Firefox/Releases/70
 page-type: firefox-release-notes
@@ -111,7 +111,7 @@ This article provides information about the changes in Firefox 70 that will affe
 
 ### WebDriver conformance (Marionette)
 
-- Updated the `WebDriver:TakeScreenshot` command to be [Fission](https://wiki.mozilla.org/Project_Fission) compatible. It means that content from [cross-origin](/en-US/docs/Web/Security/Same-origin_policy) iframes is now included in a page's screenshot. Or when using it from chrome scope that the active tab's content is visible now inside the browser window. ([Firefox bug 1559592](https://bugzil.la/1559592)).
+- Updated the `WebDriver:TakeScreenshot` command to be [Fission](https://wiki.mozilla.org/Project_Fission) compatible. It means that content from [cross-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) iframes is now included in a page's screenshot. Or when using it from chrome scope that the active tab's content is visible now inside the browser window. ([Firefox bug 1559592](https://bugzil.la/1559592)).
 - `WebDriver:TakeScreenshot` no longer accepts a list of DOM elements as used for highlighting ([Firefox bug 1575511](https://bugzil.la/1575511)).
 - `WebDriver:ExecuteScript` and `WebDriver:ExecuteAsyncScript` no longer sets `window.onunload` in ways that are web-exposed ([Firefox bug 1568991](https://bugzil.la/1568991)).
 

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLMediaElement.progress_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`progress`** event is fired periodically as the browser loads a resource.
 

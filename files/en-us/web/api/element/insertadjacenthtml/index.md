@@ -10,7 +10,7 @@ browser-compat: api.Element.insertAdjacentHTML
 
 > [!WARNING]
 > This method parses its input as HTML or XML, writing the result into the DOM.
-> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
 >
 > You can reduce the risk by assigning {{domxref("TrustedHTML")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 > This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup, such as {{htmlelement("script")}} elements and event handler attributes.
@@ -120,7 +120,7 @@ code {
 #### JavaScript
 
 Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
-This acts as a transparent replacement for the trusted types JavaScript API:
+This acts as a transparent replacement for the Trusted Types JavaScript API:
 
 ```js
 if (typeof trustedTypes === "undefined")
@@ -133,7 +133,7 @@ Your own application code should use a third party library such as the "DOMPurif
 
 ```js
 const policy = trustedTypes.createPolicy("some-content-policy", {
-  createHTML: (input) => {
+  createHTML(input) {
     return input; // Do not do this in your own code!
     // Instead do something like:
     // return DOMPurify.sanitize(input);

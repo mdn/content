@@ -32,7 +32,7 @@ Sidebar documents get access to the same set of privileged JavaScript APIs that 
 
 Sidebar documents are unloaded when their browser window is closed or when the user closes the sidebar. This means that unlike background pages, sidebar documents don't stay loaded all the time, but unlike browser action popups, they stay loaded while the user interacts with web pages.
 
-When an extension that defines a sidebar is first installed, its sidebar will be opened automatically. This is intended to help the user understand that the extension includes a sidebar. Note that it's not possible for an extension to open sidebars programmatically: sidebars can only be opened by the user.
+When an extension that defines a sidebar is first installed, its sidebar will be opened automatically. This is intended to help the user understand that the extension includes a sidebar.
 
 ## Specifying sidebars
 

@@ -1,5 +1,5 @@
 ---
-title: Firefox 134 for developers
+title: Firefox 134 release notes for developers
 short-title: Firefox 134
 slug: Mozilla/Firefox/Releases/134
 page-type: firefox-release-notes

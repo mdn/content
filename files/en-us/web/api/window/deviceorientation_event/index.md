@@ -62,9 +62,9 @@ if (window.DeviceOrientationEvent) {
   );
 }
 
-const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {
+function handleOrientationEvent(frontToBack, leftToRight, rotateDegrees) {
   // do something amazing
-};
+}
 ```
 
 ## Specifications

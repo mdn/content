@@ -14,7 +14,7 @@ If unset, the app's (i.e., the {{htmlelement("html")}} [`lang`](/en-US/docs/Web/
 
 ## Value
 
-A string representing a BCP 47 language tag.
+A string representing a {{glossary("BCP 47 language tag")}}.
 
 ## Examples
 

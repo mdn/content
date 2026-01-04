@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLMediaElement.abort_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`abort`** event is fired when the resource was not fully loaded, but not as the result of an error.
 

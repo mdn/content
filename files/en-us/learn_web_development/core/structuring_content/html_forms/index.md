@@ -6,7 +6,7 @@ page-type: tutorial-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons", "Learn_web_development/Core/Structuring_content")}}
 
 HTML forms and buttons are powerful tools for interacting with a website's users. Most commonly, they provide users with controls to manipulate a user interface (UI) or input data when required.
 
@@ -255,8 +255,10 @@ There are other button behaviors that can be specified via the `<button>` elemen
 - `<button type="reset">` creates a _reset button_ — this immediately deletes all data out of the form, resetting it to its initial state. **Don't use reset buttons** — they used to be popular in the early days of the web, but they are usually more annoying than they are helpful. Most people have experienced filling out a long form only to click the reset button by accident instead of the submit button, meaning they have to start again.
 - `<button type="button">` creates a button with the same behavior as buttons specified outside of `<form>` elements. As we saw earlier, they do absolutely nothing by default, and JavaScript is needed to give them functionality.
 
+Although you can create these button types by using an `<input>` element with the same `type` values – such as [`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit), [`<input type="reset">`](/en-US/docs/Web/HTML/Reference/Elements/input/reset), and [`<input type="button">`](/en-US/docs/Web/HTML/Reference/Elements/input/button) – they have many disadvantages compared to their `<button>` counterparts. So you should use `<button>` instead.
+
 > [!NOTE]
-> You can also create the above button types using an `<input>` element with the same `type` values specified — [`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit), [`<input type="reset">`](/en-US/docs/Web/HTML/Reference/Elements/input/reset), and [`<input type="button">`](/en-US/docs/Web/HTML/Reference/Elements/input/button). However, these have many disadvantages compared to their `<button>` counterparts. You should use `<button>` instead.
+> Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> has a free lesson — [The very basics of forms](https://scrimba.com/learn-responsive-web-design-c029/~031?via=mdn) — which provides a useful interactive recap of the form basics we covered previously in this article.
 
 ## An aside on accessibility
 
@@ -361,7 +363,7 @@ Before moving on, play with the different form controls in your local copy and s
 
 The "Choose hotel room type" buttons are implemented using [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) controls. These render as a set of push button controls where only one of the set can be selected at any one time — you can't select more than one at once. They are named after the buttons found on old-fashioned radios, where you press one button and the previously-selected one pops out again.
 
-Our example code look looks like this:
+Our example code looks like this:
 
 ```html
 <fieldset>
@@ -488,18 +490,14 @@ Form validation is a huge topic that is beyond scope for this article, so we wil
 
 In short, don't decide between using either client-side or server-side validation - you will need both. You need client-side validation to give users feedback on their input and server-side validation to make sure messages are in a format your server can safely handle. If you want to start learning more about validation, a good place to start is [Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Forms and buttons](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons).
-
 ## Summary
 
 That's all for now. There's a lot more to know about forms, but for now, we've given you enough of an understanding to move forward in your studies.
 
-Next up, we will have a look at how to debug problems in your HTML code.
+Next up, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on HTML forms.
 
 ## See also
 
 - [Web forms — Working with user data](/en-US/docs/Learn_web_development/Extensions/Forms)
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons", "Learn_web_development/Core/Structuring_content")}}

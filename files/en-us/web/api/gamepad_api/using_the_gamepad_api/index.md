@@ -65,20 +65,12 @@ function gamepadHandler(event, connected) {
   }
 }
 
-window.addEventListener(
-  "gamepadconnected",
-  (e) => {
-    gamepadHandler(e, true);
-  },
-  false,
-);
-window.addEventListener(
-  "gamepaddisconnected",
-  (e) => {
-    gamepadHandler(e, false);
-  },
-  false,
-);
+window.addEventListener("gamepadconnected", (e) => {
+  gamepadHandler(e, true);
+});
+window.addEventListener("gamepaddisconnected", (e) => {
+  gamepadHandler(e, false);
+});
 ```
 
 This previous example also demonstrates how the `gamepad` property can be held after the event has completed — a technique we will use for device state querying later.

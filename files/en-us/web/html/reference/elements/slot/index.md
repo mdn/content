@@ -21,7 +21,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 <template id="element-details-template">
   <style>
     details {
-      font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+      font-family: "Open Sans Light", "Helvetica", "Arial", sans-serif;
     }
     .name {
       font-weight: bold;
@@ -142,4 +142,4 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - HTML [`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) attribute
 - CSS {{CSSXref("::slotted")}} pseudo-element
 - CSS {{cssxref(":has-slotted")}} pseudo-class
-- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module

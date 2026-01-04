@@ -11,11 +11,13 @@ Safari uses the open source {{glossary("WebKit")}} rendering engine, which was d
 
 ## See also
 
-- [Safari](<https://en.wikipedia.org/wiki/Safari_(web_browser)>) on Wikipedia
+- [Safari (web browser)](<https://en.wikipedia.org/wiki/Safari_(web_browser)>) on Wikipedia
 - [Safari](https://www.apple.com/safari/) on apple.com
-- [The WebKit project](https://webkit.org/)
+- [The WebKit Open Source Project](https://webkit.org/)
 - [WebKit Build Archives](https://webkit.org/build-archives/)
-- [Reporting a bug for Safari](https://bugs.webkit.org/)
+- [Report Safari bugs](https://bugs.webkit.org/)
 - Related glossary terms:
   - {{glossary("Browser")}}
+  - {{Glossary("Engine/Rendering", "Rendering engine")}}
   - {{glossary("WebKit")}}
+  - Other browsers: {{glossary("Google Chrome")}}, {{glossary("Microsoft Edge")}}, {{glossary("Mozilla Firefox")}}, {{glossary("Opera Browser")}}

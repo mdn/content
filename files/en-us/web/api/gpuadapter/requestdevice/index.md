@@ -39,12 +39,14 @@ Not all features and limits will be available to WebGPU in all browsers that sup
 
 A {{jsxref("Promise")}} that fulfills with a {{domxref("GPUDevice")}} object instance.
 
-If you make a duplicate call, i.e., call `requestDevice()` on a {{domxref("GPUAdapter")}} that `requestDevice()` was already called on, the promise fulfills with a device that is immediately lost. You can then get information on how the device was lost via {{domxref("GPUDevice.lost")}}.
+If you make a duplicate call, i.e., call `requestDevice()` on a {{domxref("GPUAdapter")}} that `requestDevice()` was already called on, the promise rejects with an `OperationError` because the associated `GPUAdapter` is consumed when a `GPUDevice` is created.
 
 ### Exceptions
 
 - `OperationError` {{domxref("DOMException")}}
-  - : The promise rejects with an `OperationError` if the limits included in the `requiredLimits` property are not supported by the {{domxref("GPUAdapter")}}, either because they are not valid limits, or because their values are higher than the adapter's values for those limits.
+  - : The promise rejects with an `OperationError` if either:
+    - The limits included in the `requiredLimits` property are not supported by the {{domxref("GPUAdapter")}}, either because they are not valid limits, or because their values are higher than the adapter's values for those limits.
+    - The `GPUAdapter` has been consumed by having `requestDevice()` called on it previously.
 - `TypeError` {{domxref("DOMException")}}
   - : The promise rejects with a `TypeError` if the features included in the `requiredFeatures` property are not supported by the {{domxref("GPUAdapter")}}.
 

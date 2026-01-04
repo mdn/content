@@ -12,6 +12,14 @@ The **`<feMergeNode>`** [SVG](/en-US/docs/Web/SVG) takes the result of another f
 
 {{svginfo}}
 
+## Attributes
+
+- {{SVGAttr("in")}}
+
+## DOM Interface
+
+This element implements the [`SVGFEMergeNodeElement`](/en-US/docs/Web/API/SVGFEMergeNodeElement) interface.
+
 ## Example
 
 ```html
@@ -44,14 +52,6 @@ The **`<feMergeNode>`** [SVG](/en-US/docs/Web/SVG) takes the result of another f
 ### Result
 
 {{EmbedLiveSample('Example', 200, 200)}}
-
-## Attributes
-
-- {{ SVGAttr("in") }}
-
-## DOM Interface
-
-This element implements the [`SVGFEMergeNodeElement`](/en-US/docs/Web/API/SVGFEMergeNodeElement) interface.
 
 ## Specifications
 

@@ -38,14 +38,14 @@ function getEventType(event) {
 }
 
 // Keyboard events
-document.addEventListener("keydown", getEventType, false); // first
-document.addEventListener("keypress", getEventType, false); // second
-document.addEventListener("keyup", getEventType, false); // third
+document.addEventListener("keydown", getEventType); // first
+document.addEventListener("keypress", getEventType); // second
+document.addEventListener("keyup", getEventType); // third
 
 // Mouse events
-document.addEventListener("mousedown", getEventType, false); // first
-document.addEventListener("mouseup", getEventType, false); // second
-document.addEventListener("click", getEventType, false); // third
+document.addEventListener("mousedown", getEventType); // first
+document.addEventListener("mouseup", getEventType); // second
+document.addEventListener("click", getEventType); // third
 ```
 
 ### Result

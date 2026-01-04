@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.isPointInPath
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.isPointInPath()`**
@@ -45,9 +45,7 @@ isPointInPath(path, x, y, fillRule)
 
 ### Return value
 
-- A boolean value
-  - : A Boolean, which is `true` if the specified point is contained in the
-    current or specified path, otherwise `false`.
+A boolean value, which is `true` if the specified point is contained in the current or specified path, otherwise `false`.
 
 ## Examples
 

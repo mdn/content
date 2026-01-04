@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Advanced HTML text"
-short-title: Advanced HTML text
+short-title: "Test: Advanced HTML text"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
 
 The aim of this skill test is to help you assess whether you understand how to use [lesser-known HTML elements to mark up advanced semantic features](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features).
 
@@ -24,7 +26,7 @@ To complete this task:
 
 The finished example should look like this:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2-finished.html", '100%', 300)}}
+{{EmbedLiveSample('advanced-text-solution', "", 260)}}
 
 ```html live-sample___advanced-text
 <h1>Advanced text semantics</h1>
@@ -45,14 +47,14 @@ The finished example should look like this:
 </p>
 ```
 
-```css hidden live-sample___advanced-text
+```css hidden live-sample___advanced-text live-sample___advanced-text-solution
 body {
   background-color: white;
-  color: #333;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -81,7 +83,7 @@ time {
 
 Your finished HTML should look like this:
 
-```html
+```html live-sample___advanced-text-solution
 <h1>Advanced text semantics</h1>
 
 <p>Let's start with a quote:</p>
@@ -113,3 +115,5 @@ Your finished HTML should look like this:
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}

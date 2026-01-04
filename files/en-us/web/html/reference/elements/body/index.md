@@ -61,7 +61,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : Function to call when the storage area has changed.
 - [`onunhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event)
   - : Function to call when a JavaScript {{jsxref("Promise")}} that has no rejection handler is rejected.
-- [`onunload`](/en-US/docs/Web/API/Window/unload_event)
+- [`onunload`](/en-US/docs/Web/API/Window/unload_event) {{deprecated_inline}}
   - : Function to call when the document is going away.
 
 ### Deprecated attributes

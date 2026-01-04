@@ -28,10 +28,12 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Contains a value controlling whether credentials should be included with the request (e.g., `omit`, `same-origin`, `include`). The default is `same-origin`.
 - {{domxref("Request.destination")}} {{ReadOnlyInline}}
   - : A string describing the type of content being requested.
+- {{domxref("Request.duplex")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : The duplex mode of the request, which determines whether the browser must send the entire request before processing the response.
 - {{domxref("Request.headers")}} {{ReadOnlyInline}}
   - : Contains the associated {{domxref("Headers")}} object of the request.
 - {{domxref("Request.integrity")}} {{ReadOnlyInline}}
-  - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+  - : Contains the [subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) value of the request (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 - {{domxref("Request.isHistoryNavigation")}} {{ReadOnlyInline}}
   - : A boolean indicating whether the request is a history navigation.
 - {{domxref("Request.keepalive")}} {{ReadOnlyInline}}

@@ -51,17 +51,13 @@ _Also inherits properties from its parent interface, {{domxref("Event")}}._
 For a given {{domxref("RTCDataChannel")}}, `dc`, created for a peer connection using its {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} method, this code sets up a handler for incoming messages and acts on them by adding the data contained within the message to the current document as a new {{HTMLElement("p")}} (paragraph) element.
 
 ```js
-dc.addEventListener(
-  "message",
-  (event) => {
-    let newParagraph = document.createElement("p");
-    let textNode = document.createTextNode(event.data);
-    newParagraph.appendChild(textNode);
+dc.addEventListener("message", (event) => {
+  let newParagraph = document.createElement("p");
+  let textNode = document.createTextNode(event.data);
+  newParagraph.appendChild(textNode);
 
-    document.body.appendChild(newParagraph);
-  },
-  false,
-);
+  document.body.appendChild(newParagraph);
+});
 ```
 
 We first create the new paragraph element and add the message data to it as a new text node. Then we append the new paragraph to the end of the document's body.

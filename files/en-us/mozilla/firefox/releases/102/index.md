@@ -1,5 +1,5 @@
 ---
-title: Firefox 102 for developers
+title: Firefox 102 release notes for developers
 short-title: Firefox 102
 slug: Mozilla/Firefox/Releases/102
 page-type: firefox-release-notes
@@ -16,7 +16,7 @@ No notable changes.
 
 ### CSS
 
-The [`update`](/en-US/docs/Web/CSS/@media/update) media feature that can be used to query the ability of the output device to modify the appearance of content after it is rendered is now available by default ([Firefox bug 1422312](https://bugzil.la/1422312)).
+The [`update`](/en-US/docs/Web/CSS/Reference/At-rules/@media/update) media feature that can be used to query the ability of the output device to modify the appearance of content after it is rendered is now available by default ([Firefox bug 1422312](https://bugzil.la/1422312)).
 
 ### JavaScript
 

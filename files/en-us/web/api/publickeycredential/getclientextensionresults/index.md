@@ -8,7 +8,7 @@ browser-compat: api.PublicKeyCredential.getClientExtensionResults
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`getClientExtensionResults()`** method of the {{domxref("PublicKeyCredential")}} interface returns a map between the identifiers of extensions requested during credential creation or authentication, and their results after processing by the user agent.
+The **`getClientExtensionResults()`** method of the {{domxref("PublicKeyCredential")}} interface returns an object mapping the identifiers of extensions requested during credential creation or authentication, and their results after processing by the user agent.
 
 During the creation or fetching of a `PublicKeyCredential` (via {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} and {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} respectively), it is possible to request "custom" processing by the client for different extensions, specified in the `publicKey` option's `extensions` property. You can find more information about requesting the different extensions in [Web Authentication extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions).
 
@@ -27,7 +27,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Map", "map")}}, with each entry being an extensions' identifier string as the key, and the output from the processing of the extension by the client as the value.
+An object with each entry being an extensions' identifier string as the key, and the output from the processing of the extension by the client as the value.
 
 ### Exceptions
 

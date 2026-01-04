@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.touchstart_event
 ---
 
-{{APIRef}}
+{{APIRef("Touch Events")}}
 
 The `touchstart` event is fired when one or more touch points are placed on the touch surface.
 

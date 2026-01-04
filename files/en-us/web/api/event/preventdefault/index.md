@@ -52,7 +52,7 @@ demonstrates how to prevent that from happening:
 ```js
 const checkbox = document.querySelector("#id-checkbox");
 
-checkbox.addEventListener("click", checkboxClick, false);
+checkbox.addEventListener("click", checkboxClick);
 
 function checkboxClick(event) {
   const warn = "preventDefault() won't let you check this!\n";

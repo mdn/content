@@ -8,17 +8,15 @@ browser-compat: api.Window.location
 
 {{APIRef}}
 
-The **`Window.location`** read-only property returns a {{domxref("Location")}} object with information about the current location of the document.
-
-Though `Window.location` is a _read-only_ `Location` object, you can also assign a string to it.
-This means that you can work with `location` as if it were a string in most cases:
-`location = 'http://www.example.com'` is a synonym of `location.href = 'http://www.example.com'`.
+The read-only **`location`** property of the {{domxref("Window")}} interface returns a {{domxref("Location")}} object with information about the current location of the document.
 
 See {{domxref("Location")}} for all available properties.
 
 ## Value
 
 A {{domxref("Location")}} object.
+
+Although the `location` property itself is read-only in the sense that you can't replace the `Location` object, you can still assign to the `location` property directly, which is equivalent to assigning to its {{domxref("Location/href", "href")}} property. You can also modify the `Location` object using the {{domxref("Location/assign", "assign()")}} and {{domxref("Location/replace", "replace()")}} methods.
 
 ## Examples
 
@@ -318,7 +316,7 @@ The current URL with "?Some%20data" appended is sent to the server (if no action
 ```css
 span.intLink {
   cursor: pointer;
-  color: #0000ff;
+  color: blue;
   text-decoration: underline;
 }
 ```
@@ -410,7 +408,7 @@ const showBookmark = (() => {
     }
   }
 
-  window.addEventListener("scroll", _chkOwner, false);
+  window.addEventListener("scroll", _chkOwner);
 
   return (bookmark, useHash) => {
     const node = document.querySelector(bookmark);

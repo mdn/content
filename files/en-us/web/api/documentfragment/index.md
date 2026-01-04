@@ -43,7 +43,7 @@ _This interface inherits the methods of its parent, {{domxref("Node")}}._
   - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified selectors.
 - {{domxref("DocumentFragment.querySelectorAll()")}}
   - : Returns a {{domxref("NodeList")}} of all the {{domxref("Element")}} nodes within the `DocumentFragment` that match the specified selectors.
-- {{DOMxRef("DocumentFragment.moveBefore()")}} {{Experimental_Inline}}
+- {{DOMxRef("DocumentFragment.moveBefore()")}}
   - : Moves a given {{domxref("Node")}} inside the invoking `DocumentFragment` as a direct child, before a given reference node, without removing and then inserting the node.
 - {{DOMxRef("DocumentFragment.replaceChildren()")}}
   - : Replaces the existing children of a `DocumentFragment` with a specified new set of children.

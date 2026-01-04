@@ -28,6 +28,9 @@ Because of abuses of push notifications in the past, web browsers and developers
 
 In addition, In Chrome and Firefox you cannot request notifications at all unless the site is a secure context (i.e., HTTPS), and you can no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s.
 
+> [!NOTE]
+> The examples in this article uses the {{domxref("Notification/Notification", "Notification()")}} constructor to create notifications. This is fine for desktop, but on most mobile browsers this will throw a {{jsxref("TypeError")}}. If you are targeting mobile devices, you should register a service worker and use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
+
 ### Checking current permission status
 
 You can check to see if you already have permission by checking the value of the {{domxref("Notification.permission_static", "Notification.permission")}} read only property. It can have one of three possible values:
@@ -156,7 +159,7 @@ Assume the following basic HTML:
 #demo-logs {
   width: 90%;
   height: 100px;
-  background-color: #ddd;
+  background-color: #dddddd;
   overflow-x: auto;
   padding: 10px;
   margin-top: 10px;
@@ -168,58 +171,56 @@ It's possible to handle multiple notifications this way:
 ```js
 const demoLogs = document.querySelector("#demo-logs");
 
-window.addEventListener("load", () => {
-  const button = document.querySelector("#notify");
+const button = document.querySelector("#notify");
 
-  button.addEventListener("click", () => {
-    if (Notification?.permission === "granted") {
-      demoLogs.innerText += `The site has permission to show notifications. Showing notifications.\n`;
-      // If the user agreed to get notified
-      // Let's try to send ten notifications
-      let i = 0;
-      // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
-      const interval = setInterval(() => {
-        // Thanks to the tag, we should only see the "Hi no 9 from MDN." notification
-        const n = new Notification(`Hi no ${i} from MDN.`, {
-          tag: "soManyNotification",
-        });
-        if (i === 9) {
-          clearInterval(interval);
-        }
-        i++;
-      }, 200);
-    } else if (Notification?.permission !== "denied") {
-      demoLogs.innerText += "Requesting notification permission.\n";
-      // If the user hasn't told if they want to be notified or not
-      // Note: because of Chrome, we are not sure the permission property
-      // is set, therefore it's unsafe to check for the "default" value.
-      Notification.requestPermission().then((status) => {
-        // If the user said okay
-        if (status === "granted") {
-          demoLogs.innerText +=
-            "User granted the permission. Sending notifications.\n";
-          let i = 0;
-          // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
-          const interval = setInterval(() => {
-            // Thanks to the tag, we should only see the "Message no 9 from MDN." notification
-            const n = new Notification(`Message no ${i} from MDN.`, {
-              tag: "soManyNotification",
-            });
-            if (i === 9) {
-              clearInterval(interval);
-            }
-            i++;
-          }, 200);
-        } else {
-          // Otherwise, we can fallback to a regular modal alert
-          demoLogs.innerText += `User denied the permission request.\n`;
-        }
+button.addEventListener("click", () => {
+  if (Notification?.permission === "granted") {
+    demoLogs.innerText += `The site has permission to show notifications. Showing notifications.\n`;
+    // If the user agreed to get notified
+    // Let's try to send ten notifications
+    let i = 0;
+    // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
+    const interval = setInterval(() => {
+      // Thanks to the tag, we should only see the "Hi no 9 from MDN." notification
+      const n = new Notification(`Hi no ${i} from MDN.`, {
+        tag: "soManyNotification",
       });
-    } else {
-      // If the user refuses to get notified, we can fallback to a regular modal alert
-      demoLogs.innerText += `The site does not have permission to show notifications.\n`;
-    }
-  });
+      if (i === 9) {
+        clearInterval(interval);
+      }
+      i++;
+    }, 200);
+  } else if (Notification?.permission !== "denied") {
+    demoLogs.innerText += "Requesting notification permission.\n";
+    // If the user hasn't told if they want to be notified or not
+    // Note: because of Chrome, we are not sure the permission property
+    // is set, therefore it's unsafe to check for the "default" value.
+    Notification.requestPermission().then((status) => {
+      // If the user said okay
+      if (status === "granted") {
+        demoLogs.innerText +=
+          "User granted the permission. Sending notifications.\n";
+        let i = 0;
+        // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
+        const interval = setInterval(() => {
+          // Thanks to the tag, we should only see the "Message no 9 from MDN." notification
+          const n = new Notification(`Message no ${i} from MDN.`, {
+            tag: "soManyNotification",
+          });
+          if (i === 9) {
+            clearInterval(interval);
+          }
+          i++;
+        }, 200);
+      } else {
+        // Otherwise, we can fallback to a regular modal alert
+        demoLogs.innerText += `User denied the permission request.\n`;
+      }
+    });
+  } else {
+    // If the user refuses to get notified, we can fallback to a regular modal alert
+    demoLogs.innerText += `The site does not have permission to show notifications.\n`;
+  }
 });
 ```
 

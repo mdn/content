@@ -95,7 +95,7 @@ JavaScript engines used in current web browsers include:
 
 - Mozilla's [SpiderMonkey](https://spidermonkey.dev/), used in Firefox, Servo, and Flow. Other non-browser usage includes MongoDB, CouchDB, and more. This was the first _ever_ JavaScript engine, created by Brendan Eich at Netscape.
 - Google's [V8](https://v8.dev/), used in Chrome and Chromium-based browsers such as Opera, Edge, and Brave. Other non-browser usage includes [Node.js](https://nodejs.org/), [Deno](https://deno.com/), [Electron](https://www.electronjs.org/), and more.
-- Apple's [JavaScriptCore](https://docs.webkit.org/Deep%20Dive/JSC/JavaScriptCore.html) (also known as SquirrelFish/Nitro), used in Safari and other WebKit-based browsers. Other non-browser usage includes [Bun](https://bun.sh/).
+- Apple's [JavaScriptCore](https://docs.webkit.org/Deep%20Dive/JSC/JavaScriptCore.html) (also known as SquirrelFish/Nitro), used in Safari and other WebKit-based browsers. Other non-browser usage includes [Bun](https://bun.com/).
 - [LibJS](https://serenityos.github.io/libjs-website/), used in [Ladybird](https://ladybird.org/).
 
 Some JavaScript engines used in earlier browsers include:

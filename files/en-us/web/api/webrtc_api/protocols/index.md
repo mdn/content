@@ -74,7 +74,7 @@ The SFM relies on the ability to determine frame dependency relationships, such 
 VP8 and VP9 codecs can include frame dependency information in the VP8 payload descriptor and VP9 payload descriptor, respectively.
 For the AV1 codec the information is sent in the [Dependency Descriptor (DD) RTP Header Extension](#dependency_descriptor_rtp_header_extension).
 
-Recent browser implementations commonly use the DD header for all codecs, as it is codec-agnostic, which can simply the SFM implementation.
+Recent browser implementations commonly use the DD header for all codecs, as it is codec-agnostic, which can simplify the SFM implementation.
 In addition, because it is a part of the RTP header rather than the payload, it can be used in end-to-end encryption scenarios.
 
 ### Scalable video coding

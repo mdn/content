@@ -3,12 +3,10 @@ title: "DocumentFragment: moveBefore() method"
 short-title: moveBefore()
 slug: Web/API/DocumentFragment/moveBefore
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.DocumentFragment.moveBefore
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`moveBefore()`** method of the {{domxref("DocumentFragment")}} interface moves a given {{domxref("Node")}} inside the invoking `DocumentFragment` as a direct child, before a given reference node.
 
@@ -45,7 +43,7 @@ None ({{jsxref("undefined")}}).
 
 The `moveBefore()` method moves a given node to a new place in the `DocumentFragment`. It provides similar functionality to the {{domxref("Node.insertBefore()")}} method, except that it doesn't remove and then reinsert the node. This means that the state of the node (which would be reset if moving it with `insertBefore()` and similar mechanisms) is preserved after the move. This includes:
 
-- [Animation](/en-US/docs/Web/CSS/CSS_animations) and [transition](/en-US/docs/Web/CSS/CSS_transitions) state.
+- [Animation](/en-US/docs/Web/CSS/Guides/Animations) and [transition](/en-US/docs/Web/CSS/Guides/Transitions) state.
 - {{htmlelement("iframe")}} loading state.
 - Interactivity states (for example, {{cssxref(":focus")}} and {{cssxref(":active")}}).
 - [Fullscreen](/en-US/docs/Web/API/Fullscreen_API) element state.

@@ -15,7 +15,7 @@ It is nice to see our ball moving, but it quickly disappears from the screen, li
 
 To detect the collision we will check whether the ball is touching (colliding with) the wall, and if so, we will change the direction of its movement accordingly.
 
-To make the calculations easier let's define a variable called `ballRadius` that will hold the radius of the drawn circle and be used for calculations. Add this to your code, somewhere below the existing variable declarations:
+To enable the calculations, let's define a variable called `ballRadius` that will hold the radius of the drawn circle and be used for calculations. Add this to your code, somewhere below the existing variable declarations:
 
 ```js
 const ballRadius = 10;
@@ -105,7 +105,7 @@ Let's again check the finished code for this part against what you've got, and h
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;

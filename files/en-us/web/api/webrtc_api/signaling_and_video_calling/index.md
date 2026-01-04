@@ -203,7 +203,7 @@ function handleUserListMsg(msg) {
   msg.users.forEach((username) => {
     const item = document.createElement("li");
     item.appendChild(document.createTextNode(username));
-    item.addEventListener("click", invite, false);
+    item.addEventListener("click", invite);
 
     listElem.appendChild(item);
   });

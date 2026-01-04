@@ -8,15 +8,15 @@ browser-compat: api.Highlight.priority
 
 {{APIRef("CSS Custom Highlight API")}}
 
+The `priority` property of the {{domxref("Highlight")}} interface is a number used to determine which highlight's styles should be used to resolve style conflicts in overlapping parts. Highlights with a higher `priority` number have preference over those with a lower `priority`.
+
 It is possible to create {{domxref("Range")}} objects that overlap in a document.
 
 When overlapping ranges are used by multiple different {{domxref("Highlight")}} objects, and when those highlights are styled using {{cssxref("::highlight")}} pseudo-elements, this may lead to conflicting styles.
 
 If two text ranges overlap and are both highlighted using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}, and if they're both styled using the `color` CSS property, the browser needs to decide which color should be used for styling the text in the overlapping part.
 
-By default, all highlights have the same priority and the browser chooses the most recently registered highlight to style the overlapping parts.
-
-The `priority` property of the {{domxref("Highlight")}} interface is a {{jsxref("Number")}} used to change this default behavior and determine which highlight's styles should be used to resolve style conflicts in overlapping parts.
+If no `priority` is set, all highlights have the same priority, and the browser chooses the most recently registered highlight to style the overlapping parts.
 
 Note that all the styles of a highlight are applied and the browser only needs to resolve conflicts when the same CSS properties are used by multiple overlapping highlights. The highlight style conflict resolution also does not depend on the order in which the {{cssxref("::highlight")}} pseudo-elements rules appear in the source, or whether or not CSS properties are marked as `!important`.
 

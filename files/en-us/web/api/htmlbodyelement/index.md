@@ -18,7 +18,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLBodyElement.aLink")}} {{deprecated_inline}}
   - : A string that represents the color of active hyperlinks.
 - {{domxref("HTMLBodyElement.background")}} {{deprecated_inline}}
-  - : A string that represents the description of the location of the background image resource. Note that this is not an URI, though some older version of some browsers do expect it.
+  - : A string that represents the description of the location of the background image resource. Note that this is not a URI, though some older version of some browsers do expect it.
 - {{domxref("HTMLBodyElement.bgColor")}} {{deprecated_inline}}
   - : A string that represents the background color for the document.
 - {{domxref("HTMLBodyElement.link")}} {{deprecated_inline}}

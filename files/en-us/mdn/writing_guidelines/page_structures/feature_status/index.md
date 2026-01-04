@@ -9,8 +9,8 @@ A feature status broadly indicates the cross-browser implementation and standard
 
 It is one of the following:
 
-- [`deprecated`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-deprecated)
-- [`experimental`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental)
+- [`deprecated`](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#setting-deprecated)
+- [`experimental`](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#setting-experimental)
 - [`non-standard`](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information)
 
 > [!WARNING]
@@ -20,7 +20,7 @@ It is one of the following:
 If none of the above statuses apply, the feature is considered _stable and standard feature_.
 For more information on these terms, see the ["Experimental, deprecated, and obsolete"](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) page.
 
-For information on how the status for a feature is determined, see the [choosing status properties](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#choosing-status-properties) section in the `@mdn/browser-compat-data` (BCD) repository.
+For information on how the status for a feature is determined, see the [choosing status properties](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#choosing-status-properties) section in the `@mdn/browser-compat-data` (BCD) repository.
 
 ## How feature statuses are added or updated?
 

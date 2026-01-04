@@ -1,7 +1,7 @@
 ---
 title: "grow: Wasm text instruction"
 short-title: grow
-slug: WebAssembly/Reference/Memory/Grow
+slug: WebAssembly/Reference/Memory/grow
 page-type: webassembly-instruction
 browser-compat:
   - webassembly.api.Memory.grow

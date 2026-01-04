@@ -22,7 +22,9 @@ None.
 
 ### Return value
 
-A `MediaTrackCapabilities` object which specifies the value or range of values which are supported for each of the user agent's supported constrainable properties. It is required to return identical information as returned by calling `getCapabilities()` on the first {{domxref("MediaStreamTrack")}} of the same `kind` as this device (video or audio) in the `MediaStream` returned by `getUserMedia({ deviceId: deviceInfo.deviceId })`. See {{domxref("MediaStreamTrack.getCapabilities()")}} for a list of commonly supported properties and their types.
+A `MediaTrackCapabilities` object which specifies the value or range of values which are supported for each of the user agent's supported constrainable properties. It is required to return identical information as returned by calling `getCapabilities()` on the first {{domxref("MediaStreamTrack")}} of the same `kind` as this device (video or audio) in the `MediaStream` returned by `getUserMedia({ deviceId: deviceInfo.deviceId })`.
+
+See {{domxref("MediaStreamTrack.getCapabilities()")}} for a list of commonly supported properties and their types.
 
 > [!NOTE]
 > If the user has not granted permission to access the input device an empty object will be returned.

@@ -3,11 +3,11 @@ title: SharedStorageWorkletGlobalScope
 slug: Web/API/SharedStorageWorkletGlobalScope
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SharedStorageWorkletGlobalScope
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`SharedStorageWorkletGlobalScope`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the global scope of a {{domxref("SharedStorageWorklet")}} module.
 
@@ -15,12 +15,12 @@ The **`SharedStorageWorkletGlobalScope`** interface of the {{domxref("Shared Sto
 
 ## Instance properties
 
-- {{domxref("SharedStorageWorkletGlobalScope.sharedStorage", "sharedStorage")}} {{Experimental_Inline}}
+- {{domxref("SharedStorageWorkletGlobalScope.sharedStorage", "sharedStorage")}} {{deprecated_inline}}
   - : Contains an instance of the {{domxref("WorkletSharedStorage")}} object, representing the shared storage for a particular origin as exposed in a worklet context.
 
 ## Instance methods
 
-- {{domxref("SharedStorageWorkletGlobalScope.register", "register()")}} {{Experimental_Inline}}
+- {{domxref("SharedStorageWorkletGlobalScope.register", "register()")}} {{deprecated_inline}}
   - : Registers an {{domxref("SharedStorageOperation", "operation", "", "nocode")}} defined inside the current worklet module.
 
 ## Examples

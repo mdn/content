@@ -21,8 +21,8 @@ The **`<hr>`** [HTML](/en-US/docs/Web/HTML) element represents a thematic break 
 ```css interactive-example
 hr {
   border: none;
-  border-top: 3px double #333;
-  color: #333;
+  border-top: 3px double #333333;
+  color: #333333;
   overflow: visible;
   text-align: center;
   height: 5px;

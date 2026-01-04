@@ -97,7 +97,7 @@ an _LFO_-controlled parameter.
 ```js
 const audioCtx = new AudioContext();
 
-// create an normal oscillator to make sound
+// create a normal oscillator to make sound
 const oscillator = audioCtx.createOscillator();
 
 // create a second oscillator that will be used as an LFO (Low-frequency
