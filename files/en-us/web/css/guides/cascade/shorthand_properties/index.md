@@ -21,6 +21,7 @@ which may differ from the property's initial value.
 That means that it **overrides** previously set values.
 For example:
 
+
 ```css
 p {
   background-color: red;
