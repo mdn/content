@@ -28,7 +28,11 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### SVG -->
+### SVG
+
+- When an SVG file is used as an [image source](/en-US/docs/Web/SVG/Guides/SVG_as_an_image) (for example, embedded into a page via an {{htmlelement("img")}} element or as a CSS {{cssxref("background-image")}}), the SVG URL now supports [media fragments](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments). ([Firefox bug 1999989](https://bugzil.la/1999989)). This means that:
+  - When the SVG includes a [SMIL animation](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL), you can use [temporal dimension](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments#temporal_dimension_fragment_syntax) syntax to play a portion of the animation from a specific start time to a specific end time, after which the animation will pause.
+  - You can use [spatial dimension](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments#spatial_dimension_fragment_syntax) syntax to display a specific area of the SVG document.
 
 <!-- #### Removals -->
 
@@ -46,6 +50,8 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2001878](https://bugzil.la/2001878)).
 - The {{cssxref("counter-increment")}}, {{cssxref("counter-reset")}}, {{cssxref("counter-set")}}, and {{cssxref("quotes")}} properties are now supported on the {{cssxref("::marker")}} pseudo-element.
   ([Firefox bug 2000404](https://bugzil.la/2000404)).
+- The following [relative length units based on root element's font](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_root_elements_font) are now supported: `rcap`, `rch`, `rex`, and `ric`. These units allow you to define `<length>` values based on the size of a particular character or font attribute of the [root](/en-US/docs/Web/CSS/Reference/Selectors/:root) element.
+  ([Firefox bug 1740584](https://bugzil.la/1740584)).
 
 <!-- #### Removals -->
 
@@ -98,6 +104,8 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 <!-- #### Marionette -->
 
 ## Changes for add-on developers
+
+- Temporarily loaded Manifest Version 3 extensions can now load scripts from localhost, as explained in [Scripts from localhost](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#scripts_from_localhost) in the Content Security Policy article. ([Firefox bug 1864284](https://bugzil.la/1864284))
 
 <!-- ### Removals -->
 

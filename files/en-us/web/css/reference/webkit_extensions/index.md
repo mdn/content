@@ -115,7 +115,7 @@ For each of the properties below, use the standard equivalents.
 - `-webkit-box-ordinal-group`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("order")}}.
 - `-webkit-box-orient`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-direction")}}.
 - `-webkit-box-pack`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("justify-content")}}.
-- {{CSSxRef("-webkit-box-reflect")}}: Use the CSS {{CSSxRef("element", "element()")}} function.
+- {{CSSxRef("-webkit-box-reflect")}}: Use the CSS {{cssxref("element()")}} function.
 
 ### C-I
 

@@ -37,7 +37,7 @@ animate(keyframes, options)
       - : Specifies the end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will end. The JavaScript equivalent of the CSS {{cssxref("animation-range-end")}} property. `rangeEnd` can take several different value types, as follows:
         - A string that can be `normal` (meaning no change to the animation's attachment range), a CSS {{cssxref("length-percentage")}} representing an offset, a `<timeline-range-name>`, or a `<timeline-range-name>` with a `<length-percentage>` following it. For example: `"normal"`, `"entry"`, or `"cover 100%"`.
 
-          See [`animation-range`](/en-US/docs/Web/CSS/Reference/Properties/animation-range) for a detailed description of the available values. Also check out the [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/), which shows exactly what the different values mean in an easy visual format.
+          See {{cssxref("animation-range")}} for a detailed description of the available values. Also check out the [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/), which shows exactly what the different values mean in an easy visual format.
 
         - An object containing `rangeName` (a string) and `offset` (a {{domxref("CSSNumericValue")}}) properties representing a `<timeline-range-name>` and `<length-percentage>`, as described in the previous bullet. For example: `{ rangeName: "entry", offset: CSS.percent("100") }`.
         - A {{domxref("CSSNumericValue")}} representing an offset, for example: `CSS.percent("100")`.

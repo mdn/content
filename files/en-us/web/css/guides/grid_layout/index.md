@@ -99,9 +99,9 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 
 ### Functions
 
-- {{CSSxRef("repeat", "repeat()")}}
-- {{CSSxRef("minmax", "minmax()")}}
-- {{CSSxRef("fit-content_function", "fit-content()")}}
+- {{cssxref("repeat()")}}
+- {{cssxref("minmax()")}}
+- {{cssxref("fit-content_function", "fit-content()")}}
 
 ### Data types and values
 

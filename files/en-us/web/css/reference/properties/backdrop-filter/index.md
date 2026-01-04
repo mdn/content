@@ -88,7 +88,7 @@ backdrop-filter: unset;
 - `none`
   - : No filter is applied to the backdrop.
 - `<filter-value-list>`
-  - : A space-separated list of {{cssxref("&lt;filter-function&gt;")}}s or an [SVG filter](/en-US/docs/Web/SVG/Reference/Element/filter) that will be applied to the backdrop. CSS `<filter-function>`s include {{CSSxRef("filter-function/blur", "blur()")}}, {{CSSxRef("filter-function/brightness", "brightness()")}}, {{CSSxRef("filter-function/contrast", "contrast()")}}, {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}, {{CSSxRef("filter-function/grayscale", "grayscale()")}}, {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}, {{CSSxRef("filter-function/invert", "invert()")}}, {{CSSxRef("filter-function/opacity", "opacity()")}}, {{CSSxRef("filter-function/saturate", "saturate()")}}, and {{CSSxRef("filter-function/sepia", "sepia()")}}.
+  - : A space-separated list of {{cssxref("filter-function")}}s or an [SVG filter](/en-US/docs/Web/SVG/Reference/Element/filter) that will be applied to the backdrop. CSS `<filter-function>`s include {{CSSxRef("filter-function/blur", "blur()")}}, {{CSSxRef("filter-function/brightness", "brightness()")}}, {{CSSxRef("filter-function/contrast", "contrast()")}}, {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}, {{CSSxRef("filter-function/grayscale", "grayscale()")}}, {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}, {{CSSxRef("filter-function/invert", "invert()")}}, {{CSSxRef("filter-function/opacity", "opacity()")}}, {{CSSxRef("filter-function/saturate", "saturate()")}}, and {{CSSxRef("filter-function/sepia", "sepia()")}}.
 
 ## Formal definition
 
@@ -163,7 +163,7 @@ body {
 ## See also
 
 - {{cssxref("filter")}}
-- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("filter-function")}}
 - {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 - [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects)
 - [CSS compositing and blending](/en-US/docs/Web/CSS/Guides/Compositing_and_blending)
