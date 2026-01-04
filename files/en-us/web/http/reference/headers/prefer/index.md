@@ -24,10 +24,7 @@ The HTTP **`Prefer`** header allows clients to indicate preferences for specific
       </td>
     </tr>
     <tr>
-      <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "Forbidden header name")}}</th>
-      <td>No</td>
-    </tr>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>
