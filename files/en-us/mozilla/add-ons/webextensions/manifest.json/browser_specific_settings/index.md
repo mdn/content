@@ -111,7 +111,7 @@ To support Firefox for Android without specifying a version range, the `gecko_an
 The extension ID must be one of these:
 
 - [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
-- A string formatted like an email address: `extensionname@example.org` However, use of an `@string` format is recommended.
+- A string formatted like an email address: `extensionname@example.org`. However, use of an `@string` format is recommended.
 
 The latter format is easier to generate and manipulate. Be aware that using a real email address here may attract spam.
 
