@@ -54,7 +54,7 @@ The `chrome_settings_overrides` key is an object that may have the following pro
     This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 - `search_provider`
-  - : Defines a search provider to add to the browser.
+  - : `object`. Defines a search provider to add to the browser.
 
     The search provider has a name and a primary search URL. Alternative
     URLs may be provided, including URLs for more specialized searches
@@ -72,7 +72,7 @@ The `chrome_settings_overrides` key is an object that may have the following pro
     search provider by typing the keyword into the search/address bar
     before the search term.
 
-    This is an object with the properties listed below. All string
+    This object has these properties. All string
     properties are [localizable](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
     - `name`
       - : `string`. The search engine's name, displayed to the user.
