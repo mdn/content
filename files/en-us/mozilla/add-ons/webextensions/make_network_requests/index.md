@@ -5,7 +5,7 @@ page-type: guide
 sidebar: addonsidebar
 ---
 
-Extension scripts can send and receive data from remote servers using the [`fetch()`](/en-US/docs/Web/API/Fetch_API) Web API. This guide provides a comprehensive overview to using that API in various extension scripts. 
+Extension scripts can send and receive data from remote servers using the [`fetch()`](/en-US/docs/Web/API/Fetch_API) Web API. This guide provides a comprehensive overview to using that API in various extension scripts.
 
 > [!NOTE]
 > If you're familiar with using the [`fetch()`] API in web development, network requests in web extensions may not behave as you expect, leading to functional or security issues. This guide provides the information you need to avoid issues.
@@ -96,7 +96,7 @@ const jsonData = response.json();
 document.getElementById("resp").textContent = jsonData;
 ```
 
-See [Safely insert external content into a page](en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page) for more information.
+See [Safely insert external content into a page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page) for more information.
 
 ### Limit content script access to cross-origin requests
 
