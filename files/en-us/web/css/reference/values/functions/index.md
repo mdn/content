@@ -305,7 +305,7 @@ The following functions are used as a value of properties to reference a value d
 
 The following functions are used to define a [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout):
 
-- {{cssxref("fit-content()")}}
+- {{cssxref("fit-content_function", "fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
 - {{cssxref("minmax()")}}
   - : Defines a size range greater-than or equal-to _min_ and less-than or equal-to _max_.
@@ -401,7 +401,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("basic-shape/ellipse", "ellipse()")}}
 - {{cssxref("env")}}
 - {{cssxref("exp")}}
-- {{cssxref("fit-content()")}}
+- {{cssxref("fit-content_function", "fit-content()")}}
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
 - {{cssxref("color_value/hsl", "hsl()")}}
 - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
@@ -477,7 +477,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("transform-function/translateY", "translateY()")}}
 - {{cssxref("transform-function/translateZ", "translateZ()")}}
 - {{cssxref("type")}} {{experimental_inline}}
-- {{cssxref("url_function")}}
+- {{cssxref("url_function", "url()")}}
 - {{cssxref("var")}}
 - {{cssxref("animation-timeline/view", "view()")}}
 - {{cssxref("basic-shape/xywh", "xywh()")}}

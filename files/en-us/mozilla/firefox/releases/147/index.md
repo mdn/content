@@ -105,6 +105,8 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
+- Temporarily loaded Manifest Version 3 extensions can now load scripts from localhost, as explained in [Scripts from localhost](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#scripts_from_localhost) in the Content Security Policy article. ([Firefox bug 1864284](https://bugzil.la/1864284))
+
 <!-- ### Removals -->
 
 <!-- ### Other -->
