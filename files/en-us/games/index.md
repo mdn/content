@@ -22,7 +22,7 @@ We've also included a reference section so you can easily find information about
 
 ## Examples
 
-For a list of web game examples, see our list of [Tutorials](/en-US/docs/Games/Tutorials).
+For a list of web game examples, see our list of [Tutorials](files/en-us/games/tutorials).
 
 ## See also
 
