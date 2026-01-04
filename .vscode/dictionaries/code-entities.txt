@@ -76,7 +76,6 @@ beforematch
 beforescriptexecute
 beforexrselect
 BGRX
-bgtest
 bhks
 biske
 bmatrix

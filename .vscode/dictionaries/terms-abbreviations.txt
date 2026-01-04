@@ -909,7 +909,6 @@ Videobridge
 Viewmodel
 virosa
 virtualizes
-VOPRF
 WAAPI
 wallclock
 WAMP
