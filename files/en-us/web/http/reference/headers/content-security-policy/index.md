@@ -1,12 +1,11 @@
 ---
-title: Content-Security-Policy (CSP)
+title: Content-Security-Policy (CSP) header
 short-title: Content-Security-Policy
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy
 page-type: http-header
 browser-compat: http.headers.Content-Security-Policy
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Security-Policy`** response header allows website administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints.
 This helps guard against {{Glossary("cross-site scripting")}} attacks.
@@ -18,10 +17,6 @@ See the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) guide f
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>no</td>
     </tr>
   </tbody>
 </table>
@@ -42,7 +37,6 @@ where `<policy-directive>` consists of:
 Fetch directives control the locations from which certain resource types may be loaded.
 
 - {{CSP("child-src")}}
-
   - : Defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
@@ -51,7 +45,6 @@ Fetch directives control the locations from which certain resource types may be 
 - {{CSP("connect-src")}}
   - : Restricts the URLs which can be loaded using script interfaces.
 - {{CSP("default-src")}}
-
   - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch directives")}}.
 
     [Fallback](#fallbacks) for all other fetch directives.
@@ -75,7 +68,6 @@ Fetch directives control the locations from which certain resource types may be 
 - {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
-
   - : Specifies valid sources for JavaScript and WebAssembly resources.
 
     [Fallback](#fallbacks) for `script-src-elem` and `script-src-attr`.
@@ -85,7 +77,6 @@ Fetch directives control the locations from which certain resource types may be 
 - {{CSP("script-src-attr")}}
   - : Specifies valid sources for JavaScript inline event handlers.
 - {{CSP("style-src")}}
-
   - : Specifies valid sources for stylesheets.
 
     [Fallback](#fallbacks) for `style-src-elem` and `style-src-attr`.
@@ -145,7 +136,6 @@ for example.
 Reporting directives control the destination URL for CSP violation reports in `Content-Security-Policy` and {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 
 - {{CSP("report-to")}}
-
   - : Provides the browser with a token identifying the reporting endpoint or group of endpoints to send CSP violation information to.
     The endpoints that the token represents are provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}} and {{HTTPHeader("Report-To")}} {{deprecated_inline}}.
 
@@ -165,15 +155,12 @@ Reporting directives control the destination URL for CSP violation reports in `C
   - : Used to specify an allowlist of [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) policies.
     Trusted Types allows applications to lock down DOM XSS injection sinks to only accept non-spoofable, typed values in place of strings.
 - {{CSP("upgrade-insecure-requests")}}
-  - : Instructs user agents to treat all of a site's insecure URLs (those served over
-    HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
-    This directive is intended for websites with large numbers of insecure legacy URLs
-    that need to be rewritten.
+  - : Instructs user agents to treat all of a site's insecure URLs (those served over HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
+    This directive is intended for websites with large numbers of insecure legacy URLs that need to be rewritten.
 
 ### Deprecated directives
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
-
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
 
 - {{CSP("report-uri")}} {{deprecated_inline}}
@@ -193,7 +180,9 @@ The `<host-source>` and `<scheme-source>` formats must be unquoted, and all othe
 
 ### 'nonce-\<nonce_value>'
 
-This value consists of the string `nonce-` followed by a {{glossary("Base64", "base64-encoded")}} string. This string is a random value that the server generates for every HTTP response. For example:
+This value consists of the string `nonce-` followed by a {{Glossary("Nonce", "nonce")}} value. The nonce value may use any of the characters from [Base64](/en-US/docs/Glossary/Base64#base64_characters) or [URL-safe Base64](/en-US/docs/Glossary/Base64#url_and_filename_safe_base64).
+
+This string is a random value that the server generates for every HTTP response. For example:
 
 ```plain
 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
@@ -212,7 +201,7 @@ See [Nonces](/en-US/docs/Web/HTTP/Guides/CSP#nonces) in the CSP guide for more u
 
 ### '\<hash_algorithm>-<hash_value>'
 
-This value consists of a string identifying a hash algorithm, followed by `-`, followed by a {{glossary("Base64", "base64-encoded")}} string representing the hash value.
+This value consists of a string identifying a hash algorithm, followed by `-`, followed by a hash value. The hash value may use any of the characters from [Base64](/en-US/docs/Glossary/Base64#base64_characters) or [URL-safe Base64](/en-US/docs/Glossary/Base64#url_and_filename_safe_base64).
 
 - The hash algorithm identifier must be one of `sha256`, `sha384`, or `sha512`.
 - The hash value is the base64-encoded {{glossary("hash function", "hash")}} of a `<script>` or `<style>` resource, calculated using one of the following hash functions: SHA-256, SHA-384, or SHA-512.
@@ -277,14 +266,33 @@ Secure upgrades are allowed. For example:
 - If the document is served from `http://example.com`, then a CSP of `'self'` will also permit resources from `https://example.com`.
 - If the document is served from `ws://example.org`, then a CSP of `'self'` will also permit resources from `wss://example.org`.
 
+### 'trusted-types-eval'
+
+By default, if a CSP contains a `default-src` or a `script-src` directive, then JavaScript functions which evaluate their arguments as JavaScript are disabled.
+This includes [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), the [`code`](/en-US/docs/Web/API/Window/setTimeout#code) argument to {{domxref("Window.setTimeout()", "setTimeout()")}}, or the {{jsxref("Function/Function()", "Function()")}} constructor.
+
+The `trusted-types-eval` keyword can be used to undo this protection, but only when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are enforced and passed to these functions instead of strings.
+This allows dynamic evaluation of strings as JavaScript, but only after inputs have been passed through a transformation function before it is injected, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup.
+
+The `trusted-types-eval` must be used instead of [`'unsafe-eval'`](#unsafe-eval) when using these methods with trusted types.
+This ensures that access to the methods is blocked on browsers that don't support trusted types.
+
+> [!NOTE]
+> Developers should avoid using `trusted-types-eval` or these methods unless absolutely necessary.
+> Trusted types ensure that the input passes through a transformation function — they don't ensure that the transformation makes the input safe (and this can be very hard to get right).
+
+See [`eval()` and similar APIs](/en-US/docs/Web/HTTP/Guides/CSP#eval_and_similar_apis) in the CSP guide for more usage information.
+
 ### 'unsafe-eval'
 
-By default, if a CSP contains a `default-src` or a `script-src` directive, then JavaScript functions which evaluate their arguments as JavaScript are disabled. This includes [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), the [`code`](/en-US/docs/Web/API/Window/setTimeout#code) argument to {{domxref("Window.setTimeout()", "setTimeout()")}}, or the {{jsxref("Function/Function()", "Function()")}} constructor.
+By default, if a CSP contains a `default-src` or a `script-src` directive, then JavaScript functions which evaluate their arguments as JavaScript are disabled.
+This includes [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), the [`code`](/en-US/docs/Web/API/Window/setTimeout#code) argument to {{domxref("Window.setTimeout()", "setTimeout()")}}, or the {{jsxref("Function/Function()", "Function()")}} constructor.
 
 The `unsafe-eval` keyword can be used to undo this protection, allowing dynamic evaluation of strings as JavaScript.
 
 > [!WARNING]
 > Developers should avoid `'unsafe-eval'`, because it defeats much of the purpose of having a CSP.
+> ['trusted-types-eval'](#trusted-types-eval) provides a "potentially" safer alternative if using these methods is necessary.
 
 See [`eval()` and similar APIs](/en-US/docs/Web/HTTP/Guides/CSP#eval_and_similar_apis) in the CSP guide for more usage information.
 

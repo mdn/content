@@ -15,7 +15,7 @@ The {{domxref("RTCError")}} interface's read-only property
 ## Value
 
 An unsigned integer value indicating the line within the SDP at which the syntax error
-described by the `RTCError` object occurred. The lines are numbed starting
+described by the `RTCError` object occurred. The lines are numbered starting
 with line 1.
 
 This property is `null` unless the value of

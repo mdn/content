@@ -2,9 +2,8 @@
 title: "SyntaxError: invalid regexp group"
 slug: Web/JavaScript/Reference/Errors/Regex_invalid_group
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid regexp group" occurs when the sequence `(?` does not start a valid group syntax. Recognized group syntaxes that start with `(?` include:
 

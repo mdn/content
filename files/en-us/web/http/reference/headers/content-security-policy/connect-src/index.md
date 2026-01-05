@@ -1,11 +1,11 @@
 ---
-title: "CSP: connect-src"
+title: "Content-Security-Policy: connect-src directive"
+short-title: connect-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/connect-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.connect-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`connect-src`** directive restricts the URLs which can be
@@ -19,7 +19,8 @@ loaded using script interfaces. The following APIs are controlled by this direct
 - {{domxref("EventSource")}}
 - {{domxref("Navigator.sendBeacon()")}}
 
-> **Note:** `connect-src 'self'` does not resolve to websocket
+> [!NOTE]
+> `connect-src 'self'` does not resolve to websocket
 > schemes in all browsers, more info in this [issue](https://github.com/w3c/webappsec-csp/issues/7).
 
 <table class="properties">
@@ -54,9 +55,7 @@ This directive may have one of the following values:
 - `'none'`
   - : No resources of this type may be loaded. The single quotes are mandatory.
 - `<source-expression-list>`
-
   - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
-
     - [`<host-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
     - [`<scheme-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
     - [`'self'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
@@ -74,23 +73,22 @@ Content-Security-Policy: connect-src https://example.com/
 The following connections are blocked and won't load:
 
 ```html
-<a ping="https://not-example.com">
-  <script>
-    const response = fetch("https://not-example.com/");
+<a ping="https://not-example.com" href="/">Link</a>
+<script>
+  const response = fetch("https://not-example.com/");
 
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://not-example.com/");
-    xhr.send();
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://not-example.com/");
+  xhr.send();
 
-    const ws = new WebSocket("wss://not-example.com/");
+  const ws = new WebSocket("wss://not-example.com/");
 
-    const es = new EventSource("https://not-example.com/");
+  const es = new EventSource("https://not-example.com/");
 
-    navigator.sendBeacon("https://not-example.com/", {
-      /* … */
-    });
-  </script></a
->
+  navigator.sendBeacon("https://not-example.com/", {
+    /* … */
+  });
+</script>
 ```
 
 ## Specifications

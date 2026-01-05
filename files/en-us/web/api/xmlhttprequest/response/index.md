@@ -41,7 +41,7 @@ The content is handled as raw text data (since nothing here is overriding the de
 {{domxref("XMLHttpRequest.responseType", "responseType")}}).
 
 ```js
-const url = "somePage.html"; //A local page
+const url = "somePage.html"; // A local page
 
 function load(url, callback) {
   const xhr = new XMLHttpRequest();

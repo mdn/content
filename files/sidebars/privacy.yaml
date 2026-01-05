@@ -10,9 +10,14 @@ sidebar:
   - type: listSubPages
     path: /Web/Privacy/Guides/Privacy_sandbox
     link: /Web/Privacy/Guides/Privacy_sandbox
+  - link: /Web/Privacy/Guides/Bounce_tracking_mitigations
   - link: /Web/Privacy/Guides/Redirect_tracking_protection
   - link: /Web/Privacy/Guides/State_Partitioning
+  - link: /Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns
   - type: listSubPages
     path: /Web/Privacy/Guides/Storage_Access_Policy
+    depth: 2
+    nested: true
     link: /Web/Privacy/Guides/Storage_Access_Policy
+    details: closed
   - link: /Web/Privacy/Guides/Third-party_cookies

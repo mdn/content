@@ -1,13 +1,15 @@
 ---
-title: Sec-CH-UA-WoW64
+title: Sec-CH-UA-WoW64 header
+short-title: Sec-CH-UA-WoW64
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-WoW64
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-UA-WoW64
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{SecureContext_Header}}{{SeeCompatTable}}
 
 The HTTP **`Sec-CH-UA-WoW64`** {{Glossary("Request header", "request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) indicating if a 32-bit user-agent application is running on a 64-bit Windows machine.
 

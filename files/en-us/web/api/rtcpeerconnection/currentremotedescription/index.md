@@ -30,7 +30,7 @@ This example looks at the `currentRemoteDescription` and displays an alert conta
 
 ```js
 const pc = new RTCPeerConnection();
-// ...
+// …
 const sd = pc.currentRemoteDescription;
 if (sd) {
   alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);

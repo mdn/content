@@ -27,7 +27,7 @@ The **`ImageCapture`** interface of the [MediaStream Image Capture API](/en-US/d
   - : Returns a {{jsxref("Promise")}} that resolves with an object containing the ranges of available configuration options.
 - {{domxref("ImageCapture.getPhotoSettings()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with an object containing the current photo configuration settings.
-- {{domxref("ImageCapture.grabFrame()")}} {{Experimental_Inline}}
+- {{domxref("ImageCapture.grabFrame()")}}
   - : Takes a snapshot of the live video in a {{domxref("MediaStreamTrack")}}, returning an {{domxref("ImageBitmap")}}, if successful.
 
 ## Example

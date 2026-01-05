@@ -1,11 +1,11 @@
 ---
-title: Access-Control-Allow-Methods
+title: Access-Control-Allow-Methods header
+short-title: Access-Control-Allow-Methods
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Methods
 page-type: http-header
 browser-compat: http.headers.Access-Control-Allow-Methods
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Access-Control-Allow-Methods`** {{Glossary("response header")}} specifies one or more [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods) allowed when accessing a resource in response to a {{glossary("preflight request")}}.
 
@@ -14,10 +14,6 @@ The HTTP **`Access-Control-Allow-Methods`** {{Glossary("response header")}} spec
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

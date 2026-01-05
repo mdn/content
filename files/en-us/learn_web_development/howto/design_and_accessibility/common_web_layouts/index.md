@@ -2,9 +2,8 @@
 title: What do common web layouts contain?
 slug: Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 When designing pages for your website, it's good to have an idea of the most common layouts.
 
@@ -65,10 +64,6 @@ The real fun begins when you start mixing them all together:
 These are just examples and you're quite free to lay things out as you want. You may notice that, while the content can move around on the screen, we always keep the header (1) on top and the footer (2) at the bottom. Also, the main content (A) matters most, so give it most of the space.
 
 These are rules of thumb you can draw on. There are complex designs and exceptions, of course. In other articles we'll discuss how to design responsive sites (sites that change depending on the screen size) and sites whose layouts vary between pages. For now, it's best to keep your layout consistent throughout your site.
-
-## Active learning
-
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
 
 ## Deeper dive
 

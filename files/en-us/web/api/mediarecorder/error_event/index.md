@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("event", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
 
-onevent = (event) => {};
+onerror = (event) => { }
 ```
 
 ## Event type
@@ -51,7 +51,7 @@ the value of {{domxref("DOMException.name", "MediaRecorderErrorEvent.error.name"
   - : The number of tracks on the stream being recorded has changed. You can't add or
     remove tracks while recording media.
 - `UnknownError`
-  - : An non-security related error occurred that cannot otherwise be categorized.
+  - : A non-security related error occurred that cannot otherwise be categorized.
     Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state", "state")}} becomes `inactive`, one last {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is sent to the `MediaRecorder` with the remaining received data, and finally a {{domxref("MediaRecorder/stop_event", "stop")}} event is sent.
 
 ## Examples

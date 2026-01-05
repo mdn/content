@@ -46,7 +46,7 @@ const observer = new ReportingObserver((reports, observer) => {
 
 observer.observe();
 
-// ...
+// …
 
 observer.disconnect();
 ```

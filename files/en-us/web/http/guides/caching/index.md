@@ -2,9 +2,8 @@
 title: HTTP caching
 slug: Web/HTTP/Guides/Caching
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP cache stores a response associated with a request and reuses the stored response for subsequent requests.
 
@@ -48,7 +47,7 @@ Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 
 However, in recent years, as HTTPS has become more common and client/server communication has become encrypted, proxy caches in the path can only tunnel a response and can't behave as a cache, in many cases. So in that scenario, there is no need to worry about outdated proxy cache implementations that cannot even see the response.
 
-On the other hand, if a {{Glossary("TLS")}} bridge proxy decrypts all communications in a person-in-the-middle manner by installing a certificate from a {{Glossary("Certificate_authority", "CA (certificate authority)")}} managed by the organization on the PC, and performs access control, etc. — it is possible to see the contents of the response and cache it. However, since [CT (certificate transparency)](/en-US/docs/Web/Security/Certificate_Transparency) has become widespread in recent years, and some browsers only allow certificates issued with an SCT (signed certificate timestamp), this method requires the application of an enterprise policy. In such a controlled environment, there is no need to worry about the proxy cache being "out of date and not updated".
+On the other hand, if a {{Glossary("TLS")}} bridge proxy decrypts all communications in a person-in-the-middle manner by installing a certificate from a {{Glossary("Certificate_authority", "CA (certificate authority)")}} managed by the organization on the PC, and performs access control, etc. — it is possible to see the contents of the response and cache it. However, since [CT (certificate transparency)](/en-US/docs/Web/Security/Defenses/Certificate_Transparency) has become widespread in recent years, and some browsers only allow certificates issued with an SCT (signed certificate timestamp), this method requires the application of an enterprise policy. In such a controlled environment, there is no need to worry about the proxy cache being "out of date and not updated".
 
 #### Managed caches
 
@@ -608,7 +607,7 @@ The combined result is shown below.
 ```http
 # bundle.v123.js
 HTTP/1.1 200 OK
-Content-Type: application/javascript
+Content-Type: text/javascript
 Content-Length: 1024
 Cache-Control: public, max-age=31536000, immutable
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT

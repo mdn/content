@@ -8,23 +8,9 @@ sidebar: svgref
 
 The **`<circle>`** [SVG](/en-US/docs/Web/SVG) element is an [SVG basic shape](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes), used to draw circles based on a center point and a radius.
 
-## Example
+## Usage context
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="50" />
-</svg>
-```
-
-{{EmbedLiveSample('Example', 100, 100)}}
+{{svginfo}}
 
 ## Attributes
 
@@ -44,9 +30,27 @@ svg {
 > [!NOTE]
 > Starting with SVG2, `cx`, `cy`, and `r` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
 
-## Usage context
+## DOM Interface
 
-{{svginfo}}
+This element implements the {{domxref("SVGCircleElement")}} interface.
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="50" />
+</svg>
+```
+
+{{EmbedLiveSample('Example', 100, 100)}}
 
 ## Specifications
 

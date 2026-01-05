@@ -1,11 +1,11 @@
 ---
 title: DataView.prototype.setUint8()
+short-title: setUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setUint8
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setUint8()`** method of {{jsxref("DataView")}} instances takes a number and stores it as an 8-bit unsigned integer in the byte at the specified byte offset of this `DataView`.
 

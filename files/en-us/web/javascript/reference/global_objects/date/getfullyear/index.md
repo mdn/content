@@ -1,11 +1,11 @@
 ---
 title: Date.prototype.getFullYear()
+short-title: getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getFullYear
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getFullYear()`** method of {{jsxref("Date")}} instances returns the year for this date according to local time.
 

@@ -1,11 +1,11 @@
 ---
 title: Date.prototype.toISOString()
+short-title: toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toISOString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toISOString()`** method of {{jsxref("Date")}} instances returns a string representing this date in the [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format), a _simplified_ format based on [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601), which is always 24 or 27 characters long (`YYYY-MM-DDTHH:mm:ss.sssZ` or `±YYYYYY-MM-DDTHH:mm:ss.sssZ`, respectively). The timezone is always UTC, as denoted by the suffix `Z`.
 

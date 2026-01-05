@@ -4,11 +4,11 @@ short-title: attributionSrc
 slug: Web/API/HTMLAnchorElement/attributionSrc
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.HTMLAnchorElement.attributionSrc
 ---
 
-{{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{deprecated_header}}
 
 The **`attributionSrc`** property of the {{domxref("HTMLAnchorElement")}} interface gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Reference/Elements/a#attributionsrc) attribute on an {{htmlelement("a")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to register of a [navigation-based attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources).
 
@@ -16,7 +16,8 @@ The browser stores the source data associated with the navigation-based attribut
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
-> **Note:** `<a>` elements cannot be used as attribution triggers, only sources.
+> [!NOTE]
+> `<a>` elements cannot be used as attribution triggers, only sources.
 
 ## Value
 
@@ -30,7 +31,7 @@ A string. There are two versions of this property that you can get and set:
     "https://a.example/register-source https://b.example/register-source";
   ```
 
-  This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionSrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin. These URLs can then respond with a {{httpheader("Attribution-Reporting-Register-Source")}} to register the source.
+  This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionSrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin. These URLs can then respond with an {{httpheader("Attribution-Reporting-Register-Source")}} to register the source.
 
   > [!NOTE]
   > Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.

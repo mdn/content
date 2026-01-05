@@ -2,9 +2,8 @@
 title: "SyntaxError: duplicate formal argument x"
 slug: Web/JavaScript/Reference/Errors/Duplicate_parameter
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "duplicate formal argument x" or "duplicate argument names not allowed in this context" occurs when a function creates two or more parameter {{Glossary("binding", "bindings")}} with the same name, and the function is not a [non-strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode) function with only simple parameters.
 

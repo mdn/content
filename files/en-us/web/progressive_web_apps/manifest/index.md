@@ -1,12 +1,11 @@
 ---
-title: Web app manifests
-short-title: Manifest
+title: Web application manifest
+short-title: Web app manifest
 slug: Web/Progressive_web_apps/Manifest
 page-type: landing-page
 browser-compat: manifests.webapp
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 A **web application manifest**, defined in the [Web Application Manifest](https://w3c.github.io/manifest/) specification, is a {{Glossary("JSON")}} text file that provides information about a web application.
 
@@ -16,8 +15,7 @@ A web application manifest contains a single JSON object where the top-level key
 
 ## Members
 
-This section lists the members that may appear in the manifest.
-
+This section lists [reference pages for manifest members](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference) that are documented on MDN.
 All members are optional in the specification, but some applications require some members to be present. For example, [PWAs must provide certain manifest members](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members).
 
 {{ListSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
@@ -45,8 +43,8 @@ All members are optional in the specification, but some applications require som
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "black",
+  "background_color": "white"
 }
 ```
 

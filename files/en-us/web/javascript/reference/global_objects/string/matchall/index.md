@@ -1,11 +1,11 @@
 ---
 title: String.prototype.matchAll()
+short-title: matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.matchAll
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`matchAll()`** method of {{jsxref("String")}} values returns an iterator of all results matching this string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), including [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
@@ -33,7 +33,6 @@ matchAll(regexp)
 ### Parameters
 
 - `regexp`
-
   - : A regular expression object, or any object that has a [`Symbol.matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/matchAll) method.
 
     If `regexp` is not a `RegExp` object and does not have a `Symbol.matchAll` method, it is implicitly converted to a {{jsxref("RegExp")}} by using `new RegExp(regexp, 'g')`.

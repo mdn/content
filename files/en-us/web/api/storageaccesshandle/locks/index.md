@@ -20,9 +20,7 @@ A {{domxref("LockManager")}} object.
 document.requestStorageAccess({ locks: true }).then(
   (handle) => {
     console.log("locks access granted");
-    await handle.locks.request('foo', async lock => {
-        return "ok";
-    });
+    handle.locks.request("foo", (lock) => "ok");
   },
   () => {
     console.log("locks access denied");

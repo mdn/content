@@ -21,10 +21,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("notificationclick", (event) => {});
+```js-nolint
+addEventListener("notificationclick", (event) => { })
 
-onnotificationclick = (event) => {};
+onnotificationclick = (event) => { }
 ```
 
 ## Event type
@@ -112,20 +112,16 @@ Notification.requestPermission().then((result) => {
   }
 });
 
-self.addEventListener(
-  "notificationclick",
-  (event) => {
-    event.notification.close();
-    if (event.action === "archive") {
-      // User selected the Archive action.
-      archiveEmail();
-    } else {
-      // User selected (e.g., clicked in) the main body of notification.
-      clients.openWindow("/inbox");
-    }
-  },
-  false,
-);
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  if (event.action === "archive") {
+    // User selected the Archive action.
+    archiveEmail();
+  } else {
+    // User selected (e.g., clicked in) the main body of notification.
+    clients.openWindow("/inbox");
+  }
+});
 ```
 
 ## Specifications

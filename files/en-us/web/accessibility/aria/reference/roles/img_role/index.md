@@ -1,5 +1,6 @@
 ---
 title: "ARIA: img role"
+short-title: img
 slug: Web/Accessibility/ARIA/Reference/Roles/img_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#img
@@ -11,7 +12,7 @@ The ARIA `img` role can be used to identify multiple elements inside page conten
 ```html
 <div role="img" aria-label="Description of the overall image">
   <img src="graphic1.png" alt="" />
-  <img src="graphic2.png" />
+  <img src="graphic2.png" alt="" />
 </div>
 ```
 

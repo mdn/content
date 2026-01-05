@@ -2,14 +2,12 @@
 title: CSSPageDescriptors
 slug: Web/API/CSSPageDescriptors
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CSSPageDescriptors
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
-The **`CSSPageDescriptors`** interface represents a CSS declaration block for an {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
+The **`CSSPageDescriptors`** interface represents a CSS declaration block for an {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 The interface exposes style information and various style-related methods and properties for the page.
 Each multi-word property has versions in camel- and snake-case.
@@ -23,29 +21,29 @@ A `CSSPageDescriptors` object is accessed through the {{DOMxRef("CSSPageRule.sty
 
 _This interface also inherits properties of its parent, {{domxref("CSSStyleDeclaration")}}._
 
-- `margin` {{experimental_inline}}
+- `margin`
   - : A string representing the `margin` property of the corresponding `@page` at-rule.
-- `margin-top` {{experimental_inline}}
+- `margin-top`
   - : A string representing the `margin-top` property of the corresponding `@page` at-rule.
-- `marginTop` {{experimental_inline}}
+- `marginTop`
   - : A string representing the `margin-top` property of the corresponding `@page` at-rule.
-- `margin-right` {{experimental_inline}}
+- `margin-right`
   - : A string representing the `margin-right` property of the corresponding `@page` at-rule.
-- `marginRight` {{experimental_inline}}
+- `marginRight`
   - : A string representing the `margin-right` property of the corresponding `@page` at-rule.
-- `margin-bottom` {{experimental_inline}}
+- `margin-bottom`
   - : A string representing the `margin-bottom` property of the corresponding `@page` at-rule.
-- `marginBottom` {{experimental_inline}}
+- `marginBottom`
   - : A string representing the `margin-bottom` property of the corresponding `@page` at-rule.
-- `margin-left` {{experimental_inline}}
+- `margin-left`
   - : A string representing the `margin-left` property of the corresponding `@page` at-rule.
-- `marginLeft` {{experimental_inline}}
+- `marginLeft`
   - : A string representing the `margin-left` property of the corresponding `@page` at-rule.
 - `page-orientation` {{experimental_inline}}
   - : A string representing the `page-orientation` property of the corresponding `@page` at-rule.
 - `pageOrientation` {{experimental_inline}}
   - : A string representing the `page-orientation` property of the corresponding `@page` at-rule.
-- `size` {{experimental_inline}}
+- `size`
   - : A string representing the `size` property of the corresponding `@page` at-rule.
 
 ## Instance methods
@@ -98,7 +96,7 @@ This allows us to see how the properties map in the Web API object.
 
 First we check if `CSSPageDescriptors` is defined on the global window object, and if not we log that the interface is not supported.
 
-If `CSSPageDescriptors` is supported, we get the document stylesheet at index `1`, and then gets the `cssRules` defined in that stylesheet.
+If `CSSPageDescriptors` is supported, we get the target stylesheet, and then gets the `cssRules` defined in that stylesheet.
 We need to get this stylesheet because the example is embedded in a separate frame with its own sheet (index `0` is the CSS for this page).
 
 We then iterate through the rules defined for the live example and match any that are of type `CSSPageRule`, as these correspond to `@page` rules.
@@ -109,30 +107,30 @@ if (typeof window.CSSPageDescriptors === "undefined") {
   log("CSSPageDescriptors is not supported on this browser.");
 } else {
   // Get stylesheets for example and then get its cssRules
-  const myRules = document.styleSheets[1].cssRules;
-  for (let i = 0; i < myRules.length; i++) {
-    if (myRules[i] instanceof CSSPageRule) {
-      log(`${myRules[i].style}`);
-      log(`margin: ${myRules[i].style.margin}`);
+  const myRules = document.getElementById("css-output").sheet.cssRules;
+  for (const rule of myRules) {
+    if (rule instanceof CSSPageRule) {
+      log(`${rule.style}`);
+      log(`margin: ${rule.style.margin}`);
 
       // Access properties using CamelCase syntax
-      log(`marginTop: ${myRules[i].style.marginTop}`);
-      log(`marginRight: ${myRules[i].style.marginRight}`);
-      log(`marginBottom: ${myRules[i].style.marginBottom}`);
-      log(`marginLeft: ${myRules[i].style.marginLeft}`);
-      log(`pageOrientation: ${myRules[i].style.pageOrientation}`);
+      log(`marginTop: ${rule.style.marginTop}`);
+      log(`marginRight: ${rule.style.marginRight}`);
+      log(`marginBottom: ${rule.style.marginBottom}`);
+      log(`marginLeft: ${rule.style.marginLeft}`);
+      log(`pageOrientation: ${rule.style.pageOrientation}`);
 
       // Access properties using snake-case syntax
-      log(`margin-top: ${myRules[i].style["margin-top"]}`);
-      log(`margin-right: ${myRules[i].style["margin-right"]}`);
-      log(`margin-left: ${myRules[i].style["margin-left"]}`);
-      log(`margin-bottom: ${myRules[i].style["margin-bottom"]}`);
-      log(`page-orientation: ${myRules[i].style["page-orientation"]}`);
+      log(`margin-top: ${rule.style["margin-top"]}`);
+      log(`margin-right: ${rule.style["margin-right"]}`);
+      log(`margin-left: ${rule.style["margin-left"]}`);
+      log(`margin-bottom: ${rule.style["margin-bottom"]}`);
+      log(`page-orientation: ${rule.style["page-orientation"]}`);
 
-      log(`size: ${myRules[i].style.size}`);
+      log(`size: ${rule.style.size}`);
 
       // Log the original CSS text using inherited property: cssText
-      log(`cssText: ${myRules[i].style.cssText}`);
+      log(`cssText: ${rule.style.cssText}`);
       log("\n");
     }
   }

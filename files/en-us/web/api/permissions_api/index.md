@@ -52,7 +52,7 @@ Not all APIs' permission statuses can be queried using the Permissions API.
 A non-exhaustive list of permission-aware APIs includes:
 
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API): `background-sync` (should always be granted)
-- [Clipboard_API](/en-US/docs/Web/API/Clipboard_API#security_considerations): `clipboard-read`, `clipboard-write`
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API#security_considerations): `clipboard-read`, `clipboard-write`
 - [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API): `compute-pressure`
 - [Geolocation API](/en-US/docs/Web/API/Geolocation_API#security_considerations): `geolocation`
 - [Local Font Access API](/en-US/docs/Web/API/Local_Font_Access_API): `local-fonts`
@@ -60,6 +60,7 @@ A non-exhaustive list of permission-aware APIs includes:
 - [Notifications API](/en-US/docs/Web/API/Notifications_API): `notifications`
 - [Payment Handler API](/en-US/docs/Web/API/Payment_Handler_API): `payment-handler`
 - [Push API](/en-US/docs/Web/API/Push_API): `push`
+- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): `captured-surface-control`, `display-capture`
 - [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API): `screen-wake-lock`
 - [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs): `accelerometer`, `gyroscope`, `magnetometer`, `ambient-light-sensor`
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API): `storage-access`, `top-level-storage-access`

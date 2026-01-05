@@ -1,19 +1,19 @@
 ---
 title: RegExp.prototype.multiline
+short-title: multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.multiline
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`multiline`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `m` flag is used with this regular expression.
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.multiline", "taller")}}
 
 ```js interactive-example
-const regex1 = new RegExp("^football");
-const regex2 = new RegExp("^football", "m");
+const regex1 = /^football/;
+const regex2 = /^football/m;
 
 console.log(regex1.multiline);
 // Expected output: false
@@ -39,7 +39,7 @@ The set accessor of `multiline` is `undefined`. You cannot change this property 
 ### Using multiline
 
 ```js
-const regex = /foo/m;
+const regex = /^foo/m;
 
 console.log(regex.multiline); // true
 ```

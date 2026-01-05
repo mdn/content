@@ -8,11 +8,11 @@ status:
 browser-compat: api.Document.domain
 ---
 
-{{ApiRef}} {{Deprecated_Header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 The **`domain`** property of the {{domxref("Document")}}
 interface gets/sets the domain portion of the {{glossary("origin")}} of the current
-document, as used by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+document, as used by the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
 ## Value
 
@@ -21,7 +21,7 @@ A string.
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
+  - : The document is forbidden from setting its domain, for example it is sandboxed or has an opaque origin. See [Failures section](#failures) for details.
 
 ## Examples
 
@@ -90,7 +90,7 @@ have not done the same thing.
 #### Deprecation
 
 The `document.domain` setter is deprecated. It undermines the security
-protections provided by the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), and complicates the origin model in browsers, leading to
+protections provided by the [same origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy), and complicates the origin model in browsers, leading to
 interoperability problems and security bugs.
 
 Attempting to set `document.domain` is dangerous. It opens up full access to
@@ -118,8 +118,6 @@ blanket exposure of all data caused by `document.domain`.
 The setter will throw a `SecurityError` {{domxref("DOMException")}} in
 several cases:
 
-- The {{httpheader('Permissions-Policy/document-domain','document-domain')}}
-  {{HTTPHeader("Permissions-Policy")}} is disabled.
 - The document is inside a sandboxed {{htmlelement("iframe")}}.
 - The document has no {{glossary("browsing context")}}.
 - The document's [effective domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`.
@@ -153,7 +151,7 @@ Affected APIs include (but are not limited to):
 
 ## See also
 
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
 - {{domxref("Location.hostname")}}
 - {{domxref("Location.host")}}
 - {{domxref("Window.origin")}}

@@ -84,7 +84,7 @@ self.onmessage = (e) => {
   }
 
   try {
-    const fs = requestFileSystemSync(TEMPORARY, 1024 * 1024 /*1MB*/);
+    const fs = requestFileSystemSync(TEMPORARY, 1024 * 1024 /* 1MB */);
 
     getAllEntries(fs.root.createReader());
 

@@ -1,5 +1,6 @@
 ---
 title: "ARIA: form role"
+short-title: form
 slug: Web/Accessibility/ARIA/Reference/Roles/form_role
 page-type: aria-role
 spec-urls:
@@ -117,7 +118,7 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 
 ### Prefer HTML
 
-Using the {{HTMLElement('form')}} element will automatically communicate a section has a role of `form`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('form')}} element will automatically communicate that the element has a role of `form`. If possible, prefer using the semantic `<form>` element instead of the `form` role.
 
 ## Specifications
 
@@ -127,4 +128,3 @@ Using the {{HTMLElement('form')}} element will automatically communicate a secti
 
 - The {{HTMLElement('form')}} element
 - The {{HTMLElement('legend')}} element
-- [form (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#form)

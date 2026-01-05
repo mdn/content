@@ -3,9 +3,8 @@ title: omnibox.SuggestResult
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/SuggestResult
 page-type: webextension-api-type
 browser-compat: webextensions.api.omnibox.SuggestResult
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`omnibox.SuggestResult`** type defines a suggestion that the extension can add to the address bar's drop-down list.
 

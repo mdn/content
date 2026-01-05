@@ -1,5 +1,6 @@
 ---
 title: "ARIA: comment role"
+short-title: comment
 slug: Web/Accessibility/ARIA/Reference/Roles/comment_role
 page-type: aria-role
 sidebar: accessibilitysidebar

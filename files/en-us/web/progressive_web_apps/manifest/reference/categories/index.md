@@ -3,9 +3,8 @@ title: categories
 slug: Web/Progressive_web_apps/Manifest/Reference/categories
 page-type: web-manifest-member
 spec-urls: https://w3c.github.io/manifest-app-info/#categories-member
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `categories` manifest member lets you specify one or more classifications for your web application.
 These categories help users discover your app in app stores.

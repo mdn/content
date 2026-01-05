@@ -16,10 +16,10 @@ The **`paymentrequest`** event of the {{domxref("ServiceWorkerGlobalScope")}} in
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("paymentrequest", (event) => {});
+```js-nolint
+addEventListener("paymentrequest", (event) => { })
 
-onpaymentrequest = (event) => {};
+onpaymentrequest = (event) => { }
 ```
 
 ## Event type
@@ -33,20 +33,20 @@ A {{domxref("PaymentRequestEvent")}}. Inherits from {{domxref("ExtendableEvent")
 When the {{domxref("PaymentRequest.show()")}} method is invoked, a `paymentrequest` event is fired on the service worker of the payment app. This event is listened for inside the payment app's service worker to begin the next stage of the payment process.
 
 ```js
-let payment_request_event;
+let paymentRequestEvent;
 let resolver;
 let client;
 
 // `self` is the global object in service worker
 self.addEventListener("paymentrequest", async (e) => {
-  if (payment_request_event) {
+  if (paymentRequestEvent) {
     // If there's an ongoing payment transaction, reject it.
     resolver.reject();
   }
   // Preserve the event for future use
-  payment_request_event = e;
+  paymentRequestEvent = e;
 
-  // ...
+  // …
 });
 ```
 

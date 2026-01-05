@@ -27,7 +27,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to a object containing statistics about the current stream.
+A {{jsxref("Promise")}} that resolves to an object containing statistics about the current stream.
 The returned object has the following properties:
 
 - `timestamp`

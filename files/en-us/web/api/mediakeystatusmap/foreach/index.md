@@ -23,9 +23,7 @@ forEach(callbackFn, thisArg)
 ### Parameters
 
 - `callbackFn`
-
   - : Function to execute for each element, taking three arguments:
-
     - `currentValue`
       - : The current element being processed in the array.
     - `index` {{optional_inline}}

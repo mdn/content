@@ -2,12 +2,9 @@
 title: Temporal
 slug: Web/JavaScript/Reference/Global_Objects/Temporal
 page-type: javascript-namespace
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal
+sidebar: jsref
 ---
-
-{{JSRef}}{{SeeCompatTable}}
 
 The **`Temporal`** object enables date and time management in various scenarios, including built-in time zone and calendar representation, wall-clock time conversions, arithmetics, formatting, and more. It is designed as a full replacement for the {{jsxref("Date")}} object.
 
@@ -275,7 +272,7 @@ There are three prominent periodic events on Earth: its rotation around the sun 
 
 In `Temporal`, every date under one calendar system is uniquely identified by three components: `year`, `month`, and `day`. While `year` is typically a positive integer, it may also be zero or negative, and increases monotonically with time. The year `1` (or `0`, if it exists) is known as the calendar epoch, and is arbitrary for each calendar. `month` is a positive integer that increments by 1 every time, starting at `1` and ending at `date.monthsInYear`, then resetting back to `1` as the year advances. `day` is also a positive integer, but it may not start at 1 or increment by 1 every time, because political changes may cause days to be skipped or repeated. But in general, `day` monotonically increases and resets as the month advances.
 
-In addition to `year`, a year can also be uniquely identified by the combination of `era` and `eraYear`, for calendars that use eras. For example, the Gregorian calendar uses the era "CE" (Common Era) and "BCE" (Before Common Era), and the year `-1` is the same as `{ era: "bce", eraYear: 1 }`. `era` is a lowercase string, and `eraYear` is an arbitrary integer that may be zero or negative, or even decrease with time (usually for the oldest era).
+In addition to `year`, a year can also be uniquely identified by the combination of `era` and `eraYear`, for calendars that use eras. For example, the Gregorian calendar uses the era "CE" (Common Era) and "BCE" (Before Common Era), and the year `-1` is the same as `{ era: "bce", eraYear: 2 }` (note that year `0` always exists for all calendars; for the Gregorian calendar, it corresponds to 1 BCE due to [astronomical year numbering](https://en.wikipedia.org/wiki/Astronomical_year_numbering)). `era` is a lowercase string, and `eraYear` is an arbitrary integer that may be zero or negative, or even decrease with time (usually for the oldest era).
 
 > [!NOTE]
 > Always use `era` and `eraYear` as a pair; don't use one property without also using the other. In addition, to avoid conflicts, don't combine `year` and `era`/`eraYear` when designating a year. Pick one year representation and use it consistently.
@@ -342,23 +339,23 @@ The `Temporal` objects will refuse to construct an instance representing a date/
 
 ## Static properties
 
-- {{jsxref("Temporal.Duration")}} {{experimental_inline}}
+- {{jsxref("Temporal.Duration")}}
   - : Represents a difference between two time points, which can be used in date/time arithmetic. It is fundamentally represented as a combination of years, months, weeks, days, hours, minutes, seconds, milliseconds, microseconds, and nanoseconds values.
-- {{jsxref("Temporal.Instant")}} {{experimental_inline}}
+- {{jsxref("Temporal.Instant")}}
   - : Represents a unique point in time, with nanosecond precision. It is fundamentally represented as the number of nanoseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC), without any time zone or calendar system.
-- {{jsxref("Temporal.Now")}} {{experimental_inline}}
+- {{jsxref("Temporal.Now")}}
   - : Provides methods for getting the current time in various formats.
-- {{jsxref("Temporal.PlainDate")}} {{experimental_inline}}
+- {{jsxref("Temporal.PlainDate")}}
   - : Represents a calendar date (a date without a time or time zone); for example, an event on a calendar which happens during the whole day no matter which time zone it's happening in. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system.
-- {{jsxref("Temporal.PlainDateTime")}} {{experimental_inline}}
+- {{jsxref("Temporal.PlainDateTime")}}
   - : Represents a date (calendar date) and time (wall-clock time) without a time zone. It is fundamentally represented as a combination of a [date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate) (with an associated calendar system) and a [time](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime).
-- {{jsxref("Temporal.PlainMonthDay")}} {{experimental_inline}}
+- {{jsxref("Temporal.PlainMonthDay")}}
   - : Represents the month and day of a calendar date, without a year or time zone; for example, an event on a calendar that recurs every year and happens during the whole day. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system. The year is used to disambiguate the month-day in non-ISO calendar systems.
-- {{jsxref("Temporal.PlainTime")}} {{experimental_inline}}
+- {{jsxref("Temporal.PlainTime")}}
   - : Represents a time without a date or time zone; for example, a recurring event that happens at the same time every day. It is fundamentally represented as a combination of hour, minute, second, millisecond, microsecond, and nanosecond values.
-- {{jsxref("Temporal.PlainYearMonth")}} {{experimental_inline}}
+- {{jsxref("Temporal.PlainYearMonth")}}
   - : Represents the year and month of a calendar date, without a day or time zone; for example, an event on a calendar that happens during the whole month. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system. The day is used to disambiguate the year-month in non-ISO calendar systems.
-- {{jsxref("Temporal.ZonedDateTime")}} {{experimental_inline}}
+- {{jsxref("Temporal.ZonedDateTime")}}
   - : Represents a date and time with a time zone. It is fundamentally represented as a combination of an [instant](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant), a time zone, and a calendar system.
 - `Temporal[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Temporal"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
@@ -376,3 +373,5 @@ The `Temporal` objects will refuse to construct an instance representing a date/
 - {{jsxref("Intl.DateTimeFormat")}}
 - {{jsxref("Intl.RelativeTimeFormat")}}
 - {{jsxref("Intl.DurationFormat")}}
+- [Temporal polyfill by proposal champions](https://www.npmjs.com/package/@js-temporal/polyfill)
+- [Temporal polyfill by FullCalendar](https://www.npmjs.com/package/temporal-polyfill)

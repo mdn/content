@@ -12,7 +12,7 @@ Deno is a JavaScript runtime which supports TypeScript compiling and caching on 
 
 The [Deno website](https://deno.com/) provides instructions for installing Deno.
 
-Deno version at the time of writing: `1.36`.
+Deno version at the time of writing: `2.6`.
 
 ## Code
 
@@ -24,91 +24,80 @@ Create a `main.js` file. This file will contain the code for a simple HTTP serve
 
 ```js
 Deno.serve({
-  port: 80,
-  handler: async (request) => {
-    // If the request is a websocket upgrade,
-    // we need to use the Deno.upgradeWebSocket helper
-    if (request.headers.get("upgrade") === "websocket") {
-      const { socket, response } = Deno.upgradeWebSocket(request);
-
-      socket.onopen = () => {
-        console.log("CONNECTED");
-      };
-      socket.onmessage = (event) => {
-        console.log(`RECEIVED: ${event.data}`);
-        socket.send("pong");
-      };
-      socket.onclose = () => console.log("DISCONNECTED");
-      socket.onerror = (error) => console.error("ERROR:", error);
-
-      return response;
-    } else {
+  port: 8080,
+  async handler(request) {
+    if (request.headers.get("upgrade") !== "websocket") {
       // If the request is a normal HTTP request,
       // we serve the client HTML file.
       const file = await Deno.open("./index.html", { read: true });
       return new Response(file.readable);
     }
+    // If the request is a websocket upgrade,
+    // we need to use the Deno.upgradeWebSocket helper
+    const { socket, response } = Deno.upgradeWebSocket(request);
+
+    socket.onopen = () => {
+      console.log("CONNECTED");
+    };
+    socket.onmessage = (event) => {
+      console.log(`RECEIVED: ${event.data}`);
+      socket.send("pong");
+    };
+    socket.onclose = () => console.log("DISCONNECTED");
+    socket.onerror = (error) => console.error("ERROR:", error);
+
+    return response;
   },
 });
 ```
 
 `Deno.upgradeWebSocket()` upgrades the connection to a WebSocket connection, which is explained further in [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism).
 
-[`Deno.serve()`](https://docs.deno.com/api/deno/~/Deno.serve) uses `Deno.listen()` and `Deno.serveHttp()` under the hood, and is a higher-level interface to easily set up a HTTP server. Without it, the code would look something like this.
-
-```js
-for await (const conn of Deno.listen({ port: 80 })) {
-  for await (const { request, respondWith } of Deno.serveHttp(conn)) {
-    respondWith(handler(request));
-  }
-}
-```
-
 ### Client
 
-Create an `index.html` file. This file will contain a script that will ping the server every five seconds after a connection has been made.
+Create an `index.html` file. This file will invoke a script that will ping the server every five seconds after a connection has been made. It should also contain the following markup:
 
 ```html
-<!doctype html>
 <h2>WebSocket Test</h2>
 <p>Sends a ping every five seconds</p>
 <div id="output"></div>
-<script>
-  const wsUri = "ws://127.0.0.1/";
-  const output = document.querySelector("#output");
-  const websocket = new WebSocket(wsUri);
-  let pingInterval;
+```
 
-  function writeToScreen(message) {
-    output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
-  }
+```js
+const wsUri = "ws://127.0.0.1:8080/";
+const output = document.querySelector("#output");
+const websocket = new WebSocket(wsUri);
+let pingInterval;
 
-  function sendMessage(message) {
-    writeToScreen(`SENT: ${message}`);
-    websocket.send(message);
-  }
+function writeToScreen(message) {
+  output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
+}
 
-  websocket.onopen = (e) => {
-    writeToScreen("CONNECTED");
+function sendMessage(message) {
+  writeToScreen(`SENT: ${message}`);
+  websocket.send(message);
+}
+
+websocket.onopen = (e) => {
+  writeToScreen("CONNECTED");
+  sendMessage("ping");
+  pingInterval = setInterval(() => {
     sendMessage("ping");
-    pingInterval = setInterval(() => {
-      sendMessage("ping");
-    }, 5000);
-  };
+  }, 5000);
+};
 
-  websocket.onclose = (e) => {
-    writeToScreen("DISCONNECTED");
-    clearInterval(pingInterval);
-  };
+websocket.onclose = (e) => {
+  writeToScreen("DISCONNECTED");
+  clearInterval(pingInterval);
+};
 
-  websocket.onmessage = (e) => {
-    writeToScreen(`RECEIVED: ${e.data}`);
-  };
+websocket.onmessage = (e) => {
+  writeToScreen(`RECEIVED: ${e.data}`);
+};
 
-  websocket.onerror = (e) => {
-    writeToScreen(`ERROR: ${e.data}`);
-  };
-</script>
+websocket.onerror = (e) => {
+  writeToScreen(`ERROR: ${e.data}`);
+};
 ```
 
 ## Running the code
@@ -116,12 +105,12 @@ Create an `index.html` file. This file will contain a script that will ping the 
 With the two files, run the app using Deno.
 
 ```sh
-deno run --allow-net=0.0.0.0:80 --allow-read=./index.html main.js
+deno run --allow-net=0.0.0.0:8080 --allow-read=./index.html main.js
 ```
 
 Deno requires us to give explicit permissions for what we can access on the host machine.
 
-- `--allow-net=0.0.0.0:80` allows the app to attach to localhost on port 80
+- `--allow-net=0.0.0.0:8080` allows the app to attach to localhost on port 8080
 - `--allow-read=./index.html` allows access to the HTML file for the client
 
 ## See also

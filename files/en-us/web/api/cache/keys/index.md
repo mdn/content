@@ -32,15 +32,13 @@ keys(request, options)
   - : The {{domxref("Request")}} want to return, if a specific key is desired. This can be
     a `Request` object or a URL.
 - `options` {{optional_inline}}
-
   - : An object whose properties control how matching is done in the `keys`
     operation. The available options are:
-
     - `ignoreSearch`
       - : A boolean value that specifies whether the
         matching process should ignore the query string in the URL. If set to
         `true`, the `?value=bar` part of
-        `http://foo.com/?value=bar` would be ignored when performing a match.
+        `https://example.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
     - `ignoreMethod`
       - : A boolean value that, when set to
@@ -66,13 +64,14 @@ objects.
 ## Examples
 
 ```js
-caches.open("v1").then((cache) => {
-  cache.keys().then((keys) => {
+caches
+  .open("v1")
+  .then((cache) => cache.keys())
+  .then((keys) => {
     keys.forEach((request, index, array) => {
       cache.delete(request);
     });
   });
-});
 ```
 
 ## Specifications

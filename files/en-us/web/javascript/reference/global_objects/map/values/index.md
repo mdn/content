@@ -1,28 +1,28 @@
 ---
 title: Map.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.values
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`values()`** method of {{jsxref("Map")}} instances returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the values for each element in this map in insertion order.
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.values()")}}
 
 ```js interactive-example
-const map1 = new Map();
+const map = new Map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+map.set("0", "foo");
+map.set(1, "bar");
 
-const iterator1 = map1.values();
+const iterator = map.values();
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Expected output: "foo"
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Expected output: "bar"
 ```
 

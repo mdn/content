@@ -74,15 +74,15 @@ The SFM relies on the ability to determine frame dependency relationships, such 
 VP8 and VP9 codecs can include frame dependency information in the VP8 payload descriptor and VP9 payload descriptor, respectively.
 For the AV1 codec the information is sent in the [Dependency Descriptor (DD) RTP Header Extension](#dependency_descriptor_rtp_header_extension).
 
-Recent browser implementations commonly use the DD header for all codecs, as it is codec-agnostic, which can simply the SFM implementation.
+Recent browser implementations commonly use the DD header for all codecs, as it is codec-agnostic, which can simplify the SFM implementation.
 In addition, because it is a part of the RTP header rather than the payload, it can be used in end-to-end encryption scenarios.
 
 ### Scalable video coding
 
-[Scalable Video Coding (SVC)](https://www.w3.org/TR/webrtc-svc/) encodes a video source in a single stream, with multiple layers that can be selectively decoded to obtain video with particular resolutions, bitrate, or quality.
+[Scalable Video Coding (SVC)](https://w3c.github.io/webrtc-svc/) encodes a video source in a single stream, with multiple layers that can be selectively decoded to obtain video with particular resolutions, bitrate, or quality.
 An SFM can forward a subset of the layers in order to send a stream that is appropriate for each recipient's network and device.
 
-Note that the dependencies are much more complicated than needed to for selecting streams to forward when using simulcast (see the [dependency diagrams](https://www.w3.org/TR/webrtc-svc/#dependencydiagrams*) in the SVC specification for a "flavor" of the complexity).
+Note that the dependencies are much more complicated than needed to for selecting streams to forward when using simulcast (see the [dependency diagrams](https://w3c.github.io/webrtc-svc/#dependencydiagrams*) in the SVC specification for a "flavor" of the complexity).
 The SVC stream consists of a base layer that provides a minimum level of quality, and may include a number of enhancement layers that allow varying frame rates ("temporal scalability"), increased resolution ("spatial scalability"), and the same resolution at different bitrates.
 The VP8 codec only supports temporal layers, while VP9 supports both temporal and spatial layers.
 

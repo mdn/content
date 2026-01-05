@@ -19,38 +19,26 @@ A boolean value.
 ## Examples
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>altKey example</title>
-
-    <script>
-      function showChar(e) {
-        alert(
-          "Key KeyDown: " +
-            String.fromCharCode(e.charCode) +
-            "\n" +
-            "charCode: " +
-            e.charCode +
-            "\n" +
-            "ALT key KeyDown: " +
-            e.altKey +
-            "\n",
-        );
-      }
-    </script>
-  </head>
-
-  <body onkeydown="showChar(event);">
-    <p>
-      Press any character key, with or without holding down the ALT key.<br />
-      You can also use the SHIFT key together with the ALT key.
-    </p>
-  </body>
-</html>
+<p>
+  Press any character key, with or without holding down the ALT key.<br />
+  You can also use the SHIFT key together with the ALT key.
+</p>
+<pre id="output"></pre>
 ```
+
+```js
+const output = document.getElementById("output");
+
+function showChar(e) {
+  output.textContent = `Key KeyDown: "${e.key}"
+ALT key KeyDown: ${e.altKey}
+`;
+}
+
+document.addEventListener("keydown", showChar);
+```
+
+{{EmbedLiveSample("examples", "", "400")}}
 
 ## Specifications
 

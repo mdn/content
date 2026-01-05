@@ -3,12 +3,10 @@ title: "Window: unload event"
 short-title: unload
 slug: Web/API/Window/unload_event
 page-type: web-api-event
-status:
-  - deprecated
 browser-compat: api.Window.unload_event
 ---
 
-{{APIRef}}{{deprecated_header}}
+{{APIRef}}
 
 > [!WARNING]
 > Developers should avoid using this event. See "Usage notes" below.
@@ -33,9 +31,10 @@ Please note that the unload event also follows the document tree: parent frame u
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("unload", (event) => {});
-onunload = (event) => {};
+```js-nolint
+addEventListener("unload", (event) => { })
+
+onunload = (event) => { }
 ```
 
 ## Event type

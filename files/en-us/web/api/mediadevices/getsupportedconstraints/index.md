@@ -38,7 +38,7 @@ This example outputs a list of the constraints supported by your browser.
 ```css hidden
 body {
   font:
-    15px Arial,
+    15px "Arial",
     sans-serif;
 }
 ```

@@ -1,14 +1,16 @@
 ---
-title: Report-To
+title: Report-To header
+short-title: Report-To
 slug: Web/HTTP/Reference/Headers/Report-To
 page-type: http-header
 status:
   - deprecated
   - non-standard
 browser-compat: http.headers.Report-To
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}{{non-standard_header}}
+{{deprecated_header}}{{non-standard_header}}
 
 > [!WARNING]
 > This header has been replaced by the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
@@ -24,10 +26,6 @@ For example, the {{HTTPHeader("Content-Security-Policy")}} header {{CSP("report-
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
     <tr>
       <th scope="row">

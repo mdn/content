@@ -1,15 +1,15 @@
 ---
-title: Firefox 46 for developers
+title: Firefox 46 release notes for developers
+short-title: Firefox 46
 slug: Mozilla/Firefox/Releases/46
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
-
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/).
 Firefox 46 was released on April 26, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -29,14 +29,13 @@ Highlights:
 ### CSS
 
 - Our implementation of CSS Grids has been updated:
-
   - The keywords `auto-fill` and `auto-fit` are now allowed in the `repeat()` function ([Firefox bug 1118820](https://bugzil.la/1118820)).
   - The `true` value has been renamed to `unsafe`; this affects the properties {{cssxref("justify-content")}}, {{cssxref("align-content")}}, {{cssxref("justify-self")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}} and {{cssxref("align-items")}} ([Firefox bug 1230478](https://bugzil.la/1230478)).
 
 - The properties {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}} and {{cssxref("text-emphasis-position")}} are now enabled by default ([Firefox bug 1231485](https://bugzil.la/1231485)).
 - Gecko now accepts the `-webkit-` prefixed version of [some properties](https://wiki.mozilla.org/Compatibility/Mobile/Non_Standard_Compatibility); it requires to switch `layout.css.prefixes.webkit` to `true` ([Firefox bug 1213126](https://bugzil.la/1213126)).
 - The experimental support of the {{cssxref("@font-face/font-display", "font-display")}} descriptor (of {{cssxref("@font-face")}}; it requires to switch `layout.css.font-display.enabled` to `true` ([Firefox bug 1157064](https://bugzil.la/1157064)).
-- Added support for [`@media (-webkit-transform-3d)`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d) as a media query for 3D transform support, if about:config pref `layout.css.prefixes.webkit` is set to `true` ([Firefox bug 1239799](https://bugzil.la/1239799)).
+- Added support for [`@media (-webkit-transform-3d)`](/en-US/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d) as a media query for 3D transform support, if about:config pref `layout.css.prefixes.webkit` is set to `true` ([Firefox bug 1239799](https://bugzil.la/1239799)).
 - {{cssxref("gradient/linear-gradient", "linear-gradient()")}} support for the omission of `0deg` units ([Firefox bug 1239153](https://bugzil.la/1239153)).
 - Added `-webkit-filter` for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ([Firefox bug 1236506](https://bugzil.la/1236506)).
 - \[css-align] "unsafe start" (formerly "true start") should serialize to "start" etc ([Firefox bug 1230398](https://bugzil.la/1230398)).
@@ -59,9 +58,9 @@ Highlights:
 
 #### DOM & HTML DOM
 
-- The deprecated {{domxref("Window.showModalDialog()")}} method is no more available when Firefox runs in multi-process mode (e10s) ([Firefox bug 1234700](https://bugzil.la/1234700)).
+- The deprecated `Window.showModalDialog()` method is no more available when Firefox runs in multi-process mode (e10s) ([Firefox bug 1234700](https://bugzil.la/1234700)).
 - Added support for {{domxref("Document.elementsFromPoint()")}} ([Firefox bug 1164427](https://bugzil.la/1164427)).
-- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the [`selectedIndex`](/en-US/docs/Web/HTML/Reference/Elements/select#selectedindex) value is now set to `-1`, the [`selectedOptions`](/en-US/docs/Web/HTML/Reference/Elements/select#selectedoptions) to an empty {{domxref("HTMLCollection")}}, and [`value`](/en-US/docs/Web/HTML/Reference/Elements/select#value) to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
+- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the [`selectedIndex`](/en-US/docs/Web/API/HTMLSelectElement/selectedIndex) value is now set to `-1`, the [`selectedOptions`](/en-US/docs/Web/API/HTMLSelectElement/selectedOptions) to an empty {{domxref("HTMLCollection")}}, and [`value`](/en-US/docs/Web/API/HTMLSelectElement/value) to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
 
 #### Canvas
 
@@ -100,7 +99,6 @@ _No change._
 
 - The asynchronous {{domxref("FileReader")}} is now available in Web workers ([Firefox bug 901097](https://bugzil.la/901097)).
 - Our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) has been updated:
-
   - The `AnimationEffectTimingReadOnly` dictionary and {{domxref("AnimationEffect/getTiming", "AnimationEffectReadOnly.timing")}} have been implemented ([Firefox bug 1214536](https://bugzil.la/1214536)).
 
 - The [Permissions API](/en-US/docs/Web/API/Permissions_API) has now been enabled by default, for all release versions, not just Nightly as it previously was ([Firefox bug 1221106](https://bugzil.la/1221106).)
@@ -151,7 +149,3 @@ _No change._
 ### Other
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

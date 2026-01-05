@@ -3,9 +3,8 @@ title: "<dialog>: The Dialog element"
 slug: Web/HTML/Reference/Elements/dialog
 page-type: html-element
 browser-compat: html.elements.dialog
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<dialog>`** [HTML](/en-US/docs/Web/HTML) element represents a modal or non-modal dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.
 
@@ -20,8 +19,25 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 > [!WARNING]
 > The `tabindex` attribute must not be used on the `<dialog>` element. See [usage notes](#usage_notes).
 
-- `open`
+- `closedby`
+  - : Specifies the types of user actions that can be used to close the `<dialog>` element. This attribute distinguishes three methods by which a dialog might be closed:
+    - A _light dismiss user action_, in which the `<dialog>` is closed when the user clicks or taps outside it. This is equivalent to the ["light dismiss" behavior of "auto" state popovers](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss).
+    - A _platform-specific user action_, such as pressing the <kbd>Esc</kbd> key on desktop platforms, or a "back" or "dismiss" gesture on mobile platforms.
+    - A developer-specified mechanism such as a {{htmlelement("button")}} with a [`click`](/en-US/docs/Web/API/Element/click_event) handler that invokes {{domxref("HTMLDialogElement.close()")}} or a {{htmlelement("form")}} submission.
 
+    Possible values are:
+    - `any`
+      - : The dialog can be dismissed using any of the three methods.
+    - `closerequest`
+      - : The dialog can be dismissed with a platform-specific user action or a developer-specified mechanism.
+    - `none`
+      - : The dialog can only be dismissed with a developer-specified mechanism.
+
+    If the `<dialog>` element does not have a valid `closedby` value specified, then
+    - if it was opened using {{domxref("HTMLDialogElement.showModal()", "showModal()")}}, it behaves as if the value was `"closerequest"`
+    - otherwise, it behaves as if the value was `"none"`.
+
+- `open`
   - : Indicates that the dialog box is active and is available for interaction. If the `open` attribute is not set, the dialog box will not be visible to the user.
     It is recommended to use the `.show()` or `.showModal()` method to render dialogs, rather than the `open` attribute. If a `<dialog>` is opened using the `open` attribute, it is non-modal.
 
@@ -73,7 +89,7 @@ This dialog is initially open because of the presence of the `open` attribute. D
 
 ### Creating a modal dialog
 
-This example demonstrates a modal dialog with a [gradient](/en-US/docs/Web/CSS/gradient) backdrop. The `.showModal()` method opens the modal dialog when the "Show the dialog" button is activated. The dialog can be closed by pressing the <kbd>Esc</kbd> key or via the `close()` method when the "Close" button within the dialog is activated.
+This example demonstrates a modal dialog with a [gradient](/en-US/docs/Web/CSS/Reference/Values/gradient) backdrop. The `.showModal()` method opens the modal dialog when the "Show the dialog" button is activated. The dialog can be closed by pressing the <kbd>Esc</kbd> key or via the `close()` method when the "Close" button within the dialog is activated.
 
 When a dialog opens, the browser, by default, gives focus to the first element that can be focused within the dialog. In this example, the [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus) attribute is applied to the "Close" button, giving it focus when the dialog opens, as this is the element we expect the user will interact with immediately after the dialog opens.
 
@@ -272,9 +288,119 @@ jsCloseBtn.addEventListener("click", (e) => {
 
 From the output, we see it is impossible to close the dialog using the _Normal close_ button. But the dialog can be closed if we bypass the form validation using the `formnovalidate` attribute on the _Cancel_ button. Programmatically, `dialog.close()` will also close such dialog.
 
+### Comparison of different closedby behaviors
+
+This example demonstrates the difference in behavior between different values of the [`closedby`](#closedby) attribute.
+
+#### HTML
+
+We provide three {{htmlelement("button")}} elements and three `<dialog>` elements. Each button will be programmed to open a different dialog that demonstrates the behavior of one of the three values of the `closedby` attribute — `none`, `closerequest`, and `any`. Note that each `<dialog>` element contains a `<button>` element that will be used to close it.
+
+```html live-sample___closedbyvalues
+<p>Choose a <code>&lt;dialog&gt;</code> type to show:</p>
+<div id="controls">
+  <button id="none-btn"><code>closedby="none"</code></button>
+  <button id="closerequest-btn">
+    <code>closedby="closerequest"</code>
+  </button>
+  <button id="any-btn"><code>closedby="any"</code></button>
+</div>
+
+<dialog closedby="none">
+  <h2><code>closedby="none"</code></h2>
+  <p>
+    Only closable using a specific provided mechanism, which in this case is
+    pressing the "Close" button below.
+  </p>
+  <button class="close">Close</button>
+</dialog>
+
+<dialog closedby="closerequest">
+  <h2><code>closedby="closerequest"</code></h2>
+  <p>Closable using the "Close" button or the Esc key.</p>
+  <button class="close">Close</button>
+</dialog>
+
+<dialog closedby="any">
+  <h2><code>closedby="any"</code></h2>
+  <p>
+    Closable using the "Close" button, the Esc key, or by clicking outside the
+    dialog. "Light dismiss" behavior.
+  </p>
+  <button class="close">Close</button>
+</dialog>
+```
+
+```css hidden live-sample___closedbyvalues
+body {
+  font-family: sans-serif;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+dialog {
+  width: 480px;
+  border-radius: 5px;
+  border-color: rgb(0 0 0 / 0.3);
+}
+
+dialog h2 {
+  margin: 0;
+}
+
+dialog p {
+  line-height: 1.4;
+}
+```
+
+#### JavaScript
+
+Here we assign different variables to reference the main control `<button>` elements, the `<dialog>` elements, and the "Close" `<button>` elements inside the dialogs. First we assign a [`click`](/en-US/docs/Web/API/Element/click_event) event listener to each control button using [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener), the event handler function of which opens the associated `<dialog>` element via [`showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal). We then loop through the "Close" `<button>` references, assigning each one a `click` event handler function that closes its `<dialog>` element via [`close()`](/en-US/docs/Web/API/HTMLDialogElement/close).
+
+```js live-sample___closedbyvalues
+const noneBtn = document.getElementById("none-btn");
+const closerequestBtn = document.getElementById("closerequest-btn");
+const anyBtn = document.getElementById("any-btn");
+
+const noneDialog = document.querySelector("[closedby='none']");
+const closerequestDialog = document.querySelector("[closedby='closerequest']");
+const anyDialog = document.querySelector("[closedby='any']");
+
+const closeBtns = document.querySelectorAll(".close");
+
+noneBtn.addEventListener("click", () => {
+  noneDialog.showModal();
+});
+
+closerequestBtn.addEventListener("click", () => {
+  closerequestDialog.showModal();
+});
+
+anyBtn.addEventListener("click", () => {
+  anyDialog.showModal();
+});
+
+closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.close();
+  });
+});
+```
+
+#### Result
+
+The rendered result is as follows:
+
+{{EmbedLiveSample("closedby-values", "100%", 300)}}
+
+Try clicking each button to open a dialog. The first one can only be closed by clicking its "Close" button. The second one can also be closed via a device-specific user action such as pressing the <kbd>Esc</kbd> key. The third one has full ["light-dismiss" behavior](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss), so it can also be closed by clicking or tapping outside the dialog.
+
 ### Animating dialogs
 
-`<dialog>`s are set to [`display: none;`](/en-US/docs/Web/CSS/display) when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree). Therefore, for `<dialog>` elements to be animated the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for the entire animation duration.
+`<dialog>`s are set to [`display: none;`](/en-US/docs/Web/CSS/Reference/Properties/display) when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree). Therefore, for `<dialog>` elements to be animated the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/Reference/Properties/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for the entire animation duration.
 
 So for example:
 
@@ -282,17 +408,17 @@ So for example:
 - When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
 > [!NOTE]
-> When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set to enable the above behavior. This behavior is available by default when animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations); an equivalent step is not required.
+> When animating using [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) needs to be set to enable the above behavior. This behavior is available by default when animating with [CSS animations](/en-US/docs/Web/CSS/Guides/Animations); an equivalent step is not required.
 
 #### Transitioning dialog elements
 
 When animating `<dialog>`s with CSS transitions, the following features are required:
 
-- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule
+- {{cssxref("@starting-style")}} at-rule
   - : Provides a set of starting values for properties set on the `<dialog>` that you want to transition from every time it is opened. This is needed to avoid unexpected behavior. By default, CSS transitions only occur when a property changes from one value to another on a visible element; they are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type.
-- [`display`](/en-US/docs/Web/CSS/display) property
+- {{cssxref("display")}} property
   - : Add `display` to the transitions list so that the `<dialog>` will remain as `display: block` (or another visible `display` value set on the dialog's open state) for the duration of the transition, ensuring the other transitions are visible.
-- [`overlay`](/en-US/docs/Web/CSS/overlay) property
+- {{cssxref("overlay")}} property
   - : Include `overlay` in the transitions list to ensure the removal of the `<dialog>` from the top layer is deferred until the transition completes, again ensuring the transition is visible.
 - {{cssxref("transition-behavior")}} property
   - : Set `transition-behavior: allow-discrete` on the `display` and `overlay` transitions (or on the {{cssxref("transition")}} shorthand) to enable discrete transitions on these two properties that are not by default animatable.
@@ -316,7 +442,7 @@ The HTML contains a `<dialog>` element, plus a button to show the dialog. Additi
 
 In the CSS, we include a `@starting-style` block that defines the transition starting styles for the `opacity` and `transform` properties, transition end styles on the `dialog:open` state, and default styles on the default `dialog` state to transition back to once the `<dialog>` has appeared. Note how the `<dialog>`'s `transition` list includes not only these properties, but also the `display` and `overlay` properties, each with `allow-discrete` set on them.
 
-We also set a starting style value for the {{cssxref("background-color")}} property on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. The `dialog:open::backdrop` selector selects only the backdrops of `<dialog>` elements when the dialog is open.
+We also set a starting style value for the {{cssxref("background-color")}} property on the {{cssxref("::backdrop")}} that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. The `dialog:open::backdrop` selector selects only the backdrops of `<dialog>` elements when the dialog is open.
 
 ```css
 /* Open state of the dialog  */
@@ -350,7 +476,7 @@ dialog {
 
 /* Transition the :backdrop when the dialog modal is promoted to the top layer */
 dialog::backdrop {
-  background-color: rgb(0 0 0 / 0%);
+  background-color: transparent;
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -368,7 +494,7 @@ because the nesting selector cannot represent pseudo-elements. */
 
 @starting-style {
   dialog:open::backdrop {
-    background-color: rgb(0 0 0 / 0%);
+    background-color: transparent;
   }
 }
 ```
@@ -403,7 +529,7 @@ The code renders as follows:
 > [!NOTE]
 > Because `<dialog>`s change from `display: none` to `display: block` each time they are shown, the `<dialog>` transitions from its `@starting-style` styles to its `dialog:open` styles every time the entry transition occurs. When the `<dialog>` closes, it transitions from its `dialog:open` state to the default `dialog` state.
 >
-> It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
+> It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
 
 #### dialog keyframe animations
 
@@ -443,6 +569,7 @@ dialog:open {
 }
 
 dialog:open::backdrop {
+  background-color: black;
   animation: backdrop-fade-in 0.7s ease-out forwards;
 }
 
@@ -478,11 +605,11 @@ dialog:open::backdrop {
 
 @keyframes backdrop-fade-in {
   0% {
-    background-color: rgb(0 0 0 / 0%);
+    opacity: 0;
   }
 
   100% {
-    background-color: rgb(0 0 0 / 25%);
+    opacity: 0.25;
   }
 }
 

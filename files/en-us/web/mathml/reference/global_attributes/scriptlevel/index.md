@@ -6,7 +6,26 @@ browser-compat: mathml.global_attributes.scriptlevel
 sidebar: mathmlref
 ---
 
-The **`scriptlevel`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [math-depth](/en-US/docs/Web/CSS/math-depth) of a MathML element. It allows overriding rules from the [user agent stylesheet](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user-agent_stylesheets) that define automatic calculation of [font-size](/en-US/docs/Web/CSS/font-size) within MathML formulas.
+The **`scriptlevel`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [math-depth](/en-US/docs/Web/CSS/Reference/Properties/math-depth) of a MathML element. It allows overriding rules from the [user agent stylesheet](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#user-agent_stylesheets) that define automatic calculation of [font-size](/en-US/docs/Web/CSS/Reference/Properties/font-size) within MathML formulas.
+
+## Syntax
+
+```html-nolint
+<math scriptlevel="-1"> <!-- decrease math-depth by 1 -->
+<math scriptlevel="+2"> <!-- increase math-depth by 2 -->
+<math scriptlevel="0"> <!-- reset math-depth to 0 -->
+```
+
+### Values
+
+If `<U>` is an unsigned [integer](/en-US/docs/Web/CSS/Reference/Values/integer) (i.e., with prefix sign symbol removed) then the accepted values are:
+
+- `<U>`
+  - : Sets the `math-depth` to value `<U>`. This will set `font-size` of the element to the same value as the one of elements at the specified depth.
+- `+<U>`
+  - : Sets the `math-depth` to value `add(<U>)`. This will scale down `font-size` on the element `<U>` times.
+- `-<U>`
+  - : Sets the `math-depth` to value `add(-<U>)`. This will scale up `font-size` on the element `<U>` times.
 
 ## Example
 
@@ -20,11 +39,15 @@ body {
   display: grid;
   place-items: center;
 }
+
+math {
+  font-size: 24px;
+}
 ```
 
 ```html
 <!-- math-depth defaults to 0 on the <math> root. -->
-<math style="font-size: 24px">
+<math>
   <msubsup>
     <!-- math-depth and font-size remain unchanged on the base. -->
     <mtext>base</mtext>
@@ -38,25 +61,6 @@ body {
   </msubsup>
 </math>
 ```
-
-## Syntax
-
-```html-nolint
-<math scriptlevel="-1"> <!-- decrease math-depth by 1 -->
-<math scriptlevel="+2"> <!-- increase math-depth by 2 -->
-<math scriptlevel="0"> <!-- reset math-depth to 0 -->
-```
-
-### Values
-
-If `<U>` is an unsigned [integer](/en-US/docs/Web/CSS/integer) (i.e., with prefix sign symbol removed) then the accepted values are:
-
-- `<U>`
-  - : Sets the `math-depth` to value `<U>`. This will set `font-size` of the element to the same value as the one of elements at the specified depth.
-- `+<U>`
-  - : Sets the `math-depth` to value `add(<U>)`. This will scale down `font-size` on the element `<U>` times.
-- `-<U>`
-  - : Sets the `math-depth` to value `add(-<U>)`. This will scale up `font-size` on the element `<U>` times.
 
 {{EmbedLiveSample("Example", "", 150)}}
 

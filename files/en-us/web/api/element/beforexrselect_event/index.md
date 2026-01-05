@@ -8,7 +8,7 @@ status:
 browser-compat: api.Element.beforexrselect_event
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`beforexrselect`** event is fired before WebXR select events ({{domxref("XRSession/select_event", "select")}}, {{domxref("XRSession/selectstart_event", "selectstart")}}, {{domxref("XRSession/selectend_event", "selectend")}}) are dispatched. It can be used to suppress XR world input events while the user is interacting with a DOM overlay UI.
 
@@ -18,10 +18,10 @@ This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubb
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("beforexrselect", (event) => {});
+```js-nolint
+addEventListener("beforexrselect", (event) => { })
 
-onbeforexrselect = (event) => {};
+onbeforexrselect = (event) => { }
 ```
 
 ## Event type

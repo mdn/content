@@ -1,11 +1,11 @@
 ---
 title: RegExp.prototype[Symbol.search]()
+short-title: "[Symbol.search]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@search
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.search]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.search`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search) should behave.
 

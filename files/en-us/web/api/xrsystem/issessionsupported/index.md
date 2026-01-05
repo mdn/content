@@ -28,10 +28,8 @@ isSessionSupported(mode)
 ### Parameters
 
 - `mode`
-
   - : A {{jsxref("String")}} specifying the WebXR session mode for which support is to
     be checked. Possible modes to check for:
-
     - `immersive-ar` {{Experimental_Inline}}
     - `immersive-vr`
     - `inline`

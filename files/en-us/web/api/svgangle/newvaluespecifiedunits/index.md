@@ -19,7 +19,6 @@ newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
 ### Parameters
 
 - `unitType`
-
   - : A constant representing the unit type to which the angle's value should be converted. This must be one of the constant values defined for the {{domxref("SVGAngle.unitType", "unitType")}} property, with the exception of `SVG_ANGLETYPE_UNKNOWN`.
     - `SVGAngle.SVG_ANGLETYPE_DEG`: convert to degrees
     - `SVGAngle.SVG_ANGLETYPE_RAD`: convert to radians
@@ -38,7 +37,6 @@ None ({{jsxref('undefined')}}).
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : Thrown if `unitType` is `SVG_ANGLETYPE_UNKNOWN` or not a valid unit type constant.
 
 - `NoModificationAllowedError` {{domxref("DOMException")}}

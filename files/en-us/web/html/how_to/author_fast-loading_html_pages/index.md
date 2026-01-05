@@ -2,13 +2,11 @@
 title: Author fast-loading HTML pages
 slug: Web/HTML/How_to/Author_fast-loading_HTML_pages
 page-type: how-to
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}
-
-These tips are based on common knowledge and experimentation.
-
 An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and internet connection. This can be crucial for high volume sites or sites which have a spike in traffic due to unusual circumstances such as breaking news stories.
+This article describes how to improve page load times based on common knowledge and experimentation.
 
 Optimizing page load performance is not just for content which will be viewed by narrowband dial-up or mobile device visitors. It is just as important for broadband content and can lead to dramatic improvements even for your visitors with the fastest connections.
 
@@ -83,35 +81,7 @@ Moreover, valid markup allows for the free use of other tools that can _pre-proc
 
 Tables for layouts are a legacy method that should not be used anymore. Layouts utilizing [floats](/en-US/docs/Learn_web_development/Core/CSS_layout/Floats), [positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning), [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox), or [grids](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) should be used instead.
 
-Tables are still considered valid markup but should be used for displaying tabular data. To help the browser render your page quicker, you should avoid nesting your tables.
-
-Rather than deeply nesting tables as in:
-
-```html
-<table>
-  <table>
-    <table>
-      …
-    </table>
-  </table>
-</table>
-```
-
-use non-nested tables or divs as in
-
-```html
-<table>
-  …
-</table>
-<table>
-  …
-</table>
-<table>
-  …
-</table>
-```
-
-See also: [CSS flexible box layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS grid layout](https://www.w3.org/TR/css-grid-1/) specifications.
+Tables are still considered valid markup but should be used for displaying tabular data. To help the browser render your page quicker, you should use CSS methods such as [flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) and [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) instead of nesting tables.
 
 ### Minify and compress SVG assets
 
@@ -164,9 +134,7 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 ## Example page structure
 
 - `{{htmlelement('html')}}`
-
   - `{{htmlelement('head')}}`
-
     - `{{htmlelement('link')}}`
 
       CSS files required for page appearance. Minimize the number of files for performance while keeping unrelated CSS in separate files for maintenance.
@@ -180,7 +148,6 @@ Note: Even though these attributes do help a lot the first time a page is loaded
   - `{{htmlelement('body')}}`
 
     User visible page content in small chunks (`{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) that can be displayed without waiting for the full page to download.
-
     - `{{htmlelement('script')}}`
 
       Any scripts which will be used to perform interactivity. Interaction scripts typically can only run after the page has completely loaded and all necessary objects have been initialized. There is no need to load these scripts before the page content. That only slows down the initial appearance of the page load.

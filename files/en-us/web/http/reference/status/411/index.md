@@ -3,9 +3,8 @@ title: 411 Length Required
 slug: Web/HTTP/Reference/Status/411
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.411
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`411 Length Required`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the server refused to accept the request without a defined {{HTTPHeader("Content-Length")}} header.
 

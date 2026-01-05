@@ -1,11 +1,10 @@
 ---
-title: Use <img> with cross-origin images and <canvas>
+title: Use cross-origin images in a canvas
 short-title: Use cross-origin images
 slug: Web/HTML/How_to/CORS_enabled_image
 page-type: how-to
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 HTML provides a [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/img#crossorigin) attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in a {{HTMLElement("canvas")}} as if they had been loaded from the current origin.
 
@@ -38,7 +37,7 @@ The first thing we need is a server that's configured to host images with the {{
 
 Let's assume we're serving our site using [Apache](https://httpd.apache.org/). Consider the HTML5 Boilerplate [Apache server configuration file for CORS images](https://github.com/h5bp/server-configs-apache/blob/main/h5bp/cross-origin/images.conf), shown below:
 
-```xml
+```apacheconf
 <IfModule mod_setenvif.c>
   <IfModule mod_headers.c>
     <FilesMatch "\.(avifs?|bmp|cur|gif|ico|jpe?g|jxl|a?png|svgz?|webp)$">
@@ -63,13 +62,12 @@ The code that starts the download (say, when the user clicks a "Download" button
 
 ```js
 function startDownload() {
-  let imageURL =
-    "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
-  let imageDescription = "The Mozilla logo";
+  let imageURL = "https://mdn.github.io/shared-assets/images/examples/mdn.svg";
+  let imageDescription = "Logo of a dinosaur in front of a map";
 
   downloadedImg = new Image();
   downloadedImg.crossOrigin = "anonymous";
-  downloadedImg.addEventListener("load", imageReceived, false);
+  downloadedImg.addEventListener("load", imageReceived);
   downloadedImg.alt = imageDescription;
   downloadedImg.src = imageURL;
 }

@@ -3,9 +3,8 @@ title: "<noscript>: The Noscript element"
 slug: Web/HTML/Reference/Elements/noscript
 page-type: html-element
 browser-compat: html.elements.noscript
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of HTML to be inserted if a script type on the page is unsupported or if scripting is currently turned off in the browser.
 
@@ -32,6 +31,13 @@ Rocks!
 [External Link](https://www.mozilla.org/)
 
 Rocks!
+
+## Usage notes
+
+The `<noscript>` element represents its children differently depending on if scripting is enabled:
+
+- If scripting is disabled the `<noscript>` element represents its children as [HTML content](/en-US/docs/Web/API/HTMLElement).
+- If scripting is enabled, the `<noscript>` element represents its children as [text](/en-US/docs/Web/API/Text).
 
 ## Technical summary
 
@@ -91,7 +97,7 @@ Rocks!
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

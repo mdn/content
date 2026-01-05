@@ -2,9 +2,8 @@
 title: Scroll container
 slug: Glossary/Scroll_container
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **scroll container** is an element box in which content can be scrolled, whether or not scroll bars are present. A user agent adds scroll bars to an element box to make it a scroll container when the CSS {{cssxref("overflow")}} property is set to `scroll` or when `overflow` is set to `auto` _and_ the content overflows the container.
 
@@ -20,6 +19,7 @@ The scrollport is the visible part of a scroll container and coincides with the 
 
 - [Learn: Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)
 - [Scroll snapping](/en-US/docs/Glossary/Scroll_snap), including [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container)
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
-- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/Guides/Overscroll_behavior) module
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module

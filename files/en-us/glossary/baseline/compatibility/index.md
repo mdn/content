@@ -2,9 +2,8 @@
 title: Baseline (compatibility)
 slug: Glossary/Baseline/Compatibility
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Baseline** identifies the availability of web platform features across popular browsers, including APIs, CSS properties, and JavaScript syntax. Baseline describes web features as being either widely available or newly available. Features that do not meet the Baseline criteria are said to have limited availability.
 

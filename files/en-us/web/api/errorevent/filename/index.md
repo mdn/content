@@ -18,7 +18,7 @@ A string.
 
 ```js
 window.addEventListener("error", (ev) => {
-  console.log("The error occur in file: " + ev.filename);
+  console.log(`The error occur in file: ${ev.filename}`);
 });
 ```
 

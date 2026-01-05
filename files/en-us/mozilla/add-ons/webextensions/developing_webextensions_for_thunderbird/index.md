@@ -2,9 +2,8 @@
 title: Developing WebExtensions for Thunderbird
 slug: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 You'll approach the coding of an extension for Thunderbird in the same way as you would for a Firefox extension; using a text editor or tool of your choice to write the code.
 

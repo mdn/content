@@ -23,11 +23,8 @@ read(formats)
 ### Parameters
 
 - `formats` {{optional_inline}}
-
   - : An optional object with the following properties:
-
     - `unsanitized` {{optional_inline}}
-
       - : An {{jsxref("Array")}} of strings containing MIME types of data formats that should not be sanitized when reading from the clipboard.
 
         Certain browsers may sanitize the clipboard data when it is read, to prevent malicious content from being pasted into the document. For example, Chrome (and other Chromium-based browsers) sanitizes HTML data by stripping `<script>` tags and other potentially dangerous content. Use the `unsanitized` array to specify a list of MIME types that should not be sanitized.
@@ -43,7 +40,7 @@ A {{jsxref("Promise")}} that resolves with an array of {{domxref("ClipboardItem"
 
 ## Security considerations
 
-Reading from the clipboard can only be done in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+Reading from the clipboard can only be done in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 Additional security requirements are covered in the [Security consideration](/en-US/docs/Web/API/Clipboard_API#security_considerations) section of the API overview topic.
 
@@ -57,7 +54,7 @@ This example uses the `read()` method to read image data from the clipboard and 
 
 ```html
 <img id="source" src="butterfly.jpg" alt="A butterfly" />
-<img id="destination" />
+<img id="destination" src="" alt="Pasted image" />
 <button id="reload" type="button">Reload</button>
 <p id="log"></p>
 ```
@@ -199,7 +196,7 @@ const destinationDiv = document.querySelector("#destination");
 destinationDiv.addEventListener("click", pasteData);
 
 async function pasteData() {
-  destinationDiv.innerText = ""; //Clear inner text
+  destinationDiv.innerText = ""; // Clear inner text
   try {
     const clipboardContents = await navigator.clipboard.read();
     for (const item of clipboardContents) {
@@ -208,8 +205,7 @@ async function pasteData() {
         mimeTypeElement.innerText = `MIME type: ${mimeType}`;
         destinationDiv.appendChild(mimeTypeElement);
         if (mimeType === "image/png") {
-          const pngImage = new Image(); // Image constructor
-          pngImage.src = "image1.png";
+          const pngImage = new Image();
           pngImage.alt = "PNG image from clipboard";
           const blob = await item.getType("image/png");
           pngImage.src = URL.createObjectURL(blob);

@@ -1,11 +1,11 @@
 ---
-title: Range
+title: Range header
+short-title: Range
 slug: Web/HTTP/Reference/Headers/Range
 page-type: http-header
 browser-compat: http.headers.Range
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Range`** {{Glossary("request header")}} indicates the part of a resource that the server should return.
 Several parts can be requested at the same time in one `Range` header, and the server may send back these ranges in a multipart document.
@@ -133,6 +133,22 @@ Content-Length: 146515
 Content-Type: image/jpeg
 …
 Accept-Ranges: bytes
+```
+
+### Fetching a range from a blob URL
+
+The [`blob:`](/en-US/docs/Web/URI/Reference/Schemes/blob) URL also supports range requests by using [`fetch()`](/en-US/docs/Web/API/Window/fetch).
+
+```js
+const blob = new Blob(["Hello, world!"], { type: "text/plain" });
+const url = URL.createObjectURL(blob);
+fetch(url, {
+  headers: {
+    Range: "bytes=7-11",
+  },
+})
+  .then((response) => response.text())
+  .then((text) => console.log(text)); // "world"
 ```
 
 ## Specifications

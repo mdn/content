@@ -3,12 +3,10 @@ title: "GPUDevice: createBindGroup() method"
 short-title: createBindGroup()
 slug: Web/API/GPUDevice/createBindGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.createBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createBindGroup()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUBindGroup")}} based on a {{domxref("GPUBindGroupLayout")}} that defines a set of resources to be bound together in a group and how those resources are used in shader stages.
@@ -29,10 +27,12 @@ createBindGroup(descriptor)
           - : A number representing a unique identifier for this resource binding, which matches the `binding` value of a corresponding {{domxref("GPUBindGroupLayout")}} entry. In addition, it matches the `n` index value of the corresponding [`@binding(n)`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader ({{domxref("GPUShaderModule")}}) used in the related pipeline.
         - `resource`
           - : The resource to bind. This can be one of the following:
-            - `GPUBufferBinding` (which wraps a {{domxref("GPUBuffer")}}; see [GPUBufferBinding objects](#gpubufferbinding_objects) for a definition)
+            - `GPUBufferBinding`: Wraps a {{domxref("GPUBuffer")}}; see [GPUBufferBinding objects](#gpubufferbinding_objects) for a definition.
+            - {{domxref("GPUBuffer")}}: Can be used directly rather than being wrapped in a `GPUBufferBinding`, provided the default [`offset`](#offset) and [`size`](#size) values are being used.
             - {{domxref("GPUExternalTexture")}}
+            - {{domxref("GPUTextureView")}}: Can be used in place of a `GPUExternalTexture` provided it is compatible (a 2D format with a single subresource, that is, [`dimension: "2d"`](/en-US/docs/Web/API/GPUTexture/createView#dimension)).
+            - {{domxref("GPUTexture")}}: Can be used in place of a `GPUTextureView`, provided a default view is desired. When used in this context, `GPUTexture` is equivalent to a `GPUTextureView` object created using a {{domxref("GPUTexture.createView()")}} call with no argument specified.
             - {{domxref("GPUSampler")}}
-            - {{domxref("GPUTextureView")}}
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `layout`
@@ -93,7 +93,7 @@ The following criteria must be met when calling **`createBindGroup()`**, otherwi
 Our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/) shows an example of creating a bind group layout and then using that as a template when creating a bind group.
 
 ```js
-// ...
+// …
 
 const bindGroupLayout = device.createBindGroupLayout({
   entries: [
@@ -119,7 +119,7 @@ const bindGroup = device.createBindGroup({
   ],
 });
 
-// ...
+// …
 ```
 
 ## Specifications

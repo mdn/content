@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("removetrack", (event) => {});
+```js-nolint
+addEventListener("removetrack", (event) => { })
 
-onremovetrack = (event) => {};
+onremovetrack = (event) => { }
 ```
 
 ## Event type

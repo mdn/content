@@ -43,7 +43,7 @@ interfaceElement.addEventListener("mousedown", () => {
     if (e instanceof InvalidState) {
       console.log("finish() called on paused or finished animation.");
     } else {
-      logMyErrors(e); //pass exception object to error handler
+      logMyErrors(e); // Pass exception object to error handler
     }
   }
 });

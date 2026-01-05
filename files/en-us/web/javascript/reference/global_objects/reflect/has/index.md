@@ -1,11 +1,11 @@
 ---
 title: Reflect.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.has
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.has()`** static method is like the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator, but
 as a function.
@@ -13,17 +13,17 @@ as a function.
 {{InteractiveExample("JavaScript Demo: Reflect.has()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   property1: 42,
 };
 
-console.log(Reflect.has(object1, "property1"));
+console.log(Reflect.has(object, "property1"));
 // Expected output: true
 
-console.log(Reflect.has(object1, "property2"));
+console.log(Reflect.has(object, "property2"));
 // Expected output: false
 
-console.log(Reflect.has(object1, "toString"));
+console.log(Reflect.has(object, "toString"));
 // Expected output: true
 ```
 

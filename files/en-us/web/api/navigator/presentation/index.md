@@ -16,6 +16,21 @@ returns a reference to {{DOMxRef("Presentation")}} object.
 
 A reference to {{DOMxRef("Presentation")}} object.
 
+## Examples
+
+Currently, the `navigator.presentation` property is most useful for feature checking, and, for the receiving user agent, to access the {{domxref("PresentationReceiver")}}.
+
+```js
+// Check if the Presentation API is available in the current browser
+if ("presentation" in navigator) {
+  footer.textContent = navigator.presentation.receiver
+    ? "Receiving presentation"
+    : "(idle)";
+} else {
+  console.error("Presentation API is not available in this browser.");
+}
+```
+
 ## Specifications
 
 {{Specifications}}

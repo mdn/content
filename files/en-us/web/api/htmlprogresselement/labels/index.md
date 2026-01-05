@@ -30,12 +30,10 @@ with the `<progress>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const progress = document.getElementById("test");
-  for (const label of progress.labels) {
-    console.log(label.textContent); // "Label 1" and "Label 2"
-  }
-});
+const progress = document.getElementById("test");
+for (const label of progress.labels) {
+  console.log(label.textContent); // "Label 1" and "Label 2"
+}
 ```
 
 {{EmbedLiveSample("Examples", "100%", 30)}}

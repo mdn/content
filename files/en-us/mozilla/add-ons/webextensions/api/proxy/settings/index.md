@@ -3,9 +3,8 @@ title: proxy.settings
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/settings
 page-type: webextension-api-property
 browser-compat: webextensions.api.proxy.settings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object used to change the browser's proxy settings.
 
@@ -25,9 +24,7 @@ The underlying value is an object. When setting this object, all properties are 
 - `httpProxyAll` {{optional_inline}}
   - : `boolean`. Use the HTTP proxy server for all protocols. Defaults to `false`.
 - `passthrough` {{optional_inline}}
-
   - : `string`. A comma-separated list of hosts that shouldn't be proxied. Can be defined as:
-
     - `HOST_NAME[:PORT]`, for example: `example.com` or `example.com:1234`
     - `IP_LITERAL[:PORT]`
     - `IP_LITERAL/PREFIX_LENGTH_IN_BITS`, using [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation)

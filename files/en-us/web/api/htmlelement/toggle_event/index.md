@@ -18,10 +18,10 @@ This event is not [cancelable](/en-US/docs/Web/API/Event/cancelable).
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("toggle", (event) => {});
+```js-nolint
+addEventListener("toggle", (event) => { })
 
-ontoggle = (event) => {};
+ontoggle = (event) => { }
 ```
 
 ## Event type
@@ -78,9 +78,9 @@ const popover = document.getElementById("mypopover");
 
 popover.addEventListener("toggle", (event) => {
   if (event.newState === "open") {
-    console.log("Popover has been shown");
+    log("Popover has been shown");
   } else {
-    console.log("Popover has been hidden");
+    log("Popover has been hidden");
   }
 });
 ```
@@ -98,7 +98,7 @@ For example:
 
 ```js
 popover.addEventListener("toggle", () => {
-  //...
+  // …
 });
 
 popover.showPopover();

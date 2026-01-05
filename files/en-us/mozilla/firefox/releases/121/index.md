@@ -1,10 +1,10 @@
 ---
-title: Firefox 121 for developers
+title: Firefox 121 release notes for developers
+short-title: Firefox 121
 slug: Mozilla/Firefox/Releases/121
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 121 that affect developers. Firefox 121 was released on [December 19, 2023](https://whattrainisitnow.com/release/?version=121).
 
@@ -20,26 +20,23 @@ This article provides information about the changes in Firefox 121 that affect d
 
 - The {{CSSXRef("text-wrap")}} property has been updated with support for the values `balance` and `stable`. The `balance` value is used for short blocks of content, such as headings, and will make sure that the content is balanced and easy to read when spread over multiple lines. The `stable` value makes sure that editable content does not reflow while the user is editing it ([Firefox bug 1731541](https://bugzil.la/1731541)).
 - The {{cssxref(":has", ":has()")}} selector, commonly referred to as the _parent selector_, is now supported. It allows developers to apply styles to an element based on related elements, e.g., `li:has(ul)` will match a list which contains a sub-list, or `h1:has(+ p)` will match a heading with a paragraph directly after it.
-- The [`text-indent`](/en-US/docs/Web/CSS/text-indent) CSS property now supports the [`each-line`](/en-US/docs/Web/CSS/text-indent#each-line) and [`hanging`](/en-US/docs/Web/CSS/text-indent#hanging) property values ([Firefox bug 784648](https://bugzil.la/784648)), allowing developers to more easily specify certain text indentation styles. Additionally, developers can now combine multiple `text-indent` property values for more creativity, e.g., `text-indent: 3em hanging each-line`.
+- The [`text-indent`](/en-US/docs/Web/CSS/Reference/Properties/text-indent) CSS property now supports the [`each-line`](/en-US/docs/Web/CSS/Reference/Properties/text-indent#each-line) and [`hanging`](/en-US/docs/Web/CSS/Reference/Properties/text-indent#hanging) property values ([Firefox bug 784648](https://bugzil.la/784648)), allowing developers to more easily specify certain text indentation styles. Additionally, developers can now combine multiple `text-indent` property values for more creativity, e.g., `text-indent: 3em hanging each-line`.
 
 ### JavaScript
 
 - The {{jsxref("Promise.withResolvers()")}} static method is now supported. This exposes the `resolve` and `reject` callback functions in the same scope as the returned {{jsxref("Promise")}}, allowing code that resolves or rejects the promise to be defined after its construction ([Firefox bug 1845586](https://bugzil.la/1845586)).
 
 - {{jsxref("Date.parse()")}} now accepts several additional date formats:
-
   - Year > 9999 for `YYYY-MMM-DD` format (e.g., `19999-Jan-01`) ([Firefox bug 1858851](https://bugzil.la/1858851))
   - `MMM-DD-YYYY` (e.g., `Jan-01-1970`) ([Firefox bug 1863489](https://bugzil.la/1863489))
   - Milliseconds for non-ISO date formats (e.g., `Jan 1 1970 10:00:00.050`) ([Firefox bug 1863125](https://bugzil.la/1863125))
   - Day of week at the beginning of formats which were being rejected, such as:
-
     - `Wed, 1970-01-01`
     - `Wed, 1970-Jan-01`
 
     The day of week does not need to be correct, or a day of week at all; for example, `foo 1970-01-01` works ([Firefox bug 1617562](https://bugzil.la/1617562)).
 
 - Other {{jsxref("Date.parse()")}} fixes:
-
   - `YYYY-M-DD` and `YYYY-MM-D` are no longer assumed GMT as an ISO date `YYYY-MM-DD` would be ([Firefox bug 1783731](https://bugzil.la/1783731)).
   - Milliseconds for all formats are truncated after 3 digits, rather than being rounded ([Firefox bug 746529](https://bugzil.la/746529)).
 
@@ -49,11 +46,11 @@ This article provides information about the changes in Firefox 121 that affect d
 
 #### DOM
 
-- {{domxref("HTMLInputElement.showPicker()")}} now works for [`<input type="week">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) and [`<input type="month">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) elements on Android ([Firefox bug 1853797](https://bugzil.la/161853797)).
+- {{domxref("HTMLInputElement.showPicker()")}} now works for [`<input type="week">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) and [`<input type="month">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) elements on Android ([Firefox bug 1853797](https://bugzil.la/1853797)).
 
 ### WebAssembly
 
-- WebAssembly now supports tail call optimization via new `return_call` and `return_call_indirect` alternatives to the [`call`](/en-US/docs/WebAssembly/Reference/Control_flow/call) instruction. This improves performance, reduces stack space usage, and enhances compatibility with programming languages that use tail calls. ([Firefox bug 1858855](https://bugzil.la/1846789)).
+- WebAssembly now supports tail call optimization via new `return_call` and `return_call_indirect` alternatives to the [`call`](/en-US/docs/WebAssembly/Reference/Control_flow/call) instruction. This improves performance, reduces stack space usage, and enhances compatibility with programming languages that use tail calls. ([Firefox bug 1846789](https://bugzil.la/1846789)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -89,7 +86,3 @@ These features are newly shipped in Firefox 121 but are disabled by default. To 
   > [!NOTE]
   > Incidentally, a change in Chrome 121 sees the `scripts` property ignored when specified with the `service_worker` property. Previously, Chrome refused to load extensions containing both properties ([Chromium bug 1418934](https://crbug.com/1418934)).
   > For more information, see [Browser support of the `background` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#browser_support).
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: payment"
+title: "Permissions-Policy: payment directive"
+short-title: payment
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/payment
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.payment
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header field's `payment` directive controls whether the current document is allowed to use the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API).
 

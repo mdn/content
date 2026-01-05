@@ -74,7 +74,7 @@ To set your `PATH` variable on a macOS system and on most Linux systems:
 2. Paste the following into the bottom of your file (updating the path as it actually is on your machine):
 
    ```bash
-   #Add WebDriver browser drivers to PATH
+   # Add WebDriver browser drivers to PATH
    export PATH=$PATH:/Users/bob
    ```
 
@@ -137,8 +137,8 @@ There is also nothing to stop you running the test on multiple browsers simultan
    ```js
    const { Builder, Browser, By, Key } = require("selenium-webdriver");
 
-   const driver_fx = new Builder().forBrowser(Browser.FIREFOX).build();
-   const driver_chr = new Builder().forBrowser(Browser.CHROME).build();
+   const driverFx = new Builder().forBrowser(Browser.FIREFOX).build();
+   const driverChr = new Builder().forBrowser(Browser.CHROME).build();
 
    async function searchTest(driver) {
      try {
@@ -156,8 +156,8 @@ There is also nothing to stop you running the test on multiple browsers simultan
      }
    }
 
-   searchTest(driver_fx);
-   searchTest(driver_chr);
+   searchTest(driverFx);
+   searchTest(driverChr);
    ```
 
 3. In terminal, make sure you are inside your project folder, then enter the following command:
@@ -493,7 +493,8 @@ In addition, we should mention test results/reporting — we've been reporting r
 
 4. You should include the `--no-timeouts` flag to make sure your tests don't end up failing because of Mocha's arbitrary timeout (which is 3 seconds).
 
-> **Note:** [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) contains several useful examples showing how to set up different combinations of test/assertion tools.
+> [!NOTE]
+> [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) contains several useful examples showing how to set up different combinations of test/assertion tools.
 
 ## Running remote tests
 
@@ -583,7 +584,10 @@ Let's update our `bstack_duck_test.js` demo, to show how these features work:
 3. Now we'll update our `capabilities` object to include a project name — add the following line before the closing curly brace, remembering to add a comma at the end of the previous line (you can vary the build and project names to organize the tests in different windows in the BrowserStack automation dashboard):
 
    ```js
-   project: "DuckDuckGo test 2";
+   const capabilities = {
+     // …
+     project: "DuckDuckGo test 2",
+   };
    ```
 
 4. Next we'll retrieve the `sessionId` of the current session, and use it (along with your `userName` and `accessKey`) to assemble the URL to send requests to, to update the BrowserStack data. Include the following lines just below the block that creates the `driver` object (which starts with `const driver = new Builder()`) :
@@ -598,7 +602,7 @@ Let's update our `bstack_duck_test.js` demo, to show how these features work:
    });
    ```
 
-5. Finally, update the `if ... else` block near the bottom of the code to send appropriate API calls to BrowserStack depending on whether the test passed or failed:
+5. Finally, update the `if...else` block near the bottom of the code to send appropriate API calls to BrowserStack depending on whether the test passed or failed:
 
    ```js
    if (title === "webdriver at DuckDuckGo") {
@@ -631,6 +635,7 @@ Let's look at an example that demonstrates getting Selenium tests to run remotel
 
    ```js
    const { Builder, By, Key } = require("selenium-webdriver");
+
    const username = "YOUR-USER-NAME";
    const accessKey = "YOUR-ACCESS-KEY";
 
@@ -790,7 +795,7 @@ So this is pretty cool. We have tested this locally, but you could set this up o
 
 ## Integrating Selenium with CI tools
 
-As another point, it is also possible to integrate Selenium and related tools like LambdaTest, and Sauce Labs with continuous integration (CI) tools — this is useful, as it means you can run your tests via a CI tool, and only commit new changes to your code repository if the tests pass.
+As another point, it is also possible to integrate Selenium and related tools like LambdaTest, and Sauce Labs with {{glossary("continuous integration")}} (CI) tools — this is useful, as it means you can run your tests via a CI tool, and only commit new changes to your code repository if the tests pass.
 
 It is out of scope to look at this area in detail in this article, but we'd suggest getting started with Travis CI — this is probably the easiest CI tool to get started with and has good integration with web tools like GitHub and Node.
 

@@ -3,9 +3,8 @@ title: Empty statement
 slug: Web/JavaScript/Reference/Statements/Empty
 page-type: javascript-statement
 browser-compat: javascript.statements.empty
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 An **empty statement** is used to provide no statement, although the
 JavaScript syntax would expect one.
@@ -13,12 +12,12 @@ JavaScript syntax would expect one.
 {{InteractiveExample("JavaScript Demo: Empty statement")}}
 
 ```js interactive-example
-const array1 = [1, 2, 3];
+const array = [1, 2, 3];
 
 // Assign all array values to 0
-for (let i = 0; i < array1.length; array1[i++] = 0 /* empty statement */);
+for (let i = 0; i < array.length; array[i++] = 0 /* empty statement */);
 
-console.log(array1);
+console.log(array);
 // Expected output: Array [0, 0, 0]
 ```
 

@@ -3,18 +3,18 @@ title: "CSSPositionTryRule: style property"
 short-title: style
 slug: Web/API/CSSPositionTryRule/style
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSPositionTryRule.style
 ---
 
-{{ APIRef("CSSOM") }}{{SeeCompatTable}}
+{{ APIRef("CSSOM") }}
 
-The **`style`** read-only property of the {{domxref("CSSPositionTryRule")}} interface returns a {{domxref("CSSPositionTryDescriptors")}} object representing the declarations set in the body of the `@position-try` at-rule.
+The read-only **`style`** property of the {{domxref("CSSPositionTryRule")}} interface contains a {{domxref("CSSPositionTryDescriptors")}} object representing the descriptors available in the {{cssxref("@position-try")}} rule's body.
 
 ## Value
 
 A {{domxref("CSSPositionTryDescriptors")}} object.
+
+Although the `style` property itself is read-only in the sense that you can't replace the `CSSPositionTryDescriptors` object, you can still assign to the `style` property directly, which is equivalent to assigning to its {{domxref("CSSStyleDeclaration/cssText", "cssText")}} property. You can also modify the `CSSPositionTryDescriptors` object using the {{domxref("CSSStyleDeclaration/setProperty", "setProperty()")}} and {{domxref("CSSStyleDeclaration/removeProperty", "removeProperty()")}} methods.
 
 ## Examples
 
@@ -24,7 +24,7 @@ The CSS includes a `@position-try` at-rule with a name of `--custom-right` and t
 @position-try --custom-bottom {
   top: anchor(bottom);
   min-width: 100px;
-  margin: 10px 0 0 0;
+  margin-top: 10px;
 }
 ```
 
@@ -49,6 +49,6 @@ console.log(tryOption.style.positionArea); // ""; no position-area specified
 - {{DOMxRef("CSSPositionTryDescriptors")}}
 - {{cssxref("@position-try")}}
 - {{cssxref("position-try-fallbacks")}}
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
-- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)

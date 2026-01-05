@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.drag_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML Drag and Drop API")}}
 
 The `drag` event is fired every few hundred milliseconds as an element or text selection is being dragged by the user.
 
@@ -16,10 +16,10 @@ This event is cancelable and may bubble up to the {{domxref("Document")}} and {{
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("drag", (event) => {});
+```js-nolint
+addEventListener("drag", (event) => { })
 
-ondrag = (event) => {};
+ondrag = (event) => { }
 ```
 
 ## Event type
@@ -103,14 +103,10 @@ source.addEventListener("dragend", (event) => {
 
 /* events fired on the drop targets */
 const target = document.getElementById("drop-target");
-target.addEventListener(
-  "dragover",
-  (event) => {
-    // prevent default to allow drop
-    event.preventDefault();
-  },
-  false,
-);
+target.addEventListener("dragover", (event) => {
+  // prevent default to allow drop
+  event.preventDefault();
+});
 
 target.addEventListener("dragenter", (event) => {
   // highlight potential drop target when the draggable element enters it

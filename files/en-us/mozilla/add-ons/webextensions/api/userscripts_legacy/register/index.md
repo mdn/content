@@ -3,9 +3,8 @@ title: userScripts.register() (Legacy)
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/register
 page-type: webextension-api-function
 browser-compat: webextensions.api.userScripts_legacy.register
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This is documentation for the legacy `userScripts` API. It's available in Firefox for Manifest V2. For functionality to work with user scripts in Manifest V3 see the new {{WebExtAPIRef("userScripts")}} API.
@@ -29,11 +28,9 @@ await registeredUserScript.unregister();
 ### Parameters
 
 - `userScriptOptions`
-
   - : `object`. Represents the user scripts to register. It has similar syntax to {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}}.
 
     The `UserScriptOptions` object has the following properties:
-
     - `scriptMetadata` {{Optional_Inline}}
       - : A `JSON` object containing arbitrary metadata properties associated with the registered user scripts. However, while arbitrary, the object must be serializable, so it is compatible with [the structured clone algorithm.](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) This metadata is used to pass details from the script to the [API script](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). For example, providing details of a subset of the APIs that need to be injected by the [API script](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). The API does not use this metadata,
     - `allFrames` {{Optional_Inline}}

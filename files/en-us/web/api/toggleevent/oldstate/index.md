@@ -19,7 +19,7 @@ A string. Possible values are `"open"` (the popover is going from showing to hid
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+// …
 
 popover.addEventListener("beforetoggle", (event) => {
   if (event.oldState === "open") {

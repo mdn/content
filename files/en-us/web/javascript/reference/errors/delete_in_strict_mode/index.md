@@ -2,9 +2,8 @@
 title: "SyntaxError: applying the 'delete' operator to an unqualified name is deprecated"
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "applying the 'delete' operator to an unqualified name is deprecated" occurs when variables are attempted to be deleted using the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator.
 

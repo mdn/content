@@ -2,9 +2,8 @@
 title: SDK (Software Development Kit)
 slug: Glossary/SDK
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **SDK** (**Software Development Kit**) is an integrated collection of tools that a developer can use to create software for a specific framework, operating system, or other platform. An SDK can include:
 

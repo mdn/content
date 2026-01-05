@@ -2,11 +2,10 @@
 title: JavaScript
 slug: Web/JavaScript
 page-type: landing-page
+sidebar: jssidebar
 ---
 
-{{jsSidebar}}
-
-**JavaScript** (**JS**) is a lightweight interpreted (or {{Glossary("Just_In_Time_Compilation", "just-in-time compiled")}}) programming language with {{Glossary("First-class Function", "first-class functions")}}. While it is most well-known as the scripting language for Web pages, [many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) also use it, such as {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) and [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript is a [prototype-based](/en-US/docs/Glossary/Prototype-based_programming), multi-paradigm, [single-threaded](/en-US/docs/Glossary/Thread), [dynamic](/en-US/docs/Glossary/Dynamic_typing) language, supporting object-oriented, imperative, and declarative (e.g., functional programming) styles.
+**JavaScript** (**JS**) is a lightweight interpreted (or {{Glossary("Just_In_Time_Compilation", "just-in-time compiled")}}) programming language with {{Glossary("First-class Function", "first-class functions")}}. While it is most well-known as the scripting language for Web pages, [many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) also use it, such as {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) and [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript is a [prototype-based](/en-US/docs/Glossary/Prototype-based_programming), [garbage-collected](/en-US/docs/Glossary/Garbage_collection), [dynamic](/en-US/docs/Glossary/Dynamic_typing) language, supporting multiple paradigms such as imperative, functional, and object-oriented.
 
 JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)), object introspection (via [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) and [`Object` utilities](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#static_methods)), and source-code recovery (JavaScript functions store their source text and can be retrieved through [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)).
 
@@ -25,14 +24,14 @@ For more information about JavaScript specifications and related technologies, s
 
 ## Beginner's tutorials
 
-Learn how to program in JavaScript from the ground up with our beginner's tutorials.
+Our [learn web development core modules](/en-US/docs/Learn_web_development/Core) contain modern, up-to-date tutorials covering JavaScript fundamentals.
 
 - [Your first website: Adding interactivity](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
   - : This article provides a brief tour of what JavaScript is and how to use it, aimed at people who are completely new to web development.
 - [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting)
-  - : Our [Learn web development](/en-US/docs/Learn_web_development) section's JavaScript module teaches all the JavaScript fundamentals from the ground up.
+  - : This module focuses on the essentials of the core JavaScript language, plus some key surrounding topics — learning these topics will give you a solid basis to work from.
 - [JavaScript frameworks and libraries](/en-US/docs/Learn_web_development/Core/Frameworks_libraries)
-  - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with tried and tested tools for building scalable, interactive web applications. Many modern companies use frameworks as a standard part of their tooling, so many front-end development jobs now require framework experience. In this set of articles, we aim to give you a comfortable starting point to help you begin learning frameworks.
+  - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with tried and tested tools for building scalable, interactive web applications. Many modern companies use frameworks as a standard part of their tooling, so many front-end development jobs now require framework experience. This set of articles provides a comfortable starting point to help you begin learning frameworks.
 
 ## JavaScript guides
 

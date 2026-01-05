@@ -3,9 +3,8 @@ title: 424 Failed Dependency
 slug: Web/HTTP/Reference/Status/424
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.4
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`424 Failed Dependency`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the method could not be performed on the resource because the requested action depended on another action, and that action failed.
 

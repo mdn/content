@@ -1,11 +1,11 @@
 ---
 title: "AggregateError: errors"
+short-title: errors
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/errors
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.AggregateError.errors
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`errors`** data property of an {{jsxref("AggregateError")}} instance contains an array representing the errors that were aggregated.
 

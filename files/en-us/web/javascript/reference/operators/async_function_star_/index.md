@@ -3,9 +3,8 @@ title: async function* expression
 slug: Web/JavaScript/Reference/Operators/async_function*
 page-type: javascript-operator
 browser-compat: javascript.operators.async_generator_function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`async function*`** keywords can be used to define an async generator function inside an expression.
 
@@ -17,7 +16,7 @@ You can also define async generator functions using the [`async function*` decla
 async function joinAll(generator) {
   let str = "";
   for await (const val of generator()) {
-    str = str + val;
+    str += val;
   }
   return str;
 }

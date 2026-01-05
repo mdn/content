@@ -1,17 +1,19 @@
 ---
-title: "Permissions-Policy: midi"
+title: "Permissions-Policy: midi directive"
+short-title: midi
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/midi
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.midi
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `midi` directive controls whether the current document is allowed to use the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API).
 
-Specifically, where a defined policy blocks use of this feature, {{domxref("Navigator.requestMIDIAccess()")}} calls will return a {{jsxref("Promise")}} that rejects with a {{domxref("DOMException")}} of type `SecurityError`.
+Specifically, where a defined policy blocks use of this feature, {{domxref("Navigator.requestMIDIAccess()")}} calls will return a {{jsxref("Promise")}} that rejects with a {{domxref("DOMException")}} of type `NotAllowedError`.
 
 ## Syntax
 

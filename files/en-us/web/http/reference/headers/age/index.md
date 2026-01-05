@@ -1,11 +1,11 @@
 ---
-title: Age
+title: Age header
+short-title: Age
 slug: Web/HTTP/Reference/Headers/Age
 page-type: http-header
 browser-compat: http.headers.Age
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Age`** {{Glossary("response header")}} indicates the time in seconds for which an object was in a proxy cache.
 
@@ -17,10 +17,6 @@ If the value is `0`, the object was probably fetched from the origin server; oth
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

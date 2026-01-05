@@ -3,9 +3,8 @@ title: management.onEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onEnabled
 page-type: webextension-api-event
 browser-compat: webextensions.api.management.onEnabled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The event listener called when the `enabled` event is fired, indicating that an add-on is now enabled.
 
@@ -33,15 +32,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `info`
       - : [`ExtensionInfo`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): info about the add-on that was enabled.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -54,6 +47,10 @@ browser.management.onEnabled.addListener((info) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#event-onEnabled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.

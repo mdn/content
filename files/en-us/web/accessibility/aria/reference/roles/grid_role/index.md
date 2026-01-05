@@ -1,5 +1,6 @@
 ---
 title: "ARIA: grid role"
+short-title: grid
 slug: Web/Accessibility/ARIA/Reference/Roles/grid_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#grid
@@ -26,20 +27,20 @@ The `grid` role is a composite widget containing a collection of one or more row
     <tr>
       <th scope="row">Aisle 1</th>
       <td tabindex="0">
-        <button id="1a" tabindex="-1">1A</button>
+        <button id="btn-1a" tabindex="-1">1A</button>
       </td>
       <td tabindex="-1">
-        <button id="1b" tabindex="-1">1B</button>
+        <button id="btn-1b" tabindex="-1">1B</button>
       </td>
       <!-- More Columns -->
     </tr>
     <tr>
       <th scope="row">Aisle 2</th>
       <td tabindex="-1">
-        <button id="2a" tabindex="-1">2A</button>
+        <button id="btn-2a" tabindex="-1">2A</button>
       </td>
       <td tabindex="-1">
-        <button id="2b" tabindex="-1">2B</button>
+        <button id="btn-2b" tabindex="-1">2B</button>
       </td>
       <!-- More Columns -->
     </tr>
@@ -210,13 +211,13 @@ tbody td {
 }
 
 tbody td {
-  border: 1px solid #000;
+  border: 1px solid black;
   text-align: right;
   color: #767676;
 }
 
 tbody td[role="gridcell"] {
-  color: #000;
+  color: black;
 }
 
 tbody td[role="gridcell"]:hover,
@@ -256,16 +257,15 @@ function moveTo(newRow, newCol) {
   const tgt = document.querySelector(
     `[data-row="${newRow}"][data-col="${newCol}"]`,
   );
-  if (tgt?.getAttribute("role") === "gridcell") {
-    document.querySelectorAll("[role=gridcell]").forEach((el) => {
-      el.setAttribute("tabindex", "-1");
-    });
-    tgt.setAttribute("tabindex", "0");
-    tgt.focus();
-    return true;
-  } else {
+  if (tgt?.getAttribute("role") !== "gridcell") {
     return false;
   }
+  document.querySelectorAll("[role=gridcell]").forEach((el) => {
+    el.setAttribute("tabindex", "-1");
+  });
+  tgt.setAttribute("tabindex", "0");
+  tgt.focus();
+  return true;
 }
 
 document.querySelector("table").addEventListener("keydown", (event) => {

@@ -19,6 +19,10 @@ This method does nothing; it is a no-op. It is solely kept for compatibility wit
 setResizable()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 None ({{jsxref("undefined")}}).

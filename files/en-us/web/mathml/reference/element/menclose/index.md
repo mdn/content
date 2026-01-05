@@ -17,7 +17,6 @@ The **`<menclose>`** [MathML](/en-US/docs/Web/MathML) element renders its conten
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Reference/Global_attributes).
 
 - `notation` {{Non-standard_Inline}}
-
   - : A list of notations, separated by white space, to apply to the child elements. The symbols are each drawn as if the others are not present, and therefore may overlap. Possible values are:
 
     | Value                | Sample Rendering                                                | Rendering in your browser                                                                                                                    | Description                                                                                                         |

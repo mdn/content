@@ -2,9 +2,7 @@
 title: rotate
 slug: Web/SVG/Reference/Attribute/rotate
 page-type: svg-attribute
-status:
-  - experimental
-spec-urls: https://svgwg.org/specs/animations/#RotateAttribute
+browser-compat: svg.elements.animateMotion.rotate
 sidebar: svgref
 ---
 
@@ -108,3 +106,7 @@ Setting `rotate`'s value to a number specifies a constant rotation, in degrees, 
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -6,9 +6,8 @@ page-type: html-attribute
 browser-compat:
   - html.elements.input.min
   - html.elements.meter.min
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`min`** attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) of the element is less than this, the element fails [validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation). This value must be less than or equal to the value of the `max` attribute.
 
@@ -64,14 +63,14 @@ It is valid for the input types including: {{HTMLElement("input/date", "date")}}
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
-      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code>&#x3C;input type="number" min="0" step="5" max="100"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
-      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code>&#x3C;input type="range" min="60" step="5" max="100"></code>
       </td>
@@ -102,7 +101,7 @@ For the {{htmlelement('meter')}} element, the `min` attribute defines the lower 
   <tbody>
     <tr>
       <td>{{HTMLElement("meter")}}</td>
-      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code
           >&#x3C;meter id="fuel" min="0" max="100" low="33" high="66"

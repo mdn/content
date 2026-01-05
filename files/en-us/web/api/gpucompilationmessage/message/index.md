@@ -3,12 +3,10 @@ title: "GPUCompilationMessage: message property"
 short-title: message
 slug: Web/API/GPUCompilationMessage/message
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUCompilationMessage.message
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`message`** read-only property of the
 {{domxref("GPUCompilationMessage")}} interface is a string representing human-readable message text.

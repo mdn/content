@@ -5,9 +5,11 @@ page-type: landing-page
 sidebar: learnsidebar
 ---
 
-Educators can use MDN's "Learn web development" section as a guide when creating programs, units, and assessment specifications for a web-related university degree, college course, coding school course, or similar. Each article includes a "Learning outcomes" section at the top detailing the topics taught in that article.
+Educators can use MDN's _Learn web development_ section as course material when creating programs, units, and assessment specifications for a web-related university degree, college course, coding school course, or similar. Each article includes a _Learning outcomes_ section at the top detailing the topics taught in that article.
 
-The MDN team is committed to reviewing the material contained within "Learn web development" annually to ensure it remains current with front-end development best practices. By basing their courses on it, educators can ensure their teaching is up-to-date.
+In addition, we provide a separate [MDN Curriculum](/en-US/curriculum/) resource that summarizes all the learning topics and outcomes taught in _Learn web development_; use this if you are creating your own front-end development curriculum and want to make sure you are on the right track and are not missing any important subjects.
+
+The MDN team is committed to reviewing the material contained within _Learn web development_ annually to ensure it remains current with front-end development best practices. By basing your courses on it, you can ensure your teaching is up-to-date.
 
 This page provides guidance and resources to make it easy to adapt MDN's learning content for your teaching.
 
@@ -18,13 +20,13 @@ Our [Core modules](/en-US/docs/Learn_web_development/Core) include fundamental w
 However, you may have additional topic requirements for your course, in which case you could:
 
 - Consider including some of the learning objectives from our [Getting started modules](/en-US/docs/Learn_web_development/Getting_started), such as soft skills like teamwork, research, and job interview techniques, and gaining familiarity with a typical web development toolset.
-- Extend the technology coverage in the Core modules with some [Extensions](/en-US/docs/Learn_web_development/Extensions). We will aim to publish more extensions as time goes on. You could consider writing your own extensions and contributing them to the curriculum so others can benefit. Contact us if you have an extension to submit!
+- Extend the technology coverage in the Core modules with some [Extensions](/en-US/docs/Learn_web_development/Extensions). We will aim to publish more extensions as time goes on. You could consider writing your own extensions and using them alongside our material.
 
 ## Using an effective learning pathway
 
 When teaching students, it is vital to provide them with a clear progression through the topics they are required to learn, with clear learning objectives and regular assessments to ensure they are on the right path.
 
-Our [Core modules](/en-US/docs/Learn_web_development/Core) provide a pathway to follow through the essentials of front-end web development and include "Test your skills" sections and challenge articles.
+Our [Core modules](/en-US/docs/Learn_web_development/Core) provide a pathway to follow through the essentials of front-end web development and include _Test your skills_ and _Challenge_ articles to test whether students have retained the important information they need.
 
 You could take your students through the provided pathway as-is, or you may wish to customize it for your needs by:
 
@@ -39,6 +41,7 @@ You could also consider using an advanced turnkey solution such as an interactiv
 
 The Frontend Developer Career Path features fun interactive lessons and challenges, knowledgeable teachers, and a supportive community; it aims to give students all they need to land their first junior developer job. Many of the course components are available as standalone free versions.
 
-## Resources
+## See also
 
-[Complete MDN Curriculum download](https://github.com/mdn/curriculum/releases/latest/download/MDN-Curriculum.pdf) (PDF)
+- [MDN Curriculum](/en-US/curriculum/)
+- [Complete MDN Curriculum download](https://github.com/mdn/curriculum/releases/latest/download/MDN-Curriculum.pdf) (PDF)

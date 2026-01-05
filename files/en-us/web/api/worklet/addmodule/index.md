@@ -25,9 +25,7 @@ addModule(moduleURL, options)
   - : A {{jsxref("String")}} containing the URL of a JavaScript file with the module to
     add.
 - `options` {{optional_inline}}
-
   - : An object with any of the following options:
-
     - `credentials`
       - : A {{domxref("Request.credentials")}} value that
         indicates whether to send credentials (e.g., cookies and HTTP authentication)
@@ -76,7 +74,7 @@ can be used to include the image created by the worklet:
 ```css
 @supports (background-image: paint(id)) {
   h1 {
-    background-image: paint(hollowHighlights, filled, 3px);
+    background-image: paint(hollow-highlights, filled, 3px);
   }
 }
 ```

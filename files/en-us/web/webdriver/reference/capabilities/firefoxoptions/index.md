@@ -6,16 +6,18 @@ sidebar: webdriver
 ---
 
 The **`moz:firefoxOptions` capability** is a namespaced set of
-capabilities specific to [Firefox](https://www.mozilla.org/en-US/firefox/new/). It is used to control the
+capabilities specific to [Firefox](https://www.firefox.com/en-US/). It is used to control the
 behavior of Firefox and can be used as a member of
 [`alwaysMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#alwaysmatch) or as a member of one of the
 [`firstMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#firstmatch) entries.
 
 It is used to define options which control how Firefox gets started and run.
 
+## Value
+
 `moz:firefoxOptions` is a JSON Object which may contain any of the following fields:
 
-##### `binary` (string)
+### `binary` (string)
 
 Absolute path to the custom Firefox binary to use.
 
@@ -90,7 +92,7 @@ default locations of Firefox are:
   </tbody>
 </table>
 
-##### `args` (array of strings)
+### `args` (array of strings)
 
 Command line arguments to pass to the Firefox binary. These must include the leading dash (`-`) where
 required, e.g., `["-headless"]`.
@@ -99,7 +101,7 @@ To have geckodriver pick up an existing [profile](#profile_string) on the local 
 `["-profile", "/path/to/profile"]`. But if a profile has to be transferred to a target machine it is
 recommended to use the `profile` entry.
 
-##### `profile` (string)
+### `profile` (string)
 
 Base64-encoded ZIP of a profile directory to use for the Firefox instance. This may be used to e.g., install
 extensions or custom certificates, but for setting custom preferences we recommend using the `prefs` ([Preferences Object](#prefs_preferences_object)) entry instead.
@@ -108,20 +110,40 @@ Profiles are created in the systems temporary folder. This is also where the enc
 `profile` is provided. By default geckodriver will create a new profile in this location.
 
 The effective profile in use by the WebDriver session is returned to the user in the `moz:profile`
-capability in the [new session response](/en-US/docs/Web/WebDriver/Commands/NewSession).
+capability in the [new session response](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession).
 
 To have geckodriver pick up an existing profile on the filesystem, please set the `args` field to
 `{"args": ["-profile", "/path/to/your/profile"]}`. Note that if you use a remote client targeting a server
 on a different system, the profile must already exist on the target system.
 
-##### `log` (Log object)
+### `log` (Log object)
 
-To increase the logging verbosity of geckodriver and Firefox, you may pass a [`log`](#log_log_object)
-object that may look like `{"log": {"level": "trace"}}` to include all trace-level logs and above
+To increase the logging verbosity of geckodriver and Firefox, you may pass a `log`
+object that may look like `{"log": {"level": "trace"}}` to include all trace-level logs and above.
 
-##### `prefs` (Preferences object)
+A JSON Object that may have any of these fields:
+
+#### `level` (string)
+
+Set the level of verbosity of geckodriver and Firefox. Available levels are `trace`, `debug`,
+`config`, `info`, `warn`, `error`, and `fatal`. If left
+undefined the default is `info`. The value is treated case-insensitively.
+
+### `prefs` (Preferences object)
 
 Map of preference name to preference value, which can be a string, a boolean or an integer.
+
+A JSON Object with one entry per preference to set. The preference will be written to the [profile](#profile_string) before starting Firefox. A full list of available preferences is available from visiting
+"about:config" in your Firefox browser. Some of these are documented in [this source](https://searchfox.org/firefox-main/source/modules/libpref/init/all.js) file.
+
+An example of a preference object:
+
+```json
+{
+  "dom.ipc.processCount": 8,
+  "javascript.options.showInConsole": false
+}
+```
 
 ### Android
 
@@ -174,32 +196,6 @@ For example, to specify a boolean extra that can be processed with [android.cont
 
 Map of environment variable name to environment variable value, both of which must be strings, that will be forwarded to application process running on the Android device.
 
-### Log object
-
-A JSON Object that may have any of these fields:
-
-#### `level` (string)
-
-Set the level of verbosity of geckodriver and Firefox. Available levels are `trace`, `debug`,
-`config`, `info`, `warn`, `error`, and `fatal`. If left
-undefined the default is `info`. The value is treated case-insensitively.
-
-### Preferences object
-
-A JSON Object with one entry per preference to set. The preference will be written to the [profile](#profile_string) before starting Firefox. A full list of available preferences is available from visiting
-"about:config" in your Firefox browser. Some of these are documented in [this source](https://searchfox.org/mozilla-central/source/modules/libpref/init/all.js) file.
-
-An example of a preference object:
-
-```json
-{
-  "dom.ipc.processCount": 8,
-  "javascript.options.showInConsole": false
-}
-```
-
-### Env object
-
 A JSON Object with one entry per environment variable to set. On Desktop, the Firefox under test will launch with
 given variable in its environment. On Android, the GeckoView-based App will have the given variable added to the
 `env` block in its configuration YAML.
@@ -248,9 +244,7 @@ The `moz:firefoxOptions` must be placed—as above—inside
 ```json
 {
   "capabilities": {
-    "firstMatch": [
-      {"moz:firefoxOptions": …}
-    ]
+    "firstMatch": [{ "moz:firefoxOptions": {} }]
   }
 }
 ```
@@ -284,4 +278,4 @@ This runs the GeckoView example application as installed on the first Android em
 - [Chrome-specific WebDriver capabilities](https://developer.chrome.com/docs/chromedriver/capabilities)
   (`goog:chromeOptions)`
 - [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
-- [New Session](/en-US/docs/Web/WebDriver/Commands/NewSession) command
+- [New Session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession) command

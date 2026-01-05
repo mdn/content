@@ -2,9 +2,8 @@
 title: "Reason: CORS request not HTTP"
 slug: Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
 page-type: http-cors-error
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 ## Reason
 
@@ -21,7 +20,7 @@ To fix this problem, make sure you use HTTPS URLs when issuing requests involvin
 
 ### Loading a local file
 
-Local files from the same directory and subdirectories were historically treated as being from the [same origin](/en-US/docs/Web/Security/Same-origin_policy).
+Local files from the same directory and subdirectories were historically treated as being from the [same origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 This meant that a file and all its resources could be loaded from a local directory or subdirectory during testing, without triggering a CORS error.
 
 Unfortunately this had security implications, as noted in this advisory: [CVE-2019-11730](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730).

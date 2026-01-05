@@ -3,12 +3,10 @@ title: "GPUCommandEncoder: popDebugGroup() method"
 short-title: popDebugGroup()
 slug: Web/API/GPUCommandEncoder/popDebugGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCommandEncoder.popDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`popDebugGroup()`** method of the
 {{domxref("GPUCommandEncoder")}} interface ends a debug group, which is begun with a {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
@@ -38,7 +36,7 @@ The following criteria must be met when calling **`popDebugGroup()`**, otherwise
 ## Examples
 
 ```js
-// ...
+// …
 
 commandEncoder.pushDebugGroup("my_group_marker"); // Start labeled debug group
 
@@ -52,7 +50,7 @@ passEncoder.end();
 
 commandEncoder.popDebugGroup(); // End labeled debug group
 
-// ...
+// …
 ```
 
 ## Specifications

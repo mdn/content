@@ -25,10 +25,8 @@ forEach(callback, thisArg)
 ### Parameters
 
 - `callback`
-
   - : A function to execute once for each entry in the
     array `xrInputSourceArray`. The callback accepts up to three parameters:
-
     - `currentValue`
       - : A {{domxref("XRInputSource")}} object which is the value of the item from within
         the `xrInputSourceArray` which is currently being processed.

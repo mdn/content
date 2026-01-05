@@ -1,11 +1,11 @@
 ---
-title: "CSP: report-to"
+title: "Content-Security-Policy: report-to directive"
+short-title: report-to
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/report-to
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.report-to
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The `Content-Security-Policy` **`report-to`** directive indicates the name of the endpoint that the browser should use for reporting CSP violations.
 

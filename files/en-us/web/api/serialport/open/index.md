@@ -21,9 +21,7 @@ open(options)
 ### Parameters
 
 - `options`
-
   - : An object with any of the following values:
-
     - `baudRate`
       - : A positive, non-zero value indicating the baud rate at which serial communication should be established.
     - `bufferSize` {{Optional_Inline}}

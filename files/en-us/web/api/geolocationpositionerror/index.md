@@ -14,7 +14,6 @@ The **`GeolocationPositionError`** interface represents the reason of an error o
 _The `GeolocationPositionError` interface doesn't inherit any property._
 
 - {{domxref("GeolocationPositionError.code")}} {{ReadOnlyInline}}
-
   - : Returns an `unsigned short` representing the error code. The following values are possible:
 
     | Value | Associated constant    | Description                                                                                                                                                                                                               |

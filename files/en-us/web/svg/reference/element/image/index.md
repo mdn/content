@@ -10,7 +10,7 @@ The **`<image>`** [SVG](/en-US/docs/Web/SVG) element includes images inside SVG 
 
 The only image formats SVG software must support are {{glossary("JPEG")}}, {{glossary("PNG")}}, and other SVG files. Animated {{glossary("GIF")}} behavior is undefined.
 
-SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG/Guides/SVG_as_an_image): external resources aren't loaded, {{cssxref(":visited")}} styles [aren't applied](/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector), and they cannot be interactive. To include dynamic SVG elements, try {{SVGElement("use")}} with an external URL. To include SVG files and run scripts inside them, try {{HTMLElement("object")}} inside of {{SVGElement("foreignObject")}}.
+SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG/Guides/SVG_as_an_image): external resources aren't loaded, {{cssxref(":visited")}} styles [aren't applied](/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited), and they cannot be interactive. To include dynamic SVG elements, try {{SVGElement("use")}} with an external URL. To include SVG files and run scripts inside them, try {{HTMLElement("object")}} inside of {{SVGElement("foreignObject")}}.
 
 > [!NOTE]
 > The HTML spec defines `<image>` as a synonym for {{HTMLElement("img")}} while parsing HTML. This specific element and its behavior only apply inside SVG documents or inline SVGs.
@@ -45,6 +45,17 @@ SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG
 - {{SVGAttr("decoding")}}
   - : Provides a hint to the browser as to whether it should perform image decoding synchronously or asynchronously.
     _Value type_: `async | sync | auto`; _Default value_: `auto`; _Animatable_: **yes**
+- {{SVGAttr("fetchpriority")}} {{experimental_inline}} {{non-standard_inline}}
+  - : Provides a hint of the relative priority to use when fetching an external image.
+    Allowed values:
+    - `high`
+      - : Fetches the external image at a high priority relative to other external resources.
+    - `low`
+      - : Fetches the external image at a low priority relative to other external resources.
+    - `auto`
+      - : Doesn't set a preference for the fetch priority.
+        It is used if no value or an invalid value is set.
+        This is the default.
 - {{SVGAttr("xlink:href")}}{{deprecated_inline}}
   - : Points at a URL for the image file.
     _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _Default value_: _none_; _Animatable_: **no**
@@ -76,3 +87,7 @@ Basic rendering of a PNG image in SVG:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{SVGAttr("fetchpriority")}} attribute

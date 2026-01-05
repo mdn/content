@@ -3,9 +3,8 @@ title: "Quantifier: *, +, ?, {n}, {n,}, {n,m}"
 slug: Web/JavaScript/Reference/Regular_expressions/Quantifier
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.quantifier
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **quantifier** repeats an [atom](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#atoms) a certain number of times. The quantifier is placed after the atom it applies to.
 
@@ -28,6 +27,9 @@ atom{count}?
 atom{min,}?
 atom{min,max}?
 ```
+
+> [!NOTE]
+> Adding `?` after `{count}` is syntactically valid but practically useless. Since `{count}` always matches exactly `count` times, `atom{count}?` behaves the same as `atom{count}`.
 
 ### Parameters
 
@@ -144,7 +146,7 @@ stripTags("<p><em>lorem</em> <strong>ipsum</strong></p>"); // 'lorem ipsum'
 ```
 
 > [!WARNING]
-> This is for demonstration only — it doesn't handle `>` in attribute values. Use a proper HTML sanitizer instead.
+> This is for demonstration only — it doesn't handle `>` in attribute values. Use a proper HTML sanitizer like the [HTML sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) instead.
 
 ### Locating Markdown paragraphs
 

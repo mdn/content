@@ -1,11 +1,11 @@
 ---
 title: Iterator.prototype.every()
+short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/every
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.every
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`every()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.every()")}}: it tests whether all elements produced by the iterator pass the test implemented by the provided function. It returns a boolean value.
 

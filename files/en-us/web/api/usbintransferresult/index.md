@@ -21,9 +21,7 @@ The `USBInTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/WebU
 - {{domxref("USBInTransferResult.data")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a `DataView` object containing the data received from the USB device, if any.
 - {{domxref("USBInTransferResult.status")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : Returns the status of the transfer request, one of:
-
     - `"ok"` - The transfer was successful.
     - `"stall"` - The device indicated an error by generating a stall condition on the endpoint. A stall on the control endpoint does not need to be cleared. A stall on a bulk or interrupt endpoint must be cleared by calling `clearHalt()` before `transferIn()` can be called again.
     - `"babble"` - The device responded with more data than was expected.

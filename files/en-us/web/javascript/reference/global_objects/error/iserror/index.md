@@ -1,11 +1,11 @@
 ---
 title: Error.isError()
+short-title: isError()
 slug: Web/JavaScript/Reference/Global_Objects/Error/isError
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Error.isError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Error.isError()`** static method determines whether the passed value is an {{jsxref("Error")}}.
 
@@ -26,7 +26,7 @@ Error.isError(value)
 
 ## Description
 
-`Error.isError()` checks if the passed value is an {{jsxref("Error")}}. It does so by performing a _branded check_ for a private property initialized by the {{jsxref("Error/Error", "Error()")}} constructor.
+`Error.isError()` checks if the passed value is an {{jsxref("Error")}}. It does so by performing a _branded check_ for a private field initialized by the {{jsxref("Error/Error", "Error()")}} constructor.
 This is the same mechanism used by {{jsxref("Array.isArray()")}}, which is in turn similar to the mechanism used by the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator.
 
 It is a more robust alternative to [`instanceof Error`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) because it avoids false positives and false negatives:
@@ -60,7 +60,7 @@ Error.isError(17);
 Error.isError("Error");
 Error.isError(true);
 Error.isError(false);
-// This is not an error, because the object does not have the private property
+// This is not an error, because the object does not have the private field
 // initialized by the Error constructor
 Error.isError({ __proto__: Error.prototype });
 ```

@@ -3,9 +3,8 @@ title: "<time>: The (Date) Time element"
 slug: Web/HTML/Reference/Elements/time
 page-type: html-element
 browser-compat: html.elements.time
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<time>`** [HTML](/en-US/docs/Web/HTML) element represents a specific period in time. It may include the `datetime` attribute to translate dates into machine-readable format, allowing for better search engine results or custom features such as reminders.
 
@@ -152,7 +151,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
       <td>Valid duration string</td>
       <td>
         <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>S</code><br />
-        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>X</em>S<br />
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>X</em>S</code><br />
         <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>XX</em>S</code><br />
         <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>XXX</em>S</code><br />
         <code>PT<em>h</em>H<em>m</em>M<em>s</em>S</code><br />

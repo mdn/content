@@ -1,14 +1,14 @@
 ---
-title: Firefox 39 for developers
+title: Firefox 39 release notes for developers
+short-title: Firefox 39
 slug: Mozilla/Firefox/Releases/39
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 39 was released on July 2, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -43,7 +43,6 @@ Highlights:
 - The [`RegExp` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) no longer throws when the first argument is a `RegExp` and the second `flags` argument is present ([Firefox bug 1108949](https://bugzil.la/1108949)).
 - The `Object.prototype.__noSuchMethod__` property is now deprecated and throws a console warning (see [Firefox bug 1140428](https://bugzil.la/1140428) and this [platform announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)).
 - The implementation of the {{jsxref("Proxy")}} object has been updated to comply more with the ES2015 specification:
-
   - The {{jsxref("Global_Objects/Proxy/Proxy/defineProperty", "defineProperty")}} and {{jsxref("Global_Objects/Proxy/Proxy/set", "set")}} handlers now need to explicitly return `true` to be successful, otherwise a {{jsxref("TypeError")}} exception will be thrown in strict mode ([Firefox bug 1132522](https://bugzil.la/1132522)).
   - If the {{domxref("window")}} object is set as the target, those handlers will now throw a `TypeError` ([Firefox bug 828137](https://bugzil.la/828137)).
 
@@ -78,7 +77,7 @@ _No change._
 
 ### Miscellaneous
 
-- [WOFF2](/en-US/docs/Web/CSS/CSS_fonts/WOFF) fonts support is now turned on by default in release version of Firefox (Beta and Release, in addition of Nightly and Developer Edition) ([Firefox bug 1084026](https://bugzil.la/1084026)).
+- [WOFF2](/en-US/docs/Web/CSS/Guides/Fonts/WOFF) fonts support is now turned on by default in release version of Firefox (Beta and Release, in addition of Nightly and Developer Edition) ([Firefox bug 1084026](https://bugzil.la/1084026)).
 - The [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) command-line option has been removed ([Firefox bug 1080319](https://bugzil.la/1080319)).
 - Support for new [Unicode 8.0 skin tone emoji](https://www.bbc.co.uk/news/newsbeat-32220611) ([Firefox bug 1153460](https://bugzil.la/1153460)).
 
@@ -93,7 +92,3 @@ _No change._
 ## Changes for add-on and Mozilla developers
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

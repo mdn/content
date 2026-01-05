@@ -59,9 +59,9 @@ First we implement a handler for the {{domxref("DedicatedWorkerGlobalScope.rtctr
 addEventListener("rtctransform", (event) => {
   let transform;
   // Select a transform based on passed options
-  if (event.transformer.options.name == "senderTransform")
+  if (event.transformer.options.name === "senderTransform")
     transform = createSenderTransform(); // A TransformStream
-  else if (event.transformer.options.name == "receiverTransform")
+  else if (event.transformer.options.name === "receiverTransform")
     transform = createReceiverTransform(); // A TransformStream
   else return;
 
@@ -78,7 +78,7 @@ The code creates a different {{domxref("TransformStream")}} to process outgoing 
 
 This example shows how to create a [message channel](/en-US/docs/Web/API/Channel_Messaging_API) and transfer one of its ports to the WebRTC encoded transform running in the worker. This main thread can then send and transfer objects and messages to the transformer running in the worker after construction, and vice versa.
 
-The code below first creates a {{domxref("MessageChannel")}} and then constructs a `RTCRtpScriptTransform` passing the {{domxref("MessageChannel.port2","port2")}} value as an property in the options argument.
+The code below first creates a {{domxref("MessageChannel")}} and then constructs a `RTCRtpScriptTransform` passing the {{domxref("MessageChannel.port2","port2")}} value as a property in the options argument.
 The port is also included in the array passed as the third constructor argument, so that it is transferred into the worker context.
 
 ```js
@@ -97,7 +97,7 @@ The worker can then get the port from the `rtctransform` event fired at the glob
 let messagePort;
 addEventListener("rtctransform", (event) => {
   messagePort = event.transformer.options.port;
-  // ... other transformer code
+  // … other transformer code
 });
 ```
 
@@ -115,7 +115,7 @@ The worker would listen for the `message` event to get the key:
 ```js
 messagePort.addEventListener("message", (event) => {
   const encryptionKeyBuffer = event.data;
-  // ... Use the encryptionKeyBuffer for encryption or any other purpose
+  // … Use the encryptionKeyBuffer for encryption or any other purpose
 });
 ```
 

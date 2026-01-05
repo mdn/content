@@ -3,9 +3,8 @@ title: webRequest.BlockingResponse
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
 page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.BlockingResponse
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An object of this type is returned by event listeners that have set `"blocking"` in their `extraInfoSpec` argument.
 
@@ -18,9 +17,7 @@ Note that you can't set all this object's properties in every listener: the prop
 Values of this type are objects. They contain the following properties:
 
 - `authCredentials` {{optional_inline}}
-
   - : `object`. If set, the request is made using the given credentials. You can only set this property in {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}. The `authCredentials` property is an object with the following properties:
-
     - `username`
       - : `string`. Username to supply.
     - `password`
@@ -29,7 +26,6 @@ Values of this type are objects. They contain the following properties:
 - `cancel` {{optional_inline}}
   - : `boolean`. If `true`, the request is cancelled. You can only set this property in {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}, {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}, and {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}.
 - `redirectUrl` {{optional_inline}}
-
   - : `string`. This is a URL, and if set, the original request is redirected to that URL. You can only set this property in {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} or {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}.
 
     Redirections to non-HTTP schemes such as `data:` are allowed. Redirects use the same request method as the original request unless initiated from `onHeadersReceived` stage, in which case the redirect uses the GET method.
@@ -43,11 +39,11 @@ Values of this type are objects. They contain the following properties:
 - `upgradeToSecure` {{optional_inline}}
   - : `boolean`. If set to `true` and the original request is an HTTP request, this will prevent the original request from being sent and instead make a secure (HTTPS) request. If any extension returns `redirectUrl` in `onBeforeRequest`, then `upgradeToSecure` will be ignored for that request. You can only set this property in {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#type-BlockingResponse) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.

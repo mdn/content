@@ -3,9 +3,8 @@ title: contextualIdentities.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/remove
 page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.remove
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes a contextual identity, given its cookie store ID.
 
@@ -27,10 +26,6 @@ let removeContext = browser.contextualIdentities.remove(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} that describes the identity that was removed. If the identity could not be found or the contextual identities feature is not enabled, the promise is rejected.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -55,3 +50,7 @@ browser.contextualIdentities
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

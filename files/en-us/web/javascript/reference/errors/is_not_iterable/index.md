@@ -2,9 +2,8 @@
 title: "TypeError: 'x' is not iterable"
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "is not iterable" occurs when the value which is [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) into an array or function call, given as the
 right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement),

@@ -4,9 +4,8 @@ short-title: accept
 slug: Web/HTML/Reference/Attributes/accept
 page-type: html-attribute
 browser-compat: html.elements.input.accept
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`accept`** attribute takes as its value a comma-separated list of one or more file types, or [unique file type specifiers](#unique_file_type_specifiers), describing which file types to allow.
 
@@ -48,7 +47,7 @@ For instance, there are a number of ways Microsoft Word files can be identified,
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
-Whereas if you're accepting a media file, you may want to be include any format of that media type:
+Whereas if you're accepting a media file, you may want to include any format of that media type:
 
 ```html
 <input type="file" id="soundFile" accept="audio/*" />

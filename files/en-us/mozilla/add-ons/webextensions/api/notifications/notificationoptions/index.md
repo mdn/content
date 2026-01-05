@@ -3,9 +3,8 @@ title: notifications.NotificationOptions
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 page-type: webextension-api-type
 browser-compat: webextensions.api.notifications.NotificationOptions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This type contains all the data needed to:
 
@@ -33,24 +32,19 @@ The first three properties - `type`, `title`, `message` - are mandatory in {{Web
 - `eventTime` {{optional_inline}}
   - : `number`. A timestamp for the notification in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `buttons` {{optional_inline}}
-
   - : `array` of `button`. An array of up to 2 buttons to include in the notification. You can listen for button clicks using {{WebExtAPIRef("notifications.onButtonClicked")}}. Each button is specified as an object with the following properties:
-
     - `title`
       - : `string`. Title for the button.
     - `iconUrl` {{optional_inline}}
       - : `string`. URL pointing to an icon for the button.
 
 - `imageUrl`
-
   - : `string`. A URL pointing to an image to use in the notification. The URL can be: a data URL, a blob URL, or the relative URL of a file within the extension. When using an SVG image, ensure that the image includes height and width attributes, for example, `<svg width="96" height="96"…`. Otherwise, the image may not display.
 
     _This property is only permitted if `type` is `"image"`. In this case, it is mandatory if the `NotificationOptions` is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}._
 
 - `items`
-
   - : `array` of `item`. An array of items to include in the notification. Depending on the settings for the operating system's notification mechanism, some of the items you provide might not be displayed. Each item is specified as an object with the following properties:
-
     - `title`
       - : `string`. Title to display in the item.
     - `message`
@@ -59,18 +53,17 @@ The first three properties - `type`, `title`, `message` - are mandatory in {{Web
     _This property is only permitted if `type` is `"list"`. In this case, it is mandatory if the `NotificationOptions` is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}._
 
 - `progress`
-
   - : `integer`. An integer between 0 and 100, used to represent the current progress in a progress indicator.
 
     _This property is only permitted if `type` is `"progress"`. In this case, it is mandatory if the `NotificationOptions` is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}._
 
 Note that `appIconMaskUrl` and `isClickable` are not supported.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

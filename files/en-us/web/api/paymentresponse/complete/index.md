@@ -27,10 +27,8 @@ complete(result)
 ### Parameters
 
 - `result` {{optional_inline}}
-
   - : A string indicating the state of the payment operation upon
     completion. It must be one of the following:
-
     - `success`
       - : The payment was successfully processed. The user agent may or may not present
         some form of "payment successful" indication to the user.

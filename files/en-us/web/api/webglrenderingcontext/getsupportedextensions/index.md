@@ -41,7 +41,7 @@ specific extension object.
 
 ## WebGL extensions
 
-Extensions for the WebGL API are registered in the [WebGL Extension Registry](https://registry.khronos.org/webgl/extensions/). They are also listed [here](/en-US/docs/Web/API/WebGL_API#extensions).
+Extensions for the WebGL API are registered in the [WebGL Extension Registry](https://registry.khronos.org/webgl/extensions/). They are also listed in our [WebGL API reference](/en-US/docs/Web/API/WebGL_API#extensions).
 
 ## Specifications
 

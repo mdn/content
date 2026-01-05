@@ -18,10 +18,10 @@ For example, if the network is down, any {{domxref("Window/fetch", "fetch()")}} 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("navigateerror", (event) => {});
+```js-nolint
+addEventListener("navigateerror", (event) => { })
 
-onnavigateerror = (event) => {};
+onnavigateerror = (event) => { }
 ```
 
 ## Event type
@@ -61,4 +61,3 @@ navigation.addEventListener("navigateerror", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

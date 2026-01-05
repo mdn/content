@@ -1,11 +1,11 @@
 ---
-title: Accept-Patch
+title: Accept-Patch header
+short-title: Accept-Patch
 slug: Web/HTTP/Reference/Headers/Accept-Patch
 page-type: http-header
 spec-urls: https://www.rfc-editor.org/rfc/rfc5789#section-3.1
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Accept-Patch`** {{Glossary("response header")}} advertises which [media types](/en-US/docs/Web/HTTP/Guides/MIME_types) the server is able to understand in a {{HTTPMethod("PATCH")}} request.
 For example, a server receiving a `PATCH` request with an unsupported media type could reply with {{HTTPStatus("415", "415 Unsupported Media Type")}} and an `Accept-Patch` header referencing one or more supported media types.
@@ -22,10 +22,6 @@ An `Accept-Patch` header in a response to any request method implicitly means th
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>Yes</td>
     </tr>
   </tbody>
 </table>

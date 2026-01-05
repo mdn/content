@@ -37,17 +37,9 @@ svg {
     <feGaussianBlur stdDeviation="10" />
   </filter>
 
-  <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur1);" />
-  <circle
-    cx="100"
-    cy="100"
-    r="50"
-    style="filter: url(#gaussianBlur2); transform: translateX(140px);" />
-  <circle
-    cx="100"
-    cy="100"
-    r="50"
-    style="filter: url(#gaussianBlur3); transform: translateX(280px);" />
+  <circle cx="100" cy="100" r="50" filter="url(#gaussianBlur1)" />
+  <circle cx="240" cy="100" r="50" filter="url(#gaussianBlur2)" />
+  <circle cx="380" cy="100" r="50" filter="url(#gaussianBlur3)" />
 </svg>
 ```
 
@@ -79,7 +71,6 @@ svg {
 </table>
 
 - `<number-optional-number>`
-
   - : If two numbers are provided, the first number represents a standard deviation value along the x-axis. The second value represents a standard deviation along the y-axis. If one number is provided, then that value is used for both X and Y.
 
     A negative value is forbidden. A value of zero disables the effect of the given filter primitive (i.e., the result is the filter input image). If `stdDeviation` is 0 in only one of X or Y, then the effect is that the blur is only applied in the direction that has a non-zero value.

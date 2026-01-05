@@ -3,9 +3,8 @@ title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
 page-type: guide
 spec-urls: https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-iteration
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 **Iteration protocols** aren't new built-ins or syntax, but _protocols_. These protocols can be implemented by any object by following some conventions.
 
@@ -38,7 +37,6 @@ An object is an iterator when it implements a **`next()`** method with the follo
 All iterator protocol methods (`next()`, `return()`, and `throw()`) are expected to return an object implementing the `IteratorResult` interface. It must have the following properties:
 
 - `done` {{optional_inline}}
-
   - : A boolean that's `false` if the iterator was able to produce the next value in the sequence. (This is equivalent to not specifying the `done` property altogether.)
 
     Has the value `true` if the iterator has completed its sequence. In this case, `value` optionally specifies the return value of the iterator.
@@ -62,13 +60,13 @@ Optionally, the iterator can also implement the **`return(value)`** and **`throw
 > [!NOTE]
 > It is not possible to know reflectively (i.e., without actually calling `next()` and validating the returned result) whether a particular object implements the iterator protocol.
 
-It is very easy to make an iterator also iterable: just implement an `[Symbol.iterator]()` method that returns `this`.
+It is very easy to make an iterator also iterable: just implement a `[Symbol.iterator]()` method that returns `this`.
 
 ```js
 // Satisfies both the Iterator Protocol and Iterable
 const myIterator = {
   next() {
-    // ...
+    // …
   },
   [Symbol.iterator]() {
     return this;
@@ -79,19 +77,19 @@ const myIterator = {
 Such object is called an _iterable iterator_. Doing so allows an iterator to be consumed by the various syntaxes expecting iterables — therefore, it is seldom useful to implement the Iterator Protocol without also implementing Iterable. (In fact, almost all syntaxes and APIs expect _iterables_, not _iterators_.) The [generator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) is an example:
 
 ```js
-const aGeneratorObject = (function* () {
+const generatorObject = (function* () {
   yield 1;
   yield 2;
   yield 3;
 })();
 
-console.log(typeof aGeneratorObject.next);
+console.log(typeof generatorObject.next);
 // "function" — it has a next method (which returns the right result), so it's an iterator
 
-console.log(typeof aGeneratorObject[Symbol.iterator]);
-// "function" — it has an [Symbol.iterator] method (which returns the right iterator), so it's an iterable
+console.log(typeof generatorObject[Symbol.iterator]);
+// "function" — it has a [Symbol.iterator] method (which returns the right iterator), so it's an iterable
 
-console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
+console.log(generatorObject[Symbol.iterator]() === generatorObject);
 // true — its [Symbol.iterator] method returns itself (an iterator), so it's an iterable iterator
 ```
 
@@ -123,7 +121,7 @@ The language specifies APIs that either produce or consume iterables and iterato
 
 ### Built-in iterables
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) (returned by [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)) are all built-in iterables, because each of their `prototype` objects implements an `[Symbol.iterator]()` method. In addition, the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object and some DOM collection types such as {{domxref("NodeList")}} are also iterables.
+{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) (returned by [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)) are all built-in iterables, because each of their `prototype` objects implements a `[Symbol.iterator]()` method. In addition, the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object and some DOM collection types such as {{domxref("NodeList")}} are also iterables.
 There is no object in the core JavaScript language that is async iterable. Some web APIs, such as {{domxref("ReadableStream")}}, have the `Symbol.asyncIterator` method set by default.
 
 [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) return [generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator), which are iterable iterators. [Async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) return [async generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator), which are async iterable iterators.
@@ -238,7 +236,7 @@ The [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await
 
 ## Error handling
 
-Because iteration involves transferring control back and forth between the iterator and the consumer, error handling happens in both ways: how the consumer handles errors thrown by the iterator, and how the iterator handles errors thrown by the consumer. When you are using one of the built-in ways of iteration, the language may also throw errors because the iterable breaks certain invariants. We will describe how built-in syntaxes generate and handle errors, which can be used as a guideline for your own code if you are manually stepping the iterator.
+Because iteration involves transferring control back and forth between the iterator and the consumer, error handling happens in both ways: how the consumer handles errors thrown by the iterator, and how the iterator handles errors thrown by the consumer. When you are using one of the built-in ways of iteration, the language may also throw errors because the iterable breaks certain {{Glossary("invariant", "invariants")}}. We will describe how built-in syntaxes generate and handle errors, which can be used as a guideline for your own code if you are manually stepping the iterator.
 
 ### Non-well-formed iterables
 
@@ -278,7 +276,7 @@ Usually, the caller implements error handling like this:
 ```js
 try {
   for (const value of iterable) {
-    // ...
+    // …
   }
 } catch (e) {
   // Handle the error
@@ -376,7 +374,7 @@ const it = idMaker();
 console.log(it.next().value); // 0
 console.log(it.next().value); // 1
 console.log(it.next().value); // 2
-// ...
+// …
 ```
 
 ### Defining an iterable with a generator
@@ -407,12 +405,12 @@ const it = idMaker();
 console.log(it.next().value); // 0
 console.log(it.next().value); // 1
 console.log(it.next().value); // 2
-// ...
+// …
 ```
 
 ### Defining an iterable with a class
 
-State encapsulation can be done with [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) as well.
+State encapsulation can be done with [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) as well.
 
 ```js
 class SimpleClass {
@@ -432,11 +430,10 @@ class SimpleClass {
       // Note: using an arrow function allows `this` to point to the
       // one of `[Symbol.iterator]()` instead of `next()`
       next: () => {
-        if (index < this.#data.length) {
-          return { value: this.#data[index++], done: false };
-        } else {
+        if (index >= this.#data.length) {
           return { done: true };
         }
+        return { value: this.#data[index++], done: false };
       },
     };
   }
@@ -563,9 +560,9 @@ class MyIterable {
     return false;
   }
   *[Symbol.iterator]() {
-    for (let i = 0; i < this.#data.length; i++) {
-      if (this.#data[i] !== tombstone) {
-        yield this.#data[i];
+    for (const data of this.#data) {
+      if (data !== tombstone) {
+        yield data;
       }
     }
   }

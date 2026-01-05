@@ -14,9 +14,10 @@ The **`complete`** event of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_AP
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("complete", (event) => {});
-oncomplete = (event) => {};
+```js-nolint
+addEventListener("complete", (event) => { })
+
+oncomplete = (event) => { }
 ```
 
 ## Event type

@@ -1,5 +1,6 @@
 ---
-title: aria-current
+title: "ARIA: aria-current attribute"
+short-title: aria-current
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-current
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-current
@@ -87,4 +88,4 @@ Usable in all roles; except for elements with the role of [`gridcell`](/en-US/do
 
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
 - {{cssxref(':local-link')}}
-- [Breadcrumb navigation with `aria-current`](/en-US/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
+- [Breadcrumb navigation with `aria-current`](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation)

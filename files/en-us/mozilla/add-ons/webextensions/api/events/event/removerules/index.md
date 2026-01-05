@@ -3,9 +3,8 @@ title: Event.removeRules()
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event/removeRules
 page-type: webextension-api-event
 browser-compat: webextensions.api.events.Event.removeRules
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes rules that were registered on a declarative event using {{WebExtAPIRef("events.Event.addRules()")}}.
 
@@ -18,11 +17,9 @@ events.Event.removeRules(ruleIdentifiers, callback)
 ### Parameters
 
 - `ruleIdentifiers` {{optional_inline}}
-
   - : `array` of `string`. Identifiers for the rules to remove. If no array is passed, all rules are removed.
 
 - `callback` {{optional_inline}}
-
   - : `function`. Called with no arguments when the rules are removed.
 
 ## Browser compatibility

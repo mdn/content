@@ -2,9 +2,8 @@
 title: Content Security Policy (CSP)
 slug: Web/HTTP/Guides/CSP
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **Content Security Policy** (CSP) is a feature that helps to prevent or minimize the risk of certain types of security threats. It consists of a series of instructions from a website to a browser, which instruct the browser to place restrictions on the things that the code comprising the site is allowed to do.
 
@@ -22,7 +21,7 @@ Finally we'll describe [strategies for deploying a CSP](#testing_your_policy) an
 
 A CSP should be delivered to the browser in the {{httpheader("Content-Security-Policy")}} response header. It should be set on all responses to all requests, not just the main document.
 
-You can also specify it using the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute of your document's {{htmlelement("meta")}} element, and this is a useful option for some use cases, such as a client-side-rendered {{glossary("SPA", "single page app")}} which has only static resources, because you can then avoid relying on any server infrastructure. However, this option does not support all CSP features.
+You can also specify it using the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) attribute of your document's {{htmlelement("meta")}} element, and this is a useful option for some use cases, such as a client-side-rendered {{glossary("SPA", "single page app")}} which has only static resources, because you can then avoid relying on any server infrastructure. However, this option does not support all CSP features.
 
 The policy is specified as a series of _directives_, separated by semi-colons. Each directive controls a different aspect of the security policy. Each directive has a name, followed by a space, followed by a value. Different directives can have different syntaxes.
 
@@ -80,7 +79,10 @@ If sanitization does fail, there are various forms the injected malicious code c
 - An inline event handler:
 
   ```html
-  <img onmouseover="console.log(`You've been hacked!`)" />
+  <img
+    onmouseover="console.log(`You've been hacked!`)"
+    src="thumbnail.jpg"
+    alt="" />
   ```
 
 - A `javascript:` URL:
@@ -99,7 +101,7 @@ A CSP can provide protection against all of these. With a CSP, you can:
 
 - define the permitted sources for JavaScript files and other resources, effectively blocking loads from `https://evil.example.com`
 - disable inline script tags
-- allow only script tags which have the correct nonce or hash set
+- allow only script tags which have the correct {{Glossary("Nonce", "nonce")}} or hash set
 - disable inline event handlers
 - disable `javascript:` URLs
 - disable dangerous APIs like `eval()`
@@ -292,7 +294,7 @@ If a CSP contains either a `default-src` or a `script-src` directive, then inlin
 - JavaScript in a `javascript:` URL:
 
   ```html
-  <a href="javascript:console.log('Hello from a javascript: URL')"></a>
+  <a href="javascript:console.log('Hello from a javascript: URL')">Click me</a>
   ```
 
 The `unsafe-inline` keyword can be used to override this restriction. For example, the following directive requires all resources to be same-origin, but allows inline JavaScript:
@@ -330,7 +332,11 @@ Like inline JavaScript, if a CSP contains either a `default-src` or a `script-sr
   setTimeout("console.log('hello from setTimeout')", 1);
   ```
 
-The `unsafe-eval` keyword can be used to override this behavior, and as with `unsafe-inline`, and for the same reasons: **developers should avoid `unsafe-eval`**. Sometimes it can be difficult to remove usages of `eval()`: in these situations, the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) can make it safer, by ensuring that the input meets a defined policy.
+The `unsafe-eval` keyword can be used to override this behavior, and as with `unsafe-inline`, and for the same reasons: **developers should avoid `unsafe-eval`**.
+
+Sometimes it can be difficult to remove usages of `eval()` and the other methods: in these situations, the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) can make it safer, by ensuring that the input meets a defined policy.
+The `trusted-types-eval` keyword should be used to override the behavior in this case.
+Unlike `unsafe-inline` it only overrides the behavior in browser when trusted types are supported and enabled; which ensures that the methods will remain blocked on browsers that don't support trusted types.
 
 Unlike `unsafe-inline`, the `unsafe-eval` keyword does still work in a directive that contains nonce or hash expressions.
 
@@ -376,7 +382,7 @@ The `strict-dynamic` keyword is provided to help with this problem. It is a keyw
 For example, consider a document like this:
 
 ```html
-<html>
+<html lang="en-US">
   <head>
     <script
       src="./main.js"
@@ -413,7 +419,7 @@ If we add `'strict-dynamic'` to the CSP, then "main.js" will be allowed to load 
 ```http
 Content-Security-Policy:
   script-src 'sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk='
-  strict-dynamic
+  'strict-dynamic'
 ```
 
 The `'strict-dynamic'` keyword makes it much easier to create and maintain nonce- or hash-based CSPs, especially when a website uses third-party scripts. It does make your CSP less secure, though, because if the scripts you include create `<script>` elements based on potential sources of XSS, then the CSP will not protect them.
@@ -461,7 +467,7 @@ Web developers are strongly encouraged to serve all their content over HTTPS. In
 <script src="http://example.org/my-cat.js"></script>
 ```
 
-This is called _mixed content_, and the presence of insecure resources greatly weakens the protection afforded by HTTPS. Under the [mixed content algorithm](/en-US/docs/Web/Security/Mixed_content) that browsers implement, if a document is served over HTTPS, insecure resources are categorized into "upgradable content" and "blockable content". Upgradable content is upgraded to HTTPS, and blockable content is blocked, potentially breaking the page.
+This is called _mixed content_, and the presence of insecure resources greatly weakens the protection afforded by HTTPS. Under the [mixed content algorithm](/en-US/docs/Web/Security/Defenses/Mixed_content) that browsers implement, if a document is served over HTTPS, insecure resources are categorized into "upgradable content" and "blockable content". Upgradable content is upgraded to HTTPS, and blockable content is blocked, potentially breaking the page.
 
 The ultimate solution to mixed content is for developers to load all resources over HTTPS. However, even if a site is actually able to serve all content over HTTPS, it can still be very difficult (or even effectively impossible, where archived content is concerned) for a developer to rewrite all the URLs the site uses to load resources.
 
@@ -581,6 +587,7 @@ The server handling these requests can then store or process the incoming report
 
 ## See also
 
+- [CSP errors and warnings](/en-US/docs/Web/HTTP/Guides/CSP/Errors)
 - [Mitigate cross-site scripting with a strict Content Security Policy](https://web.dev/articles/strict-csp) on web.dev (2024)
 - [Content Security Policy: A successful mess between hardening and mitigation](https://infocondb.org/con/locomocosec/locomocosec-2019/content-security-policy-a-successful-mess-between-hardening-and-mitigation)
 - [Content Security Policy Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html) on owasp.org

@@ -1,5 +1,6 @@
 ---
 title: "ARIA: navigation role"
+short-title: navigation
 slug: Web/Accessibility/ARIA/Reference/Roles/navigation_role
 page-type: aria-role
 spec-urls:
@@ -63,7 +64,7 @@ None.
 
 ### Prefer HTML
 
-Using the {{HTMLElement('nav')}} element will automatically communicate a section has a role of `navigation`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('nav')}} element will automatically communicate that the element has a role of `navigation`. If possible, prefer using the semantic `<nav>` element instead of the `navigation` role.
 
 ### Labeling landmarks
 

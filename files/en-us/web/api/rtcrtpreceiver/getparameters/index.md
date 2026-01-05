@@ -27,34 +27,28 @@ An object indicating the current configuration of the receiver.
 <!-- Spec defines as RTCRtpReceiveParameters, which is just a RTCRtpParameters -->
 
 - `codecs`
-
   - : An array of objects describing the [media codecs](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) that the receiver is ready to use.
     This is the subset of codecs that the receiver has indicated it prefers and that the remote endpoint has indicated it is prepared to send.
     This parameter cannot be changed once initially set.
 
     Each codec object in the array may have the following properties: <!-- RTCRtpCodecParameters -->
-
     - `channels` {{optional_inline}}
-
       - : A positive integer indicating the number of channels supported by the codec.
         For example, for audio codecs a value of 1 specifies monaural sound, while 2 indicates stereo.
 
     - `clockRate`
-
       - : A positive integer specifying the codec's clock rate in Hertz (Hz).
         The clock rate is the rate at which the codec's RTP timestamp advances.
         Most codecs have specific values or ranges of values they permit.
         The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
 
     - `mimeType`
-
       - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
         The MIME type strings used by RTP differ from those used elsewhere.
         IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
         Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 
     - `payloadType`
-
       - : The [RTP payload type](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1) used to identify this codec.
 
     - `sdpFmtpLine` {{optional_inline}}

@@ -16,19 +16,15 @@ The **`SVGStyleElement`** interface corresponds to the SVG {{SVGElement("style")
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGStyleElement.type")}} {{deprecated_inline}}
-
   - : A string corresponding to the {{SVGAttr("type")}} attribute of the given element.
 
 - {{domxref("SVGStyleElement.media")}}
-
   - : A string corresponding to the {{SVGAttr("media")}} attribute of the given element.
 
 - {{domxref("SVGStyleElement.title")}}
-
   - : A string corresponding to the [`title`](/en-US/docs/Web/SVG/Reference/Element/style#title) attribute of the given element.
 
 - {{domxref("SVGStyleElement.sheet")}} {{ReadOnlyInline}}
-
   - : Returns the {{domxref("CSSStyleSheet")}} object associated with the given element, or `null` if there is none.
 
 - {{domxref("SVGStyleElement.disabled")}}
@@ -44,7 +40,8 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 To dynamically create an SVG style element (`SVGStyleElement`), you need to use [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS), specifying a `style` element in the SVG namespace.
 
-> **Note:** [`Document.createElement()`](/en-US/docs/Web/API/Document/createElement) can't be used to create SVG style elements (it returns an [`HTMLStyleElement`](/en-US/docs/Web/API/HTMLStyleElement)).
+> [!NOTE]
+> [`Document.createElement()`](/en-US/docs/Web/API/Document/createElement) can't be used to create SVG style elements (it returns an [`HTMLStyleElement`](/en-US/docs/Web/API/HTMLStyleElement)).
 
 Given the following SVG element:
 
@@ -127,7 +124,7 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Refer
 <svg
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <style id="circle_style_id" media="all and (min-width: 600px)">
+  <style id="circle_style_id" media="(width >= 600px)">
     circle {
       fill: gold;
       stroke: green;
@@ -158,7 +155,7 @@ This is called after initialization, whenever the frame resizes, and if the butt
 const log = document.getElementById("log");
 
 function setLogText() {
-  //Log current values of properties
+  // Log current values of properties
   log.value = `style.media: ${style.media} (frame width: ${window.innerWidth})\n`; // 'all' by default
   log.value += `style.title: ${style.title}\n`; // no default value
   log.value += `style.disabled: ${style.disabled}\n`; // 'false' by default

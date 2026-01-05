@@ -2,9 +2,8 @@
 title: Installing and uninstalling web apps
 slug: Web/Progressive_web_apps/Guides/Installing
 page-type: guide
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 This guide covers how users can install and uninstall PWAs on their devices. If you want to learn about making a web app installable as a PWA, see [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) instead.
 

@@ -1,11 +1,11 @@
 ---
 title: Set.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.forEach
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`forEach()`** method of {{jsxref("Set")}} instances executes a provided function once
 for each value in this set, in insertion order.

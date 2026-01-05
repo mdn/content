@@ -25,7 +25,6 @@ postMessage(message, options)
 ### Parameters
 
 - `message`
-
   - : The object to deliver to the worker; this will be in the `data` field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.message_event", "message")}} event. This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
 
     The `message` parameter is mandatory. If the data to be passed to the worker is unimportant, `null` or `undefined` must be passed explicitly.
@@ -58,7 +57,8 @@ const myWorker = new Worker("worker.js");
 
 For a full example, see our [simple worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run example](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
-> **Note:** `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
+> [!NOTE]
+> `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
 
 ### Transfer Example
 
@@ -71,7 +71,7 @@ This minimum example has `main` create an `ArrayBuffer` and transfer it to `myWo
 const myWorker = new Worker("myWorker.js");
 
 // listen for myWorker to transfer the buffer back to main
-myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
+myWorker.addEventListener("message", (msg) => {
   console.log("message from worker received in main:", msg);
 
   const bufTransferredBackFromWorker = msg.data;
@@ -103,7 +103,7 @@ console.log(
 
 ```js
 // listen for main to transfer the buffer to myWorker
-self.onmessage = function handleMessageFromMain(msg) {
+self.onmessage = (msg) => {
   console.log("message from main received in worker:", msg);
 
   const bufTransferredFromMain = msg.data;

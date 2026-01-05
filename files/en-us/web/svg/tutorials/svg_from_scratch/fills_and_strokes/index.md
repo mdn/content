@@ -133,7 +133,7 @@ In case of second shape, stroke has been rendered before fill.
 In addition to setting attributes on objects, you can also use CSS to style fills and strokes. Not all attributes can be set via CSS. Attributes that deal with painting and filling are usually available, so `fill`, `stroke`, `stroke-dasharray`, etc. can all be set this way, in addition to the gradient and pattern versions of those shown below. Attributes like `width`, `height`, or {{SVGElement("path")}} commands cannot be set through CSS. It's easiest just to test and find out what is available and what isn't.
 
 > [!NOTE]
-> The [SVG specification](https://www.w3.org/TR/SVG/propidx.html) decides strictly between attributes that are _properties_ and other attributes. The former can be modified with CSS, the latter not.
+> The [SVG specification](https://svgwg.org/svg2-draft/propidx.html) decides strictly between attributes that are _properties_ and other attributes. The former can be modified with CSS, the latter not.
 
 CSS can be inserted inline with the element via the `style` attribute:
 

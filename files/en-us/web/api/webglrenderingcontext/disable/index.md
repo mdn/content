@@ -20,7 +20,6 @@ disable(capability)
 ### Parameters
 
 - `capability`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which WebGL capability to disable. Possible
     values:
 

@@ -1,13 +1,15 @@
 ---
-title: "CSP: report-uri"
+title: "Content-Security-Policy: report-uri directive"
+short-title: report-uri
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri
 page-type: http-csp-directive
 status:
   - deprecated
 browser-compat: http.headers.Content-Security-Policy.report-uri
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 > [!WARNING]
 > The {{CSP("report-to")}} directive is intended to replace `report-uri`, and in browsers that support `report-to`, the `report-uri` directive is ignored.
@@ -55,7 +57,8 @@ Content-Security-Policy: report-uri <uri> <uri>;
 
 The report JSON object is sent via an HTTP `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/csp-report`.
 
-> [!NOTE] Violation reports should be considered attacker-controlled data.
+> [!NOTE]
+> Violation reports should be considered attacker-controlled data.
 > The content should be properly sanitized before storing or rendering.
 > This is particularly true of the [script-sample](#script-sample) property, if supplied.
 
@@ -76,7 +79,6 @@ The report JSON object has a single top-level property, `"csp-report"`, which co
 - `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The referrer of the document in which the violation occurred.
 - `script-sample`
-
   - : The first 40 characters of the inline script, event handler, or style that caused the violation.
     Violations originating from external files are not included in the report.
 
@@ -136,7 +138,7 @@ As you can see, the report includes the full path to the violating resource in `
 This is not always the case.
 For example, if `signup.html` attempted to load CSS from `http://anothercdn.example.com/stylesheet.css`, the browser would _not_ include the full path, only the origin,
 (`http://anothercdn.example.com`) in order to prevent leaking sensitive information about cross-origin resources.
-The CSP specification [gives an explanation](https://www.w3.org/TR/CSP/#security-violation-reports) of this behavior.
+The CSP specification [gives an explanation](https://w3c.github.io/webappsec-csp/#security-violation-reports) of this behavior.
 
 ### CSP violation report with Content-Security-Policy-Report-Only
 
@@ -180,32 +182,40 @@ Content-Security-Policy: default-src https:; report-uri /csp-violation-report-en
 <?php
 
 // Start configure
-$log_file = dirname(__FILE__) . '/csp-violations.log';
+$log_file = dirname(__FILE__) . "/csp-violations.log";
 $log_file_size_limit = 1000000; // bytes - once exceeded no further entries are added
-$email_address = 'admin@example.com';
-$email_subject = 'Content-Security-Policy violation';
+$email_address = "admin@example.com";
+$email_subject = "Content-Security-Policy violation";
 // End configuration
 
-$current_domain = preg_replace('/www\./i', '', $_SERVER['SERVER_NAME']);
-$email_subject = $email_subject . ' on ' . $current_domain;
+$current_domain = preg_replace("/www\./i", "", $_SERVER["SERVER_NAME"]);
+$email_subject = $email_subject . " on " . $current_domain;
 
 http_response_code(204); // HTTP 204 No Content
 
-$json_data = file_get_contents('php://input');
+$json_data = file_get_contents("php://input");
 
 // We pretty print the JSON before adding it to the log file
-if ($json_data = json_decode($json_data)) {
-  $json_data = json_encode($json_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+if (($json_data = json_decode($json_data))) {
+  $json_data = json_encode(
+    $json_data,
+    JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES,
+  );
 
   if (!file_exists($log_file)) {
     // Send an email
-    $message = "The following Content-Security-Policy violation occurred on " .
+    $message =
+      "The following Content-Security-Policy violation occurred on " .
       $current_domain . ":\n\n" .
       $json_data .
       "\n\nFurther CPS violations will be logged to the following log file, but no further email notifications will be sent until this log file is deleted:\n\n" .
       $log_file;
-    mail($email_address, $email_subject, $message,
-         'Content-Type: text/plain;charset=utf-8');
+    mail(
+      $email_address,
+      $email_subject,
+      $message,
+      "Content-Type: text/plain;charset=utf-8",
+    );
   } else if (filesize($log_file) > $log_file_size_limit) {
     exit(0);
   }

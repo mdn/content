@@ -25,8 +25,8 @@ async function getData() {
       throw new Error(`Response status: ${response.status}`);
     }
 
-    const json = await response.json();
-    console.log(json);
+    const result = await response.json();
+    console.log(result);
   } catch (error) {
     console.error(error.message);
   }
@@ -60,7 +60,7 @@ By default, `fetch()` makes a {{httpmethod("GET")}} request, but you can use the
 ```js
 const response = await fetch("https://example.org/post", {
   method: "POST",
-  // ...
+  // …
 });
 ```
 
@@ -76,7 +76,7 @@ To set a request body, pass it as the `body` option:
 const response = await fetch("https://example.org/post", {
   method: "POST",
   body: JSON.stringify({ username: "example" }),
-  // ...
+  // …
 });
 ```
 
@@ -102,7 +102,7 @@ const response = await fetch("https://example.org/post", {
   },
   // Automatically converted to "username=example&password=password"
   body: new URLSearchParams({ username: "example", password: "password" }),
-  // ...
+  // …
 });
 ```
 
@@ -156,7 +156,7 @@ const response = await fetch("https://example.org/post", {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({ username: "example" }),
-  // ...
+  // …
 });
 ```
 
@@ -170,7 +170,7 @@ const response = await fetch("https://example.org/post", {
   method: "POST",
   headers: myHeaders,
   body: JSON.stringify({ username: "example" }),
-  // ...
+  // …
 });
 ```
 
@@ -193,7 +193,6 @@ const response = await fetch(`https://example.org/login?${params}`);
 Whether a request can be made cross-origin or not is determined by the value of the {{domxref("RequestInit", "", "mode")}} option. This may take one of three values: `cors`, `same-origin`, or `no-cors`.
 
 - For fetch requests the default value of `mode` is `cors`, meaning that if the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) mechanism. This means that:
-
   - if the request is a [simple request](/en-US/docs/Web/HTTP/Guides/CORS#simple_requests), then the request will always be sent, but the server must respond with the correct {{httpheader("Access-Control-Allow-Origin")}} header or the browser will not share the response with the caller.
   - if the request is not a simple request, then the browser will send a [preflighted request](/en-US/docs/Web/HTTP/Guides/CORS#preflighted_requests) to check that the server understands CORS and allows the request, and the real request will not be sent unless the server responds to the preflighted request with the appropriate CORS headers.
 
@@ -205,9 +204,13 @@ See the reference documentation for {{domxref("RequestInit", "", "mode")}} for m
 
 ### Including credentials
 
-Credentials are cookies, {{glossary("TLS")}} client certificates, or authentication headers containing a username and password.
+In the context of the Fetch API, a credential is an extra piece of data sent along with the request that the server may use to authenticate the user. All the following items are considered to be credentials:
 
-To control whether or not the browser sends credentials, as well as whether the browser respects any **`Set-Cookie`** response headers, set the `credentials` option, which can take one of the following three values:
+- HTTP cookies
+- {{glossary("TLS")}} client certificates
+- The {{httpheader("Authorization")}} and {{httpheader("Proxy-Authorization")}} headers.
+
+By default, credentials are only included in same-origin requests. To customize this behavior, as well as to control whether the browser respects any **`Set-Cookie`** response headers, set the [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) option, which can take one of the following three values:
 
 - `omit`: never send credentials in the request or include credentials in the response.
 - `same-origin` (the default): only send and include credentials for same-origin requests.
@@ -350,7 +353,7 @@ async function getData() {
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
-    // ...
+    // …
   } catch (error) {
     console.error(error.message);
   }
@@ -494,17 +497,16 @@ async function* makeTextFileLineIterator(fileURL) {
   const response = await fetch(fileURL);
   const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
 
-  let { value: chunk, done: readerDone } = await reader.read();
-  chunk = chunk || "";
+  let { value: chunk = "", done: readerDone } = await reader.read();
 
-  const newline = /\r?\n/gm;
+  const newline = /\r?\n/g;
   let startIndex = 0;
 
   while (true) {
     const result = newline.exec(chunk);
     if (!result) {
       if (readerDone) break;
-      const remainder = chunk.substr(startIndex);
+      const remainder = chunk.slice(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
       chunk = remainder + (chunk || "");
       startIndex = newline.lastIndex = 0;
@@ -551,8 +553,8 @@ async function getData() {
       throw new Error(`Response status: ${response.status}`);
     }
 
-    const json1 = await response.json();
-    const json2 = await response.json(); // will throw
+    const result1 = await response.json();
+    const result2 = await response.json(); // will throw
   } catch (error) {
     console.error(error.message);
   }
@@ -572,8 +574,8 @@ async function getData() {
 
     const response2 = response1.clone();
 
-    const json1 = await response1.json();
-    const json2 = await response2.json();
+    const result1 = await response1.json();
+    const result2 = await response2.json();
   } catch (error) {
     console.error(error.message);
   }

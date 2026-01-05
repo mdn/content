@@ -3,9 +3,8 @@ title: Learn web development writing guidelines
 short-title: Learning content
 slug: MDN/Writing_guidelines/Learning_content
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The [Learn web development](/en-US/docs/Learn_web_development) section of MDN is aimed specifically at folks learning the basic fundamentals of web development, and as such, requires a different approach to the rest of MDN's content. This articles provides guidelines for writing learning content.
 
@@ -43,7 +42,7 @@ There are a few differences, however:
   > Try this...
   ```
 
-- **Challenges**: Learn content includes challenges periodically to test that the reader understands the topics they have learnt about before moving on to the next article. These are currently written in a few different styles, for example see [Challenge: Structuring a page of content](/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content) and [Test your skills: HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images), but we intend to improve the consistency and experience of these in the future.
+- **Challenges**: Learn content includes challenges periodically to test that the reader understands the topics they have learnt about before moving on to the next article. These are currently written in a few different styles, for example see [Challenge: Structuring a page of content](/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content) and [Test your skills: HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images), but we intend to improve the consistency and experience of these in the future.
 - **Density and completeness**: MDN content is generally known for its comprehensiveness. Learn content is specifically not as exhaustively complete as the rest of the MDN content. It is less dense and gentler in its approach, to allow learners to pick up useful skills and make regular progress, without feeling overwhelmed. They can dive deeper later on. Learn content can omit details to provide a more comfortable learning experience, provided it does not teach the reader anything misleading or bad practice.
 - **Stable learning outcomes**: The learning outcomes at the top of each tutorial provide a summary of what each tutorial teaches, and together provide a structured curriculum for front-end web development. It is vital that the learning outcomes and what is taught both remain stable and in sync, otherwise the content cannot be trusted as a basis for formal learning (for example educational courses of certifications). As such, changes to the learning outcomes should happen slowly, and not without good reason. If you try to add content that is not covered in the associated learning outcomes (or vice versa), your pull request will be closed. [Make a suggestion](/en-US/docs/MDN/Writing_guidelines/What_we_write#suggesting_content) first.
 

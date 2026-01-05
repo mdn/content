@@ -1,11 +1,11 @@
 ---
-title: PUT
+title: PUT request method
+short-title: PUT
 slug: Web/HTTP/Reference/Methods/PUT
 page-type: http-method
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#PUT
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The **`PUT`** HTTP method creates a new resource or replaces a representation of the target resource with the request {{Glossary("HTTP Content", "content")}}.
 

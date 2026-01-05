@@ -16,7 +16,7 @@ Setting `selectionEnd` to a value less than the current value of {{domxref("HTML
 
 The property value can be retrieved and set without the `<textarea>` having focus, but the element does need to have focus for the {{cssxref("::selection")}} pseudo-element to match the selected text.
 
-Setting the `selectionEnd` to a new value fires the {{domxref("HTMLTextAreaElement.selectionchange_event", "selectchange")}} and {{domxref("HTMLTextAreaElement.select_event", "select")}} events.
+Setting the `selectionEnd` to a new value fires the {{domxref("HTMLTextAreaElement.selectionchange_event", "selectionchange")}} and {{domxref("HTMLTextAreaElement.select_event", "select")}} events.
 
 ## Value
 

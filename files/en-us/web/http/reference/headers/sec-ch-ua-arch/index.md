@@ -1,13 +1,15 @@
 ---
-title: Sec-CH-UA-Arch
+title: Sec-CH-UA-Arch header
+short-title: Sec-CH-UA-Arch
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Arch
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-UA-Arch
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{SeeCompatTable}}{{SecureContext_Header}}
 
 The HTTP **`Sec-CH-UA-Arch`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) which contains the user-agent's underlying CPU architecture, such as ARM or x86.
 

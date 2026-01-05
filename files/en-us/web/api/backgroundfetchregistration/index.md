@@ -54,7 +54,6 @@ _Also inherits events from its parent, {{domxref("EventTarget")}}._
 Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{domxref("BackgroundFetchRegistration/progress_event", "progress")}} {{Experimental_Inline}}
-
   - : Fired when there is a change to any of the following properties:
     {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}},
     {{domxref("BackgroundFetchRegistration.downloaded", "downloaded")}},

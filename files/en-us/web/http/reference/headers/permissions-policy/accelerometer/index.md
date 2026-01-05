@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: accelerometer"
+title: "Permissions-Policy: accelerometer directive"
+short-title: accelerometer
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/accelerometer
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.accelerometer
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader('Permissions-Policy')}} header `accelerometer` directive controls whether the current document is allowed to gather information about the acceleration of the device through the {{domxref('Accelerometer')}} interface.
 

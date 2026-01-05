@@ -3,9 +3,8 @@ title: webNavigation.TransitionType
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
 page-type: webextension-api-type
 browser-compat: webextensions.api.webNavigation.TransitionType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Cause of the navigation: for example, the user clicked a link, or typed an address, or clicked a bookmark.
 
@@ -38,11 +37,11 @@ Values of this type are strings. Possible values are:
 - "keyword_generated"
   - : Corresponds to a visit generated for a keyword.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#type-TransitionType) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.

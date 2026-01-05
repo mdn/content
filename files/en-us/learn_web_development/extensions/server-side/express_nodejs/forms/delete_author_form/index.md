@@ -17,7 +17,7 @@ Open **/controllers/authorController.js**. Find the exported `author_delete_get(
 
 ```js
 // Display Author delete form on GET.
-exports.author_delete_get = asyncHandler(async (req, res, next) => {
+exports.author_delete_get = async (req, res, next) => {
   // Get details of author and all their books (in parallel)
   const [author, allBooksByAuthor] = await Promise.all([
     Author.findById(req.params.id).exec(),
@@ -27,14 +27,15 @@ exports.author_delete_get = asyncHandler(async (req, res, next) => {
   if (author === null) {
     // No results.
     res.redirect("/catalog/authors");
+    return;
   }
 
   res.render("author_delete", {
     title: "Delete Author",
-    author: author,
+    author,
     author_books: allBooksByAuthor,
   });
-});
+};
 ```
 
 The controller gets the id of the `Author` instance to be deleted from the URL parameter (`req.params.id`).
@@ -49,6 +50,7 @@ When both operations have completed it renders the **author_delete.pug** view, p
 > if (author === null) {
 >   // No results.
 >   res.redirect("/catalog/authors");
+>   return;
 > }
 > ```
 
@@ -58,7 +60,7 @@ Find the exported `author_delete_post()` controller method, and replace it with 
 
 ```js
 // Handle Author delete on POST.
-exports.author_delete_post = asyncHandler(async (req, res, next) => {
+exports.author_delete_post = async (req, res, next) => {
   // Get details of author and all their books (in parallel)
   const [author, allBooksByAuthor] = await Promise.all([
     Author.findById(req.params.id).exec(),
@@ -69,16 +71,15 @@ exports.author_delete_post = asyncHandler(async (req, res, next) => {
     // Author has books. Render in same way as for GET route.
     res.render("author_delete", {
       title: "Delete Author",
-      author: author,
+      author,
       author_books: allBooksByAuthor,
     });
     return;
-  } else {
-    // Author has no books. Delete object and redirect to the list of authors.
-    await Author.findByIdAndDelete(req.body.authorid);
-    res.redirect("/catalog/authors");
   }
-});
+  // Author has no books. Delete object and redirect to the list of authors.
+  await Author.findByIdAndDelete(req.body.authorid);
+  res.redirect("/catalog/authors");
+};
 ```
 
 First we validate that an id has been provided (this is sent via the form body parameters, rather than using the version in the URL).

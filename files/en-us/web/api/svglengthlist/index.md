@@ -85,7 +85,7 @@ function resetSpacing() {
 function printList() {
   output.textContent = "";
   for (let i = 0; i < list.length; i++) {
-    output.innerText += list.getItem(i).value + "\n";
+    output.innerText += `${list.getItem(i).value}\n`;
   }
 }
 printList();

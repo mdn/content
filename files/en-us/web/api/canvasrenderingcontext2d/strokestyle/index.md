@@ -6,11 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.strokeStyle
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.strokeStyle`** property of the
 Canvas 2D API specifies the color, gradient, or pattern to use for the strokes
-(outlines) around shapes. The default is `#000` (black).
+(outlines) around shapes. The default is `black`.
 
 > [!NOTE]
 > For more examples of stroke and fill styles, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).

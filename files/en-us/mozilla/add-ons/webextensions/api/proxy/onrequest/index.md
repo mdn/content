@@ -3,9 +3,8 @@ title: proxy.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
 page-type: webextension-api-event
 browser-compat: webextensions.api.proxy.onRequest
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a web request is about to be made, to give the extension an opportunity to proxy it.
 
@@ -47,11 +46,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed one argument, which is a {{WebExtAPIRef("proxy.RequestDetails")}} object containing details of the request.
 
     The listener can return any of:
-
     - a {{WebExtAPIRef("proxy.ProxyInfo")}} object.
     - an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects.
     - a `Promise` that resolves to a `ProxyInfo` object.

@@ -1,11 +1,11 @@
 ---
 title: WeakRef.prototype.deref()
+short-title: deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakRef.deref
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`deref()`** method of {{jsxref("WeakRef")}} instances returns this `WeakRef`'s target value, or `undefined` if the target value has been garbage-collected.
 

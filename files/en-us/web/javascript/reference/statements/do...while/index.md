@@ -3,9 +3,8 @@ title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
 page-type: javascript-statement
 browser-compat: javascript.statements.do_while
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`do...while`** statement creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated after executing the statement, resulting in the specified statement executing at least once.
 
@@ -16,8 +15,8 @@ let result = "";
 let i = 0;
 
 do {
-  i = i + 1;
-  result = result + i;
+  i += 1;
+  result += i;
 } while (i < 5);
 
 console.log(result);

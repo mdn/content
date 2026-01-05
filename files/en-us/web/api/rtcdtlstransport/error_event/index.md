@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("error", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
 
-onerror = (event) => {};
+onerror = (event) => { }
 ```
 
 ## Event type
@@ -46,7 +46,7 @@ Transport-level errors will have one of the following values for the specified e
 
 ## Examples
 
-In this example, the {{domxref("RTCDtlsTransport.onerror", "onerror")}} event handler property is used to set the handler for the `error` event.
+In this example, the `onerror` event handler property is used to set the handler for the `error` event.
 
 ```js
 transport.onerror = (ev) => {

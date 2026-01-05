@@ -3,9 +3,8 @@ title: 504 Gateway Timeout
 slug: Web/HTTP/Reference/Status/504
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.504
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`504 Gateway Timeout`** [server error response](/en-US/docs/Web/HTTP/Reference/Status#server_error_responses) status code indicates that the server, while acting as a gateway or {{Glossary("Proxy_server", "proxy")}}, did not get a response in time from the upstream server in order to complete the request.
 This is similar to a {{HTTPStatus("502", "502 Bad Gateway")}}, except that in a `504` status, the proxy or gateway did not receive any HTTP response from the origin within a certain time.

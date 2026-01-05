@@ -19,6 +19,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js-nolint
 addEventListener("cancel", (event) => { })
+
 oncancel = (event) => { }
 ```
 

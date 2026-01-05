@@ -1,11 +1,11 @@
 ---
 title: TypedArray.prototype.toReversed()
+short-title: toReversed()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toReversed
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.toReversed
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toReversed()`** method of {{jsxref("TypedArray")}} instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) counterpart of the {{jsxref("TypedArray/reverse", "reverse()")}} method. It returns a new typed array with the elements in reversed order. This method has the same algorithm as {{jsxref("Array.prototype.toReversed()")}}.
 

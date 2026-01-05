@@ -3,9 +3,8 @@ title: find
 slug: Mozilla/Add-ons/WebExtensions/API/find
 page-type: webextension-api
 browser-compat: webextensions.api.find
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Finds text in a web page, and highlights matches.
 
@@ -20,8 +19,8 @@ To use this API you need to have the "find" [permission](/en-US/docs/Mozilla/Add
 - {{WebExtAPIRef("find.removeHighlighting()")}}
   - : Remove any highlighting.
 
-## Browser compatibility
-
 {{WebExtExamples("h2")}}
+
+## Browser compatibility
 
 {{Compat}}

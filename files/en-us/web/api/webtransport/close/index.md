@@ -41,7 +41,7 @@ const url = "https://example.com:4999/wt";
 // Initialize transport connection
 const transport = new WebTransport(url);
 
-// ...
+// …
 
 transport.close({
   closeCode: 17,

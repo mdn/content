@@ -55,7 +55,6 @@ The `type` attribute of the return value will be one of the following:
 - `gl.SAMPLER_CUBE`
 - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
   following values are possible additionally:
-
   - `gl.UNSIGNED_INT`
   - `gl.UNSIGNED_INT_VEC2`
   - `gl.UNSIGNED_INT_VEC3`
@@ -96,7 +95,6 @@ in the shader:
   `c.foo` and `c.bar`.
 - Arrays of structs or arrays: each entry of the array will generate its own entries.
   E.g. `uniform struct { float foo; vec4 bar; } d[2];` will result in:
-
   - `d[0].foo`
   - `d[0].bar`
   - `d[1].foo`

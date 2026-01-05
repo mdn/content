@@ -28,15 +28,14 @@ A promise that resolves with an {{jsxref("ArrayBuffer")}}.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The request was [aborted](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request).
 - {{jsxref("TypeError")}}
   - : Thrown for one of the following reasons:
     - The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
     - There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
 - {{jsxref("RangeError")}}
-  - : There was a problem creating the associated `ArrayBuffer`.
-    For example, if the data size is more than [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER).
+  - : Thrown if there is a problem creating the associated `ArrayBuffer` (for example, if the data size is too large).
 
 ## Examples
 
@@ -100,14 +99,21 @@ The {{domxref("Response.Response","Response()")}} constructor accepts
 {{domxref("File")}}s and {{domxref("Blob")}}s, so it may be used to read a
 {{domxref("File")}} into other formats.
 
+```html
+<input type="file" />
+```
+
 ```js
 function readFile(file) {
   return new Response(file).arrayBuffer();
 }
-```
 
-```html
-<input type="file" onchange="readFile(this.files[0])" />
+document
+  .querySelector("input[type=file]")
+  .addEventListener("change", (event) => {
+    const file = event.target.files[0];
+    const buffer = readFile(file);
+  });
 ```
 
 ## Specifications

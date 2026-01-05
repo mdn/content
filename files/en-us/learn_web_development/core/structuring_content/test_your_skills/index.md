@@ -1,6 +1,6 @@
 ---
-title: "Test your skills: HTML"
-short-title: Test your skills
+title: "Test your skills: Structuring content with HTML"
+short-title: "Test: HTML tests index"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills
 page-type: learn-module-assessment
 sidebar: learnsidebar

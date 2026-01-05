@@ -1,10 +1,10 @@
 ---
 title: Customize your app's theme and background colors
+short-title: Customize colors of your app
 slug: Web/Progressive_web_apps/How_to/Customize_your_app_colors
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 When building [Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps), it's important to not only consider the appearance of your app's content, but also the way the app appears on the user's device once the app is installed.
 
@@ -18,7 +18,7 @@ The [`background_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference
 
 Because this color appears before your stylesheets have loaded, set its value to the same color value as the `background-color` CSS property in your application's stylesheet. This will ensure a smooth visual transition between launching the web application and loading its content.
 
-The value can be any valid CSS [`<color>`](/en-US/docs/Web/CSS/color_value). In this web app manifest file example, the application's background color is set to the [named color](/en-US/docs/Web/CSS/named-color) `peachpuff`. :
+The value can be any valid CSS {{cssxref("&lt;color&gt;")}}. In this web app manifest file example, the application's background color is set to the [named color](/en-US/docs/Web/CSS/Reference/Values/named-color) `peachpuff`. :
 
 ```json
 {
@@ -59,7 +59,7 @@ Different devices, operating systems, and browsers apply the `theme_color` membe
 
 Choose a `theme_color` that complements the overall design and branding of your PWA and works well across a variety of devices and platforms to ensure a consistent user experience.
 
-As with `background_color`, any [`<color>`](/en-US/docs/Web/CSS/color_value) value is valid. In this web app manifest file example, the `theme_color` is set to the `rgb(255 218 185)`, the [RGB](/en-US/docs/Web/CSS/color_value/rgb) equivalent of `peachpuff`:
+As with `background_color`, any {{cssxref("&lt;color&gt;")}} value is valid. In this web app manifest file example, the `theme_color` is set to the `rgb(255 218 185)`, the [RGB](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) equivalent of `peachpuff`:
 
 ```json
 {

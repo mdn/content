@@ -53,7 +53,7 @@ Then we can add some CSS into the mix to get it looking nice:
 
 ```css live-sample___string-concat-name
 button {
-  font-family: "helvetica neue", helvetica, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   border: 2px solid rgb(200 200 0 / 60%);
@@ -213,6 +213,9 @@ A web page with no dynamically updating content is referred to as **static** —
 JavaScript is applied to your HTML page in a similar manner to CSS.
 Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets and {{htmlelement("style")}} elements to apply internal stylesheets to HTML, JavaScript only needs one friend in the world of HTML — the {{htmlelement("script")}} element. Let's learn how this works.
 
+> [!NOTE]
+> Scrimba's [Setting up our JavaScript file](https://scrimba.com/learn-javascript-c0v/~03?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial walks through a couple of different ways to add JavaScript to your HTML.
+
 ### Internal JavaScript
 
 1. First of all, make a local copy of our example file [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Save it in a directory somewhere sensible.
@@ -281,7 +284,7 @@ This works great, but what if we wanted to put our JavaScript in an external fil
    }
    ```
 
-4. Save and refresh your browser. You'll discover that clicking the button has no effect, and if you check your browser's console, you'll see an error along the lines of `Cross-origin request blocked`. That's because like many external resources, JavaScript modules need to be loaded from the [same origin](/en-US/docs/Web/Security/Same-origin_policy) as the HTML, and `file://` URLs don't qualify. There are two solutions to fix this problem:
+4. Save and refresh your browser. You'll discover that clicking the button has no effect, and if you check your browser's console, you'll see an error along the lines of `Cross-origin request blocked`. That's because like many external resources, JavaScript modules need to be loaded from the [same origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) as the HTML, and `file://` URLs don't qualify. There are two solutions to fix this problem:
    - Our recommended solution is to [set up a local testing server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server). With the server program running and serving the `apply-javascript-external.html` and `script.js` files on port `8000`, open your browser and go to `http://localhost:8000`.
    - If you cannot run a local server, you can also use `<script defer src="script.js"></script>` instead of `<script type="module" src="script.js"></script>`. See [Script loading strategies](#script_loading_strategies) below for more information. But note that features we use in other parts of the tutorial may require a local HTTP server anyway.
 5. Now the website works just the same as before, but now we've got our JavaScript in an external file.
@@ -349,7 +352,6 @@ There are a few different strategies to make sure your JavaScript only runs afte
 - In the internal JavaScript example above, the script element is placed at the bottom of the body of the document, and therefore only run after the rest of the HTML body is parsed.
 - In the external JavaScript example above, the script element is placed in the head of the document, before the HTML body is parsed. But because we're using `<script type="module">`, the code is treated as a [module](/en-US/docs/Web/JavaScript/Guide/Modules) and the browser waits for all HTML to be processed before executing JavaScript modules. (You could also place external scripts at the bottom of the body. But if there is a lot of HTML and the network is slow, it may take a lot of time before the browser can even start fetching and loading the script, so placing external scripts in the head is usually better.)
 - If you still want to use non-module scripts in the document head, which could block the whole page from displaying, and could cause errors because it executes before the HTML is parsed:
-
   - For external scripts, you should add the `defer` (or if you don't need the HTML to be ready, the `async`) attribute on the {{htmlelement("script")}} element.
   - For internal scripts, you should wrap the code in a [`DOMContentLoaded` event listener](/en-US/docs/Web/API/Document/DOMContentLoaded_event).
 

@@ -21,7 +21,7 @@ Find the exported `book_create_get()` controller method and replace it with the 
 
 ```js
 // Display book create form on GET.
-exports.book_create_get = asyncHandler(async (req, res, next) => {
+exports.book_create_get = async (req, res, next) => {
   // Get all authors and genres, which we can use for adding to our book.
   const [allAuthors, allGenres] = await Promise.all([
     Author.find().sort({ family_name: 1 }).exec(),
@@ -33,7 +33,7 @@ exports.book_create_get = asyncHandler(async (req, res, next) => {
     authors: allAuthors,
     genres: allGenres,
   });
-});
+};
 ```
 
 This uses `await` on the result of `Promise.all()` to get all `Author` and `Genre` objects in parallel (the same approach used in [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)).
@@ -72,7 +72,7 @@ exports.book_create_post = [
   body("genre.*").escape(),
   // Process request after validation and sanitization.
 
-  asyncHandler(async (req, res, next) => {
+  async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -104,15 +104,16 @@ exports.book_create_post = [
         title: "Create Book",
         authors: allAuthors,
         genres: allGenres,
-        book: book,
+        book,
         errors: errors.array(),
       });
-    } else {
-      // Data from form is valid. Save book.
-      await book.save();
-      res.redirect(book.url);
+      return;
     }
-  }),
+
+    // Data from form is valid. Save book.
+    await book.save();
+    res.redirect(book.url);
+  },
 ];
 ```
 

@@ -51,8 +51,8 @@ This SVG contains two semi-opaque squares, one red and one blue, each positioned
 
 ```html
 <svg viewBox="0 0 50 50" height="200">
-  <rect width="25" height="25" fill="#f009" />
-  <rect id="transformed" width="25" height="25" fill="#00f9" />
+  <rect width="25" height="25" fill="#ff000099" />
+  <rect id="transformed" width="25" height="25" fill="#0000ff99" />
 </svg>
 ```
 
@@ -86,6 +86,6 @@ document
 - {{domxref("DOMMatrixReadOnly.scale()")}}
 - {{domxref("DOMMatrix.scale3dSelf()")}}
 - CSS {{cssxref("transform")}} property and the {{cssxref("transform-function/scale", "scaleSelf()")}} and {{cssxref("transform-function/matrix", "matrix()")}} functions
-- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module
 - SVG [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) attribute
 - {{domxref("CanvasRenderingContext2D")}} interface {{domxref("CanvasRenderingContext2D.transform()", "transform()")}} method

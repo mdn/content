@@ -10,9 +10,8 @@ browser-compat:
   - html.elements.script.crossorigin
   - html.elements.video.crossorigin
 spec-urls: https://html.spec.whatwg.org/multipage/urls-and-fetching.html#cors-settings-attributes
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`crossorigin`** attribute, valid on the {{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, and {{HTMLElement("video")}} elements, provides support for [CORS](/en-US/docs/Web/HTTP/Guides/CORS), defining how the element handles cross-origin requests, thereby enabling the configuration of the CORS requests for the element's fetched data. Depending on the element, the attribute can be a CORS settings attribute.
 
@@ -61,7 +60,9 @@ By default (that is, when the attribute is not specified), CORS is not used at a
 > [!NOTE]
 > The `crossorigin` attribute is not supported for [`rel="icon"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#icon) in Chromium-based browsers. See the [open Chromium issue](https://crbug.com/1121645).
 
-### Example: `crossorigin` with the `<script>` element
+## Examples
+
+### `crossorigin` with the `<script>` element
 
 You can use the following {{HTMLElement("script")}} element to tell a browser to execute the `https://example.com/example-framework.js` script without sending user-credentials.
 
@@ -71,7 +72,7 @@ You can use the following {{HTMLElement("script")}} element to tell a browser to
   crossorigin="anonymous"></script>
 ```
 
-### Example: Web manifest with credentials
+### Web manifest with credentials
 
 The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) that requires credentials, even if the file is from the same origin.
 
@@ -91,5 +92,3 @@ The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/
 
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTML attribute: `rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

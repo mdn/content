@@ -1,11 +1,11 @@
 ---
-title: Alt-Svc
+title: Alt-Svc header
+short-title: Alt-Svc
 slug: Web/HTTP/Reference/Headers/Alt-Svc
 page-type: http-header
 browser-compat: http.headers.Alt-Svc
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Alt-Svc`** {{Glossary("response header")}} lets a server indicate that another network location (the "alternative service") can be treated as authoritative for that origin when making future requests.
 
@@ -16,10 +16,6 @@ Doing so allows new protocol versions to be advertised without affecting in-flig
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

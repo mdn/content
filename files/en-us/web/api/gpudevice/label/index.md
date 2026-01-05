@@ -3,12 +3,10 @@ title: "GPUDevice: label property"
 short-title: label
 slug: Web/API/GPUDevice/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUDevice.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** read-only property of the
 {{domxref("GPUDevice")}} interface is a string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -39,7 +37,7 @@ async function init() {
   // Get a label
   console.log(device.label);
 
-  // ...
+  // …
 }
 ```
 

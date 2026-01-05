@@ -1,18 +1,19 @@
 ---
-title: "CSP: frame-src"
+title: "Content-Security-Policy: frame-src directive"
+short-title: frame-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/frame-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.frame-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`frame-src`** directive specifies valid sources for nested
 browsing contexts loading using elements such as {{HTMLElement("frame")}} and
 {{HTMLElement("iframe")}}.
 
-> **Note:** **`frame-src`** allows you to specify where iframes in a page may be loaded from.
+> [!NOTE]
+> **`frame-src`** allows you to specify where iframes in a page may be loaded from.
 > This differs from **`frame-ancestors`**, which allows you to specify what parent source may embed a page.
 
 <table class="properties">
@@ -48,9 +49,7 @@ This directive may have one of the following values:
 - `'none'`
   - : No resources of this type may be loaded. The single quotes are mandatory.
 - `<source-expression-list>`
-
   - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
-
     - [`<host-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
     - [`<scheme-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
     - [`'self'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)

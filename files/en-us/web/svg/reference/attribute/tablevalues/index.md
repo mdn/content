@@ -35,9 +35,9 @@ svg {
       y1="0"
       x2="200"
       y2="0">
-      <stop offset="0" stop-color="#ff0000" />
-      <stop offset="0.5" stop-color="#00ff00" />
-      <stop offset="1" stop-color="#0000ff" />
+      <stop offset="0" stop-color="red" />
+      <stop offset="0.5" stop-color="lime" />
+      <stop offset="1" stop-color="blue" />
     </linearGradient>
   </defs>
 
@@ -62,14 +62,14 @@ svg {
     width="200"
     height="200"
     fill="url(#gradient)"
-    style="filter: url(#componentTransfer1);" />
+    filter="url(#componentTransfer1)" />
   <rect
-    x="0"
+    x="220"
     y="0"
     width="200"
     height="200"
     fill="url(#gradient)"
-    style="filter: url(#componentTransfer2); transform: translateX(220px);" />
+    filter="url(#componentTransfer2)" />
 </svg>
 ```
 
@@ -101,7 +101,6 @@ svg {
 </table>
 
 - `<list-of-numbers>`
-
   - : This value holds a comma- and/or space-separated list of {{cssxref("number")}}s, which define a lookup table for the color component transfer function. Each number can be between `0` and `1`.
 
     An empty list results in an identity transfer function.

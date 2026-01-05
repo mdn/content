@@ -1,11 +1,11 @@
 ---
 title: Math.log10()
+short-title: log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.log10
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.log10()`** static method returns the base 10 logarithm of a number. That is
 

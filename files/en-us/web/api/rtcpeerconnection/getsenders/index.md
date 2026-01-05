@@ -17,6 +17,10 @@ A sender object provides methods and properties for examining and controlling th
 getSenders()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An array of {{domxref("RTCRtpSender")}} objects, one for each track on the connection.

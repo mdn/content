@@ -3,9 +3,8 @@ title: devtools.panels.ExtensionPanel
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel
 page-type: webextension-api-type
 browser-compat: webextensions.api.devtools.panels.ExtensionPanel
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An `ExtensionPanel` represents a panel added to the devtools. It's the resolution of the [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) returned by [`browser.devtools.panels.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create).
 
@@ -15,10 +14,6 @@ Values of this type are objects. The define two events, `onShown` and `onHidden`
 
 - `onShown` is emitted when the panel is shown in the devtools (for example, because the user clicked on the panel's tab in the devtools window).
 - `onHidden` is emitted when the panel is hidden (for example, because the user switched to a different tab in the devtools window).
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -48,6 +43,10 @@ browser.devtools.panels
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.

@@ -3,12 +3,10 @@ title: "NavigateEvent: NavigateEvent() constructor"
 short-title: NavigateEvent()
 slug: Web/API/NavigateEvent/NavigateEvent
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.NavigateEvent.NavigateEvent
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`NavigateEvent()`** constructor creates a new {{domxref("NavigateEvent")}} object instance.
 
@@ -93,4 +91,3 @@ navigation.addEventListener("navigate", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

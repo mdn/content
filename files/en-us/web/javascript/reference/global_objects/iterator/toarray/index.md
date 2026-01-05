@@ -1,11 +1,11 @@
 ---
 title: Iterator.prototype.toArray()
+short-title: toArray()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/toArray
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.toArray
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toArray()`** method of {{jsxref("Iterator")}} instances creates a new {{jsxref("Array")}} instance populated with the elements yielded from the iterator.
 

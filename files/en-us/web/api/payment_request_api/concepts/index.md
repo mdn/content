@@ -7,7 +7,7 @@ spec-urls:
   - https://w3c.github.io/payment-method-id/
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}
+{{DefaultAPISidebar("Payment Request API")}}
 
 The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) makes it easy to handle payments in a website or app. In this article, we'll take a look at how the API operates and what each of its components does.
 
@@ -34,10 +34,9 @@ Payment handlers are identified by **payment method identifiers**, which are str
 
 ### Standardized payment method identifiers
 
-Standardized payment method identifiers are those listed in the [payment method registry](https://www.w3.org/TR/payment-method-id/#registry).
+Standardized payment method identifiers are those listed in the [payment method registry](https://w3c.github.io/payment-method-id/#registry).
 
 - `secure-payment-confirmation`
-
   - : Identifies the [Secure Payment Confirmation](https://w3c.github.io/secure-payment-confirmation/) method. The payment request data for this method is defined by the {{domxref("SecurePaymentConfirmationRequest")}} dictionary. For more information see [Using Secure Payment Confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation).
 
 - `basic-card`

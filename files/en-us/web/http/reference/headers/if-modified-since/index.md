@@ -1,11 +1,11 @@
 ---
-title: If-Modified-Since
+title: If-Modified-Since header
+short-title: If-Modified-Since
 slug: Web/HTTP/Reference/Headers/If-Modified-Since
 page-type: http-header
 browser-compat: http.headers.If-Modified-Since
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`If-Modified-Since`** {{Glossary("request header")}} makes a request [conditional](/en-US/docs/Web/HTTP/Guides/Conditional_requests).
 The server sends back the requested resource, with a {{HTTPStatus("200")}} status, only if it has been modified after the date in the `If-Modified-Since` header.

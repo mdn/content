@@ -47,7 +47,7 @@ async function init() {
   console.log(adapterInfo.vendor);
   console.log(adapterInfo.architecture);
 
-  // ...
+  // …
 }
 ```
 

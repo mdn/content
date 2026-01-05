@@ -22,10 +22,8 @@ forEach(callback, thisArg)
 ### Parameters
 
 - `callback`
-
   - : A function to execute on each element of `someNodeList`. It
     accepts 3 parameters:
-
     - `currentValue`
       - : The current element being processed in `someNodeList`.
     - `currentIndex` {{Optional_inline}}

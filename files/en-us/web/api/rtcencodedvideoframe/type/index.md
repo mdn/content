@@ -30,7 +30,7 @@ The implementation of a `transform()` function in a [WebRTC Encoded Transform](/
 
 ```js
 const transformer = new TransformStream({
-  transform: async (encodedFrame, controller) => {
+  async transform(encodedFrame, controller) {
     if (encodedFrame.type === "key") {
       // Apply key frame transformation
     } else if (encodedFrame.type === "delta") {

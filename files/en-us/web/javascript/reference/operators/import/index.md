@@ -3,9 +3,8 @@ title: import()
 slug: Web/JavaScript/Reference/Operators/import
 page-type: javascript-operator
 browser-compat: javascript.operators.import
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`import()`** syntax, commonly called _dynamic import_, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
 
@@ -42,7 +41,8 @@ Returns a promise which:
   - In a web-based module system (browsers, for example), if the network request fails (not connected to the Internet, CORS issue, etc.) or an HTTP error occurs (404, 500, etc.).
 - If evaluation of the referenced module throws, rejects with the thrown error.
 
-> **Note:** `import()` never synchronously throws an error.
+> [!NOTE]
+> `import()` never synchronously throws an error.
 
 ## Description
 
@@ -111,10 +111,18 @@ import("/my-module.js").then((mod2) => {
 This aggressive caching ensures that a piece of JavaScript code is never executed more than once, even if it is imported multiple times. Future imports don't even result in HTTP requests or disk access. If you do need to re-import and re-evaluate a module without restarting the entire JavaScript environment, one possible trick is to use a unique query parameter in the module specifier. This works in non-browser runtimes that support URL specifiers too.
 
 ```js
-import("/my-module.js?t=" + Date.now());
+import(`/my-module.js?t=${Date.now()}`);
 ```
 
 Note that this can lead to memory leaks in a long-running application, because the engine cannot safely garbage-collect any module namespace objects. Currently, there is no way to manually clear the cache of module namespace objects.
+
+You can also use the [Fetch API](/en-US/docs/Web/API/Fetch_API) to fetch module source code as text, and then evaluate the module manually depending on the module type:
+
+- For JavaScript modules, you can dynamically import the source code as a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static) in browsers, or use [`vm.Module`](https://nodejs.org/docs/latest/api/vm.html#class-vmmodule) to evaluate it in Node.js.
+- For JSON modules, you can parse the source code using {{jsxref("JSON.parse()")}}.
+- For CSS modules, you can create a new {{domxref("CSSStyleSheet")}} object and use its [`replace()`](/en-US/docs/Web/API/CSSStyleSheet/replace) method to populate it with the source code.
+
+However, this is semantically not the same as dynamic import, because user-agent settings like [fetch destination](/en-US/docs/Web/API/Request/destination), [CSP](/en-US/docs/Web/HTTP/Guides/CSP), or [module resolution](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve) may not be applied correctly.
 
 Module namespace object caching only applies to modules that are loaded and linked _successfully_. A module is imported in three steps: loading (fetching the module), linking (mostly, parsing the module), and evaluating (executing the parsed code). Only evaluation failures are cached; if a module fails to load or link, the next import may try to load and link the module again. The browser may or may not cache the result of the fetch operation, but it should follow typical HTTP semantics, so handling such network failures should not be different from handling {{domxref("Window/fetch", "fetch()")}} failures.
 
@@ -198,6 +206,16 @@ Promise.all(
     (_, index) => import(`/modules/module-${index}.js`),
   ),
 ).then((modules) => modules.forEach((module) => module.load()));
+```
+
+### Using import attributes with dynamic import
+
+[Import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) are accepted as the second parameter of the `import()` syntax.
+
+```js
+const data = await import("./data.json", {
+  with: { type: "json" },
+});
 ```
 
 ## Specifications

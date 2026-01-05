@@ -1,14 +1,16 @@
 ---
-title: Sec-GPC
+title: Sec-GPC header
+short-title: Sec-GPC
 slug: Web/HTTP/Reference/Headers/Sec-GPC
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-GPC
-spec-urls: https://privacycg.github.io/gpc-spec/
+spec-urls: https://w3c.github.io/gpc/#the-sec-gpc-header-field-for-http-requests
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`Sec-GPC`** {{Glossary("request header")}} is part of the [Global Privacy Control](https://globalprivacycontrol.org/) (GPC) mechanism to indicate whether the user consents to a website or service selling or sharing their personal information with third parties.
 
@@ -63,5 +65,4 @@ navigator.globalPrivacyControl; // "false" or "true"
 - {{HTTPHeader("DNT")}} header
 - {{HTTPHeader("Tk")}} header
 - [globalprivacycontrol.org](https://globalprivacycontrol.org/)
-- [Global Privacy Control Spec](https://privacycg.github.io/gpc-spec/)
 - [Do Not Track on Wikipedia](https://en.wikipedia.org/wiki/Do_Not_Track)

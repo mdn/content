@@ -1,11 +1,11 @@
 ---
 title: SharedArrayBuffer.prototype.grow()
+short-title: grow()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/grow
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.SharedArrayBuffer.grow
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`grow()`** method of {{jsxref("SharedArrayBuffer")}} instances grows the `SharedArrayBuffer` to the specified size, in bytes.
 

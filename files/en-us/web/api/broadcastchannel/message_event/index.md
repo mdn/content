@@ -16,6 +16,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js-nolint
 addEventListener("message", (event) => { })
+
 onmessage = (event) => { }
 ```
 

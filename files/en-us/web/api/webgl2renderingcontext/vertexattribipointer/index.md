@@ -55,18 +55,18 @@ interpreted as integers in the shader.
 ### Linear Blend Skinning
 
 ```js
-//Describe the layout of the buffer:
-//1. position
+// Describe the layout of the buffer:
+// 1. position
 gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(0);
-//2. bone weights, normalized to [0, 1]
+// 2. bone weights, normalized to [0, 1]
 gl.vertexAttribPointer(1, 4, gl.UNSIGNED_BYTE, true, 20, 12);
 gl.enableVertexAttribArray(1);
-//3. bone indices, interpreted as integer
+// 3. bone indices, interpreted as integer
 gl.vertexAttribIPointer(2, 4, gl.UNSIGNED_BYTE, 20, 16);
 gl.enableVertexAttribArray(2);
 
-//Connect to attributes from the vertex shader
+// Connect to attributes from the vertex shader
 gl.bindAttribLocation(shaderProgram, 0, "position");
 gl.bindAttribLocation(shaderProgram, 1, "boneWeights");
 gl.bindAttribLocation(shaderProgram, 2, "boneIndices");

@@ -2,9 +2,8 @@
 title: "Content Security Policy: The page's settings blocked the loading of a resource: xyz"
 slug: Web/HTTP/Guides/CSP/Errors/CSPViolation
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The warning "Content Security Policy: The page's settings blocked the loading of a resource: xyz" occurs when the page's CSP configuration given by `xyz` prevents the resource from being loaded into the document's context.
 

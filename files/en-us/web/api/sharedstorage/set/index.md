@@ -4,11 +4,11 @@ short-title: set()
 slug: Web/API/SharedStorage/set
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SharedStorage.set
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`set()`** method of the {{domxref("SharedStorage")}} interface either stores a new key-value pair in the current origin's shared storage or updates an existing one.
 
@@ -52,7 +52,7 @@ window.sharedStorage
   .set("ab-testing-group", "0", {
     ignoreIfPresent: true,
   })
-  .then(console.log("Set operation completed"));
+  .then(() => console.log("Set operation completed"));
 ```
 
 ## Specifications

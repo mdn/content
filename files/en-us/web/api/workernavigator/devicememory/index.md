@@ -40,4 +40,4 @@ console.log(`This device has at least ${memory}GiB of RAM.`);
 
 ## See also
 
-- {{HTTPHeader("Device-Memory")}} HTTP header
+- {{HTTPHeader("Sec-CH-Device-Memory")}} HTTP header

@@ -3,9 +3,8 @@ title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
 page-type: javascript-language-feature
 browser-compat: javascript.operators.new_target
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`new.target`** meta-property lets you detect whether a function or constructor was called using the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. In constructors and functions invoked using the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator, `new.target` returns a reference to the constructor or function that `new` was called upon. In normal function calls, `new.target` is {{jsxref("undefined")}}.
 

@@ -3,9 +3,8 @@ title: 500 Internal Server Error
 slug: Web/HTTP/Reference/Status/500
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.500
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`500 Internal Server Error`** [server error response](/en-US/docs/Web/HTTP/Reference/Status#server_error_responses) status code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.
 This error is a generic "catch-all" response to server issues, indicating that the server cannot find a more appropriate [5XX error](/en-US/docs/Web/HTTP/Reference/Status#server_error_responses) to respond with.

@@ -19,6 +19,10 @@ The **`keys()`** method of the {{domxref("HighlightRegistry")}} interface return
 keys()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new iterator object containing the names of each `Highlight` object in the registry, in insertion order.

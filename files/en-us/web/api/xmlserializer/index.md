@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.XMLSerializer
 ---
 
-{{APIRef("XMLSerializer")}}
+{{APIRef("HTML DOM")}}
 
 The `XMLSerializer` interface provides the {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method to construct an XML string representing a {{Glossary("DOM")}} tree.
 
@@ -52,10 +52,10 @@ Because `insertAdjacentHTML()` accepts a string and not a `Node` as its second p
 ```js
 const inp = document.createElement("input");
 const XMLS = new XMLSerializer();
-const inp_xmls = XMLS.serializeToString(inp); // First convert DOM node into a string
+const inpSerialized = XMLS.serializeToString(inp); // First convert DOM node into a string
 
 // Insert the newly created node into the document's body
-document.body.insertAdjacentHTML("afterbegin", inp_xmls);
+document.body.insertAdjacentHTML("afterbegin", inpSerialized);
 ```
 
 The code creates a new {{HTMLElement("input")}} element by calling {{domxref("Document.createElement()")}}, then serializes it into XML using {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}.

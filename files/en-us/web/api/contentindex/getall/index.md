@@ -30,9 +30,7 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
 `contentDescription` items.
 
 - `contentDescription`
-
   - : Each item returned is an {{jsxref('Object')}} containing the following data:
-
     - `id`
       - : A unique {{jsxref('String')}} identifier.
     - `title`
@@ -45,10 +43,8 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
       - : A {{jsxref('String')}} containing the URL of the corresponding HTML document.
         Needs to be under the scope of the current [service worker](/en-US/docs/Web/API/ServiceWorker).
     - `category` {{Optional_Inline}}
-
       - : A {{jsxref('String')}} defining the category of content.
         Can be:
-
         - `''` An empty {{jsxref('String')}}, this is the default.
         - `homepage`
         - `article`
@@ -56,9 +52,7 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
         - `audio`
 
     - `icons` {{Optional_Inline}}
-
       - : An {{jsxref('Array')}} of image resources, defined as an {{jsxref('Object')}} with the following data:
-
         - `src`
           - : A URL {{jsxref('String')}} of the source image.
         - `sizes` {{Optional_Inline}}

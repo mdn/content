@@ -1,17 +1,19 @@
 ---
-title: Early-Data
+title: Early-Data header
+short-title: Early-Data
 slug: Web/HTTP/Reference/Headers/Early-Data
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Early-Data
+sidebar: http
 ---
 
-{{SeeCompatTable}}{{HTTPSidebar}}
+{{SeeCompatTable}}
 
-The HTTP **`Early-Data`** {{Glossary("request header")}} is set by an intermediary to indicate that the request has been conveyed in [TLS early data](/en-US/docs/Web/Security/Transport_Layer_Security#tls_1.3), and also indicates that the intermediary understands the {{HTTPStatus("425", "425 Too Early")}} status code.
+The HTTP **`Early-Data`** {{Glossary("request header")}} is set by an intermediary to indicate that the request has been conveyed in [TLS early data](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security#tls_1.3), and also indicates that the intermediary understands the {{HTTPStatus("425", "425 Too Early")}} status code.
 
-If a client has interacted with a server recently, early data (also known as zero round-trip time [(0-RTT) data](/en-US/docs/Web/Security/Transport_Layer_Security#tls_1.3)) allows the client to send data to a server in the first round trip of a connection, without waiting for the TLS [handshake](/en-US/docs/Glossary/TCP_handshake) to complete.
+If a client has interacted with a server recently, early data (also known as zero round-trip time [(0-RTT) data](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security#tls_1.3)) allows the client to send data to a server in the first round trip of a connection, without waiting for the TLS [handshake](/en-US/docs/Glossary/TCP_handshake) to complete.
 This reduces latency for repeat connections between a client and server, but has security implications, as early data is susceptible to replay attacks.
 
 The `Early-Data` header is **not** set by the originator of the request (i.e., a browser).

@@ -1,5 +1,6 @@
 ---
 title: "ARIA: columnheader role"
+short-title: columnheader
 slug: Web/Accessibility/ARIA/Reference/Roles/columnheader_role
 page-type: aria-role
 spec-urls:

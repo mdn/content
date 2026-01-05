@@ -38,7 +38,7 @@ For example:
 
 ```js
 mainElem.addEventListener("scrollsnapchange", (event) => {
-  // ...
+  // …
 
   // Log a SnapEvent object instance to the console
   console.log(event);
@@ -57,5 +57,5 @@ mainElem.addEventListener("scrollsnapchange", (event) => {
 
 - {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event
 - {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event
-- [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [CSS scroll snap module](/en-US/docs/Web/CSS/Guides/Scroll_snap)
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) on developer.chrome.com (2024)

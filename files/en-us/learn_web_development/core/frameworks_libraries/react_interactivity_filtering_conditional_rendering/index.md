@@ -234,6 +234,8 @@ Bind this function to the form's `submit` event by adding the following `onSubmi
 
 ```jsx
 <form className="stack-small" onSubmit={handleSubmit}>
+  {/* … */}
+</form>
 ```
 
 You should now be able to edit a task in your browser. At this point, your `Todo.jsx` file should look like this:
@@ -386,15 +388,17 @@ const filterList = FILTER_NAMES.map((name) => (
 Now we'll replace the three repeated `<FilterButton />`s in `App.jsx` with this `filterList`. Replace the following:
 
 ```jsx
-<FilterButton />
-<FilterButton />
-<FilterButton />
+<div className="filters btn-group stack-exception">
+  <FilterButton />
+  <FilterButton />
+  <FilterButton />
+</div>
 ```
 
 With this:
 
-```jsx-nolint
-{filterList}
+```jsx
+<div className="filters btn-group stack-exception">{filterList}</div>
 ```
 
 This won't work yet. We've got a bit more work to do first.

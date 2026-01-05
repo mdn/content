@@ -3,9 +3,8 @@ title: "<code>: The Inline Code element"
 slug: Web/HTML/Reference/Elements/code
 page-type: html-element
 browser-compat: html.elements.code
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<code>`** [HTML](/en-US/docs/Web/HTML) element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. By default, the content text is displayed using the {{Glossary("user agent", "user agent's")}} default monospace font.
 
@@ -20,9 +19,9 @@ The **`<code>`** [HTML](/en-US/docs/Web/HTML) element displays its contents styl
 
 ```css interactive-example
 code {
-  background-color: #eee;
+  background-color: #eeeeee;
   border-radius: 3px;
-  font-family: courier, monospace;
+  font-family: "Courier New", monospace;
   padding: 0 3px;
 }
 ```

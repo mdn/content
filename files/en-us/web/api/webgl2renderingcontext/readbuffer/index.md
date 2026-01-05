@@ -24,9 +24,7 @@ readBuffer(source)
 ### Parameters
 
 - `source`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying a color buffer. Possible values:
-
     - `gl.BACK`
       - : Reads from the back color buffer.
     - `gl.NONE`

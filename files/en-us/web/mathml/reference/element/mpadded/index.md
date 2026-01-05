@@ -41,18 +41,18 @@ For the `depth`, `height`, `lspace`, `voffset` and `width` attributes, some brow
 
 ```html
 <math display="block">
-  <mpadded
-    width="400px"
-    height="5em"
-    depth="4em"
-    lspace="300px"
-    voffset="-2em"
-    style="background: lightblue">
+  <mpadded width="400px" height="5em" depth="4em" lspace="300px" voffset="-2em">
     <mi>x</mi>
     <mo>+</mo>
     <mi>y</mi>
   </mpadded>
 </math>
+```
+
+```css
+mpadded {
+  background: lightblue;
+}
 ```
 
 {{ EmbedLiveSample('dimensions_and_offsets_example', 700, 200, "", "") }}
@@ -62,25 +62,40 @@ For the `depth`, `height`, `lspace`, `voffset` and `width` attributes, some brow
 ```html
 <math display="block">
   <!-- increment by a length -->
-  <mpadded width="+20px" style="background: lightblue">
+  <mpadded width="+20px">
     <mtext>+20px</mtext>
   </mpadded>
 
   <!-- set to a pseudo-unit -->
-  <mpadded width="2width" style="background: lightgreen">
+  <mpadded width="2width">
     <mtext>2width</mtext>
   </mpadded>
 
   <!-- increment by a percent of a pseudo-unit -->
-  <mpadded width="+400%height" style="background: lightyellow">
+  <mpadded width="+400%height">
     <mtext>+400%height</mtext>
   </mpadded>
 
   <!-- decrement to a multiple of a namedspace -->
-  <mpadded width="-1thickmathspace" style="background: pink">
-    <mtext>-.5thickmathspace</mtext>
+  <mpadded width="-1thickmathspace">
+    <mtext>-1thickmathspace</mtext>
   </mpadded>
 </math>
+```
+
+```css
+mpadded:nth-child(1) {
+  background: lightblue;
+}
+mpadded:nth-child(2) {
+  background: lightgreen;
+}
+mpadded:nth-child(3) {
+  background: lightyellow;
+}
+mpadded:nth-child(4) {
+  background: pink;
+}
 ```
 
 {{ EmbedLiveSample('legacy_syntax_example', 700, 200, "", "") }}

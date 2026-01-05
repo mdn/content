@@ -3,9 +3,8 @@ title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
 page-type: javascript-statement
 browser-compat: javascript.statements.if_else
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`if...else`** statement executes a statement if a specified condition is {{Glossary("truthy")}}. If the condition is {{Glossary("falsy")}}, another statement in the optional `else` clause will be executed.
 

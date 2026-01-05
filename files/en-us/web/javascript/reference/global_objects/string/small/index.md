@@ -1,13 +1,15 @@
 ---
 title: String.prototype.small()
+short-title: small()
 slug: Web/JavaScript/Reference/Global_Objects/String/small
 page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.String.small
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`small()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("small")}} element (`<small>str</small>`), which causes this string to be displayed in a small font.
 

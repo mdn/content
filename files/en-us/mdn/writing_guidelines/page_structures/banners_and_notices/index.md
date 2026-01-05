@@ -15,7 +15,7 @@ This article describes the more important banners and how they are added.
 
 ## Where are banner macros added
 
-Banners are added using macros that are usually inserted below the page metadata, alongside the page sidebar macro. For example, in the block below, the `\{{SecureContext_Header}}` macro has been used to indicate that the {{domxref("AudioDecoder")}} interface is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts), the `\{{AvailableInWorkers}}` macro has been used to indicate that the {{domxref("AudioDecoder")}} interface is only available in [window context](/en-US/docs/Web/API/Window) and [dedicated worker context](/en-US/docs/Web/API/DedicatedWorkerGlobalScope), and `\{{SeeCompatTable}}` has been added to indicate that the interface is experimental.
+Banners are added using macros that are usually inserted below the page metadata, alongside the page sidebar macro. For example, in the block below, the `\{{SecureContext_Header}}` macro has been used to indicate that the {{domxref("AudioDecoder")}} interface is only available in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts), the `\{{AvailableInWorkers}}` macro has been used to indicate that the {{domxref("AudioDecoder")}} interface is only available in [window context](/en-US/docs/Web/API/Window) and [dedicated worker context](/en-US/docs/Web/API/DedicatedWorkerGlobalScope), and `\{{SeeCompatTable}}` has been added to indicate that the interface is experimental.
 
 ```md
 ---
@@ -34,8 +34,8 @@ browser-compat: api.AudioDecoder
 
 You need to add the following macros manually:
 
-- `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-- `\{{AvailableInWorkers}}` — this generates a **Available In Workers** note that indicates that the technology is available in [worker context](/en-US/docs/Web/API/Web_Workers_API).
+- `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+- `\{{AvailableInWorkers}}` — this generates an **Available In Workers** note that indicates that the technology is available in [worker context](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Banners that are added automatically
 

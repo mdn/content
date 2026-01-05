@@ -2,12 +2,10 @@
 title: GPUOutOfMemoryError
 slug: Web/API/GPUOutOfMemoryError
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUOutOfMemoryError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUOutOfMemoryError`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} describes an out-of-memory (oom) error indicating that there was not enough free memory to complete the requested operation.
 
@@ -19,7 +17,7 @@ Out-of-memory errors should be relatively rare in a well-behaved app but are les
 
 ## Constructor
 
-- {{domxref("GPUOutOfMemoryError.GPUOutOfMemoryError", "GPUOutOfMemoryError()")}} {{Experimental_Inline}}
+- {{domxref("GPUOutOfMemoryError.GPUOutOfMemoryError", "GPUOutOfMemoryError()")}}
   - : Creates a new `GPUOutOfMemoryError` object instance.
 
 ## Instance properties

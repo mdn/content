@@ -3,9 +3,8 @@ title: browserSettings.closeTabsByDoubleClick
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/closeTabsByDoubleClick
 page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.closeTabsByDoubleClick
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to enable or disable the user's ability to close a tab using double-click.
 

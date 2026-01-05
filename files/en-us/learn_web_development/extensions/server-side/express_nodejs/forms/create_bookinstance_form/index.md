@@ -28,14 +28,14 @@ Find the exported `bookinstance_create_get()` controller method and replace it w
 
 ```js
 // Display BookInstance create form on GET.
-exports.bookinstance_create_get = asyncHandler(async (req, res, next) => {
+exports.bookinstance_create_get = async (req, res, next) => {
   const allBooks = await Book.find({}, "title").sort({ title: 1 }).exec();
 
   res.render("bookinstance_form", {
     title: "Create BookInstance",
     book_list: allBooks,
   });
-});
+};
 ```
 
 The controller gets a sorted list of all books (`allBooks`) and passes it via `book_list` to the view **`bookinstance_form.pug`** (along with a `title`).
@@ -62,7 +62,7 @@ exports.bookinstance_create_post = [
     .toDate(),
 
   // Process request after validation and sanitization.
-  asyncHandler(async (req, res, next) => {
+  async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -87,12 +87,12 @@ exports.bookinstance_create_post = [
         bookinstance: bookInstance,
       });
       return;
-    } else {
-      // Data from form is valid
-      await bookInstance.save();
-      res.redirect(bookInstance.url);
     }
-  }),
+
+    // Data from form is valid
+    await bookInstance.save();
+    res.redirect(bookInstance.url);
+  },
 ];
 ```
 

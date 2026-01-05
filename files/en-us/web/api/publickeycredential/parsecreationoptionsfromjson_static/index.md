@@ -21,7 +21,6 @@ PublicKeyCredential.parseCreationOptionsFromJSON(options)
 ### Parameters
 
 - `options`
-
   - : An object with the same structure as a {{domxref("PublicKeyCredentialCreationOptions")}}, but with [base64url](/en-US/docs/Glossary/Base64)-encoded strings used in place of buffer properties.
 
 ### Return value

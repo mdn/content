@@ -56,9 +56,9 @@ People with disabilities are just as diverse as people without disabilities, and
 
 People with visual impairments include people with blindness, low-level vision, and color blindness. Many people with visual impairments use screen magnifiers that are either physical magnifiers or software zoom capabilities. Most browsers and operating systems these days have zoom capabilities. Some users will rely on screen readers, which is software that reads digital text aloud. Some screen reader examples include:
 
-- Paid commercial products, like [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) and [Dolphin Screen Reader](https://yourdolphin.com/ScreenReader) (Windows).
+- Paid commercial products, like [JAWS](https://vispero.com/jaws-screen-reader-software/) (Windows) and [Dolphin Screen Reader](https://yourdolphin.com/ScreenReader) (Windows).
 - Free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- Software built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (on ChromeOS), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- Software built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/features/?vision) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (on ChromeOS), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and play around with it, to get an idea of how it works. See our [screen reader tutorials](/en-US/docs/Learn_web_development/Core/Accessibility/Tooling#screen_readers) for more details on using them. The below video also provides a brief example of what the experience is like.
 
@@ -144,7 +144,7 @@ To summarize:
 There are numerous checklists and sets of guidelines available for basing accessibility tests on, which might seem overwhelming at first glance. Our advice is to familiarize yourself with the basic areas in which you need to take care, as well as understanding the high-level structures of the guidelines that are most relevant to you.
 
 - For a start, the W3C has published a large and very detailed document that includes very precise, technology-agnostic criteria for accessibility conformance. These are called the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG), and they are not a short read by any means. The criteria are split up into four main categories, which specify how implementations can be made perceivable, operable, understandable, and robust. The best place to get a light introduction and start learning is [WCAG at a Glance](https://www.w3.org/WAI/standards-guidelines/wcag/glance/). There is no need to learn all of the WCAG criteria — be aware of the major areas of concern, and use a variety of techniques and tools to highlight any areas that don't conform to the WCAG criteria (see below for more).
-- Your country may also have specific legislation governing the need for websites serving their population to be accessible — for example [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf) in the EU, [Section 508 of the Rehabilitation Act](https://www.section508.gov/training/) in the US, [Federal Ordinance on Barrier-Free Information Technology](https://www.aktion-mensch.de/inklusion/barrierefreiheit/barrierefreie-website) in Germany, the [Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/introduction/made) in the UK, [Accessibilità](https://www.agid.gov.it/it/ambiti-intervento/accessibilita-usabilita) in Italy, the [Disability Discrimination Act](https://humanrights.gov.au/our-work/disability-rights/publications/guidelines-equal-access-digital-goods-and-services) in Australia, etc. The W3C keeps a list of [Web Accessibility Laws & Policies](https://www.w3.org/WAI/policies/) by country.
+- Your country may also have specific legislation governing the need for websites serving their population to be accessible — for example [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf) in the EU, [Section 508 of the Rehabilitation Act](https://www.section508.gov/training/) in the US, [Federal Ordinance on Barrier-Free Information Technology](https://www.aktion-mensch.de/inklusion/barrierefreiheit/barrierefreie-website) in Germany, the [Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/introduction/made) in the UK, [Accessibilità](https://www.agid.gov.it/it/ambiti-intervento/accessibilita-usabilita) in Italy, the [Disability Discrimination Act](https://humanrights.gov.au/resource-hub/resources-for-organisations-businesses/disability-resources-employers/guidelines-equal-access-digital-goods-and-services) in Australia, etc. The W3C keeps a list of [Web Accessibility Laws & Policies](https://www.w3.org/WAI/policies/) by country.
 
 So while the WCAG is a set of guidelines, your country will probably have laws governing web accessibility, or at least the accessibility of services available to the public (which could include websites, television, physical spaces, etc.) It is a good idea to find out what your laws are. If you make no effort to check that your content is accessible, you could be legally liable if people complain.
 
@@ -162,7 +162,7 @@ Different operating systems have different accessibility APIs available:
 - Android: Accessibility framework
 - iOS: UIAccessibility
 
-Where the native semantic information provided by the HTML elements in your web apps falls down, you can supplement it with features from the [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/), which add semantic information to the accessibility tree to improve accessibility. You can learn a lot more about WAI-ARIA in our [WAI-ARIA basics](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) article.
+Where the native semantic information provided by the HTML elements in your web apps falls down, you can supplement it with features from the [WAI-ARIA specification](https://w3c.github.io/aria/), which add semantic information to the accessibility tree to improve accessibility. You can learn a lot more about WAI-ARIA in our [WAI-ARIA basics](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) article.
 
 ## Summary
 
@@ -171,7 +171,6 @@ This article should have given you a useful high-level overview of accessibility
 ## See also
 
 - [WCAG](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   - [Perceivable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   - [Operable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   - [Understandable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)

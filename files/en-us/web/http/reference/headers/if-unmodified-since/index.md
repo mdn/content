@@ -1,11 +1,11 @@
 ---
-title: If-Unmodified-Since
+title: If-Unmodified-Since header
+short-title: If-Unmodified-Since
 slug: Web/HTTP/Reference/Headers/If-Unmodified-Since
 page-type: http-header
 browser-compat: http.headers.If-Unmodified-Since
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`If-Unmodified-Since`** {{Glossary("request header")}} makes the request for the resource [conditional](/en-US/docs/Web/HTTP/Guides/Conditional_requests).
 The server will send the requested resource (or accept it in the case of a {{HTTPMethod("POST")}} or another non-{{Glossary("Safe/HTTP", "safe")}} method) only if the resource on the server has not been modified after the date in the request header.

@@ -6,9 +6,8 @@ page-type: html-attribute
 browser-compat:
   - html.elements.input.placeholder
   - html.elements.textarea.placeholder
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`placeholder`** attribute defines the text displayed in a form control when the control has no value. The placeholder text should provide a brief hint to the user as to the expected type of data that should be entered into the control.
 
@@ -54,5 +53,5 @@ Placeholders can not be relied upon as a replacement for a label even for those 
 ## See also
 
 - HTML [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title)
-- CSS [`:placeholder-shown`](/en-US/docs/Web/CSS/:placeholder-shown) pseudo-class selector
-- CSS [`::placeholder`](/en-US/docs/Web/CSS/::placeholder) pseudo-element selector
+- CSS {{cssxref(":placeholder-shown")}} pseudo-class selector
+- CSS {{cssxref("::placeholder")}} pseudo-element selector

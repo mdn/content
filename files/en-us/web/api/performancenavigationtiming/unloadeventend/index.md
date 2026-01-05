@@ -8,13 +8,13 @@ browser-compat: api.PerformanceNavigationTiming.unloadEventEnd
 
 {{APIRef("Performance API")}}
 
-The **`unloadEventEnd`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the current document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler completes.
+The **`unloadEventEnd`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the previous document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler completes.
 
 ## Value
 
 The `unloadEventEnd` property can have the following values:
 
-- A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the current document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler completes.
+- A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the previous document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler completes.
 - `0` if there is no previous document.
 - `0` if the previous page was on another origin.
 

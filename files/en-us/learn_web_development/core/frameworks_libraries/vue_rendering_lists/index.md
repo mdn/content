@@ -88,13 +88,13 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
    import { nanoid } from "nanoid";
    ```
 
-2. Next, add an `id` field to each element in your `ToDoItems` array, and assign each of them a value of `"todo-" + nanoid()`.
+2. Next, add an `id` field to each element in your `ToDoItems` array, and assign each of them a value of `` `todo-${nanoid()}` ``.
 
    The `<script>` element in `App.vue` should now have the following contents:
 
    ```js
-   import ToDoItem from "./components/ToDoItem.vue";
    import { nanoid } from "nanoid";
+   import ToDoItem from "./components/ToDoItem.vue";
 
    export default {
      name: "app",
@@ -104,15 +104,15 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
      data() {
        return {
          ToDoItems: [
-           { id: "todo-" + nanoid(), label: "Learn Vue", done: false },
+           { id: `todo-${nanoid()}`, label: "Learn Vue", done: false },
            {
-             id: "todo-" + nanoid(),
+             id: `todo-${nanoid()}`,
              label: "Create a Vue project with the CLI",
              done: true,
            },
-           { id: "todo-" + nanoid(), label: "Have fun", done: true },
+           { id: `todo-${nanoid()}`, label: "Have fun", done: true },
            {
-             id: "todo-" + nanoid(),
+             id: `todo-${nanoid()}`,
              label: "Create a to-do list",
              done: false,
            },
@@ -124,7 +124,7 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
 
 3. Now, add the `v-for` directive and `key` attribute to the `<li>` element in your `App.vue` template, like so:
 
-   ```html
+   ```vue
    <ul>
      <li v-for="item in ToDoItems" :key="item.id">
        <to-do-item label="My ToDo Item" :done="true"></to-do-item>
@@ -136,7 +136,7 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
 
 4. Update the `label="My ToDo Item"` attribute to `:label="item.label"`, and the `:done="true"` attribute to `:done="item.done"`, as seen in context below:
 
-   ```html
+   ```vue
    <ul>
      <li v-for="item in ToDoItems" :key="item.id">
        <to-do-item :label="item.label" :done="item.done"></to-do-item>
@@ -176,7 +176,7 @@ export default {
 
 Now, over in your `App.vue` component, pass `item.id` as a prop to the `ToDoItem` component. Your `App.vue` template should now look like this:
 
-```html
+```vue
 <template>
   <div id="app">
     <h1>My To-Do List</h1>

@@ -11,37 +11,6 @@ The **`<animateMotion>`** [SVG](/en-US/docs/Web/SVG) element provides a way to d
 > [!NOTE]
 > To reuse an existing path, it will be necessary to use an {{SVGElement("mpath")}} element inside the `<animateMotion>` element instead of the {{SVGAttr("path")}} attribute.
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-```
-
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <path
-    fill="none"
-    stroke="lightgrey"
-    d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
-
-  <circle r="5" fill="red">
-    <animateMotion
-      dur="10s"
-      repeatCount="indefinite"
-      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
-  </circle>
-</svg>
-```
-
-{{EmbedLiveSample('Example', 150, '100%')}}
-
 ## Usage context
 
 {{svginfo}}
@@ -72,9 +41,40 @@ svg {
 - [Animation event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
   - : Most notably: `onbegin`, `onend`, `onrepeat`
 
-## Usage notes
+## DOM Interface
 
 This element implements the {{domxref("SVGAnimateMotionElement")}} interface.
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+```
+
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    fill="none"
+    stroke="lightgrey"
+    d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+
+  <circle r="5" fill="red">
+    <animateMotion
+      dur="10s"
+      repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+</svg>
+```
+
+{{EmbedLiveSample('Example', 150, '100%')}}
 
 ## Specifications
 

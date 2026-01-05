@@ -3,9 +3,8 @@ title: Logical OR assignment (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 page-type: javascript-operator
 browser-compat: javascript.operators.logical_or_assignment
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **logical OR assignment (`||=`)** operator only evaluates the right operand and assigns to the left if the left operand is {{Glossary("falsy")}}.
 

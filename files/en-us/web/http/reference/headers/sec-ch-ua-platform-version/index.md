@@ -1,13 +1,15 @@
 ---
-title: Sec-CH-UA-Platform-Version
+title: Sec-CH-UA-Platform-Version header
+short-title: Sec-CH-UA-Platform-Version
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Platform-Version
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-UA-Platform-Version
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{SeeCompatTable}}{{SecureContext_Header}}
 
 The HTTP **`Sec-CH-UA-Platform-Version`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) which provides the version of the operating system on which the user agent is running.
 

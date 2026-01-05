@@ -1,11 +1,11 @@
 ---
-title: SourceMap
+title: SourceMap header
+short-title: SourceMap
 slug: Web/HTTP/Reference/Headers/SourceMap
 page-type: http-header
 browser-compat: http.headers.SourceMap
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`SourceMap`** {{Glossary("response header")}} provides the location of a {{Glossary("source map")}} for the resource.
 
@@ -16,10 +16,6 @@ The HTTP `SourceMap` header has precedence over a source annotation (`sourceMapp
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -44,7 +40,7 @@ The following response contains an absolute path in the `SourceMap` header.
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/javascript
+Content-Type: text/javascript
 SourceMap: /path/to/file.js.map
 
 <optimized-javascript>

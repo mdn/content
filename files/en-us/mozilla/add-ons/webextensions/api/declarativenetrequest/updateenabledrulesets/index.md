@@ -3,9 +3,8 @@ title: declarativeNetRequest.updateEnabledRulesets
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateEnabledRulesets
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.updateEnabledRulesets
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Updates the extension's set of static rulesets. The rulesets with IDs listed in `options.disableRulesetIds` are first deactivated, and then the rulesets listed in `options.enableRulesetIds` are activated. Note that the set of enabled static rulesets persists across sessions but not across extension updates, i.e., the [`declarative_net_request.rule_resources` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) determines the set of enabled static rulesets on each extension update.
 
@@ -23,7 +22,6 @@ let updatedRulesets = browser.declarativeNetRequest.updateEnabledRulesets(
 ### Parameters
 
 - `options`
-
   - : An object detailing the rulesets to activate or deactivate in the extension's static rulesets.
     - `disableRulesetIds` {{optional_inline}}
       - : An array of `string`. IDs of static Rulesets to deactivated.

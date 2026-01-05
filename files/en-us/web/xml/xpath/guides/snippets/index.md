@@ -5,26 +5,26 @@ page-type: guide
 sidebar: xmlsidebar
 ---
 
-This article provides some XPath code snippets — examples of how to implement a few **utility functions**. These functions are based on standard interfaces from the [DOM Level 3 XPath specification](https://www.w3.org/TR/DOM-Level-3-XPath/) that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
+This article provides some XPath code snippets — examples of how to implement a few **utility functions**. These functions are based on standard interfaces that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
 
-### Node-specific evaluator function
+## Node-specific evaluator function
 
 The following custom utility function can be used to evaluate XPath expressions on given XML nodes. The first argument is a DOM node or Document object, while the second is a string defining an XPath expression.
 
-#### Example: Defining a custom node-specific `evaluateXPath()` utility function
+### Example: Defining a custom node-specific `evaluateXPath()` utility function
 
 ```js
-// Evaluate an XPath expression aExpression against a given DOM node
-// or Document object (aNode), returning the results as an array
+// Evaluate an XPath expression `expr` against a given DOM node
+// or Document object `node`, returning the results as an array
 // thanks wanderingstan at morethanwarm dot mail dot com for the
 // initial work.
-function evaluateXPath(aNode, aExpr) {
+function evaluateXPath(node, expr) {
   const xpe = new XPathEvaluator();
   const nsResolver =
-    aNode.ownerDocument === null
-      ? aNode.documentElement
-      : aNode.ownerDocument.documentElement;
-  const result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
+    node.ownerDocument === null
+      ? node.documentElement
+      : node.ownerDocument.documentElement;
+  const result = xpe.evaluate(expr, node, nsResolver, 0, null);
   const found = [];
   let res;
   while ((res = result.iterateNext())) found.push(res);
@@ -34,11 +34,11 @@ function evaluateXPath(aNode, aExpr) {
 
 Note that the `documentElement` should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used). Otherwise, you have to provide your own implementation of XPathNSResolver.
 
-#### Sample usage
+### Sample usage
 
 Assume we have the following XML document (see also [Parsing and serializing XML](/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML)):
 
-##### Example: An XML document to use with the custom `evaluateXPath()` utility function
+#### Example: An XML document to use with the custom `evaluateXPath()` utility function
 
 ```xml
 <?xml version="1.0"?>
@@ -58,7 +58,7 @@ Assume we have the following XML document (see also [Parsing and serializing XML
 
 You can now "query" the document with XPath expressions. Although walking the DOM tree can achieve similar results, using XPath expressions is much quicker and more powerful. If you can rely on `id` attributes, `document.getElementById()` is still powerful, but it's not nearly as powerful as XPath. Here are some examples.
 
-##### Example: JavaScript code with the custom `evaluateXPath()` utility function
+#### Example: JavaScript code with the custom `evaluateXPath()` utility function
 
 ```js
 // display the last names of all people in the doc
@@ -77,23 +77,26 @@ results = evaluateXPath(people, "//address[contains(@street, 'south')]");
 console.log(results.length);
 ```
 
-### docEvaluateArray
+## docEvaluateArray
 
 The following is a utility function to get (ordered) XPath results into an array, regardless of whether there is a special need for namespace resolvers, etc. It avoids the more complex syntax of [`document.evaluate()`](/en-US/docs/Web/API/Document/evaluate) for cases when it is not required as well as the need to use the special iterators on [`XPathResult`](/en-US/docs/Web/API/XPathResult) (by returning an array instead).
 
-#### Example: Defining a `docEvaluateArray()` utility function
+### Example: Defining a `docEvaluateArray()` utility function
 
 ```js
 // Example usage:
 // const els = docEvaluateArray('//a');
 // console.log(els[0].nodeName); // gives 'A' in HTML document with at least one link
 
-function docEvaluateArray(expr, doc, context, resolver) {
+function docEvaluateArray(
+  expr,
+  context,
+  doc = context ? context.ownerDocument : document,
+  resolver = null,
+) {
   let i;
   const a = [];
-  doc = doc || (context ? context.ownerDocument : document);
-  resolver = resolver || null;
-  context = context || doc;
+  context ||= doc;
 
   const result = doc.evaluate(
     expr,
@@ -109,11 +112,11 @@ function docEvaluateArray(expr, doc, context, resolver) {
 }
 ```
 
-### getXPathForElement
+## getXPathForElement
 
 The following function allows one to pass an element and an XML document to find a unique string XPath expression leading back to that element.
 
-#### Example: Defining a `getXPathForElement()` utility function
+### Example: Defining a `getXPathForElement()` utility function
 
 ```js
 function getXPathForElement(el, xml) {
@@ -145,11 +148,8 @@ function getXPathForElement(el, xml) {
 }
 ```
 
-### Resources
+## See also
 
 - [XPath](/en-US/docs/Web/XML/XPath)
 - [Forum discussion on this topic](https://forums.mozillazine.org/viewtopic.php?t=229106)
-
-## See also
-
 - [Introduction to using XPath in JavaScript](/en-US/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)

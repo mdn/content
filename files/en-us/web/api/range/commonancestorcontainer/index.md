@@ -10,7 +10,7 @@ browser-compat: api.Range.commonAncestorContainer
 
 The **`Range.commonAncestorContainer`** read-only property
 returns the deepest — or furthest down the document tree — {{domxref("Node")}} that
-contains both [boundary points](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3) of the {{domxref("Range")}}. This means that if
+contains both [boundary points](https://dom.spec.whatwg.org/#introduction-to-dom-ranges) of the {{domxref("Range")}}. This means that if
 {{domxref("Range.startContainer")}} and {{domxref("Range.endContainer")}} both refer to
 the same node, this node is the **common ancestor container**.
 
@@ -72,10 +72,10 @@ The `.highlight` class created below uses a set of CSS
 
 @keyframes highlight {
   from {
-    outline: 1px solid #f00f;
+    outline: 1px solid red;
   }
   to {
-    outline: 1px solid #f000;
+    outline: 1px solid transparent;
   }
 }
 ```

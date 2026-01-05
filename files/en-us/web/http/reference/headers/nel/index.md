@@ -1,13 +1,15 @@
 ---
-title: NEL
+title: NEL header
+short-title: NEL
 slug: Web/HTTP/Reference/Headers/NEL
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.NEL
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`NEL`** {{Glossary("response header")}} is used to configure network request logging.
 
@@ -16,10 +18,6 @@ The HTTP **`NEL`** {{Glossary("response header")}} is used to configure network 
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

@@ -96,7 +96,7 @@ The `password` value doesn't add any special constraints to the entered text, bu
 
 Keep in mind this is just a user interface feature; unless you submit your form securely, it will get sent in plain text, which is bad for security — a malicious party could intercept your data and steal passwords, credit card details, or whatever else you've submitted. The best way to protect users from this is to host any pages involving forms over a secure connection (i.e., located at an `https://` address), so the data is encrypted before it is sent.
 
-Browsers recognize the security implications of sending form data over an insecure connection, and have warnings to deter users from using insecure forms. For more information on what Firefox implements, see [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
+Browsers recognize the security implications of sending form data over an insecure connection, and have warnings to deter users from using insecure forms.
 
 ### Hidden content
 
@@ -212,45 +212,22 @@ The radio button isn't actually a button, despite its name; let's move on and lo
 
 Then we also have the {{htmlelement("button")}} element itself. This can take a `type` attribute of value `submit`, `reset`, or `button` to mimic the behavior of the three `<input>` types mentioned above. The main difference between the two is that actual `<button>` elements are much easier to style.
 
-```html
-<input type="submit" value="Submit this form" />
-<input type="reset" value="Reset this form" />
-<input type="button" value="Do Nothing without JavaScript" />
-
-<button type="submit">Submit this form</button>
-<button type="reset">Reset this form</button>
-<button type="button">Do Nothing without JavaScript</button>
+```html live-sample___actual_buttons_ex
+<p>Using &lt;input></p>
+<p>
+  <input type="submit" value="Submit this form" />
+  <input type="reset" value="Reset this form" />
+  <input type="button" value="Do Nothing without JavaScript" />
+</p>
+<p>Using &lt;button></p>
+<p>
+  <button type="submit">Submit this form</button>
+  <button type="reset">Reset this form</button>
+  <button type="button">Do Nothing without JavaScript</button>
+</p>
 ```
 
-```html hidden
-<div class="button-demo">
-  <p>Using &lt;input></p>
-  <p>
-    <input type="submit" value="Submit this form" />
-    <input type="reset" value="Reset this form" />
-    <input type="button" value="Do Nothing without JavaScript" />
-  </p>
-  <p>Using &lt;button></p>
-  <p>
-    <button type="submit">Submit this form</button>
-    <button type="reset">Reset this form</button>
-    <button type="button">Do Nothing without JavaScript</button>
-  </p>
-</div>
-```
-
-```css hidden
-button,
-input {
-  display: none;
-}
-.button-demo button,
-.button-demo input {
-  all: revert;
-}
-```
-
-{{ EmbedLiveSample('Actual_buttons', '500', '250') }}
+{{ EmbedLiveSample('actual_buttons_ex', '500', '250') }}
 
 > [!NOTE]
 > The `image` input type also renders as a button. We'll cover that later too.
@@ -308,7 +285,7 @@ If the image button is used to submit the form, this control doesn't submit its 
 So for example when you click on the image at coordinate (123, 456) and it submits via the `get` method, you'll see the values appended to the URL as follows:
 
 ```url
-http://foo.com?pos.x=123&pos.y=456
+https://example.com?pos.x=123&pos.y=456
 ```
 
 This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data) article.
@@ -406,10 +383,6 @@ Many of the elements used to define form controls have some of their own specifi
     </tr>
   </tbody>
 </table>
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Basic controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls).
 
 ## Summary
 

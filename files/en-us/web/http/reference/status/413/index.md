@@ -3,9 +3,8 @@ title: 413 Content Too Large
 slug: Web/HTTP/Reference/Status/413
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.413
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`413 Content Too Large`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the request entity was larger than limits defined by server.
 The server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.

@@ -3,9 +3,8 @@ title: "<address>: The Contact Address element"
 slug: Web/HTML/Reference/Elements/address
 page-type: html-element
 browser-compat: html.elements.address
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<address>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed HTML provides contact information for a person or people, or for an organization.
 

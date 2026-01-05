@@ -176,11 +176,11 @@ l10n:
     WebExtensions#How_to: 怎么做
     WebExtensions#API: JavaScript API
     WebExtensions#manifest.json: 清单键
-    extension_workshop: Extension Workshop
-    extension_workshop_develop: Develop
-    extension_workshop_publish: Publish
-    extension_workshop_manage: Manage
-    extension_workshop_enterprise: Enterprise
+    extension_workshop: 扩展工作坊
+    extension_workshop_develop: 开发
+    extension_workshop_publish: 发布
+    extension_workshop_manage: 管理
+    extension_workshop_enterprise: 企业版
     Channels: 渠道
     Blog: 附加组件博客
     Forums: 附加组件论坛

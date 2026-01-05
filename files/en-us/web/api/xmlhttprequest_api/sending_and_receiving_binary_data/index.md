@@ -39,7 +39,7 @@ req.responseType = "blob";
 
 req.onload = (event) => {
   const blob = req.response;
-  // ...
+  // …
 };
 
 req.send();

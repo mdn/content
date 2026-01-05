@@ -61,7 +61,7 @@ function draw() {
 function generateStars(ctx) {
   for (let j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = "#fff";
+    ctx.fillStyle = "white";
     ctx.translate(
       75 - Math.floor(Math.random() * 150),
       75 - Math.floor(Math.random() * 150),
@@ -110,36 +110,30 @@ There is no such thing as an inverse clipping mask. However, we can define a mas
 A rectangle does not have a drawing direction, but it behaves as if we drew it clockwise. By default, the arc command also goes clockwise, but we can change its direction with the last argument.
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
   const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
-    ctx.translate(75, 75);
+  const ctx = canvas.getContext("2d");
+  ctx.translate(75, 75);
 
-    // Clipping path
-    ctx.beginPath();
-    ctx.rect(-75, -75, 150, 150); // Outer rectangle
-    ctx.arc(0, 0, 60, 0, Math.PI * 2, true); // Hole anticlockwise
-    ctx.clip();
+  // Clipping path
+  ctx.beginPath();
+  ctx.rect(-75, -75, 150, 150); // Outer rectangle
+  ctx.arc(0, 0, 60, 0, Math.PI * 2, true); // Hole anticlockwise
+  ctx.clip();
 
-    // Draw background
-    const linGrad = ctx.createLinearGradient(0, -75, 0, 75);
-    linGrad.addColorStop(0, "#232256");
-    linGrad.addColorStop(1, "#143778");
+  // Draw background
+  const linGrad = ctx.createLinearGradient(0, -75, 0, 75);
+  linGrad.addColorStop(0, "#232256");
+  linGrad.addColorStop(1, "#143778");
 
-    ctx.fillStyle = linGrad;
-    ctx.fillRect(-75, -75, 150, 150);
+  ctx.fillStyle = linGrad;
+  ctx.fillRect(-75, -75, 150, 150);
 
-    generateStars(ctx);
-  }
+  generateStars(ctx);
 }
 ```
 
@@ -147,7 +141,7 @@ function draw() {
 function generateStars(ctx) {
   for (let j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = "#fff";
+    ctx.fillStyle = "white";
     ctx.translate(
       75 - Math.floor(Math.random() * 150),
       75 - Math.floor(Math.random() * 150),

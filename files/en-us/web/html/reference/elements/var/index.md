@@ -3,9 +3,8 @@ title: "<var>: The Variable element"
 slug: Web/HTML/Reference/Elements/var
 page-type: html-element
 browser-compat: html.elements.var
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<var>`** [HTML](/en-US/docs/Web/HTML) element represents the name of a variable in a mathematical expression or a programming context. It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent.
 
@@ -142,7 +141,7 @@ This HTML uses `<var>` to enclose the names of two variables.
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

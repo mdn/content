@@ -1,15 +1,20 @@
 ---
-title: Firefox 51 for developers
+title: Firefox 51 release notes for developers
+short-title: Firefox 51
 slug: Mozilla/Firefox/Releases/51
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
-
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/).
 Firefox 51 was released on January 24, 2017. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
+
+### Developer Tools
+
+- [Network Monitor now shows a "Blocked" state for network requests.](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#timings)
+- [All devtools bugs fixed between Firefox 50 and Firefox 51](https://bugzilla.mozilla.org/buglist.cgi?list_id=13263768&resolution=FIXED&classification=Client%20Software&chfieldto=2016-09-19&query_format=advanced&chfield=resolution&chfieldfrom=2016-08-01&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%20about%3Adebugging&component=Developer%20Tools%3A%20Animation%20Inspector&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Computed%20Styles%20Inspector&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20CSS%20Rules%20Inspector&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20DOM&component=Developer%20Tools%3A%20Font%20Inspector&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20JSON%20Viewer&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Design%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Shared%20Components&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox).
 
 ### HTML
 
@@ -39,18 +44,11 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 - The `next()` method of the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) will now throw a {{jsxref("TypeError")}} if the returned value is not an object ([Firefox bug 1016936](https://bugzil.la/1016936)).
 - Child-indexed pseudo-class selectors should match without a parent ([Firefox bug 1300374](https://bugzil.la/1300374)).
 
-### Developer Tools
-
-- [Network Monitor now shows a "Blocked" state for network requests.](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#timings)
-- [All devtools bugs fixed between Firefox 50 and Firefox 51](https://bugzilla.mozilla.org/buglist.cgi?list_id=13263768&resolution=FIXED&classification=Client%20Software&chfieldto=2016-09-19&query_format=advanced&chfield=resolution&chfieldfrom=2016-08-01&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%20about%3Adebugging&component=Developer%20Tools%3A%20Animation%20Inspector&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Computed%20Styles%20Inspector&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20CSS%20Rules%20Inspector&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20DOM&component=Developer%20Tools%3A%20Font%20Inspector&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20JSON%20Viewer&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Design%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Shared%20Components&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox).
-
 ### WebGL
 
 - [WebGL 2](/en-US/docs/Web/API/WebGL_API) is now enabled by default. See [webglsamples.org/WebGL2Samples](https://webglsamples.org/WebGL2Samples/) for a few demos.
-
   - WebGL 2 provides the {{domxref("WebGL2RenderingContext")}} interface that brings OpenGL ES 3.0 to the {{HTMLElement("canvas")}} element.
   - New features include:
-
     - [3D textures](/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D),
     - [Sampler objects](/en-US/docs/Web/API/WebGLSampler),
     - [Uniform Buffer objects](/en-US/docs/Web/API/WebGL2RenderingContext#uniform_buffer_objects),
@@ -67,7 +65,6 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 ### IndexedDB v2
 
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) version 2 implementation is now complete:
-
   - Supports for the new {{domxref("IDBObjectStore.getKey()")}} method has been added ([Firefox bug 1271506](https://bugzil.la/1271506)).
   - Supports for {{domxref("IDBCursor.continuePrimaryKey()")}} method has been added ([Firefox bug 1271505](https://bugzil.la/1271505)).
   - Binary keys are now supported ([Firefox bug 1271500](https://bugzil.la/1271500)).
@@ -131,7 +128,7 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 
 ### Security
 
-- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password) field) are created so that they would be submitted insecurely, Firefox displays a crossed-out lock icon in the address bar to warn users ([Firefox bug 1319119](https://bugzil.la/1319119)). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
+- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password) field) are created so that they would be submitted insecurely, Firefox displays a crossed-out lock icon in the address bar to warn users ([Firefox bug 1319119](https://bugzil.la/1319119)).
 
 ### Removals
 
@@ -144,7 +141,6 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 ### WebExtensions
 
 - New APIs:
-
   - {{WebExtAPIRef("idle.queryState()")}} ([Firefox bug 1299846](https://bugzil.la/1299846))
   - {{WebExtAPIRef("idle.onStateChanged")}} ([Firefox bug 1299775](https://bugzil.la/1299775))
   - {{WebExtAPIRef("management.getSelf()")}} ([Firefox bug 1283116](https://bugzil.la/1283116))
@@ -152,7 +148,7 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
   - {{WebExtAPIRef("runtime.getBrowserInfo()")}} ([Firefox bug 1268399](https://bugzil.la/1268399))
   - {{WebExtAPIRef("runtime.reload()")}} and {{WebExtAPIRef("runtime.onUpdateAvailable()")}} ([Firefox bug 1279012](https://bugzil.la/1279012))
 
-- You can now [embed a WebExtension in a legacy add-on type](/en-US/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions) ([Firefox bug 1252215](https://bugzil.la/1252215)).
+- You can now [embed a WebExtension in a legacy add-on type](https://web.archive.org/web/20210528055219/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Embedded_WebExtensions) ([Firefox bug 1252215](https://bugzil.la/1252215)).
 - [Clipboard access](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard) is now supported ([Firefox bug 1197451](https://bugzil.la/1197451))
 - The arguments passed to the callback of {{WebExtAPIRef("tabs.executeScript()")}} have been fixed ([Firefox bug 1290157](https://bugzil.la/1290157))
 - [localStorage](/en-US/docs/Web/API/Window/localStorage) is now cleared when a WebExtension is uninstalled ([Firefox bug 1213990](https://bugzil.la/1213990))
@@ -160,9 +156,8 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 
 ### Other
 
-- The [`multiprocessCompatible` property of `install.rdf`](/en-US/docs/Mozilla/Add-ons/Install_Manifests#multiprocesscompatible) must now be explicitly set to `false` to prevent multiprocess from being enabled in Firefox when the add-on is installed.
+- The [`multiprocessCompatible` property of `install.rdf`](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests#multiprocesscompatible) must now be explicitly set to `false` to prevent multiprocess from being enabled in Firefox when the add-on is installed.
 - The Mozilla-specific Social API has been substantially changed (largely to remove APIs no longer used), as follows:
-
   - The `MozSocial` interface and the `Navigator.mozSocial` property which supports it have been removed.
   - The Social Bookmarks API has been removed.
   - The Social chat functionality has been removed.
@@ -172,8 +167,4 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
   - Social service provider manifest properties supporting the removed functionality are no longer supported.
 
 - If an add-on uses `mimeTypes.rdf` to provide a file extension to MIME type mapping, it must now register an entry in the `"ext-to-type-mapping"` category ([Firefox bug 306471](https://bugzil.la/306471)).
-- The [Browser API](/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API) now includes a `detail` object on the event object of the [`mozbrowserlocationchange`](/en-US/docs/Web/Events/mozbrowserlocationchange) event that contains `canGoForward`/`canGoBack` properties, allowing retrieval of the mozBrowser's back/forward status synchronously ([Firefox bug 1279635](https://bugzil.la/1279635)).
-
-## Older versions
-
-{{Firefox_for_developers}}
+- The [Browser API](https://web.archive.org/web/20210124171655/https://developer.mozilla.org/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API) now includes a `detail` object on the event object of the `mozbrowserlocationchange` event that contains `canGoForward`/`canGoBack` properties, allowing retrieval of the mozBrowser's back/forward status synchronously ([Firefox bug 1279635](https://bugzil.la/1279635)).

@@ -1,11 +1,11 @@
 ---
-title: Upgrade-Insecure-Requests
+title: Upgrade-Insecure-Requests header
+short-title: Upgrade-Insecure-Requests
 slug: Web/HTTP/Reference/Headers/Upgrade-Insecure-Requests
 page-type: http-header
 browser-compat: http.headers.Upgrade-Insecure-Requests
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Upgrade-Insecure-Requests`** {{Glossary("request header")}} sends a signal to the server indicating the client's preference for an encrypted and authenticated response, and that the client can successfully handle the {{CSP("upgrade-insecure-requests")}} [CSP](/en-US/docs/Web/HTTP/Guides/CSP) directive.
 

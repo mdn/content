@@ -131,13 +131,11 @@ Django does a pretty good job of creating a basic admin site using the informati
 You can further customize the interface to make it even easier to use. Some of the things you can do are:
 
 - List views:
-
   - Add additional fields/information displayed for each record.
   - Add filters to select which records are listed, based on date or some other selection value (e.g., Book loan status).
   - Add additional options to the actions menu in list views and choose where this menu is displayed on the form.
 
 - Detail views
-
   - Choose which fields to display (or exclude), along with their order, grouping, whether they are editable, the widget used, orientation etc.
   - Add related fields to a record to allow inline editing (e.g., add the ability to add and edit book records while you're creating their author record).
 

@@ -3,9 +3,8 @@ title: userScripts.UserScriptFilter
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptFilter
 page-type: webextension-api-type
 browser-compat: webextensions.api.userScripts.UserScriptFilter
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A list of user scripts to be processed by {{WebExtAPIRef("userScripts.getScripts()")}} or {{WebExtAPIRef("userScripts.unregister()")}}.
 

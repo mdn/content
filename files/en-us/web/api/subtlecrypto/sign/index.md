@@ -291,7 +291,7 @@ async function test(data) {
     log(
       `encodedData: ${shorterEncodedBuffer}...[${encodedData.byteLength} bytes total]`,
     );
-    //log(`encodedData: ${encodedData}`);
+    // log(`encodedData: ${encodedData}`);
 
     // Sign the data using the private key.
     const signature = await crypto.subtle.sign(

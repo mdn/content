@@ -14,10 +14,10 @@ The **`cuechange`** event fires when a {{domxref("TextTrack")}} has changed the 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("cuechange", (event) => {});
+```js-nolint
+addEventListener("cuechange", (event) => { })
 
-oncuechange = (event) => {};
+oncuechange = (event) => { }
 ```
 
 ## Event type

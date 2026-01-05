@@ -3,9 +3,8 @@ title: 510 Not Extended
 slug: Web/HTTP/Reference/Status/510
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc2774#section-7
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`510 Not Extended`** [server error response](/en-US/docs/Web/HTTP/Reference/Status#server_error_responses) status code is sent when the client request declares an HTTP Extension ({{RFC("2774")}}) that should be used to process the request, but the extension is not supported.
 

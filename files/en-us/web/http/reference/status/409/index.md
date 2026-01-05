@@ -3,9 +3,8 @@ title: 409 Conflict
 slug: Web/HTTP/Reference/Status/409
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.409
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`409 Conflict`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates a request conflict with the current state of the target resource.
 

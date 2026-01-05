@@ -1,5 +1,6 @@
 ---
 title: "ARIA: feed role"
+short-title: feed
 slug: Web/Accessibility/ARIA/Reference/Roles/feed_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#feed
@@ -49,15 +50,12 @@ If a feed is nested within a feed, such as a comments feed within a feed of blog
 ### <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles, states, and properties
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-
   - : If the feed has no visible title, the `feed` element has a label specified with `aria-label`. If it does, see `aria-labelledby`.
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-
   - : If the feed has a visible title, the `feed` element has `aria-labelledby` referring to the element containing the title. If not, add an `aria-label`.
 
 - [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
-
   - : When busy, such as when articles are being added or removed from the `feed`, set `aria-busy="true"` during the update operation. Make sure it's reset to `false` when the operation is complete or the changes may not become visible.
 
 - article

@@ -1,5 +1,6 @@
 ---
 title: "ARIA: listbox role"
+short-title: listbox
 slug: Web/Accessibility/ARIA/Reference/Roles/listbox_role
 page-type: aria-role
 spec-urls:
@@ -36,27 +37,21 @@ When the listbox role is added to an element, or such an element becomes visible
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
   - : Holds the `id` string of the currently active element within the listbox. If that's an option element, then that would be the `id` of the most recently interacted with option, regardless of whether that option has an [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) value of `true` or not. Takes the value of only one `id`, even in a multiselectable listbox. If the `id` does not refer to a DOM descendant of the listbox, then that `id` must be included among the IDs in the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute.
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
-
   - : This is a space-separated list of element IDs which are not DOM child elements of the listbox. IDs listed here cannot also be listed in [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attributes of any other elements.
 
 - [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
-
   - : Include and set to `true` if the user can select more than one option. If set to `true`, _every_ selectable option should have an [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) attribute included and set to `true` or `false`. Options which are _not_ selectable _should not_ have the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) attribute. If `false` or omitted, only the currently selected option, if any option is selected, needs the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) attribute, and it must be set to `true`.
 
 - [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
-
   - : A Boolean attribute which indicates that an option with a non-empty string value must be selected.
 
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
-
   - : The user cannot change which options are selected or unselected, but the listbox is otherwise operable.
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-
   - : A human-readable string value which identifies the listbox. If there's a visible label, then [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) should be used instead to refer to that label.
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-
   - : Identifies the visible element or elements in a space-separated list of element IDs which identify the listbox. If there's no visible label, then [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) should be used instead to include a label. (Note: "labelled", with two L's, is the correct spelling based on the accessibility API conventions.)
 
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription)
@@ -65,12 +60,10 @@ When the listbox role is added to an element, or such an element becomes visible
 ### Keyboard interactions
 
 - When a single-select listbox receives focus:
-
   - If none of the options are selected before the listbox receives focus, the first option receives focus. Optionally, the first option may be automatically selected.
   - If an option is selected before the listbox receives focus, focus is set on the selected option.
 
 - When a multi-select listbox receives focus:
-
   - If none of the options are selected before the listbox receives focus, focus is set on the first option and there is no automatic change in the selection state.
   - If one or more options are selected before the listbox receives focus, focus is set on the first option in the list that is selected.
 
@@ -91,14 +84,11 @@ When the listbox role is added to an element, or such an element becomes visible
   (Optional): Moves focus to last option. Optionally, in a single-select listbox, selection may also move with focus. Supporting this key is strongly recommended for lists with more than five options.
 
 - Type-ahead is recommended for all listboxes, especially those with more than seven options:
-
   - Type a character: focus moves to the next item with a name that starts with the typed character.
   - Type multiple characters in rapid succession: focus moves to the next item with a name that starts with the string of characters typed.
 
 - **Multiple Selection**: Authors may implement either of two interaction models to support multiple selection: a recommended model that does not require the user to hold a modifier key, such as <kbd>Shift</kbd> or <kbd>Control</kbd>, while navigating the list or an alternative model that does require modifier keys to be held while navigating in order to avoid losing selection states.
-
   - Recommended selection model — holding modifier keys is not necessary:
-
     - <kbd>Space</kbd>: changes the selection state of the focused option.
     - <kbd>Shift + Down Arrow</kbd> (Optional): Moves focus to and toggles the selected state of the next option.
     - <kbd>Shift + Up Arrow</kbd> (Optional): Moves focus to and toggles the selected state of the previous option.
@@ -142,9 +132,6 @@ The snippet below, using [`aria-activedescendant`](/en-US/docs/Web/Accessibility
   tabindex="0"
   id="listbox1"
   aria-labelledby="listbox1label"
-  onclick="return listItemClick(event);"
-  onkeydown="return listItemKeyEvent(event);"
-  onkeypress="return listItemKeyEvent(event);"
   aria-activedescendant="listbox1-1">
   <div role="option" id="listbox1-1" class="selected" aria-selected="true">
     Green
@@ -155,6 +142,13 @@ The snippet below, using [`aria-activedescendant`](/en-US/docs/Web/Accessibility
   <div role="option" id="listbox1-5">Violet</div>
   <div role="option" id="listbox1-6">Periwinkle</div>
 </div>
+```
+
+```js
+const listbox = document.getElementById("listbox1");
+listbox.addEventListener("click", listItemClick);
+listbox.addEventListener("keydown", listItemKeyEvent);
+listbox.addEventListener("keypress", listItemKeyEvent);
 ```
 
 This could have more easily been handled with the native HTML {{HTMLElement('select')}} and {{HTMLElement('label')}} elements.
@@ -179,11 +173,11 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 
 ## Best practices
 
-- To be keyboard-accessible, authors should [manage focus](https://www.w3.org/TR/wai-aria-1.1/#managingfocus) of all descendants of this role.
+- To be keyboard-accessible, authors should [manage focus](https://w3c.github.io/aria/#managingfocus) of all descendants of this role.
 - It is recommended that authors use different styling for the selection when the list is not focused, e.g., a non-active selection is often shown with a lighter background color.
 - If the listbox is not part of another widget, it should have the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) property set.
 - If one or more entries are not DOM children of listbox, additional `aria-*` properties will need to be set (see [ARIA Best Practices](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/)).
-- If there is a valid reason to [expand](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded) the listbox, the [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) role may be more appropriate.
+- If there is a valid reason to [expand](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) the listbox, the [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) role may be more appropriate.
 
 ## Specifications
 
@@ -199,4 +193,3 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
 - [ARIA: `listitem` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
 - [ARIA Best Practices – Listbox](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/)
-- [ARIA Role Model – Listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)

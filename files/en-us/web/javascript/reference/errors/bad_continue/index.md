@@ -2,9 +2,8 @@
 title: "SyntaxError: continue must be inside loop"
 slug: Web/JavaScript/Reference/Errors/Bad_continue
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "continue must be inside loop" occurs when a {{jsxref("Statements/continue", "continue")}} statement is not inside a loop statement.
 

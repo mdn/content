@@ -5,9 +5,8 @@ page-type: guide
 browser-compat:
   - api.Clipboard
   - webextensions.api.clipboard
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Working with the clipboard in extensions is transitioning from the Web API {{domxref("Document.execCommand()","document.execCommand")}} method (which is deprecated) to the {{domxref("Clipboard", "navigator.clipboard")}} method.
 
@@ -32,7 +31,7 @@ This section describes the options for writing data to the clipboard.
 
 ### Using the Clipboard API
 
-The Clipboard API writes arbitrary data to the clipboard from your extension. Using the API requires the permission `"clipboardRead"` or `"clipboardWrite"` in your `manifest.json` file. As the API is only available to [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts), it cannot be used from a content script running on `http:`-pages, only `https:`-pages.
+The Clipboard API writes arbitrary data to the clipboard from your extension. Using the API requires the permission `"clipboardRead"` or `"clipboardWrite"` in your `manifest.json` file. As the API is only available to [Secure Contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts), it cannot be used from a content script running on `http:`-pages, only `https:`-pages.
 
 For page scripts, the `"clipboard-write"` permission needs to be requested using the Web API {{domxref("Permissions", "navigator.permissions")}}. You can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:
 
@@ -108,7 +107,8 @@ Depending on the browser, this may not work. On Firefox, it will not work, and y
 
 To enable this use case, you need to ask for the `"clipboardWrite"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So: `"clipboardWrite"` enables you to write to the clipboard outside a short-lived event handler for a user action.
 
-> **Note:** {{domxref("Document.execCommand", "document.execCommand()")}} does not work on input fields of `type="hidden"`, with the HTML5 attribute `"hidden"`, or any matching CSS rule using `"display: none;"`. So, to add a "copy to clipboard" button to a `span`, `div`, or `p` tag, you need to use a workaround, such as setting the input's position to absolute and moving it out of the viewport.
+> [!NOTE]
+> {{domxref("Document.execCommand", "document.execCommand()")}} does not work on input fields of `type="hidden"`, with the HTML5 attribute `"hidden"`, or any matching CSS rule using `"display: none;"`. So, to add a "copy to clipboard" button to a `span`, `div`, or `p` tag, you need to use a workaround, such as setting the input's position to absolute and moving it out of the viewport.
 
 ### Browser-specific considerations
 
@@ -130,7 +130,7 @@ This section describes the options for reading or pasting data from the clipboar
 
 ### Using the Clipboard API
 
-The Clipboard API's {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.read", "navigator.clipboard.read()")}} methods let you read arbitrary text or binary data from the clipboard in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts). This lets you access the data in the clipboard without pasting it into an editable element.
+The Clipboard API's {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.read", "navigator.clipboard.read()")}} methods let you read arbitrary text or binary data from the clipboard in [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts). This lets you access the data in the clipboard without pasting it into an editable element.
 
 Once you have the `"clipboard-read"` permission from the [Permissions API](/en-US/docs/Web/API/Permissions_API), you can read from the clipboard easily. For example, this snippet of code fetches the text from the clipboard and replaces the contents of the element with the ID `"outbox"` with that text.
 

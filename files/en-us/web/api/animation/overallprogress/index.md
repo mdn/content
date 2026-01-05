@@ -3,12 +3,10 @@ title: "Animation: overallProgress property"
 short-title: overallProgress
 slug: Web/API/Animation/overallProgress
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Animation.overallProgress
 ---
 
-{{APIRef("Web Animations")}}{{seecompattable}}
+{{APIRef("Web Animations")}}
 
 The **`overallProgress`** read-only property of the {{domxref("Animation")}} interface returns a number between `0` and `1` indicating the animation's overall progress towards its finished state. This is the overall progress across all of the animation's iterations, not each individual iteration.
 
@@ -46,11 +44,10 @@ The demo's CSS provides some rudimentary styling, which is not important for und
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {
-  margin: 0;
   width: 500px;
   margin: 0 auto;
   padding: 20px;

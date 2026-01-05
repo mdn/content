@@ -21,13 +21,13 @@ The serializable property of a shadow root is specified when the shadow root is 
 ## Examples
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
+const customElem = document.querySelector("my-shadow-dom-element");
+const shadow = customElem.shadowRoot;
 
-// ...
+// …
 
 // Is it serializable?
-let hostElem = shadow.serializable;
+const hostElem = shadow.serializable;
 ```
 
 ## Specifications

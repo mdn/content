@@ -17,7 +17,8 @@ A positive integer with the length of the {{domxref("CharacterData.data")}} stri
 
 ## Example
 
-> **Note:** {{domxref("CharacterData")}} is an abstract interface.
+> [!NOTE]
+> {{domxref("CharacterData")}} is an abstract interface.
 > The examples below use {{domxref("Text")}}, a concrete interface implementing it.
 
 ```html

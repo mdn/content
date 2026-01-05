@@ -1,5 +1,6 @@
 ---
-title: aria-rowindex
+title: "ARIA: aria-rowindex attribute"
+short-title: aria-rowindex
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-rowindex

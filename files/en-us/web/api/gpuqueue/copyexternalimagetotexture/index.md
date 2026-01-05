@@ -3,12 +3,10 @@ title: "GPUQueue: copyExternalImageToTexture() method"
 short-title: copyExternalImageToTexture()
 slug: Web/API/GPUQueue/copyExternalImageToTexture
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUQueue.copyExternalImageToTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`copyExternalImageToTexture()`** method of the
 {{domxref("GPUQueue")}} interface copies a snapshot taken from a source image, video, or canvas into a given {{domxref("GPUTexture")}}.
@@ -24,13 +22,10 @@ copyExternalImageToTexture(source, destination, copySize)
 ### Parameters
 
 - `source`
-
   - : An object representing the source to write to the destination, and its origin. This can take the following properties:
-
     - `source`
       - : An object providing the source of the snapshot to copy. This can be an {{domxref("HTMLCanvasElement")}}, {{domxref("HTMLImageElement")}}, {{domxref("HTMLVideoElement")}}, {{domxref("ImageBitmap")}}, {{domxref("ImageData")}}, {{domxref("OffscreenCanvas")}}, or {{domxref("VideoFrame")}} object. The image source data is captured at the exact moment `copyExternalImageToTexture()` is invoked.
     - `origin` {{optional_inline}}
-
       - : An object or array specifying the origin of the copy — the top-left corner of the source sub-region to copy from. Together with `copySize`, this defines the full extent of the source sub-region. The `x` and `y` values default to 0 if any of all of `origin` is omitted.
 
         For example, you can pass an array like `[0, 0]`, or its equivalent object `{ x: 0, y: 0 }`.
@@ -39,13 +34,9 @@ copyExternalImageToTexture(source, destination, copySize)
       - : A boolean. If set to `true`, the image capture is flipped vertically. If omitted, `flipY` defaults to `false`.
 
 - `destination`
-
   - : An object defining the texture subresource and origin to write the captured image to, plus encoding metadata. This can take the following properties:
-
     - `aspect` {{optional_inline}}
-
       - : An enumerated value defining which aspects of the texture to write the image to. Possible values are:
-
         - `"all"`
           - : All available aspects of the texture format will be written to, which can mean all or any of color, depth, and stencil, depending on what kind of format you are dealing with.
         - `"depth-only"`
@@ -56,7 +47,6 @@ copyExternalImageToTexture(source, destination, copySize)
         If omitted, `aspect` takes a value of `"all"`.
 
     - `colorSpace` {{optional_inline}}
-
       - : An enumerated value describing the color space and encoding used to encode data into the destination texture. Possible values are `"srgb"` and `"display-p3"`. If omitted, `colorSpace` defaults to `"srgb"`.
 
         > [!NOTE]
@@ -65,13 +55,11 @@ copyExternalImageToTexture(source, destination, copySize)
     - `mipLevel` {{optional_inline}}
       - : A number representing the mip-map level of the texture to write the image to. If omitted, `mipLevel` defaults to 0.
     - `origin` {{optional_inline}}
-
       - : An object or array specifying the origin of the copy — the minimum corner of the texture region to write the image data to. Together with `copySize`, this defines the full extent of the region to copy to. The `x`, `y`, and `z` values default to 0 if any of all of `origin` is omitted.
 
         For example, you can pass an array like `[0, 0, 0]`, or its equivalent object `{ x: 0, y: 0, z: 0 }`.
 
     - `premultipliedAlpha` {{optional_inline}}
-
       - : A boolean. If set to `true`, the image data written into the texture will have its RGB channels premultiplied by the alpha channel. If omitted, `premultipliedAlpha` defaults to `false`.
 
         > [!NOTE]
@@ -81,7 +69,6 @@ copyExternalImageToTexture(source, destination, copySize)
       - : A {{domxref("GPUTexture")}} object representing the texture to write the data to.
 
 - `copySize`
-
   - : An object or array specifying `width`, `height`, and `depthOrArrayLayers` — of the region to copy from/to.
 
     For example, you can pass an array like `[16, 1, 1]`, or its equivalent object `{ width: 16, height: 1, depthOrArrayLayers: 1 }`.

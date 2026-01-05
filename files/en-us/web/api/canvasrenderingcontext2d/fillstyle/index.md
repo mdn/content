@@ -6,13 +6,12 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.fillStyle
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.fillStyle`**
 property of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API) specifies the
-color, gradient, or pattern to use inside shapes. The default style is `#000`
-(black).
+color, gradient, or pattern to use inside shapes. The default style is `black`.
 
 > [!NOTE]
 > For more examples of fill and stroke styles, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
@@ -107,7 +106,6 @@ setFillColor(c, m, y, k, a);
 - [Canvas API](/en-US/docs/Web/API/Canvas_API)
 - The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
 - Values used by this property:
-
   - {{cssxref("&lt;color&gt;")}} CSS data type
   - {{domxref("CanvasGradient")}} object
   - {{domxref("CanvasPattern")}} object

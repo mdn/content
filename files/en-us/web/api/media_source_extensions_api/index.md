@@ -2,8 +2,6 @@
 title: Media Source API
 slug: Web/API/Media_Source_Extensions_API
 page-type: web-api-overview
-status:
-  - experimental
 spec-urls:
   - https://w3c.github.io/media-source/
   - https://w3c.github.io/media-playback-quality/

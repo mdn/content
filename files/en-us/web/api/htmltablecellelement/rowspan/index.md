@@ -8,7 +8,7 @@ browser-compat: api.HTMLTableCellElement.rowSpan
 
 {{ APIRef("HTML DOM") }}
 
-The **`rowSpan`** read-only property of the {{domxref("HTMLTableCellElement")}} interface represents the number of rows this cell must span; this lets the cell occupy space across multiple rows of the table. It reflects the [`rowspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute.
+The **`rowSpan`** property of the {{domxref("HTMLTableCellElement")}} interface represents the number of rows this cell must span; this lets the cell occupy space across multiple rows of the table. It reflects the [`rowspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute.
 
 ## Value
 
@@ -83,17 +83,17 @@ const increaseButton = document.getElementById("increase");
 const decreaseButton = document.getElementById("decrease");
 
 increaseButton.addEventListener("click", () => {
-  cell.rowSpan = cell.rowSpan + 1;
+  cell.rowSpan += 1;
 
   // Update the display
   output.textContent = cell.rowSpan;
 });
 
 decreaseButton.addEventListener("click", () => {
-  cell.rowSpan = cell.rowSpan - 1;
+  cell.rowSpan -= 1;
 
   // Update the display
-  output.textContent = `${cell.rowSpan == 0 ? "all remaining" : cell.rowSpan}`;
+  output.textContent = `${cell.rowSpan === 0 ? "all remaining" : cell.rowSpan}`;
 });
 ```
 

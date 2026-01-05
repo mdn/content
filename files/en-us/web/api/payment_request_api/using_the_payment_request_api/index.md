@@ -4,7 +4,7 @@ slug: Web/API/Payment_Request_API/Using_the_Payment_Request_API
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
+{{DefaultAPISidebar("Payment Request API")}}
 
 The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides a browser-based method of connecting users and their preferred payment systems and platforms to merchants that they want to pay for goods and services. This article is a guide to making use of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API), with examples and suggested best practices.
 
@@ -248,7 +248,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 
 ## Recommending a payment app when user has no apps
 
-If you select to pay with the BobPay demo payment provider on this merchant page, it tries to call `PaymentRequest.show()`, while intercepting the `NotSupportedError` {{domxref("DOMException")}}. If this payment method is not supported, it redirects to the signup page for BobPay.
+If you select to pay with the BobBucks demo payment provider on this merchant page, it tries to call `PaymentRequest.show()`, while intercepting the `NotSupportedError` {{domxref("DOMException")}}. If this payment method is not supported, it redirects to the signup page for BobBucks.
 
 The code looks something like this:
 
@@ -270,7 +270,7 @@ checkoutButton.addEventListener("click", () => {
     })
     .catch((error) => {
       if (error.name === "NotSupportedError") {
-        window.location.href = "https://bobpay.xyz/#download";
+        window.location.href = "https://bobbucks.dev/#download";
       } else {
         // Other kinds of errors; cancelled or failed payment. For demo purposes:
         introPanel.style.display = "none";

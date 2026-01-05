@@ -3,9 +3,8 @@ title: chrome_settings_overrides
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.chrome_settings_overrides
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

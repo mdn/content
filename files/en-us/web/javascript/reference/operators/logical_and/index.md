@@ -3,9 +3,8 @@ title: Logical AND (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
 page-type: javascript-operator
 browser-compat: javascript.operators.logical_and
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **logical AND (`&&`)** (logical conjunction) operator for a set of boolean operands will be `true` if and only if all the operands are `true`. Otherwise it will be `false`.
 

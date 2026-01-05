@@ -2,9 +2,8 @@
 title: Cloud
 slug: Glossary/Cloud
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **Cloud** refers to servers located worldwide that are accessed over the Internet, and the software and databases that run on those servers.
 

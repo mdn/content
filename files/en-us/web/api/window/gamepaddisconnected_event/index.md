@@ -14,6 +14,16 @@ The event will not fire if disallowed by the document's {{httpheader('Permission
 
 This event is not cancelable and does not bubble.
 
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js-nolint
+addEventListener("gamepaddisconnected", (event) => { })
+
+ongamepaddisconnected = (event) => { }
+```
+
 ## Examples
 
 To be informed when a gamepad is disconnected, you can add a handler to the window using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:

@@ -99,7 +99,7 @@ const divElem = document.querySelector("body > div");
 
 const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
-    entry.target.style.width = entry.contentBoxSize[0].inlineSize + 10 + "px";
+    entry.target.style.width = `${entry.contentBoxSize[0].inlineSize + 10}px`;
   }
 });
 
@@ -120,7 +120,7 @@ const divElem = document.querySelector("body > div");
 const resizeObserver = new ResizeObserver((entries) => {
   requestAnimationFrame(() => {
     for (const entry of entries) {
-      entry.target.style.width = entry.contentBoxSize[0].inlineSize + 10 + "px";
+      entry.target.style.width = `${entry.contentBoxSize[0].inlineSize + 10}px`;
     }
   });
 });
@@ -172,4 +172,4 @@ window.addEventListener("error", (e) => {
 - [Learn: The box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model)
 - {{domxref('PerformanceObserver')}}
 - {{domxref('IntersectionObserver')}} (part of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API))
-- Upcoming [container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) may be a viable alternative for implementing responsive design.
+- Upcoming [container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries) may be a viable alternative for implementing responsive design.

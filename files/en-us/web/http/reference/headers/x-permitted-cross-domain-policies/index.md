@@ -1,12 +1,12 @@
 ---
-title: X-Permitted-Cross-Domain-Policies
+title: X-Permitted-Cross-Domain-Policies header
+short-title: X-Permitted-Cross-Domain-Policies
 slug: Web/HTTP/Reference/Headers/X-Permitted-Cross-Domain-Policies
 page-type: http-header
 status:
   - non-standard
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`X-Permitted-Cross-Domain-Policies`** {{Glossary("response header")}} defines a meta-policy that controls whether site resources can be accessed cross-origin by a document running in a web client like Adobe Acrobat or Microsoft Silverlight.
 
@@ -20,10 +20,6 @@ Some security testing tools will still check for the presence of a `X-Permitted-
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -53,7 +49,7 @@ X-Permitted-Cross-Domain-Policies: <permitted-cross-domain-policy>
 ## Description
 
 Web clients such as Adobe Acrobat or Apache Flex can load web documents, which may in turn load resources from the same site or other sites.
-Access is restricted to same-site resources by default, due to the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), but cross-origin sites may choose to make some or all of their resources available to clients cross-origin using special files, referred to as a cross-domain policy files.
+Access is restricted to same-site resources by default, due to the [same origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy), but cross-origin sites may choose to make some or all of their resources available to clients cross-origin using special files, referred to as a cross-domain policy files.
 
 A "master" cross-domain policy file may be defined as `crossdomain.xml` file in the root of the domain, for example: `http://example.com/crossdomain.xml`.
 The master file defines the _meta-policy_ for the whole site using the `permitted-cross-domain-policies` attribute of the `<site-control>` tag.

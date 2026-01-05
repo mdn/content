@@ -3,9 +3,8 @@ title: 226 IM Used
 slug: Web/HTTP/Reference/Status/226
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc3229.html#section-10.4.1
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`226 IM Used`** [successful response](/en-US/docs/Web/HTTP/Reference/Status#successful_responses) status code indicates that the server is returning a {{Glossary("delta")}} in response to a {{HTTPMethod("GET")}} request.
 It is used in the context of _HTTP delta encodings_.

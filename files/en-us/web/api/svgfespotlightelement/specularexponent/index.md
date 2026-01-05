@@ -44,7 +44,7 @@ In this example, we access the exponent value controlling the focus of the `<feS
     cx="100"
     cy="100"
     r="50"
-    style="fill:lightblue;"
+    fill="lightblue"
     filter="url(#specularLightingFilter)" />
 </svg>
 ```

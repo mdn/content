@@ -1,5 +1,6 @@
 ---
 title: "ARIA: search role"
+short-title: search
 slug: Web/Accessibility/ARIA/Reference/Roles/search_role
 page-type: aria-role
 spec-urls:
@@ -18,7 +19,7 @@ The `search` role is used to identify the search functionality; the section of t
 
 ## Description
 
-The `search` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) role that can be added to the container element that encompasses all of the elements that combined to form the search feature of the document or application, including a descendant [(`<input type="search">`)](/en-US/docs/Web/HTML/Reference/Elements/input/search). If a document includes more than one search, each should have a unique label, unless they are the same search repeated, then use the same name. There is a [`input` of type `search`)](/en-US/docs/Web/HTML/Reference/Elements/input/search), though this does not define a search landmark by itself. Using {{HTMLElement('search')}} is an alternative way to define a search landmark.
+The `search` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) role that can be added to the container element that encompasses all of the elements that combined to form the search feature of the document or application, including a descendant [`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search). If a document includes more than one search, each should have a unique label, unless they are the same search repeated, then use the same name. There is an [`input` of type `search`](/en-US/docs/Web/HTML/Reference/Elements/input/search), though this does not define a search landmark by itself. Using {{HTMLElement('search')}} is an alternative way to define a search landmark.
 
 ## Examples
 
@@ -40,7 +41,9 @@ When a {{HTMLElement('form')}} is a search form, use the `search` role instead o
 
 ### Prefer HTML
 
-Using the {{HTMLElement('form')}} element in conjunction with a declaration of `role="search"` will provide the largest amount of support.
+Using the {{HTMLElement('search')}} element will automatically communicate that the element has a role of `search`. If possible, prefer using the semantic `<search>` element instead of the `search` role.
+
+If your `<input>` of type `search` is already contained within a {{HTMLElement("form")}}, then wrapping the form in another `<search>` element may be unnecessary markup. In this case, using `role="search"` on the `<form>` itself is acceptable.
 
 ### Labeling landmarks
 

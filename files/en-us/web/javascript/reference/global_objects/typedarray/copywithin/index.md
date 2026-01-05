@@ -1,11 +1,11 @@
 ---
 title: TypedArray.prototype.copyWithin()
+short-title: copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.copyWithin
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`copyWithin()`** method of {{jsxref("TypedArray")}} instances shallow copies part of this typed array to another location in the same typed array and returns this typed array without modifying its length. This method has the same algorithm as {{jsxref("Array.prototype.copyWithin()")}}.
 

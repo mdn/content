@@ -17,17 +17,17 @@ This event is [cancelable](/en-US/docs/Web/API/Event/cancelable) when an element
 Among other things, this event can be used to:
 
 - prevent an element from being shown.
-- add or remove classes or properties from the element or associated elements, for example to control the animation behaviour of a dialog as it is opened and closed.
+- add or remove classes or properties from the element or associated elements, for example to control the animation behavior of a dialog as it is opened and closed.
 - clear the state of the element before it is opened or after it is hidden, for example to reset a dialog form and return value to an empty state, or hide any nested manual popovers when reopening a popup.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("beforetoggle", (event) => {});
+```js-nolint
+addEventListener("beforetoggle", (event) => { })
 
-onbeforetoggle = (event) => {};
+onbeforetoggle = (event) => { }
 ```
 
 ## Event type
@@ -108,7 +108,9 @@ The HTML consists of a popover, a button for toggling it open and closed, and a 
 
 ```html
 <button popovertarget="mypopover">Toggle the popover</button>
-<button id="allow_button"></button>
+<label for="allow-popover">
+  Allow opening <input type="checkbox" id="allow-popover" checked />
+</label>
 <div id="mypopover" popover>Popover content</div>
 ```
 
@@ -136,22 +138,15 @@ function log(text) {
 #### JavaScript
 
 First we set up the code to simulate a state where we don't want to allow the popover to open.
-This is represented by the variable `allowOpen`, which is toggled when the associated button is clicked.
+This is represented by the variable `allowOpen`, which is toggled when the associated checkbox is toggled.
 
 ```js
-const allowButton = document.getElementById("allow_button");
+const allowCheckbox = document.getElementById("allow-popover");
 
 let allowOpen = true;
 
-function toggleState() {
-  allowOpen = !allowOpen;
-  allowButton.innerText = allowOpen ? "Open Allowed" : "Open Prevented";
-}
-
-toggleState();
-
-allowButton.addEventListener("click", (event) => {
-  toggleState();
+allowCheckbox.addEventListener("change", (event) => {
+  allowOpen = allowCheckbox.checked;
 });
 ```
 
@@ -188,7 +183,7 @@ For example:
 
 ```js
 popover.addEventListener("beforetoggle", () => {
-  //...
+  // …
 });
 
 popover.showPopover();

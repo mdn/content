@@ -37,7 +37,7 @@ An {{domxref("SVGAnimatedNumber")}} object.
     y="20"
     width="160"
     height="160"
-    style="fill:lightblue;"
+    fill="lightblue"
     filter="url(#turbulenceFilter)" />
 </svg>
 ```

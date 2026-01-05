@@ -1,5 +1,6 @@
 ---
-title: aria-pressed
+title: "ARIA: aria-pressed attribute"
+short-title: aria-pressed
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-pressed
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-pressed

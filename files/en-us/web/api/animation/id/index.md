@@ -16,10 +16,10 @@ A string which can be used to identify the animation, or `null` if the animation
 
 ## Examples
 
-In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm?editors=0010), you can assign the `rabbitDownAnimation` an `id` like so:
+In the [Red Queen's Race Game example](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#other_useful_methods), you can assign the `redQueenAlice` an `id` like so:
 
 ```js
-rabbitDownAnimation.id = "rabbitGo";
+redQueenAlice.id = "redQueenAlice";
 ```
 
 ## Specifications

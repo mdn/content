@@ -3,9 +3,8 @@ title: shortcuts
 slug: Web/Progressive_web_apps/Manifest/Reference/shortcuts
 page-type: web-manifest-member
 browser-compat: manifests.webapp.shortcuts
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `shortcuts` manifest member is used to specify links to key tasks or pages within your web application.
 Browsers can use this information to create a context menu, which is typically displayed when a user interacts with the web app's icon.
@@ -53,35 +52,28 @@ Browsers can use this information to create a context menu, which is typically d
 ### Values
 
 - `shortcuts`
-
   - : An array of objects. Each object represents a key task or page in the web app.
 
     Each object can have one or more properties. Of these, only `name` and `url` are required.
     The possible properties include:
-
     - `name`
-
       - : A string that represents the name of the shortcut, which is displayed to users in a context menu.
 
     - `short_name` {{Optional_Inline}}
-
       - : A string that represents a short version of the shortcut's name.
         Browsers may use this in contexts where there isn't enough space to display the full name.
 
     - `description` {{Optional_Inline}}
-
       - : A string that describes the purpose of the shortcut.
         Browsers may expose this information to assistive technology, such as screen readers, which can help users understand the purpose of the shortcut.
 
     - `url`
-
       - : An app URL that opens when the associated shortcut is activated.
         The URL must be within the [scope](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope) of the web app manifest.
         If the value is absolute, it should be same-origin with the page that links to the manifest file.
         If the value is relative, it is resolved against the manifest file's URL.
 
     - [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) {{Optional_Inline}}
-
       - : An array of icon objects representing the shortcut in various contexts.
         This has the same format as the [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) manifest member.
 
@@ -204,5 +196,5 @@ Building on the previous example, the code below adds icons to the two shortcuts
 - [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) manifest member
 - [`scope`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope) manifest member
 - [`start_url`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) manifest member
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
 - How to [expose common actions as shortcuts](/en-US/docs/Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts) in PWAs

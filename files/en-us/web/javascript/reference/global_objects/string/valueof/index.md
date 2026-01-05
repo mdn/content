@@ -1,11 +1,11 @@
 ---
 title: String.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.valueOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`valueOf()`** method of {{jsxref("String")}} values returns this string value.
 

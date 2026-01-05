@@ -20,7 +20,7 @@ Our boombox looks like this:
 
 Note the retro cassette deck with a play button, and vol and pan sliders to allow you to alter the volume and stereo panning. We could make this a lot more complex, but this is ideal for simple learning at this stage.
 
-[Check out the final demo here on CodePen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
+[Check out the final demo here live](https://mdn.github.io/webaudio-examples/audio-basics/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
 
 ## Audio graphs
 
@@ -101,37 +101,29 @@ Now we can add the play and pause functionality.
 // Select our play button
 const playButton = document.querySelector("button");
 
-playButton.addEventListener(
-  "click",
-  () => {
-    // Check if context is in suspended state (autoplay policy)
-    if (audioContext.state === "suspended") {
-      audioContext.resume();
-    }
+playButton.addEventListener("click", () => {
+  // Check if context is in suspended state (autoplay policy)
+  if (audioContext.state === "suspended") {
+    audioContext.resume();
+  }
 
-    // Play or pause track depending on state
-    if (playButton.dataset.playing === "false") {
-      audioElement.play();
-      playButton.dataset.playing = "true";
-    } else if (playButton.dataset.playing === "true") {
-      audioElement.pause();
-      playButton.dataset.playing = "false";
-    }
-  },
-  false,
-);
+  // Play or pause track depending on state
+  if (playButton.dataset.playing === "false") {
+    audioElement.play();
+    playButton.dataset.playing = "true";
+  } else if (playButton.dataset.playing === "true") {
+    audioElement.pause();
+    playButton.dataset.playing = "false";
+  }
+});
 ```
 
 We also need to take into account what to do when the track finishes playing. Our `HTMLMediaElement` fires an `ended` event once it's finished playing, so we can listen for that and run code accordingly:
 
 ```js
-audioElement.addEventListener(
-  "ended",
-  () => {
-    playButton.dataset.playing = "false";
-  },
-  false,
-);
+audioElement.addEventListener("ended", () => {
+  playButton.dataset.playing = "false";
+});
 ```
 
 ## Modifying sound
@@ -170,13 +162,9 @@ So let's grab this input's value and update the gain value when the input node h
 ```js
 const volumeControl = document.querySelector("#volume");
 
-volumeControl.addEventListener(
-  "input",
-  () => {
-    gainNode.gain.value = volumeControl.value;
-  },
-  false,
-);
+volumeControl.addEventListener("input", () => {
+  gainNode.gain.value = volumeControl.value;
+});
 ```
 
 > [!NOTE]
@@ -220,13 +208,9 @@ We use the values from that input to adjust our panner values in the same way as
 ```js
 const pannerControl = document.querySelector("#panner");
 
-pannerControl.addEventListener(
-  "input",
-  () => {
-    panner.pan.value = pannerControl.value;
-  },
-  false,
-);
+pannerControl.addEventListener("input", () => {
+  panner.pan.value = pannerControl.value;
+});
 ```
 
 Let's adjust our audio graph again, to connect all the nodes together:
@@ -235,7 +219,7 @@ Let's adjust our audio graph again, to connect all the nodes together:
 track.connect(gainNode).connect(panner).connect(audioContext.destination);
 ```
 
-The only thing left to do is give the app a try: [Check out the final demo here on CodePen](https://codepen.io/Rumyra/pen/qyMzqN/).
+The only thing left to do is give the app a try: [Check out the final demo here live](https://mdn.github.io/webaudio-examples/audio-basics/).
 
 ## Summary
 

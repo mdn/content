@@ -5,9 +5,10 @@ page-type: web-manifest-member
 status:
   - experimental
 browser-compat: manifests.webapp.share_target
+sidebar: pwasidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The `share_target` manifest member allows installed {{Glossary("Progressive Web Apps")}} (PWAs) to be registered as a share target in the system's share dialog.
 
@@ -16,7 +17,7 @@ Once registered and installed, a PWA that uses the Web Share Target API acts as 
 > [!NOTE]
 > If you want to share data using the Web Share API, see [Web Share API](/en-US/docs/Web/API/Web_Share_API) and [`navigator.share()`](/en-US/docs/Web/API/Navigator/share).
 
-### Values
+## Values
 
 The value of the `share_target` member is an object that defines how an application can receive shared data. This object may contain the following properties (`action` and `params` are required):
 

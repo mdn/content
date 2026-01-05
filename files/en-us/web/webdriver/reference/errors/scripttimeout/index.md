@@ -59,7 +59,6 @@ finished successfully
 
 - [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Errors)
 - Associated commands and types:
-
   - [JavaScript error](/en-US/docs/Web/WebDriver/Reference/Errors/JavaScriptError)
-  - [Execute Script](/en-US/docs/Web/WebDriver/Commands/ExecuteScript)
-  - [Execute Async Script](/en-US/docs/Web/WebDriver/Commands/ExecuteAsyncScript)
+  - [Execute Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteScript)
+  - [Execute Async Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteAsyncScript)

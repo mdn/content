@@ -1,13 +1,15 @@
 ---
 title: Object.prototype.__defineGetter__()
+short-title: __defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.Object.defineGetter
+sidebar: jsref
 ---
 
-{{JSRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > This feature is deprecated in favor of defining [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) using the [object initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) or the {{jsxref("Object.defineProperty()")}} API. This method's behavior is only specified for web compatibility, and is not required to be implemented in any platform. It may not work everywhere.

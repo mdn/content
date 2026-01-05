@@ -17,16 +17,13 @@ new WebAssembly.Tag(type)
 ### Parameters
 
 - `type`
-
   - : An object that can contain the following members:
-
     - `parameters`
       - : An array of [data types](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#types) (`"i32"`, `"i64"`, `"f32"`, `"f64"`, `"v128"`, `"externref"`, `"anyfunc"`).
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-
   - : Thrown if at least one of these conditions are met:
     - The `type` parameter is not an object.
     - The `type.parameters` property is not supplied.

@@ -90,7 +90,7 @@ async function* makeTextFileLineIterator(fileURL) {
   let { value: chunk, done: readerDone } = await reader.read();
   chunk = chunk ? utf8Decoder.decode(chunk, { stream: true }) : "";
 
-  let re = /\r\n|\n|\r/gm;
+  let re = /\r?\n/g;
   let startIndex = 0;
 
   for (;;) {
@@ -99,7 +99,7 @@ async function* makeTextFileLineIterator(fileURL) {
       if (readerDone) {
         break;
       }
-      let remainder = chunk.substr(startIndex);
+      let remainder = chunk.substring(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
       chunk =
         remainder + (chunk ? utf8Decoder.decode(chunk, { stream: true }) : "");
@@ -111,7 +111,7 @@ async function* makeTextFileLineIterator(fileURL) {
   }
   if (startIndex < chunk.length) {
     // last line didn't end in a newline char
-    yield chunk.substr(startIndex);
+    yield chunk.substring(startIndex);
   }
 }
 

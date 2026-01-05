@@ -20,7 +20,7 @@ A new static [normalized TimeRanges object](/en-US/docs/Web/API/TimeRanges#norma
 const video = document.querySelector("video");
 const timeRangesObject = video.seekable;
 const timeRanges = [];
-//Go through the object and output an array
+// Go through the object and output an array
 for (let count = 0; count < timeRangesObject.length; count++) {
   timeRanges.push([timeRangesObject.start(count), timeRangesObject.end(count)]);
 }

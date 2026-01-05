@@ -1,11 +1,11 @@
 ---
 title: Atomics.load()
+short-title: load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.load
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.load()`** static
 method returns a value at a given position in the array.

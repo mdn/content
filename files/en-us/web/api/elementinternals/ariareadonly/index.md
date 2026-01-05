@@ -27,7 +27,14 @@ A string with one of the following values:
 In this example the value of `ariaReadOnly` is set to "true".
 
 ```js
-this.internals_.ariaReadonly = "true";
+class CustomControl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaReadonly = "true";
+  }
+  // …
+}
 ```
 
 ## Specifications

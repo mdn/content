@@ -18,7 +18,7 @@ A string, which can be one of the following values:
 
 - `"cache"`
   - : The resource was retrieved from the cache.
-- `"navigational-prefetch"` {{experimental_inline}}
+- `"navigational-prefetch"` {{experimental_inline}} {{non-standard_inline}}
   - : The resource was retrieved from a prefetched response stored in an in-memory cache via the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 - `""` (empty string)
   - : Returned if none of the above delivery types apply.
@@ -33,9 +33,9 @@ The following example uses a {{domxref("PerformanceObserver")}} to notify of new
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  const cachedResources = list.getEntries().filter((entry) => {
-    return entry.deliveryType === "cache";
-  });
+  const cachedResources = list
+    .getEntries()
+    .filter((entry) => entry.deliveryType === "cache");
   console.log(cachedResources);
 });
 
@@ -45,9 +45,9 @@ observer.observe({ type: "resource", buffered: true });
 The following example uses {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call the method.
 
 ```js
-const scripts = performance.getEntriesByType("resource").filter((entry) => {
-  return entry.deliveryType === "cache";
-});
+const scripts = performance
+  .getEntriesByType("resource")
+  .filter((entry) => entry.deliveryType === "cache");
 console.log(scripts);
 ```
 

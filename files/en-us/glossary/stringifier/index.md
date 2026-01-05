@@ -2,9 +2,8 @@
 title: Stringifier
 slug: Glossary/Stringifier
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An {{Glossary("object", "object's")}} stringifier is any {{Glossary("attribute")}} or {{Glossary("method")}} that is defined to provide a textual representation of the object for use in situations where a {{Glossary("string")}} is expected.
 

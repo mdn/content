@@ -125,7 +125,8 @@ if (done) {
 }
 ```
 
-> **Note:** `close()` is part of the new custom stream, not the original stream we are discussing here. We'll explain more about the custom stream in the next section.
+> [!NOTE]
+> `close()` is part of the new custom stream, not the original stream we are discussing here. We'll explain more about the custom stream in the next section.
 
 If `done` is not `true`, we process the new chunk we've read (contained in the `value` property of the results object) and then call the `pump()` function again to read the next chunk.
 
@@ -274,9 +275,7 @@ class MockPushSource {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random character string
   static #randomChars(length = 8) {
@@ -356,7 +355,7 @@ function makePushSourceStream() {
       readRepeatedly().catch((e) => controller.error(e));
       function readRepeatedly() {
         return pushSource.dataRequest().then((result) => {
-          if (result.data.length == 0) {
+          if (result.data.length === 0) {
             logSource(`No data from source: closing`);
             controller.close();
             return;
@@ -379,9 +378,7 @@ function makePushSourceStream() {
 
 ```js hidden
 // Monkey patch fetch() so it returns a response that is a mocked stream
-window.fetch = async (...args) => {
-  return { body: stream };
-};
+window.fetch = async (...args) => ({ body: stream });
 ```
 
 The code below shows a more complete example.

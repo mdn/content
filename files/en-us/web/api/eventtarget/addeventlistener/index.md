@@ -52,7 +52,7 @@ addEventListener(type, listener, useCapture)
 ### Parameters
 
 - `type`
-  - : A case-sensitive string representing the [event type](/en-US/docs/Web/Events) to listen for.
+  - : A case-sensitive string representing the [event type](/en-US/docs/Web/API/Document_Object_Model/Events) to listen for.
 - `listener`
   - : The object that receives a notification (an object that implements the
     {{domxref("Event")}} interface) when an event of the specified type occurs. This must
@@ -60,10 +60,8 @@ addEventListener(type, listener, useCapture)
     [function](/en-US/docs/Web/JavaScript/Guide/Functions). See
     [The event listener callback](#the_event_listener_callback) for details on the callback itself.
 - `options` {{optional_inline}}
-
   - : An object that specifies characteristics about the event listener. The available
     options are:
-
     - `capture` {{optional_inline}}
       - : A boolean value indicating that events of this type will be dispatched
         to the registered `listener` before being dispatched to any
@@ -73,7 +71,6 @@ addEventListener(type, listener, useCapture)
         should be invoked at most once after being added. If `true`, the
         `listener` would be automatically removed when invoked. If not specified, defaults to `false`.
     - `passive` {{optional_inline}}
-
       - : A boolean value that, if `true`, indicates that the function specified by `listener` will never call {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener calls `preventDefault()`, nothing will happen and a console warning may be generated.
 
         If this option is not specified it defaults to `false` – except that in browsers other than Safari, it defaults to `true` for {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events. See [Using passive listeners](#using_passive_listeners) to learn more.
@@ -82,7 +79,6 @@ addEventListener(type, listener, useCapture)
       - : An {{domxref("AbortSignal")}}. The listener will be removed when the {{domxref("AbortController/abort()", "abort()")}} method of the {{domxref("AbortController")}} which owns the `AbortSignal` is called. If not specified, no `AbortSignal` is associated with the listener.
 
 - `useCapture` {{optional_inline}}
-
   - : A boolean value indicating whether events of this type will be dispatched to
     the registered `listener` _before_ being dispatched to
     any `EventTarget` beneath it in the DOM tree. Events that are bubbling
@@ -90,7 +86,7 @@ addEventListener(type, listener, useCapture)
     bubbling and capturing are two ways of propagating events that occur in an element
     that is nested within another element, when both elements have registered a handle for
     that event. The event propagation mode determines the order in which elements receive
-    the event. See [DOM Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) and [JavaScript Event order](https://www.quirksmode.org/js/events_order.html#link4) for a detailed explanation.
+    the event. See [the DOM spec](https://dom.spec.whatwg.org/#introduction-to-dom-events) and [JavaScript Event order](https://www.quirksmode.org/js/events_order.html#link4) for a detailed explanation.
     If not specified, `useCapture` defaults to `false`.
 
     > [!NOTE]
@@ -144,8 +140,8 @@ the element. It will be the same as the value of the `currentTarget` property of
 the event argument that is passed to the handler.
 
 ```js
-my_element.addEventListener("click", function (e) {
-  console.log(this.className); // logs the className of my_element
+myElement.addEventListener("click", function (e) {
+  console.log(this.className); // logs the className of myElement
   console.log(e.currentTarget === this); // logs `true`
 });
 ```
@@ -153,8 +149,8 @@ my_element.addEventListener("click", function (e) {
 As a reminder, [arrow functions do not have their own `this` context](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#cannot_be_used_as_methods).
 
 ```js
-my_element.addEventListener("click", (e) => {
-  console.log(this.className); // WARNING: `this` is not `my_element`
+myElement.addEventListener("click", (e) => {
+  console.log(this.className); // WARNING: `this` is not `myElement`
   console.log(e.currentTarget === this); // logs `false`
 });
 ```
@@ -162,8 +158,8 @@ my_element.addEventListener("click", (e) => {
 If an event handler (for example, {{domxref("Element.click_event", "onclick")}}) is specified on an element in the HTML source, the JavaScript code in the attribute value is effectively wrapped in a handler function that binds the value of `this` in a manner consistent with the `addEventListener()`; an occurrence of `this` within the code represents a reference to the element.
 
 ```html
-<table id="my_table" onclick="console.log(this.id);">
-  <!-- `this` refers to the table; logs 'my_table' -->
+<table id="my-table" onclick="console.log(this.id);">
+  <!-- `this` refers to the table; logs 'my-table' -->
   …
 </table>
 ```
@@ -178,7 +174,7 @@ shown in the following example:
     console.log(this.id);
   }
 </script>
-<table id="my_table" onclick="logID();">
+<table id="my-table" onclick="logID();">
   <!-- when called, `this` will refer to the global object -->
   …
 </table>
@@ -202,8 +198,8 @@ class Something {
   constructor(element) {
     // bind causes a fixed `this` context to be assigned to `onclick2`
     this.onclick2 = this.onclick2.bind(this);
-    element.addEventListener("click", this.onclick1, false);
-    element.addEventListener("click", this.onclick2, false); // Trick
+    element.addEventListener("click", this.onclick1);
+    element.addEventListener("click", this.onclick2); // Trick
   }
   onclick1(event) {
     console.log(this.name); // undefined, as `this` is the element
@@ -224,8 +220,8 @@ class Something {
   name = "Something Good";
   constructor(element) {
     // Note that the listeners in this case are `this`, not this.handleEvent
-    element.addEventListener("click", this, false);
-    element.addEventListener("dblclick", this, false);
+    element.addEventListener("click", this);
+    element.addEventListener("dblclick", this);
   }
   handleEvent(event) {
     console.log(this.name); // 'Something Good', as this is bound to newly created object
@@ -301,17 +297,13 @@ Read [the function guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_sc
 ### Memory issues
 
 ```js
-const elts = document.getElementsByTagName("*");
+const elems = document.getElementsByTagName("*");
 
 // Case 1
-for (const elt of elts) {
-  elt.addEventListener(
-    "click",
-    (e) => {
-      // Do something
-    },
-    false,
-  );
+for (const elem of elems) {
+  elem.addEventListener("click", (e) => {
+    // Do something
+  });
 }
 
 // Case 2
@@ -319,8 +311,8 @@ function processEvent(e) {
   // Do something
 }
 
-for (const elt of elts) {
-  elt.addEventListener("click", processEvent, false);
+for (const elem of elems) {
+  elem.addEventListener("click", processEvent);
 }
 ```
 
@@ -363,12 +355,14 @@ clicks on an element.
 
 ```html
 <table id="outside">
-  <tr>
-    <td id="t1">one</td>
-  </tr>
-  <tr>
-    <td id="t2">two</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td id="t1">one</td>
+    </tr>
+    <tr>
+      <td id="t2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -384,7 +378,7 @@ function modifyText() {
 
 // Add event listener to table
 const el = document.getElementById("outside");
-el.addEventListener("click", modifyText, false);
+el.addEventListener("click", modifyText);
 ```
 
 In this code, `modifyText()` is a listener for `click` events
@@ -403,12 +397,14 @@ This example demonstrates how to add an `addEventListener()` that can be aborted
 
 ```html
 <table id="outside">
-  <tr>
-    <td id="t1">one</td>
-  </tr>
-  <tr>
-    <td id="t2">two</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td id="t1">one</td>
+    </tr>
+    <tr>
+      <td id="t2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -447,12 +443,14 @@ event listener.
 
 ```html
 <table id="outside">
-  <tr>
-    <td id="t1">one</td>
-  </tr>
-  <tr>
-    <td id="t2">two</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td id="t1">one</td>
+    </tr>
+    <tr>
+      <td id="t2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -460,20 +458,16 @@ event listener.
 
 ```js
 // Function to change the content of t2
-function modifyText(new_text) {
+function modifyText(newText) {
   const t2 = document.getElementById("t2");
-  t2.firstChild.nodeValue = new_text;
+  t2.firstChild.nodeValue = newText;
 }
 
 // Function to add event listener to table
 const el = document.getElementById("outside");
-el.addEventListener(
-  "click",
-  function () {
-    modifyText("four");
-  },
-  false,
-);
+el.addEventListener("click", function () {
+  modifyText("four");
+});
 ```
 
 Notice that the listener is an anonymous function that encapsulates code that is then,
@@ -493,12 +487,14 @@ notation.
 
 ```html
 <table id="outside">
-  <tr>
-    <td id="t1">one</td>
-  </tr>
-  <tr>
-    <td id="t2">two</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td id="t1">one</td>
+    </tr>
+    <tr>
+      <td id="t2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -506,20 +502,16 @@ notation.
 
 ```js
 // Function to change the content of t2
-function modifyText(new_text) {
+function modifyText(newText) {
   const t2 = document.getElementById("t2");
-  t2.firstChild.nodeValue = new_text;
+  t2.firstChild.nodeValue = newText;
 }
 
 // Add event listener to table with an arrow function
 const el = document.getElementById("outside");
-el.addEventListener(
-  "click",
-  () => {
-    modifyText("four");
-  },
-  false,
-);
+el.addEventListener("click", () => {
+  modifyText("four");
+});
 ```
 
 #### Result
@@ -590,7 +582,7 @@ also available to the event handler when using an arrow function.
 .demo-logs {
   width: 530px;
   height: 16rem;
-  background-color: #ddd;
+  background-color: #dddddd;
   overflow-x: auto;
   padding: 1rem;
 }
@@ -650,7 +642,7 @@ function noneOnceHandler(event) {
   log("outer, none-once, default\n");
 }
 function captureHandler(event) {
-  //event.stopImmediatePropagation();
+  // event.stopImmediatePropagation();
   log("middle, capture");
 }
 function noneCaptureHandler(event) {
@@ -663,7 +655,7 @@ function passiveHandler(event) {
 }
 function nonePassiveHandler(event) {
   event.preventDefault();
-  //event.stopPropagation();
+  // event.stopPropagation();
   log("inner2, none-passive, default, not open new page");
 }
 ```
@@ -771,6 +763,8 @@ The code adds a listener to the container's {{domxref("Element/wheel_event", "wh
 
 ```js
 const passive = document.querySelector("#passive");
+const container = document.querySelector("#container");
+
 passive.addEventListener("change", (event) => {
   container.removeEventListener("wheel", wheelHandler);
   container.addEventListener("wheel", wheelHandler, {
@@ -779,7 +773,6 @@ passive.addEventListener("change", (event) => {
   });
 });
 
-const container = document.querySelector("#container");
 container.addEventListener("wheel", wheelHandler, {
   passive: true,
   once: true,
@@ -830,5 +823,5 @@ The effect is that:
 ## See also
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [Creating and triggering custom events](/en-US/docs/Web/Events/Creating_and_triggering_events)
+- [Creating and dispatching custom events](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events)
 - [More details on the use of `this` in event handlers](https://www.quirksmode.org/js/this.html)

@@ -28,12 +28,10 @@ setPositionState(stateDict)
 ### Parameters
 
 - `stateDict` {{optional_inline}}
-
   - : An object providing updated information about the playback position and speed
     of the document's ongoing media. If the object is empty, the existing playback
     state information is cleared. This object can contain the following
     parameters:
-
     - `duration` {{optional_inline}}
       - : A floating-point value giving the total duration of the current media in seconds. This should always be a positive number, with positive infinity ({{jsxref("Infinity")}}) indicating media without a defined end, such as a live stream.
     - `playbackRate` {{optional_inline}}
@@ -48,9 +46,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-
   - : This error can occur in an array of circumstances:
-
     - The specified object's `duration` is missing, negative, or `null`.
     - Its `position` is either negative or greater than `duration`.
     - Its `playbackRate` is zero.

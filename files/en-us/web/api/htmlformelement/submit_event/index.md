@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLFormElement.submit_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`submit`** event fires when a {{HtmlElement("form")}} is submitted.
 
@@ -27,10 +27,10 @@ However, the event is _not_ sent to the form when a script calls the {{domxref("
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("submit", (event) => {});
+```js-nolint
+addEventListener("submit", (event) => { })
 
-onsubmit = (event) => {};
+onsubmit = (event) => { }
 ```
 
 ## Event type
@@ -64,19 +64,20 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 ### JavaScript
 
 ```js
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+
 function logSubmit(event) {
   log.textContent = `Form Submitted! Timestamp: ${event.timeStamp}`;
   event.preventDefault();
 }
 
-const form = document.getElementById("form");
-const log = document.getElementById("log");
 form.addEventListener("submit", logSubmit);
 ```
 
 ### Result
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Examples", "", "", "", "", "", "", "allow-forms")}}
 
 ## Specifications
 

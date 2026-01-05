@@ -3,9 +3,8 @@ title: HTTP response status codes
 slug: Web/HTTP/Reference/Status
 page-type: landing-page
 browser-compat: http.status
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 HTTP response status codes indicate whether a specific [HTTP](/en-US/docs/Web/HTTP) request has been successfully completed.
 Responses are grouped in five classes:
@@ -135,7 +134,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : In [conditional requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests), the client has indicated preconditions in its headers which the server does not meet.
 - {{HTTPStatus(413, "413 Content Too Large")}}
   - : The request body is larger than limits defined by server.
-    The server might close the connection or return an {{HTTPHeader("Retry-After")}} header field.
+    The server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.
 - {{HTTPStatus(414, "414 URI Too Long")}}
   - : The URI requested by the client is longer than the server is willing to interpret.
 - {{HTTPStatus(415, "415 Unsupported Media Type")}}

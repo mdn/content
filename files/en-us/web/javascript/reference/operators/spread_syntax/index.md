@@ -3,9 +3,8 @@ title: Spread syntax (...)
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
 page-type: javascript-operator
 browser-compat: javascript.operators.spread
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **spread (`...`)** syntax allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.
 
@@ -341,7 +340,7 @@ const obj2 = { foo: "baz", y: 13 };
 const merge = (...objects) =>
   objects.reduce((acc, cur) => ({ ...acc, ...cur }));
 
-const mergedObj1 = merge(obj1, obj2);
+const mergedObj = merge(obj1, obj2);
 // { foo: 'baz', x: 42, y: 13 }
 ```
 

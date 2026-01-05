@@ -22,7 +22,14 @@ A string.
 In this example the value of `ariaLabel` is set to "close".
 
 ```js
-this.internals_.ariaLabel = "close";
+class CustomControl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaLabel = "close";
+  }
+  // …
+}
 ```
 
 ## Specifications

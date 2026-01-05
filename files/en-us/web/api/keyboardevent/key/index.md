@@ -163,44 +163,40 @@ As we finally release the `key 2`, a {{domxref("Element/keyup_event", "keyup")}}
 This example uses {{domxref("EventTarget.addEventListener()")}} to listen for {{domxref("Element/keydown_event", "keydown")}} events. When they occur, the key's value is checked to see if it's one of the keys the code is interested in, and if it is, it gets processed in some way (possibly by steering a spacecraft, perhaps by changing the selected cell in a spreadsheet).
 
 ```js
-window.addEventListener(
-  "keydown",
-  (event) => {
-    if (event.defaultPrevented) {
-      return; // Do nothing if the event was already processed
-    }
+window.addEventListener("keydown", (event) => {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
 
-    switch (event.key) {
-      case "ArrowDown":
-        // Do something for "down arrow" key press.
-        break;
-      case "ArrowUp":
-        // Do something for "up arrow" key press.
-        break;
-      case "ArrowLeft":
-        // Do something for "left arrow" key press.
-        break;
-      case "ArrowRight":
-        // Do something for "right arrow" key press.
-        break;
-      case "Enter":
-        // Do something for "enter" or "return" key press.
-        break;
-      case " ":
-        // Do something for "space" key press.
-        break;
-      case "Escape":
-        // Do something for "esc" key press.
-        break;
-      default:
-        return; // Quit when this doesn't handle the key event.
-    }
+  switch (event.key) {
+    case "ArrowDown":
+      // Do something for "down arrow" key press.
+      break;
+    case "ArrowUp":
+      // Do something for "up arrow" key press.
+      break;
+    case "ArrowLeft":
+      // Do something for "left arrow" key press.
+      break;
+    case "ArrowRight":
+      // Do something for "right arrow" key press.
+      break;
+    case "Enter":
+      // Do something for "enter" or "return" key press.
+      break;
+    case " ":
+      // Do something for "space" key press.
+      break;
+    case "Escape":
+      // Do something for "esc" key press.
+      break;
+    default:
+      return; // Quit when this doesn't handle the key event.
+  }
 
-    // Cancel the default action to avoid it being handled twice
-    event.preventDefault();
-  },
-  true,
-);
+  // Cancel the default action to avoid it being handled twice
+  event.preventDefault();
+});
 ```
 
 ## Specifications

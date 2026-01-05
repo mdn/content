@@ -22,9 +22,7 @@ getPathData(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An optional object for controlling aspects of the path data retrieval process. This object may contain the following properties:
-
     - `normalize` {{optional_inline}}
       - : A boolean value indicating whether the returned sequence of path segments is converted to the base set of [absolute commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands) (`'M'`, `'L'`, `'C'` and `'Z'`), with the values adjusted accordingly.
 

@@ -2,9 +2,8 @@
 title: Native manifests
 slug: Mozilla/Add-ons/WebExtensions/Native_manifests
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Native manifests are JSON files provisioned on the user's computer by means other than the extension installation process. For example, a native manifest might be provisioned by a device administrator or native application installer.
 

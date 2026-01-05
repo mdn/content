@@ -3,9 +3,8 @@ title: "<canvas>: The Graphics Canvas element"
 slug: Web/HTML/Reference/Elements/canvas
 page-type: html-element
 browser-compat: html.elements.canvas
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-US/docs/Web/API/Canvas_API) or the [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
 
@@ -142,7 +141,7 @@ ctx.fillRect(10, 10, 100, 100);
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

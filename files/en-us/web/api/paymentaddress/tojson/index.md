@@ -19,6 +19,10 @@ The **`toJSON()`** method of the {{domxref("PaymentAddress")}} interface is a st
 toJSON()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A JSON object.

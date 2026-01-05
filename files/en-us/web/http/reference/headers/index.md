@@ -3,9 +3,8 @@ title: HTTP headers
 short-title: Headers
 slug: Web/HTTP/Reference/Headers
 page-type: landing-page
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **HTTP headers** let the client and the server pass additional information with a message in a request or response.
 In HTTP/1.X, a header is a case-insensitive name followed by a colon, then optional whitespace which will be ignored, and finally by its value (for example: `Allow: POST`).
@@ -154,6 +153,13 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/Gui
   - : States the wish for a {{HTTPHeader("Repr-Digest")}} header.
     It is the `Repr-` analogue of {{HTTPHeader("Want-Content-Digest")}}.
 
+## Integrity policy
+
+- {{HTTPHeader("Integrity-Policy")}}
+  - : Ensures that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) guarantees.
+- {{HTTPHeader("Integrity-Policy-Report-Only")}}
+  - : Reports on resources that the user agent loads that would violate [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) guarantees if the integrity policy were enforced (using the `Integrity-Policy` header).
+
 ## Message body information
 
 - {{HTTPHeader("Content-Length")}}
@@ -204,7 +210,7 @@ Range requests are useful for applications like media players that support rando
 - {{HTTPHeader("Location")}}
   - : Indicates the URL to redirect a page to.
 - {{HTTPHeader("Refresh")}}
-  - : Directs the browser to reload the page or redirect to another. Takes the same value as the `meta` element with [`http-equiv="refresh"`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv).
+  - : Directs the browser to reload the page or redirect to another. Takes the same value as the `meta` element with [`http-equiv="refresh"`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv).
 
 ## Request context
 
@@ -239,7 +245,7 @@ Range requests are useful for applications like media players that support rando
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
   - : Allows web developers to experiment with policies by monitoring, but not enforcing, their effects. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
 - {{HTTPHeader("Expect-CT")}} {{deprecated_inline}}
-  - : Lets sites opt in to reporting and enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) to detect use of misissued certificates for that site.
+  - : Lets sites opt in to reporting and enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Defenses/Certificate_Transparency) to detect use of misissued certificates for that site.
 - {{HTTPHeader("Permissions-Policy")}}
   - : Provides a mechanism to allow and deny the use of browser features in a website's own frame, and in {{htmlelement("iframe")}}s that it embeds.
 - {{HTTPHeader("Reporting-Endpoints")}} {{experimental_inline}}
@@ -253,7 +259,7 @@ Range requests are useful for applications like media players that support rando
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : A cross-domain policy file may grant clients, such as Adobe Acrobat or Apache Flex (among others), permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy).
+  - : A cross-domain policy file may grant clients, such as Adobe Acrobat or Apache Flex (among others), permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
     The `X-Permitted-Cross-Domain-Policies` header overrides such policy files so that clients still block unwanted requests.
 - {{HTTPHeader("X-Powered-By")}}
   - : May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.
@@ -279,6 +285,16 @@ The following request headers are not _strictly_ "fetch metadata request headers
   - : Indicates the purpose of the request, when the purpose is something other than immediate use by the user-agent. The header currently has one possible value, `prefetch`, which indicates that the resource is being fetched preemptively for a possible future navigation.
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
   - : A request header sent in preemptive request to {{domxref("Window/fetch", "fetch()")}} a resource during service worker boot. The value, which is set with {{domxref("NavigationPreloadManager.setHeaderValue()")}}, can be used to inform a server that a different resource should be returned than in a normal `fetch()` operation.
+
+## Fetch storage access headers
+
+These headers enable an enhanced workflow for the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+
+- {{HTTPHeader("Sec-Fetch-Storage-Access")}}
+  - : Indicates the "storage access status" for the current fetch context, which will be one of `none`, `inactive`, or `active`.
+    The server may respond with `Activate-Storage-Access` to request that the browser activate an `inactive` permission and retry the request, or to load a resource with access to its third-party cookies if the status is `active`.
+- {{HTTPHeader("Activate-Storage-Access")}}
+  - : Used in response to `Sec-Fetch-Storage-Access` to indicate that the browser can activate an existing permission for secure access and retry the request with cookies, or load a resource with cookie access if it already has an activated permission.
 
 ## Server-sent events
 
@@ -361,7 +377,7 @@ HTTP [Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) are a set of reque
 Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.
 
 - {{HTTPHeader("Accept-CH")}}
-  - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute.
+  - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) attribute.
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
   - : Servers use `Critical-CH` along with {{HTTPHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#critical_client_hints).
 
@@ -403,18 +419,29 @@ The [UA client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client
 > [!NOTE]
 > User-agent client hints are not available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) because they rely on [permissions policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) delegation, which could be used to leak data.
 
-#### Device client hints
+#### Device and responsive image client hints
 
-- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Response header used to confirm the image device to pixel ratio (DPR) in requests where the screen {{HTTPHeader("DPR")}} client hint was used to select an image resource.
-- {{HTTPHeader("Device-Memory")}}
+- {{HTTPHeader("Sec-CH-Device-Memory")}} {{experimental_inline}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
-- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{HTTPHeader("Sec-CH-DPR")}} {{experimental_inline}}
   - : Request header that provides the client device pixel ratio (the number of physical {{glossary("device pixel", "device pixels")}} for each {{Glossary("CSS pixel")}}).
-- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{HTTPHeader("Sec-CH-Viewport-Height")}} {{experimental_inline}}
+  - : Request header provides the client's layout viewport height in {{Glossary("CSS pixel","CSS pixels")}}.
+- {{HTTPHeader("Sec-CH-Viewport-Width")}} {{experimental_inline}}
   - : Request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}.
+- {{HTTPHeader("Sec-CH-Width")}} {{experimental_inline}}
+  - : Request header provides the image's width in {{Glossary("CSS pixel","CSS pixels")}}.
+
+##### Deprecated device and responsive image client hints
+
+- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Standardized as {{HTTPHeader("Sec-CH-Device-Memory")}}
+- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Standardized as {{HTTPHeader("Sec-CH-DPR")}}
+- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Standardized as {{HTTPHeader("Sec-CH-Viewport-Width")}}
 - {{HTTPHeader("Width")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Request header indicates the desired resource width in physical pixels (the intrinsic size of an image).
+  - : Standardized as {{HTTPHeader("Sec-CH-Width")}}
 
 #### Network client hints
 
@@ -478,6 +505,8 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
   - : A client can send the [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-accept-signature-header) header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : Indicates that the request has been conveyed in TLS early data.
+- {{HTTPHeader("Idempotency-Key")}} {{experimental_inline}}
+  - : Provides a unique key for `POST` and `PATCH` requests, allowing them to be made idempotent.
 - {{HTTPHeader("Set-Login")}} {{experimental_inline}}
   - : Response header sent by a federated identity provider (IdP) to set its login status, meaning whether any users are logged into the IdP on the current browser or not.
     This is stored by the browser and used by the [FedCM API](/en-US/docs/Web/API/FedCM_API).
@@ -487,6 +516,8 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
   - : The [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-signed-headers-header) header field identifies an ordered list of response header fields to include in a signature.
 - {{HTTPHeader("Speculation-Rules")}} {{experimental_inline}}
   - : Provides a list of URLs pointing to text resources containing [speculation rule](/en-US/docs/Web/API/Speculation_Rules_API) JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set.
+- {{HTTPHeader("Sec-Speculation-Tags")}} {{experimental_inline}}
+  - : Contains one or more tag values from the speculation rules that resulted in the speculation so a server can identify which rule(s) caused a speculation and potentially block them.
 - {{HTTPHeader("Supports-Loading-Mode")}} {{experimental_inline}}
   - : Set by a navigation target to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering) requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
 
@@ -501,7 +532,7 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{non-standard_inline}}
   - : Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
 - {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
-  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="…">`.
+  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is equivalent to [`<meta name="robots">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots) elements.
 
 ## Deprecated headers
 

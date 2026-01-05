@@ -1,6 +1,6 @@
 ---
 title: to
-slug: Web/SVG/Reference/Attribute/To
+slug: Web/SVG/Reference/Attribute/to
 page-type: svg-attribute
 spec-urls:
   - https://svgwg.org/specs/animations/#SetElementToAttribute

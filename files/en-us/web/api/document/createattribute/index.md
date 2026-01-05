@@ -29,12 +29,12 @@ createAttribute(name)
 
 ### Return value
 
-A {{domxref("Attr")}} node.
+An {{domxref("Attr")}} node.
 
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : Thrown if the [`name`](#name) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
+  - : Thrown if the [`name`](#name) value is not a valid [XML name](https://www.w3.org/TR/xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
 
 ## Examples
 

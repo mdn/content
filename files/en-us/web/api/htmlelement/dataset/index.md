@@ -18,6 +18,10 @@ of the {{DOMxRef("HTMLElement")}} interface provides read/write access to [custo
 > Instead, all writes must be to the individual properties within the
 > `dataset`, which in turn represent the data attributes.
 
+## Value
+
+A {{domxref("DOMStringMap")}}.
+
 An HTML `data-*` attribute and its corresponding DOM
 `dataset.property` modify their shared name according to where
 they are read or written:
@@ -40,10 +44,8 @@ attributes in our article [_Using data attributes_](/en-US/docs/Web/HTML/How_to/
 ### Name conversion
 
 - `dash-style` to `camelCase` conversion
-
   - : A custom data attribute name is transformed to a key for the
     {{domxref("DOMStringMap") }} entry by the following:
-
     1. Lowercase all ASCII capital letters (`A` to
        `Z`);
     2. Remove the prefix `data-` (including the dash);
@@ -52,10 +54,8 @@ attributes in our article [_Using data attributes_](/en-US/docs/Web/HTML/How_to/
     4. Other characters (including other dashes) are left unchanged.
 
 - `camelCase` to `dash-style` conversion
-
   - : The opposite transformation, which maps a key to an attribute name, uses the
     following:
-
     1. **Restriction:** Before transformation, a dash _must not_ be
        immediately followed by an ASCII lowercase letter `a` to
        `z`;
@@ -83,10 +83,6 @@ For example, a `data-abc-def` attribute corresponds to
   converted into `data-example="null"`.
 
 - To remove an attribute, you can use the [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete): `delete element.dataset.keyname`.
-
-## Value
-
-A {{domxref("DOMStringMap")}}.
 
 ## Examples
 

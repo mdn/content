@@ -40,8 +40,7 @@ You can use this attribute with any SVG element.
 </table>
 
 - `<language-tag>`
-
-  - : This value specifies the language used for the element. The syntax of this value is defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+  - : This value specifies the language used for the element as a valid {{glossary("BCP 47 language tag")}}.
 
     The most common syntax is a value formed by a lowercase two-character part for the language and an uppercase two-character part for the region or country, separated by a minus sign, e.g., `en-US` for US English or `de-AT` for Austrian German.
 
@@ -64,4 +63,4 @@ You can use this attribute with any SVG element.
 ## See also
 
 - [XML specification of `xml:lang`](https://www.w3.org/TR/xml/#sec-lang-tag)
-- {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}
+- {{glossary("BCP 47 language tag")}}

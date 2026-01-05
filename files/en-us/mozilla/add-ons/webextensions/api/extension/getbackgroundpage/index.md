@@ -3,9 +3,8 @@ title: extension.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
 page-type: webextension-api-function
 browser-compat: webextensions.api.extension.getBackgroundPage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns the [Window](/en-US/docs/Web/API/Window) of the background page if the background script is running. If the script is not running, null is returned.
 

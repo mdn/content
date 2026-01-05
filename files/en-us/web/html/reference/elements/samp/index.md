@@ -3,9 +3,8 @@ title: "<samp>: The Sample Output element"
 slug: Web/HTML/Reference/Elements/samp
 page-type: html-element
 browser-compat: html.elements.samp
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<samp>`** [HTML](/en-US/docs/Web/HTML) element is used to enclose inline text which represents sample (or quoted) output from a computer program. Its contents are typically rendered using the browser's default monospaced font (such as [Courier](<https://en.wikipedia.org/wiki/Courier_(typeface)>) or Lucida Console).
 
@@ -84,7 +83,7 @@ The CSS that achieves the appearance we want is:
 
 ```css
 .prompt {
-  color: #b00;
+  color: #bb0000;
 }
 
 samp > kbd {
@@ -92,7 +91,7 @@ samp > kbd {
 }
 
 .cursor {
-  color: #00b;
+  color: #0000bb;
 }
 ```
 

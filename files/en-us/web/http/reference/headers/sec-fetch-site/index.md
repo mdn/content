@@ -1,11 +1,11 @@
 ---
-title: Sec-Fetch-Site
+title: Sec-Fetch-Site header
+short-title: Sec-Fetch-Site
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-Site
 page-type: http-header
 browser-compat: http.headers.Sec-Fetch-Site
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Sec-Fetch-Site`** {{Glossary("fetch metadata request header")}} indicates the relationship between a request initiator's origin and the origin of the requested resource.
 

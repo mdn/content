@@ -1,0 +1,27 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Learn_web_development
+    title: Learn
+  - type: section
+    link: /Learn_web_development/Howto
+    title: How to
+  - type: listSubPages
+    path: /Learn_web_development/Howto/Web_mechanics
+    link: /Learn_web_development/Howto/Web_mechanics
+    details: closed
+  - type: listSubPages
+    path: /Learn_web_development/Howto/Design_and_accessibility
+    link: /Learn_web_development/Howto/Design_and_accessibility
+    details: closed
+  - type: listSubPages
+    path: /Learn_web_development/Howto/Tools_and_setup
+    link: /Learn_web_development/Howto/Tools_and_setup
+    details: closed
+  - type: listSubPages
+    path: /Learn_web_development/Howto/Solve_CSS_problems
+    link: /Learn_web_development/Howto/Solve_CSS_problems
+    details: closed
+  - /Learn_web_development/Howto/Solve_HTML_problems
+  - /Learn_web_development/Howto/Solve_JavaScript_problems

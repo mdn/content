@@ -49,7 +49,7 @@ const elementDisplay = document.getElementById("elementDisplay");
 getElementButton.addEventListener("click", () => {
   const circleElement = svgElement.getElementById("circle1");
   if (circleElement) {
-    elementDisplay.textContent = "Element found: " + circleElement.tagName;
+    elementDisplay.textContent = `Element found: ${circleElement.tagName}`;
   } else {
     elementDisplay.textContent = "Element not found.";
   }

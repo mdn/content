@@ -38,7 +38,7 @@ An {{domxref("SVGAnimatedString")}} object.
     y="50"
     width="200"
     height="100"
-    style="fill:blue;"
+    fill="blue"
     filter="url(#image-filter)" />
 </svg>
 ```

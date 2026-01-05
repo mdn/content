@@ -1,6 +1,6 @@
 ---
 title: Code of conduct enforcement guidelines
-short-title: Community Participation Guidelines
+short-title: Code of conduct guidelines
 slug: MDN/Community/Community_Participation_Guidelines
 page-type: mdn-community-guide
 sidebar: mdnsidebar
@@ -18,7 +18,7 @@ This document describes how to report violations and what happens depending on t
 - **Proportionality:** Responses to violations are proportionate to the harm caused.
 - **Restorative Justice:** Repair harm and foster learning.
 
-## Code of Conduct Violations and Enforcement Ladder
+## Code of Conduct violations and enforcement ladder
 
 The MDN Community Management team ([`@mdn/community`](https://github.com/orgs/mdn/teams/community) on GitHub) investigates the severity of behavior based on a report, then determines and carries out any actions, if appropriate.
 Violations follow a step-by-step escalation process, and the reportee is informed of consequences at leach level.
@@ -26,17 +26,17 @@ In serious cases, enforcement may skip levels up to and including an immediate, 
 
 Below is a summary of severity levels and enforcement actions.
 
-### Level 0: No Action
+### Level 0: No action
 
 - **Severity:** There is no clear indication a violation of the CPG.
 - **Actions:** No formal action taken. Feedback is provided to the reporter, reportee, or both, to promote good behavior and positive interactions.
 
-### Level 1: Simple Warning Issued
+### Level 1: Simple warning issued
 
 - **Severity:** Minor violations of the CPG.
 - **Actions:** A private, written warning from project leadership, with clarity of the violation and consequences of continued behavior.
 
-### Level 2: Warning
+### Level 2: Formal warning issued
 
 - **Severity:** Moderate violation of the CPG, or repeated minor violations.
 - **Actions:**
@@ -44,17 +44,18 @@ Below is a summary of severity levels and enforcement actions.
   - Guidance on rectifying the situation, if possible.
   - Communication of next-level consequences if behaviors are repeated.
 
-### Level 3: Warning + Mandatory Cooling Off Period (Tool Access Revoked - GH & Discord)
+### Level 3: Warning and mandatory cooling-off period
 
 - **Severity:** Continued violations or escalation in severity.
 - **Actions:**
   - A private warning with clarity of the violation and consequences of continued behavior.
   - No interaction on community messaging platforms, such as public forums, commenting on bugs.
-  - No interacting with people involved in the report or others suspected to be involved.
+  - No interaction with people involved in the report or others suspected to be involved.
+  - Access to GitHub and Discord temporarily revoked.
   - Avoid interactions in Mozilla channels, physical spaces and offices, and online channels like social media (e.g., following/liking/re-posting).
   - The reportee has the opportunity to participate in the project again after onboarding that clarifies expected behavior.
 
-### Level 4: Ban across MDN and Mozilla Spaces, All Areas Permanent Ban
+### Level 4: Permanent ban across MDN and Mozilla spaces
 
 - **Severity:** Serious [Mozilla Community Participation Guidelines (CPG)](https://www.mozilla.org/en-US/about/governance/policies/participation/) breaches.
 - **Actions:**
@@ -65,15 +66,15 @@ Below is a summary of severity levels and enforcement actions.
   - Permanently suspended from any and all community leadership roles.
   - Revocation of any and all permissions to use the Mozilla trademark.
 
-## Reporting Process
+## Reporting process
 
-### How to Report a violation
+### Reporting violations
 
 Reports can be sent to mdn-cpg-report@mozilla.com.
 To report a violation or abuse on GitHub, see [GitHub's content reporting guide](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam).
 The **"Report to repository admins"** option must be checked for the MDN team to see a content report.
 
-Include any relevant details, including date, time, description of the violation.
+Include any relevant details, including date, time, and description of the violation.
 Include identifying information of the offender and screenshots, if possible.
 
 ### Investigation
@@ -81,24 +82,24 @@ Include identifying information of the offender and screenshots, if possible.
 MDN Community Management investigates all reports confidentially.
 When necessary, further information may be requested from the involved parties.
 
-### Decision Making
+### Decision making
 
-MDN Community Management assess the severity of the violation, apply the enforcement actions as outlined, and communicate the outcome to relevant parties.
+MDN Community Management assesses the severity of the violation, applies the enforcement actions as outlined, and communicates the outcome to relevant parties.
 
 ### Appeals
 
-If a reported individual believes the decision was unjust, they may appeal through the [appeals process detailed on the community page].
+Once an incident has been investigated and a decision has been communicated to the relevant parties, all have the opportunity to appeal this decision by sending an email to mdn-cpg-report@mozilla.com.
 Appeals are reviewed by a separate, impartial panel.
 
-### Documentation and Record Keeping
+### Documentation and record keeping
 
 All incidents will be documented to ensure consistency and fairness.
-Records of violations and actions taken are kept private, and accessible only by MDN Community Management.
+Records of violations and actions taken are kept private and accessible only by MDN Community Management.
 
 ## Frequently Asked Questions (FAQs)
 
 Common questions are answered below.
-If anything else about CPG reports and processes is unclear or unanswered, get in touch via [our Communication channels](/en-US/docs/MDN/Community/Communication_channels).
+If anything else about CPG reports and processes is unclear or unanswered, get in touch via one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ### What happens if a violation involves an edge-case scenario?
 
@@ -107,10 +108,10 @@ The enforcement team will make a judgment based on the context and the principle
 
 Examples include:
 
-- **Anonymous Reports:** These reports are investigated with extra care to validate the claims while maintaining fairness.
-- **Reports Involving Leadership Members:** A separate impartial panel will handle these cases to avoid conflicts of interest.
-- **Interactions During Cooling-Off Periods:** Violations during a cooling-off period, such as unintentional online interactions, may be considered differently, with an emphasis on intent and harm caused.
+- **Anonymous reports:** These reports are investigated with extra care to validate the claims while maintaining fairness.
+- **Reports involving leadership members:** A separate impartial panel will handle these cases to avoid conflicts of interest.
+- **Interactions during cooling-off periods:** Violations during a cooling-off period, such as unintentional online interactions, may be considered differently, with an emphasis on intent and harm caused.
 
-### Updates to CPG
+### How is CPG maintained over time?
 
 The CPG process is a living document that evolves with the community. Feedback is welcome on [GitHub Discussions](https://github.com/orgs/mdn/discussions), [Discord](https://mdn.dev/discord), and changes will be communicated on the community page.

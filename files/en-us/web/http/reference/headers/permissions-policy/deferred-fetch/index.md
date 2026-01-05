@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: deferred-fetch"
+title: "Permissions-Policy: deferred-fetch directive"
+short-title: deferred-fetch
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/deferred-fetch
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.deferred-fetch
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`deferred-fetch`** {{HTTPHeader("Permissions-Policy")}} directive is part of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API).
 
@@ -19,16 +21,16 @@ See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas
 
 ```http
 Permissions-policy: deferred-fetch=(self)
-Permissions-policy: deferred-fetch=(self <urllist>)
-Permissions-policy: deferred-fetch=(<urllist>)
+Permissions-policy: deferred-fetch=(self <url-list>)
+Permissions-policy: deferred-fetch=(<url-list>)
 ```
 
-- `<urllist>`
+- `<url-list>`
   - : A space-separated list of origins (each of which is given in quotation marks) which are granted a higher quota of 64KiB taken from the parent's main quota. The 64KiB quota is taken at the time the subframe is created.
 
 A cross-origin subframe can grant `deferred-fetch` to one of its cross-origin subframe descendants, delegating its entire quota. This only works if none of the quota is currently being used.
 
-Permissions Policy checks are not discernable from quota checks. Calling `fetchLater()` will throw a `QuotaExceededError` both if the quota is actually exceeded and if the quota was restricted for that origin via a Permissions Policy.
+Permissions Policy checks are not discernible from quota checks. Calling `fetchLater()` will throw a `QuotaExceededError` both if the quota is actually exceeded and if the quota was restricted for that origin via a Permissions Policy.
 
 ## Default policy
 

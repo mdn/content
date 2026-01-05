@@ -3,9 +3,8 @@ title: downloads.removeFile()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.removeFile
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`removeFile()`** function of the {{WebExtAPIRef("downloads")}} API removes a downloaded file from disk.
 
@@ -34,10 +33,6 @@ let removing = browser.downloads.removeFile(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the request was successful, the promise will be fulfilled with no arguments. If the request failed, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -68,6 +63,10 @@ searching.then(remove, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-removeFile) API.

@@ -20,14 +20,14 @@ The **`AudioSinkInfo`** interface of the {{domxref("Web Audio API", "Web Audio A
 
 ## Examples
 
-If a new {{domxref("AudioContext")}} is created with a `sinkId` value of `{ type: 'none' }`, calling {{domxref("AudioContext.sinkId")}} later in the code will return a `AudioSinkInfo` object containing `type: 'none'`. This is currently the only value available.
+If a new {{domxref("AudioContext")}} is created with a `sinkId` value of `{ type: 'none' }`, calling {{domxref("AudioContext.sinkId")}} later in the code will return an `AudioSinkInfo` object containing `type: 'none'`. This is currently the only value available.
 
 ```js
 audioCtx = new window.AudioContext({
   sinkId: { type: "none" },
 });
 
-// ...
+// …
 
 audioCtx.sinkId;
 ```
@@ -42,7 +42,7 @@ audioCtx.sinkId;
 
 ## See also
 
-- [SetSinkId test example](https://set-sink-id.glitch.me/)
+- [SetSinkId test example](https://mdn.github.io/dom-examples/audiocontext-setsinkid/) (check out the [source code](https://github.com/mdn/dom-examples/tree/main/audiocontext-setsinkid))
 - {{domxref("AudioContext.setSinkId()")}}
 - {{domxref("AudioContext.sinkId")}}
 - {{domxref("AudioContext/sinkchange_event", "sinkchange")}}

@@ -3,9 +3,8 @@ title: 200 OK
 slug: Web/HTTP/Reference/Status/200
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.200
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`200 OK`** [successful response](/en-US/docs/Web/HTTP/Reference/Status#successful_responses) status code indicates that a request has succeeded.
 A `200 OK` response is cacheable by default.

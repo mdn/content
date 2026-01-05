@@ -1,11 +1,11 @@
 ---
-title: Via
+title: Via header
+short-title: Via
 slug: Web/HTTP/Reference/Headers/Via
 page-type: http-header
 browser-compat: http.headers.Via
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The **`Via`** {{glossary("request header", "request")}} and {{glossary("response header")}} is added by {{Glossary("Proxy_server", "proxies")}}, both forward and reverse.
 It is used for tracking message forwards, avoiding request loops, and identifying the protocol capabilities of senders along the request/response chain.

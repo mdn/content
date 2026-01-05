@@ -5,9 +5,10 @@ page-type: html-element
 status:
   - deprecated
 browser-compat: html.elements.acronym
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<acronym>`** [HTML](/en-US/docs/Web/HTML) element allows authors to clearly indicate a sequence of characters that compose an acronym or abbreviation for a word.
 

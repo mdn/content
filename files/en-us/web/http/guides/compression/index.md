@@ -2,9 +2,8 @@
 title: Compression in HTTP
 slug: Web/HTTP/Guides/Compression
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **Compression** is an important way to increase the performance of a website. For some documents, size reduction of up to 70% lowers the bandwidth capacity needs. Over the years, algorithms also got more efficient, and new ones are supported by clients and servers.
 

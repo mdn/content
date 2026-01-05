@@ -3,9 +3,8 @@ title: downloads.acceptDanger()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/acceptDanger
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.acceptDanger
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`acceptDanger()`** function of the {{WebExtAPIRef("downloads")}} API prompts the user to either accept or cancel a potentially dangerous download.
 
@@ -30,11 +29,11 @@ let prompting = browser.downloads.acceptDanger(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). When the dialog closes, the promise will be fulfilled with no arguments.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-acceptDanger) API.

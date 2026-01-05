@@ -1,11 +1,11 @@
 ---
 title: Intl.Collator.prototype.compare()
+short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Collator.compare
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`compare()`** method of {{jsxref("Intl.Collator")}} instances compares two
 strings according to the sort order of this collator object.

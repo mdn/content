@@ -3,9 +3,8 @@ title: theme.reset()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/reset
 page-type: webextension-api-function
 browser-compat: webextensions.api.theme.reset
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Resets any theme applied using the {{WebExtAPIRef("theme.update()")}} method.
 

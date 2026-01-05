@@ -30,13 +30,11 @@ _The `History` interface doesn't inherit any property._
 _The `History`_ _interface doesn't inherit any methods._
 
 - {{domxref("History.back","back()")}}
-
   - : This asynchronous method goes to the previous page in session history, the same action as when the user clicks the browser's <kbd>Back</kbd> button. Equivalent to `history.go(-1)`.
 
     Calling this method to go back beyond the first page in the session history has no effect and doesn't raise an exception.
 
 - {{domxref("History.forward","forward()")}}
-
   - : This asynchronous method goes to the next page in session history, the same action as when the user clicks the browser's <kbd>Forward</kbd> button; this is equivalent to `history.go(1)`.
 
     Calling this method to go forward beyond the most recent page in the session history has no effect and doesn't raise an exception.

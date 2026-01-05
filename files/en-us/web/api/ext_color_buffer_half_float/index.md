@@ -22,17 +22,22 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 - `ext.RGBA16F_EXT`
   - : RGBA 16-bit floating-point color-renderable format.
 - `ext.RGB16F_EXT`
-  - : RGB 16-bit floating-point color-renderable format.
+  - : RGB 16-bit floating-point format. In WebGL 1.0, this may be color-renderable (implementation-dependent). In WebGL 2.0, this format is not color-renderable.
 - `ext.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT`
-  - : ?
+  - : Passed to {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}} to get the framebuffer type.
 - `ext.UNSIGNED_NORMALIZED_EXT`
-  - : ?
+  - : The framebuffer contains unsigned fixed-point components.
 
 ## Extended methods
 
 This extension extends {{domxref("WebGLRenderingContext.renderbufferStorage()")}}:
 
-- The `internalformat` parameter now accepts `ext.RGBA16F_EXT` and `ext.RGB16F_EXT`.
+- In WebGL 1.0 contexts, the `internalFormat` parameter now accepts `ext.RGBA16F_EXT` and `ext.RGB16F_EXT`. However, `ext.RGB16F_EXT` support is optional and applications must check framebuffer completeness to determine if it's supported.
+- In WebGL 2.0 contexts, the `internalFormat` parameter now accepts `ext.RGBA16F_EXT`. The `RGB16F` format is not color-renderable in WebGL 2.0.
+
+It extends {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}:
+
+- In WebGL 1.0 contexts, the `pname` parameter now accepts `ext.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT`. An `INVALID_OPERATION` error is generated if `attachment` is `DEPTH_STENCIL_ATTACHMENT` and `pname` is `FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT`. When `pname` is `ext.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT`, `getFramebufferAttachmentParameter()` returns either `gl.FLOAT` or `gl.UNSIGNED_NORMALIZED_EXT` for floating-point or unsigned fixed-point components respectively.
 
 ## Examples
 

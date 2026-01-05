@@ -1,10 +1,10 @@
 ---
-title: Firefox 63 for developers
+title: Firefox 63 release notes for developers
+short-title: Firefox 63
 slug: Mozilla/Firefox/Releases/63
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 63 that will affect developers. Firefox 63 was released on October 23, 2018.
 
@@ -32,16 +32,16 @@ This article provides information about the changes in Firefox 63 that will affe
 ### CSS
 
 - Support for the {{CSSxRef(":defined")}} pseudo-class has been added ([Firefox bug 1331334](https://bugzil.la/1331334)).
-- Support for {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} and {{CSSxRef("gap")}} have been added in [Flexbox layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#the_gap_properties) ([Firefox bug 1398483](https://bugzil.la/1398483)).
-- Re-enabled support for [webkit-prefixed pixel-density @media queries](/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio) ([Firefox bug 1444139](https://bugzil.la/1444139)).
-- Support added for the [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ([Firefox bug 1472843](https://bugzil.la/1472843)).
+- Support for {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} and {{CSSxRef("gap")}} have been added in [Flexbox layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox#the_gap_properties) ([Firefox bug 1398483](https://bugzil.la/1398483)).
+- Re-enabled support for [webkit-prefixed pixel-density @media queries](/en-US/docs/Web/CSS/Reference/At-rules/@media/-webkit-device-pixel-ratio) ([Firefox bug 1444139](https://bugzil.la/1444139)).
+- Support added for the [CSS Flexible Box Layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ([Firefox bug 1472843](https://bugzil.la/1472843)).
 - Implemented the `path()` function for {{CSSxRef("offset-path")}} ([Firefox bug 1429298](https://bugzil.la/1429298)).
-- Implemented [syntax improvements from the Media Queries Level 4 specification](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax_improvements_in_level_4) ([Firefox bug 1422225](https://bugzil.la/1422225)).
+- Implemented syntax improvements from the Media Queries Level 4 specification, notably [nested boolean expressions](/en-US/docs/Web/CSS/Guides/Media_queries/Using#creating_complex_media_queries) and the [range syntax](/en-US/docs/Web/CSS/Guides/Media_queries/Using#targeting_media_features) ([Firefox bug 1422225](https://bugzil.la/1422225)).
 - Renamed `offset-*` properties to {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}}, and {{CSSxRef("inset-inline-end")}} ([Firefox bug 1464782](https://bugzil.la/1464782)).
-- Added support for the [prefers-reduced-motion](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature ([Firefox bug 1365045](https://bugzil.la/1365045), [Firefox bug 1475462](https://bugzil.la/1475462)).
+- Added support for the [prefers-reduced-motion](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media feature ([Firefox bug 1365045](https://bugzil.la/1365045), [Firefox bug 1475462](https://bugzil.la/1475462)).
 - Added flow relative values (`block`, `inline`) for the {{CSSxRef("resize")}} property ([Firefox bug 1464786](https://bugzil.la/1464786)).
 - Implemented flexbox layout for `safe` & `unsafe` values in {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("justify-content")}} ([Firefox bug 1297774](https://bugzil.la/1297774)).
-- The [logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) (where appropriate) are now animatable ([Firefox bug 1309752](https://bugzil.la/1309752)).
+- The [logical properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) (where appropriate) are now animatable ([Firefox bug 1309752](https://bugzil.la/1309752)).
 
 #### Removals
 
@@ -73,7 +73,6 @@ _No changes._
 #### DOM
 
 - The following portions of the {{domxref("Web_Animations_API", "Web Animations API", "", "1")}} have been enabled by default (see [Firefox bug 1476158](https://bugzil.la/1476158)):
-
   - The {{DOMxRef("Animation")}} properties {{DOMxRef("Animation.ready", "ready")}} and {{DOMxRef("Animation.finished", "finished")}}, specifying the `Animation` object's `ready` and `finished` {{JSxRef("Promise")}}s.
   - The {{DOMxRef("Animation")}} object's {{DOMxRef("Animation.effect", "effect")}} property.
   - The interfaces {{DOMxRef("KeyframeEffect")}} and {{DOMxRef("AnimationEffect")}}.
@@ -171,7 +170,6 @@ _No changes._
 - {{WebExtAPIRef("browserAction.getBadgeTextColor()")}} and {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} enable you to get and set the text color of browser action badges ([Firefox bug 1424620](https://bugzil.la/1424620)).
 - The theme `colors` key in `manifest.json` now supports the `ntp_text` property to set the text color in a new tab, and the `ntp_background` property to set the color of a new tab ([Firefox bug 1347204](https://bugzil.la/1347204)).
 - Themes can now define the colors for sidebars, such as the bookmarks sidebar ([Firefox bug 1418602](https://bugzil.la/1418602)). The relevant properties include:
-
   - `sidebar`: The background color for sidebars.
   - `sidebar_text`: The text color for sidebars.
   - `sidebar_highlight`: The background color of a selected item in a sidebar.
@@ -211,7 +209,3 @@ _No changes._
 - {{WebExtAPIRef("webRequest.SecurityInfo")}} adds two new properties, `keaGroupName`, and `signatureSchemeName`. This change was uplifted to Firefox 62 ([Firefox bug 1471959](https://bugzil.la/1471959)).
 - {{WebExtAPIRef("cookies.Cookie")}} now includes a property indicating the SameSite state of the cookie. The {{WebExtAPIRef("cookies.SameSiteStatus")}} enumeration defines SameSite state values ([Firefox bug 1351663](https://bugzil.la/1351663)).
 - Match patterns for URLs now explicitly match the "data" URL scheme ([Firefox bug 1280370](https://bugzil.la/1280370)).
-
-## Older versions
-
-{{Firefox_for_developers}}

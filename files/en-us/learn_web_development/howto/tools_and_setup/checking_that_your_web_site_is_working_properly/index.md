@@ -2,9 +2,8 @@
 title: How do you make sure your website works properly?
 slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 In this article, we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.
 
@@ -35,10 +34,6 @@ So you've published your website online? Very good! But are you sure it works pr
 A distant web server often behaves quite differently from a local one, so it's a good idea to test your website once it's online. You might be surprised at how many problems come up: images don't show up, pages don't load or load slowly, and so on. Most of the time it's no big deal, just a simple mistake or an issue with your web hosting configuration.
 
 Let's see how to diagnose and solve those problems.
-
-## Active Learning
-
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
 
 ## Dig deeper
 

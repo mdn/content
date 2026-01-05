@@ -45,7 +45,7 @@ As we've already created the models, the main things we'll need to create are:
 
 Ultimately we might have pages to show lists and detail information for books, genres, authors and bookinstances, along with pages to create, update, and delete records. That's a lot to document in one article. Therefore most of this article will concentrate on setting up our routes and controllers to return "dummy" content. We'll extend the controller methods in our subsequent articles to work with model data.
 
-The first section below provides a brief "primer" on how to use the Express [Router](https://expressjs.com/en/4x/api.html#router) middleware. We'll then use that knowledge in the following sections when we set up the LocalLibrary routes.
+The first section below provides a brief "primer" on how to use the Express [Router](https://expressjs.com/en/5x/api.html#router) middleware. We'll then use that knowledge in the following sections when we set up the LocalLibrary routes.
 
 ## Routes primer
 
@@ -68,15 +68,16 @@ First we create routes for a wiki in a module named **wiki.js**. The code first 
 // wiki.js - Wiki route module.
 
 const express = require("express");
+
 const router = express.Router();
 
 // Home page route.
-router.get("/", function (req, res) {
+router.get("/", (req, res) => {
   res.send("Wiki home page");
 });
 
 // About page route.
-router.get("/about", function (req, res) {
+router.get("/about", (req, res) => {
   res.send("About this wiki");
 });
 
@@ -90,6 +91,7 @@ To use the router module in our main app file we first `require()` the route mod
 
 ```js
 const wiki = require("./wiki.js");
+
 // …
 app.use("/wiki", wiki);
 ```
@@ -101,7 +103,7 @@ The two routes defined in our wiki route module are then accessible from `/wiki/
 Our module above defines a couple of typical route functions. The "about" route (reproduced below) is defined using the `Router.get()` method, which responds only to HTTP GET requests. The first argument to this method is the URL path while the second is a callback function that will be invoked if an HTTP GET request with the path is received.
 
 ```js
-router.get("/about", function (req, res) {
+router.get("/about", (req, res) => {
   res.send("About this wiki");
 });
 ```
@@ -113,7 +115,7 @@ The callback takes three arguments (usually named as shown: `req`, `res`, `next`
 >
 > The router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback functions. Each function is part of the middleware chain, and will be called in the order it is added to the chain (unless a preceding function completes the request).
 
-The callback function here calls [`send()`](https://expressjs.com/en/4x/api.html#res.send) on the response to return the string "About this wiki" when we receive a GET request with the path (`/about`). There are a [number of other response methods](https://expressjs.com/en/guide/routing.html#response-methods) for ending the request/response cycle. For example, you could call [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) to send a JSON response or [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) to send a file. The response method that we'll be using most often as we build up the library is [`render()`](https://expressjs.com/en/4x/api.html#res.render), which creates and returns HTML files using templates and data—we'll talk a lot more about that in a later article!
+The callback function here calls [`send()`](https://expressjs.com/en/5x/api.html#res.send) on the response to return the string "About this wiki" when we receive a GET request with the path (`/about`). There are a [number of other response methods](https://expressjs.com/en/guide/routing.html#response-methods) for ending the request/response cycle. For example, you could call [`res.json()`](https://expressjs.com/en/5x/api.html#res.json) to send a JSON response or [`res.sendFile()`](https://expressjs.com/en/5x/api.html#res.sendFile) to send a file. The response method that we'll be using most often as we build up the library is [`render()`](https://expressjs.com/en/5x/api.html#res.render), which creates and returns HTML files using templates and data—we'll talk a lot more about that in a later article!
 
 ### HTTP verbs
 
@@ -133,23 +135,9 @@ router.post("/about", (req, res) => {
 
 The route paths define the endpoints at which requests can be made. The examples we've seen so far have just been strings, and are used exactly as written: '/', '/about', '/book', '/any-random.path'.
 
-Route paths can also be string patterns. String patterns use a form of regular expression syntax to define _patterns_ of endpoints that will be matched. The syntax is listed below (note that the hyphen (`-`) and the dot (`.`) are interpreted literally by string-based paths):
-
-- `?` : The endpoint must have 0 or 1 of the preceding character (or group), e.g., a route path of `'/ab?cd'` will match endpoints `acd` or `abcd`.
-- `+` : The endpoint must have 1 or more of the preceding character (or group), e.g., a route path of `'/ab+cd'` will match endpoints `abcd`, `abbcd`, `abbbcd`, and so on.
-- `*` : The endpoint may have an arbitrary string where the `*` character is placed. E.g. a route path of `'/ab*cd'` will match endpoints `abcd`, `abXcd`, `abSOMErandomTEXTcd`, and so on.
-- `()` : Grouping match on a set of characters to perform another operation on, e.g., `'/ab(cd)?e'` will perform a `?`-match on the group `(cd)` — it will match `abe` and `abcde`.
-
-The route paths can also be JavaScript [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions). For example, the route path below will match `catfish` and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
-
-```js
-app.get(/.*fish$/, function (req, res) {
-  // …
-});
-```
-
-> [!NOTE]
-> Most of our routes for the LocalLibrary will use strings and not regular expressions. We'll also use route parameters as discussed in the next section.
+Route paths can also be string patterns. String patterns use a form of regular expression syntax to define _patterns_ of endpoints that will be matched.
+Most of our routes for the LocalLibrary will use strings and not regular expressions
+We'll also use route parameters as discussed in the next section.
 
 ### Route parameters
 
@@ -165,75 +153,140 @@ app.get("/users/:userId/books/:bookId", (req, res) => {
 });
 ```
 
-The names of route parameters must be made up of "word characters" (A-Z, a-z, 0-9, and \_).
-
 > [!NOTE]
 > The URL _/book/create_ will be matched by a route like `/book/:bookId` (because `:bookId` is a placeholder for _any_ string, therefore `create` matches). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs specifically, their route handler must be defined before your `/book/:bookId` route.
 
-That's all you need to get started with routes - if needed you can find more information in the Express docs: [Basic routing](https://expressjs.com/en/starter/basic-routing.html) and [Routing guide](https://expressjs.com/en/guide/routing.html). The following sections show how we'll set up our routes and controllers for the LocalLibrary.
+Route parameter names (for example, `bookId`, above) can be any valid JavaScript identifier that starts with a letter, `_`, or `$`. You can include digits after the first character, but not hyphens and spaces.
+You can also use names that aren't valid JavaScript identifiers, including spaces, hyphens, emoticons, or any other character, but you need to define them with a quoted string and access them using bracket notation.
+For example:
 
-### Handling errors in the route functions
+```js
+app.get('/users/:"user id"/books/:"book-id"', (req, res) => {
+  // Access quoted param using bracket notation
+  const user = req.params["user id"];
+  const book = req.params["book-id"];
+  res.send({ user, book });
+});
+```
+
+### Wildcards
+
+Wildcard parameters match one or more characters across multiple segments, returning each segment as a value in an array.
+They are defined the same way as regular parameters, but are prefixed with an asterisk.
+
+So for example, consider the URL `http://localhost:3000/users/34/books/8989`, we can extract all the information after `users/` with the `example` wildcard:
+
+```js
+app.get("/users/*example", (req, res) => {
+  // req.params would contain { "example": ["34", "books", "8989"]}
+  res.send(req.params);
+});
+```
+
+### Optional parts
+
+Braces can be used to define parts of the path that are optional.
+For example, below we match a filename with any extension (or none).
+
+```js
+app.get("/file/:filename{.:ext}", (req, res) => {
+  // Given URL: http://localhost:3000/file/somefile.md`
+  // req.params would contain { "filename": "somefile", "ext": "md"}
+  res.send(req.params);
+});
+```
+
+### Reserved characters
+
+The following characters are reserved: `(()[]?+!)`.
+If you want to use them, you must escape them with a backslash (`\`).
+
+You also can't use the pipe character (`|`) in a regular expression.
+
+That's all you need to get started with routes.
+If needed, you can find more information in the Express docs: [Basic routing](https://expressjs.com/en/starter/basic-routing.html) and [Routing guide](https://expressjs.com/en/guide/routing.html). The following sections show how we'll set up our routes and controllers for the LocalLibrary.
+
+### Handling errors and exceptions in the route functions
 
 The route functions shown earlier all have arguments `req` and `res`, which represent the request and response, respectively.
-Route functions are also called with a third argument `next`, which can be used to pass errors to the Express middleware chain.
+Route functions are also passed a third argument, `next`, which contains a callback function that can be called to pass any errors or exceptions to the Express middleware chain, where they will eventually propagate to your global error handling code.
 
-The code below shows how this works, using the example of a database query that takes a callback function, and returns either an error `err` or some results.
-If `err` is returned, `next` is called with `err` as the value in its first parameter (eventually the error propagates to our global error handling code).
-On success the desired data is returned and then used in the response.
+From Express 5, `next` is called automatically with the rejection value if a route handler returns a [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that subsequently rejects; therefore, no error handling code is required in route functions when using promises.
+This leads to very compact code when working with asynchronous promise-based APIs, in particular when using [`async` and `await`](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises#async_and_await).
+
+For example, the following code uses the `find()` method to query a database and then renders the result.
+
+```js
+exports.get("/about", async (req, res, next) => {
+  const successfulResult = await About.find({}).exec();
+  res.render("about_view", { title: "About", list: successfulResult });
+});
+```
+
+The code below shows the same example using a promise chain.
+Note that if you wanted to, you could `catch()` the error and implement your own custom handling.
+
+```js
+exports.get(
+  "/about",
+  // Removed 'async'
+  (req, res, next) =>
+    About.find({})
+      .exec()
+      .then((successfulResult) => {
+        res.render("about_view", { title: "About", list: successfulResult });
+      })
+      .catch((err) => {
+        next(err);
+      }),
+);
+```
+
+> [!NOTE]
+> Most modern APIs are asynchronous and promise-based, so error handling is often that straightforward.
+> Certainly that's all you really _need_ to know about error handling for this tutorial!
+
+Express 5 automatically catches and forwards exceptions that are thrown in synchronous code:
+
+```js
+app.get("/", (req, res) => {
+  // Express will catch this
+  throw new Error("SynchronousException");
+});
+```
+
+However, you must [`catch()`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) exceptions occurring in asynchronous code invoked by route handlers or middleware. These will not be caught by the default code:
+
+```js
+app.get("/", (req, res, next) => {
+  setTimeout(() => {
+    try {
+      // You must catch and propagate this error yourself
+      throw new Error("AsynchronousException");
+    } catch (err) {
+      next(err);
+    }
+  }, 100);
+});
+```
+
+Lastly, if you're using the older style of asynchronous methods that return an error or result in a callback function, then you need to propagate the error yourself.
+The following example shows how.
 
 ```js
 router.get("/about", (req, res, next) => {
   About.find({}).exec((err, queryResults) => {
     if (err) {
+      // Propagate the error
       return next(err);
     }
-    //Successful, so render
+    // Successful, so render
     res.render("about_view", { title: "About", list: queryResults });
   });
 });
 ```
 
-### Handling exceptions in route functions
-
-The previous section shows how Express expects route functions to return errors.
-The framework is designed for use with asynchronous functions that take a callback function (with an error and result argument), which is called when the operation completes.
-That's a problem because later on we will be making Mongoose database queries that use [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based APIs, and which may throw exceptions in our route functions (rather than returning errors in a callback).
-
-In order for the framework to properly handle exceptions, they must be caught, and then forwarded as errors as shown in the previous section.
-
-> [!NOTE]
-> Express 5, which is currently in beta, is expected to handle JavaScript exceptions natively.
-
-Re-imagining the simple example from the previous section with `About.find().exec()` as a database query that returns a promise, we might write the route function inside a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block like this:
-
-```js
-exports.get("/about", async function (req, res, next) {
-  try {
-    const successfulResult = await About.find({}).exec();
-    res.render("about_view", { title: "About", list: successfulResult });
-  } catch (error) {
-    return next(error);
-  }
-});
-```
-
-That's quite a lot of boilerplate code to add to every function.
-Instead, for this tutorial we'll use the [express-async-handler](https://www.npmjs.com/package/express-async-handler) module.
-This defines a wrapper function that hides the `try...catch` block and the code to forward the error.
-The same example is now very simple, because we only need to write code for the case where we assume success:
-
-```js
-// Import the module
-const asyncHandler = require("express-async-handler");
-
-exports.get(
-  "/about",
-  asyncHandler(async (req, res, next) => {
-    const successfulResult = await About.find({}).exec();
-    res.render("about_view", { title: "About", list: successfulResult });
-  }),
-);
-```
+For more information see [Error handling](https://expressjs.com/en/guide/error-handling.html).
 
 ## Routes needed for the LocalLibrary
 
@@ -262,18 +315,12 @@ Before we define our routes, we'll first create all the dummy/skeleton callback 
 Start by creating a folder for our controllers in the project root (**/controllers**) and then create separate controller files/modules for handling each of the models:
 
 ```plain
-/express-locallibrary-tutorial  //the project root
+/express-locallibrary-tutorial  # the project root
   /controllers
     authorController.js
     bookController.js
     bookinstanceController.js
     genreController.js
-```
-
-The controllers will use the `express-async-handler` module, so before we proceed, install it into the library using `npm`:
-
-```bash
-npm install express-async-handler
 ```
 
 ### Author controller
@@ -282,59 +329,54 @@ Open the **/controllers/authorController.js** file and type in the following cod
 
 ```js
 const Author = require("../models/author");
-const asyncHandler = require("express-async-handler");
 
 // Display list of all Authors.
-exports.author_list = asyncHandler(async (req, res, next) => {
+exports.author_list = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author list");
-});
+};
 
 // Display detail page for a specific Author.
-exports.author_detail = asyncHandler(async (req, res, next) => {
+exports.author_detail = async (req, res, next) => {
   res.send(`NOT IMPLEMENTED: Author detail: ${req.params.id}`);
-});
+};
 
 // Display Author create form on GET.
-exports.author_create_get = asyncHandler(async (req, res, next) => {
+exports.author_create_get = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author create GET");
-});
+};
 
 // Handle Author create on POST.
-exports.author_create_post = asyncHandler(async (req, res, next) => {
+exports.author_create_post = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author create POST");
-});
+};
 
 // Display Author delete form on GET.
-exports.author_delete_get = asyncHandler(async (req, res, next) => {
+exports.author_delete_get = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author delete GET");
-});
+};
 
 // Handle Author delete on POST.
-exports.author_delete_post = asyncHandler(async (req, res, next) => {
+exports.author_delete_post = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author delete POST");
-});
+};
 
 // Display Author update form on GET.
-exports.author_update_get = asyncHandler(async (req, res, next) => {
+exports.author_update_get = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author update GET");
-});
+};
 
 // Handle Author update on POST.
-exports.author_update_post = asyncHandler(async (req, res, next) => {
+exports.author_update_post = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Author update POST");
-});
+};
 ```
 
-The module first requires the `Author` model that we'll later be using to access and update our data, and the `asyncHandler` wrapper we'll use to catch any exceptions thrown in our route handler functions.
+The module first requires the `Author` model that we'll later be using to access and update our data.
 It then exports functions for each of the URLs we wish to handle.
 Note that the create, update and delete operations use forms, and hence also have additional methods for handling form post requests — we'll discuss those methods in the "forms article" later on.
 
-The functions all use the wrapper function described above in [Handling exceptions in route functions](#handling_exceptions_in_route_functions), with arguments for the request, response, and next.
 The functions respond with a string indicating that the associated page has not yet been created.
 If a controller function is expected to receive path parameters, these are output in the message string (see `req.params.id` above).
-
-Note that once implemented, some route functions might not contain any code that can throw exceptions.
-We can change those back to "normal" route handler functions when we get to them.
 
 #### BookInstance controller
 
@@ -342,47 +384,46 @@ Open the **/controllers/bookinstanceController.js** file and copy in the followi
 
 ```js
 const BookInstance = require("../models/bookinstance");
-const asyncHandler = require("express-async-handler");
 
 // Display list of all BookInstances.
-exports.bookinstance_list = asyncHandler(async (req, res, next) => {
+exports.bookinstance_list = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance list");
-});
+};
 
 // Display detail page for a specific BookInstance.
-exports.bookinstance_detail = asyncHandler(async (req, res, next) => {
+exports.bookinstance_detail = async (req, res, next) => {
   res.send(`NOT IMPLEMENTED: BookInstance detail: ${req.params.id}`);
-});
+};
 
 // Display BookInstance create form on GET.
-exports.bookinstance_create_get = asyncHandler(async (req, res, next) => {
+exports.bookinstance_create_get = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance create GET");
-});
+};
 
 // Handle BookInstance create on POST.
-exports.bookinstance_create_post = asyncHandler(async (req, res, next) => {
+exports.bookinstance_create_post = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance create POST");
-});
+};
 
 // Display BookInstance delete form on GET.
-exports.bookinstance_delete_get = asyncHandler(async (req, res, next) => {
+exports.bookinstance_delete_get = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance delete GET");
-});
+};
 
 // Handle BookInstance delete on POST.
-exports.bookinstance_delete_post = asyncHandler(async (req, res, next) => {
+exports.bookinstance_delete_post = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance delete POST");
-});
+};
 
 // Display BookInstance update form on GET.
-exports.bookinstance_update_get = asyncHandler(async (req, res, next) => {
+exports.bookinstance_update_get = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance update GET");
-});
+};
 
 // Handle bookinstance update on POST.
-exports.bookinstance_update_post = asyncHandler(async (req, res, next) => {
+exports.bookinstance_update_post = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: BookInstance update POST");
-});
+};
 ```
 
 #### Genre controller
@@ -391,47 +432,46 @@ Open the **/controllers/genreController.js** file and copy in the following text
 
 ```js
 const Genre = require("../models/genre");
-const asyncHandler = require("express-async-handler");
 
 // Display list of all Genre.
-exports.genre_list = asyncHandler(async (req, res, next) => {
+exports.genre_list = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre list");
-});
+};
 
 // Display detail page for a specific Genre.
-exports.genre_detail = asyncHandler(async (req, res, next) => {
+exports.genre_detail = async (req, res, next) => {
   res.send(`NOT IMPLEMENTED: Genre detail: ${req.params.id}`);
-});
+};
 
 // Display Genre create form on GET.
-exports.genre_create_get = asyncHandler(async (req, res, next) => {
+exports.genre_create_get = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre create GET");
-});
+};
 
 // Handle Genre create on POST.
-exports.genre_create_post = asyncHandler(async (req, res, next) => {
+exports.genre_create_post = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre create POST");
-});
+};
 
 // Display Genre delete form on GET.
-exports.genre_delete_get = asyncHandler(async (req, res, next) => {
+exports.genre_delete_get = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre delete GET");
-});
+};
 
 // Handle Genre delete on POST.
-exports.genre_delete_post = asyncHandler(async (req, res, next) => {
+exports.genre_delete_post = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre delete POST");
-});
+};
 
 // Display Genre update form on GET.
-exports.genre_update_get = asyncHandler(async (req, res, next) => {
+exports.genre_update_get = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre update GET");
-});
+};
 
 // Handle Genre update on POST.
-exports.genre_update_post = asyncHandler(async (req, res, next) => {
+exports.genre_update_post = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Genre update POST");
-});
+};
 ```
 
 #### Book controller
@@ -441,51 +481,50 @@ This follows the same pattern as the other controller modules, but additionally 
 
 ```js
 const Book = require("../models/book");
-const asyncHandler = require("express-async-handler");
 
-exports.index = asyncHandler(async (req, res, next) => {
+exports.index = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Site Home Page");
-});
+};
 
 // Display list of all books.
-exports.book_list = asyncHandler(async (req, res, next) => {
+exports.book_list = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book list");
-});
+};
 
 // Display detail page for a specific book.
-exports.book_detail = asyncHandler(async (req, res, next) => {
+exports.book_detail = async (req, res, next) => {
   res.send(`NOT IMPLEMENTED: Book detail: ${req.params.id}`);
-});
+};
 
 // Display book create form on GET.
-exports.book_create_get = asyncHandler(async (req, res, next) => {
+exports.book_create_get = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book create GET");
-});
+};
 
 // Handle book create on POST.
-exports.book_create_post = asyncHandler(async (req, res, next) => {
+exports.book_create_post = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book create POST");
-});
+};
 
 // Display book delete form on GET.
-exports.book_delete_get = asyncHandler(async (req, res, next) => {
+exports.book_delete_get = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book delete GET");
-});
+};
 
 // Handle book delete on POST.
-exports.book_delete_post = asyncHandler(async (req, res, next) => {
+exports.book_delete_post = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book delete POST");
-});
+};
 
 // Display book update form on GET.
-exports.book_update_get = asyncHandler(async (req, res, next) => {
+exports.book_update_get = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book update GET");
-});
+};
 
 // Handle book update on POST.
-exports.book_update_post = asyncHandler(async (req, res, next) => {
+exports.book_update_post = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book update POST");
-});
+};
 ```
 
 ## Create the catalog route module
@@ -496,7 +535,7 @@ The skeleton already has a **./routes** folder containing routes for the _index_
 Create another route file — **catalog.js** — inside this folder, as shown.
 
 ```plain
-/express-locallibrary-tutorial //the project root
+/express-locallibrary-tutorial # the project root
   /routes
     index.js
     users.js
@@ -507,13 +546,14 @@ Open **/routes/catalog.js** and copy in the code below:
 
 ```js
 const express = require("express");
-const router = express.Router();
 
 // Require controller modules.
 const book_controller = require("../controllers/bookController");
 const author_controller = require("../controllers/authorController");
 const genre_controller = require("../controllers/genreController");
 const book_instance_controller = require("../controllers/bookinstanceController");
+
+const router = express.Router();
 
 /// BOOK ROUTES ///
 
@@ -575,7 +615,7 @@ router.get("/authors", author_controller.author_list);
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
 router.get("/genre/create", genre_controller.genre_create_get);
 
-//POST request for creating Genre.
+// POST request for creating Genre.
 router.post("/genre/create", genre_controller.genre_create_post);
 
 // GET request to delete Genre.
@@ -652,19 +692,19 @@ The handler functions are all imported from the controller modules we created in
 
 ### Update the index route module
 
-We've set up all our new routes, but we still have a route to the original page. Let's instead redirect this to the new index page that we've created at the path '/catalog'.
+We've set up all our new routes, but we still have a route to the original page. Let's instead redirect this to the new index page that we've created at the path `/catalog`.
 
 Open **/routes/index.js** and replace the existing route with the function below.
 
 ```js
 // GET home page.
-router.get("/", function (req, res) {
+router.get("/", (req, res) => {
   res.redirect("/catalog");
 });
 ```
 
 > [!NOTE]
-> This is our first use of the [redirect()](https://expressjs.com/en/4x/api.html#res.redirect) response method. This redirects to the specified page, by default sending HTTP status code "302 Found". You can change the status code returned if needed, and supply either absolute or relative paths.
+> This is our first use of the [redirect()](https://expressjs.com/en/5x/api.html#res.redirect) response method. This redirects to the specified page, by default sending HTTP status code "302 Found". You can change the status code returned if needed, and supply either absolute or relative paths.
 
 ### Update app.js
 
@@ -674,9 +714,9 @@ We do this in `app.js`.
 Open **app.js** and require the catalog route below the other routes (add the third line shown below, underneath the other two that should be already present in the file):
 
 ```js
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-const catalogRouter = require("./routes/catalog"); //Import routes for "catalog" area of site
+const indexRouter = require("./routes/index");
+const usersRouter = require("./routes/users");
+const catalogRouter = require("./routes/catalog"); // Import routes for "catalog" area of site
 ```
 
 Next, add the catalog route to the middleware stack below the other routes (add the third line shown below, underneath the other two that should be already present in the file):
@@ -688,7 +728,7 @@ app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 ```
 
 > [!NOTE]
-> We have added our catalog module at a path `'/catalog'`. This is prepended to all of the paths defined in the catalog module. So for example, to access a list of books, the URL will be: `/catalog/books/`.
+> We have added our catalog module at a path `/catalog`. This is prepended to all of the paths defined in the catalog module. So for example, to access a list of books, the URL will be: `/catalog/books/`.
 
 That's it. We should now have routes and skeleton functions enabled for all the URLs that we will eventually support on the LocalLibrary website.
 

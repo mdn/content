@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.imageSmoothingEnabled
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`imageSmoothingEnabled`** property of the
 {{domxref("CanvasRenderingContext2D")}} interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), determines whether scaled images
@@ -50,8 +50,7 @@ ctx.font = "16px sans-serif";
 ctx.textAlign = "center";
 
 const img = new Image();
-img.src =
-  "https://interactive-examples.mdn.mozilla.net/media/examples/star.png";
+img.src = "/shared-assets/images/examples/big-star.png";
 img.onload = () => {
   const w = img.width,
     h = img.height;

@@ -3,9 +3,8 @@ title: browser_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.browser_action
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -92,7 +91,7 @@ The `browser_action` key is an object that may have any of the following propert
           chrome://browser/content/extension-mac.css on macOS. When setting
           dimensions, be aware that this stylesheet sets
           <code>box-sizing: border-box</code> (see
-          <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
+          <a href="/en-US/docs/Web/CSS/Reference/Properties/box-sizing">box-sizing</a>).
         </p>
         <p>
           <a

@@ -3,9 +3,8 @@ title: await
 slug: Web/JavaScript/Reference/Operators/await
 page-type: javascript-operator
 browser-compat: javascript.operators.await
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`await`** operator is used to wait for a {{jsxref("Promise")}} and get its fulfillment value. It can only be used inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules).
 
@@ -122,9 +121,9 @@ If the `Promise` is rejected, the rejected value is thrown.
 ```js
 async function f4() {
   try {
-    const z = await Promise.reject(30);
+    const z = await Promise.reject(new Error("rejected!"));
   } catch (e) {
-    console.error(e); // 30
+    console.error(e); // Error: rejected!
   }
 }
 

@@ -21,10 +21,8 @@ new Response(body, options)
 ### Parameters
 
 - `body` {{optional_inline}}
-
   - : An object defining a body for the response. This can be `null` (which is
     the default value), or one of:
-
     - {{domxref("Blob")}}
     - {{jsxref("ArrayBuffer")}}
     - {{jsxref("TypedArray")}}
@@ -36,9 +34,7 @@ new Response(body, options)
     - string literal
 
 - `options` {{optional_inline}}
-
   - : An options object containing any custom settings that you want to apply to the response, or an empty object (which is the default value). The possible options are:
-
     - `status`
       - : The status code for the response.
         The default value is `200`.

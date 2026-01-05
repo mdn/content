@@ -3,12 +3,10 @@ title: "GPUComputePassEncoder: popDebugGroup() method"
 short-title: popDebugGroup()
 slug: Web/API/GPUComputePassEncoder/popDebugGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUComputePassEncoder.popDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`popDebugGroup()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface ends a compute pass debug group, which is begun with a {{domxref("GPUComputePassEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
@@ -38,7 +36,7 @@ The following criteria must be met when calling **`popDebugGroup()`**, otherwise
 ## Examples
 
 ```js
-// ...
+// …
 
 const passEncoder = commandEncoder.beginComputePass();
 
@@ -50,7 +48,7 @@ passEncoder.dispatchWorkgroups(Math.ceil(BUFFER_SIZE / 64));
 
 passEncoder.popDebugGroup();
 
-// ...
+// …
 ```
 
 ## Specifications

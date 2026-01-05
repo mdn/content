@@ -99,11 +99,13 @@ By default, when you create a new app with `npx degit sveltejs/template my-svelt
 In the file `package.json` you can see that the `build` and `dev` scripts are just calling rollup:
 
 ```json
-"scripts": {
-  "build": "rollup -c",
-  "dev": "rollup -c -w",
-  "start": "sirv public"
-},
+{
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public"
+  }
+}
 ```
 
 In the `dev` script we are passing the `-w` argument, which tells rollup to watch files and rebuild on changes.
@@ -131,7 +133,7 @@ export default {
       dev: !production,
       // we'll extract any component CSS out into
       // a separate file - better for performance
-      css: (css) => {
+      css(css) {
         css.write("public/build/bundle.css");
       },
     }),

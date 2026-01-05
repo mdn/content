@@ -44,7 +44,8 @@ _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}
 - {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an integer representing the vertical scroll amount.
 
-> **Note:** [Element: mousewheel event](/en-US/docs/Web/API/Element/mousewheel_event) has additional documentation about the deprecated properties `wheelDelta`, `wheelDeltaX`, `wheelDeltaY`.
+> [!NOTE]
+> [Element: mousewheel event](/en-US/docs/Web/API/Element/mousewheel_event) has additional documentation about the deprecated properties `wheelDelta`, `wheelDeltaX`, `wheelDeltaY`.
 
 ## Instance methods
 
@@ -62,5 +63,4 @@ _This interface doesn't define any specific methods, but inherits methods from i
 
 - {{domxref("Element/wheel_event", "wheel")}} event
 - Interfaces replaced by this one:
-
   - Gecko's legacy mouse wheel event object: {{DOMxRef("MouseScrollEvent")}}

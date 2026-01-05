@@ -5,14 +5,15 @@ page-type: html-element
 status:
   - deprecated
 browser-compat: html.elements.font
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`<font>`** [HTML](/en-US/docs/Web/HTML) element defines the font size, color and face for its content.
 
 > [!WARNING]
-> Do not use this element. Use the CSS [Fonts](/en-US/docs/Web/CSS/CSS_fonts) properties to style text.
+> Do not use this element. Use the CSS [Fonts](/en-US/docs/Web/CSS/Guides/Fonts) properties to style text.
 
 ## Attributes
 

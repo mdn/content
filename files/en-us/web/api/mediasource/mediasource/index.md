@@ -36,7 +36,7 @@ const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
 if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
   const mediaSource = new MediaSource();
-  //console.log(mediaSource.readyState); // closed
+  // console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener("sourceopen", sourceOpen);
 } else {

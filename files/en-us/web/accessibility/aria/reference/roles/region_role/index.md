@@ -1,5 +1,6 @@
 ---
 title: "ARIA: region role"
+short-title: region
 slug: Web/Accessibility/ARIA/Reference/Roles/region_role
 page-type: aria-role
 spec-urls:
@@ -53,7 +54,7 @@ Only use the `region` role if no other relevant [content sectioning](/en-US/docs
 
 ### Prefer HTML
 
-Using the {{HTMLElement('section')}} element will automatically communicate that a section has a role of `region` if it is given an accessible name. If at all possible, prefer using {{HTMLElement('section')}} instead.
+Using the {{HTMLElement('section')}} element will automatically communicate that the element has a role of `region`. If possible, prefer using the semantic `<section>` element instead of the `region` role.
 
 ### Labeling landmarks
 
@@ -90,7 +91,6 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 ## See also
 
 - The {{HTMLElement('section')}} element
-- [region (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#region)
 - [ARIA: `banner` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role)
 - [ARIA: `main` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)
 - [ARIA: `contentinfo` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)

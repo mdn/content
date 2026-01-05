@@ -2,9 +2,8 @@
 title: "SyntaxError: invalid class set operation in regular expression"
 slug: Web/JavaScript/Reference/Errors/Regex_invalid_class_set_operation
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid class set operation in regular expression" occurs when a double punctuator sequence appears in a [`v`-mode character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class) but it is not recognized by the syntax.
 

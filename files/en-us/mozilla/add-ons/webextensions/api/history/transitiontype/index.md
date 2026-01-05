@@ -3,9 +3,8 @@ title: history.TransitionType
 slug: Mozilla/Add-ons/WebExtensions/API/history/TransitionType
 page-type: webextension-api-type
 browser-compat: webextensions.api.history.TransitionType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This describes how the browser navigated to a particular page. For example, "link" means that the browser navigated to the page because the user clicked a link.
 
@@ -36,11 +35,11 @@ Values of this type are strings. Possible values are:
 - "keyword_generated"
   - : Corresponds to a visit generated for a keyword.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#type-TransitionType) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.

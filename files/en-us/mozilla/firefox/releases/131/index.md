@@ -1,10 +1,10 @@
 ---
-title: Firefox 131 for developers
+title: Firefox 131 release notes for developers
+short-title: Firefox 131
 slug: Mozilla/Firefox/Releases/131
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 131 that affect developers. Firefox 131 was released on [October 1, 2024](https://whattrainisitnow.com/release/?version=131).
 
@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ### CSS
 
-- The `inset-area` CSS property has been renamed to {{CSSXRef("position-area")}} in preparation for further implementation of [Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). Currently, this property is only used internally for parsing values. The Anchor Positioning features are being progressively rolled out behind a preference. See [Experimental features in Firefox: CSS Anchor Positioning](/en-US/docs/Mozilla/Firefox/Experimental_features#css_anchor_positioning) for more information. ([Firefox bug 1909358](https://bugzil.la/1909358) and [Firefox bug 1838746](https://bugzil.la/1838746)).
+- The `inset-area` CSS property has been renamed to {{CSSXRef("position-area")}} in preparation for further implementation of [Anchor Positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning). Currently, this property is only used internally for parsing values. The Anchor Positioning features are being progressively rolled out behind a preference. ([Firefox bug 1909358](https://bugzil.la/1909358) and [Firefox bug 1838746](https://bugzil.la/1838746)).
 
 ### JavaScript
 
@@ -68,7 +68,3 @@ These features are newly shipped in Firefox 131 but are disabled by default. To 
 - **Permissions for microphone and camera:** `permissions.media.query.enabled`.
 
   The `microphone` and `camera` [permissions](/en-US/docs/Web/API/Permissions_API) can now be used in the {{domxref("Permissions.query()")}} method to test whether access to the corresponding hardware has been granted, denied, or still requires user approval. ([Firefox bug 1609427](https://bugzil.la/1609427) and [Firefox bug 1915222](https://bugzil.la/1915222)).
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -6,9 +6,8 @@ page-type: html-attribute
 browser-compat:
   - html.elements.input.multiple
   - html.elements.select.multiple
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The Boolean **`multiple`** attribute, if set, means the form control accepts one or more values. The attribute is valid for the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/file", "file")}} input types and the {{HTMLElement("select")}}. The manner by which the user opts for multiple values depends on the form control.
 
@@ -83,6 +82,8 @@ The `multiple` attribute on the {{HTMLElement("select")}} element represents a c
 ```
 
 When `multiple` is specified, most browsers will show a scrolling list box instead of a single line dropdown.
+
+Multiple selected options are submitted using the {{domxref("URLSearchParams")}} array convention, i.e., `name=value1&name=value2`.
 
 ## Accessibility concerns
 

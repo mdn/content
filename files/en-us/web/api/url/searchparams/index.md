@@ -24,7 +24,7 @@ A {{domxref("URLSearchParams")}} object.
 const params = new URL("https://example.com/?name=Jonathan%20Smith&age=18")
   .searchParams;
 const name = params.get("name");
-const age = parseInt(params.get("age"));
+const age = parseInt(params.get("age"), 10);
 
 console.log(`name: ${name}`); // name: Jonathan Smith
 console.log(`age: ${age}`); // age: 18

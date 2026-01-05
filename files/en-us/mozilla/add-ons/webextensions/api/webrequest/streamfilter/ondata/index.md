@@ -3,9 +3,8 @@ title: webRequest.StreamFilter.ondata
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/ondata
 page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.StreamFilter.ondata
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An event handler called repeatedly when response data is available. The handler is passed an [`Event` object](/en-US/docs/Web/API/Event) with a `data` property. The `data` property includes a chunk of the response data as an {{jsxref("ArrayBuffer")}}.
 
@@ -229,10 +228,7 @@ function listener(details) {
   };
 
   filter.onstop = (event) => {
-    let combinedLength = 0;
-    for (const buffer of data) {
-      combinedLength += buffer.length;
-    }
+    const combinedLength = data.reduce((acc, buffer) => acc + buffer.length, 0);
     const combinedArray = new Uint8Array(combinedLength);
     let writeOffset = 0;
     for (const buffer of data) {

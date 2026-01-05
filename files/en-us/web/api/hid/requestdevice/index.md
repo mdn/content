@@ -23,15 +23,12 @@ requestDevice(options)
 ### Parameters
 
 - `options`
-
   - : An object containing an array of filter objects for possible devices to pair with. Each filter object can have the following properties:
-
     - `vendorId` {{optional_inline}}
       - : An integer representing the vendorId of the requested HID device
     - `productId` {{optional_inline}}
       - : An integer representing the productId of the requested HID device.
     - `usagePage` {{optional_inline}}
-
       - : An integer representing the usage page component of the HID usage of the requested device. The usage for a top level collection is used to identify the device type.
 
         Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-16) document
@@ -53,7 +50,7 @@ A {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDD
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

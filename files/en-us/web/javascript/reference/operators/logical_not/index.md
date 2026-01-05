@@ -3,9 +3,8 @@ title: Logical NOT (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
 page-type: javascript-operator
 browser-compat: javascript.operators.logical_not
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **logical NOT (`!`)** (logical complement, negation) operator takes truth to
 falsity and vice versa. It is typically used with boolean (logical)
@@ -71,8 +70,8 @@ The same conversion can be done through the {{jsxref("Boolean/Boolean", "Boolean
 
 ```js
 !!true; // !!truthy returns true
-!!{}; // !!truthy returns true: any object is truthy...
-!!new Boolean(false); // ...even Boolean objects with a false .valueOf()!
+!!{}; // !!truthy returns true: any object is truthy…
+!!new Boolean(false); // … even Boolean objects with a false .valueOf()!
 !!false; // !!falsy returns false
 !!""; // !!falsy returns false
 !!Boolean(false); // !!falsy returns false

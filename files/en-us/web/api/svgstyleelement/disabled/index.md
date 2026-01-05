@@ -118,7 +118,7 @@ Note that this is the earliest point at which setting the property to `true` wil
 Before this point the SVG did not have a style associated, and so the value defaults to `false`.
 
 ```js
-//Disable the style
+// Disable the style
 style.disabled = true;
 ```
 

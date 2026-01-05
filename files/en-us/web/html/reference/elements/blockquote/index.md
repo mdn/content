@@ -3,9 +3,8 @@ title: "<blockquote>: The Block Quotation element"
 slug: Web/HTML/Reference/Elements/blockquote
 page-type: html-element
 browser-compat: html.elements.blockquote
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<blockquote>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see [Notes](#usage_notes) for how to change it). A URL for the source of the quotation may be given using the `cite` attribute, while a text representation of the source can be given using the {{HTMLElement("cite")}} element.
 

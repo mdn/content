@@ -34,7 +34,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("CookieStore")}} object for the current document context.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
+  - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/HTTP/Guides/IFrame_credentialless) for more details.
 - {{domxref("Window.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
 - {{domxref("Window.crypto")}} {{ReadOnlyInline}}
@@ -83,7 +83,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` for a conversion factor to adapt to screen pixels if needed.
 - {{domxref("Window.name")}}
   - : Gets/sets the name of the window.
-- {{domxref("Window.navigation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Window.navigation")}} {{ReadOnlyInline}}
   - : Returns the current `window`'s associated {{domxref("Navigation")}} object. The entry point for the [Navigation API](/en-US/docs/Web/API/Navigation_API).
 - {{domxref("Window.navigator")}} {{ReadOnlyInline}}
   - : Returns a reference to the navigator object.
@@ -129,7 +129,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns an object reference to the window object itself.
 - {{domxref("Window.sessionStorage")}}
   - : Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.
-- {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}} {{experimental_inline}} {{SecureContext_Inline}}
+- {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{deprecated_inline}}
   - : Returns the {{domxref("WindowSharedStorage")}} object for the current origin. This is the main entry point for writing data to shared storage using the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API).
 - {{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SpeechSynthesis")}} object, which is the entry point into using [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) speech synthesis functionality.
@@ -141,12 +141,21 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
 - {{domxref("Window.trustedTypes")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object, providing the entry point for using the {{domxref("Trusted Types API", "", "", "nocode")}}.
+- {{domxref("Window.viewport")}} {{Experimental_inline}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("Viewport")}} object instance, which provides information about the current state of the device's viewport.
 - {{domxref("Window.visualViewport")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("VisualViewport")}} object which represents the visual viewport for a given window.
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
   - : Returns a reference to the current window.
 - `window[0]`, `window[1]`, etc.
   - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
+- Named properties
+  - : Some elements in the document are also exposed as window properties:
+    - For each {{HTMLElement("embed")}}, {{HTMLElement("form")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, and {{HTMLElement("object")}} element, its `name` (if non-empty) is exposed.
+      For example, if the document contains `<form name="my_form">`, then `window["my_form"]` (and its equivalent `window.my_form`) returns a reference to that element.
+    - For each HTML element, its `id` (if non-empty) is exposed.
+
+    If a property corresponds to a single element, that element is directly returned. If the property corresponds to multiple elements, then an {{domxref("HTMLCollection")}} is returned containing all of them. If any of the elements is a navigable `<iframe>` or `<object>`, then the {{domxref("HTMLIFrameElement/contentWindow", "contentWindow")}} of first such iframe is returned instead.
 
 ### Deprecated properties
 
@@ -272,8 +281,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Executes a function after the browser has finished other heavy tasks.
 - {{domxref("Window.setResizable()")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Does nothing (no-op). Kept for backward compatibility with Netscape 4.x.
-- {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Displays a modal dialog.
 - {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Transforms a {{domxref("WebKitPoint")}} from the node's coordinate system to the page's coordinate system.
 - {{domxref("Window.webkitConvertPointFromPageToNode()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -291,18 +298,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the window has been resized.
 - {{domxref("Window/storage_event", "storage")}}
   - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
-
-### Clipboard events
-
-- {{domxref("Window/copy_event", "copy")}}
-  - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/copy_event", "oncopy")}} property.
-- {{domxref("Window/cut_event", "cut")}}
-  - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/cut_event", "oncut")}} property.
-- {{domxref("Window/paste_event", "paste")}}
-  - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/paste_event", "onpaste")}} property.
 
 ### Connection events
 
@@ -355,7 +350,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the window, the document and its resources are about to be unloaded.
 - {{domxref("Window/load_event", "load")}}
   - : Fired when the whole page has loaded, including all dependent resources such as stylesheets images.
-- {{domxref("Window/unload_event", "unload")}} {{deprecated_inline}}
+- {{domxref("Window/unload_event", "unload")}}
   - : Fired when the document or a child resource is being unloaded.
 
 ### Manifest events

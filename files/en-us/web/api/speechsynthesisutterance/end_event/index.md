@@ -14,10 +14,10 @@ The **`end`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("end", (event) => {});
+```js-nolint
+addEventListener("end", (event) => { })
 
-onend = (event) => {};
+onend = (event) => { }
 ```
 
 ## Event type

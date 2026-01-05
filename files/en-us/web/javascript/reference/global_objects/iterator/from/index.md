@@ -1,11 +1,11 @@
 ---
 title: Iterator.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/from
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Iterator.from
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Iterator.from()`** static method creates a new {{jsxref("Iterator")}} object from an iterator or iterable object.
 

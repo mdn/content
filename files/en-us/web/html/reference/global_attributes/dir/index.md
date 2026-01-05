@@ -1,11 +1,11 @@
 ---
-title: dir
+title: HTML dir global attribute
+short-title: dir
 slug: Web/HTML/Reference/Global_attributes/dir
 page-type: html-attribute
 browser-compat: html.global_attributes.dir
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`dir`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that indicates the directionality of the element's text.
 
@@ -54,7 +54,10 @@ This attribute is mandatory for the {{ HTMLElement("bdo") }} element where it ha
 
 This attribute is _not_ inherited by the {{ HTMLElement("bdi") }} element. If not set, its value is `auto`.
 
-Browsers might allow users to change the directionality of {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }}s in order to assist with authoring content. Chrome and Safari provide a directionality option in the contextual menu of input fields. Firefox uses <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> but does NOT update the `dir` attribute value.
+Browsers might allow users to change the directionality of {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }} elements in order to assist with authoring content.
+Chrome and Safari provide a directionality option in the contextual menu of input fields.
+Firefox uses <kbd>Ctrl</kbd> (Windows)/<kbd>Cmd</kbd> (macOS) + <kbd>Shift</kbd> + <kbd>X</kbd> inside a `<textarea>` to toggle text direction.
+These features toggle the `dir` attribute value between `ltr` and `rtl`.
 
 ## Specifications
 

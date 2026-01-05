@@ -5,11 +5,13 @@ page-type: javascript-function
 status:
   - deprecated
 browser-compat: javascript.builtins.unescape
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Objects")}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
-> **Note:** `unescape()` is a non-standard function implemented by browsers and was only standardized for cross-engine compatibility. It is not required to be implemented by all JavaScript engines and may not work everywhere. Use {{jsxref("decodeURIComponent()")}} or {{jsxref("decodeURI()")}} if possible.
+> [!NOTE]
+> `unescape()` is a non-standard function implemented by browsers and was only standardized for cross-engine compatibility. It is not required to be implemented by all JavaScript engines and may not work everywhere. Use {{jsxref("decodeURIComponent()")}} or {{jsxref("decodeURI()")}} if possible.
 
 The **`unescape()`** function computes a new string in which hexadecimal escape sequences are replaced with the characters that they represent. The escape sequences might be introduced by a function like {{jsxref("escape()")}}.
 

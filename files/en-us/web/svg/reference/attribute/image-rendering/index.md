@@ -8,7 +8,7 @@ sidebar: svgref
 
 The **`image-rendering`** attribute provides a hint to the browser about how to make speed vs. quality tradeoffs as it performs image processing.
 
-The resampling is always done in a truecolor (e.g., 24-bit) color space even if the original data and/or the target device is indexed color.
+The resampling is always done in a true color (e.g., 24-bit) color space even if the original data and/or the target device is indexed color.
 
 > [!NOTE]
 > As a presentation attribute, `image-rendering` also has a CSS property counterpart: {{cssxref("image-rendering")}}. When both are specified, the CSS property takes priority.

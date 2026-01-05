@@ -2,26 +2,25 @@
 title: Updating extensions for Firefox 2
 slug: Mozilla/Firefox/Releases/2/Updating_extensions
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information that will be useful to developers that wish to update their extensions to work properly under Firefox 2.
 
 ## Step 1: Update the install manifest
 
-The first step — and, for most extensions, the only one that will be needed — is to update the [install manifest](/en-US/Install_Manifests) file, install.rdf, to indicate compatibility with Firefox 2.
+The first step — and, for most extensions, the only one that will be needed — is to update the [install manifest](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests) file, install.rdf, to indicate compatibility with Firefox 2.
 
 Find the line indicating the maximum compatible version of Firefox (which, for Firefox 1.5, might look like this):
 
-```bash
- <em:maxVersion>1.5.0.*</em:maxVersion>
+```xml
+<em:maxVersion>1.5.0.*</em:maxVersion>
 ```
 
 Change it to indicate compatibility with Firefox 2:
 
-```bash
- <em:maxVersion>2.0.0.*</em:maxVersion>
+```xml
+<em:maxVersion>2.0.0.*</em:maxVersion>
 ```
 
 Then reinstall your extension.
@@ -30,7 +29,7 @@ Then reinstall your extension.
 
 Firefox 2 incorporates changes to the default skin. Additionally, some user interface elements have been changed or moved, and it's possible your extension may be affected by these, depending on what your XUL overlays do.
 
-Look over the article [Theme changes in Firefox 2](/en-US/Theme_changes_in_Firefox_2) to learn what changes were made that may affect your extension's XUL overlays.
+Look over the article [Theme changes in Firefox 2](https://web.archive.org/web/20191005020825/https://developer.mozilla.org/en-US/Add-ons/Themes/Obsolete/Theme_changes_in_Firefox_2) to learn what changes were made that may affect your extension's XUL overlays.
 
 ## Step 3: Test
 
@@ -40,4 +39,4 @@ Be sure to test your extension carefully on Firefox 2 before you release it to t
 
 Update your extension's entry on [https://addons.mozilla.org](https://addons.mozilla.org/). This will ensure that users can find it.
 
-In addition, if your extension provides an [`updateURL`](/en-US/Install_Manifests#updateurl) in the install manifest, be sure to update the update manifest so that the new version of your extension can be found automatically by Firefox. By doing this, the first time the user runs your extension after upgrading to Firefox 2, Firefox can offer to automatically install it for them.
+In addition, if your extension provides an [`updateURL`](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests#updateurl) in the install manifest, be sure to update the update manifest so that the new version of your extension can be found automatically by Firefox. By doing this, the first time the user runs your extension after upgrading to Firefox 2, Firefox can offer to automatically install it for them.

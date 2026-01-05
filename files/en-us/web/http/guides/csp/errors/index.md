@@ -1,10 +1,10 @@
 ---
-title: CSP errors and warnings (Content Security Policy)
+title: Content Security Policy errors and warnings
+short-title: Errors and warnings
 slug: Web/HTTP/Guides/CSP/Errors
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 When you see any of the following messages logged in the browser devtools console, it indicates that a problem related to [CSP](/en-US/docs/Web/HTTP/Guides/CSP) has occurred.
 
@@ -21,7 +21,7 @@ When you see any of the following messages logged in the browser devtools consol
 - Ignoring "%1$S" within script-src or style-src: nonce-source or hash-source specified
 - Ignoring "%1$S" within script-src: 'strict-dynamic' specified
 - Ignoring source "%1$S" (Only supported within script-src).
-- Keyword 'strict-dynamic' within "%1$S" with no valid nonce or hash might block all scripts from loading
+- Keyword 'strict-dynamic' within "%1$S" with no valid {{Glossary("Nonce", "nonce")}} or hash might block all scripts from loading
 - The report URI (%1$S) should be an HTTP or HTTPS URI.
 - This site (%1$S) has a Report-Only policy without a report URI. CSP will not block and cannot report violations of this policy.
 - Failed to parse unrecognized source %1$S
@@ -32,7 +32,7 @@ When you see any of the following messages logged in the browser devtools consol
 - Ignoring srcs for directive '%1$S'
 - Interpreting %1$S as a hostname, not a keyword. If you intended this to be a keyword, use '%2$S' (wrapped in single quotes).
 - Not supporting directive '%1$S'. Directive and values will be ignored.
-- Blocking insecure request '%1$S'.(/en-US/docs/Web/HTTP/CSP/Errors/blockAllMixedContent)
+- Blocking insecure request '%1$S'.(/en-US/docs/Web/HTTP/Guides/CSP/Errors/blockAllMixedContent)
 - Ignoring '%1$S' since it does not contain any parameters.
 - Ignoring sandbox directive when delivered in a report-only policy '%1$S'
 - Referrer Directive '%1$S' has been deprecated. Please use the Referrer-Policy header instead.

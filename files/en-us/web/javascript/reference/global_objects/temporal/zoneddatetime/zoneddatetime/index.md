@@ -5,9 +5,10 @@ page-type: javascript-constructor
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.ZonedDateTime
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.ZonedDateTime()`** constructor creates {{jsxref("Temporal.ZonedDateTime")}} objects.
 
@@ -20,7 +21,8 @@ new Temporal.ZonedDateTime(epochNanoseconds, timeZone)
 new Temporal.ZonedDateTime(epochNanoseconds, timeZone, calendar)
 ```
 
-> **Note:** `Temporal.ZonedDateTime()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Temporal.ZonedDateTime()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -29,7 +31,7 @@ new Temporal.ZonedDateTime(epochNanoseconds, timeZone, calendar)
 - `timeZone`
   - : A string that corresponds to the {{jsxref("Temporal/ZonedDateTime/timeZoneId", "timeZoneId")}} property. Unlike all other `Temporal` APIs, it must be a valid time zone identifier (either named or offset) as-is, and cannot be a `Temporal.ZonedDateTime` instance or a date-time string.
 - `calendar` {{optional_inline}}
-  - : A string that corresponds to the {{jsxref("Temporal/ZonedDateTime/calendarId", "calendarId")}} property. Defaults to `"iso8601"`.
+  - : A string that corresponds to the {{jsxref("Temporal/ZonedDateTime/calendarId", "calendarId")}} property. See [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for a list of commonly supported calendar types. Defaults to `"iso8601"`.
 
 ### Return value
 

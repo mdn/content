@@ -58,7 +58,7 @@ In this article, we'll build a simple contact form. Let's make a rough sketch.
 
 Our form will contain three text fields and one button. We are asking the user for their name, their email and the message they want to send. Hitting the button will send their data to a web server.
 
-## Active learning: Implementing our form HTML
+## Implementing our form HTML
 
 Ok, let's have a go at creating the HTML for our form. We will use the following HTML elements: {{HTMLelement("form")}}, {{HTMLelement("label")}}, {{HTMLelement("input")}}, {{HTMLelement("textarea")}}, and {{HTMLelement("button")}}.
 
@@ -181,7 +181,7 @@ First of all, add a {{htmlelement("style")}} element to your page, inside your H
 
 ```html
 <style>
-  …
+  /* CSS goes here */
 </style>
 ```
 
@@ -197,7 +197,7 @@ form {
   display: inline-block;
   /* Form outline */
   padding: 1em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 1em;
 }
 
@@ -221,7 +221,7 @@ textarea {
   width: 300px;
   box-sizing: border-box;
   /* Match form field borders */
-  border: 1px solid #999;
+  border: 1px solid #999999;
 }
 
 input:focus,
@@ -229,7 +229,7 @@ textarea:focus {
   /* Set the outline width and style */
   outline-style: solid;
   /* To give a little highlight on active elements */
-  outline-color: #000;
+  outline-color: black;
 }
 
 textarea {
@@ -330,7 +330,7 @@ form {
 
   /* To see the limits of the form */
   padding: 1em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 1em;
 }
 
@@ -358,13 +358,13 @@ textarea {
   box-sizing: border-box;
 
   /* To harmonize the look & feel of text field border */
-  border: 1px solid #999;
+  border: 1px solid #999999;
 }
 
 input:focus,
 textarea:focus {
   /* To give a little highlight on active elements */
-  border-color: #000;
+  border-color: black;
 }
 
 textarea {

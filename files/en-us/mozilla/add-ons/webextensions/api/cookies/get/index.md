@@ -3,9 +3,8 @@ title: cookies.get()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/get
 page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`get()`** method of the {{WebExtAPIRef("cookies")}} API retrieves information about a cookie, given the cookie's name and URL.
 
@@ -29,17 +28,13 @@ let getting = browser.cookies.get(
 ### Parameters
 
 - `details`
-
   - : An `object` containing details that are used to match a cookie to be retrieved. It can include these properties:
-
     - `firstPartyDomain` {{optional_inline}}
       - : A `string` representing the first-party domain with which the cookie to retrieve is associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
     - `name`
       - : A `string` representing the name of the cookie to retrieve.
     - `partitionKey` {{optional_inline}}
-
       - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. Include this object with `topLevelSite` to obtain a cookie from partitioned storage. Otherwise, returns the cookie from unpartitioned storage. This object contains:
-
         - `topLevelSite` {{optional_inline}}
           - : A `string` representing the first-party URL of the top-level site storage partition containing the cookie.
 

@@ -21,10 +21,8 @@ drawBuffers(buffers)
 ### Parameters
 
 - `buffers`
-
   - : An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLenum")}} specifying the buffers into which
     fragment colors will be written. Possible values are:
-
     - `gl.NONE`
       - : Fragment shader output is not written into any color
         buffer.

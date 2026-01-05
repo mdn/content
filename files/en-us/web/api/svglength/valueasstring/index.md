@@ -8,7 +8,7 @@ browser-compat: api.SVGLength.valueAsString
 
 {{APIRef("SVG")}}
 
-The `valueAsString` property of the {{domxref("SVGLength")}} interface represents the [\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length)'s value as a strin\*, in the units expressed by {{domxref("SVGLength.unitType", "unitType")}}.
+The `valueAsString` property of the {{domxref("SVGLength")}} interface represents the [\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length)'s value as a string, in the units expressed by {{domxref("SVGLength.unitType", "unitType")}}.
 
 Setting this attribute will cause {{domxref("SVGLength.value", "value")}}, {{domxref("SVGLength.valueInSpecifiedUnits", "valueInSpecifiedUnits")}}, and {{domxref("SVGLength.unitType", "unitType")}} to be updated automatically to reflect this setting.
 

@@ -1,11 +1,10 @@
 ---
-title: "<small>: the side comment element"
+title: "<small>: The Side Comment element"
 slug: Web/HTML/Reference/Elements/small
 page-type: html-element
 browser-compat: html.elements.small
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<small>`** [HTML](/en-US/docs/Web/HTML) element represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size smaller, such as from `small` to `x-small`.
 
@@ -57,8 +56,14 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 ```html
 <p>
   This is the first sentence.
-  <span style="font-size:0.8em">This whole sentence is in small letters.</span>
+  <span class="small">This whole sentence is in small letters.</span>
 </p>
+```
+
+```css
+.small {
+  font-size: 0.8em;
+}
 ```
 
 #### Result
@@ -147,4 +152,3 @@ Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement(
 - {{HTMLElement("sub")}} and {{HTMLElement("sup")}}
 - {{HTMLElement("font")}}
 - {{HTMLElement("style")}}
-- HTML 4.01 Specification: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)

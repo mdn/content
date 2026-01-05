@@ -1,11 +1,11 @@
 ---
 title: Intl.Locale.prototype.minimize()
+short-title: minimize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.minimize
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`minimize()`** method of {{jsxref("Intl.Locale")}} instances attempts to
 remove information about this locale that would be added by calling
@@ -40,7 +40,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Intl.Locale")}} instance whose `baseName` property returns
+An {{jsxref("Intl.Locale")}} instance whose `baseName` property returns
 the result of the [Remove Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm
 executed against _{{jsxref("Intl/Locale/baseName", "locale.baseName")}}_.
 

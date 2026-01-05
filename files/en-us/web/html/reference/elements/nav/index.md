@@ -3,9 +3,8 @@ title: "<nav>: The Navigation Section element"
 slug: Web/HTML/Reference/Elements/nav
 page-type: html-element
 browser-compat: html.elements.nav
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<nav>`** [HTML](/en-US/docs/Web/HTML) element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.
 
@@ -43,7 +42,7 @@ nav {
 
 .crumb a::after {
   display: inline-block;
-  color: #000;
+  color: black;
   content: ">";
   font-size: 80%;
   font-weight: bold;

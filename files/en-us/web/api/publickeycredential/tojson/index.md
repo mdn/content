@@ -45,9 +45,7 @@ The object properties are:
 - `clientExtensionResults`
   - : An array containing [base64url](/en-US/docs/Glossary/Base64)-encoded versions of the values returned by {{domxref("PublicKeyCredential.getClientExtensionResults()")}}.
 - `response`
-
   - : The response property object depends on whether the credentials are returned following a registration or authentication operation.
-
     - When registering a new user `response` will be a JSON-type representation of {{domxref("AuthenticatorAttestationResponse")}} where buffer values have been [base64url](/en-US/docs/Glossary/Base64) encoded.
 
     - When authenticating a user the returned value will be a JSON-type representation version of {{domxref("AuthenticatorAssertionResponse")}} where buffer values have been [base64url](/en-US/docs/Glossary/Base64) encoded.
@@ -71,11 +69,11 @@ const newCredentialInfo = await navigator.credentials.create({
 The web app then serializes the returned credential using `JSON.stringify()` (which in turn calls `toJSON()`) and posts it back to the server.
 
 ```js
-const registration_url = "https://example.com/registration";
-const apiRegOptsResp = await fetch(registration_url, {
+const registrationURL = "https://example.com/registration";
+const apiRegOptsResp = await fetch(registrationURL, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(newCredentialInfo), //Calls newCredentialInfo.toJSON
+  body: JSON.stringify(newCredentialInfo), // Calls newCredentialInfo.toJSON
 });
 ```
 

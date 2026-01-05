@@ -2,9 +2,8 @@
 title: How can we design for all types of users?
 slug: Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article provides basic tips to help you design websites for any kind of user.
 
@@ -34,10 +33,6 @@ This article provides basic tips to help you design websites for any kind of use
 
 When you're building a website, one top issue to consider is [Universal Design](https://en.wikipedia.org/wiki/Universal_design): accommodating all users regardless of disability, technical constraints, culture, location, and so on.
 
-## Active Learning
-
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
-
 ## Dig deeper
 
 ### Color contrast
@@ -46,7 +41,7 @@ To keep your text readable, use a text color that contrasts well with the backgr
 
 The {{Glossary("W3C")}} defines a good color mix with an algorithm that calculates luminosity ratio between foreground and background. The calculation may seem pretty complicated, but we can rely on tools to do the job for us.
 
-Let's download and install the Paciello Group's [Color Contrast Analyser](https://www.tpgi.com/color-contrast-checker/).
+Let's download and install the Paciello Group's [Color Contrast Analyser](https://vispero.com/color-contrast-checker/).
 
 > [!NOTE]
 > Alternatively you can find a number of contrast checkers online, such as WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/). We suggest a local checker because it comes packaged with an on-screen color picker to find out a color value.

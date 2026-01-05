@@ -1,11 +1,11 @@
 ---
-title: Server
+title: Server header
+short-title: Server
 slug: Web/HTTP/Reference/Headers/Server
 page-type: http-header
 browser-compat: http.headers.Server
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Server`** {{Glossary("response header")}} describes the software used by the origin server that handled the request and generated a response.
 
@@ -24,10 +24,6 @@ In general, a more robust approach to server security is to ensure software is r
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: drawIndexed() method"
 short-title: drawIndexed()
 slug: Web/API/GPURenderPassEncoder/drawIndexed
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.drawIndexed
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndexed()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface draws indexed primitives based on the vertex and index buffers provided by {{domxref("GPURenderPassEncoder.setVertexBuffer", "setVertexBuffer()")}} and {{domxref("GPURenderPassEncoder.setIndexBuffer", "setIndexBuffer()")}}.
@@ -45,7 +43,7 @@ None ({{jsxref("Undefined")}}).
 In the WebGPU Samples [Shadow Mapping](https://webgpu.github.io/webgpu-samples/samples/shadowMapping/) example, `drawIndexed()` is used in two separate render passes in each animation frame, one to populate the shadow buffer and one to draw the primary view of the scene. Study the example code listing for the full context.
 
 ```js
-// ...
+// …
 
 const commandEncoder = device.createCommandEncoder();
 {
@@ -71,7 +69,7 @@ const commandEncoder = device.createCommandEncoder();
   renderPass.end();
 }
 
-// ...
+// …
 ```
 
 ## Specifications

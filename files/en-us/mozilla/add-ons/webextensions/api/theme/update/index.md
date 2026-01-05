@@ -3,9 +3,8 @@ title: theme.update()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/update
 page-type: webextension-api-function
 browser-compat: webextensions.api.theme.update
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Updates the browser theme according to the content of the {{WebExtAPIRef("theme.Theme", "Theme")}} object.
 
@@ -38,7 +37,7 @@ const sunTheme = {
   },
   colors: {
     frame: "#CF723F",
-    tab_background_text: "#111",
+    tab_background_text: "#111111",
   },
 };
 
@@ -54,7 +53,7 @@ const day = {
   },
   colors: {
     frame: "#CF723F",
-    tab_background_text: "#111",
+    tab_background_text: "#111111",
   },
 };
 

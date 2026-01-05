@@ -1,11 +1,11 @@
 ---
 title: String.prototype.substring()
+short-title: substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.substring
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`substring()`** method of {{jsxref("String")}} values returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
 

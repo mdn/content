@@ -22,17 +22,14 @@ supports(type)
 ### Parameters
 
 - `type`
-
   - : A string indicating the {{Glossary("MIME type")}} to test.
 
     These MIME types are always supported:
-
     - `text/plain`
     - `text/html`
     - `image/png`
 
     These MIME types may be supported:
-
     - `image/svg+xml`
     - Custom MIME-type formats starting with `"web "`.
       The custom type (without the `"web "` prefix), must have the correct formatting for a MIME type.

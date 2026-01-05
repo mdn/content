@@ -29,13 +29,12 @@ Before starting to document an API, you should have available:
    Whether it is a W3C Recommendation or an early editor's draft, you should refer to the latest available draft of the spec that covers (or specs that cover) that API.
    To find it, you can usually do a Web search. The latest version will often be linked to from all versions of the spec, listed under "latest draft" or similar.
 2. The latest modern web browsers:
-   These should be experimental/alpha builds such as [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) that are more likely to support the features you are documenting.
+   These should be experimental/alpha builds such as [Firefox Nightly](https://www.firefox.com/en-US/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) that are more likely to support the features you are documenting.
    This is especially pertinent if you are documenting a nascent/experimental API.
 3. Demos/blog posts/other info: Find as much info as you can.
 4. Useful engineering contacts:
    It is really useful to find yourself a friendly engineering contact to ask questions about the spec, someone who is involved in the standardization of the API, or its implementation in a browser.
    Good places to find them are:
-
    - Your internal company address book, if you work for a relevant company.
    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) or a W3C list like [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/).
    - The spec itself. For example, the [Web Audio API spec](https://webaudio.github.io/web-audio-api/) lists the authors and their contact details at the top.
@@ -181,7 +180,6 @@ Creating a list of all these subpages is a good way to track them. For example:
 
 - Web_Audio_API
 - AudioContext
-
   - AudioContext.currentTime
   - AudioContext.destination
   - AudioContext.listener
@@ -191,7 +189,6 @@ Creating a list of all these subpages is a good way to track them. For example:
   - …
 
 - AudioNode
-
   - AudioNode.context
   - AudioNode.numberOfInputs
   - AudioNode.numberOfOutputs
@@ -201,7 +198,6 @@ Creating a list of all these subpages is a good way to track them. For example:
 
 - AudioParam
 - Events (update list)
-
   - start
   - end
   - …
@@ -238,21 +234,19 @@ Now you should be ready to start writing your interface pages. Each interface re
 5. **List of properties, List of methods**: These sections should be titled "Properties" and "Methods", and provide links (using the \\{{domxref}} macro) to a reference page for each property/method of that interface, along with a description of what each one does. These should be marked up using [description/definition lists](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists). Each description should be short and concise — one sentence if possible. See the "Referencing other API features with the \\{{domxref}} macro" section for a quicker way to create links to other pages.
 
    At the beginning of both sections, before the beginning of the list of properties/methods, indicate inheritance using the appropriate sentence, in italics:
-
    - _This interface doesn't implement any specific properties, but inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
    - _This interface also inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
    - _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
    - _This interface also inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
 
    > [!NOTE]
-   > Properties that are read-only should have the \\{{ReadOnlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \\{{domxref}} links (after the use of the \\{{experimentalInline}}, \\{{non-standard_Inline}} and \\{{deprecatedInline}} macros, if some of these are needed.
+   > Properties that are read-only should have the \\{{ReadOnlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \\{{domxref}} links (after the use of the \\{{experimental_inline}}, \\{{non-standard_Inline}} and \\{{deprecated_inline}} macros, if some of these are needed.
 
 6. **Examples**: Include a code listing to show typical usage of a major feature of the API. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you could reference a [GitHub](https://github.com/) repo containing the full example, and you could also link to a live example created using the [GitHub gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) feature (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN [Live Sample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) feature to make it live and playable in the page.
 7. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
 8. **Browser compatibility**: Now you need to include a browser compatibility table. See [Compatibility tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for details.
 9. **Polyfill**: If appropriate, include this section, providing code for a polyfill that enables the API to be used even on browsers that don't implement it. If no polyfill exists or is needed, leave this section out entirely.
 10. **See also**: The "See also" section is a good place to include further links that may be useful when learning about this technology, including MDN (and external) tutorials, examples, libraries, etc. We have a liberal policy for linking to external sources, but pay attention:
-
     - Do not include pages with the same information as another page in the MDN; link to that page instead.
     - Do not put author names — we are a writer-neutral documentation site. Link to the document; the author name will be displayed there.
     - Pay special attention to blog posts: they tend to become outdated (old syntax, wrong compat information). Link to them only if they have a clear added value that can't be found in a maintained document.
@@ -279,13 +273,13 @@ Property pages must have the following sections:
 3. **Feature status**: A [banner indicating the feature status](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) (such as deprecated, non standard, or experimental) is added automatically, if needed. For that you need to [update the status in the browser-compat-data repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 
 4. **Description**: the first paragraph of the property page should provide a short, concise description of the property's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default/initial value, and whether it's read-only or not. The structure of the first sentence must be:
-
    - For read-only properties
      - : The **`InterfaceName.property`** read-only property returns a \\{{domxref("type")}} that…
    - For other properties
      - : The **`InterfaceName.property`** property is a \\{{domxref("type")}} that…
 
-   > **Note:** `InterfaceName.property` should be in `<code>`, and should additionally be in bold (`<strong>`) the first time it's used.
+   > [!NOTE]
+   > `InterfaceName.property` should be in `<code>`, and should additionally be in bold (`<strong>`) the first time it's used.
 
 5. **Value**: The Value section will contain a description of the property's value. This should contain the data type of the property, and what it represents. For an example, see {{domxref("SpeechRecognition.grammars")}}
 
@@ -313,19 +307,17 @@ Method pages need the following sections:
 3. **Feature status**: A [banner indicating the feature status](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) (such as deprecated, non standard, or experimental) is added automatically, if needed. For that you need to [update the status in the browser-compat-data repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 
 4. **Description**: The first paragraph of the method page should provide a short concise description of the method's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default parameter values, any theory that the method relies on, and what the parameter values do.
-
    - The beginning of the first sentence must follow the following structure:
      - : The **`InterfaceName.method()`** method interface …
 
-   > **Note:** `InterfaceName.method()` should be in `<code>`, and should also be in bold (`<strong>`) the first time it's used.
+   > [!NOTE]
+   > `InterfaceName.method()` should be in `<code>`, and should also be in bold (`<strong>`) the first time it's used.
 
 5. **Syntax**: The syntax section should include a 2–3 line example — usually just construction of the interface, then calling of the interface method.
-
    - The syntax should be of the form:
      - : method(param1, param2, …)
 
    The syntax section should include three subsections (see {{domxref("SubtleCrypto.sign()")}} for an example):
-
    - "Parameters": This should contain a definition list (or unordered list) that names and describes the different parameters the method takes. You should include the {{optional_inline}} macro next to the parameter name, in the case of optional parameters. If there are no parameters, this section should be omitted.
    - "Return value": This should say what return value the method has, be it a simple value like a double or boolean, or a more complex value like another interface object, in which case you can use \\{{domxref}} macro to link to the MDN API page covering that interface (if it exists.) A method might return nothing, in which case the return value should be written as "\\{{jsxref('undefined')}}" (which will look like this in the rendered page: {{jsxref("undefined")}}).
    - "Exceptions": This should list the different exceptions that can be raised when invoking the method, and what circumstances cause them. If there are no exceptions, this section should be omitted.

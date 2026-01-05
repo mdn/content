@@ -2,9 +2,8 @@
 title: Your second extension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 If you've been through the [Your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) article, you've already got an idea of how to write an extension. In this article, you'll write a slightly more complex extension that demonstrates a few more of the APIs.
 
@@ -14,7 +13,6 @@ To implement this, we will:
 
 - **define a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), which is a button attached to the Firefox toolbar**.
   For the button we'll supply:
-
   - an icon, called "beasts-32.png"
   - a popup to open when the button is pressed. The popup will include HTML, CSS, and JavaScript.
 
@@ -84,7 +82,6 @@ Now create a new file called "manifest.json", and give it the following contents
 - [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) is optional, but recommended: it allows you to specify an icon for the extension, that will be shown in the Add-ons Manager.
 - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) lists permissions the extension needs. We're just asking for the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) here.
 - [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) specifies the toolbar button. We're supplying three pieces of information here:
-
   - `default_icon` is mandatory, and points to the icon for the button
   - `default_title` is optional, and will be shown in a tooltip
   - `default_popup` is used if you want a popup to be shown when the user clicks the button. We do, so we've included this key and made it point to an HTML file included with the extension.
@@ -97,7 +94,7 @@ Note that all paths given are relative to manifest.json itself.
 
 The extension should have an icon. This will be shown next to the extension's listing in the Add-ons Manager (you can open this by visiting the URL "about:addons"). Our manifest.json promised that we would have an icon for the toolbar at "icons/beasts-48.png".
 
-Create the "icons" directory and save an icon there named "beasts-48.png". You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png), which is taken from the [Aha-Soft's Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/), and used under the terms of its license.
+Create the "icons" directory and save an icon there named "beasts-48.png". You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png), which is taken from the [Aha-Soft's Free Retina iconset](https://www.aha-soft.com/free-icons/free-retina-icon-set/), and used under the terms of its license.
 
 If you choose to supply your own icon, It should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this it will be specified as the `96` property of the `icons` object in manifest.json:
 
@@ -138,7 +135,7 @@ The HTML file looks like this:
 
 ```html
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="choose_beast.css" />

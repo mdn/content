@@ -2,12 +2,10 @@
 title: WebGPU API
 slug: Web/API/WebGPU_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat: api.GPU
 ---
 
-{{DefaultAPISidebar("WebGPU API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{DefaultAPISidebar("WebGPU API")}}{{securecontext_header}}
 
 The **WebGPU API** enables web developers to use the underlying system's GPU (Graphics Processing Unit) to carry out high-performance computations and draw complex images that can be rendered in the browser.
 
@@ -17,7 +15,7 @@ WebGPU is the successor to {{domxref("WebGL_API", "WebGL", "", "nocode")}}, prov
 
 It is fair to say that {{domxref("WebGL_API", "WebGL", "", "nocode")}} revolutionized the web in terms of graphical capabilities after it first appeared around 2011. WebGL is a JavaScript port of the [OpenGL ES 2.0](https://registry.khronos.org/OpenGL-Refpages/es2.0/) graphics library, allowing web pages to pass rendering computations directly to the device's GPU to be processed at very high speeds, and render the result inside a {{htmlelement("canvas")}} element.
 
-WebGL and the [GLSL](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>) language used to write WebGL shader code are complex, so several WebGL libraries have been created to make WebGL apps easier to write: Popular examples include [Three.js](https://threejs.org/), [Babylon.js](https://www.babylonjs.com/), and [PlayCanvas](https://playcanvas.com/). Developers have used these tools to build immersive web-based 3D games, music videos, training and modeling tools, VR and AR experiences, and more.
+WebGL and the [GLSL](<https://wikis.khronos.org/opengl/Core_Language_(GLSL)>) language used to write WebGL shader code are complex, so several WebGL libraries have been created to make WebGL apps easier to write: Popular examples include [Three.js](https://threejs.org/), [Babylon.js](https://www.babylonjs.com/), and [PlayCanvas](https://playcanvas.com/). Developers have used these tools to build immersive web-based 3D games, music videos, training and modeling tools, VR and AR experiences, and more.
 
 However, WebGL has some fundamental issues that needed addressing:
 
@@ -34,7 +32,6 @@ There are several layers of abstraction between a device GPU and a web browser r
 ![A basic stack diagram showing the position of the different elements of a WebGPU architecture on a device](basic-webgpu-stack.png)
 
 - Physical devices have GPUs. Most devices only have one GPU, but some have more than one. Different GPU types are available:
-
   - Integrated GPUs, which live on the same board as the CPU and share its memory.
   - Discrete GPUs, which live on their own board, separate from the CPU.
   - Software "GPUs", implemented on the CPU.
@@ -69,7 +66,7 @@ async function init() {
 
   const device = await adapter.requestDevice();
 
-  //...
+  // …
 }
 ```
 
@@ -78,14 +75,13 @@ async function init() {
 A pipeline is a logical structure containing programmable stages that are completed to get your program's work done. WebGPU is currently able to handle two types of pipeline:
 
 - A render pipeline renders graphics, typically into a {{htmlelement("canvas")}} element, but it could also render graphics offscreen. It has two main stages:
-
   - A vertex stage, in which a vertex shader takes positioning data fed into the GPU and uses it to position a series of vertices in 3D space by applying specified effects like rotation, translation, or perspective. The vertices are then assembled into primitives such as triangles (the basic building block of rendered graphics) and rasterized by the GPU to figure out what pixels each one should cover on the drawing canvas.
 
   - A fragment stage, in which a fragment shader computes the color for each pixel covered by the primitives produced by the vertex shader. These computations frequently use inputs such as images (in the form of textures) that provide surface details and the position and color of virtual lights.
 
 - A compute pipeline is for general computation. A compute pipeline contains a single compute stage in which a compute shader takes general data, processes it in parallel across a specified number of workgroups, then returns the result in one or more buffers. The buffers can contain any kind of data.
 
-The shaders mentioned above are sets of instructions processed by the GPU. WebGPU shaders are written in a low-level Rust-like language called [WebGPU Shader Language](https://gpuweb.github.io/gpuweb/wgsl/) (WGSL).
+The shaders mentioned above are sets of instructions processed by the GPU. WebGPU shaders are written in a low-level Rust-like language called [WebGPU Shading Language](https://gpuweb.github.io/gpuweb/wgsl/) (WGSL).
 
 There are several different ways in which you could architect a WebGPU app, but the process will likely contain the following steps:
 
@@ -157,7 +153,7 @@ const canvas = document.querySelector("#gpuCanvas");
 const context = canvas.getContext("webgpu");
 
 context.configure({
-  device: device,
+  device,
   format: navigator.gpu.getPreferredCanvasFormat(),
   alphaMode: "premultiplied",
 });
@@ -516,7 +512,7 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("HTMLCanvasElement.getContext()")}} — the `"webgpu"` `contextType`
   - : Invoking `getContext()` with the `"webgpu"` `contextType` returns a {{domxref("GPUCanvasContext")}} object instance, which can then be configured with {{domxref("GPUCanvasContext.configure()")}}.
 - {{domxref("GPUCanvasContext")}}
-  - : Represents the WebGPU rendering context of an {{htmlelement("canvas")}} element.
+  - : Represents the WebGPU rendering context of a {{htmlelement("canvas")}} element.
 
 ### Representing pipeline resources
 
@@ -591,7 +587,7 @@ You can find more information about WebGPU error handling in the explainer — s
 
 ## Security requirements
 
-The whole API is available only in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+The whole API is available only in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Examples
 

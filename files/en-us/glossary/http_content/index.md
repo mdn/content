@@ -1,10 +1,9 @@
 ---
-title: HTTP Content
+title: HTTP content
 slug: Glossary/HTTP_Content
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In HTTP messages, the **content** describes the 'information' conveyed in the message body (which follows the header section), after any message framing from HTTP/1.1 chunked transfer encoding has been removed.
 This was referred to as a "payload" in HTTP/1.1, but message "content" distinguishes from frame payloads in HTTP/2 and HTTP/3 where the data in a single frame could be header data, body data, or other control information.

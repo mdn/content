@@ -2,9 +2,8 @@
 title: Quantifiers
 slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 Quantifiers indicate numbers of characters or expressions to match.
 
@@ -137,10 +136,9 @@ console.log(modifiedQuote.match(regexpTooGreedy));
       <td>
         <p>
           By default quantifiers like <code>*</code> and <code>+</code> are
-          "greedy", meaning that they try to match as much of the string as
+          "greedy", meaning that they try to match as many times as
           possible. The <code>?</code> character after the quantifier makes the
-          quantifier "non-greedy": meaning that it will stop as soon as it finds
-          a match. For example, given a string like "some &#x3C;foo> &#x3C;bar>
+          quantifier "non-greedy": meaning that it will stop as soon as it finds the minimum number of matches. For example, given a string like "some &#x3C;foo> &#x3C;bar>
           new &#x3C;/bar> &#x3C;/foo> thing":
         </p>
         <ul>
@@ -150,6 +148,12 @@ console.log(modifiedQuote.match(regexpTooGreedy));
           </li>
           <li><code>/&#x3C;.*?>/</code> will match "&#x3C;foo>"</li>
         </ul>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> Adding <code>?</code> after <code>{n}</code> is syntactically valid but practically useless.
+            Since <code>{n}</code> always matches exactly n times, <code>x{n}?</code> behaves the same as <code>x{n}</code>.
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>
@@ -187,6 +191,8 @@ console.table(sentence.match(longWord)); // ["multiplication"]
 ### Optional character
 
 In this example, we match words that either end with "our" or "or".
+
+<!-- cSpell:ignore neighbour -->
 
 ```js
 const britishText = "He asked his neighbour a favour.";

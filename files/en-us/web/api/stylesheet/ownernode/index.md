@@ -23,24 +23,23 @@ A {{domxref("Node")}} object.
 
 ## Examples
 
+Assuming the `<head>` contains the following:
+
 ```html
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="example.css" />
-  </head>
-  <body>
-    <button onclick="alert(document.styleSheets[0].ownerNode)">
-      Show example.css's ownerNode
-    </button>
-  </body>
-</html>
-// Displays "object HTMLLinkElement"
+<link rel="stylesheet" href="example.css" />
+```
+
+Then:
+
+```js
+console.log(document.styleSheets[0].ownerNode);
+// Displays '<link rel="stylesheet" href="example.css">'
 ```
 
 ## Notes
 
 For style sheets that are included by other style sheets, such as with
-[`@import`](/en-US/docs/Web/CSS/@import), the value of this
+{{cssxref("@import")}}, the value of this
 property is `null`.
 
 ## Specifications

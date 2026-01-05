@@ -2,9 +2,8 @@
 title: 'SyntaxError: "x" is a reserved identifier'
 slug: Web/JavaScript/Reference/Errors/Reserved_identifier
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "_variable_ is a reserved identifier" occurs
 when [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) are used as identifiers.

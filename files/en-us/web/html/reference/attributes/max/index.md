@@ -7,9 +7,8 @@ browser-compat:
   - html.elements.input.max
   - html.elements.meter.max
   - html.elements.progress.max
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`max`** attribute defines the maximum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) of the element is greater than this, the element fails [validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation). This value must be greater than or equal to the value of the [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) attribute. If the `max` attribute is present but is not specified or is invalid, no `max` value is applied. If the `max` attribute is valid and a non-empty value is greater than the maximum allowed by the `max` attribute, constraint validation will prevent form submission.
 
@@ -65,14 +64,14 @@ If the value exceeds the max value allowed, the {{domxref('validityState.rangeOv
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
-      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code>&#x3C;input type="number" min="0" step="5" max="100"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
-      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code>&#x3C;input type="range" min="60" step="5" max="100"></code>
       </td>
@@ -103,7 +102,7 @@ For the {{htmlelement('progress')}} element, the `max` attribute describes how m
   <tbody>
     <tr>
       <td>{{HTMLElement("progress")}}</td>
-      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code
           >&#x3C;progress id="file" max="100" value="70"> 70%
@@ -113,7 +112,7 @@ For the {{htmlelement('progress')}} element, the `max` attribute describes how m
     </tr>
     <tr>
       <td>{{HTMLElement("meter")}}</td>
-      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code
           >&#x3C;meter id="fuel" min="0" max="100" low="33" high="66"
@@ -140,7 +139,6 @@ Provide instructions to help users understand how to complete the form and use i
 
 - [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step)
 - [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min)
-- other meter attributes: [`low`](/en-US/docs/Web/HTML/Reference/Attributes/low), [`high`](/en-US/docs/Web/HTML/Reference/Attributes/high), [`optimum`](/en-US/docs/Web/HTML/Reference/Attributes/optimum)
 - [Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - [Form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.rangeOverflow')}}

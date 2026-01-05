@@ -1,5 +1,6 @@
 ---
-title: aria-expanded
+title: "ARIA: aria-expanded attribute"
+short-title: aria-expanded
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-expanded
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-expanded
@@ -69,11 +70,9 @@ A parent row in a [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Role
 ## Values
 
 - `false`
-
   - : The grouping element this element owns or controls is collapsed.
 
 - `true`
-
   - : The grouping element this element owns or controls is expanded.
 
 - `undefined` (default)

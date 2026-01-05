@@ -14,11 +14,14 @@ sidebar: urlsidebar
 
 ## Syntax
 
-JavaScript URLs start with the `javascript:` scheme and are followed by JavaScript code. The code will be parsed as a script.
-
 ```url
 javascript:<script>
 ```
+
+- `javascript:`
+  - : The scheme of the URL.
+- `<script>`
+  - : The JavaScript code to execute. The code will be parsed as a script.
 
 ## Description
 

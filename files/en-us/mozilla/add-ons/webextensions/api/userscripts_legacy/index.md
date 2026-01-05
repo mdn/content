@@ -3,9 +3,8 @@ title: userScripts (Legacy)
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy
 page-type: webextension-api
 browser-compat: webextensions.api.userScripts_legacy
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This is documentation for the legacy `userScripts` API. It's available in Firefox for Manifest V2. For functionality to work with user scripts in Manifest V3 see the new {{WebExtAPIRef("userScripts")}} API.
@@ -30,6 +29,8 @@ To use the API, call {{WebExtAPIRef("userScripts_legacy.register","register()")}
 
 - {{WebExtAPIRef("userScripts_legacy.RegisteredUserScript", "userScripts.RegisteredUserScript")}}
   - : The `object` returned by the {{WebExtAPIRef("userScripts_legacy.register","register()")}} method. It represents the registered user scripts and is used to deregister the user scripts.
+- {{WebExtAPIRef("userScripts_legacy.UserScriptOptions", "userScripts.UserScriptOptions")}}
+  - : The `object` passed to the {{WebExtAPIRef("userScripts_legacy.register","register()")}} method. It represents the content scripts to register.
 
 ## Methods
 

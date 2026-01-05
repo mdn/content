@@ -3,9 +3,8 @@ title: "<bdi>: The Bidirectional Isolate element"
 slug: Web/HTML/Reference/Elements/bdi
 page-type: html-element
 browser-compat: html.elements.bdi
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<bdi>`** [HTML](/en-US/docs/Web/HTML) element tells the browser's bidirectional algorithm to treat the text it contains in isolation from its surrounding text. It's particularly useful when a website dynamically inserts some text and doesn't know the directionality of the text being inserted.
 

@@ -40,32 +40,30 @@ button.
   <button id="openDialog">Open Dialog</button>
 </p>
 <p id="dialogStatus"></p>
+```
 
-<script>
-  (() => {
-    const openDialog = document.getElementById("openDialog");
-    const dialog = document.getElementById("dialog");
-    const text = document.getElementById("dialogStatus");
+```js
+const openDialog = document.getElementById("openDialog");
+const dialog = document.getElementById("dialog");
+const text = document.getElementById("dialogStatus");
 
-    function openCheck(dialog) {
-      if (dialog.open) {
-        text.innerText = "Dialog open";
-      } else {
-        text.innerText = "Dialog closed";
-      }
-    }
+function openCheck(dialog) {
+  if (dialog.open) {
+    text.innerText = "Dialog open";
+  } else {
+    text.innerText = "Dialog closed";
+  }
+}
 
-    // Update button opens a modal dialog
-    openDialog.addEventListener("click", () => {
-      dialog.showModal();
-      openCheck(dialog);
-    });
+// Update button opens a modal dialog
+openDialog.addEventListener("click", () => {
+  dialog.showModal();
+  openCheck(dialog);
+});
 
-    dialog.addEventListener("close", () => {
-      openCheck(dialog);
-    });
-  })();
-</script>
+dialog.addEventListener("close", () => {
+  openCheck(dialog);
+});
 ```
 
 ### Result

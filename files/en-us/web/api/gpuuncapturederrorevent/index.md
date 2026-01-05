@@ -2,12 +2,10 @@
 title: GPUUncapturedErrorEvent
 slug: Web/API/GPUUncapturedErrorEvent
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUUncapturedErrorEvent
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUUncapturedErrorEvent`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is the event object type for the {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event, used for telemetry and to report unexpected errors.
 
@@ -17,14 +15,14 @@ Known error cases should be handled using {{domxref("GPUDevice.pushErrorScope", 
 
 ## Constructor
 
-- {{domxref("GPUUncapturedErrorEvent.GPUUncapturedErrorEvent", "GPUUncapturedErrorEvent()")}} {{Experimental_Inline}}
+- {{domxref("GPUUncapturedErrorEvent.GPUUncapturedErrorEvent", "GPUUncapturedErrorEvent()")}}
   - : Creates a new `GPUUncapturedErrorEvent` object instance.
 
 ## Instance properties
 
 _Inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("GPUUncapturedErrorEvent.error", "error")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUUncapturedErrorEvent.error", "error")}} {{ReadOnlyInline}}
   - : A {{domxref("GPUError")}} object instance providing access to the details of the error.
 
 ## Examples
@@ -32,7 +30,7 @@ _Inherits properties from its parent, {{domxref("Event")}}._
 You could use something like the following as a global mechanism to pick up any errors that aren't handled by error scopes and capture them.
 
 ```js
-// ...
+// …
 
 device.addEventListener("uncapturederror", (event) => {
   // Re-surface the error
@@ -43,7 +41,7 @@ device.addEventListener("uncapturederror", (event) => {
   });
 });
 
-// ...
+// …
 ```
 
 ## Specifications

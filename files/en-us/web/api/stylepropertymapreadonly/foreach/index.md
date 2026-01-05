@@ -21,9 +21,7 @@ forEach(callbackFn, thisArg)
 ### Parameters
 
 - `callbackFn`
-
   - : The function to execute for each element, taking three arguments:
-
     - `currentValue`
       - : The value of the current element being processed.
     - `index` {{optional_inline}}

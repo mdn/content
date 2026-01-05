@@ -2,9 +2,8 @@
 title: WebXR — Virtual and Augmented Reality for the Web
 slug: Games/Techniques/3D_on_the_web/WebXR
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 The concepts of virtual reality (VR) and augmented reality (AR) aren't new, but the technology is more accessible than ever. We can also use a JavaScript API to make use of it in web applications. This article introduces WebXR from the perspective of its use in games.
 

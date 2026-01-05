@@ -45,7 +45,14 @@ First we add some HTML elements for loading some files and displaying the SHA-25
 <label
   >Choose file(s) to hash <input type="file" id="file" name="file" multiple
 /></label>
-<output style="display:block;font-family:monospace;"></output>
+<output></output>
+```
+
+```css hidden
+output {
+  display: block;
+  font-family: monospace;
+}
 ```
 
 Next we use the SubtleCrypto interface to process them. This works by:
@@ -74,6 +81,10 @@ async function fileHash(file) {
   // each byte of the array buffer. This gets us an array where each byte
   // of the array buffer becomes one item in the array
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
+  if (uint8ViewOfHash.toHex) {
+    // The logic below is equivalent to the toHex() method, introduced in 2025.
+    return uint8ViewOfHash.toHex();
+  }
   // We then convert it to a regular array so we can convert each item
   // to hexadecimal strings, where characters of 0-9 or a-f represent
   // a number between 0 and 15, containing 4 bits of information,
@@ -145,7 +156,14 @@ The code below, like our SHA256 example, can be used to generate these hashes fr
   >Choose file(s) to hash <input type="file" id="file" name="file" multiple
 /></label>
 
-<output style="display:block;font-family:monospace;"></output>
+<output></output>
+```
+
+```css hidden
+output {
+  display: block;
+  font-family: monospace;
+}
 ```
 
 ```js

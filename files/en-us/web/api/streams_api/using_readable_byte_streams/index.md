@@ -102,9 +102,9 @@ class MockHypotheticalSocket {
     const resultObj = {};
     resultObj["bytesRead"] = 0;
 
-    return new Promise((resolve /*, reject*/) => {
+    return new Promise((resolve /*, reject */) => {
       if (this.data_read >= this.max_data) {
-        //out of data
+        // Out of data
         resolve(resultObj);
         return;
       }
@@ -137,20 +137,18 @@ class MockHypotheticalSocket {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random number bytes in this call of socket
   getNumberRandomBytesSocket() {
     // Capped to remaining data and the max min return-per-read range
-    const remaining_data = this.max_data - this.data_read;
+    const remainingData = this.max_data - this.data_read;
     const numberBytesReceived =
-      remaining_data < this.min_per_read
-        ? remaining_data
+      remainingData < this.min_per_read
+        ? remainingData
         : this.getRandomIntInclusive(
             this.min_per_read,
-            Math.min(this.max_per_read, remaining_data),
+            Math.min(this.max_per_read, remainingData),
           );
     return numberBytesReceived;
   }
@@ -347,7 +345,7 @@ function readStream(reader) {
         offset += value.byteLength;
         bytesReceived += value.byteLength;
 
-        //logConsumer(`Read ${bytesReceived} bytes: ${value}`);
+        // logConsumer(`Read ${bytesReceived} bytes: ${value}`);
         logConsumer(`Read ${bytesReceived} bytes`);
         result += value;
 
@@ -355,7 +353,9 @@ function readStream(reader) {
         if (bytesReceived > 300 && bytesReceived < 600) {
           logConsumer(`Delaying read to emulate slow stream reading`);
           const delay = (ms) =>
-            new Promise((resolve) => setTimeout(resolve, ms));
+            new Promise((resolve) => {
+              setTimeout(resolve, ms);
+            });
           await delay(1000);
         }
 
@@ -440,9 +440,9 @@ class MockUnderlyingFileHandle {
     resultObj["buffer"] = buffer;
     resultObj["bytesRead"] = 0;
 
-    return new Promise((resolve /*, reject*/) => {
+    return new Promise((resolve /*, reject */) => {
       if (position >= this.maxdata) {
-        //out of data
+        // Out of data
         resolve(resultObj);
         return;
       }
@@ -473,9 +473,7 @@ class MockUnderlyingFileHandle {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random character string
   randomChars(length = 8) {
@@ -574,7 +572,7 @@ function makeReadableByteFileStream(filename) {
   return new ReadableStream({
     type: "bytes", // An underlying byte stream!
     start(controller) {
-      // Called to initialise the underlying source.
+      // Called to initialize the underlying source.
       // For a file source open a file handle (here we just create the mocked object).
       fileHandle = new MockUnderlyingFileHandle();
       logSource(
@@ -701,9 +699,9 @@ class MockUnderlyingFileHandle {
     resultObj["buffer"] = buffer;
     resultObj["bytesRead"] = 0;
 
-    return new Promise((resolve /*, reject*/) => {
+    return new Promise((resolve /*, reject */) => {
       if (position >= this.maxdata) {
-        //out of data
+        // Out of data
         resolve(resultObj);
         return;
       }
@@ -734,9 +732,7 @@ class MockUnderlyingFileHandle {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random character string
   randomChars(length = 8) {
@@ -825,7 +821,7 @@ function makeReadableByteFileStream(filename) {
   return new ReadableStream({
     type: "bytes", // An underlying byte stream!
     start(controller) {
-      // Called to initialise the underlying source.
+      // Called to initialize the underlying source.
       // For a file source open a file handle (here we just create the mocked object).
       fileHandle = new MockUnderlyingFileHandle();
       logSource(
@@ -941,9 +937,9 @@ class MockUnderlyingFileHandle {
     resultObj["buffer"] = buffer;
     resultObj["bytesRead"] = 0;
 
-    return new Promise((resolve /*, reject*/) => {
+    return new Promise((resolve /*, reject */) => {
       if (position >= this.maxdata) {
-        //out of data
+        // Out of data
         resolve(resultObj);
         return;
       }
@@ -974,9 +970,7 @@ class MockUnderlyingFileHandle {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random character string
   randomChars(length = 8) {
@@ -1065,7 +1059,7 @@ function makeReadableByteFileStream(filename) {
   return new ReadableStream({
     type: "bytes", // An underlying byte stream!
     start(controller) {
-      // Called to initialise the underlying source.
+      // Called to initialize the underlying source.
       // For a file source open a file handle (here we just create the mocked object).
       fileHandle = new MockUnderlyingFileHandle();
       logSource(

@@ -1,11 +1,11 @@
 ---
-title: WWW-Authenticate
+title: WWW-Authenticate header
+short-title: WWW-Authenticate
 slug: Web/HTTP/Reference/Headers/WWW-Authenticate
 page-type: http-header
 browser-compat: http.headers.WWW-Authenticate
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`WWW-Authenticate`** {{Glossary("response header")}} advertises the [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication) methods (or {{Glossary("challenge", "challenges")}}) that might be used to gain access to a specific resource.
 
@@ -27,10 +27,6 @@ The client is expected to select the most secure of the challenges it understand
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -123,7 +119,7 @@ The following sections describe token and auth parameters for some common auth s
   - : A server-specified quoted string that the server can use to control the lifetime in which particular credentials will be considered valid.
     This must be uniquely generated each time a 401 response is made, and may be regenerated more often (for example, allowing a digest to be used only once).
     The specification contains advice on possible algorithms for generating this value.
-    The nonce value is opaque to the client.
+    The {{Glossary("Nonce", "nonce")}} value is opaque to the client.
 - `opaque`
   - : A server-specified quoted string that should be returned unchanged in the {{HTTPHeader("Authorization")}}.
     This is opaque to the client. The server is recommended to include Base64 or hexadecimal data.

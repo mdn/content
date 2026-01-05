@@ -3,9 +3,8 @@ title: "<ruby>: The Ruby Annotation element"
 slug: Web/HTML/Reference/Elements/ruby
 page-type: html-element
 browser-compat: html.elements.ruby
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<ruby>`** [HTML](/en-US/docs/Web/HTML) element represents small annotations that are rendered above, below, or next to base text, usually used for showing the pronunciation of East Asian characters. It can also be used for annotating other kinds of text, but this usage is less common.
 
@@ -73,9 +72,21 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >.
+        One or more groups, each consisting of two parts:
+        <ol>
+          <li>The base text, which is either:
+            <ul>
+              <li><a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content">Phrasing content</a>, but with no <code>&lt;ruby&gt;</code> elements and with no <code>&lt;ruby&gt;</code> element descendants, or</li>
+              <li>A single <code>&lt;ruby&gt;</code> element that itself has no <code>&lt;ruby&gt;</code> element descendants.</li>
+            </ul>
+          </li>
+          <li>The annotations for the base text, which is either:
+            <ul>
+              <li>One or more {{HTMLElement("rt")}} elements, or</li>
+              <li>An {{HTMLElement("rp")}} element followed by one or more {{HTMLElement("rt")}} elements, each of which is itself followed by an {{HTMLElement("rp")}} element (that is, <code>rp, rt, rp, rt, ..., rp</code>).</li>
+            </ul>
+          </li>
+        </ol>
       </td>
     </tr>
     <tr>
@@ -94,7 +105,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>
@@ -122,6 +133,5 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 
 - {{HTMLElement("rt")}}
 - {{HTMLElement("rp")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rtc")}}
+- {{cssxref("ruby-overhang")}}
 - {{CSSxRef("text-transform")}}: full-size-kana

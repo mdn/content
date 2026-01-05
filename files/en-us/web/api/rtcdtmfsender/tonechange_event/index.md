@@ -18,10 +18,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("tonechange", (event) => {});
+```js-nolint
+addEventListener("tonechange", (event) => { })
 
-ontonechange = (event) => {};
+ontonechange = (event) => { }
 ```
 
 ## Event type
@@ -44,18 +44,14 @@ This example establishes a handler for the `tonechange` event which updates an e
 This can be done using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-dtmfSender.addEventListener(
-  "tonechange",
-  (ev) => {
-    let tone = ev.tone;
-    if (tone === "") {
-      tone = "&lt;none&gt;";
-    }
+dtmfSender.addEventListener("tonechange", (ev) => {
+  let tone = ev.tone;
+  if (tone === "") {
+    tone = "&lt;none&gt;";
+  }
 
-    document.getElementById("playingTone").innerText = tone;
-  },
-  false,
-);
+  document.getElementById("playingTone").innerText = tone;
+});
 ```
 
 You can also just set the `ontonechange` event handler property directly:

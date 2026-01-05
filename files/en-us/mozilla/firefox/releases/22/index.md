@@ -1,12 +1,14 @@
 ---
-title: Firefox 22 for developers
+title: Firefox 22 release notes for developers
+short-title: Firefox 22
 slug: Mozilla/Firefox/Releases/22
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
+Firefox 22 was released on June 25, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### HTML
 
@@ -45,7 +47,7 @@ page-type: firefox-release-notes
 
 ### CSS
 
-- Support for [CSS Flexbox layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) has been enabled by default ([Firefox bug 841876](https://bugzil.la/841876)).
+- Support for [CSS Flexbox layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) has been enabled by default ([Firefox bug 841876](https://bugzil.la/841876)).
 - Following a spec change, the initial value for {{cssxref("min-width")}} and {{cssxref("min-height")}} has been changed back to `0`, even on flex items ([Firefox bug 848539](https://bugzil.la/848539)).
 - Support for CSS Conditionals ({{cssxref("@supports")}} and {{domxref("CSS.supports_static", "CSS.supports()")}}) has been enabled by default ([Firefox bug 855455](https://bugzil.la/855455)).
 - Support for {{cssxref("background-clip")}} and {{cssxref("background-origin")}} properties in the {{cssxref("background")}} shorthand has been implemented ([Firefox bug 570896](https://bugzil.la/570896)).
@@ -54,7 +56,7 @@ page-type: firefox-release-notes
 
 - The `properties` parameter has been removed from the `nsITreeView.getCellProperties()`, `nsITreeView.getColumnProperties()` and `nsITreeView.getRowProperties()` methods of `nsITreeView`. These methods should now return a string of space-separated property names ([Firefox bug 407956](https://bugzil.la/407956)).
 - The `inIDOMUtils.getCSSPropertyNames()` method has been implemented and will return all supported [CSS property](/en-US/docs/Web/CSS/Reference) names.
-- See [here](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/) for more changes.
+- See [the Mozilla blog](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/) for more changes.
 
 ### Firefox Developer Tools
 
@@ -68,7 +70,3 @@ page-type: firefox-release-notes
 
 - [Firefox 22 Beta Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/22.0beta/releasenotes/)
 - [Add-on Compatibility for Firefox 22](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)
-
-### Versions
-
-{{Firefox_for_developers}}

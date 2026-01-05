@@ -12,7 +12,7 @@ The **Trusted Types API** gives web developers a way to ensure that input has be
 
 ## Concepts and usage
 
-Client-side, or DOM-based, XSS attacks happen when data crafted by an attacker is passed to a browser API that executes that data as code. These APIs are known as _injection sinks_.
+Client-side, or DOM-based, XSS attacks happen when data crafted by an attacker is passed to a browser API that executes that data as code. These APIs are known as [_injection sinks_](#injection_sink_interfaces).
 
 The Trusted Types API distinguishes three sorts of injection sinks:
 
@@ -95,7 +95,7 @@ If you create a policy named `"default"`, and your CSP enforces the use of trust
 
 ```js
 trustedTypes.createPolicy("default", {
-  createHTML: (value) => {
+  createHTML(value) {
     console.log("Please refactor this code");
     return sanitize(value);
   },
@@ -117,7 +117,7 @@ If the default policy returned `null` or `undefined`, then the browser will thro
 
 ```js
 trustedTypes.createPolicy("default", {
-  createHTML: (value) => {
+  createHTML(value) {
     console.log("Please refactor this code");
     return null;
   },
@@ -133,6 +133,50 @@ element.innerHTML = userInput;
 
 > [!NOTE]
 > It's recommended that you use the default policy only while you are transitioning from legacy code that passes input directly to injection sinks, to code that uses trusted types explicitly.
+
+### Injection sink interfaces
+
+This section provides a list of "direct" injection sink interfaces.
+
+Note that there are cases where untrusted strings may be "indirectly injected", such as when an untrusted string is added as the child node of a script element, and then the element is added to the document.
+These cases are evaluated the untrusted script is added to the document.
+
+#### TrustedHTML
+
+- {{domxref("Document.execCommand()")}} with a `commandName` of [`"insertHTML"`](/en-US/docs/Web/API/Document/execCommand#inserthtml)
+- {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
+- {{domxref("Document.write()")}}
+- {{domxref("Document.writeln()")}}
+- {{domxref("DOMParser.parseFromString()")}}
+- {{domxref("Element.innerHTML")}}
+- {{domxref("Element.insertAdjacentHTML")}}
+- {{domxref("Element.outerHTML")}}
+- {{domxref("Element.setHTMLUnsafe()")}}
+- {{domxref("HTMLIFrameElement.srcdoc")}}
+- {{domxref("Range.createContextualFragment()")}}
+- {{domxref("ShadowRoot.innerHTML")}}
+- {{domxref("ShadowRoot.setHTMLUnsafe()")}}
+
+#### TrustedScript
+
+- [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [`Element.setAttribute()`](/en-US/docs/Web/API/Element/setAttribute#value) (`value` argument)
+- [`Element.setAttributeNS()`](/en-US/docs/Web/API/Element/setAttributeNS#value) (`value` argument)
+- [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
+- {{domxref("HTMLScriptElement.innerText")}}
+- {{domxref("HTMLScriptElement.textContent")}}
+- {{domxref("HTMLScriptElement.text")}}
+- [`window.setTimeout()`](/en-US/docs/Web/API/Window/setTimeout#code) and [`WorkerGlobalScope.setTimeout()`](/en-US/docs/Web/API/WorkerGlobalScope/setTimeout#code) (`code` argument)
+- [`window.setInterval()`](/en-US/docs/Web/API/Window/setInterval#code) and [`WorkerGlobalScope.setInterval()`](/en-US/docs/Web/API/WorkerGlobalScope/setInterval#code) (`code` argument)
+
+#### TrustedScriptURL
+
+- {{domxref("HTMLScriptElement.src")}}
+- {{domxref("ServiceWorkerContainer.register()")}}
+- {{domxref("SvgAnimatedString.baseVal")}}
+- {{domxref("WorkerGlobalScope.importScripts()")}}
+- `url` argument to [`Worker()` constructor](/en-US/docs/Web/API/Worker/Worker#url)
+- `url` argument to [`SharedWorker()` constructor](/en-US/docs/Web/API/SharedWorker/SharedWorker#url)
 
 ### Cross-browser support for trusted types
 
@@ -155,7 +199,7 @@ In this section we'll look at how the trusted types tinyfill can protect a websi
 The trusted types tinyfill is just this:
 
 ```js
-if (typeof trustedTypes == "undefined")
+if (typeof trustedTypes === "undefined")
   trustedTypes = { createPolicy: (n, rules) => rules };
 ```
 
@@ -200,6 +244,28 @@ Either way, the injection sink gets sanitized data, and because we could enforce
   - : Defines the functions used to create the above Trusted Type objects.
 - {{domxref("TrustedTypePolicyFactory")}}
   - : Creates policies and verifies that Trusted Type object instances were created via one of the policies.
+
+### Extensions to other interfaces
+
+- {{domxref("Window.trustedTypes")}}
+  - : Returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object in the main thread.
+    This is the entry point for using the API in the Window thread.
+- {{domxref("WorkerGlobalScope.trustedTypes")}}.
+  - : Returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object in a worker.
+
+### Extensions to HTTP
+
+#### `Content-Security-Policy` directives
+
+- {{CSP("require-trusted-types-for")}}
+  - : Enforces that Trusted Types are passed to DOM XSS [injection sinks](#concepts_and_usage).
+- {{CSP("trusted-types")}}
+  - : Used to specify an allowlist of Trusted Types policy names.
+
+#### `Content-Security-Policy` keywords
+
+- [`trusted-types-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)
+  - : Allows [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and similar functions to be used but only when Trusted Types are supported and enforced.
 
 ## Examples
 

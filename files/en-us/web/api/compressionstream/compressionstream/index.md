@@ -19,9 +19,9 @@ new CompressionStream(format)
 ### Parameters
 
 - `format`
-
   - : One of the following allowed compression formats:
-
+    - `"brotli"`
+      - : Compresses the stream using the [Brotli](https://www.rfc-editor.org/rfc/rfc1952) algorithm.
     - `"gzip"`
       - : Compresses the stream using the [GZIP](https://www.rfc-editor.org/rfc/rfc1952) format.
     - `"deflate"`
@@ -29,6 +29,8 @@ new CompressionStream(format)
         The ZLIB format includes a header with information about the compression method and the uncompressed size of the data, and a trailing checksum for verifying the integrity of the data
     - `"deflate-raw"`
       - : Compresses the stream using the [DEFLATE](https://www.rfc-editor.org/rfc/rfc1951) algorithm without a header and trailing checksum.
+    - `"zstd"`
+      - : Compresses the stream using the [ZSTD](https://datatracker.ietf.org/doc/html/rfc8478) algorithm.
 
 ### Exceptions
 

@@ -3,9 +3,8 @@ title: theme_color
 slug: Web/Progressive_web_apps/Manifest/Reference/theme_color
 page-type: web-manifest-member
 browser-compat: manifests.webapp.theme_color
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `theme_color` member is used to specify the default color for your web application's user interface.
 This color may be applied to various browser UI elements, such as the toolbar, address bar, and status bar.
@@ -27,8 +26,7 @@ It can be particularly noticeable in contexts like the task switcher or when the
 ### Values
 
 - `theme_color`
-
-  - : A string that specifies a valid [color value](/en-US/docs/Web/CSS/color_value).
+  - : A string that specifies a valid [color value](/en-US/docs/Web/CSS/Reference/Values/color_value).
 
     > [!NOTE]
     > Browsers may ignore the alpha component of the color based on the context.
@@ -66,7 +64,7 @@ You can override this default in the following ways:
 These override methods provide you the flexibility to adapt your app's appearance for specific pages or user preferences, improving the overall user experience.
 
 Browsers may also adjust the applied theme color based on user preferences.
-If a user has set a preference for light or dark mode, browsers may override the manifest `theme_color` value to support any [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query defined in your app's CSS.
+If a user has set a preference for light or dark mode, browsers may override the manifest `theme_color` value to support any {{cssxref("@media/prefers-color-scheme")}} media query defined in your app's CSS.
 
 ```css
 body {
@@ -96,7 +94,7 @@ body {
 
 ```json
 {
-  "theme_color": "rgb(66, 133, 244)"
+  "theme_color": "rgb(66 133 244)"
 }
 ```
 
@@ -106,7 +104,7 @@ body {
 {
   "name": "My First App",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "white",
   "theme_color": "#ff4500"
 }
 ```

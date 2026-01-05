@@ -7,9 +7,8 @@ browser-compat:
   - html.elements.input.required
   - html.elements.select.required
   - html.elements.textarea.required
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The [Boolean](/en-US/docs/Glossary/Boolean/HTML) **`required`** attribute, if present, indicates that the user must specify a value for the input before the owning form can be submitted.
 
@@ -23,6 +22,8 @@ In the case of a same named group of {{HTMLElement("input/checkbox","checkbox")}
 
 > [!NOTE]
 > Setting [`aria-required="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) tells a screen reader that an element (any element) is required, but has no bearing on the optionality of the element.
+
+## Description
 
 ### Attribute interactions
 

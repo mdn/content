@@ -5,7 +5,7 @@ page-type: web-api-overview
 browser-compat:
   - api.CookieStore
   - api.CookieStoreManager
-spec-urls: https://wicg.github.io/cookie-store/
+spec-urls: https://cookiestore.spec.whatwg.org/
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
@@ -14,11 +14,12 @@ The **Cookie Store API** is an asynchronous API for managing cookies, available 
 
 ## Concepts and Usage
 
-The existing method of getting and setting cookies involves working with {{domxref("document.cookie")}} as a string of key/value pairs. In addition to this being cumbersome and error prone, it also has a host of issues in the context of modern web development.
+The original method of getting and setting cookies involves working with {{domxref("document.cookie")}} to get and set cookie information as a string of key/value pairs.
+In addition to this being cumbersome and error prone, it also has a host of issues in the context of modern web development.
 
-The `document.cookie` interface is {{Glossary("synchronous")}}, single-threaded, and blocking. When writing a cookie you must wait for the browser to update the string of all cookies. In addition, the reliance on {{domxref("document")}} means that cookies cannot be accessed by service workers which cannot access the `document` object.
+The `document.cookie` interface is {{Glossary("synchronous")}}, single-threaded, and blocking. When writing a cookie you must wait for the browser to update the string of all cookies. In addition, the reliance on {{domxref("document")}} means that cookies cannot be accessed by service workers, as they cannot access the `document` object.
 
-The _Cookie Store API_ provides an updated method of managing cookies. It is {{Glossary("asynchronous")}} and promise-based, therefore does not block the event loop. It does not rely on {{domxref("document")}} and so is available to service workers. The methods for getting and setting cookies also provide more feedback by way of error messages. This means that web developers do not have to set then immediately read back a cookie to check that setting was successful.
+The _Cookie Store API_ provides an updated method of managing cookies. It is {{Glossary("asynchronous")}} and promise-based, therefore does not block the event loop. It does not rely on {{domxref("Document")}} and so is available to service workers. The methods for getting and setting cookies also provide more feedback by way of error messages. This means that web developers do not have to set then immediately read back a cookie to check that setting was successful.
 
 ## Interfaces
 

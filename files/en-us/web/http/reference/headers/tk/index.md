@@ -1,14 +1,16 @@
 ---
-title: Tk
+title: Tk header
+short-title: Tk
 slug: Web/HTTP/Reference/Headers/Tk
 page-type: http-header
 status:
   - deprecated
   - non-standard
-spec-urls: https://www.w3.org/TR/tracking-dnt/
+spec-urls: https://w3c.github.io/dnt/drafts/tracking-dnt.html#dfn-tk
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Deprecated_header}}{{non-standard_header}}
+{{Deprecated_header}}{{non-standard_header}}
 
 > [!NOTE]
 > The DNT (Do Not Track) specification has been discontinued. See {{domxref("Navigator.doNotTrack")}} for more information.
@@ -21,10 +23,6 @@ The HTTP **`Tk`** {{Glossary("response header")}} indicates the tracking status 
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -84,6 +82,10 @@ Tk: N
 ## Specifications
 
 {{specifications}}
+
+## Browser compatibility
+
+This response header doesn't trigger any browser behavior, so browser compatibility is irrelevant.
 
 ## See also
 

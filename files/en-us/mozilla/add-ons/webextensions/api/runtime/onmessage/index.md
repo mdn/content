@@ -3,9 +3,8 @@ title: runtime.onMessage
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onMessage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use this event to listen for messages from another part of your extension.
 
@@ -62,15 +61,12 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `message`
       - : `object`. The message. This is a serializable object (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
     - `sender`
       - : A {{WebExtAPIRef('runtime.MessageSender')}} object representing the sender of the message.
     - `sendResponse`
-
       - : A function to call, at most once, to send a response to the `message`. The function takes one argument: any serializable object (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)). This argument is passed back to the message sender.
 
         If you have more than one `onMessage()` listener in the same document, then only one can send a response.
@@ -78,7 +74,6 @@ Events have three functions:
         To send a response synchronously, call `sendResponse()` before the listener function returns.
 
         To send a response asynchronously, use one of these options:
-
         - Return a {{jsxref("Promise")}} from the listener function and resolve the promise when the response is ready. This is the preferred approach.
         - Keep a reference to the `sendResponse()` argument and return `true` from the listener function. You then call `sendResponse()` after the listener function returns.
 

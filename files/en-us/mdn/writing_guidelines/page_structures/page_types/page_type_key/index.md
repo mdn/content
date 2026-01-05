@@ -12,10 +12,11 @@ Like any other front matter key, the `page-type` key is specified in the YAML at
 
 ```md
 ---
-title: Geolocation.getCurrentPosition()
-slug: Web/API/Geolocation/getCurrentPosition
-page-type: web-api-instance-method
-browser-compat: api.Geolocation.getCurrentPosition
+title: 100 Continue
+slug: Web/HTTP/Reference/Status/100
+page-type: http-status-code
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
+sidebar: http
 ---
 ```
 
@@ -43,7 +44,7 @@ This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn_
 - `learn-topic`: an overview of a topic, that is, a collection of modules like [_CSS_](/en-US/docs/Learn_web_development/Core/Styling_basics).
 - `learn-module` an overview of a module, that is, an ordered collection of guides, like [_Structuring content with HTML_](/en-US/docs/Learn_web_development/Core/Structuring_content).
 - `learn-module-chapter` a guide that is part of a module, like [_Mobile accessibility_](/en-US/docs/Learn_web_development/Core/Accessibility/Mobile).
-- `learn-module-assessment` a special guide with an activity allowing to assess the comprehension of a module or a part of it, like [_Test your skills: basic controls_](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls).
+- `learn-module-assessment` a special guide with an activity allowing to assess the comprehension of a module or a part of it, like [_Test your skills: Forms and buttons_](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons).
 - `learn-faq`: the answer to a specific question about web development, like [_What is a domain name?_](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name).
 
 ### Accessibility page types
@@ -57,19 +58,19 @@ This section lists `page-type` values for pages under [Web/Accessibility](/en-US
 
 This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/CSS). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `css-at-rule`: an [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), like {{cssxref("@media")}}.
-- `css-at-rule-descriptor`: an at-rule descriptor, like [`@counter-style/prefix`](/en-US/docs/Web/CSS/@counter-style/prefix).
-- `css-combinator`: a combinator, like the [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
-- `css-function`: a [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions), like {{cssxref("max")}}.
+- `css-at-rule`: an [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules), like {{cssxref("@media")}}.
+- `css-at-rule-descriptor`: an at-rule descriptor, like [`@counter-style/prefix`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style/prefix).
+- `css-combinator`: a combinator, like the [descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator).
+- `css-function`: a [function](/en-US/docs/Web/CSS/Reference/Values/Functions), like {{cssxref("max")}}.
 - `css-keyword`: a keyword, like {{cssxref("inherit")}}.
-- `css-media-feature`: a [media feature](/en-US/docs/Web/CSS/@media#media_features), like [`hover`](/en-US/docs/Web/CSS/@media/hover).
-- `css-module`: a module, like [CSS Animations](/en-US/docs/Web/CSS/CSS_animations).
+- `css-media-feature`: a [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features), like {{cssxref("@media/hover")}}.
+- `css-module`: a module, like [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations).
 - `css-property`: a property, like {{cssxref("background-color")}}.
-- `css-pseudo-class`: a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), like {{cssxref(":enabled")}}.
-- `css-pseudo-element`: a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), like {{cssxref("::before")}}.
-- `css-selector`: a [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors), like the [class selector](/en-US/docs/Web/CSS/Class_selectors).
-- `css-shorthand-property`: a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties), like {{cssxref("background")}}.
-- `css-type`: a [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types), like [`<color>`](/en-US/docs/Web/CSS/color_value).
+- `css-pseudo-class`: a [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), like {{cssxref(":enabled")}}.
+- `css-pseudo-element`: a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), like {{cssxref("::before")}}.
+- `css-selector`: a [basic selector](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#basic_selectors), like the [class selector](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors).
+- `css-shorthand-property`: a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties), like {{cssxref("background")}}.
+- `css-type`: a [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types), like {{cssxref("&lt;color&gt;")}}.
 
 ### Glossary page types
 
@@ -121,7 +122,7 @@ This section lists `page-type` values for pages under [Web/JavaScript](/en-US/do
 
 This section lists `page-type` values for pages under [Web/MathML](/en-US/docs/Web/MathML). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `mathml-attribute`: an MathML attribute, like [`mathcolor`](/en-US/docs/Web/MathML/Reference/Global_attributes/mathcolor).
+- `mathml-attribute`: a MathML attribute, like [`mathcolor`](/en-US/docs/Web/MathML/Reference/Global_attributes/mathcolor).
 - `mathml-element`: an HTML element, like [`<msqrt>`](/en-US/docs/Web/MathML/Reference/Element/msqrt).
 
 ### SVG page types
@@ -156,7 +157,7 @@ This section lists `page-type` values for pages under [WebAssembly/](/en-US/docs
 - `webassembly-instance-property`: an instance property, like [`WebAssembly.Instance.exports`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports).
 - `webassembly-instance-method`: an instance method, like [`WebAssembly.Exception.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg).
 - `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module/exports_static).
-- `webassembly-instruction`: an instruction, or a set of instructions, like [`Wrap`](/en-US/docs/WebAssembly/Reference/Numeric/Wrap).
+- `webassembly-instruction`: an instruction, or a set of instructions, like [`wrap`](/en-US/docs/WebAssembly/Reference/Numeric/wrap).
 
 ### WebDriver page types
 

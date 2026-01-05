@@ -17,10 +17,10 @@ on one of the [derived classes](/en-US/docs/Web/API/Sensor#interfaces_based_on_s
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("activate", (event) => {});
+```js-nolint
+addEventListener("activate", (event) => { })
 
-onactivate = (event) => {};
+onactivate = (event) => { }
 ```
 
 ## Event type

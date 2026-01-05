@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Element.scrollBy
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`scrollBy()`** method of the {{domxref("Element")}}
 interface scrolls an element by the given amount.

@@ -1,13 +1,15 @@
 ---
-title: Sec-CH-UA-Full-Version-List
+title: Sec-CH-UA-Full-Version-List header
+short-title: Sec-CH-UA-Full-Version-List
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Full-Version-List
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-UA-Full-Version-List
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{SeeCompatTable}}{{SecureContext_Header}}
 
 The HTTP **`Sec-CH-UA-Full-Version-List`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) which provides the user-agent's branding and full version information.
 
@@ -37,12 +39,11 @@ This is a feature designed to prevent servers from rejecting unknown user agents
 
 ## Syntax
 
-A comma separated list of brands in the user agent brand list, and their associated full version number.
-The syntax for a single entry has the following format:
-
 ```http
-Sec-CH-UA-Full-Version-List: "<brand>";v="<full version>", ...
+Sec-CH-UA-Full-Version-List: "<brand>";v="<full version>", …
 ```
+
+The value is a comma separated list of brands in the user agent brand list, and their associated full version number.
 
 ### Directives
 

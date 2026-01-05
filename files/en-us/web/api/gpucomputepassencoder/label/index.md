@@ -3,12 +3,10 @@ title: "GPUComputePassEncoder: label property"
 short-title: label
 slug: Web/API/GPUComputePassEncoder/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUComputePassEncoder.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** read-only property of the
 {{domxref("GPUComputePassEncoder")}} interface is a string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.

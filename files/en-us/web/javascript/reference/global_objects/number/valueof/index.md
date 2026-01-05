@@ -1,11 +1,11 @@
 ---
 title: Number.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.valueOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`valueOf()`** method of {{jsxref("Number")}} values returns the value of this number.
 

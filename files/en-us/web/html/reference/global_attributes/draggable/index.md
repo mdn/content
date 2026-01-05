@@ -1,11 +1,11 @@
 ---
-title: draggable
+title: HTML draggable global attribute
+short-title: draggable
 slug: Web/HTML/Reference/Global_attributes/draggable
 page-type: html-attribute
 browser-compat: html.global_attributes.draggable
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`draggable`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that indicates whether the element can be dragged, either with native browser behavior or the [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
 

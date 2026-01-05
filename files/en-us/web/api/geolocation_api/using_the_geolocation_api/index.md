@@ -4,7 +4,7 @@ slug: Web/API/Geolocation_API/Using_the_Geolocation_API
 page-type: guide
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
+{{DefaultAPISidebar("Geolocation API")}}
 
 The Geolocation API is used to retrieve the user's location, so that it can for example be used to display their position using a mapping API. This article explains the basics of how to use it.
 
@@ -133,7 +133,7 @@ button {
 ```html
 <button id="find-me">Show my location</button><br />
 <p id="status"></p>
-<a id="map-link" target="_blank"></a>
+<a id="map-link" href="" target="_blank">Location unknown</a>
 ```
 
 ### JavaScript

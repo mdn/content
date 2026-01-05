@@ -3,12 +3,10 @@ title: "GPUPipelineError: GPUPipelineError() constructor"
 short-title: GPUPipelineError()
 slug: Web/API/GPUPipelineError/GPUPipelineError
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.GPUPipelineError.GPUPipelineError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUPipelineError()`** constructor creates a new
 {{domxref("GPUPipelineError")}} object instance.

@@ -27,17 +27,14 @@ After decoding the [CBOR](https://datatracker.ietf.org/doc/html/rfc8949) encoded
 properties:
 
 - `authData`
-
   - : The [Authenticator data](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data) for the operation. Note that in {{domxref("AuthenticatorAssertionResponse")}}, the `authenticatorData` is exposed as a property in a JavaScript object (see {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}) while in {{domxref("AuthenticatorAttestationResponse")}}, the `authenticatorData` is a property in a [CBOR](https://datatracker.ietf.org/doc/html/rfc8949) map.
 
     The same {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} field is used by both `AuthenticatorAttestationResponse` and by `AuthenticatorAssertionResponse`. When used in attestation, it contains an optional field, `attestedCredentialData`. This field is not included when used in the `AuthenticatorAssertionResponse`. The attestedCredentialData field contains the `credentialId` and `credentialPublicKey`.
 
 - `fmt`
-
-  - : A text string that indicates the format of the attStmt. The [WebAuthn specification defines a number of formats](https://www.w3.org/TR/webauthn/#defined-attestation-formats); however, formats may also be defined
-    in other specifications and registered in an [IANA registry](https://www.w3.org/TR/webauthn/#sctn-att-fmt-reg). Formats
+  - : A text string that indicates the format of the attStmt. The [WebAuthn specification defines a number of formats](https://w3c.github.io/webauthn/#sctn-defined-attestation-formats); however, formats may also be defined
+    in other specifications and registered in an [IANA registry](https://w3c.github.io/webauthn/#sctn-att-fmt-reg). Formats
     defined by WebAuthn are:
-
     - `"packed"`
     - `"tpm"`
     - `"android-key"`
@@ -47,7 +44,7 @@ properties:
 
 - `attStmt`
   - : An attestation statement that is of the format defined by `"fmt"`. For
-    now, [see the WebAuthn specification for details on each format](https://www.w3.org/TR/webauthn/#defined-attestation-formats).
+    now, [see the WebAuthn specification for details on each format](https://w3c.github.io/webauthn/#sctn-defined-attestation-formats).
 
 ## Examples
 

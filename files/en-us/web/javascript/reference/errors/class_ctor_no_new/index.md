@@ -2,9 +2,8 @@
 title: "TypeError: class constructors must be invoked with 'new'"
 slug: Web/JavaScript/Reference/Errors/Class_ctor_no_new
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "class constructors must be invoked with 'new'" occurs when a [class constructor](/en-US/docs/Web/JavaScript/Reference/Classes) is called without the {{jsxref("Operators/new", "new")}} keyword. All class constructors must be called with `new`.
 

@@ -22,10 +22,10 @@ See the documentation of the {{domxref("EditContext.updateCharacterBounds()", "u
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("characterboundsupdate", (event) => {});
+```js-nolint
+addEventListener("characterboundsupdate", (event) => { })
 
-oncharacterboundsupdate = (event) => {};
+oncharacterboundsupdate = (event) => { }
 ```
 
 ## Event type

@@ -3,9 +3,8 @@ title: browserSettings.overrideContentColorScheme
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/overrideContentColorScheme
 page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.overrideContentColorScheme
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a string.
 
@@ -16,10 +15,6 @@ This object takes these values:
 - "light": Applies a light theme to webpages.
 - "dark": Applies a dark theme to webpages.
 - "auto": Automatically applies a light or dark theme to webpages based on the browser's theme.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -36,3 +31,7 @@ browser.browserSettings.overrideContentColorScheme
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

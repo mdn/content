@@ -1,11 +1,11 @@
 ---
 title: Symbol.split
+short-title: split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.split
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.split`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.split`. The {{jsxref("String.prototype.split()")}} method looks up this symbol on its first argument for the method that splits a string at the indices that match the current object.
 

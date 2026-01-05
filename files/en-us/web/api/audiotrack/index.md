@@ -20,9 +20,9 @@ The most common use for accessing an `AudioTrack` object is to toggle its {{domx
 - {{domxref("AudioTrack.kind", "kind")}} {{ReadOnlyInline}}
   - : A string specifying the category into which the track falls. For example, the main audio track would have a `kind` of `"main"`.
 - {{domxref("AudioTrack.label", "label")}} {{ReadOnlyInline}}
-  - : A string providing a human-readable label for the track. For example, an audio commentary track for a movie might have a `label` of `"Commentary with director John Q. Public and actors John Doe and Jane Eod."` This string is empty if no label is provided.
+  - : A string providing a human-readable label for the track. For example, an audio commentary track for a movie might have a `label` of `"Commentary with director Christopher Nolan and actors Leonardo DiCaprio and Elliot Page."` This string is empty if no label is provided.
 - {{domxref("AudioTrack.language", "language")}} {{ReadOnlyInline}}
-  - : A string specifying the audio track's primary language, or an empty string if unknown. The language is specified as a BCP 47 ({{RFC(5646)}}) language code, such as `"en-US"` or `"pt-BR"`.
+  - : A string specifying the audio track's primary language, or an empty string if unknown. The language is specified as a {{glossary("BCP 47 language tag")}}, such as `"en-US"` or `"pt-BR"`.
 - {{domxref("AudioTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}
   - : The {{domxref("SourceBuffer")}} that created the track. Returns null if the track was not created by a {{domxref("SourceBuffer")}} or the {{domxref("SourceBuffer")}} has been removed from the {{domxref("MediaSource.sourceBuffers")}} attribute of its parent media source.
 
@@ -51,7 +51,7 @@ tracks.forEach((track) => {
 });
 ```
 
-The {{domxref("AudioTrack.language", "language")}} is in standard ({{RFC(5646)}}) format. For US English, this would be `"en-US"`, for example.
+The {{domxref("AudioTrack.language", "language")}} is specified as a valid {{glossary("BCP 47 language tag")}}, for example `"en-US"` for US English.
 
 ## Example
 

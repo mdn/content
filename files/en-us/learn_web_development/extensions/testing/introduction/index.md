@@ -39,7 +39,8 @@ Cross-browser testing is the practice of ensuring that a website works across va
 
 Remember that you are not your users — just because your site works on your MacBook Pro or high-end Galaxy Nexus, doesn't mean it will work for all your users!
 
-> **Note:** [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) discusses the different browsers, their market share, and related cross-browser compatibility issues.
+> [!NOTE]
+> [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) discusses the different browsers, their market share, and related cross-browser compatibility issues.
 
 Websites should be accessible across different browsers and devices, and to people with disabilities (e.g., screen-reader-friendly). A site doesn't need to deliver the exact same experience on all browsers and devices, as long as the core functionality is accessible in some way. For example, a modern browser might have something animated, 3D and shiny, while older browsers might just show a flat graphic with the same information.
 
@@ -129,13 +130,13 @@ Finally, you can get smarter with your testing using auditing or automation tool
 - see if a button click causes something to happen successfully (like for example, a map displaying), displaying the results once the tests are completed
 - take a screenshot of each, allowing you to see if a layout is consistent across the different browsers.
 
-If you wish to invest money in testing, there are also commercial tools that can automate much of the setup and testing for you (such as [Sauce Labs](https://saucelabs.com/) and [Browser Stack](https://www.browserstack.com/)). These kinds of tools usually enable a continuous integration workflow, where code changes are automatically tested before they are allowed to be submitted into your code repository.
+If you wish to invest money in testing, there are also commercial tools that can automate much of the setup and testing for you (such as [Sauce Labs](https://saucelabs.com/) and [Browser Stack](https://www.browserstack.com/)). These kinds of tools usually enable a {{glossary("continuous integration")}} workflow, where code changes are automatically tested before they are allowed to be submitted into your code repository.
 
 #### Testing on prerelease browsers
 
 It is often a good idea to test on prerelease versions of browsers; see the following links:
 
-- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+- [Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/)
 - [Microsoft Edge Insider](https://www.microsoft.com/en-us/edge/download/insider)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [Chrome Canary](https://www.google.com/chrome/canary/)

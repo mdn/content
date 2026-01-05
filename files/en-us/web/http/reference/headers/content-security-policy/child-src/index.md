@@ -1,11 +1,11 @@
 ---
-title: "CSP: child-src"
+title: "Content-Security-Policy: child-src directive"
+short-title: child-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/child-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.child-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`child-src`** directive defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing
@@ -45,9 +45,7 @@ This directive may have one of the following values:
 - `'none'`
   - : No resources of this type may be loaded. The single quotes are mandatory.
 - `<source-expression-list>`
-
   - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
-
     - [`<host-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
     - [`<scheme-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
     - [`'self'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
@@ -68,7 +66,7 @@ This {{HTMLElement("iframe")}} and worker are blocked and won't load:
 <iframe src="https://not-example.com"></iframe>
 
 <script>
-  const blockedWorker = new Worker("data:application/javascript,…");
+  const blockedWorker = new Worker("data:text/javascript,…");
 </script>
 ```
 

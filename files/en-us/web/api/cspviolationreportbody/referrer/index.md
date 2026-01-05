@@ -105,7 +105,7 @@ referrer: http://127.0.0.1:9999/bounce/
 blockedURL: inline
 ```
 
-Note that `referrer` is the page we navigated from, `documentURL` is the page with the CSP violation, and `blockedURL` is not an URL at all in this case, but an indication that the violation was caused by an unsafe inline script.
+Note that `referrer` is the page we navigated from, `documentURL` is the page with the CSP violation, and `blockedURL` is not a URL at all in this case, but an indication that the violation was caused by an unsafe inline script.
 
 ## Specifications
 

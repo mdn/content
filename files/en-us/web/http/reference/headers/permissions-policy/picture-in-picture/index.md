@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: picture-in-picture"
+title: "Permissions-Policy: picture-in-picture directive"
+short-title: picture-in-picture
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.picture-in-picture
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `picture-in-picture` directive controls whether the current document is allowed to play a video in a {{domxref("Picture-in-Picture API", "Picture-in-Picture", "", "nocode")}} mode.
 

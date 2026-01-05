@@ -3,9 +3,8 @@ title: class expression
 slug: Web/JavaScript/Reference/Operators/class
 page-type: javascript-operator
 browser-compat: javascript.operators.class
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`class`** keyword can be used to define a class inside an expression.
 

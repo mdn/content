@@ -1,11 +1,11 @@
 ---
 title: Math.PI
+short-title: PI
 slug: Web/JavaScript/Reference/Global_Objects/Math/PI
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.PI
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.PI`** static data property represents the ratio of the circumference of a circle to its diameter, approximately 3.14159.
 

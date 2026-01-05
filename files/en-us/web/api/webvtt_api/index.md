@@ -18,15 +18,8 @@ The WebVTT API is primarily used for displaying subtitles or captions that overl
 A text track is a container for time-aligned text data that can be played in parallel with a video or audio track to provide a translation, transcription, or overview of the content.
 A video or audio media element may define tracks of different kinds or in different languages, allowing users to display appropriate tracks based on their preferences or needs.
 
-The different kinds of text data that can be specified are listed below.
+The different kinds of text data that can be specified are `captions`, `descriptions`, `chapters`, `subtitles` or `metadata`; the [`<track>`](/en-US/docs/Web/HTML/Reference/Elements/track#kind) documentation has more information about what they mean.
 Note that browsers do not necessarily support all kinds of text tracks.
-
-- `subtitles` provide a textual translation of spoken dialog.
-  This is the default type of text track, and if used, the source language must be specified.
-- `captions` provide a transcription of spoken text, and may include information about other audio such as music or background noise.
-  They are intended for hearing impaired users.
-- `chapters` provide high level navigation information, allowing users to more easily switch to relevant content.
-- `metadata` is used for any other kinds of time-aligned information.
 
 The individual time-aligned units of text data within a track are referred to as "cues".
 Each cue has a start time, end time, and textual payload.
@@ -37,7 +30,7 @@ A text track and cues can be defined in a file using the [WebVTT File Format](/e
 
 Alternatively you can add a {{domxref("TextTrack")}} to a media element in JavaScript using [`HTMLMediaElement.addTextTrack()`](/en-US/docs/Web/API/HTMLMediaElement/addTextTrack), and then add individual {{domxref("VTTCue")}} objects to the track with {{domxref("TextTrack.addCue()")}}.
 
-The {{cssxref("::cue")}} [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) can be used both in HTML and in a WebVTT file to style the cues for a particular element, for a particular tag within a cue, for a VTT class, or for a cue with a particular label.
+The {{cssxref("::cue")}} [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) can be used both in HTML and in a WebVTT file to style the cues for a particular element, for a particular tag within a cue, for a VTT class, or for a cue with a particular label.
 The `::cue-region` pseudo-element is intended for styling cues in a particular region, but is not supported in any browser.
 
 Most important WebVTT features can be accessed using either the file format or Web API.
@@ -65,7 +58,7 @@ Most important WebVTT features can be accessed using either the file format or W
 
 ### Related CSS extensions
 
-These [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) are used to style cues in media with VTT tracks.
+These [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) are used to style cues in media with VTT tracks.
 
 - {{CSSxRef("::cue")}}
   - : Matches cues within a selected element in media with VTT tracks.
@@ -82,9 +75,7 @@ These [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 The following example adds a new {{domxref("TextTrack")}} to the video, then adds cues using {{domxref("TextTrack.addCue()")}} method calls, with constructed `VTTCue` objects as arguments.
 
 ```html
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 #### CSS
@@ -181,9 +172,7 @@ video {
 ```
 
 ```html
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 #### CSS
@@ -250,9 +239,7 @@ video {
 ```
 
 ```html hidden
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 #### Styling by tag type
@@ -371,7 +358,7 @@ video::cue(v[voice="Bob"]) {
 
 #### Result
 
-The example should the cues with colour coding that matches the styling above (if the text is not colored, then `::cue` is not supported on your browser).
+The example should the cues with color coding that matches the styling above (if the text is not colored, then `::cue` is not supported on your browser).
 
 {{EmbedLiveSample('More cue styling examples','400','330')}}
 
@@ -385,4 +372,4 @@ The example should the cues with colour coding that matches the styling above (i
 
 ## See also
 
-- The CSS [`::cue` and `::cue()`](/en-US/docs/Web/CSS/::cue) pseudo-elements
+- The CSS [`::cue` and `::cue()`](/en-US/docs/Web/CSS/Reference/Selectors/::cue) pseudo-elements

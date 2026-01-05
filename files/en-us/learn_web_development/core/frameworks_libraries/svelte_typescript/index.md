@@ -215,7 +215,7 @@ And if you pass something that is not a number, it will complain about it:
 
 ![Type checking in VS Code - the ms variable has been given a non-numeric value](06-vscode-type-checking-in-components.png)
 
-The application template has a `check` script configured that runs `svelte-check` against your code. This package allows you to detect errors and warnings normally displayed by a code editor from the command line, which makes it pretty useful for running it in a continuous integration (CI) pipeline. Just run `npm run check` to check for unused CSS, and return A11y hints and TypeScript compile errors.
+The application template has a `check` script configured that runs `svelte-check` against your code. This package allows you to detect errors and warnings normally displayed by a code editor from the command line, which makes it pretty useful for running it in a {{glossary("continuous integration")}} (CI) pipeline. Just run `npm run check` to check for unused CSS, and return A11y hints and TypeScript compile errors.
 
 In this case, if you run `npm run check` (either in the VS Code console or terminal) you will get the following error:
 
@@ -499,7 +499,7 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
    import Todo from "./Todo.svelte";
    import MoreActions from "./MoreActions.svelte";
    import NewTodo from "./NewTodo.svelte";
-   import TodosStatus from "./TodosStatus.svelte";
+   import type TodosStatus from "./TodosStatus.svelte";
    import { alert } from "../stores";
 
    import { Filter } from "../types/filter.enum";
@@ -784,7 +784,7 @@ import { localStore } from "./localStore";
 
      return {
        subscribe,
-       set: (value: JsonValue) => {
+       set(value: JsonValue) {
          localStorage.setItem(key, toString(value)); // save also to local storage as a string
          return set(value);
        },
@@ -971,7 +971,7 @@ export const localStore = <T extends JsonValue>(key: string, initial: T) => {
 
   return {
     subscribe,
-    set: (value: T) => {
+    set(value: T) {
       localStorage.setItem(key, toString(value)); // save also to local storage as a string
       return set(value);
     },

@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: publickey-credentials-create"
+title: "Permissions-Policy: publickey-credentials-create directive"
+short-title: publickey-credentials-create
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.publickey-credentials-create
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `publickey-credentials-create` directive controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to create new WebAuthn credentials, i.e., via {{domxref("CredentialsContainer.create","navigator.credentials.create({publicKey})")}}.
 

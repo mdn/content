@@ -158,7 +158,12 @@
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "firefox-release-notes"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "firefox-release-notes",
+                "firefox-release-notes-active"
+              ]
             }
           }
         },

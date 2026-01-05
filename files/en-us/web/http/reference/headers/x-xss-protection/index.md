@@ -1,14 +1,16 @@
 ---
-title: X-XSS-Protection
+title: X-XSS-Protection header
+short-title: X-XSS-Protection
 slug: Web/HTTP/Reference/Headers/X-XSS-Protection
 page-type: http-header
 status:
   - deprecated
   - non-standard
 browser-compat: http.headers.X-XSS-Protection
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Non-standard_header}}{{deprecated_header}}
+{{Non-standard_header}}{{deprecated_header}}
 
 > [!WARNING]
 > Even though this feature can protect users of older web browsers that don't support {{Glossary("CSP")}}, in some cases, **`X-XSS-Protection` can create XSS vulnerabilities** in otherwise safe websites.
@@ -24,10 +26,6 @@ It is recommended that you use [`Content-Security-Policy`](/en-US/docs/Web/HTTP/
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

@@ -4,15 +4,14 @@ short-title: step
 slug: Web/HTML/Reference/Attributes/step
 page-type: html-attribute
 browser-compat: html.elements.input.step
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`step`** attribute is a number that specifies the granularity that the value must adhere to or the keyword `any`. It is valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types.
 
 The `step` sets the _stepping interval_ when clicking up and down spinner buttons, moving a slider left and right on a range, and validating the different date types. If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1 unit type (minute, week, month, day) for the date/time input types. The value must be a positive number - integer or float — or the special value `any`, which means no stepping is implied and any value is allowed (barring other constraints, such as [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max)).
 
-The default stepping value for `number` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer. The default stepping value for `time` is 60 seconds, with 900 being equal to 15 minutes.
+Only values which are a whole number of steps from the step base are valid. The step base is [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or `0` if neither is provided (except for `week`, which has a default step base of −259,200,000, representing the start of week `1970-W01`).
 
 ## Syntax
 

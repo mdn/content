@@ -46,7 +46,6 @@ The XML file that describes a search engine follows the basic template below. Se
 - InputEncoding
   - : The [character encoding](/en-US/docs/Glossary/Character_encoding) to use when submitting input to the search engine.
 - Image
-
   - : URL of an icon for the search engine. When possible, include a 16×16 image of type `image/x-icon` (such as `/favicon.ico`) and a 64×64 image of type `image/jpeg` or `image/png`.
 
     The URL may also use the [`data:` URL scheme](/en-US/docs/Web/URI/Reference/Schemes/data). (You can generate a `data:` URL from an icon file at [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data).)
@@ -65,11 +64,9 @@ The XML file that describes a search engine follows the basic template below. Se
     ![Search suggestions from Google displayed in Firefox's search box](searchsuggestionsample.png)
 
 - Url
-
   - : Describes the URL or URLs to use for the search. The `template` attribute indicates the base URL for the search query.
 
     Firefox supports three URL types:
-
     - `type="text/html"` specifies the URL for the actual search query.
     - `type="application/x-suggestions+json"` specifies the URL for fetching search suggestions. In Firefox 63 onwards, `type="application/json"` is accepted as an alias of this.
     - `type="application/x-moz-keywordsearch"` specifies the URL used when a keyword search is entered in the location bar. This is supported only in Firefox.

@@ -16,10 +16,10 @@ The event is not cancelable.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("visibilitychange", (event) => {});
+```js-nolint
+addEventListener("visibilitychange", (event) => { })
 
-onvisibilitychange = (event) => {};
+onvisibilitychange = (event) => { }
 ```
 
 ## Event type
@@ -46,11 +46,9 @@ document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     playingOnHide = !audio.paused;
     audio.pause();
-  } else {
+  } else if (playingOnHide) {
     // Resume playing if audio was "playing on hide"
-    if (playingOnHide) {
-      audio.play();
-    }
+    audio.play();
   }
 });
 ```

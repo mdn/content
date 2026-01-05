@@ -2,9 +2,8 @@
 title: What is a progressive web app?
 slug: Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app
 page-type: guide
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 A progressive web app (PWA) is an app that's built using web platform technologies, but that provides a user experience like that of a platform-specific app.
 
@@ -18,7 +17,7 @@ The benefits of platform-specific apps include:
 - **Offline and background operation**: They are able to operate when the user is not interacting with them and when the device is offline. This, for example, enables a chat app to receive messages when it is not open, and display a notification to the user. It also enables a news app to update in the background so it can show fresh content even if the device is offline.
 - **Dedicated UI**: They can implement their own distinctive, immersive UI.
 - **OS integration**: They can be integrated into the host OS: for example, a messaging app can register as a share target, enabling users to select an image in the photo app and send it using the messaging app. They can also access device features such as the camera, GPS or accelerometer.
-- **App store integration**: They are distributed using the app store, giving users a single place to find them and a consistent way to decide whether they want to install them.
+- **App Store integration**: They are distributed using the app store, giving users a single place to find them and a consistent way to decide whether they want to install them.
 
 ## Traditional websites
 
@@ -41,14 +40,12 @@ PWAs have the benefits of websites, including:
 PWAs also have many of the benefits of platform-specific apps, including:
 
 - [**PWAs can be installed on the device**](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable). This means:
-
   - The PWA can be installed from platform's app store or installed directly from the web.
   - The PWA can be installed like a platform-specific app, and can customize the install process.
   - Once installed, the PWA gets an app icon on the device, alongside platform-specific apps.
   - Once installed, the PWA can be launched as a standalone app, rather than a website in a browser.
 
 - [**PWAs can operate in the background and offline**](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation): a typical website is only active while the page is loaded in the browser. A PWA can:
-
   - Work while the device does not have network connectivity.
   - Update content in the background.
   - Respond to [push messages](/en-US/docs/Web/API/Push_API) from the server.

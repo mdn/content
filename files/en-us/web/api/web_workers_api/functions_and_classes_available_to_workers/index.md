@@ -35,7 +35,7 @@ The following functions are **only** available to workers:
 ## Web APIs available in workers
 
 > [!NOTE]
-> If a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can also test support for a particular object/function using the site: <https://worker-playground.glitch.me/>
+> If a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can test support for a particular object or function using the [Worker Playground](https://mdn.github.io/dom-examples/web-workers/worker-playground/).
 
 The following Web APIs are available to workers:
 

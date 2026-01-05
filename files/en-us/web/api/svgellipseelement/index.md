@@ -34,28 +34,24 @@ _Inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}._
 
 ```html
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-  <ellipse
-    cx="100"
-    cy="100"
-    rx="100"
-    ry="60"
-    id="ellipse"
-    onclick="outputSize();" />
+  <ellipse cx="100" cy="100" rx="100" ry="60" id="ellipse" />
 </svg>
 ```
 
 ### JavaScript
 
 ```js
-function outputSize() {
-  const ellipse = document.getElementById("ellipse");
+const ellipse = document.getElementById("ellipse");
 
+function outputSize() {
   // Outputs "horizontal radius: 100 vertical radius: 60"
   console.log(
     `horizontal radius: ${ellipse.rx.baseVal.valueAsString}`,
     `vertical radius: ${ellipse.ry.baseVal.valueAsString}`,
   );
 }
+
+ellipse.addEventListener("click", outputSize);
 ```
 
 ### Result

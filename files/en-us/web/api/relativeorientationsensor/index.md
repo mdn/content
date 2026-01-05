@@ -34,7 +34,7 @@ _No specific events; inherits events from its ancestor, {{domxref('Sensor')}}._
 
 ### Basic Example
 
-The following example, which is loosely based on [Intel's Orientation Phone demo](https://intel.github.io/generic-sensor-demos/orientation-phone/), instantiates an `RelativeOrientationSensor` with a frequency of 60 times a second.
+The following example, which is loosely based on [Intel's Orientation Phone demo](https://intel.github.io/generic-sensor-demos/orientation-phone/), instantiates a `RelativeOrientationSensor` with a frequency of 60 times a second.
 
 > [!NOTE]
 > The Intel demo this is based on uses the `AbsoluteOrientationSensor`. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.
@@ -67,7 +67,7 @@ Promise.all([
 ]).then((results) => {
   if (results.every((result) => result.state === "granted")) {
     sensor.start();
-    // ...
+    // …
   } else {
     console.log("No permissions to use RelativeOrientationSensor.");
   }

@@ -13,7 +13,7 @@ This defines whether or not the shadow root's internal features are accessible f
 
 When the `mode` of a shadow root is `"closed"`, the shadow root's implementation internals are inaccessible and unchangeable from JavaScript—in the same way the implementation internals of, for example, the {{HTMLElement("video")}} element are inaccessible and unchangeable from JavaScript.
 
-The property value is set using the `options.mode` property of the object passed to {{domxref("Element.attachShadow()")}}, or using the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute of the [`<template>`](/en-US/docs/Web/HTML/Reference/Elements/template) element when a shadow root is created declaratively.
+The property value is set using the `mode` property of the object passed to {{domxref("Element.attachShadow()")}}, or using the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute of the [`<template>`](/en-US/docs/Web/HTML/Reference/Elements/template) element when a shadow root is created declaratively.
 
 ## Value
 
@@ -30,13 +30,13 @@ A string value that can have either of the values:
 // We create a closed shadow root, that is not accessible
 let element = document.createElement("div");
 element.attachShadow({ mode: "closed" });
-element.shadowRoot; // null as the shadow root is closed
+console.log(element.shadowRoot); // logs null as the shadow root is closed
 
 // We create an open shadow root, that is accessible
 let element2 = document.createElement("div");
 element2.attachShadow({ mode: "open" });
 console.log(`The shadow is ${element2.shadowRoot.mode}`); // logs "The shadow is open"
-element2.shadowRoot.textContent("Opened shadow"); // The shadow is open, we can access it from outside
+element2.shadowRoot.textContent = "Opened shadow"; // The shadow is open, we can access it from outside
 ```
 
 ## Specifications

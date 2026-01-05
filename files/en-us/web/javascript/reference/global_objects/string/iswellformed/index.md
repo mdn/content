@@ -1,11 +1,11 @@
 ---
 title: String.prototype.isWellFormed()
+short-title: isWellFormed()
 slug: Web/JavaScript/Reference/Global_Objects/String/isWellFormed
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.isWellFormed
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`isWellFormed()`** method of {{jsxref("String")}} values returns a boolean indicating whether this string contains any [lone surrogates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 

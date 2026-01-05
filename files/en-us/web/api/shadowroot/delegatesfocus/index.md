@@ -23,13 +23,13 @@ The property value is originally set using the `delegatesFocus` property of the 
 ## Examples
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
+const customElem = document.querySelector("my-shadow-dom-element");
+const shadow = customElem.shadowRoot;
 
-// ...
+// …
 
 // Does it delegate focus?
-let hostElem = shadow.delegatesFocus;
+const hostElem = shadow.delegatesFocus;
 ```
 
 The [Declarative Shadow DOM with delegated focus](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom_with_delegated_focus) example in the `<template>` documentation demonstrates the effects of delegating focus.

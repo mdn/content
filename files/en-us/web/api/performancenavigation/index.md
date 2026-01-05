@@ -22,9 +22,7 @@ An object of this type can be obtained by calling the {{domxref("Performance.nav
 _The `PerformanceNavigation` interface doesn't inherit any properties._
 
 - {{domxref("PerformanceNavigation.type")}} {{ReadOnlyInline}} {{deprecated_inline}}
-
   - : An `unsigned short` which indicates how the navigation to this page was done. Possible values are:
-
     - `TYPE_NAVIGATE` (0)
       - : The page was accessed by following a link, a bookmark, a form submission, or a script, or by typing the URL in the address bar.
     - `TYPE_RELOAD` (1)

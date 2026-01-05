@@ -24,7 +24,7 @@ In this example, the `layer` property is used to obtain the {{domxref("XRLayer")
 
 ```js
 myLayer.addEventListener("redraw", (e) => {
-  if (typeof e.layer === "XRQuadLayer") {
+  if (e.layer instanceof XRQuadLayer) {
     // redraw quad layer
   }
 });

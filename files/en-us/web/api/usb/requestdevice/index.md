@@ -18,22 +18,23 @@ triggers the user agent's pairing flow.
 ## Syntax
 
 ```js-nolint
-requestDevice(filters)
+requestDevice(options)
 ```
 
 ### Parameters
 
-- `filters`
-
-  - : An array of filter objects for possible devices you would like to pair. Each filter
-    object can have the following properties:
-
-    - `vendorId`
-    - `productId`
-    - `classCode`
-    - `subclassCode`
-    - `protocolCode`
-    - `serialNumber`
+- `options`
+  - : An object that sets options for selecting an appropriate device.
+    The available options are:
+    - `filters`
+      - : An array of filter objects for possible devices you would like to pair. Each filter
+        object can have the following properties:
+        - `vendorId`
+        - `productId`
+        - `classCode`
+        - `subclassCode`
+        - `protocolCode`
+        - `serialNumber`
 
 ### Return value
 
@@ -41,7 +42,7 @@ A {{JSxRef("Promise")}} that resolves with an instance of {{DOMxRef("USBDevice")
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

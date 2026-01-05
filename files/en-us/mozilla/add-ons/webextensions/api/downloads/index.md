@@ -3,9 +3,8 @@ title: downloads
 slug: Mozilla/Add-ons/WebExtensions/API/downloads
 page-type: webextension-api
 browser-compat: webextensions.api.downloads
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables extensions to interact with the browser's download manager. You can use this API module to download files, cancel, pause, resume downloads, and show downloaded files in the file manager.
 
@@ -72,11 +71,11 @@ To use this API you need to have the "downloads" [API permission](/en-US/docs/Mo
 - {{WebExtAPIRef("downloads.onChanged")}}
   - : When any of a {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}'s properties except `bytesReceived` changes, this event fires with the `downloadId` and an object containing the properties that changed.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads) API.

@@ -177,7 +177,7 @@ We can move it left and right, up and down, and back and forth; we can also rota
 The sound direction is coming from the boombox speaker at the front, so when we rotate it, we can alter the sound's direction — i.e., make it project to the back when the boombox is rotated 180 degrees and facing away from us.
 
 We need to set up a few things for the interface.
-First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) to actually do the movement.
+First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) to actually do the movement.
 Finally, we'll set some bounds so our boombox doesn't move too far in any direction:
 
 ```js
@@ -207,7 +207,7 @@ const outerBound = 1.5;
 Let's create a function that takes the direction we want to move as a parameter, and both modifies the CSS transform and updates the position and orientation values of our panner node properties to change the sound as appropriate.
 
 To start with let's take a look at our left, right, up and down values as these are pretty straightforward.
-We'll move the boombox along these axis and update the appropriate position.
+We'll move the boombox along these axes and update the appropriate position.
 
 ```js
 function moveBoombox(direction) {
@@ -267,16 +267,16 @@ The rotation is a circle and we need [`Math.sin`](/en-US/docs/Web/JavaScript/Ref
 Let's set up a rotation rate, which we'll convert into a radian range value for use in `Math.sin` and `Math.cos` later, when we want to figure out the new coordinates when we're rotating our boombox:
 
 ```js
-// set up rotation constants
-const rotationRate = 60; // bigger number equals slower sound rotation
+// Set up rotation constants
+const rotationRate = 60; // Bigger number equals slower sound rotation
 
-const q = Math.PI / rotationRate; //rotation increment in radians
+const q = Math.PI / rotationRate; // Rotation increment in radians
 ```
 
 We can also use this to work out degrees rotated, which will help with the CSS transforms we will have to create (note we need both an x and y-axis for the CSS transforms):
 
 ```js
-// get degrees for CSS
+// Get degrees for CSS
 const degreesX = (q * 180) / Math.PI;
 const degreesY = (q * 180) / Math.PI;
 ```
@@ -474,33 +474,25 @@ function moveBoombox(direction, prevMove) {
 
 ## Wiring up our controls
 
-Wiring up out control buttons is comparatively simple — now we can listen for a mouse event on our controls and run this function, as well as stop it when the mouse is released:
+Wiring up our control buttons is comparatively simple — now we can listen for a mouse event on our controls and run this function, as well as stop it when the mouse is released:
 
 ```js
 // for each of our controls, move the boombox and change the position values
 moveControls.forEach((el) => {
   let moving;
-  el.addEventListener(
-    "mousedown",
-    () => {
-      const direction = this.dataset.control;
-      if (moving && moving.frameId) {
-        cancelAnimationFrame(moving.frameId);
-      }
-      moving = moveBoombox(direction);
-    },
-    false,
-  );
+  el.addEventListener("mousedown", () => {
+    const direction = this.dataset.control;
+    if (moving && moving.frameId) {
+      cancelAnimationFrame(moving.frameId);
+    }
+    moving = moveBoombox(direction);
+  });
 
-  window.addEventListener(
-    "mouseup",
-    () => {
-      if (moving && moving.frameId) {
-        cancelAnimationFrame(moving.frameId);
-      }
-    },
-    false,
-  );
+  window.addEventListener("mouseup", () => {
+    if (moving && moving.frameId) {
+      cancelAnimationFrame(moving.frameId);
+    }
+  });
 });
 ```
 
@@ -538,25 +530,21 @@ Let's create a play button, that when clicked will play or pause the audio depen
 // Select our play button
 const playButton = document.querySelector("button");
 
-playButton.addEventListener(
-  "click",
-  () => {
-    // Check if context is in suspended state (autoplay policy)
-    if (audioContext.state === "suspended") {
-      audioContext.resume();
-    }
+playButton.addEventListener("click", () => {
+  // Check if context is in suspended state (autoplay policy)
+  if (audioContext.state === "suspended") {
+    audioContext.resume();
+  }
 
-    // Play or pause track depending on state
-    if (playButton.dataset.playing === "false") {
-      audioElement.play();
-      playButton.dataset.playing = "true";
-    } else if (playButton.dataset.playing === "true") {
-      audioElement.pause();
-      playButton.dataset.playing = "false";
-    }
-  },
-  false,
-);
+  // Play or pause track depending on state
+  if (playButton.dataset.playing === "false") {
+    audioElement.play();
+    playButton.dataset.playing = "true";
+  } else if (playButton.dataset.playing === "true") {
+    audioElement.pause();
+    playButton.dataset.playing = "false";
+  }
+});
 ```
 
 For a more in depth look at playing/controlling audio and audio graphs check out [Using The Web Audio API.](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
@@ -572,7 +560,6 @@ The values can be hard to manipulate sometimes and depending on your use case it
 > there are a [number of tests here](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true) so you can keep track of the status of the inner workings of this node across different platforms.
 
 Again, you can [check out the final demo here](https://mdn.github.io/webaudio-examples/spatialization/), and the [final source code is here](https://github.com/mdn/webaudio-examples/tree/main/spatialization).
-There is also a [CodePen demo too](https://codepen.io/Rumyra/pen/MqayoK?editors=0100).
 
 If you are working with 3D games and/or WebXR it's a good idea to harness a 3D library to create such functionality, rather than trying to do this all yourself from first principles.
 We rolled our own in this article to give you an idea of how it works, but you'll save a lot of time by taking advantage of work others have done before you.

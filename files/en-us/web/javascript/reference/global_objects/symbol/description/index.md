@@ -1,11 +1,11 @@
 ---
 title: Symbol.prototype.description
+short-title: description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Symbol.description
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`description`** accessor property of {{jsxref("Symbol")}} values returns a string containing the description of this symbol, or `undefined` if the symbol has no description.
 

@@ -1,10 +1,10 @@
 ---
-title: Firefox 118 for developers
+title: Firefox 118 release notes for developers
+short-title: Firefox 118
 slug: Mozilla/Firefox/Releases/118
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 118 that affect developers. Firefox 118 was released on September 26, 2023.
 
@@ -17,10 +17,10 @@ This article provides information about the changes in Firefox 118 that affect d
 ### CSS
 
 - The {{cssxref("font-synthesis-position")}} property and `position` value for {{cssxref("font-synthesis")}} shorthand property are now supported. These allow subscript and superscript typefaces to be disabled for fonts that do not have glyphs for them when using {{cssxref("font-variant-position")}} ([Firefox bug 1849010](https://bugzil.la/1849010)).
-- Multiple CSS [math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions) are now supported: [`abs()`](/en-US/docs/Web/CSS/abs), [`sign()`](/en-US/docs/Web/CSS/sign), [`round()`](/en-US/docs/Web/CSS/round), [`mod()`](/en-US/docs/Web/CSS/mod), [`rem()`](/en-US/docs/Web/CSS/rem), [`pow()`](/en-US/docs/Web/CSS/pow), [`sqrt()`](/en-US/docs/Web/CSS/sqrt), [`hypot()`](/en-US/docs/Web/CSS/hypot), [`log()`](/en-US/docs/Web/CSS/log), and [`exp()`](/en-US/docs/Web/CSS/exp) (Firefox bug [1814589](https://bugzil.la/1814589)).
-- A new keyword `from-font` in the CSS property [`font-size-adjust`](/en-US/docs/Web/CSS/font-size-adjust) enables picking the desired `<font-metric>` from the first available font (Firefox bug [1708240](https://bugzil.la/1708240)).
-- The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape (Firefox bug [1819464](https://bugzil.la/1819464)).
-- The CSS property [`font-size-adjust`](/en-US/docs/Web/CSS/font-size-adjust) supports the keyword `from-font` that enables picking the desired `<font-metric>` from the first available font (Firefox bug [1708240](https://bugzil.la/1708240)).
+- Multiple CSS [math functions](/en-US/docs/Web/CSS/Reference/Values/Functions#math_functions) are now supported: [`abs()`](/en-US/docs/Web/CSS/Reference/Values/abs), [`sign()`](/en-US/docs/Web/CSS/Reference/Values/sign), [`round()`](/en-US/docs/Web/CSS/Reference/Values/round), [`mod()`](/en-US/docs/Web/CSS/Reference/Values/mod), [`rem()`](/en-US/docs/Web/CSS/Reference/Values/rem), [`pow()`](/en-US/docs/Web/CSS/Reference/Values/pow), [`sqrt()`](/en-US/docs/Web/CSS/Reference/Values/sqrt), [`hypot()`](/en-US/docs/Web/CSS/Reference/Values/hypot), [`log()`](/en-US/docs/Web/CSS/Reference/Values/log), and [`exp()`](/en-US/docs/Web/CSS/Reference/Values/exp) (Firefox bug [1814589](https://bugzil.la/1814589)).
+- A new keyword `from-font` in the CSS property [`font-size-adjust`](/en-US/docs/Web/CSS/Reference/Properties/font-size-adjust) enables picking the desired `<font-metric>` from the first available font (Firefox bug [1708240](https://bugzil.la/1708240)).
+- The CSS property [`transform-box`](/en-US/docs/Web/CSS/Reference/Properties/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape (Firefox bug [1819464](https://bugzil.la/1819464)).
+- The CSS property [`font-size-adjust`](/en-US/docs/Web/CSS/Reference/Properties/font-size-adjust) supports the keyword `from-font` that enables picking the desired `<font-metric>` from the first available font (Firefox bug [1708240](https://bugzil.la/1708240)).
 
 ### JavaScript
 
@@ -58,14 +58,10 @@ No notable changes.
 
 #### Marionette
 
-- Added support for all the [Web Authentication extension commands](https://www.w3.org/TR/webauthn-2/#sctn-automation), which allow users to authenticate themselves by Public Key Credentials ([Firefox bug 1846574](https://bugzil.la/1846574))
+- Added support for all the [Web Authentication extension commands](https://w3c.github.io/webauthn/#sctn-automation), which allow users to authenticate themselves by Public Key Credentials ([Firefox bug 1846574](https://bugzil.la/1846574))
 
 ## Changes for add-on developers
 
 ### Removals
 
 - Support for [`browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) in the manifest keys [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action), [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui), [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), and [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) for Manifest V3 extensions has been removed ([Firefox bug 1830711](https://bugzil.la/1830711)). See [Browser Styles' Manifest v3 migration](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) for information about transitioning from `browser_style` in Manifest V3 extensions.
-
-## Older versions
-
-{{Firefox_for_developers}}

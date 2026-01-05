@@ -1,11 +1,11 @@
 ---
 title: Date.prototype[Symbol.toPrimitive]()
+short-title: "[Symbol.toPrimitive]()"
 slug: Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.@@toPrimitive
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.toPrimitive]()`** method of {{jsxref("Date")}} instances returns a primitive value representing this date. It may either be a string or a number, depending on the hint given.
 

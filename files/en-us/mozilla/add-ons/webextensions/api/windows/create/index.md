@@ -3,9 +3,8 @@ title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
 page-type: webextension-api-function
 browser-compat: webextensions.api.windows.create
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Creates a new window.
 
@@ -30,13 +29,9 @@ let creating = browser.windows.create(
 ### Parameters
 
 - `createData` {{optional_inline}}
-
   - : `object`.
-
     - `allowScriptsToClose` {{optional_inline}}
-
       - : `boolean`. When the window is opened, it will contain a single tab, or more than one tab if `url` is given and includes an array containing more than one URL. By default scripts running in these pages are not allowed to close their tab using [`window.close()`](/en-US/docs/Web/API/Window/close). If you include `allowScriptsToClose` and set it to `true`, then this default behavior is changed, so scripts can close their tabs. Note that:
-
         - this only applies to the tabs that were opened when the window was created. If the user opens more tabs in this window, then scripts will not be able to close those new tabs.
         - if the URL(s) given in `url` point to [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) (that is, they are pages included with this extension and loaded with the "moz-extension:" protocol) then scripts _are_ by default allowed to close those tabs.
 

@@ -7,7 +7,11 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Research_and_learning", "Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Getting_started/Soft_skills")}}
 
-As a professional in the web industry, you are going to have to work with other people on projects during multiple phases — brainstorming ideas, writing proposals, implementing code, and more. This article looks at how to work together with others.
+As a professional in the web industry, you are going to have to work with other people on projects during multiple phases — brainstorming ideas, writing proposals, implementing code, and more.
+
+In web development teams, collaboration often happens through tools such as version control systems (for example, [Git](https://git-scm.com) and [GitHub](https://github.com)). Developers typically work on separate copies of a project, review each other's code, and discuss changes using comments. Such a workflow helps teams catch bugs early, maintain code quality, and ensure everyone understands the changes being made.
+
+This article looks at how to work together with others.
 
 <table>
   <tbody>
@@ -55,10 +59,10 @@ Here are some initial ideas for how to get involved in some community networks:
 
 - Do some research in your local area, see what local in-person meetup groups there are, and attend some of them. You can look events up using sites like [Meetup.com](https://www.meetup.com/) or [Eventbrite](https://www.eventbrite.co.uk/).
 - Have a look at resources such as [confs.tech](https://confs.tech/) to find tech conferences of interest. If they are out of your price range, try contacting the organizers to see if you could work the conference as a volunteer — you'll still get to attend it and meet lots of people.
-- [Stack Overflow](https://stackoverflow.com/) is a great place to ask questions and answer other people's questions.
 - The [freeCodeCamp forums](https://forum.freecodecamp.org/) is another great place to ask and answer questions.
 - Check out the [Frontend Developers](https://discord.me/frontenddevelopers) Discord server.
-- Also hang out on [MDN's Discord](/discord).
+- Hang out on [MDN's Discord server](/discord).
+- Join a friendly developer-oriented {{glossary("IRC")}} channel such as [Libera.Chat](https://web.libera.chat/).
 - Our learning partner, Scrimba, provides a [strong community and collaboration experience](https://scrimba.com/the-frontend-developer-career-path-c0j/~0xyi?via=mdn) via their Discord server, intending to help their students gain experience in working with others.
 - Find web developers on the social networks, see what they are saying, and join in conversations.
 
@@ -113,7 +117,7 @@ You will often be required to work on a team with other developers, with differe
 - Showing empathy for other team members at all times, but especially when things don't go to plan and adjustments are needed.
 - Helping each other to succeed.
 
-Even if you are not doing a real work project — you might be doing a college mock project, or working on your own hobby project — you should practice running it like a real software project, with a timeline, plan, and responsibilities. Learn about typical [software development lifecycles](https://www.geeksforgeeks.org/software-development-life-cycle-sdlc/). Pick up some basic [project planning](https://en.wikipedia.org/wiki/Project_planning) skills and tools to be able to estimate and plan your work.
+Even if you are not doing a real work project — you might be doing a college mock project, or working on your own hobby project — you should practice running it like a real software project, with a timeline, plan, and responsibilities. Learn about typical [software development lifecycles](https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/). Pick up some basic [project planning](https://en.wikipedia.org/wiki/Project_planning) skills and tools to be able to estimate and plan your work.
 
 It is also a good idea to start doing peer reviews — colleagues will review each other's work and provide feedback on how it could be improved. Areas looked at might include general code quality and adherence to code style guides, performance, sticking to best practices, usability, and quality of documentation. You can benefit greatly, whether you are the reviewer, or the person being reviewed:
 
@@ -122,11 +126,11 @@ It is also a good idea to start doing peer reviews — colleagues will review ea
 
 ## Learn to embrace failure
 
-A very common issue that causes students and new developers to shy away from experimentation and taking risks (for example when starting new projects or exploring new ideas) is fear of failure, and how it will be judged by peers/team mates. You should spend some time learning about the value that can be gleaned from making mistakes.
+A common reason students and new developers shy away from experimentation and taking risks (for example, when starting new projects or exploring new ideas) is fear of failure and how it might be judged by peers or teammates. You should spend some time reflecting on mistakes and identifying the lessons they provide.
 
 Failure is really only a small step on the road to success. All of the most successful developers have failed many times, and it is not the actual failure that matters, but how you handle that failure, and the lessons you learn from it.
 
-Here are some tips:
+Here are some practical tips to help create a safe environment for learning from failure:
 
 - Define a safe space/peer group where people are free to ask questions — remember that there are no "stupid questions", only people who fail to question. Foster a culture where peers support each other and failure is not judged harshly.
 - Look to your network and try to find online or in-person groups who can either give you help and advice or are facing the same issues you are and can provide moral support or experiment together.

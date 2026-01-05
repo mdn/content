@@ -3,9 +3,8 @@ title: "<body>: The Document Body element"
 slug: Web/HTML/Reference/Elements/body
 page-type: html-element
 browser-compat: html.elements.body
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of an HTML document. There can be only one `<body>` element in a document.
 
@@ -62,7 +61,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : Function to call when the storage area has changed.
 - [`onunhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event)
   - : Function to call when a JavaScript {{jsxref("Promise")}} that has no rejection handler is rejected.
-- [`onunload`](/en-US/docs/Web/API/Window/unload_event)
+- [`onunload`](/en-US/docs/Web/API/Window/unload_event) {{deprecated_inline}}
   - : Function to call when the document is going away.
 
 ### Deprecated attributes
@@ -206,4 +205,4 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - {{HTMLElement("html")}}
 - {{HTMLElement("head")}}
-- [Event handling overview](/en-US/docs/Web/Events/Event_handlers)
+- [Event handling overview](/en-US/docs/Web/API/Document_Object_Model/Events#registering_event_handlers)

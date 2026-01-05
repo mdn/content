@@ -3,9 +3,8 @@ title: name
 slug: Web/Progressive_web_apps/Manifest/Reference/name
 page-type: web-manifest-member
 browser-compat: manifests.webapp.name
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `name` manifest member is used to specify the full name of your web application as it's usually displayed to users, such as in application lists or as a label for your application's icon.
 
@@ -48,7 +47,9 @@ Consider the following factors when selecting a name for your web app:
 For a web app that helps users navigate trails and plan their hiking adventures, you might add the following `name` to the app manifest:
 
 ```json
-"name": "Trail Navigator"
+{
+  "name": "Trail Navigator"
+}
 ```
 
 The app name `Trail Navigator` effectively describes the app's purpose, is easy to read and remember, and is likely to be understood by a wide audience. It uses familiar terms that outdoor enthusiasts might readily understand.
@@ -56,8 +57,10 @@ The app name `Trail Navigator` effectively describes the app's purpose, is easy 
 If you want, you can also add a `short_name`:
 
 ```json
-"name": "Trail Navigator",
-"short_name": "TrailNav"
+{
+  "name": "Trail Navigator",
+  "short_name": "TrailNav"
+}
 ```
 
 ## Specifications

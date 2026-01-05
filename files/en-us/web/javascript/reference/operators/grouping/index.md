@@ -3,19 +3,18 @@ title: Grouping operator ( )
 slug: Web/JavaScript/Reference/Operators/Grouping
 page-type: javascript-operator
 browser-compat: javascript.operators.grouping
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **grouping `( )`** operator controls the precedence of evaluation in expressions. It also acts as a container for arbitrary expressions in certain syntactic constructs, where ambiguity or syntax errors would otherwise occur.
 
 {{InteractiveExample("JavaScript Demo: Grouping operator")}}
 
-```js interactive-example
+```js-nolint interactive-example
 console.log(1 + 2 * 3); // 1 + 6
 // Expected output: 7
 
-console.log(1 + 2 * 3); // 1 + 6
+console.log(1 + (2 * 3)); // 1 + 6
 // Expected output: 7
 
 console.log((1 + 2) * 3); // 3 * 3

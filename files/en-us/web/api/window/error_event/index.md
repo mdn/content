@@ -16,10 +16,10 @@ This event is only generated for script errors thrown synchronously, such as dur
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("error", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
 
-onerror = (message, source, lineno, colno, error) => {};
+onerror = (message, source, lineno, colno, error) => { }
 ```
 
 > [!NOTE]
@@ -27,7 +27,7 @@ onerror = (message, source, lineno, colno, error) => {};
 
 ## Event type
 
-The event object is a {{domxref("ErrorEvent")}} instance if it was generated from a user interface element, or an {{domxref("Event")}} instance otherwise.
+The event object is an {{domxref("ErrorEvent")}} instance if it was generated from a user interface element, or an {{domxref("Event")}} instance otherwise.
 
 {{InheritanceDiagram("ErrorEvent")}}
 
@@ -60,7 +60,6 @@ When canceled, the error won't appear in the console, but the current script wil
 The event handler's signature is asymmetric between `addEventListener()` and `onerror`. The event handler passed to `Window.addEventListener()` receives a single {{domxref("ErrorEvent")}} object, while the `onerror` handler receives five arguments, matching the {{domxref("ErrorEvent")}} object's properties:
 
 - `message`
-
   - : A string containing a human-readable error message describing the problem. Same as {{domxref("ErrorEvent.message")}}.
 
     > [!NOTE]
@@ -101,7 +100,7 @@ This special behavior only happens for the `onerror` event handler on `window`. 
 ```html
 <div class="controls">
   <button id="script-error" type="button">Generate script error</button>
-  <img class="bad-img" />
+  <img src="bad-image.jpg" class="bad-img" alt="I don't exist" />
 </div>
 
 <div class="event-log">
@@ -164,8 +163,7 @@ window.addEventListener("error", (event) => {
 
 const scriptError = document.querySelector("#script-error");
 scriptError.addEventListener("click", () => {
-  const badCode = "const s;";
-  eval(badCode);
+  throw new Error("This is a script error");
 });
 ```
 

@@ -1,11 +1,11 @@
 ---
-title: Prefer
+title: Prefer header
+short-title: Prefer
 slug: Web/HTTP/Reference/Headers/Prefer
 page-type: http-header
 spec-urls: https://www.rfc-editor.org/rfc/rfc7240#section-2
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Prefer`** header allows clients to indicate preferences for specific server behaviors during request processing.
 
@@ -24,7 +24,7 @@ The HTTP **`Prefer`** header allows clients to indicate preferences for specific
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>
@@ -33,7 +33,7 @@ The HTTP **`Prefer`** header allows clients to indicate preferences for specific
 ## Syntax
 
 ```http
-Prefer: <preference>
+Prefer: <preference>, <preference>, ...
 ```
 
 ## Directives

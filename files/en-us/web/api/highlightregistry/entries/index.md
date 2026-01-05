@@ -19,6 +19,10 @@ The **`entries()`** method of the {{domxref("HighlightRegistry")}} interface ret
 entries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new iterator object that contains an array of `[name, highlight]` for each `Highlight` object in the `HighlightRegistry`, in insertion order.

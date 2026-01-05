@@ -1,11 +1,10 @@
 ---
-title: "<script>: type attribute"
+title: <script> type attribute
 slug: Web/HTML/Reference/Elements/script/type
 page-type: html-attribute
 browser-compat: html.elements.script.type
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`type`** attribute of the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element indicates the _type_ of script represented by the element: a classic script, an import map, a JavaScript module, speculation rules, or a data block.
 

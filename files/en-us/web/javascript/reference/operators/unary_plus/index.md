@@ -3,9 +3,8 @@ title: Unary plus (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
 page-type: javascript-operator
 browser-compat: javascript.operators.unary_plus
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **unary plus (`+`)** operator precedes its operand and evaluates to its
 operand but attempts to [convert it into a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), if it isn't already.

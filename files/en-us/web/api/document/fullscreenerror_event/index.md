@@ -20,10 +20,10 @@ This event is not cancelable.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("fullscreenerror", (event) => {});
+```js-nolint
+addEventListener("fullscreenerror", (event) => { })
 
-onfullscreenerror = (event) => {};
+onfullscreenerror = (event) => { }
 ```
 
 ## Event type

@@ -3,9 +3,8 @@ title: Division (/)
 slug: Web/JavaScript/Reference/Operators/Division
 page-type: javascript-operator
 browser-compat: javascript.operators.division
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **division (`/`)** operator produces the quotient of its operands where the left operand is the dividend and the right operand is the divisor.
 

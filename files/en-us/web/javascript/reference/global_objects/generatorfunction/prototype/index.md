@@ -1,13 +1,13 @@
 ---
 title: GeneratorFunction.prototype.prototype
+short-title: prototype
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction/prototype
 page-type: javascript-instance-data-property
 spec-urls:
   - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-generatorfunction.prototype.prototype
   - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-generatorfunction-instances-prototype
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`prototype`** property of `GeneratorFunction.prototype` is shared by all generator functions. Its value is [`Generator.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator). Each generator function created with the `function*` syntax or the `GeneratorFunction()` constructor also has its own `prototype` property, whose prototype is `GeneratorFunction.prototype.prototype`. When the generator function is called, its `prototype` property becomes the prototype of the returned generator object.
 

@@ -1,13 +1,15 @@
 ---
-title: Sec-CH-Prefers-Reduced-Motion
+title: Sec-CH-Prefers-Reduced-Motion header
+short-title: Sec-CH-Prefers-Reduced-Motion
 slug: Web/HTTP/Reference/Headers/Sec-CH-Prefers-Reduced-Motion
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-Prefers-Reduced-Motion
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{SeeCompatTable}}{{SecureContext_Header}}
 
 The HTTP **`Sec-CH-Prefers-Reduced-Motion`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_preference_media_features_client_hints) which indicates the user agent's preference for animations to be displayed with reduced motion.
 
@@ -89,6 +91,6 @@ The client will include the header in subsequent requests in the current session
 - [Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
 - {{HTTPHeader("Accept-CH")}}
-- [`prefers-reduced-motion` CSS Media Query](/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
+- {{cssxref("@media/prefers-reduced-motion")}} CSS media query
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}} header
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

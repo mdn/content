@@ -21,7 +21,6 @@ decrypt(algorithm, key, data)
 ### Parameters
 
 - `algorithm`
-
   - : An object specifying the [algorithm](#supported_algorithms) to be used, and any extra parameters as required.
     The values given for the extra parameters must match those passed into the corresponding {{domxref("SubtleCrypto.encrypt()", "encrypt()")}} call.
     - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}} object.

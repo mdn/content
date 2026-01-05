@@ -1,11 +1,11 @@
 ---
-title: Cache-Control
+title: Cache-Control header
+short-title: Cache-Control
 slug: Web/HTTP/Reference/Headers/Cache-Control
 page-type: http-header
 browser-compat: http.headers.Cache-Control
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Cache-Control`** header holds _directives_ (instructions) in both requests and responses that control [caching](/en-US/docs/Web/HTTP/Guides/Caching) in browsers and shared caches (e.g., Proxies, CDNs).
 
@@ -32,6 +32,10 @@ The HTTP **`Cache-Control`** header holds _directives_ (instructions) in both re
 </table>
 
 ## Syntax
+
+```http
+Cache-Control: <directive>, <directive>, ...
+```
 
 Cache directives follow these rules:
 
@@ -335,6 +339,11 @@ Same meaning that `no-transform` has for a response, but for a request instead.
 
 The client indicates that an already-cached response should be returned. If a cache has a stored response, even a stale one, it will be returned. If no cached response is available, a [504 Gateway Timeout](/en-US/docs/Web/HTTP/Reference/Status/504) response will be returned.
 
+#### `stale-if-error`
+
+The `stale-if-error` request directive indicates that the browser is interested in receiving stale content on error from any intermediate server for a particular origin.
+This is not supported by any browser (see [Browser compatibility](#browser_compatibility)).
+
 ## Use Cases
 
 ### Preventing storing
@@ -428,7 +437,7 @@ There are no cache directives for clearing already-stored responses from caches 
 Imagine that clients/caches store a [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) response for a path, with no request flight to the server. There is nothing a server could do to that path.
 
 [`Clear-Site-Data: cache`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) can be used to clear every stored response for a site in the browser cache, so use this with care.
-Note that this will not affected shared or intermediate caches.
+Note that this will not affect shared or intermediate caches.
 
 ## Specifications
 

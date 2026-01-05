@@ -36,7 +36,6 @@ A reference to a {{domxref("MediaStream")}} object, which has a single
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : Thrown if the value of `frameRate` is negative.
 
 - `SecurityError` {{domxref("DOMException")}}

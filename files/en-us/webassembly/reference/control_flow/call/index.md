@@ -1,5 +1,6 @@
 ---
-title: call
+title: "call: Wasm text instruction"
+short-title: call
 slug: WebAssembly/Reference/Control_flow/call
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
@@ -32,7 +33,7 @@ Calling the `greet` function imported from JavaScript using `call`:
 const url = "{%wasm-url%}";
 await WebAssembly.instantiateStreaming(fetch(url), {
   env: {
-    greet: function () {
+    greet() {
       console.log("Hello");
       // Expected output: "Hello"
     },

@@ -17,6 +17,8 @@ If the method was unable to vibrate because of invalid parameters, it will retur
 `false`, else it returns `true`. If the pattern leads to a too
 long vibration, it is truncated: the max length depends on the implementation.
 
+Some devices may not vibrate if they are in Silent mode or Do Not Disturb (DND) mode. To ensure vibration works, make sure these modes are turned off and that vibration is enabled in the system settings.
+
 ## Syntax
 
 ```js-nolint
@@ -40,7 +42,7 @@ A boolean.
 
 ## Security
 
-[Sticky user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Sticky user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

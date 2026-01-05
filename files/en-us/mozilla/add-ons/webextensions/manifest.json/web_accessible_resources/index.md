@@ -3,9 +3,8 @@ title: web_accessible_resources
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.web_accessible_resources
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -69,11 +68,11 @@ In Manifest V3, the `web_accessible_resources` key is an array of objects like t
   "web_accessible_resources": [
     {
       "resources": ["test1.png", "test2.png"],
-      "matches": ["https://web-accessible-resources-1.glitch.me/*"]
+      "matches": ["https://web-accessible-resources-1.example.com/*"]
     },
     {
       "resources": ["test3.png", "test4.png"],
-      "matches": ["https://web-accessible-resources-2.glitch.me/*"],
+      "matches": ["https://web-accessible-resources-2.example.com/*"],
       "use_dynamic_url": true
     }
   ]

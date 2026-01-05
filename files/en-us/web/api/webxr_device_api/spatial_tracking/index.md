@@ -136,10 +136,7 @@ function myDrawFrame(currentFrameTime, frame) {
   animationFrameRequestID = session.requestAnimationFrame(myDrawFrame);
 
   if (viewerPose) {
-    if (!previousViewerPose) {
-      previousViewerPose = viewerPose;
-    }
-
+    previousViewerPose ??= viewerPose;
     let offsetMatrix = mat4.create();
     mat4.sub(
       offsetMatrix,
@@ -173,8 +170,6 @@ On the other hand, if your app involves the user physically moving in real space
 You can do this by creating a new reference space that incorporates into its effective origin the distance the viewer's position jumped since the previous frame, using the {{domxref("XRReferenceSpace")}} method {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}.
 
 ### The reset event
-
-**_<<<--- this section probably has problems still; corrections are appreciated --->>>_**
 
 When a discontinuity or break in the native or effective origin of a reference space occurs, the {{Glossary("user agent")}} will send the {{domxref("XRReferenceSpace")}} a {{domxref("XRReferenceSpace.reset_event", "reset")}} event. This event indicates that a significant change to the origin's position has taken place relative to the user's environment.
 

@@ -3,9 +3,8 @@ title: 410 Gone
 slug: Web/HTTP/Reference/Status/410
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.410
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`410 Gone`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the target resource is no longer available at the origin server and that this condition is likely to be permanent.
 A 410 response is cacheable by default.
@@ -35,7 +34,7 @@ HTTP/1.1 410 Gone
 Content-Type: text/html
 Content-Length: 212
 
-<html>
+<html lang="en-US">
   <head>
     <title>Promotion expired</title>
   </head>

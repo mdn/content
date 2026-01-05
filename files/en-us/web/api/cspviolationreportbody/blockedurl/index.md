@@ -12,7 +12,7 @@ The **`blockedURL`** read-only property of the {{domxref("CSPViolationReportBody
 
 ## Value
 
-An string containing a value or URL that represents the resource that violated the policy.
+A string containing a value or URL that represents the resource that violated the policy.
 
 If the value is not the URL of a resource, it must be one of the following strings:
 
@@ -23,7 +23,7 @@ If the value is not the URL of a resource, it must be one of the following strin
   - : An `eval()`.
     For example, `eval()` was used but [`'unsafe-eval'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) was not specified in the CSP.
 - `wasm-eval`
-  - : An Wasm evaluation.
+  - : A Wasm evaluation.
     For example, `eval()` was used but [`'wasm-unsafe-eval'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#wasm-unsafe-eval) was not specified in the CSP.
 - `trusted-types-policy`
   - : A resource that violated the [`trusted-types`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) CSP directive.
@@ -122,16 +122,14 @@ The policy also uses the `trusted-types` directive to specify that a {{domxref("
     <script src="main.js"></script>
   </head>
 
-  <body></body>
-
-  <script>
-    const policy = trustedTypes.createPolicy("somePolicy", {
-      createHTML: (string) => {
+  <body>
+    <script>
+      const policy = trustedTypes.createPolicy("somePolicy", {
         // Some (insufficient) sanitization code
-        return string.replace(/</g, "&lt;");
-      },
-    });
-  </script>
+        createHTML: (string) => string.replace(/</g, "&lt;"),
+      });
+    </script>
+  </body>
 </html>
 ```
 
@@ -167,18 +165,20 @@ In addition, it specifies the directive `require-trusted-types-for 'script'`, wh
   </head>
   <body>
     <input type="text" id="userInput" />
-    <button onclick="updateContent()">Update Content</button>
+    <button>Update Content</button>
     <div id="content"></div>
+
+    <script>
+      function updateContent() {
+        const userInput = document.getElementById("userInput").value;
+
+        // Passing unsanitized content - a violation of the policy
+        document.getElementById("content").innerHTML = userInput;
+      }
+
+      document.querySelector("button").addEventListener("click", updateContent);
+    </script>
   </body>
-
-  <script>
-    function updateContent() {
-      const userInput = document.getElementById("userInput").value;
-
-      // Passing unsanitized content - a violation of the policy
-      document.getElementById("content").innerHTML = userInput;
-    }
-  </script>
 </html>
 ```
 
@@ -193,10 +193,8 @@ In order to avoid the violation we would need to update the script to define a t
 
 ```js
 const policy = trustedTypes.createPolicy("myPolicy", {
-  createHTML: (string) => {
-    // Some (insufficient) sanitization code
-    return string.replace(/</g, "&lt;");
-  },
+  // Some (insufficient) sanitization code
+  createHTML: (string) => string.replace(/</g, "&lt;"),
 });
 
 function updateContent() {

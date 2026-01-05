@@ -1,11 +1,11 @@
 ---
-title: Access-Control-Allow-Credentials
+title: Access-Control-Allow-Credentials header
+short-title: Access-Control-Allow-Credentials
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Credentials
 page-type: http-header
 browser-compat: http.headers.Access-Control-Allow-Credentials
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Access-Control-Allow-Credentials`** {{Glossary("response header")}} tells browsers whether the server allows credentials to be included in cross-origin HTTP requests.
 
@@ -29,10 +29,6 @@ When credentials are included:
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

@@ -3,9 +3,8 @@ title: <input type="hidden">
 slug: Web/HTML/Reference/Elements/input/hidden
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_hidden
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`hidden`** let web developers include data that cannot be seen or modified by users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content.
 
@@ -165,7 +164,7 @@ Even though the hidden input cannot be seen at all, its data is still submitted.
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
+      <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
     </tr>
   </tbody>
 </table>

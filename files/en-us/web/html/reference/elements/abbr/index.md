@@ -3,9 +3,8 @@ title: "<abbr>: The Abbreviation element"
 slug: Web/HTML/Reference/Elements/abbr
 page-type: html-element
 browser-compat: html.elements.abbr
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<abbr>`** [HTML](/en-US/docs/Web/HTML) element represents an abbreviation or acronym.
 
@@ -193,7 +192,7 @@ You can use `<abbr>` in tandem with {{HTMLElement("dfn")}} to more formally defi
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

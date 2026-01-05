@@ -1,14 +1,16 @@
 ---
-title: DNT
+title: DNT header
+short-title: DNT
 slug: Web/HTTP/Reference/Headers/DNT
 page-type: http-header
 status:
   - deprecated
   - non-standard
 browser-compat: http.headers.DNT
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Deprecated_header}}{{non-standard_header}}
+{{Deprecated_header}}{{non-standard_header}}
 
 > [!NOTE]
 > The DNT (Do Not Track) specification has been discontinued. See {{domxref("Navigator.doNotTrack")}} for more information.
@@ -61,7 +63,7 @@ navigator.doNotTrack; // "0", "1" or null
 
 ## Specifications
 
-Part of the discontinued [Tracking Preference Expression (DNT)](https://www.w3.org/TR/tracking-dnt/#dnt-header-field) specification.
+Part of the discontinued [Tracking Preference Expression (DNT)](https://w3c.github.io/dnt/drafts/tracking-dnt.html#dnt-header-field) specification.
 
 ## Browser compatibility
 

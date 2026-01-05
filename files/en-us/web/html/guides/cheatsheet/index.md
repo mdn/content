@@ -1,11 +1,10 @@
 ---
 title: HTML cheatsheet for syntax and common tasks
-short-title: HTML cheatsheet
+short-title: Cheatsheet
 slug: Web/HTML/Guides/Cheatsheet
 page-type: guide
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 While using {{Glossary("HTML")}} it can be very handy to have an easy way to remember how to use HTML tags properly and how to apply them. MDN provides you with extended [HTML reference documentation](/en-US/docs/Web/HTML/Reference/Elements) as well as a deep instructional [set of HTML guides](/en-US/docs/Learn_web_development/Core/Structuring_content). However, in many cases we just need some quick hints as we go. That's the whole purpose of the cheat sheet, to give you some quick accurate ready to use code snippets for common usages.
 
@@ -167,7 +166,7 @@ see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
       <td>A line break</td>
       <td>{{HTMLElement("br")}}</td>
       <td id="br-example">
-        <pre class="brush: html">Line 1&#x3C;br>Line 2</pre>
+        <pre class="brush: html">Line 1&#x3C;br />Line 2</pre>
         {{EmbedLiveSample("br-example", 100, 80)}}
       </td>
     </tr>
@@ -177,7 +176,7 @@ see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
       <td id="wbr-example">
         <pre class="brush: html">
 &#x3C;div style="width: 200px">
-  Llanfair&#x3C;wbr>pwllgwyngyll&#x3C;wbr>gogerychwyrndrobwllllantysiliogogogoch.
+  Llanfair&#x3C;wbr />pwllgwyngyll&#x3C;wbr />gogerychwyrndrobwllllantysiliogogogoch.
 &#x3C;/div></pre
         >
         {{EmbedLiveSample("wbr-example", 100, 80)}}
@@ -213,7 +212,7 @@ format&#x3C;/code>.</pre
       <td id="audio-example">
         <pre class="brush: html">
 &#x3C;audio controls>
-  &#x3C;source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+  &#x3C;source src="/shared-assets/audio/t-rex-roar.mp3" type="audio/mpeg" />
 &#x3C;/audio>
         </pre>
         {{EmbedLiveSample("audio-example", 100, 80)}}
@@ -225,8 +224,8 @@ format&#x3C;/code>.</pre
       <td id="video-example">
         <pre class="brush: html">
 &#x3C;video controls width="250"
-  src="https://archive.org/download/ElephantsDream/ed_hd.ogv" >
-  &#x3C;a href="https://archive.org/download/ElephantsDream/ed_hd.ogv">Download OGV video&#x3C;/a>
+  src="/shared-assets/videos/flower.webm" >
+  &#x3C;a href="/shared-assets/videos/flower.webm">Download WebM video&#x3C;/a>
 &#x3C;/video></pre
         >
         {{EmbedLiveSample("video-example", 100, 200)}}
@@ -327,7 +326,7 @@ an extended quotation.&#x3C;/blockquote></pre
       <td>A horizontal rule</td>
       <td>{{HTMLElement("hr")}}</td>
       <td id="hr-example">
-        <pre class="brush: html">before&#x3C;hr>after</pre>
+        <pre class="brush: html">before&#x3C;hr />after</pre>
         {{EmbedLiveSample("hr-example", 100, 100)}}
       </td>
     </tr>

@@ -68,13 +68,11 @@ The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API c
 {{domxref('CSSStyleValue')}} is the base class through which all CSS values are expressed. Subclasses include:
 
 - {{domxref('CSSImageValue')}}
-  - : An interface representing values for properties that take an image, for example [`background-image`](/en-US/docs/Web/CSS/background-image), [`list-style-image`](/en-US/docs/Web/CSS/list-style-image), or [`border-image-source`](/en-US/docs/Web/CSS/border-image-source).
+  - : An interface representing values for properties that take an image, for example {{cssxref("background-image")}}, {{cssxref("list-style-image")}}, or {{cssxref("border-image-source")}}.
 - {{domxref('CSSKeywordValue')}}
   - : An interface which creates an object to represent CSS keywords and other identifiers. When used where a string is expected, it will return the value of `CSSKeyword.value`.
 - {{domxref('CSSMathValue')}}
-
   - : A tree of subclasses representing numeric values that are more complicated than a single value and unit, including:
-
     - {{domxref('CSSMathInvert')}} - represents a CSS {{cssxref("calc","calc()")}} value used as `calc(1 / <value>)`.
     - {{domxref('CSSMathMax')}} - represents the CSS {{cssxref("max","max()")}} function.
     - {{domxref('CSSMathMin')}} - represents the CSS {{cssxref("min","min()")}} function.
@@ -83,9 +81,7 @@ The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API c
     - {{domxref('CSSMathSum')}} - represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
 
 - {{domxref('CSSNumericValue')}}
-
   - : An interface representing operations that all numeric values can perform, including:
-
     - {{domxref('CSSNumericValue.add')}} - Adds supplied numbers to the `CSSNumericValue`.
     - {{domxref('CSSNumericValue.sub')}} - Subtracts supplied numbers to the `CSSNumericValue`.
     - {{domxref('CSSNumericValue.mul')}} - Multiplies supplied numbers to the `CSSNumericValue`.
@@ -101,11 +97,11 @@ The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API c
 - {{domxref('CSSPositionValue')}}
   - : Represents values for properties that take a position, for example object-position.
 - {{domxref('CSSTransformValue')}}
-  - : An interface representing a list of [`transform`](/en-US/docs/Web/CSS/transform) list values. They "contain" one or more {{domxref('CSSTransformComponent')}}s, which represent individual `transform` function values.
+  - : An interface representing a list of {{cssxref("transform")}} list values. They "contain" one or more {{domxref('CSSTransformComponent')}}s, which represent individual `transform` function values.
 - {{domxref('CSSUnitValue')}}
   - : An interface representing numeric values that can be represented as a single unit, or a named number and percentage.
 - {{domxref('CSSUnparsedValue')}}
-  - : Represents property values that reference [custom properties](/en-US/docs/Web/CSS/--*). It consists of a list of string fragments and variable references.
+  - : Represents property values that reference [custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*). It consists of a list of string fragments and variable references.
 
 ## Specifications
 

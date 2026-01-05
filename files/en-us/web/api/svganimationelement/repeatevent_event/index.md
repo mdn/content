@@ -19,10 +19,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("repeatEvent", (event) => {});
+```js-nolint
+addEventListener("repeatEvent", (event) => { })
 
-onrepeat = (event) => {};
+onrepeat = (event) => { }
 ```
 
 ## Event type
@@ -58,7 +58,7 @@ A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 ```css
 ul {
   height: 100px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   overflow-y: scroll;
   padding: 10px 30px;
 }

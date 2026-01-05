@@ -78,7 +78,7 @@ We initialized our working directory as a git working directory earlier on. A qu
 git status
 ```
 
-You should get a status report of what files are being tracked, what files are staged, and so on — all terms that are part of the git grammar. If you get the error `fatal: not a git repository` returned, then the working directory is not a git working directory and you'll need to initialise git using `git init`.
+You should get a status report of what files are being tracked, what files are staged, and so on — all terms that are part of the git grammar. If you get the error `fatal: not a git repository` returned, then the working directory is not a git working directory and you'll need to initialize git using `git init`.
 
 Now we have three tasks ahead of us:
 
@@ -192,9 +192,11 @@ Let's get started.
 2. In your package.json, find your `scripts` member, and update it so that it contains the following test and build commands:
 
    ```json
-   "scripts": {
-     // …
-     "test": "vitest"
+   {
+     "scripts": {
+       // …
+       "test": "vitest"
+     }
    }
    ```
 

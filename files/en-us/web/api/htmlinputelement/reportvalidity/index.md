@@ -123,19 +123,19 @@ reportButton.addEventListener("click", () => {
   }
 });
 
-const validateAge = () => {
-  const validityState_object = ageInput.validity;
-  if (validityState_object.valueMissing) {
+function validateAge() {
+  const validityState = ageInput.validity;
+  if (validityState.valueMissing) {
     ageInput.setCustomValidity("Please set an age (required)");
-  } else if (ageInput.rangeUnderflow) {
+  } else if (validityState.rangeUnderflow) {
     ageInput.setCustomValidity("Your value is too low");
-  } else if (ageInput.rangeOverflow) {
+  } else if (validityState.rangeOverflow) {
     ageInput.setCustomValidity("Your value is too high");
   } else if (enableValidation) {
     // sets to empty string if valid AND enableValidation has been set to true
     ageInput.setCustomValidity("");
   }
-};
+}
 ```
 
 #### Results

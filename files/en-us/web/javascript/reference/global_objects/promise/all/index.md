@@ -1,11 +1,11 @@
 ---
 title: Promise.all()
+short-title: all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.all
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.all()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values. It rejects when any of the input's promises rejects, with this first rejection reason.
 
@@ -79,7 +79,7 @@ const p = Promise.all([1, 2, 3]);
 const p2 = Promise.all([1, 2, 3, Promise.resolve(444)]);
 // One (and the only) input promise is rejected,
 // so the returned promise gets rejected
-const p3 = Promise.all([1, 2, 3, Promise.reject(555)]);
+const p3 = Promise.all([1, 2, 3, Promise.reject(new Error("bad"))]);
 
 // Using setTimeout, we can execute code after the queue is empty
 setTimeout(() => {
@@ -91,8 +91,24 @@ setTimeout(() => {
 // Logs:
 // Promise { <state>: "fulfilled", <value>: Array[3] }
 // Promise { <state>: "fulfilled", <value>: Array[4] }
-// Promise { <state>: "rejected", <reason>: 555 }
+// Promise { <state>: "rejected", <reason>: Error: bad }
 ```
+
+### Destructuring the result
+
+You will find [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) very useful if you are batching together a known number of tasks.
+
+```js
+// With then()
+Promise.all([p1, p2, p3]).then(([a, b, c]) => {
+  console.log(a, b, c); // 3 1337 "foo"
+});
+
+// With await
+const [a, b, c] = await Promise.all([p1, p2, p3]);
+```
+
+Be careful: if the original promises and the result variables' order don't match, you may run into subtle bugs.
 
 ### Asynchronicity or synchronicity of Promise.all
 
@@ -122,7 +138,10 @@ setTimeout(() => {
 The same thing happens if `Promise.all` rejects:
 
 ```js
-const mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
+const mixedPromisesArray = [
+  Promise.resolve(33),
+  Promise.reject(new Error("bad")),
+];
 const p = Promise.all(mixedPromisesArray);
 console.log(p);
 setTimeout(() => {
@@ -133,7 +152,7 @@ setTimeout(() => {
 // Logs:
 // Promise { <state>: "pending" }
 // the queue is now empty
-// Promise { <state>: "rejected", <reason>: 44 }
+// Promise { <state>: "rejected", <reason>: Error: bad }
 ```
 
 `Promise.all` resolves synchronously if and only if the `iterable` passed is empty:

@@ -23,7 +23,6 @@ furigana
 Gannen
 Garay
 geng-zi
-Gondi
 Gunjala
 Gurung
 Halloumi
@@ -33,7 +32,6 @@ Henkan
 Hijri
 Hinckley
 Hiroko
-Hmong
 háček
 Jeonja
 Kayah
@@ -60,7 +58,6 @@ Mundi
 Newa
 nosinė
 Nyiakeng
-Ol
 Onal
 Osmanya
 Oyayubi
@@ -73,6 +70,7 @@ Rohingya
 Romaji
 Saurashtra
 Sharada
+shippo
 Sinhala
 Sora_Sompeng
 Sunuwar
@@ -84,7 +82,6 @@ Tham
 Tirhuta
 Tlayolotl
 Totnes
-Uruk
 Wancho
 Warang
 Zenkaku

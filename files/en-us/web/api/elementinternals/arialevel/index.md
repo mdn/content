@@ -22,7 +22,14 @@ A string containing an integer.
 In this example the value of `ariaLevel` is set to "1".
 
 ```js
-this.internals_.ariaLevel = "1";
+class CustomEl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaLevel = "1";
+  }
+  // …
+}
 ```
 
 ## Specifications

@@ -6,9 +6,8 @@ spec-urls:
   - https://www.rfc-editor.org/rfc/rfc6455
   - https://www.rfc-editor.org/rfc/rfc7230
   - https://www.rfc-editor.org/rfc/rfc7540
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The [HTTP/1.1 protocol](/en-US/docs/Web/HTTP) provides a special mechanism that can be used to upgrade an already established connection to a different protocol, using the {{HTTPHeader("Upgrade")}} header field.
 
@@ -74,7 +73,7 @@ Sec-WebSocket-Extensions: extensions
 - `extensions`
   - : A comma-separated list of extensions to request (or agree to support). These should be selected from the [IANA WebSocket Extension Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#extension-name). Extensions which take parameters do so by using semicolon delineation.
 
-For example:
+For example, this header indicates two custom extensions: `superspeed` and `colormode` (which additionally has the parameter `depth=16`):
 
 ```http
 Sec-WebSocket-Extensions: superspeed, colormode; depth=16

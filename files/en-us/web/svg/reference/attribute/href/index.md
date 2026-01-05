@@ -31,7 +31,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
-- {{SVGElement("discard")}}
 - {{SVGElement("feImage")}}
 - {{SVGElement("image")}}
 - {{SVGElement("linearGradient")}}
@@ -148,32 +147,6 @@ For {{SVGElement("feImage")}}, `href` defines a URL referring to an image resour
   </tbody>
 </table>
 
-### discard
-
-For {{SVGElement("discard")}}, `href` defines a URL referring to an element that will be discarded (removed from the DOM).
-If not specified, the immediate parent element of `<discard>` is discarded.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#url">&#x3C;url></a></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>No</td>
-    </tr>
-  </tbody>
-</table>
-
 ### image
 
 For {{SVGElement("image")}}, `href` defines a URL referring to the image to render.
@@ -242,7 +215,7 @@ For {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}}, `href`
 
 ### mpath
 
-For {{SVGElement("mpath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) which defines the motion path.
+For {{SVGElement("mpath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside) which defines the motion path.
 
 <table class="properties">
   <tbody>
@@ -317,7 +290,7 @@ For {{SVGElement("script")}}, `href` defines a URL referring to an external reso
 
 ### textPath
 
-For {{SVGElement("textPath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) onto which the text will be rendered if no {{SVGAttr("path")}} attribute is provided. On the {{SVGElement("textPath")}} element, the `href` attribute is animatable.
+For {{SVGElement("textPath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside) onto which the text will be rendered if no {{SVGAttr("path")}} attribute is provided. On the {{SVGElement("textPath")}} element, the `href` attribute is animatable.
 
 <table class="properties">
   <tbody>

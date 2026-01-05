@@ -1,11 +1,11 @@
 ---
-title: Forwarded
+title: Forwarded header
+short-title: Forwarded
 slug: Web/HTTP/Reference/Headers/Forwarded
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc7239
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Forwarded`** {{Glossary("request header")}} contains information that may be added by [reverse proxy servers](/en-US/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling) (load balancers, CDNs, etc.) that would otherwise be altered or lost when proxy servers are involved in the path of the request.
 
@@ -33,12 +33,11 @@ The alternative and de-facto standard versions of this header are the {{HTTPHead
 
 ## Syntax
 
-The syntax for the forwarding header from a single proxy is shown below.
-Directives are `key=value` pairs, separated by a semicolon.
-
 ```http
 Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
 ```
+
+Directives are `key=value` pairs, separated by a semicolon.
 
 If there are multiple proxy servers between the client and server, they may each specify their own forwarding information.
 This can be done by adding a new `Forwarded` header to the end of the header block, or by appending the information to the end of the last `Forwarded` header in a comma-separated list.
@@ -46,10 +45,8 @@ This can be done by adding a new `Forwarded` header to the end of the header blo
 ## Directives
 
 - `by` {{optional_inline}}
-
   - : The interface where the request came in to the proxy server.
     The identifier can be:
-
     - an obfuscated identifier (such as "hidden" or "secret").
       This should be treated as the default.
     - an IP address (v4 or v6, optionally with a port, and ipv6 quoted and enclosed in square brackets)

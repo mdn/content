@@ -14,12 +14,14 @@ information is available to sites the browser connects to as well.
 
 ## Syntax
 
-Resource URLs are composed of two parts: a prefix (`resource:`), and a path
-pointing to the resource you want to load:
-
 ```url
 resource://<path>
 ```
+
+- `resource:`
+  - : The scheme of the URL.
+- `<path>`
+  - : A path pointing to the resource you want to load.
 
 An example:
 

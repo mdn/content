@@ -14,22 +14,22 @@ property returns the element immediately following the specified one in its pare
 
 ## Value
 
-A {{domxref("Element")}} object, or `null`.
+An {{domxref("Element")}} object, or `null`.
 
 ## Examples
 
 ```html
 <div id="div-01">Here is div-01</div>
 <div id="div-02">Here is div-02</div>
+```
 
-<script>
-  let el = document.getElementById("div-01").nextElementSibling;
-  console.log("Siblings of div-01:");
-  while (el) {
-    console.log(el.nodeName);
-    el = el.nextElementSibling;
-  }
-</script>
+```js
+let el = document.getElementById("div-01").nextElementSibling;
+console.log("Siblings of div-01:");
+while (el) {
+  console.log(el.nodeName);
+  el = el.nextElementSibling;
+}
 ```
 
 This example outputs the following into the console when it loads:

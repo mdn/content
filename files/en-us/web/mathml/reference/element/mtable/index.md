@@ -13,17 +13,15 @@ The **`<mtable>`** [MathML](/en-US/docs/Web/MathML) element allows you to create
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Reference/Global_attributes). Some browsers may also support the following attributes:
 
 - `align` {{Non-standard_Inline}}
-
   - : Specifies the **vertical** alignment of the table with respect to its environment.
     Possible values are:
-
     - `axis` (default): The vertical center of the table aligns on the environment's axis (typically the minus sign).
     - `baseline`: The vertical center of the table aligns on the environment's baseline.
     - `bottom`: The bottom of the table aligns on the environments baseline.
     - `center`: See baseline.
     - `top`: The top of the table aligns on the environments baseline.
 
-    In addition, values of the `align` attribute can end with a _rownumber_ (e.g., `align="center 3"`). This allows you to align the specified row of the table rather than the whole table. A negative Integer value counts rows from the bottom of the table.
+    In addition, values of the `align` attribute can end with a _row number_ (e.g., `align="center 3"`). This allows you to align the specified row of the table rather than the whole table. A negative Integer value counts rows from the bottom of the table.
 
 - `columnalign` {{Non-standard_Inline}}
   - : Specifies the horizontal alignment of the cells. Multiple values separated by space are allowed and apply to the corresponding columns (e.g., `columnalign="left right center"`). Possible values are: `left`, `center` (default) and `right`.

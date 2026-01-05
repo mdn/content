@@ -4,11 +4,11 @@ short-title: append()
 slug: Web/API/SharedStorage/append
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SharedStorage.append
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`append()`** method of the {{domxref("SharedStorage")}} interface appends a string to the value of an existing key-value pair in the current origin's shared storage.
 
@@ -48,7 +48,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
 ```js
 window.sharedStorage
   .append("integer-list", ",9")
-  .then(console.log("Value appended to integer list"));
+  .then(() => console.log("Value appended to integer list"));
 ```
 
 ## Specifications

@@ -115,14 +115,14 @@ In this example we create an {{jsxref("ArrayBuffer")}} and then clone the object
 
 ```js
 // Create an ArrayBuffer with a size in bytes
-const buffer1 = new ArrayBuffer(16);
+const buffer = new ArrayBuffer(16);
 
 const object1 = {
-  buffer: buffer1,
+  buffer,
 };
 
 // Clone the object containing the buffer, and transfer it
-const object2 = structuredClone(object1, { transfer: [buffer1] });
+const object2 = structuredClone(object1, { transfer: [buffer] });
 
 // Create an array from the cloned buffer
 const int32View2 = new Int32Array(object2.buffer);

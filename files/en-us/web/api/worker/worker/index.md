@@ -8,7 +8,7 @@ browser-compat: api.Worker.Worker
 
 {{APIRef("Web Workers API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
-The **`Worker()`** constructor creates a {{domxref("Worker")}} object that executes the script at the specified URL. This script must obey the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+The **`Worker()`** constructor creates a {{domxref("Worker")}} object that executes the script at the specified URL. This script must obey the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
 > [!NOTE]
 > There is a disagreement among browser manufacturers about whether a data URL is of the same origin or not. Though Firefox 10 and later accept data URLs, that's not the case in all other browsers.
@@ -23,7 +23,6 @@ new Worker(url, options)
 ### Parameters
 
 - `url`
-
   - : A string representing the URL of the script the worker will execute. It must obey the same-origin policy. The URL is resolved relative to the current HTML page's location.
 
     > [!NOTE]
@@ -36,9 +35,7 @@ new Worker(url, options)
     > This way, the path is relative to the current script instead of the current HTML page, which allows the bundler to safely do optimizations like renaming (because otherwise the `worker.js` URL may point to a file not controlled by the bundler, so it cannot make any assumptions).
 
 - `options` {{optional_inline}}
-
   - : An object containing option properties that can be set when creating the object instance. Available properties are as follows:
-
     - `type`
       - : A string specifying the type of worker to create. The value can be `classic` or `module`. If not specified, the default used is `classic`.
     - `credentials`

@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
 
 Media, namely images and video, account for over 70% of the bytes downloaded for the average website. In terms of download performance, eliminating media, and reducing file size is the low-hanging fruit. This article looks at optimizing images and video to improve web performance.
 
@@ -103,7 +103,7 @@ Finally, should you want to include animated images on your page, then know that
 
 #### Serving the optimal size
 
-In image delivery the "one size fits all" approach will not yield the best results, meaning that for smaller screens you would want to serve images with smaller resolution and vice versa for larger screens. On top of that, you'd also want to serve higher resolution images to those devices that boast a high DPI screen (e.g., "Retina"). So apart from creating plenty of intermediate image variants you also need a way to serve the right file to the right browser. That's where you would need to upgrade your `<picture>` and `<source>` elements with [media](/en-US/docs/Web/HTML/Reference/Elements/source#media) and/or [sizes](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) attributes. A detailed article on how to combine all of these attributes can be found [here](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/).
+In image delivery the "one size fits all" approach will not yield the best results, meaning that for smaller screens you would want to serve images with smaller resolution and vice versa for larger screens. On top of that, you'd also want to serve higher resolution images to those devices that boast a high DPI screen (e.g., "Retina"). So apart from creating plenty of intermediate image variants you also need a way to serve the right file to the right browser. That's where you would need to upgrade your `<picture>` and `<source>` elements with [`media`](/en-US/docs/Web/HTML/Reference/Elements/source#media) and/or [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) attributes. [Responsive images done right: A guide to `<picture>` and `srcset`](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/) explains in detail how to combine all of these attributes.
 
 Two interesting effects to keep in mind regarding high dpi screens is that:
 
@@ -122,7 +122,7 @@ Secondly, with the adoption of Priority Hints, you can control the priority furt
 
 As images are loaded asynchronously and continue to load after the first paint, if their dimensions aren't defined before load, they can cause reflows to the page content. For example, when text gets pushed down the page by images loading. For this reason, it's important to set `width` and `height` attributes so that the browser can reserve space for them in the layout.
 
-When the `width` and `height` attributes of an image are included on an HTML {{htmlelement("img")}} element, the [aspect ratio of the image](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio#adjusting_aspect_ratios_of_replaced_elements) can be calculated by the browser prior to the image being loaded. This {{glossary("aspect ratio")}} is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
+When the `width` and `height` attributes of an image are included on an HTML {{htmlelement("img")}} element, the [aspect ratio of the image](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios#adjusting_aspect_ratios_of_replaced_elements) can be calculated by the browser prior to the image being loaded. This {{glossary("aspect ratio")}} is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
 
 Browsers begin rendering content as HTML is parsed, often before all assets, including images, are downloaded. Including dimensions enable browsers to reserve a correctly-sized placeholder box for each image to appear in when the images are loaded when first rendering the page.
 
@@ -130,7 +130,7 @@ Browsers begin rendering content as HTML is parsed, often before all assets, inc
 
 Without the `width` and `height` attributes, no placeholder space is created, creating a noticeable {{glossary('jank')}}, or layout shift, in the page when the image loads after the page is rendered. Page reflow and repaints are performance and usability issues.
 
-The {{glossary("CLS")}} metric measures jank on page load, or how much visible content shifts in the viewport and by how much. The main culprits of bad CLS are replaced elements without declared dimensions that reflow when the asset loads, including images, ad, embeds, and iframes without an size or {{cssxref("aspect-ratio")}} and web fonts.
+The {{glossary("CLS")}} metric measures jank on page load, or how much visible content shifts in the viewport and by how much. The main culprits of bad CLS are replaced elements without declared dimensions that reflow when the asset loads, including images, ad, embeds, and iframes without a size or {{cssxref("aspect-ratio")}} and web fonts.
 
 In responsive designs, when a container is narrower than an image, the following CSS is generally used to keep images from breaking out of their containers:
 
@@ -157,4 +157,4 @@ For any background images, it's important you set a `background-color` value so 
 
 In this section, we took a look at image optimization. You now have a general understanding of how to optimize half of the average website's average bandwidth total. This is just one of the types of media consuming users' bandwidth and slowing down page load. Let's take a look at video optimization, tackling the next 20% of bandwidth consumption.
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}

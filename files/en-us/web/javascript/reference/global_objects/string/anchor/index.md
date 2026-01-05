@@ -1,13 +1,15 @@
 ---
 title: String.prototype.anchor()
+short-title: anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
 page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.String.anchor
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`anchor()`** method of {{jsxref("String")}} values creates a string that embeds this string in an {{HTMLElement("a")}} element with a name (`<a name="...">str</a>`).
 

@@ -1,12 +1,12 @@
 ---
-title: X-Powered-By
+title: X-Powered-By header
+short-title: X-Powered-By
 slug: Web/HTTP/Reference/Headers/X-Powered-By
 page-type: http-header
 status:
   - non-standard
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`X-Powered-By`** {{Glossary("response header")}} is a non-standard header for identifying the application or framework that generated the response.
 

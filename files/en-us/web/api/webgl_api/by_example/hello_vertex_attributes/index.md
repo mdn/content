@@ -69,67 +69,63 @@ button {
 </script>
 ```
 
-```js hidden
-;(() => {
-  "use strict";
-```
-
 ```js
-window.addEventListener("load", setupWebGL, false);
-let gl;
-let program;
+const canvas = document.querySelector("canvas");
 
-function setupWebGL(evt) {
-  window.removeEventListener(evt.type, setupWebGL, false);
-  if (!(gl = getRenderingContext())) return;
+const gl = getRenderingContext();
+let source = document.querySelector("#vertex-shader").innerHTML;
+const vertexShader = gl.createShader(gl.VERTEX_SHADER);
+gl.shaderSource(vertexShader, source);
+gl.compileShader(vertexShader);
 
-  let source = document.querySelector("#vertex-shader").innerHTML;
-  const vertexShader = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vertexShader, source);
-  gl.compileShader(vertexShader);
-  source = document.querySelector("#fragment-shader").innerHTML;
-  const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fragmentShader, source);
-  gl.compileShader(fragmentShader);
-  program = gl.createProgram();
-  gl.attachShader(program, vertexShader);
-  gl.attachShader(program, fragmentShader);
-  gl.linkProgram(program);
-  gl.detachShader(program, vertexShader);
-  gl.detachShader(program, fragmentShader);
-  gl.deleteShader(vertexShader);
-  gl.deleteShader(fragmentShader);
-  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-    const linkErrLog = gl.getProgramInfoLog(program);
-    cleanup();
-    document.querySelector("p").textContent =
-      `Shader program did not link successfully. Error log: ${linkErrLog}`;
-    return;
-  }
-
-  initializeAttributes();
-  gl.useProgram(program);
-  gl.drawArrays(gl.POINTS, 0, 1);
-
-  document.querySelector("canvas").addEventListener(
-    "click",
-    (evt) => {
-      const clickXRelativeToCanvas = evt.pageX - evt.target.offsetLeft;
-      const clickXinWebGLCoords =
-        (2.0 * (clickXRelativeToCanvas - gl.drawingBufferWidth / 2)) /
-        gl.drawingBufferWidth;
-      gl.bufferData(
-        gl.ARRAY_BUFFER,
-        new Float32Array([clickXinWebGLCoords]),
-        gl.STATIC_DRAW,
-      );
-      gl.drawArrays(gl.POINTS, 0, 1);
-    },
-    false,
-  );
+source = document.querySelector("#fragment-shader").innerHTML;
+const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+gl.shaderSource(fragmentShader, source);
+gl.compileShader(fragmentShader);
+const program = gl.createProgram();
+gl.attachShader(program, vertexShader);
+gl.attachShader(program, fragmentShader);
+gl.linkProgram(program);
+gl.detachShader(program, vertexShader);
+gl.detachShader(program, fragmentShader);
+gl.deleteShader(vertexShader);
+gl.deleteShader(fragmentShader);
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+  const linkErrLog = gl.getProgramInfoLog(program);
+  cleanup();
+  document.querySelector("p").textContent =
+    `Shader program did not link successfully. Error log: ${linkErrLog}`;
+  throw new Error("Program failed to link");
 }
 
 let buffer;
+initializeAttributes();
+gl.useProgram(program);
+gl.drawArrays(gl.POINTS, 0, 1);
+
+canvas.addEventListener("click", (evt) => {
+  const clickXRelativeToCanvas = evt.pageX - evt.target.offsetLeft;
+  const clickXinWebGLCoords =
+    (2.0 * (clickXRelativeToCanvas - gl.drawingBufferWidth / 2)) /
+    gl.drawingBufferWidth;
+  gl.bufferData(
+    gl.ARRAY_BUFFER,
+    new Float32Array([clickXinWebGLCoords]),
+    gl.STATIC_DRAW,
+  );
+  gl.drawArrays(gl.POINTS, 0, 1);
+});
+
+function getRenderingContext() {
+  canvas.width = canvas.clientWidth;
+  canvas.height = canvas.clientHeight;
+  const gl = canvas.getContext("webgl");
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.clearColor(0.0, 0.0, 0.0, 1.0);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+  return gl;
+}
+
 function initializeAttributes() {
   gl.enableVertexAttribArray(0);
   buffer = gl.createBuffer();
@@ -138,7 +134,7 @@ function initializeAttributes() {
   gl.vertexAttribPointer(0, 1, gl.FLOAT, false, 0, 0);
 }
 
-window.addEventListener("beforeunload", cleanup, true);
+window.addEventListener("beforeunload", cleanup);
 function cleanup() {
   gl.useProgram(null);
   if (buffer) {
@@ -148,30 +144,6 @@ function cleanup() {
     gl.deleteProgram(program);
   }
 }
-```
-
-```js hidden
-function getRenderingContext() {
-  const canvas = document.querySelector("canvas");
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  const gl =
-    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    const paragraph = document.querySelector("p");
-    paragraph.textContent =
-      "Failed. Your browser or device may not support WebGL.";
-    return null;
-  }
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  return gl;
-}
-```
-
-```js hidden
-})();
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-vertex-attributes).

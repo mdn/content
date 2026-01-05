@@ -3,12 +3,10 @@ title: "NavigateEvent: signal property"
 short-title: signal
 slug: Web/API/NavigateEvent/signal
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigateEvent.signal
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`signal`** read-only property of the
 {{domxref("NavigateEvent")}} interface returns an {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
@@ -25,11 +23,11 @@ The general idea here is that the `signal` property can be passed to an associat
 navigation.addEventListener("navigate", (event) => {
   event.intercept({
     async handler() {
-      // ...
+      // …
 
       await fetch(`/img/some-image.jpg`, { signal: event.signal });
 
-      // ...
+      // …
     },
   });
 });
@@ -50,4 +48,3 @@ navigation.addEventListener("navigate", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

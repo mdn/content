@@ -45,7 +45,7 @@ immediately start performing operations on it again. For example, consider this 
 
 ```js
 sourceBuffer.addEventListener("updateend", (ev) => {
-  // ...
+  // …
 });
 
 sourceBuffer.appendBuffer(buf);

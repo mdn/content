@@ -3,9 +3,8 @@ title: "<colgroup>: The Table Column Group element"
 slug: Web/HTML/Reference/Elements/colgroup
 page-type: html-element
 browser-compat: html.elements.colgroup
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<colgroup>`** [HTML](/en-US/docs/Web/HTML) element defines a group of columns within a table.
 
@@ -21,20 +20,24 @@ The **`<colgroup>`** [HTML](/en-US/docs/Web/HTML) element defines a group of col
     <col span="2" class="batman" />
     <col span="2" class="flash" />
   </colgroup>
-  <tr>
-    <td></td>
-    <th scope="col">Batman</th>
-    <th scope="col">Robin</th>
-    <th scope="col">The Flash</th>
-    <th scope="col">Kid Flash</th>
-  </tr>
-  <tr>
-    <th scope="row">Skill</th>
-    <td>Smarts, strong</td>
-    <td>Dex, acrobat</td>
-    <td>Super speed</td>
-    <td>Super speed</td>
-  </tr>
+  <thead>
+    <tr>
+      <td></td>
+      <th scope="col">Batman</th>
+      <th scope="col">Robin</th>
+      <th scope="col">The Flash</th>
+      <th scope="col">Kid Flash</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Skill</th>
+      <td>Smarts, strong</td>
+      <td>Dex, acrobat</td>
+      <td>Super speed</td>
+      <td>Super speed</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -76,7 +79,6 @@ td {
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `span`
-
   - : Specifies the number of consecutive columns the `<colgroup>` element spans. The value must be a positive integer greater than zero. If not present, its default value is `1`.
 
     > [!NOTE]
@@ -87,7 +89,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
 - `align` {{deprecated_inline}}
-
   - : Specifies the horizontal alignment of each column group cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and the offset defined by the [`charoff`](#charoff) attribute. Note that the descendant {{HTMLElement("col")}} elements may override this value using their own [`align`](/en-US/docs/Web/HTML/Reference/Elements/col#align) attribute. Use the {{cssxref("text-align")}} CSS property on the {{htmlelement("td")}} and {{htmlelement("th")}} elements instead, as this attribute is deprecated.
 
     > [!NOTE]
@@ -98,30 +99,25 @@ The following attributes are deprecated and should not be used. They are documen
     > If the table does use a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
 - `bgcolor` {{deprecated_inline}}
-
-  - : Defines the background color of each column group cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of each column group cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/Reference/Values/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/Reference/Values/named-color). Other CSS {{cssxref("&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
-
   - : Does nothing. It was originally intended to specify the alignment of the content to a character of each column group cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored, though it will still be used as the default value for the [`align`](/en-US/docs/Web/HTML/Reference/Elements/col#align) of the {{HTMLElement("col")}} elements which are members of this column group.
 
 - `charoff` {{deprecated_inline}}
-
   - : Does nothing. It was originally intended to specify the number of characters to offset the column group cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `valign` {{deprecated_inline}}
-
   - : Specifies the vertical alignment of each column group cell. The possible {{Glossary("enumerated")}} values are `baseline`, `bottom`, `middle`, and `top`. Note that the descendant {{HTMLElement("col")}} elements may override this value using their own [`valign`](/en-US/docs/Web/HTML/Reference/Elements/col#valign) attribute. Use the {{cssxref("vertical-align")}} CSS property on the {{htmlelement("td")}} and {{htmlelement("th")}} elements instead, as this attribute is deprecated.
 
     > [!NOTE]
     > Setting `vertical-align` on the `<colgroup>` element has no effect as {{HTMLElement("td")}} and {{HTMLElement("th")}} elements are not descendants of the `<colgroup>` element, and therefore they do not inherit from it.
     >
-    > If the table does not use a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute, use the [`td:nth-of-type()`](/en-US/docs/Web/CSS/:nth-of-type) CSS selector per column, e.g., `td:nth-of-type(2) { vertical-align: middle; }` to center the second column cells vertically.
+    > If the table does not use a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute, use the [`td:nth-of-type()`](/en-US/docs/Web/CSS/Reference/Selectors/:nth-of-type) CSS selector per column, e.g., `td:nth-of-type(2) { vertical-align: middle; }` to center the second column cells vertically.
     >
     > If the table does use a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
 - `width` {{deprecated_inline}}
-
   - : Specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute can take the special form `0*`, which means that the width of each column spanned should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` can also be used. Note that the descendant {{HTMLElement("col")}} elements may override this value using their own [`width`](/en-US/docs/Web/HTML/Reference/Elements/col#width) attribute. Use the {{cssxref("width")}} CSS property instead, as this attribute is deprecated.
 
 ## Usage notes
@@ -150,33 +146,37 @@ Two `<colgroup>` elements are used to structure a basic table by creating column
   </caption>
   <colgroup span="5" class="weekdays"></colgroup>
   <colgroup span="2" class="weekend"></colgroup>
-  <tr>
-    <th>Mon</th>
-    <th>Tue</th>
-    <th>Wed</th>
-    <th>Thu</th>
-    <th>Fri</th>
-    <th>Sat</th>
-    <th>Sun</th>
-  </tr>
-  <tr>
-    <td>Clean room</td>
-    <td>Football training</td>
-    <td>Dance Course</td>
-    <td>History Class</td>
-    <td>Buy drinks</td>
-    <td>Study hour</td>
-    <td>Free time</td>
-  </tr>
-  <tr>
-    <td>Yoga</td>
-    <td>Chess Club</td>
-    <td>Meet friends</td>
-    <td>Gymnastics</td>
-    <td>Birthday party</td>
-    <td>Fishing trip</td>
-    <td>Free time</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th>Sat</th>
+      <th>Sun</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Clean room</td>
+      <td>Football training</td>
+      <td>Dance Course</td>
+      <td>History Class</td>
+      <td>Buy drinks</td>
+      <td>Study hour</td>
+      <td>Free time</td>
+    </tr>
+    <tr>
+      <td>Yoga</td>
+      <td>Chess Club</td>
+      <td>Meet friends</td>
+      <td>Gymnastics</td>
+      <td>Birthday party</td>
+      <td>Fishing trip</td>
+      <td>Free time</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -267,7 +267,7 @@ table {
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

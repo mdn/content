@@ -3,9 +3,8 @@ title: scripting.unregisterContentScripts()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/unregisterContentScripts
 page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.unregisterContentScripts
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Unregisters one or more content scripts.
 

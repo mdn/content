@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
 
 This article gets you started with HTML tables, covering the very basics such as rows, cells, headings, making cells span multiple columns and rows, and how to group together all the cells in a column for styling purposes.
 
@@ -30,6 +30,7 @@ This article gets you started with HTML tables, covering the very basics such as
           <li>Basic table syntax — <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, and <code>&lt;td&gt;</code>.</li>
           <li>Defining table headers with <code>&lt;th&gt;</code>.</li>
           <li>Spanning multiple columns and rows with <code>colspan</code> and <code>rowspan</code>.</li>
+          <li>Grouping columns with <code>&lt;colgroup&gt;</code> and <code>&lt;col&gt;</code>.</li>
         </ul>
       </td>
     </tr>
@@ -220,7 +221,7 @@ When implemented correctly, HTML tables are handled well by accessibility tools 
 
 ### Table styling
 
-You can also have a [look at the live example](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) on GitHub! One thing you'll notice is that the table does look a bit more readable there — this is because the table you see above on this page has minimal styling, whereas the GitHub version has more significant CSS applied.
+You can also have a [look at the live planets data example](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) on GitHub! One thing you'll notice is that the table does look a bit more readable there — this is because the table you see above on this page has minimal styling, whereas the GitHub version has more significant CSS applied.
 
 Be under no illusion; for tables to be effective on the web, you need to provide some styling information with [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), as well as good solid structure with HTML. In this lesson we are focusing on the HTML part; you'll find out about styling tables later on, in our [Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables) lesson.
 
@@ -228,7 +229,7 @@ We won't focus on CSS in this module, but we have provided a minimal CSS stylesh
 
 ### When should you avoid HTML tables?
 
-HTML tables should be used for tabular data (information that's easy to work with in rows and columns) — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, for example one row to contain a page header, a row to contain each content column, one row to contain the footer, etc. This technique was used because CSS support across browsers used to be a lot more limited. Modern browsers have solid CSS support so table-based layouts are now extremely rare, but you might still see them in some corners of the web.
+HTML tables should be used for tabular data (information that's easy to work with in rows and columns) — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, for example one row to contain a page header, a row to contain each content column, one row to contain the footer, etc. This technique was used in the past because CSS support across browsers used to be a lot more limited. Modern browsers have solid CSS support so table-based layouts are no longer needed. Table layouts are now extremely rare, but you might still see them in some corners of the web.
 
 In short, using tables for layout rather than [CSS layout techniques](/en-US/docs/Learn_web_development/Core/CSS_layout) is a bad idea. The main reasons are as follows:
 
@@ -236,13 +237,13 @@ In short, using tables for layout rather than [CSS layout techniques](/en-US/doc
 2. **Tables produce tag soup**: As mentioned above, table layouts generally involve more complex markup structures than proper layout techniques. This can result in the code being harder to write, maintain, and debug.
 3. **Tables are not automatically responsive**: When you use proper layout containers (such as {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}}, or {{htmlelement("div")}}), their width defaults to 100% of their parent element. Tables on the other hand are sized according to their content by default, so extra measures are needed to get table layout styling to effectively work across a variety of devices.
 
-## Active learning: Creating your first table
+## Creating your first table
 
-We've talked table theory enough, so, let's dive into a practical example and build up a simple table.
+We've talked table theory enough, so, let's dive into a practical example and get you to build up a simple table.
 
-1. First of all, make a local copy of [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) in a new directory on your local machine.
+1. First of all, make a copy of [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) in a new directory on your local machine. The HTML template already contains a `<link>` element to apply the CSS to the HTML, so you don't need to worry about that.
 2. The content of every table is enclosed by these two tags: **[`<table></table>`](/en-US/docs/Web/HTML/Reference/Elements/table)**. Add these inside the body of your HTML.
-3. The smallest container inside a table is a table cell, which is created by a **[`<td>`](/en-US/docs/Web/HTML/Reference/Elements/td)** element ('td' stands for 'table data'). Add the following inside your table tags:
+3. The smallest container inside a table is a table cell, which is created with a **[`<td>`](/en-US/docs/Web/HTML/Reference/Elements/td)** element ("td" stands for "table data"). Add the following inside your table tags:
 
    ```html
    <td>Hi, I'm your first cell.</td>
@@ -274,11 +275,12 @@ To stop this row from growing and start placing subsequent cells on a second row
 
 2. Now you've made one row, have a go at making one or two more — each row needs to be wrapped in an additional `<tr>` element, with each cell contained in a `<td>`.
 
-### Result
+<details>
+<summary>Click here to show the solution</summary>
 
-This should result in a table that looks something like the following:
+Your finished HTML should look something like this:
 
-```html hidden
+```html
 <table>
   <tr>
     <td>Hi, I'm your first cell.</td>
@@ -296,27 +298,15 @@ This should result in a table that looks something like the following:
 </table>
 ```
 
-```css hidden
-table {
-  border-collapse: collapse;
-}
-td,
-th {
-  border: 1px solid black;
-  padding: 10px 20px;
-}
-```
+You can also find this code on GitHub at [simple-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/simple-table.html) ([see it running live also](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
-{{EmbedLiveSample("Result")}}
-
-> [!NOTE]
-> You can also find this on GitHub as [simple-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/simple-table.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+</details>
 
 ## Adding headers with \<th> elements
 
 Now let's turn our attention to table headers — special cells that go at the start of a row or column and define the type of data that row or column contains (as an example, see the "Person" and "Age" cells in the first example shown in this article). To illustrate why they are useful, have a look at the following table example. First the source code:
 
-```html
+```html live-sample___table-headers
 <table>
   <tr>
     <td>&nbsp;</td>
@@ -356,7 +346,7 @@ Now let's turn our attention to table headers — special cells that go at the s
 </table>
 ```
 
-```css hidden
+```css hidden live-sample___table-headers
 table {
   border-collapse: collapse;
 }
@@ -369,20 +359,66 @@ th {
 
 Now the actual rendered table:
 
-{{EmbedLiveSample("Adding_headers_with_th_elements", "", "250")}}
+{{EmbedLiveSample("table-headers", "", "250")}}
 
 The problem here is that, while you can kind of make out what's going on, it is not as easy to cross reference data as it could be. If the column and row headings stood out in some way, it would be much better.
 
-### Active learning: table headers
+### Adding headers to the dogs table
 
-Let's have a go at improving this table.
+Now we'd like you to have a go at improving the dogs table example by adding some headers.
 
-1. First, make a local copy of our [dogs-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) files in a new directory on your local machine. The HTML contains the same Dogs example as you saw above.
-2. To recognize the table headers as headers, both visually and semantically, you can use the **[`<th>`](/en-US/docs/Web/HTML/Reference/Elements/th)** element ('th' stands for 'table header'). This works in exactly the same way as a `<td>`, except that it denotes a header, not a normal cell. Go into your HTML, and change all the `<td>` elements surrounding the table headers into `<th>` elements.
+1. First, make a local copy of our [dogs-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) files in a new directory on your local machine.
+2. To recognize the table headers as headers, both visually and semantically, you can use the **[`<th>`](/en-US/docs/Web/HTML/Reference/Elements/th)** element ("th" stands for "table header"). This works in exactly the same way as a `<td>`, except that it denotes a header, not a normal cell. Go into your HTML, and change all the `<td>` elements surrounding the table headers into `<th>` elements.
 3. Save your HTML and load it in a browser, and you should see that the headers now look like headers.
 
-> [!NOTE]
-> You can find our finished example at [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table-fixed.html) on GitHub ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished HTML should look something like this:
+
+```html
+<table>
+  <tr>
+    <td>&nbsp;</td>
+    <th>Knocky</th>
+    <th>Flor</th>
+    <th>Ella</th>
+    <th>Juan</th>
+  </tr>
+  <tr>
+    <th>Breed</th>
+    <td>Jack Russell</td>
+    <td>Poodle</td>
+    <td>Streetdog</td>
+    <td>Cocker Spaniel</td>
+  </tr>
+  <tr>
+    <th>Age</th>
+    <td>16</td>
+    <td>9</td>
+    <td>10</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <th>Owner</th>
+    <td>Mother-in-law</td>
+    <td>Me</td>
+    <td>Me</td>
+    <td>Sister-in-law</td>
+  </tr>
+  <tr>
+    <th>Eating Habits</th>
+    <td>Eats everyone's leftovers</td>
+    <td>Nibbles at food</td>
+    <td>Hearty eater</td>
+    <td>Will eat till he explodes</td>
+  </tr>
+</table>
+```
+
+You can also find this code on GitHub at [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table-fixed.html) ([see it running live also](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+
+</details>
 
 ### Why are headers useful?
 
@@ -399,7 +435,7 @@ Sometimes we want cells to span multiple rows or columns. Take the following sim
 
 The initial markup looks like this:
 
-```html
+```html live-sample___multiple-rows-columns
 <table>
   <tr>
     <th>Animals</th>
@@ -427,7 +463,7 @@ The initial markup looks like this:
 </table>
 ```
 
-```css hidden
+```css hidden live-sample___multiple-rows-columns
 table {
   border-collapse: collapse;
 }
@@ -440,7 +476,9 @@ th {
 
 But the output doesn't give us quite what we want:
 
-{{EmbedLiveSample("Allowing_cells_to_span_multiple_rows_and_columns", "", "350")}}
+{{EmbedLiveSample("multiple-rows-columns", "", "350")}}
+
+### Fixing the layout with `rowspan` and `colspan`
 
 We need a way to get "Animals", "Hippopotamus", and "Crocodile" to span across two columns, and "Horse" and "Chicken" to span downwards over two rows. Fortunately, table headers and cells have the `colspan` and `rowspan` attributes, which allow us to do just those things. Both accept a unitless number value, which equals the number of rows or columns you want spanned. For example, `colspan="2"` makes a cell span two columns.
 
@@ -451,11 +489,204 @@ Let's use `colspan` and `rowspan` to improve this table.
 3. Finally, use `rowspan` to make "Horse" and "Chicken" span across two rows.
 4. Save and open your code in a browser to see the improvement.
 
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished HTML should look something like this:
+
+```html
+<table>
+  <tr>
+    <th colspan="2">Animals</th>
+  </tr>
+  <tr>
+    <th colspan="2">Hippopotamus</th>
+  </tr>
+  <tr>
+    <th rowspan="2">Horse</th>
+    <td>Mare</td>
+  </tr>
+  <tr>
+    <td>Stallion</td>
+  </tr>
+  <tr>
+    <th colspan="2">Crocodile</th>
+  </tr>
+  <tr>
+    <th rowspan="2">Chicken</th>
+    <td>Hen</td>
+  </tr>
+  <tr>
+    <td>Rooster</td>
+  </tr>
+</table>
+```
+
+You can also find this code on GitHub at [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table-fixed.html) ([see it running live also](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+
+</details>
+
+## Grouping columns with `<colgroup>` and `<col>`
+
+There is a way to target entire table columns as a single entity, for example when applying styles to a table (which you'll learn about later, in [Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)). As you get more experience with creating HTML tables, you'll find that applying a background color, for example, to every cell in a single column is harder than you might think. The {{htmlelement("colgroup")}} and {{htmlelement("col")}} elements provide a solution to this problem.
+
+The `<colgroup>` element should be included as a child of the table, just after the opening `<table>` element. Inside the `<colgroup>` element you can include one or more `<col>` elements, which represent groups of columns. The `<col>` element can include a `span` attribute that indicates the number of columns in that group. It can also include global attributes such as `style` (if you want to target the group with inline styles) or `class` (if you want to target that group with CSS or JavaScript using a class name). The `<col>` elements represent the table columns from the start of the columns, for example from the left hand side of a table written in a left-to-right language such as English.
+
+Let's have a look at an example to show what we mean. The following table shows a school timetable:
+
+```html live-sample___colgroup-col
+<h1>School language timetable</h1>
+
+<table>
+  <colgroup>
+    <col span="2" />
+    <col class="column-background" />
+    <col class="column-fixed-width" />
+    <col class="column-background" />
+    <col class="column-background-border" />
+    <col span="2" class="column-fixed-width" />
+  </colgroup>
+  <tr>
+    <td>&nbsp;</td>
+    <th>Mon</th>
+    <th>Tues</th>
+    <th>Wed</th>
+    <th>Thurs</th>
+    <th>Fri</th>
+    <th>Sat</th>
+    <th>Sun</th>
+  </tr>
+  <tr>
+    <th>1st period</th>
+    <td>English</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>German</td>
+    <td>Dutch</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th>2nd period</th>
+    <td>English</td>
+    <td>English</td>
+    <td>&nbsp;</td>
+    <td>German</td>
+    <td>Dutch</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th>3rd period</th>
+    <td>&nbsp;</td>
+    <td>German</td>
+    <td>&nbsp;</td>
+    <td>German</td>
+    <td>Dutch</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th>4th period</th>
+    <td>&nbsp;</td>
+    <td>English</td>
+    <td>&nbsp;</td>
+    <td>English</td>
+    <td>Dutch</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+```
+
+In this table, there are eight columns. Let's look at the `<colgroup>` and `<col>` structure more closely to show how it affects them:
+
+```html
+<colgroup>
+  <col span="2" />
+  <col class="column-background" />
+  <col class="column-fixed-width" />
+  <col class="column-background" />
+  <col class="column-background-border" />
+  <col span="2" class="column-fixed-width" />
+</colgroup>
+```
+
+Looking at the `<col>` elements:
+
+- The first one has `span="2"` set on it, so it represents the first _and_ second columns from the left of the table. We are not targeting these columns with any styles, but we need to include it so that we can target subsequent columns.
+- The second and fourth ones don't have a `span` attribute set, so they will represent a single column — the third and fifth columns in these cases. They have a `class` of `column-background` applied.
+- The third one doesn't have a `span` attribute set, and has a `class` of `column-fixed-width` applied. It represents the fourth column.
+- The fifth one doesn't have a `span` attribute set, and has a `class` of `column-background-border` applied. It represents the sixth column.
+- The sixth one has `span="2"` set on it, and has a `class` of `column-fixed-width` applied. It represents the seventh and eighth columns.
+
+We have hidden most of the CSS for this example, but we are showing you the rules that apply styles to the `<col>` elements with the `column-background`, `column-fixed-width`, and `column-background-border` classes set on them:
+
+```css hidden live-sample___colgroup-col
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 20px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200 200 200);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td,
+th {
+  border: 1px solid rgb(190 190 190);
+  padding: 10px 20px;
+}
+
+td {
+  text-align: center;
+}
+```
+
+```css live-sample___colgroup-col
+.column-background {
+  background-color: #97db9a;
+}
+
+.column-fixed-width {
+  width: 40px;
+}
+
+.column-background-border {
+  background-color: #dcc48e;
+  border: 4px solid #c1437a;
+}
+```
+
+- The `<col>` elements with a `column-background` class have a solid background color set on them.
+- The `<col>` elements with a `column-fixed-width` class have a narrow fixed width set on them.
+- The `<col>` element with a `column-background-border` class has a solid background color and a thick border set on it.
+
+You don't need to worry about how the CSS works for now; you'll learn about it in detail later on in our [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module.
+
+Let's look at how the above code renders:
+
+{{embedlivesample("colgroup-col", "100%", 400)}}
+
+Notice how the different columns receive the styles specified in the classes.
+
 > [!NOTE]
-> You can find our finished example at [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table-fixed.html) on GitHub ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> Even though `<colgroup>` and `<col>` mainly facilitate styling, they are an HTML feature, therefore we've covered them here rather than in our CSS modules. Is it also fair to say that they are a _limited_ feature — as shown on the [`<colgroup>` reference page](/en-US/docs/Web/HTML/Reference/Elements/colgroup#usage_notes), only a limited subset of styles can be applied to a `<col>` element, and most of the other settings that were historically available have been deprecated (removed, or flagged for removal).
+
+## Interactive recap of table concepts
+
+The following embedded content from Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides an interactive lesson summarizing most of the techniques covered in this article. Check it out for a recap of the key points and some extra practice.
+
+<mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~03s" scrimtitle="HTML tables"></scrim-inline>
 
 ## Summary
 
 That wraps up the basics of HTML tables. In the next article, we'll look at some further features that can be used to make HTML tables more accessible to visually impaired people.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}

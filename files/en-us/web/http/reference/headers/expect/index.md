@@ -1,11 +1,11 @@
 ---
-title: Expect
+title: Expect header
+short-title: Expect
 slug: Web/HTTP/Reference/Headers/Expect
 page-type: http-header
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#field.expect
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Expect`** {{Glossary("request header")}} indicates that there are expectations that need to be met by the server in order to handle the complete request successfully.
 

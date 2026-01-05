@@ -5,7 +5,8 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-> **Note:** _Remove this whole explanatory note before publishing._
+> [!NOTE]
+> _Remove this whole explanatory note before publishing._
 >
 > ---
 >
@@ -39,7 +40,6 @@ sidebar: mdnsidebar
 > - **status**
 >   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See [How feature statuses are added or updated](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
->
 >   - : Replace the placeholder value `path.to.feature.NameOfTheEvent_event` with the query string for the event in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
 >     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >
@@ -61,17 +61,16 @@ sidebar: mdnsidebar
 >
 > You should update or delete the following macros according to the advice below:
 >
-> - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+> - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 >   If it isn't, then you can remove the macro call.
->   If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) page.
-> - `\{{AvailableInWorkers}}` — this generates a **Available In Workers** note that indicates that the technology is available in [worker context](/en-US/docs/Web/API/Web_Workers_API).
+>   If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts) page.
+> - `\{{AvailableInWorkers}}` — this generates an **Available In Workers** note that indicates that the technology is available in [worker context](/en-US/docs/Web/API/Web_Workers_API).
 >   If it is only available in window context, then you can remove the macro call.
->   If it is also available or only available in worker context, then you may also need to passing an parameter to it due to its availability (see [\\{{AvailableInWorkers}} macros source code](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) for all available values), you may also need to fill in an entry for it in the [Web APIs available in workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#web_apis_available_in_workers) page.
+>   If it is also available or only available in worker context, then you may also need to passing a parameter to it due to its availability (see [\\{{AvailableInWorkers}} macros source code](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) for all available values), you may also need to fill in an entry for it in the [Web APIs available in workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#web_apis_available_in_workers) page.
 > - `\{{APIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page.
 >   For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API.
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
 >   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide for information on how to do this.
-> - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
 > Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
 >
@@ -85,7 +84,7 @@ sidebar: mdnsidebar
 > For example, [Element: wheel event](/en-US/docs/Web/API/Element/wheel_event) is linked from [`Element` Events](/en-US/docs/Web/API/Element#events).
 >
 > If the parent object does not have an _Events_ section, then add one.
-> If this is a new "class" of event, then you should add a link to this section of the parent from the [Event reference](/en-US/docs/Web/Events).
+> If this is a new "class" of event, then you should add a link to this section of the parent from the [DOM events](/en-US/docs/Web/API/Document_Object_Model/Events#event_index) guide.
 >
 > _Remember to remove this whole explanatory note before publishing._
 
@@ -99,10 +98,10 @@ You could copy most of this from the property's summary on the corresponding API
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("NameOfTheEvent", (event) => {});
+```js-nolint
+addEventListener("NameOfTheEvent", (event) => { })
 
-onNameOfTheEvent = (event) => {};
+onNameOfTheEvent = (event) => { }
 ```
 
 ## Event type

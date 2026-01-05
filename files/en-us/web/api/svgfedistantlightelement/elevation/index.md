@@ -33,7 +33,7 @@ An {{domxref("SVGAnimatedNumber")}} object.
     y="50"
     width="100"
     height="100"
-    style="fill:yellow;"
+    fill="yellow"
     filter="url(#lightingFilter)" />
 </svg>
 ```

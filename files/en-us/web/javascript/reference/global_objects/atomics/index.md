@@ -3,9 +3,8 @@ title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
 page-type: javascript-namespace
 browser-compat: javascript.builtins.Atomics
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics`** namespace object contains static methods for carrying out atomic operations. They are used with {{jsxref("SharedArrayBuffer")}} and {{jsxref("ArrayBuffer")}} objects.
 

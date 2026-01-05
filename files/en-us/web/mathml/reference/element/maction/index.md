@@ -20,10 +20,8 @@ The **`<maction>`** [MathML](/en-US/docs/Web/MathML) element allows to bind acti
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Reference/Global_attributes) as well as the following attributes:
 
 - `actiontype` {{Deprecated_Inline}} {{Non-standard_Inline}}
-
   - : The action which specifies what happens for this element. Special behavior
     for the following values were implemented by some browsers:
-
     - `statusline`: If there is a click on the _expression_ or the reader moves the pointer over it, the _message_ is sent to the browser's status line. The syntax is: `<maction actiontype="statusline"> expression message </maction>`.
     - `toggle`: When there is a click on the subexpression, the rendering alternates the display of selected subexpressions. Therefore each click increments the `selection` value.
       The syntax is: `<maction actiontype="toggle" selection="positive-integer" > expression1 expression2 expressionN </maction>`.

@@ -1,11 +1,11 @@
 ---
 title: Number.prototype.toPrecision()
+short-title: toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toPrecision
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toPrecision()`** method of {{jsxref("Number")}} values returns a string representing this number to the specified number of significant digits.
 

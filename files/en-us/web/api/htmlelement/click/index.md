@@ -32,21 +32,24 @@ Simulate a mouse-click when moving the mouse pointer over a checkbox:
 
 ```html
 <form>
-  <input
-    type="checkbox"
-    id="myCheck"
-    onmouseover="myFunction()"
-    onclick="alert('click event occurred')" />
+  <input type="checkbox" id="myCheck" />
 </form>
 ```
 
 ### JavaScript
 
 ```js
+const checkbox = document.getElementById("myCheck");
+
 // On mouse-over, execute myFunction
-function myFunction() {
-  document.getElementById("myCheck").click();
-}
+checkbox.addEventListener("mouseover", () => {
+  // Simulate a mouse click
+  checkbox.click();
+});
+
+checkbox.addEventListener("click", () => {
+  console.log("click event occurred");
+});
 ```
 
 ## Specifications
@@ -60,7 +63,6 @@ function myFunction() {
 ## See also
 
 - Related event handlers
-
   - {{domxref("Element.click_event", "Element.onclick")}}
   - {{domxref("Element.dblclick_event", "Element.ondblclick")}}
   - {{domxref("Element.auxclick_event", "Element.onauxclick")}}

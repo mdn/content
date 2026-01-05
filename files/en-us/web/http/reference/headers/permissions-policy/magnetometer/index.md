@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: magnetometer"
+title: "Permissions-Policy: magnetometer directive"
+short-title: magnetometer
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/magnetometer
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.magnetometer
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `magnetometer` directive controls whether the current document is allowed to gather information about the orientation of the device through the {{domxref("Magnetometer")}} interface.
 

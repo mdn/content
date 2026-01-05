@@ -2,9 +2,8 @@
 title: Associate files with your PWA
 slug: Web/Progressive_web_apps/How_to/Associate_files_with_your_PWA
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 On a device, files are usually associated with apps, so when the user opens the file, the operating system launches the appropriate app and passes the file to it. For example, HTML files are often opened in a web browser, text files in a text editor, and videos in a video player.
 
@@ -100,4 +99,4 @@ Note that the code checks that `launchQueue` exists before using it, to ensure t
 - [File System API](/en-US/docs/Web/API/File_System_API)
 - [File API](/en-US/docs/Web/API/File_API)
 - [Let installed web applications be file handlers](https://developer.chrome.com/docs/capabilities/web-apis/file-handling) on developer.chrome.com (2022)
-- [Handle files in Progressive Web Apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files) on learn.microsoft.com (2023)
+- [Handle files in Progressive Web Apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/handle-files) on learn.microsoft.com (2023)

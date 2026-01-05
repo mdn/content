@@ -1,11 +1,11 @@
 ---
-title: Want-Repr-Digest
+title: Want-Repr-Digest header
+short-title: Want-Repr-Digest
 slug: Web/HTTP/Reference/Headers/Want-Repr-Digest
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530#section-4
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Want-Repr-Digest`** {{glossary("request header", "request")}} and {{glossary("response header")}} indicates a preference for the recipient to send a {{HTTPHeader("Repr-Digest")}} integrity header in messages associated with the request URI and representation metadata.
 
@@ -28,8 +28,6 @@ Some implementations may send unsolicited `Repr-Digest` headers without requirin
 </table>
 
 ## Syntax
-
-A comma-separated list of one or more hashing algorithms:
 
 ```http
 Want-Repr-Digest: <algorithm>=<preference>

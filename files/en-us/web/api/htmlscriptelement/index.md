@@ -11,14 +11,17 @@ HTML {{HTMLElement("script")}} elements expose the **`HTMLScriptElement`** inter
 
 JavaScript files should be served with the `text/javascript` [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types), but browsers are lenient and block them only if the script is served with an image type (`image/*`), video type (`video/*`), audio type (`audio/*`), or `text/csv`. If the script is blocked, its element receives an {{domxref("HTMLElement/error_event", "error")}} event; otherwise, it receives a {{domxref("Window/load_event", "load")}} event.
 
+> [!NOTE]
+> When inserted using the {{domxref("Document.write()")}} method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using {{domxref("Element.innerHTML")}} or {{domxref("Element.outerHTML")}}, they do not execute at all.
+
 {{InheritanceDiagram}}
 
 ## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLScriptElement.attributionSrc")}} {{securecontext_inline}} {{experimental_inline}}
-  - : Gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Reference/Elements/script#attributionsrc) attribute on an {{htmlelement("script")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the script resource request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers), respectively.
+- {{domxref("HTMLScriptElement.attributionSrc")}} {{securecontext_inline}} {{deprecated_inline}}
+  - : Gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Reference/Elements/script#attributionsrc) attribute on a {{htmlelement("script")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the script resource request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers), respectively.
 - {{domxref("HTMLScriptElement.async")}}
   - : A boolean value that controls how the script should be executed. For classic scripts, if the `async` property is set to `true`, the external script will be fetched in parallel to parsing and evaluated as soon as it is available. For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), if the `async` property is set to `true`, the script and all their dependencies will be fetched in parallel to parsing and evaluated as soon as they are available.
 - {{domxref("HTMLScriptElement.blocking")}}
@@ -33,6 +36,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string; an obsolete way of registering event handlers on elements in an HTML document.
 - {{domxref("HTMLScriptElement.fetchPriority")}}
   - : An optional string representing a hint given to the browser on how it should prioritize fetching of an external script relative to other external scripts. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default). It reflects the `fetchpriority` attribute of the {{HTMLElement("script")}} element.
+- {{domxref("HTMLScriptElement.innerText")}}
+  - : A property that represents the inline text content of the {{HTMLElement("script")}} element as though it were rendered text.
+    The property accepts either a {{domxref("TrustedScript")}} object or a string.
 - {{domxref("HTMLScriptElement.integrity")}}
   - : A string that contains inline metadata that a browser can use to verify that a fetched resource has been delivered without unexpected manipulation. It reflects the `integrity` attribute of the {{HTMLElement("script")}} element.
 - {{domxref("HTMLScriptElement.noModule")}}
@@ -40,16 +46,19 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
   - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Reference/Elements/script#referrerpolicy) HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
 - {{domxref("HTMLScriptElement.src")}}
-  - : A string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document. It reflects the `src` attribute of the {{HTMLElement("script")}} element.
+  - : A {{domxref("TrustedScriptURL")}} or string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document.
+    It reflects the `src` attribute of the {{HTMLElement("script")}} element.
 - {{domxref("HTMLScriptElement.text")}}
-
-  - : A string that joins and returns the contents of all {{domxref("Text")}} nodes inside the {{HTMLElement("script")}} element (ignoring other nodes like comments) in tree order. On setting, it acts the same way as the {{domxref("Node.textContent")}} property.
-
-    > [!NOTE]
-    > When inserted using the {{domxref("Document.write()")}} method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using {{domxref("Element.innerHTML")}} or {{domxref("Element.outerHTML")}}, they do not execute at all.
-
+  - : A property that represents the inline text content of the {{HTMLElement("script")}} element.
+    The property accepts either a {{domxref("TrustedScript")}} object or a string.
+    It acts the same way as the [`textContent`](/en-US/docs/Web/API/HTMLScriptElement/textContent) property.
+- {{domxref("HTMLScriptElement.textContent")}}
+  - : A property that represents the inline text content of the {{HTMLElement("script")}} element.
+    The property is redefined from {{domxref("Node/textContent","Node")}} to support {{domxref("TrustedScript")}} as an input.
+    On this element it behaves exactly like the [`text`](/en-US/docs/Web/API/HTMLScriptElement/text) property.
 - {{domxref("HTMLScriptElement.type")}}
-  - : A string representing the type of the script. It reflects the `type` attribute of the {{HTMLElement("script")}} element.
+  - : A string representing the type of the script.
+    It reflects the `type` attribute of the {{HTMLElement("script")}} element.
 
 ## Static methods
 

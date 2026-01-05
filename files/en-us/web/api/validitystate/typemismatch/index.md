@@ -78,7 +78,7 @@ emailInput.addEventListener("input", () => {
   } else if (emailInput.validity.typeMismatch) {
     log("Input is not an email.");
   } else {
-    log("Validation failed: " + emailInput.validationMessage);
+    log(`Validation failed: ${emailInput.validationMessage}`);
   }
 });
 ```

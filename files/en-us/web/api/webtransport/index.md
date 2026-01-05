@@ -87,7 +87,7 @@ async function useTransport(url) {
   const transport = await initTransport(url);
 
   // Use the transport object to send and receive data
-  // ...
+  // …
 
   // When done, close the transport
   await closeTransport(transport);

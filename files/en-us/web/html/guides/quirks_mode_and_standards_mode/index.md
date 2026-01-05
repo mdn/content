@@ -3,9 +3,8 @@ title: Understanding quirks and standards modes
 short-title: Quirks and standards modes
 slug: Web/HTML/Guides/Quirks_mode_and_standards_mode
 page-type: guide
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 In the old days of the web, pages were typically written in two versions: One for Netscape Navigator, and one for Microsoft Internet Explorer. When the web standards were made at W3C, browsers could not just start using them, as doing so would break most existing sites on the web. Browsers therefore introduced two modes to treat new standards compliant sites differently from old legacy sites.
 
@@ -15,7 +14,7 @@ The limited-quirks and no-quirks modes used to be called "almost-standards" mode
 
 ## How do browsers determine which mode to use?
 
-For [HTML](/en-US/docs/Web/HTML) documents, browsers use a doctype in the beginning of the document to decide whether to handle it in quirks mode or standards mode. To ensure that your page uses full standards mode, make sure that your page has a doctype like in this example:
+For [HTML](/en-US/docs/Web/HTML) documents, browsers use a doctype in the beginning of the document to decide whether to handle it in quirks mode or no-quirks mode. To ensure that your page uses no-quirks mode, make sure that your page has a doctype like in this example:
 
 ```html
 <!doctype html>
@@ -28,7 +27,7 @@ For [HTML](/en-US/docs/Web/HTML) documents, browsers use a doctype in the beginn
 </html>
 ```
 
-The doctype shown in the example, `<!doctype html>`, is the simplest possible, and the one recommended by current HTML standards. Earlier versions of the HTML standard recommended other variants, but all existing browsers today will use full standards mode for this doctype. There are no valid reasons to use a more complicated doctype. If you do use another doctype, you may risk choosing one which triggers almost standards mode or quirks mode.
+The doctype shown in the example, `<!doctype html>`, is the simplest possible, and the one recommended by current HTML standards. Earlier versions of the HTML standard recommended other variants, but all existing browsers today will use no-quirks mode for this doctype. There are no valid reasons to use a more complicated doctype. If you do use another doctype, you may risk choosing one which triggers limited-quirks mode or quirks mode.
 
 Put the doctype right at the beginning of your HTML document, before any other content.
 
@@ -38,9 +37,9 @@ See also a detailed description of [when different browsers choose various modes
 
 ### XHTML
 
-If you serve your page as [XHTML](/en-US/docs/Glossary/XHTML) using the `application/xhtml+xml` MIME type in the `Content-Type` HTTP header, you do not need a doctype to enable standards mode, as such documents always use 'full standards mode'.
+If you serve your page as [XHTML](/en-US/docs/Glossary/XHTML) using the `application/xhtml+xml` MIME type in the `Content-Type` HTTP header, you do not need a doctype to enable no-quirks mode, as such documents always use no-quirks mode.
 
-If you serve XHTML-like content using the `text/html` MIME type, browsers will read it as HTML, and you will need the doctype to use standards mode.
+If you serve XHTML-like content using the `text/html` MIME type, browsers will read it as HTML, and you will need the doctype to use no-quirks mode.
 
 ## How do I see which mode is used?
 

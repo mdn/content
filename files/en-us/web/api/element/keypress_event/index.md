@@ -8,7 +8,7 @@ status:
 browser-compat: api.Element.keypress_event
 ---
 
-{{APIRef}} {{deprecated_header}}
+{{APIRef("UI Events")}}{{deprecated_header}}
 
 The **`keypress`** event is fired when a [letter, number, punctuation, or symbol](https://w3c.github.io/uievents/#unicode-character-categories) key is pressed, or else when the <kbd>Enter</kbd> key is pressed — including when the <kbd>Enter</kbd> key is pressed in combination with the <kbd>Shift</kbd> key or <kbd>Ctrl</kbd> key. Otherwise, when a modifier key such as the <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, <kbd>Meta</kbd>, <kbd>Esc</kbd>, or <kbd>Option</kbd> key is pressed in isolation, the `keypress` event is _not_ fired.
 
@@ -21,10 +21,10 @@ The event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbl
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("keypress", (event) => {});
+```js-nolint
+addEventListener("keypress", (event) => { })
 
-onkeypress = (event) => {};
+onkeypress = (event) => { }
 ```
 
 ## Event type
@@ -38,15 +38,12 @@ A {{domxref("KeyboardEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxr
 _This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
 - {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
-
   - : Returns a boolean value that is `true` if the <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
-
   - : Returns a string with the code value of the physical key represented by the event.
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
-
   - : Returns a boolean value that is `true` if the <kbd>Ctrl</kbd> key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.isComposing")}} {{ReadOnlyInline}}
@@ -56,13 +53,11 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
   - : Returns a number representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown in [Keyboard locations](/en-US/docs/Web/API/KeyboardEvent#keyboard_locations).
 - {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
-
   - : Returns a boolean value that is `true` if the <kbd>Meta</kbd> key (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.repeat")}} {{ReadOnlyInline}}
   - : Returns a boolean value that is `true` if the key is being held down such that it is automatically repeating.
 - {{domxref("KeyboardEvent.shiftKey")}} {{ReadOnlyInline}}
-
   - : Returns a boolean value that is `true` if the <kbd>Shift</kbd> key was active when the key event was generated.
 
 ## Examples
@@ -119,7 +114,6 @@ input.onkeypress = logKey;
 
 - The {{domxref("Document")}} interface, which the event also targets.
 - Related events:
-
   - [`input`](/en-US/docs/Web/API/Element/input_event)
   - [`keydown`](/en-US/docs/Web/API/Element/keydown_event)
   - [`keyup`](/en-US/docs/Web/API/Element/keyup_event)

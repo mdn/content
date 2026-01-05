@@ -3,9 +3,8 @@ title: tabs.ungroup()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/ungroup
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.ungroup
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes one or more tabs from their respective tab groups. If any groups become empty, they are deleted.
 
@@ -13,6 +12,8 @@ All tabs in a tab group must be adjacent. If necessary, an ungrouped tab is move
 
 > [!NOTE]
 > The `tabs.ungroup()` method is not the only way to ungroup tabs. A tab is also ungrouped when it's moved by calling {{WebExtAPIRef("tabs.move")}} with an `index` that is outside a tab group.
+
+For more information on tab groups, see {{WebExtAPIRef("tabGroups")}}.
 
 ## Syntax
 

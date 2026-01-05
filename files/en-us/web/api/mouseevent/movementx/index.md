@@ -12,7 +12,7 @@ The **`movementX`** read-only property of the {{domxref("MouseEvent")}} interfac
 In other words, the value of the property is computed like this: `currentEvent.movementX = currentEvent.screenX - previousEvent.screenX`.
 
 > [!WARNING]
-> Browsers [use different units for `movementX` and {{domxref("MouseEvent.screenX", "screenX")}}](https://github.com/w3c/pointerlock/issues/42) than what the specification defines. Depending on the browser and operating system, the `movementX` units may be a physical pixel, a logical pixel, or a CSS pixel. You may want to avoid the movement properties, and instead calculate the delta between the current client values ({{domxref("MouseEvent.screenX", "screenX")}}, {{domxref("MouseEvent.screenY", "screenY")}}) and the previous client values.
+> Browsers [use different units for `movementX` and `screenX`](https://github.com/w3c/pointerlock/issues/42) than what the specification defines. Depending on the browser and operating system, the `movementX` units may be a physical pixel, a logical pixel, or a CSS pixel. You may want to avoid the movement properties, and instead calculate the delta between the current client values ({{domxref("MouseEvent.screenX", "screenX")}}, {{domxref("MouseEvent.screenY", "screenY")}}) and the previous client values.
 
 ## Value
 
@@ -31,6 +31,8 @@ This example logs the amount of mouse movement using `movementX` and {{domxref("
 ### JavaScript
 
 ```js
+const log = document.getElementById("log");
+
 function logMovement(event) {
   log.insertAdjacentHTML(
     "afterbegin",
@@ -39,7 +41,6 @@ function logMovement(event) {
   while (log.childNodes.length > 128) log.lastChild.remove();
 }
 
-const log = document.getElementById("log");
 document.addEventListener("mousemove", logMovement);
 ```
 

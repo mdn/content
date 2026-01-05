@@ -3,9 +3,8 @@ title: Event.addListener()
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event/addListener
 page-type: webextension-api-event
 browser-compat: webextensions.api.events.Event.addListener
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Registers an event listener callback to an event.
 
@@ -18,7 +17,6 @@ events.Event.addListener(listener)
 ### Parameters
 
 - `listener`
-
   - : Function called when the event occurs. The parameters of this function depend on the type of event.
 
 ## Browser compatibility

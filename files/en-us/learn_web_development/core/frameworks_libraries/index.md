@@ -7,7 +7,7 @@ sidebar: learnsidebar
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Introduction", "Learn_web_development/Core")}}
 
-JavaScript frameworks are an essential part of modern front-end web development, providing developers with tried and tested tools for building scalable, interactive web applications. Many modern companies use frameworks as a standard part of their tooling, so many front-end development jobs now require framework experience. In this set of articles, we are aiming to give you a comfortable starting point to help you begin learning frameworks.
+JavaScript frameworks are an essential part of modern front-end web development, providing developers with tried and tested tools for building scalable, interactive web applications. Many modern companies use frameworks as a standard part of their tooling, so many front-end development jobs now require framework experience. This set of articles provides a comfortable starting point to help you begin learning frameworks.
 
 As an aspiring front-end developer, it can be hard to work out where to begin when learning frameworks — there are so many frameworks to choose from, new ones appear all the time, they mostly work in a similar way but do some things differently, and there are some specific things to be careful about when using frameworks.
 
@@ -21,6 +21,9 @@ We are not aiming to exhaustively teach you everything you need to know about Re
 After that, we'll provide some tutorials covering the essentials React, a popular framework choice, to provide you with enough context and familiarity to start going into greater depth yourself. We want you to go forward and learn about frameworks in a pragmatic way that doesn't forget about web platform fundamental best practices such as accessibility.
 
 We also provide some tutorials covering the basics of other framework choices, for those who want to make a different choice to React.
+
+> [!NOTE]
+> Scrimba's [Libraries/Frameworks](https://scrimba.com/learn-react-c0e/~033a?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial provides a useful summary of frameworks versus libraries, a brief history of libraries and frameworks on the web, and some background information specifically on React.
 
 ## Prerequisites
 

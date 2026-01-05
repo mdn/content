@@ -103,7 +103,7 @@ Note that this is the earliest point at which setting the property to `true` wil
 Before this point the document did not have an associated style, and so the value defaults to `false`.
 
 ```js
-//Disable the style
+// Disable the style
 style.disabled = true;
 ```
 

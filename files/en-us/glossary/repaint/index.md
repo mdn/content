@@ -2,9 +2,8 @@
 title: Repaint
 slug: Glossary/Repaint
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Repaint** happens when a {{glossary("browser")}} redraws a web page to show the visual updates resulting from a UI change, such as after an update on an interactive site. This usually follows reflowing, which is when the browser recalculates the position and geometry of certain parts of a web page.
 

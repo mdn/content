@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: screen-wake-lock"
+title: "Permissions-Policy: screen-wake-lock directive"
+short-title: screen-wake-lock
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/screen-wake-lock
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.screen-wake-lock
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header **`screen-wake-lock`** directive controls whether the current document is allowed to use [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) to indicate that the device should not dim or turn off the screen.
 

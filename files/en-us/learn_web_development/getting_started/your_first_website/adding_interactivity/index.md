@@ -92,7 +92,7 @@ Try clicking the list items a few times and note how the "done" styles are toggl
 To start you off with writing some JavaScript, we'll walk you through adding a _Hello world!_ example to your sample website. ([_Hello world!_](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) is the standard introductory programming example.)
 
 > [!WARNING]
-> If you haven't been following along with the rest of our course, [download this example code](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages) and use it as a starting point.
+> If you haven't been following along with the rest of our course, [download this example code](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/main) and use it as a starting point.
 
 1. Inside your `first-website` folder or the example folder you have just downloaded, create a new folder named `scripts`.
 2. Within the `scripts` folder, create a new text document called `main.js`, and save it.
@@ -156,8 +156,7 @@ In this section, you will use JavaScript and [DOM API](/en-US/docs/Web/API/HTML_
 In this code, you stored a reference to your {{htmlelement("img")}} element in the `myImage` variable. Then you assigned it a `click` event handler function. Every time the `<img>` is clicked, the function does the following:
 
 - Retrieves the value of the image's `src` attribute.
-- Uses a conditional (`if ... else` structure) to check if the `src` value is equal to the path of the original image:
-
+- Uses a conditional (`if...else` structure) to check if the `src` value is equal to the path of the original image:
   - If it is, the code changes the `src` value to the path of the second image, forcing the other image to be loaded inside the `<img>` element.
   - If it isn't (meaning the image has already been changed), the `src` value swaps back to the original image path.
 

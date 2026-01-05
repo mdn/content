@@ -16,7 +16,8 @@ If a table has multiple {{HtmlElement("tbody")}} elements, by default, the new r
 inserted into the last `<tbody>`.
 To insert the row into a specific section, use {{domxref("HTMLTableSectionElement.insertRow()")}}
 
-> **Note:** `insertRow()` inserts the row directly into the
+> [!NOTE]
+> `insertRow()` inserts the row directly into the
 > table. The row does not need to be appended separately as would be the case if
 > {{domxref("Document.createElement()")}} had been used to create the new
 > `<tr>` element.
@@ -61,15 +62,17 @@ new row. (To be valid HTML, a `<tr>` must have at least one
 
 ```html
 <table id="my-table">
-  <tr>
-    <td>Row 1</td>
-  </tr>
-  <tr>
-    <td>Row 2</td>
-  </tr>
-  <tr>
-    <td>Row 3</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Row 1</td>
+    </tr>
+    <tr>
+      <td>Row 2</td>
+    </tr>
+    <tr>
+      <td>Row 3</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

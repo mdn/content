@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.contextmenu_event
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Events")}}
 
 The **`contextmenu`** event fires when the user attempts to open a context menu. This event is typically triggered by clicking the right mouse button, or by pressing the context menu key.
 
@@ -21,10 +21,10 @@ Any right-click event that is not disabled (by calling the click event's {{domxr
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("contextmenu", (event) => {});
+```js-nolint
+addEventListener("contextmenu", (event) => { })
 
-oncontextmenu = (event) => {};
+oncontextmenu = (event) => { }
 ```
 
 ## Event type

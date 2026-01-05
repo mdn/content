@@ -64,7 +64,6 @@ The `submit` input will be displayed as a button (by default)—this can be pres
 
 - `action`: The resource/URL where data is to be sent for processing when the form is submitted. If this is not set (or set to an empty string), then the form will be submitted back to the current page URL.
 - `method`: The HTTP method used to send the data: `POST` or `GET`.
-
   - The `POST` method should always be used if the data is going to result in a change to the server's database, because this can be made more resistant to cross-site forgery request attacks.
   - The `GET` method should only be used for forms that don't change user data (e.g., a search form). It is recommended for when you want to be able to bookmark or share the URL.
 
@@ -79,7 +78,6 @@ A process flowchart for processing form requests is shown below, starting with a
 As shown in the diagram above, the main things that form handling code needs to do are:
 
 1. Display the default form the first time it is requested by the user.
-
    - The form may contain blank fields (e.g., if you're creating a new record), or it may be pre-populated with initial values (e.g., if you are changing a record, or have useful default initial values).
 
 2. Receive data submitted by the user, usually in an HTTP `POST` request.
@@ -167,7 +165,7 @@ The functions are defined as below:
 - [`validationResult(req)`](https://express-validator.github.io/docs/api/validation-result/#validationresult): Runs the validation, making errors available in the form of a `validation` result object. This is invoked in a separate callback, as shown below:
 
   ```js
-  asyncHandler(async (req, res, next) => {
+  async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -177,7 +175,7 @@ The functions are defined as below:
     } else {
       // Data from form is valid.
     }
-  });
+  };
   ```
 
   We use the validation result's `isEmpty()` method to check if there were errors, and its `array()` method to get the set of error messages. See the [Handling validation section](https://express-validator.github.io/docs/guides/getting-started/#handling-validation-errors) for more information.

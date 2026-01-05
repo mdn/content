@@ -20,9 +20,13 @@ The **`<view>`** [SVG](/en-US/docs/Web/SVG) element defines a particular view of
 - {{SVGAttr("viewBox")}}
   - : This attribute defines the bound of the SVG viewport for the pattern fragment.
     _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts)**; _Default value_: none; _Animatable_: **yes**
-- {{SVGAttr("zoomAndPan")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{SVGAttr("zoomAndPan")}} {{Deprecated_Inline}}
   - : This attribute specifies whether the SVG document can be magnified and panned.
     _Value type_: **disable | magnify**; _Default value_: magnify; _Animatable_: **no**
+
+## DOM Interface
+
+This element implements the {{domxref("SVGViewElement")}} interface.
 
 ## Example
 

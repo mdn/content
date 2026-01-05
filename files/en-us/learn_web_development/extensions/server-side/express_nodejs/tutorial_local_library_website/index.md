@@ -8,7 +8,8 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
-The first article in our practical tutorial series explains what you'll learn, and provides an overview of the "local library" example website we'll be working through and evolving in subsequent articles.
+This article is an overview of the MDN Express tutorial and introduces the "local library" example website we'll be using throughout the next few pages.
+You'll find out what the tutorial covers, how to get started, how to ask for help, and everything else you need to build and deploy your first server-side JavaScript app.
 
 <table>
   <tbody>

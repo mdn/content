@@ -3,9 +3,8 @@ title: tabs.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onRemoved
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a tab is closed.
 
@@ -31,9 +30,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `tabId`
       - : `integer`. ID of the tab that closed.
     - `removeInfo`

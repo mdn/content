@@ -3,11 +3,11 @@ title: "<audio>: The Embed Audio element"
 slug: Web/HTML/Reference/Elements/audio
 page-type: html-element
 browser-compat: html.elements.audio
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}
-
-The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound content in documents. It may contain one or more audio sources, represented using the `src` attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.
+The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound content in documents. It may contain one or more audio sources, represented using the `src` attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one.
+It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.
 
 {{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
 
@@ -25,7 +25,8 @@ figure {
 }
 ```
 
-The above example shows basic usage of the `<audio>` element. In a similar manner to the {{htmlelement("img")}} element, we include a path to the media we want to embed inside the `src` attribute; we can include other attributes to specify information such as whether we want it to autoplay and loop, whether we want to show the browser's default audio controls, etc.
+The above example shows basic usage of the `<audio>` element.
+In a similar manner to the {{htmlelement("img")}} element, we include a path to the media we want to embed inside the `src` attribute; we can include other attributes to specify information such as whether we want it to autoplay and loop, whether we want to show the browser's default audio controls, etc.
 
 The content inside the opening and closing `<audio></audio>` tags is shown as a fallback in browsers that don't support the element.
 
@@ -34,26 +35,24 @@ The content inside the opening and closing `<audio></audio>` tags is shown as a 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `autoplay`
-
   - : A Boolean attribute: if specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.
 
     > [!NOTE]
-    > Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Guides/Autoplay) for additional information about how to properly use autoplay.
+    > Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible.
+    > If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it).
+    > However, this can be useful when creating media elements whose source will be set at a later time, under user control.
+    > See our [autoplay guide](/en-US/docs/Web/Media/Guides/Autoplay) for additional information about how to properly use autoplay.
 
 - `controls`
-
   - : If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
 
 - `controlslist`
-
   - : The [`controlslist`](https://wicg.github.io/controls-list/explainer.html) attribute, when specified, helps the browser select what controls to show for the `audio` element whenever the browser shows its own set of controls (that is, when the `controls` attribute is specified).
 
     The allowed values are `nodownload`, `nofullscreen` and `noremoteplayback`.
 
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
-
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether to use CORS to fetch the related audio file. [CORS-enabled resources](/en-US/docs/Web/HTML/How_to/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
-
     - `anonymous`
       - : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the resource will be _tainted_, and its usage restricted.
     - `use-credentials`
@@ -62,8 +61,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     When not present, the resource is fetched without a CORS request (i.e., without sending the `Origin:` HTTP header), preventing its non-tainted use in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for additional information.
 
 - `disableremoteplayback`
-
-  - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc.). See [this proposed specification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) for more information.
+  - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc.). See the proposed [Remote Playback API specification](https://w3c.github.io/remote-playback/#the-disableremoteplayback-attribute) for more information.
 
     In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
 
@@ -72,9 +70,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 - `muted`
   - : A Boolean attribute that indicates whether the audio will be initially silenced. Its default value is `false`.
 - `preload`
-
   - : This {{Glossary("enumerated")}} attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience. It may have one of the following values:
-
     - `none`: Indicates that the audio should not be preloaded.
     - `metadata`: Indicates that only audio metadata (e.g., length) is fetched.
     - `auto`: Indicates that the whole audio file can be downloaded, even if the user is not expected to use it.
@@ -92,165 +88,48 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
 ## Events
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Event name</th>
-      <th scope="col">Fired when</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{domxref("ScriptProcessorNode/audioprocess_event", "audioprocess")}}</td>
-      <td>
-        The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is
-        ready to be processed.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}
-      </td>
-      <td>
-        The browser can play the media, but estimates that not enough data has
-        been loaded to play the media up to its end without having to stop for
-        further buffering of content.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
-      </td>
-      <td>
-        The browser estimates it can play the media up to its end without
-        stopping for content buffering.
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("OfflineAudioContext/complete_event", "complete")}}</td>
-      <td>
-        The rendering of an {{DOMxRef("OfflineAudioContext")}} is
-        terminated.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
-      </td>
-      <td>The <code>duration</code> attribute has been updated.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
-      </td>
-      <td>
-        The media has become empty; for example, this event is sent if the media
-        has already been loaded (or partially loaded), and the
-        {{domxref("HTMLMediaElement.load")}} method is called to
-        reload it.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.ended_event", 'ended')}}
-      </td>
-      <td>Playback has stopped because the end of the media was reached.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
-      </td>
-      <td>The first frame of the media has finished loading.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
-      </td>
-      <td>The metadata has been loaded.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
-      </td>
-      <td>Fired when the browser has started to load the resource.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.pause_event", 'pause')}}
-      </td>
-      <td>Playback has been paused.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.play_event", 'play')}}
-      </td>
-      <td>Playback has begun.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.playing_event", 'playing')}}
-      </td>
-      <td>
-        Playback is ready to start after having been paused or delayed due to
-        lack of data.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
-      </td>
-      <td>The playback rate has changed.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
-      </td>
-      <td>A <em>seek</em> operation completed.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
-      </td>
-      <td>A <em>seek</em> operation began.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}
-      </td>
-      <td>
-        The user agent is trying to fetch media data, but data is unexpectedly
-        not forthcoming.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
-      </td>
-      <td>Media data loading has been suspended.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
-      </td>
-      <td>
-        The time indicated by the <code>currentTime</code> attribute has been
-        updated.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
-      </td>
-      <td>The volume has changed.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
-      </td>
-      <td>Playback has stopped because of a temporary lack of data</td>
-    </tr>
-  </tbody>
-</table>
+- {{domxref("ScriptProcessorNode/audioprocess_event", "audioprocess")}} {{Deprecated_Inline}}
+  - : The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is ready to be processed.
+- {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}
+  - : The browser can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
+- {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
+  - : The browser estimates it can play the media up to its end without stopping for content buffering.
+- {{domxref("OfflineAudioContext/complete_event", "complete")}}
+  - : The rendering of an {{DOMxRef("OfflineAudioContext")}} is terminated.
+- {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
+  - : The `duration` attribute has been updated.
+- {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
+  - : The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the {{domxref("HTMLMediaElement.load")}} method is called to reload it.
+- {{domxref("HTMLMediaElement.ended_event", 'ended')}}
+  - : Playback has stopped because the end of the media was reached.
+- {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
+  - : The first frame of the media has finished loading.
+- {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
+  - : The metadata has been loaded.
+- {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
+  - : Fired when the browser has started to load the resource.
+- {{domxref("HTMLMediaElement.pause_event", 'pause')}}
+  - : Playback has been paused.
+- {{domxref("HTMLMediaElement.play_event", 'play')}}
+  - : Playback has begun.
+- {{domxref("HTMLMediaElement.playing_event", 'playing')}}
+  - : Playback is ready to start after having been paused or delayed due to lack of data.
+- {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
+  - : The playback rate has changed.
+- {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
+  - : A _seek_ operation completed.
+- {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
+  - : A _seek_ operation began.
+- {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}
+  - : The user agent is trying to fetch media data, but data is unexpectedly not forthcoming.
+- {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
+  - : Media data loading has been suspended.
+- {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
+  - : The time indicated by the `currentTime` attribute has been updated.
+- {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
+  - : The volume has changed.
+- {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
+  - : Playback has stopped because of a temporary lack of data.
 
 ## Usage notes
 
@@ -468,7 +347,7 @@ This example includes multiple `<source>` elements. The browser tries to load th
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>
@@ -495,7 +374,6 @@ This example includes multiple `<source>` elements. The browser tries to load th
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
-
   - [Media container formats (file types)](/en-US/docs/Web/Media/Guides/Formats/Containers)
   - [Guide to audio codecs used on the web](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs)
 

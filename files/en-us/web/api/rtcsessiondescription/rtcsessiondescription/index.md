@@ -29,9 +29,7 @@ new RTCSessionDescription(options)
 ### Values
 
 - `options`
-
   - : An object providing the default values for the session description. It should contain the following properties:
-
     - `type`
       - : **Required.** A string which is used to set the `type` property of the new `RTCSessionDescription` object. Must be one of the valid {{domxref("RTCSessionDescription.type")}} values.
     - `sdp` {{optional_inline}}

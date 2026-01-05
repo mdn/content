@@ -27,9 +27,7 @@ new WheelEvent(type, options)
   - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `wheel`.
 - `options` {{optional_inline}}
-
   - : An object that, _in addition of the properties defined in {{domxref("MouseEvent/MouseEvent", "MouseEvent()")}}_, can have the following properties:
-
     - `deltaX` {{optional_inline}}
       - : A floating number representing the horizontal scroll amount in the `deltaMode` unit.
         It defaults to `0.0`.
@@ -40,7 +38,6 @@ new WheelEvent(type, options)
       - : A floating number representing the scroll amount for the z-axis scroll amount in the `deltaMode` unit.
         It defaults to `0.0`.
     - `deltaMode` {{optional_inline}}
-
       - : An integer representing the unit of the delta values scroll amount. It defaults to `0x00`. Permitted values are:
 
         | Constant          | Value  | Description                               |

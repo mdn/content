@@ -16,9 +16,10 @@ This event does not fire when the hash is modified using {{domxref("history.push
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("hashchange", (event) => {});
-onhashchange = (event) => {};
+```js-nolint
+addEventListener("hashchange", (event) => { })
+
+onhashchange = (event) => { }
 ```
 
 ## Event type
@@ -47,13 +48,9 @@ In addition to the `Window` interface, the event handler property `onhashchange`
 You can use the `hashchange` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
 ```js
-window.addEventListener(
-  "hashchange",
-  () => {
-    console.log("The hash has changed!");
-  },
-  false,
-);
+window.addEventListener("hashchange", () => {
+  console.log("The hash has changed!");
+});
 ```
 
 Or use the `onhashchange` event handler property:

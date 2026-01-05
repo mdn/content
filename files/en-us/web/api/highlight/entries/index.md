@@ -19,6 +19,10 @@ The **`entries()`** method of the {{domxref("Highlight")}} interface returns a n
 entries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new iterator object that contains an array of `[range, range]` for each `Range` object in the given `Highlight`, in insertion order.

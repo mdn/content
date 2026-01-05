@@ -22,10 +22,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("icegatheringstatechange", (event) => {});
+```js-nolint
+addEventListener("icegatheringstatechange", (event) => { })
 
-onicegatheringstatechange = (event) => {};
+onicegatheringstatechange = (event) => { }
 ```
 
 ## Event type
@@ -54,22 +54,18 @@ pc.onicegatheringstatechange = (ev) => {
 Likewise, you can use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add a listener for `icegatheringstatechange` events:
 
 ```js
-pc.addEventListener(
-  "icegatheringstatechange",
-  (ev) => {
-    let connection = ev.target;
+pc.addEventListener("icegatheringstatechange", (ev) => {
+  let connection = ev.target;
 
-    switch (connection.iceGatheringState) {
-      case "gathering":
-        // collection of candidates has begun
-        break;
-      case "complete":
-        // collection of candidates is finished
-        break;
-    }
-  },
-  false,
-);
+  switch (connection.iceGatheringState) {
+    case "gathering":
+      // collection of candidates has begun
+      break;
+    case "complete":
+      // collection of candidates is finished
+      break;
+  }
+});
 ```
 
 ## Specifications

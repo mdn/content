@@ -3,9 +3,8 @@ title: tabs.onDetached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onDetached
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onDetached
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a tab is detached from a window, for example because it is being moved between windows.
 
@@ -31,9 +30,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `tabId`
       - : `integer`. ID of the tab that was detached.
     - `detachInfo`

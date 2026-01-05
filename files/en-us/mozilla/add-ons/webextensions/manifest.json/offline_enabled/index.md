@@ -5,9 +5,8 @@ page-type: webextension-manifest-key
 status:
   - deprecated
 browser-compat: webextensions.manifest.offline_enabled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

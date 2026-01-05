@@ -3,9 +3,8 @@ title: tabs.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.getCurrent
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Get a {{WebExtAPIRef("tabs.Tab")}} containing information about the tab that this script is running in.
 

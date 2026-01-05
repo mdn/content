@@ -8,34 +8,9 @@ sidebar: svgref
 
 The **`<linearGradient>`** [SVG](/en-US/docs/Web/SVG) element lets authors define linear gradients to apply to other SVG elements.
 
-## Example
+## Usage context
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg
-  viewBox="0 0 10 10"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <linearGradient id="myGradient" gradientTransform="rotate(90)">
-      <stop offset="5%" stop-color="gold" />
-      <stop offset="95%" stop-color="red" />
-    </linearGradient>
-  </defs>
-
-  <!-- using my linear gradient -->
-  <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
-</svg>
-```
-
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{svginfo}}
 
 ## Attributes
 
@@ -67,9 +42,38 @@ svg {
   - : This attribute defines the y coordinate of the ending point of the vector gradient along which the linear gradient is drawn.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `0%`; _Animatable_: **yes**
 
-## Usage context
+## DOM Interface
 
-{{svginfo}}
+This element implements the {{domxref("SVGLinearGradientElement")}} interface.
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg
+  viewBox="0 0 10 10"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="myGradient" gradientTransform="rotate(90)">
+      <stop offset="5%" stop-color="gold" />
+      <stop offset="95%" stop-color="red" />
+    </linearGradient>
+  </defs>
+
+  <!-- using my linear gradient -->
+  <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
+</svg>
+```
+
+{{EmbedLiveSample('Example', 150, '100%')}}
 
 ## Specifications
 

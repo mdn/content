@@ -60,6 +60,8 @@ _The following properties and methods are inherited from {{domxref("CanvasRender
 
 ### Context
 
+- {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} {{experimental_inline}}
+  - : Returns an object containing the actual context attributes. Context attributes can be requested with {{domxref("OffscreenCanvas.getContext()")}}.
 - {{domxref("CanvasRenderingContext2D.isContextLost()")}}
   - : Returns `true` if the rendering context was lost.
 
@@ -128,15 +130,17 @@ The following properties control how text is laid out.
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
 - {{domxref("CanvasRenderingContext2D.wordSpacing")}}
   - : Word spacing. Default value: `0px`
+- {{domxref("CanvasRenderingContext2D.lang")}} {{experimental_inline}}
+  - : Gets or sets the language of the canvas drawing context.
 
 ### Fill and stroke styles
 
 Fill styling is used for colors and styles inside shapes and stroke styling is used for the lines around shapes.
 
 - {{domxref("CanvasRenderingContext2D.fillStyle")}}
-  - : Color or style to use inside shapes. Default `#000` (black).
+  - : Color or style to use inside shapes. Default to `black`.
 - {{domxref("CanvasRenderingContext2D.strokeStyle")}}
-  - : Color or style to use for the lines around shapes. Default `#000` (black).
+  - : Color or style to use for the lines around shapes. Default to `black`.
 
 ### Gradients and patterns
 

@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: deferred-fetch-minimal"
+title: "Permissions-Policy: deferred-fetch-minimal directive"
+short-title: deferred-fetch-minimal
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/deferred-fetch-minimal
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.deferred-fetch-minimal
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`deferred-fetch-minimal`** {{HTTPHeader("Permissions-Policy")}} directive is part of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API).
 
@@ -21,10 +23,10 @@ See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas
 Permissions-policy: deferred-fetch-minimal=*
 Permissions-policy: deferred-fetch-minimal=()
 Permissions-policy: deferred-fetch-minimal=(self)
-Permissions-policy: deferred-fetch-minimal=(<urllist>)
+Permissions-policy: deferred-fetch-minimal=(<url-list>)
 ```
 
-- `<urllist>`
+- `<url-list>`
   - : A space-separated list of origins that are allowed to use the secondary 128KiB quota (with a maximum of 8KiB per subframe).
 
 A top-level frame with the `deferred-fetch-minimal` permission set to `self` or `()` does not allowed the default shared 128kb quota to be used by cross-origin subframes at all. Instead, the 128KiB quota for subframes is added to its normal quota.

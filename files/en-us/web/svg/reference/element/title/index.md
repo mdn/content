@@ -13,6 +13,18 @@ Text in a `<title>` element is not rendered as part of the graphic, but browsers
 > [!NOTE]
 > For backward compatibility with SVG 1.1, `<title>` elements should be the first child element of their parent.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+This element only includes global attributes.
+
+## DOM Interface
+
+This element implements the {{domxref("SVGTitleElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -36,14 +48,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## Attributes
-
-This element only includes global attributes
-
-## Usage context
-
-{{svginfo}}
 
 ## Specifications
 

@@ -57,31 +57,33 @@ if ("virtualKeyboard" in navigator) {
 
 ### Detect the virtual keyboard geometry using CSS environment variables
 
-The VirtualKeyboard API also exposes the following [CSS environment variables](/en-US/docs/Web/CSS/env): `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, and `keyboard-inset-height`.
+The VirtualKeyboard API also exposes the following [CSS environment variables](/en-US/docs/Web/CSS/Reference/Values/env): `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, and `keyboard-inset-height`.
 
 The `keyboard-inset-*` CSS environment variables are useful to adapt your layout to the virtual keyboard appearance using CSS. They define a rectangle by its top, right, bottom, and left insets from the edge of the viewport. The `width` and `height` variables are also available if needed.
 
 The code snippet below uses the `keyboard-inset-height` CSS variable to reserve space for the virtual keyboard to appear below the list of messages and input field in a chat-like application. When the virtual keyboard is hidden, the `env()` function returns `0px` and the `keyboard` grid area is hidden. The messages and input elements can occupy the full height of the viewport. When the virtual keyboard appears, the `keyboard` grid area gets the height of the virtual keyboard.
 
 ```html
-<style>
-  body {
-    display: grid;
-    margin: 0;
-    height: 100vh;
-    grid-template:
-      "messages" 1fr
-      "input" auto
-      "keyboard" env(keyboard-inset-height, 0px);
-  }
-</style>
 <ul id="messages"></ul>
 <input type="text" />
-<script>
-  if ("virtualKeyboard" in navigator) {
-    navigator.virtualKeyboard.overlaysContent = true;
-  }
-</script>
+```
+
+```css
+body {
+  display: grid;
+  margin: 0;
+  height: 100vh;
+  grid-template:
+    "messages" 1fr
+    "input" auto
+    "keyboard" env(keyboard-inset-height, 0px);
+}
+```
+
+```js
+if ("virtualKeyboard" in navigator) {
+  navigator.virtualKeyboard.overlaysContent = true;
+}
 ```
 
 ### Control the virtual keyboard on `contenteditable` elements

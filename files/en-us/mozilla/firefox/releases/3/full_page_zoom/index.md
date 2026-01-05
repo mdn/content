@@ -2,13 +2,12 @@
 title: Full page zoom
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Full page zoom (or just fullZoom) is a new feature in [Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3).
 
-### Example (XUL:browser)
+## Example (XUL:browser)
 
 The following example demonstrates the use for the current focused browser window. This is the typical usage for a Firefox extension.
 
@@ -18,7 +17,7 @@ ZoomManager.enlarge();
 ZoomManager.setZoomForBrowser(gBrowser.selectedBrowser, ZoomManager.MIN);
 ```
 
-### Example (XUL:iframe)
+## Example (XUL:iframe)
 
 Note: This is probably out of date.
 
@@ -34,7 +33,7 @@ var docViewer = contViewer.QueryInterface(
 docViewer.fullZoom = zoom;
 ```
 
-### References
+## References
 
 - Page zoom extension by Ted Mielczarek [fullpagezoom.xpi](https://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi) for latest Firefox 3.0 nightlies
 - The [bugzilla bug](https://bugzil.la/4821) about fullZoom.

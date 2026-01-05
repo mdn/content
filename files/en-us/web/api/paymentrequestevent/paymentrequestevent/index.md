@@ -50,7 +50,7 @@ A developer would not use this constructor manually. A new `PaymentRequestEvent`
 
 ```js
 self.addEventListener("paymentrequest", (e) => {
-  // ...
+  // …
 });
 ```
 

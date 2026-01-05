@@ -8,9 +8,7 @@ browser-compat: api.HTMLDialogElement.show
 
 {{ APIRef("HTML DOM") }}
 
-The **`show()`** method of the {{domxref("HTMLDialogElement")}}
-interface displays the dialog modelessly, i.e., still allowing interaction with content
-outside of the dialog.
+The **`show()`** method of the {{domxref("HTMLDialogElement")}} interface displays the dialog modelessly, i.e., still allowing interaction with content outside of the dialog.
 
 ## Syntax
 
@@ -33,16 +31,18 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example shows a simple button that, when clicked, opens a
-{{htmlelement("dialog")}} containing a form via the `show()` method. From
-there you can click the _Cancel_ button to close the dialog (via the
-{{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
-button.
+### Basic usage
+
+The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the `show()` method.
+From there you can click the _Cancel_ button ("X") to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit button.
+
+#### HTML
 
 ```html
 <!-- Simple pop-up dialog box, containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
+    <button type="button" id="cancel">X</button>
     <section>
       <p>
         <label for="favAnimal">Favorite animal:</label>
@@ -55,45 +55,51 @@ button.
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
+      <li>
+        <button type="reset">Reset</button>
+      </li>
+      <li>
+        <button type="submit">Confirm</button>
+      </li>
     </menu>
   </form>
 </dialog>
 
-<menu>
-  <button id="updateDetails">Update details</button>
-</menu>
-
-<script>
-  (() => {
-    const updateButton = document.getElementById("updateDetails");
-    const cancelButton = document.getElementById("cancel");
-    const dialog = document.getElementById("favDialog");
-    dialog.returnValue = "favAnimal";
-
-    function openCheck(dialog) {
-      if (dialog.open) {
-        console.log("Dialog open");
-      } else {
-        console.log("Dialog closed");
-      }
-    }
-
-    // Update button opens a modeless dialog
-    updateButton.addEventListener("click", () => {
-      dialog.show();
-      openCheck(dialog);
-    });
-
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener("click", () => {
-      dialog.close("animalNotChosen");
-      openCheck(dialog);
-    });
-  })();
-</script>
+<button id="updateDetails">Update details</button>
 ```
+
+#### JavaScript
+
+```js
+const updateButton = document.getElementById("updateDetails");
+const cancelButton = document.getElementById("cancel");
+const dialog = document.getElementById("favDialog");
+dialog.returnValue = "favAnimal";
+
+function openCheck(dialog) {
+  if (dialog.open) {
+    console.log("Dialog open");
+  } else {
+    console.log("Dialog cancelled");
+  }
+}
+
+// Update button opens a modeless dialog
+updateButton.addEventListener("click", () => {
+  dialog.show();
+  openCheck(dialog);
+});
+
+// Form cancel button closes the dialog box
+cancelButton.addEventListener("click", () => {
+  dialog.close("animalNotChosen");
+  openCheck(dialog);
+});
+```
+
+#### Results
+
+{{EmbedLiveSample("Basic usage",100, 200)}}
 
 ## Specifications
 

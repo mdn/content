@@ -1,11 +1,11 @@
 ---
-title: "CSP: script-src"
+title: "Content-Security-Policy: script-src directive"
+short-title: script-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.script-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** directive specifies valid sources for JavaScript. This includes not only URLs loaded directly into {{HTMLElement("script")}} elements, but also things like inline script event handlers (`onclick`) and [XSLT stylesheets](/en-US/docs/Web/XML/XSLT) which can trigger script execution.
 
@@ -41,7 +41,6 @@ This directive may have one of the following values:
 - `'none'`
   - : No resources of this type may be loaded. The single quotes are mandatory.
 - `<source-expression-list>`
-
   - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, any of the source expression values listed in [Fetch directive syntax](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax) are applicable.
 
 ## Examples
@@ -63,7 +62,7 @@ the following script is blocked and won't be loaded or executed:
 Note that inline event handlers are blocked as well:
 
 ```html
-<button id="btn" onclick="doSomething()"></button>
+<button id="btn" onclick="doSomething()">Click me</button>
 ```
 
 You should replace them with {{domxref("EventTarget.addEventListener", "addEventListener")}} calls:
@@ -82,7 +81,7 @@ This is a pragmatic approach, in particular when your site uses many resources a
 
 An alternative method is to specify allowed scripts using file hashes.
 Using this approach an external file in a `<script>` element can only be loaded and executed if all the valid hash values in its [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute match the allowed values in the CSP header.
-The [Subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) feature additionally checks that the downloaded file has the indicated hash value, and therefore has not been modified.
+The [Subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) feature additionally checks that the downloaded file has the indicated hash value, and therefore has not been modified.
 This is safer than trusting a domain, because files will only be used if they are unmodified, even if loaded from a compromised site.
 It is however more granular, and requires that hash values are updated in CSP and script elements whenever the associated scripts are changed.
 
@@ -123,7 +122,7 @@ Values that are not recognized as hashes by the browser are ignored, so the foll
   crossorigin="anonymous"></script>
 ```
 
-[Subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) contains more information about calculating hashes and using the `integrity` attribute.
+[Subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) contains more information about calculating hashes and using the `integrity` attribute.
 
 ### Unsafe inline script
 
@@ -150,7 +149,7 @@ The following {{HTMLElement("script")}} element will be allowed by the policy:
 ```
 
 Allowing all inline scripts is considered a security risk, so it's recommended to use a nonce-source or a hash-source instead.
-To allow inline scripts and styles with a nonce-source, you need to generate a random nonce value (using a cryptographically secure random token generator) and include it in the policy.
+To allow inline scripts and styles with a nonce-source, you need to generate a random {{Glossary("Nonce", "nonce")}} value (using a cryptographically secure random token generator) and include it in the policy.
 It is important to note, this nonce value needs to be dynamically generated as it has to be unique for each HTTP request:
 
 ```http
@@ -217,7 +216,6 @@ If a page has a CSP header and `'unsafe-eval'` isn't specified with the `script-
 - {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("Function", "Function()")}}
 - When passing a string literal like to methods like: `setTimeout("alert(\"Hello World!\");", 500);`
-
   - {{domxref("Window.setTimeout", "setTimeout()")}}
   - {{domxref("Window.setInterval", "setInterval()")}}
   - {{domxref("Window.setImmediate", "setImmediate()")}}

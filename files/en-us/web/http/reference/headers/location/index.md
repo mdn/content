@@ -1,11 +1,11 @@
 ---
-title: Location
+title: Location header
+short-title: Location
 slug: Web/HTTP/Reference/Headers/Location
 page-type: http-header
 browser-compat: http.headers.Location
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Location`** {{Glossary("response header")}} indicates the URL to redirect a page to.
 It only provides a meaning when served with a `3XX` [redirection response](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages) or a {{HTTPStatus("201", "201 Created")}} status response.
@@ -29,10 +29,6 @@ In cases of resource creation, it indicates the URL of the newly-created resourc
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

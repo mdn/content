@@ -1,11 +1,11 @@
 ---
-title: HEAD
+title: HEAD request method
+short-title: HEAD
 slug: Web/HTTP/Reference/Methods/HEAD
 page-type: http-method
 browser-compat: http.methods.HEAD
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The **`HEAD`** HTTP method requests the metadata of a resource in the form of [headers](/en-US/docs/Web/HTTP/Reference/Headers) that the server would have sent if the {{HTTPMethod("GET")}} method was used instead.
 This method can be used in cases where a URL might produce a large download, for example, a `HEAD` request can read the {{HTTPHeader("Content-Length")}} header to check the file size before downloading the file with a `GET`.

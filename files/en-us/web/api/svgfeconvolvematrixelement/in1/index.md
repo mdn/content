@@ -33,7 +33,7 @@ In this example, the `<feConvolveMatrix>` element applies a convolution filter t
     y="20"
     width="100"
     height="100"
-    style="fill:lightblue;"
+    fill="lightblue"
     filter="url(#convolveFilter)" />
 </svg>
 ```

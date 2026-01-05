@@ -22,9 +22,7 @@ drawArraysInstancedANGLE(mode, first, count, primcount)
 ### Parameters
 
 - `mode`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values are:
-
     - `gl.POINTS`: Draws a single dot.
     - `gl.LINE_STRIP`: Draws a straight line to the next vertex.
     - `gl.LINE_LOOP`: Draws a straight line to the next vertex, and connects the last vertex back to the first.

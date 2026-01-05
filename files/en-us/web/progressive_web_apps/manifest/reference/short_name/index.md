@@ -3,9 +3,8 @@ title: short_name
 slug: Web/Progressive_web_apps/Manifest/Reference/short_name
 page-type: web-manifest-member
 browser-compat: manifests.webapp.short_name
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `short_name` manifest member is used to specify a short name for your web application, which may be used when the full [`name`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/name) is too long for the available space.
 
@@ -40,8 +39,10 @@ Keep the following points in mind when selecting a short name for your web app:
 Consider a web app that helps users plan and log their hiking adventures. The `name` has been defined as `Trail Navigator`. A `short_name` can be added to the manifest as follows:
 
 ```json
-"name": "Trail Navigator",
-"short_name": "TrailNav"
+{
+  "name": "Trail Navigator",
+  "short_name": "TrailNav"
+}
 ```
 
 The app's shorter name `TrailNav` is concise and is suitable for limited space contexts. It maintains a connection to the app's full name and is easy to remember.

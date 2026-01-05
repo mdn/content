@@ -3,9 +3,8 @@ title: optional_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.optional_permissions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -86,9 +85,10 @@ The optional API permissions are:
 - `search`
 - `sessions`
 - `tabHide`
+- `tabGroups`
 - `tabs`
 - `topSites`
-- 'userScripts' ([optional-only](#optional-only_permissions))
+- `userScripts` ([optional-only](#optional-only_permissions))
 - `webNavigation`
 - `webRequest`
 - `webRequestBlocking`
@@ -102,6 +102,7 @@ These optional permissions are granted silently, without a user prompt:
 - `activeTab`
 - `cookies`
 - `idle`
+- `tabGroups`
 - `webRequest`
 - `webRequestBlocking`
 - `webRequestFilterResponse`
@@ -113,7 +114,7 @@ Optional permissions are generally available for use in the [`permissions`](/en-
 
 The optional-only API permissions are:
 
-- 'userScripts' (see [userScripts permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions))
+- `userScripts` (see [userScripts permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions))
 
 ## Examples
 

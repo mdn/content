@@ -2,9 +2,8 @@
 title: "RangeError: BigInt negative exponent"
 slug: Web/JavaScript/Reference/Errors/BigInt_negative_exponent
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "BigInt negative exponent" occurs when a {{jsxref("BigInt")}} is raised to the power of a negative BigInt value.
 

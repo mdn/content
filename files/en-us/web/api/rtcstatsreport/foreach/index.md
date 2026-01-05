@@ -24,10 +24,8 @@ forEach(callbackFn, thisArg)
 ### Parameters
 
 - `callbackFn`
-
   - : A function to execute for each entry in the report.
     The function is called with the following arguments:
-
     - `report`
       - : Statistics report for each iteration.
         This can be any of the [statistics dictionary types](/en-US/docs/Web/API/RTCStatsReport#the_statistic_types).

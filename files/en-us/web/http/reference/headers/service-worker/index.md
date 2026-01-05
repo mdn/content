@@ -1,11 +1,11 @@
 ---
-title: Service-Worker
+title: Service-Worker header
+short-title: Service-Worker
 slug: Web/HTTP/Reference/Headers/Service-Worker
 page-type: http-header
 browser-compat: http.headers.Service-Worker
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Service-Worker`** {{Glossary("request header")}} is included in fetches for a service worker's script resource.
 This header helps administrators log service worker script requests for monitoring purposes.

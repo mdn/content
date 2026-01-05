@@ -3,9 +3,8 @@ title: webNavigation.getAllFrames()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
 page-type: webextension-api-function
 browser-compat: webextensions.api.webNavigation.getAllFrames
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Given a tab ID, retrieves information about all the frames it contains.
 
@@ -22,9 +21,7 @@ let gettingFrames = browser.webNavigation.getAllFrames(
 ### Parameters
 
 - `details`
-
   - : `object`. Information about the tab to retrieve all frames from.
-
     - `tabId`
       - : `integer`. The ID of the tab.
 
@@ -34,20 +31,24 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 - `errorOccurred`
   - : `boolean`. True if the last navigation in this frame was interrupted by an error, i.e., the {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} event fired.
-- `processId` {{optional_inline}} {{deprecated_inline}}
-  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
+- `url`
+  - : `string`. The URL associated with this frame.
 - `frameId`
   - : `integer`. The ID of the frame. If this is the main frame, then `frameId` is zero.
+- `frameType`
+  - : `string`. The type of frame. Returns the values `"outermost_frame"`, `"fenced_frame"`, or `"sub_frame"` .
 - `parentFrameId`
   - : `integer`. ID of this frame's parent. This is -1 if there is no parent frame: that is, if this frame is the top-level browsing context in the tab.
-- `url`
-  - : `string`. The URL currently associated with this frame.
+- `documentId`
+  - : `string`. A UUID of the frame's document.
+- `parentDocumentId`
+  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
+- `documentLifecycle`
+  - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, or `"pending_deletion"`.
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 
 If the tab is discarded, the promise will instead resolve with a `null` value. If the specified tab could not be found, or some other error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -83,6 +84,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#method-getAllFrames) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.

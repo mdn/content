@@ -3,9 +3,8 @@ title: "<hgroup>: The Heading Group element"
 slug: Web/HTML/Reference/Elements/hgroup
 page-type: html-element
 browser-compat: html.elements.hgroup
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) element with one or more [`<p>`](/en-US/docs/Web/HTML/Reference/Elements/p).
 

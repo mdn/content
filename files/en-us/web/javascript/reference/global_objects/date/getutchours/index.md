@@ -1,11 +1,11 @@
 ---
 title: Date.prototype.getUTCHours()
+short-title: getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCHours
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getUTCHours()`** method of {{jsxref("Date")}} instances returns the hours for this date according to universal time.
 

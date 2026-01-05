@@ -43,7 +43,7 @@ Let's recap and look at the example we touched on in our [JavaScript debugging a
 
 ```js
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function (position) {
+  navigator.geolocation.getCurrentPosition((position) => {
     // show the location on a map, such as the Google Maps API
   });
 } else {
@@ -61,7 +61,7 @@ In this section, we'll look at implementing your own feature detection tests, in
 
 You can write tests for CSS features by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g., `paragraph.style.rotate`) in JavaScript.
 
-A classic example might be to test for [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid) support in a browser; for browsers that support the `subgrid` value for a subgrid value for [`grid-template-columns`](/en-US/docs/Web/CSS/grid-template-columns) and [`grid-template-rows`](/en-US/docs/Web/CSS/grid-template-rows), we can use subgrid in our layout. For browsers that don't, we could use regular grid that works fine but is not as cool-looking.
+A classic example might be to test for [Subgrid](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid) support in a browser; for browsers that support the `subgrid` value for a subgrid value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}, we can use subgrid in our layout. For browsers that don't, we could use regular grid that works fine but is not as cool-looking.
 
 Using this as an example, we could include a subgrid stylesheet if the value is supported and a regular grid stylesheet if not. To do so, we could include two stylesheets in the head of our HTML file: one for all the styling, and one that implements the default layout if subgrid is not supported:
 
@@ -87,7 +87,7 @@ In our conditional statement, we test to see if the {{cssxref("grid-template-col
 
 #### @supports
 
-CSS has a native feature detection mechanism: the {{cssxref("@supports")}} at-rule. This works in a similar manner to [media queries](/en-US/docs/Web/CSS/CSS_media_queries) except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or {{glossary("aspect ratio")}}, it selectively applies CSS depending on whether a CSS feature is supported, similar to `CSS.supports()`.
+CSS has a native feature detection mechanism: the {{cssxref("@supports")}} at-rule. This works in a similar manner to [media queries](/en-US/docs/Web/CSS/Guides/Media_queries) except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or {{glossary("aspect ratio")}}, it selectively applies CSS depending on whether a CSS feature is supported, similar to `CSS.supports()`.
 
 For example, we could rewrite our previous example to use `@supports`:
 
@@ -133,7 +133,6 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
 Common patterns for detectable features include:
 
 - Members of an object
-
   - : Check whether a particular method or property (typically an entry point into using the API or other feature you are detecting) exists in its parent `Object`.
 
     Our earlier example used this pattern to detect [Geolocation](/en-US/docs/Web/API/Geolocation_API) support by testing the [`navigator`](/en-US/docs/Web/API/Navigator) object for a `geolocation` member:
@@ -145,17 +144,16 @@ Common patterns for detectable features include:
     ```
 
 - Properties of an element
-
   - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it.
 
     This example shows a way of detecting [Canvas API](/en-US/docs/Web/API/Canvas_API) support:
 
     ```js
-    function supports_canvas() {
+    function supportsCanvas() {
       return !!document.createElement("canvas").getContext;
     }
 
-    if (supports_canvas()) {
+    if (supportsCanvas()) {
       // Create and draw on canvas elements
     }
     ```
@@ -164,11 +162,9 @@ Common patterns for detectable features include:
     > The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
 
 - Specific return values of a method on an element
-
   - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns.
 
 - Retention of assigned property value by an element
-
   - : Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained.
 
 Bear in mind that some features are, however, known to be undetectable. In these cases, you'll need to use a different approach, such as using a {{Glossary("Polyfill", "polyfill")}}.
@@ -178,7 +174,7 @@ Bear in mind that some features are, however, known to be undetectable. In these
 We also wanted to mention the {{domxref("Window.matchMedia")}} JavaScript feature at this point too. This is a property that allows you to run media query tests inside JavaScript. It looks like this:
 
 ```js
-if (window.matchMedia("(max-width: 480px)").matches) {
+if (window.matchMedia("(width <= 480px)").matches) {
   // run JavaScript in here.
 }
 ```
@@ -186,16 +182,13 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 As an example, our [Snapshot](https://github.com/chrisdavidmills/snapshot) demo makes use of it to selectively apply the Brick JavaScript library and use it to handle the UI layout, but only for the small screen layout (480px wide or less). We first use the `media` attribute to only apply the Brick CSS to the page if the page width is 480px or less:
 
 ```html
-<link
-  href="dist/brick.css"
-  rel="stylesheet"
-  media="all and (max-width: 480px)" />
+<link href="dist/brick.css" rel="stylesheet" media="(width <= 480px)" />
 ```
 
 We then use `matchMedia()` in the JavaScript several times, to only run Brick navigation functions if we are on the small screen layout (in wider screen layouts, everything can be seen at once, so we don't need to navigate between different views).
 
 ```js
-if (window.matchMedia("(max-width: 480px)").matches) {
+if (window.matchMedia("(width <= 480px)").matches) {
   deck.shuffleTo(1);
 }
 ```

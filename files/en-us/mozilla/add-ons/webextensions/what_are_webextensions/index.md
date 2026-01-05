@@ -2,9 +2,8 @@
 title: What are extensions?
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!NOTE]
 > If you are already familiar with the basic concepts of browser extensions, skip this section to [see how extension files are put together](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Then, use the [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference) to start building your extension. Visit [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) to learn more about the workflow for testing, publishing, and extensions for Firefox.
@@ -13,7 +12,7 @@ An extension adds features and functions to a browser. It's created using famili
 
 **Enhance or complement a website**: Use an add-on to deliver additional in-browser features or information from your website. Allow users to collect details from pages they visit to enhance the service you offer.
 
-Examples: [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/), [Enhancer for YouTube](https://addons.mozilla.org/en-US/firefox/addon/enhancer-for-youtube/), and [Control Panel for Twitter](https://addons.mozilla.org/en-US/firefox/addon/control-panel-for-twitter/).
+Examples: [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/) and [Control Panel for Twitter](https://addons.mozilla.org/en-US/firefox/addon/control-panel-for-twitter/).
 
 ![The Grammarly extension providing an edit hint in the GitHub editor.](grammarly-in-github-editor.png)
 

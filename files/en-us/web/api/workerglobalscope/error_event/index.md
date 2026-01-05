@@ -14,10 +14,10 @@ The **`error`** event of the {{domxref("WorkerGlobalScope")}} interface fires wh
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("error", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
 
-onerror = (message, filename, lineno, colno, error) => {};
+onerror = (message, filename, lineno, colno, error) => { }
 ```
 
 > [!NOTE]

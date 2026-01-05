@@ -3,12 +3,10 @@ title: "GPURenderBundleEncoder: setIndexBuffer() method"
 short-title: setIndexBuffer()
 slug: Web/API/GPURenderBundleEncoder/setIndexBuffer
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderBundleEncoder.setIndexBuffer
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setIndexBuffer()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface sets the current {{domxref("GPUBuffer")}} that will provide index data for subsequent drawing commands.
@@ -54,7 +52,7 @@ The following criteria must be met when calling **`setIndexBuffer()`**, otherwis
 ## Examples
 
 ```js
-// ...
+// …
 
 const bundleEncoder = device.createRenderBundleEncoder(descriptor);
 
@@ -67,7 +65,7 @@ bundleEncoder.drawIndexed(indexCount);
 
 const renderBundle = bundleEncoder.finish();
 
-// ...
+// …
 ```
 
 ## Specifications

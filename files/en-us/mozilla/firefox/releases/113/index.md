@@ -1,10 +1,10 @@
 ---
-title: Firefox 113 for developers
+title: Firefox 113 release notes for developers
+short-title: Firefox 113
 slug: Mozilla/Firefox/Releases/113
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 113 that affect developers. Firefox 113 was released on May 09, 2023.
 
@@ -16,13 +16,13 @@ No notable changes.
 
 ### CSS
 
-- The [`color()`](/en-US/docs/Web/CSS/color_value/color), [`lab()`](/en-US/docs/Web/CSS/color_value/lab), [`lch()`](/en-US/docs/Web/CSS/color_value/lch), [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab), [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch), and [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix) functional notations are now supported, along with the [`forced-color-adjust`](/en-US/docs/Web/CSS/forced-color-adjust) property.
-  For more information on the functional notations, see the [CSS color value](/en-US/docs/Web/CSS/color_value) documentation.
+- The [`color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color), [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab), [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch), [`oklab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklab), [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch), and [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) functional notations are now supported, along with the [`forced-color-adjust`](/en-US/docs/Web/CSS/Reference/Properties/forced-color-adjust) property.
+  For more information on the functional notations, see the [CSS color value](/en-US/docs/Web/CSS/Reference/Values/color_value) documentation.
   ([Firefox bug 1352753](https://bugzil.la/1352753), [Firefox bug 1813497](https://bugzil.la/1813497), [Firefox bug 1818819](https://bugzil.la/1818819), [Firefox bug 1824526](https://bugzil.la/1824526)).
-- The [`:nth-child of <selector>` syntax](/en-US/docs/Web/CSS/:nth-child#the_of_selector_syntax) allows you to target a group of children based upon the `An+B` rule that also matches a defined selector.
+- The [`:nth-child of <selector>` syntax](/en-US/docs/Web/CSS/Reference/Selectors/:nth-child#the_of_selector_syntax) allows you to target a group of children based upon the `An+B` rule that also matches a defined selector.
   See ([Firefox bug 1808229](https://bugzil.la/1808229)) for more details.
-- The [`scripting`](/en-US/docs/Web/CSS/@media/scripting) media feature is now supported. See ([Firefox bug 1166581](https://bugzil.la/1166581)) for more details.
-- The [`content`](/en-US/docs/Web/CSS/content) property now supports all image type including, `<gradient>`, `image-set()` and `url()`. See ([Firefox bug 1684958](https://bugzil.la/1684958)) for more details. There is currently an issue with the `::before` and `::after` pseudo selectors that means that they don't paint `<gradient>`s. See ([Firefox bug 1832901](https://bugzil.la/1832901)) for more details.
+- The [`scripting`](/en-US/docs/Web/CSS/Reference/At-rules/@media/scripting) media feature is now supported. See ([Firefox bug 1166581](https://bugzil.la/1166581)) for more details.
+- The [`content`](/en-US/docs/Web/CSS/Reference/Properties/content) property now supports all image type including, `<gradient>`, `image-set()` and `url()`. See ([Firefox bug 1684958](https://bugzil.la/1684958)) for more details. There is currently an issue with the `::before` and `::after` pseudo selectors that means that they don't paint `<gradient>`s. See ([Firefox bug 1832901](https://bugzil.la/1832901)) for more details.
 
 ### JavaScript
 
@@ -40,7 +40,7 @@ No notable changes.
 #### Media, WebRTC, and Web Audio
 
 - The [AV1 video codec](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#av1) is now enabled on Android. Hardware accelerated decoding is used if supported by the device ([Firefox bug 1672276](https://bugzil.la/1672276)).
-- The following WebRTC methods, properties, and dictionaries are now supported: [`RTCRtpSender.getCapabilities()`](/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static), [`RTCRtpReceiver.getCapabilities()`](/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities_static), [`RTCRtpSender.setStreams()`](/en-US/docs/Web/API/RTCRtpSender/setStreams), [`RTCSctpTransport`](/en-US/docs/Web/API/RTCSctpTransport) & [`RTCPeerConnection.sctp`](/en-US/docs/Web/API/RTCPeerConnection/sctp), [`RTCMediaSourceStats`](/en-US/docs/Web/API/RTCMediaSourceStats), [`RTCPeerConnection.connectionState`](/en-US/docs/Web/API/RTCPeerConnection/connectionState), and [`RTCPeerConnectionStats`](/en-US/docs/Web/API/RTCPeerConnectionStats).
+- The following WebRTC methods, properties, and dictionaries are now supported: [`RTCRtpSender.getCapabilities()`](/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static), [`RTCRtpReceiver.getCapabilities()`](/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities_static), [`RTCRtpSender.setStreams()`](/en-US/docs/Web/API/RTCRtpSender/setStreams), [`RTCSctpTransport`](/en-US/docs/Web/API/RTCSctpTransport) & [`RTCPeerConnection.sctp`](/en-US/docs/Web/API/RTCPeerConnection/sctp), {{domxref("RTCVideoSourceStats")}} & {{domxref("RTCAudioSourceStats")}}, [`RTCPeerConnection.connectionState`](/en-US/docs/Web/API/RTCPeerConnection/connectionState), and [`RTCPeerConnectionStats`](/en-US/docs/Web/API/RTCPeerConnectionStats).
   The corresponding bug reports are, respectively: [Firefox bug 1531460](https://bugzil.la/1531460), [Firefox bug 1531461](https://bugzil.la/1531461), [Firefox bug 1510802](https://bugzil.la/1510802), [Firefox bug 1278299](https://bugzil.la/1278299), [Firefox bug 1804678](https://bugzil.la/1804678), [Firefox bug 1265827](https://bugzil.la/1265827), and [Firefox bug 1531087](https://bugzil.la/1531087).
 
 #### Removals
@@ -70,14 +70,10 @@ No notable changes.
 
 - When an extension registers multiple listeners for the same event, all the event listeners are called when the event page wakes up, instead of only the first one ([Firefox bug 1798655](https://bugzil.la/1798655)).
 - Support is now provided for the {{WebExtAPIRef("declarativeNetRequest")}} API ([Firefox bug 1782685](https://bugzil.la/1782685)).
-- The `gecko_android` subkey has been added to the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key. This subkey enables an extension to specify the range of Firefox for Android versions it is compatible with ([Firefox bug 1824237](https://bugzil.la/1824237)).
+- The `gecko_android` sub-key has been added to the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key. This sub-key enables an extension to specify the range of Firefox for Android versions it is compatible with ([Firefox bug 1824237](https://bugzil.la/1824237)).
 
 ## Other
 
 - Support for animated [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) (AV1 Image Format files) images.
   Previously, they would display as still images with no way for web pages to detect this and fall back to another format.
   ([Firefox bug 1825580](https://bugzil.la/1825580)).
-
-## Older versions
-
-{{Firefox_for_developers}}

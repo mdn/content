@@ -10,7 +10,7 @@ browser-compat: api.EditContext.textformatupdate_event
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
-The `textformatupdate` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window is happening.
+The `textformatupdate` event of the {{domxref("EditContext")}} interface fires when composition using an {{glossary("Input Method Editor")}} (IME) window is happening.
 
 The event is fired when the IME decides that certain parts of the text being composed should be formatted differently to indicate the composition state.
 
@@ -24,10 +24,10 @@ As a web developer, you should listen for the `textformatupdate` event and updat
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("textformatupdate", (event) => {});
+```js-nolint
+addEventListener("textformatupdate", (event) => { })
 
-ontextformatupdate = (event) => {};
+ontextformatupdate = (event) => { }
 ```
 
 ## Event type

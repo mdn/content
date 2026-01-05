@@ -15,7 +15,7 @@ To accommodate users with color vision disorders ("color blindness"), be careful
 
 ## Related WCAG success criteria
 
-- [1.4.1 Use of color (A)](https://www.w3.org/TR/WCAG21/#use-of-color)
+- [1.4.1 Use of color (A)](https://w3c.github.io/wcag/guidelines/22/#use-of-color)
   - : Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
 
 ## See also

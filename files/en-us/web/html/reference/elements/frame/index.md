@@ -5,9 +5,10 @@ page-type: html-element
 status:
   - deprecated
 browser-compat: html.elements.frame
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`<frame>`** [HTML](/en-US/docs/Web/HTML) element defines a particular area in which another HTML document can be displayed. A frame should be used within a {{HTMLElement("frameset")}}.
 

@@ -2,9 +2,8 @@
 title: "TypeError: matchAll/replaceAll must be called with a global RegExp"
 slug: Web/JavaScript/Reference/Errors/Requires_global_RegExp
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "TypeError: matchAll/replaceAll must be called with a global RegExp" occurs when the {{jsxref("String.prototype.matchAll()")}} or {{jsxref("String.prototype.replaceAll()")}} method is used with a {{jsxref("RegExp")}} object that does not have the {{jsxref("RegExp/global", "global")}} flag set.
 
@@ -49,7 +48,7 @@ If you intend to do global matching/replacement: either add the `g` flag, or con
 const existingPattern = /./;
 const newPattern = new RegExp(
   existingPattern.source,
-  existingPattern.flags + "g",
+  `${existingPattern.flags}g`,
 );
 "abc".replaceAll(newPattern, "f"); // "fff"
 ```

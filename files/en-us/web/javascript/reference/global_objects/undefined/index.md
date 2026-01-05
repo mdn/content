@@ -3,9 +3,8 @@ title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
 page-type: javascript-global-property
 browser-compat: javascript.builtins.undefined
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`undefined`** global property represents the primitive
 value [`undefined`](/en-US/docs/Web/JavaScript/Guide/Data_structures#undefined_type). It is one of JavaScript's

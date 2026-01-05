@@ -22,7 +22,6 @@ encrypt(algorithm, key, data)
 ### Parameters
 
 - `algorithm`
-
   - : An object specifying the [algorithm](#supported_algorithms) to be used and any extra parameters if required:
     - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}} object.
     - To use [AES-CTR](#aes-ctr), pass an {{domxref("AesCtrParams")}} object.
@@ -86,7 +85,7 @@ A given counter block value must never be used more than once with the same key:
 
 Typically this is achieved by splitting the initial counter block value into two concatenated parts:
 
-- A [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) (that is, a number that may only be used once). The nonce part of the block stays the same for every block in the message. Each time a new message is to be encrypted, a new nonce is chosen. Nonces don't have to be secret, but they must not be reused with the same key.
+- A {{Glossary("Nonce", "nonce")}} (that is, a number that may only be used once). The nonce part of the block stays the same for every block in the message. Each time a new message is to be encrypted, a new nonce is chosen. Nonces don't have to be secret, but they must not be reused with the same key.
 - A counter. This part of the block gets incremented each time a block is encrypted.
 
 Essentially: the nonce should ensure that counter blocks are not reused from one message to the next, while the counter should ensure that counter blocks are not reused within a single message.
@@ -163,34 +162,6 @@ function encryptMessage(key) {
 }
 ```
 
-```js
-let iv = window.crypto.getRandomValues(new Uint8Array(16));
-let key = window.crypto.getRandomValues(new Uint8Array(16));
-let data = new Uint8Array(12345);
-// crypto functions are wrapped in promises so we have to use await and make sure the function that
-// contains this code is an async function
-// encrypt function wants a cryptokey object
-const key_encoded = await window.crypto.subtle.importKey(
-  "raw",
-  key.buffer,
-  "AES-CTR",
-  false,
-  ["encrypt", "decrypt"],
-);
-const encrypted_content = await window.crypto.subtle.encrypt(
-  {
-    name: "AES-CTR",
-    counter: iv,
-    length: 128,
-  },
-  key_encoded,
-  data,
-);
-
-// Uint8Array
-console.log(encrypted_content);
-```
-
 ### AES-CBC
 
 This code fetches the contents of a text box, encodes it for encryption, and encrypts it using AES in CBC mode.
@@ -208,14 +179,7 @@ function encryptMessage(key) {
   let encoded = getMessageEncoding();
   // iv will be needed for decryption
   iv = window.crypto.getRandomValues(new Uint8Array(16));
-  return window.crypto.subtle.encrypt(
-    {
-      name: "AES-CBC",
-      iv: iv,
-    },
-    key,
-    encoded,
-  );
+  return window.crypto.subtle.encrypt({ name: "AES-CBC", iv }, key, encoded);
 }
 ```
 
@@ -236,11 +200,7 @@ function encryptMessage(key) {
   const encoded = getMessageEncoding();
   // iv will be needed for decryption
   const iv = window.crypto.getRandomValues(new Uint8Array(12));
-  return window.crypto.subtle.encrypt(
-    { name: "AES-GCM", iv: iv },
-    key,
-    encoded,
-  );
+  return window.crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, encoded);
 }
 ```
 

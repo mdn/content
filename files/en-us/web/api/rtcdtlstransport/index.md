@@ -37,7 +37,6 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
 ## Events
 
 - {{DOMxRef("RTCDtlsTransport.error_event", "error")}}
-
   - : Sent when a transport-level error occurs on the {{domxref("RTCPeerConnection")}}.
 
 - {{DOMxRef("RTCDtlsTransport.statechange_event", "statechange")}}

@@ -2,9 +2,8 @@
 title: Best practices for PWAs
 slug: Web/Progressive_web_apps/Guides/Best_practices
 page-type: guide
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) can be installed on devices and used as traditional websites in web browsers. This means that PWAs need to be able to adapt to different environments and to different user expectations.
 
@@ -101,4 +100,4 @@ Make sure your PWA provides an app-like experience by considering the following 
 ## See also
 
 - [What makes a good Progressive Web App](https://web.dev/articles/pwa-checklist) on web.dev (2022).
-- [Best practices for PWAs](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/best-practices) on learn.microsoft.com (2023).
+- [Best practices for PWAs](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/best-practices) on learn.microsoft.com (2023).

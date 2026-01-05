@@ -53,7 +53,6 @@ You can use this attribute with the following SVG elements:
 - `text-bottom`
   - : Matches the bottom of the box to the top of the parent's content area.
 - `text-before-edge`
-
   - : The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.
 
     > [!NOTE]
@@ -68,7 +67,6 @@ You can use this attribute with the following SVG elements:
 - `text-top`
   - : Matches the top of the box to the top of the parent's content area.
 - `text-after-edge`
-
   - : The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.
 
     > [!NOTE]
@@ -122,7 +120,7 @@ SVG 2 introduces some changes to the definition of this property. In particular:
 
   <style>
     <![CDATA[
-      text{
+      text {
         font: bold 36px Verdana, Helvetica, Arial, sans-serif;
       }
     ]]>
@@ -145,4 +143,4 @@ For object alignment in other elements (such as {{SVGElement("text")}}), see {{S
 ## See also
 
 - CSS {{cssxref("alignment-baseline")}} property
-- [CSS baseline alignment](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment#baseline_alignment)
+- [CSS baseline alignment](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview#baseline_alignment)

@@ -19,10 +19,10 @@ If you don't want that behavior, call {{domxref("Event/preventDefault", "prevent
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("click", (event) => {});
+```js-nolint
+addEventListener("click", (event) => { })
 
-onclick = (event) => {};
+onclick = (event) => { }
 ```
 
 ## Event type

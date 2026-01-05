@@ -28,11 +28,9 @@ new OscillatorNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}}.
 - `options` {{optional_inline}}
-
   - : An object whose properties specify the initial values for the oscillator node's
     properties. Any properties omitted from the object will take on the default value
     as documented.
-
     - `type`
       - : The shape of the wave produced by the node. Valid values are
         `"sine"`, `"square"`, `"sawtooth"`,

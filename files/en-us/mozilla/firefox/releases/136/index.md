@@ -1,10 +1,10 @@
 ---
-title: Firefox 136 for developers
+title: Firefox 136 release notes for developers
+short-title: Firefox 136
 slug: Mozilla/Firefox/Releases/136
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 136 that affect developers. Firefox 136 was released on [March 4, 2025](https://whattrainisitnow.com/release/?version=136).
 
@@ -17,8 +17,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ### CSS
 
-- The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components) ([Firefox bug 1940691](https://bugzil.la/1940691)).
-- The [`:open`](/en-US/docs/Web/CSS/:open) pseudo-class is now supported and allows you to select any element that is currently in an open state, this applies to the {{htmlelement("details")}}, {{htmlelement("dialog")}}, {{htmlelement("input")}} elements with a picker and {{htmlelement("select")}} elements which present a drop-down box. ([Firefox bug 1936113](https://bugzil.la/1936113)).
+- The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components) ([Firefox bug 1940691](https://bugzil.la/1940691)).
+- The [`:open`](/en-US/docs/Web/CSS/Reference/Selectors/:open) pseudo-class is now supported and allows you to select any element that is currently in an open state, this applies to the {{htmlelement("details")}}, {{htmlelement("dialog")}}, {{htmlelement("input")}} elements with a picker and {{htmlelement("select")}} elements which present a drop-down box. ([Firefox bug 1936113](https://bugzil.la/1936113)).
 - The {{cssxref("gradient")}} CSS functions {{cssxref("linear-gradient")}}, {{cssxref("conic-gradient")}}, and {{cssxref("radial-gradient")}} now allow a single color stop and 0-1 positions. This produces a single solid color and is used in setting the {{cssxref("mask")}} CSS property. ([Firefox bug 1900530](https://bugzil.la/1900530)).
 
 ### JavaScript
@@ -39,7 +39,6 @@ This article provides information about the changes in Firefox 136 that affect d
 - Element properties are now reflected for the [Aria attributes that contain element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) ([Firefox bug 1919102](https://bugzil.la/1919102)).
 
   This includes:
-
   - {{domxref("Element/ariaActiveDescendantElement","ariaActiveDescendantElement")}}, {{domxref("Element/ariaControlsElements","ariaControlsElements")}}, {{domxref("Element/ariaDescribedByElements","ariaDescribedByElements")}}, {{domxref("Element/ariaDetailsElements","ariaDetailsElements")}}, {{domxref("Element/ariaErrorMessageElements","ariaErrorMessageElements")}}, {{domxref("Element/ariaFlowToElements","ariaFlowToElements")}}, {{domxref("Element/ariaLabelledByElements", "ariaLabelledByElements")}}, {{domxref("Element/ariaOwnsElements","ariaOwnsElements")}} in the {{domxref("Element")}} interface
   - {{domxref("ElementInternals/ariaActiveDescendantElement","ariaActiveDescendantElement")}}, {{domxref("ElementInternals/ariaControlsElements","ariaControlsElements")}}, {{domxref("ElementInternals/ariaDescribedByElements","ariaDescribedByElements")}}, {{domxref("ElementInternals/ariaDetailsElements","ariaDetailsElements")}}, {{domxref("ElementInternals/ariaErrorMessageElements","ariaErrorMessageElements")}}, {{domxref("ElementInternals/ariaFlowToElements","ariaFlowToElements")}}, {{domxref("ElementInternals/ariaLabelledByElements", "ariaLabelledByElements")}}, {{domxref("ElementInternals/ariaOwnsElements","ariaOwnsElements")}} in the {{domxref("ElementInternals")}} interface.
 
@@ -61,7 +60,7 @@ This article provides information about the changes in Firefox 136 that affect d
 
 - Firefox now handles WebSocket port conflicts for the RemoteAgent more efficiently. If the port specified via the `--remote-debugging-port` command line argument cannot be acquired within 5 seconds, such as when another Firefox process is already using it, Firefox will now shut down instead of hanging ([Firefox bug 1927721](https://bugzil.la/1927721)).
 
-- Navigations using the HTTP schema, triggered by the `WebDriver:Navigate` command in Marionette or `browsingContext.navigate` in WebDriver BiDi, will no longer be automatically upgraded to HTTPS. These requests will now remain on HTTP as intended ([Firefox bug 1943551](https://bugzil.la/1943551)).
+- Navigations using the HTTP scheme, triggered by the `WebDriver:Navigate` command in Marionette or `browsingContext.navigate` in WebDriver BiDi, will no longer be automatically upgraded to HTTPS. These requests will now remain on HTTP as intended ([Firefox bug 1943551](https://bugzil.la/1943551)).
 
 #### WebDriver BiDi
 
@@ -98,7 +97,3 @@ These features are newly shipped in Firefox 136 but are disabled by default. To 
   ([Firefox bug 1069931](https://bugzil.la/1069931)).
 - **SVG path API methods**: `dom.svg.pathSegment.enabled`.
   The {{domxref("SVGPathElement/getPathData", "getPathData()")}}, {{domxref("SVGPathElement/setPathData", "setPathData()")}}, and {{domxref("SVGPathElement/getPathSegmentAtLength", "getPathSegmentAtLength()")}} methods of the {{domxref("SVGPathElement")}} interface are now supported. These methods provide a convenient way to work with SVG path data instead of parsing raw string data. ([Firefox bug 1934525](https://bugzil.la/1934525)).
-
-## Older versions
-
-{{Firefox_for_developers}}

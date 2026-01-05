@@ -63,7 +63,7 @@ And you will see the correct version number in the [output](https://googlechrome
 > [!NOTE]
 > libwebp returns the current version a.b.c as a hexadecimal number 0xabc. For example, v0.6.1 is encoded as 0x000601 = 1537.
 
-### Get an image from JavaScript into Wasm
+## Get an image from JavaScript into Wasm
 
 Getting the encoder's version number is great, but encoding an actual image would be more impressive. How do we do that?
 
@@ -117,11 +117,11 @@ const api = {
 const image = await loadImage("./image.jpg");
 const p = api.create_buffer(image.width, image.height);
 Module.HEAP8.set(image.data, p);
-// ... call encoder ...
+// … call encoder …
 api.destroy_buffer(p);
 ```
 
-### Encode the Image
+## Encode the Image
 
 The image is now available in Wasm. It is time to call the WebP encoder to do its job. Looking at the [WebP documentation](https://developers.google.com/speed/webp/docs/api#simple_encoding_api), you'll find that `WebPEncodeRGBA` seems like a perfect fit. The function takes a pointer to the input image and its dimensions, as well as a quality option between 0 and 100. It also allocates an output buffer for us that we need to free using `WebPFree()` once we are done with the WebP image.
 
@@ -171,7 +171,8 @@ const result = new Uint8Array(resultView);
 api.free_result(resultPointer);
 ```
 
-> **Note:** `new Uint8Array(someBuffer)` will create a new view onto the same memory chunk, while `new Uint8Array(someTypedArray)` will copy the data.
+> [!NOTE]
+> `new Uint8Array(someBuffer)` will create a new view onto the same memory chunk, while `new Uint8Array(someTypedArray)` will copy the data.
 
 Depending on the size of your image, you might run into an error where Wasm can't grow the memory enough to accommodate both the input and the output image:
 

@@ -1,5 +1,6 @@
 ---
 title: "ARIA: banner role"
+short-title: banner
 slug: Web/Accessibility/ARIA/Reference/Roles/banner_role
 page-type: aria-role
 spec-urls:
@@ -61,6 +62,8 @@ We could also have written the above with the HTML `header` element:
 ```
 
 ## Best practices
+
+Using the {{HTMLElement('header')}} element will automatically communicate that the element has a role of `banner`. If possible, prefer using the semantic `<header>` element instead of the `banner` role.
 
 While it is best to use the `header` element and ensure it is not a descendant of any subsection of the page, sometimes you don't have access to the underlying HTML. If this is the case, you can add the role of `banner` to the element of the page which should be exposed as a `banner` with JavaScript. Identifying the page's banner in this way will help improve the site's accessibility.
 

@@ -25,7 +25,7 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns the amount of device memory in gigabytes. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024.
 - {{domxref("WorkerNavigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean indicating a user's consent to their information being shared or sold.
-- {{domxref("WorkerNavigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("WorkerNavigator.gpu")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the {{domxref("GPU")}} object for the current worker context. The entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
 - {{DOMxRef("WorkerNavigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.

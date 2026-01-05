@@ -12,11 +12,9 @@ The MDN community is encouraged to [initiate and engage in discussions](/en-US/d
 Most discussions do not need a formal resolution process. These MDN discussion guidelines are here for the discussions that need a timely resolution, are stalled, are at risk of becoming stalled, or are otherwise not moving toward a conclusion and would benefit from a formal process:
 
 1. Each discussion is held / rooted in a [discussion on GitHub](https://github.com/orgs/mdn/discussions). This GitHub discussion serves as the "source of truth" for the topic.
-
    - To maintain continuity, remember to capture summaries and notes from any meetings and async discussions in this GitHub discussion thread.
 
 2. Each topic of discussion needs a driver. The driver is often the author of the discussion, but can be another person committed to resolving the discussion. The driver is responsible for:
-
    - Guiding the conversation.
    - Making people aware the discussion exists.
    - Setting the feedback, timeline, informing people of it, changing the timeline as necessary, and sticking to the timeline as appropriate.
@@ -27,7 +25,6 @@ Most discussions do not need a formal resolution process. These MDN discussion g
    - Guiding the implementation of the discussion results or working with the appropriate team lead to ensure that the results are implemented.
 
 3. Face-to-face meetings regarding a discussion should only be called if there is disagreement.
-
    - Face-to-face meetings must be announced in all relevant [communication channels](/en-US/docs/MDN/Community/Communication_channels), such as Slack, Discord, GitHub discussion, etc.
    - Conclusions of each face-to-face meeting must be entered into the GitHub discussion, which is the source of truth for the discussion.
    - The driver is responsible for calling the meeting, informing all parties, and reporting results back into the GitHub discussion.

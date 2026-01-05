@@ -26,7 +26,7 @@ A string. Currently the only value is `none`.
 
 ## See also
 
-- [SetSinkId test example](https://set-sink-id.glitch.me/)
+- [SetSinkId test example](https://mdn.github.io/dom-examples/audiocontext-setsinkid/) (check out the [source code](https://github.com/mdn/dom-examples/tree/main/audiocontext-setsinkid))
 - {{domxref("AudioContext.setSinkId()")}}
 - {{domxref("AudioContext.sinkId")}}
 - {{domxref("AudioContext/sinkchange_event", "sinkchange")}}

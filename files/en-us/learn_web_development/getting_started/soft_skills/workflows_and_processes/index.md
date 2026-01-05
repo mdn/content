@@ -167,20 +167,18 @@ Tools such as [Trello](https://trello.com/) and [Asana](https://asana.com/) prov
 
 [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) provide another good tooling option, and are free to use — you just need to sign up for a GitHub account.
 
-> [!CALLOUT]
->
-> **Try it out**
->
-> You should read up on the above processes, and practice tracking some of your work or personal projects using a kanban board. Don't worry about using a complex scrum methodology; basic kanban is fine for the moment. Even if you're doing something solo, it can be great to practice the workflow of:
->
-> 1. Creating tasks.
-> 2. Deciding how big they are or how long they will take.
-> 3. Prioritizing tasks.
-> 4. Putting them in order with due dates.
-> 5. Starting to work on different tasks.
-> 6. Setting their statuses ("in progress", "blocked", "done", etc.) as the work progresses.
->
-> Track the progress of a complete project from start to finish — try it with your own website or a side project of some kind. Also, try [contributing to an open source project](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#participate_in_open_source) or two; many of them will use a process to track their work similar to what we have described above.
+## Getting practice with project workflows
+
+You should read up on the above processes, and practice tracking some of your work or personal projects using a kanban board. Don't worry about using a complex scrum methodology; basic kanban is fine for the moment. Even if you're doing something solo, it can be great to practice the workflow of:
+
+1. Creating tasks.
+2. Deciding how big they are or how long they will take.
+3. Prioritizing tasks.
+4. Putting them in order with due dates.
+5. Starting to work on different tasks.
+6. Setting their statuses ("in progress", "blocked", "done", etc.) as the work progresses.
+
+Track the progress of a complete project from start to finish — try it with your own website or a side project of some kind. Also, try [contributing to an open source project](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#participate_in_open_source) or two; many of them will use a process to track their work similar to what we have described above.
 
 ## See also
 

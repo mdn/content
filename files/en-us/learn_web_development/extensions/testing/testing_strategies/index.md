@@ -168,7 +168,7 @@ It is generally better to have a real device running the browser you want to tes
 
 The following are also good options, if you can get them:
 
-- A Linux PC available, in case you need to test bugs specific to Linux versions of browsers. Linux users commonly use Firefox, Opera, and Chrome. If you only have one machine available, you could consider creating a dual boot machine running Linux and Windows on separate partitions. Ubuntu's installer makes this quite easy to set up; see [WindowsDualBoot](https://help.ubuntu.com/community/WindowsDualBoot) for help with this.
+- A Linux PC available, in case you need to test bugs specific to Linux versions of browsers. Linux users commonly use Firefox, Opera, and Chrome. If you only have one machine available, you could consider creating a dual boot machine running Linux and Windows on separate partitions.
 - A couple of lower-spec mobile devices, so you can test the performance of features like animations on less powerful processors.
 
 Your main work machine can also be a place to install other tools for specific purposes, such as accessibility auditing tools, screen readers, and emulators/virtual machines.
@@ -192,7 +192,7 @@ An emulator might be as simple as testing a device condition. For example, if yo
 More often than not though, you'll have to install some kind of emulator. The most common devices/browsers you'll want to test are as follows:
 
 - The official [Android Studio IDE](https://developer.android.com/studio/) for developing Android apps is a bit heavy weight for just testing websites on Google Chrome or the old Stock Android browser, but it does come with a Robust [emulator](https://developer.android.com/studio/run/emulator.html). If you want something a bit more lightweight, [Andy](https://www.andyroid.net/) is a reasonable option that runs on both Windows and Mac.
-- Apple provides an app called [Simulator](https://help.apple.com/simulator/mac/current/) that runs on top of the [XCode](https://developer.apple.com/xcode/) development environment, and emulates iPad/iPhone/Apple Watch/Apple TV. This includes the native iOS Safari browser. This unfortunately only runs on a Mac.
+- Apple provides an app called [Simulator](https://help.apple.com/simulator/mac/current/) that runs on top of the [Xcode](https://developer.apple.com/xcode/) development environment, and emulates iPad/iPhone/Apple Watch/Apple TV. This includes the native iOS Safari browser. This unfortunately only runs on a Mac.
 
 You can often find simulators for other mobile device environments too, for example:
 
@@ -215,7 +215,6 @@ To use a Virtual Box, you need to:
 3. Open the app; you'll be presented with a view like the following: ![Application window left panel lists Windows operating system and Opera TV emulators. Right panel include several subpanels including general, system, display, settings, audio, network and a preview.](virtualbox.png)
 4. To create a new virtual machine, press the _New_ button in the top left-hand corner.
 5. Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
-
    1. Provide a name for the new virtual machine
    2. Choose which operating system and version you are installing on it
    3. Set how much RAM should be allocated (we'd recommend something like 2048MB, or 2GB)
@@ -277,7 +276,7 @@ These steps are designed to make sure that the browser you are testing in is as 
 > Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.
 
 > [!NOTE]
-> Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/jazzband/django-waffle).
+> Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/django-waffle/django-waffle).
 
 ## Summary
 

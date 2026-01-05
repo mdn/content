@@ -2,9 +2,8 @@
 title: Media query
 slug: Glossary/Media_query
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **media query** is a logical expression that is a method for CSS, JavaScript, HTML, and other web languages, to check aspects of the user agent or device that the document is being displayed in, independent of the document contents, to determine whether the associated code block or feature should be applied.
 
@@ -20,5 +19,5 @@ A media query may optionally be prefixed by a single media query modifier or `no
 
 ## See also
 
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) module
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using) module

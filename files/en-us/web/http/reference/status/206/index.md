@@ -3,9 +3,8 @@ title: 206 Partial Content
 slug: Web/HTTP/Reference/Status/206
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.206
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`206 Partial Content`** [successful response](/en-US/docs/Web/HTTP/Reference/Status#successful_responses) status code is sent in response to a [range request](/en-US/docs/Web/HTTP/Guides/Range_requests).
 The response body contains the requested ranges of data as specified in the {{HTTPHeader("Range")}} header of the request.

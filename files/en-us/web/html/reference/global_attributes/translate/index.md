@@ -1,11 +1,11 @@
 ---
-title: translate
+title: HTML translate global attribute
+short-title: translate
 slug: Web/HTML/Reference/Global_attributes/translate
 page-type: html-attribute
 browser-compat: html.global_attributes.translate
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`translate`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that is used to specify whether an element's _translatable attribute_ values and its {{domxref("Text")}} node children should be translated when the page is localized, or whether to leave them unchanged.
 

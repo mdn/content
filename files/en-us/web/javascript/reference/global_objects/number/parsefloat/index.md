@@ -1,11 +1,11 @@
 ---
 title: Number.parseFloat()
+short-title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.parseFloat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Number.parseFloat()`** static method parses an argument and returns a floating point number. If a number cannot be parsed from the argument, it returns {{jsxref("NaN")}}.
 

@@ -3,9 +3,8 @@ title: pageAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setIcon
 page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.setIcon
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the icon for the page action.
 
@@ -26,11 +25,8 @@ let settingIcon = browser.pageAction.setIcon(
 ### Parameters
 
 - `details`
-
   - : `object`. An object containing either `imageData` or `path` properties, and a `tabId` property.
-
     - `imageData` {{optional_inline}}
-
       - : {{WebExtAPIRef('pageAction.ImageDataType')}} or `object`. This is either a single `ImageData` object or a dictionary object.
 
         Use a dictionary object to specify multiple `ImageData` objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `imageData` is a dictionary, the value of each property is an `ImageData` object, and its name is its size, like this:
@@ -47,7 +43,6 @@ let settingIcon = browser.pageAction.setIcon(
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
     - `path` {{optional_inline}}
-
       - : `string` or `object`. This is either a relative path to an icon file or a dictionary object.
 
         Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `path` is a dictionary, the value of each property is a relative path, and its name is its size, like this:
@@ -76,10 +71,6 @@ let settingIcon = browser.pageAction.setIcon(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments once the icon has been set.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Set the icon for the page action when the user clicks it:
@@ -94,6 +85,10 @@ browser.pageAction.onClicked.addListener((tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction#method-setIcon) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.

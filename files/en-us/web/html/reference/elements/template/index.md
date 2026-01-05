@@ -3,9 +3,8 @@ title: "<template>: The Content Template element"
 slug: Web/HTML/Reference/Elements/template
 page-type: html-element
 browser-compat: html.elements.template
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript or generated immediately into shadow DOM.
 
@@ -14,16 +13,12 @@ The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `shadowrootmode`
-
   - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element.
     It is a declarative version of the {{domxref("Element.attachShadow()")}} method and accepts the same {{glossary("enumerated")}} values.
-
     - `open`
-
       - : Exposes the internal shadow root DOM for JavaScript (recommended for most use cases).
 
     - `closed`
-
       - : Hides the internal shadow root DOM from JavaScript.
 
     > [!NOTE]
@@ -35,23 +30,24 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     > You may find the non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has since been removed and replaced by the standard `shadowrootmode` attribute.
 
 - `shadowrootclonable`
-
   - : Sets the value of the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If set, a clone of the shadow host (the parent element of this `<template>`) created with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a shadow root in the copy.
 
 - `shadowrootdelegatesfocus`
-
   - : Sets the value of the [`delegatesFocus`](/en-US/docs/Web/API/ShadowRoot/delegatesFocus) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If this is set and a non-focusable element in the shadow tree is selected, then focus is delegated to the first focusable element in the tree.
     The value defaults to `false`.
 
-- `shadowrootserializable` {{experimental_inline}}
-
+- `shadowrootserializable`
   - : Sets the value of the [`serializable`](/en-US/docs/Web/API/ShadowRoot/serializable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
     The value defaults to `false`.
 
 ## Usage notes
+
+This element has no permitted content, because everything nested inside it in the HTML source does not actually become the children of the `<template>` element. The {{domxref("Node.childNodes")}} property of the `<template>` element is always empty, and you can only access said nested content via the special {{domxref("HTMLTemplateElement.content", "content")}} property. However, if you call {{domxref("Node.appendChild()")}} or similar methods on the `<template>` element, then you would be inserting children into the `<template>` element itself, which is a violation of its content model and does not actually update the {{domxref("DocumentFragment")}} returned by the `content` property.
+
+Due to the way the `<template>` element is parsed, all `<html>`, `<head>`, and `<body>` opening and closing tags inside the template are syntax errors and are ignored by the parser, so `<template><head><title>Test</title></head></template>` is the same as `<template><title>Test</title></template>`.
 
 There are two main ways to use the `<template>` element.
 
@@ -59,10 +55,10 @@ There are two main ways to use the `<template>` element.
 
 By default, the element's content is not rendered.
 The corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template.
-This fragment can be cloned via the {{domxref("Node.cloneNode", "cloneNode")}} method and inserted into the DOM.
 
-Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior.
-For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
+The {{domxref("Node.cloneNode()")}} and {{domxref("Document.importNode()")}} methods both create a copy of a node. The difference is that `importNode()` clones the node in the context of the calling document, whereas `cloneNode()` uses the document of the node being cloned. The document context determines the {{domxref("CustomElementRegistry")}} for constructing any custom elements. For this reason, use `document.importNode()` to clone the `content` fragment so that custom element descendants are constructed using the definitions in the current document, rather than the separate document that owns the template content. See the {{domxref("Node.cloneNode()")}} page's examples for more details.
+
+Note that the `DocumentFragment` container itself should not have data attached to it. See the [Data on the DocumentFragment is not cloned](#data_on_the_documentfragment_is_not_cloned) example for more details.
 
 ### Declarative Shadow DOM
 
@@ -113,7 +109,7 @@ if ("content" in document.createElement("template")) {
   const template = document.querySelector("#productrow");
 
   // Clone the new row and insert it into the table
-  const clone = template.content.cloneNode(true);
+  const clone = document.importNode(template.content, true);
   let td = clone.querySelectorAll("td");
   td[0].textContent = "1235646565";
   td[1].textContent = "Stuff";
@@ -121,7 +117,7 @@ if ("content" in document.createElement("template")) {
   tbody.appendChild(clone);
 
   // Clone the new row and insert it into the table
-  const clone2 = template.content.cloneNode(true);
+  const clone2 = document.importNode(template.content, true);
   td = clone2.querySelectorAll("td");
   td[0].textContent = "0384928528";
   td[1].textContent = "Acme Kidney Beans 2";
@@ -137,10 +133,10 @@ The result is the original HTML table, with two new rows appended to it via Java
 
 ```css hidden
 table {
-  background: #000;
+  background: black;
 }
 table td {
-  background: #fff;
+  background: white;
 }
 ```
 
@@ -177,8 +173,10 @@ In this example, a hidden support warning is included at the beginning of the ma
 ```
 
 ```js
-const isShadowRootModeSupported =
-  HTMLTemplateElement.prototype.hasOwnProperty("shadowRootMode");
+const isShadowRootModeSupported = Object.hasOwn(
+  HTMLTemplateElement.prototype,
+  "shadowRootMode",
+);
 
 document
   .querySelector("p[hidden]")
@@ -193,7 +191,7 @@ This example demonstrates how `shadowrootdelegatesfocus` is applied to a shadow 
 
 The code first declares a shadow root inside a `<div>` element, using the `<template>` element with the `shadowrootmode` attribute.
 This displays both a non-focusable `<div>` containing text and a focusable `<input>` element.
-It also uses CSS to style elements with [`:focus`](/en-US/docs/Web/CSS/:focus) to blue, and to set the normal styling of the host element.
+It also uses CSS to style elements with {{cssxref(":focus")}} to blue, and to set the normal styling of the host element.
 
 ```html
 <div>
@@ -256,7 +254,7 @@ This also focuses the parent element as shown below.
 
 ![Screenshot of the code where the element has focus](template_with_focus.png)
 
-## Avoiding DocumentFragment pitfalls
+## Data on the DocumentFragment is not cloned
 
 When a {{domxref("DocumentFragment")}} value is passed, {{domxref("Node.appendChild")}} and similar methods move only the _child nodes_ of that value into the target node. Therefore, it is usually preferable to attach event handlers to the children of a `DocumentFragment`, rather than to the `DocumentFragment` itself.
 
@@ -282,11 +280,11 @@ function clickHandler(event) {
   event.target.append(" — Clicked this div");
 }
 
-const firstClone = template.content.cloneNode(true);
+const firstClone = document.importNode(template.content, true);
 firstClone.addEventListener("click", clickHandler);
 container.appendChild(firstClone);
 
-const secondClone = template.content.cloneNode(true);
+const secondClone = document.importNode(template.content, true);
 secondClone.children[0].addEventListener("click", clickHandler);
 container.appendChild(secondClone);
 ```
@@ -295,7 +293,7 @@ container.appendChild(secondClone);
 
 Since `firstClone` is a `DocumentFragment`, only its children are added to `container` when `appendChild` is called; the event handlers of `firstClone` are not copied. In contrast, because an event handler is added to the first _child node_ of `secondClone`, the event handler is copied when `appendChild` is called, and clicking on it works as one would expect.
 
-{{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
+{{EmbedLiveSample(' Data on the DocumentFragment is not cloned')}}
 
 ## Technical summary
 
@@ -325,7 +323,7 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>No restrictions</td>
+      <td>Nothing (see <a href="#usage_notes">Usage notes</a>)</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -352,7 +350,7 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>
@@ -384,6 +382,6 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 - {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements
 - [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) interface
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
-- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
 - [Declarative Shadow DOM (with html)](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) in _Using Shadow DOM_
 - [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) on web.dev (2023)

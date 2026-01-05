@@ -1,17 +1,23 @@
 ---
-title: "Permissions-Policy: identity-credentials-get"
+title: "Permissions-Policy: identity-credentials-get directive"
+short-title: identity-credentials-get
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/identity-credentials-get
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.identity-credentials-get
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Permissions-Policy")}} header `identity-credentials-get` directive controls whether the current document is allowed to use the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API), and more specifically the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method with an `identity` option.
+The HTTP {{HTTPHeader("Permissions-Policy")}} header `identity-credentials-get` directive controls whether the current document is allowed to use the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API), and more specifically usage of the following methods:
 
-Where this policy forbids use of the API, the {{jsxref("Promise")}} returned by the `get()` call will reject with a `NotAllowedError` {{domxref("DOMException")}}.
+- {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} (when used with the `identity` option)
+- {{domxref("IdentityCredential.disconnect_static", "IdentityCredential.disconnect()")}}
+- {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}}
+
+Where this policy forbids use of the API, {{jsxref("Promise")}}s returned by these methods will reject with a `NotAllowedError` {{domxref("DOMException")}}.
 
 ## Syntax
 

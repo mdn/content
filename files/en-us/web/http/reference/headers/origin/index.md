@@ -1,11 +1,11 @@
 ---
-title: Origin
+title: Origin header
+short-title: Origin
 slug: Web/HTTP/Reference/Headers/Origin
 page-type: http-header
 browser-compat: http.headers.Origin
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Origin`** {{Glossary("request header")}} indicates the {{glossary("origin")}} ([scheme](/en-US/docs/Web/URI/Reference/Schemes), hostname, and port) that _caused_ the request.
 For example, if a user agent needs to request resources included in a page, or fetched by scripts that it executes, then the origin of the page may be included in the request.
@@ -34,7 +34,7 @@ Origin: <scheme>://<hostname>:<port>
 ## Directives
 
 - `null`
-  - : The origin is "privacy sensitive", or is an _opaque origin_ as defined by the HTML specification (specific cases are listed in the [description](#description) section).
+  - : The origin is "privacy sensitive", or is an [opaque origin](/en-US/docs/Glossary/Origin#opaque_origin) (specific cases are listed in the [description](#description) section).
 - `<scheme>`
   - : The protocol that is used.
     Usually, it is the HTTP protocol or its secured version, HTTPS.
@@ -52,7 +52,7 @@ It is used to provide the security context for the origin request, except in cas
 Broadly speaking, user agents add the `Origin` request header to:
 
 - {{Glossary("CORS", "cross origin")}} requests.
-- [same-origin](/en-US/docs/Web/Security/Same-origin_policy) requests except for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests (i.e., they are added to same-origin {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, and {{HTTPMethod("DELETE")}} requests).
+- [same-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) requests except for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests (i.e., they are added to same-origin {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, and {{HTTPMethod("DELETE")}} requests).
 
 There are some exceptions to the above rules; for example, if a cross-origin {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} request is made in [no-cors mode](/en-US/docs/Web/API/Request/mode#value), the `Origin` header will not be added.
 
@@ -62,7 +62,8 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 - Cross-origin images and media data, including that in {{HTMLElement("img")}}, {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements.
 - Documents created programmatically using {{domxref("DOMImplementation.createDocument", "createDocument()")}}, generated from a `data:` URL, or that do not have a creator browsing context.
 - Redirects across origins.
-- {{HTMLElement("iframe", "iframes")}} with a sandbox attribute that doesn't contain the value `allow-same-origin`.
+- Documents served with the {{HTTPHeader("Content-Security-Policy")}} `sandbox` directive whose value doesn't include `allow-same-origin`.
+- {{HTMLElement("iframe", "iframes")}} with a sandbox attribute whose value doesn't include `allow-same-origin`.
 - Responses that are network errors.
 - {{HTTPHeader("Referrer-Policy")}} set to `no-referrer` for non-`cors` request modes (e.g., basic form posts).
 
@@ -91,5 +92,5 @@ Origin: https://developer.mozilla.org:80
 
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Referer")}}
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
 - [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802) (Stack Overflow)

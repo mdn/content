@@ -1,11 +1,11 @@
 ---
 title: Math.sinh()
+short-title: sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.sinh
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.sinh()`** static method returns the hyperbolic sine of a number. That is,
 

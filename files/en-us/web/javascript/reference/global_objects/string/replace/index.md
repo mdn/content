@@ -1,11 +1,11 @@
 ---
 title: String.prototype.replace()
+short-title: replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.replace
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`replace()`** method of {{jsxref("String")}} values returns a new string with one, some, or all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function called for each match. If `pattern` is a string, only the first occurrence will be replaced. The original string is left unchanged.
 
@@ -17,7 +17,7 @@ const paragraph = "I think Ruth's dog is cuter than your dog!";
 console.log(paragraph.replace("Ruth's", "my"));
 // Expected output: "I think my dog is cuter than your dog!"
 
-const regex = /Dog/i;
+const regex = /dog/i;
 console.log(paragraph.replace(regex, "ferret"));
 // Expected output: "I think Ruth's ferret is cuter than your dog!"
 ```
@@ -120,7 +120,7 @@ function replacer(match, p1, p2, p3, offset, string) {
   // p1 is non-digits, p2 digits, and p3 non-alphanumerics
   return [p1, p2, p3].join(" - ");
 }
-const newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+const newString = "abc12345#$*%".replace(/(\D*)(\d*)(\W*)/, replacer);
 console.log(newString); // abc - 12345 - #$*%
 ```
 
@@ -134,8 +134,8 @@ In the following example, the regular expression is defined in `replace()` and i
 
 ```js
 const str = "Twas the night before Xmas...";
-const newstr = str.replace(/xmas/i, "Christmas");
-console.log(newstr); // Twas the night before Christmas...
+const newStr = str.replace(/xmas/i, "Christmas");
+console.log(newStr); // Twas the night before Christmas...
 ```
 
 This logs `'Twas the night before Christmas...'`.
@@ -150,8 +150,8 @@ Global replace can only be done with a regular expression. In the following exam
 ```js
 const re = /apples/gi;
 const str = "Apples are round, and apples are juicy.";
-const newstr = str.replace(re, "oranges");
-console.log(newstr); // oranges are round, and oranges are juicy.
+const newStr = str.replace(re, "oranges");
+console.log(newStr); // oranges are round, and oranges are juicy.
 ```
 
 This logs `'oranges are round, and oranges are juicy'`.
@@ -163,8 +163,8 @@ The following script switches the words in the string. For the replacement text,
 ```js
 const re = /(\w+)\s(\w+)/;
 const str = "Maria Cruz";
-const newstr = str.replace(re, "$2, $1");
-console.log(newstr); // Cruz, Maria
+const newStr = str.replace(re, "$2, $1");
+console.log(newStr); // Cruz, Maria
 ```
 
 This logs `'Cruz, Maria'`.

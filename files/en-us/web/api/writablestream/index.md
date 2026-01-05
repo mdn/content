@@ -56,7 +56,7 @@ try {
   await writer.close(); // wait for all chunks to be written
   console.log("All chunks written");
 } catch (error) {
-  console.error("Stream error: " + error);
+  console.error("Stream error: ", error);
 }
 ```
 
@@ -72,4 +72,4 @@ This example does not support the [backpressure](/en-US/docs/Web/API/Streams_API
 
 ## See also
 
-- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
+- [Streams—The Definitive Guide](https://web.dev/articles/streams)

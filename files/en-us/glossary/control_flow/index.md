@@ -2,9 +2,8 @@
 title: Control flow
 slug: Glossary/Control_flow
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Control flow** is the order in which the computer executes statements in a script.
 

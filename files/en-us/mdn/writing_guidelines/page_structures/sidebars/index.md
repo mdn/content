@@ -56,18 +56,18 @@ To create a single link in a sidebar, you include a YAML list item containing a 
 
 ```yaml
 sidebar:
-  - /MDN/Changelog
+  - /MDN/Writing_guidelines/Page_structures/Sidebars
 ```
 
-The URL is relative to the `docs` directory in the MDN URL structure, so for example, `/MDN/Changelog` would generate a link to https://developer.mozilla.org/en-US/docs/MDN/Changelog. The system automatically uses the linked page's document title as the link text.
+The URL is relative to the `docs` directory in the MDN URL structure, so for example, `/MDN/Writing_guidelines/Page_structures/Sidebars` would generate a link to the current page. The system automatically uses the linked page's document title as the link text.
 If the page has a `short-title` key in the front matter, that will be used for the sidebar link display text instead.
 
-If you want to use custom link text that's not a document's `title` or `short-title`, you need to include two keys inside the list item — `title`, which contains the custom link text, and `link`, which contains the relative URL as before. The following example would create a link to the MDN Web Docs changelog as before, but with custom link text of "Our changelog":
+If you want to use custom link text that's not a document's `title` or `short-title`, you need to include two keys inside the list item — `title`, which contains the custom link text, and `link`, which contains the relative URL as before. The following example would create a link to the current page as before, but with custom link text of "Writing sidebars":
 
 ```yaml
 sidebar:
-  - title: Our changelog
-    link: /MDN/Changelog
+  - title: Writing sidebars
+    link: /MDN/Writing_guidelines/Page_structures/Sidebars
 ```
 
 ### Section titles
@@ -114,7 +114,6 @@ sidebar:
         children:
           - /MDN/Community
           - /MDN/Community/Getting_started
-          - /MDN/Community/Security_vulnerability_response
       - /MDN/Community/Open_source_etiquette
       - /MDN/Community/Communication_channels
       - /MDN/Community/Discussions
@@ -227,7 +226,7 @@ Let's look at an example to show what this looks like. In the [HTML](/en-US/docs
 
 ```yaml
 - type: listSubPages
-  path: /Web/HTML/Element/input
+  path: /Web/HTML/Reference/Elements/input
   title: Input_types
   details: closed
   code: true
@@ -265,16 +264,17 @@ When the sidebar is rendered, the system replaces the `Input_types` text with it
 
 If an MDN locale is accessed that does not have a value defined for a particular placeholder, it defaults to the `en-US` version. If an `en-US` version is not defined, the literal placeholder text is displayed (which would be `Input_types`, in the above case).
 
-## Non-standard sidebars
+## Unique sidebars
 
-There are some sidebars on MDN that don't use the standard system described above. These are complex, fully automated macros that don't need changing very often:
+There are some sidebars on MDN that don't use the standard system described above. These are more complex macros that need special handling:
 
 - `\{{APIRef("<API>")}}`
   - : The API sidebar displayed on [API reference pages](/en-US/docs/Web/API#interfaces). For each interface, the macro auto-generates links to members defined on the interface — properties, methods, events, etc. The single parameter is the name of the relevant API group defined in the [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) file. To edit the related pages shown at the bottom of the sidebar, edit that API's GroupData entry.
 - `\{{DefaultAPISidebar("<API>")}}`
   - : The API sidebar displayed on [API landing pages](/en-US/docs/Web/API#specifications). The single parameter is the name of the relevant API group defined in the [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) file. To edit the guides, interfaces, etc. linked to in a particular API's sidebar, edit that API's GroupData entry.
-- `\{{JSRef("<JS_topic>")}}`
-  - : The sidebar on [JavaScript reference pages](/en-US/docs/Web/JavaScript/Reference). The single parameter is the directory you want to generate the links for.
+- `sidebar: jsref`
+  - : The sidebar on [JavaScript reference pages](/en-US/docs/Web/JavaScript/Reference) included via front matter.
+    The `jsref` contents are defined in rari in [`jsref.rs`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/sidebars/jsref.rs).
 
 If you think one of these should be updated, get in touch with us via the [usual channels](/en-US/docs/MDN/Community/Communication_channels).
 

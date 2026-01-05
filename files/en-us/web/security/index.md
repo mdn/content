@@ -1,7 +1,9 @@
 ---
 title: Security on the web
+short-title: Security
 slug: Web/Security
 page-type: landing-page
+sidebar: security
 ---
 
 Websites contain several different types of information. Some of it is non-sensitive, for example the copy shown on the public pages. Some of it is sensitive, for example customer usernames, passwords, and banking information, or internal algorithms and private product information.
@@ -32,7 +34,7 @@ Web browsers follow a strict security model that enforces strong security for co
 
 ### Same-origin policy and CORS
 
-[Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) is a fundamental security mechanism of the web that restricts how a document or a script loaded from one {{Glossary("origin")}} can interact with a resource from another origin. It helps isolate potentially malicious documents, reducing possible attack vectors.
+[Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy) is a fundamental security mechanism of the web that restricts how a document or a script loaded from one {{Glossary("origin")}} can interact with a resource from another origin. It helps isolate potentially malicious documents, reducing possible attack vectors.
 
 In general, documents from one origin cannot make requests to other origins. This makes sense because you don't want sites to be able to interfere with one another and access unauthorized data.
 
@@ -48,16 +50,14 @@ All browsers are moving towards requiring HTTPS by default; this is practically 
 
 Related topics:
 
-- [Transport layer security](/en-US/docs/Web/Security/Transport_Layer_Security) (TLS)
+- [Transport layer security](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security) (TLS)
   - : The TLS protocol is the standard for enabling two networked applications or devices to exchange information privately and robustly. Applications that use TLS can choose their security parameters, which can have a substantial impact on the security and reliability of data.
 - [HTTP Strict-Transport-Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : The `Strict-Transport-Security` [HTTP](/en-US/docs/Web/HTTP) header lets a website specify that it may only be accessed using HTTPS.
-- [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency)
+- [Certificate Transparency](/en-US/docs/Web/Security/Defenses/Certificate_Transparency)
   - : Certificate Transparency (CT) is an open framework designed to protect against and monitor for certificate misissuance. Newly issued certificates are 'logged' to publicly run, often independent CT logs. These provide append-only, cryptographically assured records of issued TLS certificates.
-- [Mixed content](/en-US/docs/Web/Security/Mixed_content)
+- [Mixed content](/en-US/docs/Web/Security/Defenses/Mixed_content)
   - : An HTTPS page that includes content fetched using [cleartext](/en-US/docs/Glossary/Plaintext) HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers.
-- [Weak signature algorithms](/en-US/docs/Web/Security/Weak_Signature_Algorithm)
-  - : The strength of the hash algorithm used in {{Glossary("Signature/Security", "signing")}} a {{Glossary("digital certificate")}} is a critical element of the security of the certificate. Some signature algorithms are known to be weak, and should be avoided when appropriate.
 
 ### Secure contexts and feature permissions
 
@@ -70,13 +70,13 @@ Browsers control the usage of "powerful features" in different ways. These "powe
 
 These "powerful features" are controlled in the following ways:
 
-- Usage of such features is permitted only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts). A secure context is a {{domxref("Window", "window")}} or a {{domxref("WorkerGlobalScope", "worker")}} for which there is reasonable confidence that the content has been delivered securely (via HTTPS/TLS). In a secure context, the potential for communication with contexts that are **not** secure is limited. Secure contexts also help to prevent [man-in-the-middle attackers](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) from accessing powerful features.
+- Usage of such features is permitted only in [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts). A secure context is a {{domxref("Window", "window")}} or a {{domxref("WorkerGlobalScope", "worker")}} for which there is reasonable confidence that the content has been delivered securely (via HTTPS/TLS). In a secure context, the potential for communication with contexts that are **not** secure is limited. Secure contexts also help to prevent [man-in-the-middle attackers](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) from accessing powerful features.
 
-  To see a list of web platform features available only in secure contexts, see [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts).
+  To see a list of web platform features available only in secure contexts, see [Features restricted to secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts).
 
 - The usage of these features is gated behind a system of user permissions: users have to explicitly opt-in to providing access to such features, meaning that they can't be used automatically. User permission requests happen automatically, and you can query the state of an API permission by using the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-- Several other browser features can be used only in response to a user action such as clicking a button, meaning that they need to be invoked from inside an appropriate event handler. This is called **transient activation**. See [Features gated by user activation](/en-US/docs/Web/Security/User_activation) for more information.
+- Several other browser features can be used only in response to a user action such as clicking a button, meaning that they need to be invoked from inside an appropriate event handler. This is called **transient activation**. See [Features gated by user activation](/en-US/docs/Web/Security/Defenses/User_activation) for more information.
 
 ## High-level security considerations
 
@@ -86,17 +86,17 @@ There are many aspects of web security that need to be thought about on the serv
 
 Handling data responsibly is largely concerned with cutting down on [third-party cookie](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) usage and being careful about the data you store and share with them. Traditionally, web developers have used cookies to store all kinds of data, and it has been easy for attackers to exploit this tendency. As a result, browsers have started to limit what you can do with cross-site cookies, with the aim of removing access to them altogether in the future.
 
-You should prepare for the removal of cross-site cookies by limiting the amount of tracking activities you rely on and/or by implementing the persistence of the desired information in other ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies) and [Replacing third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#replacing_third-party_cookies) for more information.
+You should prepare for the removal of cross-site cookies by limiting the amount of tracking activities you rely on and/or by implementing the persistence of the desired information in other ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies) for more information.
 
 ### Protect user identity and manage logins
 
 When implementing a secure solution that involves data collection, particularly if the data is sensitive such as log-in credentials, it makes sense to use a reputable solution. For example, any respectable server-side framework will have built-in features to protect against common vulnerabilities. You could also consider using a specialized product for your purpose, for example an identity provider solution or a secure online survey provider.
 
-If you want to roll your own solution for collecting user data, make sure you understand all aspects and requirements. Hire an experienced server-side developer and/or security engineer to implement the system, and ensure it is tested thoroughly. Use multi-factor authentication (MFA) to provide better protection. Consider using a dedicated API such as [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API) or [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) to streamline the client-side of the app.
+If you want to roll your own solution for collecting user data, make sure you understand all aspects and requirements. Hire an experienced server-side developer and/or security engineer to implement the system, and ensure it is tested thoroughly. Use {{glossary("multi-factor authentication")}} (MFA) to provide better protection. Consider using a dedicated API such as [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API) or [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) to streamline the client-side of the app.
 
 Here are some other tips for providing secure logins:
 
-- When collecting user login information, enforce strong passwords so that your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. In addition, encourage your users to use a password manager so that they can use more complex passwords, don't need to worry about remembering them, and won't create a security risk by writing them down. See also our article on [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
+- When collecting user login information, enforce strong passwords so that your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. In addition, encourage your users to use a password manager so that they can use more complex passwords, don't need to worry about remembering them, and won't create a security risk by writing them down. See also our article on [password authentication](/en-US/docs/Web/Security/Authentication/Passwords).
 - You should also educate your users about **phishing**. Phishing is the act of sending a message to a user (for example, an email or an SMS) containing a link to a site that looks like a site they use every day but isn't. The link is accompanied by a message designed to trick users into entering their username and password on the site so it can be stolen and then used by an attacker for malicious purposes.
 
   > [!NOTE]
@@ -109,7 +109,7 @@ Here are some other tips for providing secure logins:
 
 As a general rule, you shouldn't [include sensitive data in URL query strings](https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url) because if a third party intercepts the URL (for example, via the {{httpheader("Referer")}} HTTP header), they could steal that information. Even more serious is the fact that these URLs can be indexed by public web crawlers, HTTP proxies, and archiving tools such as the [internet archive](https://web.archive.org/), meaning that your sensitive data could persist on publicly accessible resources.
 
-Use `POST` requests rather than `GET` requests to avoid these issues. Our article [Referer header policy: Privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) describes in more detail the privacy and security risks associated with the `Referer` header, and offers advice on mitigating those risks.
+Use `POST` requests rather than `GET` requests to avoid these issues. Our article [Referer header policy: Privacy and security concerns](/en-US/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) describes in more detail the privacy and security risks associated with the `Referer` header, and offers advice on mitigating those risks.
 
 > [!NOTE]
 > Steering away from transmitting sensitive data in URLs via `GET` requests can also help protect against {{glossary("CSRF", "cross-site request forgery")}} and [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
@@ -131,7 +131,7 @@ Following on from the previous section, when you allow feature and resource usag
 
 Related topics:
 
-- [Subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
+- [Subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity)
   - : **Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a {{Glossary("CDN")}}) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
 - [HTTP Access-Control-Allow-Origin](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
   - : The **`Access-Control-Allow-Origin`** response header indicates whether the response can be shared with requesting code from the given {{glossary("origin")}}.
@@ -174,7 +174,3 @@ Some of these guides are directly related to the [HTTP Observatory](/en-US/obser
 - [Learn: Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
 - [Mozilla Security Blog](https://blog.mozilla.org/security/)
 - [OWASP Cheat Sheet series](https://cheatsheetseries.owasp.org/index.html)
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Security", "1", "0", "1")}}
-</section>

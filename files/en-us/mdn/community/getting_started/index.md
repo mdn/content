@@ -46,7 +46,7 @@ We need your technical expertise, and we'll help polish your English in order to
 
 ## Choosing what to work on and getting started
 
-Once you've decided what sort of task you want to work on, it is time to head over to the [contributors task board](https://github.com/orgs/mdn/projects/25/views/1), pick an issue, and let us know by commenting on the issue and tagging the `@mdn/mdn-community-engagement` team.
+Once you've decided what sort of task you want to work on, it is time to head over to the [contributors task board](https://github.com/orgs/mdn/projects/25/views/1), pick an issue, and let us know by commenting on the issue and tagging the `@mdn/community` team.
 Someone from the team will respond with some comments, hints, or guidance.
 
 Make sure you're not working on something that's already in-progress - it can be frustrating to duplicate or lose work.
@@ -60,7 +60,7 @@ Here's a list of ways you can contribute to MDN Web Docs:
 - [Review pull requests](/en-US/docs/MDN/Community/Pull_requests)
 - [Help beginners in our community](/en-US/docs/MDN/Community)
 - [Help translate MDN Web Docs](/en-US/docs/MDN/Community/Translated_content)
-- [Help fix known backend issues](https://github.com/mdn/rari/issues) and [known frontend issues](https://github.com/mdn/yari/issues)
+- [Help fix known backend issues](https://github.com/mdn/rari/issues) and [known frontend issues](https://github.com/mdn/fred/issues)
 - [Help us keep browser compatibility data up to date](https://github.com/mdn/browser-compat-data)
 
 ## Contributions

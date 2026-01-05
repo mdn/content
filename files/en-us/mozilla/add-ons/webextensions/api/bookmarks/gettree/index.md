@@ -3,9 +3,8 @@ title: bookmarks.getTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.getTree
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 **`bookmarks.getTree()`** returns an array containing the root of the bookmarks tree as a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} object.
 

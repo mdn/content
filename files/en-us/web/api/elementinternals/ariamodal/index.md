@@ -27,7 +27,14 @@ A string with one of the following values:
 In this example the value of `ariaModal` is set to "true".
 
 ```js
-this.internals_.ariaModal = "true";
+class CustomEl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaModal = "true";
+  }
+  // …
+}
 ```
 
 ## Specifications

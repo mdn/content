@@ -1,11 +1,11 @@
 ---
 title: Array.prototype.indexOf()
+short-title: indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.indexOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`indexOf()`** method of {{jsxref("Array")}} instances returns the first index at which a
 given element can be found in the array, or -1 if it is not present.

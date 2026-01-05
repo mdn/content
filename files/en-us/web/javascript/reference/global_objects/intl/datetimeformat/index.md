@@ -3,9 +3,8 @@ title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.DateTimeFormat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.DateTimeFormat`** object enables language-sensitive date and time formatting.
 
@@ -152,7 +151,7 @@ console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
 // "2:00:00 pm AEDT"
 
 // sometimes you want to be very precise
-options.fractionalSecondDigits = 3; //number digits for fraction-of-seconds
+options.fractionalSecondDigits = 3; // number digits for fraction-of-seconds
 console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
 // "2:00:00.200 pm AEDT"
 

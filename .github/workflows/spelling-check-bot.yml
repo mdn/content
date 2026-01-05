@@ -15,31 +15,42 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
+    timeout-minutes: 5
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          package-manager-cache: false
 
-      - name: Install all yarn packages
-        run: yarn --frozen-lockfile
+      - name: Install
+        run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run scripts
         id: check
         run: |
           echo Running spelling check...
-          output=$(yarn --silent lint:typos-group-by-file || exit 0)
+          output=$(npm run --silent lint:typos-group-by-file || exit 0)
           if [ -n "${output}" ]; then
             output=$(node scripts/linkify-logs.js "${output}")
             output=$(echo "$output" | sed 's/^/- /')
+            echo "Log size is ${#output} characters"
             echo "$output"
+
+            # Trim output to avoid GraphQL 'Body is too long (maximum is 65536 characters)' error
+            maxLength=64000
+            if [ ${#output} -gt ${maxLength} ]; then
+              output=$(echo "$output" | head -c $maxLength)
+              output+=$'\n...\n\n> [!WARNING]\n> The report is too long to be posted in full. Check the complete report in the [workflow logs](https://github.com/mdn/content/actions/runs/'"${GITHUB_RUN_ID}"$').'
+            fi
+
             echo "OUTPUT<<EOF" >> "$GITHUB_OUTPUT"
             echo "$output" >> "$GITHUB_OUTPUT"
             echo "EOF" >> "$GITHUB_OUTPUT"

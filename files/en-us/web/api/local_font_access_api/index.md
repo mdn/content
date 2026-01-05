@@ -42,7 +42,7 @@ In terms of privacy and security:
 
 ## Examples
 
-For a working live demo, see [Font Select Demo](https://local-font-access.glitch.me/demo/).
+For a working live demo, see our [Local Font Access API demo](https://mdn.github.io/dom-examples/local-font-access/).
 
 ### Feature detection
 

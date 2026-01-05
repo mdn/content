@@ -135,7 +135,7 @@ Here we have a {{HTMLElement("video")}} element whose [`autoplay`](/en-US/docs/W
 
 ```js
 const video = document.getElementById("video");
-video.addEventListener("play", handleFirstPlay, false);
+video.addEventListener("play", handleFirstPlay);
 
 let hasPlayed = false;
 function handleFirstPlay(event) {

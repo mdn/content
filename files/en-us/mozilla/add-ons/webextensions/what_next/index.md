@@ -2,9 +2,8 @@
 title: What next?
 slug: Mozilla/Add-ons/WebExtensions/What_next
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 You'll now be ready to start turning your idea for a browser extension into reality. Before you start that journey, it's worth being aware of a few things that will help to make it a smooth one.
 

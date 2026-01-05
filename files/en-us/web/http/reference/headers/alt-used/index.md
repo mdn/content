@@ -1,11 +1,11 @@
 ---
-title: Alt-Used
+title: Alt-Used header
+short-title: Alt-Used
 slug: Web/HTTP/Reference/Headers/Alt-Used
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc7838
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Alt-Used`** {{Glossary("request header")}} is used to identify the alternative service in use, just as the {{HTTPHeader("Host")}} HTTP header field identifies the host and port of the origin.
 

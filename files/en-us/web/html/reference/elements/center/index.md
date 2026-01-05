@@ -5,9 +5,10 @@ page-type: html-element
 status:
   - deprecated
 browser-compat: html.elements.center
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<center>`** [HTML](/en-US/docs/Web/HTML) element is a [block-level element](/en-US/docs/Glossary/Block-level_content) that displays its block-level or inline contents centered horizontally within its containing element. The container is usually, but isn't required to be, {{HTMLElement("body")}}.
 
@@ -33,10 +34,16 @@ This element implements the {{domxref("HTMLElement")}} interface.
 ## Example 2 (CSS alternative)
 
 ```html
-<div style="text-align:center">
+<div class="center">
   This text will be centered.
   <p>So will this paragraph.</p>
 </div>
+```
+
+```css
+.center {
+  text-align: center;
+}
 ```
 
 ### Result
@@ -46,10 +53,16 @@ This element implements the {{domxref("HTMLElement")}} interface.
 ## Example 3 (CSS alternative)
 
 ```html
-<p style="text-align:center">
+<p class="center">
   This line will be centered.<br />
   And so will this line.
 </p>
+```
+
+```css
+.center {
+  text-align: center;
+}
 ```
 
 ### Result

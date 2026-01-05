@@ -7,15 +7,35 @@ sidebar: mdnsidebar
 
 ## Page front matter
 
+Page metadata is described in front matter like the following example:
+
+```md
+---
+title: aria-labelledby
+slug: Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
+page-type: aria-attribute
+spec-urls: https://w3c.github.io/aria/#aria-labelledby
+sidebar: accessibilitysidebar
+---
+```
+
 ### Title and slug
 
 An ARIA role page should have a `title` and `slug` of `ARIA: Name Of The Role`. For example, the [button role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) has a `title` and `slug` of `ARIA/NameOfTheRole_role` and the [aria-labelledby](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute has a `title` of `aria-labelledby`.
 
+### Sidebar
+
+The `accessibilitysidebar` can be used in all pages under `/Web/Accessibility`:
+
+```yaml
+sidebar: accessibilitysidebar
+```
+
+See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
+
 ### Top macros
 
-A number of macro calls appear at the top of the content section. You should update or delete them according to the advice below:
-
-- \\{{ariaref}}—generates a suitable ARIA sidebar, depending on what tags are included on the page.
+A number of macro calls appear at the top of the content section. You should update or delete them according to the advice below.
 
 ### Statuses
 

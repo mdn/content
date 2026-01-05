@@ -3,12 +3,10 @@ title: "GPURenderBundleEncoder: drawIndirect() method"
 short-title: drawIndirect()
 slug: Web/API/GPURenderBundleEncoder/drawIndirect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderBundleEncoder.drawIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndirect()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface draws primitives using parameters read from a {{domxref("GPUBuffer")}}.
@@ -25,7 +23,6 @@ drawIndirect(indirectBuffer, indirectOffset)
 ### Parameters
 
 - `indirectBuffer`
-
   - : A {{domxref("GPUBuffer")}} containing the `vertexCount`, `instanceCount`, `firstVertex`, and `firstInstance` values needed to carry out the drawing operation. The buffer must contain a tightly packed block of four 32-bit unsigned integer values representing the values (16 bytes total), given in the same order as the arguments for {{domxref("GPURenderBundleEncoder.draw()")}}. So for example:
 
     ```js
@@ -60,7 +57,7 @@ The following criteria must be met when calling **`drawIndirect()`**, otherwise 
 ## Examples
 
 ```js
-// ...
+// …
 
 // Create GPURenderBundleEncoder
 const bundleEncoder = device.createRenderBundleEncoder(descriptor);
@@ -89,7 +86,7 @@ bundleEncoder.drawIndirect(drawValues, 0);
 // End the bundle recording
 const renderBundle = bundleEncoder.finish();
 
-// ...
+// …
 ```
 
 ## Specifications

@@ -3,9 +3,8 @@ title: Right shift (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
 page-type: javascript-operator
 browser-compat: javascript.operators.right_shift
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **right shift (`>>`)** operator returns a number or BigInt whose binary representation is the first operand shifted by the specified number of bits to the right. Excess bits shifted off to the right are discarded, and copies of the leftmost bit are shifted in from the left. This operation is also called "sign-propagating right shift" or "arithmetic right shift", because the sign of the resulting number is the same as the sign of the first operand.
 

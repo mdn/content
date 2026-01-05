@@ -27,21 +27,19 @@ document).
 
 ## Examples
 
+Assume the document's `<head>` looks like:
+
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <script>
-      alert(document.title); // displays "Hello World!"
-      document.title = "Goodbye World!";
-      alert(document.title); // displays "Goodbye World!"
-    </script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World!</title>
+</head>
+```
+
+```js
+console.log(document.title); // "Hello World!"
+document.title = "Goodbye World!"; // Page title changed
+console.log(document.title); // "Goodbye World!"
 ```
 
 ## Specifications

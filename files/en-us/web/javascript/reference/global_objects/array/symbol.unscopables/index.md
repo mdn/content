@@ -1,11 +1,11 @@
 ---
 title: Array.prototype[Symbol.unscopables]
+short-title: "[Symbol.unscopables]"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Array.@@unscopables
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.unscopables]`** data property of `Array.prototype` is shared by all {{jsxref("Array")}} instances. It contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
 

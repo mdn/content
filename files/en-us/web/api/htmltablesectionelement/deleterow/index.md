@@ -35,16 +35,18 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-In this example, two buttons allow you to add and remove rows from the table body section; it also updates a {{HTMLElement("output")}} element with the number of rows currently in the table.
+In this example, two buttons allow you to add and remove rows from the table body section; it also updates an {{HTMLElement("output")}} element with the number of rows currently in the table.
 
 ### HTML
 
 ```html
 <table>
   <thead>
-    <th>Col 1</th>
-    <th>Col 2</th>
-    <th>Col 3</th>
+    <tr>
+      <th>Col 1</th>
+      <th>Col 2</th>
+      <th>Col 3</th>
+    </tr>
   </thead>
   <tbody>
     <tr>

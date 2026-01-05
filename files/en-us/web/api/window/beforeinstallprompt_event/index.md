@@ -25,10 +25,10 @@ When the user uses the in-app installation UI to install the app, the in-app ins
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("beforeinstallprompt", (event) => {});
+```js-nolint
+addEventListener("beforeinstallprompt", (event) => { })
 
-onbeforeinstallprompt = (event) => {};
+onbeforeinstallprompt = (event) => { }
 ```
 
 ## Event type

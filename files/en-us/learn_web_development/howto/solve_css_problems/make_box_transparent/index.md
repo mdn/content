@@ -1,8 +1,9 @@
 ---
 title: How to make a box semi-transparent
+short-title: Make a box semi-transparent
 slug: Learn_web_development/Howto/Solve_CSS_problems/Make_box_transparent
 page-type: learn-faq
-sidebar: learnsidebar
+sidebar: learn-how-to
 ---
 
 This guide will help you to understand the ways to make a box semi-transparent using CSS.
@@ -15,7 +16,7 @@ Using a value of `0` would make the box completely transparent, and values betwe
 
 ## Changing the opacity of the background color only
 
-In many cases you will only want to make the background color itself partly transparent, keeping the text and other elements fully opaque. To achieve this, use a [`<color>`](/en-US/docs/Web/CSS/color_value) value that has an alpha channel, such as `rgb()`. As with `opacity`, a value of `1` for the alpha channel value makes the color fully opaque. Therefore, `background-color: rgb(0 0 0 / 50%);` will set the background color to 50% opacity.
+In many cases you will only want to make the background color itself partly transparent, keeping the text and other elements fully opaque. To achieve this, use a {{cssxref("&lt;color&gt;")}} value that has an alpha channel, such as `rgb()`. As with `opacity`, a value of `1` for the alpha channel value makes the color fully opaque. Therefore, `background-color: rgb(0 0 0 / 50%);` will set the background color to 50% opacity.
 
 Try changing the opacity and alpha channel values in the below examples to see more or less of the background image behind the box.
 
@@ -45,7 +46,7 @@ body {
 
 .box {
   flex: 1;
-  border: 5px solid #000;
+  border: 5px solid black;
   border-radius: 0.5em;
   font-size: 140%;
   padding: 20px;
@@ -54,14 +55,14 @@ body {
 
 ```css live-sample___opacity
 .box1 {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   opacity: 0.5;
 }
 
 .box2 {
   background-color: rgb(0 0 0 / 0.5);
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -72,4 +73,4 @@ body {
 
 ## See also
 
-- [Applying color to HTML elements using CSS.](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
+- [Applying color to HTML elements using CSS.](/en-US/docs/Web/CSS/Guides/Colors/Applying_color)

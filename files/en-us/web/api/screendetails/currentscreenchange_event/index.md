@@ -32,10 +32,10 @@ The **`currentscreenchange`** event of the {{domxref("ScreenDetails")}} interfac
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("currentscreenchange", (event) => {});
+```js-nolint
+addEventListener("currentscreenchange", (event) => { })
 
-oncurrentscreenchange = (event) => {};
+oncurrentscreenchange = (event) => { }
 ```
 
 ## Event type

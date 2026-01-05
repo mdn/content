@@ -2,12 +2,10 @@
 title: GPUShaderModule
 slug: Web/API/GPUShaderModule
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUShaderModule
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUShaderModule`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents an internal shader module object, a container for [WGSL](https://gpuweb.github.io/gpuweb/wgsl/) shader code that can be submitted to the GPU for execution by a pipeline.
 
@@ -17,12 +15,12 @@ A `GPUShaderModule` object instance is created using {{domxref("GPUDevice.create
 
 ## Instance properties
 
-- {{domxref("GPUShaderModule.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUShaderModule.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Instance methods
 
-- {{domxref("GPUShaderModule.getCompilationInfo", "getCompilationInfo()")}} {{Experimental_Inline}}
+- {{domxref("GPUShaderModule.getCompilationInfo", "getCompilationInfo()")}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUCompilationInfo")}} object containing messages generated during the `GPUShaderModule`'s compilation.
 
 ## Examples
@@ -64,16 +62,16 @@ async function init() {
     throw Error("Couldn't request WebGPU adapter.");
   }
 
-  let device = await adapter.requestDevice();
+  const device = await adapter.requestDevice();
 
-  // ...
+  // …
   // later on
 
   const shaderModule = device.createShaderModule({
     code: shaders,
   });
 
-  // ...
+  // …
 }
 ```
 

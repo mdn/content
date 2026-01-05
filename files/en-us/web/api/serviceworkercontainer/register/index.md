@@ -14,8 +14,9 @@ If successful, the registration associates the provided script URL to a _scope_,
 A single registration is created for each unique scope.
 If `register()` is called for a scope that has an existing registration, the registration is updated with any changes to the scriptURL or options.
 If there are no changes, then the existing registration is returned.
-Note that calling `register()` with the same scope and `scriptURL` does not restart the installation process.
-You can therefore call this method unconditionally from a controlled page: you don't need to first check whether there's an active registration or service worker.
+Calling `register()` with the same scope and `scriptURL` does not restart the installation process, so it is generally safe to call this method unconditionally from a controlled page.
+However, it does send a network request for the service worker script, which may put more load on the server.
+If this is a concern, you can first check for an existing registration using {{domxref("ServiceWorkerContainer.getRegistration()")}}.
 
 A document can potentially be within the scope of several registrations with different service workers and options.
 The browser will associate the document with the matching registration that has the most specific scope.
@@ -37,11 +38,8 @@ register(scriptURL, options)
   - : The URL of the service worker script.
     The registered service worker file needs to have a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types#textjavascript).
 - `options` {{optional_inline}}
-
   - : An object containing registration options. Currently available options are:
-
     - `scope`
-
       - : A string representing a URL that defines a service worker's registration scope; that is, what range of URLs a service worker can control.
 
         This is usually specified as a URL that is relative to the base URL of the site (e.g., `/some/path/`), so that the resolved scope is the same irrespective of what page the registration code is called from.
@@ -52,10 +50,8 @@ register(scriptURL, options)
         See the [Examples](#examples) section for information on broadening the default scope of a service worker.
 
     - `type`
-
       - : A string specifying the type of worker to create.
         Valid values are:
-
         - `'classic'`
           - : The loaded service worker is in a standard script.
             This is the default.
@@ -64,10 +60,8 @@ register(scriptURL, options)
             For ES module compatibility info, see the [browser compatibility data table for the `ServiceWorker` interface](/en-US/docs/Web/API/ServiceWorker#browser_compatibility).
 
     - `updateViaCache`
-
       - : A string indicating how the HTTP cache is used for service worker scripts resources during updates.
         Note: This only refers to the service worker script and its imports, not other resources fetched by these scripts.
-
         - `'all'`
           - : The HTTP cache will be queried for the main script, and all imported scripts. If no fresh entry is found in the HTTP cache, then the scripts are fetched from the network.
         - `'imports'`
@@ -82,7 +76,6 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistratio
 ### Exceptions
 
 - `TypeError`
-
   - : The `scriptURL` or `scope URL` is a failure.
     This can happen if the URL can't be resolved to a valid URL or uses a scheme that is not `http:` or `https`.
     It may also happen if `scriptURL` is not a {{domxref("TrustedScriptURL")}}, and this is a requirement of the site's [Trusted Types Policy](/en-US/docs/Web/API/Trusted_Types_API).

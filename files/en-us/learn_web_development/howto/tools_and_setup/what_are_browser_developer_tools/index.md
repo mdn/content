@@ -2,9 +2,8 @@
 title: What are browser developer tools?
 slug: Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 Every modern web browser includes a powerful suite of developer tools. These tools do a range of things, from inspecting currently-loaded HTML, CSS and JavaScript to showing which assets the page has requested and how long they took to load. This article explains how to use the basic functions of your browser's devtools.
 
@@ -20,12 +19,10 @@ The devtools live inside your browser in a subwindow that looks roughly like thi
 How do you pull it up? Three ways:
 
 - **_Keyboard:_**
-
   - **Windows:** <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> or <kbd>F12</kbd>
   - **macOS:** <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>
 
 - **_Menu bar:_**
-
   - **Firefox:** _Menu (☰) ➤ More tools ➤ Web Developer Tools_
   - **Chrome:** _More tools ➤ Developer tools_
   - **Opera**: _Developer ➤ Developer tools_
@@ -82,7 +79,7 @@ These features are especially handy:
 You'll notice a number of clickable tabs at the top of the CSS Viewer:
 
 - _Computed_: This shows the computed styles for the currently selected element (the final, normalized values that the browser applies).
-- _Layout_: This shows the details for CSS [grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) layout modes if the element you are inspecting uses them.
+- _Layout_: This shows the details for CSS [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) and [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) layout modes if the element you are inspecting uses them.
 - _Fonts_: In Firefox and Safari, the _Fonts_ tab shows the fonts applied to the current element.
 
 The _box model_ view visually represents the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is. In Firefox, this is located in the _Layout_ tab, and in other browsers it is in the _Computed_ tab.

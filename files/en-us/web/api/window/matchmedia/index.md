@@ -10,7 +10,7 @@ browser-compat: api.Window.matchMedia
 
 The {{domxref("Window")}} interface's **`matchMedia()`** method
 returns a new {{domxref("MediaQueryList")}} object that can then be used to determine if
-the {{domxref("document")}} matches the [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) string,
+the {{domxref("document")}} matches the [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using) string,
 as well as to monitor the document to detect when it matches (or stops matching) that
 media query.
 
@@ -23,10 +23,9 @@ matchMedia(mediaQueryString)
 ### Parameters
 
 - `mediaQueryString`
-
   - : A string specifying the media query to parse into a {{domxref("MediaQueryList")}}.
 
-    Just like in CSS, any [media feature](/en-US/docs/Web/CSS/@media#media_features) must be wrapped in parentheses inside the expression. For example: `matchMedia("(max-width: 600px)")` works, whereas `matchMedia("max-width: 600px")` does not. Keywords for media types (`all`, `print`, `screen`) and logical operators (`and`, `or`, `not`, `only`) do not need to be wrapped in parentheses.
+    Just like in CSS, any [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) must be wrapped in parentheses inside the expression. For example: `matchMedia("(width <= 600px)")` or `matchMedia("(orientation: landscape)")` work, whereas `matchMedia("width < 600px")` or `matchMedia("orientation: landscape")` do not. Keywords for media types (`all`, `print`, `screen`) and logical operators (`and`, `or`, `not`, `only`) do not need to be wrapped in parentheses.
 
 ### Return value
 
@@ -51,7 +50,7 @@ in the article on {{domxref("Window.devicePixelRatio")}}.
 
 ## Examples
 
-This example runs the media query `(max-width: 600px)` and displays the
+This example runs the media query `(width <= 600px)` and displays the
 value of the resulting `MediaQueryList`'s `matches` property in a
 {{HTMLElement("span")}}; as a result, the output will say "true" if the viewport is less
 than or equal to 600 pixels wide, and will say "false" if the window is wider than that.
@@ -59,7 +58,7 @@ than or equal to 600 pixels wide, and will say "false" if the window is wider th
 ### JavaScript
 
 ```js
-let mql = window.matchMedia("(max-width: 600px)");
+let mql = window.matchMedia("(width <= 600px)");
 
 document.querySelector(".mq-value").innerText = mql.matches;
 ```
@@ -77,12 +76,12 @@ A simple `<span>` to receive the output.
 ```css hidden
 .mq-value {
   font:
-    18px arial,
+    18px "Arial",
     sans-serif;
   font-weight: bold;
-  color: #88f;
+  color: #8888ff;
   padding: 0.4em;
-  border: 1px solid #dde;
+  border: 1px solid #ddddee;
 }
 ```
 
@@ -90,7 +89,7 @@ A simple `<span>` to receive the output.
 
 {{EmbedLiveSample("Examples", "100%", "60")}}
 
-See [Testing media queries programmatically](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries) for additional code examples.
+See [Testing media queries programmatically](/en-US/docs/Web/CSS/Guides/Media_queries/Testing) for additional code examples.
 
 ## Specifications
 
@@ -102,6 +101,6 @@ See [Testing media queries programmatically](/en-US/docs/Web/CSS/CSS_media_queri
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{domxref("MediaQueryList")}}

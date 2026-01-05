@@ -2,9 +2,8 @@
 title: Accessible name
 slug: Glossary/Accessible_name
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **accessible name** is the name of a user interface element; it is the text associated with an HTML element that provides users of assistive technology with a label for the element.
 

@@ -2,9 +2,8 @@
 title: Anatomy of a video game
 slug: Games/Anatomy
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article looks at the anatomy and workflow of the average video game from a technical point of view, in terms of how the main loop should run. It helps beginners to modern game development understand what is required when building a game and how web standards like JavaScript lend themselves as tools. Experienced game programmers who are new to web development could also benefit, too.
 
@@ -20,7 +19,7 @@ Other games demand control over each of the smallest possible individual timesli
 
 But it might not need per-frame control. Your game loop might be similar to the _find the differences_ example and base itself on input events. It might require both input and simulated time. It might even loop based on something else entirely.
 
-Modern JavaScript — as described in the next sections — thankfully makes it easy to develop an efficient, execute-once-per-frame main loop. Of course, your game will only be as optimized as you make it. If something looks like it should be attached to a more infrequent event then it is often a good idea to break it out of the main loop (but not always).
+Modern JavaScript — as described in the next sections — thankfully makes it less difficult to develop an efficient, execute-once-per-frame main loop. Of course, your game will only be as optimized as you make it. If something looks like it should be attached to a more infrequent event then it is often a good idea to break it out of the main loop (but not always).
 
 ## Building a main loop in JavaScript
 
@@ -51,7 +50,7 @@ But do not immediately assume animations require frame-by-frame control. Simple 
 
 ## Building a better main loop in JavaScript
 
-There are two obvious issues with our previous main loop: `main()` pollutes the {{ domxref("window") }} object (where all global variables are stored) and the example code did not leave us with a way to _stop_ the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need easy (direct) access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).
+There are two obvious issues with our previous main loop: `main()` pollutes the {{ domxref("window") }} object (where all global variables are stored) and the example code did not leave us with a way to _stop_ the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need direct access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).
 
 <!-- prettier-ignore-start -->
 ```js
@@ -114,14 +113,14 @@ The key to programming a main loop, in JavaScript, is to attach it to whatever e
 
 ## Building a more optimized main loop in JavaScript
 
-Ultimately, in JavaScript, the browser is running its own main loop and your code exists in some of its stages. The above sections describe main loops which try not to wrestle away control from the browser. These main methods attach themselves to `window.requestAnimationFrame()`, which asks the browser for control over the upcoming frame. It is up to the browser how to relate these requests to their main loop. The [W3C spec for requestAnimationFrame](https://www.w3.org/TR/animation-timing/) does not really define exactly when the browsers must perform the requestAnimationFrame callbacks. This can be a benefit because it leaves browser vendors free to experiment with the solutions that they feel are best and tweak it over time.
+Ultimately, in JavaScript, the browser is running its own main loop and your code exists in some of its stages. The above sections describe main loops that avoid taking control away from the browser. These main methods attach themselves to `window.requestAnimationFrame()`, which asks the browser for control over the upcoming frame. It is up to the browser how to relate these requests to its main loop. The [HTML spec](https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#dom-animationframeprovider-requestanimationframe) does not really define exactly when the browsers must perform the `requestAnimationFrame` callbacks. This can be a benefit because it leaves browser vendors free to experiment with the solutions that they feel are best and tweak them over time.
 
 Modern versions of Firefox and Google Chrome (and probably others) _attempt_ to connect `requestAnimationFrame` callbacks to their main thread at the very beginning of a frame's timeslice. The browser's main thread thus _tries_ to look like the following:
 
 1. Start a new frame (while the previous frame is handled by the display).
 2. Go through the list of `requestAnimationFrame` callbacks and invoke them.
 3. Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.
-4. Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](https://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
+4. Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](https://en.wikipedia.org/wiki/Screen_tearing#Vertical_synchronization)) and repeat.
 
 You can think about developing realtime applications as having a budget of time to do work. All of the above steps must take place every 16-and-a-half milliseconds to keep up with a 60 Hz display. Browsers invoke your code as early as possible to give it maximum computation time. Your main thread will often start workloads that are not even on the main thread (such as rasterization or shaders in WebGL). Long calculations can be performed on a Web Worker or a GPU at the same time as the browser uses its main thread to manage garbage collection, its other tasks, or handle asynchronous events.
 
@@ -215,15 +214,12 @@ Other methods of tackling the problem exist.
 One common technique is to update the simulation at a constant frequency and then draw as much (or as little) of the actual frames as possible. The update method can continue looping without care about what the user sees. The draw method can view the last update and when it happened. Since draw knows when it represents, and the simulation time for the last update, it can predict a plausible frame to draw for the user. It does not matter whether this is more frequent than the official update loop (or even less frequent). The update method sets checkpoints and, as frequently as the system allows, the render method draws instants of time around them. There are many ways to separate the update method in web standards:
 
 - Draw on `requestAnimationFrame()` and update on a {{domxref("Window.setInterval", "setInterval()")}} or {{domxref("Window.setTimeout", "setTimeout()")}}.
-
   - This uses processor time even when unfocused or minimized, hogs the main thread, and is probably an artifact of traditional game loops (but it is simple.)
 
 - Draw on `requestAnimationFrame()` and update on a {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}} or {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} in a [Web Worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
-
   - This is the same as above, except update does not hog the main thread (nor does the main thread hog it). This is a more complex solution, and might be too much overhead for simple updates.
 
 - Draw on `requestAnimationFrame()` and use it to poke a Web Worker containing the update method with the number of ticks to compute, if any.
-
   - This sleeps until `requestAnimationFrame()` is called and does not pollute the main thread, plus you are not relying on old-fashioned methods. Again, this is a bit more complex than the previous two options, and _starting_ each update will be blocked until the browser decides to fire rAF callbacks.
 
 Each of these methods have similar tradeoffs:
@@ -317,15 +313,12 @@ I want to be clear that any of the above, or none of them, could be best for you
 An important thing to remember for managed platforms, like the web, is that your loop may stop execution for significant periods of time. This could occur when the user unselects your tab and the browser sleeps (or slows) its `requestAnimationFrame` callback interval. You have many ways to deal with this situation and this could depend on whether your game is single player or multiplayer. Some choices are:
 
 - Consider the gap "a pause" and skip the time.
-
   - You can probably see how this is problematic for most multiplayer games.
 
 - You can simulate the gap to catch up.
-
   - This can be a problem for long drops and/or complex updates.
 
 - You can recover the game state from a peer or the server.
-
   - This is ineffective if your peers or server are out-of-date too, or they don't exist because the game is single player and doesn't have a server.
 
 Once your main loop has been developed and you have decided on a set of assumptions and tradeoffs which suit your game, it is now just a matter of using your decisions to calculate any applicable physics, AI, sounds, network synchronization, and whatever else your game may require.

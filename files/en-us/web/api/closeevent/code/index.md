@@ -70,7 +70,7 @@ An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6
     </tr>
     <tr>
       <td><code>1005</code></td>
-      <td>No Status Rcvd</td>
+      <td>No Status Received</td>
       <td>
         <strong>Reserved.</strong> Indicates that no status code was provided even though one was expected.
       </td>

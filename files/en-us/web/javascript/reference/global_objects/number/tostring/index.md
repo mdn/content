@@ -1,28 +1,28 @@
 ---
 title: Number.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("Number")}} values returns a string representing this number value.
 
 {{InteractiveExample("JavaScript Demo: Number.prototype.toString()")}}
 
 ```js interactive-example
-function hexColour(c) {
+function hexColor(c) {
   if (c < 256) {
     return Math.abs(c).toString(16);
   }
   return 0;
 }
 
-console.log(hexColour(233));
+console.log(hexColor(233));
 // Expected output: "e9"
 
-console.log(hexColour("11"));
+console.log(hexColor("11"));
 // Expected output: "b"
 ```
 

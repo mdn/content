@@ -3,9 +3,8 @@ title: 101 Switching Protocols
 slug: Web/HTTP/Reference/Status/101
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.101
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`101 Switching Protocols`** [informational response](/en-US/docs/Web/HTTP/Reference/Status#informational_responses) status code indicates the protocol that a server has switched to.
 The protocol is specified in the {{HTTPHeader("Upgrade")}} request header received from a client.

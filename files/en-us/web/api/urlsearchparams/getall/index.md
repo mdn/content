@@ -29,13 +29,13 @@ An array of strings, which may be empty if no values for the given parameter are
 ## Examples
 
 ```js
-let url = new URL("https://example.com?foo=1&bar=2");
-let params = new URLSearchParams(url.search);
+const url = new URL("https://example.com?foo=1&bar=2");
+const params = new URLSearchParams(url.search);
 
-//Add a second foo parameter.
+// Add a second foo parameter.
 params.append("foo", 4);
 
-console.log(params.getAll("foo")); //Prints ["1","4"].
+console.log(params.getAll("foo")); // ["1", "4"]
 ```
 
 ## Specifications

@@ -42,19 +42,17 @@ block is clicked by the user.
 
 [View this example live](https://mdn.dev/archives/media/samples/domref/mozSetImageElement.html).
 
-```html
-<style>
-  #my-box {
-    background-image: -moz-element(#canvas-bg);
-    text-align: center;
-    width: 400px;
-    height: 400px;
-    cursor: pointer;
-  }
-</style>
+```css
+#my-box {
+  background-image: -moz-element(#canvas-bg);
+  text-align: center;
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
+}
 ```
 
-The CSS defined by the {{ HTMLElement("style") }} block above is used by our {{HTMLElement("div")}} to use an element with the id "canvas-bg" as its background.
+The CSS defined above is used by our {{HTMLElement("div")}} to use an element with the id "canvas-bg" as its background.
 
 ```js
 let c = 0x00;

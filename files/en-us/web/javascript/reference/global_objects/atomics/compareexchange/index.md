@@ -1,11 +1,11 @@
 ---
 title: Atomics.compareExchange()
+short-title: compareExchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.compareExchange
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.compareExchange()`** static method exchanges a given replacement value at a given position in the array, if a given expected value equals the old value. It returns the old value at that position whether it was equal to the expected value or not. This atomic operation guarantees that no other write happens until the modified value is written back.
 
@@ -74,11 +74,11 @@ Atomics.load(ta, 0); // 12
 Here is one example of an atomic adder (same functionality as {{jsxref("Atomics.add()")}}), adapted from the linked Wikipedia article:
 
 ```js
-function add(mem, index, value) {
+function add(mem, index, a) {
   let done = false;
   while (!done) {
     const value = Atomics.load(mem, index);
-    done = Atomics.compareExchange(p, value, value + a) === value;
+    done = Atomics.compareExchange(mem, index, value, value + a) === value;
   }
   return value + a;
 }

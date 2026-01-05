@@ -22,9 +22,7 @@ setSignals(options)
 ### Parameters
 
 - `options` {{Optional_Inline}}
-
   - : An object with any of the following values:
-
     - `dataTerminalReady`
       - : A boolean indicating whether to invoke the operating system to either assert (if true) or de-assert (if false) the "data terminal ready" or "DTR" signal on the serial port.
     - `requestToSend`

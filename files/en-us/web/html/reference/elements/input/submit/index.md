@@ -3,9 +3,8 @@ title: <input type="submit">
 slug: Web/HTML/Reference/Elements/input/submit
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_submit
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`submit`** are rendered as buttons. When the {{domxref("Element/click_event", "click")}} event occurs (typically because the user clicked the button), the {{Glossary("user agent")}} attempts to submit the form to the server.
 

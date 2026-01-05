@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("push", (event) => {});
+```js-nolint
+addEventListener("push", (event) => { })
 
-onpush = (event) => {};
+onpush = (event) => { }
 ```
 
 ## Event type
@@ -40,22 +40,18 @@ _Inherits properties from its parent, {{domxref("ExtendableEvent")}}. Additional
 This example sets up a handler for `push` events that takes {{Glossary("JSON")}} data, parses it, and dispatches the message for handling based on information contained within the message.
 
 ```js
-self.addEventListener(
-  "push",
-  (event) => {
-    let message = event.data.json();
+self.addEventListener("push", (event) => {
+  let message = event.data.json();
 
-    switch (message.type) {
-      case "init":
-        doInit();
-        break;
-      case "shutdown":
-        doShutdown();
-        break;
-    }
-  },
-  false,
-);
+  switch (message.type) {
+    case "init":
+      doInit();
+      break;
+    case "shutdown":
+      doShutdown();
+      break;
+  }
+});
 ```
 
 ## Specifications

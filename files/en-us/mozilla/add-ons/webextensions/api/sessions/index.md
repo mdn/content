@@ -3,9 +3,8 @@ title: sessions
 slug: Mozilla/Add-ons/WebExtensions/API/sessions
 page-type: webextension-api
 browser-compat: webextensions.api.sessions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use the sessions API to list, and restore, tabs and windows that have been closed while the browser has been running.
 
@@ -57,11 +56,11 @@ To use the sessions API you must have the "sessions" [API permission](/en-US/doc
 - {{WebExtAPIRef("sessions.onChanged")}}
   - : Fired when a tab or window is closed.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.

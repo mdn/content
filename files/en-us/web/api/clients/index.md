@@ -48,9 +48,7 @@ addEventListener("notificationclick", (event) => {
 
       // If we didn't find an existing chat window,
       // open a new one:
-      if (!chatClient) {
-        chatClient = await clients.openWindow("/chat/");
-      }
+      chatClient ??= await clients.openWindow("/chat/");
 
       // Message the client:
       chatClient.postMessage("New chat messages!");

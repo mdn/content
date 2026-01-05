@@ -3,9 +3,8 @@ title: webNavigation.onBeforeNavigate
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onBeforeNavigate
 page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onBeforeNavigate
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the browser is about to start a navigation event.
 
@@ -34,9 +33,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `details`
       - : `object`. Details about the navigation event. See the [details](#details) section for more information.
 
@@ -51,18 +48,21 @@ Events have three functions:
   - : `integer`. The ID of the tab in which the navigation is about to occur.
 - `url`
   - : `string`. The URL to which the given frame will navigate.
-- `processId` {{optional_inline}} {{deprecated_inline}}
-  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 - `frameId`
   - : `integer`. Frame in which the navigation is about to occur. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
+    frameType
+- `frameType`
+  - : `string`. The type of frame. Returns the values `"outermost_frame"`, `"fenced_frame"`, or `"sub_frame"` .
 - `parentFrameId`
   - : `integer`. ID of this frame's parent. Set to `-1` if this is a top-level frame.
+- `parentDocumentId`
+  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
+- `documentLifecycle`
+  - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, or `"pending_deletion"`.
 - `timeStamp`
   - : `number`. The time when the browser is about to start the navigation, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
-
-## Browser compatibility
-
-{{Compat}}
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 
 ## Examples
 
@@ -81,6 +81,10 @@ browser.webNavigation.onBeforeNavigate.addListener(logOnBefore, filter);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.

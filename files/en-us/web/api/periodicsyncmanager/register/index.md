@@ -26,9 +26,7 @@ register(tag, options)
 - `tag`
   - : A unique {{jsxref('String')}} identifier.
 - `options` {{optional_inline}}
-
   - : An {{jsxref('Object')}} containing the following optional data:
-
     - `minInterval`
       - : The minimum interval time, in milliseconds, at which
         the periodic sync should occur.
@@ -75,4 +73,3 @@ async function registerPeriodicNewsCheck() {
 ## See also
 
 - [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
-- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

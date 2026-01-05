@@ -1,12 +1,12 @@
 ---
-title: Progressive web app structure
+title: "js13kGames: Progressive web app structure"
+short-title: PWA structure
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 page-type: guide
+sidebar: pwasidebar
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
-
-{{PWASidebar}}
 
 In this article, we will analyze the [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) application, why it is built that way, and what benefits it brings.
 
@@ -14,7 +14,7 @@ The [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) website structure i
 
 ![Folder structure of js13kPWA.](js13kpwa-directory.png)
 
-### The HTML
+## The HTML
 
 From the HTML point of view, the app shell is everything outside the content section:
 
@@ -77,11 +77,11 @@ The {{htmlelement("head")}} section contains some basic info like title, descrip
 
 The app's only job is to list all the A-Frame entries from the js13kGames 2017 competition. As you can see it is a very ordinary, one page website — the point is to have something simple so we can focus on the implementation of the actual PWA features.
 
-### The CSS
+## The CSS
 
 The CSS is also as plain as possible: it uses {{cssxref("@font-face")}} to load and use a custom font, and it applies some simple styling of the HTML elements. The overall approach is to have the design look good on both mobile (with a responsive web design approach) and desktop devices.
 
-### The main app JavaScript
+## The main app JavaScript
 
 The app.js file does a few things we will look into closely in the next articles. First of all it generates the content based on this template:
 
@@ -97,15 +97,15 @@ const template = `<article>
   </ul>
 </article>`;
 let content = "";
-for (let i = 0; i < games.length; i++) {
-  let entry = template
+for (const game of games) {
+  const entry = template
     .replace(/POS/g, i + 1)
-    .replace(/SLUG/g, games[i].slug)
-    .replace(/NAME/g, games[i].name)
-    .replace(/AUTHOR/g, games[i].author)
-    .replace(/WEBSITE/g, games[i].website)
-    .replace(/GITHUB/g, games[i].github);
-  entry = entry.replace("<a href='http:///'></a>", "-");
+    .replace(/SLUG/g, game.slug)
+    .replace(/NAME/g, game.name)
+    .replace(/AUTHOR/g, game.author)
+    .replace(/WEBSITE/g, game.website)
+    .replace(/GITHUB/g, game.github)
+    .replace("<a href='http:///'></a>", "-");
   content += entry;
 }
 document.getElementById("content").innerHTML = content;
@@ -114,8 +114,14 @@ document.getElementById("content").innerHTML = content;
 Next, it registers a service worker:
 
 ```js
+let swRegistration = null;
+
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/pwa-examples/js13kpwa/sw.js");
+  navigator.serviceWorker
+    .register("/pwa-examples/js13kpwa/sw.js")
+    .then((reg) => {
+      swRegistration = reg;
+    });
 }
 ```
 
@@ -136,6 +142,7 @@ The last block creates notifications that display a randomly-selected item from 
 
 ```js
 function randomNotification() {
+  if (!swRegistration) return;
   const randomItem = Math.floor(Math.random() * games.length);
   const notifTitle = games[randomItem].name;
   const notifBody = `Created by ${games[randomItem].author}.`;
@@ -144,12 +151,12 @@ function randomNotification() {
     body: notifBody,
     icon: notifImg,
   };
-  new Notification(notifTitle, options);
+  swRegistration.showNotification(notifTitle, options);
   setTimeout(randomNotification, 30000);
 }
 ```
 
-### The service worker
+## The service worker
 
 The last file we will quickly look at is the service worker: sw\.js — it first imports data from the games.js file:
 
@@ -182,8 +189,8 @@ const appShellFiles = [
   "/pwa-examples/js13kpwa/icons/icon-512.png",
 ];
 const gamesImages = [];
-for (let i = 0; i < games.length; i++) {
-  gamesImages.push(`data/img/${games[i].slug}.jpg`);
+for (const game of games) {
+  gamesImages.push(`data/img/${game.slug}.jpg`);
 }
 const contentToCache = appShellFiles.concat(gamesImages);
 ```
@@ -224,7 +231,7 @@ self.addEventListener("fetch", (e) => {
 });
 ```
 
-### The JavaScript data
+## The JavaScript data
 
 The games data is present in the data folder in a form of a JavaScript object ([games.js](https://github.com/mdn/pwa-examples/blob/main/js13kpwa/data/games.js)):
 
@@ -244,7 +251,7 @@ const games = [
     website: "github.com/Platane",
     github: "github.com/Platane/js13k-2017",
   },
-  // ...
+  // …
   {
     slug: "emma-3d",
     name: "Emma-3D",

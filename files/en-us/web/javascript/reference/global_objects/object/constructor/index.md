@@ -1,11 +1,11 @@
 ---
 title: Object.prototype.constructor
+short-title: constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Object.constructor
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`constructor`** data property of an {{jsxref("Object")}} instance returns a reference to the constructor function that created the instance object. Note that the value of this property is a reference to _the function itself_, not a string containing the function's name.
 

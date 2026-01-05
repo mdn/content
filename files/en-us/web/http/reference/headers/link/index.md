@@ -1,11 +1,11 @@
 ---
-title: Link
+title: Link header
+short-title: Link
 slug: Web/HTTP/Reference/Headers/Link
 page-type: http-header
 browser-compat: http.headers.Link
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Link`** header provides a means for serializing one or more links in HTTP headers.
 This allows the server to point a client to another resource containing metadata about the requested resource.

@@ -10,7 +10,8 @@ browser-compat: api.MediaSource.handle
 
 The **`handle`** read-only property of the {{domxref("MediaSource")}} interface returns a {{domxref("MediaSourceHandle")}} object, a proxy for the `MediaSource` that can be transferred from a dedicated worker back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property.
 
-> **Note:** `handle` is only visible on {{domxref("MediaSource")}} instances inside dedicated workers.
+> [!NOTE]
+> `handle` is only visible on {{domxref("MediaSource")}} instances inside dedicated workers.
 
 Each `MediaSource` object created inside a dedicated worker has its own distinct `MediaSourceHandle`. The `handle` getter will always return the `MediaSourceHandle` instance specific to the associated dedicated worker `MediaSource` instance. If the handle has already been transferred to the main thread using {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}}, the handle instance in the worker is technically detached and can't be transferred again.
 
@@ -47,7 +48,8 @@ worker.addEventListener("message", (msg) => {
 });
 ```
 
-> **Note:** {{domxref("MediaSourceHandle")}}s cannot be successfully transferred into or via a shared worker or service worker.
+> [!NOTE]
+> {{domxref("MediaSourceHandle")}}s cannot be successfully transferred into or via a shared worker or service worker.
 
 ## Specifications
 

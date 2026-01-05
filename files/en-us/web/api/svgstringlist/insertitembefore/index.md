@@ -34,7 +34,7 @@ The string that was added to the list.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("SVGStringList")}} corresponds to a read-only attribute or when the object itself is read-only.
 
 ## Specifications

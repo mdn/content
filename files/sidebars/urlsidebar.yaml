@@ -16,6 +16,8 @@ sidebar:
     details: open
     code: true
   - /Web/URI/Reference/Authority
+  - /Web/URI/Reference/Path
+  - /Web/URI/Reference/Query
   - type: listSubPages
     path: /Web/URI/Reference/Fragment
     link: /Web/URI/Reference/Fragment

@@ -1,18 +1,19 @@
 ---
-title: Viewport-Width
+title: Viewport-Width header
+short-title: Viewport-Width
 slug: Web/HTTP/Reference/Headers/Viewport-Width
 page-type: http-header
 status:
   - deprecated
   - non-standard
 browser-compat: http.headers.Viewport-Width
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_header}}{{Non-standard_Header}}
+{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 > [!WARNING]
-> The `Viewport-Width` header was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07).
-> The proposed replacement is [`Sec-CH-Viewport-Width`](https://wicg.github.io/responsive-image-client-hints/#sec-ch-viewport-width) (Responsive Image Client Hints).
+> The `Viewport-Width` header was standardized as {{HTTPHeader("Sec-CH-Viewport-Width")}} and the new name is now preferred.
 
 The HTTP **`Viewport-Width`** {{Glossary("request header")}} is a [device client hint](/en-US/docs/Web/HTTP/Guides/Client_hints) which provides the client's layout viewport width in {{Glossary("CSS pixel", "CSS pixels")}}.
 The value is rounded up to the smallest following integer (i.e., ceiling value).
@@ -73,6 +74,15 @@ Viewport-Width: 320
 ## See also
 
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
-- {{HTTPHeader("Content-DPR")}}, {{HTTPHeader("Device-Memory")}}, {{HTTPHeader("DPR")}}, {{HTTPHeader("Width")}} device client hints
+- Device and responsive image client hints
+  - {{HTTPHeader("Sec-CH-Viewport-Width")}}
+  - {{HTTPHeader("Sec-CH-Viewport-Height")}}
+  - {{HTTPHeader("Sec-CH-Device-Memory")}}
+  - {{HTTPHeader("Sec-CH-DPR")}}
+  - {{HTTPHeader("Sec-CH-Width")}}
+  - {{HTTPHeader("DPR")}} {{deprecated_inline}}
+  - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}
+  - {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}
+  - {{HTTPHeader("Width")}} {{deprecated_inline}}
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}} header

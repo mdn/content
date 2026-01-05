@@ -3,9 +3,8 @@ title: Import attributes
 slug: Web/JavaScript/Reference/Statements/import/with
 page-type: javascript-language-feature
 browser-compat: javascript.statements.import.import_attributes
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 > [!NOTE]
 > A previous version of this proposal used the `assert` keyword instead of `with`. The assertion feature is now non-standard. Check the [browser compatibility table](#browser_compatibility) for details.
@@ -51,7 +50,7 @@ On the web, each import statement results in a HTTP request. The response is the
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 ...
-{"name":"John"}
+{"name":"Maria"}
 ```
 
 Modules are identified and parsed only according to their served [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) — the file extension in the URL cannot be used to identify a file's type. In this case, the MIME type is `application/json`, which tells the browser that the file is JSON and must be parsed as JSON. If, for some reason (e.g., the server is hijacked or bogus), the MIME type in the server response is set to `text/javascript` (for JavaScript source), then the file would be parsed and executed as code. If the "JSON" file actually contains malicious code, the `import` declaration would unintentionally execute external code, posing a serious security threat.
@@ -88,7 +87,9 @@ The attributes syntax is designed to be extensible — although only `type` is s
 - Resolution: the attribute is part of the module specifier (the string in the `from` clause). Therefore, given the same string path, different attributes may lead to entirely different modules being loaded. For example, [TypeScript supports the `resolution-mode` attribute](https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/#stable-support-resolution-mode-in-import-types).
 
   ```ts
-  import type { TypeFromRequire } from "pkg" with { "resolution-mode": "require" };
+  import type { TypeFromRequire } from "pkg" with {
+    "resolution-mode": "require",
+  };
   ```
 
 - Fetching: for example, CSS modules are fetched with the [`destination`](/en-US/docs/Web/API/Request/destination) set to `"style"`, and JSON modules are fetched with `destination: "json"`. This means given the same destination URL, the server may still return different content.
@@ -104,7 +105,7 @@ In `data.json`:
 
 ```json
 {
-  "name": "John"
+  "name": "Shilpa"
 }
 ```
 
@@ -117,6 +118,7 @@ In `index.html`:
     <meta charset="utf-8" />
     <script type="module">
       import data from "./data.json" with { type: "json" };
+
       const p = document.createElement("p");
       p.textContent = `name: ${data.name}`;
       document.body.appendChild(p);
@@ -126,10 +128,22 @@ In `index.html`:
 </html>
 ```
 
-Start a local HTTP server (see [troubleshooting](/en-US/docs/Web/JavaScript/Guide/Modules#troubleshooting)) and go to the `index.html` page. You should see `John` on the page.
+Start a local HTTP server (see [troubleshooting](/en-US/docs/Web/JavaScript/Guide/Modules#troubleshooting)) and go to the `index.html` page. You should see `Shilpa` on the page.
 
 > [!NOTE]
 > JSON modules only have one default export. You cannot do named imports from them (like `import { name } from "data.json"`).
+
+### Using import attributes with dynamic import
+
+Import attributes are also accepted as the second parameter of the `import()` syntax.
+
+```js
+const data = await import("./data.json", {
+  with: { type: "json" },
+});
+```
+
+Note that, like static imports, dynamic imports are cached for the lifetime of the environment (e.g., a page or worker). If you expect this data to change (such as the latest news or a user's credits), use the [Fetch API](/en-US/docs/Web/API/Fetch_API) instead.
 
 ## Specifications
 

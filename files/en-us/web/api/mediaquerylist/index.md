@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.MediaQueryList
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view API")}}
 
-A **`MediaQueryList`** object stores information on a [media query](/en-US/docs/Web/CSS/CSS_media_queries) applied to a document, with support for both immediate and event-driven matching against the state of the document.
+A **`MediaQueryList`** object stores information on a [media query](/en-US/docs/Web/CSS/Guides/Media_queries) applied to a document, with support for both immediate and event-driven matching against the state of the document.
 
 You can create a `MediaQueryList` by calling {{DOMxRef("Window.matchMedia", "matchMedia()")}} on the {{DOMxRef("window")}} object. The resulting object handles sending notifications to listeners when the media query state changes (i.e., when the media query test starts or stops evaluating to `true`).
 
@@ -38,7 +38,7 @@ _The `MediaQueryList` interface inherits methods from its parent interface, {{DO
 _The following events are delivered to `MediaQueryList` objects:_
 
 - {{DOMxRef("MediaQueryList.change_event", "change")}}
-  - : Sent to the `MediaQueryList` when the result of running the media query against the document changes. For example, if the media query is `(min-width: 400px)`, the `change` event is fired any time the width of the document's {{Glossary("viewport")}} changes such that its width moves across the 400px boundary in either direction.
+  - : Sent to the `MediaQueryList` when the result of running the media query against the document changes. For example, if the media query is `(width >= 400px)`, the `change` event is fired any time the width of the document's {{Glossary("viewport")}} changes such that its width moves across the 400px boundary in either direction.
 
 ## Examples
 
@@ -46,7 +46,7 @@ This example creates a `MediaQueryList` and then sets up a listener to detect wh
 
 ```js
 const para = document.querySelector("p");
-const mql = window.matchMedia("(max-width: 600px)");
+const mql = window.matchMedia("(width <= 600px)");
 
 function screenTest(e) {
   if (e.matches) {
@@ -78,8 +78,8 @@ You can find other examples on the individual property and method pages.
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryListEvent")}}
 - The article {{DOMxRef("Window.devicePixelRatio")}} also has a useful example

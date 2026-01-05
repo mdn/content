@@ -2,9 +2,8 @@
 title: Authenticator
 slug: Glossary/Authenticator
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **authenticator** is an entity that can perform the cryptographic operations needed to register and authenticate users, and securely store the cryptographic keys used in these operations.
 

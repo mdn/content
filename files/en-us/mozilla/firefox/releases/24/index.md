@@ -1,12 +1,21 @@
 ---
-title: Firefox 24 for developers
+title: Firefox 24 release notes for developers
+short-title: Firefox 24
 slug: Mozilla/Firefox/Releases/24
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
+Firefox 24 was released on September 17, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
+
+### Developer Tools
+
+- The Network inspector now lets you filter by content type (CSS/image/font etc.) and see the relevant size and load times.
+- The DevTools options panel to the left lets you disable/enable JavaScript temporarily.
+- Extension developers may use the new [Browser Console](https://mihai.sucan.ro/mihai/blog/the-browser-console-is-replacing-the-error-console/) for Chrome-level scripts (Replaces Error Console).
+- The source map syntax has been changed to use `//#` instead of `//@` ([Firefox bug 870361](https://bugzil.la/870361)).
 
 ### CSS
 
@@ -36,13 +45,6 @@ page-type: firefox-release-notes
 - On desktop Firefox only, `HTMLCanvasElement.getContext()` can now take the `webgl` value, in addition to `experimental-webgl` ([Firefox bug 870232](https://bugzil.la/870232)).
 - The non-standard method `mozLoadFrom()` of {{domxref("HTMLMediaElement")}} has been removed ([Firefox bug 877135](https://bugzil.la/877135)).
 
-### Developer Tools
-
-- The Network inspector now lets you filter by content type (CSS/image/font etc.) and see the relevant size and load times.
-- The DevTools options panel to the left lets you disable/enable JavaScript temporarily.
-- Extension developers may use the new [Browser Console](https://mihai.sucan.ro/mihai/blog/the-browser-console-is-replacing-the-error-console/) for Chrome-level scripts (Replaces Error Console).
-- The source map syntax has been changed to use `//#` instead of `//@` ([Firefox bug 870361](https://bugzil.la/870361)).
-
 ### MathML
 
 - The `dir` attribute for controlling directionality of formulas on e.g., {{MathMLElement("math")}} or {{MathMLElement("mrow")}} elements is now equivalent to using the {{cssxref("direction")}} CSS property.
@@ -57,7 +59,3 @@ page-type: firefox-release-notes
 ## See also
 
 - [Firefox 24 Aurora Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/24.0a2/auroranotes/)
-
-## Older versions
-
-{{Firefox_for_developers}}

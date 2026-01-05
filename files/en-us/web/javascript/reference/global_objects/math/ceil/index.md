@@ -1,11 +1,11 @@
 ---
 title: Math.ceil()
+short-title: ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.ceil
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.ceil()`** static method always rounds up and returns the smallest integer greater than or equal to a given number.
 

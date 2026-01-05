@@ -3,9 +3,8 @@ title: webNavigation.onCreatedNavigationTarget
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget
 page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onCreatedNavigationTarget
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a new window, or a new tab in an existing window, is created to host the target of a navigation. For example, this event is sent when:
 
@@ -41,9 +40,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `details`
       - : `object`. Details about the navigation event. See the [details](#details) section for more information.
 
@@ -56,8 +53,6 @@ Events have three functions:
 
 - `sourceFrameId`
   - : `integer`. ID of the frame from which the navigation is initiated. `0` indicates that the frame is the tab's top-level browsing context, not a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation is initiated from a nested iframe. Frame IDs are unique for a given tab and process.
-- `processId` {{optional_inline}} {{deprecated_inline}}
-  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process the navigation originated from.
 - `sourceTabId`
   - : `integer`. The ID of the tab from which the navigation is initiated. For example, if the user opens a link in a new tab, this will be the ID of the tab containing the link.
 - `tabId`
@@ -68,10 +63,8 @@ Events have three functions:
   - : `string`. The URL which will be loaded in the new tab.
 - `windowId`
   - : `number`. The ID of the window in which the new tab is created.
-
-## Browser compatibility
-
-{{Compat}}
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process the navigation originated from.
 
 ## Examples
 
@@ -95,6 +88,10 @@ browser.webNavigation.onCreatedNavigationTarget.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
