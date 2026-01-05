@@ -153,7 +153,7 @@ conic-gradient(red .8rad, yellow .6rad, blue 1.3rad);
 There are other effects you can create with conic gradients. Oddly, a checkerboard is one of them. By creating quadrants with an upper left and lower right white quadrant and lower left and upper right black quadrants, then repeating the gradient 16 times (four times across and four times down) you can make a checkerboard.
 
 ```css
-conic-gradient(white 90deg, black 0.25turn 0.5turn, white 1rad 1.5rad, black 300grad);
+conic-gradient(white 90deg, black 0.25turn 0.5turn, white calc(pi * 1rad) calc(pi * 1.5 * 1rad), black 300grad);
 background-size: 25% 25%;
 ```
 
