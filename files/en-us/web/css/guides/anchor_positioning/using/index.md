@@ -125,12 +125,13 @@ When multiple anchor elements are given the same {{cssxref("anchor-name")}} valu
 
 For example, if a document contains multiple repeated components, each with a positioned element tethered to an anchor, all the positioned elements will be anchored to the last anchor on the page unless each component uses a different anchor name. This is likely not the desired behavior.
 
-The {{cssxref("anchor-scope")}} property can fix this problem by making it so that each positioned element can only be anchored to an element within the same subtree of the element that has the scope set on it:
+The {{cssxref("anchor-scope")}} property can fix this problem by limiting the visibility, or "scope", of an `anchor-name` value to a specific subtree. The result is that each positioned element can only be anchored to an element within the same subtree of the element that has the scope set on it.
 
 - `anchor-scope: all` sets the scope so that _any_ `anchor-name` values set in the subtree can only be bound to by positioned elements in the same subtree.
-- `anchor-scope: --my-anchor` sets the scope so that the specified `anchor-name` value, when set in the subtree, can only be bound to by positioned elements in the same subtree.
+- `anchor-scope: --my-anchor, --my-anchor2` sets the scope so that the specified `anchor-name` values, when set in the subtree, can only be bound to by positioned elements in the same subtree.
+- `anchor-scope: none` is the default value; it specifies that no anchor scoping is set.
 
-For example, let's say you have an anchor and a anchor-positioned element inside a scoped container, and another positioned element outside the container:
+For example, let's say you have an multiple anchor and anchor-positioned {{htmlelement("div")}} elements inside {{htmlelement("section")}} containers:
 
 ```html live-sample___anchor-scope
 <section class="scoped">
@@ -138,12 +139,31 @@ For example, let's say you have an anchor and a anchor-positioned element inside
   <div class="positioned">Positioned 1</div>
 </section>
 
-<div class="positioned">Positioned 2</div>
+<section class="scoped">
+  <div class="anchor">⚓︎</div>
+  <div class="positioned">Positioned 2</div>
+</section>
+
+<section class="scoped">
+  <div class="anchor">⚓︎</div>
+  <div class="positioned">Positioned 3</div>
+</section>
 ```
 
-We scope the container using `anchor-scope: --my-anchor`:
+We turn each `anchor` `<div>` into an anchor element by giving them an `anchor-name` of `--my-anchor`. We then position each `positioned` `<div>` relative to an element with the `--my-anchor` anchor name by giving them absolute positioning, a `position-anchor` value of `--my-anchor`, and a {{cssxref("position-area")}} value of `right`. Finally, we set the anchor scope of each `<section>` container using `anchor-scope: --my-anchor`:
 
 ```css hidden live-sample___anchor-scope
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .scoped {
   padding: 20px;
   background: #eee;
@@ -162,17 +182,20 @@ We scope the container using `anchor-scope: --my-anchor`:
   background: orange;
   width: fit-content;
   padding: 3px;
+}
+```
+
+```css live-sample___anchor-scope
+.anchor {
+  anchor-name: --my-anchor;
+}
+
+.positioned {
   position: absolute;
   position-anchor: --my-anchor;
   position-area: right;
 }
 
-.anchor {
-  anchor-name: --my-anchor;
-}
-```
-
-```css live-sample___anchor-scope
 .scoped {
   anchor-scope: --my-anchor;
 }
@@ -180,9 +203,11 @@ We scope the container using `anchor-scope: --my-anchor`:
 
 This results in the following positioning behavior:
 
-{{ EmbedLiveSample("anchor-scope", "100%", "225") }}
+{{ EmbedLiveSample("anchor-scope", "100%", "150") }}
 
-The first positioned element is positioned relative to the anchor. It is in scope for positioning relative to the `--my-anchor` anchor, as it is inside the `<section>` element where `anchor-scope: --my-anchor` is set. The second positioned element is not positioned relative to the anchor. It is not a descendant of the `<section>` element, so it is outside the anchor scope.
+Each positioned element is positioned relative to the anchor inside the same `<section>` element. This is because each `<section>` element has an `anchor-scope` of `--my-anchor` set on it; positioned elements inside each scoped container can therefore only be positioned relative to `my-anchor` anchors inside the same container.
+
+If we didn't set `anchor-scope: --my-anchor` on the containers, all of the positioned elements would be positioned relative to the last anchor on the page.
 
 ## Positioning elements relative to their anchor
 
