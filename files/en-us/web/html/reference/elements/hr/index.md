@@ -84,25 +84,32 @@ The `<hr>` tag can be placed within a list item for visual separation, to create
 
 #### HTML
 
-```html-nolint
-<h2>My To-Do List</h2>
+```html
 <ul>
-  <li>Task 1</li>
-  <li>Task 2</li>
-  <li>Task 3</li>
-  <li><hr /> <!-- Thematic break --></li>
-  <li>Completed Task A</li>
-  <li>Completed Task B</li>
+  <li>Cut</li>
+  <li>Copy</li>
+  <li>Paste</li>
+  <li>Paste Style</li>
+  <li><hr /></li>
+  <li>Delete</li>
 </ul>
+```
 
-<h2>Steps in a Recipe</h2>
-<ol>
-  <li>Mix dry ingredients thoroughly.</li>
-  <li>Pour in wet ingredients.</li>
-  <li><hr /> <!-- Thematic break --></li>
-  <li>Mix for 10 minutes.</li>
-  <li>Bake for one hour at 300 degrees.</li>
-</ol>
+```css hidden
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100px;
+  margin: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid lightgrey;
+}
+hr {
+  margin-block: 0.2rem;
+  color: lightgrey;
+}
 ```
 
 #### Result
