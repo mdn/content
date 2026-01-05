@@ -6,7 +6,7 @@ browser-compat: css.at-rules.keyframes.selectors
 sidebar: cssref
 ---
 
-CSS **keyframe selectors** identify specific points in an animation timeline where the keyframe's style should be applied. Defined in the [CSS animation module](/en-US/docs/Web/CSS/CSS_Animations), these selectors are used exclusively within the {{cssxref("@keyframes")}} at-rule.
+CSS **keyframe selectors** identify specific points in an animation timeline where keyframe styles should be applied. These selectors are used exclusively within the {{cssxref("@keyframes")}} at-rule.
 
 ## Syntax
 
@@ -25,6 +25,12 @@ to {
 100% {
 }
 
+/* With <timeline-range-name> */
+entry 20% {
+}
+exit 80% {
+}
+
 /* Selector lists */
 0%,
 50%,
@@ -41,16 +47,18 @@ to {
   - : Represents the start of the animation sequence. It is equivalent to `0%`.
 - `to`
   - : Represents the end of the animation sequence. It is equivalent to `100%`.
-- {{cssxref("percentage")}}
-  - : A percentage between `0%` and `100%`, inclusive, representing the total progression through the animation sequence.
+- `<percentage>`
+  - : A {{cssxref("percentage")}} between `0%` and `100%`, inclusive, representing the total progression through the animation sequence.
+- `<timeline-range-name> <percentage>`
+  - : A {{cssxref("timeline-range-name")}} preceding a `<percentage>` component represents a specific progress point within the named timeline range.
 
 ## Description
 
-A `<keyframe-selector>` can be the `to` or `from` keyword, a percentage between `0%` and `100%`, inclusive, or a comma-separated list of these keywords and/or percentages. When a comma-separated list of `<keyframe-selector>` is used, the style block that follows applies to all the specified progression points.
+A `<keyframe-selector>` can be the `to` or `from` keyword, a percentage between `0%` and `100%`, inclusive, or a comma-separated list of these keywords and/or percentages. When the percentage is preceded by a {{cssxref("timeline-range-name")}}, it defines a timeline range if the animation timelines is a view progress timeline; otherwise, the selector is ignored. When a comma-separated `<keyframe-selector>` list is used, the style block that follows applies to all the specified progression points.
 
 ### Valid percentage values
 
-Percentage values must include the percent sign (`%`). A unitless `0` is invalid. Values outside the range `0%` to `100%` (such as `-10%` or `110%`) are invalid and will cause the keyframe block to be ignored.
+Percentage values must include the percent sign (`%`). Unitless values (such as `0` and `20`) and values outside the range `0%` to `100%` (such as `-10%` or `110%`) are invalid and will cause the keyframe block to be ignored.
 
 ### Cascade, order, precedence, and importance
 
@@ -62,7 +70,7 @@ The `!important` flag is not valid within an `@keyframes` definition.
 
 ### Omitted start and end selectors
 
-If no `0%` (or `from`) or `100%` (or `to`) keyframe is specified, the browser will use the element's computed styles for those states, allowing the animation to transition smoothly from or to the element's non-animated property values. In other words, if a property is specified in a middle-of-the-timeline keyframe, without being set within a starting or ending keyframe selector block, the property will animate from it's original value to that value.
+If no `0%` (or `from`) or `100%` (or `to`) keyframe is specified, the browser will use the element's computed styles for those states, allowing the animation to transition smoothly from or to the element's non-animated property values. In other words, if a property is specified in a middle-of-the-timeline keyframe without being set within a starting or ending keyframe selector block, the property will animate from its original value to that value.
 
 For example, if an element has a `red` background color, and the following animation is applied:
 
@@ -75,28 +83,13 @@ For example, if an element has a `red` background color, and the following anima
 }
 ```
 
-The background color will be `red` at the start of the animation, transitioning to `purple` a quarter of the way through the animation, remaining `purple` for half the animation, and transitioning back to `red`, the original background color, starting `75%` of the way through the {{cssxref("animation-timeline", "animation timeline", "", "nocode")}}. It will behave as if the following were set:
-
-```css
-@keyframes changeToPurple {
-  25%,
-  75% {
-    background-color: purple;
-  }
-  0%,
-  100% {
-    background-color: var(--nonAnimatedColor);
-  }
-}
-```
-
-Where `--nonAnimatedColor`, is the `background-color` of the element without the animation applied; in this case, `red`.
+The background color will be `red` at the start of the animation, transitioning to `purple` a quarter of the way through the animation, remaining `purple` for half the animation, and transitioning back to `red`, the original background color, starting `75%` of the way through the {{cssxref("animation-timeline", "animation timeline", "", "nocode")}}. See the example that [omits the `to` and `from`](#omitting_to_and_from).
 
 #### Omitted property declarations
 
 When creating an `@keyframes` animation to animate multiple properties, you don't have to declare all the properties in all the keyframe selector blocks.
 
-For example, in the [basic usage](#basic_usage) example, the `opacity` is declared in all the keyframe selector blocks, but only starting and ending `transforms` values are set. In that case, the element will be fully opaque 50% of the way through the animation timeline, but the point at which the element is transformed `25vw` to the right depends on the {{cssxref("animation-timing-function")}}; being half the same as the `50%` in the case of `linear`, but not if `ease-in` is used, which was done in this case.
+For example, in the [basic usage](#basic_usage) example, the `opacity` is declared in all the keyframe selector blocks, but only start and end `transform` values are set. In that case, the element will be fully opaque `50%` of the way through the animation timeline, but the point at which the element is transformed `25vw` to the right depends on the {{cssxref("animation-timing-function")}} — it will be `50%` in the case of `linear`, but not if `ease-in` is used (which it is in this case).
 
 ### Cascade order
 
@@ -129,7 +122,7 @@ This animation repeats non-changing values in multiple selector blocks, which is
 }
 ```
 
-We can use the cascade to group values in one selector block, then overriding them as necessary. The following is the equivalent to the previous animation, just with few lines of CSS:
+We can use the cascade to group values in one selector block, then override them as necessary. The following is equivalent to the previous animation, but with fewer lines of CSS:
 
 ```css
 @keyframes uglyAnimation {
@@ -180,6 +173,33 @@ Order is important! We can't ignore the cascade. If we reorder the above incorre
 }
 ```
 
+### With named timeline ranges
+
+Originally defined in the [CSS animation module](/en-US/docs/Web/CSS/Guides/Animations), the [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module expanded the keyframe selector for view progress ranges. A {{cssxref("timeline-range-name")}} can precede the `<percentage>` component of the selector to attach keyframes to specific progress points within the named timeline range. The `<timeline-range-name>` represents the selected predefined named timeline range, and the `<percentage>` after it represents the percentage progress between the start and end of that named timeline range. This addition to the selector enables adding timeline range information directly in the `@keyframes` animation definition.
+
+```css
+@keyframes in-and-out {
+  entry 0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  entry 100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  exit 0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  exit 100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+```
+
+If the element's animation timeline does not have a corresponding named timeline range, then any keyframes attached to points on that named timeline range are ignored. It is possible that these attachment points are outside the active interval of the animation. When this occurs, the automatic `from` (`0%`) and `to` (`100%`) keyframes are only generated for properties that don't have keyframes at or earlier than `0%` or at or after `100%`, respectively.
+
 ## Examples
 
 ### Basic usage
@@ -208,7 +228,7 @@ div {
 }
 ```
 
-We create an {{cssxref("@keyframes")}} animation, applying styles to the `from`, `to`, and a middle percentage, animating the {{cssxref("opacity")}} and the {{cssxref("transform")}} properties.
+We create an {{cssxref("@keyframes")}} animation, applying styles to the `from` and `to` keywords and a middle percentage. We animate the {{cssxref("opacity")}} and the {{cssxref("transform")}} properties.
 
 ```css
 @keyframes slide-and-fade {
@@ -238,9 +258,9 @@ div {
 
 {{EmbedLiveSample("Basic usage","100%","200")}}
 
-### Selector lists and initial values
+### Selector lists
 
-Using the same HTML and CSS as in the previous example, this example demonstrates using comma-separated selectors to group selectors, applying the same styles at multiple points in an animation.
+Using the same HTML and basic styling as in the previous example, this example demonstrates using comma-separated selectors to group selectors, applying the same styles at multiple points in an animation.
 
 ```html hidden
 <div>I am animated</div>
@@ -248,7 +268,7 @@ Using the same HTML and CSS as in the previous example, this example demonstrate
 
 #### CSS
 
-We create a `pulse` animation that changes the size of our element. We also declare a `background-color` in only one selector block.
+We create a `pulse` animation that changes the size of our element.
 
 ```css
 div {
@@ -266,7 +286,6 @@ div {
   25%,
   100% {
     transform: scale(0.8);
-    background-color: black;
   }
 }
 ```
@@ -286,7 +305,62 @@ div {
 {{EmbedLiveSample("Selector lists and initial values","100%","125")}}
 
 By using a selector list with multiple comma-separated keyframe selectors, the animation "pauses" from the `25%` keyframe until it reaches the `75%` keyframe.
-The `black` is only set in the `25%, 75%` keyframe, so the element animates from and to `rebeccapurple`, it's original `background-color`.
+
+### Omitting `to` and `from`
+
+This example demonstrates how, if starting or ending styles are omitted when the `to` or `from` keyframe selectors are not included in a `@keyframes` animation definition.
+
+#### HTML
+
+We include a few elements. We will be animating all of them.
+
+```html
+<div>I am animated</div>
+<div>I am animated</div>
+<div>I am animated</div>
+```
+
+#### CSS
+
+We provide basic styles to our elements, giving each a different {{cssxref("outline-width")}} and {{cssxref("background-color")}}. These are the properties we will be animating.
+
+```css
+div {
+  background-color: magenta;
+  outline: 10px dashed black;
+  color: white;
+  width: min-content;
+  padding: 10px;
+  font: 2rem sans-serif;
+  margin: 35px auto;
+
+  animation: changes 5s linear infinite;
+}
+div:first-of-type {
+  background-color: blue;
+  outline-width: 0;
+}
+div:last-of-type {
+  background-color: green;
+  outline-width: 20px;
+}
+```
+
+We create an animation that sets an element's {{cssxref("border-width")}} and {{cssxref("background-color")}} at only the `30%` keyframe.
+
+```css
+@keyframes changes {
+  30%, 40% {
+    background-color: black;
+    outline-width: 15px;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Omitting to and from","100%","420")}}
+
+The `background-color` and `outline-width` properties are set in the `30%, 40%` keyframe, so the elements' background colors animate from and to `green`, `magenta`, and `blue` while their outline widths animate from `0px`, `10px`, and `20px` to `15px`, remain in that state for one-tenth of the animation, and then back again.
 
 ## Specifications
 
@@ -300,5 +374,7 @@ The `black` is only set in the `25%, 75%` keyframe, so the element animates from
 
 - {{cssxref("@keyframes")}}
 - {{cssxref("animation")}}
+- {{cssxref("animation-range")}}
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - [CSS animations](/en-US/docs/Web/CSS/CSS_Animations) module
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
