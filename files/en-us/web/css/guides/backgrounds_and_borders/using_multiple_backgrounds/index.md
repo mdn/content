@@ -52,8 +52,9 @@ For example:
 .element {
   background-image: url(a.png), url(b.png), url(c.png);
   background-position: left top;
-} 
+}
 ```
+
 This is equivalent to:
 
 ```css
@@ -64,8 +65,6 @@ This is equivalent to:
     left top;
 }
 ```
-
-
 
 ## See also
 
