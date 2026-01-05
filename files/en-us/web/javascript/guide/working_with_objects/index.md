@@ -9,7 +9,7 @@ sidebar: jssidebar
 
 JavaScript is designed on an object-based paradigm. An object is a collection of [properties](/en-US/docs/Glossary/Property/JavaScript), and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a [method](/en-US/docs/Glossary/Method).
 
-Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life. In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects can have properties, which define their characteristics.
+Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life. In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object with properties. A cup has a color, a design, weight, a material it is made of, etc. In the same way, JavaScript objects can have properties, which define their characteristics.
 
 In addition to objects that are predefined in the browser, you can define your own objects. This chapter describes how to use objects, properties, and methods, and how to create your own objects.
 
@@ -149,20 +149,20 @@ Objects can also be created using the {{jsxref("Object.create()")}} method. This
 
 ```js
 // Animal properties and method encapsulation
-const Animal = {
+const animalProto = {
   type: "Invertebrates", // Default value of properties
   displayType() {
-    // Method which will display type of Animal
+    // Method which will display the type of animal
     console.log(this.type);
   },
 };
 
-// Create new animal type called `animal`
-const animal = Object.create(Animal);
+// Create a new animal type called `animal`
+const animal = Object.create(animalProto);
 animal.displayType(); // Logs: Invertebrates
 
-// Create new animal type called fish
-const fish = Object.create(Animal);
+// Create a new animal type called fish
+const fish = Object.create(animalProto);
 fish.type = "Fishes";
 fish.displayType(); // Logs: Fishes
 ```
@@ -306,7 +306,7 @@ function showProps(obj, objName) {
 }
 ```
 
-There is no native way to list all inherited properties including non-enumerable ones. However, this can be achieved with the following function:
+There is no native way to list all inherited properties, including non-enumerable ones. However, this can be achieved with the following function:
 
 ```js
 function listAllProperties(myObj) {
@@ -395,15 +395,15 @@ car2.displayCar();
 
 ### Using this for object references
 
-JavaScript has a special keyword, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), that you can use within a method to refer to the current object. For example, suppose you have 2 objects, `Manager` and `Intern`. Each object has its own `name`, `age` and `job`. In the function `sayHi()`, notice the use of `this.name`. When added to the 2 objects, the same function will print the message with the name of the respective object it's attached to.
+JavaScript has a special keyword, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), that you can use within a method to refer to the current object. For example, suppose you have 2 objects, `manager` and `intern`. Each object has its own `name`, `age` and `job`. In the function `sayHi()`, notice the use of `this.name`. When added to the 2 objects, the same function will print the message with the name of the respective object it's attached to.
 
 ```js
-const Manager = {
+const manager = {
   name: "Karina",
   age: 27,
   job: "Software Engineer",
 };
-const Intern = {
+const intern = {
   name: "Tyrone",
   age: 21,
   job: "Software Engineer Intern",
@@ -413,15 +413,15 @@ function sayHi() {
   console.log(`Hello, my name is ${this.name}`);
 }
 
-// add sayHi function to both objects
-Manager.sayHi = sayHi;
-Intern.sayHi = sayHi;
+// Add sayHi function to both objects
+manager.sayHi = sayHi;
+intern.sayHi = sayHi;
 
-Manager.sayHi(); // Hello, my name is Karina
-Intern.sayHi(); // Hello, my name is Tyrone
+manager.sayHi(); // Hello, my name is Karina
+intern.sayHi(); // Hello, my name is Tyrone
 ```
 
-`this` is a "hidden parameter" of a function call that's passed in by specifying the object before the function that was called. For example, in `Manager.sayHi()`, `this` is the `Manager` object, because `Manager` comes before the function `sayHi()`. If you access the same function from another object, `this` will change as well. If you use other methods to call the function, like {{jsxref("Function.prototype.call()")}} or {{jsxref("Reflect.apply()")}}, you can explicitly pass the value of `this` as an argument.
+`this` is a "hidden parameter" of a function call that's passed in by specifying the object before the function that was called. For example, in `manager.sayHi()`, `this` is the `manager` object, because `manager` comes before the function `sayHi()`. If you access the same function from another object, `this` will change as well. If you use other methods to call the function, like {{jsxref("Function.prototype.call()")}} or {{jsxref("Reflect.apply()")}}, you can explicitly pass the value of `this` as an argument.
 
 ## Defining getters and setters
 

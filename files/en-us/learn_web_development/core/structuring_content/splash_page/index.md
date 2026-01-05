@@ -362,7 +362,6 @@ In this assessment we are presenting you with a mostly-finished splash page abou
 
 Just below the `<h1>`, add a `<video>` element that embeds our header video into the page. We'd like it to do the following:
 
-- Specify the [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) of the video.
 - Autoplay the video on load (for this to work in at least some browsers, you'll also need to specify that the video should be muted).
 - Loop endlessly rather than playing once.
 - Preload the video content.
@@ -419,7 +418,6 @@ Your finished HTML should look something like this:
 
         <video
           src="https://mdn.github.io/shared-assets/videos/learn/bug_video_640.mp4"
-          type="video/mp4"
           autoplay
           loop
           muted

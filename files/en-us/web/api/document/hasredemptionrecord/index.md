@@ -3,10 +3,12 @@ title: "Document: hasRedemptionRecord() method"
 short-title: hasRedemptionRecord()
 slug: Web/API/Document/hasRedemptionRecord
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Document.hasRedemptionRecord
 ---
 
-{{APIRef("Storage Access API")}}
+{{APIRef("Storage Access API")}}{{SeeCompatTable}}
 
 The **`hasRedemptionRecord()`** method of the {{domxref("Document")}} interface returns a promise that fulfills with a boolean indicating whether the browser has a [redemption record](/en-US/docs/Web/API/Private_State_Token_API/Using#redeeming_tokens) originating from a particular issuer.
 

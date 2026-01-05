@@ -442,7 +442,7 @@ The HTML contains a `<dialog>` element, plus a button to show the dialog. Additi
 
 In the CSS, we include a `@starting-style` block that defines the transition starting styles for the `opacity` and `transform` properties, transition end styles on the `dialog:open` state, and default styles on the default `dialog` state to transition back to once the `<dialog>` has appeared. Note how the `<dialog>`'s `transition` list includes not only these properties, but also the `display` and `overlay` properties, each with `allow-discrete` set on them.
 
-We also set a starting style value for the {{cssxref("background-color")}} property on the [`::backdrop`](/en-US/docs/Web/CSS/Reference/Selectors/::backdrop) that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. The `dialog:open::backdrop` selector selects only the backdrops of `<dialog>` elements when the dialog is open.
+We also set a starting style value for the {{cssxref("background-color")}} property on the {{cssxref("::backdrop")}} that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. The `dialog:open::backdrop` selector selects only the backdrops of `<dialog>` elements when the dialog is open.
 
 ```css
 /* Open state of the dialog  */
