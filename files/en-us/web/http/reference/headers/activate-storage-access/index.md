@@ -46,21 +46,21 @@ Activate-Storage-Access: load
 - `retry`
   - : The server uses this token to indicate that it needs its third party cookies in order to properly respond to this request.
 
-    The server should check for `Sec-Fetch-Storage-Access: inactive` in the request before responding with this token, in order to check that the permission has already been granted (but is inactive).
+    The server should check for `Sec-Fetch-Storage-Access: inactive` in the request before responding with this token to check that the permission has already been granted (but is inactive).
     The `allowed-origin` parameter must be specified to allow the specific origin (specify `*` to allow any origin).
 
     The browser should respond by activating an _already-granted_ storage-access permission, and retrying the request with unpartitioned cookies included.
 
 - `load`
-  - : The server uses this token to indicate that it is sending the browser a HTML document that needs to activate a pre-existing `storage-access` permission grant — in order to access unpartiioned cookies while it loads.
+  - : The server uses this token to indicate that it is sending the browser an HTML document that needs to activate a pre-existing `storage-access` permission grant — in order to access unpartitioned cookies while it loads.
 
-    The server should check for `Sec-Fetch-Storage-Access: inactive` or `Sec-Fetch-Storage-Access: active` in the request before responding with `load`, in order to confirm that the permission has already been granted.
+    The server should check for `Sec-Fetch-Storage-Access: inactive` or `Sec-Fetch-Storage-Access: active` in the request before responding with `load` to confirm that the permission has already been granted.
 
     The browser should respond by loading the resource and granting it access to its unpartitioned cookies.
 
 ## Description
 
-The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API#) provides a JavaScript mechanism to allow an embedded resource to request `storage-access` permission.
+The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) provides a JavaScript mechanism to allow an embedded resource to request `storage-access` permission.
 This enables sending third-party cookies in requests, which would otherwise be blocked by default in most browsers.
 The resource must first be requested without cookies, so the server returns an uncredentialed version of the resource that will not have access to its own cookies.
 After loading, this resource can call {{domxref("Document.requestStorageAccess()")}} with transient activation to request the storage-access permission.
@@ -73,7 +73,6 @@ Similarly, if you load another origin in the same site, the permission will be g
 
 The resource has to be loaded at least once to be granted the storage-access permission.
 However, once granted, a server can use `Activate-Storage-Access` to activate the permission for other origins and contexts.
-Note that it is also possible (but less efficient), to activate a permission by loading a resource and calling `Document.requestStorageAccess()`.
 
 The way this works is that:
 
@@ -84,6 +83,9 @@ The way this works is that:
    Once loaded by the browser, this resource has access to its cookies as though it were a first-party resource.
 
 Responses must also include the {{httpheader("Vary")}} header with `Sec-Fetch-Storage-Access`.
+
+> [!NOTE]
+> It is also possible (but less efficient) to activate a permission by loading a resource and calling `Document.requestStorageAccess()`.
 
 ## Examples
 

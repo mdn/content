@@ -22,7 +22,7 @@ The [storage access headers](/en-US/docs/Web/API/Storage_Access_API#storage_acce
 Note that the headers can activate a granted permission for any embedded resource, such as credentialed images, not just code embedded in an {{htmlelement("iframe")}}.
 
 It is also possible to activate a granted permission for a cross-origin, same-site endpoint by calling `requestStorageAccess()` (this time without the requirement for transient activation).
-However this only works to activate permission for embedded code.
+However, this only works to activate permission for embedded code.
 It is also less efficient than using the headers, because the resource needs to be loaded in order to activate the permission.
 
 > [!NOTE]
