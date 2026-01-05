@@ -112,7 +112,7 @@ nav li {
 
 Another way to align items on the main axis is to use auto margins. This enables the design pattern of a navigation bar where one group of items are aligned left and another group aligned right. Here we are using the auto margins technique described in [Using auto margins for main axis alignment](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items#using_auto_margins_for_main_axis_alignment).
 
-The items are aligned on the main axis with `normal`, which behaves as `start`, as this is the initial behavior of flexbox. The [`gap`](/en-US/docs/Web/CSS/Reference/Properties/gap) property creates gaps between items. And we are aligning the last item to the right by giving it a `margin-left` value of `auto`. You can move the class from one item to another to change where the split happens.
+The items are aligned on the main axis with `normal`, which behaves as `start`, as this is the initial behavior of flexbox. The {{cssxref("gap")}} property creates gaps between items. And we are aligning the last item to the right by giving it a `margin-left` value of `auto`. You can move the class from one item to another to change where the split happens.
 
 ```html live-sample___split-navigation
 <nav>
@@ -374,7 +374,7 @@ img {
 
 Flexbox is particularly useful when it comes to styling form controls. Forms have several small elements that we typically want to align with each other. A common pattern is to have a {{htmlelement("label")}} and {{htmlelement("input")}} pair combined with a {{htmlelement("button")}}, perhaps for a search form or a newsletter sign-up form where you want your visitor to enter their email address.
 
-Flexbox makes this type of layout easy to achieve. The `<label>`, `<input>` and `<button>` are contained in a wrapper that is set to `display: flex`. The flex properties allow the `<input>` field to grow, while the button and label do not grow. The text input field will grow and shrink depending on the space available.
+Flexbox makes this type of layout achievable with just a few declarations. The `<label>`, `<input>` and `<button>` are contained in a wrapper that is set to `display: flex`. The flex properties allow the `<input>` field to grow, while the button and label do not grow. The text input field will grow and shrink depending on the space available.
 
 ```html live-sample___label-input-button
 <form class="example">
@@ -416,7 +416,7 @@ Flexbox makes this type of layout easy to achieve. The `<label>`, `<input>` and 
 
 {{EmbedLiveSample("label-input-button")}}
 
-Patterns like this can make it much easier to create a library of form elements for your design, which easily accommodate additional elements being added. You are taking advantage of the flexibility of flexbox by mixing items that do not grow with those that do.
+Patterns like this can make it easier to create a library of form elements for your design, which easily accommodate additional elements being added. You are taking advantage of the flexibility of flexbox by mixing items that do not grow with those that do.
 
 ## Conclusion
 

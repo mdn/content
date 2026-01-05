@@ -12,8 +12,8 @@ The **`animation-range`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US
 
 This property is a shorthand for the following CSS properties:
 
-- [`animation-range-start`](/en-US/docs/Web/CSS/Reference/Properties/animation-range-start)
-- [`animation-range-end`](/en-US/docs/Web/CSS/Reference/Properties/animation-range-end)
+- {{cssxref("animation-range-start")}}
+- {{cssxref("animation-range-end")}}
 
 ## Syntax
 
@@ -56,7 +56,7 @@ The `animation-range` shorthand property is specified as one or more single anim
 ### Values
 
 - `<animation-range-start>`
-  - : The keyword `normal`, a `<length-percentage>`, a [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name), or a `<timeline-range-name> <length-percentage>` pair, representing the {{cssxref("animation-range-start")}}. If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `0%`.
+  - : The keyword `normal`, a `<length-percentage>`, a {{cssxref("timeline-range-name")}}, or a `<timeline-range-name> <length-percentage>` pair, representing the {{cssxref("animation-range-start")}}. If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `0%`.
 - `<animation-range-end>`
   - : The keyword `normal`, a `<length-percentage>`, a `<timeline-range-name>`, or a `<timeline-range-name> <length-percentage>` pair, representing the {{cssxref("animation-range-end")}}. If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `100%`.
 
@@ -66,7 +66,7 @@ The `animation-range` shorthand property sets the `animation-range-start` and `a
 
 The {{glossary("Scroll container", "scroll port")}} area known as the view progress visibility range is the area inside which the subject element of a [named view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) animation is deemed to be visible. By default, this is the full range of the scrollport, but it can be adjusted using the {{cssxref("view-timeline-inset")}} property.
 
-If two values are specified as components of the `<animation-range>` property, they will be interpreted in the order `<animation-range-start>` then `<animation-range-end>`. The value of each component is either the keyword `normal`, a {{cssxref("length-percentage")}}, or a [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) optionally followed by a `<length-percentage>`. These values are space-separated. Normal is equal to `0%` for start and `100%` for end. Setting `normal` with a `<length-percentage>` for either the start or end range is invalid.
+If two values are specified as components of the `<animation-range>` property, they will be interpreted in the order `<animation-range-start>` then `<animation-range-end>`. The value of each component is either the keyword `normal`, a {{cssxref("length-percentage")}}, or a {{cssxref("timeline-range-name")}} optionally followed by a `<length-percentage>`. These values are space-separated. Normal is equal to `0%` for start and `100%` for end. Setting `normal` with a `<length-percentage>` for either the start or end range is invalid.
 
 ### Defining range start and defaulting range end
 
@@ -77,7 +77,7 @@ If the value is a single `<length-percentage>` or the keyword `normal`, this val
 - `animation-range: 20%;` is the equivalent to `animation-range-start: 20%; animation-range-end: normal;`
 - `animation-range: normal;` is the equivalent to `animation-range-start: 0%; animation-range-end: 100%;`
 
-If the value is a single [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) (without a `<length-percentage>` following it), that timeline range name is applied to both the `<animation-range-start>` and `<animation-range-end>` components, and the ranges of `0%` and `100%`, respectively, are implied. For example:
+If the value is a single {{cssxref("timeline-range-name")}} (without a `<length-percentage>` following it), that timeline range name is applied to both the `<animation-range-start>` and `<animation-range-end>` components, and the ranges of `0%` and `100%`, respectively, are implied. For example:
 
 - `animation-range: contain;` is equivalent to `animation-range-start: contain 0%; animation-range-end: contain 100%;`
 - `animation-range: cover;` is equivalent to `animation-range-start: cover 0%; animation-range-end: cover 100%;`
@@ -100,7 +100,7 @@ If you include two values and the first value is the keyword `normal` or a `<len
 
 ### Multiple animations
 
-When specifying ranges for multiple animations, the `animation-range` shorthand property is specified as one or more single animation ranges, separated by commas. Each animation-range is applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and the `animation-range` property values do not match, if there are more `animation-range` value than animations, the extra ranges are ignore. If there are more animations than ranges, the list of `animation-range` values are repeated until there is a corresponding range for each animation. For example, if we set `animation-range: 25% 75%, normal;`, the animation range of all the odd numbered animations `25% 75%` and all the even animations will be be `0% 100%`.
+When specifying ranges for multiple animations, the `animation-range` shorthand property is specified as one or more single animation ranges, separated by commas. Each animation-range is applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and the `animation-range` property values do not match, if there are more `animation-range` value than animations, the extra ranges are ignore. If there are more animations than ranges, the list of `animation-range` values are repeated until there is a corresponding range for each animation. For example, if we set `animation-range: 25% 75%, normal;`, the animation range of all the odd numbered animations `25% 75%` and all the even animations will be `0% 100%`.
 
 ## Formal definition
 
@@ -167,7 +167,7 @@ We also include a checkbox to toggle the {{cssxref("animation-fill-mode")}} prop
 
 We define an animation that animates an element's opacity, scale, and background color, causing it to fade in, scale up, and change color as the animation progresses. We apply this animation to the `animatedElement` with the {{cssxref("animation")}} shorthand.
 
-A view progress timeline is created by setting the [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function as the value of the {{cssxref("animation-timeline")}} property on our `animatedElement`. The result is that the element animates as it moves upwards through the document as it is scrolled. We declare `animation-timeline` property after the shorthand, as the shorthand resets this property.
+A view progress timeline is created by setting the {{cssxref("animation-timeline/view", "view()")}} function as the value of the {{cssxref("animation-timeline")}} property on our `animatedElement`. The result is that the element animates as it moves upwards through the document as it is scrolled. We declare `animation-timeline` property after the shorthand, as the shorthand resets this property.
 
 Lastly, an `animation-range` declaration is set to make the animation begin later than expected and finish earlier.
 

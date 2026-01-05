@@ -6,12 +6,7 @@ browser-compat: css.properties.view-timeline-axis
 sidebar: cssref
 ---
 
-The **`view-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property is used to specify the scrollbar direction that will be used to provide the timeline for a _named view progress timeline_ animation, which is progressed through based on the change in visibility of an element (known as the _subject_) inside a scrollable element (_scroller_). `view-timeline-axis` is set on the subject. See [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) for more details.
-
-> [!NOTE]
-> If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
-
-The `view-timeline-axis`, {{cssxref("view-timeline-inset")}} and {{cssxref("view-timeline-name")}} properties can also be set using the {{cssxref("view-timeline")}} shorthand property.
+The **`view-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property specifies the scroll direction to be used for a [named view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline).
 
 ## Syntax
 
@@ -19,23 +14,35 @@ The `view-timeline-axis`, {{cssxref("view-timeline-inset")}} and {{cssxref("view
 /* Logical property values */
 view-timeline-axis: block;
 view-timeline-axis: inline;
-/* Non-logical property values */
+
+/* Physical property values */
 view-timeline-axis: y;
 view-timeline-axis: x;
+
+/* Global values */
+view-timeline-axis: inherit;
+view-timeline-axis: initial;
+view-timeline-axis: revert;
+view-timeline-axis: revert-layer;
+view-timeline-axis: unset;
 ```
 
 ### Values
 
-Allowed values for `view-timeline-axis` are:
+- `<axis>`
+  - : Specifies the scroll direction used by the view progress timeline. The value can be one of the {{cssxref("axis")}} keywords: `block`, `inline`, `x`, or `y`. The default value is `block`.
 
-- `block`
-  - : The scrollbar on the block axis of the scroller element, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `y`, while for vertical writing modes, it is the same as `x`. This is the default value.
-- `inline`
-  - : The scrollbar on the inline axis of the scroller element, which is the axis in the direction parallel to the flow of text in a line. For horizontal writing modes, this is the same as `x`, while for vertical writing modes, this is the same as `y`.
-- `y`
-  - : The scrollbar on the vertical axis of the scroller element.
-- `x`
-  - : The scrollbar on the horizontal axis of the scroller element.
+## Description
+
+The `view-timeline-axis` property specifies the direction, or `<axis>`, of [named view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline) that are based on the element's box.
+
+By default, CSS {{cssxref("@keyframes")}} animations progress along the time-based default timeline. When you set the animation progress via a view progress timeline instead, `view-timeline-axis` specifies the direction that controls the timeline progression.
+
+For view progress timelines, progression of the animation along the timelines is based on the visibility of the element, or _subject_. The `view-timeline-axis` property is set on the subject.
+
+The subject must be nested inside a scrollable element. If the scrollable element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
+
+The `view-timeline-axis`, along with the {{cssxref("view-timeline-inset")}} and {{cssxref("view-timeline-name")}} properties, is a component of the {{cssxref("view-timeline")}} shorthand property.
 
 ## Formal definition
 
@@ -99,11 +106,9 @@ The HTML for the example is shown below.
 #### CSS
 
 In the CSS, we set the `subject` element as the source of a view progress timeline named `--subject-reveal` using the `view-timeline-name` property.
-The scroll axis is set using `view-timeline-axis: x;` (Chromium) and `view-timeline-axis: horizontal;` (Firefox) — this causes the _horizontal scrollbar_ position of the scrolling ancestor element to determine the animation timeline.
+The scroll axis is set using `view-timeline-axis: x;`. We also include `view-timeline-axis: horizontal;` for browsers that support the non-standard legacy `horizontal` and `vertical` values, rather than `x` and `y`.
 
 The `content` ancestor element is made to overflow horizontally by laying out its contents using `display: flex;` and `flex-flow: column wrap;`.
-
-Also worth noting is that the subject element has an `animation-duration` applied to it so that the example will work in Firefox.
 
 ```css
 .subject {
@@ -133,15 +138,11 @@ p {
 
 .animation {
   view-timeline-name: --subject-reveal;
-  /* Chromium supports the new x/y syntax */
   view-timeline-axis: x;
-  /* Firefox still supports the old horizontal/vertical syntax */
   view-timeline-axis: horizontal;
 
-  animation-name: appear;
-  animation-fill-mode: both;
+  animation: appear 1ms linear both;
   animation-timeline: --subject-reveal;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
 }
 
 @keyframes appear {
@@ -153,6 +154,28 @@ p {
   to {
     opacity: 1;
     transform: scaleX(1);
+  }
+}
+```
+
+```css hidden
+@layer no-support {
+  body::before {
+    display: block;
+    text-align: center;
+    padding: 1em;
+  }
+  @supports not (view-timeline-axis: inherit) {
+    body::before {
+      content: "Your browser doesn't support the `view-timeline-axis` property.";
+      background-color: wheat;
+    }
+  }
+  @supports (view-timeline-axis: horizontal) {
+    body::before {
+      content: "Your browser supports legacy values for the `view-timeline-axis` property.";
+      background-color: yellow;
+    }
   }
 }
 ```
@@ -174,6 +197,8 @@ Scroll the horizontal bar at the bottom to see the subject element animate as yo
 ## See also
 
 - {{cssxref("animation-timeline")}}
-- {{cssxref("timeline-scope")}}
 - {{cssxref("view-timeline")}}, {{cssxref("view-timeline-inset")}}, {{cssxref("view-timeline-name")}}
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
+- {{cssxref("view()")}}
+- [Guide: Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

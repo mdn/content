@@ -45,7 +45,7 @@ The `mask-mode` property can take multiple comma-separated `<masking-mode>` keyw
 ## Description
 
 A mask transfers its transparency, and depending on the mask type, it's luminance, to the element it is masking.
-If the mask is of type {{cssxref("&lt;image&gt;")}}, by default the alpha values of the mask image determine the visibility of each part of the masked element: where the mask is opaque, the corresponding part of the masked element is visible; where the mask is translucent, the element is as well, with those areas of the element being hidden. This is the default behavior for `<image>` masks when the `mask-mode` property is set to or defaults to `match-source`, and it is always the case when the `mask-mode` is explicitly set to `alpha`.
+If the mask is of type {{cssxref("image")}}, by default the alpha values of the mask image determine the visibility of each part of the masked element: where the mask is opaque, the corresponding part of the masked element is visible; where the mask is translucent, the element is as well, with those areas of the element being hidden. This is the default behavior for `<image>` masks when the `mask-mode` property is set to or defaults to `match-source`, and it is always the case when the `mask-mode` is explicitly set to `alpha`.
 
 ### Understanding luminance
 

@@ -2,9 +2,11 @@
 title: Registering attribution sources
 slug: Web/API/Attribution_Reporting_API/Registering_sources
 page-type: guide
+status:
+  - deprecated
 ---
 
-{{DefaultAPISidebar("Attribution Reporting API")}}
+{{DefaultAPISidebar("Attribution Reporting API")}}{{deprecated_header}}
 
 This article explains how to register attribution sources when using the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
 

@@ -260,6 +260,9 @@ In the below sections, we'll walk through all the important parts of the code.
 >
 > Note also that `popover="hint"` falls back to `popover="manual"` in unsupporting browsers.
 
+> [!NOTE]
+> There is a related feature — **interest invokers** — that can be used to create hover/focus popover functionality conveniently and consistently, without requiring JavaScript. Check out [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) to learn more.
+
 ### Creating the sub-menus with `popover="auto"`
 
 The popup sub-menus are created declaratively, using `auto` popovers.
@@ -500,7 +503,7 @@ The HTML contains a {{htmlelement("div")}} element declared to be a popover via 
 
 #### CSS
 
-The two popover properties we want to transition are [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity) and [`transform`](/en-US/docs/Web/CSS/Reference/Properties/transform). We want the popover to fade in or out while growing or shrinking horizontally. To achieve this, we set a starting state for these properties on the hidden state of the popover element (selected with the `[popover]` [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)) and an end state for the shown state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/Reference/Selectors/:popover-open) pseudo-class). We also use the [`transition`](/en-US/docs/Web/CSS/Reference/Properties/transition) property to define the properties to animate and the animation's duration as the popover gets shown or hidden.
+The two popover properties we want to transition are {{cssxref("opacity")}} and {{cssxref("transform")}}. We want the popover to fade in or out while growing or shrinking horizontally. To achieve this, we set a starting state for these properties on the hidden state of the popover element (selected with the `[popover]` [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)) and an end state for the shown state of the popover (selected via the {{cssxref(":popover-open")}} pseudo-class). We also use the {{cssxref("transition")}} property to define the properties to animate and the animation's duration as the popover gets shown or hidden.
 
 ```css
 html {
@@ -573,7 +576,7 @@ As discussed earlier, we have also:
 - Added `overlay` to the list of transitioned properties to make sure that the removal of the element from the top layer is deferred until the animation has been completed. The effect of this may not be noticeable for basic animations such as this one, but in more complex cases, omitting this property can result in the element being removed from the overlay before the transition completes.
 - Set `allow-discrete` on both properties in the above transitions to enable [discrete transitions](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete).
 
-You'll note that we've also included a transition on the [`::backdrop`](/en-US/docs/Web/CSS/Reference/Selectors/::backdrop) appearing behind the popover when it opens, providing a nice darkening animation.
+You'll note that we've also included a transition on the {{cssxref("::backdrop")}} appearing behind the popover when it opens, providing a nice darkening animation.
 
 #### Result
 
@@ -676,3 +679,7 @@ html {
 The code renders as follows:
 
 {{ EmbedLiveSample("A popover keyframe animation", "100%", "200") }}
+
+## See also
+
+- Collection of [Popover API examples](https://mdn.github.io/dom-examples/popover-api/)

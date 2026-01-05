@@ -3845,6 +3845,8 @@ These keys control documents. In the specification, they're included in other se
       <th scope="col">Linux</th>
       <th scope="col">Android</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><code>"Close"</code> [1]</td>
       <td>
@@ -3948,7 +3950,7 @@ These keys control documents. In the specification, they're included in other se
       </td>
       <td></td>
     </tr>
-  </thead>
+  </tbody>
 </table>
 
 \[1] Prior to Firefox 37, this key generated the key value `"Unidentified"`.

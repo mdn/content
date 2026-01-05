@@ -101,7 +101,7 @@ A CSP can provide protection against all of these. With a CSP, you can:
 
 - define the permitted sources for JavaScript files and other resources, effectively blocking loads from `https://evil.example.com`
 - disable inline script tags
-- allow only script tags which have the correct nonce or hash set
+- allow only script tags which have the correct {{Glossary("Nonce", "nonce")}} or hash set
 - disable inline event handlers
 - disable `javascript:` URLs
 - disable dangerous APIs like `eval()`

@@ -6,7 +6,7 @@ browser-compat: css.types.basic-shape.rect
 sidebar: cssref
 ---
 
-The **`rect()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle at the specified distance from the top and left edges of the containing block. It is a basic shape function of the {{cssxref("&lt;basic-shape&gt;")}} [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). You can use the `rect()` function in CSS properties such as {{cssxref("offset-path")}} to create the rectangular path along which an element moves and in {{cssxref("clip-path")}} to define the shape of the clipping region.
+The **`rect()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle at the specified distance from the top and left edges of the containing block. It is a basic shape function of the {{cssxref("basic-shape")}} [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). You can use the `rect()` function in CSS properties such as {{cssxref("offset-path")}} to create the rectangular path along which an element moves and in {{cssxref("clip-path")}} to define the shape of the clipping region.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ The inset rectangle is defined by specifying four offset values, starting with t
   - : Makes the edge for which this value is used to coincide with the corresponding edge of the containing block. If `auto` is used for the first (top) or fourth (left) value, the value of `auto` is `0`, and if used for the second (right) or third (bottom) value, the value of `auto` is `100%`.
 
 - `round <'border-radius'>`
-  - : Specifies the radius of the rounded corners of the rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/Reference/Properties/border-radius) shorthand property. This parameter is optional.
+  - : Specifies the radius of the rounded corners of the rectangle using the same syntax as the CSS {{cssxref("border-radius")}} shorthand property. This parameter is optional.
 
 ## Formal syntax
 
@@ -116,6 +116,6 @@ In this example, the {{cssxref("offset-path")}} property uses the `rect()` funct
 - {{cssxref("basic-shape/xywh","xywh()")}} function
 - {{cssxref("clip-path")}} property
 - {{cssxref("offset-path")}} property
-- {{cssxref("&lt;basic-shape&gt;")}} data type
+- {{cssxref("basic-shape")}} data type
 - [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
 - [Guide to basic shapes](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside)
