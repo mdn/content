@@ -17,7 +17,7 @@ theguardian.com
 sussex.ac.uk
 ```
 
-This means that all domains under each of these domains belong to the same organization. For example:
+All domains under a registrable domain belong to the same organization. For example:
 
 ```plain
  film.theguardian.com
