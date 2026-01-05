@@ -125,7 +125,7 @@ The `chrome_settings_overrides` key is an object that may have the following pro
     - `suggest_url` {{optional_inline}}
       - : `string`. URL used for search suggestions. This must be an HTTPS URL.
 
-    - `prepopulated_id` {{optional_inline}}
+    - `suggest_url_get_params` {{optional_inline}}
       - : `string`. GET parameters to send to `suggest_url`. Available only in Firefox, for optimal cross-browser compatibility use `suggest_url` instead.
 
     - `suggest_url_post_params` {{optional_inline}}
