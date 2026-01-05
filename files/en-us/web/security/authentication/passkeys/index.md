@@ -18,7 +18,7 @@ In this guide we'll:
 - Introduce the [Web Authentication API (WebAuthn)](/en-US/docs/Web/API/Web_Authentication_API), which enables web apps to use passkeys.
 - Go through the two main flows supported by WebAuthn: [registration](#registration) and [sign-in](#sign_in).
 - Explore some of the main [features of the WebAuthn API](#features_of_webauthn).
-- Summarise the [security properties of passkeys](#security_properties_of_passkeys).
+- Summarize the [security properties of passkeys](#security_properties_of_passkeys).
 - Explore some good practices to help prevent users from being locked out if they [lose their passkeys](#handling_lost_passkeys), to help users [manage their passkeys](#managing_passkeys), and to help users [migrate from passwords](#migrating_from_passwords).
 
 ## The WebAuthn API
@@ -92,7 +92,7 @@ In this section we'll go into some more detail about various aspects of the WebA
 
 ### Platform and roaming authenticators
 
-The WebAuthn API distinguishes two types of authenticator:
+The WebAuthn API distinguishes two types of authenticators:
 
 - **Platform authenticators**
   - : These authenticators are not removable from the device. For example, authenticators built into the device's operating system, like the [Touch ID](https://en.wikipedia.org/wiki/Touch_ID) system in Apple devices or the [Windows Hello](https://en.wikipedia.org/wiki/Windows_10#System_security) system.
@@ -278,7 +278,7 @@ To reduce the chance of problems like this, the WebAuthn API defines a set of st
 
 - {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "PublicKeyCredential.signalAllAcceptedCredentials()")}} gives the browser the identifiers of all the passkeys that the RP currently accepts as valid, to enable all attached authenticators to update their stored keys. It could be called every time the user successfully authenticates. This API must only be called for authenticated users, because it exposes the user's credential IDs.
 
-- {{domxref("PublicKeyCredential.signalCurrentUserDetails_static", "PublicKeyCredential.signalCurrentUserDetails()")}} tells the browser the user's current username and display name, and should be called when an authenticated user changes these values. This API must only be called for authenticated users, because it exposes uses data.
+- {{domxref("PublicKeyCredential.signalCurrentUserDetails_static", "PublicKeyCredential.signalCurrentUserDetails()")}} tells the browser the user's current username and display name, and should be called when an authenticated user changes these values. This API must only be called for authenticated users, because it exposes user data.
 
 ## Migrating from passwords
 
