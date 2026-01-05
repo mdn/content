@@ -190,7 +190,8 @@ Compression algorithms are at risk of security attacks, so there are a number of
 
 Additionally, dictionaries could themselves become tracking vectors so browsers may restrict this feature when cookies are disabled or when other extra privacy protections are enabled.
 
-As with other resources, when loading a [separate (standalone) dictionary](#separate_dictionary) via a [`<link rel="compression-dictionary">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary) tag, if the website has a {{HTTPHeader("Content-Security-Policy")}} header, the `connect-src` directive (or `default-src`, if `connect-src` is not set) must permit the location of the dictionary resource to avoid the request being blocked.
+As with other resources, if a website uses the {{HTTPHeader("Content-Security-Policy")}} header, the compression dictionary must be an allowed source in order for it to be loaded.
+In particular, when loading a [separate dictionary](#separate_dictionary) using [`<link rel="compression-dictionary">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary), the `connect-src` directive (or  `default-src`, if `connect-src` is not set) must allow the dictionary location.
 
 ## Specifications
 
