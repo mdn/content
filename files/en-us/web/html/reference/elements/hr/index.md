@@ -89,7 +89,7 @@ The `<hr>` tag can be placed within a list item for visual separation, to create
   <li>Cut</li>
   <li>Copy</li>
   <li>Paste</li>
-  <li><hr /></li>
+  <li role="presentation"><hr /></li>
   <li>Delete</li>
 </ul>
 ```
