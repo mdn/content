@@ -14,6 +14,10 @@ You can specify either the _type_ of cursor using a keyword, or load a specific 
 {{InteractiveExample("CSS Demo: cursor")}}
 
 ```css interactive-example-choice
+cursor: pointer;
+```
+
+```css interactive-example-choice
 cursor: help;
 ```
 
