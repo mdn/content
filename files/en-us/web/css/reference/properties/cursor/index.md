@@ -37,10 +37,6 @@ cursor: not-allowed;
 cursor: zoom-in;
 ```
 
-```css interactive-example-choice
-cursor: grab;
-```
-
 ```html interactive-example
 <section class="default-example container" id="default-example">
   <div id="example-element">
