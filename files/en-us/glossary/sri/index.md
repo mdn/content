@@ -9,4 +9,4 @@ sidebar: glossarysidebar
 
 ## See also
 
-- [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity)
+- [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity)

@@ -11,7 +11,7 @@ The **CSS scroll-driven animations** module provides functionality that builds o
 
 ## Scroll-driven animations in action
 
-You can define the scroller that controls the animation either by naming the animation or with the {{cssxref("scroll")}} function.
+You can define the scroller that controls the animation either by naming the animation or with the {{cssxref("animation-timeline/scroll", "scroll()")}} function.
 
 ```html hidden live-sample___scroll_animation
 <main>
@@ -124,13 +124,13 @@ Scroll the element in the inline direction to see its background color change. S
 
 ### Data types and values
 
-- [`<axis>`](/en-US/docs/Web/CSS/Reference/Values/axis)
-- [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name)
+- {{cssxref("axis")}}
+- {{cssxref("timeline-range-name")}}
 
 ### Functions
 
-- [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
-- [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view)
+- {{cssxref("animation-timeline/scroll", "scroll()")}}
+- {{cssxref("animation-timeline/view", "view()")}}
 
 ### Interfaces
 

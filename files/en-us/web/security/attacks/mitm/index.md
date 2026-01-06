@@ -27,7 +27,7 @@ Modern web hosting services support HTTPS for you, either by default or through 
 
 ### Load subresources over HTTPS
 
-When a page loads resources (scripts, stylesheets, fonts, images, and so on), these resources should also be served over HTTPS. If a page is loaded over HTTPS and it attempts to load resources over HTTP, then the browser will either try to upgrade the load request to use HTTPS or will block the request: this is called [mixed content blocking](/en-US/docs/Web/Security/Mixed_content).
+When a page loads resources (scripts, stylesheets, fonts, images, and so on), these resources should also be served over HTTPS. If a page is loaded over HTTPS and it attempts to load resources over HTTP, then the browser will either try to upgrade the load request to use HTTPS or will block the request: this is called [mixed content blocking](/en-US/docs/Web/Security/Defenses/Mixed_content).
 
 If it's not possible for you to update your code to load resources from HTTPS URLs (for example, because your HTML has been archived) your server can set a [content security policy](/en-US/docs/Web/HTTP/Guides/CSP) that contains the [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Guides/CSP#upgrading_insecure_requests) directive, and the browser will automatically upgrade these requests to HTTPS.
 

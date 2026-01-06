@@ -101,7 +101,7 @@ A CSP can provide protection against all of these. With a CSP, you can:
 
 - define the permitted sources for JavaScript files and other resources, effectively blocking loads from `https://evil.example.com`
 - disable inline script tags
-- allow only script tags which have the correct nonce or hash set
+- allow only script tags which have the correct {{Glossary("Nonce", "nonce")}} or hash set
 - disable inline event handlers
 - disable `javascript:` URLs
 - disable dangerous APIs like `eval()`
@@ -467,7 +467,7 @@ Web developers are strongly encouraged to serve all their content over HTTPS. In
 <script src="http://example.org/my-cat.js"></script>
 ```
 
-This is called _mixed content_, and the presence of insecure resources greatly weakens the protection afforded by HTTPS. Under the [mixed content algorithm](/en-US/docs/Web/Security/Mixed_content) that browsers implement, if a document is served over HTTPS, insecure resources are categorized into "upgradable content" and "blockable content". Upgradable content is upgraded to HTTPS, and blockable content is blocked, potentially breaking the page.
+This is called _mixed content_, and the presence of insecure resources greatly weakens the protection afforded by HTTPS. Under the [mixed content algorithm](/en-US/docs/Web/Security/Defenses/Mixed_content) that browsers implement, if a document is served over HTTPS, insecure resources are categorized into "upgradable content" and "blockable content". Upgradable content is upgraded to HTTPS, and blockable content is blocked, potentially breaking the page.
 
 The ultimate solution to mixed content is for developers to load all resources over HTTPS. However, even if a site is actually able to serve all content over HTTPS, it can still be very difficult (or even effectively impossible, where archived content is concerned) for a developer to rewrite all the URLs the site uses to load resources.
 

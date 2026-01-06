@@ -55,10 +55,10 @@ There are two main ways to use the `<template>` element.
 
 By default, the element's content is not rendered.
 The corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template.
-This fragment can be cloned via the {{domxref("Node.cloneNode", "cloneNode")}} method and inserted into the DOM.
 
-Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior.
-For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
+The {{domxref("Node.cloneNode()")}} and {{domxref("Document.importNode()")}} methods both create a copy of a node. The difference is that `importNode()` clones the node in the context of the calling document, whereas `cloneNode()` uses the document of the node being cloned. The document context determines the {{domxref("CustomElementRegistry")}} for constructing any custom elements. For this reason, use `document.importNode()` to clone the `content` fragment so that custom element descendants are constructed using the definitions in the current document, rather than the separate document that owns the template content. See the {{domxref("Node.cloneNode()")}} page's examples for more details.
+
+Note that the `DocumentFragment` container itself should not have data attached to it. See the [Data on the DocumentFragment is not cloned](#data_on_the_documentfragment_is_not_cloned) example for more details.
 
 ### Declarative Shadow DOM
 
@@ -109,7 +109,7 @@ if ("content" in document.createElement("template")) {
   const template = document.querySelector("#productrow");
 
   // Clone the new row and insert it into the table
-  const clone = template.content.cloneNode(true);
+  const clone = document.importNode(template.content, true);
   let td = clone.querySelectorAll("td");
   td[0].textContent = "1235646565";
   td[1].textContent = "Stuff";
@@ -117,7 +117,7 @@ if ("content" in document.createElement("template")) {
   tbody.appendChild(clone);
 
   // Clone the new row and insert it into the table
-  const clone2 = template.content.cloneNode(true);
+  const clone2 = document.importNode(template.content, true);
   td = clone2.querySelectorAll("td");
   td[0].textContent = "0384928528";
   td[1].textContent = "Acme Kidney Beans 2";
@@ -191,7 +191,7 @@ This example demonstrates how `shadowrootdelegatesfocus` is applied to a shadow 
 
 The code first declares a shadow root inside a `<div>` element, using the `<template>` element with the `shadowrootmode` attribute.
 This displays both a non-focusable `<div>` containing text and a focusable `<input>` element.
-It also uses CSS to style elements with [`:focus`](/en-US/docs/Web/CSS/Reference/Selectors/:focus) to blue, and to set the normal styling of the host element.
+It also uses CSS to style elements with {{cssxref(":focus")}} to blue, and to set the normal styling of the host element.
 
 ```html
 <div>
@@ -254,7 +254,7 @@ This also focuses the parent element as shown below.
 
 ![Screenshot of the code where the element has focus](template_with_focus.png)
 
-## Avoiding DocumentFragment pitfalls
+## Data on the DocumentFragment is not cloned
 
 When a {{domxref("DocumentFragment")}} value is passed, {{domxref("Node.appendChild")}} and similar methods move only the _child nodes_ of that value into the target node. Therefore, it is usually preferable to attach event handlers to the children of a `DocumentFragment`, rather than to the `DocumentFragment` itself.
 
@@ -280,11 +280,11 @@ function clickHandler(event) {
   event.target.append(" — Clicked this div");
 }
 
-const firstClone = template.content.cloneNode(true);
+const firstClone = document.importNode(template.content, true);
 firstClone.addEventListener("click", clickHandler);
 container.appendChild(firstClone);
 
-const secondClone = template.content.cloneNode(true);
+const secondClone = document.importNode(template.content, true);
 secondClone.children[0].addEventListener("click", clickHandler);
 container.appendChild(secondClone);
 ```
@@ -293,7 +293,7 @@ container.appendChild(secondClone);
 
 Since `firstClone` is a `DocumentFragment`, only its children are added to `container` when `appendChild` is called; the event handlers of `firstClone` are not copied. In contrast, because an event handler is added to the first _child node_ of `secondClone`, the event handler is copied when `appendChild` is called, and clicking on it works as one would expect.
 
-{{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
+{{EmbedLiveSample(' Data on the DocumentFragment is not cloned')}}
 
 ## Technical summary
 

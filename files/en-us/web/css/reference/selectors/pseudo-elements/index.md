@@ -95,9 +95,9 @@ These pseudo-elements are real elements that are not otherwise selectable.
 
 - {{CSSxRef("::details-content")}}
   - : The expandable/collapsible contents of a {{HTMLElement("details")}} element.
-- {{CSSxRef("::part", "::part()")}}
+- {{cssxref("::part()")}}
   - : Any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute.
-- {{CSSxRef("::slotted", "::slotted()")}}
+- {{cssxref("::slotted()")}}
   - : Any element placed into a slot inside an HTML template.
 
 ## Form-related pseudo-elements
@@ -132,7 +132,7 @@ C
 
 - {{CSSxRef("::column")}}
 - {{CSSxRef("::checkmark")}}
-- {{CSSxRef("::cue")}} (and {{CSSxRef("::cue", "::cue()")}})
+- {{CSSxRef("::cue")}} (and {{cssxref("::cue()")}})
 
 D
 
@@ -158,7 +158,7 @@ M
 
 P
 
-- {{CSSxRef("::part", "::part()")}}
+- {{cssxref("::part()")}}
 - {{CSSxRef("::picker()")}}
 - {{CSSxRef("::picker-icon")}}
 - {{CSSxRef("::placeholder")}}
@@ -169,7 +169,7 @@ S
 - {{CSSxRef("::scroll-marker")}}
 - {{CSSxRef("::scroll-marker-group")}}
 - {{CSSxRef("::selection")}}
-- {{CSSxRef("::slotted", "::slotted()")}}
+- {{cssxref("::slotted()")}}
 - {{CSSxRef("::spelling-error")}}
 
 T

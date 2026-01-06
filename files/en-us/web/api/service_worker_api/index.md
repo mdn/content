@@ -20,7 +20,7 @@ Service workers run in a worker context: they therefore have no DOM access and r
 
 Service workers can't import JavaScript modules dynamically, and [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) will throw an error if it is called in a service worker global scope. Static imports using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement are allowed.
 
-Service workers are only available in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts): this means that their document is served over HTTPS, although browsers also treat `http://localhost` as a secure context, to facilitate local development. HTTP connections are susceptible to malicious code injection by {{Glossary("MitM", "man in the middle")}} attacks, and such attacks could be worse if allowed access to these powerful APIs.
+Service workers are only available in [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts): this means that their document is served over HTTPS, although browsers also treat `http://localhost` as a secure context, to facilitate local development. HTTP connections are susceptible to malicious code injection by {{Glossary("MitM", "man in the middle")}} attacks, and such attacks could be worse if allowed access to these powerful APIs.
 
 > [!NOTE]
 > On Firefox, for testing you can run service workers over HTTP (insecurely); simply check the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox DevTools options/gear menu.

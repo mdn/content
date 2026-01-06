@@ -2,9 +2,12 @@
 title: Using the Topics API
 slug: Web/API/Topics_API/Using
 page-type: web-api-overview
+status:
+  - deprecated
+  - non-standard
 ---
 
-{{DefaultAPISidebar("Topics API")}}
+{{DefaultAPISidebar("Topics API")}}{{deprecated_header}}{{non-standard_header}}
 
 > [!WARNING]
 > This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section for details of opposition.

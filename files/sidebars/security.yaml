@@ -5,29 +5,21 @@ sidebar:
     link: /Web/Security
   - type: section
     title: Guides
-  - /Web/Security/Transport_Layer_Security
-  - /Web/Security/Mixed_content
-  - /Web/Security/Same-origin_policy
-  - /Web/Security/Certificate_Transparency
-  - /Web/Security/Subresource_Integrity
-  - /Web/Security/User_activation
-  - /Web/Security/IFrame_credentialless
-  - /Web/Security/Referer_header:_privacy_and_security_concerns
-  - /Web/Security/Firefox_Security_Guidelines
-  - type: listSubPages
-    path: /Web/Security/Authentication
-    link: /Web/Security/Authentication
-    details: closed
   - type: listSubPages
     path: /Web/Security/Attacks
     link: /Web/Security/Attacks
+    details: closed
+  - type: listSubPages
+    path: /Web/Security/Defenses
+    link: /Web/Security/Defenses
+    details: closed
+  - type: listSubPages
+    path: /Web/Security/Authentication
+    link: /Web/Security/Authentication
     details: closed
   - type: listSubPages
     path: /Web/Security/Practical_implementation_guides
     link: /Web/Security/Practical_implementation_guides
     title: Practical implementation guides
     details: closed
-  - type: listSubPages
-    path: /Web/Security/Secure_Contexts
-    link: /Web/Security/Secure_Contexts
-    details: closed
+  - /Web/Security/Firefox_Security_Guidelines

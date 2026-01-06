@@ -10,16 +10,23 @@ This article describes the process by which a {{glossary("Relying party", "relyi
 
 ## Calling the `get()` method
 
-RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to request that a user be given the option to sign in to the RP with a choice of existing IdP accounts (that they are already signed in with on the browser). The IdPs identify the RP by its `clientId`, which was issued by each IdP to the RP in a separate IdP-specific process. The chosen IdP identifies the specific user who is attempting to sign-in with the credentials (cookies) provided to the browser during the [sign-in flow](#fedcm_sign-in_flow).
+RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to request that a user be given the option to sign in to the RP with a choice of existing IdP accounts. The IdPs identify the RP by its `clientId`, which was issued by each IdP to the RP in a separate IdP-specific process. The chosen IdP identifies the specific user who is attempting to sign-in with the credentials (cookies) provided to the browser during the [sign-in flow](#fedcm_sign-in_flow).
 
-The method returns a promise that fulfills with an {{domxref("IdentityCredential")}} object if the user identity is successfully validated by the chosen IdP. This object contains a token that includes user identity information that has been signed with the IdP's {{glossary("digital certificate")}}.
+If the user has never signed into an IdP or is logged out, `CredentialsContainer.get()` rejects with an error and the RP can direct the user to an IdP page to sign in or create an account.
 
-The RP sends the token to its server to validate the certificate, and on success can use the (now trusted) identity information in the token to sign them into their service (starting a new session), sign them up to their service if they are a new user, etc.
+Otherwise, if the user identity is successfully validated by the chosen IdP, `CredentialsContainer.get()` returns a promise that fulfills with an {{domxref("IdentityCredential")}} object .
 
-If the user has never signed into an IdP or is logged out, the `get()` method rejects with an error and the RP can direct the user to an IdP page to sign in or create an account.
+### The `IdentityCredential.token` object
 
-> [!NOTE]
-> The exact structure and content of the validation token is opaque to the FedCM API, and to the browser. An IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see [Verify the Google ID token on your server side](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token), for example) to make sure they are using it correctly.
+The `IdentityCredential` includes a `token` property which the RP can use to sign the user in.
+
+The FedCM API does not define the structure of the `token` object or what the RP should do with it: this depends entirely on the federated identity protocol that the IdP implements.
+
+For example, in the [FedCM for OAuth](https://github.com/aaronpk/oauth-fedcm-profile) profile, which describes how the [OpenID Connect (OIDC)](/en-US/docs/Web/Security/Authentication/Federated_identity#openid_connect) protocol could be implemented using FedCM, the token returned by `CredentialsContainer.get()` is an OAuth authorization code. The RP uses this code to retrieve the identity token from the IdP's token endpoint.
+
+When an RP chooses to work with a particular IdP, the IdP will provide instructions for how to use the returned `token` value.
+
+### Example request
 
 A typical request might look like this:
 
@@ -32,7 +39,9 @@ async function signIn() {
         {
           configURL: "https://accounts.idp.example/config.json",
           clientId: "********",
-          nonce: "******",
+          params: {
+            /* IdP-specific parameters */
+          },
           loginHint: "user1@example.com",
         },
         {
@@ -49,7 +58,7 @@ The `identity.providers` property takes an array containing one or more objects 
 The previous example also includes some optional features:
 
 - `identity.context` specifies the context in which the user is authenticating with FedCM. For example, is it a first-time signup for this account, or a sign-in with an existing account? The browser uses this information to vary the text in its FedCM UI to better suit the context.
-- The `nonce` property provides a random nonce value that ensures the response is issued for this specific request, preventing {{glossary("replay attack", "replay attacks")}}.
+- The `params` property contains any parameters that this IdP needs. Its structure and content is determined by the specific IdP.
 - The `loginHint` property provides a hint about the account option(s) the browser should present for user sign-in. This hint is matched against the `login_hints` values that the IdP provides at the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint).
 
 The browser requests the IdP config files and carries out the sign-in flow detailed below. For more information on the kind of interaction a user might expect from the browser-supplied UI, see [Implement an identity solution with FedCM on the Relying Party side](https://developer.chrome.com/docs/identity/fedcm/implement/relying-party).
@@ -65,7 +74,7 @@ The flow is as follows:
 1. The RP invokes {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} to start off the sign-in flow.
 
 2. From the `configURL` provided for each IdP, the browser requests two files:
-   1. The well-known file (`/.well-known/web-identity`), available from `/.well-known/web-identity` at the [eTLD+1](https://web.dev/articles/same-site-same-origin#site) of the `configURL`.
+   1. The well-known file (`/.well-known/web-identity`), available from `/.well-known/web-identity` at the {{glossary("registrable domain")}} of the `configURL`.
    2. The [IdP config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) (`/config.json`), available at the `configURL`.
 
    These are both [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) requests, which don't have cookies and don't follow redirects. This effectively prevents IdPs from learning who made the request and which RP is attempting to connect.
