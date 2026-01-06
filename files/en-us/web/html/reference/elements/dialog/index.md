@@ -301,6 +301,7 @@ The above examples demonstrate the following three methods of closing modal dial
 - By submitting the form within the dialog form using the `dialog` method (as seen in the [HTML-only example](#html-only-dialog)).
 - By pressing the <kbd>Esc</kbd> key.
 - By calling the {{domxref("HTMLDialogElement.close()")}} method (as seen in the [modal example](#creating_a_modal_dialog)).
+
   In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Confirm" button closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
 
 The "Cancel" button includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/input/submit#formmethod) attribute, which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} method. When a form's method is [`dialog`](#usage_notes), the state of the form is saved but not submitted, and the dialog gets closed.
