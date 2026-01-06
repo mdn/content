@@ -53,7 +53,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ## Invoker commands and dialogs
 
-Dialogs can be opened and closed using invoker commands defined on interactive elements such as `<button>`.
+Dialogs can be opened and closed using invoker commands defined on interactive elements, such as `<button>`.
 The `command` attribute allows a button to invoke actions on a dialog without requiring custom JavaScript event listeners.
 
 This mechanism was originally designed for popovers and later extended to dialogs, which is why related information may also appear in popover documentation.
@@ -63,100 +63,43 @@ For more details, see:
 - [Invoker Commands API](/en-US/docs/Web/API/Invoker_Commands_API)
 - [Popover API](/en-US/docs/Web/API/Popover_API)
 
-### Example: Opening a dialog using `command`
+### Example snippet: Opening a dialog using `command`
 
-````html
+```html
 <button command="show-modal" commandfor="my-dialog">Open dialog</button>
 
 <dialog id="my-dialog">
   <p>Hello from the dialog</p>
   <button command="close" commandfor="my-dialog">Close</button>
 </dialog>
+```
 
-## Accessibility When implementing a dialog, it is important to consider the
-most appropriate place to set user focus. When using
-{{domxref("HTMLDialogElement.showModal()")}} to open a `
-<dialog>
-  `, focus is set on the first nested focusable element. Explicitly indicating
-  the initial focus placement by using the
-  [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus)
-  attribute will help ensure initial focus is set on the element deemed the best
-  initial focus placement for any particular dialog. When in doubt, as it may
-  not always be known where initial focus could be set within a dialog,
-  particularly for instances where a dialog's content is dynamically rendered
-  when invoked, the `
-  <dialog>
-    ` element itself may provide the best initial focus placement. Ensure a
-    mechanism is provided to allow users to close the dialog. The most robust
-    way to ensure that all users can close the dialog is to include an explicit
-    button to do so, such as a confirmation, cancellation, or close button. By
-    default, a dialog invoked by the `showModal()` method can be dismissed by
-    pressing the <kbd>Esc</kbd> key. A non-modal dialog does not dismiss via the
-    <kbd>Esc</kbd> key by default, and depending on what the non-modal dialog
-    represents, it may not be desired for this behavior. Keyboard users expect
-    the <kbd>Esc</kbd> key to close modal dialogs; ensure that this behavior is
-    implemented and maintained. If multiple modal dialogs are open, pressing the
-    <kbd>Esc</kbd> key should close only the last shown dialog. When using `
-    <dialog>
-      `, this behavior is provided by the browser. While dialogs can be created
-      using other elements, the native `
-      <dialog>
-        ` element provides usability and accessibility features that must be
-        replicated if you use other elements for a similar purpose. If you're
-        creating a custom dialog implementation, ensure that all expected
-        default behaviors are supported and proper labeling recommendations are
-        followed. The `
-        <dialog>
-          ` element is exposed by browsers in a manner similar to custom dialogs
-          that use the ARIA
-          [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
-          attribute. `
-          <dialog>
-            ` elements invoked by the `showModal()` method implicitly have
-            [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal),
-            whereas `
-            <dialog>
-              ` elements invoked by the `show()` method or displayed using the
-              `open` attribute or by changing the default `display` of a `
-              <dialog>
-                ` are exposed as `[aria-modal="false"]`. When implementing modal
-                dialogs, everything other than the `
-                <dialog>
-                  ` and its contents should be rendered inert using the
-                  [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert)
-                  attribute. When using `
-                  <dialog>
-                    ` along with the `HTMLDialogElement.showModal()` method,
-                    this behavior is provided by the browser. ## Examples ###
-                    HTML-only dialog This example demonstrates the creation of a
-                    non-modal dialog by using only HTML. Because of the boolean
-                    `open` attribute in the `
-                    <dialog>
-                      ` element, the dialog appears open when the page loads.
-                      The dialog can be closed by clicking the "OK" button
-                      because the `method` attribute in the `
-                      <form>
-                        ` element is set to `"dialog"`. In this case, no
-                        JavaScript is needed to close the form. ```html
-                        <dialog open>
-                          <p>Greetings, one and all!</p>
-                          <form method="dialog">
-                            <button>OK</button>
-                          </form>
-                        </dialog>
-                      </form>
-                    </dialog>
-                  </dialog>
-                </dialog>
-              </dialog>
-            </dialog>
-          </dialog>
-        </dialog>
-      </dialog>
-    </dialog>
-  </dialog>
+## Accessibility
+
+When implementing a dialog, it is important to consider the most appropriate place to set user focus. When using {{domxref("HTMLDialogElement.showModal()")}} to open a `<dialog>`, focus is set on the first nested focusable element. Explicitly indicating the initial focus placement by using the [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus) attribute will help ensure initial focus is set on the element deemed the best initial focus placement for any particular dialog. When in doubt, as it may not always be known where initial focus could be set within a dialog, particularly for instances where a dialog's content is dynamically rendered when invoked, the `<dialog>` element itself may provide the best initial focus placement.
+
+Ensure a mechanism is provided to allow users to close the dialog. The most robust way to ensure that all users can close the dialog is to include an explicit button to do so, such as a confirmation, cancellation, or close button.
+
+By default, a dialog invoked by the `showModal()` method can be dismissed by pressing the <kbd>Esc</kbd> key. A non-modal dialog does not dismiss via the <kbd>Esc</kbd> key by default, and depending on what the non-modal dialog represents, it may not be desired for this behavior. Keyboard users expect the <kbd>Esc</kbd> key to close modal dialogs; ensure that this behavior is implemented and maintained. If multiple modal dialogs are open, pressing the <kbd>Esc</kbd> key should close only the last shown dialog. When using `<dialog>`, this behavior is provided by the browser.
+
+While dialogs can be created using other elements, the native `<dialog>` element provides usability and accessibility features that must be replicated if you use other elements for a similar purpose. If you're creating a custom dialog implementation, ensure that all expected default behaviors are supported and proper labeling recommendations are followed.
+
+The `<dialog>` element is exposed by browsers in a manner similar to custom dialogs that use the ARIA [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) attribute. `<dialog>` elements invoked by the `showModal()` method implicitly have [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal), whereas `<dialog>` elements invoked by the `show()` method or displayed using the `open` attribute or by changing the default `display` of a `<dialog>` are exposed as `[aria-modal="false"]`. When implementing modal dialogs, everything other than the `<dialog>` and its contents should be rendered inert using the [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute. When using `<dialog>` along with the `HTMLDialogElement.showModal()` method, this behavior is provided by the browser.
+
+## Examples
+
+### HTML-only dialog
+
+This example demonstrates the creation of a non-modal dialog by using only HTML. Because of the boolean `open` attribute in the `<dialog>` element, the dialog appears open when the page loads. The dialog can be closed by clicking the "OK" button because the `method` attribute in the `<form>` element is set to `"dialog"`. In this case, no JavaScript is needed to close the form.
+
+```html
+<dialog open>
+  <p>Greetings, one and all!</p>
+  <form method="dialog">
+    <button>OK</button>
+  </form>
 </dialog>
-````
+```
 
 #### Result
 
@@ -294,14 +237,13 @@ confirmBtn.addEventListener("click", (event) => {
 
 #### Result
 
-{{EmbedLiveSample("Handling the return value from the dialog", "100%", 300)}}  
+{{EmbedLiveSample("Handling the return value from the dialog", "100%", 300)}}
 
 The above examples demonstrate the following three methods of closing modal dialogs:
 
-- By submitting the form within the dialog form using the `dialog` method (as seen in the HTML-only example).
+- By submitting the form within the dialog form using the `dialog` method (as seen in the [HTML-only example](#html-only_dialog)).
 - By pressing the <kbd>Esc</kbd> key.
 - By calling the {{domxref("HTMLDialogElement.close()")}} method (as seen in the [modal example](#creating_a_modal_dialog)).
-
   In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Confirm" button closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
 
 The "Cancel" button includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/input/submit#formmethod) attribute, which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} method. When a form's method is [`dialog`](#usage_notes), the state of the form is saved but not submitted, and the dialog gets closed.
