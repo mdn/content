@@ -37,7 +37,7 @@ After parsing each declaration, style rule, at-rule, and so on, the browser chec
 
 ### At-rule errors
 
-The `@` symbol, known in CSS specifications as an `<at-keyword-token>`, indicates the beginning of a CSS {{cssxref("at-rule")}}. Once an at-rule begins with the `@` symbol, nothing is considered invalid from the parser's standpoint. Everything up to the first semi-colon (`;`) or the opening curly brace (`{`) is part of the at-rule's prelude. The content of each at-rule is interpreted according to the grammar rules for that particular at-rule.
+The `@` symbol, known in CSS specifications as an `<at-keyword-token>`, indicates the beginning of a CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules). Once an at-rule begins with the `@` symbol, nothing is considered invalid from the parser's standpoint. Everything up to the first semi-colon (`;`) or the opening curly brace (`{`) is part of the at-rule's prelude. The content of each at-rule is interpreted according to the grammar rules for that particular at-rule.
 
 Statement at-rules, such as {{cssxref("@import")}} and {{cssxref("@namespace")}} declarations, contain just a prelude. The semicolon ends the at-rule immediately for [statement at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules#statement_at-rules). If the contents of the prelude are invalid according to the grammar for that at-rule, the at-rule is ignored, with the browser continuing to parse CSS after it encounters the next semi-colon. For example, if an `@import` at-rule occurs after any CSS declaration other than `@charset`, `@layer` or other `@import` statements, the `@import` declaration is ignored.
 
