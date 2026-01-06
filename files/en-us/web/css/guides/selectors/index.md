@@ -190,7 +190,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
   - {{CSSxRef("::cue")}}
 
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations)
-  - [`<keyframe-selector>`](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe)
+  - [`<keyframe-selector>`](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
 
 - {{CSSXref("@namespace")}} at-rule
 

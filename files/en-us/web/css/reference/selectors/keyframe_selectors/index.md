@@ -1,6 +1,6 @@
 ---
 title: Keyframe selectors
-slug: Web/CSS/Reference/Selectors/Keyframe
+slug: Web/CSS/Reference/Selectors/Keyframe_selectors
 page-type: css-selector
 browser-compat: css.selectors.keyframe
 sidebar: cssref

@@ -19,7 +19,7 @@ findRule(select)
 ### Parameters
 
 - `select`
-  - : A string which contains the [keyframe selector](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe) of the rule to be found, which must be:
+  - : A string which contains the [keyframe selector](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors) of the rule to be found, which must be:
     - a comma-separated list of percentage values between 0% and 100%;
     - or, the keywords `from` or `to`
 
