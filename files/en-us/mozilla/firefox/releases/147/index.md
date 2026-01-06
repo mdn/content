@@ -95,11 +95,22 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- Fixed the new session response to include the required `setWindowRect` property. ([Firefox bug 1916522](https://bugzil.la/1916522)).
+- Fixed JSON serialization of Chrome Windows. ([Firefox bug 2000801](https://bugzil.la/2000801)).
+
+#### WebDriver BiDi
+
+- Fixed an issue where `browsingContext.navigate` with `wait=none` didn't always contain the real target URL. ([Firefox bug 2004191](https://bugzil.la/2004191)).
+- Updated `script.evaluate` and `script.callFunction` to bypass Content Security Policy (CSP). ([Firefox bug 1941780](https://bugzil.la/1941780)).
+- Implemented the `input.fileDialogOpened` event. ([Firefox bug 1855045](https://bugzil.la/1855045)).
+- Updated the `emulation.setLocaleOverride` command to override the `Accept-Language` header. ([Firefox bug 1995691](https://bugzil.la/1995691)).
+- Implemented the `emulation.setScreenSettingsOverride` command. ([Firefox bug 2000651](https://bugzil.la/2000651)).
+- Fixed missing `script.realmCreated` event for new browsing contexts. ([Firefox bug 2002721](https://bugzil.la/2002721)).
+- Updated `emulation.setLocaleOverride` to throw an error when called with the `locale` argument equal to `undefined`. ([Firefox bug 2003992](https://bugzil.la/2003992)).
 
 <!-- #### Marionette -->
 
