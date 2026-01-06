@@ -60,7 +60,7 @@ Some at-rules are almost always valid. The {{cssxref("@layer")}} at-rule comes i
 
 There are many ways you might make a mistake writing a selector, but only invalid selectors cause a selector list to be invalid (See [invalid selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#invalid_selector_list)).
 
-If you include a {{cssxref("class_selectors", "class")}}, {{cssxref("id_selectors", "id")}}, or {{cssxref("type_selectors", "type")}} selector for a class, id, or element (or custom element) that doesn't exist, it may be a logic error but it's not a syntax error. However, if you have a typo in a pseudo-class or a pseudo-element, it might create an invalid selector, which is an error the parser needs to address.
+If you include a [class selector](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors), an [id_selectors](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors), or a [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) for a class, id, or element (or custom element) that doesn't exist, it may be a logic error but it's not a syntax error. However, if you have a typo in a pseudo-class or a pseudo-element, it might create an invalid selector, which is an error the parser needs to address.
 
 If a selector list contains any invalid selectors, then the entire style block is ignored. There are exceptions: if the invalid selector is within an {{cssxref(":is")}} or {{cssxref(":where")}} pseudo-class (which accept [forgiving selector lists](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list)) or if the unknown selector is a [`-webkit-` prefixed pseudo-element](#-webkit-_exception), only the unknown selector is ignored as not matching anything. The selector list is not invalidated.
 
