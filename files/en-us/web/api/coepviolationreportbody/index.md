@@ -78,6 +78,23 @@ The logged report object for a COEP violation from loading an iframe might look 
 ]
 ```
 
+<!-- 
+The report from the reporting API might look like this
+
+```json
+{
+  "type": "coep",
+  "url": "https://localhost:8443/",
+  "body": {
+    "type": "corp",
+    "blockedURL": "https://www.wikipedia.org/static/images/project-logos/enwiki.png",
+    "destination": "image",
+    "disposition": "enforce"
+  }
+}
+```
+-->
+
 ## Specifications
 
 {{Specifications}}
