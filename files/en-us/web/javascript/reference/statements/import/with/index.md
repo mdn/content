@@ -41,7 +41,8 @@ export { names } from "module-name" with { key: "data", key2: "data2", /* …, *
 
 - {{jsxref("TypeError")}}
   - : An unsupported `key` was specified in a _dynamic import_.
-Note that the behaviour for unsupported keys is undefined, but might result in an exception on some browsers.
+
+Note that specifying an unsupported value for a supported key may also result in an exception in some cases, depending on the key.
 
 ## Description
 
