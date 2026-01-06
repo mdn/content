@@ -2,7 +2,7 @@
 title: Keyframe selectors
 slug: Web/CSS/Reference/Selectors/Keyframe
 page-type: css-selector
-browser-compat: css.at-rules.keyframes.selectors
+browser-compat: css.selectors.keyframe
 sidebar: cssref
 ---
 
@@ -54,7 +54,7 @@ to {
 
 ## Description
 
-A `<keyframe-selector>` can be the `to` or `from` keyword, a percentage between `0%` and `100%`, inclusive, or a comma-separated list of these keywords and/or percentages. When the percentage is preceded by a {{cssxref("timeline-range-name")}}, it defines a timeline range if the animation timelines is a view progress timeline; otherwise, the selector is ignored. When a comma-separated `<keyframe-selector>` list is used, the style block that follows applies to all the specified progression points.
+A `<keyframe-selector>` can be the `to` or `from` keyword, a percentage between `0%` and `100%`, inclusive, or a comma-separated list of these keywords and/or percentages. When the percentage is preceded by a {{cssxref("timeline-range-name")}}, it defines a timeline range if the animation timeline is a view progress timeline; otherwise, the selector is ignored. When a comma-separated `<keyframe-selector>` list is used, the style block that follows applies to all the specified progression points.
 
 ### Valid percentage values
 
@@ -175,7 +175,7 @@ Order is important! We can't ignore the cascade. If we reorder the above incorre
 
 ### With named timeline ranges
 
-Originally defined in the [CSS animation module](/en-US/docs/Web/CSS/Guides/Animations), the [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module expanded the keyframe selector for view progress ranges. A {{cssxref("timeline-range-name")}} can precede the `<percentage>` component of the selector to attach keyframes to specific progress points within the named timeline range. The `<timeline-range-name>` represents the selected predefined named timeline range, and the `<percentage>` after it represents the percentage progress between the start and end of that named timeline range. This addition to the selector enables adding timeline range information directly in the `@keyframes` animation definition.
+Originally defined in the [CSS animation module](/en-US/docs/Web/CSS/Guides/Animations), the [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module expanded the keyframe selector to enable view progress timeline range information to be included directly in the `@keyframes` animation definition. A {{cssxref("timeline-range-name")}} can precede the `<percentage>` component of the selector to attach keyframes to specific progress points within the named timeline range. The `<timeline-range-name>` represents the selected predefined named timeline range, and the `<percentage>` after it represents the percentage progress between the start and end of that named timeline range.
 
 ```css
 @keyframes in-and-out {
@@ -198,7 +198,7 @@ Originally defined in the [CSS animation module](/en-US/docs/Web/CSS/Guides/Anim
 }
 ```
 
-If the element's animation timeline does not have a corresponding named timeline range, then any keyframes attached to points on that named timeline range are ignored. It is possible that these attachment points are outside the active interval of the animation. When this occurs, the automatic `from` (`0%`) and `to` (`100%`) keyframes are only generated for properties that don't have keyframes at or earlier than `0%` or at or after `100%`, respectively.
+If the element's animation timeline does not have a corresponding named view timeline range, then any keyframes attached to points on that named timeline range are ignored. These attachment points may be outside the active interval of the animation. When this occurs, the automatic `from` (`0%`) and `to` (`100%`) keyframes are only generated for properties that don't have keyframes at or earlier than `0%` or at or after `100%`, respectively.
 
 ## Examples
 
@@ -260,7 +260,7 @@ div {
 
 ### Selector lists
 
-Using the same HTML and basic styling as in the previous example, this example demonstrates using comma-separated selectors to group selectors, applying the same styles at multiple points in an animation.
+Using the same HTML and basic styling as in the previous example, this example demonstrates the use of comma-separated selectors to group keyframes, applying the same styles at multiple points in an animation.
 
 ```html hidden
 <div>I am animated</div>
@@ -322,7 +322,7 @@ We include a few elements. We will be animating all of them.
 
 #### CSS
 
-We provide basic styles to our elements, giving each a different {{cssxref("outline-width")}} and {{cssxref("background-color")}}. These are the properties we will be animating.
+We provide basic styles to our elements, and give each one a different {{cssxref("outline-width")}} and {{cssxref("background-color")}}. We will animate these two properties.
 
 ```css
 div {
@@ -346,7 +346,7 @@ div:last-of-type {
 }
 ```
 
-We create an animation that sets an element's {{cssxref("border-width")}} and {{cssxref("background-color")}} at only the `30%` keyframe.
+We create an animation that sets an element's `background-color` and `outline-width` at `30%` and `40%` keyframes.
 
 ```css
 @keyframes changes {
@@ -360,7 +360,7 @@ We create an animation that sets an element's {{cssxref("border-width")}} and {{
 
 {{EmbedLiveSample("Omitting to and from","100%","420")}}
 
-The `background-color` and `outline-width` properties are set in the `30%, 40%` keyframe, so the elements' background colors animate from and to `green`, `magenta`, and `blue` while their outline widths animate from `0px`, `10px`, and `20px` to `15px`, remain in that state for one-tenth of the animation, and then back again.
+The `background-color` and `outline-width` properties are set in `30%` and `40%` keyframes. As a result, the elements' `background-color` values animate from `green`, `magenta`, and `blue` to `black` while their `outline-width` values animate from `0px`, `10px`, and `20px` to `15px`. They remain in that state for one-tenth of the animation — between `30%` and `40%` duration. After `40%` duration, these properties animate back to their initial values again.
 
 ## Specifications
 
