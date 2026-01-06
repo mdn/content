@@ -308,7 +308,7 @@ By using a selector list with multiple comma-separated keyframe selectors, the a
 
 ### Omitting `to` and `from`
 
-This example demonstrates how, when the `to` or `from` keyframe selectors are not included in a `@keyframes` animation definition, the animated properties will animated to and from the original, non-animated property values.
+This example demonstrates how, when the `to` or `from` keyframe selectors are not included in a `@keyframes` animation definition, the animated properties will animate to and from the original, non-animated property values.
 
 #### HTML
 
