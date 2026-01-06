@@ -138,8 +138,8 @@ element.innerHTML = userInput;
 
 This section provides a list of "direct" injection sink interfaces.
 
-Note that there are cases where untrusted strings may be "indirectly injected", such as when an untrusted string is added as the child node of a script element, and then the element is added to the document.
-These cases are evaluated the untrusted script is added to the document.
+These are the API properties and methods which perform trusted type checks when they are evaluated.
+They can be passed trusted types (`TrustedHTML`, `TrustedScript`, or `TrustedScriptURL`) as well as strings, and must be passed trusted types when trusted type enforcement is enabled.
 
 #### TrustedHTML
 
@@ -180,6 +180,31 @@ These cases are evaluated the untrusted script is added to the document.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
 - `url` argument to [`Worker()` constructor](/en-US/docs/Web/API/Worker/Worker#url)
 - `url` argument to [`SharedWorker()` constructor](/en-US/docs/Web/API/SharedWorker/SharedWorker#url)
+
+### Indirect injection sinks
+
+Indirect injection sinks are those where untrusted strings are injected into the DOM via an intermediate mechanism that doesn't trigger script execution, and then evaluated.
+These kinds of sinks bypass the trusted type checks that have been added to the direct injection sinks.
+
+The following code shows how this might work (note that there are many other mechanisms for indirect injection).
+First a text node is created using a string provided by a user, and then a {{htmlelement("script")}} element is constructed and the text node is appended as a child element.
+Next the script element is added to the DOM as a child of the {{htmlelement("body")}} element, potentially allowing any scripts defined in the original string to be run.
+
+```js
+// Create a text node
+const unstrustedString = "/* Potentially malcious JavaScript code */";
+const textNode = document.createTextNode(unstrustedString);
+
+// Create a script element and add the text node
+const script = document.createElement("script");
+script.appendChild(textNode);
+document.body.appendChild(script);
+```
+
+Because a text node isn't always used in a context where the text might be used as an injection sink, it does enforce trusted types.
+
+Instead, browsers that are enforcing trusted types will run trusted type checks when indirect injection sinks are is injected into the DOM (in the example above, when `appendChild()` is called).
+This will cause an exception if the text node was constructed with a string rather than an appropriate trusted type.
 
 ### Cross-browser support for trusted types
 
