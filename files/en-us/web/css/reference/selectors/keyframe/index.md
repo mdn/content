@@ -62,7 +62,7 @@ Percentage values must include the percent sign (`%`). Unitless values (such as 
 
 ### Cascade, order, precedence, and importance
 
-Property values set by animation `@keyframes` are more important than all normal styles, meaning no matter the {{cssxref("specificity")}}, an animated value will override values that do not have an {{cssxref("important", "!important")}} flag set. Only important property values and values currently being transitioned take precedence over animated property values.
+Property values set by animation `@keyframes` are more important than all normal styles, meaning no matter the [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity), an animated value will override values that do not have an {{cssxref("important", "!important")}} flag set. Only important property values and values currently being transitioned take precedence over animated property values.
 
 All keyframe selectors have the same specificity. The order of keyframe selectors within the selector list does not matter. The source order only matters if a duplicate keyframe selector declares a different value for an already declared property on the same selector.
 
