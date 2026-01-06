@@ -2417,8 +2417,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
       </td>
       <td><code>APPCOMMAND_MEDIA_FAST_FORWARD</code></td>
       <td></td>
-      <td><code>GDK_KEY_AudioForward</code> (0x1008FF97)</td>
-      <td><code>Qt:Key_AudioForward</code> (0x01000102)</td>
+      <td><code>GDK_KEY_AudioForward</code> (0x1008FF97)<br/><code>Qt:Key_AudioForward</code> (0x01000102)</td>
       <td><code>KEYCODE_MEDIA_FAST_FORWARD</code> (90)</td>
     </tr>
     <tr>
