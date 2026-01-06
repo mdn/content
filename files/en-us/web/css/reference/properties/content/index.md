@@ -51,6 +51,7 @@ content: image-set("image1x.png" 1x, "image2x.png" 2x);
 
 /* speech output: alternative text after a "/"  */
 content: url("../img/test.png") / "This is the alt text";
+content: "" / "Chapter " counter(chapter);
 
 /* <string> value */
 content: "unparsed text";
@@ -91,7 +92,7 @@ The value can be:
 - One of two keywords: `none` or `normal`. `normal` is the default property value.
 - `<content-replacement>` when replacing a DOM node. `<content-replacement>` is always an `<image>`.
 - A `<content-list>` when replacing pseudo-elements and margin boxes. A `<content-list>` is a list of one or more anonymous inline boxes appearing in the order specified. Each `<content-list>` item is of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader).
-- An optional alternative text value of a `<string>` or `<counter>`, preceded by a slash (`/`).
+- An optional alternative text value that can include `<string>`, `<counter>`, or [`attr()`](#attrx) function values, preceded by a slash (`/`).
 
 The keywords and data types mentioned above are described in more detail below:
 
@@ -131,8 +132,8 @@ The keywords and data types mentioned above are described in more detail below:
 - `attr(x)`
   - : The `attr(x)` CSS function retrieves the value of an attribute of the selected element, or the pseudo-element's originating element. The value of the element's attribute `x` is an unparsed string representing the attribute name. If there is no attribute `x`, an empty string is returned. The case sensitivity of the attribute name parameter depends on the document language.
 
-- alternative text: `/ <string> | <counter>`
-  - : Alternative text may be specified for an image or any `<content-list>` items, by appending a forward slash and then a string of text or a counter. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers. The {{cssxref("string", "/ &lt;string>")}} or {{cssxref("counter", "/ &lt;counter>")}} data types specify the "alt text" for the element.
+- alternative text: `/ <string> | <counter> | attr()`
+  - : Alternative text may be specified for an image or any `<content-list>` items, by appending a forward slash and then a combination of strings, counters, or `attr()` functions. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers.
 
 ## Formal definition
 
@@ -341,6 +342,59 @@ a::before {
 > The alternative text value is exposed in the browser's accessibility tree. Refer to the [See also](#see_also) section for browser-specific accessibility panels.
 
 If using a screen reader, it should speak the word "MOZILLA" when it reaches the image. You can select the `::before` pseudo-element with your developer tools selection tool, and view the {{glossary("accessible name")}} in the accessibility panel.
+
+### Including counters in alternative text
+
+This example includes a list of links to a set of book chapters, and specifies generated content before each one that includes a counter. This results in an elegant chapter number announcement for screenreader users before each link text is read out.
+
+#### HTML
+
+We include a heading before creating an ordered list of chapter title links using {{htmlelement("ol")}}, {{htmlelement("li")}}, and {{htmlelement("a")}} elements.
+
+```html live-sample___alt-counter
+<h2>Chapter list</h2>
+<ol>
+  <li><a href="#">A stranger calls</a></li>
+  <li><a href="#">Two owls</a></li>
+  <li><a href="#">Dinner was bland</a></li>
+  <li><a href="#">Three owls</a></li>
+  <li><a href="#">No-one answered the door</a></li>
+  <li><a href="#">The stranger leaves</a></li>
+  <li><a href="#">Bedtime</a></li>
+</ol>
+```
+
+#### CSS
+
+The CSS includes a {{cssxref("counter-reset")}} for the `chapter` counter on the `<ol>` element. We also increment the `chapter` counter on each `<li>` element using {{cssxref("counter-increment")}}.
+
+```css live-sample___alt-counter
+ol {
+  counter-reset: chapter;
+}
+
+li {
+  counter-increment: chapter;
+}
+```
+
+Next, we set the `<li>` elements' {{cssxref("::marker")}} pseudo-elements to have generated `content` equal to the current `chapter` counter value (retrieved using the {{cssxref("counter()")}} function) plus a colon. We then set the `<a>` elements' {{cssxref("::before")}} pseudo-elements to have generated `content` equal to an empty string (so nothing is displayed), but with alt text equal to the current `chapter` counter value preceded by the word "Chapter".
+
+```css live-sample___alt-counter
+li::marker {
+  content: counter(chapter) ": ";
+}
+
+a::before {
+  content: "" / "Chapter " counter(chapter);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('alt-counter', '100%', 220)}}
+
+When using a screenreader, supporting browsers should speak the word "Chapter" followed by the current counter number, followed by the link text, when each list item is reached. So for example "Chapter 1 A stranger calls", "Chapter 2 Two owls", etc. This provides a better experience for screenreader user navigating the list.
 
 ### Element replacement with URL
 
