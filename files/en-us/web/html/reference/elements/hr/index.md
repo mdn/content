@@ -63,15 +63,17 @@ The following example adds a thematic break between paragraph-level elements.
 #### HTML
 
 ```html
-<p>
-  This is the first paragraph of text. This is the first paragraph of text. This
-  is the first paragraph of text. This is the first paragraph of text.
-</p>
-<hr />
-<p>
-  This is the second paragraph of text. This is the second paragraph of text.
-  This is the second paragraph of text. This is the second paragraph of text.
-</p>
+<article>
+  <p>
+    This is the first paragraph of text. This is the first paragraph of text.
+    This is the first paragraph of text. This is the first paragraph of text.
+  </p>
+  <hr />
+  <p>
+    This is the second paragraph of text. This is the second paragraph of text.
+    This is the second paragraph of text. This is the second paragraph of text.
+  </p>
+</article>
 ```
 
 #### Result
