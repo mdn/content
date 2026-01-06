@@ -13,7 +13,7 @@ The [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module provides feat
 
 The features of the CSS motion path module provide offset transforms: transforms that align a point on an element to an offset distance along an offset path, optionally rotating the transformed element to follow the path direction. This module enables powerful transform possibilities, for example:
 
-- Positioning using polar coordinates rather than limiting transformation to the standard rectangular {{cssxref("transform")}} function coordinates.
+- Positioning using polar coordinates rather than limiting transformation to the standard rectangular {{cssxref("transform")}} coordinates.
 - Animating an element along a defined path.
 
 CSS motion paths allow the definition of complex 2D spatial transitions by leveraging [CSS shape functions](/en-US/docs/Web/CSS/Reference/Values/Functions#shape_functions).
@@ -119,8 +119,8 @@ In this example, we used [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) and [
 
 ## See also
 
-- {{cssxref("position_value", "&lt;position&gt;")}}
+- {{cssxref("&lt;position&gt;")}}
 - {{cssxref("easing-function")}}
-- {{cssxref("radial-gradient")}} function
-- [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media query
+- {{cssxref("gradient/radial-gradient")}} function
+- {{cssxref("@media/prefers-reduced-motion")}} media query
 - {{cssxref("will-change")}} CSS property

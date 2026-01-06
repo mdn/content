@@ -11,7 +11,7 @@ The **CSS scroll-driven animations** module provides functionality that builds o
 
 ## Scroll-driven animations in action
 
-You can define the scroller that controls the animation either by naming the animation or with the {{cssxref("scroll")}} function.
+You can define the scroller that controls the animation either by naming the animation or with the {{cssxref("animation-timeline/scroll", "scroll()")}} function.
 
 ```html hidden live-sample___scroll_animation
 <main>
