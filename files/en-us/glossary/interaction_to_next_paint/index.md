@@ -14,7 +14,7 @@ INP was designed by Google as one of the [Core Web Vital](https://web.dev/articl
 
 INP measures the worst length of time (minus some outliers), in milliseconds, between the user interaction on a web page and the next frame presentation after that interaction is processed. Scrolling and zooming are not included in this metric. INP is calculated using the [Event Timing API](/en-US/docs/Web/API/PerformanceEventTiming). Asynchronous operations such as network fetches or file reads usually do not delay INP as painting can occur while such operations are handled.
 
-All eligible interactions throughout the page lifetime are considered. For highly interactive pages of 50 or more interactions, the 98th percentile is used to exclude some extreme outliers that are not reflective of overall page responsiveness.
+All eligible interactions throughout the page lifetime are considered. For highly interactive pages of 50 or more interactions, the 98th percentile is used to exclude some extreme outliers that are not reflective of overall page responsiveness. The {{domxref("Performance.interactionCount")}} value can be used to see when a large number of interactions have happened on a page.
 
 The longer the delay, the worse the user experience. The [Long Animation Frames API](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing) can help identify causes of high INP.
 
@@ -22,6 +22,7 @@ The longer the delay, the worse the user experience. The [Long Animation Frames 
 
 - [Long animation frame timing](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing)
 - [PerformanceEventTiming](/en-US/docs/Web/API/PerformanceEventTiming)
+- {{domxref("Performance.interactionCount")}}
 - [INP](https://web.dev/articles/inp) on web.dev (2023)
 - [Optimize Interaction to Next Paint](https://web.dev/articles/optimize-inp) on web.dev (2023)
 - [Interaction to Next Paint is officially a Core Web Vital](https://web.dev/blog/inp-cwv-launch) on web.dev (2024)
