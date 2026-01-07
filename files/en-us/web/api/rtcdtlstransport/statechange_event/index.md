@@ -43,7 +43,7 @@ dtlsTransport.addEventListener("statechange", (ev) => {
 The same code, using the `onstatechange` event handler property, looks like this:
 
 ```js
-let dtlsTransport = pc.getSenders()[0].transport;
+const dtlsTransport = pc.getSenders()[0].transport;
 
 dtlsTransport.onstatechange = (ev) => {
   if (dtlsTransport.state === "failed") {
