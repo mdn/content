@@ -26,6 +26,7 @@ When implementing a "more info" icon (ⓘ) with a tooltip, the icon element shou
 **For simple tooltips with plain text:**
 
 Use a `<button>` element for the icon with `aria-describedby` pointing to the tooltip container:
+
 ```html
 <button aria-describedby="description-id" aria-label="More information">
   ⓘ
@@ -40,6 +41,7 @@ The `aria-describedby` attribute creates the association between the button and 
 **For complex content with structure:**
 
 If the additional information contains headings, lists, or interactive elements, use `role="dialog"` instead of `role="tooltip"`:
+
 ```html
 <button aria-label="More information" aria-expanded="false">ⓘ</button>
 <div role="dialog" aria-labelledby="dialog-title" hidden>
@@ -94,6 +96,7 @@ The tooltip should appear on focus or when the element is hovered on, without ad
 - The tooltip is only hidden via JavaScript and CSS selectors. If JavaScript is not available the tooltip is shown.
 
 ## Examples
+
 ```html
 <label for="password">Password:</label>
 <input aria-describedby="passwordrules" id="password" type="password" />
@@ -111,6 +114,7 @@ The tooltip should appear on focus or when the element is hovered on, without ad
 ```
 
 The tooltip can be instantiated with CSS. Change the class name with JavaScript to a class that hides the tooltip if the user hits the <kbd>Escape</kbd> key.
+
 ```css
 [role="tooltip"] {
   visibility: hidden;
