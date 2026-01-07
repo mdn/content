@@ -41,9 +41,7 @@ The `aria-describedby` attribute creates the association between the button and 
 
 If the additional information contains headings, lists, or interactive elements, use `role="dialog"` instead of `role="tooltip"`:
 ```html
-<button aria-label="More information" aria-expanded="false">
-ⓘ
-</button>
+<button aria-label="More information" aria-expanded="false">ⓘ</button>
 <div role="dialog" aria-labelledby="dialog-title" hidden>
   <h2 id="dialog-title">Additional Details</h2>
   <p>Content with structure...</p>
