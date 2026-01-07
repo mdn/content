@@ -29,6 +29,7 @@ For Firefox, the `reduce` request is honoured if:
   - Alternatively, add `gtk-enable-animations = false` to the `[Settings]` block of [the GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration).
 
 - In Plasma/KDE: System Settings > Workspace Behavior -> General Behavior > "Animation speed" is set all the way to right to "Instant".
+  - Alternatively, add `AnimationDurationFactor=0` to the `[KDE]` block of `~/.config/kdeglobals`.
 - In Windows 10: Settings > Ease of Access > Display > Show animations in Windows.
 - In Windows 11: Settings > Accessibility > Visual Effects > Animation Effects
 - In macOS: System Settings > Accessibility > Display > Reduce motion.
