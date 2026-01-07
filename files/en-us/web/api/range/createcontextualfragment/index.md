@@ -47,7 +47,7 @@ In the HTML case, if the context node would be `html`, for historical reasons th
 ### Security considerations
 
 The method does not perform any sanitization of the input to remove XSS-unsafe elements such as {{htmlelement("script")}}, or event handler content attributes.
-If the input is provided by a user, and the returned {{domxref("DocumentFragment")}} is subsequently injected into the DOM, this method can be threfore become a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+If the input is provided by a user, and the returned {{domxref("DocumentFragment")}} is subsequently injected into the DOM, this method can be therefore become a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 
 For example, the following code would inject the potentially dangerous user-provided string into the DOM.
 

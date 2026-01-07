@@ -97,7 +97,7 @@ Third party content embedded in an {{htmlelement("iframe")}} that needs to acces
    > This was not desirable behavior from a security standpoint — for example, if `shop.example.com` embedded `locator.users.com` to allow users to use their location info while shopping, and `locator.users.com` called `requestStorageAccess()`, `shop.example.com` and any other sites it embeds would be able to access its cookies, but also access cookies from `private.users.com`, which is not intended to be embedded. [Read more about the motivations](https://github.com/privacycg/storage-access/issues/113) behind this change.
 
 5. After an embed has activated the storage-access permission it should reload itself.
-   The browser will re-request the resource with third-party cookies included, and make them available to the embedded resource once it has loaded.
+   The browser will re-request the resource with third-party cookies included, and make them available to the embedded resource once it has loaded. The embed's cross-origin requests follow the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy), therefore third-party cookies are sent only with requests to the embedded resource's exact origin. Other origins within the same site wishing to access third-party cookies will need to activate the storage-access permission separately.
 
 ### Storage access headers
 
@@ -297,6 +297,7 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 ### Safari
 
 - The storage access grants are phased out after 30 days of browser usage passed without user interaction. Successful use of the Storage Access API resets this counter.
+- After an embed has activated the storage-access permission and its content has been re-requested, third-party cookies are sent with requests to the embedded resource's _site_ rather than origin. Safari still uses an older design that does not follow the same-origin policy.
 
 ## Examples
 

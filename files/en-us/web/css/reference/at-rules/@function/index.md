@@ -58,7 +58,7 @@ A typical CSS function looks like this:
 }
 ```
 
-The function has a name of `--transparent` and takes two custom properties as parameters, `--color` and `--alpha`, which can be used locally inside the function body. The body contains a single line, which is a `result` descriptor that defines the value returned by the function. The value of the `result` descriptor uses [CSS relative color syntax](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) to convert the input `--color` value into an [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) color with the alpha channel value specified in the input `--alpha` value.
+The function has a name of `--transparent` and takes two custom properties as parameters, `--color` and `--alpha`, which can be used locally inside the function body. The body contains a single line, which is a `result` descriptor that defines the value returned by the function. The value of the `result` descriptor uses [CSS relative color syntax](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) to convert the input `--color` value into an {{cssxref("color_value/oklch")}} color with the alpha channel value specified in the input `--alpha` value.
 
 You can then call this function anywhere you want to produce a semi-transparent version of an existing color, for example:
 
@@ -84,7 +84,7 @@ It is possible to specify data types for the function parameters and return type
 }
 ```
 
-Now the function will only produce a valid value if the input arguments are a {{cssxref("&lt;color>")}} and a {{cssxref("&lt;number>")}}, respectively, and the `result` is a {{cssxref("&lt;color>")}}. If not, for example:
+Now the function will only produce a valid value if the input arguments are a {{cssxref("&lt;color&gt;")}} and a {{cssxref("&lt;number&gt;")}}, respectively, and the `result` is a {{cssxref("&lt;color&gt;")}}. If not, for example:
 
 ```css
 section {

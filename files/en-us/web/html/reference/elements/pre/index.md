@@ -8,7 +8,7 @@ sidebar: htmlsidebar
 
 The **`<pre>`** [HTML](/en-US/docs/Web/HTML) element represents preformatted text which is to be presented exactly as written in the HTML file. The text is typically rendered using a non-proportional, or [monospaced](https://en.wikipedia.org/wiki/Monospaced_font) font.
 
-Whitespace inside this element is displayed as written, with one exception. If one or more leading newline characters are included immediately following the opening `<pre>` tag, the _first_ newline character is stripped.
+Whitespace inside this element is displayed as written, with one exception. If one or more leading newline characters are included immediately following the opening `<pre>` tag, the _first_ newline character is stripped. This transformation is done by the HTML parser and does not apply when using {{Glossary("XHTML")}}.
 
 `<pre>` elements' text content is parsed as HTML, so if you want to ensure that your text content stays as plain text, some syntax characters, such as `<`, may need to be escaped using their respective {{glossary("character reference", "character references")}}. See [escaping ambiguous characters](#escaping_ambiguous_characters) for more information.
 
