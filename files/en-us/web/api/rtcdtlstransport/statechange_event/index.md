@@ -31,7 +31,7 @@ A generic {{domxref("Event")}}.
 Given an {{domxref("RTCPeerConnection")}}, `pc`, the following code creates an event handler that calls a function named `handleFailure()` if the DTLS transport enters a failure state.
 
 ```js
-let dtlsTransport = pc.getSenders()[0].transport;
+const dtlsTransport = pc.getSenders()[0].transport;
 
 dtlsTransport.addEventListener("statechange", (ev) => {
   if (dtlsTransport.state === "failed") {
