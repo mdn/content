@@ -25,16 +25,16 @@ Watch the embedded scrim, and complete the tasks on the timeline (the little gho
 
 In this task, there are two boxes below, one is using the standard box model, the other the alternate box model. We'd like you to change the width of the second box by adding declarations to the `.alternate` class, so that it matches the visual width of the first box.
 
-Your final result should look like the image below:
+Your final result should look like the following finished rendering:
 
-![Two boxes of the same size](mdn-box-model1.png)
+{{EmbedLiveSample("box-model1-finish", "", "540px")}}
 
-```html live-sample___box-models
+```html live-sample___box-model1-start live-sample___box-model1-finish
 <div class="box">I use the standard box model.</div>
 <div class="box alternate">I use the alternate box model.</div>
 ```
 
-```css live-sample___box-models
+```css live-sample___box-model1-start live-sample___box-model1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -52,14 +52,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("box-models", "", "540px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("box-model1-start", "", "540px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 You will need to increase the width of the second block, to add the size of the padding and border:
 
-```css
+```css live-sample___box-model1-finish
 .alternate {
   box-sizing: border-box;
   width: 390px;
@@ -79,15 +81,15 @@ To complete this task, add the following features to the provided box:
 - A left margin of `2em`.
 - Padding on all sides of `1em`.
 
-Your final result should look like the image below:
+Your final result should look like the following finished rendering:
 
-![A box with a dotted border](mdn-box-model2.png)
+{{EmbedLiveSample("box-model2-finish")}}
 
-```html live-sample___mbp
+```html live-sample___box-model2-start live-sample___box-model2-finish
 <div class="box">I use the standard box model.</div>
 ```
 
-```css live-sample___mbp
+```css live-sample___box-model2-start live-sample___box-model2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -96,7 +98,9 @@ body {
 }
 ```
 
-{{EmbedLiveSample("mbp")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("box-model2-start")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -104,7 +108,7 @@ body {
 This task involves using the margin, border and padding properties correctly.
 You might choose to use the longhand properties ({{cssxref("margin-top")}}, {{cssxref("margin-right")}}, etc.), however when setting a margin and padding on all sides, the shorthand is probably the better choice:
 
-```css
+```css live-sample___box-model2-finish
 .box {
   border: 5px dotted black;
   margin: 20px 1em 40px 2em;
@@ -120,11 +124,11 @@ In this task, the inline element has a margin, padding and border. However, the 
 
 To complete this task, update the CSS to cause the size of the margin, padding, and border to be respected by the other lines, while still keeping the element inline.
 
-Your final result should look like the image below:
+Your final result should look like the following finished rendering:
 
-![An inline box with space between it and the text around it.](mdn-box-model3.png)
+{{EmbedLiveSample("box-model3-finish")}}
 
-```html live-sample___inline-block
+```html live-sample___box-model3-start live-sample___box-model3-finish
 <div class="box">
   <p>
     Veggies es bonus vobis, <span>proinde vos postulo</span> essum magis
@@ -140,7 +144,7 @@ Your final result should look like the image below:
 </div>
 ```
 
-```css live-sample___inline-block
+```css live-sample___box-model3-start live-sample___box-model3-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -152,7 +156,9 @@ body {
 }
 ```
 
-{{EmbedLiveSample("inline-block")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("box-model3-start")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -160,7 +166,7 @@ body {
 Solving this task requires that you understand when to use different {{cssxref("display")}} values.
 After adding `display: inline-block`, the block direction margin, border and padding will cause the other lines to be pushed away from the element:
 
-```css
+```css live-sample___box-model3-finish
 .box span {
   background-color: pink;
   border: 5px solid black;
