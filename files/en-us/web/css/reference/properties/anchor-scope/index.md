@@ -44,11 +44,19 @@ This can be a problem in certain situations. For example, if a document contains
 
 The `anchor-scope` property can fix this problem by limiting the visibility, or "scope", of an `anchor-name` value to a specific subtree. The result is that each positioned element can only be anchored to an element within the same subtree of the element that has the scope set on it.
 
-- `anchor-scope: all` sets the scope so that _any_ `anchor-name` values set in the subtree can only be bound to by positioned elements in the same subtree.
-- `anchor-scope: <dashed-ident>#` sets the scope so that the specified `anchor-name` values, when set in the subtree, can only be bound to by positioned elements in the same subtree.
-- `anchor-scope: none` is the default value; it specifies that no anchor scoping is set.
+- `anchor-scope: all` sets the scope so that _any_ `anchor-name` values set in the subtree can only be bound to by positioned elements in the same subtree. Let's say we include multiple anchors in a document, all with `anchor-name: --my-anchor` set on them, and place them in separate containers. We will then set `anchor-scope: all` on each container. If we then include a positioned element inside one of the containers and give it `--my-anchor` as the value of its `position-anchor` property, it will be positioned relative to the anchor inside the same container.
 
-If you have, for example, three `anchor-name` values set inside a subtree (say, <code>&#8209;&#8209;anchor1</code>, <code>&#8209;&#8209;anchor2</code>, and <code>&#8209;&#8209;anchor3</code>), setting <code>anchor-scope: &#8209;&#8209;anchor1, &#8209;&#8209;anchor2, &#8209;&#8209;anchor3</code> on the top-level element of the subtree would be equivalent to setting `anchor-scope: all`.
+  Furthermore, if we create another positioned element outside the containers and give it the same anchor name, or a different anchor name, it will not be anchor-positioned relative to any of the anchors, regardless of whether the anchors have those anchor names included inside their `anchor-name` values. `anchor-scope: all` limits the anchor scope for containers it is set on for _any_ anchors, regardless of `anchor-name`, to only positioned elements inside the same containers.
+
+- `anchor-scope: <dashed-ident>#` sets the scope so that the specified `anchor-name` values, when set in the subtree, can only be bound to by positioned elements in the same subtree. If we return to the same example described in the previous bullet, but change the `anchor-scope` value set on the containers to `--my-anchor`:
+  - Positioned elements with `position-anchor: --my-anchor` set on them will be limited to the scope imposed by the `anchor-scope` setting. They will only be positioned relative to the anchors if they are placed inside the containers.
+  - However, positioned elements with different `position-anchor` names — for example, `--another-anchor` — _can_ be positioned relative to one of the anchors, whether it is placed inside or outside the containers, provided you add the `--another-anchor` anchor name to the anchor's `anchor-name` property. The `anchor-scope` property only limits the scope for the `--my-anchor` anchor name, so it will have no effect on other anchor names.
+
+    If multiple anchors are given the `--another-anchor` anchor name, the positioned elements with that `position-anchor` value will be positioned relative to the last anchor in the source order with that name.
+
+- `anchor-scope: none` is the default value, which specifies that no anchor scope is set. If multiple anchors exist in a document with the same `anchor-name`, and a positioned element is given this name as the value of its `position-anchor` property, it will be positioned relative to the last anchor element in the source order, regardless of where it is placed in the DOM hierarchy.
+
+If you have, for example, three `anchor-name` values set inside a subtree (say, `--anchor1`, `--anchor2`, and `--anchor3`), setting `anchor-scope: --anchor1, --anchor2, --anchor3` on the top-level element of the subtree would be equivalent to setting `anchor-scope: all`.
 
 Anchor scopes only affect [explicit anchor associations](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#explicit_css_anchor_association), that is, those made between an anchor element with an `anchor-name` set on it, and a positioned element referencing the anchor element's anchor name in its `position-anchor` value. Anchor scopes do not affect [implicit anchor associations](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#implicit_anchor_association).
 
@@ -183,7 +191,7 @@ Finally, we include a {{htmlelement("form")}} containing three different [`<inpu
 
 #### CSS
 
-We start by specifying our anchor elements as anchors by giving them two {{cssxref("anchor-name")}} values: <code>&#8209;&#8209;my-anchor</code> and `--another-anchor`.
+We start by specifying our anchor elements as anchors by giving them two {{cssxref("anchor-name")}} values: `--my-anchor` and `--another-anchor`.
 
 ```css hidden live-sample___comparing-values
 body {
@@ -213,11 +221,11 @@ body {
 
 .positioned,
 .positioned2 {
-  background: orange;
-  border: 2px solid #ddd;
+  border: 1px solid black;
   border-radius: 3px;
   width: fit-content;
-  padding: 3px;
+  padding: 3px 6px;
+  box-shadow: 3px 3px 3px rgba(0 0 0 / 0.2);
 }
 
 form {
@@ -278,7 +286,7 @@ The example renders as follows:
 Check out the initial positioning effect applied to the positioned elements with `anchor-scope: all` set on the `<section>` elements, and then try selecting the other available `anchor-scope` values to see what their effect is. You should observe the following:
 
 - `all`: The scope for positioning elements relative to anchor elements that are descendants of the `<section>` elements is limited to positioned elements that are themselves descendants of the `<section>` elements, regardless of the `anchor-name` value used to associate them. As a result, the positioned elements inside the `<section>` elements ("Positioned 1–3") are anchor-positioned as expected, but the positioned element outside the `<section>` elements ("Positioned 4") is not anchor-positioned. It is out of scope.
-- `--my-anchor`: The scope for positioning elements relative to anchor elements that are descendants of the `<section>` elements is limited to positioned elements that are themselves descendants of the `<section>` elements, only if the `--my-anchor` `anchor-name` is used to associate them. As a result, the positioned elements inside the `<section>` elements ("Positioned 1–3") are anchor-positioned as expected, and the positioned element outside the `<section>` elements ("Positioned 4") is also anchor-positioned as expected. In the former case, the positioned elements are inside the set scope, and in the latter case, the positioned element is not affected by the set scope, as it is using an anchor name outside the scope (<code>&#8209;&#8209;another-anchor</code>). The "Positioned 4" element is positioned relative to the last anchor element in the source that has the matching anchor name.
+- `--my-anchor`: The scope for positioning elements relative to anchor elements that are descendants of the `<section>` elements is limited to positioned elements that are themselves descendants of the `<section>` elements, only if the `--my-anchor` `anchor-name` is used to associate them. As a result, the positioned elements inside the `<section>` elements ("Positioned 1–3") are anchor-positioned as expected, and the positioned element outside the `<section>` elements ("Positioned 4") is also anchor-positioned as expected. In the former case, the positioned elements are inside the set scope, and in the latter case, the positioned element is not affected by the set scope, as it is using an anchor name outside the scope (`--another-anchor`). The "Positioned 4" element is positioned relative to the last anchor element in the source that has the matching anchor name.
 - `none`: As no anchor scope is set on the `<section>` elements, all of the positioned elements are positioned relative to the last anchor element in the source order.
 
 ## Specifications
