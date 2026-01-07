@@ -8,7 +8,7 @@ browser-compat: api.RTCDtlsTransport.statechange_event
 
 {{APIRef("WebRTC")}}
 
-A **`statechange`** event occurs when the {{domxref("RTCDtlsTransport")}} changes state. The {{domxref("RTCDtlsTransport.state", "state")}} can be used to determine the current state of the underlying Datagram Transport Layer Security (DTLS) transport.
+A **`statechange`** event occurs when the {{domxref("RTCDtlsTransport")}} changes state. The {{domxref("RTCDtlsTransport.state", "state")}} property can be used to determine the current state of the underlying Datagram Transport Layer Security (DTLS) transport.
 
 This event is not cancelable and does not bubble.
 
