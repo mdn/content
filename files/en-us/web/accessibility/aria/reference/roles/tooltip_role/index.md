@@ -19,6 +19,46 @@ Because the tooltip itself never receives focus and is not in the tabbing order,
 
 The tooltip is not the appropriate role for the more information "i" icon, ⓘ. A tooltip is directly associated with the owning element. The ⓘ isn't 'described by' detailed information; the tool or control is.
 
+### Correct usage for information icons
+
+When implementing a "more info" icon (ⓘ) with a tooltip, the icon element should be a button, and the `role="tooltip"` should be applied to the container element that displays when the icon is activated.
+
+**For simple tooltips with plain text:**
+
+Use a `<button>` element for the icon with `aria-describedby` pointing to the tooltip container:
+```html
+<button aria-describedby="description-id" aria-label="More information">
+  ⓘ
+</button>
+<div role="tooltip" id="description-id">
+  Additional explanatory information goes here.
+</div>
+```
+
+The `aria-describedby` attribute creates the association between the button and the tooltip content. When a screen reader user focuses the button, they will hear both the button's label and the tooltip content.
+
+**For complex content with structure:**
+
+If the additional information contains headings, lists, or interactive elements, use `role="dialog"` instead of `role="tooltip"`:
+```html
+<button aria-label="More information" aria-expanded="false">
+  ⓘ
+</button>
+<div role="dialog" aria-labelledby="dialog-title" hidden>
+  <h2 id="dialog-title">Additional Details</h2>
+  <p>Content with structure...</p>
+  <button>Close</button>
+</div>
+```
+
+**Key points:**
+
+- The icon itself should be a `<button>` element (or have `role="button"`)
+- The tooltip content uses `role="tooltip"` only for simple, non-interactive text
+- Use `aria-describedby` to connect the button to the tooltip
+- For complex or interactive content, use `role="dialog"` instead of `role="tooltip"`
+- Never apply `role="tooltip"` directly to the icon element
+
 The use of the ARIA `tooltip` role is a supplement to the normal browser tooltip behavior. An example of a native browser tooltip is the way some browsers display an element's [`title` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/title) on long mouse hover. One cannot activate this feature through either keyboard focus or through touch interaction, making this feature inaccessible. If the information is important enough to include as a tooltip or title, consider including it in visible text.
 
 Elements with the `tooltip` role should be referenced through the use of [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) before or when the tooltip is displayed. The `aria-describedby` attribute is on the owning element, not on the tooltip.
