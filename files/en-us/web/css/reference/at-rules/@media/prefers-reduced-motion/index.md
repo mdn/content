@@ -30,6 +30,7 @@ For Firefox, the `reduce` request is honoured if:
 
 - In Plasma/KDE: System Settings > Workspace Behavior -> General Behavior > "Animation speed" is set all the way to right to "Instant".
   - Alternatively, add `AnimationDurationFactor=0` to the `[KDE]` block of `~/.config/kdeglobals`.
+  - Or just run `kwriteconfig6 --key AnimationDurationFactor 0` in your favourite terminal emulator.
 - In Windows 10: Settings > Ease of Access > Display > Show animations in Windows.
 - In Windows 11: Settings > Accessibility > Visual Effects > Animation Effects
 - In macOS: System Settings > Accessibility > Display > Reduce motion.
