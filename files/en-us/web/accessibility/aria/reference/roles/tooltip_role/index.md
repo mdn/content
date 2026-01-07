@@ -42,7 +42,7 @@ The `aria-describedby` attribute creates the association between the button and 
 If the additional information contains headings, lists, or interactive elements, use `role="dialog"` instead of `role="tooltip"`:
 ```html
 <button aria-label="More information" aria-expanded="false">
-  ⓘ
+ⓘ
 </button>
 <div role="dialog" aria-labelledby="dialog-title" hidden>
   <h2 id="dialog-title">Additional Details</h2>
@@ -96,7 +96,6 @@ The tooltip should appear on focus or when the element is hovered on, without ad
 - The tooltip is only hidden via JavaScript and CSS selectors. If JavaScript is not available the tooltip is shown.
 
 ## Examples
-
 ```html
 <label for="password">Password:</label>
 <input aria-describedby="passwordrules" id="password" type="password" />
@@ -114,7 +113,6 @@ The tooltip should appear on focus or when the element is hovered on, without ad
 ```
 
 The tooltip can be instantiated with CSS. Change the class name with JavaScript to a class that hides the tooltip if the user hits the <kbd>Escape</kbd> key.
-
 ```css
 [role="tooltip"] {
   visibility: hidden;
