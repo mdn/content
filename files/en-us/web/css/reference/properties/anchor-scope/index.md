@@ -52,7 +52,7 @@ If you have, for example, three `anchor-name` values set inside a subtree (say, 
 
 Anchor scopes only affect [explicit anchor associations](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#explicit_css_anchor_association), that is, those made between an anchor element with an `anchor-name` set on it, and a positioned element referencing the anchor element's anchor name in its `position-anchor` value. Anchor scopes do not affect [implicit anchor associations](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#implicit_anchor_association).
 
-For more information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide.
+For more information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide.
 
 ## Formal definition
 
