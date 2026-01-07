@@ -201,7 +201,7 @@ Passkeys are more secure than passwords, and we can see how their design address
 
 - Unlike a password, the user never invents a passkey value or needs to remember it. This means users can't choose weak passkey values, so they are not vulnerable to [guessing](/en-US/docs/Web/Security/Authentication/Passwords#guessing) attacks.
 
-- Passkeys are never reused across sites, so that they are not vulnerable to [credential stuffing](/en-US/docs/Web/Security/Authentication/Passwords#credential_stuffing) attacks. If an attacker does get access to a passkey, they can only use it for the site that originally created it.
+- Passkeys are never reused across sites, so they are not vulnerable to [credential stuffing](/en-US/docs/Web/Security/Authentication/Passwords#credential_stuffing) attacks. If an attacker does get access to a passkey, they can only use it for the site that originally created it.
 
 - With passkeys, the server never has to store any secrets, so if an attacker [breaks into the server's database](/en-US/docs/Web/Security/Authentication/Passwords#database_compromise), they can't compromise accounts using the stored data. Note, however, that they can compromise user accounts if they can _write_ fake credentials into the server's database.
 
