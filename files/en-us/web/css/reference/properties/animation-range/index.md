@@ -252,7 +252,7 @@ Scroll to see the element being animated.
 
 {{EmbedLiveSample("Examples", "100%", "480px")}}
 
-Note how the `from`, or `0%`, keyframe property values are not applied to the animated element until the top block border edge is `10%` past the container's bottom edge; it is full size, fully opaque, and magenta. At that point, the animation is applied and it is styled with the values defined by the `0%` keyframe selector. When the `animation-range-end` is reached, 25% from the top of the scrollport, it jumps back to its original styling.
+Note how the `from`, or `0%`, keyframe property values are not applied to the animated element until the top block border edge is `10%` past the container's bottom edge; it is full size, fully opaque, and magenta. At that point, the animation is applied and it is styled with the values defined by the `0%` [keyframe selector](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors). When the `animation-range-end` is reached, 25% from the top of the scrollport, it jumps back to its original styling.
 
 Generally, you will want to set `animation-fill-mode: both` when creating [scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations). The jump to the default state occurs because we did not set the {{cssxref("animation-fill-mode")}} property on the element, which can be used to apply an animation's styles to an element before and after the animation's execution. We initially omitted the property in this example to better enable visualizing the effects of `animation-range`.
 
