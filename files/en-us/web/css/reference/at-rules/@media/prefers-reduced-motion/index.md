@@ -26,7 +26,7 @@ For Firefox, the `reduce` request is honoured if:
 
 - In GTK/GNOME: Settings > Accessibility > Seeing > Reduced animation is turned on.
   - In older versions of GNOME, GNOME Tweaks > General tab (or Appearance, depending on version) > Animations is turned off.
-  - Alternatively, add `gtk-enable-animations = false` to the `[Settings]` block of [the GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration). Additionally run `gsettings set org.gnome.desktop.interface enable-animations false` to make programms pick up the settings faster.
+  - Alternatively, add `gtk-enable-animations = false` to the `[Settings]` block of [the GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration). Additionally run `gsettings set org.gnome.desktop.interface enable-animations false` to make programs pick up the settings faster.
 
 - In Plasma/KDE: System Settings > Workspace Behavior -> General Behavior > "Animation speed" is set all the way to right to "Instant".
   - Alternatively, add `AnimationDurationFactor=0` to the `[KDE]` block of `~/.config/kdeglobals`.
