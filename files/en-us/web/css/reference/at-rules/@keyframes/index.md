@@ -37,7 +37,7 @@ The **`@keyframes`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gu
 
 ## Description
 
-To use keyframes, create a `@keyframes` rule with a name that is then used by the {{ cssxref("animation-name") }} property to match an animation to its keyframe declaration. Each `@keyframes` rule contains a style list of keyframe selectors, which specify percentages along the animation when the keyframe occurs, and a block containing the styles for that keyframe.
+To use keyframes, create a `@keyframes` rule with a name that is then used by the {{ cssxref("animation-name") }} property to match an animation to its keyframe declaration. Each `@keyframes` rule contains a style list of [keyframe selectors](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors), which specify percentages along the animation when the keyframe occurs, and a block containing the styles for that keyframe.
 
 You can list the keyframe percentages in any order; they will be handled in the order they should occur.
 
