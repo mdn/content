@@ -304,6 +304,7 @@ Select different values from the drop-down menus to change the anchors that the 
 ## See also
 
 - {{cssxref("anchor-name")}}
+- {{cssxref("anchor-scope")}}
 - HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute
 - [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide
