@@ -3,11 +3,13 @@ title: Sec-CH-Width header
 short-title: Sec-CH-Width
 slug: Web/HTTP/Reference/Headers/Sec-CH-Width
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-Width
 sidebar: http
 ---
 
-{{SecureContext_header}}
+{{SecureContext_header}}{{SeeCompatTable}}
 
 The HTTP **`Sec-CH-Width`** {{Glossary("request header")}} is a [device client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) which indicates the desired resource width in physical pixels — the intrinsic size of an image. The provided pixel value is a number rounded to the smallest following integer (i.e., ceiling value).
 

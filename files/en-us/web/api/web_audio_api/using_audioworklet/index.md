@@ -251,6 +251,13 @@ class MyAudioProcessor extends AudioWorkletProcessor {
 }
 ```
 
+If `automationRate` is not specified in a parameter descriptor, it defaults to
+`"a-rate"` (sample-accurate updates).
+
+To use block-rate processing, `"k-rate"` must be explicitly requested.
+Making the automation rate explicit helps avoid incorrect assumptions about
+whether a parameter is sample-accurate or block-rate by default.
+
 Accessing your processor node's parameters is as simple as looking them up in the `parameters` object passed into your implementation of {{domxref("AudioWorkletProcessor.process", "process()")}}. Within the `parameters` object are arrays, one for each of your parameters, and sharing the same names as your parameters.
 
 - A-rate parameters
