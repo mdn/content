@@ -64,7 +64,7 @@ Function(arg1, arg2, /* …, */ argN, functionBody)
 - {{jsxref("TypeError")}}
   - : Any parameter is a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 
-The methods also throws any exception that occurs during evaluation of the code.
+The method also throws any exception that occurs during evaluation of the code.
 
 ## Description
 
