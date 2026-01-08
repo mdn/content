@@ -133,7 +133,7 @@ The keywords and data types mentioned above are described in more detail below:
   - : The `attr(x)` CSS function retrieves the value of an attribute of the selected element, or the pseudo-element's originating element. The value of the element's attribute `x` is an unparsed string representing the attribute name. If there is no attribute `x`, an empty string is returned. The case sensitivity of the attribute name parameter depends on the document language.
 
 - alternative text: `/ <string> | <counter> | attr()`
-  - : Alternative text may be specified for an image or any `<content-list>` items, by appending a forward slash and then a combination of strings, counters, or `attr()` functions. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers.
+  - : Alternative text may be specified for an image or any `<content-list>` items, by appending a forward slash and then a combination of strings, counters, and `attr()` functions. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers.
 
 ## Formal definition
 
