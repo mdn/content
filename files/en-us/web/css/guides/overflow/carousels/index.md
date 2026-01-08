@@ -6,7 +6,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module defines features enabling the creation of flexible and accessible pure-CSS carousels with browser-generated and developer-styled scroll buttons and scroll markers. This guide explains how to create a carousel using these features.
+The [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module defines features enabling the creation of flexible pure-CSS carousels with browser-generated and developer-styled scroll buttons and scroll markers. This guide explains how to create a carousel using these features.
 
 ## Carousel concepts
 
@@ -25,11 +25,11 @@ A key feature of carousels is **pagination** — the items feel like separate pi
 
 Carousels can be quite brittle and challenging to implement with JavaScript. They require scripts to associate scroll markers with the items they represent while continuously updating the scroll buttons to keep them operating correctly. When carousels are created using JavaScript, the accessibility of the carousel and the associated controls has to be added in.
 
-Fortunately, we can create accessible carousels with associated controls without the use of JavaScript, using CSS carousel features.
+Fortunately, we can create carousels with associated controls without the use of JavaScript, using CSS carousel features.
 
 ## CSS carousel features
 
-The CSS carousel features provide pseudo-elements and pseudo-classes that enable the creation of carousels using only CSS and HTML, with the browser handling most of the scrolling and link references in an accessible, flexible, and consistent manner. These features are as follows:
+The CSS carousel features provide pseudo-elements and pseudo-classes that enable the creation of carousels using only CSS and HTML, with the browser handling most of the scrolling and link references in a flexible and consistent manner. These features are as follows:
 
 - {{cssxref("::scroll-button()")}}
   - : Generated inside a {{glossary("scroll container")}}, these pseudo-elements represent scroll buttons, which scroll the container in a specified direction.
