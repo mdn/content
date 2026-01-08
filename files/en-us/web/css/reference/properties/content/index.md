@@ -394,7 +394,7 @@ a::before {
 
 {{EmbedLiveSample('alt-counter', '100%', 220)}}
 
-When using a screenreader, supporting browsers should speak the word "Chapter" followed by the current counter number, followed by the link text, when each list item is reached. So for example "Chapter 1 A stranger calls", "Chapter 2 Two owls", etc. This provides a better experience for screenreader user navigating the list.
+When a screenreader navigates to a link within the list, supporting browsers will announce "Chapter" followed by the current counter number, followed by the link text, for example, "Chapter 1 A stranger calls" and "Chapter 2 Two owls".
 
 ### Element replacement with URL
 
