@@ -86,7 +86,7 @@ body {
 }
 
 .box {
-  border: 2px solid #888;
+  border: 2px solid #888 888;
   width: 50px;
 }
 
