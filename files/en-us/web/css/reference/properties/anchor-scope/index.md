@@ -33,7 +33,7 @@ anchor-scope: unset;
   - : No anchor scope limiting happens on an element. This is the default value.
 - `all`
   - : Sets the scope so that _any_ `anchor-name` values set in the subtree can only be bound to by positioned elements in the same subtree.
-- {{cssxref("dashed-ident")}}#
+- {{cssxref("dashed-ident", "&lt;dashed-ident&gt;#")}}
   - : One or more comma-separated {{cssxref("dashed-ident")}}s representing anchor names. Sets the scope so that the specified `anchor-name` values, when set in the subtree, can only be bound to by positioned elements in the same subtree.
 
 ## Description
@@ -100,7 +100,7 @@ To test this out, we declare the `anchor` `<div>` as an anchor element by settin
 ```css hidden live-sample___basic-usage
 .scoped {
   padding: 20px;
-  background: #eee;
+  background: #eeeeee;
 }
 
 .anchor {
@@ -181,8 +181,8 @@ Finally, we include a {{htmlelement("form")}} containing three different [`<inpu
 
     <input type="radio" id="all" name="scope" value="all" checked />
     <label for="all"><code>all</code></label>
-    <input type="radio" id="--my-anchor" name="scope" value="--my-anchor" />
-    <label for="--my-anchor"><code>--my-anchor</code></label>
+    <input type="radio" id="my-anchor" name="scope" value="--my-anchor" />
+    <label for="my-anchor"><code>--my-anchor</code></label>
     <input type="radio" id="none" name="scope" value="none" />
     <label for="none"><code>none</code></label>
   </fieldset>
@@ -203,8 +203,8 @@ body {
 
 .scoped {
   padding: 20px;
-  background: #eee;
-  border: 2px solid #ddd;
+  background: #eeeeee;
+  border: 2px solid #dddddd;
   border-radius: 10px;
   width: 100px;
   height: 100px;
@@ -225,7 +225,7 @@ body {
   border-radius: 3px;
   width: fit-content;
   padding: 3px 6px;
-  box-shadow: 3px 3px 3px rgba(0 0 0 / 0.2);
+  box-shadow: 3px 3px 3px rgb(0 0 0 / 0.2);
 }
 
 form {

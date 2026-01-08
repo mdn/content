@@ -37,9 +37,9 @@ There's a special [text fragment](/en-US/docs/Web/URI/Reference/Fragment/Text_fr
 - `#syntax`
   - : The browser will scroll to the element with the `id="syntax"` in the document (which, for this page, is the [Syntax](#syntax) heading).
 - `#:~:text=fragment`
-  - : The browser will highlight the text [`fragment`](#:~:text=fragment) in the document.
+  - : The browser will highlight the text [`fragment`](#:~:text=fragment) in the document; see [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments) for more details.
 - `#t=10,20`
-  - : The video or audio will start playing from the 10th second.
+  - : The video or audio will start playing from the 10th second; see [Media fragments](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments) for more details.
 
 ## Specifications
 
@@ -49,3 +49,4 @@ There's a special [text fragment](/en-US/docs/Web/URI/Reference/Fragment/Text_fr
 
 - [URIs](/en-US/docs/Web/URI)
 - [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments)
+- [Media fragments](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments)

@@ -162,7 +162,7 @@ const trustedScriptURL = policy.createScriptURL(untrustedScript);
 We can now pass the `TrustedScriptURL` object into `register()`:
 
 ```js
-navigator.serviceWorker.register(trustedScriptURL).
+navigator.serviceWorker.register(trustedScriptURL);
 ```
 
 ### Register a service worker with default scope

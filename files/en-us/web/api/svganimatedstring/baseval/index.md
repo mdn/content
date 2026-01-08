@@ -9,7 +9,7 @@ browser-compat: api.SVGAnimatedString.baseVal
 {{APIRef("SVG")}}
 
 > [!WARNING]
-> The [`baseVal`](/en-US/docs/Web/API/SVGAnimatedString/baseVal) property can be used to set the non-animated value of a reflected attribute.
+> The `baseVal` property can be used to set the non-animated value of a reflected attribute.
 > In the case of {{domxref("SVGScriptElement/href","SVGScriptElement.href.baseVal")}} this property represents the URL of an external script loaded into the SVG script element.
 > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 >
