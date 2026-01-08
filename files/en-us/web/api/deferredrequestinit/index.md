@@ -7,7 +7,7 @@ status:
 browser-compat: api.Window.fetchLater
 ---
 
-{{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Fetch API")}}{{SeeCompatTable}}
 
 The **`DeferredRequestInit`** dictionary of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) represents the set of options that can be used to configure a deferred fetch request.
 

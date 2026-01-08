@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.fetchLater
 ---
 
-{{APIRef("fetchLater API")}}{{SeeCompatTable}}
+{{APIRef("Fetch API")}}{{SeeCompatTable}}
 
 The **`fetchLater()`** method of the {{domxref("Window")}} interface creates a deferred fetch.
 
