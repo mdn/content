@@ -103,7 +103,7 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### WebDriver BiDi
 
-- Implemented the `input.fileDialogOpened` event, which is emitted whenever a filepicker is triggered by the content page, for instance after clicking on an input with `type="file"`. ([Firefox bug 1855045](https://bugzil.la/1855045)).
+- Implemented the `input.fileDialogOpened` event, which is emitted whenever a file picker is triggered by the content page, for instance after clicking on an input with `type="file"`. ([Firefox bug 1855045](https://bugzil.la/1855045)).
 - Implemented the `emulation.setScreenSettingsOverride` command to allow clients to emulate the screen dimensions for a list of browsing contexts or user contexts. ([Firefox bug 2000651](https://bugzil.la/2000651)).
 - Fixed an issue where `browsingContext.navigate` with `wait=none` didn't always contain the real target URL. ([Firefox bug 2004191](https://bugzil.la/2004191)).
 - Updated `script.evaluate` and `script.callFunction` to bypass Content Security Policy (CSP). ([Firefox bug 1941780](https://bugzil.la/1941780)).

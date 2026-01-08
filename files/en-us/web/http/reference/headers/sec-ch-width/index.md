@@ -61,6 +61,10 @@ Then on subsequent image requests the client might send `Sec-CH-Width` header ba
 Width: 1920
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

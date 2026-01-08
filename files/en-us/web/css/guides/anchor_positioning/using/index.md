@@ -166,7 +166,7 @@ body {
 
 .scoped {
   padding: 20px;
-  background: #eee;
+  background: #eeeeee;
 }
 
 .anchor {

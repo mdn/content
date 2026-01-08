@@ -325,6 +325,7 @@ jssidebar
 jsval
 kaios
 kawi
+kdeglobals
 kerx
 Key_Codeinput
 KEY_dead_abovecomma
@@ -360,6 +361,7 @@ KIND_NONHEAP
 knda
 Kore
 krai
+kwriteconfig
 lanatham
 laoo
 largeop
