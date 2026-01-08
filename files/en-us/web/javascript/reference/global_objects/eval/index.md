@@ -54,9 +54,9 @@ If `script` is not a {{domxref("TrustedScript")}} or string primitive, `eval()` 
 - {{jsxref("SyntaxError")}}
   - : The `script` parameter cannot be parsed as a script.
 - {{jsxref("TypeError")}}
-  - : `script` is passed a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
+  - : `script` is a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 
-The methods also throws any exception that occurs during evaluation of the code.
+The method also throws any exception that occurs during evaluation of the code.
 
 ## Description
 
@@ -370,14 +370,13 @@ const untrustedCode = "alert('Potentially evil code!');";
 const adder = eval(untrustedCode);
 ```
 
-Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that specifies [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) will prevent such code running by default.
-You can specify [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) in your CSP to allow `eval()` to execute, but this is unsafe as it disables one of the main protections of CSP.
-
+Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that specifies [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) or [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) will prevent such code running by default.
 If you must allow the scripts to run via `eval()` you can mitigate the risks by always assigning a {{domxref("TrustedScript")}} instance instead of a string, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 This ensures that the input is passed through a transformation function.
 
 To allow `eval()` to run, you will additionally need to specify the [`trusted-types-eval` keyword](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) in your CSP `script-src` directive.
-This acts in the same way as `unsafe-eval`, but _only_ allows the method to evaluate if trusted types are enabled (if you were to use `unsafe-eval` it would allow execution even on browsers that do not support trusted types).
+
+The [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) keyword also allows `eval()`, but is much less safe then `trusted-types-eval` because it would allow execution even on browsers that do not support trusted types.
 
 For example, the required CSP for your site might look like this:
 
@@ -385,7 +384,7 @@ For example, the required CSP for your site might look like this:
 Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_allowlist>' 'trusted-types-eval'
 ```
 
-The behavior of the transformation function will depend on the specific use case that requires a user provided script.
+The behavior of the transformation function implemented in your trusted types policy will depend on the specific use case that requires a user provided script.
 If possible you should lock the allowed scripts to exactly the code that you trust to run.
 If that is not possible, you might allow or block the use of certain functions within the provided input.
 
@@ -400,7 +399,7 @@ To mitigate the risk of XSS, we should always assign `TrustedScript` instances t
 We also need to do this if we're enforcing trusted types for other reasons and we want to allow some script sources that have been permitted (by `CSP: script-src`).
 
 Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
-This acts as a transparent replacement for the trusted types JavaScript API:
+This acts as a transparent replacement for the Trusted Types JavaScript API:
 
 ```js
 if (typeof trustedTypes === "undefined")
@@ -420,18 +419,17 @@ const policy = trustedTypes.createPolicy("script-policy", {
 });
 ```
 
-Then we use the `policy` object to create a `trustedScript` object from a potentially unsafe input string:
+Then we use the `policy` object to create a `TrustedScript` object from a potentially unsafe input string:
 
 ```js
 // The potentially malicious string
-// We won't be including untrustedScript in our scriptAllowList array
 const untrustedScript = "alert('Potentially evil code!');";
 
 // Create a TrustedScriptURL instance using the policy
 const trustedScript = policy.createScript(untrustedScript);
 ```
 
-The `trustedScriptURL` property can now be used in `eval()`
+The `TrustedScript` object can now be passed to `eval()`:
 
 ```js
 eval(trustedScriptURL);
