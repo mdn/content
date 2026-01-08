@@ -1,3 +1,4 @@
+<!-- Edited by ashri: first contribution to improve clarity -->
 ---
 title: HTML elements reference
 short-title: Elements
