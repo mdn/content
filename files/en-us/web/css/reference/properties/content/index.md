@@ -345,7 +345,7 @@ If using a screen reader, it should speak the word "MOZILLA" when it reaches the
 
 ### Including counters in alternative text
 
-This example includes a list of links to a set of book chapters, and specifies generated content before each one that includes a counter. This results in an elegant chapter number announcement for screenreader users before each link text is read out.
+This example includes a list of links to a set of book chapters, and specifies generated content before each one that includes a book icon and a counter, with alternative text that includes the literal word "Chapter" in place of the icon. This results in an elegant chapter number announcement for screenreader users before each link text is read out.
 
 #### HTML
 
@@ -366,7 +366,7 @@ We include a heading followed by an ordered list of chapter title links using {{
 
 #### CSS
 
-The CSS includes a {{cssxref("counter-reset")}} for the `chapter` counter on the `<ol>` element. We also increment the `chapter` counter on each `<li>` element using {{cssxref("counter-increment")}}.
+The CSS includes a {{cssxref("counter-reset")}} for the `chapter` counter on the `<ol>` element. We also increment the `chapter` counter on each `<li>` element using {{cssxref("counter-increment")}}, and remove the list markers by setting a {{cssxref("list-style-type")}} value of `none`.
 
 ```css live-sample___alt-counter
 ol {
@@ -375,24 +375,21 @@ ol {
 
 li {
   counter-increment: chapter;
+  list-style-type: none;
 }
 ```
 
-Next, we set the `<li>` elements' {{cssxref("::marker")}} pseudo-elements to have generated `content` equal to the current `chapter` counter value (retrieved using the {{cssxref("counter()")}} function) plus a colon. We then set the `<a>` elements' {{cssxref("::before")}} pseudo-elements to have generated `content` equal to an empty string (so nothing is displayed), but with alt text equal to the current `chapter` counter value preceded by the word "Chapter".
+Next, we set the `<a>` elements' {{cssxref("::before")}} pseudo-elements to have generated `content` equal to a book emoji to represent a chapter, plus the current `chapter` counter value, and a space character so that the generated content is separated from the link text. Finally, we set the generated content's alt text to the current `chapter` counter value preceded by the word "Chapter".
 
 ```css live-sample___alt-counter
-li::marker {
-  content: counter(chapter) ": ";
-}
-
 a::before {
-  content: "" / "Chapter " counter(chapter);
+  content: "📖 " counter(chapter) " " / "Chapter " counter(chapter);
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('alt-counter', '100%', 220)}}
+{{EmbedLiveSample('alt-counter', '100%', 270)}}
 
 When a screenreader navigates to a link within the list, supporting browsers will announce "Chapter" followed by the current counter number, followed by the link text, for example, "Chapter 1 A stranger calls" and "Chapter 2 Two owls".
 
