@@ -535,6 +535,7 @@ The CSS for creating the scroll markers in this demo is nearly identical to the 
 
 ```css live-sample___second-example
 ul::column::scroll-marker {
+  content: "";
   width: 16px;
   height: 16px;
   background-color: transparent;
