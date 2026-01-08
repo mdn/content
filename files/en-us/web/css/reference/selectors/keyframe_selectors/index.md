@@ -375,6 +375,6 @@ The `background-color` and `outline-width` properties are set in `30%` and `40%`
 - {{cssxref("@keyframes")}}
 - {{cssxref("animation")}}
 - {{cssxref("animation-range")}}
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
-- [CSS animations](/en-US/docs/Web/CSS/CSS_Animations) module
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
