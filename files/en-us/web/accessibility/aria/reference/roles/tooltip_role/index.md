@@ -17,7 +17,7 @@ A tooltip typically becomes visible, after a short delay of generally one to fiv
 
 Because the tooltip itself never receives focus and is not in the tabbing order, a tooltip can not contain interactive elements like links, inputs, or buttons.
 
-The tooltip is not the appropriate role for the more information "i" icon, ⓘ. A tooltip is directly associated with the owning element. The ⓘ isn't 'described by' detailed information; the tool or control is.
+The `tooltip` is not the appropriate role for the more information "i" icon, ⓘ. A tooltip is directly associated with the owning element. The ⓘ isn't 'described by' detailed information; the tool or control is. The `role="tooltip"` is included on the tip or control, as can be seen in the [`tooltip` example](#examples), with the `passwordrules` element that contains the tip content having the role. 
 
 The use of the ARIA `tooltip` role is a supplement to the normal browser tooltip behavior. An example of a native browser tooltip is the way some browsers display an element's [`title` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/title) on long mouse hover. One cannot activate this feature through either keyboard focus or through touch interaction, making this feature inaccessible. If the information is important enough to include as a tooltip or title, consider including it in visible text.
 
