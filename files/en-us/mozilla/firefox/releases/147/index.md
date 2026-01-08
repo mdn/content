@@ -16,7 +16,10 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
+
+- When you select a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) (such as {{cssxref("::before")}} or {{cssxref("::after")}}) in the HTML pane of the Inspector, you can now edit the selector of the corresponding rule in the CSS pane.
+  ([Firefox bug 1998704](https://bugzil.la/1998704)).
 
 <!-- ### HTML -->
 
