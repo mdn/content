@@ -117,7 +117,7 @@ Cookie: 0x23223
 Sec-Fetch-Dest: webidentity
 ```
 
-The request is credentialed: that is, it includes cookies for the IdP's site, which the IdP can use to identify which IdP accounts the user is signed into. Note that because the browser's request to this endpoint is a cross-site request, cookies will only be included if they have a [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute value of `"None"`.
+The request is credentialed: that is, it includes cookies for the IdP's site, which the IdP can use to identify which IdP accounts the user is signed into. Note that because the browser's request to this endpoint is a cross-site request, cookies will only be included if they have a [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute value of `None`.
 
 The response returns a list of all the IdP accounts that the user is currently signed in with (not specific to any particular RP), with a JSON structure that matches the following:
 
