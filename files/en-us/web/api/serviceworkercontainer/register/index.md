@@ -99,7 +99,7 @@ This ensures that only one service worker runs for each document.
 
 ### Security considerations
 
-The `scriptURL` parameter specifies the script for the service worker, which can intercept network requests for pages within its scope and return respones that are fresh, cached, new, or modified.
+The `scriptURL` parameter specifies the script for the service worker, which can intercept network requests for pages within its scope and return responses that are fresh, cached, new, or modified.
 If the input is provided by a user, this is a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 
 It is extremely risky to accept and execute arbitrary URLs from untrusted origins.
