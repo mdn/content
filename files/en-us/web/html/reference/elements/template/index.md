@@ -38,6 +38,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     If this is set and a non-focusable element in the shadow tree is selected, then focus is delegated to the first focusable element in the tree.
     The value defaults to `false`.
 
+- `shadowrootreferencetarget` {{Experimental_Inline}}
+  - : Sets the value of the `referenceTarget` property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element. The value should be the ID of an element inside the shadow DOM. If set, target references to the host element from outside the shadow DOM will cause the referenced target element to become the effective target of the reference to the host element.
+
 - `shadowrootserializable`
   - : Sets the value of the [`serializable`](/en-US/docs/Web/API/ShadowRoot/serializable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
@@ -191,7 +194,7 @@ This example demonstrates how `shadowrootdelegatesfocus` is applied to a shadow 
 
 The code first declares a shadow root inside a `<div>` element, using the `<template>` element with the `shadowrootmode` attribute.
 This displays both a non-focusable `<div>` containing text and a focusable `<input>` element.
-It also uses CSS to style elements with [`:focus`](/en-US/docs/Web/CSS/Reference/Selectors/:focus) to blue, and to set the normal styling of the host element.
+It also uses CSS to style elements with {{cssxref(":focus")}} to blue, and to set the normal styling of the host element.
 
 ```html
 <div>

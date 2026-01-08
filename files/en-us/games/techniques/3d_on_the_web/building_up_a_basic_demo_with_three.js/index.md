@@ -7,8 +7,7 @@ sidebar: games
 
 A typical 3D scene in a game — even the simplest one — contains standard items like shapes located in a coordinate system, a camera to view it, lights and materials to make it look better, animations to make it look alive, etc. **Three.js**, as with any other 3D library, provides built-in helper functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Three.js, including setting up a development environment, structuring the necessary HTML, the fundamental objects of Three, and how to build up a basic demo.
 
-Three is one of the most popular [WebGL](/en-US/docs/Web/API/WebGL_API) libraries, and it is easy to get started with.
-We are not saying it is better than any other WebGL library, and you should feel free to try other libraries.
+Three is one of the most popular [WebGL](/en-US/docs/Web/API/WebGL_API) libraries, though we are not saying it is better than any other WebGL library, and you should feel free to try other libraries.
 
 > [!NOTE]
 > This guide was last updated in November 2024, and is compatible with Three.js version `r79`.
@@ -184,7 +183,7 @@ cube.rotation.set(0.4, 0.2, 0);
 ## Three.js shape example
 
 If you've followed everything so far without any problems, you've created your first object in a 3D environment using Three.js!
-It was easier than you thought, right?
+Congratulations.
 Your code should look like the following live sample.
 You can click "Play" to view and edit the code in the MDN Playground:
 

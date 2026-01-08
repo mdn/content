@@ -1377,6 +1377,18 @@
       ],
       "events": []
     },
+    "Private State Token API": {
+      "overview": ["Private State Token API"],
+      "guides": ["/docs/Web/API/Private_State_Token_API/Using"],
+      "methods": [
+        "Document.hasPrivateToken()",
+        "Document.hasRedemptionRecord()",
+        "Window.fetch()",
+        "XMLHttpRequest.setPrivateToken()"
+      ],
+      "properties": ["HTMLIFrameElement.privateToken"],
+      "events": []
+    },
     "Push API": {
       "overview": ["Push API"],
       "guides": ["/docs/Web/API/Push_API/Best_Practices"],
@@ -1884,8 +1896,15 @@
     },
     "View Transition API": {
       "overview": ["View Transition API"],
-      "guides": ["/docs/Web/API/View_Transition_API/Using"],
-      "interfaces": ["ViewTransition"],
+      "guides": [
+        "/docs/Web/API/View_Transition_API/Using",
+        "/docs/Web/API/View_Transition_API/Using_types"
+      ],
+      "interfaces": [
+        "CSSViewTransitionRule",
+        "ViewTransition",
+        "ViewTransitionTypeSet"
+      ],
       "methods": ["Document.startViewTransition()"],
       "properties": [],
       "events": ["Window: pagereveal", "Window: pageswap"]

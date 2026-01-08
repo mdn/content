@@ -76,4 +76,4 @@ For example:
 
 - `<meta>` `name` attribute [`color-scheme`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) value
 - {{cssxref("color-scheme")}} CSS property
-- [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media query
+- {{cssxref("@media/prefers-color-scheme")}} media query

@@ -76,6 +76,7 @@ beforematch
 beforescriptexecute
 beforexrselect
 BGRX
+bgtest
 bhks
 biske
 bmatrix
@@ -298,6 +299,7 @@ indexeddb-examples
 indexifembedded
 inputreport
 inputsourceschange
+interestfor
 intitle
 intl.uidirection.locale
 intrinsicsize
@@ -323,6 +325,7 @@ jssidebar
 jsval
 kaios
 kawi
+kdeglobals
 kerx
 Key_Codeinput
 KEY_dead_abovecomma
@@ -358,6 +361,7 @@ KIND_NONHEAP
 knda
 Kore
 krai
+kwriteconfig
 lanatham
 laoo
 largeop
@@ -383,6 +387,7 @@ localecho
 localstore
 longdiv
 longtask
+loseinterest
 lowdelay
 lowp
 lquote
@@ -521,6 +526,8 @@ ondispose
 ondownloadprogress
 onefive
 ongesturestart
+oninterest
+onloseinterest
 onnavigate
 onnavigateerror
 onnavigatesuccess

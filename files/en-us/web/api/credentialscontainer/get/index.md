@@ -134,7 +134,9 @@ async function signIn() {
         {
           configURL: "https://accounts.idp.example/config.json",
           clientId: "********",
-          nonce: "******",
+          params: {
+            /* IdP-specific parameters */
+          },
         },
       ],
     },
@@ -155,7 +157,9 @@ async function signIn() {
         {
           configURL: "https://accounts.idp.example/config.json",
           clientId: "********",
-          nonce: "******",
+          params: {
+            /* IdP-specific parameters */
+          },
           loginHint: "user1@example.com",
         },
       ],
@@ -175,7 +179,9 @@ async function signIn() {
           {
             configURL: "https://accounts.idp.example/config.json",
             clientId: "********",
-            nonce: "******",
+            params: {
+              /* IdP-specific parameters */
+            },
           },
         ],
       },

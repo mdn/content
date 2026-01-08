@@ -6,7 +6,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module defines features enabling the creation of flexible and accessible pure-CSS carousels with browser-generated and developer-styled scroll buttons and scroll markers. This guide explains how to create a carousel using these features.
+The [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module defines features enabling the creation of flexible pure-CSS carousels with browser-generated and developer-styled scroll buttons and scroll markers. This guide explains how to create a carousel using these features.
 
 ## Carousel concepts
 
@@ -23,13 +23,13 @@ Users can move through the items by clicking or activating navigational buttons 
 
 A key feature of carousels is **pagination** — the items feel like separate pieces of content that are moved between rather than forming one continuous section of content. You might show one item at a time or several items on each carousel "page". When several items are visible, you might show an entirely new group of items each time the "next" or "previous" button is pressed. Alternatively, you could add a single new item to one end of the list while moving the item at the other end out of view.
 
-Carousels can be quite brittle and challenging to implement with JavaScript. They require scripts to associate scroll markers with the items they represent while continuously updating the scroll buttons to keep them operating correctly. When carousels are created using JavaScript, the accessibility of the carousel and the associated controls has to be added in.
+Carousels can be quite brittle and challenging to implement with JavaScript. They require scripts to associate scroll markers with the items they represent while continuously updating the scroll buttons to keep them operating correctly.
 
-Fortunately, we can create accessible carousels with associated controls without the use of JavaScript, using CSS carousel features.
+Fortunately, we can create carousels with associated controls without the use of JavaScript, using CSS carousel features.
 
 ## CSS carousel features
 
-The CSS carousel features provide pseudo-elements and pseudo-classes that enable the creation of carousels using only CSS and HTML, with the browser handling most of the scrolling and link references in an accessible, flexible, and consistent manner. These features are as follows:
+The CSS carousel features provide pseudo-elements and pseudo-classes that enable the creation of carousels using only CSS and HTML, with the browser handling most of the scrolling and link references in a flexible and consistent manner. These features are as follows:
 
 - {{cssxref("::scroll-button()")}}
   - : Generated inside a {{glossary("scroll container")}}, these pseudo-elements represent scroll buttons, which scroll the container in a specified direction.
@@ -38,9 +38,11 @@ The CSS carousel features provide pseudo-elements and pseudo-classes that enable
 - {{cssxref("::scroll-marker")}}
   - : Generated inside the children of a scroll container ancestor or within a scroll container's columns, to represent their scroll markers. These can be selected to scroll the container to their associated child elements or column, and are collected inside the scroll container's {{cssxref("::scroll-marker-group")}} for layout purposes.
 - {{cssxref(":target-current")}}
-  - : This pseudo-class can be used to select the currently-active scroll marker. It can be used to provide a highlight style to the currently active marker, which is important for usability and accessibility.
+  - : Used to select the currently active scroll marker and style it. The ability to style the active scroll marker is important for both usability and accessibility.
+- {{cssxref(":target-before")}} and {{cssxref(":target-after")}}
+  - : Used to select and style scroll markers before and after the currently active scroll marker, respectively. They are useful for styling navigation items that come before and after the active navigation position, indicating items the user has already viewed and those that are still to come.
 - {{cssxref("::column")}}
-  - : This pseudo-element represents the individual columns generated when a container is set to display its content in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). It can be used in conjunction with {{cssxref("::scroll-marker")}} to generate a scroll marker for each column.
+  - : Represents the individual columns generated when a container is set to display its content in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). The `::column` pseudo-element can be used in conjunction with {{cssxref("::scroll-marker")}} to generate a scroll marker for each column.
 
 ## Carousel with single pages
 
@@ -533,9 +535,23 @@ ul::column::scroll-marker {
   border: 2px solid black;
   border-radius: 10px;
 }
+```
+
+Finally, we use the `:target-current` pseudo-class to mark the active scroll marker, providing the user with an idea of where they are in the navigation. We also use the {{cssxref(":target-before")}} and {{cssxref(":target-after")}} pseudo-classes to apply some custom styling to the scroll markers before and after the active one. We also set a {{cssxref("transition")}} on the `ul::column::scroll-marker:target-current` rule so that the style changes between the different states animate smoothly.
+
+```css live-sample___second-example
+ul::column::scroll-marker:target-before {
+  border: 2px solid gray;
+}
 
 ul::column::scroll-marker:target-current {
   background-color: black;
+  transition: all 0.7s;
+}
+
+ul::column::scroll-marker:target-after {
+  border: 2px solid red;
+  background-color: red;
 }
 ```
 

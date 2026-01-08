@@ -107,7 +107,7 @@ function isPointInsideSphere(point, sphere) {
 ```
 
 > [!NOTE]
-> The code above features a square root, which can be expensive to calculate. An easy optimization to avoid it consists of comparing the squared distance with the squared radius, so the optimized equation would instead involve `distanceSqr < sphere.radius * sphere.radius`.
+> The code above features a square root, which can be expensive to calculate. An effective optimization to avoid it consists of comparing the squared distance with the squared radius, so the optimized equation would instead involve `distanceSqr < sphere.radius * sphere.radius`.
 
 ### Sphere vs. sphere
 

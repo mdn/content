@@ -6,7 +6,7 @@ browser-compat: css.at-rules.counter-style.additive-symbols
 sidebar: cssref
 ---
 
-The **`additive-symbols`** descriptor of the {{cssxref('@counter-style')}} at-rule is used to specify counter symbols when the `@counter-style` {{cssxref('@counter-style/system', 'system')}} descriptor value is set as `additive`. The additive system is used to construct [sign-value numbering](https://en.wikipedia.org/wiki/Sign-value_notation) systems such as Roman numerals.
+The **`additive-symbols`** descriptor of the {{cssxref("@counter-style")}} at-rule is used to specify counter symbols when the `@counter-style` {{cssxref('@counter-style/system', 'system')}} descriptor value is set as `additive`. The additive system is used to construct [sign-value numbering](https://en.wikipedia.org/wiki/Sign-value_notation) systems such as Roman numerals.
 
 ## Syntax
 
@@ -126,5 +126,5 @@ For the list item with the value of `109`, the numeral `C` represents `100`, and
 
 - {{cssxref("@counter-style")}} descriptors: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
 - List style properties: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}} function to create anonymous counter styles
+- {{cssxref("symbols()")}} function to create anonymous counter styles
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
