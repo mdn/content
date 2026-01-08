@@ -51,7 +51,7 @@ content: image-set("image1x.png" 1x, "image2x.png" 2x);
 
 /* speech output: alternative text after a "/"  */
 content: url("../img/test.png") / "This is the alt text";
-content: "" / "Chapter " counter(chapter);
+content: counter(chapter) / "Chapter " counter(chapter);
 
 /* <string> value */
 content: "unparsed text";
