@@ -23,7 +23,7 @@ Users can move through the items by clicking or activating navigational buttons 
 
 A key feature of carousels is **pagination** — the items feel like separate pieces of content that are moved between rather than forming one continuous section of content. You might show one item at a time or several items on each carousel "page". When several items are visible, you might show an entirely new group of items each time the "next" or "previous" button is pressed. Alternatively, you could add a single new item to one end of the list while moving the item at the other end out of view.
 
-Carousels can be quite brittle and challenging to implement with JavaScript. They require scripts to associate scroll markers with the items they represent while continuously updating the scroll buttons to keep them operating correctly. When carousels are created using JavaScript, the accessibility of the carousel and the associated controls has to be added in.
+Carousels can be quite brittle and challenging to implement with JavaScript. They require scripts to associate scroll markers with the items they represent while continuously updating the scroll buttons to keep them operating correctly. 
 
 Fortunately, we can create carousels with associated controls without the use of JavaScript, using CSS carousel features.
 
