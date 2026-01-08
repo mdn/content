@@ -345,7 +345,7 @@ If using a screen reader, it should speak the word "MOZILLA" when it reaches the
 
 ### Including counters in alternative text
 
-This example includes a list of links to a set of book chapters, and specifies generated content before each one that includes a book icon and a counter, with alternative text that includes the literal word "Chapter" in place of the icon. This results in an elegant chapter number announcement for screenreader users before each link text is read out.
+This example features a list of links to a set of book chapters, and shows how to use generated content to include a book icon and a counter before each one, with alternative text that includes the literal word "Chapter" in place of the icon. This results in the word "chapter" and the chapter number preceding the text in each link's {{glossary("accessible name")}}, which will be announced to screenreader users when the link receives focus.
 
 #### HTML
 
