@@ -189,8 +189,8 @@ You can use the `<iframe>` [`allow`](/en-US/docs/Web/HTML/Reference/Elements/ifr
 
 ```html
 <iframe
-	src="https://www.example.com/iframe"
-	allow="deferred-fetch;deferred-fetch-minimal;"></iframe>
+  src="https://www.example.com/iframe"
+  allow="deferred-fetch;deferred-fetch-minimal;"></iframe>
 ```
 
 The `allow="deferred-fetch"` directive is needed to prevent same-origin iframes from using up the 512KiB quota, and the `allow="deferred-fetch-minimal"` directive is needed to prevent cross-origin iframes from using up the 128KiB quota. Including both directives will prevent both quotas from being used, regardless of the `src` value.
@@ -210,8 +210,8 @@ fetchLater("<32KiB of characters>", { headers: headersExceeding32KiB });
 
 // Maximum of 64KiB per origin including body
 fetchLater("https://origin.example.com", {
-	method: "POST",
-	body: bodyExceeding64KiB,
+  method: "POST",
+  body: bodyExceeding64KiB,
 });
 
 // Maximum of 64KiB per origin including body and automatically added headers
