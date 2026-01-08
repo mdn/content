@@ -34,7 +34,7 @@ The {{domxref("Window/fetchLater", "fetchLater()")}} API enables a developer to 
 - {{domxref("Window.fetch()")}} and {{domxref("WorkerGlobalScope.fetch()")}}
   - : The `fetch()` method used to fetch a resource.
 - {{domxref("Window.fetchLater()")}}
-  - : Used to queue a resource for sending at a later point.
+  - : Used to make a deferred fetch request.
 - {{domxref("DeferredRequestInit")}}
   - : Represents the set of options that can be used to configure a deferred fetch request.
 - {{domxref("FetchLaterResult")}}
