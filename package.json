@@ -62,7 +62,7 @@
     "cspell": "9.4.0",
     "cspell-group-by-file-reporter": "^1.0.1",
     "file-type": "^21.3.0",
-    "fs-extra": "^11.3.2",
+    "fs-extra": "^11.3.3",
     "imagemin": "^9.0.1",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^10.0.0",
