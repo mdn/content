@@ -137,7 +137,9 @@ The last layer is the bottom layer. The background color is always this last lay
 
 ### Body background applied to the entire document
 
-If the document root is the {{htmlelement("html")}} element and the computed value of `background-image` on the root element is `none` and its `background-color` is `transparent`, the browser will promote the `background` style of the first {{htmlelement("body")}} element onto the `:root`, and treat the `<body>` as if `background: initial` were set. In other words, the `:root` gets all the `background` styles that were set on `body`, and `<body>` element's background properties are their initial values. Because of this behavior, it's preferable to set your document's background styles in your `body` style block rather than your `html` style block.
+If the document root is the {{htmlelement("html")}} element and the computed value of `background-image` on the root element is `none` and its `background-color` is `transparent`, the browser will promote the `background` style of the first {{htmlelement("body")}} element onto the `:root`, and treat the `<body>` as if `background: initial` were set. In other words, the `:root` gets all the `background` styles that were set on `body`, and `<body>` element's background properties are their initial values.
+
+Because of this behavior, the specification authors recommend setting your document's background styles in your `body` style block rather than your `html` style block. However, it's important to note that using containment disables this `body` to `html` element `background` promotion. When the used value of the {{cssxref("contain")}} property on either the `<html>` or `<body>` element is anything other than `none`, the `background` property and any longhand components, do not propagate from the `<body>` element to the root `<html>` element.
 
 ## Formal definition
 
