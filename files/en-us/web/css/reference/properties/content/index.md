@@ -349,7 +349,7 @@ This example includes a list of links to a set of book chapters, and specifies g
 
 #### HTML
 
-We include a heading before creating an ordered list of chapter title links using {{htmlelement("ol")}}, {{htmlelement("li")}}, and {{htmlelement("a")}} elements.
+We include a heading followed by an ordered list of chapter title links using {{htmlelement("ol")}}, {{htmlelement("li")}}, and {{htmlelement("a")}} elements.
 
 ```html live-sample___alt-counter
 <h2>Chapter list</h2>
