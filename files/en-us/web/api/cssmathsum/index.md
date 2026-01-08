@@ -9,7 +9,7 @@ browser-compat: api.CSSMathSum
 
 The **`CSSMathSum`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
 
-A CSSMathSum is the object type returned when the [`StylePropertyMapReadOnly.get()`](/en-US/docs/Web/API/StylePropertyMapReadOnly/get) method is used on a CSS property whose value is created with a [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function.
+A CSSMathSum is the object type returned when the [`StylePropertyMapReadOnly.get()`](/en-US/docs/Web/API/StylePropertyMapReadOnly/get) method is used on a CSS property whose value is created with a {{cssxref("calc()")}} function.
 
 {{InheritanceDiagram}}
 
@@ -33,7 +33,7 @@ _The interface may also inherit methods from its parent interface, {{domxref("CS
 
 ## Examples
 
-We create an element with a [`width`](/en-US/docs/Web/CSS/Reference/Properties/width) determined using a [`calc()`](/en-US/docs/Web/CSS/Reference/Values/calc) function, then {{domxref("console/log_static", "console.log()")}} the `operator` and `values`, and dig into the values a bit.
+We create an element with a {{cssxref("width")}} determined using a {{cssxref("calc()")}} function, then {{domxref("console/log_static", "console.log()")}} the `operator` and `values`, and dig into the values a bit.
 
 ```html
 <div>has width</div>

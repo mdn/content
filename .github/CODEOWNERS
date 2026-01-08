@@ -35,8 +35,9 @@
 # MathML
 /files/en-us/web/mathml/ @mdn/mathml
 
-# Templates and sidebars (rari)
+# L10n for Macros (rari)
 /files/jsondata/L10n-Template.json @mdn/engineering
+/files/jsondata/L10n-CSSFormalDefinitions.json @mdn/engineering
 
 # ============================= CONTROL FILES ============================= #
 # The CODEOWNERS file must end with these matches: Any pull request changing
@@ -59,6 +60,7 @@
 /SECURITY.md @mdn/engineering
 # Scripts and Tests
 /scripts @mdn/engineering
+/scripts/content @mdn/content-team
 /tests   @mdn/engineering
 
 # Dependencies

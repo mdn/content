@@ -28,7 +28,7 @@ npm -v
 After you have installed Node.js, you can install the dependencies using `npm install` and start the local preview:
 
 ```bash
-npm
+npm i
 npm start
 ```
 

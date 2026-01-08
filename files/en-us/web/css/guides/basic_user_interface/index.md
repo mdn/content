@@ -91,6 +91,9 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{CSSxRef("caret-color")}}
 - {{CSSxRef("caret-shape")}}
 - {{CSSxRef("cursor")}}
+- {{CSSxRef("interest-delay")}}, shorthand for:
+  - {{CSSxRef("interest-delay-start")}}
+  - {{CSSxRef("interest-delay-end")}}
 - {{CSSxRef("outline")}}, shorthand for:
   - {{CSSxRef("outline-color")}}
   - {{CSSxRef("outline-style")}}
@@ -109,7 +112,7 @@ The CSS basic user interface module also defines the {{CSSxRef("caret")}}, `nav-
 
 ## Related concepts
 
-- CSS [`cursor`](/en-US/docs/Web/CSS/Reference/Properties/cursor) property
+- CSS {{cssxref("cursor")}} property
 - SVG [`cursor`](/en-US/docs/Web/SVG/Reference/Attribute/cursor) attribute
 - CSS {{CSSxRef(":focus")}}, {{CSSxRef(":focus-within")}}, and {{CSSxRef(":focus-visible")}} pseudoclasses
 - {{DOMXref("CaretPosition")}} Interface

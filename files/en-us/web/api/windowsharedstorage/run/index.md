@@ -4,11 +4,11 @@ short-title: run()
 slug: Web/API/WindowSharedStorage/run
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.WindowSharedStorage.run
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`run()`** method of the
 {{domxref("WindowSharedStorage")}} interface executes a [run operation](/en-US/docs/Web/API/SharedStorageRunOperation) that is registered in a module added to the current origin's {{domxref("SharedStorageWorklet")}}.

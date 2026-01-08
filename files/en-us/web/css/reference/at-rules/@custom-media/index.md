@@ -9,7 +9,7 @@ browser-compat: css.at-rules.custom-media
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) defines aliases for long or complex [media queries](/en-US/docs/Web/CSS/Guides/Media_queries). Instead of repeating the same hardcoded `<media-query-list>` in multiple [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed.
+The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) defines aliases for long or complex [media queries](/en-US/docs/Web/CSS/Guides/Media_queries). Instead of repeating the same hardcoded `<media-query-list>` in multiple {{cssxref("@media")}} at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) de
 ### Values
 
 - `<extension-name>`
-  - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident); the name identifying the custom media query.
+  - : A {{cssxref("dashed-ident")}}; the name identifying the custom media query.
 - Represented value
   - : The value aliased by the custom media query. Possible values are:
     - `<media-query-list>`
@@ -35,7 +35,7 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) de
 
 ## Description
 
-When building responsive interfaces, the same media condition often needs to be repeated across multiple [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rules, sometimes across different files and teams. Duplicating media queries increases the risk of mistakes, makes refactoring harder, and creates unnecessary maintenance overhead. Any time a media query changes, every instance must be found and updated manually — a process that can be both error-prone and difficult to track in large codebases.
+When building responsive interfaces, the same media condition often needs to be repeated across multiple {{cssxref("@media")}} at-rules, sometimes across different files and teams. Duplicating media queries increases the risk of mistakes, makes refactoring harder, and creates unnecessary maintenance overhead. Any time a media query changes, every instance must be found and updated manually — a process that can be both error-prone and difficult to track in large codebases.
 
 The `@custom-media` at-rule solves this problem by letting you define **named aliases** for media queries. Instead of repeating the full media query everywhere, you declare the media condition once as a custom media query and reference its alias throughout your stylesheets. With this in place, updating the underlying media query requires a single change in one location.
 
@@ -233,7 +233,7 @@ The initial definition of `--mobile-breakpoint` is overridden and therefore igno
 
 ## See also
 
-- CSS [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) at-rule
-- CSS [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import) at-rule
+- CSS {{cssxref("@media")}} at-rule
+- CSS {{cssxref("@import")}} at-rule
 - [Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
 - [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module

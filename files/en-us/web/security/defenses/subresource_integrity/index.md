@@ -49,7 +49,7 @@ So `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` is the "ha
 
 #### SRI Hash Generator
 
-The [SRI Hash Generator](https://www.srihash.org/) is an online tool you can use to generate SRI hashes.
+The [SRI Hash Generator](https://srihash.org/) is an online tool you can use to generate SRI hashes.
 
 #### Using OpenSSL
 
@@ -191,4 +191,4 @@ Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrit
 - [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP)
 - The {{httpheader("Content-Security-Policy")}} HTTP header.
 - [A CDN that can not XSS you: Using Subresource Integrity](https://frederikbraun.de/using-subresource-integrity.html)
-- [SRI Hash Generator](https://www.srihash.org/)
+- [SRI Hash Generator](https://srihash.org/)

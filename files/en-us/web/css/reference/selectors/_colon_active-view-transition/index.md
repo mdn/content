@@ -20,7 +20,7 @@ The **`:active-view-transition`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-
 
 ### Styling an active view transition
 
-This example extends on the [same-document view transition](/en-US/docs/Web/API/Document/startViewTransition#using_a_same-document_view_transition) example on the `startViewTransition` page.
+This example extends the [Basic view transition example](/en-US/docs/Web/API/Document/startViewTransition#basic_usage) on the `startViewTransition` page.
 
 ```html
 <main>
@@ -103,5 +103,9 @@ changeColorButton.addEventListener("keypress", changeColor);
 
 ## See also
 
-- {{CSSXRef(":active-view-transition-type", ":active-view-transition-type()")}} pseudo-class
-- [`startViewTransition`](/en-US/docs/Web/API/Document/startViewTransition) method
+- {{cssxref(":active-view-transition-type()")}} pseudo-class
+- [`startViewTransition()`](/en-US/docs/Web/API/Document/startViewTransition) method
+- {{domxref("Document.activeViewTransition")}}
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)
+- [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
+- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types)

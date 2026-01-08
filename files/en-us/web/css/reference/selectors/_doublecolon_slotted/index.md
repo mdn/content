@@ -176,8 +176,8 @@ Our markup includes three custom elements, including a custom element with an in
 ## See also
 
 - {{cssxref(":host")}}
-- {{cssxref(":host_function", ":host()")}}
-- {{cssxref(":host-context", ":host-context()")}}
+- {{cssxref(":host()")}}
+- {{cssxref(":host-context()")}}
 - {{cssxref(":has-slotted")}}
 - [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
 - HTML [`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) attribute

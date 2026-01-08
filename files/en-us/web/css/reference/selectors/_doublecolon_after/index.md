@@ -60,7 +60,7 @@ The `::after` pseudo-element is an inline box generated as an immediate child of
 
 An `::after` pseudo-element with a {{cssxref("display")}} value of `list-item` behaves like a list item, and can therefore generate a {{cssxref("::marker")}} pseudo-element just like an {{htmlelement("li")}} element.
 
-If the [`content`](/en-US/docs/Web/CSS/Reference/Properties/content) property is not specified, has an invalid value, or has `normal` or `none` as a value, then the `::after` pseudo-element is not rendered. It behaves as if `display: none` is set.
+If the {{cssxref("content")}} property is not specified, has an invalid value, or has `normal` or `none` as a value, then the `::after` pseudo-element is not rendered. It behaves as if `display: none` is set.
 
 > [!NOTE]
 > The [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) specification introduced the double-colon notation `::after` to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Browsers also accept single-colon notation `:after`, introduced in CSS2.
@@ -82,7 +82,7 @@ Let's create two classes: one for boring paragraphs and one for exciting ones. W
 ```html
 <p class="boring-text">Here is some plain old boring text.</p>
 <p>Here is some normal text that is neither boring nor exciting.</p>
-<p class="exciting-text">Contributing to MDN is easy and fun.</p>
+<p class="exciting-text">Contributing to MDN is fun.</p>
 ```
 
 #### CSS

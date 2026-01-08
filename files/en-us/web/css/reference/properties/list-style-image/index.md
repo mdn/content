@@ -96,7 +96,7 @@ list-style-image: unset;
 
 ### Values
 
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
   - : A valid image to use as the marker.
 - `none`
   - : Specifies that no image is used as the marker. If this value is set, the marker defined in {{ Cssxref("list-style-type") }} will be used instead. This is the default value for {{cssxref("list-style")}}.

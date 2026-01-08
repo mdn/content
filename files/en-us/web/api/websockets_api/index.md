@@ -37,7 +37,7 @@ Additionally, the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is ex
 The HTTP headers are used in the [WebSocket handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake):
 
 - {{HTTPHeader("Sec-WebSocket-Key")}}
-  - : An HTTP request header that contains a nonce from the client.
+  - : An HTTP request header that contains a {{Glossary("Nonce", "nonce")}} from the client.
     This is used in the [WebSocket opening handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) to verify that the client explicitly intends to open a WebSocket.
     It is added automatically by the browser.
 - {{HTTPHeader("Sec-WebSocket-Accept")}}
