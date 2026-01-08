@@ -44,7 +44,7 @@ The `fetchLater()` method takes all the same parameters as {{domxref("Window.fet
 The [same exceptions for `fetch()`](/en-US/docs/Web/API/Window/fetch#exceptions) can be raised for `fetchLater()`, along with the following additional exceptions:
 
 - {{domxref("QuotaExceededError")}}
-  - : Use of this feature was blocked due to exceeding the available quota. See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details. Callers of `fetchLater()` should be defensive and catch `QuotaExceededError` errors in almost all cases, especially if they are embedding third-party JavaScript.
+  - : Use of this feature was blocked due to exceeding the available quota. See [`fetchLater()` quotas](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas) for more details. Callers of `fetchLater()` should be defensive and catch `QuotaExceededError` errors in almost all cases, especially if they are embedding third-party JavaScript.
 
 - `RangeError` {{domxref("DOMException")}}
   - : Thrown when a negative `activateAfter` value is specified.
@@ -61,7 +61,7 @@ A {{domxref("FetchLaterResult")}} containing an `activated` boolean property ind
 
 ## Examples
 
-The [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) article provides examples of how the quotas are applied.
+The [`fetchLater()` quotas](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch) article provides examples of how the quotas are applied.
 
 ### Defer a `GET` request until the page is navigated away from or closed
 
@@ -176,7 +176,6 @@ detachedWindow.fetchLater("https://origin.example.com");
 
 ## See also
 
-- [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API)
-- [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas)
+- [Using Deferred Fetch](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch)
 - {{domxref("FetchLaterResult")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
