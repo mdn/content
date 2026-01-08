@@ -75,5 +75,6 @@ Permissions-Policy: deferred-fetch-minimal=()
 ## See also
 
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- {{domxref("window.fetchLater()")}}
 - {{HTTPHeader("Permissions-Policy")}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
