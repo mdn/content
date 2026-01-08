@@ -6,9 +6,7 @@ browser-compat: javascript.builtins.undefined
 sidebar: jssidebar
 ---
 
-The **`undefined`** global property represents the primitive
-value [`undefined`](/en-US/docs/Web/JavaScript/Guide/Data_structures#undefined_type). It is one of JavaScript's
-{{Glossary("Primitive", "primitive types")}}.
+The **`undefined`** global property represents the primitive value [`undefined`](/en-US/docs/Web/JavaScript/Guide/Data_structures#undefined_type). It is one of JavaScript's {{Glossary("Primitive", "primitive types")}}.
 
 {{InteractiveExample("JavaScript Demo: undefined")}}
 
@@ -38,10 +36,7 @@ The primitive value [`undefined`](/en-US/docs/Web/JavaScript/Guide/Data_structur
 
 In all non-legacy browsers, `undefined` is a non-configurable, non-writable property. Even when this is not the case, avoid overriding it.
 
-A variable that has not been assigned a value is of type `undefined`. A
-method or statement also returns `undefined` if the variable that is being
-evaluated does not have an assigned value. A function returns `undefined` if
-a value was not {{jsxref("Statements/return", "returned")}}.
+A variable that has not been assigned a value is of type `undefined`. A function returns `undefined` if a value was not {{jsxref("Statements/return", "returned")}}. Accessing a property that does not exist also returns `undefined`. The {{jsxref("Operators/void", "void")}} operator always returns `undefined`.
 
 > [!NOTE]
 > While you can use `undefined` as an {{Glossary("identifier")}} (variable name) in any scope other than the global scope (because `undefined` is not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)), doing so is a very bad idea that will make your code difficult to maintain and debug.
@@ -63,9 +58,7 @@ a value was not {{jsxref("Statements/return", "returned")}}.
 
 ### Strict equality and undefined
 
-You can use `undefined` and the strict equality and inequality operators to
-determine whether a variable has a value. In the following code, the variable
-`x` is not initialized, and the `if` statement evaluates to true.
+You can use `undefined` and the strict equality and inequality operators to determine whether a variable has a value. In the following code, the variable `x` is not initialized, and the `if` statement evaluates to true.
 
 ```js
 let x;
@@ -77,17 +70,13 @@ if (x === undefined) {
 ```
 
 > [!NOTE]
-> The _strict equality_ operator (as opposed to the
-> _standard equality_ operator) must be used here, because
-> `x == undefined` also checks whether `x` is `null`,
-> while strict equality doesn't. This is because `null` is not equivalent to
-> `undefined`.
+> The _strict equality_ operator (as opposed to the _loose equality_ operator) must be used here, because `x == undefined` also checks whether `x` is `null`, while strict equality doesn't. This is because `null` is not equivalent to `undefined`.
 >
 > See [Equality comparison and sameness](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) for details.
 
 ### typeof operator and undefined
 
-{{jsxref("Operators/typeof", "typeof")}} can be used to determine whether a variable is `undefined`:
+{{jsxref("Operators/typeof", "typeof")}} can also determine whether a variable is `undefined`:
 
 ```js
 let x;
@@ -96,30 +85,30 @@ if (typeof x === "undefined") {
 }
 ```
 
-> [!NOTE]
-> Accessing Lexical Declarations (`const` and `let`) _before_ before initialization
-> produces a `ReferenceError`, even when the check uses `typeof`. This is due
-> to the {{jsxref("Statements/let#temporal_dead_zone_tdz", "temporal dead zone (TDZ)")}}.
->
-> ```js example-bad
-> if (typeof z === "undefined") {
->   // Uncaught ReferenceError: Cannot access 'z' before initialization
-> }
-> let z = 1;
-> ```
->
-> In contrast, `var` declarations are hoisted and initialized to `undefined`, so `typeof` checks work as expected:
->
-> ```js
-> if (typeof y === "undefined") {
->   // these statements execute
-> }
-> var y = 1;
-> ```
+One reason to use {{jsxref("Operators/typeof", "typeof")}} is that it does not throw an error if the variable does not exist in the current scope.
 
-The global scope is bound to the {{jsxref("globalThis", "global object", "", 1)}}, so
-checking the existence of a variable in the global context can be done by checking the
-existence of a property on the _global object_, for instance, by using the {{jsxref("Operators/in", "in")}} operator:
+```js
+// x has not been declared before
+// evaluates to true without errors
+if (typeof x === "undefined") {
+  // these statements execute
+}
+
+// Throws a ReferenceError
+if (x === undefined) {
+}
+```
+
+It also works with variables declared with `var` _after_ the check, because the declaration is hoisted to the top of the scope with value `undefined`.
+
+```js
+if (typeof x === "undefined") {
+  // these statements execute
+}
+var x = 1;
+```
+
+This technique is usually only useful for testing global variables. You can know if a variable exists at any other scope (blocks, functions, modules, etc.) just by looking at the source code. The global scope is bound to the {{jsxref("globalThis", "global object", "", 1)}}, so checking the existence of a variable in the global context can be done by checking the existence of a property on the _global object_, such as by using the {{jsxref("Operators/in", "in")}} operator:
 
 ```js
 if ("x" in window) {
@@ -127,9 +116,33 @@ if ("x" in window) {
 }
 ```
 
+However, none of the techniques above work if the variable is declared with `let`, `const`, or other lexical declarations. Using `typeof` before the line of declaration still produces a `ReferenceError`, due to the {{jsxref("Statements/let#temporal_dead_zone_tdz", "temporal dead zone (TDZ)")}}.
+
+```js example-bad
+if (typeof z === "undefined") {
+  // Uncaught ReferenceError: Cannot access 'z' before initialization
+}
+let z = 1;
+```
+
+Furthermore, `let` and `const` declarations do not create properties on the global object, so they cannot be checked with the `in` operator either.
+
+```js example-bad
+let z;
+if ("z" in window) {
+  // false, even if z is declared globally with let or const
+}
+```
+
+If you want to share global variables across different scripts, it is more advisable to use `var` or explicitly attach them to the global object:
+
+```js
+window.myGlobalVar = "foo";
+```
+
 ### void operator and undefined
 
-The {{jsxref("Operators/void", "void")}} operator is a third alternative.
+The {{jsxref("Operators/void", "void")}} operator can also be used to produce the `undefined` value. This is very commonly seen in minified code because `void 0` is 3 bytes shorter and cannot be overridden. You should usually avoid this pattern in your own code.
 
 ```js
 let x;
