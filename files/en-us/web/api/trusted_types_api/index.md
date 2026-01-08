@@ -159,10 +159,13 @@ These cases are evaluated the untrusted script is added to the document.
 
 #### TrustedScript
 
-- [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- {{jsxref("AsyncFunction")}}
+- {{jsxref("AsyncGeneratorFunction")}}
+- {{jsxref("eval()")}}
 - [`Element.setAttribute()`](/en-US/docs/Web/API/Element/setAttribute#value) (`value` argument)
 - [`Element.setAttributeNS()`](/en-US/docs/Web/API/Element/setAttributeNS#value) (`value` argument)
 - [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
+- {{jsxref("GeneratorFunction")}}
 - {{domxref("HTMLScriptElement.innerText")}}
 - {{domxref("HTMLScriptElement.textContent")}}
 - {{domxref("HTMLScriptElement.text")}}
