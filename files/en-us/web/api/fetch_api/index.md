@@ -38,7 +38,8 @@ The {{domxref("Window/fetchLater", "fetchLater()")}} API enables a developer to 
 - {{domxref("DeferredRequestInit")}}
   - : Represents the set of options that can be used to configure a deferred fetch request.
 - {{domxref("FetchLaterResult")}}
-  - : Represents the result of requesting a deferred fetch.- {{DOMxRef("Headers")}}
+  - : Represents the result of requesting a deferred fetch.
+- {{DOMxRef("Headers")}}
   - : Represents response/request headers, allowing you to query them and take different actions depending on the results.
 - {{DOMxRef("Request")}}
   - : Represents a resource request.
