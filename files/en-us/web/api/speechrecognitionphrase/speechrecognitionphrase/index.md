@@ -30,7 +30,6 @@ new SpeechRecognitionPhrase(phrase, boost)
     > [!NOTE]
     > A high value such as `9.0` or `10.0` might make the recognition engine erroneously recognize other phrases as the specified phrase. Therefore, such values should be used rarely when constructing `SpeechRecognitionPhrase` objects.
 
-
 ### Return value
 
 A new {{domxref("SpeechRecognitionPhrase")}} object.
