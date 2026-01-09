@@ -202,7 +202,7 @@ ul::scroll-button(right) {
 ```
 
 > [!NOTE]
-> The intent is that the scroll buttons are automatically given an appropriate accessible name, so they are announced appropriately by assistive technologies. No browser currently supports that, however. In the future, the above buttons will have an implicit [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) of `button` and their {{glossary("accessible name", "accessible names")}} will be "scroll left" and "scroll right", respectively. Until then, you must add the alternative text.
+> User agents should automatically give an appropriate accessible name to generated scroll buttons so that assistive technologies can appropriately announced them and the buttons should have an implicit [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) of `button`. Providing [alternative text for generated content](/en-US/docs/Web/CSS/Reference/Properties/content#alternative_text_string_counter) ensures the buttons have the {{glossary("accessible name", "accessible names")}} of "scroll left" and "scroll right" in user agents that don't natively include scroll button accessibility features.
 
 ### Positioning scroll buttons
 
