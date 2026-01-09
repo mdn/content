@@ -15,7 +15,7 @@ browser-compat: api.WorkerGlobalScope.importScripts
 > You can mitigate this risk by having a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that restricts the locations from which scripts can be loaded, and by always assigning {{domxref("TrustedScriptURL")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
 > See [Security considerations](#security_considerations) for more information.
 
-The **`importScripts()`** method of the {{domxref("WorkerGlobalScope")}} interface synchronously imports one or more scripts into the scope of a classic worker.
+The **`importScripts()`** method of the {{domxref("WorkerGlobalScope")}} interface synchronously imports one or more scripts into the scope of a [classic worker](/en-US/docs/Web/API/Worker/Worker#module_and_classic_workers) (a worker constructed from a classic script).
 
 Note that the method cannot be used in [module workers](/en-US/docs/Web/API/Worker/Worker#module_and_classic_workers), which instead load dependenices using [`import` statements](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 
@@ -51,12 +51,12 @@ None ({{jsxref("undefined")}}).
 The **`importScripts()`** method synchronously imports one or more scripts into the scope of a classic worker.
 
 Unlike the initial classic module script, which must be same-origin with its document, this method can import cross-origin scripts unless blocked by a {{httpheader("Cross-Origin-Resource-Policy")}}, [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), or some other security mechanism.
-Note that because classic scripts are fetched in `no-cors` mode, they are not blocked by CORS.
+Note that because classic scripts are fetched in `no-cors` mode, they can be fetched cross-origin even if the server does not set the appropriate CORS headers.
 
 ### Security considerations
 
 The parameters specify scripts to be imported into the scope of a classic worker.
-If the input is provided by a user, this is a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+If the URLs for the scripts are provided by a user, this is a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 
 It is extremely risky to accept and execute arbitrary URLs from untrusted origins.
 A website should control what scripts that are allowed to run using a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) with the [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src) directive (or a fallback defined in [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src)).
@@ -83,7 +83,7 @@ This was omitted in this example for brevity, but is recommended in production c
 ### Using TrustedScriptURL
 
 To mitigate the risk of XSS, we should always assign `TrustedScriptURL` instances to each of the parameters.
-We also need to do this if we're enforcing trusted types for other reasons and we want to allow some script sources that have been permitted (by `CSP: worker-src`).
+We also need to do this if we're enforcing trusted types for other reasons and we want to allow some script sources that have been permitted (for example, by `CSP: script-src`).
 
 Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
 This acts as a transparent replacement for the trusted types JavaScript API:
@@ -112,7 +112,7 @@ const policy = trustedTypes.createPolicy("script-url-policy", {
 });
 ```
 
-Then we use the `policy` object to create a `trustedScript` object from a potentially unsafe input string:
+Then we use the `policy` object to create a `TrustedScript` object from a potentially unsafe input string:
 
 ```js
 // The potentially malicious string
@@ -123,7 +123,7 @@ const untrustedScript = "https://evil.example.com/import_worker.js";
 const trustedScriptURL = policy.createScriptURL(untrustedScript);
 ```
 
-The `trustedScriptURL` property can now be used when importing the script in a classic worker:
+The `TrustedScriptURL` object can now be used when importing the script in a classic worker:
 
 ```js
 importScripts(trustedScriptURL);
