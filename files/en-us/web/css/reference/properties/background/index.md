@@ -117,17 +117,28 @@ The `background` shorthand property enables you to declare all CSS background pr
 
 The `background` property is specified as one or more background layers, separated by commas. Each layer may include zero, one, or two `<visual-box>` components and zero or one `<attachment>`, `<bg-image>`, `<bg-position>`, `<bg-size>`, and `<repeat-style>` components. If two `<bg-position>`, `<bg-size>`, or `<repeat-style>` components are specified, the first value is the horizontal value and the second value is the vertical value. If only a single value is set, that value is applied to both dimensions.
 
-Component properties not set in the `background` shorthand property value declaration are set to their default values.
-
 The `<'background-color'>` component may only be included in the last background layer specified.
+
+Component properties not set in the `background` shorthand property value declaration are set to their default values.
 
 ### Component property order
 
 Because some of the component properties share value types, the order of those component properties within the shorthand is important.
 
-The `<bg-size>` value may only be included immediately after `<bg-position>`, separated with the `/` character. For example: `10px 10px / 80% 80%` means the background image is `80%` as tall and as wide as the element, and will be positioned `10px` from the top and `10px` from the left of the element's top-left corner.
+The `<bg-size>` value may only be included immediately after `<bg-position>`, separated with the `/` character. For example: `10px 10px / 80% 80%` means the background image is `80%` as tall and as wide as the element, and will be positioned `10px` from the top and `10px` from the left of the element's top-left corner. Within the `<bg-position>`, if both values are lengths, or one is a length and the other is `center`, the first value refers to the horizontal position and the second value refers to the vertical position.
 
 Each background layer can include zero, one, or two [`<visual-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#visual-box) values. If only one value is included, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If two values are present, the first occurrence specifies the `background-origin` and the second specifies the `background-clip` value. If no `<visual-box>` values are present, the `background-origin` defaults to `border-box` and the `background-clip` defaults to `padding-box`.
+
+While there is no order requirement for the other background properties, the following order is recommended for consistency and legibility, while remembering that none of the values are required:
+
+`<bg-image> <bg-position> / <bg-size> <repeat-style> <attachment> <bg-clip> <bg-origin> <'background-color'>`
+
+The following `background` explicitly sets all the default values:
+
+```css
+background: none 0% 0% / auto auto repeat scroll border-box padding-box
+  transparent;
+```
 
 ### Image painting order
 
