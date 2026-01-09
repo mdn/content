@@ -34,14 +34,18 @@ new Worker(url, options)
     The URL is resolved relative to the current HTML page's location.
 
 - `options` {{optional_inline}}
+
   - : An object containing option properties that can be set when creating the object instance.
     Available properties are as follows:
+
     - `credentials`
+
       - : A string specifying whether the browser sends credentials when importing modules into a module worker.
         The allowed values are the same as can be passed to the [`fetch()` request](/en-US/docs/Web/API/RequestInit#credentials): `omit`, `same-origin`, or `include`.
         The default is `same-origin` (only include credentials for same-origin requests).
 
         This is ignored for classic workers.
+
     - `name`
       - : A string specifying an identifying name for the {{domxref("DedicatedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
     - `type`
