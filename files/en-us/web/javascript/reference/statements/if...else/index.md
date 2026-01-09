@@ -14,10 +14,10 @@ The **`if...else`** statement executes a statement if a specified condition is {
 function testNum(a) {
   let result;
   if (a > 0) {
-  result = "positive";
-} else {
-  result = "not positive";
-}
+    result = "positive";
+  } else {
+    result = "not positive";
+  }
   return result;
 }
 
