@@ -103,16 +103,6 @@ background: unset;
 
 ## Description
 
-The following three lines of CSS are equivalent:
-
-```css
-background: none;
-background: transparent;
-background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
-```
-
-### Property components
-
 The `background` shorthand property enables you to declare all CSS background properties in a single declaration. The background lies underneath the content of an element. When you have multiple, comma-separated background values, each is a background layer that is painted on top of the previous layers.
 
 The `background` property is specified as one or more background layers, separated by commas. Each layer may include zero, one, or two `<visual-box>` components and zero or one `<attachment>`, `<bg-image>`, `<bg-position>`, `<bg-size>`, and `<repeat-style>` components. If two `<bg-position>`, `<bg-size>`, or `<repeat-style>` components are specified, the first value is the horizontal value and the second value is the vertical value. If only a single value is set, that value is applied to both dimensions.
@@ -133,11 +123,19 @@ While there is no order requirement for the other background properties, the fol
 
 `<bg-image> <bg-position> / <bg-size> <repeat-style> <attachment> <bg-clip> <bg-origin> <'background-color'>`
 
-The following `background` explicitly sets all the default values:
+The following `background` explicitly sets all the default values in this order:
 
 ```css
 background: none 0% 0% / auto auto repeat scroll border-box padding-box
   transparent;
+```
+
+The following three lines of CSS are equivalent to the above, even if the order differs:
+
+```css
+background: none;
+background: transparent;
+background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
 ```
 
 ### Image painting order
