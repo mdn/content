@@ -14,15 +14,15 @@ The **`if...else`** statement executes a statement if a specified condition is {
 function testNum(a) {
   let result;
   if (a > 0) {
-    result = "positive";
-  } else {
-    result = "NOT positive";
-  }
+  result = "positive";
+} else {
+  result = "not positive";
+}
   return result;
 }
 
 console.log(testNum(-5));
-// Expected output: "NOT positive"
+// Expected output: "not positive"
 ```
 
 ## Syntax
