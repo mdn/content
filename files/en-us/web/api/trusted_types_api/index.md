@@ -139,7 +139,7 @@ element.innerHTML = userInput;
 This section provides a list of "direct" injection sink interfaces.
 
 These are the API properties and methods which perform trusted type checks when they are evaluated.
-They can be passed trusted types (`TrustedHTML`, `TrustedScript`, or `TrustedScriptURL`) as well as strings, and must be passed trusted types when trusted type enforcement is enabled.
+They can be passed trusted types (`TrustedHTML`, `TrustedScript`, or `TrustedScriptURL`) as well as strings, and must be passed trusted types when trusted type enforcement is enabled and no default policy is defined.
 
 #### TrustedHTML
 
@@ -192,7 +192,7 @@ Next the script element is added to the DOM as a child of the {{htmlelement("bod
 
 ```js
 // Create a text node
-const unstrustedString = "/* Potentially malcious JavaScript code */";
+const unstrustedString = "/* Potentially malicious JavaScript code */";
 const textNode = document.createTextNode(unstrustedString);
 
 // Create a script element and add the text node
@@ -201,9 +201,10 @@ script.appendChild(textNode);
 document.body.appendChild(script);
 ```
 
-Because a text node isn't always used in a context where the text might be used as an injection sink, it does enforce trusted types.
+Because a text node won't always used in contexts where its text is executable, trusted type checking isn't performed when the untrusted string is used to create the node.
 
-Instead, browsers that are enforcing trusted types will run trusted type checks when indirect injection sinks are is injected into the DOM (in the example above, when `appendChild()` is called).
+Instead, browsers run the trusted type checks when potentially untrustworthy code is about to be executed.
+In the example above, this is when `document.body.appendChild(script)` is called to add the script element to the DOM.
 This will cause an exception if the text node was constructed with a string rather than an appropriate trusted type.
 
 ### Cross-browser support for trusted types
