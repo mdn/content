@@ -58,6 +58,51 @@ function makeRSA(p, q) {
 }
 ```
 
+## Error.cause vs SuppressedError
+
+`Error.cause` is used to associate a single underlying error with a new error, providing additional context about why an operation failed.
+
+`SuppressedError` is designed for scenarios where multiple errors occur, but one error should be treated as the primary failure while other errors are preserved for debugging.
+
+### When to use each
+
+| Situation                                             | Use               |
+| ----------------------------------------------------- | ----------------- |
+| Wrap a single underlying error                        | `Error.cause`     |
+| Preserve multiple related errors                      | `SuppressedError` |
+| Add context while rethrowing                          | `Error.cause`     |
+| Report secondary failures without losing the main one | `SuppressedError` |
+
+### Examples
+
+Using `Error.cause`:
+
+```js
+try {
+  readFile("config.json");
+} catch (err) {
+  throw new Error("Failed to load configuration", { cause: err });
+}
+```
+
+Using `SuppressedError`:
+
+```js
+try {
+  doWork();
+} catch (primaryError) {
+  try {
+    cleanup();
+  } catch (cleanupError) {
+    throw new SuppressedError(
+      cleanupError,
+      primaryError,
+      "Cleanup failed after work error",
+    );
+  }
+}
+```
+
 ## Specifications
 
 {{Specifications}}
