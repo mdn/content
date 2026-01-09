@@ -151,6 +151,7 @@ const thenable = {
 
 Promise.resolve(thenable); // A promise fulfilled with 42
 ```
+
 A thenable’s `.then()` method is expected to call its fulfillment or rejection handlers synchronously.
 Implementing `.then()` as an `async` function is incorrect and can cause errors to escape Promise error handling.
 
