@@ -42,6 +42,8 @@ None ({{jsxref("undefined")}}).
 
 - `NetworkError`
   - : Imported scripts were served without a `text/javascript` media (MIME) type or without one of the permitted [legacy JavaScript MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types#legacy_javascript_mime_types).
+- {{jsxref("SyntaxError")}}
+  - : Thrown if any URL cannot be resolved.
 - {{jsxref("TypeError")}}
   - : Thrown if the current {{domxref("WorkerGlobalScope")}} is a module (use [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) instead).
     It may also happen if any parameter is not a {{domxref("TrustedScriptURL")}} and the site is [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
