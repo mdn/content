@@ -151,6 +151,22 @@ const thenable = {
 
 Promise.resolve(thenable); // A promise fulfilled with 42
 ```
+A thenable’s `.then()` method is expected to call its fulfillment or rejection handlers synchronously.
+Implementing `.then()` as an `async` function is incorrect and can cause errors to escape Promise error handling.
+
+This is because `async` functions always wrap thrown errors in a returned `Promise`, while Promise resolution expects thenables to signal errors either by throwing synchronously or by explicitly calling the rejection handler.
+
+For example, using an `async` `.then()` method can result in thrown errors not being handled as expected during Promise resolution:
+
+```js
+const badThenable = {
+  async then(onFulfilled, onRejected) {
+    throw new Error("This error may not be handled as a rejection");
+  },
+};
+
+Promise.resolve(badThenable);
+```
 
 ### Promise concurrency
 
