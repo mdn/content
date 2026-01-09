@@ -27,22 +27,27 @@ new Worker(url, options)
 ### Parameters
 
 - `url`
+
   - : A {{domxref("TrustedScriptURL")}} object or a string representing the URL of the script or module that the worker will execute.
+
     This must be same-origin with the caller's document, or a `blob:` or `data:` URL.
     The URL is resolved relative to the current HTML page's location.
+
 - `options` {{optional_inline}}
   - : An object containing option properties that can be set when creating the object instance.
     Available properties are as follows:
     - `credentials`
-      - : A string specifying the type of credentials to use for the worker.
-        The value can be `omit`, `same-origin`, or _`include`.
-        If not specified, or if type is `classic`, the default used is `same-origin` (only include credentials for same-origin requests)._
+      - : A string specifying whether the browser sends credentials when importing modules into a module worker.
+        The allowed values are the same as can be passed to the [`fetch()` request](/en-US/docs/Web/API/RequestInit#credentials): `omit`, `same-origin`, or `include`.
+        The default is `same-origin` (only include credentials for same-origin requests).
+
+        This is ignored for classic workers.
     - `name`
       - : A string specifying an identifying name for the {{domxref("DedicatedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
     - `type`
       - : A string specifying the type of worker to create.
         The value can be `classic` or `module`.
-        If not specified, the default used is `classic`.
+        The default is `classic`.
 
 ### Exceptions
 
@@ -65,7 +70,7 @@ If a cross-origin worker is required, users must load it from an intermediate sa
 
 ### Module and classic workers
 
-A classic worker is one that hat is constructed from a classic script, while a module worker is constructed from an [ECMASCript module](/en-US/docs/Web/JavaScript/Guide/Modules).
+A classic worker is one that that is constructed from a classic script, while a module worker is constructed from an [ECMASCript module](/en-US/docs/Web/JavaScript/Guide/Modules).
 The type of worker affects the worker constructor options, how the worker script is fetched, and how it is executed.
 
 The code below shows two ways you can construct a classic worker, and also how you specify the `type` of `"module"` to create a module worker.
@@ -86,20 +91,29 @@ const worker3 = new Worker("worker_module.js", {
 
 Module workers and their dependencies are loaded and executed using ECMAScript module semantics:
 
-- Fetched using [CORS](/en-US/docs/Web/HTTP/Guides/CORS)
+- Dependencies are imported via static [`import` statements](/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- Fetched asynchronously using [CORS](/en-US/docs/Web/HTTP/Guides/CORS).
 - All modules are resolved before any code is executed
 - Must be served with the media type `Content-Type: text/javascript`
 - Executed in {{glossary("Strict mode")}}
-- Dependencies are loaded via static [`import` statements](/en-US/docs/Web/JavaScript/Reference/Statements/import)
 
-All same-origin workers can load same-origin scripts by default.
-However because module scripts are fetched using CORS, cross-origin scripts must be served with the {{httpheader("Access-Control-Allow-Origin")}} header.
-In addition, the if the document has a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), it must allow the origins of imported worker scripts in `worker-src` (with fallback to `script-src` and `default-src` directives).
+Classic workers are fetched and executed as scripts:
 
-Classic workers are fetched in `no-cors` mode and are executed as scripts rather than modules.
-They can themselves import other scripts using {{domxref("WorkerGlobalScope.importScripts()")}} (not `import` statements), and these are also fetched in `no-cors` mode.
-Because imports are fetched in `no-cors` mode, scripts can be requested cross-origin even if the server does not set the appropriate CORS headers.
-Unlike for modules, the document [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) is not affected by the `worker-src` directive, but it is still affected by sources listed in the `script-src` directive.
+- Dependencies are imported using the {{domxref("WorkerGlobalScope.importScripts()")}} method
+- Fetched synchonously in `no-cors` mode
+
+### Importing scripts or modules
+
+Module workers can import [ECMASCript modules](/en-US/docs/Web/JavaScript/Guide/Modules) using [`import` statements](/en-US/docs/Web/JavaScript/Reference/Statements/import).
+Modules are fetched using CORS, so cross-origin modules must be served with the {{httpheader("Access-Control-Allow-Origin")}} header in order to be loaded.
+Developers can specify whether or not credentials should be sent in cross-origin imports.
+
+Classic workers can import scripts (but not modules) using the {{domxref("WorkerGlobalScope.importScripts()")}} method.
+Unlike modules, scripts are fetched in `no-cors` mode, and can be requested cross-origin even if the server does not set the appropriate CORS headers.
+Credentials are sent for same-origin imports, but are usully not sent for cross-origin requests.
+
+In addition, if the document has a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), it must allow the origins of imported scripts or modules.
+For modules the allowed sources are specified in `worker-src` (with fallback to `script-src` and `default-src` directives), while for classic scripts the sources are specified in `script-src` (with fallback to the `default-src` directives).
 
 ### `data:` and `blob:` URLs
 
