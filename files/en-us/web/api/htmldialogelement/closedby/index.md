@@ -16,11 +16,11 @@ The **`closedBy`** property of the
 A string; possible values are:
 
 - `any`
-  - : The dialog can be dismissed by a user initiated close request or clicks outside the dialog.
+  - : The dialog can be dismissed with a light dismiss user action, a platform-specific user action, or a developer-specified mechanism.
 - `closerequest`
-  - : The dialog can only be dismissed by a user initiated close request.
+  - : The dialog can be dismissed with a platform-specific user action or a developer-specified mechanism.
 - `none`
-  - : The dialog can only be dismissed with a developer-specified mechanism. User actions such as clicking outside the dialog have no effect.
+  - : The dialog can only be dismissed with a developer-specified mechanism.
 
 ### Default behaviour
 
