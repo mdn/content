@@ -16,13 +16,13 @@ function testNum(a) {
   if (a > 0) {
     result = "positive";
   } else {
-    result = "NOT positive";
+    result = "not positive";
   }
   return result;
 }
 
 console.log(testNum(-5));
-// Expected output: "NOT positive"
+// Expected output: "not positive"
 ```
 
 ## Syntax
