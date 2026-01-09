@@ -3,12 +3,15 @@ title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
 page-type: css-at-rule
 browser-compat: css.at-rules.container
+spec-urls:
+  - https://drafts.csswg.org/css-conditional-5/#container-type
+  - https://drafts.csswg.org/css-anchor-position-2/#container-rule-anchored
 sidebar: cssref
 ---
 
 The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#naming_containment_contexts).
 Style declarations are filtered by a condition and applied to the container if the condition is true.
-The condition is evaluated when the queried container size, [`<style-feature>`](#container_style_queries), or scroll-state changes.
+The condition is evaluated when the queried container size, [`<style-feature>`](#container_style_queries), scroll-state, or state of the applied [position-try fallback](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) (in the case of [anchor-positioned](/en-US/docs/Web/CSS/Guides/Anchor_positioning) containers) changes.
 
 The {{cssxref("container-name")}} property specifies a list of query container names. These names can be used by `@container` rules to filter which query containers are targeted. The optional, case-sensitive `<container-name>` filters the query containers that are targeted by the query.
 
@@ -35,6 +38,15 @@ Once an eligible query container has been selected for an element, each containe
 @container scroll-state(scrollable: top) {
   .back-to-top-link {
     visibility: visible;
+  }
+}
+
+/* With an anchored query */
+@container anchored(fallback: bottom) {
+  .infobox::before {
+    content: "▲";
+    bottom: 100%;
+    top: auto;
   }
 }
 
@@ -68,7 +80,7 @@ Once an eligible query container has been selected for an element, each containe
     - `<container-name>`
       - : Optional. The name of the container that the styles will be applied to when the query evaluates to true, specified as an {{cssxref("ident")}}.
     - `<container-query>`
-      - : A set of features that are evaluated against the query container when the size, [`<style-feature>`](#container_style_queries), or scroll-state of the container changes.
+      - : A set of features that are evaluated against the query container when the size, [`<style-feature>`](#container_style_queries), scroll-state, or applied position-try fallback of the container changes.
 
 ### Logical keywords in container queries
 
@@ -123,7 +135,7 @@ Details about usage and naming restrictions are described in the {{cssxref("cont
 
 ### Descriptors
 
-The `<container-condition>` queries include [size](#size_container_descriptors) and [scroll-state](#scroll-state_container_descriptors) container descriptors.
+The `<container-condition>` queries include [size](#size_container_descriptors), [scroll-state](#scroll-state_container_descriptors), and [anchored](#anchored_container_descriptors) container descriptors.
 
 #### Size container descriptors
 
@@ -175,7 +187,7 @@ Scroll-state container descriptors are specified inside the `<container-conditio
 }
 ```
 
-Supported keywords for scroll-state container descriptors include physical and {{glossary("flow relative values")}}
+Supported keywords for scroll-state container descriptors include physical and {{glossary("flow relative values")}}.
 
 - `scrollable`
   - : Queries whether the container can be scrolled in the given direction via user-initiated scrolling, such as by dragging the scrollbar or using a trackpad gesture. In other words, is there overflowing content in the given direction that can be scrolled to? Valid `scrollable` values include the following keywords:
@@ -289,6 +301,27 @@ Supported keywords for scroll-state container descriptors include physical and {
       /* … */
     }
     ```
+
+#### Anchored container descriptors
+
+Anchored container descriptors are specified inside the `<container-condition>` within a set of parentheses following the `anchored` keyword, for example:
+
+```css
+@container anchored(fallback: top) {
+  /* … */
+}
+@container anchored(fallback: flip-block flip-inline) {
+  /* … */
+}
+@container anchored(fallback: --custom-fallback) {
+  /* … */
+}
+```
+
+- `anchored`
+  - : Queries whether a specific position-try fallback is currently active on an anchor-positioned container, as specified via the {{cssxref("position-try-fallbacks")}} property. Valid `anchored` values include any component value that is valid for inclusion in a `position-try-fallbacks` property value.
+
+    If the fallback value named in the test is currently active on the anchor-positioned container, the test passes, and the rules inside the `@container` block are applied to descendants of the anchor-positioned container.
 
 ## Formal syntax
 
@@ -449,7 +482,11 @@ The global `revert` and `revert-layer` are invalid as values in a `<style-featur
 
 ### Scroll-state queries
 
-See [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) for full walkthroughs of scroll-state query examples.
+See [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) for scroll-state query examples.
+
+### Anchored queries
+
+See [Using anchored container queries](/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries) for anchored query examples.
 
 ## Specifications
 
@@ -464,6 +501,7 @@ See [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditiona
 - [Using container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
+- [Using anchored container queries](/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}

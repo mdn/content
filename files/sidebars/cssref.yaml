@@ -17,6 +17,7 @@ sidebar:
     children:
       - /Web/CSS/Guides/Anchor_positioning/Using
       - /Web/CSS/Guides/Anchor_positioning/Try_options_hiding
+      - /Web/CSS/Guides/Anchor_positioning/Anchored_container_queries
   - title: Animations
     details: closed
     children:
