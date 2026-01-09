@@ -119,7 +119,7 @@ The `<bg-size>` value may only be included immediately after `<bg-position>`, se
 
 Each background layer can include zero, one, or two [`<visual-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#visual-box) values. If only one value is included, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If two values are present, the first occurrence specifies the `background-origin` and the second specifies the `background-clip` value. If no `<visual-box>` values are present, the `background-origin` defaults to `border-box` and the `background-clip` defaults to `padding-box`.
 
-While there is no order requirement for the other background properties, the following order is recommended for consistency and legibility, while remembering that none of the values are required:
+While there is no order requirement for the other background properties, the following order is recommended for consistency and legibility; remember that none of the values are required:
 
 `<bg-image> <bg-position> / <bg-size> <repeat-style> <attachment> <bg-clip> <bg-origin> <'background-color'>`
 
