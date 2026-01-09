@@ -50,7 +50,7 @@ get(options)
         > In the case of a [federated authentication (FedCM API)](/en-US/docs/Web/API/FedCM_API) request, a `mediation` value of `optional` or `silent` may result in attempted [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication). Whether this occurred is communicated to the identity provider (IdP) via the [`is_auto_selected`](/en-US/docs/Web/API/FedCM_API/IDP_integration#is_auto_selected) parameter sent to the IdP's `id_assertion_endpoint` during validation and the relying party (RP) via the {{domxref("IdentityCredential.isAutoSelected")}} property. This is useful for performance evaluation, security requirements (the IdP may wish to reject automatic reauthentication requests and always require user mediation), and general UX (an IdP or RP may wish to present different UX for auto and non-auto login experiences).
 
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `get()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an `AbortError` {{domxref("DOMException")}}.
+      - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `get()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or rejected with the signal's reason (which is an `AbortError` {{domxref("DOMException")}} by default, or a custom value if one was provided when calling {{domxref("AbortController.abort", "abort()")}}).
 
     - `password` {{optional_inline}}
       - : This option asks the browser to retrieve a stored [password](/en-US/docs/Web/API/Credential_Management_API/Credential_types#passwords) as a {{domxref("PasswordCredential")}} object. It is a boolean value.
@@ -97,8 +97,11 @@ If a single credential cannot be unambiguously obtained, the promise resolves wi
 
 ### Exceptions
 
-- `AbortError` {{domxref("DOMException")}}
+- `AbortSignal.reason` (typically an `AbortError` {{domxref("DOMException")}})
   - : The request was aborted by a call to the {{domxref("AbortController.abort", "abort()")}} method of the {{domxref("AbortController")}} associated with this method's [`signal`](#signal) option.
+
+    > [!NOTE]
+    > The promise rejects with the value provided in the `reason` parameter of the {{domxref("AbortController.abort", "abort()")}} method. If no reason was explicitly provided, it defaults to an `AbortError` {{domxref("DOMException")}}. If a custom value (such as a string or a specific error object) was provided, the promise rejects with that specific value.
 
 - {{domxref("IdentityCredentialError")}}
   - : When requesting an {{domxref("IdentityCredential")}}, the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, and rejects with an error response containing information about the reason.
@@ -255,6 +258,44 @@ navigator.credentials
   .catch((err) => {
     console.error(err);
   });
+```
+
+#### Handling a custom abort reason
+
+In this example, we use a custom reason to distinguish between a user-initiated cancellation and a timeout.
+
+```js
+const controller = new AbortController();
+
+// Abort the request after 10 seconds with a custom string reason
+setTimeout(() => controller.abort("TimeoutError"), 10000);
+
+const publicKey = {
+  challenge: new Uint8Array([139, 66, 181, 87, 7, 203 /* ,… */]),
+  rpId: "acme.com",
+  allowCredentials: [
+    {
+      type: "public-key",
+      id: new Uint8Array([64, 66, 25, 78, 168, 226, 174 /* ,… */]),
+    },
+  ],
+  userVerification: "required",
+};
+
+try {
+  const credential = await navigator.credentials.get({
+    publicKey,
+    signal: controller.signal,
+  });
+} catch (err) {
+  if (err === "TimeoutError") {
+    console.error("The request timed out.");
+  } else if (err.name === "AbortError") {
+    console.log("The request was cancelled by the user.");
+  } else {
+    console.error("An unexpected error occurred:", err);
+  }
+}
 ```
 
 ## Specifications
