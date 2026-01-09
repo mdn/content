@@ -37,7 +37,7 @@ hr::after {
 }
 ```
 
-Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.
+Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using CSS. For example, the {{cssxref('border-style')}} CSS property allows you to greatly customize the line's appearance.
 
 ## Attributes
 
