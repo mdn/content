@@ -77,6 +77,7 @@ hr::after {
   padding: 0 0.3em;
 }
 ```
+
 ## Attributes
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
