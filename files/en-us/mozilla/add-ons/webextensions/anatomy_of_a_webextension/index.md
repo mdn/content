@@ -20,11 +20,9 @@ The manifest can also contain pointers to several other types of files:
 - [Sidebars, popups, and options pages](#sidebars_popups_and_options_pages_2)
   - : HTML documents that provide content for various user interface components.
 - [Content scripts](#content_scripts_2)
-  - : JavaScript included with your extension, that you will inject into web pages.
+  - : JavaScript included with your extension that you will inject into web pages.
 - [Web-accessible resources](#web_accessible_resources)
   - : Make packaged content accessible to web pages and content scripts.
-- [Internationalization files](#internationalization_files)
-  - : Locale-specific JSON files used for extension internationalization (i18n).
 
 ![The components of a web extension. The manifest.JSON must be present in all extensions. It provides pointers to background pages, content scripts, browser actions, page actions, options pages, and web accessible resources. Background pages consist of HTML and JS. Content scripts consist of JS and CSS. The user clicks on an icon to trigger browser actions and page actions and the resulting pop-up consists of HTML, CSS, and JS. Options pages consist of HTML, CSS, and JS.](webextension-anatomy.png)
 
@@ -65,14 +63,6 @@ You'd typically load a page like this using {{WebExtAPIRef("windows.create()")}}
 
 See [Extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) to learn more.
 
-## Internationalization files
-
-WebExtensions support internationalization using the `_locales/` directory.
-This directory contains locale-specific JSON files that define translated strings,
-which can be referenced from `manifest.json` and extension scripts.
-
-For more details, see
-[Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization).
 
 ## Content scripts
 
@@ -100,3 +90,14 @@ Web accessible resources are resources—such as images, HTML, CSS, and JavaScri
 For example, if a content script wants to insert some images into web pages, you could include them in the extension and make them web accessible. Then the content script could create and append [`img`](/en-US/docs/Web/HTML/Reference/Elements/img) tags which reference the images via the `src` attribute.
 
 To learn more, see the documentation for the [`"web_accessible_resources"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) `manifest.json` key.
+
+## Internationalization files
+
+WebExtensions support internationalization using the `_locales/` directory, which is part of the extension’s file structure.
+
+This directory contains locale-specific JSON files that define translated strings used by the extension. While internationalization is configured through the `manifest.json` file, the `_locales/` directory itself exists alongside other extension files and is therefore documented as part of the extension anatomy.
+
+Translated strings defined in `_locales/` can be referenced from the `manifest.json` file, extension scripts, and extension CSS files, allowing extensions to display localized content throughout their user interface.
+
+See [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) to learn more.
+
