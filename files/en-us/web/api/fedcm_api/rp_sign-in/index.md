@@ -74,7 +74,7 @@ The flow is as follows:
 1. The RP invokes {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} to start off the sign-in flow.
 
 2. From the `configURL` provided for each IdP, the browser requests two files:
-   1. The well-known file (`/.well-known/web-identity`), available from `/.well-known/web-identity` at the [eTLD+1](https://web.dev/articles/same-site-same-origin#site) of the `configURL`.
+   1. The well-known file (`/.well-known/web-identity`), available from `/.well-known/web-identity` at the {{glossary("registrable domain")}} of the `configURL`.
    2. The [IdP config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) (`/config.json`), available at the `configURL`.
 
    These are both [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) requests, which don't have cookies and don't follow redirects. This effectively prevents IdPs from learning who made the request and which RP is attempting to connect.

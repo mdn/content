@@ -42,6 +42,31 @@ In this example, three backgrounds are stacked: the Firefox logo, an image of bu
 
 As you can see here, the Firefox logo (listed first within {{ cssxref("background-image") }}) is on top, directly above the bubbles graphic, followed by the gradient (listed last) sitting underneath all previous 'images'. Each subsequent sub-property ({{ cssxref("background-repeat") }} and {{ cssxref("background-position") }}) applies to the corresponding backgrounds. So the first listed value for {{ cssxref("background-repeat") }} applies to the first (frontmost) background, and so forth.
 
+## Value repetition for multiple backgrounds
+
+When using multiple backgrounds, if a background-related property is given fewer comma-separated values than the number of background layers, the user agent repeats the list of values until there are enough values for all layers.
+
+For example:
+
+```css
+.element {
+  background-image: url(a.png), url(b.png), url(c.png);
+  background-position: left top;
+}
+```
+
+
+This is equivalent to:
+
+```css
+.element {
+  background-position:
+    left top,
+    left top,
+    left top;
+}
+```
+
 ## See also
 
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module

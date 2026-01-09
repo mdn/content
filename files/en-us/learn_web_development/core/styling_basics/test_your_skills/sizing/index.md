@@ -23,11 +23,11 @@ To complete the task:
 2. To test this, remove the content from the HTML to make sure you still get a `100px` tall box even with no content.
 3. Size the second box so that it is fixed at `100px` tall. In this case, the content should overflow.
 
-Your final result should look like the image below:
+Your final result should look like the following rendering:
 
-![Two boxes one with overflowing content](mdn-sizing-height-min-height.png)
+{{EmbedLiveSample("sizing1-finish", "", "500px")}}
 
-```html live-sample___height-min-height
+```html live-sample___sizing1-start live-sample___sizing1-finish
 <div class="box box1">
   <p>
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
@@ -45,7 +45,7 @@ Your final result should look like the image below:
 </div>
 ```
 
-```css live-sample___height-min-height
+```css live-sample___sizing1-start live-sample___sizing1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
   padding: 1em;
@@ -66,14 +66,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("height-min-height", "", "500px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("sizing1-start", "", "500px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 There are two boxes. The first one should be given a `min-height` so it expands to hold the additional content, but will not shrink below `100px` tall if the content is removed. The second box is given a fixed height, which will cause content to overflow.
 
-```css
+```css live-sample___sizing1-finish
 .box1 {
   min-height: 100px;
 }
@@ -94,17 +96,17 @@ To complete the task:
 1. Make the inner box width `60%` of the width of the outer box. The {{cssxref("box-sizing")}} property is set to `border-box`, which means that the total width includes any `padding` and `border`.
 2. Give the inner box `10%` padding on all sides.
 
-Your final result should look like the image below:
+Your final result should look like the following rendering:
 
-![A box with another box nested inside](mdn-sizing-percentages.png)
+{{EmbedLiveSample("sizing2-finish", "", "250px")}}
 
-```html live-sample___percentages
+```html live-sample___sizing2-start live-sample___sizing2-finish
 <div class="box">
   <div class="inner">Make me 60% of my parent's width.</div>
 </div>
 ```
 
-```css live-sample___percentages
+```css live-sample___sizing2-start live-sample___sizing2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
   padding: 1em;
@@ -130,7 +132,9 @@ body {
 }
 ```
 
-{{EmbedLiveSample("percentages", "", "250px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("sizing2-start", "", "250px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -138,10 +142,7 @@ body {
 Set the box `width` to `60%`, and give it a `padding` value of `10%`.
 All elements already have `box-sizing: border-box` set to save you from worrying about calculating the `60%` width value:
 
-```css
-* {
-  box-sizing: border-box;
-}
+```css live-sample___sizing2-finish
 .inner {
   width: 60%;
   padding: 10%;
@@ -156,11 +157,11 @@ In this task, you have two images in boxes. One image is smaller than the box, w
 
 To complete the task, imagine that the box is responsive and therefore could grow and shrink. Apply a declaration to the images so that the large image shrinks down into the box, but the small image does not stretch.
 
-Your final result should look like this:
+Your final result should look like the following rendering:
 
-![Two boxes with images in](mdn-sizing-max-width.png)
+{{EmbedLiveSample("sizing3-finish", "", "720px")}}
 
-```html live-sample___max-width
+```html live-sample___sizing3-start live-sample___sizing3-finish
 <div class="box">
   <img
     alt="A pink star"
@@ -174,7 +175,7 @@ Your final result should look like this:
 </div>
 ```
 
-```css live-sample___max-width
+```css live-sample___sizing3-start live-sample___sizing3-finish
 body {
   font: 1.2em / 1.5 sans-serif;
   padding: 1em;
@@ -190,14 +191,16 @@ img {
 }
 ```
 
-{{EmbedLiveSample("max-width", "", "700px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("sizing3-start", "", "700px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Set the images' `max-width` property to `100%` to contain the large image inside its box. If you use `width: 100%`, the small image will stretch.
 
-```css
+```css live-sample___sizing3-finish
 img {
   max-width: 100%;
 }

@@ -63,6 +63,10 @@ In subsequent requests, the client might send `Sec-CH-Viewport-Width` header:
 Sec-CH-Viewport-Width: 320
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

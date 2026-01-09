@@ -62,6 +62,10 @@ Then on subsequent requests the client might send `Sec-CH-DPR` header to the ser
 Sec-CH-DPR: 2.0
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

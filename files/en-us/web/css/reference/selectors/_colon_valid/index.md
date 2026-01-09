@@ -123,7 +123,6 @@ label,
 input {
   display: block;
   font-family: inherit;
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   width: 100%;
@@ -132,13 +131,13 @@ input {
 }
 
 input {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 
 input:hover,
 input:focus {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 input:required + span::after {

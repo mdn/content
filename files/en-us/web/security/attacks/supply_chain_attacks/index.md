@@ -160,7 +160,7 @@ The SBOM also lists vulnerabilities that have been identified in the product's d
 
 #### Creating an SBOM
 
-You can generate an SBOM for a product using a separate tool such as [cdxgen](https://cyclonedx.github.io/cdxgen/#/) or a command such as [`npm sbom`](https://docs.npmjs.com/cli/commands/npm-sbom/). An SBOM is usually generated as part of the build process, although it is possible to generate one at other stages of the software lifecycle.
+You can generate an SBOM for a product using a separate tool such as [cdxgen](https://cdxgen.github.io/cdxgen/#/) or a command such as [`npm sbom`](https://docs.npmjs.com/cli/commands/npm-sbom/). An SBOM is usually generated as part of the build process, although it is possible to generate one at other stages of the software lifecycle.
 
 #### Using an SBOM
 
