@@ -28,7 +28,7 @@ A new {{jsxref("Iterator")}} object that yields the values from each of the inpu
 
 ## Description
 
-The `Iterator.concat()` method is conceptually similar to `Array`'s [`concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) method, but it operates on any kind of iterable, and returns an iterator instead of an array. This means that the iterables can be lazily iterated, avoiding unnecessarily allocation or computation. It also means that, technically, you can [concatenate _infinite iterables_](#concatenating_infinite_iterables), but results from iterables after the first infinite iterable will never be reached.
+The `Iterator.concat()` method is conceptually similar to `Array`'s [`concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) method, but it operates on any kind of iterable, and returns an iterator instead of an array. This means that the iterables can be lazily iterated, avoiding unnecessary allocation or computation. It also means that, technically, you can [concatenate _infinite iterables_](#concatenating_infinite_iterables), but results from iterables after the first infinite iterable will never be reached.
 
 While each iterable can be infinite, the list of iterables must be finite—and quite limited in number because engines impose a very low limit on the number of function arguments. If you need to concatenate a large—even infinite—number of iterables, use {{jsxref("Iterator.prototype.flatMap()")}} instead.
 
@@ -48,7 +48,7 @@ const it = infiniteIterables().flatMap((x) => x);
 // Infinite sequence of numbers: 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, ...
 ```
 
-This method is similar in functionality to the following function, which uses the [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*) operator to yield values from each of the input iterables in sequence:
+The `Iterator.concat()` method is similar in functionality to the following function, which uses the [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*) operator to yield values from each of the input iterables in sequence:
 
 ```js
 function* concat(...iterables) {
