@@ -123,6 +123,26 @@ scroll-padding: unset;
 
 {{Compat}}
 
+## Examples
+
+### Preventing content from being hidden by a fixed header
+
+A common use case for `scroll-padding` is when a page includes a fixed-position header.
+Without `scroll-padding`, content linked via fragment identifiers can be hidden beneath the header.
+
+```css
+header {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  width: 100%;
+}
+
+html {
+  scroll-padding-top: 60px;
+}
+```
+
 ## See also
 
 - [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
