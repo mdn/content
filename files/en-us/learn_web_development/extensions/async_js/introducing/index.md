@@ -142,6 +142,18 @@ The next example is just like the last one, except we added a text box for you t
 
 You'll find that while our `generatePrimes()` function is running, our program is completely unresponsive: you can't type anything, click anything, or do anything else.
 
+> **Important:** Using promises or `async`/`await` does not make
+CPU-bound code run in parallel.
+
+Long-running, CPU-intensive tasks (such as generating prime numbers)
+still run synchronously on the main thread, even when wrapped in a Promise.
+Async JavaScript is most effective for I/O-bound tasks, such as network
+requests or timers, where the browser can continue doing other work while
+waiting for an external response.
+
+To avoid blocking the main thread during heavy computation, consider using
+Web Workers, which allow JavaScript to run on a separate thread.
+
 ```html hidden
 <label for="quota">Number of primes:</label>
 <input type="text" id="quota" name="quota" value="1000000" />
