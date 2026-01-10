@@ -59,7 +59,12 @@ async function init() {
     throw Error("WebGPU not supported.");
   }
 
-  const adapter = await navigator.gpu.requestAdapter();
+  let adapter;
+  try {
+    adapter = await navigator.gpu.requestAdapter();
+  } catch (error) {
+    console.error(error);
+  }
   if (!adapter) {
     throw Error("Couldn't request WebGPU adapter.");
   }
