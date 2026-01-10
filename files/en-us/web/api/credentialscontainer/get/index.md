@@ -97,11 +97,11 @@ If a single credential cannot be unambiguously obtained, the promise resolves wi
 
 ### Exceptions
 
-- `AbortSignal.reason` (typically an `AbortError` {{domxref("DOMException")}})
-  - : The request was aborted by a call to the {{domxref("AbortController.abort", "abort()")}} method of the {{domxref("AbortController")}} associated with this method's [`signal`](#signal) option.
+- `AbortError` {{domxref("DOMException")}}
+  - : The request was aborted by a call to the {{domxref("AbortController.abort", "abort()")}} method of the {{domxref("AbortController")}} associated with this method's [`signal`](#signal) option. The promise rejects with the value provided in the `reason` parameter of the {{domxref("AbortController.abort", "abort()")}} method. If no reason was explicitly provided, it defaults to an `AbortError` {{domxref("DOMException")}}. If a custom value (such as a string or a specific error object) was provided, the promise rejects with that specific value.
 
-    > [!NOTE]
-    > The promise rejects with the value provided in the `reason` parameter of the {{domxref("AbortController.abort", "abort()")}} method. If no reason was explicitly provided, it defaults to an `AbortError` {{domxref("DOMException")}}. If a custom value (such as a string or a specific error object) was provided, the promise rejects with that specific value.
+- `TimeoutError` {{domxref("DOMException")}}
+  - : The request was automatically aborted due to a timeout set using {{domxref("AbortSignal.timeout_static", "AbortSignal.timeout()")}}.
 
 - {{domxref("IdentityCredentialError")}}
   - : When requesting an {{domxref("IdentityCredential")}}, the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, and rejects with an error response containing information about the reason.
@@ -260,40 +260,38 @@ navigator.credentials
   });
 ```
 
-#### Handling a custom abort reason
+### Handling a custom abort reason
 
-In this example, we use a custom reason to distinguish between a user-initiated cancellation and a timeout.
+In this example, we use {{domxref("AbortSignal.timeout_static", "AbortSignal.timeout()")}} to automatically abort the request if it takes longer than 10 seconds.
 
 ```js
-const controller = new AbortController();
+async function authenticateUser() {
+  const publicKey = {
+    challenge: new Uint8Array([139, 66, 181, 87, 7, 203 /* ,… */]),
+    rpId: "acme.com",
+    allowCredentials: [
+      {
+        type: "public-key",
+        id: new Uint8Array([64, 66, 25, 78, 168, 226, 174 /* ,… */]),
+      },
+    ],
+    userVerification: "required",
+  };
 
-// Abort the request after 10 seconds with a custom string reason
-setTimeout(() => controller.abort("TimeoutError"), 10000);
-
-const publicKey = {
-  challenge: new Uint8Array([139, 66, 181, 87, 7, 203 /* ,… */]),
-  rpId: "acme.com",
-  allowCredentials: [
-    {
-      type: "public-key",
-      id: new Uint8Array([64, 66, 25, 78, 168, 226, 174 /* ,… */]),
-    },
-  ],
-  userVerification: "required",
-};
-
-try {
-  const credential = await navigator.credentials.get({
-    publicKey,
-    signal: controller.signal,
-  });
-} catch (err) {
-  if (err === "TimeoutError") {
-    console.error("The request timed out.");
-  } else if (err.name === "AbortError") {
-    console.log("The request was cancelled by the user.");
-  } else {
-    console.error("An unexpected error occurred:", err);
+  try {
+    const credential = await navigator.credentials.get({
+      publicKey,
+      signal: AbortSignal.timeout(10000), // Abort after 10 seconds
+    });
+    console.log("Authentication successful:", credential);
+  } catch (err) {
+    if (err.name === "TimeoutError") {
+      console.error("The authentication request timed out.");
+    } else if (err.name === "AbortError") {
+      console.log("The request was cancelled by the user.");
+    } else {
+      console.error("An unexpected error occurred:", err);
+    }
   }
 }
 ```
