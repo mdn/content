@@ -9,13 +9,18 @@ sidebar: http
 
 The **`DELETE`** HTTP method asks the server to delete a specified resource.
 
+> **Warning:** Although request message framing is independent of the method used,
+> content received in a `DELETE` request has no generally defined semantics,
+> cannot alter the meaning or target of the request, and might lead some
+> implementations to reject the request and close the connection.
+
 The `DELETE` method has no defined semantics for the message body, so this should be empty.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Request has body</th>
-      <td>May</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">Successful response has body</th>
