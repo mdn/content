@@ -143,7 +143,7 @@ The next example is just like the last one, except we added a text box for you t
 You'll find that while our `generatePrimes()` function is running, our program is completely unresponsive: you can't type anything, click anything, or do anything else.
 
 > **Important:** Using promises or `async`/`await` does not make
-CPU-bound code run in parallel.
+> CPU-bound code run in parallel.
 
 Long-running, CPU-intensive tasks (such as generating prime numbers)
 still run synchronously on the main thread, even when wrapped in a Promise.
