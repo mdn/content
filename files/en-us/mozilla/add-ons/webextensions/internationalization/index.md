@@ -215,12 +215,14 @@ In addition, you can use such substitutions to specify parts of the string that 
 
 ## Localized string selection
 
-Locales can be specified using a language code, such as `fr` or `en` or qualified with a script and region code, such as `en-US` or `zh-Hans-CN`. When your extension asks the i18n system for a string, it selects a string using this algorithm:
+Locales are specified using a language code, such as `fr` or `en`, that can be qualified with a script and region code, such as `en-US` or `zh-Hans-CN`. When your extension asks for a localized string, the i18n system returns the string from the `messages.json` files using this order of precedence:
 
-1. Return the string if there is a `messages.json` file for the user's set browser locale containing the string. For example, if the user has set their browser to `en-US` and the extension provides the `_locales/en_US/messages.json` file.
-2. Otherwise, if the browser locale is qualified with a script or region (e.g., `en-US` or `zh-Hans-CN`) and there is a `messages.json` file for the regionless version and failing that the scriptless version of that locale and that file contains the string, return it. For example, if the user has set their browser to `zh-Hans-CN` (and there is no `_locales/zh_Hans_CN/messages.json` file) the i18n system looks for a string in `zh-Hans`, and if that isn't available, `zh`.
-3. Otherwise, if there is a `messages.json` file for the `default_locale` defined in the `manifest.json`, and it contains the string, return it.
-4. Otherwise return an empty string.
+1. The file for the user's browser locale, e.g., `zh-Hans-CN`.
+2. If the browser locale is qualified with a script or region, the file for the regionless version, e.g., `zh-Hans`.
+3. If the browser locale is qualified with a script or region, the file for the scriptless version, e.g., `zh`.
+4. The file for the `default_locale` defined in the `manifest.json` file.
+
+If the requested string is not present in any of those files, an empty string is returned.
 
 Take this example:
 
@@ -233,16 +235,26 @@ Take this example:
       en
       - messages.json
         - `{ "colorLocalized": { "message": "color", "description": "Color." }, /* … */ }`
+        - `{ "colorBlue": { "message": "Blue", "description": "Blue." }, /* … */ }`
 
     - fr
       - messages.json
         - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, /* … */}`
+        - `{ "colorBlue": { "message": "Bleu", "description": "Blue." }, /* … */ }`
 
-Suppose the `default_locale` is set to `fr`.
+With the `default_locale` set to `fr`.
 
-- If the browser's locale is `en-GB` when the extension calls `getMessage("colorLocalized")`, it is returned "colour" because `_locales/en_GB/messages.json` contains the `colorLocalized` message.
-- If the browser's locale is `en-US` when the extension calls `getMessage("colorLocalized")`, it is returned "color" because it falls back to the message present in `_locales/en/messages.json`.
-- If the browser's locale is `zh-Hans-CN` when the extension calls `getMessage("colorLocalized")`, it is returned "couleur" because there is no language, script, or region match to the `zh-Hans-CN` locale.
+- If the browser's locale is `en-GB`:
+  - `getMessage("colorLocalized")` returns "colour" because `_locales/en_GB/messages.json` contains the `colorLocalized` message.
+  - `getMessage("colorBlue")`, returns "blue" because it falls back to the `colorBlue` message in `_locales/en/messages.json`.
+- If the browser's locale is `en-US`:
+  - `getMessage("colorLocalized")` returns "color" because there is no `_locales/en_US/messages.json` file, so it falls back to the message present in `_locales/en/messages.json`.
+  - `getMessage("colorBlue")` returns "blue" because it falls back to the `colorBlue` message in `_locales/en/messages.json`.
+- If the browser's locale is `zh-Hans-CN`:
+  - `getMessage("colorLocalized")` returns "couleur" because there is no region, script, or language match to the `zh-Hans-CN` locale (i.e., no `messages.json` file in a `zh-Hans-CN`, `zh-Hans`, or`zh` folder).
+  - `getMessage("colorBlue")` returns "bleu" because there is no region, script, or language match to the `zh-Hans-CN` locale.
+
+If the extension were to call `getMessage("colorRed")` it's returned an empty string, as there is no property for `"colorRed"` in any of the language files.
 
 ## Predefined messages
 
