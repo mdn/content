@@ -16,7 +16,7 @@ For a full description of corner shape behavior and multiple examples, see the {
 
 ## Constituent properties
 
-The `corner-block-start-shape` property is a shorthand for the following physical properties:
+The `corner-block-start-shape` property is a shorthand for the following logical properties:
 
 - {{cssxref("corner-start-start-shape")}}
 - {{cssxref("corner-start-end-shape")}}
