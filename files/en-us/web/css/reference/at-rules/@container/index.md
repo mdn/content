@@ -6,13 +6,7 @@ browser-compat: css.at-rules.container
 sidebar: cssref
 ---
 
-The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#naming_containment_contexts).
-Style declarations are filtered by a condition and applied to the container if the condition is true.
-The condition is evaluated when the queried container size, [`<style-feature>`](#container_style_queries), or scroll-state changes.
-
-The {{cssxref("container-name")}} property specifies a list of query container names. These names can be used by `@container` rules to filter which query containers are targeted. The optional, case-sensitive `<container-name>` filters the query containers that are targeted by the query.
-
-Once an eligible query container has been selected for an element, each container feature in the `<container-condition>` is evaluated against that query container.
+The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#naming_containment_contexts) if a specified condition is true.
 
 ## Syntax
 
@@ -54,7 +48,7 @@ Once an eligible query container has been selected for an element, each containe
 }
 
 /* Condition list */
-@container card (width > 400px), style(--responsive: true), scroll-state(stuck: top) {
+@container card (width > 400px), style(--reference-size < 2em), scroll-state(stuck: top) {
   h2 {
     font-size: 1.5em;
   }
@@ -70,6 +64,13 @@ Once an eligible query container has been selected for an element, each containe
     - `<container-query>`
       - : A set of features that are evaluated against the query container when the size, [`<style-feature>`](#container_style_queries), or scroll-state of the container changes.
 
+## Description
+
+A `@container` query specifies a condition and contains a set of rules, which are filtered by a condition and applied to the container if the condition is true.
+The condition is evaluated when the queried container size, [`<style-feature>`](#container_style_queries), or scroll-state changes.
+
+Once an eligible query container has been selected for an element, each container feature in the `<container-condition>` is evaluated against that query container.
+
 ### Logical keywords in container queries
 
 Logical keywords can be used to define the container condition:
@@ -83,7 +84,7 @@ Logical keywords can be used to define the container condition:
   /* <stylesheet> */
 }
 
-@container (width > 400px) or (height > 400px) {
+@container style(--themeColor: blue) or style(--themeColor: purple) {
   /* <stylesheet> */
 }
 
@@ -94,7 +95,7 @@ Logical keywords can be used to define the container condition:
 
 ### Named containment contexts
 
-A containment context can be named using the {{cssxref("container-name")}} property.
+The {{cssxref("container-name")}} property specifies a list of query container names. These names can be used by `@container` rules to filter which query containers are targeted. The optional, case-sensitive `<container-name>` filters the query containers that are targeted by the query.
 
 ```css
 .post {
@@ -120,6 +121,67 @@ In container queries, the {{cssxref("container-name")}} property is used to filt
 ```
 
 Details about usage and naming restrictions are described in the {{cssxref("container-name")}} page.
+
+### Nested container queries
+
+It's not possible to target multiple containers in a single container query.
+It is possible to nest container queries which has the same effect.
+
+The following query evaluates to true and applies the declared style if the container named `summary` is wider than `400px` and has an ancestor container wider than `800px`:
+
+```css
+@container summary (width > 400px) {
+  @container (width > 800px) {
+    /* <stylesheet> */
+  }
+}
+```
+
+### Container style queries
+
+Container queries can also evaluate the computed style of the container element. A _container style query_ is a `@container` query that uses one or more `style()` functional notations. The boolean syntax and logic combining style features into a style query is the same as for [CSS feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
+
+The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** is a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations), a CSS property, or a [CSS custom property name](/en-US/docs/Web/CSS/Reference/Properties/--*).
+
+```css
+@container style(--themeBackground),
+    not style(background-color: red),
+    style(color: green) and style(background-color: transparent),
+    style(--themeColor: blue) or style(--themeColor: purple) {
+  /* <stylesheet> */
+}
+```
+
+A style feature without a value evaluates to true if the computed value is different from the initial value for the given property.
+
+If the `<style-feature>` passed as the `style()` function's argument is a declaration, the style query evaluates to true if the declaration's value is the same as the computed value of that property for the container being queried. Otherwise, it resolves to false.
+
+The following container query checks if the [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) of the container element's `--accent-color` is `blue`:
+
+```css
+@container style(--accent-color: blue) {
+  /* <stylesheet> */
+}
+```
+
+> [!NOTE]
+> If a custom property has a value of `blue`, the equivalent hexadecimal code `#0000ff` will not match unless the property has been defined as a color with {{cssxref("@property")}} so the browser can properly compare computed values.
+
+Style features that query a shorthand property are true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style(border: 2px solid red)` will resolve to true if all 12 longhand properties (`border-bottom-style`, etc.) that make up that shorthand are true.
+
+The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
+
+#### Range syntax for container style queries
+
+It is possible to use range syntax for container style queries. You can use comparison operators (`<`, `<=`, `>`, `>=`) to compare:
+
+- Custom property values, for example `style(--inner-padding > 1em)`.
+- Literal values, for example `style(1em < 20px)`.
+- Values from substitution functions such as [`attr()`](/en-US/docs/Web/CSS/Reference/Values/attr), for example `style(attr(data-columns, type<number>) > 2)`.
+
+The following numeric types can be compared: {{cssxref("&lt;length>")}}, {{cssxref("&lt;number>")}}, {{cssxref("&lt;percentage>")}}, {{cssxref("&lt;angle>")}}, {{cssxref("&lt;time>")}}, {{cssxref("&lt;frequency>")}}, and {{cssxref("&lt;resolution>")}}. Both sides of the comparison must resolve to the same data type, otherwise the container query is invalid.
+
+See [Styling a heading based on a reference size style](#styling_a_heading_based_on_a_reference_size_style) for a container style query example.
 
 ### Descriptors
 
@@ -389,65 +451,119 @@ Next, target that container by adding the name to the container query:
 }
 ```
 
-### Nested container queries
+### Styling a heading based on a reference size style
 
-It's not possible to target multiple containers in a single container query.
-It is possible to nest container queries which has the same effect.
+In this example, we set a `--reference-size` [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) on a container, and then set properties on a descendant heading dynamically, based on the custom property value.
 
-The following query evaluates to true and applies the declared style if the container named `summary` is wider than `400px` and has an ancestor container wider than `800px`:
+#### HTML
 
-```css
-@container summary (width > 400px) {
-  @container (width > 800px) {
-    /* <stylesheet> */
+We include an {{htmlelement("article")}} element with an [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) nested inside it. The `--reference-size` custom property is set on the `<article>` element and given an initial value of `1em`. We also include a {{htmlelement("form")}} containing a [range slider](/en-US/docs/Web/HTML/Reference/Elements/input/range) that will be wired up (via JavaScript) to allow the `--reference-size` to be adjusted live, plus an {{htmlelement("output")}} element to report the currently-selected size.
+
+```html live-sample___style-query-example
+<article style="--reference-size: 1em">
+  <h1>A heading with a border</h1>
+</article>
+<form>
+  <label for="size-slider">Set reference size</label>
+  <input type="range" min="1" step="0.1" max="3.5" value="1" id="size-slider" />
+  <output>1em</output>
+</form>
+```
+
+#### CSS
+
+In our styles, we first set a {{cssxref("container-name")}} on our `<article>`, and set some static styles on our `<h1>` that will be applied if the `--reference-size` custom property isn't set, or if the browser doesn't support container style queries.
+
+```css hidden live-sample___style-query-example
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 10px;
+}
+```
+
+```css live-sample___style-query-example
+article {
+  container-name: custom-heading;
+}
+
+h1 {
+  font-size: 2em;
+  padding: 15px;
+  border: 5px solid black;
+  border-radius: 15px;
+}
+```
+
+Next, we use a `@container` block to query whether the `custom-heading` container has the `--reference-size` custom property set, and if so, set the `<h1>` element's {{cssxref("font-size")}} equal to it:
+
+```css live-sample___style-query-example
+@container custom-heading style(--reference-size) {
+  h1 {
+    font-size: var(--reference-size);
   }
 }
 ```
 
-### Container style queries
+In the final part of our CSS, we use multiple `@container` blocks to query whether the `--reference-size` custom property set on the `custom-heading` container is within various ranges — less than `2em`, `2em` or greater but less than `3em`, or `3em` or greater. A different set of styles are applied to the `<h1>` depending on the range that matches the `--reference-size` value — we want the set values to increase as appropriate, as the `font-size` increases.
 
-Container queries can also evaluate the computed style of the container element. A _container style query_ is a `@container` query that uses one or more `style()` functional notations. The boolean syntax and logic combining style features into a style query is the same as for [CSS feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
+```css live-sample___style-query-example
+@container custom-heading style(--reference-size < 2em) {
+  h1 {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+}
 
-```css
-@container style(<style-feature>),
-    not style(<style-feature>),
-    style(<style-feature>) and style(<style-feature>),
-    style(<style-feature>) or style(<style-feature>) {
-  /* <stylesheet> */
+@container custom-heading style(2em <= --reference-size < 3em) {
+  h1 {
+    padding: 15px;
+    border: 5px solid black;
+    border-radius: 15px;
+  }
+}
+
+@container custom-heading style(--reference-size >= 3em) {
+  h1 {
+    padding: 20px;
+    border: 10px solid black;
+    border-radius: 20px;
+  }
 }
 ```
 
-The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** is a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values).
+#### JavaScript
 
-```css
-@container style(--themeBackground),
-    not style(background-color: red),
-    style(color: green) and style(background-color: transparent),
-    style(--themeColor: blue) or style(--themeColor: purple) {
-  /* <stylesheet> */
-}
+In our script, we grab references to the `<article>`, range `<input>`, and `<output>` elements. We set an event listener on the slider so that, when it is moved to input a different value, that value has an `em` unit added to it and is both printed to the `<output>` element and set as the value of `--reference-size` on the `<article>` element.
+
+```js live-sample___style-query-example
+const articleElem = document.querySelector("article");
+const inputElem = document.querySelector("input");
+const outputElem = document.querySelector("output");
+
+inputElem.addEventListener("input", () => {
+  newValue = `${inputElem.value}em`;
+  outputElem.textContent = newValue;
+  articleElem.style.setProperty("--reference-size", newValue);
+});
 ```
 
-A style feature without a value evaluates to true if the computed value is different from the initial value for the given property.
+#### Result
 
-If the `<style-feature>` passed as the `style()` function's argument is a declaration, the style query evaluates to true if the declaration's value is the same as the computed value of that property for the container being queried. Otherwise, it resolves to false.
+The rendered example looks like this:
 
-The following container query checks if the [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) of the container element's `--accent-color` is `blue`:
+{{EmbedLiveSample("Setting_styles_based_on_a_container's_size", "100%", 250)}}
 
-```css
-@container style(--accent-color: blue) {
-  /* <stylesheet> */
-}
-```
+Try moving the range slider to see how that affects the styling of the heading. The padding, border, and border-radius should adjust when the font size reaches different thresholds.
 
-> [!NOTE]
-> If a custom property has a value of `blue`, the equivalent hexadecimal code `#0000ff` will not match unless the property has been defined as a color with {{cssxref("@property")}} so the browser can properly compare computed values.
-
-Style features that query a shorthand property are true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style(border: 2px solid red)` will resolve to true if all 12 longhand properties (`border-bottom-style`, etc.) that make up that shorthand are true.
-
-The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
-
-### Scroll-state queries
+### Scroll-state query examples
 
 See [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) for full walkthroughs of scroll-state query examples.
 
