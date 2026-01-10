@@ -22,26 +22,47 @@ A string; possible values are:
 - `none`
   - : The dialog can only be dismissed with a developer-specified mechanism.
 
+### Default behaviour
+
+If the `closedby` attribute is absent or invalid, it falls back to the **Auto** state. In the **Auto** state:
+
+- when the `<dialog>` is opened with `showModal()`, it behaves as if: `closedby="closerequest"`
+- when the `<dialog>` is opened by any other means, it behaves as if: `closedby="none"`
+
 ## Examples
 
 ### Basic `closedBy` usage
 
 ```html
-<dialog open closedby="any">
-  <h2>My dialog</h2>
+<dialog closedby="any">
   <p>
-    Closable using the Esc key, or by clicking outside the dialog. "Light
-    dismiss" behavior.
+    Closable using the <kbd>Esc</kbd> key, or by clicking outside the dialog
+    ("light dismiss").
   </p>
 </dialog>
 ```
 
-```js
-const dialogElem = document.querySelector("dialog");
-
-// Logs "any" to the console
-console.log(dialogElem.closedBy);
+```html hidden
+<pre id="log"></pre>
 ```
+
+```js hidden
+const logElement = document.getElementById("log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+```js
+const dialog = document.querySelector("dialog");
+dialog.showModal();
+log(`closedBy: ${dialog.closedBy}`);
+```
+
+### Result
+
+{{ EmbedLiveSample('Basic `closedBy` usage', '100%', '250px') }}
 
 ## Specifications
 
@@ -53,4 +74,4 @@ console.log(dialogElem.closedBy);
 
 ## See also
 
-- {{ HTMLElement("dialog") }}
+- HTML {{htmlelement("dialog")}} element
