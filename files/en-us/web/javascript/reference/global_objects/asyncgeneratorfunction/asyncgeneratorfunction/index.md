@@ -7,6 +7,14 @@ browser-compat: javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunctio
 sidebar: jsref
 ---
 
+> [!WARNING]
+> The arguments passed this method are dynamically evaluated and executed as JavaScript.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+>
+> You can mitigate this risk by always passing {{domxref("TrustedScript")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+>
+> See [Security considerations](#security_considerations) in the [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) for more information.
+
 The **`AsyncGeneratorFunction()`** constructor creates {{jsxref("AsyncGeneratorFunction")}} objects.
 
 Note that `AsyncGeneratorFunction` is not a global object. It could be obtained by evaluating the following code.
@@ -31,14 +39,17 @@ AsyncGeneratorFunction(arg1, arg2, functionBody)
 AsyncGeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> [!NOTE]
-> `AsyncGeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncGeneratorFunction` instance.
+> [!NOTE] > `AsyncGeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new).
+> Both create a new `AsyncGeneratorFunction` instance.
 
 ### Parameters
 
 See {{jsxref("Function/Function", "Function()")}}.
 
 ## Examples
+
+Note that these examples omit the use of trusted types for brevity.
+For code showing the usual approach, see [Using `TrustedScript`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#using_trustedscript) in `eval()`.
 
 ### Using the constructor
 
