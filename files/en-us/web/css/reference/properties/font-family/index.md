@@ -79,7 +79,10 @@ font-family: ui-sans-serif;
 font-family: ui-monospace;
 font-family: ui-rounded;
 font-family: math;
-font-family: fangsong;
+font-family: generic(fangsong);
+font-family: generic(kai);
+font-family: generic(nastaliq);
+font-family: generic(khmer-mul);
 
 /* Global values */
 font-family: inherit;
@@ -148,8 +151,16 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `math`
       - : This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.
         UA stylesheets may set `math { font-family: math }` so that the {{MathMLElement("math")}} element uses appropriate fonts by default.
-    - `fangsong`
-      - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
+    - `<generic-script-specific>`
+      - : Generic family names for specific writing systems. These should be wrapped with the keyword `generic()` and must not be quoted. A generic script-specific font family usually appears before the other generic families above. The following keywords are defined:
+      - `generic(fangsong)`
+        - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
+      - `generic(kai)`
+        - : A particular cursive-style of Chinese characters in Kai forms. This style is often used for government documents.
+      - `generic(nastaliq)`
+        - : A particular cursive-style of Perso-Arabic script for writing Urdu and Kashmiri.
+      - `generic(khmer-mul)`
+        - : A particular style of Khmer script for titles, headings or proper nouns.
 
 ## Formal definition
 
