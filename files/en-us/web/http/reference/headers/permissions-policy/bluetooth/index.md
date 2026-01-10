@@ -30,35 +30,34 @@ Permissions-Policy: bluetooth=<allowlist>;
 
 ## Default policy
 
-The default allowlist for `bluetooth` is `self`.
+The default allowlist for `bluetooth` is `self`. The top-level browsing context and same-origin iframes are allowed access to the `bluetooth` feature by default.
 
 ## Examples
 
-### General example
+### Basic usage
 
-SecureCorp Inc. wants to disable the Web Bluetooth API within all browsing contexts except for its own origin and those whose origin is `https://example.com`.
-It can do so by delivering the following HTTP response header to define a Permissions Policy:
+SecureCorp Inc. wants to disallow `bluetooth` within all browsing contexts except for its own origin and those whose origin is `https://example.com`. It can do so by delivering the following HTTP response header to define a Permissions Policy:
 
 ```http
 Permissions-Policy: bluetooth=(self "https://example.com")
 ```
 
-### With an \<iframe> element
+Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
 
-FastCorp Inc. wants to disable `bluetooth` for all cross-origin child frames, except for a specific `<iframe>`.
-It can do so by delivering the following HTTP response header to define a Permissions Policy:
-
-```http
-Permissions-Policy: bluetooth=(self https://other.com/blue)
+```html
+<iframe src="https://example.com/blue" allow="bluetooth"></iframe>
 ```
 
-Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
+> [!NOTE]
+> Specifying the `Permissions-Policy` header in this manner disallows `bluetooth` for other origins, even if they would be allowed by the `<iframe>` `allow` attribute.
+
+### Using the default policy
+
+FastCorp Inc. wants to allow `bluetooth` in a specific cross-origin child frame. Since the default allowlist for `bluetooth` is `self`, it can do so by including an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
 
 ```html
 <iframe src="https://other.com/blue" allow="bluetooth"></iframe>
 ```
-
-`<iframe>` attributes can selectively enable features in certain frames, and not in others, even if those frames contain documents from the same origin.
 
 ## Specifications
 
