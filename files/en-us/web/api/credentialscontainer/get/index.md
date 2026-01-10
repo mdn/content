@@ -260,7 +260,7 @@ navigator.credentials
   });
 ```
 
-### Handling a custom abort reason
+### Implementing a timeout
 
 In this example, we use {{domxref("AbortSignal.timeout_static", "AbortSignal.timeout()")}} to automatically abort the request if it takes longer than 10 seconds.
 
