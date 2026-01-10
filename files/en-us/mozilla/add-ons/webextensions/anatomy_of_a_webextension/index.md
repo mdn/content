@@ -92,7 +92,7 @@ To learn more, see the documentation for the [`"web_accessible_resources"`](/en-
 
 ## Internationalization files
 
-WebExtensions support internationalization through the `_locales/` directory, which is part of the extension’s top-level file structure alongside files such as `manifest.json`, background scripts, and extension pages.
+WebExtensions support internationalization through the `_locales/` directory, which is part of the extension's top-level file structure alongside files such as `manifest.json`, background scripts, and extension pages.
 
 The `_locales/` directory contains one subdirectory per supported locale (for example, `en`, `fr`, or `de`). Each locale directory includes a `messages.json` file that defines translated strings used by the extension.
 
@@ -100,7 +100,7 @@ Internationalization is tightly integrated with other parts of the extension ana
 
 - The `manifest.json` file can reference localized strings from `_locales/` for fields such as the extension name and description.
 - Background scripts, extension pages (such as popups, options pages, and sidebars), and content scripts can retrieve localized strings at runtime through the internationalization APIs.
-- Localized strings can also be used in extension stylesheets, allowing user interface text to adapt to the user’s language.
+- Localized strings can also be used in extension stylesheets, allowing user interface text to adapt to the user's language.
 
 By placing localization resources in a dedicated `_locales/` directory, extensions can keep translated content separate from logic and layout while still making it accessible throughout the extension.
 
