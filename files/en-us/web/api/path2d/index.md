@@ -19,26 +19,50 @@ The **`Path2D`** interface of the Canvas 2D API is used to declare a path that c
 - {{domxref("Path2D.addPath()")}}
   - : Adds a path to the current path.
 - {{domxref("CanvasRenderingContext2D.closePath", "Path2D.closePath()")}}
-  - : Causes the point of the pen to move back to the start of the current sub-path. It tries to draw a straight line from the current point to the start. If the shape has already been closed or has only one point, this function does nothing.
+  - : Causes the point of the pen to move back to the start of the current sub-path.
 - {{domxref("CanvasRenderingContext2D.moveTo()", "Path2D.moveTo()")}}
   - : Moves the starting point of a new sub-path to the (`x, y`) coordinates.
 - {{domxref("CanvasRenderingContext2D.lineTo()", "Path2D.lineTo()")}}
   - : Connects the last point in the subpath to the (`x, y`) coordinates with a straight line.
 - {{domxref("CanvasRenderingContext2D.bezierCurveTo()", "Path2D.bezierCurveTo()")}}
-  - : Adds a cubic Bézier curve to the path. It requires three points. The first two points are control points and the third one is the end point. The starting point is the last point in the current path, which can be changed using `moveTo()` before creating the Bézier curve.
+  - : Adds a cubic Bézier curve to the path.
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo()", "Path2D.quadraticCurveTo()")}}
   - : Adds a quadratic Bézier curve to the current path.
 - {{domxref("CanvasRenderingContext2D.arc()", "Path2D.arc()")}}
-  - : Adds an arc to the path which is centered at (`x, y`) position with radius `r` starting at `startAngle` and ending at `endAngle` going in the given direction by `counterclockwise` (defaulting to clockwise).
+  - : Adds an arc to the path.
 - {{domxref("CanvasRenderingContext2D.arcTo()", "Path2D.arcTo()")}}
-  - : Adds a circular arc to the path with the given control points and radius, connected to the previous point by a straight line.
+  - : Adds a circular arc to the path.
 - {{domxref("CanvasRenderingContext2D.ellipse()", "Path2D.ellipse()")}}
-  - : Adds an elliptical arc to the path which is centered at (`x, y`) position with the radii `radiusX` and `radiusY` starting at `startAngle` and ending at `endAngle` going in the given direction by `counterclockwise` (defaulting to clockwise).
+  - : Adds an elliptical arc to the path.
 - {{domxref("CanvasRenderingContext2D.rect()", "Path2D.rect()")}}
-  - : Creates a path for a rectangle at position (`x, y`) with a size that is determined by `width` and `height`.
+  - : Creates a rectangular path.
 - {{domxref("CanvasRenderingContext2D.roundRect()", "Path2D.roundRect()")}}
-  - : Creates a path for a rounded rectangle at position (`x, y`) with a size that is determined by `width` and `height` and the radii of the circular arc to be used for the corners of the rectangle is determined by `radii`.
+  - : Creates a rounded rectangle path.
 
+## Examples
+
+### Creating and copying paths
+
+This example demonstrates how a `Path2D` object can be copied and extended.
+
+First, `path1` creates a rectangle.  
+Then, `path2` is created as a copy of `path1`.  
+After that, `path2` is extended with a circle.  
+Finally, only `path2` is drawn.
+
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+const path1 = new Path2D();
+path1.rect(10, 10, 100, 100);
+
+const path2 = new Path2D(path1);
+path2.moveTo(220, 60);
+path2.arc(170, 60, 50, 0, 2 * Math.PI);
+
+ctx.stroke(path2);
+```
 ## Specifications
 
 {{Specifications}}
@@ -50,3 +74,4 @@ The **`Path2D`** interface of the Canvas 2D API is used to declare a path that c
 ## See also
 
 - {{domxref("CanvasRenderingContext2D")}}
+
