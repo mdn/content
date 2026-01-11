@@ -80,7 +80,7 @@ When this event is processed, the target's border is set to `dashed` to provide 
 
 ```js
 function pointermoveHandler(ev) {
-  // This function implements a 2-pointer horizontal pinch/zoom gesture.
+  // This function implements a 2-pointer pinch/zoom gesture.
   //
   // If the distance between the two pointers has increased (zoom in),
   // the target element's background is changed to "pink" and if the
@@ -100,7 +100,7 @@ function pointermoveHandler(ev) {
   // If two pointers are down, check for pinch gestures
   if (evCache.length === 2) {
     // Calculate the distance between the two pointers
-    const curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
+    const curDiff = Math.hypot(evCache[0].clientX - evCache[1].clientX, evCache[0].clientY - evCache[1].clientY);
 
     if (prevDiff > 0) {
       if (curDiff > prevDiff) {
