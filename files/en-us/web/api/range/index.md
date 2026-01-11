@@ -17,7 +17,7 @@ There also is the {{domxref("Range.Range()", "Range()")}} constructor available.
 
 ## Instance properties
 
-_There are no inherited properties._
+The following properties are inherited from the parent interface, {{DOMxRef("AbstractRange")}}.
 
 - {{domxref("Range.collapsed")}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether the range's start and end points are at the same position.
