@@ -14,6 +14,20 @@ Before contributing, make sure you're familiar with the project guidelines and c
 - [Writing style guide][] - This covers the language and style we use and how we write and format code examples.
 - [How to write in Markdown][] - This covers the Markdown features we support on MDN and custom extensions we've added.
 
+### First-time contributor checklist
+
+If this is your first time contributing to MDN Web Docs (or to open source in general), the checklist below can help you get started smoothly:
+
+- ✅ Make sure your GitHub email address is verified (required for commits to be attributed correctly).
+- ✅ Read the [Code of Conduct](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md).
+- ✅ Start with **small changes** such as fixing typos, improving clarity, or correcting formatting.
+- ✅ Prefer using the **GitHub UI** for your first contribution if you are not comfortable with git yet.
+- ✅ Edit only **one file** in your first pull request to keep reviews simple.
+- ✅ Write a clear commit message that briefly explains *what* you changed and *why*.
+- ✅ Be patient and respectful during reviews — feedback is a normal part of the process.
+
+First-time contributions are welcome, and maintainers are happy to help if you get stuck.
+
 ### Prerequisite knowledge
 
 We expect contributors to MDN to have some knowledge of web technologies before working on content.
