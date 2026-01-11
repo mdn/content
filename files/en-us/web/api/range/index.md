@@ -3,6 +3,8 @@ title: Range
 slug: Web/API/Range
 page-type: web-api-interface
 browser-compat: api.Range
+api-inheritance:
+  - AbstractRange
 ---
 
 {{APIRef("DOM")}}
