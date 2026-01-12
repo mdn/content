@@ -156,8 +156,13 @@ async function updateReleaseNotes(version, newStatus, releaseDate) {
       "$1\n\n$2",
     );
 
-    // Remove all remaining HTML comments (including multi-line comments)
-    content = content.replace(/<!--[\s\S]*?-->\n?/g, "");
+    // Remove all remaining HTML comments (including multi-line comments).
+    // Apply repeatedly to avoid incomplete multi-character sanitization.
+    let previousContent;
+    do {
+      previousContent = content;
+      content = content.replace(/<!--[\s\S]*?-->\n?/g, "");
+    } while (content !== previousContent);
 
     // Clean up excessive blank lines (more than 2 consecutive)
     content = content.replace(/\n{3,}/g, "\n\n");
