@@ -30,7 +30,6 @@ In many cases, it is caused by a browser plugin (e.g., an ad blocker or privacy 
 
 If you are using `localhost`, ensure that the correct scheme and port are used and that the service is running.
 
-
 Other possible causes include:
 
 - Trying to access an `https` resource that has an invalid certificate will cause this error.
