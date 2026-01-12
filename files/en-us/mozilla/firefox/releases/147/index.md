@@ -16,7 +16,10 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
+
+- When you select a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) (such as {{cssxref("::before")}} or {{cssxref("::after")}}) in the HTML pane of the Inspector, you can now edit the selector of the corresponding rule in the CSS pane.
+  ([Firefox bug 1998704](https://bugzil.la/1998704)).
 
 <!-- ### HTML -->
 
@@ -59,6 +62,8 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - CSS module scripts are now supported, allowing a stylesheet to be loaded into a script as a {{domxref("CSSStyleSheet")}} instance using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) keyword and the [`type` import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) set to `type="css"`.
   ([Firefox bug 1986681](https://bugzil.la/1986681)).
+- The {{jsxref("Iterator.concat()")}} method is now supported. This method enables you to create a new iterator that combines multiple input iterables into a single sequence.
+  ([Firefox bug 1986672](https://bugzil.la/1986672)).
 
 <!-- No notable changes. -->
 
@@ -100,19 +105,20 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### General
 
 - Fixed the new session response to include the required `setWindowRect` property. ([Firefox bug 1916522](https://bugzil.la/1916522)).
-- Fixed JSON serialization of Chrome Windows. ([Firefox bug 2000801](https://bugzil.la/2000801)).
 
 #### WebDriver BiDi
 
+- Implemented the `input.fileDialogOpened` event, which is emitted whenever a file picker is triggered by the content page, for instance after clicking on an input with `type="file"`. ([Firefox bug 1855045](https://bugzil.la/1855045)).
+- Implemented the `emulation.setScreenSettingsOverride` command to allow clients to emulate the screen dimensions for a list of browsing contexts or user contexts. ([Firefox bug 2000651](https://bugzil.la/2000651)).
 - Fixed an issue where `browsingContext.navigate` with `wait=none` didn't always contain the real target URL. ([Firefox bug 2004191](https://bugzil.la/2004191)).
 - Updated `script.evaluate` and `script.callFunction` to bypass Content Security Policy (CSP). ([Firefox bug 1941780](https://bugzil.la/1941780)).
-- Implemented the `input.fileDialogOpened` event. ([Firefox bug 1855045](https://bugzil.la/1855045)).
-- Updated the `emulation.setLocaleOverride` command to override the `Accept-Language` header. ([Firefox bug 1995691](https://bugzil.la/1995691)).
-- Implemented the `emulation.setScreenSettingsOverride` command. ([Firefox bug 2000651](https://bugzil.la/2000651)).
-- Fixed missing `script.realmCreated` event for new browsing contexts. ([Firefox bug 2002721](https://bugzil.la/2002721)).
+- Fixed missing `script.realmCreated` event for new browsing contexts created via `window.open`. ([Firefox bug 2002721](https://bugzil.la/2002721)).
+- Updated `emulation.setLocaleOverride` to override the `Accept-Language` header. ([Firefox bug 1995691](https://bugzil.la/1995691)).
 - Updated `emulation.setLocaleOverride` to throw an error when called with the `locale` argument equal to `undefined`. ([Firefox bug 2003992](https://bugzil.la/2003992)).
 
-<!-- #### Marionette -->
+#### Marionette
+
+- Fixed JSON serialization of Chrome Windows. ([Firefox bug 2000801](https://bugzil.la/2000801)).
 
 ## Changes for add-on developers
 

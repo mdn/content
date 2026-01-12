@@ -19,11 +19,11 @@ In this task, we want you to use one of the special values we looked at in the [
 
 To complete the task, write a declaration in a new rule that will reset the background color back to white, without using an actual color value.
 
-Your final result should look like the image below:
+Your final result should look like the following finished rendering:
 
-![Barely visible yellow links on a white background.](mdn-cascade.png)
+{{EmbedLiveSample("cascade1-finish")}}
 
-```html live-sample___cascade
+```html live-sample___cascade1-start live-sample___cascade1-finish
 <div class="container" id="outer">
   <div class="container" id="inner">
     <ul>
@@ -34,7 +34,7 @@ Your final result should look like the image below:
 </div>
 ```
 
-```css live-sample___cascade
+```css live-sample___cascade1-start live-sample___cascade1-finish
 #outer div ul .nav a {
   background-color: powderblue;
   padding: 5px;
@@ -47,14 +47,16 @@ div div li a {
 }
 ```
 
-{{EmbedLiveSample("cascade")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("cascade1-start")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 One possible solution is as follows:
 
-```css
+```css live-sample___cascade1-finish
 #outer #inner a {
   background-color: inherit;
 }
@@ -72,11 +74,11 @@ To complete this task, manipulate the cascade layer order to color the links `re
 
 This task is a stretch goal — it requires knowledge of cascade layers, which we didn't cover in the [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) article. You can find the information you need to attempt this task at [Cascade layers > Determining the precedence based on the order of layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#determining_the_precedence_based_on_the_order_of_layers).
 
-Your final result should look like the image below:
+Your final result should look like the following finished rendering:
 
-![Barely visible yellow links on a white background.](mdn-cascade.png)
+{{EmbedLiveSample("cascade2-finish")}}
 
-```html live-sample___cascade-layer
+```html live-sample___cascade2-start live-sample___cascade2-finish
 <div class="container" id="outer">
   <div class="container" id="inner">
     <ul>
@@ -87,7 +89,7 @@ Your final result should look like the image below:
 </div>
 ```
 
-```css live-sample___cascade-layer
+```css live-sample___cascade2-start
 @layer yellow, purple, green;
 
 @layer yellow {
@@ -109,15 +111,37 @@ Your final result should look like the image below:
 }
 ```
 
-{{EmbedLiveSample("cascade-layer")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("cascade2-start")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 One possible solution is as follows:
 
-```css
+```css live-sample___cascade2-finish
 @layer yellow, green, purple;
+```
+
+```css hidden live-sample___cascade2-finish
+@layer yellow {
+  #outer div ul .nav a {
+    padding: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}
+@layer purple {
+  div div li a {
+    color: rebeccapurple;
+  }
+}
+@layer green {
+  a {
+    color: lightgreen;
+  }
+}
 ```
 
 There is one thing you need to do in this task: change the order of precedence so the declaration for the desired color is in the last declared layer, which is what this solution shows.
