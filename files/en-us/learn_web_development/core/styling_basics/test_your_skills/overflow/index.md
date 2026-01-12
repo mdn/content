@@ -22,11 +22,11 @@ To complete the task:
 1. Update the CSS so that the height is maintained and the box will have scrollbars only if there is enough text to cause an overflow.
 2. Test your solution by removing some of the text from the HTML and checking that if there is only a small amount of text that does not overflow, no scrollbar appears.
 
-Your final result should look like the image below:
+Your final result should look like the following rendering:
 
-![A small box with a border and a vertical scrollbar.](mdn-overflow1.png)
+{{EmbedLiveSample("overflow1-finish", "", "450px")}}
 
-```html live-sample___overflow-scroll
+```html live-sample___overflow1-start live-sample___overflow1-finish
 <div class="box">
   <p>
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
@@ -41,7 +41,7 @@ Your final result should look like the image below:
 </div>
 ```
 
-```css live-sample___overflow-scroll
+```css live-sample___overflow1-start live-sample___overflow1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -54,14 +54,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("overflow-scroll", "", "450px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("overflow1-start", "", "450px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 You should add `overflow: auto` so that the box will only gain scrollbars when the content is too large:
 
-```css
+```css live-sample___overflow1-finish
 .box {
   overflow: auto;
 }
@@ -73,11 +75,11 @@ You should add `overflow: auto` so that the box will only gain scrollbars when t
 
 In this task, there is an image in the box that is bigger than the dimensions of the box so that it overflows visibly. Update the CSS so that any image outside of the box is hidden.
 
-Your final result should look like the image below:
+Your final result should look like the following rendering:
 
-![A box with an image which fills the box but does not spill out the edges.](mdn-overflow2.png)
+{{EmbedLiveSample("overflow2-finish", "", "300px")}}
 
-```html live-sample___overflow-hidden
+```html live-sample___overflow2-start live-sample___overflow2-finish
 <div class="box">
   <img
     alt="flowers"
@@ -85,7 +87,7 @@ Your final result should look like the image below:
 </div>
 ```
 
-```css live-sample___overflow-hidden
+```css live-sample___overflow2-start live-sample___overflow2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -96,14 +98,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("overflow-hidden", "", "300px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("overflow2-start", "", "300px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 You should add `overflow: hidden` to the `.box` selector:
 
-```css
+```css live-sample___overflow2-finish
 .box {
   overflow: hidden;
 }

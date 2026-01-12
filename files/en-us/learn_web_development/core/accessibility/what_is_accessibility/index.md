@@ -176,6 +176,6 @@ This article should have given you a useful high-level overview of accessibility
   - [Understandable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
   - [Robust](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
 
-- [Google Chrome released an auto-captioning extension](https://blog.google/products/chrome/live-caption-chrome/)
+- [Google Chrome released an auto-captioning extension](https://blog.google/products-and-platforms/products/chrome/live-caption-chrome/)
 
 {{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}
