@@ -131,7 +131,7 @@ input {
 }
 
 input {
-  box-shadow: inset 1px 1px 3px #ccccccs;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 

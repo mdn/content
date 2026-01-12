@@ -17,13 +17,13 @@ The aim of this skill test is to help you assess whether you understand [positio
 
 To complete this task, position the item with a class of `target` to the top and right of the container, which has the 5px grey border.
 
-Your final result should look like the image below:
+Your final result should look like this finished rendering:
 
-![The green box is at the top right of a container with a grey border.](position-task1.png)
+{{EmbedLiveSample("position1-finish", "", "250px")}}
 
 **Bonus question:** Can you change the target to display underneath the text?
 
-```html live-sample___position1
+```html live-sample___position1-start live-sample___position1-finish
 <div class="container">
   <p>
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
@@ -38,7 +38,7 @@ Your final result should look like the image below:
 </div>
 ```
 
-```css live-sample___position1
+```css live-sample___position1-start live-sample___position1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -70,15 +70,17 @@ body {
 }
 ```
 
-{{EmbedLiveSample("position1", "", "400px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("position1-start", "", "400px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 This requires `position: relative` and `position: absolute` and understanding how they relate to each other in terms of relative positioning creating a new positioning context.
-A likely issue could be that you add `position: absolute` to the child without applying `position: relative` to the container. In that case, the target will end up being positioned according to the viewport.
+A likely issue could be that you add `position: absolute` to the child without applying `position: relative` to the container. In that case, the target will end up being positioned relative to the viewport.
 
-```css
+```css live-sample___position1-finish
 .container {
   position: relative;
 }
@@ -96,11 +98,11 @@ For the bonus question, you need to add a negative `z-index` to the target, for 
 
 ## Task 2
 
-In this task, if you scroll the box in the example below, the sidebar scrolls with the content. We want you to update the code so that the sidebar (`<div class="sidebar">`) stays in place and only the content scrolls.
+In the starting state of this task, if you scroll the content, the sidebar scrolls with the content. We want you to update the code so that the sidebar (`<div class="sidebar">`) stays in place and only the content scrolls, as shown in this finished rendering:
 
-![The content is scrolled but the sidebar has stayed in place.](position-task2.png)
+{{EmbedLiveSample("position2-finish", "", "400px")}}
 
-```html live-sample___position2
+```html live-sample___position2-start live-sample___position2-finish
 <div class="container">
   <div class="sidebar">
     <p>
@@ -131,7 +133,7 @@ In this task, if you scroll the box in the example below, the sidebar scrolls wi
 </div>
 ```
 
-```css live-sample___position2
+```css live-sample___position2-start live-sample___position2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -160,23 +162,21 @@ body {
   margin-left: 160px;
 }
 
-.container {
-  /* Add styles here */
-}
-
 .sidebar {
   /* Add styles here */
 }
 ```
 
-{{EmbedLiveSample("position2", "", "400px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("position2-start", "", "400px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
-We're testing your understanding of `position: fixed` with a slightly different example to the ones in the learning materials.
+Your finished sidebar CSS should look like this:
 
-```css
+```css live-sample___position2-finish
 .sidebar {
   position: fixed;
 }

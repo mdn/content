@@ -3108,8 +3108,12 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "SFrameTransform": {
+    "SFrameReceiverTransform": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "SFrameSenderTransform": {
+      "inh": "",
       "impl": []
     },
     "SFrameTransformErrorEvent": {
