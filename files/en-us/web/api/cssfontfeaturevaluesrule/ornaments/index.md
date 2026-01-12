@@ -28,7 +28,7 @@ Blah
 // look for the first stylesheet and the first cssRule in that sheet
 const myRule = document.styleSheets[0].cssRules[0];
 // check 
-if (rule instanceof CSSFontFeatureValuesRule && myRule.ornaments.size) {
+if (myRule instanceof CSSFontFeatureValuesRule && myRule.ornaments.size) {
   // do something with the ornaments
 }
 ```
