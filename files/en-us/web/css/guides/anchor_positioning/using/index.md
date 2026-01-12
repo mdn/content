@@ -253,11 +253,11 @@ Both will place the positioned element `50px` above the bottom of the element's 
 
 The most common `anchor()` parameters you'll use will refer to a side of the default anchor. You will also often either add a {{cssxref("margin")}} to create spacing between the edge of the anchor and positioned element or use `anchor()` within a `calc()` function to add that spacing.
 
-For example, this rule positions the right edge of the positioned element flush to the anchor element's left edge, then adds some `margin-left` to make some space between the edges:
+For example, this rule positions the left edge of the positioned element flush to the anchor element's right edge, then adds some `margin-left` to make some space between the edges:
 
 ```css
 .positionedElement {
-  right: anchor(left);
+  left: anchor(right);
   margin-left: 10px;
 }
 ```
