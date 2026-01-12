@@ -68,7 +68,7 @@ box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 /* inset, length values, and a color */
 box-shadow: inset 5em 1em gold;
 
-/* Mulyiple shadows, separated by commas */
+/* Multiple shadows, separated by commas */
 box-shadow:
   3px 3px red inset,
   -1em 0 0.4em olive;
