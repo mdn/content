@@ -154,13 +154,13 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `<generic-script-specific>`
       - : Generic family names for specific writing systems. These should be wrapped with the keyword `generic()` and must not be quoted. A generic script-specific font family usually appears before the other generic families above. The following keywords are defined:
       - `generic(fangsong)`
-        - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
+        - : A style of Chinese characters that are between serif-style Song and cursive-style Kai forms.
       - `generic(kai)`
-        - : A particular cursive-style of Chinese characters in Kai forms. This style is often used for government documents.
+        - : A cursive-style of Chinese characters in Kai forms.
       - `generic(nastaliq)`
-        - : A particular cursive-style of Perso-Arabic script for writing Urdu and Kashmiri.
+        - : A cursive-style of Perso-Arabic script for writing Urdu and Kashmiri.
       - `generic(khmer-mul)`
-        - : A particular style of Khmer script for titles, headings or proper nouns.
+        - : A style of Khmer script for titles, headings or proper nouns.
 
 ## Formal definition
 
