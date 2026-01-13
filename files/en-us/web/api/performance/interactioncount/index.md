@@ -8,15 +8,15 @@ browser-compat: api.Performance.interactionCount
 
 {{APIRef("Performance API")}}
 
-The read-only `performance.interactionCount` property is an `unsigned long` A count of the number of real-user interactions that have occurred on the page.
+The read-only `performance.interactionCount` property represents the number of real-user interactions that have occurred on the page.
 
 Only discrete interactions with an {{domxref("PerformanceEventTiming.interactionId")}} are counted, so scroll interactions are excluded for example.
 
-This is useful to accurately calculate {{Glossary("Interaction_to_next_paint", "Interaction to Next Paint (INP)")}}, and in particular to exclude outliers for long-lived pages as INP takes the 98th percentile of interactions for a page and so excludes 1 in every 50 interactions as "outliers" that are not reflective of overall page responsiveness.
+This is useful when calculating {{Glossary("Interaction_to_next_paint", "Interaction to Next Paint (INP)")}}, and in particular to exclude outliers for long-lived pages. INP takes the 98th percentile of interactions for a page and so excludes 1 in every 50 interactions as "outliers" that are not reflective of overall page responsiveness.
 
 ## Value
 
-A number. Starting at `0` and increment with each discrete interaction as measured by {{domxref("PerformanceEventTiming")}} and where an {{domxref("PerformanceEventTiming.interactionId")}} is assigned.
+A number, which is initially `0`, and increments by `1` with each discrete interaction as measured by {{domxref("PerformanceEventTiming")}}, where an {{domxref("PerformanceEventTiming.interactionId")}} is assigned.
 
 ## Examples
 
@@ -26,7 +26,7 @@ A number. Starting at `0` and increment with each discrete interaction as measur
 // For pages with a large number of interactions, recalculate INP after
 // excluding 1 out of every 50 outliers.
 if (performance.interactionCount > 50) {
-  // (Actual calculation is complex and is not shown here)
+  // Actual calculation is complex and is not shown here
 }
 ```
 
