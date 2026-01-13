@@ -95,4 +95,4 @@ No notable changes.
 ## Experimental web features
 
 No experimental features were added in this release.
-You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+Check the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page for features from other releases.
