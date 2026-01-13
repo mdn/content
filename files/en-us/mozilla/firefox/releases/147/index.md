@@ -20,6 +20,11 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - When you select a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) (such as {{cssxref("::before")}} or {{cssxref("::after")}}) in the HTML pane of the Inspector, you can now edit the selector of the corresponding rule in the CSS pane.
   ([Firefox bug 1998704](https://bugzil.la/1998704)).
+- During a view transition, view transition pseudo-elements now appear in the elements view. ([Firefox bug 1996608](https://bugzil.la/1996608)).
+- During a view transition, the associated animations now appear in the animations panel. ([Firefox bug 1995296](https://bugzil.la/1995296)).
+- Elements with a valid [anchor-name](/en-US/docs/Web/CSS/Reference/Properties/anchor-name) get an 'anchor' badge in the elements view. ([Firefox bug 1895196](https://bugzil.la/1895196)).
+- A highlighted element's associated [@position-try](/en-US/docs/Web/CSS/Reference/At-rules/@position-try) rules are now displayed in the CSS rules panel. ([Firefox bug 1895176](https://bugzil.la/1895176)).
+- JSON payloads can be imported into Firefox Profiler from the JSON viewer using a new button. This provides a breakdown of the size of the resource. ([Firefox bug 1997209](https://bugzil.la/1997209)).
 
 <!-- ### HTML -->
 
