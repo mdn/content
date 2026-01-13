@@ -10,6 +10,13 @@ browser-compat: api.CSSFontFeatureValuesRule.styleset
 
 Blah
 
+## Value
+
+A {{domxref("CSSFontFeatureValuesMap")}} object.
+
+
+Although the `styleset` property itself is read-only in the sense that you can't replace the `CSSFontFeatureValuesMap` object, you can still assign to the `styleset` property directly. You can also modify the values of the `styleset` using the [`CSSFontFeatureValuesMap` instance methods](/en-US/docs/Web/API/CSSFontFeatureValuesMap#instance_methods).
+
 ## Example
 
 ### CSS

@@ -10,6 +10,12 @@ browser-compat: api.CSSFontFeatureValuesRule.ornaments
 
 Blah
 
+## Value
+
+A {{domxref("CSSFontFeatureValuesMap")}} object.
+
+Although the `ornaments` property itself is read-only in the sense that you can't replace the `CSSFontFeatureValuesMap` object, you can still assign to the `ornaments` property directly. You can also modify the values of the `ornaments` using the [`CSSFontFeatureValuesMap` instance methods](/en-US/docs/Web/API/CSSFontFeatureValuesMap#instance_methods).
+
 ## Example
 
 ### CSS

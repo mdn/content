@@ -10,6 +10,12 @@ browser-compat: api.CSSFontFeatureValuesRule.stylistic
 
 Blah
 
+## Value
+
+A {{domxref("CSSFontFeatureValuesMap")}} object.
+
+Although the `stylistic` property itself is read-only in the sense that you can't replace the `CSSFontFeatureValuesMap` object, you can still assign to the `stylistic` property directly. You can also modify the values of the `stylistic` using the [`CSSFontFeatureValuesMap` instance methods](/en-US/docs/Web/API/CSSFontFeatureValuesMap#instance_methods).
+
 ## Example
 
 ### CSS
