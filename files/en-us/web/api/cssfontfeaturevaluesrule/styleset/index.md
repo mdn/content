@@ -8,12 +8,11 @@ browser-compat: api.CSSFontFeatureValuesRule.styleset
 
 {{ APIRef("CSSOM") }}
 
-Blah
+The read-only **styleset** property of the {{domXRef("CSSFontFeatureValuesRule")}} interface contains a {{domXRef("CSSFontFeatureValuesMap")}} object representing the user-defined-ident and feature index for a variable font which supports {{CSSXRef("font-variant-alternates", "styleset()", "#styleset")}}.
 
 ## Value
 
 A {{domxref("CSSFontFeatureValuesMap")}} object.
-
 
 Although the `styleset` property itself is read-only in the sense that you can't replace the `CSSFontFeatureValuesMap` object, you can still assign to the `styleset` property directly. You can also modify the values of the `styleset` using the [`CSSFontFeatureValuesMap` instance methods](/en-US/docs/Web/API/CSSFontFeatureValuesMap#instance_methods).
 

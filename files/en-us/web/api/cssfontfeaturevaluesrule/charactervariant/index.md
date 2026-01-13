@@ -8,7 +8,7 @@ browser-compat: api.CSSFontFeatureValuesRule.characterVariant
 
 {{ APIRef("CSSOM") }}
 
-Blah
+The read-only **characterVariant** property of the {{domXRef("CSSFontFeatureValuesRule")}} interface contains a {{domXRef("CSSFontFeatureValuesMap")}} object representing the user-defined-ident and feature index for a variable font which supports {{CSSXRef("font-variant-alternates", "characterVariant()", "#characterVariant")}}.
 
 ## Value
 
