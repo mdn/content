@@ -210,11 +210,12 @@ HTML provides several elements that can be used together to create forms that th
 
 HTML offers a selection of elements that help to create interactive user interface objects.
 
-| Element                    | Description                                                                                                                                                                                          |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{HTMLElement("details")}} | Creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label must be provided using the {{HTMLElement("summary")}} element.  |
-| {{HTMLElement("dialog")}}  | Represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.                                                                                        |
-| {{HTMLElement("summary")}} | Specifies a summary, caption, or legend for a details element's disclosure box. Clicking the `<summary>` element toggles the state of the parent {{HTMLElement("details")}} element open and closed. |
+| Element                                                | Description                                                                                                                                                                                          |
+| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{HTMLElement("details")}}                             | Creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label must be provided using the {{HTMLElement("summary")}} element.  |
+| {{HTMLElement("dialog")}}                              | Represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.                                                                                        |
+| {{HTMLElement("geolocation")}} {{experimental_inline}} | Creates an interactive control for the user to share their geolocation data with the page.                                                                                                           |
+| {{HTMLElement("summary")}}                             | Specifies a summary, caption, or legend for a details element's disclosure box. Clicking the `<summary>` element toggles the state of the parent {{HTMLElement("details")}} element open and closed. |
 
 ## Web Components
 
