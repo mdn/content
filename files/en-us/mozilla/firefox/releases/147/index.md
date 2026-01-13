@@ -1,18 +1,13 @@
 ---
-title: Firefox 147 release notes for developers (Beta)
-short-title: Firefox 147 (Beta)
+title: Firefox 147 release notes for developers (Stable)
+short-title: Firefox 147 (Stable)
 slug: Mozilla/Firefox/Releases/147
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 147 that affect developers.
-Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [January 13, 2026](https://whattrainisitnow.com/release/?version=147).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 147 was released on [January 13, 2026](https://whattrainisitnow.com/release/?version=147).
 
 ## Changes for web developers
 
@@ -26,23 +21,15 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - A highlighted element's associated {{cssxref("@position-try")}} rules are now displayed in the CSS rules panel. ([Firefox bug 1895176](https://bugzil.la/1895176)).
 - JSON payloads can be imported into Firefox Profiler from the JSON viewer using a new button. This provides a breakdown of the size of the resource. ([Firefox bug 1997209](https://bugzil.la/1997209)).
 
-<!-- ### HTML -->
+### HTML
 
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### SVG
 
 - When an SVG file is used as an [image source](/en-US/docs/Web/SVG/Guides/SVG_as_an_image) (for example, embedded into a page via an {{htmlelement("img")}} element or as a CSS {{cssxref("background-image")}}), the SVG URL now supports [media fragments](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments). ([Firefox bug 1999989](https://bugzil.la/1999989)). This means that:
   - When the SVG includes a [SMIL animation](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL), you can use [temporal dimension](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments#temporal_dimension_fragment_syntax) syntax to play a portion of the animation from a specific start time to a specific end time, after which the animation will pause.
   - You can use [spatial dimension](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments#spatial_dimension_fragment_syntax) syntax to display a specific area of the SVG document.
-
-<!-- #### Removals -->
 
 ### CSS
 
@@ -61,26 +48,12 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The following [relative length units based on root element's font](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_root_elements_font) are now supported: `rcap`, `rch`, `rex`, and `ric`. These units allow you to define `<length>` values based on the size of a particular character or font attribute of the [root](/en-US/docs/Web/CSS/Reference/Selectors/:root) element.
   ([Firefox bug 1740584](https://bugzil.la/1740584)).
 
-<!-- #### Removals -->
-
 ### JavaScript
 
 - CSS module scripts are now supported, allowing a stylesheet to be loaded into a script as a {{domxref("CSSStyleSheet")}} instance using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) keyword and the [`type` import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) set to `type="css"`.
   ([Firefox bug 1986681](https://bugzil.la/1986681)).
 - The {{jsxref("Iterator.concat()")}} method is now supported. This method enables you to create a new iterator that combines multiple input iterables into a single sequence.
   ([Firefox bug 1986672](https://bugzil.la/1986672)).
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
 
 ### APIs
 
@@ -94,16 +67,6 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - Service workers can now be ECMAScript [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules).
   To load a service worker module, specify a [`type`](/en-US/docs/Web/API/ServiceWorkerContainer/register#type) of `'module'` when calling {{domxref("ServiceWorkerContainer.register()")}}.
   ([Firefox bug 1360870](https://bugzil.la/1360870)).
-
-<!-- #### DOM -->
-
-<!-- #### Media, WebRTC, and Web Audio -->
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -128,10 +91,6 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ## Changes for add-on developers
 
 - Temporarily loaded Manifest Version 3 extensions can now load scripts from localhost, as explained in [Scripts from localhost](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#scripts_from_localhost) in the Content Security Policy article. ([Firefox bug 1864284](https://bugzil.la/1864284))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
