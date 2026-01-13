@@ -6,7 +6,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module defines features enabling the creation of flexible and accessible pure-CSS carousels with browser-generated and developer-styled scroll buttons and scroll markers. This guide explains how to create a carousel using these features.
+The [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module defines features enabling the creation of flexible pure-CSS carousels with browser-generated and developer-styled scroll buttons and scroll markers. This guide explains how to create a carousel using these features.
 
 ## Carousel concepts
 
@@ -23,13 +23,13 @@ Users can move through the items by clicking or activating navigational buttons 
 
 A key feature of carousels is **pagination** — the items feel like separate pieces of content that are moved between rather than forming one continuous section of content. You might show one item at a time or several items on each carousel "page". When several items are visible, you might show an entirely new group of items each time the "next" or "previous" button is pressed. Alternatively, you could add a single new item to one end of the list while moving the item at the other end out of view.
 
-Carousels can be quite brittle and challenging to implement with JavaScript. They require scripts to associate scroll markers with the items they represent while continuously updating the scroll buttons to keep them operating correctly. When carousels are created using JavaScript, the accessibility of the carousel and the associated controls has to be added in.
+Carousels can be quite brittle and challenging to implement with JavaScript. They require scripts to associate scroll markers with the items they represent while continuously updating the scroll buttons to keep them operating correctly.
 
-Fortunately, we can create accessible carousels with associated controls without the use of JavaScript, using CSS carousel features.
+Fortunately, we can create carousels with associated controls without the use of JavaScript, using CSS carousel features.
 
 ## CSS carousel features
 
-The CSS carousel features provide pseudo-elements and pseudo-classes that enable the creation of carousels using only CSS and HTML, with the browser handling most of the scrolling and link references in an accessible, flexible, and consistent manner. These features are as follows:
+The CSS carousel features provide pseudo-elements and pseudo-classes that enable the creation of carousels using only CSS and HTML, with the browser handling most of the scrolling and link references in a flexible and consistent manner. These features are as follows:
 
 - {{cssxref("::scroll-button()")}}
   - : Generated inside a {{glossary("scroll container")}}, these pseudo-elements represent scroll buttons, which scroll the container in a specified direction.
@@ -50,21 +50,21 @@ Our first demo is a carousel of single pages, with each item taking up the full 
 
 We'll use [flexbox](#carousel_layout_with_flexbox) to lay out the carousel, [scroll snapping](#setting_up_scroll_snapping_on_the_list) to enforce clear pagination, and anchor positioning to [position the scroll buttons](#positioning_scroll_buttons) and scroll markers relative to the carousel.
 
-The HTML consists of a [heading element](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul), with each [list item](/en-US/docs/Web/HTML/Reference/Elements/li) containing some sample content:
+The HTML consists of a [heading element](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul), with each [list item](/en-US/docs/Web/HTML/Reference/Elements/li) containing some sample content, along with a custom `data-` attribute (which we explain with the styling):
 
 ```html live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
 <h1>CSS carousel single item per page</h1>
 <ul>
-  <li>
+  <li data-accName="Item 1">
     <h2>Page 1</h2>
   </li>
-  <li>
+  <li data-accName="Item 2">
     <h2>Page 2</h2>
   </li>
-  <li>
+  <li data-accName="Item 3">
     <h2>Page 3</h2>
   </li>
-  <li>
+  <li data-accName="Item 4">
     <h2>Page 4</h2>
   </li>
 </ul>
@@ -189,20 +189,20 @@ ul::scroll-button(*):disabled {
 > [!NOTE]
 > We also set a {{cssxref("cursor")}} value of `pointer` on the scroll buttons to make it more obvious that they can be interacted with (an improvement for both general [UX](/en-US/docs/Glossary/UX) and [cognitive accessibility](/en-US/docs/Web/Accessibility/Guides/Cognitive_accessibility)), unsetting it when the scroll buttons are `:disabled`.
 
-Next, an appropriate icon is set on the left and right scroll buttons via the `content` property, which is also what causes the scroll buttons to be generated:
+Next, an appropriate icon is set on the left and right scroll buttons via the {{cssxref("content")}} property, which is also what causes the scroll buttons to be generated. That icon must also have a corresponding plain text accessible name, so use the [alternative text](/en-US/docs/Web/CSS/Reference/Properties/content#adding_an_image_with_alternative_text) feature of the `content` property (with the caveat that [this may still be insufficient to satisfy WCAG](/en-US/docs/Web/CSS/Reference/Properties/content#accessibility)):
 
 ```css live-sample___first-example live-sample___first-example-step2
 ul::scroll-button(left) {
-  content: "◄";
+  content: "◄" / "Previous";
 }
 
 ul::scroll-button(right) {
-  content: "►";
+  content: "►" / "Next";
 }
 ```
 
 > [!NOTE]
-> The scroll buttons are automatically given an appropriate accessible name, so they are announced appropriately by assistive technologies. For example, the above buttons have an implicit [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) of `button` and their {{glossary("accessible name", "accessible names")}} are "scroll left" and "scroll right", respectively.
+> User agents should automatically give an appropriate accessible name to generated scroll buttons so that assistive technologies can appropriately announced them and the buttons should have an implicit [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) of `button`. Providing [alternative text for generated content](/en-US/docs/Web/CSS/Reference/Properties/content#alternative_text_string_counter) ensures the buttons have the {{glossary("accessible name", "accessible names")}} of "scroll left" and "scroll right" in user agents that don't natively include scroll button accessibility features.
 
 ### Positioning scroll buttons
 
@@ -277,16 +277,20 @@ ul::scroll-marker-group {
 }
 ```
 
-Next, we handle the look and feel of the scroll markers themselves; they can be styled just like any other [generated content](/en-US/docs/Web/CSS/Guides/Generated_content). It is important to note that we need to set a non-`none` value for the `content` property so the scroll markers are actually generated. We also set some rudimentary styles to make the markers appear as outlined circles:
+Next, we handle the look and feel of the scroll markers themselves; they can be styled just like any other [generated content](/en-US/docs/Web/CSS/Guides/Generated_content). It is important to note that we need to set a non-`none` value for the `content` property so the scroll markers are actually generated. A value of `""` produces a blank accessible name (a WCAG SC [4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) violation), so it's necessary to provide some text value. Because each scroll marker having the same name may not be useful for users, consider using `attr()` to pull the value from a custom `data-` attribute on the `<li>` (this example looks for an attribute `data-accName`). Understand this value will not be picked up by automated translation services.
+
+We also set some rudimentary styles to make the markers appear as outlined circles while visually hiding the text content we've added:
 
 ```css live-sample___first-example
 li::scroll-marker {
-  content: "";
+  content: attr(data-accName);
   width: 16px;
   height: 16px;
   background-color: transparent;
   border: 2px solid black;
   border-radius: 50%;
+  overflow: hidden;
+  text-indent: 16px;
 }
 ```
 
@@ -319,6 +323,9 @@ You can also navigate between pages by swiping left and right, dragging the scro
 The second demo is a carousel with multiple items per page, which again includes [scroll buttons](#creating_scroll_buttons) and [scroll markers](#creating_scroll_markers) for navigating through the pages. This demo is also responsive — different numbers of items appear on each page depending on the viewport width.
 
 This demo is very similar to the [Carousel with single pages](#carousel_with_single_pages) demo, except that instead of using flexbox for layout, it uses [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) and the {{cssxref("::column")}} pseudo-element to create arbitrary columns that span the full width of the carousel and may contain multiple items.
+
+> [!NOTE]
+> There is currently no way to provide an accessible name for the scroll markers (there is no corresponding HTML element from which to draw a `data-` value as in the prior example). Using this pattern will create a WCAG SC [4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) violation.
 
 Using this approach, we can be sure that if the viewport grows or shrinks, while the item size remains constant, we'll never have a partial item displayed off the edge of the scrollport. In this case, the scroll markers are created on scroll container fragments, per-column, rather than on children, per-item.
 

@@ -7,9 +7,9 @@ status:
 browser-compat: api.Window.fetchLater
 ---
 
-{{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Fetch API")}}{{SeeCompatTable}}
 
-The **`DeferredRequestInit`** dictionary of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) represents the set of options that can be used to configure a deferred fetch request.
+The **`DeferredRequestInit`** dictionary of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents the set of options that can be used to configure a deferred fetch request.
 
 The `DeferredRequestInit` object is passed directly into the {{domxref("window.fetchLater()")}} function call as the second argument.
 
@@ -60,7 +60,7 @@ fetchLater("/send_beacon", {
 
 ## See also
 
-- [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [Using Deferred Fetch](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch)
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
