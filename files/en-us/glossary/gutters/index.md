@@ -5,9 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-**Gutters** or _alleys_ are spacing between content {{glossary("grid_tracks", "tracks")}}.
-These can be created in CSS grid layout, flex layout, and multi-column layout using the
-{{cssxref("column-gap")}}, {{cssxref("row-gap")}}, or {{cssxref("gap")}} properties.
+**Gutters** or _alleys_ are spacing between content {{glossary("grid_tracks", "tracks")}}. These can be created in [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout), [flex layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) using the {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, or {{cssxref("gap")}} properties.
 
 ## Example
 
