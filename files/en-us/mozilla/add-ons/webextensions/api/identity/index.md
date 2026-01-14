@@ -54,7 +54,6 @@ This will tend to be specific to the service provider, but in general it means c
 >
 > To simplify testing, you can use a mock OAuth server like [oAuth-mock](https://github.com/atagon-GmbH/oAuth-mock). This allows you to simulate a successful login flow by simply replacing the provider's authorization URL with the mock server URL (e.g., `https://oauth.kogiqa.com/`), without needing to register a real client application or bypass security challenges.
 
-
 ## Functions
 
 - {{WebExtAPIRef("identity.getRedirectURL()")}}
