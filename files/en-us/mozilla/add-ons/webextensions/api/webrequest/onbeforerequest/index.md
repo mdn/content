@@ -64,6 +64,10 @@ Events have three functions:
 
 ### details
 
+- `documentId` {{optional_inline}}
+  - : `string`. The UUID of the document making the request.
+- `documentLifecycle`
+  - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, or `"pending_deletion"`.
 - `cookieStoreId`
   - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `documentUrl`
@@ -77,6 +81,8 @@ Events have three functions:
 
 - `frameId`
   - : `integer`. Zero if the request happens in the main frame; a positive value is the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
+- `frameType`
+  - : `string`. The type of frame the request occurred in. Returns the values `"outermost_frame"`, `"fenced_frame"`, or `"sub_frame"`.
 - `incognito`
   - : `boolean`. Whether the request is from a private browsing window.
 - `method`
@@ -86,6 +92,8 @@ Events have three functions:
 
     The `originUrl` is often but not always the same as the `documentUrl`. For example, if a page contains an iframe, and the iframe contains a link that loads a new document into the iframe, then the `documentUrl` for the resulting request will be the iframe's parent document, but the `originUrl` will be the URL of the document in the iframe that contained the link.
 
+- `parentDocumentId`{{optional_inline}}
+   - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
 - `parentFrameId`
   - : `integer`. ID of the frame that contains the frame which sent the request. Set to -1 if no parent frame exists.
 - `proxyInfo`
