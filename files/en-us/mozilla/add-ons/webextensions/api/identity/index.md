@@ -49,6 +49,12 @@ Before you use OAuth2 with a service provider, you must register the extension w
 
 This will tend to be specific to the service provider, but in general it means creating an entry for your extension on the provider's website. In this process you supply your redirect URL, and receive a client ID (and sometimes also a secret). You need to pass both of these into {{WebExtAPIRef("identity.launchWebAuthFlow()")}}.
 
+> [!NOTE]
+> **Testing Tip:** During development and automated testing, configuring a real provider (like Google or GitHub) can be difficult due to Two-Factor Authentication (2FA), Captchas, or rate limits.
+>
+> To simplify testing, you can use a mock OAuth server like [oAuth-mock](https://github.com/atagon-GmbH/oAuth-mock). This allows you to simulate a successful login flow by simply replacing the provider's authorization URL with the mock server URL (e.g., `https://oauth.kogiqa.com/`), without needing to register a real client application or bypass security challenges.
+
+
 ## Functions
 
 - {{WebExtAPIRef("identity.getRedirectURL()")}}
