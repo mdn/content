@@ -8,9 +8,9 @@ browser-compat: api.Performance.interactionCount
 
 {{APIRef("Performance API")}}
 
-The read-only `performance.interactionCount` property represents the number of real-user interactions that have occurred on the page since the page was loaded.
+The read-only `performance.interactionCount` property represents the number of real-user interactions that have occurred on the page since it was loaded.
 
-Only discrete interactions with an {{domxref("PerformanceEventTiming.interactionId", "interactionId")}} (such as clicks and key events) are counted — so, for example, scroll interactions are excluded.
+Only discrete interactions with an {{domxref("PerformanceEventTiming.interactionId", "interactionId")}} — such as clicks and key events — are counted. Other interactions, such as scroll interactions, are excluded.
 
 This is useful when calculating {{Glossary("Interaction_to_next_paint", "Interaction to Next Paint (INP)")}}, and in particular to exclude outliers for long-lived pages. INP takes the 98th percentile of interactions for a page and so excludes 1 in every 50 interactions as "outliers" that are not reflective of overall page responsiveness.
 
@@ -22,8 +22,8 @@ A number, which is initially `0`, and increments by `1` with each discrete inter
 
 ### Checking the number of interactions to accurately calculate INP
 
-For pages with a large number of interactions, recalculate INP after
-excluding 1 out of every 50 outliers.
+For pages with a large number of interactions, you can recalculate INP after
+excluding 1 out of every 50 outliers using the following pattern:
 
 ```js
 if (performance.interactionCount >= 50) {
