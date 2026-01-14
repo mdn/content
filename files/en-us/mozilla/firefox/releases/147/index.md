@@ -94,6 +94,5 @@ No notable changes.
 
 ## Experimental web features
 
-These features are shipping in Firefox 147 but are disabled by default.
-To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
-You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+No experimental features were added in this release.
+Check the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page for features from other releases.
