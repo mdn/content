@@ -89,7 +89,7 @@ In this example of intercepting a navigation, the `handler()` function starts by
 
 ```js
 navigation.addEventListener("navigate", (event) => {
-  if (shouldNotIntercept(navigateEvent)) return;
+  if (shouldNotIntercept(event)) return;
   const url = new URL(event.destination.url);
 
   if (url.pathname.startsWith("/articles/")) {
