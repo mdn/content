@@ -63,6 +63,7 @@ path2.arc(170, 60, 50, 0, 2 * Math.PI);
 
 ctx.stroke(path2);
 ```
+
 ## Specifications
 
 {{Specifications}}
