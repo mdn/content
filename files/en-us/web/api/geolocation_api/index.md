@@ -30,6 +30,9 @@ In both cases, the method call takes up to three arguments:
 
 For further information on Geolocation usage, read [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API).
 
+> [!NOTE]
+> The {{htmlelement("geolocation")}} element provides an alternative mechanism for accessing and handling geolocation data that solves some of the shortcomings of the Geolocation API, such as providing a consistent UI, and a more intuitive permission gathering process.
+
 ## Interfaces
 
 - {{domxref("Geolocation")}}
@@ -87,5 +90,6 @@ As Wi-Fi-based locating is often provided by Google, the vanilla Geolocation API
 
 ## See also
 
+- {{htmlelement("geolocation")}} element
 - [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - [Who moved my geolocation?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)
