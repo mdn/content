@@ -8,24 +8,33 @@ browser-compat: api.IDBFactory.deleteDatabase
 
 {{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-The **`deleteDatabase()`** method of the {{DOMxRef("IDBFactory")}} interface requests the deletion of a database. The method returns an {{DOMxRef("IDBOpenDBRequest")}} object immediately, and performs the deletion operation asynchronously.
+The **`deleteDatabase()`** method of the {{DOMxRef("IDBFactory")}} interface requests the
+deletion of a database. The method returns an {{DOMxRef("IDBOpenDBRequest")}} object
+immediately, and performs the deletion operation asynchronously.
 
-If the database is successfully deleted, then a `success` event is fired on the request object returned from this method, with its `result` set to `undefined`. If an error occurs while the database is being deleted, then an `error` event is fired on the request object that is returned from this method.
+If the database is successfully deleted, then a `success` event is fired on the request
+object returned from this method, with its `result` set to `undefined`. If an error occurs
+while the database is being deleted, then an `error` event is fired on the request object
+that is returned from this method.
 
-When `deleteDatabase()` is called, any other open connections to this particular database will get a [versionchange](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event.
+When `deleteDatabase()` is called, any other open connections to this particular database
+will get a [versionchange](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event.
 
 ## Blocked state
 
-The delete operation can enter a **blocked** state if there are open connections to the database that don't close in response to the `versionchange` event. When blocked, the deletion waits indefinitely for all connections to close. During this blocked state:
+The delete operation can enter a **blocked** state if there are open connections to the
+database that don't close in response to the `versionchange` event. When blocked, the
+deletion waits indefinitely for all connections to close. During this blocked state:
 
 - A `blocked` event fires on the returned {{DOMxRef("IDBOpenDBRequest")}} object
 - Existing {{DOMxRef("IDBDatabase")}} connections continue to operate normally
 - New {{DOMxRef("IDBFactory")}} operations (like `open()` or additional `deleteDatabase()` calls) on the same database will also be queued and wait
 
-**Best practice:** Close all connections to the database before calling `deleteDatabase()` to avoid blocking. When a connection receives the `versionchange` event, it should close itself by calling {{DOMxRef("IDBDatabase.close()")}}.
+**Best practice:** Close all connections to the database before calling `deleteDatabase()`
+to avoid blocking. When a connection receives the `versionchange` event, it should close
+itself by calling {{DOMxRef("IDBDatabase.close()")}}.
 
 ## Syntax
-
 ```js-nolint
 // For the current standard:
 deleteDatabase(name)
@@ -55,14 +64,14 @@ An {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this re
 If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `null`.
 
 > [!NOTE]
-> 
-> The delete operation may be blocked if there are open connections to the database. Listen for the {{domxref("IDBOpenDBRequest.blocked_event", "blocked")}} event on the returned request to handle this case.
-Listen for the {{domxref("IDBOpenDBRequest.blocked_event", "blocked")}} event on the returned request to handle this case.
-> 
+>
+> The delete operation may be blocked if there are open connections to the database.
+> Listen for the {{domxref("IDBOpenDBRequest.blocked_event", "blocked")}} event on the
+> returned request to handle this case.
+
 ## Examples
 
 ### Basic database deletion
-
 ```js-nolint
 const DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
