@@ -19,7 +19,7 @@ In this task, you have an image that is overflowing the box. We want the image t
 
 Your final result should look like the following rendering:
 
-{{EmbedLiveSample("images-forms1-finish", "", "400px")}}
+{{EmbedLiveSample("images-forms1-finish", "", "280px")}}
 
 ```html live-sample___images-forms1-start live-sample___images-forms1-finish
 <div class="box">
@@ -74,7 +74,7 @@ To complete the task:
 
 Your final result should look like the following rendering:
 
-{{EmbedLiveSample("images-forms2-finish")}}
+{{EmbedLiveSample("images-forms2-finish", "", "80px")}}
 
 ```html live-sample___images-forms2-start live-sample___images-forms2-finish
 <form action="" class="my-form" method="post">
@@ -98,7 +98,7 @@ body {
 
 This is the starting state of the task:
 
-{{EmbedLiveSample("images-forms2-start")}}
+{{EmbedLiveSample("images-forms2-start", "", "80px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
