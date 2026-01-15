@@ -45,9 +45,9 @@ The **`Path2D`** interface of the Canvas 2D API is used to declare a path that c
 
 This example demonstrates how a `Path2D` object can be copied and extended.
 
-First, `path1` creates a rectangle.  
-Then, `path2` is created as a copy of `path1`.  
-After that, `path2` is extended with a circle.  
+First, `path1` creates a rectangle.
+Then, `path2` is created as a copy of `path1`.
+After that, `path2` is extended with a circle.
 Finally, only `path2` is drawn.
 
 ```js
