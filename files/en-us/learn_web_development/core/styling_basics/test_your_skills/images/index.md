@@ -130,7 +130,7 @@ Here's an example solution for the task:
 
 ## Task 3
 
-Our second form styling assessment is fairly free-form, and you have a lot of flexibility over what you end up doing here, hence we won't provide an example rendering.
+The solution for this assessment is fairly free-form, and you have a lot of flexibility over what you can do here. So we're not providing an example rendering.
 
 Your CSS needs to include the following:
 
