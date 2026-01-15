@@ -59,7 +59,7 @@ This is the starting state of the task:
 <details>
 <summary>Click here to show the solution</summary>
 
-You will need to increase the width of the second block, to add the size of the padding and border:
+You will need to increase the width of the second block to add the size of the padding and border:
 
 ```css live-sample___box-model1-finish
 .alternate {
@@ -81,7 +81,7 @@ To complete this task, add the following features to the provided box:
 - A left margin of `2em`.
 - Padding on all sides of `1em`.
 
-Your final result should look like the following finished rendering:
+Your final result should look like the following rendering:
 
 {{EmbedLiveSample("box-model2-finish")}}
 
@@ -105,8 +105,8 @@ This is the starting state of the task:
 <details>
 <summary>Click here to show the solution</summary>
 
-This task involves using the margin, border and padding properties correctly.
-You might choose to use the longhand properties ({{cssxref("margin-top")}}, {{cssxref("margin-right")}}, etc.), however when setting a margin and padding on all sides, the shorthand is probably the better choice:
+This task involves using the margin, border, and padding properties correctly.
+You might choose to use the longhand properties ({{cssxref("margin-top")}}, {{cssxref("margin-right")}}, etc.); however, when setting a margin and padding on all sides, the shorthand is probably the better choice:
 
 ```css live-sample___box-model2-finish
 .box {
@@ -120,11 +120,11 @@ You might choose to use the longhand properties ({{cssxref("margin-top")}}, {{cs
 
 ## Task 3
 
-In this task, the inline element has a margin, padding and border. However, the lines above and below are overlapping it.
+In this task, the inline element has a margin, padding, and border. However, the lines above and below are overlapping it.
 
 To complete this task, update the CSS to cause the size of the margin, padding, and border to be respected by the other lines, while still keeping the element inline.
 
-Your final result should look like the following finished rendering:
+Your final result should look like the following rendering:
 
 {{EmbedLiveSample("box-model3-finish")}}
 
@@ -163,7 +163,7 @@ This is the starting state of the task:
 <details>
 <summary>Click here to show the solution</summary>
 
-Solving this task requires that you understand when to use different {{cssxref("display")}} values.
+Solving this task requires you to understand when to use different {{cssxref("display")}} values.
 After adding `display: inline-block`, the block direction margin, border and padding will cause the other lines to be pushed away from the element:
 
 ```css live-sample___box-model3-finish
