@@ -14,10 +14,12 @@ browser-compat: api.CSSFontFeatureValuesMap
 
 ## Instance Method
 
-- {{domxref('CSSFontFeatureValuesMap.clear')}}
+- {{domxref('CSSFontFeatureValuesMap.clear()')}}
   - : Removes all declarations in the `CSSFontFeatureValuesMap`.
-- {{domxref('CSSFontFeatureValuesMap.delete')}}
+- {{domxref('CSSFontFeatureValuesMap.delete()')}}
   - : Removes the CSS declaration with the given property in the `CSSFontFeatureValuesMap`.
+- {{domxref('CSSFontFeatureValuesMap.entries()')}}
+  - : Returns a new [map iterator](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator) object that contains the `[key, value]` pairs for each declaration in this `CSSFontFeatureValuesMap` in insertion order.
 
 ## Specifications
 
