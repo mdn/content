@@ -16,7 +16,7 @@ An unsigned long integer.
 
 ## Example
 
-EXPLANATION GOES HERE
+The following example outputs an integer of the number of the declarations within the [`@swash`](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values#swash) feature block.
 
 ```css
 @font-feature-values "MonteCarlo" {
