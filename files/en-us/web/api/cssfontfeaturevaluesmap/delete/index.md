@@ -19,7 +19,8 @@ delete(property)
 
 ### Parameters
 
-None.
+- `property`
+  - : An identifier indicating the declaration to remove.
 
 ### Return value
 
