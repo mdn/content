@@ -103,7 +103,7 @@ Events have three functions:
     The `originUrl` is often but not always the same as the `documentUrl`. For example, if a page contains an iframe, and the iframe contains a link that loads a new document into the iframe, then the `documentUrl` for the resulting request will be the iframe's parent document, but the `originUrl` will be the URL of the document in the iframe that contained the link.
 
 - `parentDocumentId`{{optional_inline}}
-   - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
+  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
 - `parentFrameId`
   - : `integer`. ID of the frame that contains the frame which sent the request. Set to -1 if no parent frame exists.
 - `proxyInfo`
