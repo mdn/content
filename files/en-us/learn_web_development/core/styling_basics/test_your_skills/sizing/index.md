@@ -25,7 +25,7 @@ To complete the task:
 
 Your final result should look like the following rendering:
 
-{{EmbedLiveSample("sizing1-finish", "", "500px")}}
+{{EmbedLiveSample("sizing1-finish", "", "460px")}}
 
 ```html live-sample___sizing1-start live-sample___sizing1-finish
 <div class="box box1">
@@ -68,7 +68,7 @@ body {
 
 This is the starting state of the task:
 
-{{EmbedLiveSample("sizing1-start", "", "500px")}}
+{{EmbedLiveSample("sizing1-start", "", "480px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -98,7 +98,7 @@ To complete the task:
 
 Your final result should look like the following rendering:
 
-{{EmbedLiveSample("sizing2-finish", "", "250px")}}
+{{EmbedLiveSample("sizing2-finish", "", "220px")}}
 
 ```html live-sample___sizing2-start live-sample___sizing2-finish
 <div class="box">
@@ -134,7 +134,7 @@ body {
 
 This is the starting state of the task:
 
-{{EmbedLiveSample("sizing2-start", "", "250px")}}
+{{EmbedLiveSample("sizing2-start", "", "100px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
