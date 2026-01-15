@@ -75,4 +75,3 @@ ctx.stroke(path2);
 ## See also
 
 - {{domxref("CanvasRenderingContext2D")}}
-
