@@ -22,22 +22,22 @@ This element is based on, and inherits properties and methods from, the {{domxre
 
 _Also inherits properties from its parent interface, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLGeolocationElement.autolocate", "autolocate")}} {{readonlyinline}} {{experimental_inline}}
-  - : A boolean value indicating whether the `<geolocation>` element should immediately retrieve location data when rendered, provided permission was previously granted. Mirrors the value of the `<geolocation>` [`autolocate`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#autolocate) attribute.
+- {{domxref("HTMLGeolocationElement.autolocate", "autolocate")}} {{experimental_inline}}
+  - : A boolean value indicating whether the browser should immediately request location data when the `<geolocation>` element is rendered, provided permission was previously granted. Mirrors the value of the `<geolocation>` [`autolocate`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#autolocate) attribute.
 - {{domxref("HTMLGeolocationElement.error", "error")}} {{readonlyinline}} {{experimental_inline}}
   - : A {{domxref("GeolocationPositionError")}} object representing error information, in the event of a failure to retrieve data.
 - {{domxref("HTMLGeolocationElement.initialPermissionStatus", "initialPermissionStatus")}} {{readonlyinline}} {{experimental_inline}}
-  - : A string representing the initial permission status for the `geolocation` feature, when the `<geolocation>` element is first rendered.
+  - : An enumerated value representing the initial permission status for the `geolocation` feature, when the page first loads.
 - {{domxref("HTMLGeolocationElement.invalidReason", "invalidReason")}} {{readonlyinline}} {{experimental_inline}}
-  - : A string representing the reason why the `<geolocation>` element is invalid ([blocked](/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking)), if that is the case.
+  - : An enumerated value representing the reason why the `<geolocation>` element is invalid ([blocked](/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking)), if that is the case.
 - {{domxref("HTMLGeolocationElement.isValid", "isValid")}} {{readonlyinline}} {{experimental_inline}}
   - : A boolean value indicating whether the `<geolocation>` element is valid or invalid (blocked).
 - {{domxref("HTMLGeolocationElement.permissionStatus", "permissionStatus")}} {{readonlyinline}} {{experimental_inline}}
   - : A string representing the current permission status for the `geolocation` feature.
 - {{domxref("HTMLGeolocationElement.position", "position")}} {{readonlyinline}} {{experimental_inline}}
   - : A {{domxref("GeolocationPosition")}} object representing the user's current position, in the event of successful location data retrieval.
-- {{domxref("HTMLGeolocationElement.watch", "watch")}} {{readonlyinline}} {{experimental_inline}}
-  - : A boolean value indicating whether the `<geolocation>` element should retrieve location data whenever the position of the user's device changes, or only once. Mirrors the value of the `<geolocation>` [`watch`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#watch) attribute.
+- {{domxref("HTMLGeolocationElement.watch", "watch")}} {{experimental_inline}}
+  - : A boolean value indicating whether the browser should request location data continuously, whenever the position of the user's device changes, or only once. Mirrors the value of the `<geolocation>` [`watch`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#watch) attribute.
 
 ## Instance methods
 
