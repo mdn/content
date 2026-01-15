@@ -35,6 +35,7 @@ to avoid blocking. When a connection receives the `versionchange` event, it shou
 itself by calling {{DOMxRef("IDBDatabase.close()")}}.
 
 ## Syntax
+
 ```js-nolint
 // For the current standard:
 deleteDatabase(name)
@@ -72,6 +73,7 @@ If the operation is successful, the value of the request's {{domxref("IDBRequest
 ## Examples
 
 ### Basic database deletion
+
 ```js-nolint
 const DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
@@ -94,6 +96,7 @@ DBDeleteRequest.onblocked = () => {
 ### Handling open connections properly
 
 This example shows how to properly close database connections to avoid blocking the delete operation:
+
 ```js-nolint
 let db;
 const openRequest = window.indexedDB.open("toDoList", 1);
