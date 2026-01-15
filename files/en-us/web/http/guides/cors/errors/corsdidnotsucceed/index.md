@@ -19,10 +19,8 @@ In many cases, it is caused by a browser plugin (e.g., an ad blocker or privacy 
 
 ## How to fix
 
-- Check DevTools > Network to see whether the request failed due to DNS resolution, a timeout,
-  a connection being refused, or a TLS handshake error.
-- Disable browser extensions or try a private browsing window, as ad blockers, firewalls,
-  and privacy tools can block network requests.
+- Check DevTools > Network to see whether the request failed due to DNS resolution, a timeout, a connection being refused, or a TLS handshake error.
+- Disable browser extensions or try a private browsing window, as ad blockers, firewalls, and privacy tools can block network requests.
 - Fix certificate or {{Glossary("TLS")}} issues, such as expired or invalid certificates.
 - Avoid mixed content: if the page is loaded over HTTPS, requests to HTTP resources can fail.
   Serve the API over HTTPS instead.
