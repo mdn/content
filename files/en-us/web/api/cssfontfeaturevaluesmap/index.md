@@ -14,6 +14,9 @@ browser-compat: api.CSSFontFeatureValuesMap
 
 ## Instance Method
 
+- {{domxref('CSSFontFeatureValuesMap.clear')}}
+  - : Removes all declarations in the `CSSFontFeatureValuesMap`.
+
 ## Specifications
 
 {{Specifications}}
