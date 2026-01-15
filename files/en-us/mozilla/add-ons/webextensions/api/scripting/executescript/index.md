@@ -52,7 +52,6 @@ The promise is rejected if the injection fails, such as when the injection targe
 
 Each `InjectionResult` object has these properties:
 
-
 - `documentId`
   - : `string`. The document associated with the injection.
 - `frameId`
