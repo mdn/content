@@ -55,11 +55,14 @@ An {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this re
 If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `null`.
 
 > [!NOTE]
+> 
 > The delete operation may be blocked if there are open connections to the database. Listen for the {{domxref("IDBOpenDBRequest.blocked_event", "blocked")}} event on the returned request to handle this case.
-
+Listen for the {{domxref("IDBOpenDBRequest.blocked_event", "blocked")}} event on the returned request to handle this case.
+> 
 ## Examples
 
 ### Basic database deletion
+
 ```js-nolint
 const DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
