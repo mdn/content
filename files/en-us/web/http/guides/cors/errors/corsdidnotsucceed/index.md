@@ -26,7 +26,7 @@ In many cases, it is caused by a browser plugin (e.g., an ad blocker or privacy 
   Serve the API over HTTPS instead.
 - Confirm that the server is responding correctly and that the endpoint returns a response.
 
-If you are using `localhost`, ensure that the correct scheme and port are used and that the service is running.
+If you are using a local dev server, ensure that the correct scheme and port are used and that the service is running.
 
 Other possible causes include:
 
