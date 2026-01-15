@@ -7,7 +7,12 @@ browser-compat: api.CSSFontFeatureValuesMap
 
 {{APIRef("CSSOM")}}
 
-## Instance Methods
+## Instance property
+
+- {{domxref('CSSFontFeatureValuesMap.size')}}
+  - : Returns an unsigned long integer containing the size of the `CSSFontFeatureValuesMap` object.
+
+## Instance Method
 
 ## Specifications
 
