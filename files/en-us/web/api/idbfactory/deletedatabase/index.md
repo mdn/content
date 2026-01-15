@@ -8,19 +8,11 @@ browser-compat: api.IDBFactory.deleteDatabase
 
 {{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-The **`deleteDatabase()`** method of the
-{{DOMxRef("IDBFactory")}} interface requests the deletion of a database. The method
-returns an {{DOMxRef("IDBOpenDBRequest")}} object immediately, and performs the deletion
-operation asynchronously.
+The **`deleteDatabase()`** method of the {{DOMxRef("IDBFactory")}} interface requests the deletion of a database. The method returns an {{DOMxRef("IDBOpenDBRequest")}} object immediately, and performs the deletion operation asynchronously.
 
-If the database is successfully deleted, then a `success` event is fired on
-the request object returned from this method, with its `result` set to
-`undefined`. If an error occurs while the database is being deleted, then an
-`error` event is fired on the request object that is returned from this
-method.
+If the database is successfully deleted, then a `success` event is fired on the request object returned from this method, with its `result` set to `undefined`. If an error occurs while the database is being deleted, then an `error` event is fired on the request object that is returned from this method.
 
-When `deleteDatabase()` is called, any other open connections to this
-particular database will get a [versionchange](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event.
+When `deleteDatabase()` is called, any other open connections to this particular database will get a [versionchange](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event.
 
 ## Blocked state
 
@@ -33,6 +25,7 @@ The delete operation can enter a **blocked** state if there are open connections
 **Best practice:** Close all connections to the database before calling `deleteDatabase()` to avoid blocking. When a connection receives the `versionchange` event, it should close itself by calling {{DOMxRef("IDBDatabase.close()")}}.
 
 ## Syntax
+
 ```js-nolint
 // For the current standard:
 deleteDatabase(name)
