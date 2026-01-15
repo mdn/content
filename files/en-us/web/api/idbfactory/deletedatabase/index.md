@@ -61,12 +61,13 @@ An {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this re
 
 If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `null`.
 
-> **Note:** The delete operation may be blocked if there are open connections to the database. Listen for the {{domxref("IDBOpenDBRequest.blocked_event", "blocked")}} event on the returned request to handle this case.
+> [!NOTE]
+> The delete operation may be blocked if there are open connections to the database. Listen for the {{domxref("IDBOpenDBRequest.blocked_event", "blocked")}} event on the returned request to handle this case.
 
 ## Examples
 
 ### Basic database deletion
-```js
+```js-nolint
 const DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
 DBDeleteRequest.onerror = (event) => {
@@ -78,9 +79,9 @@ DBDeleteRequest.onsuccess = (event) => {
   console.log(event.result); // should be undefined
 };
 
-DBDeleteRequest.onblocked = (event) => {
+DBDeleteRequest.onblocked = () => {
   console.warn(
-    "Database deletion blocked. Please close all open tabs with this site."
+    "Database deletion blocked. Please close all open tabs with this site.",
   );
 };
 ```
@@ -88,15 +89,15 @@ DBDeleteRequest.onblocked = (event) => {
 ### Handling open connections properly
 
 This example shows how to properly close database connections to avoid blocking the delete operation:
-```js
+```js-nolint
 let db;
 const openRequest = window.indexedDB.open("toDoList", 1);
 
-openRequest.onsuccess = (event) => {
-  db = event.target.result;
+openRequest.onsuccess = () => {
+  db = openRequest.result;
 
   // Listen for external deletion requests
-  db.onversionchange = (event) => {
+  db.onversionchange = () => {
     db.close();
     console.log("Database is outdated or being deleted. Connection closed.");
   };
@@ -112,19 +113,19 @@ function deleteDatabase() {
 
   const deleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
-  deleteRequest.onsuccess = (event) => {
+  deleteRequest.onsuccess = () => {
     console.log("Database deleted successfully");
     db = null;
   };
 
-  deleteRequest.onerror = (event) => {
-    console.error("Error deleting database:", event.target.error);
+  deleteRequest.onerror = () => {
+    console.error("Error deleting database:", deleteRequest.error);
   };
 
-  deleteRequest.onblocked = (event) => {
+  deleteRequest.onblocked = () => {
     console.warn(
       "Delete blocked. Other connections are still open. " +
-        "Please close all tabs using this database."
+        "Please close all tabs using this database.",
     );
   };
 }
