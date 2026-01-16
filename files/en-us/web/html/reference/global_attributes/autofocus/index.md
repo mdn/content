@@ -13,7 +13,7 @@ The **`autofocus`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_att
 <input name="q" autofocus />
 ```
 
-Only one element in the document, or part of a dialog or popover element, may have this attribute specified. If applied to multiple elements the first focusable one will receive focus.
+Only one element inside a document, `<dialog>` element, or popover may have this attribute specified. If applied to multiple elements, the first focusable one will receive focus.
 
 > [!NOTE]
 > The `autofocus` attribute applies to all elements, not just form controls. For example, it might be used on a [contenteditable](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) area.
