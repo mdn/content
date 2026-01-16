@@ -98,6 +98,7 @@ request.onsuccess = () => {
   console.log("Database deleted successfully.");
 };
 ```
+
 ## Specifications
 
 {{Specifications}}
