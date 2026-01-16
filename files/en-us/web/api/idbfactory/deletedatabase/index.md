@@ -81,7 +81,6 @@ DBDeleteRequest.onsuccess = (event) => {
 The following example shows how to handle the case where database deletion is blocked
 due to existing open connections.
 
-
 ```js
 const request = indexedDB.deleteDatabase("toDoList");
 
