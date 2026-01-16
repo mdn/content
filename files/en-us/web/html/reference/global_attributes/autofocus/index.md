@@ -7,7 +7,7 @@ browser-compat: html.global_attributes.autofocus
 sidebar: htmlsidebar
 ---
 
-The **`autofocus`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is a Boolean attribute indicating that an element should be focused on page load, or when the {{HTMLElement("dialog")}} or [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) element that it is part of is displayed.
+The **`autofocus`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is a Boolean attribute indicating whether the element should be focused on page load or, if it is nested inside a {{htmlelement("dialog")}} or [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) element, when the `<dialog>` or popover is shown.
 
 ```html
 <input name="q" autofocus />
