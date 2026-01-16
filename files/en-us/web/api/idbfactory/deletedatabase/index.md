@@ -31,8 +31,6 @@ connections to the database are closed.
 During this blocked state, existing {{DOMxRef("IDBDatabase")}} connections continue to
 operate normally, but no new operations that open or delete the same database will succeed until the deletion completes.
 
-
-
 ## Syntax
 
 ```js-nolint
