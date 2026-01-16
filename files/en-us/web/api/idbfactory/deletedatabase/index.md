@@ -86,7 +86,7 @@ const request = indexedDB.deleteDatabase("toDoList");
 
 request.onblocked = () => {
   console.warn(
-    "Database deletion is blocked. Close all open connections to proceed."
+    "Database deletion is blocked. Close all open connections to proceed.",
   );
 };
 
