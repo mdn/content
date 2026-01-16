@@ -50,7 +50,7 @@ We include a `<geolocation>` element and two {{htmlelement("p")}} elements, one 
 
 ```html
 <geolocation>
-  Your browser doesn't support the &lt;geolocation&gt; element.
+  Your browser doesn't support the <code>&lt;geolocation&gt;</code> element.
 </geolocation>
 <p id="status"></p>
 <p id="output"></p>

@@ -65,7 +65,7 @@ We start by including a `<geolocation>` element and a {{htmlelement("div")}} ele
 
 ```html
 <geolocation>
-  Your browser doesn't support the &lt;geolocation&gt; element.
+  Your browser doesn't support the <code>&lt;geolocation&gt;</code> element.
 </geolocation>
 <div id="cover">Cover element</div>
 ```
@@ -81,7 +81,8 @@ Finally, we provide a {{htmlelement("select")}} element to enable the user to ch
 ```html
 <form>
   <label for="invalidate"
-    >Choose a way to invalidate the &lt;geolocation&gt; element:</label
+    >Choose a way to invalidate the
+    <code>&lt;geolocation&gt;</code> element:</label
   >
   <select id="invalidate">
     <option value="">None</option>
@@ -179,7 +180,7 @@ selectElem.addEventListener("input", () => {
 });
 ```
 
-Finally, we include code to report the validation status changes that occur when different select values are chosen. We start by setting the `<p>` text content to include the `invalidReason` active when the page first loads. We then add a {{domxref("HTMLGeolocationElement.validationstatuschange_event", "validationstatuschange")}} event listener to the `<geolocation>` element. Whenever the validation status changes, we check whether the `<geolocation>` element is valid, and if so, print a message confirming this to the `<p>` element text content. If the `<geolocation>` element is invalid, we print the `invalidReason` to the `<p>` element text content.
+Finally, we include code to report the validation status changes that occur when different select values are chosen. We start by setting the `<p>` text content to include the `invalidReason` active when the page first loads. We then add a {{domxref("HTMLGeolocationElement.validationstatuschange_event", "validationstatuschange")}} event listener to the `<geolocation>` element. Whenever the validation status changes, we check whether the `<geolocation>` element is valid using {{domxref("HTMLGeolocationElement.isValid")}}, and if so, print a message confirming this to the `<p>` element text content. If the `<geolocation>` element is invalid, we print the `invalidReason` to the `<p>` element text content.
 
 ```js
 reasonElem.textContent = `Invalid reason: ${geo.invalidReason}`;
