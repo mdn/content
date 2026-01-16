@@ -217,9 +217,8 @@ We include two same-structure flex containers, which will be styled similarly ex
 <div class="container basis-0">
   <div>heading</div>
   <section>
-  <div class="content">flex-basis: 0;</div>
-</section>
-
+    <div class="content">flex-basis: 0;</div>
+  </section>
 </div>
 <div class="container basis-0-percent">
   <div>heading</div>
