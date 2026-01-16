@@ -62,7 +62,6 @@ to this request are fired.
 
 If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `undefined`.
 
-
 ## Examples
 
 ```js
