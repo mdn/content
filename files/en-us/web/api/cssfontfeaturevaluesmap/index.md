@@ -28,6 +28,8 @@ browser-compat: api.CSSFontFeatureValuesMap
   - : Returns a boolean indicating whether an entry with the specified key exists in this `CSSFontFeatureValuesMap` or not.
 - {{domxref('CSSFontFeatureValuesMap.keys()')}}
   - : Returns a new [map iterator](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator) object that contains the `key` for each declaration in this `CSSFontFeatureValuesMap` in insertion order.
+- {{domxref('CSSFontFeatureValuesMap.set()')}}
+  - : Adds a new entry with a specified key and value to this `CSSFontFeatureValuesMap`, or updates an existing entry if the key already exists.
 - {{domxref('CSSFontFeatureValuesMap.values()')}}
   - : Returns a new [map iterator](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator) object that contains the `value` for each declaration in this `CSSFontFeatureValuesMap` in insertion order.
 
