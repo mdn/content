@@ -53,3 +53,7 @@ console.log(myRule.swash.size); // logs 0
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Map.prototype.clear()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/clear)

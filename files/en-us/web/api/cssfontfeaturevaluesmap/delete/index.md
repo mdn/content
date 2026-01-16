@@ -54,3 +54,7 @@ console.log(myRule.swash.has("swishy")); // logs false
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Map.prototype.delete()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/delete)

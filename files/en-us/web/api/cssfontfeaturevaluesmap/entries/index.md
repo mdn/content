@@ -53,3 +53,7 @@ console.log(swashes.next().value); // logs ["swashy", [2]]
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Map.prototype.entries()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries)
