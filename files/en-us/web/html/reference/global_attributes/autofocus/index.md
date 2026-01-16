@@ -18,6 +18,9 @@ Only one element in the document, or part of a dialog or popover element, may ha
 > [!NOTE]
 > The `autofocus` attribute applies to all elements, not just form controls. For example, it might be used on a [contenteditable](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) area.
 
+> [!NOTE]
+> On page load, when a [URI fragment](/en-US/docs/Web/URI/Reference/Fragment) points to a focusable element, that element usually receives focus instead of the one indicated by the `autofocus` attribute.
+
 ## Accessibility concerns
 
 Automatically focusing a form control can confuse visually-impaired people using screen-reading technology and people with cognitive impairments. When `autofocus` is assigned, screen-readers "teleport" their user to the form control without warning them beforehand.
