@@ -47,13 +47,13 @@ _Inherits properties from its parent interface, {{domxref("HTMLElement")}}._
 
 _Also inherits events from its parent interface, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLGeolocationElement.location_event", "location")}} {{readonlyinline}} {{experimental_inline}}
-  - : Fired whenever the `<geolocation>` element receives location data, or error information when the location data request was unsuccessful.
-- {{domxref("HTMLGeolocationElement.promptaction_event", "promptaction")}} {{readonlyinline}} {{experimental_inline}}
+- {{domxref("HTMLGeolocationElement.location_event", "location")}} {{experimental_inline}}
+  - : Fired whenever the browser receives location data, or error information when the location data request was unsuccessful.
+- {{domxref("HTMLGeolocationElement.promptaction_event", "promptaction")}} {{experimental_inline}}
   - : Fired whenever the user activates the `<geolocation>` element and selects an option from the resulting dialog, either to grant or deny `geolocation` permission.
-- {{domxref("HTMLGeolocationElement.promptdismiss_event", "promptdismiss")}} {{readonlyinline}} {{experimental_inline}}
+- {{domxref("HTMLGeolocationElement.promptdismiss_event", "promptdismiss")}} {{experimental_inline}}
   - : Fired whenever the user activates the `<geolocation>` element and dismisses the resulting dialog, by pressing the "close" button or the <kbd>Esc</kbd> key.
-- {{domxref("HTMLGeolocationElement.validationstatuschange_event", "validationstatuschange")}} {{readonlyinline}} {{experimental_inline}}
+- {{domxref("HTMLGeolocationElement.validationstatuschange_event", "validationstatuschange")}} {{experimental_inline}}
   - : Fired whenever the `<geolocation>` element's {{domxref("HTMLGeolocationElement.isValid", "isValid")}} value changes.
 
 ## Description
@@ -153,7 +153,7 @@ geo.addEventListener("promptdismiss", notifyUserRetrySelection);
 geo.addEventListener("promptaction", notifyUserGrantPermission);
 ```
 
-Finally for the `if` block, we define the `notifyUserRetrySelection()` and `notifyUserGrantPermission()` functions referenced in the previous two event listeners. The former prints a message to the status paragraph telling the user to press the button again and allow location, as in this case, we will always want them to retry. The latter uses the {{domxref("HTMLGeolocationElement.permissionStatus")}} property to check whether the permission status is `denied` or `prompt` and if so, we ask them to press the button again and allow location. We don't need to ask this if they grant permission.
+Finally for the `if` block, we define the `notifyUserRetrySelection()` and `notifyUserGrantPermission()` functions referenced in the previous two event listeners. The former prints a message to the status paragraph telling the user to press the button again and allow location, as in this case, we will always want them to retry. The latter uses the {{domxref("HTMLGeolocationElement.permissionStatus")}} property to check whether the permission status is `denied` or `prompt` and if so, we ask them to press the button again and allow location. We don't need to ask this if they already granted permission.
 
 ```js
 function notifyUserRetrySelection() {
