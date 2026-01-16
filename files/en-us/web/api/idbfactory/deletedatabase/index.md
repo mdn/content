@@ -22,6 +22,17 @@ method.
 When `deleteDatabase()` is called, any other open connections to this
 particular database will get a [versionchange](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event.
 
+If there are open connections to the database when `deleteDatabase()` is called, the
+deletion request may become blocked. In this case, the returned
+{{DOMxRef("IDBOpenDBRequest")}} will fire a
+[`blocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event) event until all existing
+connections to the database are closed.
+
+During this blocked state, existing {{DOMxRef("IDBDatabase")}} connections continue to
+operate normally, but no new operations that open or delete the same database will succeed until the deletion completes.
+
+
+
 ## Syntax
 
 ```js-nolint
@@ -48,9 +59,11 @@ deleteDatabase(name, options)
 
 ### Return value
 
-An {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this request are fired.
+An {{DOMxRef("IDBOpenDBRequest")}} on which `success`, `error`, and `blocked` events related
+to this request are fired.
 
-If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `null`.
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `undefined`.
+
 
 ## Examples
 
@@ -68,6 +81,28 @@ DBDeleteRequest.onsuccess = (event) => {
 };
 ```
 
+The following example shows how to handle the case where database deletion is blocked
+due to existing open connections.
+
+
+```js
+const request = indexedDB.deleteDatabase("toDoList");
+
+request.onblocked = () => {
+  console.warn(
+    "Database deletion is blocked. Close all open connections to proceed."
+  );
+};
+
+request.onerror = () => {
+  console.error("Error deleting database.");
+};
+
+request.onsuccess = () => {
+  console.log("Database deleted successfully.");
+};
+
+```
 ## Specifications
 
 {{Specifications}}
