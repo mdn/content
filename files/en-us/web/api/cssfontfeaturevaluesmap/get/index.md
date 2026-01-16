@@ -11,8 +11,6 @@ browser-compat: api.CSSFontFeatureValuesMap.get
 The **`get()`** method of the {{domxref("CSSFontFeatureValuesMap")}}
 interface returns value corresponding to the key in this `CSSFontFeatureValuesMap`, or `undefined` if there is none.
 
-The get() method of the StylePropertyMapReadOnly interface returns a CSSStyleValue object for the first value of the specified property.
-
 ## Syntax
 
 ```js-nolint
