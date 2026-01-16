@@ -20,6 +20,8 @@ browser-compat: api.CSSFontFeatureValuesMap
   - : Removes the CSS declaration with the given property in the `CSSFontFeatureValuesMap`.
 - {{domxref('CSSFontFeatureValuesMap.entries()')}}
   - : Returns a new [map iterator](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator) object that contains the `[key, value]` pairs for each declaration in this `CSSFontFeatureValuesMap` in insertion order.
+- {{domxref('CSSFontFeatureValuesMap.forEach()')}}
+  - : Executes a provided function once per each key/value pair in this `CSSFontFeatureValuesMap` in insertion order.
 
 ## Specifications
 
