@@ -251,7 +251,6 @@ section {
   min-height: 200px;
 }
 
-
 .content {
   background: wheat;
   height: 300px;
