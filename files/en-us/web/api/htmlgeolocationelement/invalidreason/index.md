@@ -64,7 +64,9 @@ In this example, we provide a form control to apply different styles to a `<geol
 We start by including a `<geolocation>` element and a {{htmlelement("div")}} element that we will later allow to be rendered on top of the `<geolocation>` element.
 
 ```html
-<geolocation></geolocation>
+<geolocation>
+  Your browser doesn't support the &lt;geolocation&gt; element.
+</geolocation>
 <div id="cover">Cover element</div>
 ```
 
@@ -193,7 +195,7 @@ geo.addEventListener("validationstatuschange", () => {
 
 #### Result
 
-See this code [running live](#) (also see the full [source code](#)). Try choosing the different invalidation options to see which invalidation reasons are reported in each case.
+See this code [running live](https://mdn.github.io/dom-examples/geolocation-element/exploring-invalid-reasons/) (also see the full [source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/exploring-invalid-reasons)). Try choosing the different invalidation options to see which invalidation reasons are reported in each case.
 
 ## Specifications
 

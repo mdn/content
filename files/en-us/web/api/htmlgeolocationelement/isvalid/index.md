@@ -37,7 +37,7 @@ console.log(geo.isValid);
 // true, provided the `<geolocation>` element is not blocked in some way
 ```
 
-See the {{domxref("HTMLGeolocationElement.invalidReason")}} page for a more functional example.
+See the {{domxref("HTMLGeolocationElement.invalidReason")}} page for a more complete example involving `isValid`.
 
 ## Specifications
 

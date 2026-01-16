@@ -41,7 +41,7 @@ console.log(geo.permissionStatus);
 
 ### Using permission status to inform the user
 
-In our [Embedded map](#) example (see [source code](#)), we add a {{domxref("HTMLGeolocationElement.promptaction_event", "promptaction")}} event listener to the `HTMLGeolocationElement` object representing our `<geolocation>` element.
+In our [Embedded map](https://mdn.github.io/dom-examples/geolocation-element/embedded-map/) example ([source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/embedded-map)), we add a {{domxref("HTMLGeolocationElement.promptaction_event", "promptaction")}} event listener to the `HTMLGeolocationElement` object representing our `<geolocation>` element.
 
 ```js
 geo.addEventListener("promptaction", notifyUserGrantPermission);
