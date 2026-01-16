@@ -26,6 +26,8 @@ browser-compat: api.CSSFontFeatureValuesMap
   - : Returns value corresponding to the key in this `CSSFontFeatureValuesMap`, or `undefined` if there is none.
 - {{domxref('CSSFontFeatureValuesMap.has()')}}
   - : Returns a boolean indicating whether an entry with the specified key exists in this `CSSFontFeatureValuesMap` or not.
+- {{domxref('CSSFontFeatureValuesMap.keys()')}}
+  - : Returns a new [map iterator](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator) object that contains the `key` for each declaration in this `CSSFontFeatureValuesMap` in insertion order.
 
 ## Specifications
 
