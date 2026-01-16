@@ -88,7 +88,7 @@ nav ul {
 
 In this task, the list items are all different sizes, but we want them to be displayed as three equal-sized columns, no matter what content is in each item.
 
-Your final result should look like the following finished rendering:
+Your final result should look like the following rendering:
 
 {{EmbedLiveSample("flexbox2-finish", "", "300px")}}
 

@@ -24,7 +24,7 @@ To complete the task:
 
 Your final result should look like the following rendering:
 
-{{EmbedLiveSample("overflow1-finish", "", "450px")}}
+{{EmbedLiveSample("overflow1-finish", "", "300px")}}
 
 ```html live-sample___overflow1-start live-sample___overflow1-finish
 <div class="box">
@@ -77,7 +77,7 @@ In this task, there is an image in the box that is bigger than the dimensions of
 
 Your final result should look like the following rendering:
 
-{{EmbedLiveSample("overflow2-finish", "", "300px")}}
+{{EmbedLiveSample("overflow2-finish", "", "260px")}}
 
 ```html live-sample___overflow2-start live-sample___overflow2-finish
 <div class="box">
@@ -100,7 +100,7 @@ body {
 
 This is the starting state of the task:
 
-{{EmbedLiveSample("overflow2-start", "", "300px")}}
+{{EmbedLiveSample("overflow2-start", "", "260px")}}
 
 <details>
 <summary>Click here to show the solution</summary>

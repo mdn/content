@@ -10,6 +10,9 @@ sidebar: cssref
 
 {{deprecated_header}}
 
+> [!NOTE]
+> The `font-stretch` descriptor was renamed to `font-width` in the [CSS Fonts specification](https://drafts.csswg.org/css-fonts/#font-stretch-desc). To preserve compatibility, the specification retains `font-stretch` as an alias for the `font-width` descriptor.
+
 The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} at-rule.
 
 For a particular font family, authors can download various font faces which correspond to the different styles of the same font family, and then use the `font-stretch` descriptor to explicitly specify the font face's stretch. The values for the CSS descriptor is same as that of its corresponding font property.

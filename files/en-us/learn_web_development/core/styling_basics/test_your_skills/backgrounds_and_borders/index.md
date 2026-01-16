@@ -29,7 +29,7 @@ To complete the task:
 
 Your final result should look like the following rendering:
 
-{{EmbedLiveSample("backgrounds1-finish", "", "200px")}}
+{{EmbedLiveSample("backgrounds1-finish", "", "160px")}}
 
 ```html live-sample___backgrounds1-start live-sample___backgrounds1-finish
 <div class="box">
@@ -62,7 +62,7 @@ h2 {
 
 This is the starting state of the task:
 
-{{EmbedLiveSample("backgrounds1-start", "", "200px")}}
+{{EmbedLiveSample("backgrounds1-start", "", "160px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -135,7 +135,7 @@ h2 {
 
 This is the starting state of the task:
 
-{{EmbedLiveSample("backgrounds2-start", "", "220px")}}
+{{EmbedLiveSample("backgrounds2-start", "", "200px")}}
 
 <details>
 <summary>Click here to show the solution</summary>

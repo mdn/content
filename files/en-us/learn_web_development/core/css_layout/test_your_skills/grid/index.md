@@ -17,9 +17,9 @@ The aim of this skill test is to help you assess whether you understand how a [g
 
 In this task, we want you to create a grid into which the four child elements will auto-place. The grid should have three columns sharing the available space equally and a 20 pixel gap between the column and row tracks. After that, try adding more child containers inside the parent container with the class of `grid` and see how they behave by default.
 
-Your final result should look like the following finished rendering:
+Your final result should look like the following rendering:
 
-{{EmbedLiveSample("grid1-finish", "", "200px")}}
+{{EmbedLiveSample("grid1-finish", "", "160px")}}
 
 ```html live-sample___grid1-start live-sample___grid1-finish
 <div class="grid">
@@ -69,7 +69,7 @@ Create a grid using `display: grid` with three columns using `grid-template-colu
 
 ## Task 2
 
-In this task, we already have a grid defined. We want you to edit the CSS rules for the two child elements, causing them to span over several grid tracks each. The second item should overlay the first as shown in the following finished rendering:
+In this task, we already have a grid defined. We want you to edit the CSS rules for the two child elements, causing them to span over several grid tracks each. The second item should overlay the first as shown in the following rendering:
 
 {{EmbedLiveSample("grid2-finish", "", "340px")}}
 
@@ -162,7 +162,7 @@ Another valid solution is to use `z-index`:
 
 In this task, there are four direct children in this grid. The starting point has them displayed using auto-placement.
 
-To complete the task, use the `grid-area` and `grid-template-areas` properties to lay the items out as shown in the following finished rendering:
+To complete the task, use the `grid-area` and `grid-template-areas` properties to lay the items out as shown in the following rendering:
 
 {{EmbedLiveSample("grid3-finish", "", "200px")}}
 

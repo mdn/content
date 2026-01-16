@@ -23,7 +23,7 @@ To complete the task:
 2. Give `<h2>` headings a blue background and white text.
 3. Cause text wrapped in a `<span>` to have a font-size of `200%`.
 
-Your final result should look like the following finished rendering:
+Your final result should look like the following rendering:
 
 {{EmbedLiveSample("selectors1-finish", "", "400px")}}
 
@@ -86,7 +86,7 @@ To complete the task:
 3. If the element with a class of `alert` also has a class of `stop`, make the background red.
 4. If the element with a class of `alert` also has a class of `go`, make the background green.
 
-Your final result should look like the following finished rendering:
+Your final result should look like the following rendering:
 
 {{EmbedLiveSample("selectors2-finish", "", "480px")}}
 
@@ -153,7 +153,7 @@ To complete the task:
 2. Make the first element inside the container `font-size: 150%` and the first line of that element red.
 3. Stripe every other row in the table by selecting these rows and giving them a background color of `#333333` and foreground white.
 
-Your final result should look like the following finished rendering:
+Your final result should look like the following rendering:
 
 {{EmbedLiveSample("selectors3-finish", "", "540px")}}
 
@@ -270,7 +270,7 @@ To complete the task:
    - Remove their bullets.
    - Give them a `1px` grey bottom border.
 
-Your final result should look like the following finished rendering:
+Your final result should look like the following rendering:
 
 {{EmbedLiveSample("selectors4-finish", "", "500px")}}
 
@@ -335,7 +335,7 @@ To complete the task, provide solutions for the following challenges using attri
 2. Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).
 3. Target the `<a>` element with an `href` value starting with `https` and give it a green border (`border-color: green`).
 
-Your final result should look like the following finished rendering:
+Your final result should look like the following rendering:
 
 {{EmbedLiveSample("selectors5-finish", "", "300px")}}
 
