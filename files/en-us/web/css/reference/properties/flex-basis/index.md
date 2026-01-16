@@ -232,7 +232,7 @@ We include two same-structure flex containers, which will be styled similarly ex
 
 #### CSS
 
-We style the containers as inline flex containers that will appear side by side to better enable comparing them. We set the `flex-direction` to `column`. The first container's flex items have a `flex-basis` value of `0`, while the second container's flex items have a `flex-basis` value of `0%`. Neither the flex containers nor their flex items have a height explicitly set, but the heights of `section` elements cannot exceed `200px` and their children have a height of `300px`.
+We style the containers as inline flex containers that will appear side by side to better enable comparing them. We set the `flex-direction` to `column`. The first container's flex items have a `flex-basis` value of `0`, while the second container's flex items have a `flex-basis` value of `0%`. Neither the flex containers nor their flex items have a height explicitly set, but the heights of `section` elements cannot be lower than `200px` and their children have a height of `300px`.
 
 ```css
 .container {
