@@ -26,7 +26,7 @@ In this article, we will teach you how to install your own automation environmen
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To show how to set up a Selenium testing environment locally and run tests with it, and how to integrate it with tools like LambdaTest, Sauce Labs, and BrowserStack.
+        To show how to set up a Selenium testing environment locally and run tests with it, and how to integrate it with tools like Sauce Labs and BrowserStack.
       </td>
     </tr>
   </tbody>
@@ -795,7 +795,7 @@ So this is pretty cool. We have tested this locally, but you could set this up o
 
 ## Integrating Selenium with CI tools
 
-As another point, it is also possible to integrate Selenium and related tools like LambdaTest, and Sauce Labs with {{glossary("continuous integration")}} (CI) tools — this is useful, as it means you can run your tests via a CI tool, and only commit new changes to your code repository if the tests pass.
+As another point, it is also possible to integrate Selenium and related tools like Sauce Labs with {{glossary("continuous integration")}} (CI) tools — this is useful, as it means you can run your tests via a CI tool, and only commit new changes to your code repository if the tests pass.
 
 It is out of scope to look at this area in detail in this article, but we'd suggest getting started with Travis CI — this is probably the easiest CI tool to get started with and has good integration with web tools like GitHub and Node.
 
@@ -803,9 +803,6 @@ To get started, see for example:
 
 - [Travis CI for complete beginners](https://docs.travis-ci.com/user/for-beginners)
 - [Building a Node.js project](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/) (with Travis)
-- [Using LambdaTest with Travis CI](https://www.lambdatest.com/support/docs/travis-ci-with-lambdatest/)
-- [Using LambdaTest with CircleCI](https://www.lambdatest.com/support/docs/circleci-integration-with-lambdatest/)
-- [Using LambdaTest with Jenkins](https://www.lambdatest.com/support/docs/jenkins-with-lambdatest/)
 - [Using Sauce Labs with Travis CI](https://docs.travis-ci.com/user/sauce-connect/)
 
 > [!NOTE]

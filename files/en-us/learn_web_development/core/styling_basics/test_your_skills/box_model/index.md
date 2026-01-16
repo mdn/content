@@ -83,7 +83,7 @@ To complete this task, add the following features to the provided box:
 
 Your final result should look like the following rendering:
 
-{{EmbedLiveSample("box-model2-finish")}}
+{{EmbedLiveSample("box-model2-finish", "100%", "140px")}}
 
 ```html live-sample___box-model2-start live-sample___box-model2-finish
 <div class="box">I use the standard box model.</div>
@@ -100,7 +100,7 @@ body {
 
 This is the starting state of the task:
 
-{{EmbedLiveSample("box-model2-start")}}
+{{EmbedLiveSample("box-model2-start", "100%", "100px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -126,7 +126,7 @@ To complete this task, update the CSS to cause the size of the margin, padding, 
 
 Your final result should look like the following rendering:
 
-{{EmbedLiveSample("box-model3-finish")}}
+{{EmbedLiveSample("box-model3-finish", "100%", "260px")}}
 
 ```html live-sample___box-model3-start live-sample___box-model3-finish
 <div class="box">
@@ -158,7 +158,7 @@ body {
 
 This is the starting state of the task:
 
-{{EmbedLiveSample("box-model3-start")}}
+{{EmbedLiveSample("box-model3-start", "100%", "220px")}}
 
 <details>
 <summary>Click here to show the solution</summary>

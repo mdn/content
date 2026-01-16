@@ -76,7 +76,7 @@ import data from "https://example.com/data.json" with { type: "json" };
 
 The `type` attribute allows you to specify that modules are served as JSON or CSS (and implicitly as JavaScript).
 
-Other attributes may also be supported, and [can affect the behaviour of different parts of the loading process](#intended_semantics_for_import_attributes).
+Other attributes may also be supported, and [can affect the behavior of different parts of the loading process](#intended_semantics_for_import_attributes).
 A syntax error is thrown if an unknown attribute is used.
 
 ### Standard attributes
