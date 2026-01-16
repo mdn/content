@@ -218,7 +218,7 @@ We include a `<geolocation>` element with a `<button>` fallback nested inside it
 <geolocation>
   <button id="fallback">Use location</button>
 </geolocation>
-<p></p>
+<p id="output"></p>
 ```
 
 #### JavaScript
@@ -229,7 +229,7 @@ In our script, we start off by grabbing a reference to the output `<p>` element.
 - If it isn't supported, we grab a reference to the fallback `<button>` element and retrieve and print the same data, except that this time we are using a `click` event listener on the button, and a {{domxref("Geolocation.getCurrentPosition()")}} call to retrieve the data.
 
 ```js
-const outputElem = document.querySelector("p");
+const outputElem = document.querySelector("#output");
 
 if (typeof HTMLGeolocationElement === "function") {
   const geo = document.querySelector("geolocation");
@@ -241,7 +241,7 @@ if (typeof HTMLGeolocationElement === "function") {
     }
   });
 } else {
-  const fallback = document.querySelector("button");
+  const fallback = document.querySelector("#fallback");
   fallback.addEventListener("click", () => {
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -257,7 +257,7 @@ if (typeof HTMLGeolocationElement === "function") {
 
 #### Result
 
-See this code [running live](#) (also see the full [source code](#)). You can also find a version of this example that includes the `watch` attribute on the `<geolocation>` element and therefore fetches location data each time the user's device position changes (see it [running live](#)).
+See this code [running live](https://mdn.github.io/dom-examples/geolocation-element/basic-example/) ([source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/basic-example)). You can also find a version of this example that includes the `watch` attribute on the `<geolocation>` element and therefore fetches location data each time the user's device position changes (see it [running live](https://mdn.github.io/dom-examples/geolocation-element/basic-watch-example/), and the [source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/basic-watch-example)).
 
 Try viewing the demos in a supported browser and an unsupported browser if possible, and note the difference in permissions dialog flow when you choose to allow or deny permission to use `geolocation`.
 

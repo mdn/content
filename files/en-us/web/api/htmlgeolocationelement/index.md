@@ -77,7 +77,7 @@ When a [blocker](/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation
 
 ### Basic usage
 
-For minimal examples that use the `<geolocation>` element and its associated `HTMLGeolocationElement` object to return location data, see our [basic example](#) ([source code](#)) and [basic watch example](#) ([source code](#)).
+For minimal examples that use the `<geolocation>` element and its associated `HTMLGeolocationElement` object to return location data, see our [basic example](https://mdn.github.io/dom-examples/geolocation-element/basic-example/) ([source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/basic-example)) and [basic watch example](https://mdn.github.io/dom-examples/geolocation-element/basic-watch-example/) ([source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/basic-watch-example)).
 
 See the [`<geolocation>`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#basic_usage_example) reference page for a walkthrough.
 
@@ -98,7 +98,7 @@ We include a `<geolocation>` element with an `autolocate` attribute so that the 
 Next, we include a {{htmlelement("p")}} element to print status messages and errors into.
 
 ```html
-<p>Status:</p>
+<p id="status">Status:</p>
 ```
 
 Finally, we include a {{htmlelement("div")}} element to render the map into.
@@ -112,7 +112,7 @@ Finally, we include a {{htmlelement("div")}} element to render the map into.
 In our script, we start off by grabbing a reference to the status `<p>` element:
 
 ```js
-const statusElem = document.querySelector("p");
+const statusElem = document.querySelector("#status");
 ```
 
 Next, we detect whether the `<geolocation>` element is supported by testing `typeof HTMLGeolocationElement === "function"`:
@@ -172,7 +172,7 @@ function notifyUserGrantPermission() {
 If `<geolocation>` is not supported, the `else` block executes. This starts by grabbing a reference to the fallback `<button>` element:
 
 ```js
-const fallback = document.querySelector("button");
+const fallback = document.querySelector("#fallback");
 ```
 
 Next, we add a `click` event handler to the resulting `HTMLButtonElement` object. Inside, we use a {{domxref("Geolocation.getCurrentPosition()")}} call to emulate the success and failure cases in the `HTMLGeolocationElement` code path. The result is the same — we either plot the location data on a map by passing it into the `drawMap()` function (along with a reference to the `HTMLButtonElement` object), or print the error message to the status paragraph.
@@ -209,7 +209,7 @@ function drawMap(lat, long, btn) {
 
 #### Result
 
-See this code [running live](#) (also see the full [source code](#)). Try viewing the demos in a supported browser and an unsupported browser if possible, and note the difference in permissions dialog flow when you allow permission to use `geolocation`.
+See this code [running live](https://mdn.github.io/dom-examples/geolocation-element/embedded-map/) ([source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/embedded-map)). Try viewing the demos in a supported browser and an unsupported browser if possible, and note the difference in permissions dialog flow when you allow permission to use `geolocation`.
 
 Also try the following:
 

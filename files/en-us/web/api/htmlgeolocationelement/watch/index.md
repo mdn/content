@@ -46,7 +46,7 @@ We include a {{htmlelement("geolocation")}} element with a `watch` attribute set
 
 ```html
 <geolocation watch></geolocation>
-<p></p>
+<p id="output"></p>
 ```
 
 #### JavaScript
@@ -54,7 +54,7 @@ We include a {{htmlelement("geolocation")}} element with a `watch` attribute set
 In our JavaScript, we start by grabbing references to the output paragraph and `<geolocation>` element, and test the `watch` value by accessing the `watch` property.
 
 ```js
-const outputElem = document.querySelector("p");
+const outputElem = document.querySelector("#output");
 const geo = document.querySelector("geolocation");
 console.log(geo.watch); // true
 ```
@@ -73,7 +73,7 @@ geo.addEventListener("location", () => {
 
 #### Result
 
-See this code [running live](#) (also see the full [source code](#)). This code also includes a fallback for browsers that don't support the `<geolocation>` element.
+See this code [running live](https://mdn.github.io/dom-examples/geolocation-element/basic-watch-example/) ([source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/basic-watch-example)). The full code also includes a fallback for browsers that don't support the `<geolocation>` element.
 
 Try viewing the demo in a supported browser and an unsupported browser if possible, and note the difference in permissions dialog flow when you choose to allow or deny permission to use `geolocation`.
 

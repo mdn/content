@@ -19,7 +19,7 @@ An enumerated value, which can be one of:
 - `granted`
   - : The user previously granted permission for the browser to use the `geolocation` feature, either via the {{htmlelement("geolocation")}} element or some other mechanism. When using the `<geolocation>` element, this means that the user previously pressed the rendered button and selected an "allow" option.
 
-    If the `<geolocation>` element has its [`autolocate`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#autolocate) attribute set to `true`, and permission was previously granted, the browser will start to request location data as soon as the page loads without requiring the user to press the button.
+    If the `<geolocation>` element has its [`autolocate`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#autolocate) attribute set to `true`, and permission was previously granted, the browser will start to request location data as soon as the page loads, without requiring the user to press the button.
 
 - `denied`
   - : The user previously denied permission for the browser to use the `geolocation` feature, either via the `<geolocation>` element or some other mechanism. When using the `<geolocation>` element, this means that the user previously pressed the rendered button and selected a "don't allow" option.
@@ -42,14 +42,16 @@ console.log(geo.initialPermissionStatus);
 
 ### Using initial permission status to inform the user on page load
 
-In our [Initial permission status](#) example (see [source code](#)), we use initial permission status to print an appropriate message to the screen informing the user what action the {{htmlelement("geolocation")}} button will perform.
+In this example, we use initial permission status to print an appropriate message to the screen informing the user what action the {{htmlelement("geolocation")}} button will perform.
 
 #### HTML
 
 We include a `<geolocation>` element and two {{htmlelement("p")}} elements, one to output permission status messages to, and one to output location data to.
 
 ```html
-<geolocation></geolocation>
+<geolocation>
+  Your browser doesn't support the &lt;geolocation&gt; element.
+</geolocation>
 <p id="status"></p>
 <p id="output"></p>
 ```
@@ -91,6 +93,10 @@ geo.addEventListener("location", () => {
   }
 });
 ```
+
+#### Result
+
+See the example [running live](https://mdn.github.io/dom-examples/geolocation-element/initial-permission-status/) ([source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/initial-permission-status)). Try selecting the `<geolocation>` button multiple times, choosing a different option from the resulting dialog each time and reloading the page, to see how the output message changes to reflect the situation.
 
 ## Specifications
 
