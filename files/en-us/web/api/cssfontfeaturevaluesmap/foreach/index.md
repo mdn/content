@@ -36,7 +36,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example assigns the entries to the `swashes` variable and then logs the first two values.
+The following example logs the `key` and `value` for each entry in the `@swash` rule.
 
 ```css
 @font-feature-values "MonteCarlo" {

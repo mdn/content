@@ -24,11 +24,11 @@ get(property)
 
 ### Return value
 
-The value associated with the specified key in the `CSSFontFeatureValuesMap` object. If the key can't be found, [undefined](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) is returned.
+Returns `true` if an entry with the specified key exists in the `CSSFontFeatureValuesMap` object; otherwise `false`.
 
 ## Examples
 
-The following example removes all the declarations within the [`@swash`](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values#swash) feature block.
+The following example gets the values that match the `key`s in the `@swash` rule.
 
 ```css
 @font-feature-values "MonteCarlo" {
