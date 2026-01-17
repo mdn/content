@@ -9,7 +9,7 @@ sidebar: http
 
 The **`DELETE`** HTTP method asks the server to delete a specified resource.
 
-Requests using `DELETE` may include a body, but it has no defined semantics.
+Requests using `DELETE` should only be used to delete data and shouldn't contain a body.
 
 > [!NOTE]
 > The semantics of sending a message body in `DELETE` requests are undefined.
