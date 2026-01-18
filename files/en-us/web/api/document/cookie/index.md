@@ -31,6 +31,9 @@ You can also assign to this property a string of the form `"key=value"`, specify
     > The domain _must_ match the domain of the JavaScript origin.
     > Setting cookies to foreign domains will be silently ignored.
 
+    > [!NOTE]
+    > If the `Domain` attribute is omitted, the cookie is host-only and applies only to the current host.
+    
   - `;expires=date-in-UTCString-format`: The expiry date of the cookie. If neither `expires` nor `max-age` is specified, it will expire at the end of session.
 
     > [!WARNING]
@@ -44,6 +47,9 @@ You can also assign to this property a string of the form `"key=value"`, specify
   - `;partitioned`: Indicates that the cookie should be stored using partitioned storage. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more details.
 
   - `;path=path`: The value of the cookie's `Path` attribute (See [Define where cookies are sent](/en-US/docs/Web/HTTP/Guides/Cookies#define_where_cookies_are_sent) for more information).
+
+  > [!NOTE]
+  > If the `Path` attribute is omitted, the browser assigns a default path derived from the request URL.
 
   - `;samesite`: The `SameSite` attribute of a {{httpheader("Set-Cookie")}} header can be set by a server to specify when the cookie will be sent. Possible values are `lax`, `strict` or `none` (see also [Controlling third-party cookies with `SameSite`](/en-US/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite)).
     - The `lax` value will send the cookie for all same-site requests and top-level navigation GET requests.
