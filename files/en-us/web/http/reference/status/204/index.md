@@ -50,6 +50,7 @@ Server: Apache/2.4.1 (Unix)
 
 In this example, the client sends a `PUT` request to update a user's profile information.
 The request includes an {{HTTPHeader("Authorization")}} header with a token to authenticate the request:
+
 ```http
 PUT /users/123 HTTP/1.1
 Host: example.com
