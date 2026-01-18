@@ -3,12 +3,10 @@ title: "Sanitizer: setDataAttributes() method"
 short-title: setDataAttributes()
 slug: Web/API/Sanitizer/setDataAttributes
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Sanitizer.setDataAttributes
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
 The **`setDataAttributes()`** method of the {{domxref("Sanitizer")}} interface sets whether all [`data-*` attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) will be allowed by the sanitizer, or if they must be individually specified.
 

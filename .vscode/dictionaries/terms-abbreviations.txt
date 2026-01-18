@@ -833,6 +833,8 @@ tweens
 UAAG
 ufrag
 UMTS
+unblinded
+unblinds
 unbookmark
 unbundling
 uncacheable
@@ -907,6 +909,7 @@ Videobridge
 Viewmodel
 virosa
 virtualizes
+VOPRF
 WAAPI
 wallclock
 WAMP

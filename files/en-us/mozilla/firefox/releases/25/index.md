@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 sidebar: firefox
 ---
 
-## Changes for Web developers
+## Changes for web developers
 
 ### New in Firefox DevTools
 

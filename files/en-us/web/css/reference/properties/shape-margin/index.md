@@ -147,4 +147,4 @@ section {
 - [Overview of CSS Shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview)
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-image-threshold")}}
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape")}}

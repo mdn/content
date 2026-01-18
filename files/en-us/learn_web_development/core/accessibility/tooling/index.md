@@ -95,7 +95,7 @@ Make sure you have a screen reader or two installed on your development machine,
 
 There are several screen readers available:
 
-- Some are paid-for commercial products, like [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows).
+- Some are paid-for commercial products, like [JAWS](https://vispero.com/jaws-screen-reader-software/) (Windows).
 - Some are free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome, Windows, and macOS), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
 - Some are built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/features/?vision) (macOS and iOS), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (on Chromebooks), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 

@@ -7,7 +7,7 @@ sidebar: glossarysidebar
 
 A **color wheel**, or a _color circle_, represents a palette of colors in chart form, arranged in a circle. A color wheel can display colors identified by two polar coordinates, the _angle_ and the _distance_ from the origin, the circle's center.
 
-Color wheels are convenient for comparing colors expressed in polar or cylindrical coordinates, like [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), or [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch).
+Color wheels are convenient for comparing colors expressed in polar or cylindrical coordinates, like {{cssxref("color_value/hsl")}}, {{cssxref("color_value/hwb")}}, or {{cssxref("color_value/lch")}}.
 
 In such cases, _complementary colors_ are often found at opposite positions on the same diameter, and _triadic colors_ (a set of three colors that complement each other) are evenly spaced around the color wheel. Similarly, _monochromatic colors_ – colors of the same _tone_ but of different _shades_ – are located on the same radius.
 
@@ -21,7 +21,7 @@ In the digital world, color wheels are used in _color pickers_, like the default
 
 - Related glossary terms:
   - {{glossary("Color space")}}
-- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) the CSS data type
+- {{cssxref("&lt;color&gt;")}} the CSS data type
 - [Color theory and the color wheel](https://www.canva.com/colors/color-wheel/)
 - [How to Use the Color Wheel to Pick Your Perfect Color Palette](https://www.bhg.com/decorating/color/basics/color-wheel-color-chart/) on Better Homes & Gardens
 - [Color wheel](https://en.wikipedia.org/wiki/Color_wheel) on Wikipedia
