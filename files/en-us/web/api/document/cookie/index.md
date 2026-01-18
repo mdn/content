@@ -33,7 +33,6 @@ You can also assign to this property a string of the form `"key=value"`, specify
 
     > [!NOTE]
     > If the `Domain` attribute is omitted, the cookie is host-only and applies only to the current host.
-    
   - `;expires=date-in-UTCString-format`: The expiry date of the cookie. If neither `expires` nor `max-age` is specified, it will expire at the end of session.
 
     > [!WARNING]
