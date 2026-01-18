@@ -3,11 +3,11 @@ title: SharedStorageOperation
 slug: Web/API/SharedStorageOperation
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SharedStorageOperation
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`SharedStorageOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the base class for all output gate operation types.
 

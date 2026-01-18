@@ -29,7 +29,7 @@ The script gets access to a number of objects that help the injected script inte
 - `$0`
   - : Contains a reference to the element that's currently selected in the devtools Inspector.
 - `inspect()`
-  - : Given an object, if it is an DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the console.
+  - : Given an object, if it is a DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the console.
 
 [See some examples.](#examples)
 

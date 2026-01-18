@@ -272,7 +272,7 @@ For numeric fields, including [`<input type="number">`](/en-US/docs/Web/HTML/Ref
 If the field contains a value outside this range, it will be invalid.
 
 Let's look at another example.
-Create a new copy of the [basic starter file](#basic_starter_file) file (save it in the same directory as `index2.html`).
+Create a new copy of the [basic starter file](#basic_starter_file) and save it in the same directory as `index2.html`.
 
 Now delete the contents of the `<body>` element, and replace it with the following:
 

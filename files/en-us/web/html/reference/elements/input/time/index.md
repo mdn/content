@@ -40,6 +40,110 @@ label {
 }
 ```
 
+## Additional attributes
+
+In addition to the attributes common to all {{HTMLElement("input")}} elements, `time` inputs offer the following attributes.
+
+> [!NOTE]
+> Unlike many data types, time values have a **periodic domain**, meaning that the values reach the highest possible value, then wrap back around to the beginning again. For example, specifying a `min` of `14:00` and a `max` of `2:00` means that the permitted time values start at 2:00 PM, run through midnight to the next day, ending at 2:00 AM. See more in the [making min and max cross midnight](#making_min_and_max_cross_midnight) section of this article.
+
+### list
+
+The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+
+### max
+
+A string indicating the latest time to accept, specified in the same [time value format](#time_value_format) as described above. If the specified string isn't a valid time, no maximum value is set.
+
+### min
+
+A string specifying the earliest time to accept, given in the [time value format](#time_value_format) described previously. If the value specified isn't a valid time string, no minimum value is set.
+
+### readonly
+
+A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} `value` property.
+
+> [!NOTE]
+> Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
+
+### step
+
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are a whole number of steps from the step base are valid. The step base is [`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or `0` (`00:00:00`) if neither is provided.
+
+For `time` inputs, the value of `step` is given in seconds and is treated as a number of milliseconds equal to 1000 times the `step` value (the underlying numeric value is in milliseconds). The default value is 60, indicating 1 minute.
+
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). In reality, it has the same effect as `60` for `time` inputs because the picker UI in this case only allows selecting whole minutes.
+
+> [!NOTE]
+> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
+
+## Validation
+
+By default, `<input type="time">` does not apply any validation to entered values, other than the user agent's interface generally not allowing you to enter anything other than a time value. This is helpful, but you can't entirely rely on the value to be a proper time string, since it might be an empty string (`""`), which is allowed. For examples of constraint validation using the `min`, `max`, `step`, and `required` attributes, see the [setting maximum and minimum times](#setting_maximum_and_minimum_times) section.
+
+## Examples
+
+### Basic uses of time
+
+The most basic use of `<input type="time">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
+
+```html
+<form>
+  <label for="appointment-time">Choose an appointment time: </label>
+  <input id="appointment-time" type="time" name="appointment-time" />
+</form>
+```
+
+{{EmbedLiveSample('Basic_uses_of_time', 600, 40)}}
+
+### Creating a time picker interface
+
+In this example, we create an interface element for choosing time using the native picker created with `<input type="time">`:
+
+```html
+<form>
+  <label for="appointment-time">
+    Choose an appointment time (opening hours 12:00 to 18:00):
+  </label>
+  <input
+    id="appointment-time"
+    type="time"
+    name="appointment-time"
+    min="12:00"
+    max="18:00"
+    required />
+  <span class="validity"></span>
+</form>
+```
+
+```css
+input[type="time"] {
+  width: 100px;
+}
+
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
+
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
+```
+
+{{ EmbedLiveSample('creating a time picker interface', 600, 140) }}
+
+### Controlling input size
+
+`<input type="time">` doesn't support form sizing attributes such as [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size), since times are always about the same number of characters long. You'll have to resort to [CSS](/en-US/docs/Web/CSS) for sizing needs.
+
 ### Setting the value attribute
 
 You can set a default value for the input by including a valid time in the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute when creating the `<input>` element, like so:
@@ -98,62 +202,6 @@ startTime.addEventListener("input", () => {
 
 When a form including a `time` input is submitted, the value is encoded before being included in the form's data. The form's data entry for a time input will always be in the form `name=HH%3Amm`, or `name=HH%3Amm%3Ass` if seconds are included (see [Using the step attribute](#using_the_step_attribute)).
 
-## Additional attributes
-
-In addition to the attributes common to all {{HTMLElement("input")}} elements, `time` inputs offer the following attributes.
-
-> [!NOTE]
-> Unlike many data types, time values have a **periodic domain**, meaning that the values reach the highest possible value, then wrap back around to the beginning again. For example, specifying a `min` of `14:00` and a `max` of `2:00` means that the permitted time values start at 2:00 PM, run through midnight to the next day, ending at 2:00 AM. See more in the [making min and max cross midnight](#making_min_and_max_cross_midnight) section of this article.
-
-### list
-
-The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
-
-### max
-
-A string indicating the latest time to accept, specified in the same [time value format](#time_value_format) as described above. If the specified string isn't a valid time, no maximum value is set.
-
-### min
-
-A string specifying the earliest time to accept, given in the [time value format](#time_value_format) described previously. If the value specified isn't a valid time string, no minimum value is set.
-
-### readonly
-
-A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} `value` property.
-
-> [!NOTE]
-> Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
-
-### step
-
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are a whole number of steps from the step base are valid. The step base is [`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or `0` (`00:00:00`) if neither is provided.
-
-For `time` inputs, the value of `step` is given in seconds and is treated as a number of milliseconds equal to 1000 times the `step` value (the underlying numeric value is in milliseconds). The default value is 60, indicating 1 minute.
-
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). In reality, it has the same effect as `60` for `time` inputs because the picker UI in this case only allows selecting whole minutes.
-
-> [!NOTE]
-> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
-
-## Using time inputs
-
-### Basic uses of time
-
-The most basic use of `<input type="time">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
-
-```html
-<form>
-  <label for="appointment-time">Choose an appointment time: </label>
-  <input id="appointment-time" type="time" name="appointment-time" />
-</form>
-```
-
-{{EmbedLiveSample('Basic_uses_of_time', 600, 40)}}
-
-### Controlling input size
-
-`<input type="time">` doesn't support form sizing attributes such as [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size), since times are always about the same number of characters long. You'll have to resort to [CSS](/en-US/docs/Web/CSS) for sizing needs.
-
 ### Using the step attribute
 
 You can use the [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step) attribute to vary the amount of time jumped whenever the time is incremented or decremented (for example, so the time moves by 10 minutes at a time when clicking the little arrow widgets).
@@ -170,10 +218,6 @@ It takes an integer value defining the number of seconds you want to increment b
 {{EmbedLiveSample('Using_the_step_attribute', 600, 40)}}
 
 To specify minutes or hours as a step, specify the number of minutes or hours in seconds, such as 120 for 2 minutes, or 7200 for 2 hours.
-
-## Validation
-
-By default, `<input type="time">` does not apply any validation to entered values, other than the user agent's interface generally not allowing you to enter anything other than a time value. This is helpful, but you can't entirely rely on the value to be a proper time string, since it might be an empty string (`""`), which is allowed.
 
 ### Setting maximum and minimum times
 
@@ -280,56 +324,6 @@ If you try to submit the form with an incomplete time (or with a time outside th
 
 > [!WARNING]
 > HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
-
-## Examples
-
-In this example, we create an interface element for choosing time using the native picker created with `<input type="time">`:
-
-### HTML
-
-```html
-<form>
-  <label for="appointment-time">
-    Choose an appointment time (opening hours 12:00 to 18:00):
-  </label>
-  <input
-    id="appointment-time"
-    type="time"
-    name="appointment-time"
-    min="12:00"
-    max="18:00"
-    required />
-  <span class="validity"></span>
-</form>
-```
-
-### CSS
-
-```css
-input[type="time"] {
-  width: 100px;
-}
-
-input + span {
-  padding-right: 30px;
-}
-
-input:invalid + span::after {
-  position: absolute;
-  content: "✖";
-  padding-left: 5px;
-}
-
-input:valid + span::after {
-  position: absolute;
-  content: "✓";
-  padding-left: 5px;
-}
-```
-
-### Result
-
-{{ EmbedLiveSample('Examples', 600, 140) }}
 
 ## Technical Summary
 

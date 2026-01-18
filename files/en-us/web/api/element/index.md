@@ -317,7 +317,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Sets the value of the attribute with the specified name and namespace, from the current node.
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Sets up mouse event capture, redirecting all mouse events to this element.
-- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}} {{experimental_inline}}
+- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}}
   - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML into a document fragment, which then replaces the element's original subtree in the DOM.
 - {{DOMxRef("Element.setHTMLUnsafe()")}}
   - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the element's original subtree in the DOM. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).
@@ -341,7 +341,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}
   - : Fired before WebXR select events ({{domxref("XRSession/select_event", "select")}}, {{domxref("XRSession/selectstart_event", "selectstart")}}, {{domxref("XRSession/selectend_event", "selectend")}}) are dispatched.
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
-  - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents).
+  - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/Guides/Containment/Using#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/Guides/Containment/Using#skips_its_contents).
 - {{domxref("Element/input_event","input")}}
   - : Fires when an element's value is changed as a direct result of a user action.
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
@@ -502,13 +502,13 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Transition events
 
 - {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has been cancelled.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) has been cancelled.
 - {{domxref("Element/transitionend_event", "transitionend")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has finished playing.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) has finished playing.
 - {{domxref("Element/transitionrun_event", "transitionrun")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) is created (i.e., when it is added to a set of running transitions), though not necessarily started.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) is created (i.e., when it is added to a set of running transitions), though not necessarily started.
 - {{domxref("Element/transitionstart_event", "transitionstart")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has started transitioning.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) has started transitioning.
 
 ## Specifications
 

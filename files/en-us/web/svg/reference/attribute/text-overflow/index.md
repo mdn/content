@@ -37,7 +37,7 @@ In SVG, `text-overflow` has an effect if there is a validly specified wrapping a
 - `ellipsis`
   - : If the text to be rendered overflows the wrapping area, the text is clipped and an ellipsis is rendered such that it fits within the given area.
 
-For more information, refer to the [CSS `text-overflow`](/en-US/docs/Web/CSS/text-overflow#values) property.
+For more information, refer to the [CSS `text-overflow`](/en-US/docs/Web/CSS/Reference/Properties/text-overflow#values) property.
 
 ## Specifications
 

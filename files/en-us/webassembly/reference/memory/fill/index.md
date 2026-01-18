@@ -1,7 +1,7 @@
 ---
 title: "fill: Wasm text instruction"
 short-title: fill
-slug: WebAssembly/Reference/Memory/Fill
+slug: WebAssembly/Reference/Memory/fill
 page-type: webassembly-instruction
 browser-compat:
   - webassembly.bulk-memory-operations

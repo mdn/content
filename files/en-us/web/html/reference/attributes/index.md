@@ -502,6 +502,17 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority">fetchpriority</a></code>
+      </td>
+      <td>
+        {{ HTMLElement("img") }},
+        {{ HTMLElement("link") }},
+        {{ HTMLElement("script") }}
+      </td>
+      <td>Signals that fetching a particular image early in the loading process has more or less impact on user experience than a browser can reasonably infer when assigning an internal priority.</td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/for">for</a></code>
       </td>
       <td>
@@ -1420,6 +1431,26 @@ To be clear, the values `"true"` and `"false"` are not allowed on boolean attrib
 
 > [!WARNING]
 > The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also be blocked by content security policies.
+
+> [!WARNING]
+> While not visible by calling the `Function.prototype.toString()` method on the handler, event handler attributes will implicitly wrap code inside of 2 `with` statements, and may produce unexpected results. For example:
+>
+> ```html
+> <div onclick="console.log(new URL(location))">Bad Example</div>
+> ```
+>
+> Essentially becomes:
+>
+> ```js example-bad
+> function onclick(event) {
+>   with (this.ownerDocument) {
+>     with (this) {
+>       console.log(new URL(location)); // 'URL' now resolves to document.URL instead of window.URL
+>       // TypeError: URL is not a constructor
+>     }
+>   }
+> }
+> ```
 
 In addition to the attributes listed in the table above, global [event handlers](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) — such as [`onclick`](/en-US/docs/Web/API/Element/click_event) — can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
 

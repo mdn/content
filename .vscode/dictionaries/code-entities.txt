@@ -76,6 +76,7 @@ beforematch
 beforescriptexecute
 beforexrselect
 BGRX
+bgtest
 bhks
 biske
 bmatrix
@@ -197,6 +198,7 @@ dweb
 ebuttm
 ebutts
 ECLF
+EdgiOS
 ehtml
 EISU
 elementname
@@ -255,8 +257,10 @@ Gloc
 glossarysidebar
 gonm
 GPOS
+grba
 Grek
 greklow
+gsettings
 GSUB
 gujr
 gukh
@@ -296,6 +300,7 @@ indexeddb-examples
 indexifembedded
 inputreport
 inputsourceschange
+interestfor
 intitle
 intl.uidirection.locale
 intrinsicsize
@@ -321,6 +326,7 @@ jssidebar
 jsval
 kaios
 kawi
+kdeglobals
 kerx
 Key_Codeinput
 KEY_dead_abovecomma
@@ -356,6 +362,7 @@ KIND_NONHEAP
 knda
 Kore
 krai
+kwriteconfig
 lanatham
 laoo
 largeop
@@ -381,6 +388,7 @@ localecho
 localstore
 longdiv
 longtask
+loseinterest
 lowdelay
 lowp
 lquote
@@ -519,6 +527,8 @@ ondispose
 ondownloadprogress
 onefive
 ongesturestart
+oninterest
+onloseinterest
 onnavigate
 onnavigateerror
 onnavigatesuccess
@@ -552,6 +562,7 @@ orya
 oscpu
 osfile.jsm
 osma
+otpauth
 otpcredential
 outbound-rtpp
 overlayinfo
@@ -642,6 +653,7 @@ rquote
 rspadd
 RTCICECandidatePairStats
 rtctransform
+rtlm
 rtpmap
 runserver
 rustc
@@ -685,6 +697,7 @@ serviceworker
 setenvif
 SHA-256-sess
 SHA-512-sess
+shadowrootreferencetarget
 sharpyuv
 shrd
 shtm

@@ -1,7 +1,7 @@
 ---
 title: "store: Wasm text instruction"
 short-title: store
-slug: WebAssembly/Reference/Memory/Store
+slug: WebAssembly/Reference/Memory/store
 page-type: webassembly-instruction
 browser-compat:
   - webassembly.api.Memory

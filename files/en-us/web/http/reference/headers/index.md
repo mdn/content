@@ -156,9 +156,9 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/Gui
 ## Integrity policy
 
 - {{HTTPHeader("Integrity-Policy")}}
-  - : Ensures that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees.
+  - : Ensures that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) guarantees.
 - {{HTTPHeader("Integrity-Policy-Report-Only")}}
-  - : Reports on resources that the user agent loads that would violate [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees if the integrity policy were enforced (using the `Integrity-Policy` header).
+  - : Reports on resources that the user agent loads that would violate [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) guarantees if the integrity policy were enforced (using the `Integrity-Policy` header).
 
 ## Message body information
 
@@ -245,7 +245,7 @@ Range requests are useful for applications like media players that support rando
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
   - : Allows web developers to experiment with policies by monitoring, but not enforcing, their effects. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
 - {{HTTPHeader("Expect-CT")}} {{deprecated_inline}}
-  - : Lets sites opt in to reporting and enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) to detect use of misissued certificates for that site.
+  - : Lets sites opt in to reporting and enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Defenses/Certificate_Transparency) to detect use of misissued certificates for that site.
 - {{HTTPHeader("Permissions-Policy")}}
   - : Provides a mechanism to allow and deny the use of browser features in a website's own frame, and in {{htmlelement("iframe")}}s that it embeds.
 - {{HTTPHeader("Reporting-Endpoints")}} {{experimental_inline}}
@@ -259,7 +259,7 @@ Range requests are useful for applications like media players that support rando
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : A cross-domain policy file may grant clients, such as Adobe Acrobat or Apache Flex (among others), permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy).
+  - : A cross-domain policy file may grant clients, such as Adobe Acrobat or Apache Flex (among others), permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
     The `X-Permitted-Cross-Domain-Policies` header overrides such policy files so that clients still block unwanted requests.
 - {{HTTPHeader("X-Powered-By")}}
   - : May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.
@@ -285,6 +285,16 @@ The following request headers are not _strictly_ "fetch metadata request headers
   - : Indicates the purpose of the request, when the purpose is something other than immediate use by the user-agent. The header currently has one possible value, `prefetch`, which indicates that the resource is being fetched preemptively for a possible future navigation.
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
   - : A request header sent in preemptive request to {{domxref("Window/fetch", "fetch()")}} a resource during service worker boot. The value, which is set with {{domxref("NavigationPreloadManager.setHeaderValue()")}}, can be used to inform a server that a different resource should be returned than in a normal `fetch()` operation.
+
+## Fetch storage access headers
+
+These headers enable an enhanced workflow for the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+
+- {{HTTPHeader("Sec-Fetch-Storage-Access")}}
+  - : Indicates the "storage access status" for the current fetch context, which will be one of `none`, `inactive`, or `active`.
+    The server may respond with `Activate-Storage-Access` to request that the browser activate an `inactive` permission and retry the request, or to load a resource with access to its third-party cookies if the status is `active`.
+- {{HTTPHeader("Activate-Storage-Access")}}
+  - : Used in response to `Sec-Fetch-Storage-Access` to indicate that the browser can activate an existing permission for secure access and retry the request with cookies, or load a resource with cookie access if it already has an activated permission.
 
 ## Server-sent events
 
@@ -409,18 +419,29 @@ The [UA client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client
 > [!NOTE]
 > User-agent client hints are not available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) because they rely on [permissions policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) delegation, which could be used to leak data.
 
-#### Device client hints
+#### Device and responsive image client hints
 
-- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Response header used to confirm the image device to pixel ratio (DPR) in requests where the screen {{HTTPHeader("DPR")}} client hint was used to select an image resource.
-- {{HTTPHeader("Device-Memory")}}
+- {{HTTPHeader("Sec-CH-Device-Memory")}} {{experimental_inline}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
-- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{HTTPHeader("Sec-CH-DPR")}} {{experimental_inline}}
   - : Request header that provides the client device pixel ratio (the number of physical {{glossary("device pixel", "device pixels")}} for each {{Glossary("CSS pixel")}}).
-- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{HTTPHeader("Sec-CH-Viewport-Height")}} {{experimental_inline}}
+  - : Request header provides the client's layout viewport height in {{Glossary("CSS pixel","CSS pixels")}}.
+- {{HTTPHeader("Sec-CH-Viewport-Width")}} {{experimental_inline}}
   - : Request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}.
+- {{HTTPHeader("Sec-CH-Width")}} {{experimental_inline}}
+  - : Request header provides the image's width in {{Glossary("CSS pixel","CSS pixels")}}.
+
+##### Deprecated device and responsive image client hints
+
+- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Standardized as {{HTTPHeader("Sec-CH-Device-Memory")}}
+- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Standardized as {{HTTPHeader("Sec-CH-DPR")}}
+- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Standardized as {{HTTPHeader("Sec-CH-Viewport-Width")}}
 - {{HTTPHeader("Width")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Request header indicates the desired resource width in physical pixels (the intrinsic size of an image).
+  - : Standardized as {{HTTPHeader("Sec-CH-Width")}}
 
 #### Network client hints
 

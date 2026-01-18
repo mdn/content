@@ -12,7 +12,7 @@ sidebar: pwasidebar
 
 The `launch_handler` member defines values that control the launch of a web application. Currently it can only contain a single value, `client_mode`, which specifies the context in which the app should be loaded when launched. For example, in an existing web app client containing an instance of the app, or in a new web app client. This leaves scope for more `launch_handler` values to be defined in the future.
 
-### Values
+## Values
 
 `launch_handler` objects may contain the following values:
 

@@ -29,7 +29,7 @@ createAttribute(name)
 
 ### Return value
 
-A {{domxref("Attr")}} node.
+An {{domxref("Attr")}} node.
 
 ### Exceptions
 

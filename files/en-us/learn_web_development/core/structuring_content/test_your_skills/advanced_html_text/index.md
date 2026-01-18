@@ -26,7 +26,7 @@ To complete this task:
 
 The finished example should look like this:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2-finished.html", '100%', 300)}}
+{{EmbedLiveSample('advanced-text-solution', "", 260)}}
 
 ```html live-sample___advanced-text
 <h1>Advanced text semantics</h1>
@@ -47,7 +47,7 @@ The finished example should look like this:
 </p>
 ```
 
-```css hidden live-sample___advanced-text
+```css hidden live-sample___advanced-text live-sample___advanced-text-solution
 body {
   background-color: white;
   color: #333333;
@@ -83,7 +83,7 @@ time {
 
 Your finished HTML should look like this:
 
-```html
+```html live-sample___advanced-text-solution
 <h1>Advanced text semantics</h1>
 
 <p>Let's start with a quote:</p>

@@ -88,7 +88,7 @@ The optional API permissions are:
 - `tabGroups`
 - `tabs`
 - `topSites`
-- 'userScripts' ([optional-only](#optional-only_permissions))
+- `userScripts` ([optional-only](#optional-only_permissions))
 - `webNavigation`
 - `webRequest`
 - `webRequestBlocking`
@@ -114,7 +114,7 @@ Optional permissions are generally available for use in the [`permissions`](/en-
 
 The optional-only API permissions are:
 
-- 'userScripts' (see [userScripts permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions))
+- `userScripts` (see [userScripts permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions))
 
 ## Examples
 

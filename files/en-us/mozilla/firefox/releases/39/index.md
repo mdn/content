@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 39 was released on July 2, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -77,7 +77,7 @@ _No change._
 
 ### Miscellaneous
 
-- [WOFF2](/en-US/docs/Web/CSS/CSS_fonts/WOFF) fonts support is now turned on by default in release version of Firefox (Beta and Release, in addition of Nightly and Developer Edition) ([Firefox bug 1084026](https://bugzil.la/1084026)).
+- [WOFF2](/en-US/docs/Web/CSS/Guides/Fonts/WOFF) fonts support is now turned on by default in release version of Firefox (Beta and Release, in addition of Nightly and Developer Edition) ([Firefox bug 1084026](https://bugzil.la/1084026)).
 - The [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) command-line option has been removed ([Firefox bug 1080319](https://bugzil.la/1080319)).
 - Support for new [Unicode 8.0 skin tone emoji](https://www.bbc.co.uk/news/newsbeat-32220611) ([Firefox bug 1153460](https://bugzil.la/1153460)).
 

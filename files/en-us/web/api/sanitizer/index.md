@@ -2,12 +2,10 @@
 title: Sanitizer
 slug: Web/API/Sanitizer
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.Sanitizer
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
 The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) defines a configuration object that specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
 
@@ -21,28 +19,28 @@ Note that `Sanitizer` is expected to be more efficient to reuse and modify when 
 
 ## Constructors
 
-- {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} {{experimental_inline}}
+- {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}}
   - : Creates and returns a `Sanitizer` object, optionally with custom sanitization behavior defined in a {{domxref('SanitizerConfig')}}.
 
 ## Instance methods
 
-- {{domxref('Sanitizer.allowElement()')}} {{experimental_inline}}
+- {{domxref('Sanitizer.allowElement()')}}
   - : Sets an element as allowed by the sanitizer, optionally with an array of attributes that are allowed or disallowed.
-- {{domxref('Sanitizer.get()')}} {{experimental_inline}}
-  - : Returns the current `Sanitizer` configuration as an {{domxref('SanitizerConfig')}} dictionary instance.
-- {{domxref('Sanitizer.removeElement()')}} {{experimental_inline}}
+- {{domxref('Sanitizer.get()')}}
+  - : Returns the current `Sanitizer` configuration as a {{domxref('SanitizerConfig')}} dictionary instance.
+- {{domxref('Sanitizer.removeElement()')}}
   - : Sets an element to be removed by the sanitizer.
-- {{domxref('Sanitizer.removeUnsafe()')}} {{experimental_inline}}
+- {{domxref('Sanitizer.removeUnsafe()')}}
   - : Updates the sanitizer configuration so that it will remove any XSS-unsafe HTML.
-- {{domxref('Sanitizer.replaceElementWithChildren()')}} {{experimental_inline}}
+- {{domxref('Sanitizer.replaceElementWithChildren()')}}
   - : Sets an element to be replaced by its child HTML elements.
-- {{domxref('Sanitizer.allowAttribute()')}} {{experimental_inline}}
+- {{domxref('Sanitizer.allowAttribute()')}}
   - : Sets an attribute as allowed on any element.
-- {{domxref('Sanitizer.removeAttribute()')}} {{experimental_inline}}
+- {{domxref('Sanitizer.removeAttribute()')}}
   - : Sets an attribute to be removed from any element.
-- {{domxref('Sanitizer.setComments()')}} {{experimental_inline}}
+- {{domxref('Sanitizer.setComments()')}}
   - : Sets whether comments will be allowed or removed by the sanitizer.
-- {{domxref('Sanitizer.setDataAttributes()')}} {{experimental_inline}}
+- {{domxref('Sanitizer.setDataAttributes()')}}
   - : Sets whether data attributes on elements will be allowed or removed by the sanitizer.
 
 ## Examples

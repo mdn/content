@@ -17,7 +17,7 @@ We are going to get you to solve this challenge in your local development enviro
 2. Inside the folder, create an `index.html` file and paste the following content into it:
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />

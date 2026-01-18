@@ -102,7 +102,7 @@ All the above transformations can be expressed by a 2x3 transformation matrix. T
 </math>
 <!-- prettier-ignore-end -->
 
-See a [concrete example on the SVG transform documentation](/en-US/docs/Web/SVG/Reference/Attribute/transform#matrix). To read more about transformations, check the [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) guide.
+See a [concrete example on the SVG transform documentation](/en-US/docs/Web/SVG/Reference/Attribute/transform#matrix). To read more about transformations, check the [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using) guide.
 
 ## Effects on Coordinate Systems
 

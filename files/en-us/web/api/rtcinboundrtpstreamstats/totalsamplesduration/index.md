@@ -18,7 +18,7 @@ This can be used with {{domxref("RTCInboundRtpStreamStats/totalAudioEnergy","tot
 
 ## Value
 
-An positive number, in seconds.
+A positive number, in seconds.
 
 ## Specifications
 

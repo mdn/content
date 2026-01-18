@@ -190,6 +190,7 @@ function isColorTypeSupported() {
   const obj = {
     get colorType() {
       supported = true;
+      return undefined;
     },
   };
   document.createElement("canvas").getContext("2d", obj);

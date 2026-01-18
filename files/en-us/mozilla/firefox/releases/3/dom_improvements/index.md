@@ -17,7 +17,7 @@ Firefox 3 offers a number of improvements to the [Document Object Model](/en-US/
 - The Web Applications 1.0 (HTML5) [`window.postMessage`](/en-US/docs/Web/API/Window/postMessage) DOM method is now supported. This method allows a limited, opt-in form of client-side communication between windows not necessarily on the same domain.
 - The `charCode` value of the `keypress` event is changed to an ASCII character if the accelerator key is pressed. Otherwise the `charCode` is the unmodified character (excepting `Shift` state).
 
-### See also
+## See also
 
 - [Firefox 3 for developers](/en-US/docs/Mozilla/Firefox/Releases/3)
 - [CSS improvements in Firefox 3](https://web.archive.org/web/20210224062716/https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/releases/3/CSS_improvements)

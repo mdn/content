@@ -48,19 +48,19 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : Set to `true` if the `<iframe>` can activate fullscreen mode by calling the {{domxref("Element.requestFullscreen", "requestFullscreen()")}} method.
 
     > [!NOTE]
-    > This attribute is considered a legacy attribute and redefined as `allow="fullscreen"`.
+    > This attribute is considered a legacy attribute and redefined as `allow="fullscreen *"`.
 
 - `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
   - : Set to `true` if a cross-origin `<iframe>` should be allowed to invoke the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API).
 
     > [!NOTE]
-    > This attribute is considered a legacy attribute and redefined as `allow="payment"`.
+    > This attribute is considered a legacy attribute and redefined as `allow="payment *"`.
 
-- `browsingtopics` {{Experimental_Inline}} {{non-standard_inline}}
+- `browsingtopics` {{non-standard_inline}} {{deprecated_inline}}
   - : A boolean attribute that, if present, specifies that the selected topics for the current user should be sent with the request for the `<iframe>`'s source. See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 
 - `credentialless` {{Experimental_Inline}}
-  - : Set to `true` to make the `<iframe>` credentialless, meaning that its content will be loaded in a new, ephemeral context. It doesn't have access to the network, cookies, and storage data associated with its origin. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
+  - : Set to `true` to make the `<iframe>` credentialless, meaning that its content will be loaded in a new, ephemeral context. It doesn't have access to the network, cookies, and storage data associated with its origin. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/HTTP/Guides/IFrame_credentialless) for more details.
 
 - `csp` {{experimental_inline}}
   - : A [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.
@@ -82,6 +82,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - `name`
   - : A targetable name for the embedded browsing context. This can be used in the `target` attribute of the {{HTMLElement("a")}}, {{HTMLElement("form")}}, or {{HTMLElement("base")}} elements; the `formtarget` attribute of the {{HTMLElement("input")}} or {{HTMLElement("button")}} elements; or the `windowName` parameter in the {{domxref("Window.open()","window.open()")}} method. In addition, the name becomes a property of the {{domxref("Window")}} and {{domxref("Document")}} objects, containing a reference to the embedded window or the element itself.
+
+- `privateToken` {{experimental_inline}}
+  - : Contains a string representation of an options object representing a [private state token](/en-US/docs/Web/API/Private_State_Token_API/Using) operation; this object has the same structure as the `RequestInit` dictionary's [`privateToken`](/en-US/docs/Web/API/RequestInit#privatetoken) property. IFrames containing this attribute can initiate operations such as issuing or redeeming tokens when their embedded content is loaded.
+
 - `referrerpolicy`
   - : Indicates which [referrer](/en-US/docs/Web/API/Document/referrer) to send when fetching the frame's resource:
     - `no-referrer`
@@ -120,7 +124,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     - `allow-presentation`
       - : Allows embedders to have control over whether an iframe can start a [presentation session](/en-US/docs/Web/API/PresentationRequest).
     - `allow-same-origin`
-      - : If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}} (potentially preventing access to [data storage/cookies](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs).
+      - : If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}} (potentially preventing access to [data storage/cookies](/en-US/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs).
     - `allow-scripts`
       - : Allows the page to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
     - `allow-storage-access-by-user-activation` {{experimental_inline}}
@@ -141,7 +145,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     > When redirecting the user, opening a popup window, or opening a new tab from an embedded page within an `<iframe>` with the `sandbox` attribute, the new browsing context is subject to the same `sandbox` restrictions. This can create issues — for example, if a page embedded within an `<iframe>` without a `sandbox="allow-forms"` or `sandbox="allow-popups-to-escape-sandbox"` attribute set on it opens a new site in a separate tab, form submission in that new browsing context will silently fail.
 
 - `src`
-  - : The URL of the page to embed. Use a value of `about:blank` to embed an empty page that conforms to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy#inherited_origins). Also note that programmatically removing an `<iframe>`'s src attribute (e.g., via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
+  - : The URL of the page to embed. Use a value of `about:blank` to embed an empty page that conforms to the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy#inherited_origins). Also note that programmatically removing an `<iframe>`'s src attribute (e.g., via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
 
     > [!NOTE]
     > The `about:blank` page uses the embedding document's URL as its base URL when resolving any relative URLs, such as anchor links.
@@ -186,7 +190,7 @@ With the DOM {{domxref("HTMLIFrameElement")}} object, scripts can access the {{d
 
 From the inside of a frame, a script can get a reference to its parent window with {{domxref("window.parent")}}.
 
-Script access to a frame's content is subject to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+Script access to a frame's content is subject to the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 Scripts cannot access most properties in other `window` objects if the script was loaded from a different origin, including scripts inside a frame accessing the frame's parent.
 Cross-origin communication can be achieved using {{domxref("Window.postMessage()")}}.
 

@@ -3,12 +3,10 @@ title: "NavigateEvent: hashChange property"
 short-title: hashChange
 slug: Web/API/NavigateEvent/hashChange
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigateEvent.hashChange
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`hashChange`** read-only property of the
 {{domxref("NavigateEvent")}} interface returns `true` if the navigation is a fragment navigation (i.e., to a fragment identifier in the same document), or `false` otherwise.

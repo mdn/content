@@ -10,7 +10,7 @@ browser-compat: api.HTMLIFrameElement.srcdoc
 
 > [!WARNING]
 > This property parses its input as HTML, writing the result into the frame's DOM.
-> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
 >
 > You can mitigate this risk by always assigning `TrustedHTML` objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
 > See [Security considerations](#security_considerations) for more information.
@@ -49,7 +49,7 @@ The `srcdoc` property allows absolutely any HTML markup to run in a frame by def
 If the frame is not sandboxed using the Content Security Property (CSP) [`sandbox` directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox) (or is sandboxed but includes the [`allow-same-origin`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox#allow-same-origin) value) then it will be same-origin with the parent.
 This means that the frame will have complete access to the parent DOM and resources, and visa versa.
 
-This is a significant vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks if potentially unsafe strings provided by a user are injected into a frame without first being sanitized.
+This is a significant vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks if potentially unsafe strings provided by a user are injected into a frame without first being sanitized.
 Consider the following code where a string of HTML from a user might be passed into a frame that is then added to the document.
 
 ```js
@@ -68,22 +68,22 @@ This ensures that the input is passed through a transformation function, which h
 
 ## Examples
 
-### Reading the HTML from a frame
+### Reading the HTML from an iframe
 
-Reading `srcdoc` causes the user agent to serialize the frame's document.
+Reading `srcdoc` causes the user agent to serialize the iframe's document.
 
 Given the following HTML:
 
 ```html
-<frame
+<iframe
   id="example"
-  srcdoc="<!doctype html><body><p>Hello World!</p></body>"></frame>
+  srcdoc="<!doctype html><body><p>Hello World!</p></body>"></iframe>
 ```
 
 You can get and log the markup as shown:
 
 ```js
-const frame = document.querySelector("#frame");
+const frame = document.querySelector("#example");
 const frameDoc = frame.srcdoc;
 console.log(frameDoc); // "<!doctype html><body><p>Hello World!</p></body>"
 ```
@@ -121,7 +121,7 @@ const untrustedString =
 const trustedHTML = policy.createHTML(untrustedString);
 
 // Inject the TrustedHTML (which contains a trusted string)
-const frame = document.querySelector("#frame");
+const frame = document.querySelector("#example");
 const frameDoc = frame.srcdoc;
 ```
 

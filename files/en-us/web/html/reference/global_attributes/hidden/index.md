@@ -81,7 +81,7 @@ This means that, unlike elements in the _hidden_ state, elements in the _hidden 
 - they participate in page layout
 - their margin, borders, padding, and background are rendered
 
-Also, the element needs to be affected by [layout containment](/en-US/docs/Web/CSS/CSS_containment) in order to be revealed.
+Also, the element needs to be affected by [layout containment](/en-US/docs/Web/CSS/Guides/Containment) in order to be revealed.
 If the element in the _hidden until found_ state has a `display` value of `none`, `contents`, or `inline`, then the element will not be revealed by "Find in page" or fragment navigation.
 
 ## Usage notes

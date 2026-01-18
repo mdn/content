@@ -35,8 +35,9 @@
 # MathML
 /files/en-us/web/mathml/ @mdn/mathml
 
-# Templates and sidebars (rari)
+# L10n for Macros (rari)
 /files/jsondata/L10n-Template.json @mdn/engineering
+/files/jsondata/L10n-CSSFormalDefinitions.json @mdn/engineering
 
 # ============================= CONTROL FILES ============================= #
 # The CODEOWNERS file must end with these matches: Any pull request changing
@@ -47,14 +48,22 @@
 # Issue templates in .github
 /.github/ISSUE_TEMPLATE/ff-project-issue.md @mdn/content-team
 
+# VSCode configuration
+/.vscode/              @mdn/engineering
+/.vscode/dictionaries/ @mdn/content-team
+/.vscode/cspell.json   @mdn/content-team
+
 # Root directory
 /* @mdn/engineering
 # Markdown files in root directory
 /*.md @mdn/content-team
-# Filecheck
+/SECURITY.md @mdn/engineering
+# Scripts and Tests
 /scripts @mdn/engineering
+/scripts/content @mdn/content-team
+/tests   @mdn/engineering
 
-# These are @mdn-bot because the auto-merge GHA workflow uses the PAT of this account.
-# If another reviewer is specified, update the PAT token or auto-merge will cease to be automatic.
-/package.json @mdn-bot
-/yarn.lock @mdn-bot
+# Dependencies
+/package.json      @mdn/engineering @mdn-bot
+/package-lock.json @mdn/engineering @mdn-bot
+/yarn.lock         @mdn/engineering @mdn-bot

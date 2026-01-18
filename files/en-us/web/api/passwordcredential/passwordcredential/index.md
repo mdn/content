@@ -28,9 +28,9 @@ Either of the following:
     - `iconURL` {{optional_inline}}
       - : A string representing the URL of an icon or avatar to be associated with the credential.
     - `id`
-      - : A string representing a unique ID for the credential.
+      - : A string representing the username portion of the username/password combination.
     - `name` {{optional_inline}}
-      - : A string representing the credential username.
+      - : A string representing a human-understandable name associated with the credential, intended to help the user select this credential in a user interface.
     - `origin`
       - : A string representing the credential's origin. {{domxref("PasswordCredential")}} objects are origin-bound, which means that they will only be usable on the specified origin they were intended to be used on.
     - `password`
