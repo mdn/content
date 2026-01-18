@@ -61,7 +61,7 @@ Some reference features have nested pages for related features. For example, the
 
 Passing the path info to the macro in the first parameter as in `\{{HTMLElement("input/range")}}` produces the link as "{{HTMLElement("input/range")}}", which is not what you want. Use the second parameter to show a different link text. So for a link to the range input type, we would write the macro as `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;<code>")}}` to produce "{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}". (Note that if the second parameter includes a space, like the one between `input` and `type` here, this macro removes the code formatting; so we've added the {{HTMLElement("code")}} tags explicitly.)
 
-### Using CSSxRef with the CSS reference
+### Using `CSSxRef` with the CSS reference
 
 Each macro is slightly different.
 

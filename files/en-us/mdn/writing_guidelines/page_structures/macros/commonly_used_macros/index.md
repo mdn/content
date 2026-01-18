@@ -55,7 +55,8 @@ See the linked source files in the first column in the following table for detai
         <code>\{{CSSxRef("cursor")}}</code> results in {{CSSxRef("cursor")}}.<br />
         <code>\{{CSSxRef(":hover")}}</code> results in {{CSSxRef(":hover")}}.<br />
         <code>\{{CSSxRef("@media")}}</code> results in {{CSSxRef("@media")}}.<br />
-        <code>\{{CSSxRef("pow")}}</code> results in {{CSSxRef("pow")}}.
+        <code>\{{CSSxRef("pow")}}</code> results in {{CSSxRef("pow")}}.<br /><br />
+        Check details in <a href="/en-US/docs/MDN/Writing_guidelines/Page_structures/Links#using_cssxref_with_the_css_reference">Using <code>cssxref</code> with the css reference</a>
       </td>
     </tr>
     <tr>
