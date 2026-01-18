@@ -5,37 +5,41 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-This page lists many of the general-purpose macros created for use on MDN.
+This page lists many of the general-purpose macros that [rari](https://github.com/mdn/rari) provides for use on MDN.
 For generic how-to information on using them in MDN content, see [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros).
 
 ## Linking
 
-MDN provides a number of link macros for easing the creation of links to reference pages, glossary entries, and other topics.
+MDN provides a number of link macros for easing the creation of links to glossary entries, reference pages, and other topics.
 
 Link macros are recommended over normal Markdown links because they are succinct and translation-friendly.
 For example, a glossary or reference link created using a macro does not need to be translated: in other locales it will automatically link to the correct version of the file.
 
-### Glossary links
+These macros are also covered in more detail on the [Link macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Links) page.
 
-The [`Glossary`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/glossary.rs) macro creates a link to a specified term's entry in the MDN [glossary](/en-US/docs/Glossary).
-This macro accepts one required parameter and one optional parameter:
+### Linking to glossary terms
 
-1. The term's name (such as "HTML"): `\{{Glossary("HTML")}}` yields {{Glossary("HTML")}}
-2. Optional: The text to display in the article instead of the term name: `\{{Glossary("CSS", "Cascading Style Sheets")}}` yields {{Glossary("CSS", "Cascading Style Sheets")}}
+The [`Glossary`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/glossary.rs) macro creates a link to the specified term's page in [MDN Glossary](/en-US/docs/Glossary).
+This macro accepts one required parameter and one optional parameter.
 
-### Linking to pages in references
+- The term is a required parameter. For example, to link to the glossary page for "HTML", the macro will be `\{{Glossary("HTML")}}`, and this will produce the link {{Glossary("HTML")}}.
+- The display text is an optional parameter. For example, you can write the link in the previous example as `\{{Glossary("HTML", "HyperText Markup Language")}}`, which will produce the link {{Glossary("HTML", "HyperText Markup Language")}}.
 
-There are macros for locale-independent linking to pages in specific reference areas of MDN: JavaScript, CSS, HTML elements, SVG, etc.
+### Linking to reference pages
+
+There are macros for locale-independent linking to pages in specific reference areas of MDN, including HTML, CSS, JavaScript, SVG, and HTTP.
 
 The macros are easy to use.
-Minimally all you need to do is specify the name of the item to link to in the first argument.
-Most macros will also take a second argument allowing you to change the display text (documentation can be found at the links in the left-most column below).
+All you need to do is specify the name of the item to link to in the first parameter.
+Similar to the glossary macro, most reference macros also accept a second parameter to allow you to change the display text
+
+See the linked source files in the first column in the following table for details.
 
 <table class="standard-table">
   <thead>
     <tr>
       <th>Macro</th>
-      <th>Links to page under</th>
+      <th>Links to pages under</th>
       <th>Example</th>
     </tr>
   </thead>
@@ -45,22 +49,24 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/cssxref.rs">CSSxRef</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a> (/Web/CSS/Reference)
+        <a href="/en-US/docs/Web/CSS/Reference">CSS reference</a> (/Web/CSS/Reference)<br />
       </td>
       <td>
-        <code>\{{CSSxRef("cursor")}}</code> results in {{CSSxRef("cursor")}}.
+        <code>\{{CSSxRef("cursor")}}</code> results in {{CSSxRef("cursor")}}.<br />
+        <code>\{{CSSxRef(":hover")}}</code> results in {{CSSxRef(":hover")}}.<br />
+        <code>\{{CSSxRef("@media")}}</code> results in {{CSSxRef("@media")}}.<br />
+        <code>\{{CSSxRef("pow")}}</code> results in {{CSSxRef("pow")}}.
       </td>
     </tr>
     <tr>
       <td>
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/domxref.rs">DOMxRef</a>
       </td>
-      <td><a href="/en-US/docs/Web/API">DOM Reference</a> (/Web/API)</td>
+      <td><a href="/en-US/docs/Web/API">DOM reference</a> (/Web/API)</td>
       <td>
-        <code>\{{DOMxRef("Document")}}</code> or <code>\{{DOMxRef("document")}}</code> results in {{DOMxRef("Document")}},<br />
-        <code>\{{DOMxRef("document.getElementsByName()")}}</code> result in {{DOMxRef("document.getElementsByName()")}}<br />
-        <code>\{{DOMxRef("Node")}}</code> result in {{DOMxRef("Node")}}.<br />
-        You can change the display text using a second parameter: <code>\{{DOMxRef("document.getElementsByName()","getElementsByName()")}}</code> results in {{DOMxRef("document.getElementsByName()","getElementsByName()")}}.
+        <code>\{{DOMxRef("document")}}</code> results in {{DOMxRef("Document")}}.<br />
+        <code>\{{DOMxRef("document.getElementsByName()")}}</code> results in {{DOMxRef("document.getElementsByName()")}}.<br />
+        <code>\{{DOMxRef("Node")}}</code> results in {{DOMxRef("Node")}}.<br />
       </td>
     </tr>
     <tr>
@@ -68,10 +74,10 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/htmlxref.rs">HTMLElement</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Reference/Elements">HTML Elements reference</a> (/Web/HTML/Reference/Elements)
+        <a href="/en-US/docs/Web/HTML/Reference/Elements">HTML elements reference</a> (/Web/HTML/Reference/Elements)
       </td>
       <td>
-        <code>\{{HTMLElement("select")}}</code> results in {{HTMLElement("select")}}
+        <code>\{{HTMLElement("select")}}</code> results in {{HTMLElement("select")}}.
       </td>
     </tr>
     <tr>
@@ -79,10 +85,10 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/jsxref.rs">JSxRef</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> (/Web/JavaScript/Reference).
+        <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> (/Web/JavaScript/Reference)
       </td>
       <td>
-        <code>\{{JSxRef("Promise")}}</code> results in {{JSxRef("Promise")}}
+        <code>\{{JSxRef("Promise")}}</code> results in {{JSxRef("Promise")}}.
       </td>
     </tr>
     <tr>
@@ -90,10 +96,10 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgattr.rs">SVGAttr</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/SVG/Reference/Attribute">SVG attribute reference</a> (/Web/SVG/Reference/Attribute).
+        <a href="/en-US/docs/Web/SVG/Reference/Attribute">SVG attribute reference</a> (/Web/SVG/Reference/Attribute)
       </td>
       <td>
-        <code>\{{SVGAttr("d")}}</code> results in {{SVGAttr("d")}}
+        <code>\{{SVGAttr("d")}}</code> results in {{SVGAttr("d")}}.
       </td>
     </tr>
     <tr>
@@ -102,10 +108,10 @@ Most macros will also take a second argument allowing you to change the display 
           href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgxref.rs">SVGElement</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/SVG/Reference/Element">SVG Element reference</a> (/Web/SVG/Reference/Element).
+        <a href="/en-US/docs/Web/SVG/Reference/Element">SVG Element reference</a> (/Web/SVG/Reference/Element)
       </td>
       <td>
-        <code>\{{SVGElement("view")}}</code> results in {{SVGElement("view")}}
+        <code>\{{SVGElement("view")}}</code> results in {{SVGElement("view")}}.
       </td>
     </tr>
     <tr>
@@ -113,10 +119,10 @@ Most macros will also take a second argument allowing you to change the display 
         <code><a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPHeader</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Reference/Headers">HTTP headers</a> (/Web/HTTP/Reference/Headers).
+        <a href="/en-US/docs/Web/HTTP/Reference/Headers">HTTP headers</a> (/Web/HTTP/Reference/Headers)
       </td>
       <td>
-        <code>\{{HTTPHeader("ACCEPT")}}</code> results in {{HTTPHeader("ACCEPT")}}
+        <code>\{{HTTPHeader("ACCEPT")}}</code> results in {{HTTPHeader("ACCEPT")}}.
       </td>
     </tr>
     <tr>
@@ -124,10 +130,10 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPMethod</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Reference/Methods">HTTP request methods</a> (/Web/HTTP/Reference/Methods).
+        <a href="/en-US/docs/Web/HTTP/Reference/Methods">HTTP request methods</a> (/Web/HTTP/Reference/Methods)
       </td>
       <td>
-        <code>\{{HTTPMethod("HEAD")}}</code> results in {{HTTPMethod("HEAD")}}
+        <code>\{{HTTPMethod("HEAD")}}</code> results in {{HTTPMethod("HEAD")}}.
       </td>
     </tr>
     <tr>
@@ -138,20 +144,19 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="/en-US/docs/Web/HTTP/Reference/Status">HTTP response status codes</a> (/Web/HTTP/Reference/Status)
       </td>
       <td>
-        <code>\{{HTTPStatus("404")}}</code> results in {{HTTPStatus("404")}}
+        <code>\{{HTTPStatus("404")}}</code> results in {{HTTPStatus("404")}}.
       </td>
     </tr>
   </tbody>
 </table>
 
-### Navigation aids for multi-page guides
+### Adding navigation aids for multi-page guides
 
-[`Previous`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs), [`Next`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs), and [`PreviousNext`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) provide navigation controls for articles which are part of sequences.
-For the single-way templates, the only parameter needed is the wiki location of the previous or next article in the sequence.
-For [`PreviousNext`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs), the two parameters needed are the wiki locations of the appropriate articles.
-The first parameter is for the previous article, and the second is for the next article.
+[`Previous`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs), [`Next`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs), and [`PreviousNext`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) provide navigation controls for articles that are part of a sequence.
+For the single-way templates, the only parameter needed is the slug of the previous or next article in the sequence.
+The [`PreviousNext`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) macro requires two parameters: the first parameter is the slug for the previous article, and the second is the slug for the next article.
 
-## Code samples
+## Generating code samples
 
 ### Live samples
 
@@ -160,9 +165,9 @@ The first parameter is for the previous article, and the second is for the next 
 - [`EmbedGHLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_gh_live_sample.rs) allows to embed live samples from GitHub pages.
   You can get more information at [GitHub live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_live_samples).
 
-## General-purpose formatting
+## Adding general-purpose formatting
 
-### Inline indicators for API documentation
+### Adding inline indicators for API documentation
 
 [`Optional_Inline`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) and [`ReadOnlyInline`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) are used in API documentation, usually when describing the list of properties of an object or parameters of a function.
 
@@ -174,9 +179,9 @@ Example:
 - `parameterX` {{optional_inline}}
   - : Indicates…
 
-## Status and compatibility indicators
+## Adding status and compatibility indicators
 
-### Inline indicators with no additional parameters
+### Adding inline indicators with no additional parameters
 
 #### Non-standard
 
@@ -203,7 +208,7 @@ For more information on the definition **experimental**, see the [Experimental, 
 
 - Icon: {{Experimental_Inline}}
 
-### Inline indicators that support specifying the technology
+### Adding inline indicators that support specifying the technology
 
 #### Deprecated
 
@@ -250,7 +255,7 @@ You can also pass some arguments to indicate that a feature works in specified w
 {{AvailableInWorkers}}
 {{AvailableInWorkers("window_and_worker_except_service")}}
 
-## Browser compatibility and specification macros
+## Linking to browser compatibility and specification
 
 The following macros are included on all reference pages, but are also supported by all page types:
 
@@ -261,8 +266,9 @@ The following macros are included on all reference pages, but are also supported
 
 ## See also
 
+- [Link macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Links)
 - [Sidebar macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [Feature status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
+- [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) (infrequently used or deprecated macros)
 - [Page templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates)
 - [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
-- [Feature status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
-- [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other): infrequently used or deprecated macros
