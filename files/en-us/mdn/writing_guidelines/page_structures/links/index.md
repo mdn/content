@@ -44,8 +44,12 @@ These macros are:
 
 ### Basic usage
 
-You derive the feature name for the first parameter for each of these macros from the last section of the slug of the document being referenced. For example, to link to the `<select>` element page with the slug `Web/HTML/Reference/Elements/select`, you will write the macro as `\{{HTMLElement("select")}}`. This will produce a correctly formatted link: "{{HTMLElement("select")}}". This is because macros add additional feature-specific formatting to the link text.
-As we just saw, the `HTMLElement` macro automatically added angular brackets around `select` as well as formatted the term like a keyword (enclosing within `<code>`). So you never have to worry about anything more than the feature name itself when using a macro. This is why using macros to add links is quick and easy.
+For the first required parameter, you derive the feature name from the last section of the slug of the document you want to link to.
+For example, to link to the `<select>` element page with the slug `Web/HTML/Reference/Elements/select`, you will write the macro as `\{{HTMLElement("select")}}`.
+This will produce the link "{{HTMLElement("select")}}", which is both code formatted as well as includes the angular brackets.
+This is because macros add additional feature-specific formatting to the link text.
+So you never have to worry about anything more than the feature name itself when using a macro.
+This is why using macros to add links is quick and easy.
 
 ### Customizing display text
 
@@ -53,7 +57,7 @@ By default, the display text of the link is the first parameter passed to the ma
 
 ### Linking to nested pages
 
-Some reference pages have nested pages. For example, the HTML `<input>` element has multiple pages for different input types, such as `Web/HTML/Reference/Elements/input/range` for the range input type.
+Some reference features have nested pages for related features. For example, the HTML `<input>` element has multiple nested pages for different input types, such as `Web/HTML/Reference/Elements/input/range` for the range input type.
 
 Passing the path info to the macro in the first parameter as in `\{{HTMLElement("input/range")}}` produces the link as "{{HTMLElement("input/range")}}", which is not what you want. Use the second parameter to show a different link text. So for a link to the range input type, we would write the macro as `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;<code>")}}` to produce "{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}". (Note that if the second parameter includes a space, like the one between `input` and `type` here, this macro removes the code formatting; so we've added the {{HTMLElement("code")}} tags explicitly.)
 
@@ -76,28 +80,28 @@ Just like the `HTMLElement` macro, the `CSSxRef` macro adds the appropriate styl
 A few other behaviors of the `CSSxRef` macro worth noting include:
 
 - Nested pages are handled automatically. For example:
-  - `\{{CSSxRef("basic-shape/circle")}}` links to `Web/CSS/Reference/Values/basic-shape/circle` with the link {{CSSxRef("basic-shape/circle")}}.
-  - `\{{CSSxRef("animation-timeline/scroll")}}` links to `Web/CSS/Reference/Properties/animation-timeline/scroll` with the link {{CSSxRef("animation-timeline/scroll")}}.
-- Some slugs in the CSS area have been named slightly different from their feature names to avoid conflicts with similar named feature of a different type. For example, the slug for the `position` data type is `Web/CSS/Reference/Values/position_value` to avoid conflict with the `position` property, which has the slug `Web/CSS/Reference/Properties/position`.
+  - `\{{CSSxRef("basic-shape/circle")}}` links to the document at `Web/CSS/Reference/Values/basic-shape/circle` with the link {{CSSxRef("basic-shape/circle")}}.
+  - `\{{CSSxRef("animation-timeline/scroll")}}` links to the document at `Web/CSS/Reference/Properties/animation-timeline/scroll` with the link {{CSSxRef("animation-timeline/scroll")}}.
+- Some CSS features have the same name. In addition to their directory location, their slugs contain suffixes to reflect their type. For example, the `position` property has the slug `Web/CSS/Reference/Properties/position`, while the `<position>` data type has the slug `Web/CSS/Reference/Values/position_value`.
 
-  The `CSSxRef` macro handles these exceptions automatically. So, `\{{CSSxRef("position")}}` links to the property page with the link {{CSSxRef("position")}}, while `\{{CSSxRef("&lt;position&gt;")}}` links to the data type page with the link {{CSSxRef("&lt;position&gt;")}}.
+  The `CSSxRef` macro handles these same-named features automatically. So, `\{{CSSxRef("position")}}` links to the property page with the link {{CSSxRef("position")}}, and `\{{CSSxRef("<position>")}}` links to the data type page with the link {{CSSxRef("&lt;position&gt;")}}.
 
-  Other features with similar name conflicts include:
+  Other features with shared names include:
   - `color` property (`Web/CSS/Reference/Properties/color`) vs. `<color>` data type (`Web/CSS/Reference/Values/color_value`)
 
-    **Macro**: `\{{CSSxRef("color")}}` vs. `{{CSSxRef("<color>")}}`
+    **Macro**: `\{{CSSxRef("color")}}` vs. `\{{CSSxRef("<color>")}}`
 
   - `flex` property (`Web/CSS/Reference/Properties/flex`) vs. `<flex>` data type (`Web/CSS/Reference/Values/flex_value`)
 
     **Macro**: `\{{CSSxRef("flex")}}` vs. `\{{CSSxRef("<flex>")}}`
 
-  - `overflow` property (`Web/CSS/Reference/Properties/overflow`) vs. `<overflow>` data type (`Web/CSS/Reference/Values/overflow_value`)
-
-    **Macro**: `\{{CSSxRef("overflow")}}` vs. `\{{CSSxRef("<overflow>")}}`
-
   - `:host` pseudo-class (`Web/CSS/Reference/Selectors/:host`) vs. `:host()` pseudo-class function (`Web/CSS/Reference/Values/:host_function`)
 
     **Macro**: `\{{CSSxRef(":host")}}` vs. `\{{CSSxRef(":host()")}}`
+
+  - `overflow` property (`Web/CSS/Reference/Properties/overflow`) vs. `<overflow>` data type (`Web/CSS/Reference/Values/overflow_value`)
+
+    **Macro**: `\{{CSSxRef("overflow")}}` vs. `\{{CSSxRef("<overflow>")}}`
 
   - `url()` function (`Web/CSS/Reference/Values/url_function`) vs. `<url>` data type (`Web/CSS/Reference/Values/url_value`)
 
@@ -112,13 +116,7 @@ A few other behaviors of the `CSSxRef` macro worth noting include:
 The cross-reference macros apply code formatting to the link text by default.
 To avoid HTML code semantics and CSS code styling applied by the macros, use the `"nocode"` parameter.
 
-For example, `\{{CSSxRef("background-color")}}` creates the "{{CSSxRef("background-color")}}" link with code styling, while `\{{domxref("CSS.supports_static", "check support", "", "nocode")}}` creates the plain text link "{{domxref("CSS.supports_static", "check support", "", "nocode")}}".
-
-## Summary
-
-Make sure to look at the source code to understand how the macro you are using works and to understand the various parameters; while the parameters are generally well documented, exceptions like "don't render as code if the second parameter includes a space" that we saw in the `\{{HTMLElement("")}}` macro is in the code but not otherwise documented.
-
-To learn which parameters each macro supports and the order of parameters for each macro, the macro's source file, linked above, includes documentation. There is a [list of commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), each of which outputs links in the main content area of the page.
+For example, `\{{CSSxRef("background-color")}}` creates the "{{CSSxRef("background-color")}}" link with code styling, while `\{{domxref("CSS.supports_static", "check support", "", "nocode")}}` creates the plain text link "{{domxref("CSS.supports_static", "check support", "", "nocode")}}". Similarly, to create the JavaScript array link without code formatting, we would write `\{{JSxRef("Array", "JavaScript arrays", "", "nocode")}}` to produce "{{JSxRef("Array", "JavaScript arrays", "", "nocode")}}".
 
 ## See also
 
