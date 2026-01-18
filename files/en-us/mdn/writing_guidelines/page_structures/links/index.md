@@ -91,6 +91,10 @@ A few other behaviors of the `CSSxRef` macro worth noting include:
 
     **Macro**: `\{{CSSxRef("color")}}` vs. `\{{CSSxRef("<color>")}}`
 
+  - `fit-content()` function (`Web/CSS/Reference/Values/fit-content_function`) vs. `fit-content` keyword (`Web/CSS/Reference/Values/fit-content`)
+
+    **Macro**: `\{{CSSxRef("fit-content_function", "fit-content()")}}` vs. `\{{CSSxRef("fit-content")}}` (this is currently an exception where you need to provide the second parameter to get the correct link text for the function.)
+
   - `flex` property (`Web/CSS/Reference/Properties/flex`) vs. `<flex>` data type (`Web/CSS/Reference/Values/flex_value`)
 
     **Macro**: `\{{CSSxRef("flex")}}` vs. `\{{CSSxRef("<flex>")}}`
@@ -106,10 +110,6 @@ A few other behaviors of the `CSSxRef` macro worth noting include:
   - `url()` function (`Web/CSS/Reference/Values/url_function`) vs. `<url>` data type (`Web/CSS/Reference/Values/url_value`)
 
     **Macro**: `\{{CSSxRef("url()")}}` vs. `\{{CSSxRef("<url>")}}`
-
-  - `fit-content()` function (`Web/CSS/Reference/Values/fit-content_function`) vs. `fit-content` keyword (`Web/CSS/Reference/Values/fit-content`)
-
-    **Macro**: `\{{CSSxRef("fit-content_function", "fit-content()")}}` vs. `\{{CSSxRef("fit-content")}}` (this is currently an exception where you need to provide the second parameter to get the correct link text for the function.)
 
 ### Disabling code formatting
 

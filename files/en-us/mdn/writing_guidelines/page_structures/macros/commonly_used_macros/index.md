@@ -31,7 +31,7 @@ There are macros for locale-independent linking to pages in specific reference a
 
 The macros are easy to use.
 All you need to do is specify the name of the item to link to in the first parameter.
-Similar to the glossary macro, most reference macros also accept a second parameter to allow you to change the display text
+Similar to the glossary macro, most reference macros also accept a second parameter to allow you to change the display text.
 
 See the linked source files in the first column in the following table for details.
 
