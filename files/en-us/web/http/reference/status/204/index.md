@@ -65,6 +65,7 @@ Authorization: Bearer 1234abcd
 
 After successfully updating the user profile, the server responds with a `204` response.
 The {{HTTPHeader("ETag")}} header contains the entity tag for the updated resource:
+
 ```http
 HTTP/1.1 204 No Content
 Date: Wed, 26 Jun 2024 12:00:00 GMT
