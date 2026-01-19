@@ -32,6 +32,8 @@ browser-compat: api.CSSFontFeatureValuesMap
   - : Adds a new entry with a specified key and value to this `CSSFontFeatureValuesMap`, or updates an existing entry if the key already exists.
 - {{domxref('CSSFontFeatureValuesMap.values()')}}
   - : Returns a new [map iterator](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator) object that contains the `value` for each declaration in this `CSSFontFeatureValuesMap` in insertion order.
+- [`CSSFontFeatureValuesMap.[Symbol.iterator]()`](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator)
+  - : Returns the iterator object itself. This allows iterator objects to also be iterable.
 
 ## Specifications
 
