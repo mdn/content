@@ -83,12 +83,12 @@ In addition to the [common attributes](/en-US/docs/Web/HTML/Reference/Elements/i
   - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `checkbox`: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
 
 - `switch`
-  - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute that applies only to `checkbox` inputs. When present, it indicates that the `checkbox` represents an on/off `switch` rather than a traditional `checkbox`. It may affect the visual appearance of the `checkbox` control to resemble a `switch`, while the underlying behavior remains the same as normal `checkbox`.
+  - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute that applies only to `checkbox` inputs. When present, it indicates that the `checkbox` represents an on/off `switch` rather than a normal `checkbox`. It alters the appearance of the `checkbox` control, but the underlying behavior remains the same as that of a normal `checkbox`.
 
     > [!NOTE]
-    > This attribute allows user agents to expose `switch` ARIA semantics to assistive technologies, instead of manually applying `role="switch"`. The markup and API is similar to those of checkboxes except the `:indeterminate` pseudo-class never matches.
+    > This attribute allows user agents to expose `switch` ARIA semantics to assistive technologies — without requiring documents to explicitly specify `role="switch"`. The markup and API are similar to those of checkboxes, except that the `:indeterminate` pseudo-class never matches.
 
-    > [!NOTE]
+    > [!WARNING]
     > This attribute is still experimental and has limited browser support. The attribute is ignored on unsupported browsers.
 
 ## Using checkbox inputs
@@ -141,7 +141,7 @@ To make a checkbox checked by default, you give it the `checked` attribute. See 
 
 ### Switch as a checkbox
 
-To make a checkbox look or act like an on/off switch in the supported browsers, you provide the `switch` attribute. See the below example:
+The following example shows how to make a checkbox look and act like an on/off switch.
 
 ```html
 <form>
@@ -161,7 +161,7 @@ To make a checkbox look or act like an on/off switch in the supported browsers, 
 ```
 
 > [!NOTE]
-> Only some browsers render the checkbox as a switch, while the behavior is the same across all browsers.
+> While only some browsers render the checkbox as a switch, the behavior is the same across all browsers.
 
 {{EmbedLiveSample('Switch_as_a_checkbox', 600, 100)}}
 
