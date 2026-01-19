@@ -242,7 +242,7 @@ An RP can use this information to help a user manage their credentials. For exam
 
 ## Managing passkeys
 
-We've seen that a user may have multiple passkeys for a single account, spread across multiple authenticators and multiple devices. Each passkey is represented as a private key stored in the authenticator, and a corresponding public key stored in the RP's server as part of the user's account information.
+We've seen that a user may have multiple passkeys for a single account, distributed across multiple authenticators and multiple devices. Each passkey corresponds to a WebAuthn credential, with private key material protected by the authenticator and a corresponding public key stored by the RP as part of the user's account information.
 
 Sometimes the user might need to delete a passkey for their account: this essentially means, deleting the public key stored in the RP's server, so that the corresponding private key can't be used to sign the user in any more. This is generally needed when the user doesn't have control of the authenticator any more, for example because they have lost the device containing it.
 
