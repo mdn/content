@@ -7,6 +7,8 @@ browser-compat: api.CSSFontFeatureValuesMap
 
 {{APIRef("CSSOM")}}
 
+The **`CSSFontFeatureValuesMap`** interface uses the default {{jsxref("Map")}} class methods.
+
 ## Instance property
 
 - {{domxref('CSSFontFeatureValuesMap.size')}}
