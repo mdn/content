@@ -279,7 +279,7 @@ There are only a few types of page inside Learn web development:
 
 - **Module group landing page**, for example [Core learning modules](/en-US/docs/Learn_web_development/Core)
   - : These contain an intro paragraph, a section detailing the prerequisites you should have before starting the module group, and a list of the modules, followed by an optional list of "See also" links.
-- **Module page**, for example [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)
+- **Module landing page**, for example [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)
   - : These contain an intro paragraph, a section detailing the prerequisites you should have before starting the module, and a list of the contained tutorials, followed by an optional list of "Additional tutorials" that are related but not part of the central learning pathway, and an optional list of "See also" links.
 - **Tutorial page**, for example [Basic HTML syntax](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
   - : The structure of a Learn tutorial is not strict, but it must provide a hands-on learning experience (see [Learn web development writing guidelines > Approach](/en-US/docs/MDN/Writing_guidelines/Learning_content#approach)), it must have a set of "Prerequisites" and "Learning outcomes" listed at the top, and the content must teach the stated learning outcomes.
