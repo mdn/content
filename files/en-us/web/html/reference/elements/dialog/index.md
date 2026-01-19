@@ -51,6 +51,34 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - The [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus) attribute should be added to the element the user is expected to interact with immediately upon opening a modal dialog. If no other element involves more immediate interaction, it is recommended to add `autofocus` to the close button inside the dialog, or the dialog itself if the user is expected to click/activate it to dismiss.
 - Do not add the `tabindex` property to the `<dialog>` element as it is not interactive and does not receive focus. The dialog's contents, including the close button contained in the dialog, can receive focus and be interactive.
 
+## Invoker commands and dialogs
+
+Dialogs can be opened and closed using invoker commands defined on interactive elements, such as `<button>`.
+The `command` attribute allows a button to invoke actions on a dialog without requiring custom JavaScript event listeners.
+
+This mechanism was originally designed for popovers and later extended to dialogs, which is why related information may also appear in popover documentation.
+
+For more details, see:
+
+- [Invoker Commands API](/en-US/docs/Web/API/Invoker_Commands_API)
+- [Popover API](/en-US/docs/Web/API/Popover_API)
+
+The following example shows how to open and close a dialog using invoker commands without JavaScript.
+
+### Example
+
+```html
+<button command="show-modal" commandfor="my-dialog">
+  Open dialog
+</button>
+
+<dialog id="my-dialog">
+  <p>This dialog was opened using an invoker command.</p>
+  <button command="close">Close</button>
+</dialog>
+```
+
+
 ## Accessibility
 
 When implementing a dialog, it is important to consider the most appropriate place to set user focus. When using {{domxref("HTMLDialogElement.showModal()")}} to open a `<dialog>`, focus is set on the first nested focusable element. Explicitly indicating the initial focus placement by using the [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus) attribute will help ensure initial focus is set on the element deemed the best initial focus placement for any particular dialog. When in doubt, as it may not always be known where initial focus could be set within a dialog, particularly for instances where a dialog's content is dynamically rendered when invoked, the `<dialog>` element itself may provide the best initial focus placement.
