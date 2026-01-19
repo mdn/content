@@ -68,9 +68,7 @@ The following example shows how to open and close a dialog using invoker command
 ### Example
 
 ```html
-<button command="show-modal" commandfor="my-dialog">
-  Open dialog
-</button>
+<button command="show-modal" commandfor="my-dialog">Open dialog</button>
 
 <dialog id="my-dialog">
   <p>This dialog was opened using an invoker command.</p>
