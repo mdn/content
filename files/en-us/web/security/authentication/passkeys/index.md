@@ -139,7 +139,7 @@ The challenge represents evidence that the authenticator's response was a respon
 
 ### Attestation
 
-The security of a passkey depends on the reliability of the authenticator used. For example, if an authenticator does not protect the private keys it stores, then an attacker could steal the keys and impersonate users. In _attestation_, an authenticator provides verifiable evidence to the RP about its origin, and about the data it produces (such as key pairs or signed assertions). This can help the RP decide whether it wants to rely on the authenticator to authenticate its users.
+The security of a passkey depends in part on the reliability of the authenticator used. For example, if an authenticator does not protect the private keys it stores, then an attacker could steal the keys and impersonate users. WebAuthn defines an optional mechanism called _attestation_, in which an authenticator can provide verifiable evidence to the RP about the authenticator and the data it produces (such as key pairs or signed assertions). This can help the RP decide whether it wants to rely on the authenticator to authenticate its users.
 
 To implement attestation, the authenticator contains a key pair called an _attestation key_, which was built into the device at manufacturing time, and which is {{glossary("digital certificate", "certified")}} as belonging to the organization that made this authenticator. For example, the certificate could state that this authenticator was produced by "Acme Authenticator Incorporated".
 
