@@ -43,8 +43,11 @@ Sec-CH-Device-Memory: <number>
 ## Directives
 
 - `<number>`
-  - : The approximate amount of device RAM. Possible values are: `0.25`, `0.5`, `1`, `2`, `4`, `8`.
-    The amount of device RAM can be used as a {{glossary("fingerprinting")}} variable, so values for the header are intentionally coarse to reduce the potential for its misuse.
+  - : The approximate amount of device RAM.
+
+    The amount of device RAM can be used as a {{glossary("fingerprinting")}} variable, so values for the header are intentionally coarse to reduce the potential for its misuse. Values are only reported in powers of two, and are clamped to an implementation-defined minimum lower value and a maximum upper value.
+
+    For example, if a browser does not report below `0.25` or above `8` then the value is one of: `0.25`, `0.5`, `1`, `2`, `4`, `8`.
 
 ## Examples
 
