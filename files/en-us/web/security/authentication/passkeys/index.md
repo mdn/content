@@ -199,7 +199,7 @@ This provides a layer of protection against [phishing](/en-US/docs/Web/Security/
 
 Passkeys are more secure than passwords, and we can see how their design addresses the most serious [weaknesses of passwords](/en-US/docs/Web/Security/Authentication/Passwords#weaknesses_of_password-based_authentication):
 
-- Unlike a password, the user never invents a passkey value or needs to remember it. This means users can't choose weak passkey values, so they are not vulnerable to [guessing](/en-US/docs/Web/Security/Authentication/Passwords#guessing) attacks.
+- Unlike a password, the user never invents a passkey value or needs to remember it. This means users can't choose weak passkey values, so they are not vulnerable to [guessing](/en-US/docs/Web/Security/Authentication/Passwords#guessing) attacks. Passkey generation is transferred from the user to the authenticator.
 
 - Passkeys are never reused across sites, so they are not vulnerable to [credential stuffing](/en-US/docs/Web/Security/Authentication/Passwords#credential_stuffing) attacks. If an attacker does get access to a passkey, they can only use it for the site that originally created it.
 
