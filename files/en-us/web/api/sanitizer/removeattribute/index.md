@@ -3,12 +3,10 @@ title: "Sanitizer: removeAttribute() method"
 short-title: removeAttribute()
 slug: Web/API/Sanitizer/removeAttribute
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Sanitizer.removeAttribute
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
 The **`removeAttribute()`** method of the {{domxref("Sanitizer")}} interface sets an attribute to be removed from all elements when the sanitizer is used.
 

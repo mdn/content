@@ -13,13 +13,13 @@ This is the only file that must be present in every extension. It contains basic
 
 The manifest can also contain pointers to several other types of files:
 
-- [Background scripts](#background_scripts_2)
+- [Background scripts](#background_scripts)
   - : Scripts that respond to browser events.
 - Icons
   - : For the extension and any buttons it might define.
-- [Sidebars, popups, and options pages](#sidebars_popups_and_options_pages_2)
+- [Sidebars, popups, and options pages](#sidebars_popups_and_options_pages)
   - : HTML documents that provide content for various user interface components.
-- [Content scripts](#content_scripts_2)
+- [Content scripts](#content_scripts)
   - : JavaScript included with your extension, that you will inject into web pages.
 - [Web-accessible resources](#web_accessible_resources)
   - : Make packaged content accessible to web pages and content scripts.
