@@ -19,7 +19,8 @@ Only one element inside a document, `<dialog>` element, or popover may have this
 > The `autofocus` attribute applies to all elements, not just form controls. For example, it might be used on a [contenteditable](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) area.
 
 > [!NOTE]
-> On page load, when a [URI fragment](/en-US/docs/Web/URI/Reference/Fragment) points to a focusable element, that element usually receives focus instead of the one indicated by the `autofocus` attribute.
+> On page load, if a [URI fragment identifier](/en-US/docs/Web/URI/Reference/Fragment#fragment) is specified and identifies an element, 
+> the element with the `autofocus` attribute does not receive focus via the `autofocus` attribute.
 
 ## Accessibility concerns
 
