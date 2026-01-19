@@ -50,7 +50,10 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
+
+- The {{domxref("Location.ancestorOrigins")}} property is now supported, which enables a document to determine whether it is being embedded in an {{htmlelement("iframe")}} and, if so, by which site(s).
+  ([Firefox bug 1085214](https://bugzil.la/1085214)).
 
 <!-- #### DOM -->
 
