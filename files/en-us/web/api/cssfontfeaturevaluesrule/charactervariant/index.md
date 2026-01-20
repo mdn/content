@@ -22,8 +22,8 @@ Although the `characterVariant` property itself is read-only in the sense that y
 
 ```css
 @font-feature-values "MonteCarlo" {
-  @characterVariant {
-    my-characterVariant: 1;
+  @charactervariant {
+    my-charactervariant: 1;
   }
 }
 ```
