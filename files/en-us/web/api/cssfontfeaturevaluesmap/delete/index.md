@@ -43,7 +43,7 @@ The following example deletes the first declaration within the [`@swash`](/en-US
 // get the rules
 const myRule = document.styleSheets[0].cssRules[0];
 console.log(myRule.swash.has("swishy")); // logs true
-myRule.swash.delete("swishy")
+myRule.swash.delete("swishy");
 console.log(myRule.swash.has("swishy")); // logs false
 ```
 
