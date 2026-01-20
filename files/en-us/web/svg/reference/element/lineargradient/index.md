@@ -91,7 +91,7 @@ svg {
 
 ```html
 <svg
-  viewBox="0 0 300 500"
+  viewBox="0 0 500 500"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
@@ -112,7 +112,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Repeating angled gradient', 400, '100%')}}
+{{EmbedLiveSample('Repeating angled gradient', 500, '100%')}}
 
 ## Specifications
 
