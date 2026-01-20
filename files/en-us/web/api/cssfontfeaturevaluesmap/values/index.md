@@ -41,7 +41,7 @@ The following example assigns the values to the `swashValues` variable and then 
 // get the rules
 const myRule = document.styleSheets[0].cssRules[0];
 // get the values of swash
-const swashValues = myRule.swash.values()
+const swashValues = myRule.swash.values();
 console.log(swashValues.next().value); // logs [1]
 console.log(swashValues.next().value); // logs [2]
 ```
