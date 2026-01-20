@@ -41,7 +41,7 @@ The following example assigns the keys to the `swashKeys` variable and then logs
 // get the rules
 const myRule = document.styleSheets[0].cssRules[0];
 // get the keys of swash
-const swashKeys = myRule.swash.keys()
+const swashKeys = myRule.swash.keys();
 console.log(swashKeys.next().value); // logs "swishy"
 console.log(swashKeys.next().value); // logs "swashy"
 ```
