@@ -99,8 +99,8 @@ svg {
       id="grad"
       x1="0"
       y1="0"
-      x2="10"
-      y2="10"
+      x2="20"
+      y2="20"
       spreadMethod="repeat"
       gradientUnits="userSpaceOnUse">
       <stop offset="50%" stop-color="red" />
@@ -108,7 +108,7 @@ svg {
     </linearGradient>
   </defs>
   <rect width="100%" height="25%" fill="url(#grad)" />
-  <rect width="100%" height="50%" fill="url(#grad)" y="30%" />
+  <rect width="100%" height="65%" fill="url(#grad)" y="30%" />
 </svg>
 ```
 
