@@ -41,7 +41,7 @@ The following example assigns the entries to the `swashes` variable and then log
 // get the rules
 const myRule = document.styleSheets[0].cssRules[0];
 // get the entries of swash
-const swashes = myRule.swash.entries()
+const swashes = myRule.swash.entries();
 console.log(swashes.next().value); // logs ["swishy", [1]]
 console.log(swashes.next().value); // logs ["swashy", [2]]
 ```
