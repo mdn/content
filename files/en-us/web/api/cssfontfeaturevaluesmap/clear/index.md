@@ -42,7 +42,7 @@ The following example removes all the declarations within the [`@swash`](/en-US/
 // get the rules
 const myRule = document.styleSheets[0].cssRules[0];
 console.log(myRule.swash.size); // logs 2
-myRule.swash.clear()
+myRule.swash.clear();
 console.log(myRule.swash.size); // logs 0
 ```
 
