@@ -33,7 +33,7 @@ Although the `swash` property itself is read-only in the sense that you can't re
 ```js
 // look for the first stylesheet and the first cssRule in that sheet
 const myRule = document.styleSheets[0].cssRules[0];
-// check 
+// check
 if (myRule instanceof CSSFontFeatureValuesRule && myRule.swash.size) {
   // do something with the swash
 }
