@@ -33,8 +33,11 @@ Although the `characterVariant` property itself is read-only in the sense that y
 ```js
 // look for the first stylesheet and the first cssRule in that sheet
 const myRule = document.styleSheets[0].cssRules[0];
-// check 
-if (myRule instanceof CSSFontFeatureValuesRule && myRule.characterVariant.size) {
+// check
+if (
+  myRule instanceof CSSFontFeatureValuesRule &&
+  myRule.characterVariant.size
+) {
   // do something with the characterVariant
 }
 ```
