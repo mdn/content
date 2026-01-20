@@ -101,7 +101,7 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 
 - {{cssxref("repeat()")}}
 - {{cssxref("minmax()")}}
-- {{cssxref("fit-content_function", "fit-content()")}}
+- {{cssxref("fit-content()")}}
 
 ### Data types and values
 
@@ -197,7 +197,7 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 - {{cssxref("min-content")}} value
 - {{cssxref("max-content")}} value
 - {{cssxref("fit-content")}} value
-- {{cssxref("fit-content_function", "fit-content()")}} function
+- {{cssxref("fit-content()")}} function
 
 ## Specifications
 
