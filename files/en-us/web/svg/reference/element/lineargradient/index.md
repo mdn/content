@@ -48,6 +48,8 @@ This element implements the {{domxref("SVGLinearGradientElement")}} interface.
 
 ## Example
 
+### Basic linear gradient
+
 ```css hidden
 html,
 body,
@@ -73,7 +75,37 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{EmbedLiveSample('Basic linear gradient', 150, '100%')}}
+
+### Repeating angled gradient
+
+In this example, the two {{SVGElement("rect")}} elements have different aspect ratios, but the angle of the gradient is the same.
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg
+  viewBox="0 0 300 500"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+   <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="10" y2="10" spreadMethod="repeat" gradientUnits="userSpaceOnUse">
+        <stop offset="50%" stop-color= "red" />
+        <stop offset="50%" stop-color= "gold" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="25%" fill="url(#grad)" /> 
+  <rect width="100%" height="50%" fill="url(#grad)" y="30%" /> 
+</svg>
+```
+
+{{EmbedLiveSample('Repeating angled gradient', 400, '100%')}}
 
 ## Specifications
 
