@@ -125,6 +125,11 @@ sidebar:
         link: /WebAssembly/Reference/Variables
         title: Variables
         details: closed
+  - type: listSubPages
+    path: /WebAssembly/Reference/Types
+    link: /WebAssembly/Reference/Types
+    title: Types
+    details: closed
 l10n:
   de:
     WebAssembly_concepts: WebAssembly-Konzepte
