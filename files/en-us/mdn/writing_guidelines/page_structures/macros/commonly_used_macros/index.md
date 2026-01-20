@@ -5,7 +5,7 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-This page lists many of the general-purpose macros that [rari](https://github.com/mdn/rari) provides for use on MDN.
+This page lists many of the general-purpose macros that MDN's build system [rari](https://github.com/mdn/rari) provides for use on MDN.
 For generic how-to information on using them in MDN content, see [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros).
 
 ## Linking
@@ -49,7 +49,7 @@ See the linked source files in the first column in the following table for detai
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/cssxref.rs">CSSxRef</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/CSS/Reference">CSS reference</a> (/Web/CSS/Reference)<br />
+        <a href="/en-US/docs/Web/CSS/Reference">CSS reference</a> (/Web/CSS/Reference)
       </td>
       <td>
         <code>\{{CSSxRef("cursor")}}</code> results in {{CSSxRef("cursor")}}.<br />
@@ -153,7 +153,7 @@ See the linked source files in the first column in the following table for detai
 
 ### Adding navigation aids for multi-page guides
 
-[`Previous`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs), [`Next`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs), and [`PreviousNext`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) provide navigation controls for articles that are part of a sequence.
+[`Previous`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs), [`Next`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs), and [`PreviousNext`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) macros provide navigation controls for articles that are part of a sequence.
 For the single-way templates, the only parameter needed is the slug of the previous or next article in the sequence.
 The [`PreviousNext`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) macro requires two parameters: the first parameter is the slug for the previous article, and the second is the slug for the next article.
 
