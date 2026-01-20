@@ -246,7 +246,7 @@ We've seen that a user may have multiple passkeys for a single account, distribu
 
 Sometimes the user might need to delete a passkey for their RP account: this essentially means deleting the public key stored in the RP's server, so that the corresponding private key can't be used to sign the user in anymore. This is generally needed when the user doesn't have control of the authenticator anymore, for example, because they have lost the device containing it.
 
-This means that an RP must implement a means for an authenticated user to view the registered passkeys for their account and delete specific public keys. For each key, the RP should display information to help a user understand which key it is and which authenticator it is associated with. This can include:
+This means that an RP should implement a means for an authenticated user to view the registered passkeys for their account and delete specific public keys. For each key, the RP should display information to help a user understand which key it is and which authenticator it is associated with. This can include:
 
 - **Passkey provider name**: The name of the passkey provider, such as "Windows Hello" or "Bitwarden".
 
