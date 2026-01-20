@@ -2,12 +2,10 @@
 title: HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat: api.Sanitizer
 ---
 
-{{DefaultAPISidebar("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("HTML Sanitizer API")}}
 
 The **HTML Sanitizer API** allows developers to take strings of HTML and filter out unwanted elements, attributes, and other HTML entities when they are inserted into the DOM or a shadow DOM.
 
@@ -219,7 +217,7 @@ They may be useful with the unsafe HTML methods and trusted types, depending on 
 
 ## Interfaces
 
-- {{domxref('Sanitizer')}} {{experimental_inline}}
+- {{domxref('Sanitizer')}}
   - : A reusable sanitizer configuration object that defines what elements and attributes should be allowed/removed when sanitizing untrusted strings of HTML.
     This is used in the methods that insert strings of HTML into the DOM or Document.
 - {{domxref('SanitizerConfig')}}

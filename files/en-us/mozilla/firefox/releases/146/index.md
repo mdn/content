@@ -1,8 +1,8 @@
 ---
-title: Firefox 146 release notes for developers (Stable)
-short-title: Firefox 146 (Stable)
+title: Firefox 146 release notes for developers
+short-title: Firefox 146
 slug: Mozilla/Firefox/Releases/146
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
