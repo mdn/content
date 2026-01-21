@@ -34,12 +34,9 @@ new Worker(url, options)
     The URL is resolved relative to the current HTML page's location.
 
 - `options` {{optional_inline}}
-
   - : An object containing option properties that can be set when creating the object instance.
     Available properties are as follows:
-
     - `credentials`
-
       - : A string specifying whether the browser sends credentials when importing modules into a module worker.
         The allowed values are the same as can be passed to the [`fetch()` request](/en-US/docs/Web/API/RequestInit#credentials): `omit`, `same-origin`, or `include`.
         The default is `same-origin` (only include credentials for same-origin requests).
@@ -114,7 +111,7 @@ Developers can specify whether or not credentials should be sent in cross-origin
 
 Classic workers can import scripts (but not modules) using the {{domxref("WorkerGlobalScope.importScripts()")}} method.
 Unlike modules, scripts are fetched in `no-cors` mode, and can be requested cross-origin even if the server does not set the appropriate CORS headers.
-Credentials are sent for same-origin imports, but are usully not sent for cross-origin requests.
+Credentials are sent for same-origin imports, but are usually not sent for cross-origin requests.
 
 In addition, if the document has a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), it must allow the origins of imported scripts or modules.
 For modules the allowed sources are specified in `worker-src` (with fallback to `script-src` and `default-src` directives), while for classic scripts the sources are specified in `script-src` (with fallback to the `default-src` directives).
@@ -209,7 +206,7 @@ const myWorker = new Worker(trustedScriptURL);
 
 ### Creating a classic worker
 
-The following code snippet shows creation of a classic {{domxref("Worker")}} object using the `Worker()` constructo, and subsequent usage of the object:
+The following code snippet shows creation of a classic {{domxref("Worker")}} object using the `Worker()` constructor, and subsequent usage of the object:
 
 ```js
 const myWorker = new Worker("worker.js");

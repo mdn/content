@@ -34,16 +34,13 @@ new SharedWorker(url, options)
 - `name` {{optional_inline}}
   - : A string specifying an identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is useful for creating new instances of the same `SharedWorker` and debugging.
 - `options` {{optional_inline}}
-
   - : An object containing option properties that can set when creating the object instance.
     Available properties are as follows:
-
     - `type`
       - : A string specifying the type of worker to create.
         The value can be `classic` or `module`.
         The default used is `classic`.
     - `credentials`
-
       - : A string specifying whether the browser sends credentials when importing modules into a module worker.
         The allowed values are the same as can be passed to the [`fetch()` request](/en-US/docs/Web/API/RequestInit#credentials): `omit`, `same-origin`, or `include`.
         The default is `same-origin` (only include credentials for same-origin requests).
