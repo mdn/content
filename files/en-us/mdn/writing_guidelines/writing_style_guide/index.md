@@ -409,7 +409,7 @@ These are our recommendations for using certain technical terms:
   - **Correct**: the `<span>` element
   - **Incorrect**: the span tag
 
-  On MDN, you can optionally specify the HTML element in the [`HTMLElement` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references), which will style the element, add the angle brackets "<>", as well as add a link to its reference page.
+  On MDN, you can optionally specify the HTML element in the [`HTMLElement` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros##linking_to_reference_pages), which will style the element, add the angle brackets "<>", as well as add a link to its reference page.
   - **Using backticks**: `<span>`
   - **Using the macro**: {{HTMLElement("span")}} (source in markdown: `\{{HTMLElement("span")}}`)
 
@@ -470,7 +470,7 @@ If the section you're linking to is on the same page, you can hint at the locati
 - **Correct**: "This concept is described in more detail in the [Accessibility](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accessibility) section of this document."
 - **Incorrect**: "This concept is described in more detail in the [Accessibility](/en-US/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accessibility) section below."
 
-On MDN, another way to link to a reference page is by using a macro. These macros are described on the [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) page. For example, to link to the reference page of an HTML element, use the `HTMLElement` macro, and to link to the reference page of a CSS property, use the `CSSxRef` macro.
+On MDN, another way to link to a reference page is by using a macro. These macros are described on the [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros##linking_to_reference_pages) page. For example, to link to the reference page of an HTML element, use the `HTMLElement` macro, and to link to the reference page of a CSS property, use the `CSSxRef` macro.
 
 We follow similar cross-referencing guidelines in the [See also](#see_also) sections at the end of reference pages, glossary pages, and guides.
 
@@ -604,7 +604,7 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 - Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [Quirks Mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode) page in correct sentence case will be:
   - **Correct**: [Quirks mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
 - For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.
-- On MDN, you can optionally use a macro to link to a page, as is explained in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section on the _Commonly used macros_ page. The use of macro will add code formatting to the keyword in the link text, as shown in the next example.
+- On MDN, you can optionally use a macro to link to a page, as is explained in the [Linking to reference pages](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros##linking_to_reference_pages) section on the _Commonly used macros_ page. The use of macro will add code formatting to the keyword in the link text, as shown in the next example.
 - No article ("A", "An", "The") is needed at the beginning of the link list item. No punctuation is required at the end of the list item because it will invariably be a term or a phrase.
   - **Correct**: {{cssxref("revert-layer")}}
   - **Incorrect**: The {{cssxref("revert-layer")}} keyword.

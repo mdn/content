@@ -2,13 +2,12 @@
 title: font-stretch
 slug: Web/CSS/Reference/At-rules/@font-face/font-stretch
 page-type: css-at-rule-descriptor
-status:
-  - deprecated
 browser-compat: css.at-rules.font-face.font-stretch
 sidebar: cssref
 ---
 
-{{deprecated_header}}
+> [!NOTE]
+> The `font-stretch` descriptor was renamed to `font-width` in the [CSS Fonts specification](https://drafts.csswg.org/css-fonts/#font-stretch-desc). To preserve compatibility, the specification retains `font-stretch` as an alias for the `font-width` descriptor.
 
 The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} at-rule.
 
