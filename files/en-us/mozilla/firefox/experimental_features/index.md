@@ -546,7 +546,7 @@ Note that, as shown below, the feature is only available on Nightly builds (irre
 
 #### Document Picture-in-Picture API
 
-The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) makes it possible to open an always-on-top window that can be populated with arbitrary HTML content — for example a video with custom controls or a set of streams showing the participants of a video conference call.
+The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) makes it possible to open an always-on-top window that can be populated with arbitrary HTML content such as a video with custom controls or a set of streams showing the participants of a video conference call.
 See [Firefox bug 1858562](https://bugzil.la/1858562) for more details.
 
 | Release channel   | Version added | Enabled by default? |
