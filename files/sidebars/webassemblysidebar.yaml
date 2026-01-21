@@ -121,6 +121,11 @@ sidebar:
         title: Numeric
         details: closed
       - type: listSubPages
+        path: /WebAssembly/Reference/Table
+        link: /WebAssembly/Reference/Table
+        title: Table
+        details: closed
+      - type: listSubPages
         path: /WebAssembly/Reference/Variables
         link: /WebAssembly/Reference/Variables
         title: Variables
