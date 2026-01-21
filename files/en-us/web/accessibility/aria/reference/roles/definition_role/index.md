@@ -13,7 +13,7 @@ The `definition` ARIA role indicates the element is a definition of a term or co
 
 The `definition` ARIA role can be included on an element that is a definition of a term or concept, similar to the native {{HTMLElement('dfn')}} element. To associate the definition with the `term` being defined, and to provide an accessible name, reference the term being defined with `role="term"`.
 
-The {{glossary("accessible name")}} is provided by the contents; the [`aria-braillelabel](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel), [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label), and [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) properties are prohibited. 
+The {{glossary("accessible name")}} is provided by the contents; the [`aria-braillelabel](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel), [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label), and [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) properties are prohibited.
 
 ```html-nolint
 <p>
