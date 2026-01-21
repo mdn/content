@@ -6,14 +6,6 @@ browser-compat: javascript.builtins.AsyncFunction
 sidebar: jsref
 ---
 
-> [!WARNING]
-> The arguments passed this method are dynamically evaluated and executed as JavaScript.
-> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
->
-> You can mitigate this risk by always passing {{domxref("TrustedScript")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
->
-> See [Security considerations](#security_considerations) for more information.
-
 The **`AsyncFunction`** object provides methods for [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function). In JavaScript, every async function is actually an `AsyncFunction` object.
 
 Note that `AsyncFunction` is _not_ a global object. It can be obtained with the following code:
