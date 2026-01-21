@@ -27,7 +27,6 @@ new Worker(url, options)
 ### Parameters
 
 - `url`
-
   - : A {{domxref("TrustedScriptURL")}} object or a string representing the URL of the script or module that the worker will execute.
 
     This must be same-origin with the caller's document, or a `blob:` or `data:` URL.
