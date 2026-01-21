@@ -91,7 +91,7 @@ Intl.DateTimeFormat(locales, options)
     - `"short"`
       - : E.g., `Thu`
     - `"narrow"`
-      - : E.g., `T`. Two weekdays may have the same narrow style for some locales (e.g., `Tuesday`'s narrow style is also `T`).
+      - : E.g., `T`. Two weekdays may have the same narrow style for some locales (e.g., both `Tuesday`'s and `Thursday`'s narrow styles are `T` in the `en-US` locale).
 - `era`
   - : The representation of the era. Possible values are:
     - `"long"`
