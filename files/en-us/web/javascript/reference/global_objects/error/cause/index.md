@@ -21,6 +21,57 @@ The value that was passed to the [`Error()`](/en-US/docs/Web/JavaScript/Referenc
 
 The value of `cause` can be of any type. You should not make assumptions that the error you caught has an `Error` as its `cause`, in the same way that you cannot be sure the variable bound in the `catch` statement is an `Error` either. The "Providing structured data as the error cause" example below shows a case where a non-error is deliberately provided as the cause.
 
+The {{jsxref("SuppressedError")}} and {{jsxref("AggregateError")}} subclasses both serve the purpose of associating multiple errors. They both represent multiple failing sites: `SuppressedError` represents an error that occurred while handling another error, while `AggregateError` represents a collection of multiple, unrelated errors that occurred during the same operation. The `cause` property represents a single failing site, with the wrapper error only adding context to the cause and not representing an additional failure.
+
+The following is typical usage of `cause`. There is a single failing site, which originates within `mainLogic()`. The `throw new Error()` statement merely wraps that original error to add context and does not constitute an additional failure.
+
+```js
+try {
+  mainLogic();
+} catch (err) {
+  throw new Error("Main logic failed", { cause: err });
+}
+```
+
+The following is typical usage of `SuppressedError`. There are two failing sites: one within `mainLogic()` and one within `cleanup()`. The `SuppressedError` instance associates the two errors.
+
+```js
+try {
+  mainLogic();
+} catch (primaryError) {
+  try {
+    cleanup();
+  } catch (cleanupError) {
+    throw new SuppressedError(
+      cleanupError,
+      primaryError,
+      "Main logic failed; while handling that, cleanup also failed",
+    );
+  }
+}
+```
+
+The following is typical usage of `AggregateError`. There are multiple failing sites within `mainLogic()`. The `AggregateError` instance associates all the errors.
+
+```js
+function mainLogic() {
+  const errors = [];
+  try {
+    operation1();
+  } catch (e1) {
+    errors.push(e1);
+  }
+  try {
+    operation2();
+  } catch (e2) {
+    errors.push(e2);
+  }
+  if (errors.length > 0) {
+    throw new AggregateError(errors, "Multiple operations failed");
+  }
+}
+```
+
 ## Examples
 
 ### Rethrowing an error with a cause
@@ -55,51 +106,6 @@ function makeRSA(p, q) {
     });
   }
   // rsa algorithm…
-}
-```
-
-## Error.cause vs SuppressedError
-
-`Error.cause` is used to associate a single underlying error with a new error, providing additional context about why an operation failed.
-
-`SuppressedError` is designed for scenarios where multiple errors occur, but one error should be treated as the primary failure while other errors are preserved for debugging.
-
-### When to use each
-
-| Situation                                             | Use               |
-| ----------------------------------------------------- | ----------------- |
-| Wrap a single underlying error                        | `Error.cause`     |
-| Preserve multiple related errors                      | `SuppressedError` |
-| Add context while rethrowing                          | `Error.cause`     |
-| Report secondary failures without losing the main one | `SuppressedError` |
-
-### Examples
-
-Using `Error.cause`:
-
-```js
-try {
-  readFile("config.json");
-} catch (err) {
-  throw new Error("Failed to load configuration", { cause: err });
-}
-```
-
-Using `SuppressedError`:
-
-```js
-try {
-  doWork();
-} catch (primaryError) {
-  try {
-    cleanup();
-  } catch (cleanupError) {
-    throw new SuppressedError(
-      cleanupError,
-      primaryError,
-      "Cleanup failed after work error",
-    );
-  }
 }
 ```
 
