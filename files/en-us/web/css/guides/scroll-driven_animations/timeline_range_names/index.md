@@ -765,7 +765,7 @@ body:has([value="30"]:checked) article {
     linear-gradient(
       to top,
       transparent calc(calc(min(100%, var(--animElHeight)) * 0.3) - 0.5px),
-      #33f calc(calc(min(100%, var(--animElHeight)) * 0.3) - 0.5px)e p
+      #33f calc(calc(min(100%, var(--animElHeight)) * 0.3) - 0.5px)
         calc(calc(min(100%, var(--animElHeight)) * 0.3) + 0.5px),
       transparent calc(calc(min(100%, var(--animElHeight)) * 0.3) + 0.5px)
         calc(calc(min(100%, var(--animElHeight)) * 0.7) - 0.5px),
