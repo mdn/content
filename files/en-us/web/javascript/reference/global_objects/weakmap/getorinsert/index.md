@@ -37,7 +37,7 @@ getOrInsert(key, defaultValue)
 
 ### Return value
 
-The value associated with the specified key in the `WeakMap` object.
+The value associated with the specified key in the `WeakMap` object. If the key can't be found, `defaultValue` is inserted and returned.
 
 ### Exceptions
 
