@@ -357,11 +357,22 @@ function postAboutFlaws(docs, config) {
       lines.push(comment);
       perDocComments.push(lines.join("\n"));
     }
-    let heading = `\n<details><summary><b>Flaws</b> (${totalFlaws})</summary>\n\n`;
-    if (docsWithZeroFlaws) {
-      heading += `Note! *${docsWithZeroFlaws} document${docsWithZeroFlaws === 1 ? "" : "s"} with no flaws that don't need to be listed. 🎉*\n\n`;
+    const zeroFlawsNote = docsWithZeroFlaws
+      ? `Note! *${docsWithZeroFlaws} document${docsWithZeroFlaws === 1 ? "" : "s"} with no flaws that don't need to be listed. 🎉*\n\n`
+      : "";
+
+    if (docs.length > 5 && totalFlaws > 5) {
+      let heading = `\n<details><summary><b>Flaws</b> (${totalFlaws})</summary>\n\n`;
+      return (
+        heading +
+        zeroFlawsNote +
+        perDocComments.join("\n\n---\n\n") +
+        "\n\n</details>"
+      );
+    } else {
+      let heading = `\n<b>Flaws</b> (${totalFlaws})\n\n`;
+      return heading + zeroFlawsNote + perDocComments.join("\n\n---\n\n");
     }
-    return heading + perDocComments.join("\n\n---\n\n") + "\n\n</details>";
   }
 }
 
