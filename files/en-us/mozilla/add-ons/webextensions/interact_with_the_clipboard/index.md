@@ -142,7 +142,7 @@ document.querySelector("#paste").addEventListener("click", paste);
 In Chrome:
 
 - Chrome doesn't expose `navigator.clipboard` to extension service workers, and offscreen documents can't access `navigator.clipboard` due to the API's document focus requirements. As a result, Chrome extensions have to use the deprecated `document.execCommand()` APIs in an offscreen document or use `navigator.clipboard` in a different context, such as a content script or extension page.
-For page scripts to write to the clipboard without user interaction, the `"clipboard-write"` permission needs to be requested using the Web API {{domxref("Permissions", "navigator.permissions")}}. Your extension can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:
+  For page scripts to write to the clipboard without user interaction, the `"clipboard-write"` permission needs to be requested using the Web API {{domxref("Permissions", "navigator.permissions")}}. Your extension can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:
 
   ```js
   navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
