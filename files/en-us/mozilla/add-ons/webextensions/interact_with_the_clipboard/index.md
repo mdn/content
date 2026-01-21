@@ -26,7 +26,7 @@ The {{domxref("Clipboard", "navigator.clipboard")}} API provides methods for:
 The Clipboard API methods {{domxref("Clipboard.write", "navigator.clipboard.write()")}} and {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} write arbitrary content to the clipboard. The methods are available from a secure context but only function after the extension's user performs {{Glossary("Transient Activation","transient activation")}}. However, with the [`"clipboardWrite"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardwrite), transient activation isn't required.
 
 > [!NOTE]
-> In Firefox, the `"clipboardWrite"` permission enables writing to the clipboard from all extension contexts and content scripts. In Chrome and Safari, the `"clipboardWrite"` permission is only supported in extension contexts (not content scripts).
+> In Firefox and Chrome, the `"clipboardWrite"` permission enables writing to the clipboard from all extension contexts and content scripts. In Safari, the `"clipboardWrite"` permission is only supported in extension contexts (not content scripts).
 
 This function takes a string and writes it to the clipboard:
 
@@ -102,7 +102,7 @@ The Clipboard API methods {{domxref("Clipboard.read", "navigator.clipboard.read(
 The methods are available from a secure context but only function after the extension's user performs {{Glossary("Transient Activation","transient activation")}} and clicks a paste prompt in an ephemeral context menu. However, with the [`"clipboardRead"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardRead)` permission, your extension can read from the clipboard without user confirmation or transient activation.
 
 > [!NOTE]
-> In Firefox, the `"clipboardRead"` permission enables writing to the clipboard from all extension contexts and content scripts. In Chrome, the `"clipboardRead"` permission is only supported in extension contexts (not content scripts). Safari doesn't support the `"clipboardRead"` permission.
+> In Firefox and Chrome, the `"clipboardRead"` permission enables writing to the clipboard from all extension contexts and content scripts. Safari doesn't support the `"clipboardRead"` permission.
 
 This snippet of code fetches the text from the clipboard and replaces the contents of the element with the ID `"outbox"` with that text.
 
@@ -141,8 +141,8 @@ document.querySelector("#paste").addEventListener("click", paste);
 
 In Chrome:
 
-- Chrome doesn't expose `navigator.clipboard` to extension service workers, and offscreen documents can't access `navigator.clipboard` due to the API's document focus requirements. As a result, Chrome extensions have to use the deprecated `document.execCommand()` APIs in an offscreen document or use `navigator.clipboad` in a different context, such as a content script or extension page.
-- For page scripts, the `"clipboard-write"` permission needs to be requested using the Web API {{domxref("Permissions", "navigator.permissions")}}. Your extension can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:
+- Chrome doesn't expose `navigator.clipboard` to extension service workers, and offscreen documents can't access `navigator.clipboard` due to the API's document focus requirements. As a result, Chrome extensions have to use the deprecated `document.execCommand()` APIs in an offscreen document or use `navigator.clipboard` in a different context, such as a content script or extension page.
+For page scripts to write to the clipboard without user interaction, the `"clipboard-write"` permission needs to be requested using the Web API {{domxref("Permissions", "navigator.permissions")}}. Your extension can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:
 
   ```js
   navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
@@ -157,7 +157,7 @@ In Chrome:
 
 In Firefox:
 
-- The availability of the Clipboard API read methods on the user's response to a paste prompt became available in Firefox 127. Before that, the methods were only available when the extension set the `"clipboardRead"` permission.
+- The availability of the Clipboard API read methods on the user's response to a paste prompt was introduced for web pages in Firefox 127 and extensions in Firefox 147. Before that, the methods were only available when the `"clipboardRead"` permission was set.
 
 ## Browser compatibility
 
