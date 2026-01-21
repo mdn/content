@@ -159,6 +159,11 @@ In Firefox:
 
 - The availability of the Clipboard API read methods on the user's response to a paste prompt was introduced for web pages in Firefox 127 and extensions in Firefox 147. Before that, the methods were only available when the `"clipboardRead"` permission was set.
 
+In Safari:
+
+- The `"clipboardWrite"` permission is only supported in extension contexts (not content scripts).
+- The `"clipboardRead"` permission isn't support.
+
 ## Browser compatibility
 
 {{Compat}}

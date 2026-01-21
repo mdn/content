@@ -183,9 +183,9 @@ Usually, the tab that's granted `activeTab` is the active tab, with one exceptio
 Two permissions enable an extension to interact with the clipboard:
 
 - `clipboardWrite`
-  - : Write to the clipboard using {{DOMxRef("Clipboard.write()")}} or {{DOMxRef("Clipboard.writeText()")}}.
+  - : Write to the clipboard using {{DOMxRef("Clipboard.write()")}}, {{DOMxRef("Clipboard.writeText()")}}, `document.execCommand("copy")` or `document.execCommand("cut")`.
 - `clipboardRead`
-  - : Read from the clipboard using {{DOMxRef("Clipboard.read()")}} or {{DOMxRef("Clipboard.readText()")}}.
+  - : Read from the clipboard using {{DOMxRef("Clipboard.read()")}}, {{DOMxRef("Clipboard.readText()")}} or `document.execCommand("paste")`.
 
 See [Interact with the clipboard](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard) for more details.
 
