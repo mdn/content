@@ -345,7 +345,7 @@ If using a screen reader, it should speak the word "MOZILLA" when it reaches the
 
 ### Including counters in alternative text
 
-This example features a list of links to a set of book chapters, and shows how to use generated content to include a book icon and a counter before each one, with alternative text that includes the literal word "Chapter" in place of the icon. This results in the word "chapter" and the chapter number preceding the text in each link's {{glossary("accessible name")}}, which will be announced to screenreader users when the link receives focus.
+This example features a list of links to a set of book chapters, and shows how to use generated content to include a book icon and a counter before each one, with alternative text that includes the literal word "Chapter" in place of the icon. This results in the word "chapter" and the chapter number preceding the text in each link's {{glossary("accessible name")}}, which will be announced to screen reader users when the link receives focus.
 
 #### HTML
 
@@ -391,7 +391,7 @@ a::before {
 
 {{EmbedLiveSample('alt-counter', '100%', 270)}}
 
-When a screenreader navigates to a link within the list, supporting browsers will announce "Chapter" followed by the current counter number, followed by the link text, for example, "Chapter 1 A stranger calls" and "Chapter 2 Two owls".
+When a screen reader navigates to a link within the list, supporting browsers will announce "Chapter" followed by the current counter number, followed by the link text, for example, "Chapter 1 A stranger calls" and "Chapter 2 Two owls".
 
 ### Element replacement with URL
 

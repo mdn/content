@@ -411,7 +411,7 @@ if (typeof trustedTypes === "undefined")
 
 Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createScript", "createScript()")}} method for transforming input strings into {{domxref("TrustedScript")}} instances.
 
-For the purpose of this example we'll assume that we have a function `transformedScript()` that defines our tranformation/filtering logic.
+For the purpose of this example, we'll assume that we have a function `transformedScript()` that defines our transformation/filtering logic.
 
 ```js
 const policy = trustedTypes.createPolicy("script-policy", {
