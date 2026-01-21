@@ -50,7 +50,7 @@ By default, the view timeline progress starts when the tracked subject's start e
 <fieldset>
   <legend>Select the height of the animated element</legend>
 
-  <label><input name="height" value="50" type="radio" checked /> 50pxlabel>
+  <label><input name="height" value="50" type="radio" checked /> 50px</label>
   <label><input name="height" value="250" type="radio" /> 250px</label>
   <label><input name="height" value="500" type="radio" /> 500px</label>
 </fieldset>
