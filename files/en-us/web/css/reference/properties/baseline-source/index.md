@@ -86,7 +86,7 @@ body {
 }
 
 .box {
-  border: 2px solid #888;
+  border: 2px solid #888888;
   width: 50px;
 }
 
@@ -131,5 +131,5 @@ We set the `.first` box to use the first baseline, the `.auto` box uses the defa
 
 ## See also
 
-- [`vertical-align`](/en-US/docs/Web/CSS/Reference/Properties/vertical-align) property
+- {{cssxref("vertical-align")}} property
 - [CSS box alignment overview](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview)

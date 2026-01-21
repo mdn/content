@@ -1,8 +1,8 @@
 ---
-title: Firefox 146 release notes for developers (Stable)
-short-title: Firefox 146 (Stable)
+title: Firefox 146 release notes for developers
+short-title: Firefox 146
 slug: Mozilla/Firefox/Releases/146
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -74,6 +74,7 @@ No notable changes.
 ## Changes for add-on developers
 
 - {{WebExtAPIRef("browsingData.removeLocalStorage")}} and {{WebExtAPIRef("browsingData.remove")}} (when `localStorage` is set in {{WebExtAPIRef("browsingData.DataTypeSet")}}) now delete objects from [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage). ([Firefox bug 1886894](https://bugzil.la/1886894))
+- The {{WebExtAPIRef("proxy.onRequest")}} API adds support for MASQUE proxies (proxy tunnel over QUIC) in the {{WebExtAPIRef("proxy.ProxyInfo")}} return type. ([Firefox bug 1988988](https://bugzil.la/1988988) and Firefox bug 1998894](https://bugzil.la/1998894))
 
 ## Experimental web features
 

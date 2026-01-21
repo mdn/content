@@ -67,7 +67,7 @@ See the [`DPR`](/en-US/docs/Web/HTTP/Reference/Headers/DPR#examples) header exam
 
 ## See also
 
-- Device client hints
+- Device and responsive image client hints
   - {{HTTPHeader("Sec-CH-Device-Memory")}}
   - {{HTTPHeader("Sec-CH-DPR")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}

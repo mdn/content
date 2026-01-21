@@ -24,7 +24,7 @@ The `<calc-sum>` type defines two numeric values and one of the following [arith
 
 ## Description
 
-The operands in the expression may be any {{cssxref("&lt;length&gt;")}} syntax value. You can use {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, or {{cssxref("&lt;integer&gt;")}}.
+The operands in the expression may be any {{cssxref("&lt;length&gt;")}} syntax value. You can use {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("angle")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, or {{cssxref("&lt;integer&gt;")}}.
 
 The two operands' types must be consistent. For lengths, you can't use `0` to mean `0px` (or another length unit). Instead, you must add an explicit unit: `margin-top: calc(0px + 20px);` is valid, while `margin-top: calc(0 + 20px);` is invalid. Percentage value types are resolved based on the context. For example, `margin-top: calc(50% + 20px);` is valid because `margin-top` resolves percentages to lengths.
 

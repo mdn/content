@@ -160,6 +160,10 @@ When calling `tabs.remove()`:
 
 ### Unsupported APIs
 
+#### Debugger API
+
+- **In Firefox:** Chrome's [debugger](https://developer.chrome.com/docs/extensions/reference/api/debugger) API [is not implemented](https://bugzil.la/1316741).
+
 #### DeclarativeContent API
 
 - **In Firefox:** Chrome's [declarativeContent](https://developer.chrome.com/docs/extensions/reference/api/declarativeContent) API [is not implemented](https://bugzil.la/1435864). In addition, Firefox [will not support](https://bugzil.la/1323433#c16) the `declarativeContent.RequestContentScript` API (which is rarely used and is unavailable in stable releases of Chrome).

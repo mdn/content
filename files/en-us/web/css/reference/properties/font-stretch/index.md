@@ -2,17 +2,12 @@
 title: font-stretch
 slug: Web/CSS/Reference/Properties/font-stretch
 page-type: css-property
-status:
-  - deprecated
 browser-compat: css.properties.font-stretch
 sidebar: cssref
 ---
 
-{{deprecated_header}}
-
 > [!NOTE]
-> The `font-stretch` property [has now been renamed to `font-width`](https://drafts.csswg.org/css-fonts/#font-stretch-desc) in the specifications. The name `font-stretch` has been kept as an alias for the `font-width` property.
-> The new name `font-width` is not yet supported by any browsers.
+> The `font-stretch` property was renamed to `font-width` in the [CSS Fonts specification](https://drafts.csswg.org/css-fonts/#font-stretch-prop). To preserve compatibility, the specification retains `font-stretch` as an alias for the `font-width` property.
 
 The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, condensed, or expanded face from a font.
 

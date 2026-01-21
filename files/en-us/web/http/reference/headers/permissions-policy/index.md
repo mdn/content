@@ -106,10 +106,10 @@ You can specify
   - : Controls whether the current document can be treated as {{domxref("Window.crossOriginIsolated", "cross-origin isolated", "", 1)}}.
 
 - {{HTTPHeader('Permissions-Policy/deferred-fetch', 'deferred-fetch')}} {{experimental_inline}}
-  - : Controls the allocation of the top-level origin's [`fetchLater()` quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas).
+  - : Controls the allocation of the top-level origin's [`fetchLater()` quota](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas).
 
 - {{HTTPHeader('Permissions-Policy/deferred-fetch-minimal', 'deferred-fetch-minimal')}} {{experimental_inline}}
-  - : Controls the allocation of the shared cross-origin subframe [`fetchLater()` quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas).
+  - : Controls the allocation of the shared cross-origin subframe [`fetchLater()` quota](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas).
 
 - {{HTTPHeader('Permissions-Policy/display-capture', 'display-capture')}} {{experimental_inline}}
   - : Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by `getDisplayMedia()` will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if permission is not obtained to capture the display's contents.
@@ -165,6 +165,12 @@ You can specify
 
 - {{httpheader('Permissions-Policy/picture-in-picture', 'picture-in-picture')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.
+
+- {{httpheader('Permissions-Policy/private-state-token-issuance','private-state-token-issuance')}} {{Experimental_Inline}}
+  - : Controls usage of [private state token](/en-US/docs/Web/API/Private_State_Token_API) `token-request` operations.
+
+- {{httpheader('Permissions-Policy/private-state-token-redemption','private-state-token-redemption')}} {{Experimental_Inline}}
+  - : Controls usage of [private state token](/en-US/docs/Web/API/Private_State_Token_API) `token-redemption` and `send-redemption-record` operations.
 
 - {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to create new asymmetric key credentials, i.e., via {{domxref("CredentialsContainer.create", "navigator.credentials.create({publicKey: ..., ...})")}}.

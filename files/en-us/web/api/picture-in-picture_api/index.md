@@ -69,7 +69,7 @@ If media action handlers have been set via the [Media Session API](/en-US/docs/W
 
 ## Controlling styling
 
-The [`:picture-in-picture`](/en-US/docs/Web/CSS/Reference/Selectors/:picture-in-picture) [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the video element currently in picture-in-picture mode, allowing you to configure your stylesheets to automatically adjust the size, style, or layout of content when a video switches back and forth between picture-in-picture and traditional presentation modes.
+The {{cssxref(":picture-in-picture")}} [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the video element currently in picture-in-picture mode, allowing you to configure your stylesheets to automatically adjust the size, style, or layout of content when a video switches back and forth between picture-in-picture and traditional presentation modes.
 
 ## Controlling access
 

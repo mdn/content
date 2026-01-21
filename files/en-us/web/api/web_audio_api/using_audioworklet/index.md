@@ -185,7 +185,7 @@ To create an audio node that pumps blocks of audio data through an {{domxref("Au
 
 1. Load and install the audio processor module
 2. Create an {{domxref("AudioWorkletNode")}}, specifying the audio processor module to use by its name
-3. Connect inputs to the `AudioWorkletNode` and its outputs to appropriate destinations (either other nodes or to the {{domxref("AudioContext")}} object's {{domxref("BaseAudioContext/destination", "destination")}} property.
+3. Connect inputs to the `AudioWorkletNode` and its outputs to appropriate destinations (either other nodes or to the {{domxref("AudioContext")}} object's {{domxref("BaseAudioContext/destination", "destination")}} property).
 
 To use an audio worklet processor, you can use code similar to the following:
 
@@ -250,6 +250,13 @@ class MyAudioProcessor extends AudioWorkletProcessor {
   }
 }
 ```
+
+If `automationRate` is not specified in a parameter descriptor, it defaults to
+`"a-rate"` (sample-accurate updates).
+
+To use block-rate processing, `"k-rate"` must be explicitly requested.
+Making the automation rate explicit helps avoid incorrect assumptions about
+whether a parameter is sample-accurate or block-rate by default.
 
 Accessing your processor node's parameters is as simple as looking them up in the `parameters` object passed into your implementation of {{domxref("AudioWorkletProcessor.process", "process()")}}. Within the `parameters` object are arrays, one for each of your parameters, and sharing the same names as your parameters.
 

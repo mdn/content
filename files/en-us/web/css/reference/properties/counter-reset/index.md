@@ -242,7 +242,7 @@ In the output, the items are numbered in reversed order from 5 to 1. Notice in t
 - {{cssxref("counter-increment")}} property
 - {{cssxref("counter-set")}} property
 - {{cssxref("@counter-style")}} at-rule
-- {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
+- {{cssxref("counter()")}} and {{cssxref("counters()")}} functions
 - {{cssxref("content")}} property
 - {{cssxref("::marker")}} pseudo-class
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module

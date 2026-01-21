@@ -250,6 +250,7 @@ The CSS animations module level 2 also introduces the `animation-trigger`, `anim
 ### At-rules and descriptors
 
 - {{cssxref("@keyframes")}}
+- [`<keyframe-selector>`](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
 
 ### Events
 
@@ -280,7 +281,7 @@ All animations, even those with 0 seconds duration, throw animation events.
 ## Related concepts
 
 - {{cssxref("will-change")}} CSS property
-- [`<easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function) data type
+- {{cssxref("easing-function")}} data type
 - [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media query
 - {{glossary("Bezier curve")}} glossary term
 

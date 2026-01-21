@@ -6,7 +6,7 @@ browser-compat: css.selectors.nesting
 sidebar: cssref
 ---
 
-The CSS **`&` nesting selector** explicitly states the relationship between parent and child rules when using [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting). It makes the nested child rule selectors _relative to the parent element_. Without the `&` nesting selector, the child rule selector selects child elements. The child rule selectors have the same [specificity](/en-US/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity) weight as if they were within {{cssxref(":is", ":is()")}}.
+The CSS **`&` nesting selector** explicitly states the relationship between parent and child rules when using [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting). It makes the nested child rule selectors _relative to the parent element_. Without the `&` nesting selector, the child rule selector selects child elements. The child rule selectors have the same [specificity](/en-US/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity) weight as if they were within {{cssxref(":is()")}}.
 
 > [!NOTE]
 > _Child rule_ does not mean _child element selector_. A child rule can target parent element or child elements depending on use of the `&` nesting selector.
@@ -137,7 +137,7 @@ The `&` nesting selector can be placed multiple times:
 
 ### Cannot represent pseudo-elements
 
-The `&` selector is equivalent to the {{cssxref(":is", ":is()")}} selector, and has the same limitation that it cannot represent pseudo-elements.
+The `&` selector is equivalent to the {{cssxref(":is()")}} selector, and has the same limitation that it cannot represent pseudo-elements.
 
 For example, with the following style rule, no generated content will be styled red, even when nested in `<div class="important">`, because `.important :is(.foo::before)` cannot match anything.
 

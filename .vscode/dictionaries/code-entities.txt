@@ -76,6 +76,7 @@ beforematch
 beforescriptexecute
 beforexrselect
 BGRX
+bgtest
 bhks
 biske
 bmatrix
@@ -259,6 +260,7 @@ GPOS
 grba
 Grek
 greklow
+gsettings
 GSUB
 gujr
 gukh
@@ -324,6 +326,7 @@ jssidebar
 jsval
 kaios
 kawi
+kdeglobals
 kerx
 Key_Codeinput
 KEY_dead_abovecomma
@@ -359,6 +362,7 @@ KIND_NONHEAP
 knda
 Kore
 krai
+kwriteconfig
 lanatham
 laoo
 largeop
@@ -693,6 +697,7 @@ serviceworker
 setenvif
 SHA-256-sess
 SHA-512-sess
+shadowrootreferencetarget
 sharpyuv
 shrd
 shtm

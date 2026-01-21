@@ -10,7 +10,7 @@ The **`resolution`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/
 
 ## Syntax
 
-The `resolution` feature is specified as a {{cssxref("&lt;resolution&gt;")}} value representing the pixel density of the output device. It is a range feature, meaning that you can also use the prefixed **`min-resolution`** and **`max-resolution`** variants to query minimum and maximum values, respectively.
+The `resolution` feature is specified as a {{cssxref("resolution")}} value representing the pixel density of the output device. It is a range feature, meaning that you can also use the prefixed **`min-resolution`** and **`max-resolution`** variants to query minimum and maximum values, respectively.
 
 ## Examples
 

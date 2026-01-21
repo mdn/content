@@ -118,7 +118,7 @@ Include a list of guide pages under this landing page. Each DT should link to th
 
 ## Interfaces
 
-_To use the [domxref macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references), remove the backticks and backslash in the markdown file._
+_To use the [domxref macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros##linking_to_reference_pages), remove the backticks and backslash in the markdown file._
 
 - `\{{domxref("NameOfTheInterface")}}`
   - : Include a brief description of the interface and what it does here.

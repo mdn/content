@@ -6,7 +6,7 @@ browser-compat: css.types.sin
 sidebar: cssref
 ---
 
-The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is a trigonometric function that returns the sine of a number, which is a value between `-1` and `1`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians. That is, `sin(45deg)`, `sin(0.125turn)`, and `sin(3.14159 / 4)` all represent the same value, approximately `0.707`.
+The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is a trigonometric function that returns the sine of a number, which is a value between `-1` and `1`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("angle")}} by interpreting the result of the argument as radians. That is, `sin(45deg)`, `sin(0.125turn)`, and `sin(3.14159 / 4)` all represent the same value, approximately `0.707`.
 
 {{InteractiveExample("CSS Demo: sin()")}}
 
@@ -92,7 +92,7 @@ width: calc(100px * sin(e / 4));
 The `sin(angle)` function accepts only one value as its parameter.
 
 - `angle`
-  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("&lt;angle&gt;")}}
+  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} or an {{cssxref("angle")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("angle")}}
 
 ### Return value
 

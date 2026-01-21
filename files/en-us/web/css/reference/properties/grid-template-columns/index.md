@@ -97,7 +97,7 @@ grid-template-columns: unset;
 - `none`
   - : Indicates that there is no explicit grid. Any columns will be implicitly generated and their size will be determined by the {{cssxref("grid-auto-columns")}} property.
 - `[line-name]`
-  - : A [`<custom-ident>`](/en-US/docs/Web/CSS/Reference/Values/custom-ident) specifying a name for the line in that location. The ident may be any valid string other than the reserved words `span` and `auto`. Lines may have multiple names separated by a space inside the square brackets, for example `[line-name-a line-name-b]`.
+  - : A {{cssxref("custom-ident")}} specifying a name for the line in that location. The ident may be any valid string other than the reserved words `span` and `auto`. Lines may have multiple names separated by a space inside the square brackets, for example `[line-name-a line-name-b]`.
 - {{cssxref("&lt;length&gt;")}}
   - : A non-negative length, giving the width of the column.
 - {{cssxref("&lt;percentage&gt;")}}
@@ -119,7 +119,7 @@ grid-template-columns: unset;
 
     As a minimum value, it represents the largest minimum size of items in that track (specified by the {{cssxref("min-width")}}/{{cssxref("min-height")}} properties of the items). This often corresponds to the {{cssxref("min-content")}} size, but not always.
 
-    If used outside of {{cssxref("minmax", "minmax()")}} notation, `auto` represents the range between the minimum and maximum values described above. In most cases, this behaves similarly to `minmax(min-content,max-content)`.
+    If used outside of {{cssxref("minmax()")}} notation, `auto` represents the range between the minimum and maximum values described above. In most cases, this behaves similarly to `minmax(min-content,max-content)`.
 
     > [!NOTE]
     > `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore, by default, an `auto`-sized track will take up any remaining space in the grid container.
