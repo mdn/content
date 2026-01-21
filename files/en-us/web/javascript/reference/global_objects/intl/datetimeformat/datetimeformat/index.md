@@ -113,7 +113,7 @@ Intl.DateTimeFormat(locales, options)
     - `"short"`
       - : E.g., `Mar`
     - `"narrow"`
-      - : E.g., `M`). Two months may have the same narrow style for some locales (e.g., `May`'s narrow style is also `M`).
+      - : E.g., `M`. Two months may have the same narrow style for some locales (e.g., both `March`'s and `May`'s narrow styles are `M` in the `en-US` locale).
 - `day`
   - : The representation of the day. Possible values are `"numeric"` and `"2-digit"`.
 - `dayPeriod`
