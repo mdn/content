@@ -70,8 +70,6 @@ scroll-padding: 20%;
 }
 ```
 
-The `scroll-padding-*` properties define offsets for the _optimal viewing region_ of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars), or to put more breathing room between a targeted element and the edges of the scrollport.
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
@@ -107,6 +105,14 @@ scroll-padding: unset;
 - `auto`
   - : The offset is determined by the user agent. This will generally be `0px`, but the user agent is free to detect and do something else if a non-zero value is more appropriate.
 
+## Description
+
+The `scroll-padding` property is shortand for the {{CSSXref("scroll-padding-top")}}, {{CSSXref("scroll-padding-right")}}, {{CSSXref("scroll-padding-bottom")}}, and {{CSSXref("scroll-padding-left")}} properties, which set the top, right, bottom, and left scroll padding of a scroll container, respectively and in that order.
+
+Useful when creating scroll-snap containers, the `scroll-padding` property enables defining offsets for the _optimal viewing region_ of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to create insets in the scrollport to make room for objects that might obscure the content, such as fixed-positioned toolbars or sidebars, or to put more breathing room between a targeted element and the edges of the scrollport.
+
+While defined in the [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module, this property applies to all scroll containers, no matter the value of the {{cssxref("scroll-snap-type")}} property.
+
 ## Formal definition
 
 {{cssinfo}}
@@ -125,5 +131,8 @@ scroll-padding: unset;
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- {{cssxref("scroll-snap-type")}}
+- [Basic concepts of scroll-snap](/en-US/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
+- [CSS scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animation) module
