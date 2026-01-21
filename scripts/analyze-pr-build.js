@@ -19,6 +19,10 @@ const hiddenCommentRegex =
   /<!-- build_hash: ([a-f0-9]+) date: ([\d:.\-TZ]+) -->/;
 
 /**
+ * @import { Doc } from "@mdn/rari"
+ */
+
+/**
  * Main function to analyze a PR build directory and post (or print) a comment.
  * @param {string} buildDirectory - Path to the build directory.
  * @param {object} config - Configuration object.
@@ -136,7 +140,7 @@ function truncateComment(comment) {
 
 /**
  * Constructs a comment about the deployment with preview URLs.
- * @param {Array} docs - Array of built document objects.
+ * @param {Doc[]} docs - Array of built document objects.
  * @param {object} config - Configuration object.
  */
 function postAboutDeployment(docs, config) {
@@ -174,7 +178,7 @@ function mdnUrlToDevUrl(prefix, host, mdnUrl) {
 
 /**
  * Constructs a comment reporting any dangerous external URLs.
- * @param {Array} docs - Array of built document objects.
+ * @param {Doc[]} docs - Array of built document objects.
  * @param {Array} patch - Array of patch objects (from parse-diff).
  * @param {object} config - Configuration object.
  */
@@ -281,7 +285,7 @@ function postAboutDangerousContent(docs, patch, config) {
 
 /**
  * Constructs a comment reporting document flaws.
- * @param {Array} docs - Array of built document objects.
+ * @param {Doc[]} docs  - Array of built document objects.
  * @param {object} config - Configuration object.
  */
 function postAboutFlaws(docs, config) {
@@ -364,6 +368,7 @@ function postAboutFlaws(docs, config) {
 /**
  * Recursively finds and returns the parsed JSON document objects from all index.json files.
  * @param {string} buildDirectory - Path to the build directory.
+ * @returns {Doc[]}
  */
 async function getBuiltDocs(buildDirectory) {
   const docs = [];
