@@ -147,6 +147,15 @@ Arrow functions can have either an _expression body_ or the usual _block body_.
 
 In an expression body, only a single expression is specified, which becomes the implicit return value. In a block body, you must use an explicit `return` statement.
 
+Arrow functions are not required to return a value. If a block body does not include a `return` statement, the function returns `undefined`, which is useful for purely behavioral functions.
+
+````js
+const logMessage = () => {
+  console.log("Hello world");
+};
+
+logMessage(); // logs "Hello world", returns undefined
+
 ```js
 const func = (x) => x * x;
 // expression body syntax, implied "return"
@@ -155,7 +164,7 @@ const func2 = (x, y) => {
   return x + y;
 };
 // with block body, explicit "return" needed
-```
+````
 
 Returning object literals using the expression body syntax `(params) => { object: literal }` does not work as expected.
 
