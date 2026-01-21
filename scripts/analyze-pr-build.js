@@ -25,14 +25,15 @@ const hiddenCommentRegex =
  */
 async function analyzePR(buildDirectory, config) {
   const combinedComments = [];
+  const docs = await getBuiltDocs(buildDirectory);
 
   if (config.prefix) {
-    const deploymentComment = await postAboutDeployment(buildDirectory, config);
+    const deploymentComment = postAboutDeployment(docs, config);
     if (deploymentComment) combinedComments.push(deploymentComment);
   }
 
   if (config.analyze_flaws) {
-    const flawsComment = await postAboutFlaws(buildDirectory, config);
+    const flawsComment = postAboutFlaws(docs, config);
     if (flawsComment) combinedComments.push(flawsComment);
   }
 
@@ -47,11 +48,7 @@ async function analyzePR(buildDirectory, config) {
         console.error(`Error reading diff file: ${err}`);
       }
     }
-    const dangerousComment = await postAboutDangerousContent(
-      buildDirectory,
-      patch,
-      config,
-    );
+    const dangerousComment = postAboutDangerousContent(docs, patch, config);
     if (dangerousComment) combinedComments.push(dangerousComment);
   }
 
@@ -139,11 +136,10 @@ function truncateComment(comment) {
 
 /**
  * Constructs a comment about the deployment with preview URLs.
- * @param {string} buildDirectory - Path to the build directory.
+ * @param {Array} docs - Array of built document objects.
  * @param {object} config - Configuration object.
  */
-async function postAboutDeployment(buildDirectory, config) {
-  const docs = await getBuiltDocs(buildDirectory);
+function postAboutDeployment(docs, config) {
   let links = [];
   for (const doc of docs) {
     if (doc.mdn_url) {
@@ -178,13 +174,12 @@ function mdnUrlToDevUrl(prefix, host, mdnUrl) {
 
 /**
  * Constructs a comment reporting any dangerous external URLs.
- * @param {string} buildDirectory - Path to the build directory.
+ * @param {Array} docs - Array of built document objects.
  * @param {Array} patch - Array of patch objects (from parse-diff).
  * @param {object} config - Configuration object.
  */
-async function postAboutDangerousContent(buildDirectory, patch, config) {
+function postAboutDangerousContent(docs, patch, config) {
   const OK_URL_PREFIXES = ["https://github.com/mdn/"];
-  const docs = await getBuiltDocs(buildDirectory);
   const comments = [];
   let totalUrls = 0;
 
@@ -286,11 +281,10 @@ async function postAboutDangerousContent(buildDirectory, patch, config) {
 
 /**
  * Constructs a comment reporting document flaws.
- * @param {string} buildDirectory - Path to the build directory.
+ * @param {Array} docs - Array of built document objects.
  * @param {object} config - Configuration object.
  */
-async function postAboutFlaws(buildDirectory, config) {
-  const docs = await getBuiltDocs(buildDirectory);
+function postAboutFlaws(docs, config) {
   const comments = [];
   const MAX_FLAW_EXPLANATION = 5;
   let docsWithZeroFlaws = 0;
