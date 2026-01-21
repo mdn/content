@@ -49,9 +49,9 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/R
 - `layout.forms.reveal-password-button.enabled`
   - : Set to `true` to enable.
 
-### Time picker for datetime-local input field
+### Time picker in `datetime-local` and `time` input elements
 
-HTML datetime-local input elements ([`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)) now includes a time picker ([Firefox bug 1726108](https://bugzil.la/1726108)).
+The HTML [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local) and [`<input type="time">`](/en-US/docs/Web/HTML/Reference/Elements/input/time) elements support a time picker. ([Firefox bug 1726108](https://bugzil.la/1726108)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
