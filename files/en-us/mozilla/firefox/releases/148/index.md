@@ -84,3 +84,8 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 148 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Document Picture-in-Picture API** (Nightly): `dom.documentpip.enabled`
+
+  The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) makes it possible to open an always-on-top window that can be populated with arbitrary HTML content such as a video with custom controls or a set of streams showing the participants of a video conference call.
+  ([Firefox bug 1858562](https://bugzil.la/1858562)).
