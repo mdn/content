@@ -139,6 +139,24 @@ function truncateComment(comment) {
 }
 
 /**
+ * Formats a section with a heading, collapsed by default unless expanded is set.
+ * @param {object} options - Formatting options.
+ * @param {string} options.title - The section title (e.g., "Preview URLs", "Flaws").
+ * @param {number} options.count - The count to display in parentheses.
+ * @param {string} [options.countLabel] - Optional label after count (e.g., "pages").
+ * @param {string} options.body - The section content.
+ * @param {boolean} [options.expanded] - If true, show expanded (no details wrapper).
+ */
+function formatSection({ title, count, countLabel, body, expanded }) {
+  const countText = countLabel ? `${count} ${countLabel}` : count;
+  const header = `<b>${title}</b> (${countText})`;
+  if (expanded) {
+    return `${header}\n\n${body}`;
+  }
+  return `<details><summary>${header}</summary>\n\n${body}\n\n</details>`;
+}
+
+/**
  * Constructs a comment about the deployment with preview URLs.
  * @param {Doc[]} docs - Array of built document objects.
  * @param {object} config - Configuration object.
@@ -155,13 +173,13 @@ function postAboutDeployment(docs, config) {
   links.sort();
 
   if (links.length > 0) {
-    if (links.length > 5) {
-      const heading = `<details><summary><b>Preview URLs</b> (${links.length} pages)</summary>\n\n`;
-      return heading + links.join("\n") + "\n\n</details>";
-    } else {
-      const heading = `<b>Preview URLs</b>\n\n`;
-      return heading + links.join("\n");
-    }
+    return formatSection({
+      title: "Preview URLs",
+      count: links.length,
+      countLabel: links.length == 1 ? "page" : "pages",
+      body: links.join("\n"),
+      expanded: links.length <= 5,
+    });
   }
   return "*seems not a single file was built!* 🙀";
 }
@@ -361,18 +379,15 @@ function postAboutFlaws(docs, config) {
       ? `Note! *${docsWithZeroFlaws} document${docsWithZeroFlaws === 1 ? "" : "s"} with no flaws that don't need to be listed. 🎉*\n\n`
       : "";
 
-    if (docs.length > 5 && totalFlaws > 5) {
-      let heading = `\n<details><summary><b>Flaws</b> (${totalFlaws})</summary>\n\n`;
-      return (
-        heading +
-        zeroFlawsNote +
-        perDocComments.join("\n\n---\n\n") +
-        "\n\n</details>"
-      );
-    } else {
-      let heading = `\n<b>Flaws</b> (${totalFlaws})\n\n`;
-      return heading + zeroFlawsNote + perDocComments.join("\n\n---\n\n");
-    }
+    return (
+      "\n" +
+      formatSection({
+        title: "Flaws",
+        count: totalFlaws,
+        body: zeroFlawsNote + perDocComments.join("\n\n---\n\n"),
+        expanded: docs.length <= 5 || totalFlaws <= 5,
+      })
+    );
   }
 }
 
