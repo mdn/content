@@ -72,7 +72,7 @@ table identifier size storage_type
 
 <!-- I'm not sure what this is, or how to find it out -->
 
-### Description
+## Description
 
 WebAssembly tables allow storage function references, which can be later retrieved for efficient, indirect function access when needed. The `table` instruction creates a new table.
 
