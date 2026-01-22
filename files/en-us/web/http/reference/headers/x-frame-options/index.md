@@ -10,7 +10,7 @@ sidebar: http
 > [!NOTE]
 > For more comprehensive options than offered by this header, see the {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive in a {{HTTPHeader("Content-Security-Policy")}} header.
 
-The HTTP **`X-Frame-Options`** {{Glossary("response header")}} can be used to indicate whether a browser should be allowed to render the document in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
+The HTTP **`X-Frame-Options`** {{Glossary("response header")}} can be used to indicate whether a browser should be allowed to render the document in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks and some [cross-site leaks](/en-US/docs/Web/Security/Attacks/XS-Leaks), by ensuring that their content is not embedded into other sites.
 
 If this header is not sent, and the website has not implemented any other mechanisms to restrict embedding (such as the {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} CSP directive), then the browser will allow other sites to embed this document.
 
