@@ -472,8 +472,10 @@ l10n:
     Animations: アニメーション
     Backgrounds_and_Borders: 背景と境界
     Box alignment: ボックス配置
+    Box sizing: ボックスサイズ指定
     Box_model: ボックスモデル
     Cascade: カスケード
+    Cascading variables: カスケード変数
     Colors: 色
     Color_contrast: "アクセシビリティ: 色のコントラスト"
     Columns: 段組み
@@ -481,16 +483,21 @@ l10n:
     Conditional_rules: 条件付きルール
     Containment: コンテナー
     Counters: カウンター
+    Coordinate_systems: 座標系 (API)
     CSSOM_view: CSSOM view
+    Custom_functions_and_mixins: カスタム関数とミックスイン
     Display: 表示方法
+    Environment_variables: 環境変数
     Filter_effects: フィルター効果
     Flexbox: フレックスボックス
     Fonts: フォント
     Functions: 関数
     Grid: グリッド
     Images: 画像
+    Layout cookbook: レイアウト料理帳
     Lists: リスト
     Logical_properties: 論理的プロパティ
+    Masking: マスク
     Media_queries: メディアクエリー
     Modules: モジュール
     Nesting: 入れ子のスタイルルール
@@ -499,7 +506,8 @@ l10n:
     Properties: プロパティ
     Pseudo-classes: 擬似クラス
     Pseudo-elements: 擬似要素
-    Scroll_anchoring: スクロールアンカリング
+    Scroll_anchoring: スクロール固定
+    Scroll-driven_animations: スクロール駆動アニメーション
     Scroll_snap: スクロールスナップ
     Selectors: セレクター
     Shapes: シェイプ
@@ -510,7 +518,9 @@ l10n:
     Transitions: トランジション
     Tools: ツール
     Types: データ型
+    Values: 値
     Values and units: 値と単位
+    Writing modes: 書字方向
   ko:
     Guides: 안내서
     Animations: 애니메이션
