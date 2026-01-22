@@ -207,7 +207,7 @@ Passkeys are more secure than passwords, and we can see how their design address
 
 - When the user tries to sign in, the browser will only look for passkeys whose scope matches the requesting site, and the RP's server can verify that the origin of the requester was what they expected. This makes passkeys resistant to [phishing](/en-US/docs/Web/Security/Attacks/Phishing) attacks, because front-end code served from a phishing site like `https://examp1e.com` is not able to use the passkey associated with `https://example.com`.
 
-Since widespread deployment of passkeys is relatively new, there isn't yet a mature understanding of the attacks that passkeys may face. It's likely that attacks would focus on the user's devices: for example, convincing them to install a malicious authenticator.
+Although passkeys provide protection against these common web authentication attacks, they don't eliminate all threats. Since widespread deployment of passkeys is relatively new, there isn't yet a mature understanding of the attacks that passkeys may face, but it's likely that some attacks would focus on the user's devices: for example, convincing them to install a malicious authenticator. Attacks may also target parts of the authentication system that are not secured by passkeys, such as account recovery mechanisms.
 
 ## Handling lost passkeys
 
