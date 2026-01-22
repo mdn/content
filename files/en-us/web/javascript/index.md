@@ -13,9 +13,10 @@ JavaScript provides a number of dynamic capabilities, including:
 
 - Runtime object creation
 - Variadic functions
-* Dynamic script generation (via [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval))
-* Object introspection (using [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) and [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) utilities)
-* Source code recovery (functions store their source text and can be retrieved using [`Function.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString))
+- Dynamic script generation (via [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval))
+- Object introspection (using [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) and [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) utilities)
+- Source code recovery (functions store their source text and can be retrieved using [`Function.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString))
+
 
 This documentation focuses on the JavaScript language itself and not on environment-specific APIs. For information about web-specific APIs, see [Web APIs](/en-US/docs/Web/API) and the [DOM](/en-US/docs/Web/API/Document_Object_Model).
 
