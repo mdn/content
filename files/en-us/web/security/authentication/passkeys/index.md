@@ -7,7 +7,7 @@ sidebar: security
 
 Passkeys enable websites to authenticate users without the user having to enter any passwords or other secret codes on the site itself. They're considered [the most secure authentication method available to websites](#security_properties_of_passkeys), and we recommend that sites should adopt passkeys as their preferred authentication method, and [phase out the use of passwords](#migrating_from_passwords).
 
-Instead of a shared secret, passkeys depend on public key cryptography. A passkey is a {{glossary("Public-key cryptography", "public/private key pair")}} that's specific to a particular user's account on a particular website.
+Instead of a shared secret, passkeys rely on public-key cryptography. A passkey is a {{glossary("Public-key cryptography", "public/private key pair")}} bound to a specific user's account on a particular website.
 
 The private key is stored in a module called an _authenticator_, that's [in, or attached to, the user's device](#platform_and_roaming_authenticators). An authenticator might be built into the platform, or a separate hardware key like a [YubiKey](https://en.wikipedia.org/wiki/YubiKey), or a credential manager app like [KeePassXC](https://keepassxc.org/).
 
