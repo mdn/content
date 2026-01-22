@@ -147,8 +147,6 @@ When the authenticator creates a new passkey, it signs the resulting object with
 
 Not all authenticators support attestation, and RPs may indicate that they are not interested in attestation. In these situations, the object returned by a call to {{domxref("CredentialsContainer.create()")}} may not be signed at all, or it may be signed using the passkey itself (this is referred to as _self attestation_). In these situations, the RP has no reliable evidence of the authenticator's origin or capabilities.
 
-In this case, even if the RPs do not receive verified information about the authenticator's origin, they can still use secure credentials. Also, this can improve user privacy by preventing the disclosure of the authenticator's information.  
-
 ### User verification
 
 When a website calls {{domxref("CredentialsContainer.create()")}} to create a new passkey, or calls {{domxref("CredentialsContainer.get()")}} to create an assertion, the authenticator will always ask the user to consent to the operation.
