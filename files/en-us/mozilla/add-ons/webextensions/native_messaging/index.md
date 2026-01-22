@@ -289,7 +289,7 @@ This is the Python 2 version:
 #!/usr/bin/env -S python2 -u
 
 # Note that running python with the `-u` flag is required on Windows,
-# to ensure that stdin and stdout are opened in binary, rather than 
+# to ensure that stdin and stdout are opened in binary, rather than
 # text, mode.
 
 import json
@@ -392,18 +392,21 @@ If the extension hasn't managed to run the application, you see an error message
 ```
 
 For this error:
+
 - Check that the name passed to `runtime.connectNative()` matches the name in the app manifest
 - On macOS/Linux, check that the:
   - Name of the app manifest is `<name>.json`.
   - Native application's manifest file location is as mentioned [in the native manifests reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#macos).
-- On Windows, check that the: 
+- On Windows, check that the:
   - Registry key is in the correct place, and its name matches the name in the app manifest.
   - Path given in the registry key points to the app manifest.
 
 ```plain
 "Error: Invalid application <name>"
 ```
+
 For this error:
+
 - Check that the application's name contains no invalid characters.
 
 ```plain
@@ -411,6 +414,7 @@ For this error:
 ```
 
 For this error:
+
 - Windows: if your application is a Python script, check that you have Python installed and have your path set up for it.
 
 ```plain
@@ -429,6 +433,7 @@ If you see this, then the app manifest has been found. Check that:
 ```
 
 For this error:
+
 - Check that the `"allowed_extensions"` key in the app manifest contains the add-on's ID.
 
 ```plain
@@ -436,6 +441,7 @@ For this error:
 ```
 
 For this error:
+
 - Check that the extension has the `"nativeMessaging"` permission.
 
 ```plain
