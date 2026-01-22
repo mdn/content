@@ -1,5 +1,7 @@
 # Welcome to MDN Web Docs
 
+[![Ask DeepWiki][deepwiki-badge]][deepwiki]
+
 ![github-profile](https://user-images.githubusercontent.com/10350960/166113119-629295f6-c282-42c9-9379-af2de5ad4338.png)
 
 [MDN Web Docs][] is an open-source, collaborative project that documents web technologies including CSS, HTML, JavaScript, and Web APIs.
@@ -54,3 +56,5 @@ It can be replaced with the normal links syntax after successfully closing https
 
 [mdn web docs]: https://developer.mozilla.org
 [communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+[deepwiki-badge]: https://deepwiki.com/badge.svg
+[deepwiki]: https://deepwiki.com/mdn/content
