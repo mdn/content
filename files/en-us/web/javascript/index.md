@@ -6,7 +6,6 @@ tags:
 page-type: landing-page
 sidebar: jssidebar
 ---
-# JavaScript
 
 JavaScript (JS) is a lightweight, interpreted (or just-in-time compiled) programming language with first-class functions. While it is best known as a scripting language for Web pages, it is also used in many non-browser environments such as Node.js, Apache CouchDB, and Adobe Acrobat. JavaScript is a dynamic, prototype-based language with garbage collection, supporting multiple programming paradigms, including imperative, functional, and object-oriented programming.
 
