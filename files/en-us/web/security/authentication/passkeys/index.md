@@ -9,7 +9,7 @@ Passkeys enable websites to authenticate users without the user having to enter 
 
 Instead of a shared secret, passkeys depend on public key cryptography. A passkey is a {{glossary("Public-key cryptography", "public/private key pair")}} that's specific to a particular user's account on a particular website.
 
-The private key is stored in a module called an _authenticator_, that's [in, or attached to, the user's device](#platform_and_roaming_authenticators). An authenticator might be built into the platform, like the [Touch ID](https://en.wikipedia.org/wiki/Touch_ID) system in Apple devices, or a separate hardware key like a [YubiKey](https://en.wikipedia.org/wiki/YubiKey), or a credential manager app like [KeePassXC](https://keepassxc.org/).
+The private key is stored in a module called an _authenticator_, that's [in, or attached to, the user's device](#platform_and_roaming_authenticators). An authenticator might be built into the platform, or a separate hardware key like a [YubiKey](https://en.wikipedia.org/wiki/YubiKey), or a credential manager app like [KeePassXC](https://keepassxc.org/).
 
 The public key is stored in the website's server. When the user signs in, the authenticator uses the private key to {{glossary("digital signature", "digitally sign")}} a statement about the user's identity, which is called an _assertion_. The website's server can use the public key to verify the assertion's signature, and sign the user in.
 
