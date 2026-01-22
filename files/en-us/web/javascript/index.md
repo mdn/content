@@ -45,5 +45,3 @@ JavaScript is not "interpreted Java". Java and JavaScript are trademarks of Orac
 ## Standard Objects
 
 Built-in JavaScript objects include: `Array`, `Boolean`, `Error`, `Function`, `JSON`, `Math`, `Number`, `Object`, `RegExp`, `String`, `Map`, `Set`, `WeakMap`, `WeakSet`, and others.
-
-
