@@ -76,7 +76,7 @@ new SharedWorker(url, options)
 
 The **`SharedWorker()`** constructor creates a {{domxref("SharedWorker")}} object that executes the classic script or module at the specified URL.
 
-The script must be [same-origin](/en-US/docs/Web/Security/Same-origin_policy) with the associated document, but may itself import scripts or modules that are cross-origin (if permitted by CORS and other restrictions).
+The script must be [same-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) with the associated document, but may itself import scripts or modules that are cross-origin (if permitted by CORS and other restrictions).
 If a cross-origin worker is required, users must load it from an intermediate same-origin worker or a blob.
 
 For more information see [Description](/en-US/docs/Web/API/Worker/Worker#description) in the `Worker()` constructor.
