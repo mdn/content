@@ -57,16 +57,18 @@ A pseudo-element can be selected based on the current state of the originating e
 
 Selects document sections based on content and document status, enabling those areas to be styled differently to indicate that status to the user.
 
-- {{CSSxRef("::selection")}}
-  - : The portion of a document that has been selected.
-- {{CSSxRef("::target-text")}}
-  - : The document's target element. The target element is identified using the URL's fragment identifier.
-- {{CSSxRef("::spelling-error")}}
-  - : A portion of text that the browser thinks is misspelled.
 - {{CSSxRef("::grammar-error")}}
   - : A portion of text that the browser thinks is grammatically incorrect.
 - {{CSSxRef("::highlight()")}}
   - : The elements in the [highlight registry](/en-US/docs/Web/API/CSS/highlights_static). It is used to create custom highlights.
+- {{CSSxRef("::search-text")}}
+  - : Search results identified by the user agent's "Find" or "Find in page" text search feature.
+- {{CSSxRef("::selection")}}
+  - : The portion of a document that has been selected.
+- {{CSSxRef("::spelling-error")}}
+  - : A portion of text that the browser thinks is misspelled.
+- {{CSSxRef("::target-text")}}
+  - : The document's target element. The target element is identified using the URL's fragment identifier.
 
 ## Tree-Abiding pseudo-elements
 

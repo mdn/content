@@ -29,6 +29,7 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
 - {{CSSXref("::highlight()")}}
 - {{CSSXref("::marker")}}
 - {{CSSXref("::placeholder")}}
+- {{CSSXref("::search-text")}}
 - {{CSSXref("::selection")}}
 - {{CSSXref("::spelling-error")}}
 - {{CSSXref("::target-text")}}

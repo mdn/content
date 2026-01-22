@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:current
 page-type: css-pseudo-class
 status:
   - experimental
-spec-urls: https://drafts.csswg.org/selectors/#the-current-pseudo
+browser-compat: css.selectors.current
 sidebar: cssref
 ---
 
@@ -12,11 +12,7 @@ sidebar: cssref
 
 The **`:current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selector is a time-dimensional pseudo-class that represents an element or the ancestor of an element that is currently being displayed. For example, this pseudo-class can be used to represent a video that is being displayed with captions by [WebVTT](/en-US/docs/Web/API/WebVTT_API).
 
-```css
-:current(p, span) {
-  background-color: yellow;
-}
-```
+Note however that `:current` is also used in some cases to represent the currently-focused element in a list of selected elements. For example, `:current` can be combined with the `::search-text` [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) to provide specific styles to the currently-focused search result.
 
 ## Syntax
 
@@ -32,7 +28,9 @@ The **`:current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 
 ## Examples
 
-### CSS
+### Styling currently-shown WebVTT subtitles
+
+#### CSS
 
 ```css
 :current(p, span) {
@@ -40,7 +38,7 @@ The **`:current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 }
 ```
 
-### HTML
+#### HTML
 
 ```html
 <video controls preload="metadata">
@@ -55,7 +53,7 @@ The **`:current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 </video>
 ```
 
-### WebVTT
+#### WebVTT
 
 ```plain
 WEBVTT FILE
@@ -73,13 +71,30 @@ This is the second caption
 This is the third caption
 ```
 
+### Styling the currently-focused browser text search result
+
+See the [`::search-text` examples](/en-US/docs/Web/CSS/Reference/Selectors/::search-text#examples) for a full example.
+
+#### CSS
+
+```css
+p::search-text {
+  color: white;
+  background-color: purple;
+}
+
+p::search-text:current {
+  background-color: crimson;
+}
+```
+
 ## Specifications
 
 {{Specifications}}
 
 ## Browser compatibility
 
-Currently, no browsers support this feature.
+{{Compat}}
 
 ## See also
 
