@@ -54,6 +54,9 @@ Example `manifest.json` file:
   "browser_specific_settings": {
     "gecko": {
       "id": "native-messaging@mozilla.org",
+      "data_collection_permissions": {
+        "required": ["none"]
+      },
       "strict_min_version": "50.0"
     }
   },
