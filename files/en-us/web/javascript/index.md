@@ -1,53 +1,43 @@
 ---
-title: JavaScript
-slug: Web/JavaScript
-page-type: landing-page
-sidebar: jssidebar
----
----
 title: "JavaScript"
 slug: "/en-US/docs/Web/JavaScript"
 tags:
   - JS
+page-type: landing-page
+sidebar: jssidebar
 ---
-
 # JavaScript
 
-JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB, and Adobe Acrobat. JavaScript is a dynamic, prototype-based language with garbage collection and supports multiple programming paradigms, including imperative, functional, and object-oriented.
+JavaScript (JS) is a lightweight, interpreted (or just-in-time compiled) programming language with first-class functions. While it is best known as a scripting language for Web pages, it is also used in many non-browser environments such as Node.js, Apache CouchDB, and Adobe Acrobat. JavaScript is a dynamic, prototype-based language with garbage collection, supporting multiple programming paradigms, including imperative, functional, and object-oriented programming.
 
-## Dynamic features
+## Dynamic Features
 
-JavaScript supports dynamic features like creating objects at runtime, variable-length parameter lists, function variables, dynamic code evaluation (`eval`), object introspection (e.g., `for...in` loops), and retrieving the source code of functions (`Object.toString()`).
+JavaScript provides dynamic capabilities including creating objects at runtime, variadic functions, dynamic script generation (via `eval`), object introspection (using `for...in` and `Object.toString()`), and source code recovery (functions store their source text and can be retrieved with `Function.prototype.toString()`).
 
-This section focuses on the JavaScript language itself, not web-specific APIs or runtime environments. For Web APIs, see the sections on [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) and [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).
+## Standards
 
-JavaScript standards are defined by the ECMAScript language specification (ECMA-262) and the ECMAScript Internationalization API specification (ECMA-402). We document features as browsers implement them, which means sometimes documentation may reference features before official standard publication.
+The JavaScript language is standardized through the ECMAScript specification (ECMA-262) and the Internationalization API specification (ECMA-402). As soon as a browser implements a feature, MDN attempts to document it. This means that for some new ECMAScript proposals, the documentation and examples may use features that are implemented in browsers before official specification publication.
 
-**Note:** JavaScript is not Java. Both "Java" and "JavaScript" are trademarks of Oracle in the United States and other countries.
+## JavaScript vs Java
 
-## Learning Resources
+JavaScript is not "interpreted Java". Java and JavaScript are trademarks of Oracle in the U.S. and other countries, but they are distinct languages with different syntax, semantics, and use cases.
 
-- [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-- [JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
-- [Your first web site: adding interactivity](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Asynchronous JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous)
-- [Frameworks and libraries](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+## Guides and Resources
 
-## Standard objects
+- **JavaScript Guide** – A general guide for JavaScript language features.
+- **Reference** – Detailed reference for JavaScript syntax, objects, functions, classes, and more.
+- **JavaScript Tutorials** – Learn modern JavaScript for web development.
+- **Your First Website** – Introduces JavaScript interactivity for beginners.
+- **Asynchronous JavaScript** – Covers promises, async/await, and event-driven programming.
+- **Client-side Web APIs** – How to work with common browser APIs.
+- **Data Structures** – Overview of built-in JavaScript data structures.
+- **Expressions and Operators** – Behavior of operators like `instanceof`, `typeof`, `new`, etc.
+- **Statements** – Details on statements like `if`, `for`, `try/catch`, `let`, `const`, etc.
+- **Functions and Classes** – Working with functions and object-oriented patterns.
 
-JavaScript has built-in standard objects like `Array`, `Boolean`, `Error`, `Function`, `JSON`, `Math`, `Number`, `Object`, `RegExp`, `String`, `Map`, `Set`, `WeakMap`, `WeakSet`, etc.
+## Standard Objects
 
-## Expressions and operators
+- Array, Boolean, Error, Function, JSON, Math, Number, Object, RegExp, String, Map, Set, WeakMap, WeakSet, and others.
 
-Learn about JavaScript operators and their behaviors:
-
-```javascript
-const obj = { a: 1, b: 2, c: 3 };
-
-for (const key in obj) {
-  console.log(key, obj[key]);
-}
-
-Object.toString();
 
 
