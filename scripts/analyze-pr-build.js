@@ -379,12 +379,16 @@ function postAboutFlaws(docs, config) {
       ? `Note! *${docsWithZeroFlaws} document${docsWithZeroFlaws === 1 ? "" : "s"} with no flaws that don't need to be listed. 🎉*\n\n`
       : "";
 
+    const reportIssueNote =
+      "*Found an unexpected or unresolvable flaw? [Please report it here](https://github.com/mdn/rari/issues/new?template=bug.yml).*\n\n";
+
     return (
       "\n" +
       formatSection({
         title: "Flaws",
         count: totalFlaws,
-        body: zeroFlawsNote + perDocComments.join("\n\n---\n\n"),
+        body:
+          zeroFlawsNote + reportIssueNote + perDocComments.join("\n\n---\n\n"),
         expanded: docs.length <= 5 || totalFlaws <= 5,
       })
     );
