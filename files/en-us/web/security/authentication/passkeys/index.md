@@ -11,7 +11,7 @@ Instead of a shared secret, passkeys rely on public-key cryptography. A passkey 
 
 The private key is stored in a module called an _authenticator_, that's [in, or attached to, the user's device](#platform_and_roaming_authenticators). An authenticator might be built into the platform, or a separate hardware key like a [YubiKey](https://en.wikipedia.org/wiki/YubiKey), or a credential manager app like [KeePassXC](https://keepassxc.org/).
 
-The public key is stored in the website's server. When the user signs in, the authenticator uses the private key to {{glossary("digital signature", "digitally sign")}} a statement about the user's identity, which is called an _assertion_. The website's server can use the public key to verify the assertion's signature, and sign the user in.
+The public key is stored on the website's server. When the user signs in, the authenticator uses the private key to {{glossary("digital signature", "digitally sign")}} a [_challenge_](#challenges) value from the server, together with contextual information such as the requesting {{glossary("origin")}}. The resulting object is called an _assertion_. The website's server can use the public key to verify the assertion's signature, and sign the user in.
 
 In this guide we'll:
 
