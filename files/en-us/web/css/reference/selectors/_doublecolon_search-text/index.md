@@ -75,9 +75,9 @@ Only certain CSS properties can be used with `::search-text`:
 
 ## Accessibility
 
-**Override search text styles sparingly**, especially when doing so for purely aesthetic reasons. For people experiencing cognitive concerns or who are less technologically literate, unexpected changes to selection styles may hurt their understanding of the functionality.
+**Override text search result styles sparingly**, especially when doing so for purely aesthetic reasons. For people experiencing cognitive concerns or who are less technologically literate, unexpected changes to these styles may hurt their understanding of the functionality.
 
-If overridden, it is important to ensure that the **contrast ratio** between the text and background colors of the search text is high enough that people can read it.
+A primary use case of `::search-text` is to increase color contrast compared the default browser styling. When customizing text search result foreground and background colors, it is important to ensure that the **contrast ratio** between them is high enough that people can read it.
 
 Color contrast ratio is found by comparing the luminosity of the selected text and the selected text background colors. To meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), text content must have a contrast ratio of **4.5:1**, or 3:1 for larger text such as headings. (WCAG defines large text as between `18.66px` and `24px` and [bold](/en-US/docs/Web/CSS/Reference/Properties/font-weight), or `24px` or larger.)
 
