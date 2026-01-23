@@ -18,13 +18,13 @@ For general information and more examples, see {{jsxref("Temporal/PlainDate/era"
 ### Using era
 
 ```js
-const dt = Temporal.ZonedDateTime.from("2021-07-01[America/New_York]"); // ISO 8601 calendar
-console.log(dt.era); // undefined
+const zdt = Temporal.ZonedDateTime.from("2021-07-01[America/New_York]"); // ISO 8601 calendar
+console.log(zdt.era); // undefined
 
-const dt2 = Temporal.ZonedDateTime.from(
+const zdt2 = Temporal.ZonedDateTime.from(
   "2021-07-01[America/New_York][u-ca=gregory]",
-);
-console.log(dt2.era); // gregory
+)
+console.log(zdt2.era); // ce
 ```
 
 ## Specifications

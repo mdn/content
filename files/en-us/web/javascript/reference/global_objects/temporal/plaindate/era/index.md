@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.Temporal.PlainDate.era
 sidebar: jsref
 ---
 
-The **`era`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a calendar-specific lowercase string representing the era of this date, or `undefined` if the calendar does not use eras (e.g., ISO 8601). `era` and `eraYear` together uniquely identify a year in a calendar, in the same way that `year` does. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent. For Gregorian, it is either `"gregory"` or `"gregory-inverse"`.
+The **`era`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a calendar-specific lowercase string representing the era of this date, or `undefined` if the calendar does not use eras (e.g., ISO 8601). `era` and `eraYear` together uniquely identify a year in a calendar, in the same way that `year` does. It is [calendar](//en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendarsen-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent. For Gregorian, it is either `"ce"` or `"bce"`.
 
-The set accessor of `era` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainDate/with", "with()")}} method to create a new `Temporal.PlainDate` object with the desired new value. When setting eras, each code may have some aliases; for example, `"ce"` and `"ad"` are equivalent to `"gregory"`, and `"bce"` and `"bc"` are equivalent to `"gregory-inverse"`.
+The set accessor of `era` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainDate/with", "with()")}} method to create a new `Temporal.PlainDate` object with the desired new value. When setting eras, each code may have some aliases; for example, `"ad"` is equivalent to `"ce"`, and `"bc"` is equivalent to `"bce"`.
 
 > [!NOTE]
 > This string is not intended for display to users. Use {{jsxref("Temporal/PlainDate/toLocaleString", "toLocaleString()")}} with the appropriate options to get a localized string.
@@ -23,10 +23,10 @@ const date = Temporal.PlainDate.from("2021-07-01"); // ISO 8601 calendar
 console.log(date.era); // undefined
 
 const date2 = Temporal.PlainDate.from("2021-07-01[u-ca=gregory]");
-console.log(date2.era); // gregory
+console.log(date2.era); // ce 
 
 const date3 = Temporal.PlainDate.from("-002021-07-01[u-ca=gregory]");
-console.log(date3.era); // gregory-inverse
+console.log(date3.era); // bce
 
 const date4 = Temporal.PlainDate.from("2021-07-01[u-ca=japanese]");
 console.log(date4.era); // reiwa
