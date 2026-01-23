@@ -26,8 +26,6 @@ The **`AbstractRange`** abstract interface is the base class upon which all {{Gl
   - : The DOM {{domxref("Node")}} in which the beginning of the range, as specified by the `startOffset` property, is located.
 - {{domxref("AbstractRange.startOffset", "startOffset")}} {{ReadOnlyInline}}
   - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the first character of the contents referred to by the range object. This value must be less than the length of the node indicated in `startContainer`.
-- {{domxref("AbstractRange.commonAncestorContainer", "commonAncestorContainer")}} {{ReadOnlyInline}}
-  - : Returns the deepest {{domxref("Node")}} that contains the `startContainer` and `endContainer` nodes.
 
 ## Instance methods
 

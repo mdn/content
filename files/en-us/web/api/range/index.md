@@ -19,6 +19,9 @@ There also is the {{domxref("Range.Range()", "Range()")}} constructor available.
 
 _The properties below are inherited from its parent interface, {{domxref("AbstractRange")}}._
 
+- {{domxref("Range.commonAncestorContainer")}} {{ReadOnlyInline}}
+  - : Returns the deepest {{ domxref("Node") }} that contains the `startContainer` and `endContainer` nodes.
+
 ## Constructor
 
 - {{ domxref("Range.Range()", "Range()") }}
