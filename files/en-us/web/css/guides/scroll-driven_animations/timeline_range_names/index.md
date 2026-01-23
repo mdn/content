@@ -241,100 +241,61 @@ The animation attachment range in the previous examples all "cover" the entire r
 
 The `cover` value represents the full range of the view progress timeline, with `0%` progress representing when the start border edge of the animated element's principal box aligns with the end edge of its view progress visibility range and `100%` representing the point when end border edge of the animated element's principal box aligns with the start edge of its view progress visibility range. This is what we've seen in all the examples thus far, where the height of the animation attachment range was the container plus the animated element.
 
-```html hidden
-<svg viewBox="-1 -1 462 1252" xmlns="http://www.w3.org/2000/svg">
-  <rect class="small end" width="100" height="50" x="10" y="450" />
-  <rect class="medium end" width="100" height="250" x="125" y="250" />
-  <rect class="large end" width="100" height="500" x="240" y="0" />
-  <rect class="container" width="350" height="250" x="0" y="500" />
-  <rect class="small start" width="100" height="50" x="10" y="750" />
-  <rect class="medium start" width="100" height="250" x="125" y="750" />
-  <rect class="large start" width="100" height="500" x="240" y="750" />
-  <text y="625" x="5">cover</text>
-  <text y="520" x="360">100%</text>
-  <line x1="0" x2="350" y1="500" y2="500" />
-  <line x1="0" x2="350" y1="750" y2="750" />
-  <text y="760" x="360">0%</text>
-</svg>
-<svg viewBox="-1 -1 462 1252" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient
-      id="repeat"
-      x1="0"
-      y1="0"
-      x2="20"
-      y2="20"
-      spreadMethod="repeat"
-      gradientUnits="userSpaceOnUse">
-      <stop offset="50%" stop-color="red" />
-      <stop offset="50%" stop-color="yellow" />
-    </linearGradient>
-  </defs>
-  <rect class="small end" width="100" height="50" x="10" y="540" />
-  <rect class="medium end" width="100" height="250" x="120" y="400" />
-  <rect class="large end" width="100" height="500" x="230" y="225" />
-  <rect class="container" width="350" height="250" x="0" y="500" />
-  <rect class="small start" width="100" height="50" x="10" y="660" />
-  <rect class="medium start" width="100" height="250" x="120" y="600" />
-  <rect class="large start" width="100" height="500" x="230" y="525" />
-  <rect
-    class="medium orange"
-    width="96"
-    height="48"
-    x="122"
-    y="602"
-    fill="url(#repeat)" />
-  <rect
-    class="large orange"
-    width="96"
-    height="198"
-    x="232"
-    y="527"
-    fill="url(#repeat)" />
-  <text y="625" x="5">cover</text>
-  <text y="590" x="360">70%</text>
-  <line x1="0" x2="350" y1="575" y2="575" />
-  <line x1="0" x2="350" y1="675" y2="675" />
-  <text y="690" x="360">30%</text>
-</svg>
+```html hidden live-sample___svg_cover
+<div>
+  <svg viewBox="-1 -1 462 1252" xmlns="http://www.w3.org/2000/svg">
+    <rect class="small end" width="100" height="50" x="10" y="450" />
+    <rect class="medium end" width="100" height="250" x="125" y="250" />
+    <rect class="large end" width="100" height="500" x="240" y="0" />
+    <rect class="container" width="350" height="250" x="0" y="500" />
+    <rect class="small start" width="100" height="50" x="10" y="750" />
+    <rect class="medium start" width="100" height="250" x="125" y="750" />
+    <rect class="large start" width="100" height="500" x="240" y="750" />
+    <text y="625" x="5">cover</text>
+    <text y="520" x="360">100%</text>
+    <line x1="0" x2="350" y1="500" y2="500" />
+    <line x1="0" x2="350" y1="750" y2="750" />
+    <text y="760" x="360">0%</text>
+  </svg>
+  <svg viewBox="-1 -1 462 1252" xmlns="http://www.w3.org/2000/svg">
+    <rect class="small end" width="100" height="50" x="10" y="540" />
+    <rect class="medium end" width="100" height="250" x="120" y="400" />
+    <rect class="large end" width="100" height="500" x="230" y="225" />
+    <rect class="container" width="350" height="250" x="0" y="500" />
+    <rect class="small start" width="100" height="50" x="10" y="660" />
+    <rect class="medium start" width="100" height="250" x="120" y="600" />
+    <rect class="large start" width="100" height="500" x="230" y="525" />
+    <rect
+      class="medium orange"
+      width="96"
+      height="48"
+      x="122"
+      y="602"
+      fill="url(#repeat)" />
+    <rect
+      class="large orange"
+      width="96"
+      height="198"
+      x="232"
+      y="527"
+      fill="url(#repeat)" />
+    <text y="625" x="5">cover</text>
+    <text y="590" x="360">70%</text>
+    <line x1="0" x2="350" y1="575" y2="575" />
+    <line x1="0" x2="350" y1="675" y2="675" />
+    <text y="690" x="360">30%</text>
+  </svg>
+</div>
 ```
 
-```css hidden
-body {
-  display: flex;
-  gap: 50px;
-}
-svg {
-  width: 240px;
-}
-
-.start,
-.end,
-.container {
-  stroke: black;
-  stroke-width: 3;
-}
-.start {
-  fill: yellow;
-}
-.end {
-  fill: red;
-}
-.container {
-  fill: none;
-}
-text {
-  font: 40px monospace;
-  fill: black;
-}
-line {
-  stroke: black;
-  stroke-width: 6;
-  stroke-dasharray: 10;
+```css hidden live-sample___svg_cover
+body div,
+body svg {
+  margin: -60px 0 -300px;
 }
 ```
 
-{{EmbedLiveSample("cover", "100%", "680")}}
+{{EmbedLiveSample("svg_cover", "100%", "680")}}
 
 The image demonstrates the animation timeline. Before the element reaches the start of the animation range, either the `0%` view progress or the `30%` view progress mark depending on the `animation-range-start`, the element is shown in yellow. This represents the position of the element when the `from` keyframe is applied. The red represents the location of the animated element relative to the scrollport when the `to` keyframe is applied. This is the position of the animated element when it reaches the end of the animation. The animation occurs when the element is between these areas, represented by the striped areas.
 
@@ -388,113 +349,75 @@ body::before {
 
 Again we use the `animation-range-start` and `animation-range-end` properties to inset the animation timeline, defining a subsection of the element's full animation attachment range as the active interval. If the element is smaller than the scrollport in the scroll direction, the `30%` occurs when the point that is 30% from the animated element's end border edge (which is 70% from its start edge) is 30% of the way from the end edge of the scrollport. The `70%` range end occurs when 30% of the element, which is 70% from the end edge, is 70% of the way through that viewport. The positions are different when the animated element is larger than the scrollport. In that case, the `30%` animation start is reached when the point that is 30% from the animated element's start end is 30% of the way from the scrollport's start end. The 70% animation end is when the 70% of the animated element has progressed to 70% of the way from the start edge. When the element is the same size as the scrollport in the scroll direction, the start and end of the range occur at the same point, so the animation occurs, but over `0px`, so is not visible.
 
-```html hidden
-<svg viewBox="-1 -1 462 1252" xmlns="http://www.w3.org/2000/svg">
-  <rect class="small end" width="100" height="50" x="10" y="500" />
-  <rect class="medium end" width="100" height="250" x="120" y="500" />
-  <rect class="large end" width="100" height="500" x="230" y="500" />
-  <rect class="container" width="350" height="250" x="0" y="500" />
-  <rect class="small start" width="100" height="50" x="10" y="700" />
-  <rect class="medium start" width="100" height="250" x="120" y="500" />
-  <rect class="large start" width="100" height="500" x="230" y="250" />
-  <rect
-    class="medium orange"
-    width="100"
-    height="250"
-    x="120"
-    y="500"
-    fill="url(#repeat)" />
-  <rect
-    class="large orange"
-    width="100"
-    height="250"
-    x="230"
-    y="500"
-    fill="url(#repeat)" />
-  <text y="460" x="10">contain</text>
-  <text y="520" x="360">100%</text>
-  <line x1="0" x2="350" y1="500" y2="500" />
-  <line x1="0" x2="350" y1="750" y2="750" />
-  <text y="760" x="360">0%</text>
-</svg>
-<svg viewBox="-1 -1 462 1252" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient
-      id="repeat"
-      x1="0"
-      y1="0"
-      x2="20"
-      y2="20"
-      spreadMethod="repeat"
-      gradientUnits="userSpaceOnUse">
-      <stop offset="50%" stop-color="red" />
-      <stop offset="50%" stop-color="yellow" />
-    </linearGradient>
-  </defs>
-  <rect class="small end" width="100" height="50" x="10" y="560" />
-  <rect class="medium end" width="100" height="250" x="120" y="500" />
-  <rect class="large end" width="100" height="500" x="230" y="325" />
-  <rect class="container" width="350" height="250" x="0" y="500" />
-  <rect class="small start" width="100" height="50" x="10" y="640" />
-  <rect class="medium start" width="100" height="250" x="120" y="500" />
-  <rect class="large start" width="100" height="500" x="230" y="425" />
-  <rect
-    class="medium orange"
-    width="100"
-    height="250"
-    x="120"
-    y="500"
-    fill="url(#repeat)" />
-  <rect
-    class="large orange"
-    width="100"
-    height="400"
-    x="230"
-    y="425"
-    fill="url(#repeat)" />
-  <text y="460" x="10">contain</text>
-  <text y="590" x="360">70%</text>
-  <line x1="0" x2="350" y1="575" y2="575" />
-  <line x1="0" x2="350" y1="675" y2="675" />
-  <text y="690" x="360">30%</text>
-</svg>
+```html hidden live-sample___svg_contain
+<div>
+  <svg viewBox="-1 -1 462 1252" xmlns="http://www.w3.org/2000/svg">
+    <rect class="small end" width="100" height="50" x="10" y="500" />
+    <rect class="medium end" width="100" height="250" x="120" y="500" />
+    <rect class="large end" width="100" height="500" x="230" y="500" />
+    <rect class="container" width="350" height="250" x="0" y="500" />
+    <rect class="small start" width="100" height="50" x="10" y="700" />
+    <rect class="medium start" width="100" height="250" x="120" y="500" />
+    <rect class="large start" width="100" height="500" x="230" y="250" />
+    <rect
+      class="medium orange"
+      width="100"
+      height="250"
+      x="120"
+      y="500"
+      fill="url(#repeat)" />
+    <rect
+      class="large orange"
+      width="100"
+      height="250"
+      x="230"
+      y="500"
+      fill="url(#repeat)" />
+    <text y="460" x="10">contain</text>
+    <text y="520" x="360">100%</text>
+    <line x1="0" x2="350" y1="500" y2="500" />
+    <line x1="0" x2="350" y1="750" y2="750" />
+    <text y="760" x="360">0%</text>
+  </svg>
+  <svg viewBox="-1 -1 462 1252" xmlns="http://www.w3.org/2000/svg">
+    <rect class="small end" width="100" height="50" x="10" y="560" />
+    <rect class="medium end" width="100" height="250" x="120" y="500" />
+    <rect class="large end" width="100" height="500" x="230" y="325" />
+    <rect class="container" width="350" height="250" x="0" y="500" />
+    <rect class="small start" width="100" height="50" x="10" y="640" />
+    <rect class="medium start" width="100" height="250" x="120" y="500" />
+    <rect class="large start" width="100" height="500" x="230" y="425" />
+    <rect
+      class="medium orange"
+      width="100"
+      height="250"
+      x="120"
+      y="500"
+      fill="url(#repeat)" />
+    <rect
+      class="large orange"
+      width="100"
+      height="400"
+      x="230"
+      y="425"
+      fill="url(#repeat)" />
+    <text y="460" x="10">contain</text>
+    <text y="590" x="360">70%</text>
+    <line x1="0" x2="350" y1="575" y2="575" />
+    <line x1="0" x2="350" y1="675" y2="675" />
+    <text y="690" x="360">30%</text>
+  </svg>
+</div>
 ```
 
-```css hidden
-body {
-  display: flex;
-  gap: 50px;
-  overflow-y: hidden;
-}
-svg {
-  width: 240px;
-  margin: -128px 0;
-}
-rect {
-  stroke: black;
-  stroke-width: 3;
-}
-.start {
-  fill: yellow;
-}
-.end {
-  fill: red;
-}
-.container {
-  fill: none;
-}
-text {
-  font: 40px monospace;
-  fill: black;
-}
-line {
-  stroke: black;
-  stroke-width: 6;
-  stroke-dasharray: 10;
+```css hidden live-sample___svg_contain
+body div,
+body svg {
+  margin: -60px 0 -300px;
 }
 ```
 
-{{EmbedLiveSample("contain", "100%", "400")}}
+{{EmbedLiveSample("svg_contain", "100%", "500")}}
 
 The animation occurs when the element is between these areas, represented by the white of the container in the `50px` example and by the overlapping orange areas in the `250px` (which is the height of the container) and the `500px` examples.
 
@@ -580,105 +503,68 @@ With `exit`, the attachment range starts when the animated element's start edge 
 
 With `exit`, the entire animation occurs as the subject exits the viewport, only completing when it is completely out of the viewport. As with `entry`, with `exit`, the animation attachment range is the size of the animated element, but abutting the start edge of the scrollport rather than the end edge, with the maximum size being the size of the container in the scroll direction.
 
-```html hidden
-<svg viewBox="-60 -1 530 1252" xmlns="http://www.w3.org/2000/svg">
-  <rect class="small end" width="100" height="50" x="10" y="700" />
-  <rect class="medium end" width="100" height="250" x="120" y="500" />
-  <rect class="large end" width="100" height="500" x="230" y="500" />
-  <rect class="container" width="350" height="250" x="0" y="500" />
-  <rect class="small start" width="100" height="50" x="10" y="750" />
-  <rect class="medium start" width="100" height="250" x="120" y="750" />
-  <rect class="large start" width="100" height="500" x="230" y="750" />
+```html hidden live-sample___svg_entry_exit
+<div>
+  <svg viewBox="-60 -1 530 1252" xmlns="http://www.w3.org/2000/svg">
+    <rect class="small end" width="100" height="50" x="10" y="700" />
+    <rect class="medium end" width="100" height="250" x="120" y="500" />
+    <rect class="large end" width="100" height="500" x="230" y="500" />
+    <rect class="container" width="350" height="250" x="0" y="500" />
+    <rect class="small start" width="100" height="50" x="10" y="750" />
+    <rect class="medium start" width="100" height="250" x="120" y="750" />
+    <rect class="large start" width="100" height="500" x="230" y="750" />
 
-  <rect
-    class="large orange"
-    width="100"
-    height="250"
-    x="230"
-    y="750"
-    fill="url(#repeat)" />
-  <text y="460" x="10">entry</text>
-  <text y="520" x="360">100%</text>
-  <text y="690" x="-50">100%</text>
-  <line x1="130" x2="350" y1="500" y2="500" />
-  <line x1="-10" x2="120" y1="700" y2="700" />
-  <line x1="0" x2="350" y1="750" y2="750" />
-  <text y="760" x="360">0%</text>
-</svg>
-<svg viewBox="-60 -1 530 1252" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient
-      id="repeat"
-      x1="0"
-      y1="0"
-      x2="20"
-      y2="20"
-      spreadMethod="repeat"
-      gradientUnits="userSpaceOnUse">
-      <stop offset="50%" stop-color="red" />
-      <stop offset="50%" stop-color="yellow" />
-    </linearGradient>
-  </defs>
-  <rect class="small end" width="100" height="50" x="10" y="450" />
-  <rect class="medium end" width="100" height="250" x="120" y="250" />
-  <rect class="large end" width="100" height="500" x="230" y="0" />
-  <rect class="container" width="350" height="250" x="0" y="500" />
-  <rect class="small start" width="100" height="50" x="10" y="501" />
-  <rect class="medium start" width="100" height="250" x="120" y="500" />
-  <rect class="large start" width="100" height="500" x="230" y="250" />
+    <rect
+      class="large orange"
+      width="100"
+      height="250"
+      x="230"
+      y="750"
+      fill="url(#repeat)" />
+    <text y="460" x="10">entry</text>
+    <text y="520" x="360">100%</text>
+    <text y="690" x="-50">100%</text>
+    <line x1="130" x2="350" y1="500" y2="500" />
+    <line x1="-10" x2="120" y1="700" y2="700" />
+    <line x1="0" x2="350" y1="750" y2="750" />
+    <text y="760" x="360">0%</text>
+  </svg>
+  <svg viewBox="-60 -1 530 1252" xmlns="http://www.w3.org/2000/svg">
+    <rect class="small end" width="100" height="50" x="10" y="450" />
+    <rect class="medium end" width="100" height="250" x="120" y="250" />
+    <rect class="large end" width="100" height="500" x="230" y="0" />
+    <rect class="container" width="350" height="250" x="0" y="500" />
+    <rect class="small start" width="100" height="50" x="10" y="501" />
+    <rect class="medium start" width="100" height="250" x="120" y="500" />
+    <rect class="large start" width="100" height="500" x="230" y="250" />
 
-  <rect
-    class="large orange"
-    width="100"
-    height="250"
-    x="230"
-    y="250"
-    fill="url(#repeat)" />
-  <text y="600" x="10">exit</text>
-  <text y="520" x="370">100%</text>
-  <line x1="-5" x2="365" y1="500" y2="500" />
-  <line x1="-10" x2="140" y1="550" y2="550" />
-  <line x1="110" x2="360" y1="750" y2="750" />
-  <text y="760" x="370">0%</text>
-  <text y="560" x="-60">0%</text>
-</svg>
+    <rect
+      class="large orange"
+      width="100"
+      height="250"
+      x="230"
+      y="250"
+      fill="url(#repeat)" />
+    <text y="600" x="10">exit</text>
+    <text y="520" x="370">100%</text>
+    <line x1="-5" x2="365" y1="500" y2="500" />
+    <line x1="-10" x2="140" y1="550" y2="550" />
+    <line x1="110" x2="360" y1="750" y2="750" />
+    <text y="760" x="370">0%</text>
+    <text y="560" x="-60">0%</text>
+  </svg>
+</div>
 ```
 
-```css hidden
-body {
-  display: flex;
-  gap: 20px;
-}
-svg {
-  width: 260px;
-}
-rect {
-  stroke: black;
-  stroke-width: 3;
-}
-.start {
-  fill: yellow;
-}
-.end {
-  fill: red;
-}
-.container {
-  fill: none;
-}
-text {
-  font: 40px monospace;
-  fill: black;
-}
-line {
-  stroke: black;
-  stroke-width: 8;
-  stroke-dasharray: 10;
+```css hidden live-sample___svg_entry_exit
+:root body div {
+  margin: 0 0 -140px 0;
 }
 ```
 
-{{EmbedLiveSample("entry and exit", "100%", "600")}}
+{{EmbedLiveSample("svg_entry_exit", "100%", "650")}}
 
-The position at `0%` progress is shown in yellow. The position at `100%` progress is displayed in red. In the case where the animated element is larger than the viewport, these two positions overlap, which is denoted by a striped background.
+The position at `0%` progress is shown in yellow. The position at `100%` progress is displayed in red. In the case, where the animated element is larger than the viewport, these two positions overlap, which is denoted by a striped background.
 
 ```css live-sample___entry_exit
 #A {
@@ -827,22 +713,9 @@ fieldset.double {
 
 Note how the effects are similar, except for when the `500px` is selected and the animated element is taller than the container. With `entry`, when the animated element is larger than the viewport, the `100%` progress occurs when the element first fully spans the viewport.
 
-```html hidden
+```html hidden live-sample___svg_entry-crossing
 <div>
   <svg viewBox="-60 -1 530 1252" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient
-        id="repeat"
-        x1="0"
-        y1="0"
-        x2="20"
-        y2="20"
-        spreadMethod="repeat"
-        gradientUnits="userSpaceOnUse">
-        <stop offset="50%" stop-color="red" />
-        <stop offset="50%" stop-color="yellow" />
-      </linearGradient>
-    </defs>
     <rect class="small end" width="100" height="50" x="10" y="700" />
     <rect class="medium end" width="100" height="250" x="120" y="500" />
     <rect class="large end" width="100" height="500" x="230" y="500" />
@@ -850,9 +723,8 @@ Note how the effects are similar, except for when the `500px` is selected and th
     <rect class="small start" width="100" height="50" x="10" y="750" />
     <rect class="medium start" width="100" height="250" x="120" y="750" />
     <rect class="large start" width="100" height="500" x="230" y="750" />
-
     <rect
-      class="large orange"
+      class="orange"
       width="100"
       height="250"
       x="230"
@@ -866,6 +738,7 @@ Note how the effects are similar, except for when the `500px` is selected and th
     <line x1="0" x2="350" y1="750" y2="750" />
     <text y="760" x="360">0%</text>
   </svg>
+
   <svg viewBox="-60 -1 530 1252" xmlns="http://www.w3.org/2000/svg">
     <rect class="small end" width="100" height="50" x="10" y="700" />
     <rect class="medium end" width="100" height="250" x="120" y="500" />
@@ -874,13 +747,12 @@ Note how the effects are similar, except for when the `500px` is selected and th
     <rect class="small start" width="100" height="50" x="10" y="750" />
     <rect class="medium start" width="100" height="250" x="120" y="750" />
     <rect class="large start" width="100" height="500" x="230" y="750" />
-
     <text y="200" x="0">entry-crossing</text>
     <text y="260" x="330">100%</text>
     <text y="490" x="80">100%</text>
     <text y="690" x="-50">100%</text>
     <line x1="225" x2="345" y1="250" y2="250" />
-    <line x1="110" x2="230" y1="500" y2="500" />
+    <line x1n h0" x2="230" y1="500" y2="500" />
     <line x1="-10" x2="120" y1="700" y2="700" />
     <line x1="0" x2="350" y1="750" y2="750" />
     <text y="760" x="360">0%</text>
@@ -888,46 +760,13 @@ Note how the effects are similar, except for when the `500px` is selected and th
 </div>
 ```
 
-```css hidden
-body::before {
-  display: block;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 1.5rem;
-}
-div {
-  display: flex;
-  gap: 20px;
-  margin-top: -50px;
-}
-svg {
-  width: 260px;
-}
-rect {
-  stroke: black;
-  stroke-width: 3;
-}
-.start {
-  fill: yellow;
-}
-.end {
-  fill: red;
-}
-.container {
-  fill: none;
-}
-text {
-  font: 40px monospace;
-  fill: black;
-}
-line {
-  stroke: black;
-  stroke-width: 8;
-  stroke-dasharray: 10;
+```css hidden hidden live-sample___svg_entry-crossing
+:root body div {
+  margin: -70px 0 -100px;
 }
 ```
 
-{{EmbedLiveSample("entry", "100%", "600")}}
+{{EmbedLiveSample("svg_entry-crossing", "100%", "600")}}
 
 The `entry-crossing` produces the same results as `entry` when the element is equal to or smaller than the viewport, but when the element is larger than the viewport, the `100%` occurs later, occurring only when the end edge has entered the view port. The yellow represents the position of the element when it reaches `0%` progress. The red represents the position at `100%` progress. The striped area indicates an overlap in these positions.
 
@@ -962,6 +801,115 @@ fieldset.double {
 {{EmbedLiveSample("exit_crossing", "100%", "400")}}
 
 Like when we compared `entry` with `entry-crossing`, the effects are similar, except for when the `500px` is selected, which makes the animated element taller than the container. With `exit`, when the animated element is larger than the viewport, the `0%` progress only occurs when the element's end edge crosses the end edge of the viewport. The `exit-crossing` produces the same results as `exit` when the element is equal to or smaller than the viewport, but when the element is larger than the viewport, the `0%` occurs earlier, occurring as soon as the element's start edge reaches the viewport's start edge, rather than waiting until the element's end edge enters the viewport.
+
+```html hidden live-sample___svg_exit_crossing
+<div>
+  <svg viewBox="-60 -1 530 1052" xmlns="http://www.w3.org/2000/svg">
+    <rect class="small end" width="100" height="50" x="10" y="450" />
+    <rect class="medium end" width="100" height="250" x="120" y="250" />
+    <rect class="large end" width="100" height="500" x="230" y="0" />
+    <rect class="container" width="350" height="250" x="0" y="500" />
+    <rect class="small start" width="100" height="50" x="10" y="501" />
+    <rect class="medium start" width="100" height="250" x="120" y="500" />
+    <rect class="large start" width="100" height="500" x="230" y="250" />
+
+    <rect
+      class="large orange"
+      width="100"
+      height="250"
+      x="230"
+      y="250"
+      fill="url(#repeat)" />
+    <text y="800" x="-10">exit</text>
+    <text y="520" x="370">100%</text>
+    <line x1="-5" x2="365" y1="500" y2="500" />
+    <line x1="-10" x2="140" y1="550" y2="550" />
+    <line x1="110" x2="360" y1="750" y2="750" />
+    <text y="760" x="370">0%</text>
+    <text y="560" x="-60">0%</text>
+  </svg>
+  <svg viewBox="-60 -1 530 1052" xmlns="http://www.w3.org/2000/svg">
+    <rect class="small end" width="100" height="50" x="10" y="450" />
+    <rect class="medium end" width="100" height="250" x="120" y="250" />
+    <rect class="large end" width="100" height="500" x="230" y="0" />
+    <rect class="container" width="350" height="250" x="0" y="500" />
+    <rect cln h"small start" width="100" height="50" x="10" y="501" />
+    <rect class="medium start" width="100" height="250" x="120" y="500" />
+    <rect class="large start" width="100" height="500" x="230" y="500" />
+    <text y="800" x="-10">exit-crossing</text>
+    <text y="520" x="370">100%</text>
+    <line x1="-5" x2="365" y1="500" y2="500" />
+    <line x1="-10" x2="140" y1="550" y2="550" />
+    <line x1="110" x2="360" y1="750" y2="750" />
+    <text y="760" x="370">0%</text>
+    <text y="560" x="-60">0%</text>
+  </svg>
+</div>
+```
+
+```css hidden hidden live-sample___svg_exit_crossing
+:root body div {
+  margin-bottom: -300px;
+}
+```
+
+{{EmbedLiveSample("svg_exit_crossing", "100%", "540")}}
+
+```html hidden live-sample___svg_exit_crossing live-sample___svg_entry_exit live-sample___svg_contain live-sample___svg_cover live-sample___svg_entry-crossing
+<svg>
+  <defs>
+    <linearGradient
+      id="repeat"
+      x1="0"
+      y1="0"
+      x2="20"
+      y2="20"
+      spreadMethod="repeat"
+      gradientUnits="userSpaceOnUse">
+      <stop offset="50%" stop-color="red" />
+      <stop offset="50%" stop-color="yellow" />
+    </linearGradient>
+  </defs>
+</svg>
+```
+
+```css hidden live-sample___svg_exit_crossing live-sample___svg_entry_exit live-sample___svg_contain live-sample___svg_cover live-sample___svg_entry-crossing
+body::before {
+  display: block;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+div {
+  display: flex;
+  gap: 20px;
+}
+svg {
+  width: 260px;
+}
+rect {
+  stroke: black;
+  stroke-width: 3;
+}
+.start {
+  fill: yellow;
+}
+.end {
+  fill: red;
+}
+.container {
+  fill: none;
+}
+text {
+  font: 40px monospace;
+  fill: black;
+}
+line {
+  stroke: black;
+  stroke-width: 8;
+  stroke-dasharray: 10;
+}
+```
 
 ## See also
 
