@@ -265,20 +265,8 @@ The `cover` value represents the full range of the view progress timeline, with 
     <rect class="small start" width="100" height="50" x="10" y="660" />
     <rect class="medium start" width="100" height="250" x="120" y="600" />
     <rect class="large start" width="100" height="500" x="230" y="525" />
-    <rect
-      class="medium orange"
-      width="96"
-      height="48"
-      x="122"
-      y="602"
-      fill="url(#repeat)" />
-    <rect
-      class="large orange"
-      width="96"
-      height="198"
-      x="232"
-      y="527"
-      fill="url(#repeat)" />
+    <rect width="96" height="48" x="122" y="602" fill="url(#g)" />
+    <rect width="96" height="198" x="232" y="527" fill="url(#g)" />
     <text y="625" x="5">cover</text>
     <text y="590" x="360">70%</text>
     <line x1="0" x2="350" y1="575" y2="575" />
@@ -359,20 +347,8 @@ Again we use the `animation-range-start` and `animation-range-end` properties to
     <rect class="small start" width="100" height="50" x="10" y="700" />
     <rect class="medium start" width="100" height="250" x="120" y="500" />
     <rect class="large start" width="100" height="500" x="230" y="250" />
-    <rect
-      class="medium orange"
-      width="100"
-      height="250"
-      x="120"
-      y="500"
-      fill="url(#repeat)" />
-    <rect
-      class="large orange"
-      width="100"
-      height="250"
-      x="230"
-      y="500"
-      fill="url(#repeat)" />
+    <rect width="100" height="250" x="120" y="500" fill="url(#g)" />
+    <rect width="100" height="250" x="230" y="500" fill="url(#g)" />
     <text y="460" x="10">contain</text>
     <text y="520" x="360">100%</text>
     <line x1="0" x2="350" y1="500" y2="500" />
@@ -387,20 +363,8 @@ Again we use the `animation-range-start` and `animation-range-end` properties to
     <rect class="small start" width="100" height="50" x="10" y="640" />
     <rect class="medium start" width="100" height="250" x="120" y="500" />
     <rect class="large start" width="100" height="500" x="230" y="425" />
-    <rect
-      class="medium orange"
-      width="100"
-      height="250"
-      x="120"
-      y="500"
-      fill="url(#repeat)" />
-    <rect
-      class="large orange"
-      width="100"
-      height="400"
-      x="230"
-      y="425"
-      fill="url(#repeat)" />
+    <rect width="100" height="250" x="120" y="500" fill="url(#g)" />
+    <rect width="100" height="400" x="230" y="425" fill="url(#g)" />
     <text y="460" x="10">contain</text>
     <text y="590" x="360">70%</text>
     <line x1="0" x2="350" y1="575" y2="575" />
@@ -513,14 +477,7 @@ With `exit`, the entire animation occurs as the subject exits the viewport, only
     <rect class="small start" width="100" height="50" x="10" y="750" />
     <rect class="medium start" width="100" height="250" x="120" y="750" />
     <rect class="large start" width="100" height="500" x="230" y="750" />
-
-    <rect
-      class="large orange"
-      width="100"
-      height="250"
-      x="230"
-      y="750"
-      fill="url(#repeat)" />
+    <rect width="100" height="250" x="230" y="750" fill="url(#g)" />
     <text y="460" x="10">entry</text>
     <text y="520" x="360">100%</text>
     <text y="690" x="-50">100%</text>
@@ -537,14 +494,7 @@ With `exit`, the entire animation occurs as the subject exits the viewport, only
     <rect class="small start" width="100" height="50" x="10" y="501" />
     <rect class="medium start" width="100" height="250" x="120" y="500" />
     <rect class="large start" width="100" height="500" x="230" y="250" />
-
-    <rect
-      class="large orange"
-      width="100"
-      height="250"
-      x="230"
-      y="250"
-      fill="url(#repeat)" />
+    <rect width="100" height="250" x="230" y="250" fill="url(#g)" />
     <text y="600" x="10">exit</text>
     <text y="520" x="370">100%</text>
     <line x1="-5" x2="365" y1="500" y2="500" />
@@ -723,13 +673,7 @@ Note how the effects are similar, except for when the `500px` is selected and th
     <rect class="small start" width="100" height="50" x="10" y="750" />
     <rect class="medium start" width="100" height="250" x="120" y="750" />
     <rect class="large start" width="100" height="500" x="230" y="750" />
-    <rect
-      class="orange"
-      width="100"
-      height="250"
-      x="230"
-      y="750"
-      fill="url(#repeat)" />
+    <rect class="orange" width="100" height="250" x="230" y="750" fill="url(#g)" />
     <text y="460" x="10">entry</text>
     <text y="520" x="360">100%</text>
     <text y="690" x="-50">100%</text>
@@ -812,14 +756,7 @@ Like when we compared `entry` with `entry-crossing`, the effects are similar, ex
     <rect class="small start" width="100" height="50" x="10" y="501" />
     <rect class="medium start" width="100" height="250" x="120" y="500" />
     <rect class="large start" width="100" height="500" x="230" y="250" />
-
-    <rect
-      class="large orange"
-      width="100"
-      height="250"
-      x="230"
-      y="250"
-      fill="url(#repeat)" />
+    <rect width="100" height="250" x="230" y="250" fill="url(#g)" />
     <text y="800" x="-10">exit</text>
     <text y="520" x="370">100%</text>
     <line x1="-5" x2="365" y1="500" y2="500" />
@@ -859,7 +796,7 @@ Like when we compared `entry` with `entry-crossing`, the effects are similar, ex
 <svg>
   <defs>
     <linearGradient
-      id="repeat"
+      id="g"
       x1="0"
       y1="0"
       x2="20"
