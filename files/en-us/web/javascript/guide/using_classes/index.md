@@ -725,8 +725,7 @@ For example, one thing that makes `Date` objects infamous is that they're _mutab
 
 ```js
 function incrementDay(date) {
-  date.setDate(date.getDate() + 1);
-  return date;
+  return new Date(date.setDate(date.getDate() + 1));
 }
 const date = new Date(); // 2019-06-19
 const newDay = incrementDay(date);
