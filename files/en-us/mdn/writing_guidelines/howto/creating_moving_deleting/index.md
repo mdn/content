@@ -106,12 +106,13 @@ For example, let's say you want to move the entire
 
 Documents should only be removed from MDN Web Docs under special circumstances. If you are thinking about deleting pages, please discuss it with the MDN Web Docs team on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) first.
 
-Deleting one or more documents or an entire tree of documents is easy, just like moving pages, because we've created a special command that takes care of the
-details for you:
+Deleting one or more documents or an entire tree of documents is easy, just like moving pages, because we've created a special command that takes care of the details for you:
 
 ```bash
-npm run content -- delete <document-slug> [locale]
+npm run content delete <document-slug> [locale] -- --redirect <redirect-slug-or-url>
 ```
+
+When you redirect, the target page can be an external URL or another page on MDN Web Docs.
 
 > [!NOTE]
 > You need to use the `npm run content delete` command to delete pages from MDN Web Docs. Don't just delete their directories from the repo. The `npm run content delete` command also handles other necessary changes such as updating the `_wikihistory.json` file.
@@ -138,32 +139,26 @@ entire `/en-US/Web/HTTP/Guides/Authentication` tree, you'd perform the following
    git checkout -b my-delete
    ```
 
-2. Perform the delete.
+2. Perform the delete with a redirect.
 
    ```bash
-   npm run content -- delete Web/HTTP/Guides/Authentication --recursive
+   npm run content delete Web/HTTP/Guides/Authentication --recursive -- --redirect /en-US/path/of/target/page
    ```
 
-3. Add a redirect. The target page can be an external URL or another page on MDN Web Docs.
-
-   ```bash
-   npm run content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
-   ```
-
-4. Add and commit all the deleted files as well as push your branch to your fork.
+3. Add and commit all the deleted files as well as push your branch to your fork.
 
    ```bash
    git commit -a
    git push -u origin my-delete
    ```
 
-5. Create your pull request.
+4. Create your pull request.
 
 > [!NOTE]
 > If the slug of the page you wish to delete contains special characters, include it in quotes, like so:
 >
 > ```bash
-> npm run content -- delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
+> npm run content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)" -- --redirect <redirect-slug-or-url>
 > ```
 
 Removing content from MDN Web Docs will inevitably result in updating the existing content as well. As a lot of articles link to others, the removed content will likely be referenced elsewhere. Adding the redirect will mitigate the impact of removing content; however, it's best practice to edit content to reflect the change and include the content edits along with the removal pull request.
