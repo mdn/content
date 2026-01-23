@@ -99,7 +99,6 @@ If a single credential cannot be unambiguously obtained, the promise resolves wi
 
 - `AbortError` {{domxref("DOMException")}}
   - : The request was aborted by a call to the {{domxref("AbortController.abort", "abort()")}} method of the {{domxref("AbortController")}} associated with this method's [`signal`](#signal) option.
-  
     Note that if the caller of `abort()` provided a `reason` argument, then `get()` will be rejected with the value of `reason`, instead of an `AbortController` exception.
 
 - `TimeoutError` {{domxref("DOMException")}}
