@@ -1,41 +1,38 @@
 ---
-title: font-stretch
-slug: Web/CSS/Reference/At-rules/@font-face/font-stretch
+title: font-width
+slug: Web/CSS/Reference/At-rules/@font-face/font-width
 page-type: css-at-rule-descriptor
-browser-compat: css.at-rules.font-face.font-stretch
+browser-compat: css.at-rules.font-face.font-width
 sidebar: cssref
 ---
 
-> [!NOTE]
-> The `font-stretch` descriptor was renamed to {{cssxref("@font-face/font-width")}} in the [CSS Fonts specification](https://drafts.csswg.org/css-fonts/#font-stretch-desc). To preserve compatibility, the specification retains `font-stretch` as a legacy alias for the `font-width` descriptor.
+The **`font-width`** [CSS](/en-US/docs/Web/CSS) descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} at-rule.
 
-The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} at-rule.
-
-For a particular font family, authors can download various font faces which correspond to the different styles of the same font family, and then use the `font-stretch` descriptor to explicitly specify the font face's stretch.
+For a particular font family, authors can download various font faces which correspond to the different styles of the same font family, and then use the `font-width` descriptor to explicitly specify the font face's width. The values for the CSS descriptor is same as that of the corresponding {{cssxref("font-width")}} property.
 
 ## Syntax
 
 ```css
 /* Single values */
-font-stretch: ultra-condensed;
-font-stretch: extra-condensed;
-font-stretch: condensed;
-font-stretch: semi-condensed;
-font-stretch: normal;
-font-stretch: semi-expanded;
-font-stretch: expanded;
-font-stretch: extra-expanded;
-font-stretch: ultra-expanded;
-font-stretch: 50%;
-font-stretch: 100%;
-font-stretch: 200%;
+font-width: ultra-condensed;
+font-width: extra-condensed;
+font-width: condensed;
+font-width: semi-condensed;
+font-width: normal;
+font-width: semi-expanded;
+font-width: expanded;
+font-width: extra-expanded;
+font-width: ultra-expanded;
+font-width: 50%;
+font-width: 100%;
+font-width: 200%;
 
 /* multiple values */
-font-stretch: 75% 125%;
-font-stretch: condensed ultra-condensed;
+font-width: 75% 125%;
+font-width: condensed ultra-condensed;
 ```
 
-The `font-stretch` property is described using any one of the values listed below.
+The `font-width` descriptor is described using any one of the values listed below.
 
 ### Values
 
@@ -46,9 +43,9 @@ The `font-stretch` property is described using any one of the values listed belo
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
   - : Specifies a more expanded font face than normal, with ultra-expanded as the most expanded.
 - `<percentage>`
-  - : A {{cssxref("&lt;percentage&gt;")}} value between 50% and 200% (inclusive). Negative values are not allowed for this property.
+  - : A {{cssxref("&lt;percentage&gt;")}} value between 50% and 200% (inclusive). Negative values are not allowed for this descriptor.
 
-In earlier versions of the `font-stretch` specification, the property accepts only the nine keyword values. CSS Fonts Level 4 extends the syntax to accept a `<percentage>` value as well. This enables variable fonts to offer something more like a continuum of character widths. For TrueType or OpenType variable fonts, the "wdth" variation is used to implement varying widths.
+In earlier versions of the `font-width` specification, the descriptor accepts only the nine keyword values. CSS Fonts Level 4 extends the syntax to accept a `<percentage>` value as well. This enables variable fonts to offer something more like a continuum of character widths. For TrueType or OpenType variable fonts, the "wdth" variation is used to implement varying widths.
 
 If the font does not provide a face that exactly matches the given value, then values less than 100% map to a narrower face, and values greater than or equal to 100% map to a wider face.
 
@@ -105,7 +102,7 @@ The table below shows the mapping between keyword values and numeric percentages
 
 ### Variable fonts
 
-Most fonts have a particular width which corresponds to one of the keyterm values. However some fonts, called variable fonts, can support a range of stretching with more or less fine granularity, and this can give the designer a much closer degree of control over the chosen weight. For this, percentage ranges are useful.
+Most fonts have a particular width which corresponds to one of the keyterm values. However some fonts, called variable fonts, can support a range of widthing with more or less fine granularity, and this can give the designer a much closer degree of control over the chosen weight. For this, percentage ranges are useful.
 
 For TrueType or OpenType variable fonts, the "wdth" variation is used to implement varying glyph widths.
 
@@ -126,9 +123,9 @@ People with dyslexia and other cognitive conditions may have difficulty reading 
 
 ## Examples
 
-### Setting a percentage range for font-stretch
+### Setting a percentage range for font-width
 
-The following uses [League Mono](https://www.theleagueofmoveabletype.com/league-mono) font to synthesize different font families from the same font file using the `font-stretch` descriptor with `semi-condensed`, `normal`, and `semi-expanded` values using keywords and percentages.
+The following uses [League Mono](https://www.theleagueofmoveabletype.com/league-mono) font to synthesize different font families from the same font file using the `font-width` descriptor with `semi-condensed`, `normal`, and `semi-expanded` values using keywords and percentages.
 
 ```html
 <p>League Mono</p>
@@ -140,19 +137,19 @@ The following uses [League Mono](https://www.theleagueofmoveabletype.com/league-
 @font-face {
   font-family: "League Mono Ultra Condensed";
   src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
-  font-stretch: ultra-condensed; /* same as 50% */
+  font-width: ultra-condensed; /* same as 50% */
 }
 
 @font-face {
   font-family: "League Mono Normal";
   src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
-  font-stretch: 100%; /* same as normal */
+  font-width: 100%; /* same as normal */
 }
 
 @font-face {
   font-family: "League Mono Ultra Expanded";
   src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
-  font-stretch: ultra-expanded; /* same as 200% */
+  font-width: ultra-expanded; /* same as 200% */
 }
 
 p:nth-child(1) {
@@ -168,7 +165,7 @@ p:nth-child(3) {
 }
 ```
 
-{{EmbedLiveSample("Setting font stretch percentages", "100%", 200)}}
+{{EmbedLiveSample("Setting font width percentages", "100%", 200)}}
 
 ## Specifications
 
@@ -180,12 +177,12 @@ p:nth-child(3) {
 
 ## See also
 
-- Modern {{cssxref("@font-face/font-width")}} descriptor, replacing `font-stretch`
-- {{cssxref("@font-face/font-display")}} descriptor
-- {{cssxref("@font-face/font-family")}} descriptor
-- {{cssxref("@font-face/font-weight")}} descriptor
-- {{cssxref("@font-face/font-style")}} descriptor
-- {{cssxref("font-feature-settings")}} descriptor
-- {{cssxref("@font-face/font-variation-settings")}} descriptor
-- {{cssxref("@font-face/src")}} descriptor
+- Legacy {{cssxref("@font-face/font-stretch")}} alias descriptor with better browser support
+- {{cssxref("@font-face/font-display", "font-display")}} descriptor
+- {{cssxref("@font-face/font-family", "font-family")}} descriptor
+- {{cssxref("@font-face/font-weight", "font-weight")}} descriptor
+- {{cssxref("@font-face/font-style", "font-style")}} descriptor
+- {{cssxref("font-feature-settings", "font-feature-settings")}} property
+- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor
+- {{cssxref("@font-face/src", "src")}} descriptor
 - {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor

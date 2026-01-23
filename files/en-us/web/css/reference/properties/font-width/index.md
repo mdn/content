@@ -1,40 +1,37 @@
 ---
-title: font-stretch
-slug: Web/CSS/Reference/Properties/font-stretch
+title: font-width
+slug: Web/CSS/Reference/Properties/font-width
 page-type: css-property
-browser-compat: css.properties.font-stretch
+browser-compat: css.properties.font-width
 sidebar: cssref
 ---
 
-> [!NOTE]
-> The `font-stretch` property was renamed to {{cssxref("font-width")}} in the [CSS Fonts specification](https://drafts.csswg.org/css-fonts/#font-stretch-prop). To preserve compatibility, the specification retains `font-stretch` as a legacy alias for the `font-width` property.
+The **`font-width`** [CSS](/en-US/docs/Web/CSS) property selects a normal, condensed, or expanded face from a font.
 
-The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, condensed, or expanded face from a font.
-
-{{InteractiveExample("CSS Demo: font-stretch")}}
+{{InteractiveExample("CSS Demo: font-width")}}
 
 ```css interactive-example-choice
-font-stretch: condensed;
+font-width: condensed;
 ```
 
 ```css interactive-example-choice
-font-stretch: expanded;
+font-width: expanded;
 ```
 
 ```css interactive-example-choice
-font-stretch: ultra-expanded;
+font-width: ultra-expanded;
 ```
 
 ```css interactive-example-choice
-font-stretch: 50%;
+font-width: 50%;
 ```
 
 ```css interactive-example-choice
-font-stretch: 100%;
+font-width: 100%;
 ```
 
 ```css interactive-example-choice
-font-stretch: 150%;
+font-width: 150%;
 ```
 
 ```html interactive-example
@@ -66,31 +63,31 @@ section {
 ## Syntax
 
 ```css
-/* <font-stretch-css3> keyword values */
-font-stretch: normal;
-font-stretch: ultra-condensed;
-font-stretch: extra-condensed;
-font-stretch: condensed;
-font-stretch: semi-condensed;
-font-stretch: semi-expanded;
-font-stretch: expanded;
-font-stretch: extra-expanded;
-font-stretch: ultra-expanded;
+/* <font-width-css3> keyword values */
+font-width: normal;
+font-width: ultra-condensed;
+font-width: extra-condensed;
+font-width: condensed;
+font-width: semi-condensed;
+font-width: semi-expanded;
+font-width: expanded;
+font-width: extra-expanded;
+font-width: ultra-expanded;
 
 /* Percentage values */
-font-stretch: 50%;
-font-stretch: 100%;
-font-stretch: 200%;
+font-width: 50%;
+font-width: 100%;
+font-width: 200%;
 
 /* Global values */
-font-stretch: inherit;
-font-stretch: initial;
-font-stretch: revert;
-font-stretch: revert-layer;
-font-stretch: unset;
+font-width: inherit;
+font-width: initial;
+font-width: revert;
+font-width: revert-layer;
+font-width: unset;
 ```
 
-This property may be specified as a single `<font-stretch-css3>` keyword value or a single {{cssxref("&lt;percentage&gt;")}} value.
+This property may be specified as a single `<font-width-css3>` keyword value or a single {{cssxref("&lt;percentage&gt;")}} value.
 
 ### Values
 
@@ -105,7 +102,7 @@ This property may be specified as a single `<font-stretch-css3>` keyword value o
 
 ### Keyword to numeric mapping
 
-The table below shows the mapping between the `<font-stretch-css3>` keyword values and numeric percentages:
+The table below shows the mapping between the `<font-width-css3>` keyword values and numeric percentages:
 
 | Keyword           | Percentage |
 | ----------------- | ---------- |
@@ -123,13 +120,13 @@ The table below shows the mapping between the `<font-stretch-css3>` keyword valu
 
 Some font families offer additional faces in which the characters are narrower than the normal face (_condensed_ faces) or wider than the normal face (_expanded_ faces).
 
-You can use `font-stretch` to select a condensed or expanded face from such fonts. If the font you are using does not offer condensed or expanded faces, this property has no effect.
+You can use `font-width` to select a condensed or expanded face from such fonts. If the font you are using does not offer condensed or expanded faces, this property has no effect.
 
 ### Font face selection
 
-The face selected for a given value of `font-stretch` depends on the faces supported by the font in question. If the font does not provide a face that exactly matches the given value, then values less than 100% map to a narrower face, and values greater than or equal to 100% map to a wider face.
+The face selected for a given value of `font-width` depends on the faces supported by the font in question. If the font does not provide a face that exactly matches the given value, then values less than 100% map to a narrower face, and values greater than or equal to 100% map to a wider face.
 
-The table below demonstrates the effect of supplying various different percentage values of `font-stretch` on two different fonts:
+The table below demonstrates the effect of supplying various different percentage values of `font-width` on two different fonts:
 
 ```css hidden
 @font-face {
@@ -161,39 +158,39 @@ td {
 }
 #inconsolata td:nth-child(2),
 #anek-malayalam td:nth-child(2) {
-  font-stretch: 50%;
+  font-width: 50%;
 }
 #inconsolata td:nth-child(3),
 #anek-malayalam td:nth-child(3) {
-  font-stretch: 62.5%;
+  font-width: 62.5%;
 }
 #inconsolata td:nth-child(4),
 #anek-malayalam td:nth-child(4) {
-  font-stretch: 75%;
+  font-width: 75%;
 }
 #inconsolata td:nth-child(5),
 #anek-malayalam td:nth-child(5) {
-  font-stretch: 87.5%;
+  font-width: 87.5%;
 }
 #inconsolata td:nth-child(6),
 #anek-malayalam td:nth-child(6) {
-  font-stretch: 100%;
+  font-width: 100%;
 }
 #inconsolata td:nth-child(7),
 #anek-malayalam td:nth-child(7) {
-  font-stretch: 112.5%;
+  font-width: 112.5%;
 }
 #inconsolata td:nth-child(8),
 #anek-malayalam td:nth-child(8) {
-  font-stretch: 125%;
+  font-width: 125%;
 }
 #inconsolata td:nth-child(9),
 #anek-malayalam td:nth-child(9) {
-  font-stretch: 150%;
+  font-width: 150%;
 }
 #inconsolata td:nth-child(10),
 #anek-malayalam td:nth-child(10) {
-  font-stretch: 200%;
+  font-width: 200%;
 }
 ```
 
@@ -253,11 +250,11 @@ td {
 
 ## Formal syntax
 
-{{csssyntax("font-stretch")}}
+{{csssyntax("font-width")}}
 
 ## Examples
 
-### Setting font stretch percentages
+### Setting font width percentages
 
 ```html
 <p class="condensed">an elephantine lizard</p>
@@ -279,19 +276,19 @@ p {
 }
 
 .condensed {
-  font-stretch: 50%;
+  font-width: 50%;
 }
 
 .normal {
-  font-stretch: 100%;
+  font-width: 100%;
 }
 
 .expanded {
-  font-stretch: 200%;
+  font-width: 200%;
 }
 ```
 
-{{EmbedLiveSample("Setting font stretch percentages", "100%", 200)}}
+{{EmbedLiveSample("Setting font width percentages", "100%", 200)}}
 
 ## Specifications
 
@@ -303,8 +300,8 @@ p {
 
 ## See also
 
-- {{cssxref("@font-face/font-stretch")}} descriptor for {{cssxref("@font-face")}}
-- Modern {{cssxref("font-width")}} property, replacing `font-stretch`
+- {{cssxref("@font-face/font-width")}} descriptor for {{cssxref("@font-face")}}
+- Legacy {{cssxref("font-stretch")}} alias property with better browser support
 - {{cssxref("font-style")}} property
 - {{cssxref("font-weight")}} property
 - SVG {{SVGAttr("font-stretch")}} attribute
