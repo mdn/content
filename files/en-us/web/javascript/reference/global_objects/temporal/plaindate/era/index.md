@@ -23,7 +23,7 @@ const date = Temporal.PlainDate.from("2021-07-01"); // ISO 8601 calendar
 console.log(date.era); // undefined
 
 const date2 = Temporal.PlainDate.from("2021-07-01[u-ca=gregory]");
-console.log(date2.era); // ce 
+console.log(date2.era); // ce
 
 const date3 = Temporal.PlainDate.from("-002021-07-01[u-ca=gregory]");
 console.log(date3.era); // bce
