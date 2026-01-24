@@ -84,6 +84,7 @@ BPPV1
 Brai
 braillelabel
 brailleroledescription
+broc
 browser-bottombox
 browser.safebrowsing
 browser.sessionhistory

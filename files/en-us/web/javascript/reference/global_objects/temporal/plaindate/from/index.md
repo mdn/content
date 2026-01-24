@@ -85,35 +85,23 @@ const d3 = Temporal.PlainDate.from({
   year: 2021,
   month: 7,
   day: 1,
-  calendar: "chinese",
+  calendar: "hebrew",
 });
 // Note: when you construct a date with an object, the date components
 // are in *that* calendar, not the ISO calendar. However, toString() always
-// outputs the date in the ISO calendar. The Chinese calendar year numbers
-// align with the Gregorian/ISO calendar (both use year 1 CE as a common reference),
-// but months are based on lunar cycles, so the month and day will differ.
-console.log(d3.toString()); // "2021-08-08[u-ca=chinese]"
-
-// Year, month, day in a calendar with a different epoch
-const d4 = Temporal.PlainDate.from({
-  year: 5781,
-  month: 7,
-  day: 1,
-  calendar: "hebrew",
-});
-// The Hebrew calendar has a different epoch year. Year 5781 in the Hebrew
-// calendar corresponds to 2021 CE in the ISO calendar.
-console.log(d4.toString()); // "2021-03-14[u-ca=hebrew]"
+// outputs the date in the ISO calendar. For example, the year "2021" in
+// the Hebrew calendar is actually 1740 BCE in the ISO calendar.
+console.log(d3.toString()); // "-001739-03-07[u-ca=hebrew]"
 
 // Era, eraYear, month, and day
-const d5 = Temporal.PlainDate.from({
+const d4 = Temporal.PlainDate.from({
   era: "meiji",
   eraYear: 4,
   month: 7,
   day: 1,
   calendar: "japanese",
 });
-console.log(d5.toString()); // "1871-07-01[u-ca=japanese]"
+console.log(d4.toString()); // "1871-07-01[u-ca=japanese]"
 ```
 
 ### Controlling overflow behavior
