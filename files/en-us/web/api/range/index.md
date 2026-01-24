@@ -15,17 +15,17 @@ There also is the {{domxref("Range.Range()", "Range()")}} constructor available.
 
 {{InheritanceDiagram}}
 
-## Instance properties
-
-_The properties below are inherited from its parent interface, {{domxref("AbstractRange")}}._
-
-- {{domxref("Range.commonAncestorContainer")}} {{ReadOnlyInline}}
-  - : Returns the deepest {{ domxref("Node") }} that contains the `startContainer` and `endContainer` nodes.
-
 ## Constructor
 
 - {{ domxref("Range.Range()", "Range()") }}
   - : Returns a `Range` object with the global {{domxref("Document")}} as its start and end.
+
+## Instance properties
+
+_Also inherits properties from its parent interface, {{domxref("AbstractRange")}}._
+
+- {{domxref("Range.commonAncestorContainer")}} {{ReadOnlyInline}}
+  - : Returns the deepest {{ domxref("Node") }} that contains the `startContainer` and `endContainer` nodes.
 
 ## Instance methods
 

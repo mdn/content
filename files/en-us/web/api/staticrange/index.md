@@ -22,7 +22,7 @@ This interface offers the same set of properties and methods as `AbstractRange`.
 
 ## Instance properties
 
-_The properties below are inherited from its parent interface, {{domxref("AbstractRange")}}._
+_Inherits properties from its parent interface, {{domxref("AbstractRange")}}._
 
 ## Usage notes
 
