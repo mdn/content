@@ -23,7 +23,7 @@ console.log(zdt.era); // undefined
 
 const zdt2 = Temporal.ZonedDateTime.from(
   "2021-07-01[America/New_York][u-ca=gregory]",
-)
+);
 console.log(zdt2.era); // ce
 ```
 
