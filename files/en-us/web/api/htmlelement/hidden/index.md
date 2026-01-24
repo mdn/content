@@ -34,7 +34,7 @@ The HTML contains two panels: a welcome panel, that asks users to agree to be aw
 
 ```html
 <div id="welcome" class="panel">
-  <h1>Welcome to Foobar.com!</h1>
+  <h1>Welcome to my website!</h1>
   <p>By clicking "OK" you agree to be awesome today!</p>
   <button class="button" id="okButton">OK</button>
 </div>

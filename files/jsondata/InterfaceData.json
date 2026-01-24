@@ -120,6 +120,10 @@
       "inh": "",
       "impl": []
     },
+    "AudioPlaybackStats": {
+      "inh": "",
+      "impl": []
+    },
     "AudioProcessingEvent": {
       "inh": "Event",
       "impl": []
@@ -406,6 +410,10 @@
     },
     "Clipboard": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "ClipboardChangeEvent": {
+      "inh": "Event",
       "impl": []
     },
     "ClipboardEvent": {
@@ -802,6 +810,10 @@
     },
     "CSSStyleValue": {
       "inh": "",
+      "impl": []
+    },
+    "CSSSupportsConditionRule": {
+      "inh": "CSSGroupingRule",
       "impl": []
     },
     "CSSSupportsRule": {
@@ -1624,6 +1636,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLGeolocationElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLHeadElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1729,6 +1745,10 @@
       "impl": []
     },
     "HTMLParamElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
+    "HTMLPermissionElement": {
       "inh": "HTMLElement",
       "impl": []
     },
@@ -2476,6 +2496,10 @@
       "inh": "Sensor",
       "impl": []
     },
+    "Origin": {
+      "inh": "",
+      "impl": []
+    },
     "OscillatorNode": {
       "inh": "AudioScheduledSourceNode",
       "impl": []
@@ -2617,6 +2641,10 @@
       "impl": []
     },
     "PerformanceTiming": {
+      "inh": "",
+      "impl": []
+    },
+    "PerformanceTimingConfidence": {
       "inh": "",
       "impl": []
     },
@@ -3092,8 +3120,12 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "SFrameTransform": {
+    "SFrameReceiverTransform": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "SFrameSenderTransform": {
+      "inh": "",
       "impl": []
     },
     "SFrameTransformErrorEvent": {

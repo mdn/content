@@ -21,11 +21,11 @@ In this task, the first list item has been given a background color using a hex 
 - The third should use HSL color.
 - The fourth should use RGB color but with the alpha channel set to `0.6`.
 
-You [can convert the hex color at convertingcolors.com](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS. Your final result should look like the image below:
+You [can convert the hex color at convertingcolors.com](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS. Your final result should look like the following rendering:
 
-![Four list items. The first three with the same background color and the last with a lighter background.](mdn-value-color.png)
+{{EmbedLiveSample("values1-finish", "", "300px")}}
 
-```html live-sample___color
+```html live-sample___values1-start live-sample___values1-finish
 <ul>
   <li class="hex">hex color</li>
   <li class="rgb">RGB color</li>
@@ -34,7 +34,7 @@ You [can convert the hex color at convertingcolors.com](https://convertingcolors
 </ul>
 ```
 
-```css live-sample___color
+```css live-sample___values1-start live-sample___values1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -56,18 +56,16 @@ li {
 /* Add styles here */
 ```
 
-{{EmbedLiveSample("color", "", "300px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("values1-start", "", "300px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
-By using [a color conversion tool](https://convertingcolors.com/hex-color-86DEFA.html), you should be equipped to use different [color functions](/en-US/docs/Web/CSS/color_value#syntax) to define the same color in different ways:
+By using [a color conversion tool](https://convertingcolors.com/hex-color-86DEFA.html), you should be equipped to use different [color functions](/en-US/docs/Web/CSS/Reference/Values/color_value#syntax) to define the same color in different ways:
 
-```css
-.hex {
-  background-color: #86defa;
-}
-
+```css live-sample___values1-finish
 .rgb {
   background-color: rgb(134 222 250);
 }
@@ -92,11 +90,11 @@ In this task, we want you to set the font size of various items of text:
 - All `<p>` elements should be `16px`.
 - A `<p>` element that is directly after an `<h1>` should be `120%`.
 
-Your final result should look like the image below:
+Your final result should look like the following rendering:
 
-![Some text at varying sizes.](mdn-value-length.png)
+{{EmbedLiveSample("values2-finish", "", "420px")}}
 
-```html live-sample___length
+```html live-sample___values2-start live-sample___values2-finish
 <h1>Level 1 heading</h1>
 <p>
   Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
@@ -110,7 +108,7 @@ Your final result should look like the image below:
 </p>
 ```
 
-```css live-sample___length
+```css live-sample___values2-start live-sample___values2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -132,14 +130,16 @@ h1 + p {
 }
 ```
 
-{{EmbedLiveSample("length", "", "420px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("values2-start", "", "420px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 You can use the following length values:
 
-```css
+```css live-sample___values2-finish
 h1 {
   font-size: 50px;
 }
@@ -163,15 +163,15 @@ h1 + p {
 
 To complete the task, update the CSS to move the background image so that it is centered horizontally and is `20%` from the top of the box.
 
-Your final result should look like the image below:
+Your final result should look like the following rendering:
 
-![A stat centered horizontally in a box and a short distance from the top of the box.](mdn-value-position.png)
+{{EmbedLiveSample("values3-finish", "", "400px")}}
 
-```html live-sample___position
+```html live-sample___values3-start live-sample___values3-finish
 <div class="box"></div>
 ```
 
-```css live-sample___position
+```css live-sample___values3-start live-sample___values3-finish
 .box {
   border: 5px solid black;
   height: 350px;
@@ -183,14 +183,16 @@ Your final result should look like the image below:
 }
 ```
 
-{{EmbedLiveSample("position", "", "400px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("values3-start", "", "400px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Use `background-position` with the `center` keyword and a percentage:
 
-```css
+```css live-sample___values3-finish
 .box {
   background-image: url("https://mdn.github.io/shared-assets/images/examples/purple-star.png");
   background-repeat: no-repeat;

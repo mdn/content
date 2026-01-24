@@ -107,7 +107,7 @@ The `<select>` element has historically been notoriously difficult to style prod
 
 ### Legacy select styling
 
-In browsers that don't support the modern customization features (or legacy codebases where they can't be used), you are limited to manipulating the [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model), the [displayed font](/en-US/docs/Web/CSS/CSS_fonts), etc. You can also use the {{cssxref("appearance")}} property to remove the default system `appearance`.
+In browsers that don't support the modern customization features (or legacy codebases where they can't be used), you are limited to manipulating the [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model), the [displayed font](/en-US/docs/Web/CSS/Guides/Fonts), etc. You can also use the {{cssxref("appearance")}} property to remove the default system `appearance`.
 
 It is however, hard to get a consistent result across browsers with traditional `<select>` elements. If you want to get full control, you should consider using a library with good facilities for styling form widgets, or try rolling your own dropdown menu using non-semantic elements, JavaScript, and [WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) to provide semantics.
 

@@ -21,24 +21,36 @@ let gettingFrame = browser.webNavigation.getFrame(
 ### Parameters
 
 - `details`
-  - : `object`. Information about the frame to retrieve information about.
-    - `tabId`
+  - : `object`. Information about the frame to retrieve information about. Must include one of `tabId`, `frameId`, or `documentId`.
+    - `tabId` {{optional_inline}}
       - : `integer`. The ID of the tab in which the frame is.
     - `processId` {{optional_inline}} {{deprecated_inline}}
       - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
-    - `frameId`
+    - `frameId` {{optional_inline}}
       - : `integer`. The ID of the frame in the given tab.
+    - `documentId` {{optional_inline}}
+      - : `string`. The UUID of the frame's document.
+
+Must include one of
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object containing the following properties:
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an object containing these properties:
 
 - `errorOccurred`
   - : `boolean`. True if the last navigation in this frame was interrupted by an error, i.e., the {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} event fired.
 - `url`
-  - : `string`. The URL currently associated with this frame, if the frame identified by `frameId` existed at one point in the tab identified by `tabId`. The fact that a URL is associated with a given `frameId` does not imply that the corresponding frame still exists.
+  - : `string`. The URL associated with this frame, if the frame identified by `frameId` existed at one point in the tab identified by `tabId`. The fact that a URL is associated with a given `frameId` does not imply that the corresponding frame still exists.
+- `frameType`
+  - : `string`. The type of frame. Returns the values `"outermost_frame"`, `"fenced_frame"`, or `"sub_frame"` .
 - `parentFrameId`
   - : `integer`. ID of this frame's parent. This is -1 if there is no parent frame: that is, if this frame is the top-level browsing context in the tab.
+- `documentId`
+  - : `string`. A UUID of the frame's document.
+- `parentDocumentId`
+  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
+- `documentLifecycle`
+  - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, or `"pending_deletion"`.
 
 If the tab is discarded, the promise will instead resolve with a `null` value. If the specified tab or frame ID could not be found, or some other error occurs, the promise will be rejected with an error message.
 

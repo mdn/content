@@ -61,7 +61,9 @@ Host permissions are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/W
 
 The extra privileges include:
 
-- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [fetch](/en-US/docs/Web/API/Fetch_API) access to those origins without cross-origin restrictions (even for requests made from content scripts)
+- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [fetch](/en-US/docs/Web/API/Fetch_API) access to those origins without cross-origin restrictions.
+  > [!NOTE]
+  > For Manifest V2 extensions in Firefox only, this includes requests made from content scripts.
 - the ability to read tab-specific metadata without the "tabs" permission, such as the `url`, `title`, and `favIconUrl` properties of {{WebExtAPIRef("tabs.Tab")}} objects
 - the ability to [inject content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#loading_content_scripts) and styles programmatically into pages served from those origins.
 - the ability to receive events from the {{webextAPIref("webRequest")}} API for these hosts
@@ -174,7 +176,7 @@ For example, consider an extension that wants to run a script in the current pag
 > [!NOTE]
 > You can only get access to the tab/data that was there, when the user interaction occurred (e.g., the click). When the active tab navigates away (e.g., due to finishing loading or some other event), the permission does not grant you access to the tab anymore.
 
-The `activeTab` permission enables scripting access to the top level tab's page and same origin frames. Running scripts or modifying styles inside [cross-origin](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_network_access) frames may require additional [host permissions](#host_permissions). Of course, [restrictions and limitations](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#permissions_restrictions_and_limitations) related to particular sites and URI schemes are applied as well.
+The `activeTab` permission enables scripting access to the top level tab's page and same origin frames. Running scripts or modifying styles inside [cross-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_network_access) frames may require additional [host permissions](#host_permissions). Of course, [restrictions and limitations](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#permissions_restrictions_and_limitations) related to particular sites and URI schemes are applied as well.
 
 Usually, the tab that's granted `activeTab` is the active tab, with one exception. An extension can create a menu item with the {{webextAPIref("menus")}} API that displays when the user context-clicks a tab. That is, a menu on an element in the tabstrip that enables the user to switch from one tab to another. If the user clicks this menu, then the `activeTab` permission is granted for the tab the user clicked, even if it's not the active tab (as of Firefox 63, [Firefox bug 1446956](https://bugzil.la/1446956)).
 

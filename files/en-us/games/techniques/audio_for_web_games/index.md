@@ -57,7 +57,7 @@ Although mobile browsers can present problems, there are ways to work around the
 
 ### Audio sprites
 
-Audio sprites borrow their name from [CSS sprites](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS), which is a visual technique for using CSS with a single graphic resource to break it into a series of sprites. We can apply the same principle to audio so that rather than having a bunch of small audio files that take time to load and play, we have one larger audio file containing all the smaller audio snippets we need. To play a specific sound from the file, we just use the known start and stop times for each audio sprite.
+Audio sprites borrow their name from [CSS sprites](/en-US/docs/Web/CSS/Guides/Images/Implementing_image_sprites), which is a visual technique for using CSS with a single graphic resource to break it into a series of sprites. We can apply the same principle to audio so that rather than having a bunch of small audio files that take time to load and play, we have one larger audio file containing all the smaller audio snippets we need. To play a specific sound from the file, we just use the known start and stop times for each audio sprite.
 
 The advantage is that we can prime one piece of audio and have our sprites ready to go. To do this we can just play and instantly pause the larger piece of audio. You'll also reduce the number of server requests and save bandwidth.
 
@@ -122,7 +122,7 @@ myAudio.addEventListener("timeupdate", () => {
 
 Music in games can have a powerful emotional effect. You can mix and match various music samples and assuming you can control the volume of your audio element you could cross-fade different musical pieces. Using the [`playbackRate()`](/en-US/docs/Web/API/HTMLMediaElement/playbackRate) method you can even adjust the speed of your music without affecting the pitch, to sync it up better with the action.
 
-All this is possible using the standard {{htmlelement("audio")}} element and associated {{domxref("HTMLMediaElement")}}, but it becomes much easier and more flexible with the more advanced [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). Let's look at this next.
+All this is possible using the standard {{htmlelement("audio")}} element and associated {{domxref("HTMLMediaElement")}}, but it becomes more flexible with the more advanced [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). Let's look at this next.
 
 ### Web Audio API for games
 

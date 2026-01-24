@@ -36,13 +36,13 @@ Another essential concept in coding is **functions**, which allow you to store a
 
 ## Where do I find functions?
 
-In JavaScript, you'll find functions everywhere. In fact, we've been using functions all the way through the course so far; we've just not been talking about them very much. Now is the time, however, for us to start talking about functions explicitly, and really exploring their syntax.
+In JavaScript, you'll find functions everywhere. In fact, we've been using functions throughout the course so far; we've just not been talking about them very much. Now is the time, however, for us to start talking about functions explicitly and exploring their syntax.
 
 Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — `()` — and you're **not** using a common built-in language structure like a [for loop](/en-US/docs/Learn_web_development/Core/Scripting/Loops#the_standard_for_loop), [while or do...while loop](/en-US/docs/Learn_web_development/Core/Scripting/Loops#while_and_do...while), or [if...else statement](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals#if...else_statements), you are making use of a function.
 
 ## Built-in browser functions
 
-We've used functions built into the browser a lot in this course.
+We've made extensive use of built-in browser functions in this course.
 
 Every time we manipulated a text string, for example:
 
@@ -79,15 +79,15 @@ We were using a _function_!
 > [!NOTE]
 > Feel free to enter these lines into your browser's JavaScript console to re-familiarize yourself with their functionality, if needed.
 
-The JavaScript language has many built-in functions to allow you to do useful things without having to write all that code yourself. In fact, some of the code you are calling when you **invoke** (a fancy word for run, or execute) a built-in browser function couldn't be written in JavaScript — many of these functions are calling parts of the background browser code, which is written largely in low-level system languages like C++, not web languages like JavaScript.
+The JavaScript language has many built-in functions that allow you to do useful things without having to write all that code yourself. In fact, some of the code you are calling when you **invoke** (a fancy word for run, or execute) a built-in browser function couldn't be written in JavaScript — many of these functions are calling parts of the background browser code, which is written largely in low-level system languages like C++, not web languages like JavaScript.
 
 Bear in mind that some built-in browser functions are not part of the core JavaScript language — some are defined as part of browser APIs, which build on top of the default language to provide even more functionality (refer to [this early section of our course](/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#so_what_can_it_really_do) for more descriptions). We'll look at using browser APIs in more detail in a later module.
 
 ## Functions versus methods
 
-**Functions** that are part of objects are called **methods**; you'll learn about objects later in the module. For now, we just wanted to clear up any possible confusion about method versus function — you are likely to meet both terms as you look at the available related resources across the Web.
+**Functions** that are part of objects are called **methods**; you'll learn about objects later in the module. For now, we just wanted to clear up any possible confusion about method versus function — you are likely to meet both terms as you look at related resources across the Web.
 
-The built-in code we've made use of so far comes in both forms: **functions** and **methods.** You can check the full list of the built-in functions, as well as the built-in objects and their corresponding methods [in our JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects).
+The built-in code we've used so far comes in both forms: **functions** and **methods.** You can check the full list of built-in functions, as well as built-in objects and their corresponding methods [in our JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects).
 
 You've also seen a lot of **custom functions** in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) example (see also the full [source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)) from our [loops article](/en-US/docs/Learn_web_development/Core/Scripting/Loops), we included a custom `draw()` function that looked like this:
 
@@ -103,13 +103,13 @@ function draw() {
 }
 ```
 
-This function draws 100 random circles inside a {{htmlelement("canvas")}} element. Every time we want to do that, we can just invoke the function with this:
+This function draws 100 random circles inside a {{htmlelement("canvas")}} element. Every time we want to do that, we can invoke the function with this:
 
 ```js
 draw();
 ```
 
-rather than having to write all that code out again every time we want to repeat it. Functions can contain whatever code you like — you can even call other functions from inside functions. The above function for example calls the `random()` function three times, which is defined by the following code:
+rather than having to write all that code out again every time we want to repeat it. Functions can contain whatever code you like — you can even call other functions from inside functions. For example, the `draw()` function seen above calls the `random()` function three times; `random()` is defined by the following code:
 
 ```js
 function random(number) {
@@ -121,7 +121,7 @@ We needed this function because the browser's built-in [`Math.random()`](/en-US/
 
 ## Invoking functions
 
-You are probably clear on this by now, but just in case, to actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the name of the function in the code somewhere, followed by parentheses.
+You are probably clear on this by now, but just in case, to actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the function's name in the code somewhere, followed by parentheses.
 
 ```js
 function myFunction() {
@@ -137,7 +137,7 @@ myFunction();
 
 ## Function parameters
 
-Some functions require **parameters** to be specified when you are invoking them — these are values that need to be included inside the function parentheses, which it needs to do its job properly.
+Some functions require **parameters** to be specified when you invoke them — these are values that need to be included inside the function parentheses, which it needs to do its job properly.
 
 > [!NOTE]
 > Parameters are sometimes called arguments, properties, or even attributes.
@@ -156,11 +156,11 @@ const newString = myText.replace("string", "sausage");
 ```
 
 > [!NOTE]
-> When you need to specify multiple parameters, they are separated by commas.
+> When you need to specify multiple parameters, you separate them with commas.
 
 ### Optional parameters
 
-Sometimes parameters are optional — you don't have to specify them. If you don't, the function will generally adopt some kind of default behavior. As an example, the array [`join()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join) function's parameter is optional:
+Sometimes parameters are optional — you don't have to specify them. If you don't, the function generally adopts some kind of default behavior. As an example, the array [`join()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join) function's parameter is optional:
 
 ```js
 const myArray = ["I", "love", "chocolate", "frogs"];
@@ -190,7 +190,7 @@ hello(); // Hello Chris!
 
 ## Anonymous functions and arrow functions
 
-So far we have just created a function like so:
+So far, we have just created functions like so:
 
 ```js
 function myFunction() {
@@ -213,12 +213,12 @@ This is called an **anonymous function**, because it has no name. You'll often s
 
 ### Anonymous function example
 
-For example, let's say you want to run some code when the user types into a text box. To do this you can call the {{domxref("EventTarget/addEventListener", "addEventListener()")}} function of the text box. This function expects you to pass it (at least) two parameters:
+For example, let's say you want to run some code when the user types into a text box. To do this, you can call the {{domxref("EventTarget/addEventListener", "addEventListener()")}} function of the text box. This function expects you to pass it at least two parameters:
 
-- the name of the event to listen for, which in this case is {{domxref("Element/keydown_event", "keydown")}}
-- a function to run when the event happens.
+- The name of the event to listen for, which in this case is {{domxref("Element/keydown_event", "keydown")}}
+- A function to run when the event happens.
 
-When the user presses a key, the browser will call the function you provided, and will pass it a parameter containing information about this event, including the particular key that the user pressed:
+When the user presses a key, the browser will call the function you provided, and pass it a parameter containing information about this event, including the particular key that the user pressed:
 
 ```js
 function logKey(event) {
@@ -264,34 +264,34 @@ const doubled = originals.map(item => item * 2);
 console.log(doubled); // [2, 4, 6]
 ```
 
-The `map()` method takes each item in the array in turn, passing it into the given function. It then takes the value returned by that function and adds it to a new array.
+The `map()` method passes each item in the array into the given function, then takes the value returned by the function and adds it to a new array.
 
-So in the example above, `item => item * 2` is the arrow function equivalent of:
+The arrow function is very concise; rewriting our `map()` code to use a regular anonymous callback function would look like this:
 
 ```js
-function doubleItem(item) {
+const doubled = originals.map(function (item) {
   return item * 2;
-}
+});
 ```
 
-You can use the same concise syntax to rewrite the `addEventListener` example.
+You can use the same concise arrow function syntax to rewrite the `addEventListener()` example:
 
-```js
+```js-nolint
 textBox.addEventListener("keydown", (event) =>
-  console.log(`You pressed "${event.key}".`),
+  console.log(`You pressed "${event.key}".`)
 );
 ```
 
 In this case, the value of `console.log()`, which is `undefined`, is implicitly returned from the callback function.
 
-We recommend that you use arrow functions, as they can make your code shorter and more readable. To learn more, see the [section on arrow functions in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions), and our [reference page on arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+We recommend using arrow functions, as they can make your code shorter and more readable. To learn more, see the [section on arrow functions in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions), and our [reference page on arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 > [!NOTE]
 > There are some subtle differences between arrow functions and normal functions. They're outside the scope of this introductory tutorial and are unlikely to make a difference in the cases we've discussed here. To learn more, see the [arrow function reference documentation](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Arrow function live sample
 
-Here's a complete working example of the "keydown" example we discussed above:
+Here's a complete working version of the `keydown` example we discussed above:
 
 The HTML:
 
@@ -323,11 +323,11 @@ The result - try typing into the text box and see the output:
 
 ## Function scope and conflicts
 
-Let's talk a bit about {{glossary("scope")}} — a very important concept when dealing with functions. When you create a function, the variables and other things defined inside the function are inside their own separate **scope**, meaning that they are locked away in their own separate compartments, unreachable from code outside the functions.
+Let's talk a bit about {{glossary("scope")}} — an important concept when dealing with functions. When you create a function, the variables and other things defined inside the function are inside their own separate **scope**. This means that they are locked away in their own separate compartment, unreachable from code outside the functions.
 
 The top-level outside all your functions is called the **global scope**. Values defined in the global scope are accessible from everywhere in the code.
 
-JavaScript is set up like this for various reasons — but mainly because of security and organization. Sometimes you don't want variables to be accessible from everywhere in the code. External scripts that you call in from elsewhere could start to mess with your code and cause problems because they happen to be using the same variable names as other parts of the code, causing conflicts. This might be done maliciously, or just by accident.
+JavaScript works like this mainly for security and organization. Sometimes you don't want variables to be accessible from everywhere in the code. External scripts called in from elsewhere could start to mess with your code and cause problems if they use the same variable names, causing conflicts. This might be done maliciously or just by accident.
 
 For example, say you have an HTML file referencing two external JavaScript files, and both of them have a variable and a function defined that use the same name:
 
@@ -362,11 +362,11 @@ You can see this example [running live on GitHub](https://mdn.github.io/learning
 
 - The second script, however, does not load and run at all, and an error is printed in the console: `Uncaught SyntaxError: Identifier 'name' has already been declared`. This is because the `name` constant is already declared in `first.js`, and you can't declare the same constant twice in the same scope. Because the second script did not load, the `greeting()` function from `second.js` is not available to be called.
 
-- If we were to remove the `const name = "Zaptec";` line from `second.js` and reload the page, both scripts would execute. The alert box would now say `Our company is called Chris.` Functions _can_ be redeclared, and the last declaration in the source order is used. The previous declarations are effectively overwritten.
+- If we were to remove the `const name = "Zaptec";` line from `second.js` and reload the page, both scripts would execute. The alert box would now say `Our company is called Chris.` If a function is _redeclared_, the last declaration in the source order is used. The previous declarations are effectively overwritten.
 
-Keeping parts of your code locked away in functions avoids such problems, and is considered a best practice.
+Locking parts of your code away in functions avoids such problems and is considered a best practice.
 
-It is a bit like a zoo. The lions, zebras, tigers, and penguins are kept in their own enclosures and only have access to the things inside — in the same manner as the function scopes. If they were able to get into other enclosures, problems would occur. At best, different animals would feel really uncomfortable inside unfamiliar habitats — a lion or tiger would feel terrible inside the penguins' watery, icy domain. At worst, the lions and tigers might try to eat the penguins!
+It is a bit like a zoo. The lions, zebras, tigers, and penguins are kept in their own enclosures and only have access to the things inside, similar to function scopes. If they were able to get into other enclosures, problems would occur. At best, different animals would feel really uncomfortable inside unfamiliar habitats — a lion or tiger would feel terrible inside the penguins' watery, icy domain. At worst, the lions and tigers might try to eat the penguins!
 
 ![Four different animals enclosed in their respective habitat in a Zoo](mdn-mozilla-zoo.png)
 
@@ -376,7 +376,7 @@ The zoo keeper is like the global scope — they have the keys to access every e
 
 Let's look at a real example to demonstrate scoping.
 
-1. First, make a local copy of our [function-scope.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-scope.html) example. This contains two functions called `a()` and `b()`, and three variables — `x`, `y`, and `z` — two of which are defined inside the functions, and one in the global scope. It also contains a third function called `output()`, which takes a single parameter and outputs it in a paragraph on the page.
+1. First, make a local copy of our [function-scope.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-scope.html) example. This contains two functions called `a()` and `b()`, and three variables — `x`, `y`, and `z` — two of which are defined inside the functions, and one in the global scope. It also contains a third function called `output()`, which takes a single parameter and outputs it to a paragraph on the page.
 2. Open the example up in a browser and in your text editor.
 3. Open the JavaScript console in your browser developer tools. In the JavaScript console, enter the following command:
 
@@ -416,7 +416,7 @@ Let's look at a real example to demonstrate scoping.
    b();
    ```
 
-   You should see the `y` and `z` values printed in the browser viewport. This works fine, as the `output()` function is being called inside the other functions, in the same scope as the variables it is printing are defined in. `output()` itself is available from anywhere, as it is defined in the global scope.
+   You should see the `y` and `z` values printed in the browser viewport. This works fine, as the `output()` function is called inside the other functions, in the same scope as the variables it prints are defined in. `output()` itself is available from anywhere, as it is defined in the global scope.
 
 6. Now try updating your code like this:
 
@@ -439,7 +439,7 @@ Let's look at a real example to demonstrate scoping.
    b();
    ```
 
-   Both the `a()` and `b()` call should print the value of x to the browser viewport. These work fine because even though the `output()` calls are not in the same scope as `x` is defined in, `x` is a global variable so is available inside all code, everywhere.
+   Both the `a()` and `b()` calls should print the value of x to the browser viewport. These work fine because even though the `output()` calls are not in the same scope as `x` is defined in, `x` is a global variable — it is available inside all code, everywhere.
 
 8. Finally, try updating your code like this:
 
@@ -465,14 +465,47 @@ Let's look at a real example to demonstrate scoping.
    This time the `a()` and `b()` calls will throw that annoying [ReferenceError: _variable name_ is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error into the console — this is because the `output()` calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.
 
 > [!NOTE]
-> The same scoping rules do not apply to loop (e.g., `for() { }`) and conditional blocks (e.g., `if () { }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
-
-> [!NOTE]
 > The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
+
+#### An aside on loop and conditional scope
+
+It is worth noting that the scope of values declared inside [conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals) and [loops](/en-US/docs/Learn_web_development/Core/Scripting/Loops) works the same as function scope when declaring values with `let` and `const`. For example, if you added the following blocks to the above example:
+
+```js
+if (x === 1) {
+  const c = 4;
+  let d = 5;
+}
+
+for (let i = 0; i <= 1; i++) {
+  const e = 6;
+  let f = 7;
+}
+```
+
+Calling `output(c)`, `output(d)`, `output(e)`, or `output(f)` would result in the same **"ReferenceError: [variable-name] is not defined"** error seen earlier. The `output()` function cannot access these variables because they are locked inside their own scope.
+
+The legacy `var` keyword works differently. If `c`, `d`, `e`, and `f` were declared using `var`:
+
+```js
+if (x === 1) {
+  var c = 4;
+  var d = 5;
+}
+
+for (let i = 0; i <= 1; i++) {
+  var e = 6;
+  var f = 7;
+}
+```
+
+they would be hoisted to the global scope; therefore, outputting them to the console (for example, with `output(c)`) would work. Variables declared with `var` inside functions, however, still have their scope limited to those functions.
+
+This inconsistency can cause confusion and errors, and is another reason why you should use `let` and `const` instead of `var`.
 
 ## Summary
 
-This article has explored the fundamental concepts behind functions, paving the way for the next one in which we get practical and take you through the steps to building up your own custom function.
+This article has explored the fundamental concepts behind functions, paving the way for the next one, in which we get practical and take you through the steps to build your own custom function.
 
 ## See also
 

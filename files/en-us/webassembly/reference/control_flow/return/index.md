@@ -1,5 +1,6 @@
 ---
-title: return
+title: "return: Wasm text instruction"
+short-title: return
 slug: WebAssembly/Reference/Control_flow/return
 page-type: webassembly-instruction
 sidebar: webassemblysidebar

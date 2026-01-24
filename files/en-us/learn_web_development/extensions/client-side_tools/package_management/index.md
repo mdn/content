@@ -147,6 +147,9 @@ Add these lines right below the `"name"`:
 
 So this is the config file that defines your package. This is good for now, so let's move on.
 
+> [!NOTE]
+> [The package.json file](https://scrimba.com/intro-to-git-c0l4grs2sa) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba provides a practical introduction to using `package.json` files.
+
 ### Installing Vite
 
 We will first install Vite, the build tool for our website. It is responsible for bundling our HTML, CSS, and JavaScript files into an optimized bundle for the browser.

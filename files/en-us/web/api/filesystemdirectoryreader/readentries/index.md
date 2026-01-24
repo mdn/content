@@ -52,7 +52,7 @@ See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem
 
 {{Compat}}
 
-On Chrome 77, `readEntries()` will only return the first 100 `FileSystemEntry` instances. In order to obtain all of the
+In Chromium-based browsers, `readEntries()` will only return the first 100 `FileSystemEntry` instances. In order to obtain all of the
 instances, `readEntries()` must be called multiple times.
 
 ## See also

@@ -143,7 +143,7 @@ Let's apply this new-found knowledge by writing a working example to give you an
 
 You can find the example HTML at [personal-greeting.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/web-storage/personal-greeting.html) — this contains a website with a header, content, and footer, and a form for entering your name.
 
-![A Screenshot of a website that has a header, content and footer sections. The header has a welcome text to the left-hand side and a button labelled 'forget' to the right-hand side. The content has an heading followed by a two paragraphs of dummy text. The footer reads 'Copyright nobody. Use the code as you like'.](web-storage-demo.png)
+![A Screenshot of a website that has a header, content and footer sections. The header has a welcome text to the left-hand side and a button labelled 'forget' to the right-hand side. The content has a heading followed by a two paragraphs of dummy text. The footer reads 'Copyright nobody. Use the code as you like'.](web-storage-demo.png)
 
 Let's build up the example, so you can understand how it works.
 

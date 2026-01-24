@@ -320,7 +320,7 @@ render();
 
 ## Summary
 
-A-Frame targets web developers by offering easy to use web markup and all the advantages that brings, such as JavaScript manipulation. It is easy to start with, but also provides a powerful API for advanced concepts, as well as dealing with cross browser differences. It's a great time to start experimenting with such frameworks.
+A-Frame targets web developers by offering web markup with advantages such as JavaScript manipulation. It provides a powerful API for advanced concepts, as well as dealing with cross browser differences. It's a great time to start experimenting with such frameworks.
 
 ## See also
 

@@ -8,7 +8,7 @@ browser-compat: api.DOMMatrix.invertSelf
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`invertSelf()`** method of the {{domxref("DOMMatrix")}} interface inverts the original matrix. If the matrix cannot be inverted, the new matrix's components are all set to `NaN` and its {{domxref("DOMMatrixReadonly.is2D", "is2D")}} property is set to `false`.
+The **`invertSelf()`** method of the {{domxref("DOMMatrix")}} interface inverts the original matrix. If the matrix cannot be inverted, the new matrix's components are all set to `NaN` and its {{domxref("DOMMatrixReadOnly.is2D", "is2D")}} property is set to `false`.
 
 To invert a matrix without mutating it, see {{domxref("DOMMatrixReadOnly.inverse()")}}
 

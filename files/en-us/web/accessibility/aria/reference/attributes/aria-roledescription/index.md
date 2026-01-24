@@ -32,7 +32,7 @@ Again, avoid using `aria-roledescription`. In this example, `escape` has no rele
 
 When using `aria-roledescription`, also ensure that the element to which it is applied has a valid ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) or has implicit role semantics and that the value itself is not empty and contains more than just whitespace characters.
 
-The `aria-roledescription` is required when using `aria-brailleroledescription`. Note that, in general, `aria-brailleroledescription` should only be used in rare cases when a `aria-roledescription` is excessively verbose when rendered in Braille.
+The `aria-roledescription` is required when using `aria-brailleroledescription`. Note that, in general, `aria-brailleroledescription` should only be used in rare cases when an `aria-roledescription` is excessively verbose when rendered in Braille.
 
 ## Examples
 

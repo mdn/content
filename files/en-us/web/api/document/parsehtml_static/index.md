@@ -3,10 +3,12 @@ title: "Document: parseHTML() static method"
 short-title: parseHTML()
 slug: Web/API/Document/parseHTML_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.Document.parseHTML_static
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`parseHTML()`** static method of the {{domxref("Document")}} object provides an XSS-safe method to parse and sanitize a string of HTML in order to create a new {{domxref("Document")}} instance.
 
@@ -36,7 +38,8 @@ A {{domxref("Document")}}.
 
 - `TypeError`
   - : This is thrown if `options.sanitizer` is passed a:
-    - non-normalized {{domxref("SanitizerConfig")}} (one that includes both "allowed" and "removed" configuration settings).
+    - {{domxref("SanitizerConfig")}} that isn't [valid](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
+      For example, a configuration that includes both "allowed" and "removed" configuration settings.
     - string that does not have the value `"default"`.
     - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
 

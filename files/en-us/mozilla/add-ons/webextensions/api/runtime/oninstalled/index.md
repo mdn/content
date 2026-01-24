@@ -40,7 +40,7 @@ Events have three functions:
         - `previousVersion` {{optional_inline}}
           - : `string`. The previous version of the extension just updated. This is only present if the `reason` value is `update`.
         - `reason`
-          - : An {{WebExtAPIRef('runtime.OnInstalledReason')}} value, stating the reason that this event is being dispatched.
+          - : A {{WebExtAPIRef('runtime.OnInstalledReason')}} value, stating the reason that this event is being dispatched.
         - `temporary`
           - : `boolean`. True if the add-on was installed temporarily. For example, using the "about:debugging" page in Firefox or using [web-ext run](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/). False otherwise.
 

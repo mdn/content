@@ -131,7 +131,7 @@ Our [View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transiti
 
 ## Customizing your animations
 
-The View Transitions pseudo-elements have default [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) applied (which are detailed in their [reference pages](/en-US/docs/Web/API/View_Transition_API#pseudo-elements)).
+The View Transitions pseudo-elements have default [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations) applied (which are detailed in their [reference pages](/en-US/docs/Web/API/View_Transition_API#pseudo-elements)).
 
 Most appearance transitions are given a default smooth cross-fade animation, as mentioned above. There are some exceptions:
 
@@ -306,8 +306,9 @@ A view transition has an associated {{domxref("ViewTransition")}} object instanc
 
 The `ViewTransition` can be accessed like so:
 
-1. In the case of same-document (SPA) transitions, the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method returns the `ViewTransition` associated with the transition.
-2. In the case of cross-document (MPA) transitions:
+1. Via the {{domxref("Document.activeViewTransition")}} property. This provides a consistent way to access the active view transition in any context, without having to worry about saving it for easy access later on.
+2. In the case of same-document (SPA) transitions, the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method returns the `ViewTransition` associated with the transition.
+3. In the case of cross-document (MPA) transitions:
    - A {{domxref("Window.pageswap_event", "pageswap")}} event is fired when a document is about to be unloaded due to a navigation. Its event object ({{domxref("PageSwapEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageSwapEvent.viewTransition")}} property, as well as a {{domxref("NavigationActivation")}} via {{domxref("PageSwapEvent.activation")}} containing the navigation type and current and destination document history entries.
      > [!NOTE]
      > If the navigation has a cross-origin URL anywhere in the redirect chain, the `activation` property returns `null`.

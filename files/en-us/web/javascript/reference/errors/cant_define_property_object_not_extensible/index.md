@@ -5,10 +5,7 @@ page-type: javascript-error
 sidebar: jssidebar
 ---
 
-The JavaScript exception "can't define property "x": "obj" is not extensible" occurs
-when {{jsxref("Object.preventExtensions()")}} marked an object as no longer extensible,
-so that it will never have properties beyond the ones it had at the time it was marked
-as non-extensible.
+The JavaScript exception "can't define property "x": "obj" is not extensible" occurs when an object is marked as non-extensible, so that it will never have properties beyond the ones it had at the time it was marked as non-extensible. Objects can be made non-extensible by calling {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, or {{jsxref("Object.freeze()")}}.
 
 ## Message
 
@@ -25,19 +22,13 @@ TypeError: Attempting to define property on object that is not extensible. (Safa
 
 ## What went wrong?
 
-Usually, an object is extensible and new properties can be added to it. However, in
-this case {{jsxref("Object.preventExtensions()")}} marked an object as no longer
-extensible, so that it will never have properties beyond the ones it had at the time it
-was marked as non-extensible.
+Usually, an object is extensible and new properties can be added to it. However, in this case the object isn't extensible, so that it will never have properties beyond the ones it had at the time it was marked as non-extensible. You could have marked the object as non-extensible by calling {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, or {{jsxref("Object.freeze()")}}, or a library you are using could have done that for you.
 
 ## Examples
 
 ### Adding new properties to a non-extensible objects
 
-In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode),
-attempting to add new properties to a non-extensible object throws a
-`TypeError`. In sloppy mode, the addition of the "x" property is silently
-ignored.
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), attempting to add new properties to a non-extensible object via assignment throws a `TypeError`. In sloppy mode, the addition of the "x" property is silently ignored.
 
 ```js example-bad
 "use strict";
@@ -49,9 +40,7 @@ obj.x = "foo";
 // TypeError: can't define property "x": Object is not extensible
 ```
 
-In both, [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and
-sloppy mode, a call to {{jsxref("Object.defineProperty()")}} throws when adding a new
-property to a non-extensible object.
+In both [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and sloppy mode, a call to {{jsxref("Object.defineProperty()")}} throws when adding a new property to a non-extensible object.
 
 ```js example-bad
 const obj = {};
@@ -61,11 +50,22 @@ Object.defineProperty(obj, "x", { value: "foo" });
 // TypeError: can't define property "x": Object is not extensible
 ```
 
-To fix this error, you will either need to remove the call to
-{{jsxref("Object.preventExtensions()")}} entirely, or move it to a position so that the
-property is added earlier and only later the object is marked as non-extensible. Of
-course you can also remove the property that was attempted to be added, if you don't
-need it.
+### Non-extensible objects created by other means
+
+The `Object.seal()` and `Object.freeze()` methods also create non-extensible objects—they just have additional restrictions on modifying existing properties as well.
+
+```js example-bad
+"use strict";
+
+const obj = { y: "bar" };
+Object.seal(obj);
+obj.x = "foo";
+// TypeError: can't define property "x": Object is not extensible
+```
+
+### Fixing the error
+
+There are three ways to fix this error: you can remove the property addition entirely if you don't need it, you can copy the existing properties to a new extensible object, or you can add the property before making the object non-extensible.
 
 ```js example-good
 "use strict";
@@ -79,3 +79,5 @@ Object.preventExtensions(obj);
 ## See also
 
 - {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.freeze()")}}

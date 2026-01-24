@@ -82,6 +82,15 @@ In addition to the [common attributes](/en-US/docs/Web/HTML/Reference/Elements/i
 - `value`
   - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `checkbox`: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
 
+- `switch`
+  - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute that applies only to `checkbox` inputs. When present, it indicates that the `checkbox` represents an on/off `switch` rather than a normal `checkbox`. It alters the appearance of the `checkbox` control, but the underlying behavior remains the same as that of a normal `checkbox`.
+
+    > [!NOTE]
+    > This attribute allows user agents to expose `switch` ARIA semantics to assistive technologies — without requiring documents to explicitly specify `role="switch"`. The markup and API are similar to those of checkboxes, except that the `:indeterminate` pseudo-class never matches.
+
+    > [!WARNING]
+    > This attribute is still experimental and has limited browser support. The attribute is ignored on unsupported browsers.
+
 ## Using checkbox inputs
 
 We already covered the most basic use of checkboxes above. Let's now look at the other common checkbox-related features and techniques you'll need.
@@ -130,6 +139,32 @@ To make a checkbox checked by default, you give it the `checked` attribute. See 
 
 {{EmbedLiveSample('Checking_boxes_by_default', 600, 100)}}
 
+### Switch as a checkbox
+
+The following example shows how to make a checkbox look and act like an on/off switch.
+
+```html
+<form>
+  <fieldset>
+    <legend>Adjust your setting</legend>
+    <div>
+      <label for="theme">Dark mode</label>
+      <input type="checkbox" name="theme" id="theme" switch checked />
+    </div>
+    <div>
+      <label for="notifications">Notifications</label>
+      <input type="checkbox" name="notifications" id="notifications" switch />
+    </div>
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
+```
+
+> [!NOTE]
+> While only some browsers render the checkbox as a switch, the behavior is the same across all browsers.
+
+{{EmbedLiveSample('Switch_as_a_checkbox', 600, 100)}}
+
 ### Providing a bigger hit area for your checkboxes
 
 In the above examples, you may have noticed that you can toggle a checkbox by clicking on its associated {{htmlelement("label")}} element as well as on the checkbox itself. This is a really useful feature of HTML form labels that makes it easier to click the option you want, especially on small-screen devices like smartphones.
@@ -159,7 +194,7 @@ This can be seen in the below example (thanks to [CSS Tricks](https://css-tricks
 
 So in this case the `indeterminate` state is used to state that collecting the ingredients has started, but the recipe is not yet complete.
 
-```js
+```js live-sample___indeterminate_state
 const overall = document.querySelector("#enchantment");
 const ingredients = document.querySelectorAll("ul input");
 
@@ -192,7 +227,41 @@ function updateDisplay() {
 }
 ```
 
-{{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
+```html live-sample___indeterminate_state
+<form>
+  <fieldset>
+    <legend>Complete the recipe</legend>
+    <div>
+      <input type="checkbox" id="enchantment" name="enchantment" />
+      <label for="enchantment">Enchantment table</label>
+      <ul>
+        <li>
+          <input type="checkbox" id="book" name="ingredient" value="book" />
+          <label for="book">Book</label>
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            id="diamonds"
+            name="ingredient"
+            value="diamonds" />
+          <label for="diamonds">Diamonds (x2)</label>
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            id="obsidian"
+            name="ingredient"
+            value="obsidian" />
+          <label for="obsidian">Obsidian (x4)</label>
+        </li>
+      </ul>
+    </div>
+  </fieldset>
+</form>
+```
+
+{{EmbedLiveSample("indeterminate_state", "", 200)}}
 
 ## Validation
 
@@ -320,7 +389,10 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>
-      <td><code><a href="#checked">checked</a></code></td>
+      <td>
+        <code><a href="#checked">checked</a></code> and
+        <code><a href="#switch">switch</a></code>
+      </td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>

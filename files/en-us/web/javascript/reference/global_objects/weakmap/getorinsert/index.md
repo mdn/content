@@ -3,13 +3,9 @@ title: WeakMap.prototype.getOrInsert()
 short-title: getOrInsert()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/getOrInsert
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.WeakMap.getOrInsert
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`getOrInsert()`** method of {{jsxref("WeakMap")}} instances returns the value corresponding to the specified key in this `WeakMap`. If the key is not present, it inserts a new entry with the key and a given default value, and returns the inserted value.
 
@@ -41,7 +37,7 @@ getOrInsert(key, defaultValue)
 
 ### Return value
 
-The value associated with the specified key in the `WeakMap` object. If the key can't be found, {{jsxref("undefined")}} is returned.
+The value associated with the specified key in the `WeakMap` object. If the key can't be found, `defaultValue` is inserted and returned.
 
 ### Exceptions
 

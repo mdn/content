@@ -30,11 +30,13 @@ This example provides two buttons to modify the column span of the first cell of
     <col span="2" class="multiColumn" />
   </colgroup>
   <thead>
-    <th></th>
-    <th scope="col">C1</th>
-    <th scope="col">C2</th>
-    <th scope="col">C3</th>
-    <th scope="col">C4</th>
+    <tr>
+      <th></th>
+      <th scope="col">C1</th>
+      <th scope="col">C2</th>
+      <th scope="col">C3</th>
+      <th scope="col">C4</th>
+    </tr>
   </thead>
   <tbody>
     <tr>

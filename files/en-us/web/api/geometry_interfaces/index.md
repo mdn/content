@@ -16,7 +16,7 @@ browser-compat:
 
 **Geometry interfaces** is a CSS module that provides interfaces for working with 3D and 2D graphics — in particular, for working with points, rectangles, quadrilaterals and [transformation matrices](/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#transformation_matrices) (for operations that translate/move, scale, rotate, skew/shear/slant, and flip graphics, as well as for multiplying/chaining and inverting/undoing those operations).
 
-As a web developer, you don't always use the geometry interfaces directly, but instead use other features that rely on them behind the scenes: parts of [CSS Transforms](/en-US/docs/Web/CSS/CSS_transforms), the [Canvas API](/en-US/docs/Web/API/Canvas_API), the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API), and (more directly) {{domxref('VideoFrame.visibleRect')}}, {{domxref('Element.getClientRects()')}}, and {{domxref('Element.getBoundingClientRect()')}}.
+As a web developer, you don't always use the geometry interfaces directly, but instead use other features that rely on them behind the scenes: parts of [CSS Transforms](/en-US/docs/Web/CSS/Guides/Transforms), the [Canvas API](/en-US/docs/Web/API/Canvas_API), the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API), and (more directly) {{domxref('VideoFrame.visibleRect')}}, {{domxref('Element.getClientRects()')}}, and {{domxref('Element.getBoundingClientRect()')}}.
 
 ## Interfaces
 

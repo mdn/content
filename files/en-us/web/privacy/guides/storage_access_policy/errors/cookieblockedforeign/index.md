@@ -17,15 +17,11 @@ CookieBlockedForeign=Request to access cookies or storage on "X" was blocked bec
 
 ## What can be done
 
-The permission can be changed or removed by:
-
-- Going to _Preferences > Content Blocking_ and either
-- adding an exception with the _Manage Exceptions_… button
-- choosing the _Custom_ Content Blocking and unchecking the _Cookies_ checkbox
+The permission can be changed or removed by going to _Settings > Privacy & Security > Enhanced Tracking Protection_ and adding an exception with the _Manage Exceptions_… button.
 
 If the resource that is being blocked doesn't need authentication, you can fix the warning message by adding a `crossorigin="anonymous"` attribute to the relevant element.
 
 ## See also
 
-- [Content blocking](https://support.mozilla.org/en-US/kb/content-blocking) on [support.mozilla.org](https://support.mozilla.org/)
+- [Enhanced Tracking Protection in Firefox for desktop](https://support.mozilla.org/en-US/kb/content-blocking) on [support.mozilla.org](https://support.mozilla.org/)
 - [The `crossorigin` attribute](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)

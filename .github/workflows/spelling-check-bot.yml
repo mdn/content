@@ -18,27 +18,26 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
         with:
           node-version-file: ".nvmrc"
           package-manager-cache: false
 
-      - name: Install all yarn packages
-        run: yarn --frozen-lockfile
+      - name: Install
+        run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run scripts
         id: check
         run: |
           echo Running spelling check...
-          output=$(yarn --silent lint:typos-group-by-file || exit 0)
+          output=$(npm run --silent lint:typos-group-by-file || exit 0)
           if [ -n "${output}" ]; then
             output=$(node scripts/linkify-logs.js "${output}")
             output=$(echo "$output" | sed 's/^/- /')

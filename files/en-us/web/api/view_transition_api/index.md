@@ -5,7 +5,9 @@ page-type: web-api-overview
 browser-compat:
   - api.Document.startViewTransition
   - css.at-rules.view-transition
-spec-urls: https://drafts.csswg.org/css-view-transitions/
+spec-urls:
+  - https://drafts.csswg.org/css-view-transitions-2/
+  - https://drafts.csswg.org/css-view-transitions/
 ---
 
 {{DefaultAPISidebar("View Transition API")}}
@@ -34,8 +36,12 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 
 ## Interfaces
 
+- {{domxref("CSSViewTransitionRule")}}
+  - : Represents a {{cssxref("@view-transition")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 - {{domxref("ViewTransition")}}
   - : Represents a view transition, and provides functionality to react to the transition reaching different states (e.g., ready to run the animation, or animation finished) or skip the transition altogether.
+- {{domxref("ViewTransitionTypeSet")}}
+  - : A [set-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) representing the types of an active view transition, which enables the types to be queried or modified on-the-fly during a transition.
 
 ## Extensions to other interfaces
 
@@ -74,7 +80,7 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 - {{cssxref(":active-view-transition")}}
   - : Matches elements when a view transition is in progress.
 - {{cssxref(":active-view-transition-type()")}}
-  - : Matches elements when a view transition of a specific type is in progress.
+  - : Matches elements when a view transition with one or more specific types is in progress.
 
 ### Pseudo-elements
 
@@ -93,7 +99,7 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 
 - [Basic View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/): A basic image gallery demo with view transitions, featuring separate animations between old and new images, and old and new captions.
 - [Basic View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/): A sample two-page site that demonstrates usage of cross-document (MPA) view transitions, providing a custom "swipe up" transition when the two pages are navigated between.
-- [View transitions `match-element` demo](/en-US/docs/Web/CSS/view-transition-name#using_the_match-element_value): An SPA featuring animated list items, demonstrating the use of the `match-element` value of the `view-transition-name` property to animate individual elements.
+- [View transitions `match-element` demo](/en-US/docs/Web/CSS/Reference/Properties/view-transition-name#using_the_match-element_value): An SPA featuring animated list items, demonstrating the use of the `match-element` value of the `view-transition-name` property to animate individual elements.
 - [HTTP 203 playlist](https://http203-playlist.netlify.app/): A video player demo app that features several different SPA view transitions, many of which are explained in [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/).
 - [Chrome DevRel view transitions demos](https://view-transitions.chrome.dev/): A series of View Transition API demos.
 

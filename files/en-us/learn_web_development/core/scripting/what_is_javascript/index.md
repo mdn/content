@@ -43,15 +43,32 @@ It is the third layer of the layer cake of standard web technologies, two of whi
 
 The three layers build on top of one another nicely. Let's take a button as an example. We can mark it up using HTML to give it structure and purpose:
 
-```html live-sample___string-concat-name
-<button type="button">Player 1: Chris</button>
+```css hidden live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 1.4em;
+}
 ```
 
-![Button showing Player 1: Chris with no styling](just-html.png)
+```html live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+<button>Player 1: Chris</button>
+```
+
+{{EmbedLiveSample('string-concat-name-html', , '80')}}
 
 Then we can add some CSS into the mix to get it looking nice:
 
-```css live-sample___string-concat-name
+```css live-sample___string-concat-name-css live-sample___string-concat-name-js
 button {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   letter-spacing: 1px;
@@ -66,11 +83,11 @@ button {
 }
 ```
 
-![Button showing Player 1: Chris with styling](html-and-css.png)
+{{EmbedLiveSample('string-concat-name-css', , '80')}}
 
 And finally, we can add some JavaScript to implement dynamic behavior:
 
-```js live-sample___string-concat-name
+```js live-sample___string-concat-name-js
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
@@ -81,10 +98,9 @@ const button = document.querySelector("button");
 button.addEventListener("click", updateName);
 ```
 
-You can click "Play" to see and edit the example in the MDN Playground.
-Try clicking on the text label to see what happens.
+Try clicking on the text label, entering a name into the dialog box that opens, and pressing the OK button.
 
-{{EmbedLiveSample('string-concat-name', , '80', , , , , 'allow-modals')}}
+{{EmbedLiveSample('string-concat-name-js', , '80', , , , , 'allow-modals')}}
 
 JavaScript can do a lot more than that — let's explore what in more detail.
 
@@ -284,7 +300,7 @@ This works great, but what if we wanted to put our JavaScript in an external fil
    }
    ```
 
-4. Save and refresh your browser. You'll discover that clicking the button has no effect, and if you check your browser's console, you'll see an error along the lines of `Cross-origin request blocked`. That's because like many external resources, JavaScript modules need to be loaded from the [same origin](/en-US/docs/Web/Security/Same-origin_policy) as the HTML, and `file://` URLs don't qualify. There are two solutions to fix this problem:
+4. Save and refresh your browser. You'll discover that clicking the button has no effect, and if you check your browser's console, you'll see an error along the lines of `Cross-origin request blocked`. That's because like many external resources, JavaScript modules need to be loaded from the [same origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) as the HTML, and `file://` URLs don't qualify. There are two solutions to fix this problem:
    - Our recommended solution is to [set up a local testing server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server). With the server program running and serving the `apply-javascript-external.html` and `script.js` files on port `8000`, open your browser and go to `http://localhost:8000`.
    - If you cannot run a local server, you can also use `<script defer src="script.js"></script>` instead of `<script type="module" src="script.js"></script>`. See [Script loading strategies](#script_loading_strategies) below for more information. But note that features we use in other parts of the tutorial may require a local HTTP server anyway.
 5. Now the website works just the same as before, but now we've got our JavaScript in an external file.

@@ -21,7 +21,7 @@ This example creates a widget and assigns the ARIA `switch` role to it.
   id="speakerPower"
   class="switch">
   <span aria-hidden="true">off</span>
-  <span aria-hidden="true">on</span>
+  <span aria-hidden="false">on</span>
 </button>
 <label for="speakerPower" class="switch">Speaker power</label>
 ```

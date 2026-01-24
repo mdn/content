@@ -8,8 +8,6 @@ name: PR Test
 
 on:
   pull_request:
-    branches:
-      - main
 
 permissions:
   # Compare two commits.
@@ -23,13 +21,13 @@ jobs:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
       # This is the directory where the built files will be placed.
-      # It's also hardcoded in the `yarn build` command in package.json.
+      # It's also hardcoded in the `npm run build` command in package.json.
       # If you change it here, you must also make the same change in
       # package.json.
       BUILD_OUT_ROOT: build
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           persist-credentials: false
 
@@ -80,16 +78,15 @@ jobs:
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          cache: npm
 
-      - name: Install all yarn packages
+      - name: Install
         if: steps.check.outputs.HAS_FILES == 'true'
-        run: yarn --frozen-lockfile
+        run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build changed content
@@ -137,12 +134,12 @@ jobs:
             ARGS+=("-f" "$PWD/$file")
           done
 
-          yarn rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
+          npx rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
 
           # Workaround, as fred-ssr doesn't copy assets.
           cp -vR node_modules/@mdn/fred/out/. "$BUILD_OUT_ROOT"
 
-          yarn fred-ssr
+          npx fred-ssr
 
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT
@@ -160,7 +157,7 @@ jobs:
         if: steps.check.outputs.HAS_MD_FILES == 'true'
         run: du -sh $BUILD_OUT_ROOT
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         if: steps.check.outputs.HAS_MD_FILES == 'true'
         with:
           name: build
@@ -174,4 +171,4 @@ jobs:
           readarray -t files_to_check <<< "$GIT_DIFF_FILES"
 
           export CONTENT_ROOT=$(pwd)/files
-          yarn filecheck "${files_to_check[@]}"
+          npm run filecheck "${files_to_check[@]}"

@@ -28,7 +28,7 @@ This article provides information about the changes in Firefox 103 that will aff
 - The {{CSSxRef("backdrop-filter")}} property (which can be used to apply graphical effects such as blurring or color shifting to the area behind an element) is now available by default. It was earlier behind a preference setting ([Firefox bug 1578503](https://bugzil.la/1578503)).
 - The {{CSSxRef("scroll-snap-stop")}} property is now available ([Firefox bug 1312165](https://bugzil.la/1312165)). You can use this property's `always` and `normal` values to specify whether or not to pass the snap points, even when scrolling fast.
 - Support has been added for the {{CSSxRef(":modal")}} pseudo class. It selects all elements that are in a state in which they exclude all interaction with other elements until the interaction has been dismissed ([Firefox bug 1768535](https://bugzil.la/1768535)).
-- The [`style`](/en-US/docs/Web/CSS/contain#style) value for the `contain` property is now supported. You can use this value for properties that can have effects on more than just an element and its descendants for effects don't escape the containing element. For more information, see ([Firefox bug 1463600](https://bugzil.la/1463600)).
+- The [`style`](/en-US/docs/Web/CSS/Reference/Properties/contain#style) value for the `contain` property is now supported. You can use this value for properties that can have effects on more than just an element and its descendants for effects don't escape the containing element. For more information, see ([Firefox bug 1463600](https://bugzil.la/1463600)).
 
 ### JavaScript
 
@@ -44,7 +44,7 @@ This article provides information about the changes in Firefox 103 that will aff
   After transferring, the original object cannot be used.
   See [Firefox bug 1659025](https://bugzil.la/1659025) for more details.
 
-- {{domxref("Window.caches")}}, {{domxref("WorkerGlobalScope.caches")}}, {{domxref("CacheStorage")}}, and {{domxref("Cache")}} now require a [secure context](/en-US/docs/Web/Security/Secure_Contexts); the properties/interfaces are not defined if used in an insecure context.
+- {{domxref("Window.caches")}}, {{domxref("WorkerGlobalScope.caches")}}, {{domxref("CacheStorage")}}, and {{domxref("Cache")}} now require a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts); the properties/interfaces are not defined if used in an insecure context.
   Previously `cache` would return a `CacheStorage` that would throw an exception if used outside of a secure context.
   See [Firefox bug 1112134](https://bugzil.la/1112134) for more details.
 

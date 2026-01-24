@@ -3,15 +3,11 @@ title: Integrity-Policy header
 short-title: Integrity-Policy
 slug: Web/HTTP/Reference/Headers/Integrity-Policy
 page-type: http-header
-status:
-  - experimental
 browser-compat: http.headers.Integrity-Policy
 sidebar: http
 ---
 
-{{SeeCompatTable}}
-
-The HTTP **`Integrity-Policy`** response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees.
+The HTTP **`Integrity-Policy`** response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) guarantees.
 
 When set the user agent will block requests on specified [request destinations](#blocked-destinations) that omit integrity metadata, and will also block requests in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made.
 
@@ -26,10 +22,6 @@ This helps guard against content manipulation of fetched subresources.
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>no</td>
     </tr>
   </tbody>
 </table>
@@ -102,5 +94,5 @@ The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoint
 ## See also
 
 - {{HTTPHeader("Integrity-Policy-Report-Only")}}
-- [Integrity Policy](/en-US/docs/Web/Security/Subresource_Integrity#integrity_policy)
+- [Integrity Policy](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy)
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)

@@ -25,6 +25,7 @@ arcseconds
 ARGB
 arsinh
 artanh
+ASACP
 ASCAP
 ascendingly
 ASCIIID
@@ -293,6 +294,7 @@ holodeck
 homescreen
 homothetic
 hotlinking
+HOTP
 hotspot
 hotspots
 hoverable
@@ -366,6 +368,7 @@ lifecycles
 lightshow
 linecaps
 linkability
+linkified
 linkify
 livemark
 livemarks
@@ -468,6 +471,7 @@ OOJS
 OPFS
 optimizability
 opto-electronic
+OTAC
 outdents
 outsetting
 overengineering
@@ -499,6 +503,7 @@ phonorecord
 phonorecords
 pilcrow
 pillarboxed
+pillarboxing
 pingback
 pingbacks
 pingpong
@@ -675,6 +680,7 @@ spatializations
 spatialize
 spatialized
 SPDY
+spearphishing
 speedwalk
 spinbuttons
 spinlocking
@@ -827,6 +833,8 @@ tweens
 UAAG
 ufrag
 UMTS
+unblinded
+unblinds
 unbookmark
 unbundling
 uncacheable
@@ -856,6 +864,7 @@ ungroup
 ungrouping
 unguaranteed
 unhovered
+unhovering
 uninterpolated
 unintuitively
 unioned
@@ -900,6 +909,7 @@ Videobridge
 Viewmodel
 virosa
 virtualizes
+VOPRF
 WAAPI
 wallclock
 WAMP

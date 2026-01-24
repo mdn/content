@@ -38,6 +38,8 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 - {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked.
     `null` if lock is pending, pointer is unlocked, or if the target is in another tree.
+- `ShadowRoot.referenceTarget` {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : A string value that indicates the effective target of any element reference made against the shadow host from outside the host element. The value should be the ID of an element inside the shadow DOM. If set, target references to the host element from outside the shadow DOM will cause the referenced target element to become the effective target of the reference to the host element.
 - {{DOMxRef("ShadowRoot.serializable")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the shadow root is serializable.
     A serializable shadow root inside an element will be serialized by {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} when its [`options.serializableShadowRoots`](/en-US/docs/Web/API/Element/getHTML#serializableshadowroots) parameter is set `true`.
@@ -57,7 +59,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
   - : Returns the topmost element at the specified coordinates.
 - {{domxref("ShadowRoot.elementsFromPoint()")}} {{Non-standard_Inline}}
   - : Returns an array of all elements at the specified coordinates.
-- {{DOMxRef("ShadowRoot.setHTML()")}}
+- {{DOMxRef("ShadowRoot.setHTML()")}} {{experimental_inline}}
   - : Provides an XSS-safe method to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, which then replaces the existing tree in the shadow DOM.
 - {{DOMxRef("ShadowRoot.setHTMLUnsafe()")}}
   - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the shadowroot's original subtree. The HTML string may include declarative shadow roots, which would be parsed as template elements the HTML was set using [`ShadowRoot.innerHTML`](/en-US/docs/Web/API/ShadowRoot/innerHTML).

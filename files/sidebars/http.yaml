@@ -21,6 +21,7 @@ sidebar:
   - /Web/HTTP/Guides/Conditional_requests
   - /Web/HTTP/Guides/Range_requests
   - /Web/HTTP/Guides/Client_hints
+  - /Web/HTTP/Guides/User-agent_reduction
   - /Web/HTTP/Guides/Compression_dictionary_transport
   - /Web/HTTP/Guides/Network_Error_Logging
   - type: listSubPages
@@ -40,6 +41,7 @@ sidebar:
       - /Web/Security/Practical_implementation_guides
       - /Web/HTTP/Guides/Permissions_Policy
       - /Web/HTTP/Guides/Cross-Origin_Resource_Policy
+      - /Web/HTTP/Guides/IFrame_credentialless
       - /Web/HTTP/Guides/CORS
       - type: listSubPages
         path: /Web/HTTP/Guides/CORS/Errors

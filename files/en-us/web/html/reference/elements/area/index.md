@@ -74,7 +74,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - `poly`: the value is `x1,y1,x2,y2,..,xn,yn`. Value specifies the coordinates of the edges of the polygon.
       If the first and last coordinate pairs are not the same, the browser will add the last coordinate pair to close the polygon
 
-    The values are numbers of CSS pixels. Our [shape generator](/en-US/docs/Web/CSS/CSS_shapes/Shape_generator) can help you generate the `coords` syntax by selecting points on an image you upload.
+    The values are numbers of CSS pixels. Our [shape generator](/en-US/docs/Web/CSS/Guides/Shapes/Shape_generator) can help you generate the `coords` syntax by selecting points on an image you upload.
 
 - `download`
   - : This attribute, if present, indicates that the linked resource is intended to be downloaded rather than displayed in the browser.
@@ -83,6 +83,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   - : The hyperlink target for the area.
     Its value is a valid URL.
     This attribute may be omitted; if so, the `<area>` element does not represent a hyperlink.
+- `interestfor` {{experimental_inline}} {{non-standard_inline}}
+  - : Defines the `<area>` element as an **interest invoker**. Its value is the `id` of the target element, which will be affected in some way (normally shown or hidden) when interest is shown or lost on the invoker element (for example, by hovering/unhovering or focusing/blurring it). See [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) for more details and examples.
 - `ping`
   - : Contains a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background).
     Typically used for tracking.

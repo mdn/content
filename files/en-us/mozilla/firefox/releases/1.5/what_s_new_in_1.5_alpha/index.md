@@ -7,27 +7,27 @@ sidebar: firefox
 
 This page is based largely on [https://www.squarefree.com/burningedg...eases/](https://www.squarefree.com/burningedge/releases/) (thanks Jesse).
 
-### New Web Developer Features
+## New Web Developer Features
 
-#### HTML
+### HTML
 
 - Elements with `tabindex="-1"` should be focusable
   - : Elements with a negative tabIndex attribute can now have focus, even though they are not in the tab order.
 - Object should submit
   - : In accordance with the HTML4 specification, `<object>` elements can now be submitted as part of a form.
 
-#### CSS
+### CSS
 
 - CSS2 quotes nesting
-  - : Starting with this release, the [`quotes`](/en-US/docs/Web/CSS/quotes) CSS2 property is fully supported, with the correct quote (depending on the nesting level) used for open-quote and close-quote.
-- CSS3 [`:only-child`](/en-US/docs/Web/CSS/:only-child)
+  - : Starting with this release, the [`quotes`](/en-US/docs/Web/CSS/Reference/Properties/quotes) CSS2 property is fully supported, with the correct quote (depending on the nesting level) used for open-quote and close-quote.
+- CSS3 [`:only-child`](/en-US/docs/Web/CSS/Reference/Selectors/:only-child)
   - : This CSS3 selector allows selecting an element that has no other elements as siblings in the DOM.
 - CSS3 columns
   - : An experimental implementation of the proposed [CSS3 multicolumn layout](https://drafts.csswg.org/css-multicol/) draft. This allows easily doing newspaper-like multicolumn presentation.
 - CSS3 `overflow-x` and `overflow-y` properties
   - : These properties can be used to control the overflow behavior in the horizontal and vertical directions somewhat independently. For example, overflow in the horizontal direction could be hidden while overflow in the vertical direction can be scrolled to.
 - CSS3 cursors
-  - : More [mouse cursor names](/en-US/docs/Web/CSS/cursor) are now supported.
+  - : More [mouse cursor names](/en-US/docs/Web/CSS/Reference/Properties/cursor) are now supported.
 - URI values on CSS `cursor` properties
   - : On Windows, OS/2 and Linux (Gtk+ 2.x) one can now use an arbitrary image as the mouse cursor while a given DOM node is being hovered.
     Any image format supported by Gecko can be used for the image.
@@ -36,11 +36,11 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - `-moz-outline-radius`
   - : CSS outlines can now have rounded corners.
 - CSS `outline` property
-  - : [CSS outlines](/en-US/docs/Web/CSS/outline) can now be used. These differ from borders in that they don't affect the page layout.
+  - : [CSS outlines](/en-US/docs/Web/CSS/Reference/Properties/outline) can now be used. These differ from borders in that they don't affect the page layout.
 - Counters in CSS-generated content
-  - : [CSS2 counters](/en-US/docs/Web/CSS/CSS_lists) are now completely supported (the implementation doesn't match the current CSS2.1 draft, but matches the upcoming one). This allows automatic numbering of sections, headings, and so forth via stylesheets.
+  - : [CSS2 counters](/en-US/docs/Web/CSS/Guides/Lists) are now completely supported (the implementation doesn't match the current CSS2.1 draft, but matches the upcoming one). This allows automatic numbering of sections, headings, and so forth via stylesheets.
 
-#### JavaScript and DOM
+### JavaScript and DOM
 
 - Array extras
   - : New methods have been added to the Array object to facilitate common tasks. See [JavaScript 1.5 Array Object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
@@ -55,14 +55,14 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - DHTML Performance Fixes
   - : A number of changes were made to significantly improve DHTML speed and smoothness.
 
-#### Graphics
+### Graphics
 
 - SVG Support
   - : SVG is W3C specification providing resolution-independent scalable vector graphics, along with a DOM. A technology preview of native SVG support is included in this release. Currently a subset of SVG 1.1 Full, missing functionality includes filters, declarative animation, and SVG defined fonts.
 - `<canvas>` Support
   - : `<canvas>` is a scriptable drawing surface for dynamically creating bitmap graphics. For a further introduction, see [Drawing Graphics with Canvas](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-#### Miscellaneous
+### Miscellaneous
 
 - Support HTTP/1.1 408 response code
   - : A persistent connection is now correctly closed when a 408 response code (Request timeout) is received. The request is retried in a new connection.
@@ -71,7 +71,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - XForms support
   - : The [W3C's XML Forms](https://www.w3.org/MarkUp/Forms/) language allows writing complex forms in XML, and includes features that regular HTML forms do not have, such as client side validation against [XML Schema](https://www.w3.org/XML/Schema) and XML submission/retrieval. Support for XForms comes as an extension, see [Mozilla XForms Project Page](https://www-archive.mozilla.org/projects/xforms/).
 
-### New Extension Developer Features
+## New Extension Developer Features
 
 - Hidden referrer column for history
   - : Extensions can now access the referer information for pages stored in the browser history. This feature can be used to provide alternate history views and other useful functionality. [Firefox bug 128398](https://bugzil.la/128398)
@@ -117,9 +117,9 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - XTF Support
   - : The eXtensible Tag Framework allows adding support for new namespaces using XPCOM components to Mozilla (written in JavaScript or C++). See [XTF Home Page](https://web.archive.org/web/20070527160710/http://www.croczilla.com/xtf).
 
-### New Browser Features
+## New Browser Features
 
-#### Improved Preferences
+### Improved Preferences
 
 - Instant Apply behavior on Linux and Mac
   - : Changes made in the Preferences window now apply immediately, in line with typical behavior in other Mac OS X and GNOME applications. This changes conforms with the Apple and GNOME Human Interface Guidelines.
@@ -128,14 +128,14 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - Searchable cookie manager
   - : Cookies can be searched by hostname/domain and cookie name, and are organized by hostname in a tree format instead of a flat list.
 
-#### Deployment
+### Deployment
 
 - Firefox MSI package
   - : The new MSI installation package facilitates distributed installation and provides greater flexibility to network administrators wanting to deploy Firefox in a corporate environment.
 - Support for profile "temp" directory on local filesystem
   - : It is now possible to store the network cache (copies of visited webpages) and the XUL fastload cache (precompiled user interface code) on a local disk, while keeping the rest of the profile data on a network drive. This will increase performance and reduce network traffic for users in a network environment.
 
-#### Other
+### Other
 
 - "Sanitize" privacy feature
   - : The "Sanitize" feature provides an easy way to quickly remove browsing history, cookies, cache, saved form information, and other personal data. The items to be removed can be customized, and the feature can be activated using either a keyboard shortcut or through a menu item.

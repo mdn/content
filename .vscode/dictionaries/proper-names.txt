@@ -73,6 +73,7 @@ Browsersync
 Bubka
 Bundlesize
 Bunyakovsky
+Bushell
 Butterick
 Buzzcocks
 Bynens
@@ -114,6 +115,7 @@ codingintrigue
 Codrops
 Coleoptera
 Colomb
+Comeau
 Conde
 Corber
 Cortana
@@ -185,6 +187,7 @@ Elly
 Emscripten
 Endtest
 Ensatina
+Ente
 Envato
 Ephesis
 Eplepsia
@@ -301,9 +304,11 @@ Kahlo
 Kaku
 Kang
 Kaply
+Karmadrome
 Kaspersky
 Katari
 Kazam
+Keegan
 kenji-yamasaki
 Kerckhoffs
 Kersee
@@ -524,6 +529,7 @@ Scrimba
 Seamonkey
 Serpentina
 Shadeed
+Sharma
 Shilpa
 Shinoda
 Shireen
@@ -625,6 +631,7 @@ Willee
 Willigers
 Winamp
 Winchelsea
+Winnifred
 Wireshark
 Wirfs
 wisedog
@@ -662,5 +669,6 @@ Zheng
 Zilla
 Zinsser
 Zosia
+zxcvbn
 Émanuel
 Österreich

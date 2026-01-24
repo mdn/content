@@ -410,7 +410,7 @@ The most popular version control system is Git, along with GitHub, a site that p
 
 We'll be using GitHub so that you can easily download the source code for each article. You will also be able to get the code as it should be after completing the article, just in case you get lost.
 
-After [installing git](https://git-scm.com/downloads), to clone the repository you should execute:
+After [installing git](https://git-scm.com/downloads/), to clone the repository you should execute:
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git

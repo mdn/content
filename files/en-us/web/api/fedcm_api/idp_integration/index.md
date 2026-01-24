@@ -22,7 +22,7 @@ There is a potential privacy issue whereby an [IdP is able to discern whether a 
 
 The well-known file is requested via an uncredentialed [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which {{glossary("Relying party", "RP")}} is attempting to connect.
 
-The well-known file must be served from the [eTLD+1](https://web.dev/articles/same-site-same-origin#site) of the IdP at `/.well-known/web-identity`. For example, if the IdP endpoints are served under `https://accounts.idp.example/`, they must serve a well-known file at `https://idp.example/.well-known/web-identity`. The well-known file's content should have the following JSON structure:
+The well-known file must be served from the {{glossary("registrable domain")}} of the IdP at `/.well-known/web-identity`. For example, if the IdP endpoints are served under `https://accounts.idp.example/`, they must serve a well-known file at `https://idp.example/.well-known/web-identity`. The well-known file's content should have the following JSON structure:
 
 ```json
 {
@@ -105,7 +105,7 @@ The following table summarizes the different requests made by the FedCM API:
 
 ### The accounts list endpoint
 
-The browser sends credentialed requests (i.e., with a cookie that identifies the user that is signed in) to this endpoint via the `GET` method. The request has no `client_id` parameter, {{httpheader("Origin")}} header, or {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to. The list of accounts returned is RP-agnostic.
+The browser sends requests to this endpoint using the `GET` method. The request has no `client_id` parameter, {{httpheader("Origin")}} header, or {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to.
 
 For example:
 
@@ -117,7 +117,11 @@ Cookie: 0x23223
 Sec-Fetch-Dest: webidentity
 ```
 
-The response to a successful request returns a list of all the IdP accounts that the user is currently signed in with (not specific to any particular RP), with a JSON structure that matches the following:
+The request is credentialed: that is, it includes cookies for the IdP's site, which the IdP can use to identify which IdP accounts the user is signed into.
+
+Note that because the browser's request to this endpoint is a cross-site request, cookies will only be included if they have a [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute value of `None`. This means that IdP's can't use `SameSite` as part of their defense against [Cross-Site Request Forgery(CSRF)](/en-US/docs/Web/Security/Attacks/CSRF) attacks, so they must implement alternative defenses.
+
+The response returns a list of all the IdP accounts that the user is currently signed in with (not specific to any particular RP), with a JSON structure that matches the following:
 
 ```json
 {
@@ -254,7 +258,7 @@ Origin: https://rp.example/
 Content-Type: application/x-www-form-urlencoded
 Cookie: 0x23223
 Sec-Fetch-Dest: webidentity
-account_id=123&client_id=client1234&nonce=Ct60bD&disclosure_text_shown=true&is_auto_selected=true
+account_id=123&client_id=client1234&disclosure_text_shown=true&is_auto_selected=true
 ```
 
 A request to this endpoint is sent as a result of the user choosing an account to sign in with from the relevant browser UI. When sent valid user credentials, this endpoint should respond with a validation token that the RP can use to validate the user on its own server, according to the usage instructions outlined by the IdP they are using for identity federation. Once the RP validates the user, they can sign them in, sign them up to their service, etc.
@@ -271,8 +275,8 @@ The request payload contains the following params:
   - : The RP's client identifier (which matches the `clientId` from the original `get()` request).
 - `account_id`
   - : The unique ID of the user account to be signed in (which matches the user's `id` from the accounts list endpoint response).
-- `nonce` {{optional_inline}}
-  - : The request nonce, provided by the RP.
+- `params` {{optional_inline}}
+  - : The serialization of the `params` object from the original `get()` request.
 - `disclosure_text_shown`
   - : A string of `"true"` or `"false"` indicating whether the disclosure text was shown or not. The disclosure text is the information shown to the user (which can include the terms of service and privacy policy links, if provided) if the user is signed in to the IdP but doesn't have an account specifically on the current RP (in which case they'd need to choose to "Continue as..." their IdP identity and then create a corresponding account on the RP).
 - `is_auto_selected`
@@ -374,4 +378,4 @@ Once the user is signed in to the IdP, the IdP should:
 
 ## See also
 
-- [Federated Credential Management API](https://privacysandbox.google.com/cookies/fedcm) on privacysandbox.google.com (2023)
+- [Federated Credential Management API](https://developer.chrome.com/docs/identity/fedcm/overview) on developer.chrome.com (2023)

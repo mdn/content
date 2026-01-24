@@ -30,9 +30,7 @@ createTouchList(touch1, touch2, /* …, */ touchN)
 
 ### Return value
 
-- `list`
-  - : A {{DOMxRef("TouchList")}} object containing the {{DOMxRef("Touch")}} objects
-    specified by the `touches` parameter.
+A {{DOMxRef("TouchList")}} object containing the {{DOMxRef("Touch")}} objects specified by the `touches` parameter.
 
 ## Examples
 

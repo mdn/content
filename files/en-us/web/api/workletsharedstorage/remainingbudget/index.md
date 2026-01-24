@@ -4,11 +4,11 @@ short-title: remainingBudget()
 slug: Web/API/WorkletSharedStorage/remainingBudget
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.WorkletSharedStorage.remainingBudget
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`remainingBudget()`** method of the
 {{domxref("WorkletSharedStorage")}} interface returns the remaining navigation budget for the current origin.

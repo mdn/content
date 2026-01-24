@@ -108,7 +108,9 @@ The HTML consists of a popover, a button for toggling it open and closed, and a 
 
 ```html
 <button popovertarget="mypopover">Toggle the popover</button>
-<button id="allow_button"></button>
+<label for="allow-popover">
+  Allow opening <input type="checkbox" id="allow-popover" checked />
+</label>
 <div id="mypopover" popover>Popover content</div>
 ```
 
@@ -136,22 +138,15 @@ function log(text) {
 #### JavaScript
 
 First we set up the code to simulate a state where we don't want to allow the popover to open.
-This is represented by the variable `allowOpen`, which is toggled when the associated button is clicked.
+This is represented by the variable `allowOpen`, which is toggled when the associated checkbox is toggled.
 
 ```js
-const allowButton = document.getElementById("allow_button");
+const allowCheckbox = document.getElementById("allow-popover");
 
 let allowOpen = true;
 
-function toggleState() {
-  allowOpen = !allowOpen;
-  allowButton.innerText = allowOpen ? "Open Allowed" : "Open Prevented";
-}
-
-toggleState();
-
-allowButton.addEventListener("click", (event) => {
-  toggleState();
+allowCheckbox.addEventListener("change", (event) => {
+  allowOpen = allowCheckbox.checked;
 });
 ```
 

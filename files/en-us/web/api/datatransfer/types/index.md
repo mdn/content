@@ -48,10 +48,10 @@ function log(msg) {
 }
 
 document.querySelectorAll("li").forEach((item) => {
-  item.addEventListener("dragstart", dragstart_handler);
+  item.addEventListener("dragstart", dragstartHandler);
 });
 
-function dragstart_handler(ev) {
+function dragstartHandler(ev) {
   log(`dragStart: target.id = ${ev.target.id}`);
 
   // Add this element's id to the drag payload so the drop handler will

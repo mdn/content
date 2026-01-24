@@ -61,7 +61,7 @@ There are a number of common JavaScript problems that you will want to be mindfu
 - Making sure [asynchronous operations](/en-US/docs/Learn_web_development/Extensions/Async_JS) have completed before trying to use the values they return. This usually means understanding how to use _promises_: using [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) appropriately or running the code to handle the result of an asynchronous call in the promise's {{jsxref("Promise.then()", "then()")}} handler. See [How to use promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises) for an introduction to this topic.
 
 > [!NOTE]
-> [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) has some nice discussions of these common mistakes and more.
+> [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/developers/javascript/10-most-common-javascript-mistakes) has some nice discussions of these common mistakes and more.
 
 ## The Browser JavaScript console
 
@@ -132,7 +132,7 @@ with
 console.error(`Response value: ${response}`);
 ```
 
-Save your code and refresh the browser and you'll now see the message reported as an error, with the same color and icon as the uncaught error below it. In addition, there will now be a expand/collapse arrow next to the message. If you press this, you'll see a single line telling you the line in the JavaScript file the error originated from. In fact, the uncaught error line _also_ has this, but it has two lines:
+Save your code and refresh the browser and you'll now see the message reported as an error, with the same color and icon as the uncaught error below it. In addition, there will now be an expand/collapse arrow next to the message. If you press this, you'll see a single line telling you the line in the JavaScript file the error originated from. In fact, the uncaught error line _also_ has this, but it has two lines:
 
 ```plain
 showHeroes http://localhost:7800/js-debug-test/index.js:25

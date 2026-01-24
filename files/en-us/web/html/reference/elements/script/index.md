@@ -28,7 +28,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     See [Browser compatibility](#browser_compatibility) for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
 
-- `attributionsrc` {{experimental_inline}}
+- `attributionsrc` {{deprecated_inline}}
   - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the script resource request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers), respectively. Which response header should be sent back depends on the value of the `Attribution-Reporting-Eligible` header that triggered the registration.
 
     > [!NOTE]
@@ -44,7 +44,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         attributionsrc="https://a.example/register-source https://b.example/register-source"></script>
       ```
 
-      This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin. These URLs can then respond with a {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header as appropriate to complete registration.
+      This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin. These URLs can then respond with an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header as appropriate to complete registration.
 
       > [!NOTE]
       > Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
@@ -76,9 +76,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     If the attribute is specified with the `async` attribute, the element will act as if only the `async` attribute is specified.
 
-- `fetchpriority`
-  - : Provides a hint of the relative priority to use when fetching an external script.
-    Allowed values:
+- [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority)
+  - : Provides a hint of the relative priority to use when fetching an external script. Allowed values:
     - `high`
       - : Fetch the external script at a high priority relative to other external scripts.
     - `low`
@@ -87,15 +86,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : Don't set a preference for the fetch priority.
         This is the default.
         It is used if no value or an invalid value is set.
-
-    See {{domxref("HTMLScriptElement.fetchPriority")}} for more information.
-
 - `integrity`
-  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not be specified when the `src` attribute is absent. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
+  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not be specified when the `src` attribute is absent. See [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
 - `nomodule`
   - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
 - `nonce`
-  - : A cryptographic nonce (number used once) to allow scripts in a [script-src Content-Security-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
+  - : A cryptographic {{Glossary("Nonce", "nonce")}} (number used once) to allow scripts in a [script-src Content-Security-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - `referrerpolicy`
   - : Indicates which [referrer](/en-US/docs/Web/API/Document/referrer) to send when fetching the script, or resources fetched by the script:
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
@@ -348,5 +344,5 @@ so that the script doesn't block parsing but is guaranteed to be evaluated befor
 ## See also
 
 - {{domxref("document.currentScript")}}
-- [Flavio Copes' article on loading JavaScript efficiently and explaining the differences between `async` and `defer`](https://flaviocopes.com/javascript-async-defer/)
+- [Flavio Copes' article on loading JavaScript efficiently and explaining the differences between `async` and `defer`](https://thevalleyofcode.com/javascript-async-defer/)
 - [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide

@@ -4,6 +4,9 @@ sidebar:
   - type: section
     link: /Learn_web_development
   - type: section
+    link: /en-US/curriculum/
+    title: MDN curriculum
+  - type: section
     link: /Learn_web_development/Getting_started
     title: Getting_started_modules
   - link: /Learn_web_development/Getting_started/Environment_setup
