@@ -163,9 +163,8 @@ const siblingDiv = document.getElementById("sibling");
 const displayTypeSelect = document.getElementById("displayType");
 
 function changeDisplayType() {
-  const displayType = displayTypeSelect.value;
-  parentDiv.style.display = displayType;
-  siblingDiv.style.display = displayType;
+  parentDiv.style.display = displayTypeSelect.value;
+  siblingDiv.style.display = displayTypeSelect.value;
 }
 
 displayTypeSelect.addEventListener("change", changeDisplayType);

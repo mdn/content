@@ -9,7 +9,7 @@ sidebar: cssref
 
 The **`<timeline-range-name>`** {{glossary("enumerated")}} data type is a CSS identifier representing one of the predefined named timeline ranges inside a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines).
 
-The `<timeline-range-name>` keyword values are used in the following longhand and shorthand properties:
+The `<timeline-range-name>` keyword values are used in [keyframe selectors](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors) and the following longhand and shorthand properties:
 
 - {{cssxref("animation-range-end")}}
 - {{cssxref("animation-range-start")}}
@@ -31,7 +31,7 @@ Valid `<timeline-range-name>` values:
   - : Represents the range of a view progress timeline from the point where the subject element first starts to enter the scroll port, to the point where it has completely entered the scrollport. `0%` is equivalent to `0%` of the `cover` range. `100%` is equivalent to `0%` of the `contain` range.
 
 - `exit`
-  - : Represents the range of a view progress timeline from the point where the subject element first starts to exit the scroll port, to the point where it has completely exited the scrollport. `0%` is equivalent to `0%` of the `contain` range. `100%` is equivalent to `0%` of the `cover` range.
+  - : Represents the range of a view progress timeline from the point where the subject element first starts to exit the scroll port, to the point where it has completely exited the scrollport. `0%` is equivalent to `100%` of the `contain` range. `100%` is equivalent to `100%` of the `cover` range.
 
 - `entry-crossing`
   - : Represents the range during which the principal box crosses the end border edge. The start (0% progress) of the range occurs when the start border edge of the element's principal box coincides with the end edge of its view progress visibility range. The end (100%) of the range is the point at which the end border edge of the element's principal box coincides with the end edge of its view progress visibility range. The size of the range is the size of the element's principle box in the scroll direction.

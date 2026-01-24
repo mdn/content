@@ -17,11 +17,11 @@ The aim of this skill test is to help you assess whether you understand how a [g
 
 In this task, we want you to create a grid into which the four child elements will auto-place. The grid should have three columns sharing the available space equally and a 20 pixel gap between the column and row tracks. After that, try adding more child containers inside the parent container with the class of `grid` and see how they behave by default.
 
-Your final result should look like the image below:
+Your final result should look like the following rendering:
 
-![A three column grid with four items placed into it.](grid-task1.png)
+{{EmbedLiveSample("grid1-finish", "", "160px")}}
 
-```html live-sample___grid1
+```html live-sample___grid1-start live-sample___grid1-finish
 <div class="grid">
   <div>One</div>
   <div>Two</div>
@@ -30,7 +30,7 @@ Your final result should look like the image below:
 </div>
 ```
 
-```css live-sample___grid1
+```css live-sample___grid1-start live-sample___grid1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -48,14 +48,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("grid1", "", "200px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("grid1-start", "", "220px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Create a grid using `display: grid` with three columns using `grid-template-columns` and a `gap` between the items:
 
-```css
+```css live-sample___grid1-finish
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -67,20 +69,20 @@ Create a grid using `display: grid` with three columns using `grid-template-colu
 
 ## Task 2
 
-In this task, we already have a grid defined. We want you to edit the CSS rules for the two child elements, causing them to span over several grid tracks each. The second item should overlay the first as in the image below:
+In this task, we already have a grid defined. We want you to edit the CSS rules for the two child elements, causing them to span over several grid tracks each. The second item should overlay the first as shown in the following rendering:
 
-![A box with two items inside one overlaying the other.](grid-task2.png)
+{{EmbedLiveSample("grid2-finish", "", "340px")}}
 
 **Bonus question:** Can you now cause the first item to display on top without changing the order of items in the source?
 
-```html live-sample___grid2
+```html live-sample___grid2-start live-sample___grid2-finish
 <div class="grid">
   <div class="item1">One</div>
   <div class="item2">Two</div>
 </div>
 ```
 
-```css live-sample___grid2
+```css live-sample___grid2-start live-sample___grid2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -116,7 +118,9 @@ body {
 }
 ```
 
-{{EmbedLiveSample("grid2", "", "340px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("grid2-start", "", "340px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -124,7 +128,7 @@ body {
 It is possible to layer items by way of them occupying the same grid cells.
 One option is to use the shorthands below, however it would be correct to use the longhand `grid-row-start` for example.
 
-```css
+```css live-sample___grid2-finish
 .item1 {
   grid-column: 1 / 4;
   grid-row: 1 / 3;
@@ -136,7 +140,7 @@ One option is to use the shorthands below, however it would be correct to use th
 }
 ```
 
-For the bonus question, one way of achieving this would be to use `order`, which we've encountered in the flexbox tutorial.
+For the bonus question, one way of achieving this is to use `order`, which we've encountered in the flexbox tutorial.
 
 ```css
 .item1 {
@@ -158,11 +162,11 @@ Another valid solution is to use `z-index`:
 
 In this task, there are four direct children in this grid. The starting point has them displayed using auto-placement.
 
-To complete the task, use the `grid-area` and `grid-template-areas` properties to lay the items out as shown in the image below:
+To complete the task, use the `grid-area` and `grid-template-areas` properties to lay the items out as shown in the following rendering:
 
-![Four items displayed in a grid.](grid-task3.png)
+{{EmbedLiveSample("grid3-finish", "", "200px")}}
 
-```html live-sample___grid3
+```html live-sample___grid3-start live-sample___grid3-finish
 <div class="grid">
   <div class="one">One</div>
   <div class="two">Two</div>
@@ -171,7 +175,7 @@ To complete the task, use the `grid-area` and `grid-template-areas` properties t
 </div>
 ```
 
-```css live-sample___grid3
+```css live-sample___grid3-start live-sample___grid3-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -190,14 +194,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("grid3", "", "200px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("grid3-start", "", "200px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Each part of the layout needs a name using the `grid-area` property and `grid-template-areas` to lay them out. Possible areas of confusion would be not realizing you should place a `.` to leave a cell empty, or that you should repeat the name to cause an element to span more than one track:
 
-```css
+```css live-sample___grid3-finish
 .grid {
   display: grid;
   gap: 20px;
@@ -229,11 +235,11 @@ Each part of the layout needs a name using the `grid-area` property and `grid-te
 
 ## Task 4
 
-In this task, you will need to use both grid layout and flexbox to recreate the example as seen in the image below. The gap between the column and row tracks should be 10px. You do not need to make any changes to the HTML in order to achieve this.
+In this task, you will need to use both grid layout and flexbox to recreate the example as seen in the finished rendering below. The gap between the column and row tracks should be 10px. You do not need to make any changes to the HTML in order to achieve this.
 
-![Two rows of cards, each with an image and a set of tags.](grid-task4.png)
+{{EmbedLiveSample("grid4-finish", "", "400px")}}
 
-```html live-sample___grid4
+```html live-sample___grid4-start live-sample___grid4-finish
 <div class="container">
   <div class="card">
     <img
@@ -284,7 +290,7 @@ In this task, you will need to use both grid layout and flexbox to recreate the 
 </div>
 ```
 
-```css live-sample___grid4
+```css live-sample___grid4-start live-sample___grid4-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -324,7 +330,9 @@ body {
 }
 ```
 
-{{EmbedLiveSample("grid4", "", "400px")}}
+This is the starting state of the task:
+
+{{EmbedLiveSample("grid4-start", "", "400px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -334,7 +342,7 @@ The `<ul>` needs to be a flex container as tags (`<li>` elements) are not lined 
 
 You may try to use flexbox on the container and restrict the cards with percentage values. You may also try to make the items into a grid layout in which case, note that the items are not aligned in two dimensions so flexbox isn't the best choice.
 
-```css
+```css live-sample___grid4-finish
 .container {
   display: grid;
   gap: 10px;

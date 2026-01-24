@@ -62,13 +62,17 @@ Then on subsequent requests the client might send `Sec-CH-DPR` header to the ser
 Sec-CH-DPR: 2.0
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-- Device client hints
+- Device and responsive image client hints
   - {{HTTPHeader("Sec-CH-Device-Memory")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}

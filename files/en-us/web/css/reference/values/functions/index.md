@@ -477,7 +477,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("transform-function/translateY", "translateY()")}}
 - {{cssxref("transform-function/translateZ", "translateZ()")}}
 - {{cssxref("type")}} {{experimental_inline}}
-- {{cssxref("url_function")}}
+- {{cssxref("url_function", "url()")}}
 - {{cssxref("var")}}
 - {{cssxref("animation-timeline/view", "view()")}}
 - {{cssxref("basic-shape/xywh", "xywh()")}}
