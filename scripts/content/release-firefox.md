@@ -7,7 +7,7 @@ sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox {{VERSION}} that affect developers.
-Firefox {{VERSION}} is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [{{RELEASE_DATE}}](https://whattrainisitnow.com/release/?version={{VERSION}}).
+Firefox {{VERSION}} is scheduled to ship on [{{RELEASE_DATE}}](https://whattrainisitnow.com/release/?version={{VERSION}}).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
