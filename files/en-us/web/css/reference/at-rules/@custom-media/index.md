@@ -5,9 +5,10 @@ page-type: css-at-rule
 status:
   - experimental
 browser-compat: css.at-rules.custom-media
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/Reference/At-rules) defines aliases for long or complex [media queries](/en-US/docs/Web/CSS/Guides/Media_queries). Instead of repeating the same hardcoded `<media-query-list>` in multiple {{cssxref("@media")}} at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed.
 
