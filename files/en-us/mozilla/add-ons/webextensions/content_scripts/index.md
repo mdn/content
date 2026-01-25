@@ -49,6 +49,8 @@ Registered content scripts are only executed if the extension is granted [host p
 
 To inject scripts programmatically, the extension needs either the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). The `scripting` permission is required to use methods from the {{WebExtAPIRef("scripting")}} API.
 
+On installation, the extension can request host permissions for hosts in the `matches` lists of the `content_scripts` manifest key. Users can opt in or out of host permissions after installing the extension.
+
 ### Restricted domains
 
 Both [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) and the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) have exceptions for some domains. Content scripts are blocked from executing on these domains, for example, to protect the user from an extension escalating privileges through special pages.
