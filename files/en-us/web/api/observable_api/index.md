@@ -14,19 +14,36 @@ The **Observable API** provides a mechanism for handling an asynchronous stream 
 
 ## Concepts and usage
 
-{{domxref("Observable")}} objects (commonly called **observables**) represent a stream of events that can be observed and manipulated. The two main ways to create an observable are as follows:
+Events are fundamental to web development and JavaScript programming at large. Events originate from {{domxref("EventTarget")}} objects:
 
-- The {{domxref("EventTarget.when()")}} method, which returns an observable representing a stream of {{domxref("Event")}}s that will be fired on the `EventTarget`.
-- The {{domxref("Observable.Observable", "Observable()")}} constructor, which returns an observable representing a custom stream of values that can be subscribed to as needed. These values can be `Event` objects, or any other kind of value.
+```js
+element.addEventListener("click", handler1);
+element.addEventListener("click", handler2);
+```
+
+When the user clicks on the `element`, the element, controlled by the browser, is responsible for pushing a notification to each of its event listeners, which are `handler1` and `handler2` in this case. The notification is an {{domxref("Event")}} object providing further context and data about the event. The handler then carries out some action in response to the event.
+
+This paradigm is known as _reactive programming_, where actions are carried out passively in response to a trigger. Abstractly, there are four main kinds of reactive programming:
+
+- _Single pull_: The initiator receives a single value. Normal functions implement this: in `const result = action();`, the caller of the `action()` function is the initiator, which pulls a single value `result` from the function.
+- _Single push_: The initiator sends a single value, and the receiver waits before it receives that value. [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implement this: in `promise.then((value) => { ... });`, the promise implementation is the initiator, which calls the callback function exactly once when the promise is settled, sending a single value.
+- _Multiple pulls_: The initiator pauses and resumes execution of the data source, eventually receiving multiple values. [Iterators](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) implement this: in `const result1 = iterator.next(); const result2 = iterator.next();`, the caller of the `next()` method is the initiator, which pulls multiple values from the iterator.
+- _Multiple pushes_: The initiator sends multiple values, and the receiver pauses execution in between receiving those values. Events implement this: in `element.addEventListener("click", handler);`, the element is the initiator, which calls the `handler` function multiple times as the user clicks on the element, sending multiple event objects.
+
+The problem with the `addEventListener()` model is that there's no neat way to _compose_ event handlers. Each handler is executed in isolation and doesn't inherently have knowledge about the other events in a sequence. For example, if you want to do something specifically for a `mousemove` event that happens after a `mousedown` event, you have to manage any shared state yourself, leading to complex and fragile code.
+
+The Observable API addresses this problem by declaratively creating and manipulating streams of events using methods such as {{domxref("Observable.map()")}} and {{domxref("Observable.filter()"}}. It doesn't fundamentally replace the event-driven model, but rather changes the way you organize your code, much like how promises changed the way asynchronous code is written compared to traditional callbacks.
 
 > [!NOTE]
-> You can also convert objects such as [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [Iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) into observables using the static {{domxref("Observable.from_static", "Observable.from()")}} method.
+> The Observable API is not inherently related to the event API. While event handling is a major use case for observables, observables can represent any stream of data, not just events. Because of this, the observable API is actually more like a language primitive than a web-exclusive API, just like {{jsxref("Promise")}} or {{jsxref("Iterator")}}. It is specified by WICG instead of TC39 for historical reasons, like {{domxref("AbortController")}} or [streams](/en-US/docs/Web/API/Streams_API).
 
-Observables can be thought of as more powerful event listeners that integrate with {{domxref("EventTarget")}}. They improve event handling code in a similar way to how [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) improved on callbacks, simplifying code by reducing the need for nested blocks.
+In the Observable API, there are two main concepts: the **observable** and the **subscriber**, which are the sender and the receiver of values, respectively. Typically, you are the subscriber who transforms and consumes values from observables using methods on the {{domxref("Observable")}} interface. If you are the implementor of an observable, then you can also manipulate the subscriber's behavior using the {{domxref("Subscriber")}} interface. There are three main ways to obtain observables:
 
-Observables have several methods that return a new observable, and these methods can be chained together to create a pipeline.
+- {{domxref("EventTarget")}} objects are observable: the {{domxref("EventTarget.when()")}} method returns an {{domxref("Observable")}} representing a stream of events fired on the `EventTarget`. You may also have libraries that return observables.
+- You can create your own custom observables using the {{domxref("Observable.Observable", "Observable()")}} constructor.
+- You can convert objects such as [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [Iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) into observables using the static {{domxref("Observable.from_static", "Observable.from()")}} method.
 
-Events passing through the pipeline can be modified at each stage; the final stage is to subscribe to the event stream produced by the `EventTarget`, specifying a function that will be called each time the event is fired.
+An observable can be transformed using various methods that return new observables, such as {{domxref("Observable.map()")}} and {{domxref("Observable.filter()")}}. Finally, to start receiving values from an observable, you subscribe to it using the {{domxref("Observable.subscribe()")}} method, or aggregate all values using methods like {{domxref("Observable.reduce()")}}. You can also unsubscribe from an observable using an {{domxref("AbortController")}} or certain methods like {{domxref("Observable.takeUntil()")}}. Observables are _lazy_ — they don't start producing values until they have at least one subscriber.
 
 Let's consider a brief example:
 
@@ -35,26 +52,21 @@ document.body
   .when("mousedown")
   .filter((e) => e.target.matches("body"))
   .map((e) => ({ x: e.clientX, y: e.clientY }))
-  .subscribe({ next: reportCoords });
-
-function reportCoords(e) {
-  console.log(`${e.x},${e.y}`);
-}
+  .subscribe((p) => {
+    console.log(`${p.x},${p.y}`);
+  });
 ```
 
-In this snippet we specify the [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event) event inside the `when()` method on the page's {{htmlelement("body")}} element, which returns a observable representing a stream of `mousedown` events fired on the `<body>` element.
+In this snippet, the page's {{htmlelement("body")}} element is an {{domxref("EventTarget")}}. We subscribe to the stream of [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event) events fired on it using the `when()` method.
 
 We then specify a pipeline:
 
-- {{domxref("Observable.filter()")}} is used to filter the events passed through the pipeline to only events fired on the {{htmlelement("body")}} element (tested using the {{domxref("Element.matches()")}} method) and not its descendents.
-- {{domxref("Observable.map()")}} is used to map the fired `mousedown` event objects to new objects containing the coordinates of the mouse cursor when the event was fired.
-- {{domxref("Observable.subscribe()")}} is used to subscribe the observable to the event stream, calling the `reportCoords()` function each time a `mousedown` event fires on the `<body>`. This function logs the mouse coordinates to the console.
+- {{domxref("Observable.filter()")}} filters the events passed through the pipeline to only events fired on the {{htmlelement("body")}} element (tested using the {{domxref("Element.matches()")}} method) and not its descendants.
+- {{domxref("Observable.map()")}} maps the fired `mousedown` event objects to new objects containing the coordinates of the mouse cursor when the event was fired.
 
-Observables, like Promises, get an initializing callback upon construction which controls what values the observable emits. For developer-created custom observables (created using the `Observable()` constructor) you pass this callback in manually, whereas for platform-returned ones (created using `EventTarget.when()`), the platform constructs the Observable with an internal callback that runs when you subscribe the observable to the event stream using `subscribe()`.
+Finally, {{domxref("Observable.subscribe()")}} subscribes to the observable, calling the `reportCoords()` function each time a `mousedown` event fires on the `<body>`. This function logs the mouse coordinates to the console.
 
-The initializing callback's argument is a `Subscriber` object, which has methods available on it that are called at different points in the observable lifecycle — for example to continue on to the {{domxref("Subscriber.next", "next()")}} event, or to {{domxref("Subscriber.complete", "complete()")}} the pipeline.
-
-You can also unsubscribe from an observable — signaling that you want it to stop producing values — using the {{domxref("Observable.takeUntil()")}} method or an {{domxref("AbortController")}}.
+You may notice that this paradigm is very similar to [iterators](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols), where we can also transform with [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/map) and [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/filter) and consume with `next()` and [`toArray()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/toArray). Indeed, both observables and iterators represent streams of data; the key difference, as previously stated, is that iterators are pull-based (the consumer decides when to receive values), while observables are push-based (the producer decides when to send values).
 
 See [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using) for more information on the above concepts.
 

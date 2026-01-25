@@ -10,7 +10,7 @@ browser-compat: api.Subscriber.addTeardown
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`addTeardown()`** method of the {{domxref("Subscriber")}} interface runs automatically after the subscription completes or is [unsubscribed](/en-US/docs/Web/API/Observable_API/Using#unsubscribing).
+The **`addTeardown()`** method of the {{domxref("Subscriber")}} interface runs automatically after the subscription completes or is [unsubscribed](/en-US/docs/Web/API/Observable_API/Using#unsubscribing_from_an_observable).
 
 The functionality of the `addTeardown()` method is is defined inside the subscriber callback, unlike the other subscriber lifecycle callbacks, which are defined in the {{domxref("Observable.subscribe()")}} method that was called to subscribe to the observable stream.
 

@@ -31,14 +31,14 @@ subscribe(observer, options)
     - `error` {{optional_inline}}
       - : A function that is called when an exception is thrown somewhere in the observable pipeline.
     - `complete` {{optional_inline}}
-      - : A callback function that is called when the stream has been successfully completed and no more data will be sent. This occurs when no more values are available to be sent, or the [observable is unsubscibed from the stream](/en-US/docs/Web/API/Observable_API/Using#unsubscribing).
+      - : A callback function that is called when the stream has been successfully completed and no more data will be sent. This occurs when no more values are available to be sent, or the [observable is unsubscribed from the stream](/en-US/docs/Web/API/Observable_API/Using#unsubscribing_from_an_observable).
 
     If the provided `observer` is a callback function, it is equivalent to the `next` callback in the object version. This is a shortcut for the common case where you just want to provide a `next` function to handle each value coming through the stream.
 
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} object instance, which allows the subscription to be aborted via the associated {{domxref("AbortController")}}. See [Unsubscribing with an `AbortController`](/en-US/docs/Web/API/Observable_API/Using#unsubscribing_with_an_abortcontroller) for more details.
+      - : An {{domxref("AbortSignal")}} object instance, which allows the subscription to be aborted via the associated {{domxref("AbortController")}}. See [Unsubscribing from an observable](/en-US/docs/Web/API/Observable_API/Using#unsubscribing_from_an_observable) for more details.
 
 ### Return value
 

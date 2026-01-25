@@ -10,7 +10,7 @@ browser-compat: api.Observable.inspect
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`inspect()`** method of the {{domxref("Observable")}} interface enables the different [lifecycle stages](/en-US/docs/Web/API/Observable_API/Using#the_observable_lifecycle) of the observable stream to be inspected, to test that it is working as it should, and get diagnostic data.
+The **`inspect()`** method of the {{domxref("Observable")}} interface enables the different [lifecycle stages](/en-US/docs/Web/API/Observable_API/Using#creating_custom_observables) of the observable stream to be inspected, to test that it is working as it should, and get diagnostic data.
 
 ## Syntax
 
@@ -31,7 +31,7 @@ inspect(inspector)
     - `subscribe` {{optional_inline}}
       - : A function that is called when the observable subscribes to the pipeline, in other words, when the `Observable.subscribe()` call successfully runs.
     - `abort` {{optional_inline}}
-      - : A function that is called when the observable subscription is [aborted](/en-US/docs/Web/API/Observable_API/Using#unsubscribing_with_an_abortcontroller).
+      - : A function that is called when the observable subscription is [aborted](/en-US/docs/Web/API/Observable_API/Using#unsubscribing_from_an_observable).
 
     If the provided `inspector` is a callback function, it is equivalent to the `next` callback in the object version. This is a shortcut for the common case where you just want to provide a `next` function to inspect each value coming through the stream.
 

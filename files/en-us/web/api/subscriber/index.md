@@ -9,9 +9,9 @@ browser-compat: api.Subscriber
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`Subscriber`** interface of the {{domxref("Observable API", "Observable API", "", "nocode")}} represents a subscription to a stream of observable values, and contains methods to manage the [lifecycle](/en-US/docs/Web/API/Observable_API/Using#the_observable_lifecycle) of that subscription.
+The **`Subscriber`** interface of the {{domxref("Observable API", "Observable API", "", "nocode")}} represents a subscription to a stream of observable values, and contains methods to manage the [lifecycle](/en-US/docs/Web/API/Observable_API/Using#creating_custom_observables) of that subscription.
 
-An observable's `Subscriber` object is passed in as an arguement to the callback function specified as the argument of an observable's constructor when it is first created. Observables created using {{domxref("EventTarget.when()")}} have their subscriber callbacks created implicitly by the browser, whereas custom observables created directly using the {{domxref("Observable.Observable", "Observable()")}} constructor have their subscriber callbacks defined explicitly by the developer.
+An observable's `Subscriber` object is passed in as an argument to the callback function specified as the argument of an observable's constructor when it is first created. Observables created using {{domxref("EventTarget.when()")}} have their subscriber callbacks created implicitly by the browser, whereas custom observables created directly using the {{domxref("Observable.Observable", "Observable()")}} constructor have their subscriber callbacks defined explicitly by the developer.
 
 The subscriber callback defines _when_ the `Subscriber` lifecycle callbacks are invoked, or to put it another way, the conditions under which stages of the lifecycle occur. The actual functionality of the `Subscriber` lifecycle callbacks is defined when {{domxref("Observable.subscribe", "subscribe()")}} is invoked on the observable, with the exception of {{domxref("Subscriber.addTeardown", "addTeardown()")}}, which is defined inside the subscriber callback itself.
 
