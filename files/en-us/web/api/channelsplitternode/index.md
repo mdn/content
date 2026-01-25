@@ -16,36 +16,36 @@ If your `ChannelSplitterNode` always has one single input, the amount of outputs
 {{InheritanceDiagram}}
 
 <table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Number of inputs</th>
-      <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Number of outputs</th>
-      <td>variable; defaults to <code>6</code>.</td>
-    </tr>
-    <tr>
-      <th scope="row">Channel count mode</th>
+<tbody>
+<tr>
+<th scope="row">Number of inputs</th>
+<td><code>1</code></td>
+</tr>
+<tr>
+<th scope="row">Number of outputs</th>
+<td>variable; defaults to <code>6</code>.</td>
+</tr>
+<tr>
+<th scope="row">Channel count mode</th>
 <td>
 <code>"explicit"</code>. Older implementations, as per earlier versions
 of the spec use <code>"max"</code>.
 </td>
 
-    </tr>
-    <tr>
-      <th scope="row">Channel count</th>
-      <td>
-        Fixed to the number of outputs. Older implementations, as per earlier
-        versions of the spec use <code>2</code> (not used in the default count
-        mode).
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Channel interpretation</th>
-      <td><code>"discrete"</code></td>
-    </tr>
-  </tbody>
+</tr>
+<tr>
+<th scope="row">Channel count</th>
+<td>
+Fixed to the number of outputs. Older implementations, as per earlier
+versions of the spec use <code>2</code> (not used in the default count
+mode).
+</td>
+</tr>
+<tr>
+<th scope="row">Channel interpretation</th>
+<td><code>"discrete"</code></td>
+</tr>
+</tbody>
 </table>
 
 ## Constructor
