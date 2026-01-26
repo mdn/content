@@ -5,7 +5,9 @@ page-type: guide
 sidebar: security
 ---
 
-Passkeys enable websites to authenticate users without the user having to enter any passwords or other secret codes on the site itself. They're considered [the most secure authentication method available to websites](#security_properties_of_passkeys), and we recommend that sites should adopt passkeys as their preferred authentication method, and [phase out the use of passwords](#migrating_from_passwords).
+Passkeys enable websites to authenticate users without the user having to enter any passwords or other secret codes on the site itself. They address [many of the most serious weaknesses of other authentication methods](#security_properties_of_passkeys) such as passwords.
+
+They're considered [the most secure authentication method available to websites](#security_properties_of_passkeys), and we recommend that sites should adopt passkeys as their preferred authentication method, and [phase out the use of passwords](#migrating_from_passwords).
 
 Instead of a shared secret, passkeys rely on public-key cryptography. A passkey is a {{glossary("Public-key cryptography", "public/private key pair")}} bound to a specific user's account on a particular website.
 
