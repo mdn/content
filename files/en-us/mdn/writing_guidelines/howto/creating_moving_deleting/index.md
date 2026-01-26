@@ -28,7 +28,7 @@ The general step-by-step process for creating a page would be:
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
-   # Run "npm install" again to ensure dependencies are up to date.
+   # Run "npm install" to ensure dependencies are up to date.
    npm install
    git checkout -b my-add
    ```
@@ -72,7 +72,7 @@ For example, let's say you want to move the entire
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
-   # Run "npm install" again just to ensure dependencies are up to date.
+   # Run "npm install" again to ensure dependencies are up to date.
    npm install
    git checkout -b my-move
    ```
@@ -134,7 +134,7 @@ entire `/en-US/Web/HTTP/Guides/Authentication` tree, you'd perform the following
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
-   # Run "npm install" again just to ensure dependencies are up to date.
+   # Run "npm install" again to ensure dependencies are up to date.
    npm install
    git checkout -b my-delete
    ```
