@@ -45,7 +45,7 @@ The defense against this is to implement the usual [defenses against XSS](/en-US
 
 ### Session fixation
 
-Ina session fixation attack, the attacker chooses a session ID value, and then convinces the website to use this value as the session ID. The attacker can then impersonate the user, because they know the ID. In this attack, the attacker doesn't have to steal the ID, because they knew it all along.
+Ina session fixation attack, the attacker chooses a session ID value, and then convinces the website to use this value as the session ID for the target user. The attacker can then impersonate the user, because they know the ID. In this attack, the attacker doesn't have to steal the ID, because they knew it all along.
 
 For example, suppose the target website expects to see the session ID included as a URL parameter in requests that the client makes. Suppose also that initially, the target user has an account on the target website but is not signed in.
 
@@ -71,11 +71,13 @@ The session ID should:
 
 If possible, websites should use a reputable web framework or library to generate session IDs.
 
-## Session cookies
+## Session ID storage
 
-Session management implementations can use various methods to store session identifiers in the client and communicate them to the server. However, cookies are the most common choice, and they have some advantages over other methods: in particular you can use cookie attributes to control who can access the cookies, when they are sent, and when they expire.
+Clients need to be able to store session identifiers and send them to the server when they make requests. The two main options for storing session identifiers are [local storage](/en-US/docs/Web/API/Web_Storage_API) and [cookies](/en-US/docs/Web/HTTP/Guides/Cookies).
 
-### Attributes
+Cookies are the recommended choice, because: a website can use cookie attributes to control who can access the cookies, when they are sent, and when they expire. In particular, by setting the [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute, a website can add some protection against session hijacking based on client-side XSS attacks.
+
+### Cookie attributes
 
 Cookies that contain session IDs should have the following attributes set:
 
@@ -131,13 +133,41 @@ All these timeouts should be calculated on the server, and actually expiring the
 
 Specific timeout periods depend on the sensitivity of the session and its usage profile: the OWASP cheatsheet includes recommendations.
 
-## Reauthentication
+## Invalidation events
 
-A website can also require reauthentication:
+A website can also invalidate existing sessions and require reauthentication:
 
-1. When the client attempts some high-risk operation, such as changing the user's credentials on the site.
-2. When the server has some grounds for thinking that the session ID might have been stolen. This could include, for example a sign-in from a new IP address or device.
+1. When the client attempts some high-risk operation, such as attempting to change, or actually changing, the user's credentials on the site, or triggering the account recovery (e.g. password reset) process.
 
-## JSON Web Tokens (JWTs)
+2. When the server has some grounds for thinking that the session ID might have been stolen. This could include, for example, a sign-in from a new IP address or device.
+
+## Decentralized session management
+
+The model we've described so far might be called "centralized session management": the session state is maintained on the server, and the client is given an identifier for the state, which it gives to the server when it makes a request.
+
+An alternative model might be called "decentralized session management". In this model, the session state is maintained as a {{glossary("digital signature", "digitally signed")}} object in the client. These signed objects are typically represented as [JSON Web Tokens (JWTs)](https://www.jwt.io/).
+
+When the server authenticates the user, the server:
+
+- Creates an object representing the user's session state
+- Digitally signs this object
+- Returns the signed object to the client.
+
+When the client makes a request, it presents the signed object to the server, which verifies the signature and uses the session state to decide how to handle the request.
+
+Because the state is maintained in the client, this model is popular for distributed applications in which the client might make requests to a number of different servers. The client passes its state to any server, and as long as that server is able to verify signatures made by the authentication system, then the server can determine how to handle the request: there's no need for the server handling the request to interact directly with the authentication system.
+
+### Token storage
+
+Considerations for token storage are mostly the same as for [session ID storage](#session_id_storage): if an attacker can steal the token, they can hijack the user's session. So websites often choose to store tokens in `HttpOnly` cookies, to benefit from the protection that this offers against client-side XSS.
+
+There are a few additional considerations that a decentralized, token-based model might need to account for:
+
+- Tokens are much bigger than session IDs, and cookies have a maximum size of 4KB.
+- If a distributed application needs to use services from different {{glossary("Registrable domain", "registrable domains")}}, then it can't use cookies, because the browser won't send a cookie to a site different from the site that set the cookie. For example, if `https://example.com` sets a cookie, it won't get sent to `https://example.org`.
+
+### Invalidating tokens
+
+In our discussion of [invalidation events](#invalidation_events), we've seen that in some situations a website wants to invalidate a user's session and force tgem to reauthenticate. With a centralized model, where the user's session state is maintained on the server, the server can invalidate a session by deleting the session state that it stores. However, with a
 
 ## Framework support
