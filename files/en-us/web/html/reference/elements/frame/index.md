@@ -35,7 +35,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 ## Example
 
-### A frameset document
+### A frameset document (deprecated)
 
 A frameset document has a {{HTMLElement("frameset")}} element instead of a {{HTMLElement("body")}} element. The `<frame>` elements are placed within the `<frameset>`.
 
@@ -52,7 +52,58 @@ A frameset document has a {{HTMLElement("frameset")}} element instead of a {{HTM
 </html>
 ```
 
-If you want to embed another HTML page into the {{HTMLElement("body")}} of a document, use an {{HTMLElement("iframe")}} element.
+### Modern alternative using `<iframe>`
+
+Instead of using frames, use `<iframe>` elements for better accessibility and performance:
+
+```html
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Modern equivalent using iframe</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 400px 500px;
+        gap: 10px;
+      }
+      iframe {
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <iframe 
+        src="https://developer.mozilla.org/en/HTML/Element/iframe"
+        title="Iframe documentation"
+        width="100%"
+        height="400">
+      </iframe>
+      <iframe 
+        src="https://developer.mozilla.org/en/HTML/Element/frame"
+        title="Frame documentation"
+        width="100%"
+        height="400">
+      </iframe>
+    </div>
+  </body>
+</html>
+```
+
+## Migration Guide
+
+If you have legacy code using frames, here's why you should migrate to `<iframe>`:
+
+| Problem with `<frame>` | Why `<iframe>` is better |
+|---|---|
+| Poor accessibility for screen readers | Full accessibility support |
+| Performance issues with page layout | Better performance and rendering |
+| Difficult to make responsive | Easily responsive with CSS |
+| Complex navigation and targeting | Simpler, more predictable behavior |
+| Deprecated and removed from modern specs | Modern standard, widely supported |
+
+If you want to embed another HTML page into the {{HTMLElement("body")}} of a document, use an {{HTMLElement("iframe")}} element instead.
 
 ## Specifications
 

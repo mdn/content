@@ -58,9 +58,110 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}._
 
 _No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}._
 
-## Example
+## Examples
 
-See [`BaseAudioContext.createDelay()`](/en-US/docs/Web/API/BaseAudioContext/createDelay#examples) for example code.
+### Creating a simple delay effect
+
+Create a delay node and apply it to an audio source:
+
+```js
+const audioContext = new AudioContext();
+
+// Create a delay node
+const delayNode = audioContext.createDelay(5.0); // max delay time of 5 seconds
+
+// Set the delay time to 2 seconds
+delayNode.delayTime.value = 2.0;
+
+// Create an audio source
+const source = audioContext.createMediaElementAudioSource(audioElement);
+
+// Connect source -> delay -> destination
+source.connect(delayNode);
+delayNode.connect(audioContext.destination);
+```
+
+### Creating a feedback delay effect (echo)
+
+Combine a delay with feedback to create an echo effect:
+
+```js
+const audioContext = new AudioContext();
+
+const delayNode = audioContext.createDelay(0.5);
+const feedbackGain = audioContext.createGain();
+const dryGain = audioContext.createGain();
+const wetGain = audioContext.createGain();
+
+// Set up the delay parameters
+delayNode.delayTime.value = 0.3; // 300ms delay
+feedbackGain.gain.value = 0.4; // Amount of feedback
+
+// Set up dry/wet mix
+dryGain.gain.value = 0.7; // 70% original signal
+wetGain.gain.value = 0.3; // 30% delayed signal
+
+const source = audioContext.createMediaElementAudioSource(audioElement);
+
+// Create the feedback loop
+source.connect(delayNode);
+delayNode.connect(feedbackGain);
+feedbackGain.connect(delayNode); // Feedback loop
+
+// Send to output
+source.connect(dryGain);
+delayNode.connect(wetGain);
+dryGain.connect(audioContext.destination);
+wetGain.connect(audioContext.destination);
+```
+
+### Automating delay time
+
+Change the delay time over time to create dynamic effects:
+
+```js
+const audioContext = new AudioContext();
+const delayNode = audioContext.createDelay(5.0);
+
+// Start with a small delay
+delayNode.delayTime.value = 0.1;
+
+// Gradually increase the delay over 10 seconds
+const startTime = audioContext.currentTime;
+delayNode.delayTime.linearRampToValueAtTime(
+  2.0,  // target value
+  startTime + 10  // time to reach target
+);
+
+const source = audioContext.createMediaElementAudioSource(audioElement);
+source.connect(delayNode);
+delayNode.connect(audioContext.destination);
+```
+
+### Breaking feedback loops with delay
+
+When creating cycles in an audio graph, you must have at least one DelayNode:
+
+```js
+const audioContext = new AudioContext();
+
+const source = audioContext.createOscillator();
+const delayNode = audioContext.createDelay(0.5);
+const feedbackGain = audioContext.createGain();
+
+// This would cause an error without the delay node
+// source -> feedbackGain -> source (cycle)
+
+// But with the delay, the feedback loop works:
+source.connect(feedbackGain);
+feedbackGain.connect(delayNode);
+delayNode.connect(feedbackGain); // Feedback is delayed, so it's safe
+delayNode.connect(audioContext.destination);
+
+source.start();
+```
+
+For more examples, see [`BaseAudioContext.createDelay()`](/en-US/docs/Web/API/BaseAudioContext/createDelay#examples).
 
 ## Specifications
 
