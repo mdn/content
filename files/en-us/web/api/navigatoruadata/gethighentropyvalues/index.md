@@ -12,8 +12,9 @@ browser-compat: api.NavigatorUAData.getHighEntropyValues
 
 The **`getHighEntropyValues()`** method of the {{domxref("NavigatorUAData")}} interface returns a {{jsxref("Promise")}} that resolves with a dictionary object containing low entropy information and requested high entropy information about the browser.
 
-The resolved object has the ["low entropy" properties](/en-US/docs/Web/API/NavigatorUAData#instance_properties) available on the `NavigatorUAData` object included by default for convenience. These values are unlikely to enable fingerprinting of the user.
-It also contains the subset of "high entropy" values requested in the parameter object, and for which permission has been granted. These are mosre likely to enable fingerprinting.
+The resolved object has the ["low entropy" properties](/en-US/docs/Web/API/NavigatorUAData#instance_properties) available on the `NavigatorUAData` object included by default — these are the values that are unlikely to enable fingerprinting of the user.
+It also contains the subset of "high entropy" values requested in the parameter object, and for which permission has been granted.
+These are the values that are more likely to enable fingerprinting.
 Note that meaning of the terms [low entropy](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints) and [high entropy](/en-US/docs/Web/HTTP/Guides/Client_hints#high_entropy_hints) is the same as defined in the HTTP [User Agent Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints) mechanism.
 
 > [!NOTE]
