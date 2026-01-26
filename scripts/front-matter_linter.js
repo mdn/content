@@ -1,6 +1,6 @@
-import fs from "node:fs/promises";
-import os from "node:os";
-import path from "node:path";
+import { lstat, readFile, writeFile } from "node:fs/promises";
+import { cpus } from "node:os";
+import { resolve } from "node:path";
 
 import { eachLimit } from "async";
 import cliProgress from "cli-progress";
@@ -12,7 +12,7 @@ import { fdir } from "fdir";
 import { getAjvValidator, checkFrontMatter } from "./front-matter_utils.js";
 
 async function resolveDirectory(file) {
-  const stats = await fs.lstat(file);
+  const stats = await lstat(file);
   if (stats.isDirectory()) {
     const api = new fdir()
       .withErrors()
@@ -41,7 +41,7 @@ async function lintFrontMatter(filesAndDirectories, options) {
     await Promise.all(filesAndDirectories.map(resolveDirectory))
   ).flat();
 
-  options.config = JSON.parse(await fs.readFile(options.configFile, "utf-8"));
+  options.config = JSON.parse(await readFile(options.configFile, "utf-8"));
 
   options.validator = getAjvValidator(options.config.schema);
 
@@ -50,14 +50,14 @@ async function lintFrontMatter(filesAndDirectories, options) {
 
   const errors = [];
   const fixableErrors = [];
-  await eachLimit(files, os.cpus().length, async (file) => {
+  await eachLimit(files, cpus().length, async (file) => {
     try {
       const [error, fixableError, content] = await checkFrontMatter(
         file,
         options,
       );
       if (content) {
-        await fs.writeFile(file, content);
+        await writeFile(file, content);
       }
       error && errors.push(error);
       fixableError && fixableErrors.push(fixableError);
@@ -105,7 +105,7 @@ yargs(hideBin(process.argv))
     },
     async (argv) => {
       const cwd = process.cwd();
-      const files = (argv.files || []).map((f) => path.resolve(cwd, f));
+      const files = (argv.files || []).map((f) => resolve(cwd, f));
 
       if (!files.length) {
         console.info("No files to lint.");
