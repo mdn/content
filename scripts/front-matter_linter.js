@@ -57,7 +57,7 @@ async function lintFrontMatter(filesAndDirectories, options) {
         options,
       );
       if (content) {
-        fs.writeFile(file, content);
+        await fs.writeFile(file, content);
       }
       error && errors.push(error);
       fixableError && fixableErrors.push(fixableError);
