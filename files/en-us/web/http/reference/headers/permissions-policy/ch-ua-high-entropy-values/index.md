@@ -28,6 +28,22 @@ Permissions-Policy: ch-ua-high-entropy-values=<allowlist>;
 
 The default allowlist for `ch-ua-high-entropy-values` is `*`.
 
+## Examples
+
+### Restricting high-entropy data to specific origins
+
+The following policy would only allow the current origin and two other specific origins to retrieve high-entropy data.
+
+```http
+Permissions-Policy: ch-ua-high-entropy-values=("self https://a.example.com" "https://b.example.com")
+```
+
+You could then embed one of the two other origins:
+
+```html
+<iframe src="https://a.example.com" allow="ch-ua-high-entropy-values"></iframe>
+```
+
 ## Specifications
 
 {{Specifications}}

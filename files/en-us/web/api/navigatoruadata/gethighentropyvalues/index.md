@@ -10,11 +10,11 @@ browser-compat: api.NavigatorUAData.getHighEntropyValues
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
-The **`getHighEntropyValues()`** method of the {{domxref("NavigatorUAData")}} interface returns a {{jsxref("Promise")}} that resolves with a dictionary object containing information about the browser (user agent).
+The **`getHighEntropyValues()`** method of the {{domxref("NavigatorUAData")}} interface returns a {{jsxref("Promise")}} that resolves with a dictionary object containing low entropy information and requested high entropy information about the browser.
 
-The resolved object has the "low entropy" properties by default, which contain the values that are less likely to allow fingerprinting of the user.
-It also contains the subset of "high entropy" values that are requested in the parameter object, and for which permission has been granted.
-Note that meaning of the terms [low entropy](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints) and [high entropy](/en-US/docs/Web/HTTP/Guides/Client_hints#high_entropy_hints) is the same as defined in the HTTP [User Agent Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints) mechanism.
+The resolved object has the ["low entropy" properties](/en-US/docs/Web/API/NavigatorUAData#instance_properties) available on the `NavigatorUAData` object included by default for convenience. These values are unlikely to enable fingerprinting of the user.
+It also contains the subset of "high entropy" values requested in the parameter object, and for which permission has been granted. These are mosre likely to enable fingerprinting.
+Note that meaning of the terms [low entropy](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints) and [high entropy](/en-US/docs/Web/HTTP/Guides/Client_hints#high_entropy_hints) is the same as defined in the HTTP [User Agent Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints) mechanism.
 
 > [!NOTE]
 > Usage of the `getHighEntropyValues()` method to retrieve high-entropy user-agent data can be controlled via the {{HTTPHeader('Permissions-Policy/ch-ua-high-entropy-values', 'ch-ua-high-entropy-values')}} {{HTTPHeader('Permissions-Policy')}}.
@@ -31,7 +31,6 @@ getHighEntropyValues(hints)
 - `hints`
   - : An array containing the high-entropy hints to be returned.
     This may include one or more of:
-
     - `"architecture"`
     - `"bitness"`
     - `"formFactors"`

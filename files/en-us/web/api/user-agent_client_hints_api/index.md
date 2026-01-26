@@ -84,11 +84,11 @@ navigator.userAgentData
 
 ## Security considerations
 
-Websites that support [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) (via the HTTP {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow)) can restrict the ability to use the User-Agent Client Hints API using the directive {{HTTPHeader("Permissions-Policy/ch-ua-high-entropy-values", "ch-ua-high-entropy-values")}}.
+Websites that support setting a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) (via the HTTP {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow)) can restrict the ability to use the User-Agent Client Hints API using the directive {{HTTPHeader("Permissions-Policy/ch-ua-high-entropy-values", "ch-ua-high-entropy-values")}}.
 
-Specifically, when the permission is not allowed, the {{domxref("NavigatorUAData.getHighEntropyValues()")}} will only return the `brands`, `mobile`, and `platform` low-entropy data.
+Specifically, when the permission is not granted, the {{domxref("NavigatorUAData.getHighEntropyValues()")}} will only return low-entropy data such as `brands`, `mobile`, and `platform`.
 
-For example, the following policy would only only allow the current origin and two other specific origins to retrieve high-entropy data.
+For example, the following policy would only allow the current origin and two other specific origins to retrieve high-entropy data.
 
 ```http
 Permissions-Policy: ch-ua-high-entropy-values=("self https://a.example.com" "https://b.example.com")
