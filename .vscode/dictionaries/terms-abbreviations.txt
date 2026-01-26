@@ -164,6 +164,7 @@ demultiplexing
 demux
 demuxing
 deoptimize
+dependenices
 deprioritized
 desaturated
 desaturates
