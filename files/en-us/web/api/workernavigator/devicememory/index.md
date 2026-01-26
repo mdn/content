@@ -11,7 +11,7 @@ browser-compat: api.WorkerNavigator.deviceMemory
 The **`deviceMemory`** read-only property of the {{domxref("WorkerNavigator")}} interface returns the approximate amount of device memory in gigabytes.
 
 The reported value is imprecise to curtail {{glossary("fingerprinting")}}.
-It's approximated by rounding to the nearest power of 2, then dividing that number by 1024.
+It's approximated by rounding the actual value to the nearest power of 2, then dividing that number by 1024.
 It is then clamped within lower and upper bounds to protect the privacy of owners of very low-memory or high-memory devices.
 These bounds may change over time (see [browser compatibility table](#browser_compatibility)).
 
