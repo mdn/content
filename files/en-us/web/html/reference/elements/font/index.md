@@ -88,12 +88,6 @@ If you have legacy code using `<font>` elements, here's how to migrate:
 | `<font size="7">`        | `style="font-size: larger;"` or `font-size: 2em;` in CSS      |
 | `<font size="+2">`       | `style="font-size: larger;"` (use CSS relative units)         |
 
-## DOM interface
-
-This element implements the {{domxref("HTMLFontElement")}} interface.
-
-<!-- ## Technical summary -->
-
 ## Specifications
 
 {{Specifications}}
