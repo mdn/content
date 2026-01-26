@@ -22,8 +22,6 @@ Only certain CSS properties can be used with `::highlight()`:
 - {{CSSxRef("text-shadow")}}
 - {{CSSxRef("stroke")}}, {{CSSxRef("fill")}}, and {{CSSxRef("stroke-width")}}
 
-Vendor-prefixed properties such as {{CSSxRef("-webkit-text-stroke-color")}} or {{CSSxRef("-webkit-text-fill-color")}} do not apply to highlight pseudo-elements.
-
 In particular, {{CSSxRef("background-image")}} is ignored.
 
 ## Syntax
