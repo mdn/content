@@ -49,11 +49,11 @@ SecureCorp Inc. must also include an {{HTMLElement('iframe','allow','#Attributes
 ```
 
 > [!NOTE]
-> Specifying the `Permissions-Policy` header in this manner disallows `bluetooth` for other origins, even if they were allowed by the `<iframe>` `allow` attribute.
+> Specifying the `Permissions-Policy` header in this manner disallows `bluetooth` for other origins, even if they are allowed by the `<iframe>` `allow` attribute.
 
 ### Using the default policy
 
-Without delivering an HTTP response header defining a Permissions Policy for `bluetooth`, user agents will apply the default allowlist `self`. In this mode, `bluetooth` is automatically allowed in the top-level browsing context and same-origin iframes, but not in cross-origin iframes.
+If an allowlist for `bluetooth` is not defined by a `Permissions-Policy` response header, user agents will apply the default allowlist `self`. In this mode, `bluetooth` is automatically allowed in the top-level browsing context and same-origin iframes, but not in cross-origin iframes.
 
 To allow `bluetooth` in a cross-origin iframe, include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
 
