@@ -137,7 +137,7 @@ Specific timeout periods depend on the sensitivity of the session and its usage 
 
 A website can also invalidate existing sessions and require reauthentication:
 
-1. When the client attempts some high-risk operation, such as attempting to change, or actually changing, the user's credentials on the site, or triggering the account recovery (e.g. password reset) process.
+1. When the client attempts some high-risk operation, such as attempting to change, or actually changing, the user's credentials on the site, or triggering the account recovery (for example, password reset) process.
 
 2. When the server has some grounds for thinking that the session ID might have been stolen. This could include, for example, a sign-in from a new IP address or device.
 
