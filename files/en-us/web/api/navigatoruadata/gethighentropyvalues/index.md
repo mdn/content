@@ -18,7 +18,8 @@ The values returned by `getHighEntropyValues()` could potentially reveal more in
 These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.
 
 > [!NOTE]
-> Usage of the `getHighEntropyValues()` method to retrieve high-entropy user-agent data can be controlled via the {{HTTPHeader('Permissions-Policy/ch-ua-high-entropy-values', 'ch-ua-high-entropy-values')}} {{HTTPHeader('Permissions-Policy')}}. If the permission is not allowed, the method will only return the `brands`, `mobile`, and `platform` low-entropy data.
+> Usage of the `getHighEntropyValues()` method to retrieve high-entropy user-agent data can be controlled via the {{HTTPHeader('Permissions-Policy/ch-ua-high-entropy-values', 'ch-ua-high-entropy-values')}} {{HTTPHeader('Permissions-Policy')}}.
+> If the permission is not allowed, the method will only return the `brands`, `mobile`, and `platform` low-entropy data.
 
 ## Syntax
 
