@@ -38,7 +38,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     If this is set and a non-focusable element in the shadow tree is selected, then focus is delegated to the first focusable element in the tree.
     The value defaults to `false`.
 
-- `shadowrootreferencetarget` {{Experimental_Inline}}
+- `shadowrootreferencetarget` {{Experimental_Inline}} {{non-standard_inline}}
   - : Sets the value of the `referenceTarget` property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element. The value should be the ID of an element inside the shadow DOM. If set, target references to the host element from outside the shadow DOM will cause the referenced target element to become the effective target of the reference to the host element.
 
 - `shadowrootserializable`
