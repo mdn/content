@@ -135,7 +135,7 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
 - {{cssxref("gradient")}} defined in [CSS images](/files/en-us/web/css/guides/images/index.md) module
 - The [`VideoColorSpace`](files/en-US/web/api/videocolorspace/index.md) interface
 - [`<feColorMatrix>`](/files/en-us/web/svg/reference/element/fecolormatrix/index.md) SVG element
-- [Canvas API: applying styles and colors](/files/en-us/web/api/canvas_api/tutorial/applying_styles_and_colors/index.md) 
+- [Canvas API: applying styles and colors](/files/en-us/web/api/canvas_api/tutorial/applying_styles_and_colors/index.md)
 - Tools:
   - [Color format converter](/files/en-us/web/css/guides/colors/color_format_converter/index.md)
   - [Color mixer](/files/en-us/web/css/guides/colors/color_mixer/index.md)
