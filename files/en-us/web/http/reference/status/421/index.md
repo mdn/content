@@ -28,7 +28,7 @@ GET / HTTP/1.1
 Host: abc.example.com
 ```
 
-In cases such as a wildcard certificate (`*.example.com`) and a connection is reused for multiple domains (`abc.example.com`, `def.example.com`), the server may respond with a 421:
+In cases such as a wildcard certificate (`*.example.com`) where a connection is reused for multiple domains (`abc.example.com`, `def.example.com`), the server may respond with a 421:
 
 ```http
 HTTP/1.1 421 Misdirected Request
