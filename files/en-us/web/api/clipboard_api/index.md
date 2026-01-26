@@ -4,6 +4,7 @@ slug: Web/API/Clipboard_API
 page-type: web-api-overview
 browser-compat:
   - api.Clipboard
+  - api.ClipboardChangeEvent
   - api.ClipboardEvent
   - api.ClipboardItem
 ---
@@ -34,6 +35,8 @@ The default action can be overridden by the event handler — see each of the ev
 - {{domxref("Clipboard")}} {{securecontext_inline}}
   - : Provides an interface for reading and writing text and data to or from the system clipboard.
     The specification refers to this as the 'Async Clipboard API'.
+- {{domxref("ClipboardChangeEvent")}}
+  - : A `ClipboardChangeEvent` is dispatched against `Clipboard` objects in {{domxref("Navigator")}} contexts when any changes are made to the system clipboard.
 - {{domxref("ClipboardEvent")}}
   - : Represents events providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events.
     The specification refers to this as the 'Clipboard Event API'.
@@ -52,8 +55,6 @@ The Clipboard API extends the following APIs, adding the listed features.
   - : An event fired whenever the user initiates a cut action.
 - `Element` [`paste`](/en-US/docs/Web/API/Element/paste_event) event
   - : An event fired whenever the user initiates a paste action.
-
-<!-- Note `Window: clipboardchange` event is in spec but not implemented -->
 
 ## Security considerations
 
@@ -111,7 +112,3 @@ navigator.clipboard
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
