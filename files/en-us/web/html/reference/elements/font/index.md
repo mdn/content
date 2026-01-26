@@ -29,6 +29,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 ## DOM interface
 
 This element implements the {{domxref("HTMLFontElement")}} interface.
+
 ## Examples
 
 ### Using the deprecated `<font>` element

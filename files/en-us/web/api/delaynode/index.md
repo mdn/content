@@ -129,8 +129,8 @@ delayNode.delayTime.value = 0.1;
 // Gradually increase the delay over 10 seconds
 const startTime = audioContext.currentTime;
 delayNode.delayTime.linearRampToValueAtTime(
-  2.0,  // target value
-  startTime + 10  // time to reach target
+  2.0, // target value
+  startTime + 10, // time to reach target
 );
 
 const source = audioContext.createMediaElementAudioSource(audioElement);

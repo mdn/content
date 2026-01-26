@@ -74,13 +74,13 @@ Instead of using frames, use `<iframe>` elements for better accessibility and pe
   </head>
   <body>
     <div class="container">
-      <iframe 
+      <iframe
         src="https://developer.mozilla.org/en/HTML/Element/iframe"
         title="Iframe documentation"
         width="100%"
         height="400">
       </iframe>
-      <iframe 
+      <iframe
         src="https://developer.mozilla.org/en/HTML/Element/frame"
         title="Frame documentation"
         width="100%"
@@ -95,13 +95,13 @@ Instead of using frames, use `<iframe>` elements for better accessibility and pe
 
 If you have legacy code using frames, here's why you should migrate to `<iframe>`:
 
-| Problem with `<frame>` | Why `<iframe>` is better |
-|---|---|
-| Poor accessibility for screen readers | Full accessibility support |
-| Performance issues with page layout | Better performance and rendering |
-| Difficult to make responsive | Easily responsive with CSS |
-| Complex navigation and targeting | Simpler, more predictable behavior |
-| Deprecated and removed from modern specs | Modern standard, widely supported |
+| Problem with `<frame>`                   | Why `<iframe>` is better           |
+| ---------------------------------------- | ---------------------------------- |
+| Poor accessibility for screen readers    | Full accessibility support         |
+| Performance issues with page layout      | Better performance and rendering   |
+| Difficult to make responsive             | Easily responsive with CSS         |
+| Complex navigation and targeting         | Simpler, more predictable behavior |
+| Deprecated and removed from modern specs | Modern standard, widely supported  |
 
 If you want to embed another HTML page into the {{HTMLElement("body")}} of a document, use an {{HTMLElement("iframe")}} element instead.
 

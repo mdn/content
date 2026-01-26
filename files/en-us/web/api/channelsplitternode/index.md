@@ -115,10 +115,10 @@ const rightData = new Uint8Array(rightAnalyser.frequencyBinCount);
 function analyze() {
   leftAnalyser.getByteFrequencyData(leftData);
   rightAnalyser.getByteFrequencyData(rightData);
-  
-  console.log('Left channel:', leftData);
-  console.log('Right channel:', rightData);
-  
+
+  console.log("Left channel:", leftData);
+  console.log("Right channel:", rightData);
+
   requestAnimationFrame(analyze);
 }
 
