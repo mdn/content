@@ -8,14 +8,11 @@ browser-compat: api.Navigator.deviceMemory
 
 {{APIRef("Device Memory API")}}{{securecontext_header}}
 
-The **`deviceMemory`** read-only
-property of the {{domxref("Navigator")}} interface returns the approximate amount of
-device memory in gigabytes.
+The **`deviceMemory`** read-only property of the {{domxref("Navigator")}} interface returns the approximate amount of device memory in gigabytes.
 
-The reported value is imprecise to curtail {{glossary("fingerprinting")}}. It's approximated by
-rounding to the nearest power of 2, then dividing that number by 1024. It is then
-clamped within lower and upper bounds to protect the privacy of owners of very low-memory or
-high-memory devices.
+The reported value is imprecise to curtail {{glossary("fingerprinting")}}.
+It's approximated by rounding the actual memory to the nearest power of 2, then dividing that number by 1024.
+It is then clamped within lower and upper bounds to protect the privacy of owners of very low-memory or high-memory devices.
 These bounds may change over time (see [browser compatibility table](#browser_compatibility)).
 
 ## Value
