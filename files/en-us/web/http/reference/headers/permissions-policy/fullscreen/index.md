@@ -13,8 +13,6 @@ sidebar: http
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `fullscreen` directive controls whether the current document is allowed to use {{domxref('Element.requestFullscreen()')}}.
 
-By default, top-level documents and their same-origin child frames can request and enter fullscreen mode. This directive allows or prevents cross-origin frames from using fullscreen mode. This includes same-origin frames.
-
 Specifically, where a defined policy blocks use of this feature, {{domxref('Element.requestFullscreen', "requestFullscreen()")}} calls will return a {{jsxref('Promise')}} that rejects with a {{jsxref('TypeError')}}.
 
 > [!NOTE]
@@ -31,33 +29,36 @@ Permissions-Policy: fullscreen=<allowlist>;
 
 ## Default policy
 
-The default allowlist for `fullscreen` is `self`.
+The default allowlist for `fullscreen` is `self`. The top-level browsing context and same-origin iframes are allowed access to the `fullscreen` feature by default.
 
 ## Examples
 
-### General example
+### Basic usage
 
-SecureCorp Inc. wants to disable the Fullscreen API within all browsing contexts except for its own origin and those whose origin is `https://example.com`. It can do so by delivering the following HTTP response header to define a Permissions Policy:
+SecureCorp Inc. wants to disallow `fullscreen` within all cross-origin iframes except those whose origin is `https://example.com`. It can do so by delivering the following HTTP response header to define a Permissions Policy:
 
 ```http
 Permissions-Policy: fullscreen=(self "https://example.com")
 ```
 
-### With an \<iframe> element
+SecureCorp Inc. must also include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on each `<iframe>` element where `fullscreen` is to be allowed:
 
-FastCorp Inc. wants to disable `fullscreen` for all cross-origin child frames, except for a specific `<iframe>`. It can do so by delivering the following HTTP response header to define a Permissions Policy:
-
-```http
-Permissions-Policy: fullscreen=(self)
+```html
+<iframe src="https://example.com/presentation" allow="fullscreen"></iframe>
 ```
 
-Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
+> [!NOTE]
+> Specifying the `Permissions-Policy` header in this manner disallows `fullscreen` for other origins, even if they were allowed by the `<iframe>` `allow` attribute.
+
+### Using the default policy
+
+Without delivering an HTTP response header defining a Permissions Policy for `fullscreen`, user agents will apply the default allowlist `self`. In this mode, `fullscreen` is automatically allowed in the top-level browsing context and same-origin iframes, but not in cross-origin iframes.
+
+To allow `fullscreen` in a cross-origin iframe, include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
 
 ```html
 <iframe src="https://other.com/videoplayer" allow="fullscreen"></iframe>
 ```
-
-iframe attributes can selectively enable features in certain frames, and not in others, even if those frames contain documents from the same origin.
 
 ## Specifications
 

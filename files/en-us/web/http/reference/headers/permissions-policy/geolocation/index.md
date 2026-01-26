@@ -21,10 +21,6 @@ Specifically, where a defined policy blocks use of this feature, calls to
 callbacks to be invoked with a {{domxref('GeolocationPositionError')}} code of
 `PERMISSION_DENIED`.
 
-By default, the Geolocation API can be used within top-level documents and their
-same-origin child frames. This directive allows or prevents cross-origin frames from
-accessing geolocation. This includes same-origin frames.
-
 ## Syntax
 
 ```http
@@ -36,39 +32,36 @@ Permissions-Policy: geolocation=<allowlist>;
 
 ## Default policy
 
-The default allowlist for `geolocation` is `self`.
+The default allowlist for `geolocation` is `self`. The top-level browsing context and same-origin iframes are allowed access to the `geolocation` feature by default.
 
 ## Examples
 
-### General example
+### Basic usage
 
-SecureCorp Inc. wants to disable the Geolocation API within all browsing contexts
-except for its own origin and those whose origin is `https://example.com`. It
-can do so by delivering the following HTTP response header to define a Permissions Policy:
+SecureCorp Inc. wants to disallow `geolocation` within all cross-origin iframes except those whose origin is `https://example.com`. It can do so by delivering the following HTTP response header to define a Permissions Policy:
 
 ```http
 Permissions-Policy: geolocation=(self "https://example.com")
 ```
 
-### With an \<iframe> element
-
-FastCorp Inc. wants to disable `geolocation` for all cross-origin child
-frames, except for a specific `<iframe>`. It can do so by delivering the following
-HTTP response header to define a Permissions Policy:
-
-```http
-Permissions-Policy: geolocation=(self)
-```
-
-Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the
-`<iframe>` element:
+SecureCorp Inc. must also include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on each `<iframe>` element where `geolocation` is to be allowed:
 
 ```html
-<iframe src="https://other.com/map" allow="geolocation"></iframe>
+<iframe src="https://example.com/map" allow="geolocation"></iframe>
 ```
 
-Interestingly, `allow` attributes can selectively enable features in certain frames, and not in others,
-even if those frames contain documents from the same origin.
+> [!NOTE]
+> Specifying the `Permissions-Policy` header in this manner disallows `geolocation` for other origins, even if they were allowed by the `<iframe>` `allow` attribute.
+
+### Using the default policy
+
+Without delivering an HTTP response header defining a Permissions Policy for `geolocation`, user agents will apply the default allowlist `self`. In this mode, `geolocation` is automatically allowed in the top-level browsing context and same-origin iframes, but not in cross-origin iframes.
+
+To allow `geolocation` in a cross-origin iframe, include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
+
+```html
+<iframe src="https://other.com/store-locator" allow="geolocation"></iframe>
+```
 
 ## Specifications
 
