@@ -50,7 +50,7 @@ No notable changes.
 
 ### JavaScript
 
-- CSS module scripts are now supported, allowing a stylesheet to be loaded into a script as a {{domxref("CSSStyleSheet")}} instance using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) keyword and the [`type` import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) set to `type="css"`.
+- CSS module scripts are now supported, allowing a stylesheet to be loaded into a script as a {{domxref("CSSStyleSheet")}} instance using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) keyword and the `type` [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) set to [`type="css"`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#css_modules_type_css).
   ([Firefox bug 1986681](https://bugzil.la/1986681)).
 - The {{jsxref("Iterator.concat()")}} method is now supported. This method enables you to create a new iterator that combines multiple input iterables into a single sequence.
   ([Firefox bug 1986672](https://bugzil.la/1986672)).
