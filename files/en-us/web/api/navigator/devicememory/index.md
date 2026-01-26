@@ -15,7 +15,8 @@ device memory in gigabytes.
 The reported value is imprecise to curtail {{glossary("fingerprinting")}}. It's approximated by
 rounding to the nearest power of 2, then dividing that number by 1024. It is then
 clamped within lower and upper bounds to protect the privacy of owners of very low-memory or
-high-memory devices. Browsers may update these bounds over time (see [browser compatibility table](#browser_compatibility)).
+high-memory devices.
+These bounds may change over time (see [browser compatibility table](#browser_compatibility)).
 
 ## Value
 
