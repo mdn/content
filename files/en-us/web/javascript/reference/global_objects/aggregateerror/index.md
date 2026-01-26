@@ -8,6 +8,8 @@ sidebar: jsref
 
 The **`AggregateError`** object represents an error when several errors need to be wrapped in a single error. It is thrown when multiple errors need to be reported by an operation, for example by {{jsxref("Promise.any()")}}, when all promises passed to it reject.
 
+Compared to {{jsxref("SuppressedError")}}, `AggregateError` represents a list of unrelated errors, while `SuppressedError` represents an error that happened during the handling of another error.
+
 `AggregateError` is a subclass of {{jsxref("Error")}}.
 
 ## Constructor
