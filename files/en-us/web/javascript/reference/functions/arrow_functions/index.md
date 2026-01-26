@@ -113,7 +113,7 @@ const b = 2;
 () => a + b + 100;
 ```
 
-The braces can only be omitted if the function directly returns an expression. If the body has statements, the braces are required — and so is the `return` keyword. Arrow functions cannot guess what or when you want to return.
+The braces can only be omitted if the function directly returns an expression. If the body has statements, the braces are required. In this case, return values must be explicitly specified with the `return` keyword. Arrow functions cannot guess what or when you want to return.
 
 ```js
 // Traditional anonymous function
@@ -145,16 +145,23 @@ const bob2 = (a) => a + 100;
 
 Arrow functions can have either an _expression body_ or the usual _block body_.
 
-In an expression body, only a single expression is specified, which becomes the implicit return value. In a block body, you must use an explicit `return` statement.
+In an expression body, only a single expression is specified, which becomes the implicit return value. The block body is analogous to traditional function bodies, where return values must be explicitly specified with the `return` keyword. Arrow functions are not required to return a value. If execution of the block body reaches the end without encountering a `return` statement, the function returns `undefined` like other functions.
 
 ```js
-const func = (x) => x * x;
-// expression body syntax, implied "return"
+// Expression body
+const add = (a, b) => a + b; // Implicitly returns a
 
-const func2 = (x, y) => {
-  return x + y;
+// Block body
+const add2 = (a, b) => {
+  console.log(a, b);
+  return a + b; // Must explicitly return a value
 };
-// with block body, explicit "return" needed
+
+// No return value
+const add3 = (b) => {
+  a += b;
+  // No return statement, so returns undefined
+};
 ```
 
 Returning object literals using the expression body syntax `(params) => { object: literal }` does not work as expected.

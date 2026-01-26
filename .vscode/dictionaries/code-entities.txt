@@ -69,6 +69,7 @@ backgroundfetchclick
 backgroundfetchfail
 backgroundfetchsuccess
 BACKTAB
+backzone
 Basetime
 bbaw
 beforeinstallprompt
@@ -260,6 +261,7 @@ GPOS
 grba
 Grek
 greklow
+gsettings
 GSUB
 gujr
 gukh
@@ -696,6 +698,7 @@ serviceworker
 setenvif
 SHA-256-sess
 SHA-512-sess
+shadowrootreferencetarget
 sharpyuv
 shrd
 shtm
