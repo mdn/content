@@ -1,40 +1,35 @@
 ---
-title: Firefox 147 release notes for developers (Beta)
-short-title: Firefox 147 (Beta)
+title: Firefox 147 release notes for developers (Stable)
+short-title: Firefox 147 (Stable)
 slug: Mozilla/Firefox/Releases/147
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 147 that affect developers.
-Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [January 13, 2026](https://whattrainisitnow.com/release/?version=147).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 147 was released on [January 13, 2026](https://whattrainisitnow.com/release/?version=147).
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
 
-<!-- ### HTML -->
+- When you select a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) (such as {{cssxref("::before")}} or {{cssxref("::after")}}) in the HTML pane of the Inspector, you can now edit the selector of the corresponding rule in the CSS pane.
+  ([Firefox bug 1998704](https://bugzil.la/1998704)).
+- During a view transition, {{cssxref("::view-transition")}} pseudo-elements now appear in the elements view. ([Firefox bug 1996608](https://bugzil.la/1996608)).
+- During a view transition, the associated animations now appear in the animations panel. ([Firefox bug 1995296](https://bugzil.la/1995296)).
+- Elements with a valid {{cssxref("anchor-name")}} get an 'anchor' badge in the elements view. ([Firefox bug 1895196](https://bugzil.la/1895196)).
+- A highlighted element's associated {{cssxref("@position-try")}} rules are now displayed in the CSS rules panel. ([Firefox bug 1895176](https://bugzil.la/1895176)).
+- JSON payloads can be imported into Firefox Profiler from the JSON viewer using a new button. This provides a breakdown of the size of the resource. ([Firefox bug 1997209](https://bugzil.la/1997209)).
 
-<!-- No notable changes. -->
+### HTML
 
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### SVG
 
 - When an SVG file is used as an [image source](/en-US/docs/Web/SVG/Guides/SVG_as_an_image) (for example, embedded into a page via an {{htmlelement("img")}} element or as a CSS {{cssxref("background-image")}}), the SVG URL now supports [media fragments](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments). ([Firefox bug 1999989](https://bugzil.la/1999989)). This means that:
   - When the SVG includes a [SMIL animation](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL), you can use [temporal dimension](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments#temporal_dimension_fragment_syntax) syntax to play a portion of the animation from a specific start time to a specific end time, after which the animation will pause.
   - You can use [spatial dimension](/en-US/docs/Web/URI/Reference/Fragment/Media_fragments#spatial_dimension_fragment_syntax) syntax to display a specific area of the SVG document.
-
-<!-- #### Removals -->
 
 ### CSS
 
@@ -53,24 +48,12 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The following [relative length units based on root element's font](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_root_elements_font) are now supported: `rcap`, `rch`, `rex`, and `ric`. These units allow you to define `<length>` values based on the size of a particular character or font attribute of the [root](/en-US/docs/Web/CSS/Reference/Selectors/:root) element.
   ([Firefox bug 1740584](https://bugzil.la/1740584)).
 
-<!-- #### Removals -->
-
 ### JavaScript
 
-- CSS module scripts are now supported, allowing a stylesheet to be loaded into a script as a {{domxref("CSSStyleSheet")}} instance using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) keyword and the [`type` import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) set to `type="css"`.
+- CSS module scripts are now supported, allowing a stylesheet to be loaded into a script as a {{domxref("CSSStyleSheet")}} instance using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) keyword and the `type` [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) set to [`type="css"`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#css_modules_type_css).
   ([Firefox bug 1986681](https://bugzil.la/1986681)).
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+- The {{jsxref("Iterator.concat()")}} method is now supported. This method enables you to create a new iterator that combines multiple input iterables into a single sequence.
+  ([Firefox bug 1986672](https://bugzil.la/1986672)).
 
 ### APIs
 
@@ -85,45 +68,31 @@ Firefox 147 is the current [Beta version of Firefox](https://www.firefox.com/en-
   To load a service worker module, specify a [`type`](/en-US/docs/Web/API/ServiceWorkerContainer/register#type) of `'module'` when calling {{domxref("ServiceWorkerContainer.register()")}}.
   ([Firefox bug 1360870](https://bugzil.la/1360870)).
 
-<!-- #### DOM -->
-
-<!-- #### Media, WebRTC, and Web Audio -->
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### General
 
 - Fixed the new session response to include the required `setWindowRect` property. ([Firefox bug 1916522](https://bugzil.la/1916522)).
-- Fixed JSON serialization of Chrome Windows. ([Firefox bug 2000801](https://bugzil.la/2000801)).
 
 #### WebDriver BiDi
 
+- Implemented the `input.fileDialogOpened` event, which is emitted whenever a file picker is triggered by the content page, for instance after clicking on an input with `type="file"`. ([Firefox bug 1855045](https://bugzil.la/1855045)).
+- Implemented the `emulation.setScreenSettingsOverride` command to allow clients to emulate the screen dimensions for a list of browsing contexts or user contexts. ([Firefox bug 2000651](https://bugzil.la/2000651)).
 - Fixed an issue where `browsingContext.navigate` with `wait=none` didn't always contain the real target URL. ([Firefox bug 2004191](https://bugzil.la/2004191)).
 - Updated `script.evaluate` and `script.callFunction` to bypass Content Security Policy (CSP). ([Firefox bug 1941780](https://bugzil.la/1941780)).
-- Implemented the `input.fileDialogOpened` event. ([Firefox bug 1855045](https://bugzil.la/1855045)).
-- Updated the `emulation.setLocaleOverride` command to override the `Accept-Language` header. ([Firefox bug 1995691](https://bugzil.la/1995691)).
-- Implemented the `emulation.setScreenSettingsOverride` command. ([Firefox bug 2000651](https://bugzil.la/2000651)).
-- Fixed missing `script.realmCreated` event for new browsing contexts. ([Firefox bug 2002721](https://bugzil.la/2002721)).
+- Fixed missing `script.realmCreated` event for new browsing contexts created via `window.open`. ([Firefox bug 2002721](https://bugzil.la/2002721)).
+- Updated `emulation.setLocaleOverride` to override the `Accept-Language` header. ([Firefox bug 1995691](https://bugzil.la/1995691)).
 - Updated `emulation.setLocaleOverride` to throw an error when called with the `locale` argument equal to `undefined`. ([Firefox bug 2003992](https://bugzil.la/2003992)).
 
-<!-- #### Marionette -->
+#### Marionette
+
+- Fixed JSON serialization of Chrome Windows. ([Firefox bug 2000801](https://bugzil.la/2000801)).
 
 ## Changes for add-on developers
 
 - Temporarily loaded Manifest Version 3 extensions can now load scripts from localhost, as explained in [Scripts from localhost](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#scripts_from_localhost) in the Content Security Policy article. ([Firefox bug 1864284](https://bugzil.la/1864284))
 
-<!-- ### Removals -->
-
-<!-- ### Other -->
-
 ## Experimental web features
 
-These features are shipping in Firefox 147 but are disabled by default.
-To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
-You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+No experimental features were added in this release.
+Check the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page for features from other releases.

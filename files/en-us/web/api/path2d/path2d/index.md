@@ -8,9 +8,7 @@ browser-compat: api.Path2D.Path2D
 
 {{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
-The **`Path2D()`** constructor returns a newly instantiated
-`Path2D` object, optionally with another path as an argument (creates a
-copy), or optionally with a string consisting of [SVG path](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) data.
+The **`Path2D()`** constructor returns a newly instantiated `Path2D` object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of [SVG path](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) data.
 
 ## Syntax
 
@@ -23,17 +21,15 @@ new Path2D(d)
 ### Parameters
 
 - `path` {{optional_inline}}
-  - : When invoked with another `Path2D` object, a copy of the
-    `path` argument is created.
+  - : When invoked with another `Path2D` object, a copy of the `path` argument is created.
 - `d` {{optional_inline}}
-  - : When invoked with a string consisting of [SVG path](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) data, a new path is created
-    from that description.
+  - : When invoked with a string consisting of [SVG path](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) data, a new path is created from that description.
 
 ## Examples
 
 ### Creating and copying paths
 
-This example creates and copies a `Path2D` path.
+This example creates and copies a `Path2D` path. First, `path1` is a rectangular path. Then, we copy `path1` into `path2` and add a circle to it. Finally, we stroke `path2`, which contains both the rectangle and the circle. Note that `path1` remains unchanged, although we never draw it to the canvas. Its only purpose is to show how you can build up a complex path by building on existing paths.
 
 ```html
 <canvas id="my-canvas"></canvas>
@@ -57,10 +53,7 @@ ctx.stroke(path2);
 
 ### Using SVG paths
 
-This example creates a `Path2D` path using [SVG path data](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths). The path will move to
-point (`M10 10`) and then move horizontally 80 points to the right
-(`h 80`), then 80 points down (`v 80`), then 80 points to the left
-(`h -80`), and then back to the start (`Z`).
+This example creates a `Path2D` path using [SVG path data](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths). The path will move to point (`M10 10`) and then move horizontally 80 points to the right (`h 80`), then 80 points down (`v 80`), then 80 points to the left (`h -80`), and then back to the start (`Z`).
 
 ```html
 <canvas id="my-canvas"></canvas>

@@ -75,7 +75,7 @@ The summary paragraph — start by naming the interface, saying what API it is p
 
 `\{{InheritanceDiagram}}`
 
-_To use the [domxref macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) in the sections below, remove the backticks and backslash in the markdown file._
+_To use the [domxref macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros##linking_to_reference_pages) in the sections below, remove the backticks and backslash in the markdown file._
 
 ## Constructor
 

@@ -119,9 +119,99 @@ For example, to stop a customizable `<select>` element's picker from being ancho
 }
 ```
 
+## Anchor scoping
+
+When multiple anchor elements are given the same {{cssxref("anchor-name")}} value and a positioned element has that name as its {{cssxref("position-anchor")}} property value, the positioned element will be associated with the _last_ anchor element in the source order with that `anchor-name` value.
+
+For example, if a document contains multiple repeated components, each with a positioned element tethered to an anchor, all the positioned elements will be anchored to the last anchor on the page unless each component uses a different anchor name. This is likely not the desired behavior.
+
+The {{cssxref("anchor-scope")}} property can fix this problem by limiting the visibility, or "scope", of an `anchor-name` value to a specific subtree. The result is that each positioned element can only be anchored to an element within the same subtree of the element that has the scope set on it.
+
+- `anchor-scope: all` sets the scope so that _any_ `anchor-name` values set in the subtree can only be bound to by positioned elements in the same subtree.
+- `anchor-scope: --my-anchor, --my-anchor2` sets the scope so that the specified `anchor-name` values, when set in the subtree, can only be bound to by positioned elements in the same subtree.
+- `anchor-scope: none` is the default value; it specifies that no anchor scoping is set.
+
+For example, let's say you have multiple anchors and anchor-positioned {{htmlelement("div")}} elements inside {{htmlelement("section")}} containers:
+
+```html live-sample___anchor-scope
+<section class="scoped">
+  <div class="anchor">⚓︎</div>
+  <div class="positioned">Positioned 1</div>
+</section>
+
+<section class="scoped">
+  <div class="anchor">⚓︎</div>
+  <div class="positioned">Positioned 2</div>
+</section>
+
+<section class="scoped">
+  <div class="anchor">⚓︎</div>
+  <div class="positioned">Positioned 3</div>
+</section>
+```
+
+We turn each `anchor` `<div>` into an anchor element by giving them an `anchor-name` of `--my-anchor`. We then position each `positioned` `<div>` relative to an element with the `--my-anchor` anchor name by giving them absolute positioning, a `position-anchor` value of `--my-anchor`, and a {{cssxref("position-area")}} value of `right`. Finally, we set the anchor scope of each `<section>` container using `anchor-scope: --my-anchor`:
+
+```css hidden live-sample___anchor-scope
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.scoped {
+  padding: 20px;
+  background: #eeeeee;
+}
+
+.anchor {
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background-color: blue;
+  width: fit-content;
+  padding: 3px;
+}
+
+.positioned {
+  background: orange;
+  width: fit-content;
+  padding: 3px;
+}
+```
+
+```css live-sample___anchor-scope
+.anchor {
+  anchor-name: --my-anchor;
+}
+
+.positioned {
+  position: absolute;
+  position-anchor: --my-anchor;
+  position-area: right;
+}
+
+.scoped {
+  anchor-scope: --my-anchor;
+}
+```
+
+This results in the following positioning behavior:
+
+{{ EmbedLiveSample("anchor-scope", "100%", "150") }}
+
+Each positioned element is positioned relative to the anchor inside the same `<section>` element. This is because each `<section>` element has an `anchor-scope` of `--my-anchor` set on it; positioned elements inside each scoped container can therefore only be positioned relative to `my-anchor` anchors inside the same container.
+
+If we didn't set `anchor-scope: --my-anchor` on the containers, all of the positioned elements would be positioned relative to the last anchor on the page.
+
 ## Positioning elements relative to their anchor
 
-As we saw above, associating a positioned element with an anchor is not really much use on its own. Our goal is to place the positioned element relative to its associated anchor element. This is done either by setting a [CSS `anchor()` function](#using_inset_properties_with_anchor_function_values) value on an [inset property](/en-US/docs/Glossary/Inset_properties), [specifying a `position-area`](#setting_a_position-area), or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
+As we saw earlier, associating a positioned element with an anchor is not really much use on its own. Our goal is to place the positioned element relative to its associated anchor element. This is done either by setting a [CSS `anchor()` function](#using_inset_properties_with_anchor_function_values) value on an [inset property](/en-US/docs/Glossary/Inset_properties), [specifying a `position-area`](#setting_a_position-area), or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
 
 > [!NOTE]
 > CSS anchor positioning also provides mechanisms for specifying fallback positions if the positioned element's default position causes it to overflow the viewport. See the [Fallback options and conditional hiding](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide for details.
@@ -163,11 +253,11 @@ Both will place the positioned element `50px` above the bottom of the element's 
 
 The most common `anchor()` parameters you'll use will refer to a side of the default anchor. You will also often either add a {{cssxref("margin")}} to create spacing between the edge of the anchor and positioned element or use `anchor()` within a `calc()` function to add that spacing.
 
-For example, this rule positions the right edge of the positioned element flush to the anchor element's left edge, then adds some `margin-left` to make some space between the edges:
+For example, this rule positions the left edge of the positioned element flush to the anchor element's right edge, then adds some `margin-left` to make some space between the edges:
 
 ```css
 .positionedElement {
-  right: anchor(left);
+  left: anchor(right);
   margin-left: 10px;
 }
 ```

@@ -1432,6 +1432,26 @@ To be clear, the values `"true"` and `"false"` are not allowed on boolean attrib
 > [!WARNING]
 > The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also be blocked by content security policies.
 
+> [!WARNING]
+> While not visible by calling the `Function.prototype.toString()` method on the handler, event handler attributes will implicitly wrap code inside of 2 `with` statements, and may produce unexpected results. For example:
+>
+> ```html
+> <div onclick="console.log(new URL(location))">Bad Example</div>
+> ```
+>
+> Essentially becomes:
+>
+> ```js example-bad
+> function onclick(event) {
+>   with (this.ownerDocument) {
+>     with (this) {
+>       console.log(new URL(location)); // 'URL' now resolves to document.URL instead of window.URL
+>       // TypeError: URL is not a constructor
+>     }
+>   }
+> }
+> ```
+
 In addition to the attributes listed in the table above, global [event handlers](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) — such as [`onclick`](/en-US/docs/Web/API/Element/click_event) — can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
 
 All event handler attributes accept a string. The string will be used to synthesize a [JavaScript function](/en-US/docs/Web/JavaScript/Reference/Functions) like `function name(/*args*/) {body}`, where `name` is the attribute's name, and `body` is the attribute's value. The handler receives the same parameters as its JavaScript event handler counterpart — most handlers receive only one `event` parameter, while `onerror` receives five: `event`, `source`, `lineno`, `colno`, `error`. This means you can, in general, use the `event` variable within the attribute.

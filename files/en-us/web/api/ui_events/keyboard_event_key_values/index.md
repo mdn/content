@@ -730,7 +730,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
         on the right side of the keyboard.
       </td>
       <td><code>VK_APPS</code> (0x5D)</td>
-      <td><code>kVK_PC_ContextMenu</code> (0x6E)</td>
+      <td><code>kVK_ContextualMenu</code> (0x6E)</td>
       <td>
         <code>GDK_KEY_Menu</code> (0xFF67)<br /><code>Qt::Key_Menu</code>
         (0x01000055)
@@ -2417,10 +2417,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
       </td>
       <td><code>APPCOMMAND_MEDIA_FAST_FORWARD</code></td>
       <td></td>
-      <td>
-        <code>GDK_KEY_AudioForward (0x1008FF97)<br />Qt:Key_AudioForward</code>
-        (0x01000102)
-      </td>
+      <td><code>GDK_KEY_AudioForward</code> (0x1008FF97)<br/><code>Qt:Key_AudioForward</code> (0x01000102)</td>
       <td><code>KEYCODE_MEDIA_FAST_FORWARD</code> (90)</td>
     </tr>
     <tr>
