@@ -10,12 +10,11 @@ browser-compat: api.NavigatorUAData.getHighEntropyValues
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
-The **`getHighEntropyValues()`** method of the {{domxref("NavigatorUAData")}} interface is a {{jsxref("Promise")}} that resolves with a dictionary object containing the _high entropy_ values the user-agent returns.
+The **`getHighEntropyValues()`** method of the {{domxref("NavigatorUAData")}} interface returns a {{jsxref("Promise")}} that resolves with a dictionary object containing information about the browser (user agent).
 
-The terms _high entropy_ and _low entropy_ refer to the amount of information these values reveal about the browser.
-The values returned as properties are deemed low entropy, and unlikely to identify a user.
-The values returned by `getHighEntropyValues()` could potentially reveal more information.
-These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.
+The resolved object has the "low entropy" properties by default, which contain the values that are less likely to allow fingerprinting of the user.
+It also contains the subset of "high entropy" values that are requested in the parameter object, and for which permission has been granted.
+Note that meaning of the terms [low entropy](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints) and [high entropy](/en-US/docs/Web/HTTP/Guides/Client_hints#high_entropy_hints) is the same as defined in the HTTP [User Agent Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints) mechanism.
 
 > [!NOTE]
 > Usage of the `getHighEntropyValues()` method to retrieve high-entropy user-agent data can be controlled via the {{HTTPHeader('Permissions-Policy/ch-ua-high-entropy-values', 'ch-ua-high-entropy-values')}} {{HTTPHeader('Permissions-Policy')}}.
@@ -30,7 +29,9 @@ getHighEntropyValues(hints)
 ### Parameters
 
 - `hints`
-  - : An array containing the hints to be returned, one or more of:
+  - : An array containing the high-entropy hints to be returned.
+    This may include one or more of:
+
     - `"architecture"`
     - `"bitness"`
     - `"formFactors"`
@@ -42,7 +43,7 @@ getHighEntropyValues(hints)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to an object containing some or all of the following values (based on the hints requested):
+A {{jsxref("Promise")}} that resolves to an object containing some or all of the following values (based on the hints requested and granted):
 
 - `brands`
   - : Returns an array of objects containing `brand` and `version` specifying the browser brand and its version (the same information as provided by {{domxref("NavigatorUAData.brands")}}).
