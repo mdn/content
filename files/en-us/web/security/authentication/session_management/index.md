@@ -168,6 +168,16 @@ There are a few additional considerations that a decentralized, token-based mode
 
 ### Invalidating tokens
 
-In our discussion of [invalidation events](#invalidation_events), we've seen that in some situations a website wants to invalidate a user's session and force tgem to reauthenticate. With a centralized model, where the user's session state is maintained on the server, the server can invalidate a session by deleting the session state that it stores. However, with a
+In our discussion of [invalidation events](#invalidation_events), we've seen that in some situations a website wants to invalidate a user's session and force them to reauthenticate. With a centralized model, where the user's session state is maintained on the server, the server can invalidate a session by deleting the session state that it stores.
+
+However, it's a basic principle of the decentralized model that a service within the application should be able to decide how to handle a request based only on the contents of the token.
+
+The most common solution to this is to:
+
+- Give the tokens that the client uses to access APIs, which are sometimes called _access tokens_, a short validity period, so that even if they are stolen, they can't be used for very long.
+- Add a new type of token called a _refresh token_, which the client is given when the user authenticates. This token has a much longer lifetime than the access token.
+- Add a new _refresh endpoint_, that will issue new access tokens when presented with a valid refresh token.
+
+The refresh endpoint gives the application a centralized place to determine whether or not the user's session should be invalidated. If it does choose to invalidate the session, is does so by refusing to issue new access tokens.
 
 ## Framework support
