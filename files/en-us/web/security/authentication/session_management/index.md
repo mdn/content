@@ -11,9 +11,11 @@ Session management is not exclusive to authentication: for example, a site might
 
 In this guide we'll first describe the most common architecture for session management, in which the user's session state is kept in the server:
 
-- When the user is authenticated, the server records their state and generates a _session ID_, which it associates with this state. The server returns a copy of the session ID to the client.
+- When the user is authenticated, the server records their state and generates a _session ID_, which it associates with this state. The server returns a copy of the session ID to the client. The client stores the session ID.
 
-- The client stores the session ID. When the client makes a request to the server, the client includes the ID. The server uses this to look up the user's session state, to decide what the client is allowed to do.
+- When the client makes a request to the server, the client includes the ID. The server uses this to look up the user's session state, to decide what the client is allowed to do.
+
+![Diagram showing session management using server-maintained session state](session-mgt-centralized.svg)
 
 ## Attacks
 
@@ -138,19 +140,21 @@ In some situations, a website might want to invalidate a user's sessions and req
 
 ## Decentralized session management
 
-The model we've described so far might be called "centralized session management": the session state is maintained on the server, and the client is given an identifier for the state, which it gives to the server when it makes a request.
+The model we've described so far might be called "centralized session management": the session state is maintained in a database on the server, and the client is given an identifier for the state, which it gives to the server when it makes a request.
 
 An alternative model might be called "decentralized session management". In this model, the session state is maintained as a {{glossary("digital signature", "digitally signed")}} object in the client. These signed objects are typically represented as [JSON Web Tokens (JWTs)](https://www.jwt.io/).
 
 When the server authenticates the user, the server:
 
-- Creates an object representing the user's session state
-- Digitally signs this object
-- Returns the signed object to the client.
+- Creates a token representing the user's session state, which determines what sort of access this user should have.
+- Digitally signs this token
+- Returns the signed token to the client.
 
-When the client makes a request, it presents the signed object to the server, which verifies the signature and uses the session state to decide how to handle the request.
+When the client makes a request, it presents the signed token to the server, which verifies the signature and uses the session state to decide how to handle the request.
 
-Because the state is maintained in the client, this model is popular for distributed applications in which the client might make requests to a number of different servers. The client passes its state to any server, and as long as that server is able to verify signatures made by the authentication system, then the server can determine how to handle the request: there's no need for the server handling the request to interact directly with the authentication system.
+Because the state is maintained in the client, this model is popular for distributed applications in which the client might make requests to a number of different servers. The client passes its state to any server, and as long as that server is able to verify signatures made by the token issuer, then the server can determine how to handle the request: there's no need for the server handling the request to interact directly with the token issuer.
+
+![Diagram showing session management using client-maintained session state](session-mgt-decentralized.svg)
 
 ### Token storage
 
