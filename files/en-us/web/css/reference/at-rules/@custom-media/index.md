@@ -229,10 +229,6 @@ When multiple `@custom-media` rules use the same name, the rule that is in scope
 at the time a `@media` rule is evaluated is used. Earlier references are not
 retroactively updated when a later `@custom-media` rule is declared.
 
-When multiple `@custom-media` rules use the same name, the rule that is in scope
-at the time a `@media` rule is evaluated is used. Earlier references are not
-retroactively updated when a later `@custom-media` rule is declared.
-
 For example, in the code above, the `--mobile-breakpoint` reference inside the
 `@media` rule is evaluated as `(width < 320px)`, so the `.container` rule is only
 applied when the viewport is less than 320px wide, even though
