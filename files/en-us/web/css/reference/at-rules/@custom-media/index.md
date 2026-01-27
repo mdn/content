@@ -47,7 +47,6 @@ that is in scope at the time a `@media` rule is evaluated is used. Earlier
 references are not retroactively updated when a later `@custom-media` rule is
 declared.
 
-
 ### Evaluating media queries with logical operators
 
 Custom media queries accept the full range of CSS logical operators — `not`, `and`, and `or` (comma-separated or using the `or` keyword).
