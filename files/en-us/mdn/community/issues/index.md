@@ -91,7 +91,16 @@ These are the general steps for working on an issue:
    > [!NOTE]
    > An issue with the `needs triage` label indicates that the MDN Web Docs core team has not reviewed the issue yet, and you shouldn't begin work on it.
 
-2. **Assign the issue to yourself:** After finding an issue you'd like to work on, make sure that the issue is not assigned to anybody else. Add a comment saying you would like to work on the issue, and if you are able to, [assign the issue to yourself](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request).
+2. **Assign the issue to yourself:** First make sure that the issue is not assigned to a specific user, and that it doesn't have a linked [Pull Request](/en-US/docs/MDN/Community/Pull_requests) indicating that someone has already started work on it.
+
+   To self-assign the issue to yourself, [open a pull request](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request) to fix it, and in the PR description include the text `Fixes #<issue_number>` (or `Related to #<issue_number>` if the PR only partially fixes the issue).
+   This creates a cross-link between the issue and the PR so that anyone viewing the issue can see that someone is working on it.
+   If you have the necessary permissions, you should also _explicitly_ [assign the issue to yourself](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request).
+
+   > [!NOTE]
+   > Creating the cross-linked PR implicitly assigns the issue to the PR's author.
+   > If the PR is merged the issue is automatically closed.
+   > If the PR is closed, the issue remains open for other authors to fix.
 
 3. **Do the research:** Most issues need some investigation before work can start.
    - Scope out the work that needs to be done. If you need to ask questions, ask them in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms).
