@@ -36,7 +36,7 @@ In this example, when the clipboard's contents are changed, the event listener l
 ```js
 navigator.clipboard.addEventListener("clipboardchange", (event) => {
   console.log(`MIME types: ${event.types}`);
-  console.log(`ID: ${event.changeId})`;
+  console.log(`ID: ${event.changeId}`);
   console.dir(event);
 });
 ```
