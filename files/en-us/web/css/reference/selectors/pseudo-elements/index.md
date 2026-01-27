@@ -68,7 +68,7 @@ Selects document sections based on content and document status, enabling those a
 - {{CSSxRef("::spelling-error")}}
   - : A portion of text that the browser thinks is misspelled.
 - {{CSSxRef("::target-text")}}
-  - : The document's target element. The target element is identified using the URL's fragment identifier.
+  - : The document's target element. The target element is identified using the [URL's fragment](/en-US/docs/Web/URI/Reference/Fragment) identifier.
 
 ## Tree-Abiding pseudo-elements
 
