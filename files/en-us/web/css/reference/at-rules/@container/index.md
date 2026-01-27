@@ -318,10 +318,10 @@ Anchored container descriptors are specified inside the `<container-condition>` 
 }
 ```
 
-- `anchored`
-  - : Queries whether a specific position-try fallback is currently active on an anchor-positioned container, as specified via the {{cssxref("position-try-fallbacks")}} property. Valid `anchored` values include any component value that is valid for inclusion in a `position-try-fallbacks` property value.
+- `fallback`
+  - : Queries whether a specific position-try fallback is currently active on an anchor-positioned container, as specified via the {{cssxref("position-try-fallbacks")}} property. Valid `fallback` values include any component value that is valid for inclusion in a `position-try-fallbacks` property value.
 
-    If the fallback value named in the test is currently active on the anchor-positioned container, the test passes, and the rules inside the `@container` block are applied to descendants of the anchor-positioned container.
+    If the `fallback` value named in the test is currently active on the anchor-positioned container, the test passes, and the rules inside the `@container` block are applied to descendants of the anchor-positioned container.
 
 ## Formal syntax
 
