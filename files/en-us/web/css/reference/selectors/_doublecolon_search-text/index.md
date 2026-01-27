@@ -65,7 +65,7 @@ Only certain CSS properties can be used with `::search-text`:
 - {{CSSxRef("color")}}
 - {{CSSxRef("background-color")}}
 - The {{CSSxRef("text-decoration")}} shorthand and associated longhand properties:
-  - {{CSSxRef("text-decoration-line")}}, the `grammar-error`, `spelling-error`, `line-through`, `none`, and `underline` values only.
+  - {{CSSxRef("text-decoration-line")}}: the `grammar-error`, `spelling-error`, `line-through`, `none`, and `underline` values only.
   - {{CSSxRef("text-decoration-color")}}
   - {{CSSxRef("text-decoration-style")}}
   - {{CSSxRef("text-decoration-thickness")}}
