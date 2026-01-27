@@ -42,7 +42,11 @@ The `@custom-media` at-rule solves this problem by letting you define **named al
 
 Custom media queries can be composed from others by referencing their alias names inside the media query features. This enables building more expressive, layered conditions. However, a custom media query cannot refer to itself, nor can it form part of a circular chain of references. Any circular dependency — direct or indirect — invalidates all custom media queries involved in that loop.
 
-If multiple `@custom-media` rules define the same `<dashed-ident>` name, only the last declaration in the source order applies. All earlier declarations are ignored.
+If multiple `@custom-media` rules define the same `<dashed-ident>` name, the rule
+that is in scope at the time a `@media` rule is evaluated is used. Earlier
+references are not retroactively updated when a later `@custom-media` rule is
+declared.
+
 
 ### Evaluating media queries with logical operators
 
