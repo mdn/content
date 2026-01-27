@@ -28,9 +28,8 @@ The general step-by-step process for creating a page would be:
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
-   # Run "yarn" again to ensure you've
-   # installed the latest Yari dependency.
-   yarn
+   # Run "npm install" to ensure dependencies are up to date.
+   npm install
    git checkout -b my-add
    ```
 
@@ -52,7 +51,7 @@ Moving one or more documents or an entire tree of documents is easy
 because we've created a special command that takes care of the details for you:
 
 ```bash
-yarn content move <from-slug> <to-slug> [locale]
+npm run content move <from-slug> <to-slug> [locale]
 ```
 
 You just have to specify the slug of the existing document that you'd like
@@ -61,7 +60,7 @@ location (e.g., `Web/HTTP/Guides/Auth`), optionally followed by the locale of th
 existing document (defaults to `en-US`).
 
 If the existing document that you'd like to move has child documents (i.e.,
-it represents a document tree), the `yarn content move` command will move
+it represents a document tree), the `npm run content move` command will move
 the entire tree.
 
 For example, let's say you want to move the entire
@@ -73,16 +72,15 @@ For example, let's say you want to move the entire
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
-   # Run "yarn" again just to ensure you've
-   # installed the latest Yari dependency.
-   yarn
+   # Run "npm install" again to ensure dependencies are up to date.
+   npm install
    git checkout -b my-move
    ```
 
 2. Perform the move (which will delete and modify existing files as well as create new files).
 
    ```bash
-   yarn content move Web/HTTP/Guides/Authentication Web/HTTP/Guides/Auth
+   npm run content move Web/HTTP/Guides/Authentication Web/HTTP/Guides/Auth
    ```
 
 3. Once files are moved we need to update references to those files in the other content files as well. Use following command to update all the references automatically in one go:
@@ -102,21 +100,22 @@ For example, let's say you want to move the entire
 5. Create your pull request.
 
 > [!NOTE]
-> The `yarn content move` command adds required redirects in the `_redirects.txt` file so that the old location will redirect to the new one. Don't edit the `_redirects.txt` file manually! Mistakes can easily creep in if you do. If you need to add a redirect without moving a file, talk to the MDN Web Docs team on the [MDN Web Docs Communication channels](/en-US/docs/MDN/Community/Communication_channels) about it.
+> The `npm run content move` command adds required redirects in the `_redirects.txt` file so that the old location will redirect to the new one. Don't edit the `_redirects.txt` file manually! Mistakes can easily creep in if you do. If you need to add a redirect without moving a file, talk to the MDN Web Docs team on the [MDN Web Docs Communication channels](/en-US/docs/MDN/Community/Communication_channels) about it.
 
 ## Deleting pages
 
 Documents should only be removed from MDN Web Docs under special circumstances. If you are thinking about deleting pages, please discuss it with the MDN Web Docs team on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) first.
 
-Deleting one or more documents or an entire tree of documents is easy, just like moving pages, because we've created a special command that takes care of the
-details for you:
+Deleting one or more documents or an entire tree of documents is easy, just like moving pages, because we've created a special command that takes care of the details for you:
 
 ```bash
-yarn content delete <document-slug> [locale]
+npm run content delete <document-slug> [locale] -- --redirect <redirect-slug-or-url>
 ```
 
+When you redirect, the target page can be an external URL or another page on MDN Web Docs.
+
 > [!NOTE]
-> You need to use the `yarn content delete` command to delete pages from MDN Web Docs. Don't just delete their directories from the repo. The `yarn content delete` command also handles other necessary changes such as updating the `_wikihistory.json` file.
+> You need to use the `npm run content delete` command to delete pages from MDN Web Docs. Don't just delete their directories from the repo. The `npm run content delete` command also handles other necessary changes such as updating the `_wikihistory.json` file.
 
 You just have to specify the slug of the existing document that you'd like
 to delete (e.g., `Web/HTTP/Guides/Authentication`), optionally followed by the locale
@@ -135,38 +134,31 @@ entire `/en-US/Web/HTTP/Guides/Authentication` tree, you'd perform the following
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
-   # Run "yarn" again just to ensure you've
-   # installed the latest Yari dependency.
-   yarn
+   # Run "npm install" again to ensure dependencies are up to date.
+   npm install
    git checkout -b my-delete
    ```
 
-2. Perform the delete.
+2. Perform the delete with a redirect.
 
    ```bash
-   yarn content delete Web/HTTP/Guides/Authentication --recursive
+   npm run content delete Web/HTTP/Guides/Authentication --recursive -- --redirect /en-US/path/of/target/page
    ```
 
-3. Add a redirect. The target page can be an external URL or another page on MDN Web Docs.
-
-   ```bash
-   yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
-   ```
-
-4. Add and commit all the deleted files as well as push your branch to your fork.
+3. Add and commit all the deleted files as well as push your branch to your fork.
 
    ```bash
    git commit -a
    git push -u origin my-delete
    ```
 
-5. Create your pull request.
+4. Create your pull request.
 
 > [!NOTE]
 > If the slug of the page you wish to delete contains special characters, include it in quotes, like so:
 >
 > ```bash
-> yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
+> npm run content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)" -- --redirect <redirect-slug-or-url>
 > ```
 
 Removing content from MDN Web Docs will inevitably result in updating the existing content as well. As a lot of articles link to others, the removed content will likely be referenced elsewhere. Adding the redirect will mitigate the impact of removing content; however, it's best practice to edit content to reflect the change and include the content edits along with the removal pull request.
@@ -177,7 +169,7 @@ To edit a page, you need to find the page source in our [content](https://github
 
 ### Preview changes
 
-If you are editing the page locally, to see what your changes look like you can go to the content repo folder, execute the CLI command `yarn start`, go to `localhost:5042` in your browser, and navigate to the page and view it. Enter the title in the search box to find it easily. The previewed page will update in the browser as you edit the source.
+If you are editing the page locally, to see what your changes look like you can go to the content repo folder, execute the CLI command `npm start`, go to `localhost:5042` in your browser, and navigate to the page and view it. Enter the title in the search box to find it easily. The previewed page will update in the browser as you edit the source.
 
 ### Attach files
 
