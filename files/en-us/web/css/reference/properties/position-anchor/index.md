@@ -237,7 +237,7 @@ We include an [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/i
 
 #### CSS
 
-We give the thumb, represented by the {{cssxref("::-webkit-slider-thumb")}} pseudo-element, an anchor name of `--thumb`. We then set that name as the value of the `<output>` element's `position-anchor` property, and give it a {{cssxref("position")}} value of `fixed`. These steps associated the `<output>` with the thumb.
+We give the thumb, represented by the {{cssxref("::-webkit-slider-thumb")}} and {{cssxref("[::-moz-range-thumb")}} pseudo-elements, an anchor name of `--thumb`. We then set that name as the value of the `<output>` element's `position-anchor` property, and give it a {{cssxref("position")}} value of `fixed`. These steps associated the `<output>` with the thumb.
 
 Finally, we use {{cssxref("left")}} and {{cssxref("top")}} properties with {{cssxref("anchor()")}} values to position the `<output>` relative to the thumb.
 
