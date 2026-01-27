@@ -33,6 +33,16 @@ There are plans to further extend possible queries by adding the generalized con
 ### At-rules and descriptors
 
 - {{cssxref("@container")}}
+  - [`aspect-ratio`](/en-US/docs/Web/CSS/Reference/At-rules/@container#aspect-ratio)
+  - [`block-size`](/en-US/docs/Web/CSS/Reference/At-rules/@container#block-size)
+  - [`fallback`](/en-US/docs/Web/CSS/Reference/At-rules/@container#fallback)
+  - [`height`](/en-US/docs/Web/CSS/Reference/At-rules/@container#height)
+  - [`inline-size`](/en-US/docs/Web/CSS/Reference/At-rules/@container#inline-size)
+  - [`orientation`](/en-US/docs/Web/CSS/Reference/At-rules/@container#orientation)
+  - [`scrollable`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrollable)
+  - [`snapped`](/en-US/docs/Web/CSS/Reference/At-rules/@container#snapped)
+  - [`stuck`](/en-US/docs/Web/CSS/Reference/At-rules/@container#stuck)
+  - [`width`](/en-US/docs/Web/CSS/Reference/At-rules/@container#width)
 - {{cssxref("@media")}}
 - {{cssxref("@supports")}}
 
