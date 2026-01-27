@@ -73,40 +73,35 @@ If possible, websites should use a reputable web framework or library to generat
 
 ## Session ID storage
 
-Clients need to be able to store session identifiers and send them to the server when they make requests. The two main options for storing session identifiers are [local storage](/en-US/docs/Web/API/Web_Storage_API) and [cookies](/en-US/docs/Web/HTTP/Guides/Cookies).
+Clients need to be able to store session identifiers securely, so an attacker can't access the value and hijack the session.
 
-Cookies are the recommended choice, because: a website can use cookie attributes to control who can access the cookies, when they are sent, and when they expire. In particular, by setting the [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute, a website can add some protection against session hijacking based on client-side XSS attacks.
+The two main options for storing session identifiers are [local storage](/en-US/docs/Web/API/Web_Storage_API) and [cookies](/en-US/docs/Web/HTTP/Guides/Cookies).
 
-### Cookie attributes
+Cookies are the recommended choice, because a website can prevent the cookie from being accessible to JavaScript by setting the [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute. With this attribute set, even in a successful XSS attack, the malicious code can't access the session ID itself (for example, to send it to the attacker). This offers a clear benefit over other client-side storage methods.
 
-Cookies that contain session IDs should have the following attributes set:
+Note though that it isn't a complete protection: the malicious code can still make HTTP requests to the target server from the user's browser that would include the session ID, so would be granted the user's privileges on the site.
 
-- [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly)
-  - : If this attribute is set, then the cookie is not accessible to JavaScript running in the client. This provides some degree of protection against a session hijacking attack made using [XSS](/en-US/docs/Web/Security/Attacks/XSS), in which an attacker is able to run malicious code on the user's device, in the context of the target website.
+## Session ID transmission
 
-    Specifically, if `HttpOnly` is set, then even in a successful XSS attack, the malicious code can't access the session ID itself (for example, to send it to the attacker).
+If a session ID is stored in local storage, then the client must explicitly read the ID and include it in the requests that it makes.
 
-    This offers a clear benefit over other client-side storage methods.
+If the session ID is in a cookie, then it will be automatically sent when the client makes requests. Again, there are attributes that control which requests include the cookie.
 
-    Note though that it isn't a complete protection: the malicious code can still make HTTP requests to the target server from the user's browser that would include the session ID, so would be granted the user's privileges on the site.
+### Secure transmission
 
-- [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesite)
-  - : Websites should set the `SameSite` attribute to `Lax` or `Strict`. This provides some protection against attacks such as [CSRF](/en-US/docs/Web/Security/Attacks/CSRF) or [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking).
+If the [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) attribute is set, then the cookie will not be sent over unencrypted connections. This is a defense against a [Manipulator in the Middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM) attack stealing a session identifier while it is in transit.
 
-    Our [guide to using `SameSite` as a CSRF defense](/en-US/docs/Web/Security/Attacks/CSRF#defense_in_depth_samesite_cookies) explores the question of when to use `Lax` and when to use `Strict`.
+### Controlling cookie destinations
 
-- [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure)
-  - : If this attribute is set then the cookie will not be sent over unencrypted connections. This is a defense against an [Manipulator in the Middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM) attack stealing a session identifier while it is in transit.
+The [`Domain`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#domain) and [`Path`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#path) attributes control the URLs to which the cookie will be sent, and should be set to the most restrictive values possible, given the needs of your site.
 
-The [`Domain`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#domain) and [`Path`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#path) attributes control the URLs to which the cookie will be set, and should be set to the most restrictive values possible, given the needs of your site. Note that `Domain` relaxes the default value, so omitting it is always more secure than including it. However, `Path` restricts the default value.
-
-Websites can control the lifetime of a session by setting the [`Expires`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#expiresdate) and [`Max-Age`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#max-agenumber) attributes. See [Session lifetime](#session_lifetime) for more guidance.
+By default, the cookie will only be sent to the same host that set it. For example, a cookie set from `https://login.example.org` will not be included in requests to `https://products.example.org` or even `https://example.org`. If you need to relax this, you can do so using the `Domain` attribute, but you can't allow the cookie to be included in requests to a completely different {{glossary("Site")}}. For example, if the cookie is set from `https://example.org`, you can't arrange for it to be sent to `https://example.com`.
 
 ### CSRF considerations
 
-If a website uses cookies to transmit session identifiers, it must implement protection against cross-site request forgery (CSRF) attacks. The risk here is that the browser may include cookies in a request from the attacker's site to the target website, and if these cookies include a valid session identifier, then the server will treat the request as if it came from a legitimate user, and carry out the attacker's requeast.
+If a website uses cookies to transmit session identifiers, it must implement protection against [cross-site request forgery (CSRF)](/en-US/docs/Web/Security/Attacks/CSRF) attacks. The risk here is that the browser may include cookies in a request from the attacker's site to the target website, and if these cookies include a valid session ID, then the server will treat the request as if it came from a legitimate user, and carry out the attacker's requeast.
 
-Our [CSRF guide](/en-US/docs/Web/Security/Attacks/CSRF) describes recommended defenses here: note that the [`SameSite`](#samesite) attribute is only part of a complete defense.
+Our CSRF guide describes [recommended defenses](/en-US/docs/Web/Security/Attacks/CSRF#defenses_against_csrf) here: note that setting the [`SameSite`](#samesite) cookie attribute is only part of a complete defense.
 
 ## Session lifetime
 
@@ -118,7 +113,7 @@ If both attributes are omitted, then the browser forgets the cookie when the use
 
 ### Timeouts
 
-The OWASP cheatsheet describes three different timeouts, all of which could be implemented as part of a session management strategy:
+The OWASP cheatsheet describes three different session timeouts, all of which could be implemented as part of a session management strategy:
 
 - _Idle timeout_: this times out after a period of inactivity, defined as a period in which the client has sent no HTTP requests to the server. After it times out, the user must reauthenticate.
 - _Absolute timeout_: this times out after a specific time period, whether or not there was activity. After it times out, the user must reauthenticate.
@@ -133,11 +128,11 @@ All these timeouts should be calculated on the server, and actually expiring the
 
 Specific timeout periods depend on the sensitivity of the session and its usage profile: the OWASP cheatsheet includes recommendations.
 
-## Invalidation events
+### Invalidation events
 
-A website can also invalidate existing sessions and require reauthentication:
+In some situations, a website might want to invalidate a user's sessions and require reauthentication:
 
-1. When the client attempts some high-risk operation, such as attempting to change, or actually changing, the user's credentials on the site, or triggering the account recovery (for example, password reset) process.
+1. When the client attempts some high-risk operation, such as attempting to change, or actually changing, the user's credentials on the site, or triggering the account recovery process (for example, password reset).
 
 2. When the server has some grounds for thinking that the session ID might have been stolen. This could include, for example, a sign-in from a new IP address or device.
 
