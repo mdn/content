@@ -93,7 +93,7 @@ img {
 
 ## More columns than will fit
 
-How overflowing columns are handled depends on whether the media context is fragmented, such as print, or is continuous, such as a web page.
+How overflowing columns are handled depends on whether the media context is fragmented, such as print, or is continuous, such as a web page. It also depends on whether {{cssxref("column-height")}} and {{cssxref("column-wrap")}} are being used to enforce [column wrapping](#using_column_wrapping_for_multicol).
 
 In fragmented media, after a fragment (for example, a page) is filled with columns, the columns will move to a new page and fill that up with columns. In continuous media, columns will overflow in the inline direction. On the web, this means that you will get a horizontal scrollbar.
 
@@ -172,6 +172,80 @@ body {
 ```
 
 {{EmbedLiveSample("min-height", "", "340px")}}
+
+## Using column wrapping for multicol
+
+The {{cssxref("column-height")}} and {{cssxref("column-wrap")}} properties can be used to assign a fixed height to generated columns, and force excess columns to overflow into additional rows of columns in the block direction. In horizontal writing mode content, this means that you'll end up with vertically-scrolling rows of columns, rather than a horizontally scrolling single column. Let's look at an example.
+
+The HTML contains basic text content, which we have hidden for brevity.
+
+```html hidden
+<p>
+  This is a bunch of text split into three columns using the CSS
+  <code>columns</code> property. This includes a <code>column-count</code> value
+  of <code>2</code> and a <code>column-height</code> value of <code>95vh</code>.
+  The <code>column-wrap</code> value is set to its initial value,
+  <code>auto</code>; when a <code>column-height</code> value is included,
+  <code>column-wrap: auto</code> resolves to <code>wrap</code>, which allows the
+  columns to wrap onto multiple rows. The text is equally distributed over the
+  columns, and placed into multiple rows.
+</p>
+
+<p>
+  The <code>column-height</code> and <code>column-wrap</code> properties were
+  introduced in
+  <a href="https://drafts.csswg.org/css-multicol-2/"
+    >CSS Multi-column Layout Module Level 2</a
+  >.
+</p>
+```
+
+We give our content some styles. Most notably, we set the `<body>` element's `column-count` to `2`, and its `column-height` to `95vh` so that each row of columns fills up the viewport. We don't need to explicitly set `column-wrap` to `wrap`: when `column-height` is set to a {{cssxref("&lt;length>")}} value, the initial value of `column-wrap` (`auto`) resolves to `wrap`, which is usually the behavior you'll want.
+
+```css hidden
+html {
+  font-family: sans-serif;
+}
+
+body {
+  width: 60%;
+  margin: 0 auto;
+}
+
+p:first-of-type {
+  margin-top: 0;
+}
+```
+
+```css
+body {
+  font-size: 1.3em;
+  line-height: 1.5;
+  column-count: 2;
+  column-height: 95vh;
+}
+```
+
+```css hidden
+@supports not (column-height: 5em) {
+  body::before {
+    content: "Your browser does not support the 'column-height' property.";
+    color: black;
+    background-color: #ffcd33;
+    display: block;
+    position: fixed;
+    inset: 40% 2em;
+    height: fit-content;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem 0;
+  }
+}
+```
+
+This example renders like so:
+
+{{EmbedLiveSample('Using column wrapping for multicol', 'auto', 240)}}
 
 ## Next steps
 
