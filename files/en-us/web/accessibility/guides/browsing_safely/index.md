@@ -41,7 +41,7 @@ Select the "Reduce motion option" in OS Accessibility settings for Apple (image 
 
 #### Use Reader Mode on browsers
 
-- Enable Content Blockers; Gets rid of ads, reduces and/or removes distractions
+- Enable Content Blockers; gets rid of ads, reduces and/or removes distractions
 - Enables text-to-speech
 - In certain browsers, enable fonts by choice
 - Enable Page Zoom

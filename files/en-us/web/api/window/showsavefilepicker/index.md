@@ -44,7 +44,7 @@ showSaveFilePicker(options)
         item is an object with the following options:
         - `description` {{Optional_Inline}}
           - : An optional description of the category of files
-            types allowed. Default to be an empty string.
+            types allowed. Defaults to an empty string.
         - `accept`
           - : An {{jsxref('Object')}} with the keys set to the [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
             for an example).
