@@ -222,7 +222,14 @@ In this example, one `@custom-media` rule is overridden by another `@custom-medi
 @custom-media --mobile-breakpoint (width < 480px);
 ```
 
-The initial definition of `--mobile-breakpoint` is overridden and therefore ignored. The final declaration becomes the active value used by all references to that custom media query.
+When multiple `@custom-media` rules use the same name, the rule that is in scope
+at the time a `@media` rule is evaluated is used. Earlier references are not
+retroactively updated when a later `@custom-media` rule is declared.
+
+> **Note**
+> The overriding behavior of `@custom-media` is still under discussion in the CSS
+> specification and may change in the future. Current implementations (Firefox,
+> behind a flag) follow evaluation-time scoping.
 
 ## Specifications
 
