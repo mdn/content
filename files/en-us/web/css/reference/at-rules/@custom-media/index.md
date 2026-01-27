@@ -229,10 +229,20 @@ When multiple `@custom-media` rules use the same name, the rule that is in scope
 at the time a `@media` rule is evaluated is used. Earlier references are not
 retroactively updated when a later `@custom-media` rule is declared.
 
-> **Note**
+When multiple `@custom-media` rules use the same name, the rule that is in scope
+at the time a `@media` rule is evaluated is used. Earlier references are not
+retroactively updated when a later `@custom-media` rule is declared.
+
+For example, in the code above, the `--mobile-breakpoint` reference inside the
+`@media` rule is evaluated as `(width < 320px)`, so the `.container` rule is only
+applied when the viewport is less than 320px wide, even though
+`--mobile-breakpoint` is redefined as `(width < 480px)` later in the stylesheet.
+
+> [!NOTE]
 > The overriding behavior of `@custom-media` is still under discussion in the CSS
-> specification and may change in the future. Current implementations (Firefox,
-> behind a flag) follow evaluation-time scoping.
+> specification and may change in the future. See the
+> [Browser compatibility](#browser-compatibility) section for current support
+> status.
 
 ## Specifications
 
