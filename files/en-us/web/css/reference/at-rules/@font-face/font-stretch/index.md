@@ -128,7 +128,7 @@ People with dyslexia and other cognitive conditions may have difficulty reading 
 
 ### Setting a percentage range for font-stretch
 
-The following uses [League Mono](https://www.theleagueofmoveabletype.com/league-mono) font to synthesize different font families from the same font file using the `font-stretch` descriptor with `semi-condensed`, `normal`, and `semi-expanded` values using keywords and percentages.
+The following example uses the [League Mono](https://www.theleagueofmoveabletype.com/league-mono) font to synthesize different font families from the same font file using the `font-stretch` descriptor with various keywords and percentage values.
 
 ```html
 <p>League Mono</p>
