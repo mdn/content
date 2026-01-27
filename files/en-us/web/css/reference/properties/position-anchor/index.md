@@ -227,7 +227,7 @@ In this example, an {{htmlelement("output")}} is positioned relative to an ancho
 
 #### HTML
 
-We include an [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) element and an [`<output>`](/en-US/docs/Web/HTML/Reference/Elements/output) element to display the value of the range. The value displayed in the `<output>` element is updated via JavaScript as the slider value changes.
+We include an [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) element and an {{htmlelement("output")}} element to display the value of the range. The value displayed in the `<output>` element is updated via JavaScript as the slider value changes.
 
 ```html
 <label for="slider">Change the value:</label>
