@@ -193,7 +193,7 @@ popover.hidePopover();
 
 ### Other examples
 
-- [Opening a modal dialog](/en-US/docs/Web/API/HTMLDialogElement#opening_a_modal_dialog) example in `HTMLDialogElement`
+- [Opening a modal dialog](/en-US/docs/Web/API/HTMLDialogElement#open_close_a_modal_dialog) example in `HTMLDialogElement`
 
 ## Specifications
 

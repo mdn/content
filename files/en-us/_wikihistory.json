@@ -54253,23 +54253,6 @@
       "Gor1"
     ]
   },
-  "Web/API/Range/collapsed": {
-    "modified": "2020-10-15T21:17:55.746Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "jsx",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "DR",
-      "Mgjbot",
-      "Maian",
-      "Jonnyq"
-    ]
-  },
   "Web/API/Range/commonAncestorContainer": {
     "modified": "2020-10-15T21:11:04.954Z",
     "contributors": [
@@ -54387,34 +54370,6 @@
       "Sheppy",
       "ethertank",
       "Gor1"
-    ]
-  },
-  "Web/API/Range/endContainer": {
-    "modified": "2020-10-15T21:18:30.774Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "jsx",
-      "Khodaidad_Basharmand",
-      "Sheppy",
-      "ethertank",
-      "Jonnyq"
-    ]
-  },
-  "Web/API/Range/endOffset": {
-    "modified": "2020-10-15T21:18:27.338Z",
-    "contributors": [
-      "fscholz",
-      "gnepnaiL-oahZ",
-      "MarkRusciano",
-      "abbycar",
-      "teoli",
-      "jsx",
-      "shubham.hatwar",
-      "Sheppy",
-      "ethertank",
-      "Jonnyq"
     ]
   },
   "Web/API/Range/extractContents": {
@@ -54648,32 +54603,6 @@
       "Sheppy",
       "ethertank",
       "SkyLined",
-      "Gor1"
-    ]
-  },
-  "Web/API/Range/startContainer": {
-    "modified": "2020-10-15T21:18:27.123Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "kollishivagangadhar",
-      "Navin_Jadhav",
-      "Sheppy",
-      "Gor1"
-    ]
-  },
-  "Web/API/Range/startOffset": {
-    "modified": "2020-10-15T21:18:03.544Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "Brettz9",
-      "kollishivagangadhar",
-      "Navin_Jadhav",
-      "Sheppy",
-      "Ptak82",
       "Gor1"
     ]
   },
@@ -58808,26 +58737,6 @@
   "Web/API/StaticRange/StaticRange": {
     "modified": "2020-10-15T21:59:08.104Z",
     "contributors": ["Sheppy", "fscholz", "connorshea", "jpmedley"]
-  },
-  "Web/API/StaticRange/collapsed": {
-    "modified": "2020-10-15T21:59:08.677Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
-  },
-  "Web/API/StaticRange/endContainer": {
-    "modified": "2020-10-15T21:59:06.718Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
-  },
-  "Web/API/StaticRange/endOffset": {
-    "modified": "2020-10-15T21:59:05.929Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
-  },
-  "Web/API/StaticRange/startContainer": {
-    "modified": "2020-10-15T21:59:06.036Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
-  },
-  "Web/API/StaticRange/startOffset": {
-    "modified": "2020-10-15T21:59:04.874Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
   },
   "Web/API/StereoPannerNode": {
     "modified": "2020-10-15T21:32:40.831Z",

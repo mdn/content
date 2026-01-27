@@ -131,7 +131,7 @@ The {{cssxref("anchor-scope")}} property can fix this problem by limiting the vi
 - `anchor-scope: --my-anchor, --my-anchor2` sets the scope so that the specified `anchor-name` values, when set in the subtree, can only be bound to by positioned elements in the same subtree.
 - `anchor-scope: none` is the default value; it specifies that no anchor scoping is set.
 
-For example, let's say you have an multiple anchor and anchor-positioned {{htmlelement("div")}} elements inside {{htmlelement("section")}} containers:
+For example, let's say you have multiple anchors and anchor-positioned {{htmlelement("div")}} elements inside {{htmlelement("section")}} containers:
 
 ```html live-sample___anchor-scope
 <section class="scoped">
