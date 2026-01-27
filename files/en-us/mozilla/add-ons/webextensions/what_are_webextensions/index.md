@@ -8,9 +8,13 @@ sidebar: addonsidebar
 > [!NOTE]
 > If you're already familiar with the basic concepts of browser extensions, skip this section to [see how extension files are organized](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Then, use the [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference) to start building your extension. Visit [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) to learn more about the workflow for developing, testing, publishing, and extensions for Firefox.
 
-An extension adds features and functions to a browser. You create one using familiar web-based technologies—HTML, CSS, and JavaScript. An extension can use the same web APIs as JavaScript on a web page, but it also has access to an extra set of JavaScript APIs. These additional APIs mean that you can do a lot more in an extension than you can with code in a web page. Here are just a few examples of the things you can do:
+An extension adds features and functions to a browser. You create one using familiar web-based technologies: HTML, CSS, and JavaScript. An extension can use the same web APIs as JavaScript on a web page, but it also has access to an extra set of JavaScript APIs.
 
-**Enhance or complement a website**: Use an add-on to deliver additional in-browser features or information from your website. Allow users to collect details from pages they visit to enhance the service you offer.
+The extra set of JavaScript APIs, the [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions), is broadly compatible across the major browsers: Google Chrome, Apple Safari, Microsoft Edge, and Opera. Extensions written for Firefox will, in most cases, run on the other browsers with few, if any, [changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
+
+The WebExtensions APIs mean that you can do a lot more in an extension than you can with code in a web page. Here are just a few examples of the things you can do:
+
+**Enhance or complement a website**: Use an extension to deliver additional in-browser features or information from your website. Allow users to collect details from pages they visit to enhance the service you offer.
 
 Examples: [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/) and [Control Panel for Twitter](https://addons.mozilla.org/en-US/firefox/addon/control-panel-for-twitter/).
 
@@ -45,8 +49,6 @@ Examples: [RPG Game - Dedalium by Loycom Games](https://addons.mozilla.org/en-US
 Examples: [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/), [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), and [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/).
 
 ![The Axe accessibility testing extension showing accessibility issues found in a webpage.](axe_developer_tools_add_on.png)
-
-You build web extensions using the [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions), a cross-browser system for developing extensions. To a large extent, the API is compatible with the [extension API](https://developer.chrome.com/docs/extensions/reference/) supported by Google Chrome and Opera. Extensions written for these browsers will, in most cases, run in Firefox or Microsoft Edge with just a few [changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
 
 If you have ideas or questions, you can reach us on the [Add-ons Discourse](https://discourse.mozilla.org/c/add-ons/35) or in the [Add-ons room](https://chat.mozilla.org/#/room/#addons:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
 
