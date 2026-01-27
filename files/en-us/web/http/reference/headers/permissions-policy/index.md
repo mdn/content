@@ -99,6 +99,10 @@ You can specify
   - : Controls whether or not the document is permitted to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control).
     The promise returned by the API's main methods will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if the permission is not allowed.
 
+- {{HTTPHeader('Permissions-Policy/ch-ua-high-entropy-values', 'ch-ua-high-entropy-values')}} {{experimental_inline}}
+  - : Controls whether or not the document is permitted to use the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method to retrieve high-entropy user-agent data.
+    If the permission is not allowed, the method will only return the `brands`, `mobile`, and `platform` low-entropy data.
+
 - {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} {{Experimental_Inline}}
   - : Controls access to the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API).
 
@@ -106,10 +110,10 @@ You can specify
   - : Controls whether the current document can be treated as {{domxref("Window.crossOriginIsolated", "cross-origin isolated", "", 1)}}.
 
 - {{HTTPHeader('Permissions-Policy/deferred-fetch', 'deferred-fetch')}} {{experimental_inline}}
-  - : Controls the allocation of the top-level origin's [`fetchLater()` quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas).
+  - : Controls the allocation of the top-level origin's [`fetchLater()` quota](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas).
 
 - {{HTTPHeader('Permissions-Policy/deferred-fetch-minimal', 'deferred-fetch-minimal')}} {{experimental_inline}}
-  - : Controls the allocation of the shared cross-origin subframe [`fetchLater()` quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas).
+  - : Controls the allocation of the shared cross-origin subframe [`fetchLater()` quota](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas).
 
 - {{HTTPHeader('Permissions-Policy/display-capture', 'display-capture')}} {{experimental_inline}}
   - : Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by `getDisplayMedia()` will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if permission is not obtained to capture the display's contents.

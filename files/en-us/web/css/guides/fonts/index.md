@@ -80,6 +80,10 @@ The CSS fonts module also defines the {{cssxref("@font-feature-values/font-displ
     - {{cssxref("@font-palette-values/font-family", "font-family")}}
     - {{cssxref("@font-palette-values/override-colors", "override-colors")}}
 
+### Functions
+
+The CSS fonts module defines the `generic()` function. Currently, no browsers support this feature.
+
 ### Data types
 
 `font-size` types:
