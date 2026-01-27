@@ -241,7 +241,7 @@ applied when the viewport is less than 320px wide, even though
 > [!NOTE]
 > The overriding behavior of `@custom-media` is still under discussion in the CSS
 > specification and may change in the future. See the
-> [Browser compatibility](#browser-compatibility) section for current support
+> [Browser compatibility](#browser_compatibility) section for current support
 > status.
 
 ## Specifications
