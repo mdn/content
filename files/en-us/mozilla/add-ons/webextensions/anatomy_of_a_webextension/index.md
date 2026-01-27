@@ -37,7 +37,7 @@ Extensions often need to respond to events that occur in the browser independent
 Background scripts can be persistent or non-persistent.
 
 - Persistent background scripts load as soon as the extension loads and stay loaded until the extension is disabled or uninstalled. Only Manifest V2 extensions can use persistent background scripts.
-- Non-persistent background scripts load when needed to respond to an event and unload when they become idle. Manifest V3 extensions use non-persistent background scripts, and Manifest V2 extensions can use this behavior.
+- Non-persistent background scripts load when needed to respond to an event and unload when they become idle. Manifest V3 extensions use non-persistent background scripts only, and Manifest V2 extensions can opt in to this behavior.
 
 You can use any of the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) in the script, if you've requested the necessary [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
