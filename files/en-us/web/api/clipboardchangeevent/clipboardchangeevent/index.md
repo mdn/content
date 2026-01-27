@@ -27,9 +27,9 @@ new ClipboardChangeEvent(type, options)
 - `options` {{Optional_Inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `types`
-    - : A sequence of strings representing the data types available on the system clipboard.
+      - : A sequence of strings representing the data types available on the system clipboard.
     - `changeId`
-    - : A integer representing a unique identifier for the clipboard change operation.
+      - : A integer representing a unique identifier for the clipboard change operation.
 
 ### Return value
 
