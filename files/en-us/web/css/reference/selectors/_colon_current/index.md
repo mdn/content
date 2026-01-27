@@ -85,6 +85,7 @@ p::search-text {
 
 p::search-text:current {
   background-color: crimson;
+  text-decoration: underline;
 }
 ```
 

@@ -56,11 +56,11 @@ p::search-text:current {
 
 ### Inheritance model
 
-The `::search-text` pseudo-element follows a special inheritance model common to all highlight pseudo-elements. For more details on how this inheritance works, see the [Highlight pseudo-elements inheritance](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#highlight_pseudo-elements_inheritance) section.
+The `::search-text` pseudo-element follows a special inheritance model common to all highlight pseudo-elements, wherein styles are inherited from both their parent elements and the pseudo-elements of their parents. For more details on how this inheritance works, see the [Highlight pseudo-elements inheritance](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#highlight_pseudo-elements_inheritance) section.
 
 ### Allowable properties
 
-Only certain CSS properties can be used with `::search-text`:
+A limited subset of CSS properties can be used with `::search-text`:
 
 - {{CSSxRef("color")}}
 - {{CSSxRef("background-color")}}
@@ -77,7 +77,7 @@ Only certain CSS properties can be used with `::search-text`:
 
 **Override text search result styles sparingly**, especially when doing so for purely aesthetic reasons. For people experiencing cognitive concerns or who are less technologically literate, unexpected changes to these styles may hurt their understanding of the functionality.
 
-A primary use case of `::search-text` is to increase color contrast compared the default browser styling. When customizing text search result foreground and background colors, it is important to ensure that the **contrast ratio** between them is high enough that people can read it.
+A primary use case of `::search-text` is to increase color contrast compared to the default browser styling. When customizing text search result foreground and background colors, it is important to ensure that the **contrast ratio** between them is high enough that people can read it.
 
 Color contrast ratio is found by comparing the luminosity of the selected text and the selected text background colors. To meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), text content must have a contrast ratio of **4.5:1**, or 3:1 for larger text such as headings. (WCAG defines large text as between `18.66px` and `24px` and [bold](/en-US/docs/Web/CSS/Reference/Properties/font-weight), or `24px` or larger.)
 
@@ -87,7 +87,7 @@ Color contrast ratio is found by comparing the luminosity of the selected text a
 
 ## Examples
 
-### Creating custom text search result styles
+### Custom styles for text search results
 
 This example shows how to use `::search-text` and `:current` to create custom styles for your browser's "Find in page" search results.
 
@@ -115,7 +115,7 @@ The HTML consists of a basic paragraph of text. We won't show the HTML source, b
 
 ### CSS
 
-In our CSS, we start by styling the `::search-text` pseudo-element. We give it custom {{cssxref("background-color")}}, {{cssxref("color")}}, {{cssxref("text-decoration")}}, and {{cssxref("text-shadow")}} styles.
+In our CSS, we start by styling the `::search-text` pseudo-element. We give it custom {{cssxref("background-color")}}, {{cssxref("color")}}, and {{cssxref("text-shadow")}} styles.
 
 ```css hidden live-sample___custom-search-results
 html {
@@ -137,19 +137,18 @@ p {
 ::search-text {
   background-color: purple;
   color: white;
-  text-decoration-line: underline;
-  text-decoration-color: yellow;
-  text-decoration-style: double;
-  text-decoration-thickness: 1px;
   text-shadow: 1px 1px 1px black;
 }
 ```
 
-Finally, we style the currently-focused search result via `::search-text:current`, providing it with a different `background-color` so that it is distinguishable from the rest of the results.
+Finally, we style the currently-focused search result via `::search-text:current`, providing it with a different `background-color` and some {{cssxref("text-decoration")}} styles so that it is distinguishable from the rest of the results.
 
 ```css live-sample___custom-search-results
 ::search-text:current {
   background-color: crimson;
+  text-decoration-line: underline;
+  text-decoration-color: yellow;
+  text-decoration-thickness: 3px;
 }
 ```
 
@@ -159,7 +158,7 @@ The example renders as follows:
 
 {{EmbedLiveSample("live-sample___custom-search-results", "100%", 300)}}
 
-Try using the in-page search to find a word that appears multiple times in the example text, such as "aliquam" or "amet". Move between the previous and next results to check out the `:current` styling.
+Try using the browser's find in page interface to find a word that appears multiple times in the example text, such as "aliquam" or "amet". Move between the previous and next results to check out the `:current` styling.
 
 ## Specifications
 
