@@ -63,7 +63,7 @@ If the website uses cookies, instead of URL parameters, to send the session ID, 
 
 The key defense against session fixation, though, is that the server must always generate a new session ID, and invalidate any existing value, every time the user signs in.
 
-## Session ID recommendations
+## Session ID values
 
 The session ID should:
 
@@ -152,9 +152,16 @@ When the server authenticates the user, the server:
 
 When the client makes a request, it presents the signed token to the server, which verifies the signature and uses the session state to decide how to handle the request.
 
-Because the state is maintained in the client, this model is popular for distributed applications in which the client might make requests to a number of different servers. The client passes its state to any server, and as long as that server is able to verify signatures made by the token issuer, then the server can determine how to handle the request: there's no need for the server handling the request to interact directly with the token issuer.
+Because the state is maintained in the client, this model is popular for distributed applications in which the client might make requests to a number of different servers. The client passes its token to any server, and as long as that server is able to verify signatures made by the token issuer, then the server can determine how to handle the request: there's no need for the server handling the request to interact directly with the token issuer.
+
+In the diagram below, we show the client interacting with two servers:
+
+- The _token server_, which authenticates the user and issues tokens
+- The _resource server_, which can validate tokens and carry out requests for properly authorized clients. In a real application, of course, there might be more than one resource server, each handling a different aspect of the application.
 
 ![Diagram showing session management using client-maintained session state](session-mgt-decentralized.svg)
+
+Note that decentralized session management tends to be more complicated than the centralized model, and introduces some vulnerabilities that we'll discuss in the next few sections. If you don't need it, because of your app's architecture, it's generally better to use the centralized model.
 
 ### Token storage
 
@@ -163,20 +170,62 @@ Considerations for token storage are mostly the same as for [session ID storage]
 There are a few additional considerations that a decentralized, token-based model might need to account for:
 
 - Tokens are much bigger than session IDs, and cookies have a maximum size of 4KB.
-- If a distributed application needs to use services from different {{glossary("Registrable domain", "registrable domains")}}, then it can't use cookies, because the browser won't send a cookie to a site different from the site that set the cookie. For example, if `https://example.com` sets a cookie, it won't get sent to `https://example.org`.
 
-### Invalidating tokens
+- If a distributed application needs to use services from different {{glossary("Registrable domain", "registrable domains")}}, then it can't use cookies to store tokens, because the browser won't send a cookie to a site different from the site that set the cookie. For example, if `https://example.com` sets a cookie, it won't get sent to `https://example.org`.
 
-In our discussion of [invalidation events](#invalidation_events), we've seen that in some situations a website wants to invalidate a user's session and force them to reauthenticate. With a centralized model, where the user's session state is maintained on the server, the server can invalidate a session by deleting the session state that it stores.
+### Token verification
 
-However, it's a basic principle of the decentralized model that a service within the application should be able to decide how to handle a request based only on the contents of the token.
+Many attacks on decentralized session management focus on token verification: that is, the process in which the resource server verifies a token and the claims that it contains before deciding how to handle the request.
+
+For example, the purpose of signing a token is to prevent an attacker from changing an existing token or creating their own token that gives them the target's privileges. However, the JWT format allows for tokens that don't contain a signature, and [some JWT verification libraries have in the past accepted such tokens](https://auth0.com/blog/critical-vulnerabilities-in-json-web-token-libraries/). This means an attacker can:
+
+1. Create a fake token, giving them access to the target's account
+2. Indicate that this token doesn't contain a signature
+3. Present the token to a resource server
+
+If the resource server's JWT library does not enforce the presence of the signature, they may allow this token and give the attacker access.
+
+To defend against an attack like this, the resource server needs to ensure that the JWT library it uses always checks the token signature.
+
+### Invalidating sessions
+
+In our discussion of [invalidation events](#invalidation_events), we've seen that in some situations a website wants to invalidate a user's session and force them to reauthenticate, because of some event that might constitute evidence that the session ID has been stolen by an attacker. For example, if a user tries to change their password, the site should invalidate all their current sessions.
+
+With a centralized model, where the user's session state is maintained on the server, the server can invalidate a session by deleting the session state that it stores.
+
+However, with the decentralized model, the client maintains the session token, and it is self-contained: a resource server should be able to decide how to handle a request based only on the contents of the token. This makes it difficult to revoke a token once it has been issued.
 
 The most common solution to this is to:
 
-- Give the tokens that the client uses to access APIs, which are sometimes called _access tokens_, a short validity period, so that even if they are stolen, they can't be used for very long.
-- Add a new type of token called a _refresh token_, which the client is given when the user authenticates. This token has a much longer lifetime than the access token.
-- Add a new _refresh endpoint_, that will issue new access tokens when presented with a valid refresh token.
+1. Give the tokens that the client uses to access resource servers (which are sometimes called _access tokens_), a short validity period, so that even if they are stolen, they can't be used for very long.
+
+2. Add a new type of token called a _refresh token_, which the client is given when the user authenticates. This token has a much longer lifetime than the access token.
+
+3. Allow the token server to issue new access tokens when presented with a valid refresh token.
+
+![Diagram showing session management using client-maintained session state, with refresh tokens](session-mgt-decentralized-refresh-token.svg)
 
 The refresh endpoint gives the application a centralized place to determine whether or not the user's session should be invalidated. If it does choose to invalidate the session, is does so by refusing to issue new access tokens.
 
-## Framework support
+## Frameworks and libraries
+
+Rather than implement all the details of session management yourself, we recommend that you use a well-regarded framework or library, and use the facilities it provides for session management.
+
+## Session management checklist
+
+We can summarise the recommendations above as follows.
+
+- Choose a centralized model for session management, if your app's architecture allows it.
+- Prefer to store your session ID in a cookie. If you do:
+  - Set the `Secure` and `HttpOnly` attributes.
+  - Implement CSRF defenses, including setting the `SameSite` attribute to `Lax` or preferably `Strict`, but also using other techniques such as fetch metadata or CSRF tokens.
+- Define a policy for session expiry, potentially with an idle timeout, an absolute timeout, and a renewal timeout.
+- Invalidate the user's session on events that might indicate session hijacking.
+- If you implement a decentralized session management system using tokens:
+  - Ensure that your endpoints correctly validate tokens.
+  - Consider adding a refresh token and giving access tokens a short lifetime.
+- Use a well-regarded session management framework or library, rather than implementing session management yourself.
+
+## See also
+
+- [Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) (OWASP)
