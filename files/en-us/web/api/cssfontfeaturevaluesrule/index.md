@@ -15,8 +15,20 @@ The **`CSSFontFeatureValuesRule`** interface represents an {{cssxref("@font-feat
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
+- {{domxref("CSSFontFeatureValuesRule.annotation")}}
+  - : A user defined value definition and value that applies an alternate annotation of the font.
+- {{domxref("CSSFontFeatureValuesRule.characterVariant")}}
+  - : A user defined value definition and value that applies a stylistic alternatives for characters of the font.
 - {{domxref("CSSFontFeatureValuesRule.fontFamily")}}
   - : A string that identifies the font family this rule applies to.
+- {{domxref("CSSFontFeatureValuesRule.ornaments")}}
+  - : A user defined value definition and value that applies alternative ornaments of the font.
+- {{domxref("CSSFontFeatureValuesRule.styleset")}}
+  - : A user defined value definition and value that applies alternate style sets of the font.
+- {{domxref("CSSFontFeatureValuesRule.stylistic")}}
+  - : A user defined value definition and value that applies alternative glyphs of the font.
+- {{domxref("CSSFontFeatureValuesRule.swash")}}
+  - : A user defined value definition and value that applies alternative swashes of the font.
 
 ## Instance methods
 

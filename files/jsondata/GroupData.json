@@ -329,6 +329,7 @@
         "CSSNamespaceRule",
         "CSSPageRule",
         "CSSPageDescriptors",
+        "CSSFontFeatureValuesMap",
         "CSSFontFeatureValuesRule",
         "CSSFontPaletteValuesRule",
         "CSSPropertyRule",
