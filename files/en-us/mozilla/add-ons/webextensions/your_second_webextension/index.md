@@ -59,10 +59,7 @@ Now create a file called "manifest.json", and give it this content:
   "icons": {
     "48": "icons/beasts-48.png"
   },
-  "permissions": [
-    "activeTab",
-    "scripting"
-  ],
+  "permissions": ["activeTab", "scripting"],
   "browser_specific_settings": {
     "gecko": {
       "id": "beastify@mozilla.org",
@@ -73,26 +70,28 @@ Now create a file called "manifest.json", and give it this content:
   },
   "action": {
     "default_icon": "icons/beasts-32.png",
-    "theme_icons": [{
+    "theme_icons": [
+      {
         "light": "icons/beasts-32-light.png",
         "dark": "icons/beasts-32.png",
         "size": 32
-    }],
+      }
+    ],
     "default_title": "Beastify",
     "default_popup": "popup/choose_beast.html"
   },
 
   "web_accessible_resources": [
     {
-      "resources": [ "beasts/*.jpg" ],
-      "matches": [ "*://*/*" ]
+      "resources": ["beasts/*.jpg"],
+      "matches": ["*://*/*"]
     }
   ]
 }
 ```
 
 - The first three keys ([`manifest_version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), and [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)) are mandatory and contain basic metadata for the extension.
-- [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) is required in Safari, otherwise it's optional. However, it's a good idea to set this property, as it's displayed in the browser's extension manager(for example, `about:addons` in Firefox).
+- [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) is required in Safari, otherwise it's optional. However, it's a good idea to set this property, as it's displayed in the browser's extension manager (for example, `about:addons` in Firefox).
 - [`homepage_url`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) is optional, but recommended: it provide useful information about the extension.
 - [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) is optional but recommended; it lets you specify an icon for the extension.
 - [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is required.
@@ -155,8 +154,8 @@ The HTML file looks like this:
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_beast.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_beast.css" />
   </head>
 
   <body>
@@ -184,7 +183,8 @@ Note that the HTML includes the CSS and JavaScript files from the directory, jus
 The CSS fixes the popup size, ensures the three choices fill the space, and adds basic styling. It also hides elements with `class="hidden"`, which means the extension hides the `<div id="error-content"...` element by default.
 
 ```css
-html, body {
+html,
+body {
   width: 100px;
 }
 
@@ -200,19 +200,19 @@ button {
   text-align: center;
   font-size: 1.5em;
   cursor: pointer;
-  background-color: #E5F2F2;
+  background-color: #e5f2f2;
 }
 
 button:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 
 button[type="reset"] {
-  background-color: #FBFBC9;
+  background-color: #fbfbc9;
 }
 
 button[type="reset"]:hover {
-  background-color: #EAEA9D;
+  background-color: #eaea9d;
 }
 ```
 
@@ -295,8 +295,11 @@ function listenForClicks() {
     }
 
     try {
-      const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
-      
+      const [tab] = await browser.tabs.query({
+        active: true,
+        currentWindow: true,
+      });
+
       if (e.target.type === "reset") {
         await reset(tab);
       } else {
@@ -325,8 +328,11 @@ function reportExecuteScriptError(error) {
  */
 (async function runOnPopupOpened() {
   try {
-    const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
-    
+    const [tab] = await browser.tabs.query({
+      active: true,
+      currentWindow: true,
+    });
+
     await browser.scripting.executeScript({
       target: { tabId: tab.id },
       files: ["/content_scripts/beastify.js"],
@@ -364,7 +370,7 @@ The `reset()` function undoes a beastify. It:
 Create a directory, under the extension root, called "content_scripts" and create a file in it called "beastify.js", with this content:
 
 ```js
-(function() {
+(function () {
   /**
    * Check and set a global guard variable to
    * ensure that if this content script is injected into a page again,
