@@ -6,7 +6,7 @@ sidebar: addonsidebar
 ---
 
 > [!NOTE]
-> If you're already familiar with the basic concepts of browser extensions, skip this section to [see how extension files are organized](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Then, use the [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference) to start building your extension. Visit [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) to learn more about the workflow for developing, testing, publishing, and extensions for Firefox.
+> If you're already familiar with the basic extensions concepts, skip this section to [see how extension files are organized](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Then, use the [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference) to start building your extension. Visit [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) to learn more about the workflow for developing, testing, publishing, and extensions for Firefox.
 
 An extension adds features and functions to a browser. You create one using familiar web-based technologies: HTML, CSS, and JavaScript. An extension can use the same web APIs as JavaScript on a web page, but it also has access to an extra set of JavaScript APIs.
 
@@ -20,7 +20,7 @@ Examples: [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon
 
 ![The Grammarly extension providing an edit hint in the GitHub editor.](grammarly-in-github-editor.png)
 
-**Let users show their personality**: Browser extensions can manipulate the content of web pages; for example, letting users add their favorite logo or picture as a background to every page they visit. Extensions may also enable users to update the look of the Firefox UI, as standalone [theme add-ons](https://extensionworkshop.com/documentation/themes/) do.
+**Let users show their personality**: Extensions can manipulate the content of web pages; for example, letting users add their favorite logo or picture as a background to every page they visit. Extensions may also enable users to update the look of the Firefox UI, as standalone [theme add-ons](https://extensionworkshop.com/documentation/themes/) do.
 
 Examples: [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/), [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), and [Emoji](https://addons.mozilla.org/en-US/firefox/addon/emoji-sav/).
 

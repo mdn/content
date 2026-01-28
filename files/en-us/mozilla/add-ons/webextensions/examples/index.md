@@ -5,7 +5,7 @@ page-type: guide
 sidebar: addonsidebar
 ---
 
-To illustrate how to use the WebExtension APIs, we maintain a repository of example extensions at <https://github.com/mdn/webextensions-examples>. This article describes how to run these examples and lists the examples along with the WebExtension APIs they demonstrate.
+To illustrate how to use the WebExtensions APIs, we maintain a repository of example extensions at <https://github.com/mdn/webextensions-examples>. This article describes how to run these examples and lists the examples along with the WebExtensions APIs they demonstrate.
 
 These examples work in Firefox Nightly: most work in earlier versions of Firefox, but check the [strict_min_version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the extension's manifest.json to make sure.
 
@@ -20,7 +20,7 @@ To try these examples, clone the repository, then install and run the extension 
 The extension stays loaded until you restart Firefox.
 
 > [!WARNING]
-> Don't submit these web extension examples to addons.mozilla.org (AMO); you don't have to sign the examples to run them.
+> Don't submit these extension examples to addons.mozilla.org (AMO); you don't have to sign the examples to run them.
 
 If you want to contribute to the repository, [send us a pull request](https://github.com/mdn/webextensions-examples/blob/main/CONTRIBUTING.md).
 

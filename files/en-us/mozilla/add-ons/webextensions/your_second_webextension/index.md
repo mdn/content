@@ -51,17 +51,18 @@ Now create a file called "manifest.json", and give it this content:
 
 ```json
 {
+  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
   "manifest_version": 3,
   "name": "Beastify",
   "version": "1.0",
-
-  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
-
   "icons": {
     "48": "icons/beasts-48.png"
   },
-
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
   "browser_specific_settings": {
     "gecko": {
       "id": "beastify@mozilla.org",
@@ -70,26 +71,21 @@ Now create a file called "manifest.json", and give it this content:
       }
     }
   },
-
-  "permissions": ["activeTab", "scripting"],
-
   "action": {
     "default_icon": "icons/beasts-32.png",
-    "theme_icons": [
-      {
+    "theme_icons": [{
         "light": "icons/beasts-32-light.png",
         "dark": "icons/beasts-32.png",
         "size": 32
-      }
-    ],
+    }],
     "default_title": "Beastify",
     "default_popup": "popup/choose_beast.html"
   },
 
   "web_accessible_resources": [
     {
-      "resources": ["beasts/*.jpg"],
-      "matches": ["*://*/*"]
+      "resources": [ "beasts/*.jpg" ],
+      "matches": [ "*://*/*" ]
     }
   ]
 }
@@ -116,7 +112,7 @@ Note that all paths given are relative to the manifest.json file.
 
 The extension should have an icon. This icon is displayed by the Add-ons Manager ("about:addons") next to the extension's listing. The manifest.json specifies that the extension's icon is at "icons/beasts-48.png".
 
-Create the "icons" directory and save an icon there named "beasts-48.png". You could use [the one from the example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png), which is taken from [Aha-Soft's Free Retina iconset](https://www.aha-soft.com/free-icons/free-retina-icon-set/), and used under the terms of its license.
+Create the "icons" directory and save an icon there named "beasts-48.png". You could use [the one from the example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png), which is from [Aha-Soft's Free Retina iconset](https://www.aha-soft.com/free-icons/free-retina-icon-set/) and used under its license.
 
 If you choose to supply an icon, it should be 48x48 pixels. You can supply a 96x96 pixel icon too, for high-resolution displays; specify it as the `96` property of the `icons` object in manifest.json:
 
@@ -135,7 +131,7 @@ Save an icon named "beasts-32.png" in the "icons" directory. You could use [the 
 
 ### The popup
 
-If you don't supply a popup, when the user clicks the toolbar button, Firefox dispatches a click event to your extension. If you supply a popup, when the user clicks the toolbar button and the popup opens, Firefox doesn't dispatch a click event.
+If you don't supply a popup, when the user clicks the toolbar button, Firefox dispatches a click event to your extension. If you supply a popup, when the user clicks the toolbar button the popup opens, and Firefox doesn't dispatch a click event.
 
 For this example, you want a popup. The function of the popup is to enable the user to choose one of three beasts.
 
@@ -156,11 +152,11 @@ touch choose_beast.html choose_beast.css choose_beast.js
 The HTML file looks like this:
 
 ```html
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="choose_beast.css" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="choose_beast.css"/>
   </head>
 
   <body>
@@ -188,8 +184,7 @@ Note that the HTML includes the CSS and JavaScript files from the directory, jus
 The CSS fixes the popup size, ensures the three choices fill the space, and adds basic styling. It also hides elements with `class="hidden"`, which means the extension hides the `<div id="error-content"...` element by default.
 
 ```css
-html,
-body {
+html, body {
   width: 100px;
 }
 
@@ -205,19 +200,19 @@ button {
   text-align: center;
   font-size: 1.5em;
   cursor: pointer;
-  background-color: #e5f2f2;
+  background-color: #E5F2F2;
 }
 
 button:hover {
-  background-color: #cff2f2;
+  background-color: #CFF2F2;
 }
 
 button[type="reset"] {
-  background-color: #fbfbc9;
+  background-color: #FBFBC9;
 }
 
 button[type="reset"]:hover {
-  background-color: #eaea9d;
+  background-color: #EAEA9D;
 }
 ```
 
@@ -265,7 +260,7 @@ function listenForClicks() {
         css: hidePage,
       });
       const url = beastNameToURL(e.target.textContent);
-      browser.tabs.sendMessage(tab.id, {
+      await browser.tabs.sendMessage(tab.id, {
         command: "beastify",
         beastURL: url,
       });
@@ -280,7 +275,7 @@ function listenForClicks() {
         target: { tabId: tab.id },
         css: hidePage,
       });
-      browser.tabs.sendMessage(tab.id, { command: "reset" });
+      await browser.tabs.sendMessage(tab.id, { command: "reset" });
     }
 
     /**
@@ -300,11 +295,8 @@ function listenForClicks() {
     }
 
     try {
-      const [tab] = await browser.tabs.query({
-        active: true,
-        currentWindow: true,
-      });
-
+      const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
+      
       if (e.target.type === "reset") {
         await reset(tab);
       } else {
@@ -333,11 +325,8 @@ function reportExecuteScriptError(error) {
  */
 (async function runOnPopupOpened() {
   try {
-    const [tab] = await browser.tabs.query({
-      active: true,
-      currentWindow: true,
-    });
-
+    const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
+    
     await browser.scripting.executeScript({
       target: { tabId: tab.id },
       files: ["/content_scripts/beastify.js"],
@@ -375,7 +364,7 @@ The `reset()` function undoes a beastify. It:
 Create a directory, under the extension root, called "content_scripts" and create a file in it called "beastify.js", with this content:
 
 ```js
-(function () {
+(function() {
   /**
    * Check and set a global guard variable to
    * ensure that if this content script is injected into a page again,
@@ -492,7 +481,7 @@ web-ext run
 
 ## What next?
 
-Now that you've created a more advanced Web extension for Firefox:
+Now that you've created a more advanced extension for Firefox:
 
 - [Read about the anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [Explore the extension examples](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)

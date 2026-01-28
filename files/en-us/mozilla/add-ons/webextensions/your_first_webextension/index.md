@@ -66,7 +66,7 @@ Using a suitable [text editor](/en-US/docs/Learn_web_development/Howto/Tools_and
 
 So far, these `manifest.json` keys have been providing information about the extension. The next key, [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), starts to define the extension's functionality. This key tells Firefox to load a script into web pages whose URL matches a specific pattern. In this case, the extension is asking Firefox to load a script called "borderify.js" into all HTTP or HTTPS pages served from "mozilla.org" or any of its subdomains.
 
-- [Learn more about content scripts.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+- [Learn more about content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 - [Learn more about match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
 ### icons/border-48.png
@@ -100,7 +100,7 @@ document.body.style.border = "5px solid red";
 
 Firefox loads this script into the pages that match the pattern given in the `content_scripts` manifest.json key. The script has direct access to the document, just as scripts loaded by the page itself do.
 
-[Learn more about content script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+[Learn more about content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 
 ## Trying it out
 
@@ -140,11 +140,11 @@ Try experimenting: edit the content script to change the border color, or do som
 
 ## Packaging and publishing
 
-For other people to use your extension, you need to package it and submit it to Mozilla for signing. To learn more about that, see ["Publishing your extension"](https://extensionworkshop.com/documentation/publish/package-your-extension/).
+For other people to use your extension, you need to package it and submit it to Mozilla for signing. To learn more, see ["Publishing your extension"](https://extensionworkshop.com/documentation/publish/package-your-extension/).
 
 ## What's next?
 
-Now you've had an introduction to the process of developing a WebExtension for Firefox:
+Now you've had an introduction to the process of developing an extension for Firefox:
 
 - [Write a more complex extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
 - [Read more about the anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
