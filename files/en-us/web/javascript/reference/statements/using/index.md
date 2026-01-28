@@ -166,7 +166,7 @@ In both cases, when the scope exits, `resource2` is disposed before `resource1`.
 
 `using` allows the variable to have value `null` or `undefined`, so the resource can be optionally present. This means you don't have to do this:
 
-```js
+```js example-bad
 function acquireResource() {
   // Imagine some real-world relevant condition here,
   // such as whether there's space to allocate for this resource
@@ -188,7 +188,7 @@ if (maybeResource) {
 
 But can do this:
 
-```js
+```js example-good
 using resource = acquireResource();
 console.log(resource?.getValue());
 ```
