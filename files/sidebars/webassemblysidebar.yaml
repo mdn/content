@@ -121,10 +121,20 @@ sidebar:
         title: Numeric
         details: closed
       - type: listSubPages
+        path: /WebAssembly/Reference/Table
+        link: /WebAssembly/Reference/Table
+        title: Table
+        details: closed
+      - type: listSubPages
         path: /WebAssembly/Reference/Variables
         link: /WebAssembly/Reference/Variables
         title: Variables
         details: closed
+  - type: listSubPages
+    path: /WebAssembly/Reference/Types
+    link: /WebAssembly/Reference/Types
+    title: Types
+    details: closed
 l10n:
   de:
     WebAssembly_concepts: WebAssembly-Konzepte
