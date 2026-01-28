@@ -37,7 +37,7 @@ The `font-width` descriptor can take a single value from the list below.
 ### Values
 
 - `normal`
-  - : Specifies a font face that is condensed by the default amount.
+  - : Specifies a normally condensed font face.
 - `semi-condensed`, `condensed`, `extra-condensed`, `ultra-condensed`
   - : Specifies a more condensed font face than normal, with ultra-condensed being the most condensed.
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
@@ -104,7 +104,7 @@ The table below shows the mapping between keyword values and numeric percentages
 
 Most fonts have a particular width that corresponds to one of the keyterm values. However, variable fonts can support a range of widths with fine granularity, giving the designer a greater degree of control over the chosen weight. For this, percentage ranges are useful.
 
-For TrueType or OpenType variable fonts, the "wdth" variation is used to implement varying glyph widths.
+For TrueType or OpenType variable fonts, the `wdth` variation is used to implement varying glyph widths.
 
 ## Accessibility
 

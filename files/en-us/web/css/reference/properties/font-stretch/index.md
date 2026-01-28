@@ -95,11 +95,11 @@ This property may be specified as a single `<font-stretch-css3>` keyword value o
 ### Values
 
 - `normal`
-  - : Specifies a normal font face.
+  - : Specifies a normally condensed font face.
 - `semi-condensed`, `condensed`, `extra-condensed`, `ultra-condensed`
-  - : Specifies a more condensed font face than normal, with `ultra-condensed` as the most condensed.
+  - : Specifies a more condensed font face than normal, with `ultra-condensed` being the most condensed.
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
-  - : Specifies a more expanded font face than normal, with `ultra-expanded` as the most expanded.
+  - : Specifies a more expanded font face than normal, with `ultra-expanded` being the most expanded.
 - `<percentage>`
   - : A {{cssxref("&lt;percentage&gt;")}} value between 50% and 200% (inclusive). Negative values are not allowed for this property.
 
@@ -244,8 +244,8 @@ td {
 
 {{EmbedLiveSample('Font_face_selection', "100%", "300px")}}
 
-- [Anek Malayalam](https://fonts.google.com/specimen/Anek+Malayalam) is a variable google font that supports widths from 75% to 125%. Values below and above this range select the closest matching font.
 - [Inconsolata](https://fonts.google.com/specimen/Inconsolata) is a variable font that offers a continuous range of widths from 50% to 200%. <!-- Note, dynamically obtained woff2 from Google fonts using query: https://fonts.googleapis.com/css2?family=Inconsolata:wdth@50..200 -->
+- [Anek Malayalam](https://fonts.google.com/specimen/Anek+Malayalam) is a variable google font that supports widths from 75% to 125%. Values below and above this range select the closest matching font.
 
 ## Formal definition
 
