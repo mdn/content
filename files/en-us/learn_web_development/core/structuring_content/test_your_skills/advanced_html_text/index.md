@@ -24,10 +24,6 @@ To complete this task:
 3. Use subscript and superscript to provide correct semantics for the chemical formulae and dates, and make them display correctly.
 4. Semantically associate machine-readable dates with the dates in the text.
 
-The finished example should look like this:
-
-{{EmbedLiveSample('advanced-text-solution', "", 260)}}
-
 ```html live-sample___advanced-text
 <h1>Advanced text semantics</h1>
 
@@ -76,7 +72,13 @@ time {
 }
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample('advanced-text', "100%", 260) }}
+
+The finished example should look like this:
+
+{{EmbedLiveSample('advanced-text-solution', "", 260)}}
 
 <details>
 <summary>Click here to show the solution</summary>

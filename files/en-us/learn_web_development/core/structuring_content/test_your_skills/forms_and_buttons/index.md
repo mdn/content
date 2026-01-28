@@ -25,7 +25,7 @@ To complete the task:
 
 <!-- Code shared across examples -->
 
-```css hidden live-sample___forms-buttons-1 live-sample___forms-buttons-2 live-sample___forms-buttons-3 live-sample___forms-buttons-4 live-sample___forms-buttons-5 live-sample___forms-buttons-6
+```css hidden live-sample___forms-buttons-1 live-sample___forms-buttons-2 live-sample___forms-buttons-3 live-sample___forms-buttons-4 live-sample___forms-buttons-5 live-sample___forms-buttons-6 live-sample___forms-buttons-1-finished live-sample___forms-buttons-2-finished live-sample___forms-buttons-3-finished live-sample___forms-buttons-4-finished live-sample___forms-buttons-5-finished live-sample___forms-buttons-6-finished
 body {
   background-color: white;
   color: #333333;
@@ -55,14 +55,20 @@ body {
 </form>
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample("forms-buttons-1", "100%", 150) }}
+
+The finished example should look like this:
+
+{{ EmbedLiveSample("forms-buttons-1-finished", "100%", 150) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___forms-buttons-1-finished
 <form>
   <ul>
     <li>
@@ -124,14 +130,20 @@ To complete the task:
 </form>
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample("forms-buttons-2", "100%", 350) }}
+
+The finished example should look like this:
+
+{{ EmbedLiveSample("forms-buttons-2-finished", "100%", 360) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___forms-buttons-2-finished
 <form>
   <fieldset>
     <legend>Who is your favorite pony?</legend>
@@ -210,14 +222,20 @@ In this task you'll explore some more specific input types. We want you to creat
 </form>
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample("forms-buttons-3", "100%", 250) }}
+
+The finished example should look like this:
+
+{{ EmbedLiveSample("forms-buttons-3-finished", "100%", 250) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___forms-buttons-3-finished
 <form>
   <h2>Edit your preferences</h2>
   <ul>
@@ -271,14 +289,20 @@ To complete the task:
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-4", "100%", 250) }}
+The starting point of the example looks like this:
+
+{{ EmbedLiveSample("forms-buttons-4", "100%", 120) }}
+
+The finished example should look like this:
+
+{{ EmbedLiveSample("forms-buttons-4-finished", "100%", 120) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___forms-buttons-4-finished
 <form>
   <ul>
     <li>
@@ -333,14 +357,20 @@ To complete the task:
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-5", "100%", 250) }}
+The starting point of the example looks like this:
+
+{{ EmbedLiveSample("forms-buttons-5", "100%", 120) }}
+
+The finished example should look like this:
+
+{{ EmbedLiveSample("forms-buttons-5-finished", "100%", 300) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___forms-buttons-5-finished
 <form>
   <fieldset>
     <legend>Personal details</legend>
@@ -412,6 +442,8 @@ Try submitting your form — it should refuse to submit until the above constrai
 </form>
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample("forms-buttons-6", "100%", 300) }}
 
 <details>
@@ -419,7 +451,7 @@ Try submitting your form — it should refuse to submit until the above constrai
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___forms-buttons-6-finished
 <form>
   <h2>Enter your support query</h2>
   <ul>

@@ -75,6 +75,8 @@ p {
 }
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample('text-basics-1', "100%", 130) }}
 
 The finished example should look like this:
@@ -150,6 +152,8 @@ ul {
 }
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample('text-basics-2', "100%", 220) }}
 
 The finished example should look like this:
@@ -216,6 +220,8 @@ dt {
 }
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample('text-basics-3', "100%", 160) }}
 
 The finished example should look like this:
@@ -276,6 +282,8 @@ em {
   color: gray;
 }
 ```
+
+The starting point of the example looks like this:
 
 {{ EmbedLiveSample('text-basics-4', "100%", 160) }}
 

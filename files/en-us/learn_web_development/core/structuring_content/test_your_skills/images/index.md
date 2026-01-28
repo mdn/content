@@ -33,7 +33,7 @@ To complete the task:
 
 <!-- Shared/setup CSS code -->
 
-```css hidden live-sample___images-1 live-sample___images-2 live-sample___images-3
+```css hidden live-sample___images-1 live-sample___images-2 live-sample___images-3 live-sample___images-1-finished live-sample___images-2-finished live-sample___images-3-finished
 body {
   background-color: white;
   color: #333333;
@@ -55,14 +55,20 @@ img {
 }
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample('images-1', "100%", 200) }}
+
+The finished example should look like this:
+
+{{ EmbedLiveSample('images-1-finished', "100%", 460) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html-nolint
+```html-nolint live-sample___images-1-finished
 <h1>Basic image embed</h1>
 
 <img src="https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images/blueberries.jpg?raw=true"
@@ -87,6 +93,8 @@ In this task, you already have a full-featured image, but we'd like you to add a
   alt="Several tall evergreen trees called larches" />
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample('images-2', "100%", 600) }}
 
 <details>
@@ -94,7 +102,7 @@ In this task, you already have a full-featured image, but we'd like you to add a
 
 Your finished HTML should look like this:
 
-```html-nolint
+```html-nolint live-sample___images-2-finished
 <h1>Basic image title</h1>
 
 <img
@@ -120,20 +128,26 @@ In this task, you are provided with both a full-featured image and some caption 
 The 2019 Firefox logo
 ```
 
-```css hidden live-sample___images-3
+```css hidden live-sample___images-3 live-sample___images-3-finished
 figcaption {
   font-style: italic;
 }
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample('images-3', "100%", 600) }}
+
+The finished example should look like this:
+
+{{ EmbedLiveSample('images-3-finished', "100%", 640) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html
+```html live-sample___images-3-finished
 <h1>Image and caption</h1>
 
 <figure>

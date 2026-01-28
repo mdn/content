@@ -30,7 +30,7 @@ To complete this task:
 
 <!-- Shared styles -->
 
-```css hidden live-sample___video-1 live-sample___audio-1
+```css hidden live-sample___video-1 live-sample___audio-1 live-sample___video-1-finished live-sample___audio-1-finished
 body {
   background-color: white;
   color: #333333;
@@ -53,14 +53,20 @@ video {
 }
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample('audio-1', "100%", 150) }}
+
+The finished example should look like this:
+
+{{ EmbedLiveSample('audio-1-finished', "100%", 180) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html
+```html live-sample___audio-1-finished
 <h1>Basic audio embed</h1>
 
 <audio
@@ -92,14 +98,20 @@ To complete this task:
 <video></video>
 ```
 
+The starting point of the example looks like this:
+
 {{EmbedLiveSample('video-1', "100%", 300)}}
+
+The finished example should look like this:
+
+{{EmbedLiveSample('video-1-finished', "100%", 380)}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html
+```html live-sample___video-1-finished
 <h1>Video embed</h1>
 
 <video controls width="320" height="240" muted>

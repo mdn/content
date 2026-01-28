@@ -41,7 +41,7 @@ To complete the task, update the links as follows:
 </p>
 ```
 
-```css hidden live-sample___links-1
+```css hidden live-sample___links-1 live-sample___links-1-finished
 body {
   background-color: white;
   color: #333333;
@@ -70,14 +70,20 @@ p {
 }
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample('links-1', "100%", 170) }}
+
+The finished example should look like this:
+
+{{ EmbedLiveSample('links-1-finished', "100%", 170) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html-nolint
+```html-nolint live-sample___links-1-finished
 <h1>Information on Whales</h1>
 
 <p>
@@ -121,7 +127,7 @@ To complete the task, update the links as follows:
 <p id="bottom">The bottom of the page!</p>
 ```
 
-```css hidden live-sample___links-2
+```css hidden live-sample___links-2 live-sample___links-2-finished
 body {
   background-color: white;
   color: #333333;
@@ -150,14 +156,20 @@ div {
 }
 ```
 
+The starting point of the example looks like this:
+
 {{ EmbedLiveSample('links-2', "100%", 200) }}
+
+The finished example should look like this:
+
+{{ EmbedLiveSample('links-2-finished', "100%", 200) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html-nolint
+```html-nolint live-sample___links-2-finished
 <h1>List path tests</h1>
 
 <ul>
@@ -230,6 +242,8 @@ p {
   box-sizing: border-box;
 }
 ```
+
+The starting point of the example looks like this:
 
 {{ EmbedLiveSample('links-3', "100%", 200) }}
 
