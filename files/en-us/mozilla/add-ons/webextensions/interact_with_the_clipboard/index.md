@@ -19,7 +19,7 @@ The {{domxref("Clipboard", "navigator.clipboard")}} API provides methods for:
 - Images, rich text, HTML, and other rich content, using {{domxref("Clipboard.read", "navigator.clipboard.read()")}} and {{domxref("Clipboard.write", "navigator.clipboard.write()")}}.
 
 > [!NOTE]
-> The Clipboard API write and read methods are only available in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts). Your extension can't use them from a content script running on `http:` pages; they can only use them from `https:` pages.
+> The Clipboard API write and read methods are only available in [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts). Your extension can't use them from a content script running on `http:` pages; they can only use them from `https:` pages.
 
 ## Writing to the clipboard
 
