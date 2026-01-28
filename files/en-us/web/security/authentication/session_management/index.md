@@ -101,7 +101,7 @@ By default, the cookie will only be sent to the same host that set it. For examp
 
 ### CSRF considerations
 
-If a website uses cookies to transmit session identifiers, it must implement protection against [cross-site request forgery (CSRF)](/en-US/docs/Web/Security/Attacks/CSRF) attacks. The risk here is that the browser may include cookies in a request from the attacker's site to the target website, and if these cookies include a valid session ID, then the server will treat the request as if it came from a legitimate user, and carry out the attacker's requeast.
+If a website uses cookies to transmit session identifiers, it must implement protection against [cross-site request forgery (CSRF)](/en-US/docs/Web/Security/Attacks/CSRF) attacks. The risk here is that the browser may include cookies in a request from the attacker's site to the target website, and if these cookies include a valid session ID, then the server will treat the request as if it came from a legitimate user, and carry out the attacker's request.
 
 Our CSRF guide describes [recommended defenses](/en-US/docs/Web/Security/Attacks/CSRF#defenses_against_csrf) here: note that setting the [`SameSite`](#samesite) cookie attribute is only part of a complete defense.
 
@@ -111,7 +111,7 @@ Determining how long a session should last before the user has to reauthenticate
 
 Websites can use the [`Expires`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#expiresdate) and [`Max-Age`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#max-agenumber) cookie attributes to control when a cookie should expire. If either of these attributes is set, then the cookie is a _persistent_ cookie, meaning that its value is recorded so it can persist over browser restarts.
 
-If both attributes are omitted, then the browser forgets the cookie when the user closes it. It's often recommended that websites should omit these attributes: for example, this is the recommendation given in the [OWASP cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#expire-and-max-age-attributes). However, many websites do use persistent cookies for session management.
+If both attributes are omitted, then the browser forgets the cookie when the user closes it. The [OWASP cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#expire-and-max-age-attributes) recommends that websites should omit these attributes. However, many websites do use persistent cookies for session management.
 
 ### Timeouts
 
@@ -213,7 +213,7 @@ Rather than implement all the details of session management yourself, we recomme
 
 ## Session management checklist
 
-We can summarise the recommendations above as follows.
+We can summarise the recommendations above as follows:
 
 - Choose a centralized model for session management, if your app's architecture allows it.
 - Prefer to store your session ID in a cookie. If you do:
