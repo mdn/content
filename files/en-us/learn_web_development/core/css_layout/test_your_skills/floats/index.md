@@ -15,9 +15,7 @@ The aim of this skill test is to help you assess whether you understand [floats 
 
 ## Task 1
 
-To complete this task, float the two elements with a class of `float1` and `float2` left and right, respectively. The text should then appear between the two boxes, as shown in this finished rendering:
-
-{{EmbedLiveSample("float1-finish", "", "210px")}}
+To complete this task, float the two elements with a class of `float1` and `float2` left and right, respectively. The text should then appear between the two boxes.
 
 ```html live-sample___float1-start live-sample___float1-finish
 <div class="box">
@@ -59,9 +57,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("float1-start", "", "210px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("float1-finish", "", "210px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -86,10 +88,6 @@ To complete this task:
 
 1. Float the element with a class of `float` to the left.
 2. Update the code so that the first line of text displays next to that element, but the following line of text (which has a class of `below`) displays underneath it.
-
-Your final result should look like this finished rendering:
-
-{{EmbedLiveSample("float2-finish", "", "300px")}}
 
 ```html live-sample___float2-start live-sample___float2-finish
 <div class="box">
@@ -131,9 +129,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("float2-start", "", "300px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("float2-finish", "", "300px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -156,9 +158,7 @@ You need to flow the item left, then add `clear: left` to the class for the seco
 
 In this task, we have a floated element. The box wrapping the float and text is displaying behind the float.
 
-To complete the task, use the most up-to-date method available to cause the box background to extend to below the float, as shown in this finished rendering:
-
-{{EmbedLiveSample("float3-finish", "", "220px")}}
+To complete the task, use the most up-to-date method available to cause the box background to extend to below the float.
 
 ```html live-sample___float3-start live-sample___float3-finish
 <div class="box">
@@ -205,9 +205,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("float3-start", "", "220px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("float3-finish", "", "220px")}}
 
 <details>
 <summary>Click here to show the solution</summary>

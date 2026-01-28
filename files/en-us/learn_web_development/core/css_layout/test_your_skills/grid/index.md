@@ -17,10 +17,6 @@ The aim of this skill test is to help you assess whether you understand how a [g
 
 In this task, we want you to create a grid into which the four child elements will auto-place. The grid should have three columns sharing the available space equally and a 20 pixel gap between the column and row tracks. After that, try adding more child containers inside the parent container with the class of `grid` and see how they behave by default.
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("grid1-finish", "", "160px")}}
-
 ```html live-sample___grid1-start live-sample___grid1-finish
 <div class="grid">
   <div>One</div>
@@ -48,9 +44,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("grid1-start", "", "220px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("grid1-finish", "", "160px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -69,9 +69,7 @@ Create a grid using `display: grid` with three columns using `grid-template-colu
 
 ## Task 2
 
-In this task, we already have a grid defined. We want you to edit the CSS rules for the two child elements, causing them to span over several grid tracks each. The second item should overlay the first as shown in the following rendering:
-
-{{EmbedLiveSample("grid2-finish", "", "340px")}}
+In this task, we already have a grid defined. We want you to edit the CSS rules for the two child elements, causing them to span over several grid tracks each. The second item should overlay the first.
 
 **Bonus question:** Can you now cause the first item to display on top without changing the order of items in the source?
 
@@ -118,9 +116,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("grid2-start", "", "340px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("grid2-finish", "", "340px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -142,7 +144,7 @@ One option is to use the shorthands below, however it would be correct to use th
 
 For the bonus question, one way of achieving this is to use `order`, which we've encountered in the flexbox tutorial.
 
-```css
+```css live-sample___grid2-finish
 .item1 {
   order: 1;
 }
@@ -162,9 +164,7 @@ Another valid solution is to use `z-index`:
 
 In this task, there are four direct children in this grid. The starting point has them displayed using auto-placement.
 
-To complete the task, use the `grid-area` and `grid-template-areas` properties to lay the items out as shown in the following rendering:
-
-{{EmbedLiveSample("grid3-finish", "", "200px")}}
+To complete the task, use the `grid-area` and `grid-template-areas` properties to lay the items out as shown in the finished task rendering below:
 
 ```html live-sample___grid3-start live-sample___grid3-finish
 <div class="grid">
@@ -194,9 +194,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("grid3-start", "", "200px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("grid3-finish", "", "200px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -235,9 +239,7 @@ Each part of the layout needs a name using the `grid-area` property and `grid-te
 
 ## Task 4
 
-In this task, you will need to use both grid layout and flexbox to recreate the example as seen in the finished rendering below. The gap between the column and row tracks should be 10px. You do not need to make any changes to the HTML in order to achieve this.
-
-{{EmbedLiveSample("grid4-finish", "", "400px")}}
+In this task, you will need to use both grid layout and flexbox to recreate the finished layout. The gap between the column and row tracks should be 10px. You do not need to make any changes to the HTML in order to achieve this.
 
 ```html live-sample___grid4-start live-sample___grid4-finish
 <div class="container">
@@ -330,9 +332,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("grid4-start", "", "400px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("grid4-finish", "", "400px")}}
 
 <details>
 <summary>Click here to show the solution</summary>

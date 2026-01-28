@@ -17,10 +17,6 @@ The aim of this skill test is to help you assess whether you understand [positio
 
 To complete this task, position the item with a class of `target` to the top and right of the container, which has the 5px grey border.
 
-Your final result should look like this finished rendering:
-
-{{EmbedLiveSample("position1-finish", "", "250px")}}
-
 **Bonus question:** Can you change the target to display underneath the text?
 
 ```html live-sample___position1-start live-sample___position1-finish
@@ -70,9 +66,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("position1-start", "", "400px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("position1-finish", "", "250px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -98,9 +98,7 @@ For the bonus question, you need to add a negative `z-index` to the target, for 
 
 ## Task 2
 
-In the starting state of this task, if you scroll the content, the sidebar scrolls with the content. We want you to update the code so that the sidebar (`<div class="sidebar">`) stays in place and only the content scrolls, as shown in this finished rendering:
-
-{{EmbedLiveSample("position2-finish", "", "400px")}}
+In the starting state of this task, if you scroll the content, the sidebar scrolls with the content. We want you to update the code so that the sidebar (`<div class="sidebar">`) stays in place and only the content scrolls.
 
 ```html live-sample___position2-start live-sample___position2-finish
 <div class="container">
@@ -167,9 +165,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("position2-start", "", "400px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("position2-finish", "", "400px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
