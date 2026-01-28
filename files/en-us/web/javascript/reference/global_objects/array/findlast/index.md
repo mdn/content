@@ -133,31 +133,23 @@ console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 
 ### Find the most recent completed task
 
-This example demonstrates a practical use case for `findLast()` when working
-with time-ordered data. It finds the most recent completed task from a list.
+This example demonstrates a practical use case for `findLast()` when working with time-ordered data. It finds the most recent completed task from a list already sorted by `timestamp`.
 
 ```js
 const tasks = [
-  { id: 1, name: "Setup project", completed: true, timestamp: 1609459200000 },
-  { id: 2, name: "Write tests", completed: false, timestamp: 1609545600000 },
-  { id: 3, name: "Fix bug #42", completed: true, timestamp: 1609632000000 },
-  {
-    id: 4,
-    name: "Deploy to staging",
-    completed: true,
-    timestamp: 1609718400000,
-  },
-  { id: 5, name: "Review PR", completed: false, timestamp: 1609804800000 },
+  { name: "Setup project", completed: true, timestamp: 1609459200000 },
+  { name: "Write tests", completed: false, timestamp: 1609545600000 },
+  { name: "Fix bug #42", completed: true, timestamp: 1609632000000 },
+  { name: "Deploy to staging", completed: true, timestamp: 1609718400000 },
+  { name: "Review PR", completed: false, timestamp: 1609804800000 },
 ];
 
 const lastCompletedTask = tasks.findLast((task) => task.completed);
 
-console.log(lastCompletedTask);
-// { id: 4, name: "Deploy to staging", completed: true, timestamp: 1609718400000 }
+console.log(lastCompletedTask.name); // Deploy to staging
 ```
 
-This is more efficient than using `find()` with a reversed array, as it avoids
-creating a new array.
+This is more efficient than using `find()` with a reversed array, because it avoids creating a new array.
 
 ### Using the third argument of callbackFn
 
