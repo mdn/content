@@ -75,11 +75,11 @@ p {
 }
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample('text-basics-1', "100%", 130) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{ EmbedLiveSample('text-basics-1-finished', "100%", 320) }}
 
@@ -152,11 +152,11 @@ ul {
 }
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample('text-basics-2', "100%", 220) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{ EmbedLiveSample('text-basics-2-finished', "100%", 400) }}
 
@@ -220,11 +220,11 @@ dt {
 }
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample('text-basics-3', "100%", 160) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{ EmbedLiveSample('text-basics-3-finished', "100%", 250) }}
 
@@ -283,11 +283,11 @@ em {
 }
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample('text-basics-4', "100%", 160) }}
 
-The finished example should look something like this:
+The finished task should look something like this:
 
 {{ EmbedLiveSample('text-basics-4-finished', "100%", 140) }}
 

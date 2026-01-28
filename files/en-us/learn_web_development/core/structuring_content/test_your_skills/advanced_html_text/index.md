@@ -72,11 +72,11 @@ time {
 }
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample('advanced-text', "100%", 260) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{EmbedLiveSample('advanced-text-solution', "", 260)}}
 

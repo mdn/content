@@ -55,11 +55,11 @@ img {
 }
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample('images-1', "100%", 200) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{ EmbedLiveSample('images-1-finished', "100%", 460) }}
 
@@ -93,7 +93,7 @@ In this task, you already have a full-featured image, but we'd like you to add a
   alt="Several tall evergreen trees called larches" />
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample('images-2', "100%", 600) }}
 
@@ -134,11 +134,11 @@ figcaption {
 }
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample('images-3', "100%", 600) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{ EmbedLiveSample('images-3-finished', "100%", 640) }}
 

@@ -55,11 +55,11 @@ body {
 </form>
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("forms-buttons-1", "100%", 150) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{ EmbedLiveSample("forms-buttons-1-finished", "100%", 150) }}
 
@@ -130,11 +130,11 @@ To complete the task:
 </form>
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("forms-buttons-2", "100%", 350) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{ EmbedLiveSample("forms-buttons-2-finished", "100%", 360) }}
 
@@ -222,11 +222,11 @@ In this task you'll explore some more specific input types. We want you to creat
 </form>
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("forms-buttons-3", "100%", 250) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{ EmbedLiveSample("forms-buttons-3-finished", "100%", 250) }}
 
@@ -289,11 +289,11 @@ To complete the task:
 </form>
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("forms-buttons-4", "100%", 120) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{ EmbedLiveSample("forms-buttons-4-finished", "100%", 120) }}
 
@@ -357,11 +357,11 @@ To complete the task:
 </form>
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("forms-buttons-5", "100%", 120) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{ EmbedLiveSample("forms-buttons-5-finished", "100%", 300) }}
 
@@ -442,7 +442,7 @@ Try submitting your form — it should refuse to submit until the above constrai
 </form>
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("forms-buttons-6", "100%", 300) }}
 

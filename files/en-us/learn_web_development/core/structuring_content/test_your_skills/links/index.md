@@ -70,11 +70,11 @@ p {
 }
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample('links-1', "100%", 170) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{ EmbedLiveSample('links-1-finished', "100%", 170) }}
 
@@ -156,11 +156,11 @@ div {
 }
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample('links-2', "100%", 200) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{ EmbedLiveSample('links-2-finished', "100%", 200) }}
 
@@ -243,7 +243,7 @@ p {
 }
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample('links-3', "100%", 200) }}
 

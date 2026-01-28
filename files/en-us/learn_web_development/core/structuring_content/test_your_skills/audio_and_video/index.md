@@ -53,11 +53,11 @@ video {
 }
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample('audio-1', "100%", 150) }}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{ EmbedLiveSample('audio-1-finished', "100%", 180) }}
 
@@ -98,11 +98,11 @@ To complete this task:
 <video></video>
 ```
 
-The starting point of the example looks like this:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample('video-1', "100%", 300)}}
 
-The finished example should look like this:
+The finished task should look like this:
 
 {{EmbedLiveSample('video-1-finished', "100%", 380)}}
 
