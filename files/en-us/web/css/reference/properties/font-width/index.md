@@ -141,61 +141,71 @@ The table below demonstrates the effect of supplying various different percentag
     format("woff2");
 }
 
+body {
+  font-family: system-ui;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tbody th {
+  text-align: right;
+}
+
+th,
+td {
+  padding: 0.25rem;
+  font-weight: normal;
+  text-align: center;
+}
+
 td {
   border: solid;
   border-width: 1px;
+  font-size: 5rem;
 }
 
-#inconsolata td {
-  font:
-    90px "Inconsolata",
-    sans-serif;
+.inconsolata {
+  font-family: "Inconsolata", sans-serif;
 }
-#anek-malayalam td {
-  font:
-    90px "Anek Malayalam",
-    sans-serif;
+
+.anek-malayalam {
+  font-family: "Anek Malayalam", sans-serif;
 }
-#inconsolata td:nth-child(2),
-#anek-malayalam td:nth-child(2) {
+
+td:nth-child(2) {
   font-width: 50%;
 }
-#inconsolata td:nth-child(3),
-#anek-malayalam td:nth-child(3) {
+td:nth-child(3) {
   font-width: 62.5%;
 }
-#inconsolata td:nth-child(4),
-#anek-malayalam td:nth-child(4) {
+td:nth-child(4) {
   font-width: 75%;
 }
-#inconsolata td:nth-child(5),
-#anek-malayalam td:nth-child(5) {
+td:nth-child(5) {
   font-width: 87.5%;
 }
-#inconsolata td:nth-child(6),
-#anek-malayalam td:nth-child(6) {
+td:nth-child(6) {
   font-width: 100%;
 }
-#inconsolata td:nth-child(7),
-#anek-malayalam td:nth-child(7) {
+td:nth-child(7) {
   font-width: 112.5%;
 }
-#inconsolata td:nth-child(8),
-#anek-malayalam td:nth-child(8) {
+td:nth-child(8) {
   font-width: 125%;
 }
-#inconsolata td:nth-child(9),
-#anek-malayalam td:nth-child(9) {
+td:nth-child(9) {
   font-width: 150%;
 }
-#inconsolata td:nth-child(10),
-#anek-malayalam td:nth-child(10) {
+td:nth-child(10) {
   font-width: 200%;
 }
 ```
 
 ```html hidden
-<table class="standard-table">
+<table>
   <thead>
     <tr>
       <th scope="row"></th>
@@ -211,7 +221,7 @@ td {
     </tr>
   </thead>
   <tbody>
-    <tr id="inconsolata">
+    <tr class="inconsolata">
       <th scope="row">Inconsolata</th>
       <td>e</td>
       <td>e</td>
@@ -223,7 +233,7 @@ td {
       <td>e</td>
       <td>e</td>
     </tr>
-    <tr id="anek-malayalam">
+    <tr class="anek-malayalam">
       <th scope="row">Anek Malayalam</th>
       <td>e</td>
       <td>e</td>
@@ -239,7 +249,11 @@ td {
 </table>
 ```
 
-{{EmbedLiveSample('Font_face_selection', "100%", "300px")}}
+{{EmbedLiveSample('Font face selection', "100%", "250px")}}
+
+A browser rendering of the above example in case your browser doesn't support `font-width` property:
+
+![A two-row comparison table showing the lowercase letter e rendered at different widths (50%, 62.5%, 75%, 87.5%, 100%, 112.5%, 125%, 150%, 200%). The top row is labeled Inconsolata and the bottom row Anek Malayalam. Both fonts are sans-serif and Inconsolata's letters are slightly wider compared to Anek Malayalam's.](font-face-selection.png)
 
 - [Inconsolata](https://fonts.google.com/specimen/Inconsolata) is a variable font that offers a continuous range of widths from 50% to 200%. <!-- Note, dynamically obtained woff2 from Google fonts using query: https://fonts.googleapis.com/css2?family=Inconsolata:wdth@50..200 -->
 - [Anek Malayalam](https://fonts.google.com/specimen/Anek+Malayalam) is a variable google font that supports widths from 75% to 125%. Values below and above this range select the closest matching font.
