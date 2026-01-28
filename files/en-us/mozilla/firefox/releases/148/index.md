@@ -32,7 +32,10 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The {{cssxref("position-area")}} property in [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) now correctly keeps the anchored element within the viewport.
+  ([Firefox bug 2008537](https://bugzil.la/2008537)).
 
 <!-- #### Removals -->
 
