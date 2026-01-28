@@ -30,6 +30,7 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("AudioProcessingEvent")}} {{Deprecated_Inline}}
 - {{domxref("BeforeUnloadEvent")}}
 - {{domxref("BlobEvent")}}
+- {{domxref("ClipboardChangeEvent")}}
 - {{domxref("ClipboardEvent")}}
 - {{domxref("CloseEvent")}}
 - {{domxref("CompositionEvent")}}
