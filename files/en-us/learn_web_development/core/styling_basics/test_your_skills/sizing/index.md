@@ -23,10 +23,6 @@ To complete the task:
 2. To test this, remove the content from the HTML to make sure you still get a `100px` tall box even with no content.
 3. Size the second box so that it is fixed at `100px` tall. In this case, the content should overflow.
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("sizing1-finish", "", "460px")}}
-
 ```html live-sample___sizing1-start live-sample___sizing1-finish
 <div class="box box1">
   <p>
@@ -66,9 +62,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("sizing1-start", "", "480px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("sizing1-finish", "", "460px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -95,10 +95,6 @@ To complete the task:
 
 1. Make the inner box width `60%` of the width of the outer box. The {{cssxref("box-sizing")}} property is set to `border-box`, which means that the total width includes any `padding` and `border`.
 2. Give the inner box `10%` padding on all sides.
-
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("sizing2-finish", "", "220px")}}
 
 ```html live-sample___sizing2-start live-sample___sizing2-finish
 <div class="box">
@@ -132,9 +128,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("sizing2-start", "", "100px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("sizing2-finish", "", "220px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -156,10 +156,6 @@ All elements already have `box-sizing: border-box` set to save you from worrying
 In this task, you have two images in boxes. One image is smaller than the box, while the other is larger, causing it to break out of the box.
 
 To complete the task, imagine that the box is responsive and therefore could grow and shrink. Apply a declaration to the images so that the large image shrinks down into the box, but the small image does not stretch.
-
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("sizing3-finish", "", "720px")}}
 
 ```html live-sample___sizing3-start live-sample___sizing3-finish
 <div class="box">
@@ -191,9 +187,13 @@ img {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("sizing3-start", "", "700px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("sizing3-finish", "", "720px")}}
 
 <details>
 <summary>Click here to show the solution</summary>

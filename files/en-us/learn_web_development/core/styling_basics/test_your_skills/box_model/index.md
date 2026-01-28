@@ -25,10 +25,6 @@ Watch the embedded scrim, and complete the tasks on the timeline (the little gho
 
 In this task, there are two boxes below, one is using the standard box model, the other the alternate box model. We'd like you to change the width of the second box by adding declarations to the `.alternate` class, so that it matches the visual width of the first box.
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("box-model1-finish", "", "540px")}}
-
 ```html live-sample___box-model1-start live-sample___box-model1-finish
 <div class="box">I use the standard box model.</div>
 <div class="box alternate">I use the alternate box model.</div>
@@ -52,9 +48,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("box-model1-start", "", "540px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("box-model1-finish", "", "540px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -81,10 +81,6 @@ To complete this task, add the following features to the provided box:
 - A left margin of `2em`.
 - Padding on all sides of `1em`.
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("box-model2-finish", "100%", "140px")}}
-
 ```html live-sample___box-model2-start live-sample___box-model2-finish
 <div class="box">I use the standard box model.</div>
 ```
@@ -98,9 +94,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("box-model2-start", "100%", "100px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("box-model2-finish", "100%", "140px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -123,10 +123,6 @@ You might choose to use the longhand properties ({{cssxref("margin-top")}}, {{cs
 In this task, the inline element has a margin, padding, and border. However, the lines above and below are overlapping it.
 
 To complete this task, update the CSS to cause the size of the margin, padding, and border to be respected by the other lines, while still keeping the element inline.
-
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("box-model3-finish", "100%", "260px")}}
 
 ```html live-sample___box-model3-start live-sample___box-model3-finish
 <div class="box">
@@ -156,9 +152,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("box-model3-start", "100%", "220px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("box-model3-finish", "100%", "260px")}}
 
 <details>
 <summary>Click here to show the solution</summary>

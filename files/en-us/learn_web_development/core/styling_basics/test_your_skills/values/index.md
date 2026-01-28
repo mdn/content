@@ -21,9 +21,7 @@ In this task, the first list item has been given a background color using a hex 
 - The third should use HSL color.
 - The fourth should use RGB color but with the alpha channel set to `0.6`.
 
-You [can convert the hex color at convertingcolors.com](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS. Your final result should look like the following rendering:
-
-{{EmbedLiveSample("values1-finish", "", "300px")}}
+You [can convert the hex color at convertingcolors.com](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS.
 
 ```html live-sample___values1-start live-sample___values1-finish
 <ul>
@@ -56,9 +54,13 @@ li {
 /* Add styles here */
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("values1-start", "", "300px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("values1-finish", "", "300px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -89,10 +91,6 @@ In this task, we want you to set the font size of various items of text:
 - The `<h2>` element should be `2em`.
 - All `<p>` elements should be `16px`.
 - A `<p>` element that is directly after an `<h1>` should be `120%`.
-
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("values2-finish", "", "420px")}}
 
 ```html live-sample___values2-start live-sample___values2-finish
 <h1>Level 1 heading</h1>
@@ -130,9 +128,13 @@ h1 + p {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("values2-start", "", "420px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("values2-finish", "", "420px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -163,10 +165,6 @@ h1 + p {
 
 To complete the task, update the CSS to move the background image so that it is centered horizontally and is `20%` from the top of the box.
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("values3-finish", "", "400px")}}
-
 ```html live-sample___values3-start live-sample___values3-finish
 <div class="box"></div>
 ```
@@ -183,9 +181,13 @@ Your final result should look like the following rendering:
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("values3-start", "", "400px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("values3-finish", "", "400px")}}
 
 <details>
 <summary>Click here to show the solution</summary>

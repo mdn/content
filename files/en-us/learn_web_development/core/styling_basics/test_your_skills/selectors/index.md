@@ -23,10 +23,6 @@ To complete the task:
 2. Give `<h2>` headings a blue background and white text.
 3. Cause text wrapped in a `<span>` to have a font-size of `200%`.
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("selectors1-finish", "", "400px")}}
-
 ```html live-sample___selectors1-start live-sample___selectors1-finish
 <div class="container">
   <h1>This is a heading</h1>
@@ -51,9 +47,13 @@ body {
 /* Add styles here */
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("selectors1-start", "", "370px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("selectors1-finish", "", "400px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -86,10 +86,6 @@ To complete the task:
 3. If the element with a class of `alert` also has a class of `stop`, make the background red.
 4. If the element with a class of `alert` also has a class of `go`, make the background green.
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("selectors2-finish", "", "480px")}}
-
 ```html live-sample___selectors2-start live-sample___selectors2-finish
 <div class="container">
   <h1>This is a heading</h1>
@@ -116,9 +112,13 @@ body {
 /* Add styles here */
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("selectors2-start", "", "480px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("selectors2-finish", "", "480px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -152,10 +152,6 @@ To complete the task:
 1. Style links, making the link-state orange, visited links green, and remove the underline on hover.
 2. Make the first element inside the container `font-size: 150%` and the first line of that element red.
 3. Stripe every other row in the table by selecting these rows and giving them a background color of `#333333` and foreground white.
-
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("selectors3-finish", "", "540px")}}
 
 ```html live-sample___selectors3-start live-sample___selectors3-finish
 <div class="container">
@@ -222,9 +218,13 @@ th {
 /* Add styles here */
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("selectors3-start", "", "440px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("selectors3-finish", "", "540px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -270,10 +270,6 @@ To complete the task:
    - Remove their bullets.
    - Give them a `1px` grey bottom border.
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("selectors4-finish", "", "500px")}}
-
 ```html live-sample___selectors4-start live-sample___selectors4-finish
 <div class="container">
   <h2>This is a heading</h2>
@@ -304,9 +300,13 @@ body {
 /* Add styles here */
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("selectors4-start", "", "500px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("selectors4-finish", "", "500px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -334,10 +334,6 @@ To complete the task, provide solutions for the following challenges using attri
 1. Target the `<a>` element with a `title` attribute and make the border pink (`border-color: pink`).
 2. Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).
 3. Target the `<a>` element with an `href` value starting with `https` and give it a green border (`border-color: green`).
-
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("selectors5-finish", "", "300px")}}
 
 ```html live-sample___selectors5-start live-sample___selectors5-finish
 <ul>
@@ -375,9 +371,13 @@ a {
 /* Add styles here */
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("selectors5-start", "", "300px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("selectors5-finish", "", "300px")}}
 
 <details>
 <summary>Click here to show the solution</summary>

@@ -17,10 +17,6 @@ The aim of this skill test is to assess whether you understand how special eleme
 
 In this task, you have an image that is overflowing the box. We want the image to scale down to fit inside the box without any extra white space, but we do not mind if some part of the image is cropped. Update the CSS to achieve this.
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("images-forms1-finish", "", "260px")}}
-
 ```html live-sample___images-forms1-start live-sample___images-forms1-finish
 <div class="box">
   <img
@@ -41,9 +37,13 @@ img {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("images-forms1-start", "", "260px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("images-forms1-finish", "", "260px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -72,10 +72,6 @@ To complete the task:
 3. Give the form field and button `10px` of padding.
 4. Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("images-forms2-finish", "", "80px")}}
-
 ```html live-sample___images-forms2-start live-sample___images-forms2-finish
 <form action="" class="my-form" method="post">
   <div>
@@ -96,9 +92,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("images-forms2-start", "", "80px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("images-forms2-finish", "", "80px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -193,7 +193,7 @@ body {
 /* Add your code here */
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("forms-2", "100%", 250) }}
 
