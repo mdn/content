@@ -19,7 +19,7 @@ The Media Capabilities API provide more powerful features than say {{DOMxref("Me
 
 To test support, smoothness, and power efficiency for encoding and decoding video or audio content, you use the {{DOMxRef("MediaCapabilities")}} interface's {{DOMxRef("MediaCapabilities.encodingInfo()","encodingInfo()")}} and {{DOMxRef("MediaCapabilities.decodingInfo()","decodingInfo()")}} methods.
 
-Media capabilities information enables websites to enable adaptive streaming to alter the quality of content based on actual user-perceived quality, and react to a pick of CPU/GPU usage in real time.
+Media capabilities information enables websites to enable adaptive streaming to alter the quality of content based on actual user-perceived quality, and react to peaks of CPU/GPU usage in real time.
 
 ## Interfaces
 
