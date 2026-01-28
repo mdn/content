@@ -99,7 +99,7 @@ To enable this use case, your extension must request the `"clipboardWrite"` [per
 
 The Clipboard API methods {{domxref("Clipboard.read", "navigator.clipboard.read()")}} and {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} read arbitrary text or binary data from the clipboard. These methods allow extensions to access data in the clipboard without pasting it into an editable element.
 
-The methods are available from a secure context but only function after the extension's user performs {{Glossary("Transient Activation","transient activation")}} and clicks a paste prompt in an ephemeral context menu. However, with the [`"clipboardRead"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardRead), your extension can read from the clipboard without user confirmation or transient activation.
+The methods are available from a secure context but only function after the extension's user performs {{Glossary("Transient Activation","transient activation")}} and clicks a paste prompt in an ephemeral context menu. However, with the [`"clipboardRead"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardread), your extension can read from the clipboard without user confirmation or transient activation.
 
 > [!NOTE]
 > In Firefox and Chrome, the `"clipboardRead"` permission enables writing to the clipboard from all extension contexts and content scripts. Safari doesn't support the `"clipboardRead"` permission.
