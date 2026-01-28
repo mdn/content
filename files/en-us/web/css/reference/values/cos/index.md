@@ -12,7 +12,6 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Refere
 
 The CSS `cos()` function is a trigonometric function that returns the cosine of a number. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("angle")}} by interpreting the result of the argument as radians. That is, `cos(45deg)`, `cos(0.125turn)`, and `cos(3.14159 / 4)` all represent the same value, approximately `0.707`.
 
-
 {{InteractiveExample("CSS Demo: cos()")}}
 
 ```css interactive-example-choice
