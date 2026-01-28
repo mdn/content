@@ -19,10 +19,6 @@ In this task, we want you to use one of the special values we looked at in the [
 
 To complete the task, write a declaration in a new rule that will reset the background color back to white, without using an actual color value.
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("cascade1-finish", "100%", "110px")}}
-
 ```html live-sample___cascade1-start live-sample___cascade1-finish
 <div class="container" id="outer">
   <div class="container" id="inner">
@@ -47,9 +43,13 @@ div div li a {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("cascade1-start", "100%", "110px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("cascade1-finish", "100%", "110px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -73,10 +73,6 @@ Then you need to remember there are special keyword values for all properties. I
 To complete this task, manipulate the cascade layer order to color the links `rebeccapurple`. No editing the `lightgreen` declaration!
 
 This task is a stretch goal — it requires knowledge of cascade layers, which we didn't cover in the [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) article. You can find the information you need to attempt this task at [Cascade layers > Determining the precedence based on the order of layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#determining_the_precedence_based_on_the_order_of_layers).
-
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("cascade2-finish", "100%", "110px")}}
 
 ```html live-sample___cascade2-start live-sample___cascade2-finish
 <div class="container" id="outer">
@@ -111,9 +107,13 @@ Your final result should look like the following rendering:
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("cascade2-start", "100%", "110px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("cascade2-finish", "100%", "110px")}}
 
 <details>
 <summary>Click here to show the solution</summary>

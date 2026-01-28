@@ -27,10 +27,6 @@ To complete the task:
    https://mdn.github.io/shared-assets/images/examples/balloons.jpg
    ```
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("backgrounds1-finish", "", "160px")}}
-
 ```html live-sample___backgrounds1-start live-sample___backgrounds1-finish
 <div class="box">
   <h2>Backgrounds & Borders</h2>
@@ -60,9 +56,13 @@ h2 {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("backgrounds1-start", "", "160px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("backgrounds1-finish", "", "160px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -101,10 +101,6 @@ To complete the task:
 
 3. Make sure that the heading text does not overlay the image, and that it is centered — you will need to use techniques learned in previous lessons to achieve this.
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("backgrounds2-finish", "", "220px")}}
-
 ```html live-sample___backgrounds2-start live-sample___backgrounds2-finish
 <div class="box">
   <h2>Backgrounds & Borders</h2>
@@ -133,9 +129,13 @@ h2 {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("backgrounds2-start", "", "200px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("backgrounds2-finish", "", "220px")}}
 
 <details>
 <summary>Click here to show the solution</summary>

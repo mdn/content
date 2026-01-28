@@ -22,10 +22,6 @@ To complete the task:
 1. Update the CSS so that the height is maintained and the box will have scrollbars only if there is enough text to cause an overflow.
 2. Test your solution by removing some of the text from the HTML and checking that if there is only a small amount of text that does not overflow, no scrollbar appears.
 
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("overflow1-finish", "", "300px")}}
-
 ```html live-sample___overflow1-start live-sample___overflow1-finish
 <div class="box">
   <p>
@@ -54,9 +50,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("overflow1-start", "", "450px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("overflow1-finish", "", "300px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -74,10 +74,6 @@ You should add `overflow: auto` so that the box will only gain scrollbars when t
 ## Task 2
 
 In this task, there is an image in the box that is bigger than the dimensions of the box so that it overflows visibly. Update the CSS so that any image outside of the box is hidden.
-
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("overflow2-finish", "", "260px")}}
 
 ```html live-sample___overflow2-start live-sample___overflow2-finish
 <div class="box">
@@ -98,9 +94,13 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("overflow2-start", "", "260px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("overflow2-finish", "", "260px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
