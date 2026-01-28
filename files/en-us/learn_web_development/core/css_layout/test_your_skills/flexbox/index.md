@@ -25,10 +25,6 @@ Watch the embedded scrim, and complete all the tasks on the timeline (the little
 
 In this task, we use some list items to create the navigation for a site. To complete the task, use flexbox to lay out the list items as a row, with an equal amount of space between each item.
 
-Your final result should look like this finished rendering:
-
-{{EmbedLiveSample("flexbox1-finish", "", "100px")}}
-
 ```html live-sample___flexbox1-start live-sample___flexbox1-finish
 <nav>
   <ul>
@@ -66,9 +62,13 @@ nav ul {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("flexbox1-start", "", "240px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("flexbox1-finish", "", "100px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -87,10 +87,6 @@ nav ul {
 ## Task 2
 
 In this task, the list items are all different sizes, but we want them to be displayed as three equal-sized columns, no matter what content is in each item.
-
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("flexbox2-finish", "", "300px")}}
 
 **Bonus question:** Can you now make the first item twice the size of the other items?
 
@@ -134,9 +130,13 @@ li {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("flexbox2-start", "", "240px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("flexbox2-finish", "", "380px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -155,7 +155,7 @@ li {
 
 For the bonus question, add a selector that targets the first element and sets `flex: 2;` (or `flex: 2 0 0;` or `flex-grow: 2`):
 
-```css
+```css live-sample___flexbox2-finish
 li:first-child {
   flex: 2;
 }
@@ -165,9 +165,7 @@ li:first-child {
 
 ## Task 3
 
-In this task, we'd like you to arrange the list items into rows as shown in the finished rendering below:
-
-{{EmbedLiveSample("flexbox3-finish", "", "260px")}}
+In this task, we'd like you to arrange the list items into rows.
 
 ```html live-sample___flexbox3-start live-sample___flexbox3-finish
 <ul>
@@ -213,9 +211,13 @@ li {
 }
 ```
 
-This is the starting state of the task:
+The starting point of the task looks like this:
 
 {{EmbedLiveSample("flexbox3-start", "", "260px")}}
+
+The finished task should look like this:
+
+{{EmbedLiveSample("flexbox3-finish", "", "260px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
