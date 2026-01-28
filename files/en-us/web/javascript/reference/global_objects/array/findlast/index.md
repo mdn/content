@@ -131,6 +131,27 @@ console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 > [!NOTE]
 > The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
 
+### Find the most recent completed task
+
+This example demonstrates a practical use case for `findLast()` when working with time-ordered data. It finds the most recent completed task from a list of tasks.
+
+```js
+const tasks = [
+  { id: 1, name: "Setup project", completed: true, timestamp: 1609459200000 },
+  { id: 2, name: "Write tests", completed: false, timestamp: 1609545600000 },
+  { id: 3, name: "Fix bug #42", completed: true, timestamp: 1609632000000 },
+  { id: 4, name: "Deploy to staging", completed: true, timestamp: 1609718400000 },
+  { id: 5, name: "Review PR", completed: false, timestamp: 1609804800000 },
+];
+
+const lastCompletedTask = tasks.findLast((task) => task.completed);
+
+console.log(lastCompletedTask);
+// { id: 4, name: "Deploy to staging", completed: true, timestamp: 1609718400000 }
+```
+
+This is more efficient than using `find()` with a reversed array, as it avoids creating a new array.
+
 ### Using the third argument of callbackFn
 
 The `array` argument is useful if you want to access another element in the array, especially when you don't have an existing variable that refers to the array. The following example first uses `filter()` to extract the positive values and then uses `findLast()` to find the last element that is less than its neighbors.
