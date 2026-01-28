@@ -34,9 +34,9 @@ To minimize the scope for cookie vulnerabilities on your site, limit access to c
 - `Path`
   - : Cookies should be set to the most restrictive `Path` possible.
 - `SameSite`
-  - : Forbid sending cookies via cross-origin requests (for example from {{htmlelement("img")}} elements) using `SameSite`. You should use one of the following two values:
+  - : Forbid sending cookies via cross-site requests (for example from {{htmlelement("img")}} elements) using `SameSite`. You should use one of the following two values:
     - `SameSite=Strict`: Only send the cookie in same-site contexts (navigations and other requests). Cookies are omitted in cross-site requests (e.g., embedding images or other resources from other sites) and cross-site navigation (e.g., when following a link from a different web page). This is a very strict setting, but it does provide strong [CSRF](/en-US/docs/Web/Security/Attacks/CSRF) protection, so use this value if possible.
-    - `SameSite=Lax`: Send the cookie in same-site requests and when navigating _to_ your website. This should be used if `Strict` is too restrictive.
+    - `SameSite=Lax`: Send the cookie in same-site requests and in cross-site top-level navigations to your website. In practice, cookies are sent for cross-site top-level navigations using safe HTTP methods (such as `GET` or `HEAD`), but are omitted in cross-site subresource requests (requests made by a page to load additional resources such as images or scripts) and in most cross-site state-changing requests (such as `POST`). This should be used if `Strict` is too restrictive.
 
     Both of the above values are useful in protecting against [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks in cases that rely on the user being authenticated.
 
