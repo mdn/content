@@ -16,11 +16,13 @@ contact points that are supported by the current device.
 
 A number.
 
-## Examples
+"Classic" desktop computers (Mac, Windows and Linux) return 0 while smartphones (Android and iOS) typically return a value of 5.
+
+## Example
 
 ```js
-if (navigator.maxTouchPoints > 1) {
-  // browser supports multi-touch
+if (navigator.maxTouchPoints > 0) {
+  // The device has a touch screen
 }
 ```
 
