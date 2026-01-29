@@ -71,6 +71,8 @@ div > div::before {
 }
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("aria-1", "100%", 250) }}
 
 <details>
@@ -79,6 +81,8 @@ div > div::before {
 Your finished HTML should look something like this:
 
 ```html
+<p>My favorite animals:</p>
+
 <div role="list">
   <div role="listitem">Pig</div>
   <div role="listitem">Gazelle</div>
@@ -104,6 +108,8 @@ To complete the task:
   <input type="search" name="search" />
 </form>
 ```
+
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("aria-2", "100%", 100) }}
 
@@ -203,6 +209,8 @@ function handleSelection(e) {
   descPara.textContent = description;
 }
 ```
+
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("aria-3", "100%", 400) }}
 

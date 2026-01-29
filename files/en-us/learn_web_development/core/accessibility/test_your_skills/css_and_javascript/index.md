@@ -21,7 +21,7 @@ To complete the task, create new rules to make the links look and behave like li
 
 <!-- Code shared across examples -->
 
-```css hidden live-sample___css-js-ally-1 live-sample___css-js-ally-2 live-sample___css-js-ally-3
+```css hidden live-sample___css-js-ally-1 live-sample___css-js-ally-2 live-sample___css-js-ally-3 live-sample___css-js-ally-1-finish live-sample___css-js-ally-2-finish
 body {
   background-color: white;
   color: #333333;
@@ -41,7 +41,7 @@ body {
 
 <!-- Example-specific code -->
 
-```html live-sample___css-js-ally-1
+```html live-sample___css-js-ally-1 live-sample___css-js-ally-1-finish
 <ul>
   <li><a href="">Animals</a></li>
   <li><a href="">Computers</a></li>
@@ -64,7 +64,13 @@ a {
 /* Add your code here */
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("css-js-ally-1", "100%", 200) }}
+
+The finished task should look something like this:
+
+{{ EmbedLiveSample("css-js-ally-1-finish", "100%", 200) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -74,6 +80,25 @@ Your finished CSS could look something like this:
 ```css
 /* ... */
 /* Don't edit the above code! */
+
+li a {
+  text-decoration: underline;
+  color: rgb(150 0 0);
+}
+
+li a:hover,
+li a:focus {
+  text-decoration: none;
+  color: red;
+}
+```
+
+```css hidden live-sample___css-js-ally-1-finish
+a {
+  text-decoration: none;
+  color: #666666;
+  outline: none;
+}
 
 li a {
   text-decoration: underline;
@@ -101,7 +126,7 @@ To complete the task:
 
 <!-- spellchecker: disable -->
 
-```html live-sample___css-js-ally-2
+```html live-sample___css-js-ally-2 live-sample___css-js-ally-2-finish
 <main>
   <h1>I am the eggman</h1>
 
@@ -156,7 +181,13 @@ p {
 }
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("css-js-ally-2", "100%", 240) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("css-js-ally-2-finish", "100%", 300) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -173,7 +204,7 @@ p {
 
 For the updated code, something like this would fix the color contrast:
 
-```css
+```css live-sample___css-js-ally-2-finish
 main {
   padding: 20px;
   background-color: red;
@@ -188,7 +219,7 @@ p {
 
 And something like this would work for the font sizing:
 
-```css
+```css live-sample___css-js-ally-2-finish
 h1 {
   font-size: 2.5rem;
 }
@@ -287,6 +318,8 @@ function handleSelection(e) {
   descPara.textContent = description;
 }
 ```
+
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("css-js-ally-3", "100%", 400) }}
 

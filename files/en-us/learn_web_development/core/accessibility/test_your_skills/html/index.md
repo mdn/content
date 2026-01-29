@@ -21,7 +21,7 @@ To complete the task, update the markup to use appropriate semantic HTML. You do
 
 <!-- Code shared across examples -->
 
-```css hidden live-sample___html-ally-1 live-sample___html-ally-2 live-sample___html-ally-3 live-sample___html-ally-4
+```css hidden live-sample___html-ally-1 live-sample___html-ally-2 live-sample___html-ally-3 live-sample___html-ally-4 live-sample___html-ally-2-finish
 body {
   background-color: white;
   color: #333333;
@@ -77,6 +77,8 @@ answer you're looking for.
   text-align: center;
 }
 ```
+
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("html-ally-1", "100%", 400) }}
 
@@ -152,7 +154,7 @@ To complete the task:
 </form>
 ```
 
-```css live-sample___html-ally-2
+```css live-sample___html-ally-2 live-sample___html-ally-2-finish
 form {
   width: 400px;
 }
@@ -165,14 +167,20 @@ li {
 }
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("html-ally-2", "100%", 200) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("html-ally-2-finish", "100%", 220) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___html-ally-2-finish
 <form>
   <fieldset>
     <legend>Personal data</legend>
@@ -219,6 +227,8 @@ To complete the task, update the links appropriately based on the above descript
 
 > [!NOTE]
 > The links in the starting code have the `target="_blank"` attribute set on them, so that when you click on them, they try to open the linked pages in a new tab rather than the same tab. This is not strictly best practice, but we've done it here so that the pages don't open in the MDN Playground output `<iframe>`, getting rid of your example code in the process!
+
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("html-ally-3", "100%", 140) }}
 
@@ -287,6 +297,8 @@ header {
   gap: 20px;
 }
 ```
+
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("html-ally-4", "100%", 400) }}
 
