@@ -17,7 +17,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gu
     local("Trickster"),
     url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
     url("trickster-outline.otf") format("opentype"),
-    url("trickster-outline.woff") format("woff");
+    url("trickster-outline.woff2") format("woff2");
 }
 ```
 
@@ -59,7 +59,7 @@ If the `local()` function is provided, specifying a font name to look for on the
 Browsers attempt to load resources in their list declaration order, so usually `local()` should be written before `url()`. Both functions are optional, so a rule block containing only one or more `local()` without `url()` is possible.
 If more specific fonts with `format()` or `tech()` values are desired, these should be listed _before_ versions that don't have these values, as the less specific variant would otherwise be tried and used first.
 
-For web delivery, it's generally best to serve fonts in WOFF2 format.
+For web delivery, it's generally best to serve fonts in WOFF2 format, because it compresses fonts more efficiently that older formats like WOFF or OpenType, reducing file size and improving load times. WOFF2 is also well supported in modern browsers, making it a safe default choice for most websites.
 
 By allowing authors to provide their own fonts, `@font-face` makes it possible to design content without being limited to the so-called "web-safe" fonts (that is, the fonts that are so common that they're considered to be universally available). The ability to specify the name of a locally-installed font to look for and use makes it possible to customize the font beyond the basics while making it possible to do so without relying on an internet connection.
 
