@@ -7,7 +7,7 @@ browser-compat: api.ClipboardChangeEvent
 
 {{APIRef("Clipboard API")}}
 
-The **`ClipboardChangeEvent`** interface of the {{domxref("Clipboard API", "", "", "nocode")}} is the event fired whenever the contents of the system clipboard are changed.
+The **`ClipboardChangeEvent`** interface of the {{domxref("Clipboard API", "", "", "nocode")}} represents events fired whenever the contents of the system clipboard are changed.
 
 {{InheritanceDiagram}}
 
@@ -21,7 +21,7 @@ The **`ClipboardChangeEvent`** interface of the {{domxref("Clipboard API", "", "
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("ClipboardChangeEvent.types")}} {{ReadOnlyInline}}
-  - : A array of objects indicating the mandatory data types available on the system clipboard when the event was fired.
+  - : An array of strings representing the mandatory data types available on the system clipboard when the event was fired.
 - {{domxref("ClipboardChangeEvent.changeId")}} {{ReadOnlyInline}}
   - : A bigint representing a unique identifier for this specific clipboard change operation.
 
@@ -31,7 +31,7 @@ _No specific methods; inherits methods from its parent {{domxref("Event")}}_.
 
 ## Examples
 
-In this example, when the clipboard's contents are changed, the event listener logs the data types, change id, and the the entire event object to the console. This is a `ClipboardChangeEvent` object of type `clipboardchange`.
+In this example, when the clipboard's contents are changed, the event listener logs the data types, change id, and the entire event object to the console. This is a `ClipboardChangeEvent` object of type `clipboardchange`.
 
 ```js
 navigator.clipboard.addEventListener("clipboardchange", (event) => {

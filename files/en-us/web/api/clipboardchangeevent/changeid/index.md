@@ -20,7 +20,7 @@ An integer. A cryptographically derived 128-bit integer that, after something is
 
 ## Examples
 
-In this example, when the contents of the clipboard change, the event listener uses the `ClipboardChangeEvent.changeId` property to logs to the console the unique ID representing the clipboard change operation that fired the event.
+In this example, when the contents of the clipboard change, the event listener uses the `ClipboardChangeEvent.changeId` property to log to the console the unique ID representing the clipboard change operation that fired the event.
 
 ```js
 navigator.clipboard.addEventListener("clipboardchange", (event) => {
