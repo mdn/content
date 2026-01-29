@@ -37,9 +37,7 @@ sendBeacon(url, data)
 
 ### Return value
 
-Returns `true` if the
-{{glossary("user agent")}} successfully queued the `data` for transfer.
-Otherwise, it returns `false`.
+Returns `true` if the {{glossary("user agent")}} successfully queued the `data` for transfer. Otherwise, it returns `false`, for example if the payload exceeds the 64 KiB limit defined in the [Fetch specification](https://fetch.spec.whatwg.org/#http-network-or-cache-fetch).
 
 ## Description
 
