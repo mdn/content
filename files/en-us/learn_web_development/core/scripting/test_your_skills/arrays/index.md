@@ -24,7 +24,7 @@ Watch the embedded scrim, and complete the task on the timeline (the little ghos
 > [!NOTE]
 > This task is somewhat of a stretch goal, given that it relies on JavaScript features you've not yet explicitly covered during the course. Give it your best shot, and search online for information on anything you are not sure about.
 
-## Task 1
+## Arrays 1
 
 This task gives you some basic array practice:
 
@@ -34,11 +34,11 @@ This task gives you some basic array practice:
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___arrays-1 live-sample___arrays-2 live-sample___arrays-3 live-sample___arrays-4
+```html hidden live-sample___arrays-1 live-sample___arrays-2 live-sample___arrays-3 live-sample___arrays-4 live-sample___arrays-1-finish live-sample___arrays-2-finish live-sample___arrays-3-finish live-sample___arrays-4-finish
 <section></section>
 ```
 
-```css hidden live-sample___arrays-1 live-sample___arrays-2 live-sample___arrays-3 live-sample___arrays-4
+```css hidden live-sample___arrays-1 live-sample___arrays-2 live-sample___arrays-3 live-sample___arrays-4 live-sample___arrays-1-finish live-sample___arrays-2-finish live-sample___arrays-3-finish live-sample___arrays-4-finish
 * {
   box-sizing: border-box;
 }
@@ -62,7 +62,13 @@ para1.textContent = `Array: ${myArray}`;
 section.appendChild(para1);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("arrays-1", "100%", 60) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("arrays-1-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -81,9 +87,23 @@ myArray.unshift("crocodiles");
 // ...
 ```
 
+```js hidden live-sample___arrays-1-finish
+const myArray = ["cats", "dogs", "chickens"];
+
+myArray[0] = "horses";
+myArray[1] = "pigs";
+
+myArray.unshift("crocodiles");
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = `Array: ${myArray}`;
+section.appendChild(para1);
+```
+
 </details>
 
-## Task 2
+## Arrays 2
 
 Now let's move on to another task. Here you are provided with a string to work with.
 
@@ -112,7 +132,13 @@ section.appendChild(para2);
 section.appendChild(para3);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("arrays-2", "100%", 60) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("arrays-2-finish", "100%", 100) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -132,9 +158,27 @@ let lastItem = myArray[arrayLength - 1];
 // ...
 ```
 
+```js hidden live-sample___arrays-2-finish
+const myString = "Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri";
+let myArray = myString.split("+");
+let arrayLength = myArray.length;
+let lastItem = myArray[arrayLength - 1];
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = `Array: ${myArray}`;
+const para2 = document.createElement("p");
+para2.textContent = `The length of the array is ${arrayLength}.`;
+const para3 = document.createElement("p");
+para3.textContent = `The last item in the array is "${lastItem}".`;
+section.appendChild(para1);
+section.appendChild(para2);
+section.appendChild(para3);
+```
+
 </details>
 
-## Task 3
+## Arrays 3
 
 For this array task, we provide you with a starting array, and you will work in somewhat the opposite direction. You need to:
 
@@ -165,7 +209,13 @@ para1.textContent = myString;
 section.appendChild(para1);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("arrays-3", "100%", 60) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("arrays-3-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -200,9 +250,41 @@ const myString = myArray.join(" - ");
 // ...
 ```
 
+```js hidden live-sample___arrays-3-finish
+const myArray = [
+  "Ryu",
+  "Ken",
+  "Chun-Li",
+  "Cammy",
+  "Guile",
+  "Sakura",
+  "Sagat",
+  "Juri",
+];
+
+myArray.pop();
+
+myArray.push("Zangief");
+myArray.push("Ibuki");
+
+myArray.forEach((element, index) => {
+  const newElement = `${element} (${index})`;
+  myArray[index] = newElement;
+});
+
+const myString = myArray.join(" - ");
+
+// Don't edit the code below here!
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = myString;
+section.appendChild(para1);
+```
+
 </details>
 
-## Task 4
+## Arrays 4
 
 For this array task, we provide you with a starting array listing the names of some birds.
 
@@ -210,8 +292,6 @@ To complete the task:
 
 1. Find the index of the `"Eagles"` item, and use that to remove the `"Eagles"` item.
 2. Make a new array from this one, called `eBirds`, that contains only birds from the original array whose names begin with the letter "E". Note that {{jsxref("String.prototype.startsWith()", "startsWith()")}} is a great way to check whether a string starts with a given character.
-
-If it works, you should see `"Emus,Egrets"` appear in the page.
 
 ```js live-sample___arrays-4
 const birds = ["Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets"];
@@ -226,7 +306,13 @@ para1.textContent = eBirds;
 section.appendChild(para1);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("arrays-4", "100%", 60) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("arrays-4-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -246,6 +332,23 @@ const eBirds = birds.filter(startsWithE);
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___arrays-4-finish
+const birds = ["Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets"];
+
+const eaglesIndex = birds.indexOf("Eagles");
+birds.splice(eaglesIndex, 1);
+
+function startsWithE(bird) {
+  return bird.startsWith("E");
+}
+const eBirds = birds.filter(startsWithE);
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = eBirds;
+section.appendChild(para1);
 ```
 
 </details>

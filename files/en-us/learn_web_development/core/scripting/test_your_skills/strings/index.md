@@ -25,11 +25,11 @@ To complete the task:
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___strings-1 live-sample___strings-2 live-sample___strings-3 live-sample___strings-4
+```html hidden live-sample___strings-1 live-sample___strings-2 live-sample___strings-3 live-sample___strings-4 live-sample___strings-1-finish live-sample___strings-2-finish live-sample___strings-3-finish live-sample___strings-4-finish
 <section></section>
 ```
 
-```css hidden live-sample___strings-1 live-sample___strings-2 live-sample___strings-3 live-sample___strings-4
+```css hidden live-sample___strings-1 live-sample___strings-2 live-sample___strings-3 live-sample___strings-4 live-sample___strings-1-finish live-sample___strings-2-finish live-sample___strings-3-finish live-sample___strings-4-finish
 * {
   box-sizing: border-box;
 }
@@ -55,7 +55,13 @@ para1.textContent = finalQuote;
 section.appendChild(para1);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("strings-1", "100%", 60) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("strings-1-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -72,6 +78,21 @@ const finalQuote = `${quoteStart}${quoteEnd}`;
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___strings-1-finish
+const quoteStart = "Don't judge each day by the harvest you reap ";
+
+const quoteEnd = "but by the seeds that you plant.";
+
+const finalQuote = `${quoteStart}${quoteEnd}`;
+
+// Don't edit the code below here!
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = finalQuote;
+section.appendChild(para1);
 ```
 
 </details>
@@ -106,7 +127,13 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("strings-2", "100%", 60) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("strings-2-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -123,6 +150,24 @@ const revisedQuote = quote.slice(0, index + substring.length + 1);
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___strings-2-finish
+const quote = "I do not like green eggs and ham. I do not like them, Sam-I-Am.";
+const substring = "green eggs and ham";
+
+const quoteLength = quote.length;
+const index = quote.indexOf(substring);
+const revisedQuote = quote.slice(0, index + substring.length + 1);
+
+const section = document.querySelector("section");
+section.innerHTML = " ";
+const para1 = document.createElement("p");
+para1.textContent = `The quote is ${quoteLength} characters long.`;
+const para2 = document.createElement("p");
+para2.textContent = revisedQuote;
+section.appendChild(para1);
+section.appendChild(para2);
 ```
 
 </details>
@@ -152,7 +197,13 @@ para1.textContent = finalQuote;
 section.appendChild(para1);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("strings-3", "100%", 60) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("strings-3-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -171,6 +222,21 @@ const finalQuote = `${fixedQuote}.`;
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___strings-3-finish
+const quote = "I dO nOT lIke gREen eGgS anD HAM";
+
+let fixedQuote = quote.toLowerCase();
+const firstLetter = fixedQuote.slice(0, 1);
+fixedQuote = fixedQuote.replace(firstLetter, firstLetter.toUpperCase());
+fixedQuote = fixedQuote.replace("green eggs and ham", "pickled onions");
+const finalQuote = `${fixedQuote}.`;
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = finalQuote;
+section.appendChild(para1);
 ```
 
 </details>
@@ -207,7 +273,13 @@ para1.textContent = myString;
 section.appendChild(para1);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("strings-4", "100%", 60) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("strings-4-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -223,6 +295,21 @@ const myString = `Using ${theorem}, we can work out that if the two shortest sid
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___strings-4-finish
+const theorem = "Pythagorean theorem";
+
+const a = 5;
+const b = 8;
+
+const myString = `Using ${theorem}, we can work out that if the two shortest sides of a right-angled triangle have lengths of ${a} and ${b},
+  the length of the hypotenuse is ${Math.sqrt(a ** 2 + b ** 2)}.`;
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = myString;
+section.appendChild(para1);
 ```
 
 </details>

@@ -31,11 +31,11 @@ To pass this test, `finalResult` should have a value of `48` and `evenOddResult`
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___math-1 live-sample___math-2 live-sample___math-3
+```html hidden live-sample___math-1 live-sample___math-2 live-sample___math-3 live-sample___math-1-finish live-sample___math-2-finish live-sample___math-3-finish
 <section></section>
 ```
 
-```css hidden live-sample___math-1 live-sample___math-2 live-sample___math-3
+```css hidden live-sample___math-1 live-sample___math-2 live-sample___math-3 live-sample___math-1-finish live-sample___math-2-finish live-sample___math-3-finish
 * {
   box-sizing: border-box;
 }
@@ -73,7 +73,13 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("math-1", "100%", 80) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("math-1-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -98,6 +104,37 @@ evenOddResult = finalResult % 2;
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___math-1-finish
+let finalResult;
+let evenOddResult;
+
+const number1 = 4;
+const number2 = 8;
+const number3 = 12;
+const number4 = 8;
+
+const additionResult = number1 + number2;
+const subtractionResult = number3 - number4;
+
+finalResult = additionResult * subtractionResult;
+
+evenOddResult = finalResult % 2;
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const finalResultCheck =
+  finalResult === 48 ? `Yes, well done!` : `No, it is ${finalResult}`;
+para1.textContent = `Is the finalResult 48? ${finalResultCheck}`;
+const para2 = document.createElement("p");
+const evenOddResultCheck =
+  evenOddResult === 0
+    ? "The final result is even!"
+    : "The final result is odd. Hrm.";
+para2.textContent = evenOddResultCheck;
+section.appendChild(para1);
+section.appendChild(para2);
 ```
 
 </details>
@@ -138,7 +175,13 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("math-2", "100%", 80) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("math-2-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -159,6 +202,27 @@ const finalNumber = Number(finalResult);
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___math-2-finish
+let result = 7 + 13 / 9 + 7;
+let result2 = (100 / 2) * 6;
+
+result *= result2;
+const finalResult = result.toFixed(2);
+const finalNumber = Number(finalResult);
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = `Your finalResult is ${finalResult}`;
+const para2 = document.createElement("p");
+const finalNumberCheck =
+  isNaN(finalNumber) === false
+    ? "finalNumber is a number type. Well done!"
+    : `Oops! finalNumber is not a number.`;
+para2.textContent = finalNumberCheck;
+section.appendChild(para1);
+section.appendChild(para2);
 ```
 
 </details>
@@ -210,7 +274,13 @@ para3.textContent = pwdTest;
 section.appendChild(para3);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("math-3", "100%", 80) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("math-3-finish", "100%", 100) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -227,6 +297,42 @@ const pwdMatch = pwd1 === pwd2;
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___math-3-finish
+// Statement 1: The elephant weighs less than the mouse
+const eleWeight = 1000;
+const mouseWeight = 2;
+// Statement 2: The Ostrich is taller than the duck
+const ostrichHeight = 2;
+const duckHeight = 0.3;
+// Statement 3: The two passwords match
+const pwd1 = "stromboli";
+const pwd2 = "stROmBoLi";
+
+const weightComparison = eleWeight < mouseWeight;
+const heightComparison = ostrichHeight > duckHeight;
+const pwdMatch = pwd1 === pwd2;
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const para2 = document.createElement("p");
+const para3 = document.createElement("p");
+const weightTest = weightComparison
+  ? "True — elephants do weigh less than mice!?"
+  : "False — of course an elephant is heavier than a mouse!";
+const heightTest = heightComparison
+  ? "True — an ostrich is indeed taller than a duck!"
+  : "False — apparently a duck is taller than an ostrich!?";
+const pwdTest = pwdMatch
+  ? "True — the passwords match."
+  : "False — the passwords do not match; please check them";
+para1.textContent = weightTest;
+section.appendChild(para1);
+para2.textContent = heightTest;
+section.appendChild(para2);
+para3.textContent = pwdTest;
+section.appendChild(para3);
 ```
 
 </details>

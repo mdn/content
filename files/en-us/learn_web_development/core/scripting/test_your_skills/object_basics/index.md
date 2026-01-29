@@ -25,11 +25,11 @@ To complete the task:
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___objects-1 live-sample___objects-2 live-sample___objects-3 live-sample___objects-4
+```html hidden live-sample___objects-1 live-sample___objects-2 live-sample___objects-3 live-sample___objects-4 live-sample___objects-1-finish live-sample___objects-2-finish live-sample___objects-3-finish live-sample___objects-4-finish
 <section></section>
 ```
 
-```css hidden live-sample___objects-1 live-sample___objects-2 live-sample___objects-3 live-sample___objects-4
+```css hidden live-sample___objects-1 live-sample___objects-2 live-sample___objects-3 live-sample___objects-4 live-sample___objects-1-finish live-sample___objects-2-finish live-sample___objects-3-finish live-sample___objects-4-finish
 * {
   box-sizing: border-box;
 }
@@ -67,7 +67,13 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("objects-1", "100%", 60) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("objects-1-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -84,6 +90,29 @@ cat.color = "black";
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___objects-1-finish
+const cat = {
+  name: "Bertie",
+  breed: "Cymric",
+  color: "white",
+  greeting: function () {
+    console.log("Meow!");
+  },
+};
+
+const catName = cat["name"];
+cat.greeting();
+cat.color = "black";
+
+const section = document.querySelector("section");
+let para1 = document.createElement("p");
+let para2 = document.createElement("p");
+para1.textContent = `The cat's name is ${catName}.`;
+para2.textContent = `The cat's color is ${cat.color}.`;
+section.appendChild(para1);
+section.appendChild(para2);
 ```
 
 </details>
@@ -123,7 +152,13 @@ para1.textContent = bandInfo;
 section.appendChild(para1);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("objects-2", "100%", 60) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("objects-2-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -167,6 +202,44 @@ bandInfo = `The ${band.nationality} ${band.genre} band ${band.name} were active 
 // ...
 ```
 
+```js hidden live-sample___objects-2-finish
+let bandInfo;
+
+const band = {
+  name: "Black Sabbath",
+  nationality: "British",
+  genre: "heavy metal",
+  members: 4,
+  formed: 1968,
+  split: 2025,
+  albums: [
+    {
+      name: "Black Sabbath",
+      released: 1970,
+    },
+    {
+      name: "Paranoid",
+      released: 1970,
+    },
+    {
+      name: "Master of Reality",
+      released: 1971,
+    },
+    {
+      name: "Vol. 4",
+      released: 1972,
+    },
+  ],
+};
+
+bandInfo = `The ${band.nationality} ${band.genre} band ${band.name} were active between ${band.formed} and ${band.split}. Their first album, ${band.albums[0].name}, was released in ${band.albums[0].released}.`;
+
+const section = document.querySelector("section");
+let para1 = document.createElement("p");
+para1.textContent = bandInfo;
+section.appendChild(para1);
+```
+
 </details>
 
 ## Object basics 3
@@ -194,7 +267,13 @@ const cat = {
 // Add your code here
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("objects-3", "100%", 60) }}
+
+<!-- The finished task should look like this:
+
+{{ EmbedLiveSample("objects-3-finish", "100%", 60) }} -->
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -204,6 +283,29 @@ Your finished JavaScript should look something like this:
 ```js
 // ...
 // Don't edit the code above here!
+
+const cat2 = {
+  name: "Elfie",
+  breed: "Aphrodite Giant",
+  color: "ginger",
+  greeting: function () {
+    console.log(`Hello, said ${this.name} the ${this.breed}.`);
+  },
+};
+
+cat.greeting();
+cat2.greeting();
+```
+
+```js hidden live-sample___objects-3-finish
+const cat = {
+  name: "Bertie",
+  breed: "Cymric",
+  color: "white",
+  greeting: function () {
+    console.log("Meow!");
+  },
+};
 
 const cat2 = {
   name: "Elfie",
@@ -253,6 +355,8 @@ const cat2 = {
 cat.greeting();
 cat2.greeting();
 ```
+
+The starting point of the task looks like this:
 
 {{ EmbedLiveSample("objects-4", "100%", 60) }}
 

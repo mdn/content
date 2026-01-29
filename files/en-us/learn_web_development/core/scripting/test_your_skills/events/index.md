@@ -25,7 +25,7 @@ Our first events-related task involves a {{htmlelement("button")}} that, when cl
 
 To complete the task, create an event listener that causes the text inside the button (`btn`) to change when it is clicked on, and change back when it is clicked again.
 
-```css hidden live-sample___events-1
+```css hidden live-sample___events-1 live-sample___events-1-finish
 p {
   color: purple;
   margin: 0.5em 0;
@@ -45,7 +45,7 @@ canvas {
 }
 ```
 
-```html hidden live-sample___events-1
+```html hidden live-sample___events-1 live-sample___events-1-finish
 <button class="off">Machine is off</button>
 ```
 
@@ -55,14 +55,20 @@ const btn = document.querySelector("button");
 // Add your code here
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("events-1", "100%", 80) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("events-1-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished JavaScript should look something like this:
 
-```js
+```js live-sample___events-1-finish
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
@@ -91,11 +97,11 @@ To complete this task, create an event listener that moves the circle around the
 > [!WARNING]
 > When testing your code, you will have to focus on the canvas before trying out your keyboard commands (for example, click on it, or tab to it with the keyboard). Otherwise they won't work.
 
-```html hidden live-sample___events-2
+```html hidden live-sample___events-2 live-sample___events-2-finish
 <canvas width="480" height="320" tabindex="0"> </canvas>
 ```
 
-```css hidden live-sample___events-2
+```css hidden live-sample___events-2 live-sample___events-2-finish
 * {
   box-sizing: border-box;
 }
@@ -129,7 +135,13 @@ drawCircle(x, y, size);
 // Add your code here
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("events-2", "100%", 350) }}
+
+The finished task should look like this (click on it and then try the keyboard controls):
+
+{{ EmbedLiveSample("events-2-finish", "100%", 350) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -160,6 +172,46 @@ window.addEventListener("keydown", (e) => {
 });
 ```
 
+```js hidden live-sample___events-2-finish
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+function drawCircle(x, y, size) {
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.beginPath();
+  ctx.fillStyle = "black";
+  ctx.arc(x, y, size, 0, 2 * Math.PI);
+  ctx.fill();
+}
+
+let x = 50;
+let y = 50;
+const size = 30;
+
+drawCircle(x, y, size);
+
+window.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "a":
+      x -= 5;
+      break;
+    case "d":
+      x += 5;
+      break;
+    case "w":
+      y -= 5;
+      break;
+    case "s":
+      y += 5;
+      break;
+  }
+
+  drawCircle(x, y, size);
+});
+```
+
 </details>
 
 ## Events 3
@@ -168,7 +220,7 @@ In the next events-related task tests your knowledge of event bubbling. We'd lik
 
 We want you to solve this without looping through all the buttons and giving each one their own event listener.
 
-```html hidden live-sample___events-3
+```html hidden live-sample___events-3 live-sample___events-3-finish
 <div class="button-bar">
   <button data-color="red">Red</button>
   <button data-color="yellow">Yellow</button>
@@ -177,7 +229,7 @@ We want you to solve this without looping through all the buttons and giving eac
 </div>
 ```
 
-```css hidden live-sample___events-3
+```css hidden live-sample___events-3 live-sample___events-3-finish
 * {
   box-sizing: border-box;
 }
@@ -205,14 +257,20 @@ const buttonBar = document.querySelector(".button-bar");
 // Add your code here
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("events-3", "100%", 80) }}
+
+The finished task should look like this (click the buttons):
+
+{{ EmbedLiveSample("events-3-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished JavaScript should look something like this:
 
-```js
+```js live-sample___events-3-finish
 const buttonBar = document.querySelector(".button-bar");
 
 function setColor(e) {

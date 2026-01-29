@@ -21,17 +21,17 @@ Watch the embedded scrim, and complete the task on the timeline (the little ghos
 
 <mdn-scrim-inline url="https://scrimba.com/learn-javascript-c0v/~011" scrimtitle="Variables practice" survey="true"></scrim-inline>
 
-## Task 1
+## Variables 1
 
 To complete this task, add a new line to correct the value stored in the existing `myName` variable to your own name.
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___variables-1 live-sample___variables-2
+```html hidden live-sample___variables-1 live-sample___variables-2 live-sample___variables-1-finish live-sample___variables-2-finish
 <section></section>
 ```
 
-```css hidden live-sample___variables-1 live-sample___variables-2
+```css hidden live-sample___variables-1 live-sample___variables-2 live-sample___variables-1-finish live-sample___variables-2-finish
 * {
   box-sizing: border-box;
 }
@@ -59,7 +59,13 @@ para.textContent = myName;
 section.appendChild(para);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("variables-1", "100%", 60) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("variables-1-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -76,9 +82,20 @@ myName = "Chris";
 // ...
 ```
 
+```js hidden live-sample___variables-1-finish
+let myName = "Paul";
+
+myName = "Chris";
+
+const section = document.querySelector("section");
+const para = document.createElement("p");
+para.textContent = myName;
+section.appendChild(para);
+```
+
 </details>
 
-## Task 2
+## Variables 2
 
 The final task for now — in this case you are provided with some existing code, which has two errors present in it. The results panel should be outputting the name `Chris`, and a statement about how old Chris will be in 20 years' time. We want you to fix the problem and correct the output.
 
@@ -101,7 +118,13 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("variables-2", "100%", 60) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("variables-2-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -118,6 +141,20 @@ let myAge = 42;
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___variables-2-finish
+let myName = "Default";
+myName = "Chris";
+let myAge = 42;
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const para2 = document.createElement("p");
+para1.textContent = myName;
+para2.textContent = `In 20 years, I will be ${myAge + 20}`;
+section.appendChild(para1);
+section.appendChild(para2);
 ```
 
 </details>

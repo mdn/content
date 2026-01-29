@@ -27,7 +27,7 @@ Watch the embedded scrim, and complete the task on the timeline (the little ghos
 
 <mdn-scrim-inline url="https://scrimba.com/learn-javascript-c0v/~02h" scrimtitle="Returning values in functions" survey="true"></scrim-inline>
 
-## Task 1
+## Functions 1
 
 To complete our first functions task:
 
@@ -36,11 +36,11 @@ To complete our first functions task:
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___functions-1 live-sample___functions-3 live-sample___functions-4
+```html hidden live-sample___functions-1 live-sample___functions-3 live-sample___functions-4 live-sample___functions-1-finish live-sample___functions-3-finish live-sample___functions-4-finish
 <p></p>
 ```
 
-```css hidden live-sample___functions-1 live-sample___functions-3 live-sample___functions-4
+```css hidden live-sample___functions-1 live-sample___functions-3 live-sample___functions-4 live-sample___functions-1-finish live-sample___functions-3-finish live-sample___functions-4-finish
 * {
   box-sizing: border-box;
 }
@@ -71,7 +71,13 @@ const para = document.querySelector("p");
 // Add your code here
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("functions-1", "100%", 60) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("functions-1-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -91,9 +97,31 @@ function chooseName() {
 chooseName();
 ```
 
+```js hidden live-sample___functions-1-finish
+const names = [
+  "Chris",
+  "Li Kang",
+  "Anne",
+  "Francesca",
+  "Mustafa",
+  "Tina",
+  "Bert",
+  "Jada",
+];
+const para = document.querySelector("p");
+
+function chooseName() {
+  const randomNumber = Math.floor(Math.random() * names.length);
+  const choice = names[randomNumber];
+  para.textContent = choice;
+}
+
+chooseName();
+```
+
 </details>
 
-## Task 2
+## Functions 2
 
 This task requires you to create a function that draws a rectangle on the provided `<canvas>` (reference variable `canvas`, context available in `ctx`), based on the five provided input variables:
 
@@ -103,11 +131,11 @@ This task requires you to create a function that draws a rectangle on the provid
 - `height` — the height of the rectangle.
 - `color` — the color of the rectangle.
 
-```html hidden live-sample___functions-2
+```html hidden live-sample___functions-2 live-sample___functions-2-finish
 <canvas width="240" height="160"></canvas>
 ```
 
-```css hidden live-sample___functions-2
+```css hidden live-sample___functions-2 live-sample___functions-2-finish
 canvas {
   border: 1px solid black;
 }
@@ -127,7 +155,13 @@ const color = "blue";
 // Add your code here
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("functions-2", "100%", 180) }}
+
+The finished task should look like this:
+
+{{ EmbedLiveSample("functions-2-finish", "100%", 180) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -148,9 +182,28 @@ function drawSquare(x, y, width, height, color) {
 drawSquare(x, y, width, height, color);
 ```
 
+```js hidden live-sample___functions-2-finish
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+const x = 50;
+const y = 60;
+const width = 100;
+const height = 75;
+const color = "blue";
+
+function drawSquare(x, y, width, height, color) {
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = color;
+  ctx.fillRect(x, y, width, height);
+}
+
+drawSquare(x, y, width, height, color);
+```
+
 </details>
 
-## Task 3
+## Functions 3
 
 In this task, you return to the problem posed in Task 1, with the aim of making three improvements to it.
 
@@ -186,7 +239,13 @@ function chooseName() {
 chooseName();
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("functions-3", "100%", 60) }}
+
+<!-- The finished task should look like this:
+
+{{ EmbedLiveSample("functions-3-finish", "100%", 60) }} -->
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -202,17 +261,43 @@ function random(min, max) {
   return num;
 }
 
-function chooseItem(array) {
+function chooseName(array) {
   const choice = array[random(0, array.length)];
   return choice;
 }
 
-para.textContent = chooseItem(names);
+para.textContent = chooseName(names);
+```
+
+```js hidden live-sample___functions-3-finish
+const names = [
+  "Chris",
+  "Li Kang",
+  "Anne",
+  "Francesca",
+  "Mustafa",
+  "Tina",
+  "Bert",
+  "Jada",
+];
+const para = document.querySelector("p");
+
+function random(min, max) {
+  const num = Math.floor(Math.random() * (max - min)) + min;
+  return num;
+}
+
+function chooseName(array) {
+  const choice = array[random(0, array.length)];
+  return choice;
+}
+
+para.textContent = chooseName(names);
 ```
 
 </details>
 
-## Task 4
+## Functions 4
 
 In this task, we have an array of names, and we're using {{jsxref("Array.filter()")}} to get an array containing only the names shorter than 5 characters. The filter is currently being passed a named function `isShort()`. This checks the length of the name, returning `true` if the name is less than 5 characters long, and `false` otherwise.
 
@@ -243,7 +328,13 @@ const shortNames = names.filter(isShort);
 para.textContent = shortNames;
 ```
 
+The starting point of the task looks like this:
+
 {{ EmbedLiveSample("functions-4", "100%", 60) }}
+
+<!-- The finished task should look like this:
+
+{{ EmbedLiveSample("functions-4-finish", "100%", 60) }} -->
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -255,6 +346,23 @@ Your finished JavaScript should look something like this:
 // Don't edit the code above here!
 
 // Update the code below here
+
+const shortNames = names.filter((name) => name.length < 5);
+para.textContent = shortNames;
+```
+
+```js hidden live-sample___functions-4-finish
+const names = [
+  "Chris",
+  "Li Kang",
+  "Anne",
+  "Francesca",
+  "Mustafa",
+  "Tina",
+  "Bert",
+  "Jada",
+];
+const para = document.querySelector("p");
 
 const shortNames = names.filter((name) => name.length < 5);
 para.textContent = shortNames;
