@@ -12,8 +12,6 @@ The **`changeId`** read-only property of the {{domxref("ClipboardChangeEvent")}}
 
 The identifier is consistent across all windows and tabs with the same storage key for the same clipboard change, enabling applications to deduplicate events when multiple windows receive the same clipboard change notification.
 
-The changeId is a
-
 ## Value
 
 An integer. A cryptographically derived 128-bit integer that, after something is written to the clipboard, is guaranteed to yield a different value than it did before the write operation.
