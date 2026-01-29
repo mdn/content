@@ -69,3 +69,8 @@ You see this in the console log:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{WebExtAPIRef("runtime.getVersion()")}} method
+- [`version_name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) manifest key
