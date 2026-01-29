@@ -26,7 +26,7 @@ Technical job interviews can be very demanding, and some have quite specific req
         <ul>
           <li>Deciding what kind of job you want.</li>
           <li>Searching for jobs.</li>
-          <li>Developing qualities for that employers look for.</li>
+          <li>Developing qualities that employers look for.</li>
           <li>Selling yourself to would-be employers.</li>
           <li>Applying for jobs.</li>
           <li>Preparing yourself for job interviews.</li>
