@@ -23,7 +23,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("ClipboardChangeEvent.types")}} {{ReadOnlyInline}}
   - : An array of strings representing the mandatory data types available on the system clipboard when the event was fired.
 - {{domxref("ClipboardChangeEvent.changeId")}} {{ReadOnlyInline}}
-  - : A bigint representing a unique identifier for this specific clipboard change operation.
+  - : A 128-bit integer representing a unique identifier for this specific clipboard change operation.
 
 ## Instance methods
 
