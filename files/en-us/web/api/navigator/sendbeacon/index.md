@@ -72,6 +72,36 @@ This means:
 
 The data is sent as an [HTTP POST](/en-US/docs/Web/HTTP/Reference/Methods/POST) request.
 
+### Payload size limit
+
+The `sendBeacon()` method is subject to a **64 KiB** (65,536 bytes) payload size limit for queued keepalive requests. This limit is enforced differently across browsers:
+
+**Chrome and Safari:**
+
+- Enforce a strict **64 KiB** (65,536 bytes) cumulative limit for all queued keepalive requests
+- If the total size of queued data exceeds this limit, `sendBeacon()` returns `false`
+- This limit is defined by the [Fetch specification](https://fetch.spec.whatwg.org/#http-network-or-cache-fetch)
+
+**Firefox:**
+
+- **Does not currently enforce** the 64 KiB limit (as of Firefox 147)
+- `sendBeacon()` will return `true` even for payloads larger than 64 KiB
+- This behavior differs from the Fetch specification's requirements
+
+**Example:**
+
+```js
+const LIMIT_64_KiB = 65536; // 64 * 1024 bytes
+
+// At the limit - succeeds in all browsers
+const atLimit = "Z".repeat(LIMIT_64_KiB);
+navigator.sendBeacon("https://example.com", atLimit); // returns true
+
+// Over the limit - fails in Chrome/Safari
+const overLimit = "Z".repeat(LIMIT_64_KiB + 1);
+navigator.sendBeacon("https://example.com", overLimit); // Chrome/Safari: false, Firefox: true
+```
+
 ### Sending analytics at the end of a session
 
 Websites often want to send analytics or diagnostics to the server when the user has finished with the page.
