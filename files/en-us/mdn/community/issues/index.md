@@ -91,7 +91,7 @@ These are the general steps for working on an issue:
    > [!NOTE]
    > An issue with the `needs triage` label indicates that the MDN Web Docs core team has not reviewed the issue yet, and you shouldn't begin work on it.
 
-2. **Assign the issue to yourself:** First make sure that the issue is not assigned to a specific user, and that it doesn't have a linked [Pull Request](/en-US/docs/MDN/Community/Pull_requests) indicating that someone is already working on it.
+2. **Claim the issue:** First, make sure that the issue is not assigned to someone else (check the "Assignees" field), and that there is no linked [Pull Request](/en-US/docs/MDN/Community/Pull_requests). A linked pull request usually means that someone is already working on the issue.
 
    To self-assign the issue, [open a pull request](/en-US/docs/MDN/Community/Pull_requests#open_a_pull_request) to fix it, and in the PR description include the text `Fixes #<issue_number>` (or `Related to #<issue_number>` if the PR only partially fixes the issue).
    This creates a cross-reference in the issue pointing to the PR so that anyone viewing the issue can see that someone is working on it.
