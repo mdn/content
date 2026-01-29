@@ -13,6 +13,9 @@ every element in the calling array.
 
 {{InteractiveExample("JavaScript Demo: Array.prototype.map()")}}
 
+> **Note:**  
+> `Array.prototype.map()` does not modify the original array. It always returns a new array.
+
 ```js interactive-example
 const array = [1, 4, 9, 16];
 
