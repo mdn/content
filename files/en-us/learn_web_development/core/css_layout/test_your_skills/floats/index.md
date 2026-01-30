@@ -158,7 +158,7 @@ You need to flow the item left, then add `clear: left` to the class for the seco
 
 In this task, we have a floated element. The box wrapping the float and text is displaying behind the float.
 
-To complete the task, use the most up-to-date method available to cause the box background to extend to below the float.
+To complete this task, use the most up-to-date method to ensure the background box contains the floated element and extends underneath it.
 
 ```html live-sample___float3-start live-sample___float3-finish
 <div class="box">
