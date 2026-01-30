@@ -156,7 +156,7 @@ You need to flow the item left, then add `clear: left` to the class for the seco
 
 ## Task 3
 
-In this task, we have a floated element. The box wrapping the float and text is displaying behind the float.
+In this task, we have a floated element. The background box that wraps the float and the text does not currently extend underneath the floated element.
 
 To complete this task, use the most up-to-date method to ensure the background box contains the floated element and extends underneath it.
 
