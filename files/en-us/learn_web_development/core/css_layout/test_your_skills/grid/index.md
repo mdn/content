@@ -164,7 +164,6 @@ Another valid solution is to use `z-index`:
 
 In this task, the grid contains four direct children. They are currently auto-placed in the grid.
 
-
 ```html live-sample___grid3-start live-sample___grid3-finish
 <div class="grid">
   <div class="one">One</div>
