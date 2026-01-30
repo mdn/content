@@ -50,6 +50,8 @@ If the user tries to click "Click here for a free kitten!", they will actually b
 
 ## Clickjacking defenses
 
+### Controlling embedding
+
 Clickjacking depends on the target website being embedded in the attacker's decoy site inside an `<iframe>`. The main defense is to disallow or at least control this capability.
 
 There are two relevant tools here:
@@ -60,6 +62,8 @@ There are two relevant tools here:
 The `frame-ancestors` directive is a replacement for `X-Frame-Options`. By setting `X-Frame-Options` as well as `frame-ancestors`, you can prevent embedding in browsers that don't support `frame-ancestors`. As [browser support for `frame-ancestors` is very good](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors#browser_compatibility), this is not a major concern.
 
 If `frame-ancestors` and `X-Frame-Options` are both set, then browsers that support `frame-ancestors` will ignore `X-Frame-Options`.
+
+### Controlling cookie transmission
 
 As an additional partial mitigation, sites should set the [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) cookie attribute for session cookies to `Lax` or `Strict`. Requests from embedded contexts such as `<iframe>` elements that are not {{glossary("Site", "same-site")}} with the top-level document will not include these cookies, and the server will therefore not treat the request as coming from a logged-in user.
 
