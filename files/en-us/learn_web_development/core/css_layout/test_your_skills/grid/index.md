@@ -69,7 +69,7 @@ Create a grid using `display: grid` with three columns using `grid-template-colu
 
 ## Task 2
 
-In this task, we already have a grid defined. We want you to edit the CSS rules for the two child elements, causing them to span over several grid tracks each. The second item should overlay the first.
+In this task, we already have a grid defined. We want you to edit the CSS rules for the two child elements so that each one spans several grid tracks. The second item should overlay the first.
 
 **Bonus question:** Can you now cause the first item to display on top without changing the order of items in the source?
 
