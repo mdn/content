@@ -93,7 +93,7 @@ A few other behaviors of the `CSSxRef` macro worth noting include:
 
   - `fit-content()` function (`Web/CSS/Reference/Values/fit-content_function`) vs. `fit-content` keyword (`Web/CSS/Reference/Values/fit-content`)
 
-    **Macro**: `\{{CSSxRef("fit-content_function", "fit-content()")}}` vs. `\{{CSSxRef("fit-content")}}` (this is currently an exception where you need to provide the second parameter to get the correct link text for the function.)
+    **Macro**: `\{{CSSxRef("fit-content()")}}` vs. `\{{CSSxRef("fit-content")}}`
 
   - `flex` property (`Web/CSS/Reference/Properties/flex`) vs. `<flex>` data type (`Web/CSS/Reference/Values/flex_value`)
 
