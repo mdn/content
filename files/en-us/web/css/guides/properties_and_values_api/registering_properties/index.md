@@ -38,8 +38,8 @@ The [CSS properties and values API](/en-US/docs/Web/CSS/Guides/Properties_and_va
 
 Registered properties are validated when they're computed rather than when they are parsed. This means that:
 
- Invalid values won't appear as invalid when inspecting the element's properties.
- An invalid property included after a valid one won't fall back to the valid property. An invalid property will, however, fall back to its registered default.
+- Invalid values won't appear as invalid when inspecting the element's properties.
+- An invalid property included after a valid one won't fall back to the valid property. An invalid property will, however, fall back to its registered default.
 
 By default, all CSS variables inherit. When you change a non-registered variable value, the browser re-parses the DOM to check which elements in the DOM tree are affected. With registered properties, setting the value `inherits: false;` tells the browser that, if the value changes, the children don't need to be reparsed, narrowing the scope of style recalculation.
 
