@@ -15,7 +15,7 @@ The aim of this skill test is to help you assess whether you understand [positio
 
 ## Task 1
 
-To complete this task, position the item with a class of `target` to the top and right of the container, which has the 5px grey border.
+To complete this task, position the element with the `target` class at the top-right corner of the container that has a `5px` gray border.
 
 **Bonus question:** Can you change the target so it displays underneath the text?
 
