@@ -55,6 +55,7 @@ Binaryen
 Birtles
 bitsies
 Bitsov
+Bitwarden
 Bixa
 Blackman
 Blackmoon
