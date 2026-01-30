@@ -631,7 +631,7 @@ M3 MacBooks and later, iPhone 15 Pro, and iPhone 16 and later. Many mobile and d
 
 The MPEG-4 specification suite's **Advanced Video Coding** (**AVC**) standard is specified by the identical ITU H.264 specification and the MPEG-4 Part 10 specification. It's a motion compensation based codec that is widely used today for all sorts of media, including broadcast television, {{Glossary("RTP")}} videoconferencing, and as the video codec for Blu-Ray discs.
 
-AVC is highly flexible, with a number of profiles with varying capabilities; for example, the Constrained Baseline Profile is designed for use in videoconferencing and mobile scenarios, using less bandwidth than the Main Profile (which is used for standard definition digital TV in some regions) or the High Profile (used for Blu-Ray Disc video). Most of the profiles use 8-bit color components and 4:2:0 chroma subsampling; The High 10 Profile adds support for 10-bit color, and advanced forms of High 10 add 4:2:2 and 4:4:4 chroma subsampling.
+AVC is highly flexible, with a number of profiles with varying capabilities; for example, the Constrained Baseline Profile is designed for use in videoconferencing and mobile scenarios, using less bandwidth than the Main Profile (which is used for standard definition digital TV in some regions) or the High Profile (used for Blu-Ray Disc video). Most of the profiles use 8-bit color components and 4:2:0 chroma subsampling. The High 10 Profile adds support for 10-bit color, and advanced forms of High 10 add 4:2:2 and 4:4:4 chroma subsampling.
 
 AVC also has special features such as support for multiple views of the same scene (Multiview Video Coding), which allows, among other things, the production of stereoscopic video.
 
