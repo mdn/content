@@ -33,11 +33,11 @@ sendBeacon(url, data)
 - `data` {{Optional_inline}}
   - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}},
     a string literal or object, a {{domxref("FormData")}} or a {{domxref("URLSearchParams")}}
-    object containing the data to send.
+    object containing the data to send. The total size of queued data is limited to 64 KiB (65,536 bytes).
 
 ### Return value
 
-Returns `true` if the {{glossary("user agent")}} successfully queued the `data` for transfer. Otherwise, it returns `false`, for example if the payload exceeds the 64 KiB limit defined in the [Fetch specification](https://fetch.spec.whatwg.org/#http-network-or-cache-fetch).
+Returns `true` if the {{glossary("user agent")}} successfully queued the `data` for transfer. Otherwise, it returns `false`.
 
 ## Description
 
