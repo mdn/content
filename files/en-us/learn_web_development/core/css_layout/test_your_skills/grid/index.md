@@ -239,7 +239,7 @@ Each part of the layout needs a name using the `grid-area` property and `grid-te
 
 ## Task 4
 
-In this task, you will need to use both grid layout and flexbox to recreate the finished layout. The gap between the column and row tracks should be 10px. You do not need to make any changes to the HTML in order to achieve this.
+In this task, you will need to use both grid layout and flexbox to recreate the finished layout. The gap between the column and row tracks should be `10px`. You do not need to make any changes to the HTML in order to achieve this.
 
 ```html live-sample___grid4-start live-sample___grid4-finish
 <div class="container">
