@@ -209,7 +209,7 @@ The starting point of the task looks like this:
 
 {{EmbedLiveSample("float3-start", "", "220px")}}
 
-The finished task should look like this:
+When you complete the task, the background box and floated element should look like this:
 
 {{EmbedLiveSample("float3-finish", "", "220px")}}
 
