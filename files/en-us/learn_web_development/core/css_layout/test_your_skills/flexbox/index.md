@@ -21,13 +21,15 @@ Watch the embedded scrim, and complete all the tasks on the timeline (the little
 
 <mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~03a" scrimtitle="Flexbox alignment challenges" survey="true"></scrim-inline>
 
-## Task 1
+## Flexbox 1
 
 In this task, we use some list items to create the navigation for a site. To complete the task, use flexbox to lay out the list items as a row, with an equal amount of space between each item.
 
-Your final result should look like this finished rendering:
+The starting point of the task looks like this:
 
-{{EmbedLiveSample("flexbox1-finish", "", "100px")}}
+{{EmbedLiveSample("flexbox1-start", "", "240px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___flexbox1-start live-sample___flexbox1-finish
 <nav>
@@ -66,9 +68,9 @@ nav ul {
 }
 ```
 
-This is the starting state of the task:
+When the task is complete, the items should look like this:
 
-{{EmbedLiveSample("flexbox1-start", "", "240px")}}
+{{EmbedLiveSample("flexbox1-finish", "", "100px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -84,15 +86,17 @@ nav ul {
 
 </details>
 
-## Task 2
+## Flexbox 2
 
-In this task, the list items are all different sizes, but we want them to be displayed as three equal-sized columns, no matter what content is in each item.
-
-Your final result should look like the following rendering:
-
-{{EmbedLiveSample("flexbox2-finish", "", "300px")}}
+In this task, the list items are all different sizes, but we want them to be displayed as three equal-sized columns, no matter the content in each item.
 
 **Bonus question:** Can you now make the first item twice the size of the other items?
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("flexbox2-start", "", "240px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___flexbox2-start live-sample___flexbox2-finish
 <ul>
@@ -134,9 +138,9 @@ li {
 }
 ```
 
-This is the starting state of the task:
+When the task is complete, the items should look like this:
 
-{{EmbedLiveSample("flexbox2-start", "", "240px")}}
+{{EmbedLiveSample("flexbox2-finish", "", "380px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -155,7 +159,7 @@ li {
 
 For the bonus question, add a selector that targets the first element and sets `flex: 2;` (or `flex: 2 0 0;` or `flex-grow: 2`):
 
-```css
+```css live-sample___flexbox2-finish
 li:first-child {
   flex: 2;
 }
@@ -163,11 +167,15 @@ li:first-child {
 
 </details>
 
-## Task 3
+## Flexbox 3
 
-In this task, we'd like you to arrange the list items into rows as shown in the finished rendering below:
+In this task, we'd like you to arrange the list items into rows.
 
-{{EmbedLiveSample("flexbox3-finish", "", "260px")}}
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("flexbox3-start", "", "260px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___flexbox3-start live-sample___flexbox3-finish
 <ul>
@@ -213,9 +221,9 @@ li {
 }
 ```
 
-This is the starting state of the task:
+When the task is complete, the items should look like this:
 
-{{EmbedLiveSample("flexbox3-start", "", "260px")}}
+{{EmbedLiveSample("flexbox3-finish", "", "260px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
