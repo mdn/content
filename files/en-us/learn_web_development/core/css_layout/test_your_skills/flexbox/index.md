@@ -66,7 +66,7 @@ The starting point of the task looks like this:
 
 {{EmbedLiveSample("flexbox1-start", "", "240px")}}
 
-The finished task should look like this:
+When the task is complete, the items should look like this:
 
 {{EmbedLiveSample("flexbox1-finish", "", "100px")}}
 
