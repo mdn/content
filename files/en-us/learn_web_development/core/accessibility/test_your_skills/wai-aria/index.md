@@ -19,6 +19,12 @@ Our first ARIA task includes a section of non-semantic markup, which is visually
 
 To complete the task, add some WAI-ARIA semantics to make screen readers recognize the `<div>` elements as an unordered list.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("aria-1", "100%", 250) }}
+
+Here's the underlying code for this starting point:
+
 <!-- Code shared across examples -->
 
 ```css hidden live-sample___aria-1 live-sample___aria-2 live-sample___aria-3
@@ -71,9 +77,7 @@ div > div::before {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("aria-1", "100%", 250) }}
+We've not shown the finished content rendered, as it doesn't look any different to the starting state.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -103,15 +107,19 @@ To complete the task:
 1. Add an attribute to allow the search form to be called out as a separate landmark on the page by screen readers, to make it easily findable.
 2. Give the search input a suitable label, without explicitly adding a visible text label to the DOM.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("aria-2", "100%", 100) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___aria-2
 <form>
   <input type="search" name="search" />
 </form>
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("aria-2", "100%", 100) }}
+We've not shown the finished content rendered, as it doesn't look significantly different to the starting state.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -135,6 +143,12 @@ For this final WAI-ARIA task, we return to an example we previously saw in the [
 As before, we have an app that presents a list of animal names. Clicking one of the animal names causes a further description of that animal to appear in a box below the list. Here, we are starting with a mouse- and keyboard-accessible version.
 
 The problem we have now is that when the DOM changes to show a new description, screen readers cannot see what has changed. Can you update it so that description changes are announced by the screen reader?
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("aria-3", "100%", 400) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___aria-3
 <section class="preview">
@@ -210,9 +224,7 @@ function handleSelection(e) {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("aria-3", "100%", 400) }}
+We've not shown the finished content rendered, as it doesn't look any different to the starting state.
 
 <details>
 <summary>Click here to show the solution</summary>

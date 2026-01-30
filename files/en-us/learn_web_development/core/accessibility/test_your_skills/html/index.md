@@ -41,6 +41,12 @@ body {
 
 <!-- Example-specific code -->
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("html-ally-1", "100%", 400) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___html-ally-1
 <font size="7">Need help?</font> <br /><br />
 If you have any problems with our products, our support center can offer you all
@@ -78,9 +84,7 @@ answer you're looking for.
 }
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("html-ally-1", "100%", 400) }}
+We've not shown the finished content rendered, as it doesn't look significantly different to the starting state.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -135,6 +139,12 @@ To complete the task:
 2. Assume that these inputs will be part of a larger form, and wrap them in an element that associates them all together as a single related group.
 3. Give the group a description/title that summarizes all of the information as personal data.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("html-ally-2", "100%", 200) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___html-ally-2
 <form>
   <ul>
@@ -167,11 +177,7 @@ li {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("html-ally-2", "100%", 200) }}
-
-The finished task should look like this:
+The finished form should look like this:
 
 {{ EmbedLiveSample("html-ally-2-finish", "100%", 220) }}
 
@@ -214,6 +220,12 @@ In this task you are required to turn all the information links in the paragraph
 
 To complete the task, update the links appropriately based on the above descriptions.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("html-ally-3", "100%", 140) }}
+
+Here's the underlying code for this starting point:
+
 ```html-nolint live-sample___html-ally-3
 <p>
   For more information about our activities, check out our fundraising page
@@ -228,9 +240,7 @@ To complete the task, update the links appropriately based on the above descript
 > [!NOTE]
 > The links in the starting code have the `target="_blank"` attribute set on them, so that when you click on them, they try to open the linked pages in a new tab rather than the same tab. This is not strictly best practice, but we've done it here so that the pages don't open in the MDN Playground output `<iframe>`, getting rid of your example code in the process!
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("html-ally-3", "100%", 140) }}
+We've not shown the finished content rendered, as it would give the answers away.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -261,6 +271,12 @@ In our final HTML accessibility task, you are given an image gallery, which has 
 - You could take the header image further and implement it using CSS for arguably better accessibility. How would you create such a solution?
 
 Update the code to fix the problems described above.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("html-ally-4", "100%", 400) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___html-ally-4
 <header>
@@ -298,9 +314,7 @@ header {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("html-ally-4", "100%", 400) }}
+We've not shown the finished content rendered, as it doesn't look any different to the starting state.
 
 <details>
 <summary>Click here to show the solution</summary>

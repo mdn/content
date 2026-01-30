@@ -41,6 +41,12 @@ body {
 
 <!-- Example-specific code -->
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("css-js-ally-1", "100%", 200) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___css-js-ally-1 live-sample___css-js-ally-1-finish
 <ul>
   <li><a href="">Animals</a></li>
@@ -64,11 +70,7 @@ a {
 /* Add your code here */
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("css-js-ally-1", "100%", 200) }}
-
-The finished task should look something like this:
+When the task is complete, the links should look something like this:
 
 {{ EmbedLiveSample("css-js-ally-1-finish", "100%", 200) }}
 
@@ -123,6 +125,12 @@ To complete the task:
 1. Think about what the problems are, and which guidelines state the acceptable values for color and sizing.
 2. Update the CSS with new values for the color and font-size to fix the problem.
 3. Test the code to make sure the problem is now fixed. Explain what tools or methods you used to select the new values and test the code.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("css-js-ally-2", "100%", 240) }}
+
+Here's the underlying code for this starting point:
 
 <!-- spellchecker: disable -->
 
@@ -181,11 +189,7 @@ p {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("css-js-ally-2", "100%", 240) }}
-
-The finished task should look like this:
+The finished content should look like this:
 
 {{ EmbedLiveSample("css-js-ally-2-finish", "100%", 300) }}
 
@@ -257,6 +261,12 @@ In our final accessibility task, you have some JavaScripting to do. We have an a
 
 But it is not very accessible — in its current state you can only operate it with the mouse. We'd like you to add some HTML and JavaScript to make it keyboard accessible too.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("css-js-ally-3", "100%", 400) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___css-js-ally-3
 <section class="preview">
   <div class="animal-list">
@@ -319,9 +329,7 @@ function handleSelection(e) {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("css-js-ally-3", "100%", 400) }}
+We've not shown the finished content rendered, as it doesn't look significantly different to the starting state.
 
 <details>
 <summary>Click here to show the solution</summary>
