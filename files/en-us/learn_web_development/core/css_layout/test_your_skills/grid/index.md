@@ -164,7 +164,6 @@ Another valid solution is to use `z-index`:
 
 In this task, there are four direct children in this grid. The starting point has them displayed using auto-placement.
 
-To complete the task, use the `grid-area` and `grid-template-areas` properties to lay the items out as shown in the finished task rendering below:
 
 ```html live-sample___grid3-start live-sample___grid3-finish
 <div class="grid">
