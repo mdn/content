@@ -17,7 +17,7 @@ The aim of this skill test is to help you assess whether you understand [positio
 
 To complete this task, position the item with a class of `target` to the top and right of the container, which has the 5px grey border.
 
-**Bonus question:** Can you change the target to display underneath the text?
+**Bonus question:** Can you change the target so it displays underneath the text?
 
 ```html live-sample___position1-start live-sample___position1-finish
 <div class="container">
