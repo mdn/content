@@ -81,7 +81,7 @@ The value of `--stop-color` is set to `cornflowerblue` at first, but when you ho
 ## Guides
 
 - [Registering CSS custom properties](/en-US/docs/Web/CSS/Guides/Properties_and_values_API/Registering_properties)
-  - : The usages and benefits of registering CSS custom properties with the `@property` at-rule and its descriptors.
+  - : Covers how to register CSS custom properties with the `@property` at-rule and explains the benefits of doing so.
 - [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
   - : Explains how to register custom properties in CSS and JavaScript, with hints on handling undefined and invalid values, fallbacks, and inheritance.
 - [CSS Houdini](/en-US/docs/Web/CSS/Guides/Properties_and_values_API/Houdini)

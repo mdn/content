@@ -9,7 +9,7 @@ sidebar: cssref
 The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is used to explicitly define [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*), allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not.
 
 > [!NOTE]
-> The JavaScript {{domxref('CSS.registerProperty_static', 'registerProperty()')}} method is equivalent to `@property` at-rule.
+> The JavaScript {{domxref('CSS.registerProperty_static', 'registerProperty()')}} method is equivalent to the `@property` at-rule.
 
 ## Syntax
 
@@ -47,7 +47,7 @@ The custom property name is a {{cssxref("dashed-ident")}} that starts with `--` 
 
 The `@property` at-rule is part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) set of APIs. It allows developers to explicitly define [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*), allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not.
 
-The `@property` rule represents a custom property registration directly in a stylesheet without having to run any JavaScript. Valid `@property` rules result in a registered custom property, which is similar to calling {{domxref('CSS.registerProperty_static', 'registerProperty()')}} with equivalent parameters.
+The `@property` rule enables custom property registration directly inside stylesheets without requiring any JavaScript. Valid `@property` rules produce registered custom properties, producing the same effect as calling {{domxref('CSS.registerProperty_static', 'registerProperty()')}} with equivalent parameters.
 
 The following conditions must be met for the `@property` rule to be valid:
 
@@ -61,7 +61,7 @@ The following conditions must be met for the `@property` rule to be valid:
   For example, `10px` is computationally independent—it doesn't change when converted to a computed value. `2in` is also valid, because `1in` is always equivalent to `96px`. However, `3em` is not valid, because the value of an `em` is dependent on the parent's {{cssxref("font-size")}}.
 - Unknown descriptors are invalid and ignored, but do not invalidate the `@property` rule.
 
-If multiple valid `@property` rules are defined using the same name, the last one in stylesheet order "wins". If custom property registration with the same name is registered using the CSS `@property` and the JavaScript `CSS.registerProperty()`, the JavaScript registration wins.
+If multiple valid `@property` rules are defined using the same name, the last one in stylesheet order "wins". If custom properties are registered with the same name using `@property` in CSS and `CSS.registerProperty()` in JavaScript, the JavaScript registration wins.
 
 ## Formal syntax
 
@@ -71,7 +71,7 @@ If multiple valid `@property` rules are defined using the same name, the last on
 
 ### Basic example
 
-In this example, we use the `@property` to declare two custom properties, and then use those properties in our style declarations.
+In this example, we use the `@property` at-rule to declare two custom properties, and then use those properties in our style declarations.
 
 #### HTML
 
