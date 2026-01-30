@@ -13,7 +13,7 @@ The aim of this skill test is to help you assess whether you understand differen
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Values and units 1
 
 In this task, the first list item has been given a background color using a hex color code. Complete the CSS using the same color in different formats, plus a final list item where you should make the background semi-opaque.
 
@@ -22,6 +22,12 @@ In this task, the first list item has been given a background color using a hex 
 - The fourth should use RGB color but with the alpha channel set to `0.6`.
 
 You [can convert the hex color at convertingcolors.com](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("values1-start", "", "300px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___values1-start live-sample___values1-finish
 <ul>
@@ -54,11 +60,7 @@ li {
 /* Add styles here */
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("values1-start", "", "300px")}}
-
-The finished task should look like this:
+The finished styling should look like this:
 
 {{EmbedLiveSample("values1-finish", "", "300px")}}
 
@@ -83,7 +85,7 @@ By using [a color conversion tool](https://convertingcolors.com/hex-color-86DEFA
 
 </details>
 
-## Task 2
+## Values and units 2
 
 In this task, we want you to set the font size of various items of text:
 
@@ -91,6 +93,12 @@ In this task, we want you to set the font size of various items of text:
 - The `<h2>` element should be `2em`.
 - All `<p>` elements should be `16px`.
 - A `<p>` element that is directly after an `<h1>` should be `120%`.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("values2-start", "", "420px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___values2-start live-sample___values2-finish
 <h1>Level 1 heading</h1>
@@ -128,13 +136,11 @@ h1 + p {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("values2-start", "", "420px")}}
-
-The finished task should look like this:
+The finished styling should look like this:
 
 {{EmbedLiveSample("values2-finish", "", "420px")}}
+
+Here's the underlying code for this starting point:
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -161,9 +167,15 @@ h1 + p {
 
 </details>
 
-## Task 3
+## Values and units 3
 
 To complete the task, update the CSS to move the background image so that it is centered horizontally and is `20%` from the top of the box.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("values3-start", "", "400px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___values3-start live-sample___values3-finish
 <div class="box"></div>
@@ -181,11 +193,7 @@ To complete the task, update the CSS to move the background image so that it is 
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("values3-start", "", "400px")}}
-
-The finished task should look like this:
+The finished styling should look like this:
 
 {{EmbedLiveSample("values3-finish", "", "400px")}}
 

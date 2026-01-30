@@ -13,7 +13,7 @@ The aim of this skill test is to help you assess whether you understand [overflo
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Overflow 1
 
 In this task, the content is overflowing the box because it has a fixed height.
 
@@ -21,6 +21,12 @@ To complete the task:
 
 1. Update the CSS so that the height is maintained and the box will have scrollbars only if there is enough text to cause an overflow.
 2. Test your solution by removing some of the text from the HTML and checking that if there is only a small amount of text that does not overflow, no scrollbar appears.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("overflow1-start", "", "450px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___overflow1-start live-sample___overflow1-finish
 <div class="box">
@@ -50,11 +56,7 @@ body {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("overflow1-start", "", "450px")}}
-
-The finished task should look like this:
+The finished styling should look like this:
 
 {{EmbedLiveSample("overflow1-finish", "", "300px")}}
 
@@ -71,9 +73,15 @@ You should add `overflow: auto` so that the box will only gain scrollbars when t
 
 </details>
 
-## Task 2
+## Overflow 2
 
 In this task, there is an image in the box that is bigger than the dimensions of the box so that it overflows visibly. Update the CSS so that any image outside of the box is hidden.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("overflow2-start", "", "260px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___overflow2-start live-sample___overflow2-finish
 <div class="box">
@@ -94,11 +102,7 @@ body {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("overflow2-start", "", "260px")}}
-
-The finished task should look like this:
+The finished styling should look like this:
 
 {{EmbedLiveSample("overflow2-finish", "", "260px")}}
 

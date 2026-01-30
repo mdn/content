@@ -21,9 +21,15 @@ Watch the embedded scrim, and complete the tasks on the timeline (the little gho
 
 <mdn-scrim-inline url="https://scrimba.com/learn-html-and-css-c0p/~01s" scrimtitle="Margin shorthand" survey="true"></scrim-inline>
 
-## Task 1
+## Box model 1
 
 In this task, there are two boxes below, one is using the standard box model, the other the alternate box model. We'd like you to change the width of the second box by adding declarations to the `.alternate` class, so that it matches the visual width of the first box.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("box-model1-start", "", "540px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___box-model1-start live-sample___box-model1-finish
 <div class="box">I use the standard box model.</div>
@@ -48,11 +54,7 @@ body {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("box-model1-start", "", "540px")}}
-
-The finished task should look like this:
+The finished styling should look like this:
 
 {{EmbedLiveSample("box-model1-finish", "", "540px")}}
 
@@ -70,7 +72,7 @@ You will need to increase the width of the second block to add the size of the p
 
 </details>
 
-## Task 2
+## Box model 2
 
 To complete this task, add the following features to the provided box:
 
@@ -80,6 +82,12 @@ To complete this task, add the following features to the provided box:
 - A bottom margin of `40px`.
 - A left margin of `2em`.
 - Padding on all sides of `1em`.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("box-model2-start", "100%", "100px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___box-model2-start live-sample___box-model2-finish
 <div class="box">I use the standard box model.</div>
@@ -94,11 +102,7 @@ body {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("box-model2-start", "100%", "100px")}}
-
-The finished task should look like this:
+The finished styling should look like this:
 
 {{EmbedLiveSample("box-model2-finish", "100%", "140px")}}
 
@@ -118,11 +122,17 @@ You might choose to use the longhand properties ({{cssxref("margin-top")}}, {{cs
 
 </details>
 
-## Task 3
+## Box model 3
 
 In this task, the inline element has a margin, padding, and border. However, the lines above and below are overlapping it.
 
 To complete this task, update the CSS to cause the size of the margin, padding, and border to be respected by the other lines, while still keeping the element inline.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("box-model3-start", "100%", "220px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___box-model3-start live-sample___box-model3-finish
 <div class="box">
@@ -152,11 +162,7 @@ body {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("box-model3-start", "100%", "220px")}}
-
-The finished task should look like this:
+The finished styling should look like this:
 
 {{EmbedLiveSample("box-model3-finish", "100%", "260px")}}
 

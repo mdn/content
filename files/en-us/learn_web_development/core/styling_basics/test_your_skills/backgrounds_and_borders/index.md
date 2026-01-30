@@ -13,7 +13,7 @@ The aim of this skill test is to help you assess whether you understand [backgro
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Backgrounds and borders 1
 
 In this task, we want you to add a background, border, and some basic styles to a page header.
 
@@ -26,6 +26,12 @@ To complete the task:
    ```plain
    https://mdn.github.io/shared-assets/images/examples/balloons.jpg
    ```
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("backgrounds1-start", "", "160px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___backgrounds1-start live-sample___backgrounds1-finish
 <div class="box">
@@ -56,11 +62,7 @@ h2 {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("backgrounds1-start", "", "160px")}}
-
-The finished task should look like this:
+The finished styling should look like this:
 
 {{EmbedLiveSample("backgrounds1-finish", "", "160px")}}
 
@@ -85,7 +87,7 @@ h2 {
 
 </details>
 
-## Task 2
+## Backgrounds and borders 2
 
 In this task, we want you to add background images, a border, and some other styling to a decorative box.
 
@@ -100,6 +102,12 @@ To complete the task:
    ```
 
 3. Make sure that the heading text does not overlay the image, and that it is centered — you will need to use techniques learned in previous lessons to achieve this.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("backgrounds2-start", "", "200px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___backgrounds2-start live-sample___backgrounds2-finish
 <div class="box">
@@ -129,11 +137,7 @@ h2 {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("backgrounds2-start", "", "200px")}}
-
-The finished task should look like this:
+The finished styling should look like this:
 
 {{EmbedLiveSample("backgrounds2-finish", "", "220px")}}
 

@@ -13,7 +13,7 @@ The aim of this skill test is to help you assess whether you understand the diff
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Sizing 1
 
 In this task, you have two boxes.
 
@@ -22,6 +22,12 @@ To complete the task:
 1. Size the first box so that the height will be at least `100px`, even if there is less content that would cause it to grow to that height. The content should not overflow if it doesn't fit into the box.
 2. To test this, remove the content from the HTML to make sure you still get a `100px` tall box even with no content.
 3. Size the second box so that it is fixed at `100px` tall. In this case, the content should overflow.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("sizing1-start", "", "480px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___sizing1-start live-sample___sizing1-finish
 <div class="box box1">
@@ -62,11 +68,7 @@ body {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("sizing1-start", "", "480px")}}
-
-The finished task should look like this:
+The finished styling should look like this:
 
 {{EmbedLiveSample("sizing1-finish", "", "460px")}}
 
@@ -87,7 +89,7 @@ There are two boxes. The first one should be given a `min-height` so it expands 
 
 </details>
 
-## Task 2
+## Sizing 2
 
 In this task, you have a box that contains another box.
 
@@ -95,6 +97,12 @@ To complete the task:
 
 1. Make the inner box width `60%` of the width of the outer box. The {{cssxref("box-sizing")}} property is set to `border-box`, which means that the total width includes any `padding` and `border`.
 2. Give the inner box `10%` padding on all sides.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("sizing2-start", "", "100px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___sizing2-start live-sample___sizing2-finish
 <div class="box">
@@ -128,11 +136,7 @@ body {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("sizing2-start", "", "100px")}}
-
-The finished task should look like this:
+The finished styling should look like this:
 
 {{EmbedLiveSample("sizing2-finish", "", "220px")}}
 
@@ -151,11 +155,17 @@ All elements already have `box-sizing: border-box` set to save you from worrying
 
 </details>
 
-## Task 3
+## Sizing 3
 
 In this task, you have two images in boxes. One image is smaller than the box, while the other is larger, causing it to break out of the box.
 
 To complete the task, imagine that the box is responsive and therefore could grow and shrink. Apply a declaration to the images so that the large image shrinks down into the box, but the small image does not stretch.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("sizing3-start", "", "700px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___sizing3-start live-sample___sizing3-finish
 <div class="box">
@@ -187,11 +197,7 @@ img {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("sizing3-start", "", "700px")}}
-
-The finished task should look like this:
+The finished styling should look like this:
 
 {{EmbedLiveSample("sizing3-finish", "", "720px")}}
 
