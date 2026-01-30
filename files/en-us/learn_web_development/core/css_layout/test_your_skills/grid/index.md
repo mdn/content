@@ -162,7 +162,7 @@ Another valid solution is to use `z-index`:
 
 ## Task 3
 
-In this task, there are four direct children in this grid. The starting point has them displayed using auto-placement.
+In this task, the grid contains four direct children. They are currently auto-placed in the grid.
 
 
 ```html live-sample___grid3-start live-sample___grid3-finish
