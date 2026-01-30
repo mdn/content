@@ -86,7 +86,7 @@ nav ul {
 
 ## Task 2
 
-In this task, the list items are all different sizes, but we want them to be displayed as three equal-sized columns, no matter what content is in each item.
+In this task, the list items are all different sizes, but we want them to be displayed as three equal-sized columns, no matter the content in each item.
 
 **Bonus question:** Can you now make the first item twice the size of the other items?
 
