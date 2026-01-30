@@ -380,7 +380,6 @@ If you aren't sure which features you want, or your favorite editor lacks those 
 
 If you like _lots_ of features and your editor is slowing down because of all your plugins, try using an [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (integrated development environment). An IDE provides many tools in one interface and it's a bit daunting for beginners, but always an option if your text editor feels too limited. Here are some popular IDEs:
 
-- [Aptana Studio](https://www.axway.com/en/aptana)
 - [Eclipse](https://www.eclipse.org/)
 - [NetBeans IDE](https://netbeans.apache.org/)
 - [Visual Studio](https://visualstudio.microsoft.com/)

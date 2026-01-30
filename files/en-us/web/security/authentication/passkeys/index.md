@@ -119,7 +119,7 @@ The WebAuthn specification distinguishes between _discoverable_ and _non-discove
 
 The advantage of using non-discoverable credentials is that an authenticator with limited storage can support a potentially unlimited number of accounts, because the key material for each account is not stored in the authenticator.
 
-The advantage of using discoverable credentials is that they enable a browser to implement [autofill](/en-US/docs/Web/Security/Authentication/Passkeys#autofill_ui) with public key credentials, which makes it much easier for users to sign in, especially when they might have both public key credentials and passwords for a given site.
+The advantage of using discoverable credentials is that they enable a browser to implement [autofill](#autofill_ui) with public key credentials, which makes it much easier for users to sign in, especially when they might have both public key credentials and passwords for a given site.
 
 **For this reason, passkeys must always be discoverable credentials, so RPs implementing passkey-based authentication should always make them discoverable**.
 
