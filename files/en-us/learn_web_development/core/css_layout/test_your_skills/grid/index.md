@@ -198,7 +198,7 @@ The starting point of the task looks like this:
 
 {{EmbedLiveSample("grid3-start", "", "200px")}}
 
-The finished task should look like this:
+To complete this task, use the `grid-area` and `grid-template-areas` properties to lay out the items as shown here:
 
 {{EmbedLiveSample("grid3-finish", "", "200px")}}
 
