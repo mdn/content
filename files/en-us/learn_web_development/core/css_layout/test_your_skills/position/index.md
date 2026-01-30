@@ -70,7 +70,7 @@ The starting point of the task looks like this:
 
 {{EmbedLiveSample("position1-start", "", "400px")}}
 
-The finished task should look like this:
+When you complete this task, the placement of the target should look like this:
 
 {{EmbedLiveSample("position1-finish", "", "250px")}}
 
