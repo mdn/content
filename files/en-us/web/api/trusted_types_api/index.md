@@ -183,29 +183,60 @@ They can be passed trusted types (`TrustedHTML`, `TrustedScript`, or `TrustedScr
 
 ### Indirect injection sinks
 
-Indirect injection sinks are those where untrusted strings are injected into the DOM via an intermediate mechanism that doesn't trigger script execution, and then evaluated.
-These kinds of sinks bypass the trusted type checks that have been added to the direct injection sinks.
+_Indirect injection sinks_ are sinks where untrusted strings are injected into the DOM via an intermediate mechanism that doesn't accept or enforce trusted types.
+These differ from the "direct" [Injection sink interfaces](#injection_sink_interfaces) listed in the previous section, which run trusted type checks on injected strings when they are called.
 
-The following code shows how this might work (note that there are many other mechanisms for indirect injection).
+For example, the following code sets script element source indirectly.
 First a text node is created using a string provided by a user, and then a {{htmlelement("script")}} element is constructed and the text node is appended as a child element.
-Next the script element is added to the DOM as a child of the {{htmlelement("body")}} element, potentially allowing any scripts defined in the original string to be run.
+Next the script element is added to the document as a child of the {{htmlelement("body")}} element — at this point scripts defined in the original string may be executed.
 
 ```js
 // Create a text node
-const unstrustedString = "/* Potentially malicious JavaScript code */";
-const textNode = document.createTextNode(unstrustedString);
+const untrustedString =
+  "console.log('A potentially malicious script from an untrusted source!');";
+const textNode = document.createTextNode(untrustedString);
 
-// Create a script element and add the text node
+// Create a script element and append the text node
 const script = document.createElement("script");
 script.appendChild(textNode);
+
+// Add the script into the document, where it can run
 document.body.appendChild(script);
 ```
 
-Because a text node won't always used in contexts where its text is executable, trusted type checking isn't performed when the untrusted string is used to create the node.
+When the text node is created there is no reason for the browser to assume it is intended to be used as a trusted type source, so trusted types are serialized to string, and are not enforced.
 
-Instead, browsers run the trusted type checks when potentially untrustworthy code is about to be executed.
-In the example above, this is when `document.body.appendChild(script)` is called to add the script element to the DOM.
-This will cause an exception if the text node was constructed with a string rather than an appropriate trusted type.
+Instead, browsers run the checks when the script element becomes executable — i.e., in this example, when `document.body.appendChild(script)` is called to add the script element to the document.
+
+The browser will first check if the string used as the script content is trusted.
+Whether the string can be trusted depends on how it was set as the {{htmlelement("script")}} source.
+
+<!-- List below derived from https://wpt.fyi/results/trusted-types/script-enforcement-001.html?label=experimental&label=master&aligned -->
+
+The source string is trusted if the script was modified using the following APIs:
+
+- Script source set via {{domxref("TrustedScript")}} sink on {{domxref("HTMLScriptElement.innerText")}}, {{domxref("HTMLScriptElement.textContent")}}, {{domxref("HTMLScriptElement.text")}}
+- Splitting script source via {{domxref("Text.splitText()")}}
+- Normalizing script source via `Element.normalize()`
+
+The source string is not trusted if modified with the following APIs:
+
+- Setting script source via {{domxref("HTMLElement.innerText")}}
+- Setting script source via {{domxref("Node.textContent")}} or {{domxref("Node.nodeValue")}}
+- Script source set via {{domxref("TrustedHTML")}} sink {{domxref("Element.innerHTML")}} or {{domxref("Element.setHTMLUnsafe()")}}
+- Script source cannot be set via {{domxref("Element.setHTML()")}}.
+- Setting script source via {{domxref("CharacterData")}} property {{domxref("CharacterData.data","data")}} and methods {{domxref("CharacterData.appendData()","appendData()")}}, {{domxref("CharacterData.insertData()","insertData()")}}, {{domxref("CharacterData.replaceData()","replaceData()")}}, {{domxref("CharacterData.deleteData()")}}, {{domxref("CharacterData.before()","before()")}}, {{domxref("CharacterData.after()","after()")}}, {{domxref("CharacterData.remove()","remove()")}}, {{domxref("CharacterData.replaceWith()","replaceWith()")}}
+- Setting script source via {{domxref("Node.appendChild()")}}, {{domxref("Node.insertBefore()")}}, {{domxref("Node.replaceChild()")}}, {{domxref("Node.removeChild()")}}
+- Setting script source via {{domxref("Element")}} methods {{domxref("Element.prepend()","prepend()")}}, {{domxref("Element.append()","append()")}}, {{domxref("Element.replaceChildren()","replaceChildren()")}}, {{domxref("Element.moveBefore()","moveBefore()")}}
+- Setting script source via {{domxref("TrustedHTML")}} sink `Node.insertAdjacentHTML()`
+- Setting script source via `Node.insertAdjacentText()`
+- Setting script source via {{domxref("Range.insertNode()")}}
+- Setting script source via {{domxref("Range.deleteContents()")}}
+- Cloning a script via {{domxref("Node.cloneNode()")}}
+- Cloning a script via {{domxref("Range.cloneContents()")}}
+
+If the string is not trusted and trusted types are enforced, the browser will attempt to obtain a `TrustedScript` from a [default policy](#the_default_policy) to use for source instead.
+If a default policy is not defined, or does not return a `TrustedScript`, the operation will throw an exception.
 
 ### Cross-browser support for trusted types
 
