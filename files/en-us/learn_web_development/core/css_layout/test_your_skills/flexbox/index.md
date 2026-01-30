@@ -21,9 +21,15 @@ Watch the embedded scrim, and complete all the tasks on the timeline (the little
 
 <mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~03a" scrimtitle="Flexbox alignment challenges" survey="true"></scrim-inline>
 
-## Task 1
+## Flexbox 1
 
 In this task, we use some list items to create the navigation for a site. To complete the task, use flexbox to lay out the list items as a row, with an equal amount of space between each item.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("flexbox1-start", "", "240px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___flexbox1-start live-sample___flexbox1-finish
 <nav>
@@ -62,10 +68,6 @@ nav ul {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("flexbox1-start", "", "240px")}}
-
 When the task is complete, the items should look like this:
 
 {{EmbedLiveSample("flexbox1-finish", "", "100px")}}
@@ -84,11 +86,17 @@ nav ul {
 
 </details>
 
-## Task 2
+## Flexbox 2
 
 In this task, the list items are all different sizes, but we want them to be displayed as three equal-sized columns, no matter the content in each item.
 
 **Bonus question:** Can you now make the first item twice the size of the other items?
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("flexbox2-start", "", "240px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___flexbox2-start live-sample___flexbox2-finish
 <ul>
@@ -130,10 +138,6 @@ li {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("flexbox2-start", "", "240px")}}
-
 When the task is complete, the items should look like this:
 
 {{EmbedLiveSample("flexbox2-finish", "", "380px")}}
@@ -163,9 +167,15 @@ li:first-child {
 
 </details>
 
-## Task 3
+## Flexbox 3
 
 In this task, we'd like you to arrange the list items into rows.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("flexbox3-start", "", "260px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___flexbox3-start live-sample___flexbox3-finish
 <ul>
@@ -211,11 +221,7 @@ li {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("flexbox3-start", "", "260px")}}
-
-The finished task should look like this:
+When the task is complete, the items should look like this:
 
 {{EmbedLiveSample("flexbox3-finish", "", "260px")}}
 

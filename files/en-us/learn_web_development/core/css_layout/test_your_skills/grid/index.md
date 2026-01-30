@@ -13,9 +13,15 @@ The aim of this skill test is to help you assess whether you understand how a [g
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## CSS grids 1
 
-In this task, we want you to create a grid into which the four child elements will auto-place. The grid should have three columns sharing the available space equally and a 20 pixel gap between the column and row tracks. After that, try adding more child containers inside the parent container with the class of `grid` and see how they behave by default.
+In this task, we want you to create a grid into which the four child elements will be auto-placed. The grid should have three columns that share the available space equally, with a `20px` gap between the column and row tracks. After that, try adding more child elements inside the parent container with the `grid` class and see how they behave by default.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("grid1-start", "", "220px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___grid1-start live-sample___grid1-finish
 <div class="grid">
@@ -44,11 +50,7 @@ body {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("grid1-start", "", "220px")}}
-
-The finished task should look like this:
+The finished layout should look like this:
 
 {{EmbedLiveSample("grid1-finish", "", "160px")}}
 
@@ -67,11 +69,17 @@ Create a grid using `display: grid` with three columns using `grid-template-colu
 
 </details>
 
-## Task 2
+## CSS grids 2
 
 In this task, we already have a grid defined. We want you to edit the CSS rules for the two child elements so that each one spans several grid tracks. The second item should overlay the first.
 
 **Bonus question:** Can you now cause the first item to display on top without changing the order of items in the source?
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("grid2-start", "", "340px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___grid2-start live-sample___grid2-finish
 <div class="grid">
@@ -116,11 +124,7 @@ body {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("grid2-start", "", "340px")}}
-
-The finished task should look like this:
+The layout should look like this after you complete the task:
 
 {{EmbedLiveSample("grid2-finish", "", "340px")}}
 
@@ -160,9 +164,15 @@ Another valid solution is to use `z-index`:
 
 </details>
 
-## Task 3
+## CSS grids 3
 
 In this task, the grid contains four direct children. They are currently auto-placed in the grid.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("grid3-start", "", "200px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___grid3-start live-sample___grid3-finish
 <div class="grid">
@@ -191,10 +201,6 @@ body {
   gap: 10px;
 }
 ```
-
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("grid3-start", "", "200px")}}
 
 To complete this task, use the `grid-area` and `grid-template-areas` properties to lay out the items as shown here:
 
@@ -235,9 +241,15 @@ Each part of the layout needs a name using the `grid-area` property and `grid-te
 
 </details>
 
-## Task 4
+## CSS grids 4
 
 In this task, you will need to use both grid layout and flexbox to recreate the finished layout. The gap between the column and row tracks should be `10px`. You do not need to make any changes to the HTML in order to achieve this.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("grid4-start", "", "400px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___grid4-start live-sample___grid4-finish
 <div class="container">
@@ -330,11 +342,7 @@ body {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("grid4-start", "", "400px")}}
-
-The finished task should look like this:
+The layout should look like this after you complete the task:
 
 {{EmbedLiveSample("grid4-finish", "", "400px")}}
 

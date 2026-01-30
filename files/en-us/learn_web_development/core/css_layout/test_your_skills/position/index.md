@@ -13,11 +13,17 @@ The aim of this skill test is to help you assess whether you understand [positio
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Positioning 1
 
 To complete this task, position the element with the `target` class at the top-right corner of the container that has a `5px` gray border.
 
 **Bonus question:** Can you change the target so it displays underneath the text?
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("position1-start", "", "400px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___position1-start live-sample___position1-finish
 <div class="container">
@@ -66,10 +72,6 @@ body {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("position1-start", "", "400px")}}
-
 When you complete this task, the placement of the target should look like this:
 
 {{EmbedLiveSample("position1-finish", "", "250px")}}
@@ -96,9 +98,15 @@ For the bonus question, you need to add a negative `z-index` to the target, for 
 
 </details>
 
-## Task 2
+## Positioning 2
 
 In the starting state of this task, if you scroll the content, the sidebar scrolls with the content. We want you to update the code so that the sidebar (`<div class="sidebar">`) stays in place and only the content scrolls.
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("position2-start", "", "400px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___position2-start live-sample___position2-finish
 <div class="container">
@@ -165,11 +173,7 @@ body {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{EmbedLiveSample("position2-start", "", "400px")}}
-
-The finished layout should look like this:
+The finished layout should render like this (scroll to see the behavior):
 
 {{EmbedLiveSample("position2-finish", "", "400px")}}
 
