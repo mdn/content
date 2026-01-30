@@ -36,7 +36,7 @@ The default action can be overridden by the event handler — see each of the ev
   - : Provides an interface for reading and writing text and data to or from the system clipboard.
     The specification refers to this as the 'Async Clipboard API'.
 - {{domxref("ClipboardChangeEvent")}}
-  - : A `ClipboardChangeEvent` is an event fired whenever the contents of the system clipboard are changed.
+  - : Represents events fired whenever the contents of the system clipboard are changed..
 - {{domxref("ClipboardEvent")}}
   - : Represents events providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events.
     The specification refers to this as the 'Clipboard Event API'.
