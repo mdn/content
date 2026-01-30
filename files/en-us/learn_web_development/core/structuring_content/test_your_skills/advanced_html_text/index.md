@@ -13,7 +13,7 @@ The aim of this skill test is to help you assess whether you understand how to u
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Advanced text 1
 
 In this task, we want you to add some semantics to the provided HTML.
 
@@ -23,6 +23,12 @@ To complete this task:
 2. Semantically mark up "HTML" and "CSS" as acronyms, providing expansions as tooltips.
 3. Use subscript and superscript to provide correct semantics for the chemical formulae and dates, and make them display correctly.
 4. Semantically associate machine-readable dates with the dates in the text.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('advanced-text', "100%", 260) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___advanced-text
 <h1>Advanced text semantics</h1>
@@ -72,11 +78,7 @@ time {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample('advanced-text', "100%", 260) }}
-
-The finished task should look like this:
+The finished content should look like this:
 
 {{EmbedLiveSample('advanced-text-solution', "", 260)}}
 

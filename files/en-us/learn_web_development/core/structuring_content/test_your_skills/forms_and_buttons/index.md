@@ -45,6 +45,12 @@ body {
 
 <!-- Example-specific code -->
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-buttons-1", "100%", 150) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___forms-buttons-1
 <form>
   <ul>
@@ -55,11 +61,7 @@ body {
 </form>
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("forms-buttons-1", "100%", 150) }}
-
-The finished task should look like this:
+The finished form should look like this:
 
 {{ EmbedLiveSample("forms-buttons-1-finished", "100%", 150) }}
 
@@ -99,6 +101,12 @@ To complete the task:
 3. Turn the second `<fieldset>`'s content into a set of checkboxes.
 4. Add a couple more hotdog choices of your own.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-buttons-2", "100%", 350) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___forms-buttons-2
 <form>
   <fieldset>
@@ -130,11 +138,7 @@ To complete the task:
 </form>
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("forms-buttons-2", "100%", 350) }}
-
-The finished task should look like this:
+The finished form should look like this:
 
 {{ EmbedLiveSample("forms-buttons-2-finished", "100%", 360) }}
 
@@ -199,6 +203,12 @@ In this task you'll explore some more specific input types. We want you to creat
 3. Phone number
 4. Favorite color
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-buttons-3", "100%", 250) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___forms-buttons-3
 <form>
   <h2>Edit your preferences</h2>
@@ -222,11 +232,7 @@ In this task you'll explore some more specific input types. We want you to creat
 </form>
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("forms-buttons-3", "100%", 250) }}
-
-The finished task should look like this:
+The finished form should look like this:
 
 {{ EmbedLiveSample("forms-buttons-3-finished", "100%", 250) }}
 
@@ -274,6 +280,12 @@ To complete the task:
 2. Associate it semantically with the provided "food" label.
 3. Inside the list, split the choices up into 2 subgroups — "mains" and "snacks".
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-buttons-4", "100%", 120) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___forms-buttons-4
 <form>
   <ul>
@@ -289,11 +301,7 @@ To complete the task:
 </form>
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("forms-buttons-4", "100%", 120) }}
-
-The finished task should look like this:
+The finished form should look like this:
 
 {{ EmbedLiveSample("forms-buttons-4-finished", "100%", 120) }}
 
@@ -341,6 +349,12 @@ To complete the task:
 2. Mark up each text label with an appropriate element so that it is semantically associated with its respective form field.
 3. Add a suitable set of structural elements around the label/field pairs to separate them out.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-buttons-5", "100%", 120) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___forms-buttons-5
 <form>
   Name:
@@ -357,11 +371,7 @@ To complete the task:
 </form>
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("forms-buttons-5", "100%", 120) }}
-
-The finished task should look like this:
+The finished form should look like this:
 
 {{ EmbedLiveSample("forms-buttons-5-finished", "100%", 300) }}
 
@@ -415,6 +425,12 @@ To complete the task:
 
 Try submitting your form — it should refuse to submit until the above constraints are followed, and give suitable error messages.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-buttons-6", "100%", 300) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___forms-buttons-6
 <form>
   <h2>Enter your support query</h2>
@@ -442,9 +458,7 @@ Try submitting your form — it should refuse to submit until the above constrai
 </form>
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("forms-buttons-6", "100%", 300) }}
+We've not shown the finished content rendered, as it doesn't look any different to the starting state.
 
 <details>
 <summary>Click here to show the solution</summary>

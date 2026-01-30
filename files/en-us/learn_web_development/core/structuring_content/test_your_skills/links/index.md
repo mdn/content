@@ -16,7 +16,7 @@ The aim of this skill test is to help you assess whether you understand how to [
 > [!NOTE]
 > Some of the links in the starting code for these tasks have the `target="_blank"` attribute set on them, so that when you click on them, they will try to open the linked page in a new tab rather than the same tab. This is not strictly best practice, but we've done it here so that the pages don't open in the MDN Playground output `<iframe>`, getting rid of your example code in the process!
 
-## Task 1
+## Links 1
 
 In this task, we want you to help fill in the links on our Whales information page.
 
@@ -26,6 +26,12 @@ To complete the task, update the links as follows:
 2. Give it a tooltip when moused over that tells the user that the page includes information on Blue Whales and Sperm Whales.
 3. The second link should be turned into a link you can click to open up an email in the user's default mail application, with the recipient set as "whales\@example.com".
 4. Bonus points if you also set it so that the subject line of the email is automatically filled in as "Question about Whales".
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('links-1', "100%", 170) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___links-1
 <h1>Information on Whales</h1>
@@ -70,11 +76,7 @@ p {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample('links-1', "100%", 170) }}
-
-The finished task should look like this:
+The finished content should look like this:
 
 {{ EmbedLiveSample('links-1-finished', "100%", 170) }}
 
@@ -101,7 +103,7 @@ Your finished HTML should look like this:
 
 </details>
 
-## Task 2
+## Links 2
 
 In this task, we want you to fill in the four links so that they link to the appropriate places.
 
@@ -111,6 +113,12 @@ To complete the task, update the links as follows:
 2. The second link should link to an image called `narwhal.jpg`, which is located in a directory called `narwhal`, which is located one directory level above the current directory.
 3. The third link should link to the UK Google Image search. The base URL is `https://www.google.co.uk`, and the image search is located in a subdirectory called `imghp`.
 4. The fourth link should link to the paragraph at the very bottom of the current page. It has an ID of `bottom`.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('links-2', "100%", 200) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___links-2
 <h1>List path tests</h1>
@@ -156,11 +164,7 @@ div {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample('links-2', "100%", 200) }}
-
-The finished task should look like this:
+The finished content should look like this:
 
 {{ EmbedLiveSample('links-2-finished', "100%", 200) }}
 
@@ -194,7 +198,7 @@ Your finished HTML should look like this:
 
 </details>
 
-## Task 3
+## Links 3
 
 The following links link to an info page about Narwhals, a support email address, and a PDF factfile that is 4MB in size.
 
@@ -202,6 +206,12 @@ To complete the task:
 
 1. Take the existing paragraphs with poorly-written link text, and rewrite them so that they have good link text.
 2. Add a warning to any links that need a warning added.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('links-3', "100%", 200) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___links-3
 <p>
@@ -243,9 +253,7 @@ p {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample('links-3', "100%", 200) }}
+We've not shown the finished content, as it gives the answers away.
 
 <details>
 <summary>Click here to show the solution</summary>
