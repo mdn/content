@@ -169,7 +169,7 @@ The starting point of the task looks like this:
 
 {{EmbedLiveSample("position2-start", "", "400px")}}
 
-The finished task should look like this:
+The finished layout should look like this:
 
 {{EmbedLiveSample("position2-finish", "", "400px")}}
 
