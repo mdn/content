@@ -89,47 +89,45 @@ These are the general steps for working on an issue:
 
 1. **Find an issue:**
 
-   If you're looking to contribute, search for issues with a [`good first issue`, `help wanted`](#set_other_labels) or [`p3`](#set_a_priority_label) label. Most repositories have issues with these labels. You are welcome to browse and pick an issue that is suitable for your skill set. Another useful place to look for issues to work on is the [MDN Contributors Task Board](https://github.com/orgs/mdn/projects/25). This project view lists open issues from multiple repositories. You can filter the list based on the topics (`Labels` column) you're interested in. See the description of some of the [labels](#set_other_labels) that get applied during the issue triage process.
+   If you're looking to contribute, search for issues with a [`good first issue`, `help wanted`](#set_other_labels) or [`p3`](#set_a_priority_label) label. Most repositories have issues with these labels. You are welcome to browse and pick an issue that is suitable for your skill set. Another useful place to look for issues to work on is the [MDN Contributor Board](https://github.com/orgs/mdn/projects/25). This project view lists open issues from multiple repositories. You can filter the list based on the topics (`Labels` column) you're interested in. See the description of some of the [labels](#set_other_labels) that get applied during the issue triage process.
 
    > [!NOTE]
    > An issue with the `needs triage` label indicates that the MDN Web Docs core team has not reviewed the issue yet, and you shouldn't begin work on it.
 
 2. **Check that no one is already working on the issue:**
 
-   Before starting work on an issue, first check that no one is assigned to the issue (the _Assignees_ field is "Unassigned").
+   Before starting work on an issue, first check that no one is assigned to the issue (the _Assignees_ field should be "Unassigned").
 
-   Then check that there are no linked [Pull Requests](/en-US/docs/MDN/Community/Pull_requests), as these may indicate that another user has claimed the issue and started working on it.
+   Then check that there are no linked [Pull Requests](/en-US/docs/MDN/Community/Pull_requests), as these may indicate that another contributor has claimed the issue and started working on it.
 
 3. **Do the research:**
 
    Most issues need some investigation before work can start.
    - Scope out the work that needs to be done.
-     If the issue is not well-described, and/or you are not sure what is needed, feel free to @mention the poster and ask for more information.
+     If the issue is not well-described, and/or you are not sure what is needed, feel free to mention the person who opened the issue (using @username) and ask for more clarifying information.
    - You can also ask for advice in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms).
 
 4. **Claim the issue:**
 
-   Contributors can "claim" unassigned and unclaimed issues by starting to work on them.
-
-   The steps are:
-   1. Fork and branch the repository.
+   You can "claim" an unassigned and unclaimed issue by following these steps:
+   1. Fork the repository and create your working branch.
    2. Fix the issue and then open a [Pull Request (PR)](/en-US/docs/MDN/Community/Pull_requests) in the repository.
-   3. In the PR description include the text `Fixes #<issue_number>` (if the PR only partially fixes the issue add the text `Related to #<issue_number>`).
+   3. In the PR description, include the text `Fixes #<issue_number>` (if the PR only partially fixes the issue add the text `Related to #<issue_number>`).
 
    Depending on the files you've updated in the pull request, a reviewer will be assigned to your pull request automatically. (Teams per topic area are defined in the [CODEOWNERS](https://github.com/mdn/content/blob/main/.github/CODEOWNERS) file).
 
    If you have the necessary permissions, you should also _explicitly_ [assign the issue to yourself](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request).
 
    > [!NOTE]
-   > Adding the `Fixes #<issue_number>` or `Related to #<issue_number>` text is what creates a cross-reference between the issue and the PR, and implicitly claims the issue for the PR's author.
+   > Adding the `Fixes #<issue_number>` or `Related to #<issue_number>` text is what creates a cross-reference between the issue and the PR, and implicitly marks the issue as claimed by you.
    > If the work is going to take some time, you might want to create a draft PR to claim the issue before all work is complete.
 
    > [!WARNING]
    > After opening the pull request, if you find you no longer have the time to make changes or incorporate review feedback, let the team know as soon as possible in a comment in the pull request. This will help the team assign another interested contributor to complete the work on the pull request and close the linked issue.
 
-5. **Close the issue:**
+5. **Close the issue as completed:**
 
-   If you opened the pull request with `Fixes #<issue>` in the description, the issue should automatically be closed when the PR is merged! Otherwise you can manually close the issue.
+   If you opened the pull request with `Fixes #<issue>` in the description, the issue will be closed automatically when the PR is merged. Otherwise, you can add a comment to the issue linking to one or more pull requests that fix it, and a maintainer will close the issue as completed.
 
 ### Fixing issues yourself
 
