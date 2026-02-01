@@ -83,7 +83,7 @@ The task list in this issue will be used to compare the documented CSS propertie
 ## Guidelines for working on an issue
 
 Remember that if you take on an issue, the expectation is for the work to be completed in a timely manner.
-If you are unable to progress work on a claimed issue, please add a comment to let us know.
+If you are unable to progress work on a claimed issue, please add a comment so that maintainers are aware, and so that the issue can be picked up by another contributor.
 
 These are the general steps for working on an issue:
 
@@ -114,16 +114,16 @@ These are the general steps for working on an issue:
    2. Fix the issue and then open a [Pull Request (PR)](/en-US/docs/MDN/Community/Pull_requests) in the repository.
    3. In the PR description, include the text `Fixes #<issue_number>` (if the PR only partially fixes the issue add the text `Related to #<issue_number>`).
 
+      Adding this text is what creates a cross-reference between the issue and the PR, and implicitly marks the issue as claimed by you.
+
+      > [!NOTE]
+      > If you have the necessary permissions, you should also _explicitly_ [assign the issue to yourself](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request).
+
    Depending on the files you've updated in the pull request, a reviewer will be assigned to your pull request automatically. (Teams per topic area are defined in the [CODEOWNERS](https://github.com/mdn/content/blob/main/.github/CODEOWNERS) file).
 
-   If you have the necessary permissions, you should also _explicitly_ [assign the issue to yourself](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request).
-
-   > [!NOTE]
-   > Adding the `Fixes #<issue_number>` or `Related to #<issue_number>` text is what creates a cross-reference between the issue and the PR, and implicitly marks the issue as claimed by you.
-   > If the work is going to take some time, you might want to create a draft PR to claim the issue before all work is complete.
-
    > [!WARNING]
-   > After opening the pull request, if you find you no longer have the time to make changes or incorporate review feedback, let the team know as soon as possible in a comment in the pull request. This will help the team assign another interested contributor to complete the work on the pull request and close the linked issue.
+   > After opening the pull request, if you find you no longer have the time to make changes or incorporate review feedback, let the team know as soon as possible in a comment in the pull request.
+   > This will help the team assign another interested contributor to complete the work on the pull request and close the linked issue.
 
 5. **Close the issue as completed:**
 
