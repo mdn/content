@@ -115,46 +115,11 @@ A typical authentication flow is as follows:
 
 5. Once verified by the server, the authentication flow is considered successful.
 
-### Discoverable credentials and conditional mediation
+### Passkey authentication
 
-**Discoverable credentials** are retrieved from an authenticator — _discovered_ by the browser — to offer as login options when the user is logging in to a relying party web app. In contrast, non-discoverable credentials are provided by the relying party server for the browser to offer as login options.
+Passkeys (also known as "discoverable credentials") allow users to sign in without typing a password, often using biometric verification like FaceID or TouchID. When combined with **Conditional Mediation**, the browser can offer to "autofill" these credentials in a standard username input field.
 
-Discoverable credential IDs and associated metadata such as [user names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#name_2) and [display names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#displayname) are stored in a client-side authenticator such as a browser password manager, authenticator app, or hardware solution such as a YubiKey. Having this information available in the authenticator means that the user can log in conveniently without having to supply credentials, and the relying party does not have to provide a [`credentialId`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) when asserting it (although it can do if desired; if the credential is asserted by the RP then the non-discoverable workflow is followed).
-
-A discoverable credential is created via a [`create()`](/en-US/docs/Web/API/CredentialsContainer/create) call with a specified [`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey). The `credentialId`, user metadata, and public key for the new credential is stored by the authenticator as discussed above, but also returned to the web app and stored on the RP server.
-
-In order to authenticate, the RP server calls [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) with **conditional mediation** specified, that is [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) set to `conditional`, an empty [`allowCredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) list (meaning only discoverable credentials can be shown), and a challenge.
-
-Conditional mediation results in discoverable credentials found in the authenticator being presented to the user in a non-modal UI along with an indication of the origin requesting credentials, rather than a modal dialog. In practice, this means autofilling available credentials in your login forms. The metadata stored in discoverable credentials can be displayed to help users choose a credential when logging in. To display discoverable credentials in your login forms, you also need to include [`autocomplete="webauthn"`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#webauthn) on your form fields.
-
-To reiterate, the relying party doesn't tell the authenticator what credentials to offer to the user — instead, the authenticator supplies the list it has available. Once the user selects a credential, the authenticator uses it to sign the challenge with the associated private key, and the browser returns the signed challenge and its `credentialId` to the RP server.
-
-The subsequent authentication process on the RP server is the same as for non-discoverable credentials.
-
-> [!NOTE]
-> You can check whether conditional mediation is available on a specific user agent by calling the {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} method.
-
-[Passkeys](https://passkeys.dev/) are a significant use case for discoverable credentials; see [Create a passkey for passwordless logins](https://web.dev/articles/passkey-registration) and [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for implementation details. See also [Discoverable credentials deep dive](https://web.dev/articles/webauthn-discoverable-credentials) for more general information on discoverable credentials.
-
-When conditional mediation is used for authentication, the prevent silent access flag (see {{domxref("CredentialsContainer.preventSilentAccess()")}}) is treated as being `true` regardless of its actual value: the conditional behavior always involves user mediation of some sort if applicable credentials are discovered.
-
-> [!NOTE]
-> If no credentials are discovered, the non-modal dialog will not be visible, and the user agent can prompt the user to take action in a way that depends on the type of credential (for example, to insert a device containing credentials).
-
-#### Discoverable credential synchronization methods
-
-It is possible for the information stored in a user's authenticator about a discoverable credential to go out sync with the relying party's server. This might happen when the user deletes a credential or modifies their user/display name on the RP web app without updating the authenticator.
-
-The API provides methods to allow the relying party server to signal changes to the authenticator, so it can update its stored credentials:
-
-- {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "PublicKeyCredential.signalAllAcceptedCredentials()")}}: Signals to the authenticator all of the valid credential IDs that the RP server still holds for a particular user.
-- {{domxref("PublicKeyCredential.signalCurrentUserDetails_static", "PublicKeyCredential.signalCurrentUserDetails()")}}: Signals to the authenticator that a particular user has updated their user name and/or display name on the RP server.
-- {{domxref("PublicKeyCredential.signalUnknownCredential_static", "PublicKeyCredential.signalUnknownCredential()")}}: Signals to the authenticator that a credential ID was not recognized by the RP server.
-
-It may seem like `signalUnknownCredential()` and `signalAllAcceptedCredentials()` have similar purposes, so what situation should each one be used in?
-
-- `signalAllAcceptedCredentials()` should be called after every successful sign-in, and when the user is logged in and you want to update the state of their credentials. It must only be called when a user is authenticated, as it shares the entire list of `credentialId`s for a given user. This would cause a privacy leak if the user is not authenticated.
-- `signalUnknownCredential()` should be called after an unsuccessful login, to signal to the authenticator that the `credentialId` of the selected credential cannot be validated, and should be removed. The method can safely be called when the user is not authenticated as it passes a single `credentialId` to the authenticator — the one the client just tried to authenticate with — and no user information.
+For a detailed guide on implementing this flow, see the [Passkey authentication guide](/en-US/docs/Web/API/Web_Authentication_API/Passkey_authentication).
 
 ### Customizing workflows based on client capabilities
 
@@ -163,7 +128,8 @@ The signup and login workflows can be customized based on the capabilities of th
 This can be used, for example, to check:
 
 - Client support for various authenticators such as passkeys or biometric user verification.
-- Whether the client [supports methods to keep relying party and authenticator credentials in sync](#discoverable_credential_synchronization_methods).
+- Whether the client [supports methods to keep relying party and authenticator credentials in sync]
+  (/en-US/docs/Web/API/Web_Authentication_API/Passkey_authentication).
 - Whether the client allows a single passkey to be used on different websites with the same origin.
 
 The code below shows how you might use `getClientCapabilities()` to check if the client supports authenticators that offer biometric user verification.

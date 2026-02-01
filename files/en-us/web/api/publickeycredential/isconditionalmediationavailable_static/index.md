@@ -8,7 +8,7 @@ browser-compat: api.PublicKeyCredential.isConditionalMediationAvailable_static
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`isConditionalMediationAvailable()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} which resolves to `true` if [conditional mediation](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) is available.
+The **`isConditionalMediationAvailable()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} which resolves to `true` if [conditional mediation](/en-US/docs/Web/API/Web_Authentication_API/Passkey_authentication) is available.
 
 ## Syntax
 
