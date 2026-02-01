@@ -113,7 +113,6 @@ display: inline-table;
 /* other values */
 display: table-row; /* all table elements have an equivalent CSS display value */
 
-
 /* Global values */
 display: inherit;
 display: initial;
