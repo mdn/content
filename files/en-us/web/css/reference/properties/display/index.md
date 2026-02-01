@@ -17,7 +17,7 @@ display: block;
 ```
 
 ```css interactive-example-choice
-display: inline block;
+display: inline flow-root;
 ```
 
 ```css interactive-example-choice
