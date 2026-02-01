@@ -140,7 +140,7 @@ The keyword values can be grouped into six value categories.
 > When browsers encounter a display property that only has an **outer** value (e.g., `display: block` or `display: inline`), the inner value is set to `flow` (e.g., `display: block flow` and `display: inline flow`).
 
 > [!NOTE]
-> You may use single-value syntax as fallback for multi-keyword syntax, for example `display: inline flex` could have the following fallback
+> You may use the more widely supported single-value syntax as a fallback for multi-keyword syntax, for example `display: inline flex` could have the following fallback
 >
 > ```css
 > .container {
