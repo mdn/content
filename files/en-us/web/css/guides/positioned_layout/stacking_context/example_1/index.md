@@ -8,9 +8,9 @@ sidebar: cssref
 
 ## Description
 
-Let's start with a basic example. In the root stacking context, there are two relatively positioned `<div>` elements (DIV #1 and DIV #3) without `z-index` properties. Inside DIV #1, there is an absolutely positioned DIV #2, while in DIV #3, there is an absolutely positioned DIV #4, both without `z-index` properties.
+Let's start with a basic example. In the root stacking context, there are two relatively positioned `<div>` elements (DIV #1 and DIV #3) with `z-index: auto`. Inside DIV #1, there is an absolutely positioned DIV #2, and inside DIV #3, there is an absolutely positioned DIV #4, both also with `z-index: auto`.
 
-The only stacking context is the root context. Without `z-index` values, elements are stacked in order of occurrence.
+The only stacking context is the root stacking context. Since no element establishes a new stacking context, all elements are painted in document order according to the standard stacking rules.
 
 ![Stacking context example 1](understanding_zindex_05a.png)
 
