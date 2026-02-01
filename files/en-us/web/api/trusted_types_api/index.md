@@ -209,31 +209,8 @@ When the text node is created there is no reason for the browser to assume it is
 Instead, browsers run the checks when the script element becomes executable — i.e., in this example, when `document.body.appendChild(script)` is called to add the script element to the document.
 
 The browser will first check if the string used as the script content is trusted.
-Whether the string can be trusted depends on how it was set as the {{htmlelement("script")}} source.
-
-<!-- List below derived from https://wpt.fyi/results/trusted-types/script-enforcement-001.html?label=experimental&label=master&aligned -->
-
-The source string is trusted if the script was modified using the following APIs:
-
-- Script source set via {{domxref("TrustedScript")}} sink on {{domxref("HTMLScriptElement.innerText")}}, {{domxref("HTMLScriptElement.textContent")}}, {{domxref("HTMLScriptElement.text")}}
-- Splitting script source via {{domxref("Text.splitText()")}}
-- Normalizing script source via `Element.normalize()`
-
-The source string is not trusted if modified with the following APIs:
-
-- Setting script source via {{domxref("HTMLElement.innerText")}}
-- Setting script source via {{domxref("Node.textContent")}} or {{domxref("Node.nodeValue")}}
-- Script source set via {{domxref("TrustedHTML")}} sink {{domxref("Element.innerHTML")}} or {{domxref("Element.setHTMLUnsafe()")}}
-- Script source cannot be set via {{domxref("Element.setHTML()")}}.
-- Setting script source via {{domxref("CharacterData")}} property {{domxref("CharacterData.data","data")}} and methods {{domxref("CharacterData.appendData()","appendData()")}}, {{domxref("CharacterData.insertData()","insertData()")}}, {{domxref("CharacterData.replaceData()","replaceData()")}}, {{domxref("CharacterData.deleteData()")}}, {{domxref("CharacterData.before()","before()")}}, {{domxref("CharacterData.after()","after()")}}, {{domxref("CharacterData.remove()","remove()")}}, {{domxref("CharacterData.replaceWith()","replaceWith()")}}
-- Setting script source via {{domxref("Node.appendChild()")}}, {{domxref("Node.insertBefore()")}}, {{domxref("Node.replaceChild()")}}, {{domxref("Node.removeChild()")}}
-- Setting script source via {{domxref("Element")}} methods {{domxref("Element.prepend()","prepend()")}}, {{domxref("Element.append()","append()")}}, {{domxref("Element.replaceChildren()","replaceChildren()")}}, {{domxref("Element.moveBefore()","moveBefore()")}}
-- Setting script source via {{domxref("TrustedHTML")}} sink `Node.insertAdjacentHTML()`
-- Setting script source via `Node.insertAdjacentText()`
-- Setting script source via {{domxref("Range.insertNode()")}}
-- Setting script source via {{domxref("Range.deleteContents()")}}
-- Cloning a script via {{domxref("Node.cloneNode()")}}
-- Cloning a script via {{domxref("Range.cloneContents()")}}
+Any operation that allows the text source of a {{htmlelement("script")}} to be modified without explicitly setting a {{domxref("TrustedScript")}} makes it untrusted.
+The {{domxref("Node.appendChild()")}} method used above is just one example (a number of others are listed in the WPT Live tests at <https://wpt.live/trusted-types/script-enforcement-001.htm>).
 
 If the string is not trusted and trusted types are enforced, the browser will attempt to obtain a `TrustedScript` from a [default policy](#the_default_policy) to use for source instead.
 If a default policy is not defined, or does not return a `TrustedScript`, the operation will throw an exception.
