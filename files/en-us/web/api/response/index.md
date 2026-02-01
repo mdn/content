@@ -75,10 +75,18 @@ You'll notice that since we are requesting an image, we need to run {{domxref("R
 ```js
 const image = document.querySelector(".my-image");
 fetch("flowers.jpg")
-  .then((response) => response.blob())
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.blob();
+  })
   .then((blob) => {
     const objectURL = URL.createObjectURL(blob);
     image.src = objectURL;
+  })
+  .catch((error) => {
+    console.error("Error fetching the image:", error);
   });
 ```
 

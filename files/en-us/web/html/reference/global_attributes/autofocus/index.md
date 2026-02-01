@@ -7,16 +7,19 @@ browser-compat: html.global_attributes.autofocus
 sidebar: htmlsidebar
 ---
 
-The **`autofocus`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is a Boolean attribute indicating that an element should be focused on page load, or when the {{HTMLElement("dialog")}} that it is part of is displayed.
+The **`autofocus`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is a Boolean attribute indicating whether the element should be focused on page load or, if it is nested inside a {{htmlelement("dialog")}} or [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) element, when the `<dialog>` or popover is shown.
 
 ```html
 <input name="q" autofocus />
 ```
 
-No more than one element in the document or dialog may have the autofocus attribute. If applied to multiple elements the first one will receive focus.
+Only one element inside a document, `<dialog>` element, or popover may have this attribute specified. If applied to multiple elements, the first focusable one will receive focus.
 
 > [!NOTE]
 > The `autofocus` attribute applies to all elements, not just form controls. For example, it might be used on a [contenteditable](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) area.
+
+> [!NOTE]
+> On page load, if a [URI fragment identifier](/en-US/docs/Web/URI/Reference/Fragment) is specified and identifies an element, the element with the `autofocus` attribute does not receive focus via the `autofocus` attribute. Generally, the element indicated by the fragment receives focus instead.
 
 ## Accessibility concerns
 

@@ -509,7 +509,7 @@ All we have left to do now in this article is to talk about a few other importan
 
 Above, we mentioned **Loops**, a very important concept in programming, which allow you to keep running a piece of code over and over again, until a certain condition is met.
 
-Let's explore a basic example to show you with this means. Go to your [browser developer tools JavaScript console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) again, paste the following code into it, and press <kbd>Enter</kbd>/<kbd>Return</kbd>:
+Let's explore a basic example to show you what this means. Go to your [browser developer tools JavaScript console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) again, paste the following code into it, and press <kbd>Enter</kbd>/<kbd>Return</kbd>:
 
 ```js
 const fruits = ["apples", "bananas", "cherries"];

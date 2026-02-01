@@ -37,6 +37,7 @@ selector {
 - [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
 - [Class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors)
 - [ID selectors](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors)
+- [Keyframe selectors](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
 - [Namespace separator (`|`)](/en-US/docs/Web/CSS/Reference/Selectors/Namespace_separator)
 - [Pseudo-class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [Pseudo-element selectors](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)

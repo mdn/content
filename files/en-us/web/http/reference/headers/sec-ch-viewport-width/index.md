@@ -63,6 +63,10 @@ In subsequent requests, the client might send `Sec-CH-Viewport-Width` header:
 Sec-CH-Viewport-Width: 320
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
@@ -70,7 +74,7 @@ Sec-CH-Viewport-Width: 320
 ## See also
 
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
-- Device client hints
+- Device and responsive image client hints
   - {{HTTPHeader("Sec-CH-Device-Memory")}}
   - {{HTTPHeader("Sec-CH-DPR")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}

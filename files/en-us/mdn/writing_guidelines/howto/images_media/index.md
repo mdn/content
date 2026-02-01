@@ -41,8 +41,8 @@ Let's walk through an example:
    cd ~/path/to/mdn/content
    git checkout main
    git pull mdn main
-   # Run "yarn" to make sure dependencies are up-to-date
-   yarn
+   # Run "npm install" to make sure dependencies are up-to-date
+   npm install
    git checkout -b my-images
    ```
 
@@ -58,7 +58,7 @@ Let's walk through an example:
    For more details, see the [Compressing images](#compressing_images) section.
 
    ```bash
-   yarn filecheck files/en-us/web/css/my-cool-image.png
+   npm run filecheck files/en-us/web/css/my-cool-image.png
    ```
 
 4. Reference your image in the document using the Markdown syntax for images, providing [descriptive text for the `alt` attribute](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives) between the brackets that describe the image, or include an {{htmlelement("img")}} element with `alt` attribute inside `files/en-us/web/css/index.md`:
@@ -126,7 +126,7 @@ This option compresses the image as much as possible and replaces the original w
 For example:
 
 ```bash
-yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
+npm run filecheck files/en-us/web/css/my-cool-image.png --save-compression
 ```
 
 ## Adding videos to MDN pages

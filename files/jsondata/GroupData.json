@@ -170,7 +170,12 @@
     },
     "Clipboard API": {
       "overview": ["Clipboard API"],
-      "interfaces": ["Clipboard", "ClipboardEvent", "ClipboardItem"],
+      "interfaces": [
+        "Clipboard",
+        "ClipboardChangeEvent",
+        "ClipboardEvent",
+        "ClipboardItem"
+      ],
       "methods": [],
       "properties": ["Navigator.clipboard"],
       "events": ["Element: copy", "Element: cut", "Element: paste"]
@@ -546,17 +551,23 @@
     },
     "Fetch API": {
       "overview": ["Fetch API"],
-      "guides": ["/docs/Web/API/Fetch_API/Using_Fetch"],
-      "interfaces": ["Headers", "Request", "RequestInit", "Response"],
-      "methods": ["Window.fetch()", "WorkerGlobalScope.fetch()"],
-      "properties": [],
-      "events": []
-    },
-    "fetchLater API": {
-      "overview": ["fetchLater API"],
-      "guides": ["/docs/Web/API/fetchLater_API/fetchLater_quotas"],
-      "interfaces": ["DeferredRequestInit", "FetchLaterResult"],
-      "methods": ["Window.fetchLater()"],
+      "guides": [
+        "/docs/Web/API/Fetch_API/Using_Fetch",
+        "/docs/Web/API/Fetch_API/Using_Deferred_Fetch"
+      ],
+      "interfaces": [
+        "DeferredRequestInit",
+        "FetchLaterResult",
+        "Headers",
+        "Request",
+        "RequestInit",
+        "Response"
+      ],
+      "methods": [
+        "Window.fetch()",
+        "WorkerGlobalScope.fetch()",
+        "Window.fetchLater()"
+      ],
       "properties": [],
       "events": []
     },

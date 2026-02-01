@@ -35,7 +35,7 @@ If another website wants to establish trust in the same user, it can do so by re
 
 1. Let's say the user visits a different website, `redeemer.example`.
 2. `redeemer.example` can make a request to a server to redeem a token for that specific user and device.
-3. The browser checks to see whether it has a token stored for that user and device. If it does, and the token is good to use (it has not already been redeemed, and it has not expired), it sends the token to a server to be redeemed. In this context, `redeemer.example` is called an **redeemer**. The server is called an **redeemer server**.
+3. The browser checks to see whether it has a token stored for that user and device. If it does, and the token is good to use (it has not already been redeemed, and it has not expired), it sends the token to a server to be redeemed. In this context, `redeemer.example` is called a **redeemer**. The server is called a **redeemer server**.
 4. If the token is redeemed successfully, the redeemer server sends a **redemption record** to the browser to verify the user trust.
 
 ### Redemption record usage
@@ -76,7 +76,7 @@ In the example implementation:
 
 As per the Privacy Pass protocol, you will need to implement at least two HTTP endpoints in your issuer server:
 
-- Key commitment: This endpoint is where your encryption public key details will be available to browsers to confirm that your server is legitimate. This endpoint must be inside a well-known directory located at the [eTLD+1](https://web.dev/articles/same-site-same-origin#site) of the issuer server at `/.well-known/private-state-token/key-commitment`. Check out the [Key-commitment endpoint example](https://github.com/GoogleChromeLabs/private-state-token-demo/blob/bf173919620f2b8203a628c3a1094c8846e6aff1/src/index.js#L55).
+- Key commitment: This endpoint is where your encryption public key details will be available to browsers to confirm that your server is legitimate. This endpoint must be inside a well-known directory located at the {{glossary("registrable domain")}} of the issuer server at `/.well-known/private-state-token/key-commitment`. Check out the [Key-commitment endpoint example](https://github.com/GoogleChromeLabs/private-state-token-demo/blob/bf173919620f2b8203a628c3a1094c8846e6aff1/src/index.js#L55).
 - Token issuance: The token issuing endpoint is where all token requests will be handled. This endpoint will be the integration point for the token issuer component. It must be located on the issuer server at `/.well-known/private-state-token/issuance`. Check out the [Token issuance endpoint example](https://github.com/GoogleChromeLabs/private-state-token-demo/blob/bf173919620f2b8203a628c3a1094c8846e6aff1/src/index.js#L81).
 
 Due to the high traffic expected on such a server, we recommend you deploy it using a scalable infrastructure (for example, in a cloud environment) to be able to adjust your backend based on a variable demand.

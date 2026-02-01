@@ -43,8 +43,13 @@ Sec-CH-Device-Memory: <number>
 ## Directives
 
 - `<number>`
-  - : The approximate amount of device RAM. Possible values are: `0.25`, `0.5`, `1`, `2`, `4`, `8`.
+  - : The approximate amount of device RAM.
+
     The amount of device RAM can be used as a {{glossary("fingerprinting")}} variable, so values for the header are intentionally coarse to reduce the potential for its misuse.
+    Values are only reported in powers of two, and are clamped to an implementation-defined minimum lower value and a maximum upper value.
+    These bounds may change over time (see [browser compatibility table](#browser_compatibility)).
+
+    For example, if a browser does not report below `2` or above `32` then the value is one of: `2`, `4`, `8`, `16`, `32`.
 
 ## Examples
 
@@ -74,7 +79,7 @@ Sec-CH-Device-Memory: 1
 - {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}
 - {{DOMxRef("Navigator.deviceMemory")}}
 - {{DOMxRef("WorkerNavigator.deviceMemory")}}
-- Device client hints
+- Device and responsive image client hints
   - {{HTTPHeader("Sec-CH-DPR")}}
   - {{HTTPHeader("Sec-CH-Viewport-Height")}}
   - {{HTTPHeader("Sec-CH-Viewport-Width")}}

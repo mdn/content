@@ -217,22 +217,20 @@ We include two same-structure flex containers, which will be styled similarly ex
 <div class="container basis-0">
   <div>heading</div>
   <section>
-    flex-basis: 0;
-    <div class="content"></div>
+    <div class="content">flex-basis: 0;</div>
   </section>
 </div>
 <div class="container basis-0-percent">
   <div>heading</div>
   <section>
-    flex-basis: 0%;
-    <div class="content"></div>
+    <div class="content">flex-basis: 0%;</div>
   </section>
 </div>
 ```
 
 #### CSS
 
-We style the containers as inline flex containers that will appear side by side to better enable comparing them. We set the `flex-direction` to `column`. The first container's flex items have a `flex-basis` value of `0`, while the second container's flex items have a `flex-basis` value of `0%`. Neither the flex containers nor their flex items have a height explicitly set, but the heights of `section` elements cannot exceed `200px` and their children have a height of `300px`.
+We style the containers as inline flex containers that will appear side by side to better enable comparing them. We set the `flex-direction` to `column`. The first container's flex items have a `flex-basis` value of `0`, while the second container's flex items have a `flex-basis` value of `0%`. Neither the flex containers nor their flex items have a height explicitly set; however, the heights of `section` elements must be at least `200px`, and their children have a height of `300px`.
 
 ```css
 .container {
@@ -245,7 +243,7 @@ We style the containers as inline flex containers that will appear side by side 
 }
 
 section {
-  border: 1px solid red;
+  outline: 1px solid red;
 
   overflow: auto;
   min-height: 200px;
@@ -268,7 +266,7 @@ section {
 
 {{EmbedLiveSample('flex_basis_0_vs_0', '100%', '400')}}
 
-In the first container, with `flex-basis: 0`, the `<section>` element has an initial main size of zero, and it grows to the `200px` height limit. In the second container, with `flex-basis: 0%`, the `<section>` element has an initial main size of `300px` because, as the flex container doesn't have a set height, the percentage flex-basis values resolve to the [`content`](#content) value.
+In the first container, with `flex-basis: 0`, the `<section>` element has an initial main size of zero, and it grows to the `200px` minimum height. In the second container, with `flex-basis: 0%`, the `<section>` element has an initial main size of `300px` because, as the flex container doesn't have a set height, the percentage flex-basis values resolve to the [`content`](#content) value.
 
 ## Specifications
 

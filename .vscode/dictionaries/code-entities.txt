@@ -69,6 +69,7 @@ backgroundfetchclick
 backgroundfetchfail
 backgroundfetchsuccess
 BACKTAB
+backzone
 Basetime
 bbaw
 beforeinstallprompt
@@ -76,6 +77,7 @@ beforematch
 beforescriptexecute
 beforexrselect
 BGRX
+bgtest
 bhks
 biske
 bmatrix
@@ -147,6 +149,7 @@ CSS_RGBCOLOR
 csslint
 cssref
 cssruleview
+cssxref
 ctron
 ctrz
 Cubehelix
@@ -172,6 +175,7 @@ docbook
 documentboundary
 dom.abortablepromise
 dom.closewatcher
+dom.documentpip
 dom.element.customstateset
 dom.input.dirpicker
 dom.media.webcodecs
@@ -259,6 +263,7 @@ GPOS
 grba
 Grek
 greklow
+gsettings
 GSUB
 gujr
 gukh
@@ -324,6 +329,7 @@ jssidebar
 jsval
 kaios
 kawi
+kdeglobals
 kerx
 Key_Codeinput
 KEY_dead_abovecomma
@@ -359,6 +365,7 @@ KIND_NONHEAP
 knda
 Kore
 krai
+kwriteconfig
 lanatham
 laoo
 largeop
@@ -693,6 +700,7 @@ serviceworker
 setenvif
 SHA-256-sess
 SHA-512-sess
+shadowrootreferencetarget
 sharpyuv
 shrd
 shtm
