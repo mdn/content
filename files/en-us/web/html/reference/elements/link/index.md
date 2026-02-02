@@ -452,4 +452,4 @@ the rendering of the page will be blocked till the resource and its critical sub
 ## See also
 
 - {{HTTPHeader("Link")}} HTTP header
-- {{HTTPHeader("Referrer-Policy")}}
+- {{HTTPHeader("Referrer-Policy")}} HTTP header
