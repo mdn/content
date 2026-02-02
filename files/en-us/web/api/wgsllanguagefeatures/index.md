@@ -40,6 +40,11 @@ The following WGSL language extensions are defined at [WGSL language extensions]
 - `readonly_and_readwrite_storage_textures`
   - : When available, allows the `"read-only"` and `"read-write"` [`storageTexture.access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access) values to be set when specifying storage texture bind group entry types in a bind group layout. These enable WGSL code to read storage textures, and read/write storage textures, respectively.
 
+- `subgroup_id`
+  - : When available, the [`subgroup_id`](https://gpuweb.github.io/gpuweb/wgsl/#built-in-values-subgroup_id) and [`num_subgroups`](https://gpuweb.github.io/gpuweb/wgsl/#built-in-values-num_subgroups) WGSL built-in values are usable in compute shaders. These improve the process of scheduling work across subgroups, by indexing memory to avoid overlapping memory accesses. See [WGSL subgroup_id extension](https://developer.chrome.com/blog/new-in-webgpu-144#wgsl_subgroup_id_extension) for more details.
+    > [!NOTE]
+    > For the `subgroup_id` WSGL feature to be usable, the [`subgroups`](https://www.w3.org/TR/WGSL/#extension-subgroups) extension needs to be enabled in the {{domxref("GPUDevice")}} (see {{domxref("GPUSupportedFeatures")}}).
+
 - `unrestricted_pointer_parameters`
   - : Loosens restrictions on pointers being passed to WGSL functions. When available, the following are allowed:
     - Parameter pointers to storage, uniform, and workgroup address spaces being passed to user-declared functions.
