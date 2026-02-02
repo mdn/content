@@ -10,6 +10,8 @@ browser-compat: api.HTMLGeolocationElement.error
 
 The **`error`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns a {{domxref("GeolocationPositionError")}} object representing error information, in the event of a failure to retrieve location data.
 
+If location data retrieval is successful, the data is available in the {{domxref("HTMLGeolocationElement.position")}} property.
+
 ## Value
 
 A {{domxref("GeolocationPositionError")}} object, or `null` if location data was successfully retrieved.

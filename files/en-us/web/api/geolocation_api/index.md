@@ -11,6 +11,9 @@ The **Geolocation API** allows the user to provide their location to web applica
 
 WebExtensions that wish to use the `Geolocation` object must add the `"geolocation"` permission to their manifest. The user's operating system will prompt the user to allow location access the first time it is requested.
 
+> [!NOTE]
+> The {{htmlelement("geolocation")}} element provides an alternative mechanism for accessing and handling geolocation data that solves some of the shortcomings of the Geolocation API: It provides a consistent UI, and a more intuitive permission management process.
+
 ## Concepts and usage
 
 You will often want to retrieve a user's location information in your web app, for example to plot their location on a map, or display personalized information relevant to their location.
@@ -29,9 +32,6 @@ In both cases, the method call takes up to three arguments:
 - An optional object which provides options for retrieval of the position data.
 
 For further information on Geolocation usage, read [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API).
-
-> [!NOTE]
-> The {{htmlelement("geolocation")}} element provides an alternative mechanism for accessing and handling geolocation data that solves some of the shortcomings of the Geolocation API, such as providing a consistent UI, and a more intuitive permission gathering process.
 
 ## Interfaces
 

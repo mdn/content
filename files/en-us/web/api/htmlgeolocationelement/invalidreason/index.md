@@ -10,7 +10,7 @@ browser-compat: api.HTMLGeolocationElement.invalidReason
 
 The **`invalidReason`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns an enumerated value representing the reason why the associated {{htmlelement("geolocation")}} element is invalid (blocked), if that is the case.
 
-When a [blocker](/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking) is active on a `<geolocation>` element, it is prevented from functioning (invalid), either temporarily or permanently, depending on the reason.
+When a [blocker](/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking) is active on a `<geolocation>` element, it is invalid: This means that it is prevented from functioning, either temporarily or permanently, depending on the reason.
 
 You can query the {{domxref("HTMLGeolocationElement.isValid")}} property to check whether the `<geolocation>` element is valid or not.
 
@@ -18,17 +18,23 @@ You can query the {{domxref("HTMLGeolocationElement.isValid")}} property to chec
 
 An enumerated value.
 
-If the `<geolocation>` element does not have a blocker active, it is therefore valid, and the `invalidReason` value is an empty string.
-
-If the `<geolocation>` element has one or more blockers active, it is invalid, and the `invalidReason` value is one of the following:
-
-1. `illegal_subframe` (Permanent): The `<geolocation>` element is nested inside a {{htmlelement("fencedframe")}} element.
-2. `unsuccesful_registration` (Temporary): More than three `<geolocation>` elements have been inserted into the same document.
-3. `recently_attached` (Expiring): The `<geolocation>` element has only recently been attached to the DOM.
-4. `intersection_changed` (Expiring): The `<geolocation>` element is being moved.
-5. `intersection_out_of_viewport_or_clipped` (Temporary): The `<geolocation>` element is rendered outside or partially inside the viewport.
-6. `intersection_occluded_or_distorted` (Temporary): The `<geolocation>` element is rendered completely inside the viewport, but it is obscured in some way, for example rendered behind other content.
-7. `style_invalid` (Temporary): The `<geolocation>` element has some restricted styles applied to it (see [Styling restrictions](/en-US/docs/Web/HTML/Reference/Elements/geolocation#styling_restrictions)).
+- If the `<geolocation>` element does not have a blocker active, it is therefore valid, and the `invalidReason` value is an empty string.
+- If the `<geolocation>` element has one or more blockers active, it is invalid, and the `invalidReason` value is one of the following:
+  - 1: `illegal_subframe`
+    - : The `<geolocation>` element is nested inside a {{htmlelement("fencedframe")}} element.
+      Permanent blocker.
+  - 2: `unsuccesful_registration`
+    - : More than three `<geolocation>` elements have been inserted into the same document. Temporary blocker.
+  - 3: `recently_attached`
+    - : The `<geolocation>` element has only recently been attached to the DOM. Expiring blocker.
+  - 4: `intersection_changed`
+    - : The `<geolocation>` element is being moved. Expiring blocker.
+  - 5: `intersection_out_of_viewport_or_clipped`
+    - : The `<geolocation>` element is rendered outside or partially inside the viewport. Temporary blocker.
+  - 6: `intersection_occluded_or_distorted`
+    - : The `<geolocation>` element is rendered completely inside the viewport, but it is obscured in some way, for example rendered behind other content. Temporary blocker.
+  - 7: `style_invalid`
+    - : The `<geolocation>` element has some restricted styles applied to it (see [Styling restrictions](/en-US/docs/Web/HTML/Reference/Elements/geolocation#styling_restrictions)). Temporary blocker.
 
 Note that these invalid reasons are in priority order, from higest to lowest. If multiple blockers are active, the `invalidReason` value returned will be the highest-priority value in the list.
 

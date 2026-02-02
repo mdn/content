@@ -8,9 +8,9 @@ browser-compat: api.HTMLGeolocationElement.watch
 
 {{APIRef("Navigation API")}}
 
-The **`watch`** property of the {{domxref("HTMLGeolocationElement")}} interface gets and sets a boolean value indicating whether the browser should request location data continuously, whenever the position of the user's device changes, or only once.
+The **`watch`** property of the {{domxref("HTMLGeolocationElement")}} interface gets and sets a boolean value indicating whether the browser should continuously update the user's location data whenever the position of their device changes, or only retrieve it once.
 
-It mirrors the value of the `<geolocation>` [`watch`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#watch) attribute.
+It reflects the value of the `<geolocation>` [`watch`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#watch) attribute.
 
 ## Value
 
@@ -32,8 +32,6 @@ Defaults to `false`.
 ```js
 const geo = document.querySelector("geolocation");
 console.log(geo.watch); // true
-geo.watch = false;
-console.log(geo.watch); // false
 ```
 
 ### Retrieving location data continuously

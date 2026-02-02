@@ -30,27 +30,26 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ## Description
 
-The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) has some shortcomings, most notably:
+The `<geolocation>` element provides a declarative browser-defined control for sharing location data. In Chrome, for example, the button features a "map pin" icon and intuitive text ("Use location" in English content).
 
-- The UI and underlying logic for requesting the data needs to be implemented from scratch each time, and is therefore inconsistent across apps.
-- The handling of permissions can be unintuitive. Users often don't understand browser permission prompts, or why they are being asked to do something, and certain situations can be hard to recover from. For example, if the user has previously denied access to the `geolocation` feature, reenabling it can involve navigating complex settings menus or even having to wait for a certain period of time if the user has dismissed the prompt a certain number of times. Chrome blocks usage for a week if the user dismisses the prompt three times.
+It also allows for intuitive management of user permissions.
+For example, in Chrome, if the user previously denied permission to access location data, or dismissed the permission dialog without making a choice, they are free to press the button again to update their choice.
+In cases where they previously denied permission, subsequent dialogs will inform them that they previously didn't allow location data to be shared, and ask them whether they want to continue not allowing it, or to allow it.
 
-The `<geolocation>` element aims to fix these problems by:
-
-- Providing a declarative browser-defined control for sharing location data. In Chrome, the button features a "map pin" icon and intuitive text ("Use location" in English content).
-- Making the permissions process more intuitive.
-  For example, in Chrome, if the user previously denied permission to access location data, or dismissed the permission dialog without making a choice, they are free to press the button again to update their choice.
-  In cases where they previously denied permission, subsequent dialogs will inform them that they previously didn't allow location data to be shared, and ask them whether they want to continue not allowing it, or to allow it.
-- More obviously reflecting the user's conscious choice, and blocking possible usage that might trick the user into providing their location data unwittingly (see [`<geolocation> blocking`](#geolocation_blocking) for more information).
+A key aspect of the `<geolocation>` element is that it reflects the user's conscious choice, and blocks possible usage that might trick the user into providing their location data unwittingly (see [`<geolocation> blocking`](#geolocation_blocking) for more information).
 
 The element's DOM API interface, {{domxref("HTMLGeolocationElement")}}, provides features to access returned position data, current permission status, and errors if the data retrieval was unsuccessful, reducing the amount of JavaScript logic that needs to be written. It also has events available to run code in response to location data being received, changes in permission status, and user interactions with the permission dialog.
 
-The `<geolocation>` element uses features of the Geolocation API in the background. By default, the browser requests location data once, as if the {{domxref("Geolocation.getCurrentPosition()")}} method was called. However, if the `watch` attribute is set to `true`, the browser constantly requests the data, as if {{domxref("Geolocation.watchPosition()")}} was called.
-
-If data is successfully retrieved, it is available in the {{domxref("HTMLGeolocationElement.position")}} property, which contains a {{domxref("GeolocationPosition")}} object. If data retrieval is unsuccessful, error information is available in the {{domxref("HTMLGeolocationElement.error")}} property, which contains a {{domxref("GeolocationPositionError")}} object.
-
 > [!NOTE]
 > For performance reasons, a maximum of three `<geolocation>` elements are allowed on any one page. If this quota is exceeded, the element functionality is disabled.
+
+### Relationship with the Geolocation API
+
+The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) provides an older alternative for handling location data. This API has some shortcomings that the `<gelocation>` element aims to solve, most notably that the UI and underlying logic for requesting the data needs to be implemented from scratch each time, and the handling of permissions can be unintuitive.
+
+The `<geolocation>` element uses features of the Geolocation API in the background. By default, the browser requests location data once, as if the {{domxref("Geolocation.getCurrentPosition()")}} method was called. However, if the `watch` attribute is set to `true`, the browser updates the data whenever the device position changes, as if {{domxref("Geolocation.watchPosition()")}} was called.
+
+If data is successfully retrieved, it is available in the {{domxref("HTMLGeolocationElement.position")}} property, which contains a {{domxref("GeolocationPosition")}} object. If data retrieval is unsuccessful, error information is available in the {{domxref("HTMLGeolocationElement.error")}} property, which contains a {{domxref("GeolocationPositionError")}} object.
 
 ### Setting the button language
 
@@ -329,6 +328,7 @@ For a walkthrough of a more complete example that uses location data to create a
 ## See also
 
 - {{domxref("HTMLGeolocationElement")}}
+- The {{httpheader("Permissions-Policy/geolocation", "geolocation")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
 - [Geolocation API](/en-US/docs/Web/API/Geolocation_API)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
 - [Introducing the `<geolocation>` HTML element](https://developer.chrome.com/blog/geolocation-html-element) on developer.chrome.com (2026)

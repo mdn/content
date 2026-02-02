@@ -34,8 +34,6 @@ If permission to use the `geolocation` feature was not previously granted, the `
 ```js
 const geo = document.querySelector("geolocation");
 console.log(geo.autolocate); // true
-geo.autolocate = false;
-console.log(geo.autolocate); // false
 ```
 
 See our [Embedded map example walkthrough](/en-US/docs/Web/API/HTMLGeolocationElement#embedded_map_example) for a real-world example that includes `autolocate`.

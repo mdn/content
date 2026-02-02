@@ -7,23 +7,26 @@ browser-compat: api.HTMLGeolocationElement
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLGeolocationElement`** interface represents the {{htmlelement("geolocation")}} element, and provides access to its properties and events.
+The **`HTMLGeolocationElement`** interface of the [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API) represents the {{htmlelement("geolocation")}} element, and provides access to its properties and events.
 
 This element is based on, and inherits properties and methods from, the {{domxref("HTMLElement")}} interface.
+
+> [!NOTE]
+> The `<geolocation>` element and `HTMLGeolocationElement` interface allow the user to share their location data with the page in a more consistent and intuitive way than the older [Geolocation API](/en-US/docs/Web/API/Geolocation_API).
 
 {{InheritanceDiagram}}
 
 ## Constructor
 
 - {{domxref("HTMLGeolocationElement.HTMLGeolocationElement", "HTMLGeolocationElement()")}} {{experimental_inline}}
-  - : Creates a new `HTMLGeolocationElement` object instance.
+  - : Creates a new `HTMLGeolocationElement` object instance. Note that this constructor is not called directly, but via a DOM method such as {{domxref("Document.createElement()")}}.
 
 ## Instance properties
 
 _Also inherits properties from its parent interface, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLGeolocationElement.autolocate", "autolocate")}} {{experimental_inline}}
-  - : A boolean value indicating whether the browser should immediately request location data when the `<geolocation>` element is rendered, provided permission is previously granted. Mirrors the value of the `<geolocation>` [`autolocate`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#autolocate) attribute.
+  - : A boolean value indicating whether the browser should immediately request location data when the `<geolocation>` element is rendered, provided permission is previously granted. Reflects the value of the `<geolocation>` [`autolocate`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#autolocate) attribute.
 - {{domxref("HTMLGeolocationElement.error", "error")}} {{readonlyinline}} {{experimental_inline}}
   - : A {{domxref("GeolocationPositionError")}} object representing error information, in the event of a failure to retrieve data.
 - {{domxref("HTMLGeolocationElement.initialPermissionStatus", "initialPermissionStatus")}} {{readonlyinline}} {{experimental_inline}}
@@ -35,9 +38,9 @@ _Also inherits properties from its parent interface, {{domxref("HTMLElement")}}.
 - {{domxref("HTMLGeolocationElement.permissionStatus", "permissionStatus")}} {{readonlyinline}} {{experimental_inline}}
   - : A string representing the current permission status for the `geolocation` feature.
 - {{domxref("HTMLGeolocationElement.position", "position")}} {{readonlyinline}} {{experimental_inline}}
-  - : A {{domxref("GeolocationPosition")}} object representing the user's current position, in the event of successful location data retrieval.
+  - : A {{domxref("GeolocationPosition")}} object representing the user's position, in the event of successful location data retrieval.
 - {{domxref("HTMLGeolocationElement.watch", "watch")}} {{experimental_inline}}
-  - : A boolean value indicating whether the browser should request location data continuously, whenever the position of the user's device changes, or only once. Mirrors the value of the `<geolocation>` [`watch`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#watch) attribute.
+  - : A boolean value indicating whether the browser should continuously update the user's location data whenever the position of their device changes, or only retrieve it once. Reflects the value of the `<geolocation>` [`watch`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#watch) attribute.
 
 ## Instance methods
 
@@ -58,11 +61,11 @@ _Also inherits events from its parent interface, {{domxref("HTMLElement")}}._
 
 ## Description
 
-The `HTMLGeolocationElement` interface represents the {{htmlelement("geolocation")}} element, which creates an interactive control to allow the user to share their location data with the page in a more consistent and intuitive way than rolling your own solution via the [Geolocation API](/en-US/docs/Web/API/Geolocation_API).
+The `HTMLGeolocationElement` interface represents the {{htmlelement("geolocation")}} element, which creates an interactive control to allow the user to share their location data with the page.
 
 When the user activates the control, they are presented with a dialog box that asks them for permission to share their location data. If they grant permission, the browser will attempt to retrieve the user's location data using the Geolocation API in the background.
 
-By default, the browser requests location data once, as if the {{domxref("Geolocation.getCurrentPosition()")}} method was called. However, if the [`watch`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#watch) attribute is set to `true`, the browser constantly requests the data, as if {{domxref("Geolocation.watchPosition()")}} was called.
+By default, the browser requests location data once, as if the {{domxref("Geolocation.getCurrentPosition()")}} method was called. However, if the [`watch`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#watch) attribute is set to `true`, the browser updates the data whenever the device position changes, as if {{domxref("Geolocation.watchPosition()")}} was called.
 
 When the data request returns, the {{domxref("HTMLGeolocationElement.location_event", "location")}} event fires, allowing you to respond appropriately, for example by grabbing the data and plotting the location on a map.
 
@@ -227,6 +230,7 @@ Also try the following:
 ## See also
 
 - {{htmlelement("geolocation")}} element
+- The {{httpheader("Permissions-Policy/geolocation", "geolocation")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
 - [Geolocation API](/en-US/docs/Web/API/Geolocation_API)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
 - [Introducing the `<geolocation>` HTML element](https://developer.chrome.com/blog/geolocation-html-element) on developer.chrome.com (2026)
