@@ -8,8 +8,7 @@ browser-compat: api.CSSFontFeatureValuesMap.delete
 
 {{APIRef("CSSOM")}}
 
-The **`delete()`** method of the {{domxref("CSSFontFeatureValuesMap")}}
-interface removes the CSS declaration with the given property in the `CSSFontFeatureValuesMap`.
+The **`delete()`** method of the {{domxref("CSSFontFeatureValuesMap")}} interface removes the CSS declaration with the given property in the `CSSFontFeatureValuesMap`.
 
 ## Syntax
 

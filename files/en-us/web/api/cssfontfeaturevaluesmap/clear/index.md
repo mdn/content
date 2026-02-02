@@ -8,8 +8,7 @@ browser-compat: api.CSSFontFeatureValuesMap.clear
 
 {{APIRef("CSSOM")}}
 
-The **`clear()`** method of the {{domxref("CSSFontFeatureValuesMap")}}
-interface removes all declarations in the `CSSFontFeatureValuesMap`.
+The **`clear()`** method of the {{domxref("CSSFontFeatureValuesMap")}} interface removes all declarations in the `CSSFontFeatureValuesMap`.
 
 ## Syntax
 

@@ -8,8 +8,7 @@ browser-compat: api.CSSFontFeatureValuesMap.has
 
 {{APIRef("CSSOM")}}
 
-The **`has()`** method of the {{domxref("CSSFontFeatureValuesMap")}}
-interface returns a boolean indicating whether an entry with the specified key exists in this `CSSFontFeatureValuesMap` or not.
+The **`has()`** method of the {{domxref("CSSFontFeatureValuesMap")}} interface returns a boolean indicating whether an entry with the specified key exists in this `CSSFontFeatureValuesMap` or not.
 
 ## Syntax
 

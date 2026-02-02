@@ -8,8 +8,7 @@ browser-compat: api.CSSFontFeatureValuesMap.get
 
 {{APIRef("CSSOM")}}
 
-The **`get()`** method of the {{domxref("CSSFontFeatureValuesMap")}}
-interface returns value corresponding to the key in this `CSSFontFeatureValuesMap`, or `undefined` if there is none.
+The **`get()`** method of the {{domxref("CSSFontFeatureValuesMap")}} interface returns value corresponding to the key in this `CSSFontFeatureValuesMap`, or `undefined` if there is none.
 
 ## Syntax
 
