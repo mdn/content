@@ -23,7 +23,7 @@ To reiterate, the relying party doesn't tell the authenticator what credentials 
 The subsequent authentication process on the RP server is the same as for non-discoverable credentials.
 
 > [!NOTE]
-> You can check whether conditional mediation is available on a specific user agent by calling the {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} method.
+> You can check whether conditional mediation is available on a specific user agent by calling the {{domxref("PublicKeyCredential.isConditionalMediationAvailable_static", "PublicKeyCredential.isConditionalMediationAvailable()")}}method.
 
 [Passkeys](https://passkeys.dev/) are a significant use case for discoverable credentials; see [Create a passkey for passwordless logins](https://web.dev/articles/passkey-registration) and [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for implementation details. See also [Discoverable credentials deep dive](https://web.dev/articles/webauthn-discoverable-credentials) for more general information on discoverable credentials.
 
@@ -45,7 +45,7 @@ const publicKeyCredentialCreationOptions = {
     residentKey: "preferred",
     requireResidentKey: false,
     userVerification: "preferred",
-  },
+  },git push origin doc-passkey-guide
 };
 
 const credential = await navigator.credentials.create({
