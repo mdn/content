@@ -452,4 +452,4 @@ the rendering of the page will be blocked till the resource and its critical sub
 ## See also
 
 - {{HTTPHeader("Link")}} HTTP header
-- {{HTTPHeader("Referrer-Policy")}} — for comprehensive examples and explanations of each referrer policy value
+- [Referrer-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) — for comprehensive examples and explanations of each referrer policy value
