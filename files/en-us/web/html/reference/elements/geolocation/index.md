@@ -204,7 +204,7 @@ The `<geolocation>` element has an accessible name written in the [language it i
 
 In addition, the `<geolocation>` element has a default [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) value of `0`, so it behaves like a real `<button>` with respect to keyboard focus.
 
-Finally, refer back to the [Accessibility restrictions](#accessibility_restrictions) section for information on styling constaints applied to the `<geolocation>` element to enforce fundamental accessibility requirements.
+Finally, refer back to the [Accessibility restrictions](#accessibility_restrictions) section for information on styling constraints applied to the `<geolocation>` element to enforce fundamental accessibility requirements.
 
 ## Examples
 
