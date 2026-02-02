@@ -63,7 +63,7 @@ The `frame-ancestors` directive is a replacement for `X-Frame-Options`. By setti
 
 If `frame-ancestors` and `X-Frame-Options` are both set, then browsers that support `frame-ancestors` will ignore `X-Frame-Options`.
 
-### Restricting cross-site cookie transmission
+### Restricting cross-site cookies
 
 As an additional partial mitigation, sites should set the [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) cookie attribute for session cookies to `Lax` or `Strict`. Requests from embedded contexts such as `<iframe>` elements that are not {{glossary("Site", "same-site")}} with the top-level document will not include these cookies, and the server will therefore not treat the request as coming from a logged-in user.
 
