@@ -9,7 +9,7 @@ The `@property` at-rule, part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_A
 
 ## Why register custom properties?
 
-CSS custom properties, commonly called CSS variables, can be defined by simple declaration. Generally, these are declared on the {{cssxref(":root")}}, and can be overridden with a different value in subsequent rulesets, including in ruled based on UI state and within container and media queries.
+CSS custom properties, commonly called CSS variables, can be defined by basic declaration. Generally, these are declared on the {{cssxref(":root")}}, and can be overridden with a different value in subsequent rulesets — including in rules based on UI state and within container and media queries.
 
 In this example, `--myColor` is assigned the value `#bada55` on `:root`, then set to a different value on `main`, which is inherited by all descendants of `main`. That value is overridden when `main` is hovered or is in a viewport that is less than `750px` wide. Within elements with a class of `circles`, `--myColor` is set to `45deg`, which is a different data type.
 
@@ -123,7 +123,7 @@ Here we use the CSS `@property` at-rule to define the `--item-size` custom prope
 }
 ```
 
-You can also use [JavaScript](/en-US/docs/Web/JavaScript) to register properties. JavaScript's {{domxref('CSS.registerProperty_static', 'CSS.registerProperty()')}} method is equivalent to `@property` at-rule. Here we defined our second custom property, `--item-color`, to have an initial value of `aqua`, to accept only {{cssxref("&lt;color&gt;")}} values, and to not be inherited.
+You can also use [JavaScript](/en-US/docs/Web/JavaScript) to register properties. JavaScript's {{domxref('CSS.registerProperty_static', 'CSS.registerProperty()')}} method is equivalent to the `@property` at-rule. Here we defined our second custom property, `--item-color`, to have an initial value of `aqua`, to accept only {{cssxref("&lt;color&gt;")}} values, and to not be inherited.
 
 ```js
 window.CSS.registerProperty({
