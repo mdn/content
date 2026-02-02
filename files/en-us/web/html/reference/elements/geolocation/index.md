@@ -54,7 +54,7 @@ If data is successfully retrieved, it is available in the {{domxref("HTMLGeoloca
 
 ### Setting the button language
 
-The global [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute is observed by the `<geolocation>` element to select a language for its rendered text. This means that you can set a `lang` attribute directly on the `<geolocation>` element or on one of its ancestors to tell the browser what language to use for the button label.
+The global [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute is used by the `<geolocation>` element to select a language for its rendered text. This means that you can set a `lang` attribute directly on the `<geolocation>` element or on one of its ancestors to tell the browser what language to use for the button label.
 
 If no suitable `lang` attribute is set, the browser's preferred language setting is used.
 
