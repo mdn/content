@@ -8,7 +8,7 @@ browser-compat: api.HTMLGeolocationElement.location_event
 
 {{APIRef("HTML DOM")}}
 
-The **`location`** event of the {{domxref("HTMLGeolocationElement")}} interface is fired whenever the browser receives location data, or error information when the location data request was unsuccessful.
+The **`location`** event of the {{domxref("HTMLGeolocationElement")}} interface is fired whenever the browser receives location data, or error information when a location data request was unsuccessful.
 
 ## Syntax
 
