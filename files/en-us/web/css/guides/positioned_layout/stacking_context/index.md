@@ -104,7 +104,7 @@ To demonstrate how the stacking order of each element participates in the stacki
 </article>
 ```
 
-Every container element has an {{cssxref("opacity")}} of less than `1` and a {{cssxref("position")}} of either `relative` or `absolute` set. These property-value pairs create a stacking context when the element has `z-index` value other than `auto`.
+Every container element has an {{cssxref("opacity")}} of less than `1`. This creates a stacking context. The containers each also have a {{cssxref("position")}} of either `relative` or `absolute` set, creating a stacking context when the element has `z-index` value other than `auto`.
 
 ```css hidden
 * {
