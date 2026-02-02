@@ -210,7 +210,7 @@ Finally, refer back to the [Accessibility restrictions](#accessibility_restricti
 
 ### Basic usage example
 
-This example uses the `<geolocation>` element to retrieve your current location, which is printed out below the button in a {{htmlelement("p")}} element. The example also uses a regular `<button>` fallback to retrive the location data in non-supporting browsers.
+This example uses the `<geolocation>` element to retrieve your current location, which is printed out below the button in a {{htmlelement("p")}} element. The example also uses a regular `<button>` fallback to retrieve the location data in non-supporting browsers.
 
 #### HTML
 
