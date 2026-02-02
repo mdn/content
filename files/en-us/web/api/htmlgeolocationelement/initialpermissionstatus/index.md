@@ -8,7 +8,7 @@ browser-compat: api.HTMLGeolocationElement.initialPermissionStatus
 
 {{APIRef("Navigation API")}}
 
-The **`initialPermissionStatus`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns an enumerated value representing the initial permission status for the `geolocation` feature, when the page first loads.
+The **`initialPermissionStatus`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns an enumerated value representing the permission status for the `geolocation` feature when the page first loads.
 
 If you want to access the current permission status for the `geolocation` feature, use the {{domxref("HTMLGeolocationElement.permissionStatus")}} property.
 

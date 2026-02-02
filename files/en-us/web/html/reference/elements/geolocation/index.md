@@ -38,7 +38,9 @@ The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) has some shortcomings
 The `<geolocation>` element aims to fix these problems by:
 
 - Providing a declarative browser-defined control for sharing location data. In Chrome, the button features a "map pin" icon and intuitive text ("Use location" in English content).
-- Reinventing the permissions process to be more intuitive. For example, in Chrome, if the user previously denied permission to access location data, or dismissed the permission dialog without making a choice, they are free to press the button again to update their choice. In cases where they previously denied permission, subsequent dialogs will inform them that they previously didn't allow location data to be shared, and ask them whether they want to continue not allowing it, or to allow it.
+- Making the permissions process more intuitive.
+  For example, in Chrome, if the user previously denied permission to access location data, or dismissed the permission dialog without making a choice, they are free to press the button again to update their choice.
+  In cases where they previously denied permission, subsequent dialogs will inform them that they previously didn't allow location data to be shared, and ask them whether they want to continue not allowing it, or to allow it.
 - More obviously reflecting the user's conscious choice, and blocking possible usage that might trick the user into providing their location data unwittingly (see [`<geolocation> blocking`](#geolocation_blocking) for more information).
 
 The element's DOM API interface, {{domxref("HTMLGeolocationElement")}}, provides features to access returned position data, current permission status, and errors if the data retrieval was unsuccessful, reducing the amount of JavaScript logic that needs to be written. It also has events available to run code in response to location data being received, changes in permission status, and user interactions with the permission dialog.
@@ -52,7 +54,7 @@ If data is successfully retrieved, it is available in the {{domxref("HTMLGeoloca
 
 ### Setting the button language
 
-The global [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute is observed by the `<geolocation>` element to select a language for its rendered text. This means that you can set a `lang` attribute directly on the `<geolocation>` element or on one of its ancestors to tell the browser what language to use for the button label.
+The global [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute is used by the `<geolocation>` element to select a language for its rendered text. This means that you can set a `lang` attribute directly on the `<geolocation>` element or on one of its ancestors to tell the browser what language to use for the button label.
 
 If no suitable `lang` attribute is set, the browser's preferred language setting is used.
 
@@ -76,7 +78,7 @@ However, a better real-world solution might be to include a regular {{htmlelemen
 
 ### `<geolocation>` blocking
 
-One key idea behind the design of the `<geolocation>` element is that it should reflect a user's conscious choice, and prevent bad actors from tricking users into activating it, for example via [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking). Because of this, the browser keeps a record of so-called **blocker reasons** for each rendered element.
+One key idea behind the design of the `<geolocation>` element is that it should reflect a user's conscious choice to expose position information, and prevent bad actors from tricking users into activating it, for example via [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking). Because of this, the browser keeps a record of so-called **blocker reasons** for each rendered element.
 
 When a blocker is active on a `<geolocation>` element, it is prevented from functioning (blocked), either temporarily or permanently, depending on the reason. When a `<geolocation>` element is blocked, it is said to be invalid. You can check whether it is invalid by querying the {{domxref("HTMLGeolocationElement.isValid")}} property. You can also return the reason why it is invalid via the {{domxref("HTMLGeolocationElement.invalidReason")}} property — see that page for a full list of possible reasons.
 
@@ -88,14 +90,14 @@ Any properties that are not listed in the following sub-sections, or logically e
 
 #### Accessibility restrictions
 
-The rendered `<geolocation>` button is deactivated (meaning that pressing it will have no effect) if the following constaints are not adhered to:
+The rendered `<geolocation>` button is deactivated (meaning that pressing it will have no effect) if the following constraints are not adhered to:
 
 - The [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) ratio between {{cssxref("color")}} and {{cssxref("background-color")}} must be at least 3:1.
 - The {{cssxref("font-size")}} must not be smaller than the `small` value (in the case of keyword values), or its computed value (in the case of other value types).
 
 #### Value constraints
 
-The following CSS property value constaints are applied to the `<geolocation>` element. If an attempt is made to set these properties to values outside the listed constraints on the `<geolocation>` element, the value is adjusted to equal the constraint (in the case of an exact value constraint) or to equal to nearest computed value upper or lower bound (in the case of a range constraint).
+The following CSS property value constraints are applied to the `<geolocation>` element. If an attempt is made to set these properties to values outside the listed constraints on the `<geolocation>` element, the value is adjusted to equal the constraint (in the case of an exact value constraint) or to equal to nearest computed value upper or lower bound (in the case of a range constraint).
 
 - {{cssxref("opacity")}}
   - : `1.0`
@@ -202,13 +204,13 @@ The `<geolocation>` element has an accessible name written in the [language it i
 
 In addition, the `<geolocation>` element has a default [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) value of `0`, so it behaves like a real `<button>` with respect to keyboard focus.
 
-Finally, refer back to the [Accessibility restrictions](#accessibility_restrictions) section for information on styling constaints applied to the `<geolocation>` element to enforce fundamental accessibility requirements.
+Finally, refer back to the [Accessibility restrictions](#accessibility_restrictions) section for information on styling constraints applied to the `<geolocation>` element to enforce fundamental accessibility requirements.
 
 ## Examples
 
 ### Basic usage example
 
-This example uses the `<geolocation>` element to retrieve your current location, which is printed out below the button in a {{htmlelement("p")}} element. The example also uses a regular `<button>` fallback to retrive the location data in non-supporting browsers.
+This example uses the `<geolocation>` element to retrieve your current location, which is printed out below the button in a {{htmlelement("p")}} element. The example also uses a regular `<button>` fallback to retrieve the location data in non-supporting browsers.
 
 #### HTML
 
@@ -225,7 +227,8 @@ We include a `<geolocation>` element with a `<button>` fallback nested inside it
 
 In our script, we start off by grabbing a reference to the output `<p>` element. We then detect whether the `<geolocation>` element is supported by testing `typeof HTMLGeolocationElement === "function"`:
 
-- If it is supported, we grab a reference to the `<geolocation>` element then add a {{domxref("HTMLGeolocationElement.location_event", "location")}} event listener so that, when the button is pressed and the data is retrieved, we print the (lat, long) coordinates to the output `<p>` (retrieved via the {{domxref("HTMLGeolocationElement.position", "position")}} property), or an error message if the data retrieval was unsuccessful (retrieved via the {{domxref("HTMLGeolocationElement.error", "error")}} property).
+- If it is supported, we first grab a reference to the `<geolocation>` element and then add a {{domxref("HTMLGeolocationElement.location_event", "location")}} event listener.
+  When the button is pressed and the data is retrieved, the listener prints the (lat, long) coordinates to the output `<p>` (retrieved via the {{domxref("HTMLGeolocationElement.position", "position")}} property), or an error message if the data retrieval was unsuccessful (retrieved via the {{domxref("HTMLGeolocationElement.error", "error")}} property).
 - If it isn't supported, we grab a reference to the fallback `<button>` element and retrieve and print the same data, except that this time we are using a `click` event listener on the button, and a {{domxref("Geolocation.getCurrentPosition()")}} call to retrieve the data.
 
 ```js

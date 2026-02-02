@@ -21,7 +21,7 @@ This document describes how to report violations and what happens depending on t
 ## Code of Conduct violations and enforcement ladder
 
 The MDN Community Management team ([`@mdn/community`](https://github.com/orgs/mdn/teams/community) on GitHub) investigates the severity of behavior based on a report, then determines and carries out any actions, if appropriate.
-Violations follow a step-by-step escalation process, and the reportee is informed of consequences at leach level.
+Violations follow a step-by-step escalation process, and the reportee is informed of consequences at each level.
 In serious cases, enforcement may skip levels up to and including an immediate, permanent ban.
 
 Below is a summary of severity levels and enforcement actions.

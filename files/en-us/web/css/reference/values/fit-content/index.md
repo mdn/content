@@ -10,7 +10,7 @@ The `fit-content` sizing keyword represents an element size that adapts to its c
 The keyword ensures that the element is never smaller than its minimum intrinsic size ({{cssxref("min-content")}}) or larger than its maximum intrinsic size ({{cssxref("max-content")}}).
 
 > [!NOTE]
-> This keyword is different from the {{cssxref("fit-content_function", "fit-content()")}} function. The function is used for grid track sizing (for example in {{cssxref("grid-template-columns")}} and {{cssxref("grid-auto-rows")}}) and for laid-out box sizing for properties such as {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, and {{cssxref("max-height")}}.
+> This keyword is different from the {{cssxref("fit-content()")}} function. The function is used for grid track sizing (for example in {{cssxref("grid-template-columns")}} and {{cssxref("grid-auto-rows")}}) and for laid-out box sizing for properties such as {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, and {{cssxref("max-height")}}.
 
 ## Syntax
 

@@ -24,7 +24,7 @@ The API is accessed via the {{domxref("Window.navigation")}} property, which ret
 
 The `navigation` interface has several associated events, the most notable being the {{domxref("Navigation/navigate_event", "navigate")}} event. This is fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, meaning that you can control all page navigations from one central place, ideal for routing functionality in SPA frameworks. (This is not the case with the {{domxref("History API", "", "", "nocode")}}, where it is sometimes hard to detect and respond to all navigations.) The `navigate` event handler is passed a {{domxref("NavigateEvent")}} object, which contains detailed information including details around the navigation's destination, type, whether it contains `POST` form data or a download request, and more.
 
-The `NavigationEvent` object also provides two methods:
+The `NavigateEvent` object also provides two methods:
 
 - {{domxref("NavigateEvent.intercept", "intercept()")}} allows you to specify custom behavior for navigations, and can take the following as arguments:
   - Callback handler functions allowing you to specify what happens both _when_ the navigation is committed and _just before_ the navigation is committed. For example, you could load relevant new content into the UI based on the path of the URL navigated to, or redirect the browser to a sign-in page if the URL points to a restricted page and the user is not signed in.

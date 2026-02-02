@@ -72,7 +72,7 @@ The extension should have an icon. This will be shown next to the extension's li
 
 Create the "icons" directory directly under the "borderify" directory. Save an icon there named "border-48.png". You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/borderify/icons/border-48.png), which is taken from the Google Material Design iconset, and is used under the terms of the [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/) license.
 
-If you choose to supply your own icon, It should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this it will be specified as the `96` property of the `icons` object in manifest.json:
+If you choose to supply your own icon, it should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this it will be specified as the `96` property of the `icons` object in manifest.json:
 
 ```json
 "icons": {
