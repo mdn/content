@@ -38,7 +38,7 @@ A new {{jsxref("Iterator")}} object. Each of its elements is an object with the 
 
 ## Description
 
-The `Iterator.zipKeyed()` function behaves like {{jsxref("Iterator.zip()")}}; the only difference is that you can specify the keys used in the resulting objects.
+The `Iterator.zipKeyed()` function behaves like {{jsxref("Iterator.zip()")}}; the only difference is that you can specify the keys used in the resulting objects, while `Iterator.zip()` always uses numeric indices (by yielding arrays).
 
 If we represent iterables as arrays, the input may looks like this:
 
@@ -50,7 +50,7 @@ If we represent iterables as arrays, the input may looks like this:
 });
 ```
 
-The resulting iterator will yield the following objects:
+The resulting iterator, regardless of the options, will start by yielding the following arrays:
 
 ```js
 ({ a: a1, b: b1, c: c1 });
@@ -58,7 +58,7 @@ The resulting iterator will yield the following objects:
 ({ a: a3, b: b3, c: c3 });
 ```
 
-After the first three objects are yielded, the input iterable `b` is exhausted on the fourth `next()` call—it returns `{ done: true }`. What happens next depends on the `mode` option. If `mode` is `"shortest"` (the default), the resulting iterator stops here: the other two input iterators are closed. If `mode` is `"strict"`, an error is thrown because the other two iterables are _not_ finished when the second one yields the result `{ done: true }`. If `mode` is `"longest"`, the resulting iterator continues yielding objects, filling missing values. For example, if `padding` is not provided, it defaults to `undefined`:
+After the first three objects are yielded, the input iterable `b` is exhausted on the fourth `next()` call—it returns `{ done: true }`. What happens next depends on the `mode` option. If `mode` is `"shortest"` (the default), the resulting iterator stops here: the other two input iterators are [closed](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#errors_during_iteration). If `mode` is `"strict"`, an error is thrown because the other two iterables are _not_ finished when the second one yields the result `{ done: true }`. If `mode` is `"longest"`, the resulting iterator continues yielding objects, filling missing values. For example, if `padding` is not provided, it defaults to `undefined`:
 
 ```js
 ({ a: a4, b: undefined, c: c4 });
@@ -76,7 +76,7 @@ If `padding` is provided as an object, it may look like `{ a: p1, b: p2, c: p3 }
 
 ### Transposing tabular data
 
-There are two common ways to represent tabular data: as an object where each property is a column, or as an array of objects where each object is a row. This example shows how to convert from the former to the latter using `Iterator.zipKeyed()`.
+There are two common ways to represent tabular data: as an object where each property is a column, or as an array of objects where each object is a row. This example shows how you can iterate the column-based representation by rows using `Iterator.zipKeyed()`.
 
 ```js
 const table = {
