@@ -48,7 +48,7 @@ _Inherits properties from its parent interface, {{domxref("HTMLElement")}}._
 _Also inherits events from its parent interface, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLGeolocationElement.location_event", "location")}} {{experimental_inline}}
-  - : Fired whenever the browser receives location data, or error information when the location data request was unsuccessful.
+  - : Fired whenever the browser receives location data, or error information when a location data request was unsuccessful.
 - {{domxref("HTMLGeolocationElement.promptaction_event", "promptaction")}} {{experimental_inline}}
   - : Fired whenever the user activates the `<geolocation>` element and selects an option from the resulting dialog, either to grant or deny `geolocation` permission.
 - {{domxref("HTMLGeolocationElement.promptdismiss_event", "promptdismiss")}} {{experimental_inline}}
