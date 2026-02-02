@@ -234,7 +234,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - `referrerpolicy`
   - : A string indicating which referrer to use when fetching the resource. For detailed explanations and examples of each policy, see the [Referrer-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) header documentation.
-
     - `no-referrer` means that the {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade` means that no {{HTTPHeader("Referer")}} header will be sent when navigating to an origin without TLS (HTTPS).
       This is a user agent's default behavior, if no policy is otherwise specified.
