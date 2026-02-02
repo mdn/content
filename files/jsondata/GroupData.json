@@ -28,6 +28,13 @@
       "properties": ["HTMLMediaElement.sinkId"],
       "events": []
     },
+    "Audio Session API": {
+      "overview": ["Audio Session API"],
+      "interfaces": ["AudioSession"],
+      "methods": [],
+      "properties": ["Navigator.audioSession"],
+      "events": []
+    },
     "Background Fetch API": {
       "overview": ["Background Fetch API"],
       "interfaces": [
