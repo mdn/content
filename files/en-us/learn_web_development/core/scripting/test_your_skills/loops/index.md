@@ -42,6 +42,12 @@ p {
 
 <!-- Example-specific code -->
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("loops-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___loops-1
 const myArray = ["tomatoes", "chick peas", "onions", "rice", "black beans"];
 const list = document.createElement("ul");
@@ -53,11 +59,7 @@ section.appendChild(list);
 // Add your code here
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("loops-1", "100%", 60) }}
-
-The finished task should look like this:
+The finished output should look like this:
 
 {{ EmbedLiveSample("loops-1-finish", "100%", 150) }}
 
@@ -111,6 +113,12 @@ To complete the task:
 2. If the `name` is found, write it and the associated `number` into the `textContent` of the provided paragraph (`para`), in the form "&lt;name>'s number is &lt;number>." After that, exit the loop before it has run its course.
 3. If none of the objects contain the `name`, print "Name not found in the phonebook" into the `textContent` of the provided paragraph.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("loops-2", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___loops-2
 const name = "Mustafa";
 const para = document.createElement("p");
@@ -134,11 +142,7 @@ section.appendChild(para);
 // Add your code here
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("loops-2", "100%", 60) }}
-
-The finished task should look like this:
+The finished output should look like this:
 
 {{ EmbedLiveSample("loops-2-finish", "100%", 60) }}
 
@@ -212,6 +216,12 @@ To complete the task:
 
 You should use a type of loop that you've not used in the previous two tasks.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("loops-3", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___loops-3
 let i = 500;
 const para = document.createElement("p");
@@ -233,11 +243,7 @@ function isPrime(num) {
 section.appendChild(para);
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("loops-3", "100%", 60) }}
-
-The finished task should look like this:
+The finished output should look like this:
 
 {{ EmbedLiveSample("loops-3-finish", "100%", 120) }}
 

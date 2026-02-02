@@ -25,11 +25,11 @@ To complete the task:
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___objects-1 live-sample___objects-2 live-sample___objects-3 live-sample___objects-4 live-sample___objects-1-finish live-sample___objects-2-finish live-sample___objects-3-finish live-sample___objects-4-finish
+```html hidden live-sample___objects-1 live-sample___objects-2 live-sample___objects-3 live-sample___objects-4 live-sample___objects-1-finish live-sample___objects-2-finish live-sample___objects-4-finish
 <section></section>
 ```
 
-```css hidden live-sample___objects-1 live-sample___objects-2 live-sample___objects-3 live-sample___objects-4 live-sample___objects-1-finish live-sample___objects-2-finish live-sample___objects-3-finish live-sample___objects-4-finish
+```css hidden live-sample___objects-1 live-sample___objects-2 live-sample___objects-3 live-sample___objects-4 live-sample___objects-1-finish live-sample___objects-2-finish live-sample___objects-4-finish
 * {
   box-sizing: border-box;
 }
@@ -41,6 +41,12 @@ p {
 ```
 
 <!-- Example-specific code -->
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("objects-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___objects-1
 const cat = {
@@ -67,11 +73,7 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("objects-1", "100%", 60) }}
-
-The finished task should look like this:
+The finished output should look like this:
 
 {{ EmbedLiveSample("objects-1-finish", "100%", 80) }}
 
@@ -137,6 +139,12 @@ To complete the task:
        > Include at least two albums in the `albums` array.
 2. Write a string to the variable `bandInfo`, which will contain a small biography detailing their name, nationality, years active, and style, and the title and release date of their first album.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("objects-2", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___objects-2
 let bandInfo;
 
@@ -152,11 +160,7 @@ para1.textContent = bandInfo;
 section.appendChild(para1);
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("objects-2", "100%", 60) }}
-
-The finished task should look like this:
+The finished output should look something like this:
 
 {{ EmbedLiveSample("objects-2-finish", "100%", 60) }}
 
@@ -252,6 +256,12 @@ To complete the task:
 2. Write your own object called `cat2`, which has the same structure and `greeting()` method, but a different `name`, `breed`, and `color`.
 3. Call both `greeting()` methods to check that they log appropriate greetings to the console.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("objects-3", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___objects-3
 const cat = {
   name: "Bertie",
@@ -267,13 +277,7 @@ const cat = {
 // Add your code here
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("objects-3", "100%", 60) }}
-
-<!-- The finished task should look like this:
-
-{{ EmbedLiveSample("objects-3-finish", "100%", 60) }} -->
+We've not shown the output of the finished code, as it doesn't print anything to the DOM. The output is all logged to the console.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -297,7 +301,7 @@ cat.greeting();
 cat2.greeting();
 ```
 
-```js hidden live-sample___objects-3-finish
+```js hidden
 const cat = {
   name: "Bertie",
   breed: "Cymric",
@@ -331,6 +335,12 @@ To complete the task:
 1. Create a JavaScript class that defines cat instances
 2. Use your class along with the `new` keyword to create the `cat` and `cat2` instances.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("objects-4", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___objects-4
 const cat = {
   name: "Bertie",
@@ -356,9 +366,7 @@ cat.greeting();
 cat2.greeting();
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("objects-4", "100%", 60) }}
+We've not shown the output of the finished code, as it doesn't print anything to the DOM. The output is all logged to the console.
 
 <details>
 <summary>Click here to show the solution</summary>

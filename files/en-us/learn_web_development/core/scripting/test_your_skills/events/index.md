@@ -25,6 +25,12 @@ Our first events-related task involves a {{htmlelement("button")}} that, when cl
 
 To complete the task, create an event listener that causes the text inside the button (`btn`) to change when it is clicked on, and change back when it is clicked again.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("events-1", "100%", 80) }}
+
+Here's the underlying code for this starting point:
+
 ```css hidden live-sample___events-1 live-sample___events-1-finish
 p {
   color: purple;
@@ -55,11 +61,7 @@ const btn = document.querySelector("button");
 // Add your code here
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("events-1", "100%", 80) }}
-
-The finished task should look like this:
+The finished example should behave like this (try pressing the button):
 
 {{ EmbedLiveSample("events-1-finish", "100%", 80) }}
 
@@ -96,6 +98,12 @@ To complete this task, create an event listener that moves the circle around the
 
 > [!WARNING]
 > When testing your code, you will have to focus on the canvas before trying out your keyboard commands (for example, click on it, or tab to it with the keyboard). Otherwise they won't work.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("events-2", "100%", 350) }}
+
+Here's the underlying code for this starting point:
 
 ```html hidden live-sample___events-2 live-sample___events-2-finish
 <canvas width="480" height="320" tabindex="0"> </canvas>
@@ -135,11 +143,7 @@ drawCircle(x, y, size);
 // Add your code here
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("events-2", "100%", 350) }}
-
-The finished task should look like this (click on it and then try the keyboard controls):
+The finished example should behave like this (click on it and then try the keyboard controls):
 
 {{ EmbedLiveSample("events-2-finish", "100%", 350) }}
 
@@ -220,6 +224,12 @@ In the next events-related task tests your knowledge of event bubbling. We'd lik
 
 We want you to solve this without looping through all the buttons and giving each one their own event listener.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("events-3", "100%", 80) }}
+
+Here's the underlying code for this starting point:
+
 ```html hidden live-sample___events-3 live-sample___events-3-finish
 <div class="button-bar">
   <button data-color="red">Red</button>
@@ -257,11 +267,7 @@ const buttonBar = document.querySelector(".button-bar");
 // Add your code here
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("events-3", "100%", 80) }}
-
-The finished task should look like this (click the buttons):
+The finished example should behave like this (try clicking the buttons):
 
 {{ EmbedLiveSample("events-3-finish", "100%", 80) }}
 

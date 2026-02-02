@@ -36,11 +36,11 @@ To complete our first functions task:
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___functions-1 live-sample___functions-3 live-sample___functions-4 live-sample___functions-1-finish live-sample___functions-3-finish live-sample___functions-4-finish
+```html hidden live-sample___functions-1 live-sample___functions-3 live-sample___functions-4 live-sample___functions-1-finish
 <p></p>
 ```
 
-```css hidden live-sample___functions-1 live-sample___functions-3 live-sample___functions-4 live-sample___functions-1-finish live-sample___functions-3-finish live-sample___functions-4-finish
+```css hidden live-sample___functions-1 live-sample___functions-3 live-sample___functions-4 live-sample___functions-1-finish
 * {
   box-sizing: border-box;
 }
@@ -52,6 +52,12 @@ p {
 ```
 
 <!-- Example-specific code -->
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("functions-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___functions-1
 const names = [
@@ -71,11 +77,7 @@ const para = document.querySelector("p");
 // Add your code here
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("functions-1", "100%", 60) }}
-
-The finished task should look like this:
+Your finished code should output a random name:
 
 {{ EmbedLiveSample("functions-1-finish", "100%", 60) }}
 
@@ -131,6 +133,12 @@ This task requires you to create a function that draws a rectangle on the provid
 - `height` — the height of the rectangle.
 - `color` — the color of the rectangle.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("functions-2", "100%", 180) }}
+
+Here's the underlying code for this starting point:
+
 ```html hidden live-sample___functions-2 live-sample___functions-2-finish
 <canvas width="240" height="160"></canvas>
 ```
@@ -155,11 +163,7 @@ const color = "blue";
 // Add your code here
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("functions-2", "100%", 180) }}
-
-The finished task should look like this:
+The finished output should look like this:
 
 {{ EmbedLiveSample("functions-2-finish", "100%", 180) }}
 
@@ -213,6 +217,12 @@ To complete the task:
 2. Update the `chooseName()` function so that it makes use of the random number function, takes the array to choose from as a parameter (making it more flexible), and returns the result.
 3. Print the returned result into the paragraph (`para`)'s `textContent`.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("functions-3", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___functions-3
 const names = [
   "Chris",
@@ -239,13 +249,7 @@ function chooseName() {
 chooseName();
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("functions-3", "100%", 60) }}
-
-<!-- The finished task should look like this:
-
-{{ EmbedLiveSample("functions-3-finish", "100%", 60) }} -->
+We've not shown the output of the finished code, as it is identical to the starting point. The code has just been refactored.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -269,7 +273,7 @@ function chooseName(array) {
 para.textContent = chooseName(names);
 ```
 
-```js hidden live-sample___functions-3-finish
+```js hidden
 const names = [
   "Chris",
   "Li Kang",
@@ -303,6 +307,12 @@ In this task, we have an array of names, and we're using {{jsxref("Array.filter(
 
 To complete the task, update the code so that the functionality inside `isShort()` is instead included directly inside the `filter()` call as an arrow function. See how compact you can make it.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("functions-4", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___functions-4
 const names = [
   "Chris",
@@ -328,13 +338,7 @@ const shortNames = names.filter(isShort);
 para.textContent = shortNames;
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("functions-4", "100%", 60) }}
-
-<!-- The finished task should look like this:
-
-{{ EmbedLiveSample("functions-4-finish", "100%", 60) }} -->
+We've not shown the output of the finished code, as it is identical to the starting point. The code structure has just been updated.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -351,7 +355,7 @@ const shortNames = names.filter((name) => name.length < 5);
 para.textContent = shortNames;
 ```
 
-```js hidden live-sample___functions-4-finish
+```js hidden
 const names = [
   "Chris",
   "Li Kang",

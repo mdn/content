@@ -31,6 +31,12 @@ Some hints/questions:
 - The last mother cat name should have an "and" before it, and a full stop after it. How do you make sure this can work, no matter how many cats are in the JSON?
 - Why are the `para1.textContent = motherInfo;` and `para2.textContent = kittenInfo;` lines inside the `displayCatInfo()` function, and not at the end of the script? This has something to do with async code.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("json-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```html hidden live-sample___json-1 live-sample___json-1-finish
 <p class="one"></p>
 <p class="two"></p>
@@ -74,11 +80,7 @@ function displayCatInfo(catString) {
 }
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("json-1", "100%", 60) }}
-
-The finished task should look like this:
+The finished output should look like this:
 
 {{ EmbedLiveSample("json-1-finish", "100%", 80) }}
 

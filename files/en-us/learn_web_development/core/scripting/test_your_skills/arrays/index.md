@@ -51,6 +51,12 @@ p {
 
 <!-- Example-specific code -->
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("arrays-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___arrays-1
 // Add your code here
 
@@ -62,11 +68,7 @@ para1.textContent = `Array: ${myArray}`;
 section.appendChild(para1);
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("arrays-1", "100%", 60) }}
-
-The finished task should look like this:
+The finished output should look like this:
 
 {{ EmbedLiveSample("arrays-1-finish", "100%", 60) }}
 
@@ -113,6 +115,12 @@ To complete the task:
 2. Store the length of the array in a variable called `arrayLength`.
 3. Store the last item in the array in a variable called `lastItem`.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("arrays-2", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___arrays-2
 const myString = "Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri";
 
@@ -132,11 +140,7 @@ section.appendChild(para2);
 section.appendChild(para3);
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("arrays-2", "100%", 60) }}
-
-The finished task should look like this:
+The finished output should look like this:
 
 {{ EmbedLiveSample("arrays-2-finish", "100%", 100) }}
 
@@ -187,6 +191,12 @@ For this array task, we provide you with a starting array, and you will work in 
 3. Iterate over each item in the array and add its index number after the name inside parentheses, for example `Ryu (0)`. Note that we don't teach how to do this in the Arrays article, so you'll have to do some research.
 4. Finally, join the array items together in a single string called `myString`, with a separator of `"-"`.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("arrays-3", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___arrays-3
 const myArray = [
   "Ryu",
@@ -209,11 +219,7 @@ para1.textContent = myString;
 section.appendChild(para1);
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("arrays-3", "100%", 60) }}
-
-The finished task should look like this:
+The finished output should look like this:
 
 {{ EmbedLiveSample("arrays-3-finish", "100%", 60) }}
 
@@ -293,6 +299,12 @@ To complete the task:
 1. Find the index of the `"Eagles"` item, and use that to remove the `"Eagles"` item.
 2. Make a new array from this one, called `eBirds`, that contains only birds from the original array whose names begin with the letter "E". Note that {{jsxref("String.prototype.startsWith()", "startsWith()")}} is a great way to check whether a string starts with a given character.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("arrays-4", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___arrays-4
 const birds = ["Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets"];
 
@@ -306,11 +318,7 @@ para1.textContent = eBirds;
 section.appendChild(para1);
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("arrays-4", "100%", 60) }}
-
-The finished task should look like this:
+The finished output should look like this:
 
 {{ EmbedLiveSample("arrays-4-finish", "100%", 60) }}
 

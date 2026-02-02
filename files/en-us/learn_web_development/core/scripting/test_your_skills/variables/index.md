@@ -44,6 +44,12 @@ p {
 
 <!-- Example-specific code -->
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("variables-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___variables-1
 let myName = "Paul";
 
@@ -59,11 +65,7 @@ para.textContent = myName;
 section.appendChild(para);
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("variables-1", "100%", 60) }}
-
-The finished task should look like this:
+The finished output should look like this:
 
 {{ EmbedLiveSample("variables-1-finish", "100%", 60) }}
 
@@ -99,6 +101,12 @@ section.appendChild(para);
 
 The final task for now — in this case you are provided with some existing code, which has two errors present in it. The results panel should be outputting the name `Chris`, and a statement about how old Chris will be in 20 years' time. We want you to fix the problem and correct the output.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("variables-2", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___variables-2
 // Fix the following code
 
@@ -118,11 +126,7 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("variables-2", "100%", 60) }}
-
-The finished task should look like this:
+The finished output should look like this:
 
 {{ EmbedLiveSample("variables-2-finish", "100%", 80) }}
 

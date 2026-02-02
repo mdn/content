@@ -44,6 +44,12 @@ p {
 
 <!-- Example-specific code -->
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("conditionals-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___conditionals-1
 let season = "summer";
 let response;
@@ -58,11 +64,7 @@ para1.textContent = response;
 section.appendChild(para1);
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("conditionals-1", "100%", 60) }}
-
-The finished task should look like this:
+The initial state of your finished output should look like this:
 
 {{ EmbedLiveSample("conditionals-1-finish", "100%", 60) }}
 
@@ -131,6 +133,12 @@ To complete the task:
 After you've entered your code, try changing `machineActive` to `true`, and `score` to a few different values to see if it works.
 Please note that, for the scope of this exercise, the `Your score is __` string will remain on the screen regardless of the `machineActive` variable's value.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("conditionals-2", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___conditionals-2
 let response;
 let score = 75;
@@ -149,11 +157,7 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("conditionals-2", "100%", 60) }}
-
-The finished task should look like this:
+The initial state of your finished output should look like this:
 
 {{ EmbedLiveSample("conditionals-2-finish", "100%", 80) }}
 
@@ -239,6 +243,12 @@ To complete the task:
 1. Create an `if...else` structure that checks whether the machine is switched on and puts a message into the `machineResult` variable telling the user whether it is on or off.
 2. If the machine is on, we also want a second conditional to run that checks whether the `pwd` is equal to `cheese`. If so, it should assign a string to `pwdResult` telling the user they logged in successfully. If not, it should assign a different string to `pwdResult` telling the user their login attempt was not successful. We'd like you to do this in a single line, using something that isn't an `if...else` structure.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("conditionals-3", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___conditionals-3
 let machineActive = true;
 let pwd = "cheese";
@@ -259,11 +269,7 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-The starting point of the task looks like this:
-
-{{ EmbedLiveSample("conditionals-3", "100%", 60) }}
-
-The finished task should look like this:
+The finished output should look like this:
 
 {{ EmbedLiveSample("conditionals-3-finish", "100%", 80) }}
 
