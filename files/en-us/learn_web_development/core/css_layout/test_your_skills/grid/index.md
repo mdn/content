@@ -13,13 +13,15 @@ The aim of this skill test is to help you assess whether you understand how a [g
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## CSS grids 1
 
-In this task, we want you to create a grid into which the four child elements will auto-place. The grid should have three columns sharing the available space equally and a 20 pixel gap between the column and row tracks. After that, try adding more child containers inside the parent container with the class of `grid` and see how they behave by default.
+In this task, we want you to create a grid into which the four child elements will be auto-placed. The grid should have three columns that share the available space equally, with a `20px` gap between the column and row tracks. After that, try adding more child elements inside the parent container with the `grid` class and see how they behave by default.
 
-Your final result should look like the following rendering:
+The starting point of the task looks like this:
 
-{{EmbedLiveSample("grid1-finish", "", "160px")}}
+{{EmbedLiveSample("grid1-start", "", "220px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___grid1-start live-sample___grid1-finish
 <div class="grid">
@@ -48,9 +50,9 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The finished layout should look like this:
 
-{{EmbedLiveSample("grid1-start", "", "220px")}}
+{{EmbedLiveSample("grid1-finish", "", "160px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -67,13 +69,17 @@ Create a grid using `display: grid` with three columns using `grid-template-colu
 
 </details>
 
-## Task 2
+## CSS grids 2
 
-In this task, we already have a grid defined. We want you to edit the CSS rules for the two child elements, causing them to span over several grid tracks each. The second item should overlay the first as shown in the following rendering:
-
-{{EmbedLiveSample("grid2-finish", "", "340px")}}
+In this task, we already have a grid defined. We want you to edit the CSS rules for the two child elements so that each one spans several grid tracks. The second item should overlay the first.
 
 **Bonus question:** Can you now cause the first item to display on top without changing the order of items in the source?
+
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("grid2-start", "", "340px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___grid2-start live-sample___grid2-finish
 <div class="grid">
@@ -118,9 +124,9 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The layout should look like this after you complete the task:
 
-{{EmbedLiveSample("grid2-start", "", "340px")}}
+{{EmbedLiveSample("grid2-finish", "", "340px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -142,7 +148,7 @@ One option is to use the shorthands below, however it would be correct to use th
 
 For the bonus question, one way of achieving this is to use `order`, which we've encountered in the flexbox tutorial.
 
-```css
+```css live-sample___grid2-finish
 .item1 {
   order: 1;
 }
@@ -158,13 +164,15 @@ Another valid solution is to use `z-index`:
 
 </details>
 
-## Task 3
+## CSS grids 3
 
-In this task, there are four direct children in this grid. The starting point has them displayed using auto-placement.
+In this task, the grid contains four direct children. They are currently auto-placed in the grid.
 
-To complete the task, use the `grid-area` and `grid-template-areas` properties to lay the items out as shown in the following rendering:
+The starting point of the task looks like this:
 
-{{EmbedLiveSample("grid3-finish", "", "200px")}}
+{{EmbedLiveSample("grid3-start", "", "200px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___grid3-start live-sample___grid3-finish
 <div class="grid">
@@ -194,9 +202,9 @@ body {
 }
 ```
 
-This is the starting state of the task:
+To complete this task, use the `grid-area` and `grid-template-areas` properties to lay out the items as shown here:
 
-{{EmbedLiveSample("grid3-start", "", "200px")}}
+{{EmbedLiveSample("grid3-finish", "", "200px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -233,11 +241,15 @@ Each part of the layout needs a name using the `grid-area` property and `grid-te
 
 </details>
 
-## Task 4
+## CSS grids 4
 
-In this task, you will need to use both grid layout and flexbox to recreate the example as seen in the finished rendering below. The gap between the column and row tracks should be 10px. You do not need to make any changes to the HTML in order to achieve this.
+In this task, you will need to use both grid layout and flexbox to recreate the finished layout. The gap between the column and row tracks should be `10px`. You do not need to make any changes to the HTML in order to achieve this.
 
-{{EmbedLiveSample("grid4-finish", "", "400px")}}
+The starting point of the task looks like this:
+
+{{EmbedLiveSample("grid4-start", "", "400px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___grid4-start live-sample___grid4-finish
 <div class="container">
@@ -330,9 +342,9 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The layout should look like this after you complete the task:
 
-{{EmbedLiveSample("grid4-start", "", "400px")}}
+{{EmbedLiveSample("grid4-finish", "", "400px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
