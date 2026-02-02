@@ -112,7 +112,12 @@ execCommand(commandName, showDefaultUI, valueArgument)
     - `outdent`
       - : Outdents the line containing the selection or insertion point.
     - `paste`
-      - : Pastes the clipboard contents at the insertion point (replaces current selection). Disabled for web content.
+      - : Pastes the clipboard contents at the insertion point (replaces current selection).
+
+        This feature is specified as disabled for _web content_, but has been implemented via the [Clipboard API](/en-US/docs/Web/API/Clipboard_API#security_considerations) on some browsers.
+        On these browsers the feature requires {{glossary("transient activation")}}, and acknowledgement of a popup UI when pasting cross-origin content.
+        See the [Browser compatibility table](/en-US/docs/Web/API/Document/execCommand#browser_compatibility) for more information.
+
     - `redo`
       - : Redoes the previous undo command.
     - `removeFormat`
@@ -227,6 +232,41 @@ function insertText(newText, selector) {
 #### Result
 
 {{EmbedLiveSample("Using insertText", 100, 300)}}
+
+### Using paste
+
+This example has a {{HTMLElement("textarea")}} element, and a {{HTMLElement("button")}} element that you can use to paste content into it.
+
+#### HTML
+
+```html
+<button id="paste">Paste</button>
+<hr />
+<textarea id="text_box">Some text.</textarea>
+```
+
+#### JavaScript
+
+```js
+const pasteButton = document.querySelector("#paste");
+const textBox = document.querySelector("#text_box");
+
+pasteButton.addEventListener("click", () => {
+  textBox.focus();
+
+  let pasted = document.execCommand("paste", false);
+  if (!pasted) {
+    textBox.textContent = "paste unsuccessful, execCommand not supported";
+  }
+});
+```
+
+#### Result
+
+On browsers that implement this feature using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API#security_considerations) you should be able to copy same-origin content (such as text from the text area) and paste it into the box.
+Cross origin content, copied from any other page or location, can be copied, but when you try to paste it a permission prompt may be displayed.
+
+{{EmbedLiveSample("Using paste", 100, 300)}}
 
 ## Specifications
 
