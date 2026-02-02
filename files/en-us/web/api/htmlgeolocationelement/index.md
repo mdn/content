@@ -87,7 +87,7 @@ This example uses the `<geolocation>` element to retrieve your current location,
 
 #### HTML
 
-We include a `<geolocation>` element with an `autolocate` attribute so that the browser will attempt to retrieve location data automatically, provided `geolocation` permission was previously granted. Inside the `<geolocation>` element we nest a {{htmlelement("button")}} fallback, which will be rendered in browsers that do not support `<geolocation>` to enable location data to be requested.
+We include a `<geolocation>` element with an `autolocate` attribute so that the browser will attempt to retrieve location data automatically, provided `geolocation` permission was previously granted. Inside the `<geolocation>` element we nest a {{htmlelement("button")}} fallback, which will be rendered in browsers that do not support the `<geolocation>` element.
 
 ```html
 <geolocation autolocate>
