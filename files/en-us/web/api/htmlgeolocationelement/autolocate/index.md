@@ -8,7 +8,7 @@ browser-compat: api.HTMLGeolocationElement.autolocate
 
 {{APIRef("Navigation API")}}
 
-The **`autolocate`** property of the {{domxref("HTMLGeolocationElement")}} interface gets and sets a boolean value indicating whether the browser should immediately request location data when the {{htmlelement("geolocation")}} element is rendered, provided permission to use the `geolocation` feature was previously granted.
+The **`autolocate`** property of the {{domxref("HTMLGeolocationElement")}} interface gets and sets a boolean value indicating whether the browser should immediately request location data when the {{htmlelement("geolocation")}} element is rendered, provided permission to use the `geolocation` feature is already granted.
 
 It reflects the value of the `<geolocation>` [`autolocate`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#autolocate) attribute.
 
