@@ -22,6 +22,10 @@ The **`<em>`** [HTML](/en-US/docs/Web/HTML) element marks text that has stress e
 em {
   /* Add your styles here */
 }
+
+p {
+  font-family: reset;
+}
 ```
 
 ## Attributes

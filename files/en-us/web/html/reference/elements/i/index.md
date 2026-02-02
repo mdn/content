@@ -28,6 +28,10 @@ The **`<i>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text th
 i {
   /* Add your styles here */
 }
+
+p {
+  font-family: reset;
+}
 ```
 
 ## Attributes
