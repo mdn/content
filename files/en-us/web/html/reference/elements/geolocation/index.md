@@ -97,7 +97,7 @@ The rendered `<geolocation>` button is deactivated (meaning that pressing it wil
 
 #### Value constraints
 
-The following CSS property value constaints are applied to the `<geolocation>` element. If an attempt is made to set these properties to values outside the listed constraints on the `<geolocation>` element, the value is adjusted to equal the constraint (in the case of an exact value constraint) or to equal to nearest computed value upper or lower bound (in the case of a range constraint).
+The following CSS property value constraints are applied to the `<geolocation>` element. If an attempt is made to set these properties to values outside the listed constraints on the `<geolocation>` element, the value is adjusted to equal the constraint (in the case of an exact value constraint) or to equal to nearest computed value upper or lower bound (in the case of a range constraint).
 
 - {{cssxref("opacity")}}
   - : `1.0`
