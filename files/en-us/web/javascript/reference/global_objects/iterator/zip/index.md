@@ -1,5 +1,6 @@
 ---
 title: Iterator.zip()
+short-title: zip()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/zip
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Iterator.zip

@@ -1,5 +1,6 @@
 ---
 title: Iterator.zipKeyed()
+short-title: zipKeyed()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/zipKeyed
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Iterator.zipKeyed
