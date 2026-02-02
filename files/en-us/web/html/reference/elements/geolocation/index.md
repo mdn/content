@@ -38,7 +38,9 @@ The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) has some shortcomings
 The `<geolocation>` element aims to fix these problems by:
 
 - Providing a declarative browser-defined control for sharing location data. In Chrome, the button features a "map pin" icon and intuitive text ("Use location" in English content).
-- Reinventing the permissions process to be more intuitive. For example, in Chrome, if the user previously denied permission to access location data, or dismissed the permission dialog without making a choice, they are free to press the button again to update their choice. In cases where they previously denied permission, subsequent dialogs will inform them that they previously didn't allow location data to be shared, and ask them whether they want to continue not allowing it, or to allow it.
+- Making the permissions process more intuitive.
+  For example, in Chrome, if the user previously denied permission to access location data, or dismissed the permission dialog without making a choice, they are free to press the button again to update their choice.
+  In cases where they previously denied permission, subsequent dialogs will inform them that they previously didn't allow location data to be shared, and ask them whether they want to continue not allowing it, or to allow it.
 - More obviously reflecting the user's conscious choice, and blocking possible usage that might trick the user into providing their location data unwittingly (see [`<geolocation> blocking`](#geolocation_blocking) for more information).
 
 The element's DOM API interface, {{domxref("HTMLGeolocationElement")}}, provides features to access returned position data, current permission status, and errors if the data retrieval was unsuccessful, reducing the amount of JavaScript logic that needs to be written. It also has events available to run code in response to location data being received, changes in permission status, and user interactions with the permission dialog.
