@@ -1,6 +1,6 @@
 ---
-title: CSS module landing page template
-slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template
+title: CSS module page template
+slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_page_template
 page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
@@ -30,15 +30,15 @@ sidebar: mdnsidebar
 > - **title**
 >   - : The `title` value is displayed at the top of the page.
 >     This is the text "CSS" followed by the name of the module.
->     For example, the title for the [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module landing page is _CSS grid layout_.
+>     For example, the title for the [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module page is _CSS grid layout_.
 > - **slug**
 >   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted as `Web/CSS/Guides/NameOfTheModule`.
->     For example, the slug for the [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module landing page is `Web/CSS/Guides/Grid_layout`.
+>     For example, the slug for the [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module page is `Web/CSS/Guides/Grid_layout`.
 > - **page-type**
->   - : The `page-type` value for CSS module landing pages is always `css-module`.
+>   - : The `page-type` value for CSS module pages is always `css-module`.
 > - **spec-urls**
->   - : The `spec-urls` value is a URL of the specification or a bulleted list of the URLs of multiple levels of the same specification in cases where there are multiple versions of a specification, such as levels 1, 2, and 3. Include only the modules that are revisions of a single spec, in descending order. For example, the `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module landing page is as follows:
+>   - : The `spec-urls` value is a URL of the specification or a bulleted list of the URLs of multiple levels of the same specification in cases where there are multiple versions of a specification, such as levels 1, 2, and 3. Include only the modules that are revisions of a single spec, in descending order. For example, the `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module page is as follows:
 >
 > ```plain
 > spec-urls:
