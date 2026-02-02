@@ -179,7 +179,7 @@ In some cases, you may wish to split by [grapheme clusters](/en-US/docs/Web/Java
 
 ```js
 const segmenter = new Intl.Segmenter("en-US", { granularity: "grapheme" });
-const str1 = "😁😭😡";
+const str1 = "🤷‍♂️🤷‍♀️🤷";
 const str2 = "123";
 const it = Iterator.zip([
   segmenter.segment(str1).map(({ segment }) => segment),
@@ -189,9 +189,9 @@ for (const [char1, char2] of it) {
   console.log(`${char1} - ${char2}`);
 }
 // Output:
-// 😁 - 1
-// 😭 - 2
-// 😡 - 3
+// 🤷‍♂️ - 1
+// 🤷‍♀️ - 2
+// 🤷 - 3
 ```
 
 ## Specifications
@@ -204,6 +204,8 @@ for (const [char1, char2] of it) {
 
 ## See also
 
+- [Polyfill of `Iterator.zip` in `core-js`](https://core-js.io/docs/features/proposals/joint-iteration)
+- [es-shims polyfill of `Iterator.zip`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.zipKeyed()")}}
 - {{jsxref("Iterator.from()")}}
