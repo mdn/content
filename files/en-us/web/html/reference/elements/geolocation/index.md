@@ -227,7 +227,8 @@ We include a `<geolocation>` element with a `<button>` fallback nested inside it
 
 In our script, we start off by grabbing a reference to the output `<p>` element. We then detect whether the `<geolocation>` element is supported by testing `typeof HTMLGeolocationElement === "function"`:
 
-- If it is supported, we grab a reference to the `<geolocation>` element then add a {{domxref("HTMLGeolocationElement.location_event", "location")}} event listener so that, when the button is pressed and the data is retrieved, we print the (lat, long) coordinates to the output `<p>` (retrieved via the {{domxref("HTMLGeolocationElement.position", "position")}} property), or an error message if the data retrieval was unsuccessful (retrieved via the {{domxref("HTMLGeolocationElement.error", "error")}} property).
+- If it is supported, we first grab a reference to the `<geolocation>` element and then add a {{domxref("HTMLGeolocationElement.location_event", "location")}} event listener.
+  When the button is pressed and the data is retrieved, the listener prints the (lat, long) coordinates to the output `<p>` (retrieved via the {{domxref("HTMLGeolocationElement.position", "position")}} property), or an error message if the data retrieval was unsuccessful (retrieved via the {{domxref("HTMLGeolocationElement.error", "error")}} property).
 - If it isn't supported, we grab a reference to the fallback `<button>` element and retrieve and print the same data, except that this time we are using a `click` event listener on the button, and a {{domxref("Geolocation.getCurrentPosition()")}} call to retrieve the data.
 
 ```js
