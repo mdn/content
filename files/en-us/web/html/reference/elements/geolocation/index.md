@@ -90,7 +90,7 @@ Any properties that are not listed in the following sub-sections, or logically e
 
 #### Accessibility restrictions
 
-The rendered `<geolocation>` button is deactivated (meaning that pressing it will have no effect) if the following constaints are not adhered to:
+The rendered `<geolocation>` button is deactivated (meaning that pressing it will have no effect) if the following constraints are not adhered to:
 
 - The [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) ratio between {{cssxref("color")}} and {{cssxref("background-color")}} must be at least 3:1.
 - The {{cssxref("font-size")}} must not be smaller than the `small` value (in the case of keyword values), or its computed value (in the case of other value types).
