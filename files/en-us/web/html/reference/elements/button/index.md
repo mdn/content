@@ -61,9 +61,16 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - `"show-modal"`
       - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.showModal()")}} method on the `<dialog>` element.
     - `"close"`
-      - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.close()")}} method on the `<dialog>` element. When used with the `value` attribute, the button's value will be passed as the dialog's return value.
+      - : The button will close a {{htmlelement("dialog")}} element.
+        If the dialog is already closed, no action will be taken.
+        This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.close()")}} method on the `<dialog>` element.
+        When used with the `value` attribute, the button's value will be passed as the dialog's `returnValue` property.
     - `"request-close"`
-      - : The button will trigger a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} event on a {{htmlelement("dialog")}} element to request that the browser dismiss it, followed by a {{domxref("HTMLDialogElement.close_event", "close")}} event. This differs from the `close` command in that authors can call {{domxref("Event.preventDefault()")}} on the `cancel` event to prevent the `<dialog>` from closing. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.requestClose()")}} method on the `<dialog>` element. When used with the `value` attribute, the button's value will be passed as the dialog's return value.
+      - : The button will trigger a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} event on a {{htmlelement("dialog")}} element to request that the browser dismiss it, followed by a {{domxref("HTMLDialogElement.close_event", "close")}} event.
+        This differs from the `close` command in that authors can call {{domxref("Event.preventDefault()")}} on the `cancel` event to prevent the `<dialog>` from closing.
+        If the dialog is already closed, no action will be taken.
+        This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.requestClose()")}} method on the `<dialog>` element.
+        When used with the button's `value` attribute, the value will be passed as the dialog's `returnValue` property.
     - `"show-popover"`
       - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to setting a value of `show` for the [`popovertargetaction`](#popovertargetaction) attribute, and also provides a declarative equivalent to calling the {{domxref("HTMLElement.showPopover()")}} method on the popover element.
     - `"hide-popover"`
@@ -139,7 +146,9 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - `button`: The button has no default behavior, and does nothing when pressed by default. It can have client-side scripts listen to the element's events, which are triggered when the events occur.
 
 - `value`
-  - : Defines the value associated with the button's `name` when it's submitted with the form data. This value is passed to the server in params when the form is submitted using this button. When used with the `close` or `request-close` commands, the `value` attribute sets the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} of the {{htmlelement("dialog")}} element being controlled. This allows you to determine which button was used to close the dialog by checking the dialog's `returnValue` property in the `close` event handler.
+  - : Defines the value associated with the button's `name` when it's submitted with the form data.
+     This value is passed to the server in params when the form is submitted using this button.
+     When used with the `close` or `request-close` commands, the `value` attribute sets the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} of the {{htmlelement("dialog")}} element being controlled.
 
 ## Notes
 
