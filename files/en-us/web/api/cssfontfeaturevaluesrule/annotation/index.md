@@ -8,7 +8,7 @@ browser-compat: api.CSSFontFeatureValuesRule.annotation
 
 {{ APIRef("CSSOM") }}
 
-The read-only **annotation** property of the {{domXRef("CSSFontFeatureValuesRule")}} interface contains a {{domXRef("CSSFontFeatureValuesMap")}} object representing the user-defined-ident and feature index for a variable font which supports {{CSSXRef("font-variant-alternates", "annotation()", "#annotation")}}.
+The read-only **annotation** property of the {{domXRef("CSSFontFeatureValuesRule")}} interface contains a {{domXRef("CSSFontFeatureValuesMap")}} object representing the [user-defined-ident](/en-US/docs/Web/CSS/Reference/Values/custom-ident) and [feature index](/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings#optional_value) for a variable font which supports {{CSSXRef("font-variant-alternates", "annotation()", "#annotation")}}.
 
 ## Value
 
