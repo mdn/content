@@ -13,13 +13,15 @@ The aim of this skill test is to assess whether you understand how special eleme
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Images and forms 1
 
-In this task, you have an image that is overflowing the box. We want the image to scale down to fit inside the box without any extra white space, but we do not mind if some part of the image is cropped. Update the CSS to achieve this.
+In this task, you have an image that is overflowing the box. We want you to scale down the image so that it fits inside the box without any extra white space; we don't mind if some part of the image is cropped. Update the CSS to achieve this.
 
-Your final result should look like the following rendering:
+The starting point of the task looks like this:
 
-{{EmbedLiveSample("images-forms1-finish", "", "260px")}}
+{{EmbedLiveSample("images-forms1-start", "", "260px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___images-forms1-start live-sample___images-forms1-finish
 <div class="box">
@@ -41,9 +43,9 @@ img {
 }
 ```
 
-This is the starting state of the task:
+The updated styling should look like this:
 
-{{EmbedLiveSample("images-forms1-start", "", "260px")}}
+{{EmbedLiveSample("images-forms1-finish", "", "260px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -61,7 +63,7 @@ img {
 
 </details>
 
-## Task 2
+## Images and forms 2
 
 In this task, you have a basic form.
 
@@ -72,9 +74,11 @@ To complete the task:
 3. Give the form field and button `10px` of padding.
 4. Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.
 
-Your final result should look like the following rendering:
+The starting point of the task looks like this:
 
-{{EmbedLiveSample("images-forms2-finish", "", "80px")}}
+{{EmbedLiveSample("images-forms2-start", "", "80px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___images-forms2-start live-sample___images-forms2-finish
 <form action="" class="my-form" method="post">
@@ -96,9 +100,9 @@ body {
 }
 ```
 
-This is the starting state of the task:
+The updated styling should look like this:
 
-{{EmbedLiveSample("images-forms2-start", "", "80px")}}
+{{EmbedLiveSample("images-forms2-finish", "", "80px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -128,7 +132,7 @@ Here's an example solution for the task:
 
 </details>
 
-## Task 3
+## Images and forms 3
 
 The solution for this assessment is fairly free-form, and you have a lot of flexibility over what you can do here. So we're not providing an example rendering.
 
@@ -137,6 +141,12 @@ Your CSS needs to include the following:
 1. A lightweight "reset" to make fonts, padding, margin, and sizing more consistent to begin with, as described in [Normalizing form behavior](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms#normalizing_form_behavior).
 2. Some nice, consistent styling for the inputs and button.
 3. A layout technique to make the inputs and labels line up neatly.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-2", "100%", 250) }}
+
+Here's the underlying code for this starting point:
 
 ```html hidden live-sample___forms-2
 <form>
@@ -193,9 +203,7 @@ body {
 /* Add your code here */
 ```
 
-This is the starting state of the task:
-
-{{ EmbedLiveSample("forms-2", "100%", 250) }}
+We've not provided finished content for this task, as many valid solutions are possible.
 
 <details>
 <summary>Click here to show the solution</summary>

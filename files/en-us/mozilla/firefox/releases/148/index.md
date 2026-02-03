@@ -32,11 +32,19 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The {{cssxref("position-area")}} property in [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) now correctly keeps the anchored element within the viewport.
+  ([Firefox bug 2008537](https://bugzil.la/2008537)).
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
+
+- The {{jsxref("Iterator.zip()")}} and {{jsxref("Iterator.zipKeyed()")}} static methods are now supported.
+  These "zip" together multiple input iterators, returning a new iterator that yields the group of input elements at each iteration step.
+  They are useful when you need to combine data from multiple input iterators that are positionally aligned (the first value yielded by the first iterator corresponds to the first value yielded by the other iterators, and so on).
+  ([Firefox bug 2003333](https://bugzil.la/2003333)).
 
 <!-- No notable changes. -->
 
@@ -64,7 +72,11 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("MouseEvent.movementX", "movementX")}} and {{domxref("MouseEvent.movementY", "movementY")}} properties on the {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} event are now populated when the pointer is moved — previously these were set to zero.
   ([Firefox bug 1987671](https://bugzil.la/1987671)).
 
-<!-- #### DOM -->
+#### DOM
+
+- The "paste" command can now be used with {{domxref("Document.execCommand()")}} in web content (in addition to web extensions).
+  This is implemented using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) and shares the same [Security considerations](/en-US/docs/Web/API/Clipboard_API#security_considerations), such as requiring transient activation and user acknowledgement when pasting cross-origin content.
+  ([Firefox bug 1998195](https://bugzil.la/1998195)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
