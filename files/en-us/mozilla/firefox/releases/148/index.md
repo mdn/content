@@ -67,7 +67,11 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("MouseEvent.movementX", "movementX")}} and {{domxref("MouseEvent.movementY", "movementY")}} properties on the {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} event are now populated when the pointer is moved — previously these were set to zero.
   ([Firefox bug 1987671](https://bugzil.la/1987671)).
 
-<!-- #### DOM -->
+#### DOM
+
+- The "paste" command can now be used with {{domxref("Document.execCommand()")}} in web content (in addition to web extensions).
+  This is implemented using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) and shares the same [Security considerations](/en-US/docs/Web/API/Clipboard_API#security_considerations), such as requiring transient activation and user acknowledgement when pasting cross-origin content.
+  ([Firefox bug 1998195](https://bugzil.la/1998195)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
