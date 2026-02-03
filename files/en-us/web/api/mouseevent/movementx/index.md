@@ -20,7 +20,7 @@ The value is zero for all events other than {{domxref("Element/mousemove_event",
 ## Value
 
 A number.
-Always zero on any {{domxref("MouseEvent")}} other than `mousemove`, and any {{domxref("PointerEvent")}} other than `pointermove` or `pointerrawevent`.
+Always zero on any {{domxref("MouseEvent")}} other than `mousemove`, and any {{domxref("PointerEvent")}} other than `pointermove` or `pointerrawupdate`.
 
 ## Examples
 

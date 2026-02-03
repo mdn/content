@@ -34,7 +34,7 @@ main:hover {
 }
 ```
 
-The [CSS properties and values API](/en-US/docs/Web/CSS/Guides/Properties_and_values_api/) provides methods of registering custom properties. Registering CSS custom properties sets the variable's type, inheritance, and default value, making them more predictable and performant.
+The [CSS properties and values API](/en-US/docs/Web/CSS/Guides/Properties_and_values_API) provides methods of registering custom properties. Registering CSS custom properties sets the variable's type, inheritance, and default value, making them more predictable and performant.
 
 Registered properties are validated when they're computed rather than when they are parsed. This means that:
 
@@ -206,6 +206,6 @@ See [Animating a custom property value](/en-US/docs/Web/CSS/Reference/At-rules/@
 - {{cssxref("var()")}}
 - [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) guide
-- [CSS Properties and Values API](/en-US/docs/Web/CSS/Guides/Properties_and_values_api) module
+- [CSS Properties and Values API](/en-US/docs/Web/CSS/Guides/Properties_and_values_API) module
 - [CSS Properties and Values](/en-US/docs/Web/API/CSS_Properties_and_Values_API) API
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module
