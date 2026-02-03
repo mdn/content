@@ -41,7 +41,7 @@ A key aspect of the `<geolocation>` element is that it reflects the user's consc
 The element's DOM API interface, {{domxref("HTMLGeolocationElement")}}, provides features to access returned position data, current permission status, and errors if the data retrieval was unsuccessful, reducing the amount of JavaScript logic that needs to be written. It also has events available to run code in response to location data being received, changes in permission status, and user interactions with the permission dialog.
 
 > [!NOTE]
-> For performance reasons, a maximum of three `<geolocation>` elements are allowed on any one page. If this quota is exceeded, the element functionality is disabled.
+> For performance reasons, a maximum of three `<geolocation>` elements are allowed on any one page. If this quota is exceeded, all `<geolocation>` elements have their functionality disabled.
 
 ### Relationship with the Geolocation API
 
