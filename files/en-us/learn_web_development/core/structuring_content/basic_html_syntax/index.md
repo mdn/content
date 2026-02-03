@@ -7,7 +7,7 @@ sidebar: learnsidebar
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}
 
-In this article, we cover the absolute basics of HTML including terminology, syntax, and structure. Along the way, you'll complete some interactive challenges to become familiar with writing basic HTML.
+In this article, we cover the fundamentals of HTML, including terminology, syntax, and structure. Along the way, you'll complete some interactive challenges to become familiar with writing basic HTML.
 
 <table>
   <tbody>
