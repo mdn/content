@@ -61,7 +61,7 @@ Here's the underlying code for this starting point:
 </form>
 ```
 
-The finished form should look like this:
+The updated form should look like this:
 
 {{ EmbedLiveSample("forms-buttons-1-finished", "100%", 150) }}
 
@@ -138,7 +138,7 @@ Here's the underlying code for this starting point:
 </form>
 ```
 
-The finished form should look like this:
+The updated form should look like this:
 
 {{ EmbedLiveSample("forms-buttons-2-finished", "100%", 360) }}
 
@@ -232,7 +232,7 @@ Here's the underlying code for this starting point:
 </form>
 ```
 
-The finished form should look like this:
+The updated form should look like this:
 
 {{ EmbedLiveSample("forms-buttons-3-finished", "100%", 250) }}
 
@@ -301,7 +301,7 @@ Here's the underlying code for this starting point:
 </form>
 ```
 
-The finished form should look like this:
+The updated form should look like this:
 
 {{ EmbedLiveSample("forms-buttons-4-finished", "100%", 120) }}
 
@@ -371,7 +371,7 @@ Here's the underlying code for this starting point:
 </form>
 ```
 
-The finished form should look like this:
+The updated form should look like this:
 
 {{ EmbedLiveSample("forms-buttons-5-finished", "100%", 300) }}
 
@@ -458,7 +458,7 @@ Here's the underlying code for this starting point:
 </form>
 ```
 
-We've not shown the finished content rendered, as it doesn't look any different to the starting state.
+We've not provided finished content for this task, as it looks the same as the starting point.
 
 <details>
 <summary>Click here to show the solution</summary>

@@ -76,7 +76,7 @@ p {
 }
 ```
 
-The finished content should look like this:
+The updated content should look like this:
 
 {{ EmbedLiveSample('links-1-finished', "100%", 170) }}
 
@@ -164,7 +164,7 @@ div {
 }
 ```
 
-The finished content should look like this:
+The updated content should look like this:
 
 {{ EmbedLiveSample('links-2-finished', "100%", 200) }}
 
@@ -253,7 +253,7 @@ p {
 }
 ```
 
-We've not shown the finished content, as it gives the answers away.
+We've not provided finished content for this task, as it would give away the solution.
 
 <details>
 <summary>Click here to show the solution</summary>

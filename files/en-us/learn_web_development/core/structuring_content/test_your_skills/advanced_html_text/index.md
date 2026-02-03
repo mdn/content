@@ -78,7 +78,7 @@ time {
 }
 ```
 
-The finished content should look like this:
+The updated content should look like this:
 
 {{EmbedLiveSample('advanced-text-solution', "", 260)}}
 

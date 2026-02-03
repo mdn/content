@@ -81,7 +81,7 @@ p {
 }
 ```
 
-The finished content should look like this:
+The updated content should look like this:
 
 {{ EmbedLiveSample('text-basics-1-finished', "100%", 320) }}
 
@@ -160,7 +160,7 @@ ul {
 }
 ```
 
-The finished content should look like this:
+The updated content should look like this:
 
 {{ EmbedLiveSample('text-basics-2-finished', "100%", 400) }}
 
@@ -230,9 +230,9 @@ dt {
 }
 ```
 
-The finished content should look like this:
+The updated content should look like this:
 
-{{ EmbedLiveSample('text-basics-3-finished', "100%", 250) }}
+{{ EmbedLiveSample('text-basics-3-finished', "100%", 260) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -295,7 +295,7 @@ em {
 }
 ```
 
-The finished content should look something like this:
+The updated content should look something like this:
 
 {{ EmbedLiveSample('text-basics-4-finished', "100%", 140) }}
 

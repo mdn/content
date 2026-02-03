@@ -59,7 +59,7 @@ video {
 }
 ```
 
-The finished content should look like this:
+The updated content should look like this:
 
 {{ EmbedLiveSample('audio-1-finished', "100%", 180) }}
 
@@ -106,7 +106,7 @@ Here's the underlying code for this starting point:
 <video></video>
 ```
 
-The finished task should look like this:
+The updated content should look like this:
 
 {{EmbedLiveSample('video-1-finished', "100%", 380)}}
 

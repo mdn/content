@@ -61,7 +61,7 @@ img {
 }
 ```
 
-The finished content should look like this:
+The updated content should look like this:
 
 {{ EmbedLiveSample('images-1-finished', "100%", 460) }}
 
@@ -101,7 +101,7 @@ Here's the underlying code for this starting point:
   alt="Several tall evergreen trees called larches" />
 ```
 
-We've not shown the finished content rendered, as it doesn't look any different to the starting state.
+We've not provided finished content for this task, as it looks the same as the starting point.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -146,7 +146,7 @@ figcaption {
 }
 ```
 
-The finished content should look like this:
+The updated content should look like this:
 
 {{ EmbedLiveSample('images-3-finished', "100%", 640) }}
 
