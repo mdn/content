@@ -14,9 +14,13 @@ The **`size`** read-only property of the {{domxref("CSSFontFeatureValuesMap")}} 
 
 An unsigned long integer.
 
-## Example
+## Examples
 
-The following example outputs an integer of the number of the declarations within the [`@swash`](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values#swash) feature block.
+### Basic usage
+
+The following example outputs an integer of the number of the declarations within the [`@swash`](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values#swash) feature block. This example is using `@swash` but also works with other [feature value blocks](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values#feature_value_blocks).
+
+#### CSS
 
 ```css
 @font-feature-values "MonteCarlo" {
@@ -26,6 +30,8 @@ The following example outputs an integer of the number of the declarations withi
   }
 }
 ```
+
+#### JavaScript
 
 ```js
 // get the rules

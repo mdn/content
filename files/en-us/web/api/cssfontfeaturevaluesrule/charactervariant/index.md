@@ -16,9 +16,11 @@ A {{domxref("CSSFontFeatureValuesMap")}} object.
 
 Although the `characterVariant` property itself is read-only in the sense that you can't replace the `CSSFontFeatureValuesMap` object, you can still assign to the `characterVariant` property directly. You can also modify the values of the `characterVariant` using the [`CSSFontFeatureValuesMap` instance methods](/en-US/docs/Web/API/CSSFontFeatureValuesMap#instance_methods).
 
-## Example
+## Examples
 
-### CSS
+### Basic usage
+
+#### CSS
 
 ```css
 @font-feature-values "MonteCarlo" {
@@ -28,7 +30,7 @@ Although the `characterVariant` property itself is read-only in the sense that y
 }
 ```
 
-### JS
+#### JavaScript
 
 ```js
 // look for the first stylesheet and the first cssRule in that sheet

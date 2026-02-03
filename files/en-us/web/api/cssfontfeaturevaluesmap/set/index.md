@@ -29,7 +29,11 @@ The `CSSFontFeatureValuesMap` object.
 
 ## Examples
 
-The following example updates the value for `swashy` and adds a third declaration.
+### Basic usage
+
+The following example updates the value for `swashy` and adds a third declaration. This example is using `@swash` but also works with other [feature value blocks](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values#feature_value_blocks).
+
+#### CSS
 
 ```css
 @font-feature-values "MonteCarlo" {
@@ -39,6 +43,8 @@ The following example updates the value for `swashy` and adds a third declaratio
   }
 }
 ```
+
+#### JavaScript
 
 ```js
 function logSwashes(value, key) {

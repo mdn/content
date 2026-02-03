@@ -36,7 +36,11 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example logs the `key` and `value` for each entry in the `@swash` rule.
+### Basic usage
+
+The following example logs the `key` and `value` for each entry in the `@swash` rule. This example is using `@swash` but also works with other [feature value blocks](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values#feature_value_blocks).
+
+#### CSS
 
 ```css
 @font-feature-values "MonteCarlo" {
@@ -46,6 +50,8 @@ The following example logs the `key` and `value` for each entry in the `@swash` 
   }
 }
 ```
+
+#### JavaScript
 
 ```js
 // function to be used as callback

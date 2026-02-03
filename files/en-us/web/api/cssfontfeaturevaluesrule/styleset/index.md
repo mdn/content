@@ -18,7 +18,9 @@ Although the `styleset` property itself is read-only in the sense that you can't
 
 ## Example
 
-### CSS
+### Basic usage
+
+#### CSS
 
 ```css
 @font-feature-values "MonteCarlo" {
@@ -28,7 +30,7 @@ Although the `styleset` property itself is read-only in the sense that you can't
 }
 ```
 
-### JS
+#### JavaScript
 
 ```js
 // look for the first stylesheet and the first cssRule in that sheet

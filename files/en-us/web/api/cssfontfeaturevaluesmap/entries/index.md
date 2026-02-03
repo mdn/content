@@ -26,7 +26,11 @@ A new iterable [iterator object](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Sym
 
 ## Examples
 
-The following example assigns the entries to the `swashes` variable and then logs the first two values.
+### Basic usage
+
+The following example assigns the entries to the `swashes` variable and then logs the first two values. This example is using `@swash` but also works with other [feature value blocks](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values#feature_value_blocks).
+
+#### CSS
 
 ```css
 @font-feature-values "MonteCarlo" {
@@ -36,6 +40,8 @@ The following example assigns the entries to the `swashes` variable and then log
   }
 }
 ```
+
+#### JavaScript
 
 ```js
 // get the rules

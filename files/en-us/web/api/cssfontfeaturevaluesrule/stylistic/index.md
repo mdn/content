@@ -18,7 +18,9 @@ Although the `stylistic` property itself is read-only in the sense that you can'
 
 ## Example
 
-### CSS
+### Basic usage
+
+#### CSS
 
 ```css
 @font-feature-values "MonteCarlo" {
@@ -28,7 +30,7 @@ Although the `stylistic` property itself is read-only in the sense that you can'
 }
 ```
 
-### JS
+#### JavaScript
 
 ```js
 // look for the first stylesheet and the first cssRule in that sheet

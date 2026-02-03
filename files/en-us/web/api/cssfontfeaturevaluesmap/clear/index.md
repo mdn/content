@@ -26,7 +26,11 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example removes all the declarations within the [`@swash`](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values#swash) feature block.
+### Basic usage
+
+The following example removes all the declarations within the [`@swash`](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values#swash) feature block. This example is using `@swash` but also works with other [feature value blocks](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values#feature_value_blocks).
+
+#### CSS
 
 ```css
 @font-feature-values "MonteCarlo" {
@@ -36,6 +40,8 @@ The following example removes all the declarations within the [`@swash`](/en-US/
   }
 }
 ```
+
+#### JavaScript
 
 ```js
 // get the rules

@@ -26,7 +26,11 @@ The value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), whic
 
 ## Examples
 
-The following example uses the built-in iterator of `CSSFontFeatureValuesMap` to log the values using a `for...of` loop.
+### Basic usage
+
+The following example uses the built-in iterator of `CSSFontFeatureValuesMap` to log the values using a `for...of` loop. This example is using `@swash` but also works with other [feature value blocks](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values#feature_value_blocks).
+
+#### CSS
 
 ```css
 @font-feature-values "MonteCarlo" {
@@ -36,6 +40,8 @@ The following example uses the built-in iterator of `CSSFontFeatureValuesMap` to
   }
 }
 ```
+
+#### JavaScript
 
 ```js
 // get the rules

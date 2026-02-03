@@ -27,7 +27,11 @@ Returns `true` if an entry with the specified key exists in the `CSSFontFeatureV
 
 ## Examples
 
-The following example gets the values that match the `key`s in the `@swash` rule.
+### Basic usage
+
+The following example gets the values that match the `key`s in the `@swash` rule. This example is using `@swash` but also works with other [feature value blocks](/en-US/docs/Web/CSS/Reference/At-rules/@font-feature-values#feature_value_blocks).
+
+#### CSS
 
 ```css
 @font-feature-values "MonteCarlo" {
@@ -37,6 +41,8 @@ The following example gets the values that match the `key`s in the `@swash` rule
   }
 }
 ```
+
+#### JavaScript
 
 ```js
 // get the rules
