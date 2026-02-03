@@ -76,17 +76,23 @@ code {
 ## Syntax
 
 ```css
-/* short syntax */
+/* short display */
+display: none;
+display: contents;
 display: block;
 display: flow-root;
 display: inline;
+display: inline-block;
 display: list-item;
 display: inline list-item;
 display: flex;
+display: inline-flex;
 display: grid;
+display: inline-grid;
 display: table;
+display: inline-table;
 
-/* multi-keyword syntax */
+/* full display */
 display: block flow;
 display: block flow-root;
 display: inline flow;
@@ -100,20 +106,7 @@ display: inline grid;
 display: block table;
 display: inline table;
 
-/* Box suppression */
-display: none;
-display: contents;
-
-/* precomposed values */
-display: inline-block;
-display: inline-flex;
-display: inline-grid;
-display: inline-table;
-
-/* other values */
-display: table-row; /* all table elements have an equivalent CSS display value */
-
-/* Global values */
+/* global values */
 display: inherit;
 display: initial;
 display: revert;
