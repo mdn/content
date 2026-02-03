@@ -64,7 +64,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
       - : The button will close a {{htmlelement("dialog")}} element.
         If the dialog is already closed, no action will be taken.
         This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.close()")}} method on the `<dialog>` element.
-        When used with the `value` attribute, the button's value will be passed as the dialog's `returnValue` property.
+        When used with the `value` attribute, the button's value will be passed as the dialog's {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property.
     - `"request-close"`
       - : The button will trigger a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} event on a {{htmlelement("dialog")}} element to request that the browser dismiss it, followed by a {{domxref("HTMLDialogElement.close_event", "close")}} event.
         This differs from the `close` command in that authors can call {{domxref("Event.preventDefault()")}} on the `cancel` event to prevent the `<dialog>` from closing.
@@ -147,8 +147,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
 - `value`
   - : Defines the value associated with the button's `name` when it's submitted with the form data.
-     This value is passed to the server in params when the form is submitted using this button.
-     When used with the `close` or `request-close` commands, the `value` attribute sets the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} of the {{htmlelement("dialog")}} element being controlled.
+    This value is passed to the server in params when the form is submitted using this button.
+    When used with the `close` or `request-close` commands, the `value` attribute sets the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} of the {{htmlelement("dialog")}} element being controlled.
 
 ## Notes
 
@@ -317,7 +317,17 @@ When the event is `cancelable`, the value of the radio buttons is checked:
 
 ### Using the `value` attribute with dialog `close` command
 
-This example demonstrates how to use the `value` attribute with `close` command to determine which button was used to close a dialog.
+This example demonstrates how to use the button `value` attribute with `close` command to populate the value of a dialog's {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property.
+
+When either the **Cancel** or **Delete** button is clicked, the dialog closes and sets its `returnValue` to the button's `value` attribute.
+The `close` event listener checks `dialog.returnValue` to determine which action the user chose and logs the result to the screen.
+
+#### HTML
+
+The HTML first defines a **Delete Record** button that uses the `commandfor` attribute to specify the dialog to be opened.
+
+Within the dialog **Cancel** and **Delete** buttons use the `commandfor` attribute to indicate that they apply to the current dialog.
+They also set the `command` attribute to "close" and set the `value` attribute to "cancel" and "delete" respectively — the value of the selected button is automatically copied to the dialog `returnValue` when the button is clicked.
 
 ```html
 <button commandfor="confirm-dialog" command="show-modal">Delete Record</button>
@@ -337,26 +347,47 @@ This example demonstrates how to use the `value` attribute with `close` command 
 </dialog>
 ```
 
+```html
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 20px;
+}
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = text;
+}
+```
+
+#### JavaScript
+
+The code uses a `close` event listener to log the dialog's `returnValue`.
+
 ```js
 const dialog = document.getElementById("confirm-dialog");
 
 dialog.addEventListener("close", () => {
   switch (dialog.returnValue) {
     case "cancel":
-      console.log("cancel was clicked");
+      log("Cancel was clicked");
       break;
     case "delete":
-      console.log("delete was clicked");
+      log("Delete was clicked");
       break;
     default:
-      console.log("Closed with value:", dialog.returnValue);
+      log("Closed with value:", dialog.returnValue);
   }
 });
 ```
 
-{{ EmbedLiveSample('using_the_value_attribute_with_dialog_close_command', 100, 200) }}
+#### Results
 
-In this example, when either the **Cancel** or **Delete** button is clicked, the dialog closes and sets its `returnValue` to the button's `value` attribute. The `close` event listener can then check `dialog.returnValue` to determine which action the user chose.
+{{ EmbedLiveSample('using_the_value_attribute_with_dialog_close_command', 100, 200) }}
 
 ## Technical summary
 
