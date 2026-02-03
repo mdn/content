@@ -176,6 +176,10 @@
       "inh": "",
       "impl": []
     },
+    "AutofillEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "BackgroundFetchEvent": {
       "inh": "ExtendableEvent",
       "impl": []
@@ -520,6 +524,14 @@
       "inh": "Animation",
       "impl": []
     },
+    "CSSApplyBlockRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
+    "CSSApplyStatementRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
     "CSSColor": {
       "inh": "CSSColorValue",
       "impl": []
@@ -538,6 +550,14 @@
     },
     "CSSContainerRule": {
       "inh": "CSSConditionRule",
+      "impl": []
+    },
+    "CSSContentsBlockRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
+    "CSSContentsStatementRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSCounterStyleRule": {
@@ -670,6 +690,10 @@
     },
     "CSSMediaRule": {
       "inh": "CSSConditionRule",
+      "impl": []
+    },
+    "CSSMixinRule": {
+      "inh": "CSSGroupingRule",
       "impl": []
     },
     "CSSNamespaceRule": {
@@ -2218,6 +2242,10 @@
     },
     "MediaStreamTrackEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "MediaStreamTrackHandle": {
+      "inh": "",
       "impl": []
     },
     "MediaStreamTrackProcessor": {

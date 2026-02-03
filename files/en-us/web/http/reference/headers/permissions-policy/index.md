@@ -99,6 +99,10 @@ You can specify
   - : Controls whether or not the document is permitted to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control).
     The promise returned by the API's main methods will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if the permission is not allowed.
 
+- {{HTTPHeader('Permissions-Policy/ch-ua-high-entropy-values', 'ch-ua-high-entropy-values')}} {{experimental_inline}}
+  - : Controls whether or not the document is permitted to use the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method to retrieve high-entropy user-agent data.
+    If the permission is not allowed, the method will only return the `brands`, `mobile`, and `platform` low-entropy data.
+
 - {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} {{Experimental_Inline}}
   - : Controls access to the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API).
 

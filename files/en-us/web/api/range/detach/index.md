@@ -3,10 +3,12 @@ title: "Range: detach() method"
 short-title: detach()
 slug: Web/API/Range/detach
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.Range.detach
 ---
 
-{{ApiRef("DOM")}}
+{{ApiRef("DOM")}}{{deprecated_header}}
 
 The **`Range.detach()`** method does nothing. It used to
 disable the {{domxref("Range")}} object and enable the browser to release associated
