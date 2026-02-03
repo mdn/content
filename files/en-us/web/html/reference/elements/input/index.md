@@ -617,10 +617,10 @@ A few additional non-standard attributes are listed following the descriptions o
     See [Client-side validation](#client-side_validation) for more information.
 
 - [`switch`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#switch)
-  - : Valid for `checkbox` input only, the `switch` attribute is a Boolean attribute that indicates whether the checkbox input should be rendered as a switch.
+  - : Valid for `checkbox` input only, `switch` is a Boolean attribute that indicates whether the checkbox input should be rendered as a switch.
 
-  > [!NOTE]
-  > This attribute is still experimental and has limited browser support. The attribute is ignored on unsupported browsers.
+    > [!NOTE]
+    > This attribute is still experimental and has limited browser support. The attribute is ignored on unsupported browsers.
 
 - `tabindex`
   - : Global attribute valid for all elements, including all the input types, an integer attribute indicating if the element can take input focus (is focusable), if it should participate to sequential keyboard navigation. As all input types except for input of type hidden are focusable, this attribute should not be used on form controls, because doing so would require the management of the focus order for all elements within the document with the risk of harming usability and accessibility if done incorrectly.
