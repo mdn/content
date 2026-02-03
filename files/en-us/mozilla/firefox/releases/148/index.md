@@ -39,7 +39,12 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
+
+- The {{jsxref("Iterator.zip()")}} and {{jsxref("Iterator.zipKeyed()")}} static methods are now supported.
+  These "zip" together multiple input iterators, returning a new iterator that yields the group of input elements at each iteration step.
+  They are useful when you need to combine data from multiple input iterators that are positionally aligned (the first value yielded by the first iterator corresponds to the first value yielded by the other iterators, and so on).
+  ([Firefox bug 2003333](https://bugzil.la/2003333)).
 
 <!-- No notable changes. -->
 
