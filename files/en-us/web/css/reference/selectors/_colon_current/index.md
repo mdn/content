@@ -28,7 +28,7 @@ The **`:current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 
 The `:current` pseudo-class is used to represent the "currently displayed" element out of a series of elements.
 
-This can mean "current" in terms of time: `:current` can be used to target the currently displayed captions or subtitles (representing using [WebVTT](/en-US/docs/Web/API/WebVTT_API)) associated with a playing video.
+This can mean "current" in terms of time: `:current` can be used to target the currently displayed captions or subtitles (represented using [WebVTT](/en-US/docs/Web/API/WebVTT_API)) that are associated with a playing video.
 
 It can also refer to the currently highlighted element in a series. For example, `:current` can be combined with the `::search-text` [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) to provide specific styles to the currently-focused search result from the browser's "Find in page" text search feature.
 
