@@ -31,7 +31,7 @@ Iterator.zipKeyed(iterables, options)
         - `"longest"`: The resulting iterator stops when all input iterables are exhausted. Missing values from shorter iterables are filled according to the `padding` option.
         - `"strict"`: A {{jsxref("TypeError")}} is thrown if not all input iterables finish at the same time.
     - `padding` {{optional_inline}}
-      - : Either `undefined` (default) or an object. Only retrieved and validated when `mode` is `"longest"`. If `undefined`, missing values from shorter iterables are filled with `undefined`. If an object is provided, each key of the `iterables` argument is retrieved _as soon as `Iterator.zipKeyed()` is called_. `padding[key]` is used for missing values for `iterables[key]`. If the `padding` object is missing some keys, those keys are filled with `undefined`.
+      - : An object. Only retrieved and validated when `mode` is `"longest"`. If `undefined` or absent, missing values from shorter iterables are filled with `undefined` (which is equivalent to passing an empty object). If an object is provided, each key of the `iterables` argument is retrieved _as soon as `Iterator.zipKeyed()` is called_. `padding[key]` is used for missing values for `iterables[key]`. If the `padding` object is missing some keys, those keys are filled with `undefined`.
 
 ### Return value
 

@@ -31,7 +31,7 @@ Iterator.zip(iterables, options)
         - `"longest"`: The resulting iterator stops when all input iterables are exhausted. Missing values from shorter iterables are filled according to the `padding` option.
         - `"strict"`: A {{jsxref("TypeError")}} is thrown if not all input iterables finish at the same time.
     - `padding` {{optional_inline}}
-      - : Either `undefined` (default) or an iterable object (not iterator). Only retrieved and validated when `mode` is `"longest"`. If `undefined`, missing values from shorter iterables are filled with `undefined`. If an iterable is provided, it is iterated for the number of times equal to the number of elements in `iterables` _as soon as `Iterator.zip()` is called_. `padding[i]` is used for missing values for `iterables[i]` (assuming `padding` and `iterables` are provided as arrays; they don't have to be). If `padding` is shorter than `iterables`, `undefined` is used for the remaining iterables.
+      - : An iterable object (not iterator). Only retrieved and validated when `mode` is `"longest"`. If `undefined` or absent, missing values from shorter iterables are filled with `undefined` (which is equivalent to passing an empty iterable). If an iterable is provided, it is iterated for the number of times equal to the number of elements in `iterables` _as soon as `Iterator.zip()` is called_. `padding[i]` is used for missing values for `iterables[i]` (assuming `padding` and `iterables` are provided as arrays; they don't have to be). If `padding` is shorter than `iterables`, `undefined` is used for the remaining iterables.
 
 ### Return value
 
