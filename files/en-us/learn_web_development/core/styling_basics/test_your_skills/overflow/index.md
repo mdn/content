@@ -19,8 +19,8 @@ In this task, the content is overflowing the box because it has a fixed height.
 
 To complete the task:
 
-1. Update the CSS so that the height is maintained and the box will have scrollbars only if there is enough text to cause an overflow.
-2. Test your solution by removing some of the text from the HTML and checking that if there is only a small amount of text that does not overflow, no scrollbar appears.
+1. Update the CSS so that the box height is maintained and scrollbars appear only when there is enough text to cause an overflow.
+2. Test your solution by removing some text from the HTML and checking that no scrollbar appears when there is only a small amount of text.
 
 The starting point of the task looks like this:
 
@@ -56,7 +56,7 @@ body {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("overflow1-finish", "", "300px")}}
 
@@ -102,7 +102,7 @@ body {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("overflow2-finish", "", "260px")}}
 

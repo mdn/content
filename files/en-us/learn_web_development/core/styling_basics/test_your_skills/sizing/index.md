@@ -68,7 +68,7 @@ body {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("sizing1-finish", "", "460px")}}
 
@@ -136,7 +136,7 @@ body {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("sizing2-finish", "", "220px")}}
 
@@ -197,7 +197,7 @@ img {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("sizing3-finish", "", "720px")}}
 

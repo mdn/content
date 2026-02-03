@@ -15,7 +15,7 @@ The aim of this skill test is to assess whether you understand how special eleme
 
 ## Images and forms 1
 
-In this task, you have an image that is overflowing the box. We want the image to scale down to fit inside the box without any extra white space, but we do not mind if some part of the image is cropped. Update the CSS to achieve this.
+In this task, you have an image that is overflowing the box. We want you to scale down the image so that it fits inside the box without any extra white space; we don't mind if some part of the image is cropped. Update the CSS to achieve this.
 
 The starting point of the task looks like this:
 
@@ -43,7 +43,7 @@ img {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("images-forms1-finish", "", "260px")}}
 
@@ -100,7 +100,7 @@ body {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("images-forms2-finish", "", "80px")}}
 
@@ -203,7 +203,7 @@ body {
 /* Add your code here */
 ```
 
-We've not shown the finished styling, as the solution to this task will vary so much from person to person.
+We've not provided finished content for this task, as many valid solutions are possible.
 
 <details>
 <summary>Click here to show the solution</summary>

@@ -49,7 +49,7 @@ div div li a {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("cascade1-finish", "100%", "110px")}}
 
@@ -115,7 +115,7 @@ Here's the underlying code for this starting point:
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("cascade2-finish", "100%", "110px")}}
 

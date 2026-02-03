@@ -54,7 +54,7 @@ body {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("box-model1-finish", "", "540px")}}
 
@@ -102,7 +102,7 @@ body {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("box-model2-finish", "100%", "140px")}}
 
@@ -162,7 +162,7 @@ body {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("box-model3-finish", "100%", "260px")}}
 

@@ -62,7 +62,7 @@ h2 {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("backgrounds1-finish", "", "160px")}}
 
@@ -137,7 +137,7 @@ h2 {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("backgrounds2-finish", "", "220px")}}
 

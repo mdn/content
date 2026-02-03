@@ -21,7 +21,7 @@ In this task, the first list item has been given a background color using a hex 
 - The third should use HSL color.
 - The fourth should use RGB color but with the alpha channel set to `0.6`.
 
-You [can convert the hex color at convertingcolors.com](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS.
+You can convert the hex color using [convertingcolors.com](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS.
 
 The starting point of the task looks like this:
 
@@ -60,7 +60,7 @@ li {
 /* Add styles here */
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("values1-finish", "", "300px")}}
 
@@ -136,9 +136,9 @@ h1 + p {
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
-{{EmbedLiveSample("values2-finish", "", "420px")}}
+{{EmbedLiveSample("values2-finish", "", "430px")}}
 
 Here's the underlying code for this starting point:
 
@@ -193,7 +193,7 @@ Here's the underlying code for this starting point:
 }
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("values3-finish", "", "400px")}}
 

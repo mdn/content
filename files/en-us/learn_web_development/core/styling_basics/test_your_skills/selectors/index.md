@@ -53,7 +53,7 @@ body {
 /* Add styles here */
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("selectors1-finish", "", "400px")}}
 
@@ -120,7 +120,7 @@ body {
 /* Add styles here */
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("selectors2-finish", "", "480px")}}
 
@@ -228,7 +228,7 @@ th {
 /* Add styles here */
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("selectors3-finish", "", "540px")}}
 
@@ -312,7 +312,7 @@ body {
 /* Add styles here */
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("selectors4-finish", "", "500px")}}
 
@@ -385,7 +385,7 @@ a {
 /* Add styles here */
 ```
 
-The finished styling should look like this:
+The updated styling should look like this:
 
 {{EmbedLiveSample("selectors5-finish", "", "300px")}}
 
