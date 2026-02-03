@@ -314,7 +314,7 @@ The parts of this example are as follows:
 3. `<head></head>`: The {{htmlelement("head")}} element. This element acts as a container for information about the page that _isn't_ part of the content that users will see. This can include keywords and a page description to be shown in search results, CSS to style content, character set declarations, and more. You will learn more about the head of the page in the next article.
 4. `<meta charset="utf-8">`: A {{htmlelement("meta")}} element. This element represents metadata that describes the page. The [`charset`](/en-US/docs/Web/HTML/Reference/Elements/meta#charset) attribute specifies the character encoding your document will use. UTF-8 includes most characters from the vast majority of human written languages, which means the page will be able to display different languages successfully. There is no reason not to set this, and it can help avoid some problems later.
 5. `<title></title>`: The {{htmlelement("title")}} element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
-6. `<body></body>`: The {{htmlelement("body")}} element. This contains _all_ the content that displays on the page, including text, images, videos, games, playable audio tracks, etc.
+6. `<body></body>`: The {{htmlelement("body")}} element. This contains _all_ the content that displays on the page, including text, images, videos, games, playable audio tracks, and so on.
 
 ### Adding some features to an HTML document
 
