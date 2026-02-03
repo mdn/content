@@ -40,10 +40,16 @@ In this article, we cover the fundamentals of HTML, including terminology, synta
 My cat is very grumpy
 ```
 
-If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in paragraph ({{htmlelement("p")}}) tags:
+We could specify that this text is a paragraph by enclosing it in paragraph ({{htmlelement("p")}}) tags:
 
 ```html
 <p>My cat is very grumpy</p>
+```
+
+Or, we could specify that this text is a top-level heading by enclosing it in [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) tags:
+
+```html
+<h1>My cat is very grumpy</h1>
 ```
 
 HTML lives inside text files called **HTML documents**, or just **documents**, with a `.html` file extension. Where previously we've talked about web pages, an HTML document contains the web page's content and specifies its structure.
@@ -59,13 +65,11 @@ Let's further explore our paragraph element from the previous section:
 
 ![A sample code snippet demonstrating the structure of an html element.<p> My cat is very grumpy </p>.](grumpy-cat-small.png)
 
-The anatomy of our element is:
+Our complete element consists of:
 
 - **The opening tag:** This consists of the name of the element (in this example, _p_ for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.
 - **The content:** This is the content of the element. In this example, it is the paragraph text — "My cat is very grumpy".
 - **The closing tag:** This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.
-
-The complete element consists of the opening tag, followed by the content, followed by the closing tag.
 
 > [!NOTE]
 > Head on over to our learning partner Scrimba's [HTML tags](https://scrimba.com/learn-html-and-css-c0p/~02?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim for an interactive explanation of HTML tags.
@@ -134,7 +138,7 @@ This renders as follows:
 {{ EmbedLiveSample('void-example', "100%", 100) }}
 
 > [!NOTE]
-> In some HTML examples, you'll see a `/` added at the end of a void element's tag, for example `<br />`. This is valid syntax, however, it is optional.
+> In some HTML examples, you'll see a `/` added at the end of a void element's tag, for example `<br />`. This is a different style of markup syntax, which isn't wrong, but this "closing slash" is not needed.
 
 ## Attributes
 
@@ -155,9 +159,9 @@ An attribute should have:
 Now it's your turn again. In this section you are going to explore the {{htmlelement("img")}} element, which is used to display an image on the page. The `<img>` element can take several attributes, including:
 
 - `src`: A **required** attribute that specifies the {{glossary("URL")}} (web address) of the image. For example: `src="https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png"`.
-- `alt`: A **required** attribute that specifies a text description to describe the image to people who cannot see it. For example: `alt="The Firefox Nightly icon"`.
-- `width`: The width of the image in pixels. For example: `width="300"`.
-- `height`: The height of the image in pixels. For example: `height="300"`.
+- `alt`: Specifies a text description to describe the image to people who cannot see it. For example: `alt="The Firefox Nightly icon"`. This attribute is not technically required, but you really should provide a text description for all images that convey meaning (as opposed to being purely decorative).
+- `width`: Specifies the width of the image in pixels. For example: `width="300"`.
+- `height`: Specifies the height of the image in pixels. For example: `height="300"`.
 
 Follow the steps below to complete the task:
 
@@ -191,7 +195,7 @@ Your finished HTML element should look something like this:
 
 ### Boolean attributes
 
-Sometimes you will see HTML attributes written without values. These are called [Boolean attributes](/en-US/docs/Glossary/Boolean/HTML). When a boolean attribute is written without a value, or with a value of some kind, its value is set to `true`. If an attribute is not included in an HTML tag, its value is set to `false`.
+Sometimes you will see HTML attributes written without values. These are called [Boolean attributes](/en-US/docs/Glossary/Boolean/HTML). When a boolean attribute is added, its value is set to `true`, irrespective of whatever value is assigned to it (even no value). If an attribute is not included in an HTML tag, its value is set to `false`.
 
 For example, consider the [`disabled`](/en-US/docs/Web/HTML/Reference/Elements/input#disabled) attribute, which you can assign to form {{htmlelement("input")}} elements to stop the user entering data into them. For example:
 
@@ -239,7 +243,7 @@ However, you soon run into problems when omitting quotes from attribute values _
 <a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
 ```
 
-However, because quotes are not included around the `title` attribute value, the browser interprets it as three attributes: a `title` attribute with the value `The`, and two Boolean attributes — `Mozilla` and `homepage`. Obviously, this is not what we intended! If you're using a device with a mouse pointer, you can try hovering over the link to view the title tooltip (it will give you "The" rather than the intended "The Mozilla homepage").
+Because quotes are not included around the `title` attribute value, the browser interprets it as three attributes: a `title` attribute with the value `The`, and two Boolean attributes — `Mozilla` and `homepage`. Obviously, this is not what we intended! If you're using a device with a mouse pointer, you can try hovering over the link to view the title tooltip (it will give you "The" rather than the intended "The Mozilla homepage").
 
 {{ EmbedLiveSample('bad-no-quotes', 700, 100) }}
 
@@ -377,9 +381,9 @@ The contents of your finished HTML element body should look something like this:
 
 </details>
 
-### Whitespace in HTML
+## Whitespace in HTML
 
-In previous examples, we've included lot of whitespace in the code. This is completely optional, and included mainly to make the code more readable. For example, these two code snippets are equivalent:
+In previous examples, we've included lot of whitespace in the code. In most cases this is completely optional, and included mainly to make the code more readable. For example, these two code snippets are equivalent:
 
 ```html-nolint live-sample___whitespace-example
 <p id="noWhitespace">Dogs are silly.</p>
@@ -393,7 +397,7 @@ They both render exactly the same:
 
 {{ EmbedLiveSample('whitespace-example', 700, 100) }}
 
-No matter how much whitespace you use inside HTML element content, the HTML parser reduces each sequence of whitespace to a single space when rendering the code.
+In almost all elements (there are exceptions such as {{htmlelement("pre")}}), no matter how much whitespace you use inside HTML element content, the HTML parser reduces each sequence of whitespace to a single space when rendering the code.
 
 It is up to you to choose a preferred code formatting style. It is common to give each nested element two spaces of indentation more than the one it is sitting inside; this is the style we use on MDN.
 
