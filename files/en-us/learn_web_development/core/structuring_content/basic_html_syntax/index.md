@@ -24,7 +24,7 @@ In this article, we cover the fundamentals of HTML, including terminology, synta
           <li>The anatomy of an HTML element — element, opening tag, content, closing tag, attributes.</li>
           <li>The HTML body and its purpose as a container for the page content.</li>
           <li>What void elements are, and how they differ from other elements.</li>
-          <li>The need for a doctype at the top of HTML documents, including its original intended purpose, and the fact that now it is somewhat of a historical artifact.</li>
+          <li>The need for a doctype at the top of HTML documents, including its original intended purpose, and the fact that it is now somewhat of a historical artifact.</li>
           <li>Understanding that HTML needs to be correctly nested.</li>
         </ul>
       </td>
