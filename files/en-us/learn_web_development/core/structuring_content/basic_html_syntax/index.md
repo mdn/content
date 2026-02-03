@@ -142,7 +142,7 @@ Elements can also have attributes. Attributes look like this:
 
 ![paragraph tag with 'class="editor-note"' attribute emphasized](grumpy-cat-attribute-small.png)
 
-Attributes contain extra information about the element that isn't part of its content. The **`class`** attribute provides an identifying name that can be used used to target the element with styles (CSS) or scripting information (JavaScript).
+Attributes contain extra information about the element that isn't part of its content. The **`class`** attribute provides an identifying name that can be used to target the element with styles (CSS) or scripting information (JavaScript).
 
 An attribute should have:
 
