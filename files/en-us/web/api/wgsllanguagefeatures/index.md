@@ -43,7 +43,7 @@ The following WGSL language extensions are defined at [WGSL language extensions]
 - `subgroup_id`
   - : When available, the [`subgroup_id`](https://gpuweb.github.io/gpuweb/wgsl/#built-in-values-subgroup_id) and [`num_subgroups`](https://gpuweb.github.io/gpuweb/wgsl/#built-in-values-num_subgroups) WGSL built-in values are usable in compute shaders. These improve the process of scheduling work across subgroups, by indexing memory to avoid overlapping memory accesses. See [WGSL subgroup_id extension](https://developer.chrome.com/blog/new-in-webgpu-144#wgsl_subgroup_id_extension) for more details.
     > [!NOTE]
-    > For the `subgroup_id` WSGL feature to be usable, the [`subgroups`](https://www.w3.org/TR/WGSL/#extension-subgroups) extension needs to be enabled in the {{domxref("GPUDevice")}} (see {{domxref("GPUSupportedFeatures")}}).
+    > For the `subgroup_id` WGSL feature to be usable, the [`subgroups`](https://gpuweb.github.io/gpuweb/wgsl/#extension-subgroups) extension needs to be enabled in the {{domxref("GPUDevice")}} (see {{domxref("GPUSupportedFeatures")}}).
 
 - `unrestricted_pointer_parameters`
   - : Loosens restrictions on pointers being passed to WGSL functions. When available, the following are allowed:
