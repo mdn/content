@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **`:where()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.
 
-The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
+The difference between `:where()` and {{cssxref(":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
 
 {{InteractiveExample("CSS Demo: :where", "tabbed-shorter")}}
 
@@ -69,7 +69,7 @@ The `:where()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/Guide
 
 ### Forgiving Selector Parsing
 
-The specification defines `:is()` and `:where()` as accepting a [forgiving selector list](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
+The specification defines `:is()` and `:where()` as accepting a [forgiving selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list).
 
 In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed invalid. When using `:is()` or `:where()` instead of the whole list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported selector will be ignored and the others used.
 
@@ -194,6 +194,7 @@ However, selectors inside `:where()` have specificity 0, so the orange footer li
 
 ## See also
 
-- {{CSSxRef(":is", ":is()")}}
+- {{cssxref(":is()")}}
 - [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Web components](/en-US/docs/Web/API/Web_components)
+- [Forgiving selector list](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list) via csswg.org.

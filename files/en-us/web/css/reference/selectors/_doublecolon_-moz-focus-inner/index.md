@@ -67,6 +67,6 @@ Not part of any standard.
   - {{cssxref("-moz-user-focus")}}
 
 - Related CSS selectors:
-  - [`:focus`](/en-US/docs/Web/CSS/Reference/Selectors/:focus)
-  - [`:focus-visible`](/en-US/docs/Web/CSS/Reference/Selectors/:focus-visible)
-  - [`:focus-within`](/en-US/docs/Web/CSS/Reference/Selectors/:focus-within)
+  - {{cssxref(":focus")}}
+  - {{cssxref(":focus-visible")}}
+  - {{cssxref(":focus-within")}}

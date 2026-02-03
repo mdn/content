@@ -6,7 +6,7 @@ browser-compat: css.types.filter-function.brightness
 sidebar: cssref
 ---
 
-The **`brightness()`** [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;filter-function&gt;")}} applies a linear multiplier value on an element or an input image, making the image appear brighter or darker.
+The **`brightness()`** [CSS](/en-US/docs/Web/CSS) {{cssxref("filter-function")}} applies a linear multiplier value on an element or an input image, making the image appear brighter or darker.
 
 {{InteractiveExample("CSS Demo: brightness()")}}
 
@@ -243,7 +243,7 @@ svg:not(:root) {
 ## See also
 
 - [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module
-- The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+- The other {{cssxref("filter-function")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}
   - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
