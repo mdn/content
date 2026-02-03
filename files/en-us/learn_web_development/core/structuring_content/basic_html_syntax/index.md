@@ -308,7 +308,7 @@ The parts of this example are as follows:
    <!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
    ```
 
-   In modern times, the doctype is a historical artifact that needs to be included for everything else to work right. `<!doctype html>` is the shortest string of characters that counts as a valid doctype, and it should be included at the top of all webpages. That is all you need to know!
+   In modern times, the doctype is a historical artifact that needs to be included for everything else to work correctly. `<!doctype html>` is the shortest string of characters that counts as a valid doctype, and it should be included at the top of all webpages. That is all you need to know!
 
 2. `<html></html>`: The {{htmlelement("html")}} element. This element wraps all the content on the page. It is sometimes known as the root element.
 3. `<head></head>`: The {{htmlelement("head")}} element. This element acts as a container for information about the page that _isn't_ part of the content that users will see. This can include keywords and a page description to be shown in search results, CSS to style content, character set declarations, and more. You will learn more about the head of the page in the next article.
