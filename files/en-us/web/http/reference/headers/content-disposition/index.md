@@ -57,7 +57,7 @@ Browsers may apply transformations to conform to the file system requirements, s
 
 A `multipart/form-data` body requires a `Content-Disposition` header to provide information about each subpart of the form (e.g., for every form field and any files that are part of field data).
 The first directive is always `form-data`, and the header must also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive.
-The value of any arguments (after the `=` sign) may be a either token or a quoted string.
+The value of any arguments (after the `=` sign) may be either a token or a quoted string.
 Quoted strings are recommended, and many server implementations require the values to be quoted.
 This is because a token must be US-ASCII for MIME type headers like `Content-Disposition`, and US-ASCII does not allow some characters that are common in filenames and other values.
 Multiple parameters are separated by a semicolon (`;`).
