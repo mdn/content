@@ -44,7 +44,7 @@ p {
 
 <!-- Example-specific code -->
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown yet):
 
 {{ EmbedLiveSample("conditionals-1", "100%", 60) }}
 
@@ -64,7 +64,7 @@ para1.textContent = response;
 section.appendChild(para1);
 ```
 
-The initial state of your finished output should look like this:
+The initial state of your updated output should look like this:
 
 {{ EmbedLiveSample("conditionals-1-finish", "100%", 60) }}
 
@@ -157,7 +157,7 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-The initial state of your finished output should look like this:
+The initial state of your updated output should look like this:
 
 {{ EmbedLiveSample("conditionals-2-finish", "100%", 80) }}
 
@@ -243,7 +243,7 @@ To complete the task:
 1. Create an `if...else` structure that checks whether the machine is switched on and puts a message into the `machineResult` variable telling the user whether it is on or off.
 2. If the machine is on, we also want a second conditional to run that checks whether the `pwd` is equal to `cheese`. If so, it should assign a string to `pwdResult` telling the user they logged in successfully. If not, it should assign a different string to `pwdResult` telling the user their login attempt was not successful. We'd like you to do this in a single line, using something that isn't an `if...else` structure.
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown yet):
 
 {{ EmbedLiveSample("conditionals-3", "100%", 60) }}
 
@@ -269,7 +269,7 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-The finished output should look like this:
+The updated output should look like this:
 
 {{ EmbedLiveSample("conditionals-3-finish", "100%", 80) }}
 

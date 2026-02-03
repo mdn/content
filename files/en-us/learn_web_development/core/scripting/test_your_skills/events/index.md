@@ -61,7 +61,7 @@ const btn = document.querySelector("button");
 // Add your code here
 ```
 
-The finished example should behave like this (try pressing the button):
+The updated example should behave like this (try pressing the button):
 
 {{ EmbedLiveSample("events-1-finish", "100%", 80) }}
 
@@ -143,7 +143,7 @@ drawCircle(x, y, size);
 // Add your code here
 ```
 
-The finished example should behave like this (click on it and then try the keyboard controls):
+The updated example should behave like this (click on it and then try the keyboard controls):
 
 {{ EmbedLiveSample("events-2-finish", "100%", 350) }}
 
@@ -267,7 +267,7 @@ const buttonBar = document.querySelector(".button-bar");
 // Add your code here
 ```
 
-The finished example should behave like this (try clicking the buttons):
+The updated example should behave like this (try clicking the buttons):
 
 {{ EmbedLiveSample("events-3-finish", "100%", 80) }}
 

@@ -79,7 +79,7 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-The finished output should look like this:
+The updated output should look like this:
 
 {{ EmbedLiveSample("math-1-finish", "100%", 80) }}
 
@@ -154,7 +154,7 @@ To complete the task:
 
 To pass this test, `finalNumber` should have a result of `4633.33`. You might need to consider operator precedence and add or modify some parentheses to the input expressions to get the correct output.
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown yet):
 
 {{ EmbedLiveSample("math-2", "100%", 80) }}
 
@@ -183,7 +183,7 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-The finished output should look like this:
+The updated output should look like this:
 
 {{ EmbedLiveSample("math-2-finish", "100%", 80) }}
 
@@ -240,7 +240,7 @@ To complete the task:
 1. There are three groups, each consisting of a statement and two variables. For each one, write a test that proves or disproves the statement made.
 2. Store the results of those tests in variables called `weightComparison`, `heightComparison`, and `pwdMatch`, respectively.
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown yet):
 
 {{ EmbedLiveSample("math-3", "100%", 80) }}
 
@@ -284,7 +284,7 @@ para3.textContent = pwdTest;
 section.appendChild(para3);
 ```
 
-The finished output should look like this:
+The updated output should look like this:
 
 {{ EmbedLiveSample("math-3-finish", "100%", 100) }}
 

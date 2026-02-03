@@ -42,7 +42,7 @@ p {
 
 <!-- Example-specific code -->
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown yet):
 
 {{ EmbedLiveSample("objects-1", "100%", 60) }}
 
@@ -73,7 +73,7 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-The finished output should look like this:
+The updated output should look like this:
 
 {{ EmbedLiveSample("objects-1-finish", "100%", 80) }}
 
@@ -139,7 +139,7 @@ To complete the task:
        > Include at least two albums in the `albums` array.
 2. Write a string to the variable `bandInfo`, which will contain a small biography detailing their name, nationality, years active, and style, and the title and release date of their first album.
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown yet):
 
 {{ EmbedLiveSample("objects-2", "100%", 60) }}
 
@@ -160,7 +160,7 @@ para1.textContent = bandInfo;
 section.appendChild(para1);
 ```
 
-The finished output should look something like this:
+The updated output should look something like this:
 
 {{ EmbedLiveSample("objects-2-finish", "100%", 60) }}
 
@@ -256,7 +256,7 @@ To complete the task:
 2. Write your own object called `cat2`, which has the same structure and `greeting()` method, but a different `name`, `breed`, and `color`.
 3. Call both `greeting()` methods to check that they log appropriate greetings to the console.
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown):
 
 {{ EmbedLiveSample("objects-3", "100%", 60) }}
 
@@ -277,7 +277,7 @@ const cat = {
 // Add your code here
 ```
 
-We've not shown the output of the finished code, as it doesn't print anything to the DOM. The output is all logged to the console.
+We've not provided finished content for this task, as it doesn't print anything to the DOM. The output is all logged to the console.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -335,7 +335,7 @@ To complete the task:
 1. Create a JavaScript class that defines cat instances
 2. Use your class along with the `new` keyword to create the `cat` and `cat2` instances.
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown):
 
 {{ EmbedLiveSample("objects-4", "100%", 60) }}
 
@@ -366,7 +366,7 @@ cat.greeting();
 cat2.greeting();
 ```
 
-We've not shown the output of the finished code, as it doesn't print anything to the DOM. The output is all logged to the console.
+We've not provided finished content for this task, as it doesn't print anything to the DOM. The output is all logged to the console.
 
 <details>
 <summary>Click here to show the solution</summary>

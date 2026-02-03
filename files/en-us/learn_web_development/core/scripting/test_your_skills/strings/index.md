@@ -42,7 +42,7 @@ p {
 
 <!-- Example-specific code -->
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown yet):
 
 {{ EmbedLiveSample("strings-1", "100%", 60) }}
 
@@ -61,7 +61,7 @@ para1.textContent = finalQuote;
 section.appendChild(para1);
 ```
 
-The finished output should look like this:
+The updated output should look like this:
 
 {{ EmbedLiveSample("strings-1-finish", "100%", 60) }}
 
@@ -109,7 +109,7 @@ To complete the task:
 2. Find the index position where `substring` appears in `quote`, and store that value in a variable called `index`.
 3. Use a combination of the variables you have and available string properties/methods to trim down the original quote to "I do not like green eggs and ham.", and store it in a variable called `revisedQuote`.
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown yet):
 
 {{ EmbedLiveSample("strings-2", "100%", 60) }}
 
@@ -135,7 +135,7 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-The finished output should look like this:
+The updated output should look like this:
 
 {{ EmbedLiveSample("strings-2-finish", "100%", 80) }}
 
@@ -186,7 +186,7 @@ To complete the task:
 2. In `fixedQuote`, replace "green eggs and ham" with another food that you really don't like.
 3. There is one more small fix to do — add a period to the end of the quote, and save the final version in a variable called `finalQuote`.
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown yet):
 
 {{ EmbedLiveSample("strings-3", "100%", 60) }}
 
@@ -207,7 +207,7 @@ para1.textContent = finalQuote;
 section.appendChild(para1);
 ```
 
-The finished output should look like this:
+The updated output should look like this:
 
 {{ EmbedLiveSample("strings-3-finish", "100%", 60) }}
 
@@ -285,7 +285,7 @@ para1.textContent = myString;
 section.appendChild(para1);
 ```
 
-The finished output should look like this:
+The updated output should look like this:
 
 {{ EmbedLiveSample("strings-4-finish", "100%", 60) }}
 

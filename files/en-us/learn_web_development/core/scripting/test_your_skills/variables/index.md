@@ -65,7 +65,7 @@ para.textContent = myName;
 section.appendChild(para);
 ```
 
-The finished output should look like this:
+The updated output should look like this:
 
 {{ EmbedLiveSample("variables-1-finish", "100%", 60) }}
 
@@ -101,7 +101,7 @@ section.appendChild(para);
 
 The final task for now — in this case you are provided with some existing code, which has two errors present in it. The results panel should be outputting the name `Chris`, and a statement about how old Chris will be in 20 years' time. We want you to fix the problem and correct the output.
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown yet):
 
 {{ EmbedLiveSample("variables-2", "100%", 60) }}
 
@@ -126,7 +126,7 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-The finished output should look like this:
+The updated output should look like this:
 
 {{ EmbedLiveSample("variables-2-finish", "100%", 80) }}
 
@@ -165,6 +165,6 @@ section.appendChild(para2);
 
 ## See also
 
-Also check out [Practice time - Part 3: let and const](https://scrimba.com/learn-javascript-c0v/~059?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba: An interactive challenge providing multiple tests concerning `let` and `const`.
+Check out [Practice time - Part 3: let and const](https://scrimba.com/learn-javascript-c0v/~059?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba: An interactive challenge providing multiple tests concerning `let` and `const`.
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}

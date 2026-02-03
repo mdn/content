@@ -80,7 +80,7 @@ function displayCatInfo(catString) {
 }
 ```
 
-The finished output should look like this:
+The updated output should look like this:
 
 {{ EmbedLiveSample("json-1-finish", "100%", 80) }}
 

@@ -53,7 +53,7 @@ p {
 
 <!-- Example-specific code -->
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown yet):
 
 {{ EmbedLiveSample("functions-1", "100%", 60) }}
 
@@ -77,7 +77,7 @@ const para = document.querySelector("p");
 // Add your code here
 ```
 
-Your finished code should output a random name:
+Your updated code should output a random name:
 
 {{ EmbedLiveSample("functions-1-finish", "100%", 60) }}
 
@@ -125,7 +125,7 @@ chooseName();
 
 ## Functions 2
 
-This task requires you to create a function that draws a rectangle on the provided `<canvas>` (reference variable `canvas`, context available in `ctx`), based on the five provided input variables:
+This task requires you to create a function that draws a rectangle on the provided `<canvas>` element (reference variable `canvas`, context available in `ctx`), based on the five provided input variables:
 
 - `x` — the x coordinate of the rectangle.
 - `y` — the y coordinate of the rectangle.
@@ -133,7 +133,7 @@ This task requires you to create a function that draws a rectangle on the provid
 - `height` — the height of the rectangle.
 - `color` — the color of the rectangle.
 
-The starting point of the task looks like this:
+The starting point of the task looks like this (nothing is shown yet in the `<canvas>`):
 
 {{ EmbedLiveSample("functions-2", "100%", 180) }}
 
@@ -163,7 +163,7 @@ const color = "blue";
 // Add your code here
 ```
 
-The finished output should look like this:
+The updated output should look like this:
 
 {{ EmbedLiveSample("functions-2-finish", "100%", 180) }}
 
@@ -249,7 +249,7 @@ function chooseName() {
 chooseName();
 ```
 
-We've not shown the output of the finished code, as it is identical to the starting point. The code has just been refactored.
+We've not provided finished content for this task, as it looks the same as the starting point. The code has just been refactored.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -338,7 +338,7 @@ const shortNames = names.filter(isShort);
 para.textContent = shortNames;
 ```
 
-We've not shown the output of the finished code, as it is identical to the starting point. The code structure has just been updated.
+We've not provided finished content for this task, as it looks the same as the starting point. The code has just been refactored.
 
 <details>
 <summary>Click here to show the solution</summary>
