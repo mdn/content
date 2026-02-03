@@ -125,6 +125,23 @@ p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
+@layer no-support {
+  body::before {
+      background-color: wheat;
+      display: block;
+      text-align: center;
+  }
+  @supports not selector(:current) {
+    body::before {
+      content: "Your browser doesn't support the :current pseudo-class.";
+    }
+  }
+  @supports not selector(::search-text) {
+    body::before {
+      content: "Your browser doesn't support the ::search-text pseudo-element.";
+    }
+  }
+}
 ```
 
 ```css live-sample___custom-search-results
