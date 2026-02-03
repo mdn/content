@@ -225,7 +225,7 @@ The above HTML snippets render like so:
 
 ### Omitting quotes around attribute values
 
-It is OK to omit the quotes from around attribute values in certain circumstances, but it can break your markup in other circumstances, so we would advise you to **always** include the quote marks. Let's explore why.
+It is OK to omit the quotes from around attribute values in certain circumstances. But because this can break your markup in other circumstances, we advise you to **always** include the quote marks. Let's explore why.
 
 The element in the code snippet below, {{htmlelement("a")}}, is called an **anchor**. Anchors enclose text and turn them into links. The `href` attribute specifies the URL the link points to. You can omit the quotes around the `href` attribute value shown below without any negative consequences, because it has no spaces in it:
 
