@@ -82,21 +82,19 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
   width: 90%;
   margin: 0 auto;
 }
 
-p {
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
-
 @layer no-support {
   body::before {
-      background-color: wheat;
-      display: block;
-      text-align: center;
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1em 0;
   }
   @supports not selector(::search-text) {
     body::before {

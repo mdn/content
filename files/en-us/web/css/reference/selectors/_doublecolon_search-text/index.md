@@ -116,20 +116,18 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  width: 90%;
-  margin: 0 auto;
-}
-
 p {
   font-size: 1.5rem;
   line-height: 1.5;
+  width: 90%;
+  margin: 0 auto;
 }
 @layer no-support {
   body::before {
-      background-color: wheat;
-      display: block;
-      text-align: center;
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1em 0;
   }
   @supports not selector(:current) {
     body::before {
@@ -169,7 +167,7 @@ The example renders as follows:
 
 {{EmbedLiveSample("live-sample___custom-search-results", "100%", 300)}}
 
-Try using the browser's find in page interface to find a word that appears multiple times in the example text, such as "aliquam" or "amet". Move between the previous and next results to check out the `:current` styling.
+Try using the browser's find in page interface to find a word that appears multiple times in the example text, such as "aliquam", "amet", or "tortor". Move between the previous and next results to check out the `:current` styling.
 
 ## Specifications
 
