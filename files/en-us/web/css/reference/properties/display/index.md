@@ -130,7 +130,7 @@ The keyword values can be grouped into six value categories.
       - : The element generates one or more inline boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
 > [!NOTE]
-> When a display property is set with only an **outer** value (e.g., `display: block` or `display: inline`), the inner value defaults to `flow` (e.g., `display: block flow` and `display: inline flow`).
+> When a display property is specified with only an **outer** value (e.g., `display: block` or `display: inline`), the inner value defaults to `flow` (e.g., `display: block flow` and `display: inline flow`).
 
 > [!NOTE]
 > You may use the single-value syntax as a fallback for multi-keyword syntax, for example `display: inline flex` could have the following fallback
@@ -167,7 +167,7 @@ The keyword values can be grouped into six value categories.
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
 > [!NOTE]
-> When a display property is set with only an **inner** value (e.g., `display: flex` or `display: grid`), the outer value defaults to `block` (e.g., `display: block flex` and `display: block grid`).
+> When a display property is specified with only an **inner** value (e.g., `display: flex` or `display: grid`), the outer value defaults to `block` (e.g., `display: block flex` and `display: block grid`).
 
 ### List Item
 
