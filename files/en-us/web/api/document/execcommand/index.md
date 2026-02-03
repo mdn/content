@@ -263,8 +263,8 @@ pasteButton.addEventListener("click", () => {
 
 #### Result
 
-On browsers that implement this feature using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API#security_considerations) you should be able to copy same-origin content (such as text from the text area) and paste it into the box.
-Cross origin content, copied from any other page or location, can be copied, but when you try to paste it a permission prompt may be displayed.
+On browsers that implement this feature using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API#security_considerations) you should be able to copy same-origin content, such as text from the text area, and then paste it to replace any selected content.
+When you try to paste cross-origin content, such as text copied from any other page or location, you will first need to select the "Paste" UI that is displayed.
 
 {{EmbedLiveSample("Using paste", 100, 300)}}
 
