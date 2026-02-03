@@ -77,7 +77,7 @@ div > div::before {
 }
 ```
 
-We've not shown the finished content rendered, as it doesn't look any different to the starting state.
+We've not provided finished content for this task, as it looks the same as the starting point.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -119,7 +119,7 @@ Here's the underlying code for this starting point:
 </form>
 ```
 
-We've not shown the finished content rendered, as it doesn't look significantly different to the starting state.
+We've not provided finished content for this task, as it doesn't look significantly different to the starting state.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -224,7 +224,7 @@ function handleSelection(e) {
 }
 ```
 
-We've not shown the finished content rendered, as it doesn't look any different to the starting state.
+We've not provided finished content for this task, as it looks the same as the starting point.
 
 <details>
 <summary>Click here to show the solution</summary>

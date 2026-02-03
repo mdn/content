@@ -189,9 +189,9 @@ p {
 }
 ```
 
-The finished content should look like this:
+The updated content should look like this:
 
-{{ EmbedLiveSample("css-js-ally-2-finish", "100%", 300) }}
+{{ EmbedLiveSample("css-js-ally-2-finish", "100%", 600) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -329,7 +329,7 @@ function handleSelection(e) {
 }
 ```
 
-We've not shown the finished content rendered, as it doesn't look significantly different to the starting state.
+We've not provided finished content for this task, as it looks the same as the starting point.
 
 <details>
 <summary>Click here to show the solution</summary>

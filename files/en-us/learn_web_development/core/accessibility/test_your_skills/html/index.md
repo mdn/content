@@ -43,7 +43,7 @@ body {
 
 The starting point of the task looks like this:
 
-{{ EmbedLiveSample("html-ally-1", "100%", 400) }}
+{{ EmbedLiveSample("html-ally-1", "100%", 630) }}
 
 Here's the underlying code for this starting point:
 
@@ -84,7 +84,7 @@ answer you're looking for.
 }
 ```
 
-We've not shown the finished content rendered, as it doesn't look significantly different to the starting state.
+We've not provided finished content for this task, as it doesn't look significantly different to the starting state.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -177,7 +177,7 @@ li {
 }
 ```
 
-The finished form should look like this:
+The updated form should look like this:
 
 {{ EmbedLiveSample("html-ally-2-finish", "100%", 220) }}
 
@@ -240,7 +240,7 @@ Here's the underlying code for this starting point:
 > [!NOTE]
 > The links in the starting code have the `target="_blank"` attribute set on them, so that when you click on them, they try to open the linked pages in a new tab rather than the same tab. This is not strictly best practice, but we've done it here so that the pages don't open in the MDN Playground output `<iframe>`, getting rid of your example code in the process!
 
-We've not shown the finished content rendered, as it would give the answers away.
+We've not provided finished content for this task, as it would give the solution away.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -314,7 +314,7 @@ header {
 }
 ```
 
-We've not shown the finished content rendered, as it doesn't look any different to the starting state.
+We've not provided finished content for this task, as it looks the same as the starting point.
 
 <details>
 <summary>Click here to show the solution</summary>
