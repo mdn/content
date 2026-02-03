@@ -378,6 +378,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                     | Size of the control                                                                                   |
 | [`src`](#src)                                 | `image`                                                                 | Same as `src` attribute for {{htmlelement('img')}}; address of image resource                         |
 | [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Incremental values that are valid                                                                     |
+| [`switch`](#switch)                           | `checkbox`                                                              | Whether the checkbox input should be rendered as a switch                                             |
 | [`type`](#type)                               | all                                                                     | Type of form control                                                                                  |
 | [`value`](#value)                             | all except `image`                                                      | The value of the control. When specified in the HTML, corresponds to the initial value                |
 | [`width`](#width)                             | `image`                                                                 | Same as `width` attribute for {{htmlelement('img')}}                                                  |
@@ -614,6 +615,12 @@ A few additional non-standard attributes are listed following the descriptions o
     > When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the `:invalid` pseudoclass.
 
     See [Client-side validation](#client-side_validation) for more information.
+
+- [`switch`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#switch)
+  - : Valid for `checkbox` input only, `switch` is a Boolean attribute that indicates whether the checkbox input should be rendered as a switch.
+
+    > [!NOTE]
+    > This attribute is still experimental and has limited browser support. The attribute is ignored on unsupported browsers.
 
 - `tabindex`
   - : Global attribute valid for all elements, including all the input types, an integer attribute indicating if the element can take input focus (is focusable), if it should participate to sequential keyboard navigation. As all input types except for input of type hidden are focusable, this attribute should not be used on form controls, because doing so would require the management of the focus order for all elements within the document with the risk of harming usability and accessibility if done incorrectly.

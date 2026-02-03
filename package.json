@@ -19,8 +19,8 @@
   },
   "type": "module",
   "scripts": {
-    "info:fred": "node -e \"process.stderr.write('\\n🐥 This command is now using fred: https://github.com/mdn/fred\\n🐞 Please report any issues here:  https://github.com/mdn/fred/issues/new?template=bug.yml\\n\\n')\"",
-    "info:rari": "node -e \"process.stderr.write('\\n🐥 This command is now using rari: https://github.com/mdn/rari\\n🐞 Please report any issues here:  https://github.com/mdn/rari/issues/new?template=bug.yml\\n\\n')\"",
+    "info:fred": "node -e \"process.stderr.write('\\n🐥 This command is using Fred: https://github.com/mdn/fred\\n🐞 Please report issues here:  https://github.com/mdn/fred/issues/new?template=bug.yml\\n\\n')\"",
+    "info:rari": "node -e \"process.stderr.write('\\n🐥 This command is using Rari: https://github.com/mdn/rari\\n🐞 Please report issues here:  https://github.com/mdn/rari/issues/new?template=bug.yml\\n\\n')\"",
     "build": "npm run --silent info:rari && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build rari build",
     "content": "npm run --silent info:rari && env-cmd --silent cross-env CONTENT_ROOT=files rari content",
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files node scripts/filecheck/index.js --cwd=.",
@@ -38,14 +38,13 @@
     "lint:typos-group-by-file": "cspell --no-progress --gitignore --quiet --reporter cspell-group-by-file-reporter --config .vscode/cspell.json \"**/*.md\"",
     "lint:typos-words-only": "cspell --no-progress --gitignore --words-only --unique --config .vscode/cspell.json \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
-    "prepare": "node scripts/npm-check.js",
     "start": "npm run --silent info:fred && npm run up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files NODE_ENV=production FRED_PLAYGROUND_LOCAL=true FRED_PLAYGROUND_PORT=5043 FRED_PORT=5042 FRED_WRITER_MODE=true fred-server",
     "test": "node --test",
     "up-to-date-check": "node scripts/up-to-date-check.js"
   },
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
-    "@mdn/fred": "2.0.2",
+    "@mdn/fred": "2.2.0",
     "@octokit/rest": "^22.0.1",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
@@ -59,7 +58,7 @@
   },
   "devDependencies": {
     "cheerio": "1.2.0",
-    "cspell": "9.6.2",
+    "cspell": "9.6.3",
     "cspell-group-by-file-reporter": "^1.0.1",
     "file-type": "^21.3.0",
     "fs-extra": "^11.3.3",
