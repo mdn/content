@@ -48,15 +48,17 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 ## Syntax
 
 ```wat
-table identifier size storage_type
+table identifier initial_size max_size storage_type
 ```
 
 - `table`
   - : The `table` instruction type. Must always be included first.
 - `identifier` {{optional_inline}}
   - : An optional identifier for the table; must begin with a `$` symbol.
-- `size`
-  - : A number representing the initial size of the table
+- `initial_size`
+  - : An integer representing the initial size of the table.
+- `max_size` {{optional_inline}}
+  - : An integer representing the maximum size the table is allowed to grow to. If this is not included, the table has no maximum size, and its growth is limited only by system constraints such as available memory.
 - `storage_type`
   - : The name of the function type to store. Possible values are:
     - `funcref`
@@ -64,28 +66,20 @@ table identifier size storage_type
     - `externref`
       - : Store references to external functions defined inside JavaScript.
 
-### Opcodes
-
-| Instruction | Binary opcode |
-| ----------- | ------------- |
-| `table`     | `????`        |
-
-<!-- I'm not sure what this is, or how to find it out -->
-
 ## Description
 
 WebAssembly tables allow storage function references, which can be later retrieved for efficient, indirect function access when needed. The `table` instruction creates a new table.
 
-A table has to be given a size and storage type. This example creates a table wth two storage slots, which will only store references to functions created inside Wasm:
+A table has to be given an initial size and storage type. This example creates a table wth two storage slots, which will only store references to functions created inside Wasm:
 
 ```wat
 (table 2 funcref)
 ```
 
-Optionally, you can also provide an identifier, which can be used to identify the table elsewhere. For example:
+Optionally, you can also provide an identifier, which can be used to identify the table elsewhere, and a maximum growth size. For example:
 
 ```wat
-(table $mytable 2 funcref)
+(table $mytable 2 10 funcref)
 ```
 
 To call a function via a table later on, you have to reference the table and the index value the function refernce is stored at. The following example uses `call_indirect`:
@@ -93,8 +87,6 @@ To call a function via a table later on, you have to reference the table and the
 ```wat
 (call_indirect (type $ret_i32) (local.get $index))
 ```
-
-(TBD: This would make so much more sense if I could get table.get to work).
 
 ## Examples
 
@@ -159,6 +151,3 @@ This makes sense, as the exported `accessTable()` function has an index value pa
 ## Browser compatibility
 
 {{Compat}}
-
-> [!NOTE]
-> The `multiMemory` compatibility table indicates versions in which `grow` can be used with a specified memory.
