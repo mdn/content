@@ -48,7 +48,7 @@ This example logs the names, [`keys`](/en-US/docs/Web/API/CSSFontFeatureValuesMa
 #### HTML
 
 ```html
-<pre id="log">Your Browser does not support <strong>CSSFontFeatureValuesMap.styleset</strong> property</pre>
+<pre id="log"></pre>
 ```
 
 #### CSS
@@ -75,6 +75,8 @@ const rules = document.querySelector("#css-output").sheet.cssRules;
 const fontOne = rules[0]; // A CSSFontFeatureValuesRule
 if (fontOne.styleset) { // check to see if styleset property is supported
   log.textContent = `The user has defined a name for styleset called: "${fontOne.styleset.keys().next().value}".`;
+} else {
+  log.textContent = "Your Browser does not support CSSFontFeatureValuesMap.styleset property."
 };
 ```
 
