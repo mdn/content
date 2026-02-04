@@ -7,7 +7,9 @@ browser-compat: api.CSSFontFeatureValuesMap
 
 {{APIRef("CSSOM")}}
 
-The **`CSSFontFeatureValuesMap`** interface uses the default {{jsxref("Map")}} class methods.
+The **`CSSFontFeatureValuesMap`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents an iterable and read-only set of font feature parameters.
+
+An `CSSFontFeatureValuesMap` instance is a read-only [Map-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis), in which each key is the user-defined-ident and the corresponding value is an index for the font feature it relates to.
 
 ## Instance property
 
