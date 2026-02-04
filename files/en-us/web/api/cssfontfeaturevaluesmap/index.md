@@ -37,6 +37,49 @@ The **`CSSFontFeatureValuesMap`** interface uses the default {{jsxref("Map")}} c
 - [`CSSFontFeatureValuesMap.[Symbol.iterator]()`](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator)
   - : Returns the iterator object itself. This allows iterator objects to also be iterable.
 
+## Examples
+
+### Logging user-defined names
+
+This example logs the names, [`keys`](/en-US/docs/Web/API/CSSFontFeatureValuesMap/keys), the user has assigned for use in {{cssxref("font-variant-alternates")}} for the [`@styleset`](/en-US/docs/Web/API/CSSFontFeatureValuesRule/styleset) property.
+
+#### HTML
+
+```html
+<pre id="log">Your Browser does not support <strong>CSSFontFeatureValuesMap.styleset</strong> property</pre>
+```
+
+#### CSS
+
+```css
+/* At-rule for "nice-style" in Font One */
+@font-feature-values Font One {
+  @styleset {
+    nice-style: 12;
+  }
+}
+
+/* Apply the at-rules with a single declaration */
+.nice-look {
+  font-variant-alternates: styleset(nice-style);
+}
+```
+
+#### JavaScript
+
+```js
+const log = document.querySelector("#log");
+const rules = document.querySelector("#css-output").sheet.cssRules;
+const fontOne = rules[0]; // A CSSFontFeatureValuesRule
+if (fontOne.styleset) { // check to see if styleset property is supported
+  log.textContent = `The user has defined a name for styleset called: "${fontOne.styleset.keys().next().value}".`;
+};
+```
+
+#### Result
+
+{{EmbedLiveSample("Logging_user-defined_names", "100%", "75px")}}
+
 ## Specifications
 
 {{Specifications}}
