@@ -7,7 +7,7 @@ sidebar: htmlsidebar
 
 Most [HTML](/en-US/docs/Web/HTML) elements are a member of one or more **content categories** — these categories group elements that share common characteristics. This is a loose grouping (it doesn't actually create a relationship among elements of these categories), but they help define and describe the categories' shared behavior and their associated rules. It's possible for [elements to not be a member of _any_ of these categories](#elements_without_a_category).
 
-The content categories are used to define the _content model_ of elements, in other words what each element can take as descendants. For example, a `<p>` element can only contain _phrasing content_, while the `<div>` element can contain _flow content_. Some elements, like `<ins>`, have a [_transparent_ content model](#transparent_content_model).
+The content categories are used to define the _content model_ of elements, in other words, what each element can take as descendants. For example, the `<p>` element can only contain _phrasing content_, while the `<div>` element can contain _flow content_. Some elements, like `<ins>`, have a [_transparent_ content model](#transparent_content_model).
 
 There are seven main content categories, which can be summarized with the Venn diagram below:
 
@@ -336,7 +336,7 @@ Some elements belong to this category only under specific conditions:
 
 ## Elements without a category
 
-Several elements are not be a member of _any_ of content category. These include:
+Several elements are not a member of _any_ content category. These include:
 
 - {{HTMLElement("caption")}}
 - {{HTMLElement("col")}}
