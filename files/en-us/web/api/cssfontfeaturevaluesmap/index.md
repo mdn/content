@@ -77,8 +77,9 @@ if (fontOne.styleset) {
   // check to see if styleset property is supported
   log.textContent = `The user has defined a name for styleset called: "${fontOne.styleset.keys().next().value}".`;
 } else {
-  log.textContent = "Your Browser does not support CSSFontFeatureValuesMap.styleset property.";
-};
+  log.textContent =
+    "Your Browser does not support CSSFontFeatureValuesMap.styleset property.";
+}
 ```
 
 #### Result
