@@ -67,78 +67,6 @@ For more information on anchor features and usage, see the [CSS anchor positioni
 
 See the `anchor-name` documentation for [basic usage](/en-US/docs/Web/CSS/Reference/Properties/anchor-name#basic_usage) and additional [`position-anchor` examples](/en-US/docs/Web/CSS/Reference/Properties/anchor-name#examples).
 
-### Using a slider thumb as an anchor
-
-In this example, an {{htmlelement("output")}} is positioned relative to an anchor that is the thumb of a range slider.
-
-#### HTML
-
-We include an [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) element and an [`<output>`](/en-US/docs/Web/HTML/Reference/Elements/output) element to display the value of the range. The value displayed in the `<output>` element is updated via JavaScript as the slider value changes.
-
-```html
-<label for="slider">Change the value:</label>
-<input type="range" min="0" max="100" value="25" id="slider" />
-<output>25</output>
-```
-
-#### CSS
-
-We give the thumb, represented by the {{cssxref("::-webkit-slider-thumb")}} pseudo-element, an anchor name of `--thumb`. We then set that name as the value of the `<output>` element's `position-anchor` property, and give it a {{cssxref("position")}} value of `fixed`. These steps associated the `<output>` with the thumb.
-
-Finally, we use {{cssxref("left")}} and {{cssxref("top")}} properties with {{cssxref("anchor()")}} values to position the `<output>` relative to the thumb.
-
-```css hidden
-body {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  font-size: 1.4rem;
-  font-family: sans-serif;
-}
-input {
-  width: 33vw;
-}
-output {
-  background: cyan;
-  border: 2px solid darkblue;
-  padding: 3px 6px;
-  border-radius: 10px;
-  font-size: 1.2rem;
-}
-```
-
-```css
-input::-webkit-slider-thumb {
-  anchor-name: --thumb;
-}
-
-output {
-  position-anchor: --thumb;
-  position: absolute;
-  left: anchor(right);
-  bottom: anchor(top);
-}
-```
-
-#### JavaScript
-
-We include an event listener that updates the content of the `<output>` element when the value of the `<input>` changes:
-
-```js
-const input = document.querySelector("input");
-const output = document.querySelector("output");
-
-input.addEventListener("input", (event) => {
-  output.innerText = `${input.value}`;
-});
-```
-
-#### Results
-
-The output is anchored to the thumb. Change the value. If anchor positioning is supported in your browser, the value will be above and to the right of the thumb, no matter where it is along the slider.
-
-{{ EmbedLiveSample("A range thumb as anchor", "100%", "225") }}
-
 ### Multiple positioned elements and anchors
 
 In this example, you can move multiple positioned elements around, associating them with different anchors. This example demonstrates how an anchor can be associated with multiple positioned elements, but an anchor-positioned element can only be associated with a single anchor at a time, the anchor defined by the `anchor-position` property.
@@ -292,6 +220,85 @@ function updateAnchorNames() {
 Select different values from the drop-down menus to change the anchors that the elements are positioned relative to.
 
 {{ EmbedLiveSample("Multiple positioned elements and anchors", "100%", "400") }}
+
+### Using a slider thumb as an anchor
+
+In this example, an {{htmlelement("output")}} is positioned relative to an anchor that is the thumb of a range slider.
+
+#### HTML
+
+We include an [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) element and an {{htmlelement("output")}} element to display the value of the range. The value displayed in the `<output>` element is updated via JavaScript as the slider value changes.
+
+```html
+<label for="slider">Change the value:</label>
+<input type="range" min="0" max="100" value="25" id="slider" />
+<output>25</output>
+```
+
+#### CSS
+
+We give the thumb, represented by the {{cssxref("::-webkit-slider-thumb")}} and {{cssxref("::-moz-range-thumb")}} pseudo-elements, an anchor name of `--thumb`. We then set that name as the value of the `<output>` element's `position-anchor` property, and give it a {{cssxref("position")}} value of `fixed`. These steps associated the `<output>` with the thumb.
+
+Finally, we use {{cssxref("left")}} and {{cssxref("top")}} properties with {{cssxref("anchor()")}} values to position the `<output>` relative to the thumb.
+
+```css hidden
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-size: 1.4rem;
+  font-family: sans-serif;
+}
+input {
+  width: 33vw;
+}
+output {
+  background: cyan;
+  border: 2px solid darkblue;
+  padding: 3px 6px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+```
+
+```css
+input::-webkit-slider-thumb {
+  anchor-name: --thumb;
+}
+
+input::-moz-range-thumb {
+  anchor-name: --thumb;
+}
+
+output {
+  position-anchor: --thumb;
+  position: absolute;
+  left: anchor(right);
+  bottom: anchor(top);
+}
+```
+
+#### JavaScript
+
+We include an event listener that updates the content of the `<output>` element when the value of the `<input>` changes:
+
+```js
+const input = document.querySelector("input");
+const output = document.querySelector("output");
+
+input.addEventListener("input", (event) => {
+  output.innerText = `${input.value}`;
+});
+```
+
+#### Results
+
+The output is anchored to the thumb. Change the value and the output will remain above and to the right of the thumb, no matter where it is along the slider.
+
+{{ EmbedLiveSample("A range thumb as anchor", "100%", "225") }}
+
+> [!NOTE]
+> The anchor positioning CSS for this demo currently doesn't work in Firefox. The `::-webkit-slider-thumb` pseudo-element isn't supported in Firefox and, while there is a Firefox-specific equivalent — {{cssxref("::-moz-range-thumb")}} — it is currently not anchorable (see [Firefox bug 1993699](https://bugzil.la/1993699)).
 
 ## Specifications
 
