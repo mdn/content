@@ -52,9 +52,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer relative to the position of the last {{domxref("Element/mousemove_event", "mousemove")}} event.
+  - : The X coordinate of the mouse pointer relative to the position of the last move event of the same type (a {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}}, or {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}).
 - {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer relative to the position of the last {{domxref("Element/mousemove_event", "mousemove")}} event.
+  - : The Y coordinate of the mouse pointer relative to the position of the last move event of the same type (a {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}}, or {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}).
 - {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
   - : The X coordinate of the mouse pointer relative to the position of the padding edge of the target node.
 - {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}

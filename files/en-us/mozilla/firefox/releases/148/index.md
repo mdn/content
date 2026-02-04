@@ -1,13 +1,13 @@
 ---
-title: Firefox 148 release notes for developers (Nightly)
-short-title: Firefox 148 (Nightly)
+title: Firefox 148 release notes for developers (Beta)
+short-title: Firefox 148 (Beta)
 slug: Mozilla/Firefox/Releases/148
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 148 that affect developers.
-Firefox 148 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [February 24, 2026](https://whattrainisitnow.com/release/?version=148).
+Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [February 24, 2026](https://whattrainisitnow.com/release/?version=148).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -18,9 +18,9 @@ Firefox 148 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- ### Developer Tools -->
 
-<!-- ### HTML -->
+### HTML
 
-<!-- No notable changes. -->
+- The initial `about:blank` document now loads synchronously. A browsing context's first navigation may resolve to `about:blank` (for example, when the initial URL is empty or explicitly set to `about:blank`). In these cases, Firefox no longer replaces the initial empty document with a second, asynchronously loaded one, and instead fires the `load` event synchronously on the initial document. ([Firefox bug 543435](https://bugzil.la/543435)).
 
 <!-- #### Removals -->
 
@@ -32,11 +32,19 @@ Firefox 148 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The {{cssxref("position-area")}} property in [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) now correctly keeps the anchored element within the viewport.
+  ([Firefox bug 2008537](https://bugzil.la/2008537)).
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
+
+- The {{jsxref("Iterator.zip()")}} and {{jsxref("Iterator.zipKeyed()")}} static methods are now supported.
+  These "zip" together multiple input iterators, returning a new iterator that yields the group of input elements at each iteration step.
+  They are useful when you need to combine data from multiple input iterators that are positionally aligned (the first value yielded by the first iterator corresponds to the first value yielded by the other iterators, and so on).
+  ([Firefox bug 2003333](https://bugzil.la/2003333)).
 
 <!-- No notable changes. -->
 
@@ -50,9 +58,25 @@ Firefox 148 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
-<!-- #### DOM -->
+- The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) is now supported.
+  This provides mechanisms to ensure that properties and functions that can potentially be used as vectors for XSS attacks are only able to be called with data that has been passed through a transformation function.
+  The mechanisms allow auditing of unsafe uses of code.
+  They don't mandate how the data is transformed, but might, for example, be used to sanitize unsafe HTML elements from user-provided strings.
+  ([Firefox bug 1994690](https://bugzil.la/1994690)).
+
+- The {{domxref("Location.ancestorOrigins")}} property is now supported, which enables you to determine whether a document is being embedded in an {{htmlelement("iframe")}} and, if so, by which site(s).
+  ([Firefox bug 1085214](https://bugzil.la/1085214)).
+
+- The {{domxref("MouseEvent.movementX", "movementX")}} and {{domxref("MouseEvent.movementY", "movementY")}} properties on the {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} event are now populated when the pointer is moved — previously these were set to zero.
+  ([Firefox bug 1987671](https://bugzil.la/1987671)).
+
+#### DOM
+
+- The "paste" command can now be used with {{domxref("Document.execCommand()")}} in web content (in addition to web extensions).
+  This is implemented using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) and shares the same [Security considerations](/en-US/docs/Web/API/Clipboard_API#security_considerations), such as requiring transient activation and user acknowledgement when pasting cross-origin content.
+  ([Firefox bug 1998195](https://bugzil.la/1998195)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
@@ -81,3 +105,8 @@ Firefox 148 is the current [Nightly version of Firefox](https://www.firefox.com/
 These features are shipping in Firefox 148 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Document Picture-in-Picture API** (Nightly): `dom.documentpip.enabled`
+
+  The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) makes it possible to open an always-on-top window that can be populated with arbitrary HTML content such as a video with custom controls or a set of streams showing the participants of a video conference call.
+  ([Firefox bug 1858562](https://bugzil.la/1858562)).

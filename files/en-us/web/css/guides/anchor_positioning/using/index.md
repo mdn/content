@@ -131,7 +131,7 @@ The {{cssxref("anchor-scope")}} property can fix this problem by limiting the vi
 - `anchor-scope: --my-anchor, --my-anchor2` sets the scope so that the specified `anchor-name` values, when set in the subtree, can only be bound to by positioned elements in the same subtree.
 - `anchor-scope: none` is the default value; it specifies that no anchor scoping is set.
 
-For example, let's say you have an multiple anchor and anchor-positioned {{htmlelement("div")}} elements inside {{htmlelement("section")}} containers:
+For example, let's say you have multiple anchors and anchor-positioned {{htmlelement("div")}} elements inside {{htmlelement("section")}} containers:
 
 ```html live-sample___anchor-scope
 <section class="scoped">
@@ -253,11 +253,11 @@ Both will place the positioned element `50px` above the bottom of the element's 
 
 The most common `anchor()` parameters you'll use will refer to a side of the default anchor. You will also often either add a {{cssxref("margin")}} to create spacing between the edge of the anchor and positioned element or use `anchor()` within a `calc()` function to add that spacing.
 
-For example, this rule positions the right edge of the positioned element flush to the anchor element's left edge, then adds some `margin-left` to make some space between the edges:
+For example, this rule positions the left edge of the positioned element flush to the anchor element's right edge, then adds some `margin-left` to make some space between the edges:
 
 ```css
 .positionedElement {
-  right: anchor(left);
+  left: anchor(right);
   margin-left: 10px;
 }
 ```

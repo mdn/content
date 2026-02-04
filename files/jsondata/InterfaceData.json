@@ -120,6 +120,10 @@
       "inh": "",
       "impl": []
     },
+    "AudioPlaybackStats": {
+      "inh": "",
+      "impl": []
+    },
     "AudioProcessingEvent": {
       "inh": "Event",
       "impl": []
@@ -170,6 +174,10 @@
     },
     "AuthenticatorResponse": {
       "inh": "",
+      "impl": []
+    },
+    "AutofillEvent": {
+      "inh": "Event",
       "impl": []
     },
     "BackgroundFetchEvent": {
@@ -516,6 +524,14 @@
       "inh": "Animation",
       "impl": []
     },
+    "CSSApplyBlockRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
+    "CSSApplyStatementRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
     "CSSColor": {
       "inh": "CSSColorValue",
       "impl": []
@@ -534,6 +550,14 @@
     },
     "CSSContainerRule": {
       "inh": "CSSConditionRule",
+      "impl": []
+    },
+    "CSSContentsBlockRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
+    "CSSContentsStatementRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSCounterStyleRule": {
@@ -666,6 +690,10 @@
     },
     "CSSMediaRule": {
       "inh": "CSSConditionRule",
+      "impl": []
+    },
+    "CSSMixinRule": {
+      "inh": "CSSGroupingRule",
       "impl": []
     },
     "CSSNamespaceRule": {
@@ -1632,6 +1660,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLGeolocationElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLHeadElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1737,6 +1769,10 @@
       "impl": []
     },
     "HTMLParamElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
+    "HTMLPermissionElement": {
       "inh": "HTMLElement",
       "impl": []
     },
@@ -2206,6 +2242,10 @@
     },
     "MediaStreamTrackEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "MediaStreamTrackHandle": {
+      "inh": "",
       "impl": []
     },
     "MediaStreamTrackProcessor": {
@@ -3108,8 +3148,12 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "SFrameTransform": {
+    "SFrameReceiverTransform": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "SFrameSenderTransform": {
+      "inh": "",
       "impl": []
     },
     "SFrameTransformErrorEvent": {
