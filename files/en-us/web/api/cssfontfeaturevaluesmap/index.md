@@ -75,7 +75,7 @@ const rules = document.querySelector("#css-output").sheet.cssRules;
 const fontOne = rules[0]; // A CSSFontFeatureValuesRule
 if (fontOne.styleset) { // check to see if styleset property is supported
   log.textContent = `The user has defined a name for styleset called: "${fontOne.styleset.keys().next().value}".`;
-};
+}
 ```
 
 #### Result
