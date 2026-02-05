@@ -11,41 +11,50 @@ The **`:autofill`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 {{InteractiveExample("CSS Demo: :autofill", "tabbed-shorter")}}
 
 ```css interactive-example
-label {
-  display: block;
-  margin-top: 1em;
-}
-
-input:is(:-webkit-autofill, :autofill) {
-  border: 3px solid darkorange;
+input:autofill {
+  outline: 10px solid magenta;
+  border: 5px dashed yellow;
 }
 ```
 
 ```html interactive-example
 <form>
   <p>Click on the text box and choose any option suggested by your browser.</p>
-
-  <label for="name">Name</label>
-  <input id="name" name="name" type="text" autocomplete="name" />
-
-  <label for="email">Email Address</label>
-  <input id="email" name="email" type="email" autocomplete="email" />
-
-  <label for="country">Country</label>
-  <input id="country" name="country" type="text" autocomplete="country-name" />
+  <p>
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" autocomplete="given-name" />
+  </p>
+  <p>
+    <label for="email">Email Address</label>
+    <input id="email" name="email" type="email" autocomplete="email" />
+  </p>
+  <p>
+    <label for="country">Country</label>
+    <input id="country" name="country" type="text" autocomplete="country-name" />
+  </p>
 </form>
 ```
 
-> [!NOTE]
-> The user agent style sheets of many browsers use `!important` in their `:-webkit-autofill` style declarations, making them non-overridable by webpages without resorting to JavaScript hacks. For example Chrome has the following in its internal stylesheet:
->
-> ```css
-> background-color: rgb(232 240 254) !important;
-> background-image: none !important;
-> color: -internal-light-dark(black, white) !important;
-> ```
->
-> This means that you cannot set the {{cssxref('background-color')}}, {{cssxref('background-image')}}, or {{cssxref('color')}} in your own rules.
+## Description
+
+The `:auto-fill` pseudo-class selects the {{htmlelement("input")}} element containing un-edited content that was auto-filled by the user-agent. Autocompletion may occur when the browser setting are set to enable autocompletion or the [`autocomplete` attribute](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) is set on the element itself. 
+
+When the user uses the browser's autocompletion feature to autofill a form control, all the form controls that can be autofilled based on the selection get populated. These will all match the `:autofill` UI state. If the user edits a control, that control will no longer match `:autofill`, even if the value is the same as the autofilled value.
+
+The specification includes the vendor-prefixed `:-webkit-autofill` pseudo-class as an alias, also matching input elements which have been autofilled by user agent and no longer matching if the user edits the autofilled field, whether the field was filled based on the `autocomplete` attribute or even without that attribute being involved.
+
+Note that the user agent style sheets of many browsers use `!important` in their style declarations, making some styles non-overridable. For example, Chrome has the following in its internal stylesheet:
+
+```css
+input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+  color: fieldtext !important;
+}
+```
+
+This means that you cannot override the default {{cssxref('background-color')}}, {{cssxref('background-image')}}, or {{cssxref('color')}} values on the currently selected input element in your own rules, but you can override the {{cssxref('appearance')}} and you can override these properties for the autofilled elements that aren't currently focused.
 
 ## Syntax
 
@@ -58,26 +67,62 @@ input:is(:-webkit-autofill, :autofill) {
 ## Examples
 
 The following example demonstrates the use of the `:autofill` pseudo-class to change the border of a text field that has been autocompleted by the browser.
-To ensure we don't create an [invalid selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#invalid_selector_list), both `:-webkit-autofill` and `:autofill` are matched using a forgiving selector list with {{cssxref(":is()")}}.
 
-```css
-input {
-  border-radius: 3px;
-}
+### HTML
 
-input:is(:-webkit-autofill, :autofill) {
-  border: 3px dotted orange;
-}
-```
+We include three HTML `<input>` elements, each with an associated {{htmlelement("label")}}. The `name` and `email` will likely autocomplete and match `:autofill`, while the `pet` value is unlikely to.
 
 ```html
 <form method="post" action="">
-  <label for="email">Email</label>
-  <input type="email" name="email" id="email" autocomplete="email" />
+  <p>
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" autocomplete="on" />
+  </p>
+  <p>
+    <label for="email">Email: </label>
+    <input type="email" name="email" id="email" autocomplete="email" />
+  </p>
+  <p>
+    <label for="pet">Your pet's name: </label>
+    <input type="text" name="pet" id="pet" />
+  </p>
 </form>
 ```
 
+### CSS
+
+We apply a {{cssxref("border-radius")}}, large {{cssxref("outline")}}, and a  {{cssxref("border")}} to the `<input>` elements when they match the `:autofill` state.
+
+```css
+input {
+  border-radius: 0px;
+}
+
+input:autofill {
+  border-radius: 50%;
+  outline: 15px solid magenta
+  border: 3px dotted yellow;
+}
+```
+
+```css hidden
+@supports not selector(:autofill) {
+  body::before {
+    content: "Your browser doesn't support the :autofill selector.";
+    background-color: wheat;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+  }
+}
+```
+
+### Results
+
 {{EmbedLiveSample('Examples')}}
+
+If you allow the `name` to autocomplete, the `name` and `email` will both have a rounded border and a magenta outline, though likely the border will not change due to the `!important` flag set in the user agent style sheet. Try editing one of the fields: note how once you edit the value, even if you reset it to it's autocompletion value, the `:autofill` styles are no longer applied. 
 
 ## Specifications
 
@@ -89,7 +134,5 @@ input:is(:-webkit-autofill, :autofill) {
 
 ## See also
 
-- [Chromium issue 46543: Auto-filled input text box yellow background highlight cannot be turned off](https://crbug.com/46543)
-- [WebKit bug 66032: Allow site authors to override autofilled fields' colors.](https://webkit.org/b/66032)
-- [Mozilla bug 740979: implement `:-moz-autofill` pseudo-class on input elements with an autofilled value](https://bugzil.la/740979)
-- [User Interface Module Level 4: more selectors](https://wiki.csswg.org/spec/css4-ui#more-selectors)
+- [`<input>` pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#input_pseudo-classes)
+- [CSS selectors](/en-US/Docs/Web/CSS/Guides/Selectors) module
