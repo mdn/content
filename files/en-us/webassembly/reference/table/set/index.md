@@ -144,14 +144,14 @@ In our script, we start by grabbing a reference to a {{htmlelement("p")}} elemen
 
 We then compile and instantiate our Wasm module using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) method, importing the `obj` object in the process.
 
-When the result is returned, we invoke the exported Wasm `run()` function available on the WebAssembly [`Instance`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance) [`exports`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports) object, passing it the `results` element as a parameter.
+When the result is returned, we invoke the exported Wasm `run()` function available on the WebAssembly [`Instance`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance) [`exports`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports) object, passing it the `outputElem` element as a parameter.
 
 ```html hidden live-sample___basic-usage
 <p></p>
 ```
 
 ```js live-sample___basic-usage
-const results = document.querySelector("p");
+const outputElem = document.querySelector("p");
 
 const obj = {
   output: function (elem, val) {
@@ -162,7 +162,7 @@ const obj = {
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
   obj,
 }).then((result) => {
-  value = result.instance.exports.run(results);
+  value = result.instance.exports.run(outputElem);
 });
 ```
 
@@ -221,7 +221,8 @@ Finally, we export the `run()` function, which takes an `externref` named `$elem
         (ref.func $f1)
     )
 
-    ;; Call the first function in the table, and print the result.
+    ;; Call the output function, to output the table
+    ;; function's return value to the DOM
     (call $output
       (local.get $elem)
       (call_indirect (type $ret_i32) (i32.const 0))
@@ -233,7 +234,8 @@ Finally, we export the `run()` function, which takes an `externref` named `$elem
         (ref.func $f2)
     )
 
-    ;; Call the first function in the table, and print the result.
+    ;; Call the output function, to output the table
+    ;; function's return value to the DOM
     (call $output
       (local.get $elem)
       (call_indirect (type $ret_i32) (i32.const 0))
