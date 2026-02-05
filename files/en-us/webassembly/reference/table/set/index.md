@@ -1,16 +1,16 @@
 ---
-title: "grow: Wasm table instruction"
-short-title: grow
-slug: WebAssembly/Reference/Table/grow
+title: "set: Wasm table instruction"
+short-title: set
+slug: WebAssembly/Reference/Table/set
 page-type: webassembly-instruction
 browser-compat: webassembly.reference-types
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-table
 sidebar: webassemblysidebar
 ---
 
-The **`grow`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) increases the size of a table by a specified number of segments.
+The **`set`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) changes the function reference stored in a particular table segment.
 
-{{InteractiveExample("Wat Demo: table.grow", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: table.set", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
@@ -56,41 +56,81 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 ## Syntax
 
 ```wat
-table.grow identifier initial_value grow_amount
+table.set identifier segment_number function_reference
 ```
 
-- `table.grow`
-  - : The `table.grow` instruction type. Must always be included first.
+- `table.set`
+  - : The `table.set` instruction type. Must always be included first.
 - `identifier`
-  - : The identifier for the table you want to grow; must begin with a `$` symbol. [EDITORIAL: is this optional?]
-- `initial_value`
-  - : The initial value to set for the new table segments. This can be one of the following:
-    - `ref.null func`
-      - : Sets the initial values to `null`.
-    - OTHER
-      - : EDITORIAL: what other values can be set for the initial value?
-- `grow_amount`
-  - : The number of segments to grow the table by. This must be an `i32` value, for example `(i32.const 1)`.
+  - : The identifier for the table you want to store a reference in; must begin with a `$` symbol. [EDITORIAL: is this optional?]
+- `segment_number`
+  - : The segment number to store the function reference in. This must be an `i32` value, for example `(i32.const 1)`.
+- `function_reference`
+  - : The function reference to store in the table. This should be a [`ref.func`](#) [EDITORIAL: does it make sense to have a reference page for this, under ref/function ("reference instructions"?)], for example `(ref.func $f1)`.
 
 ### Result
 
-A `i32` equal to the size of the table before the `grow` instruction is applied to it, or `-1` if the table failed to grow, for example due to an out-of-memory (OOM) error or the new size being greater than the [table's maximum size](/en-US/docs/WebAssembly/Reference/Table/table#max_size).
-
-To retrieve the new table size after the `grow` instruction is applied to it, use the [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size) instruction.
+`null`.
 
 ### Opcodes
 
-| Instruction  | Binary opcode |
-| ------------ | ------------- |
-| `table.grow` | `0xFC`        |
+| Instruction | Binary opcode |
+| ----------- | ------------- |
+| `table.set` | `0x26`        |
 
 ## Description
 
-`table.grow` is used to increase the size of a table by a specified number of segments.
+The `table.set` instruction is used to store a specified function in a particular segment of an existing table. Specifically, it allows wasm modules to mutate references contained in tables at runtime.
 
-Note that `table.grow` must be included inside a function. Trying to include the instruction at the top level of a module results in an error.
+This is convenient if different references are required later on in a program's lifecycle to the ones that table was initialized with. For example, you could create a table with one segment, define two functions, then initialize the table segment with a reference to one of those functions using the [`elem`](#) [EDITORIAL: ADDING DUMMY LINK TO THIS, AS IT'LL NEED DOCUMENTING SOMEWHERE] module segment:
 
-A wasm table can be grown from JavaScript using the [`table.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/grow) method.
+```wat
+(module
+  ;; Create table with 1 function slot
+  (table $return_funcs 1 funcref)
+
+  ;; Define basic functions that return i32s
+  (func $f1 (result i32)
+    (i32.const 42)
+  )
+  (func $f2 (result i32)
+    (i32.const 100)
+  )
+
+  ;; initialize table slot
+  (elem (i32.const 0) $f1)
+
+  ...
+```
+
+When using instructions like `table.set`, you also need to forward-declare the functions using `(elem declare ...)` so they can be referenced later on:
+
+```wat
+  ...
+
+  (elem declare func $f1 $f2)
+
+  ...
+```
+
+Later on, you can then dynamically change the function reference stored in the table segment using `table.set`:
+
+```wat
+  ...
+
+  (func $populate
+    (table.set $return_funcs
+      (i32.const 0)
+      (ref.func $f2)
+    )
+  )
+
+  ...
+```
+
+Note that `table.set` must be included inside a function. Trying to include the instruction at the top level of a module results in an error.
+
+A wasm table can be grown from JavaScript using the [`table.set()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/set) method.
 
 ## Examples
 
@@ -220,5 +260,5 @@ This makes sense, as each time the `output()` function is run from inside the wa
 
 ## See also
 
-- [`table.set`](/en-US/docs/WebAssembly/Reference/Table/set)
+- [`table.grow`](/en-US/docs/WebAssembly/Reference/Table/grow)
 - [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size)
