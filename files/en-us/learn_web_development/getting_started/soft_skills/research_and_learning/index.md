@@ -51,7 +51,6 @@ When you encounter a problem or an unfamiliar concept, it can be helpful to foll
 
 Using a structured approach like this helps reduce frustration and prevents unproductive searching.
 
-
 ### Choose high-quality resources
 
 You should make sure that the resources you choose for research are high quality and reputable. To find out which resources are reputable, ask your teacher or more experienced colleagues what they'd recommend, and do some web searches to find out what other folks around the web recommend. MDN of course comes recommended; other good examples include:
