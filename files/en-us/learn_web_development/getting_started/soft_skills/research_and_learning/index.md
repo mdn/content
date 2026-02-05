@@ -47,7 +47,7 @@ When you encounter a problem or an unfamiliar concept, it can be helpful to foll
 2. **Consult official documentation first** — for web platform features, MDN Web Docs should usually be your first stop.
 3. **Search for examples** — look for small, focused examples that demonstrate the concept in isolation.
 4. **Experiment locally** — try the solution in a minimal test project or sandbox to confirm your understanding.
-5. **Reflect and document** — note what worked, what didn’t, and why, so future problems are easier to solve.
+5. **Reflect and document** — note what worked, what didn't, and why, so future problems are easier to solve.
 
 Using a structured approach like this helps reduce frustration and prevents unproductive searching.
 
