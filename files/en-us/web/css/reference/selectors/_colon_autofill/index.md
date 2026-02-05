@@ -11,9 +11,12 @@ The **`:autofill`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 {{InteractiveExample("CSS Demo: :autofill", "tabbed-shorter")}}
 
 ```css interactive-example
+input {
+  border: 3px solid black;;
+}
 input:autofill {
-  outline: 10px solid magenta;
-  border: 5px dashed yellow;
+  outline: 5px solid magenta;
+  border: 3px dashed yellow;
 }
 ```
 
@@ -77,7 +80,7 @@ We include three HTML `<input>` elements, each with an associated {{htmlelement(
 <form method="post" action="">
   <p>
     <label for="name">Name: </label>
-    <input type="text" name="name" id="name" autocomplete="on" />
+    <input name="n" id="name" autocomplete="given-name" />
   </p>
   <p>
     <label for="email">Email: </label>
@@ -85,14 +88,14 @@ We include three HTML `<input>` elements, each with an associated {{htmlelement(
   </p>
   <p>
     <label for="pet">Your pet's name: </label>
-    <input type="text" name="pet" id="pet" />
+    <input name="pet" id="pet" />
   </p>
 </form>
 ```
 
 ### CSS
 
-We apply a {{cssxref("border-radius")}}, large {{cssxref("outline")}}, and a {{cssxref("border")}} to the `<input>` elements when they match the `:autofill` state.
+We apply a {{cssxref("border-radius")}}, {{cssxref("outline")}}, and {{cssxref("border-color")}} to the `<input>` elements when they match the `:autofill` state.
 
 ```css
 input {
@@ -101,8 +104,8 @@ input {
 
 input:autofill {
   border-radius: 0.5lh;
-  outline: 15px solid magenta
-  border: 3px dotted yellow;
+  outline: 5px dotted magenta;
+  border-color: yellow;
 }
 ```
 
