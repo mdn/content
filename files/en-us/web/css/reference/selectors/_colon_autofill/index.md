@@ -100,7 +100,7 @@ input {
 }
 
 input:autofill {
-  border-radius: 50%;
+  border-radius: 0.5lh;
   outline: 15px solid magenta
   border: 3px dotted yellow;
 }
