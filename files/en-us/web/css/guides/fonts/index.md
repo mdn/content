@@ -138,7 +138,9 @@ The CSS fonts module defines the `generic()` function. Currently, no browsers su
 
 ### Interfaces
 
+- {{domxref("CSSFontFaceDescriptors")}}
 - {{domxref("CSSFontFaceRule")}}
+- {{domxref("CSSFontFeatureValuesMap")}}
 - {{domxref("CSSFontFeatureValuesRule")}}
 - {{domxref("CSSFontPaletteValuesRule")}}
 
