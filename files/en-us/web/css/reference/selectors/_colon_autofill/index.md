@@ -45,7 +45,7 @@ The specification includes the vendor-prefixed `:-webkit-autofill` pseudo-class 
 
 Note that the user agent style sheets of many browsers use `!important` in their style declarations, making some styles non-overridable. For example, Chrome has the following in its internal stylesheet:
 
-```css
+```css no-lint
 input:-internal-autofill-selected {
   appearance: menulist-button;
   background-image: none !important;
