@@ -17,7 +17,7 @@ Box shadows include inset and outset shadow, single or multiple shadows, and sol
 
 The properties in this module also let you define whether cells inside a {{HTMLElement("table")}} should have shared or separate borders.
 
-### Backgrounds, borders, and box shadows in action
+## Backgrounds, borders, and box shadows in action
 
 This sample of borders, backgrounds, and box shadows consists of centered background images made of linear and radial gradients. A series of box shadows make the border appear to "pop". The element on the left has a border image set. The element on the right has a rounded dotted border.
 
