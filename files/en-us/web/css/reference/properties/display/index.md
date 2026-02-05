@@ -503,6 +503,7 @@ You can find more examples in the pages for each separate display type under [Gr
 
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - {{CSSxRef("grid")}}, {{CSSxRef("flex")}}
+- [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module
 - SVG {{SVGAttr("display")}} attribute
 - [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [Introduction to formatting contexts](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts)
