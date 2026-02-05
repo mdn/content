@@ -12,7 +12,7 @@ The **`:autofill`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 
 ```css interactive-example
 input {
-  border: 3px solid black;;
+  border: 3px solid black;
 }
 input:autofill {
   outline: 5px solid magenta;
