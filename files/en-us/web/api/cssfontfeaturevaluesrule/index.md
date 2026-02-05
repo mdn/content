@@ -38,7 +38,11 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
 ### Read font family
 
-In this example, we declare two {{cssxref("@font-feature-values")}} one for the _Font One_ font family, and the other for _Font Two_. We then use the CSSOM to read these font families, displaying them into the log.
+In this example, we declare two {{cssxref("@font-feature-values")}} one for the _Font One_ font family, and the other for _Font Two_.
+In both declarations we define that the name "nice-style" can be used to represent the styleset alternate glyphs for the fonts, specifying the index for that alternate in each font family.
+The alternate glpyhs are then applied for any  `.nice-clook` class, using {{cssxref("font-variant-alternates")}} and passing the name to the [`styleset()`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates#styleset) function.
+
+We then use the CSSOM to read these declaration as `CSSFontFeatureValuesRule` instances, displaying them into the log.
 
 #### HTML
 
@@ -52,7 +56,7 @@ In this example, we declare two {{cssxref("@font-feature-values")}} one for the 
 /* At-rule for "nice-style" in Font One */
 @font-feature-values Font One {
   @styleset {
-    nice-style: 12;
+    nice-style: 12; # name used to represent the alternate set of glyphs at index 12
   }
 }
 
@@ -65,7 +69,7 @@ In this example, we declare two {{cssxref("@font-feature-values")}} one for the 
 
 /* Apply the at-rules with a single declaration */
 .nice-look {
-  font-variant-alternates: styleset(nice-style);
+  font-variant-alternates: styleset(nice-style); # Name selects different index for same alternate in different fonts
 }
 ```
 
