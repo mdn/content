@@ -22,15 +22,15 @@ input:autofill {
   <p>Click on the text box and choose any option suggested by your browser.</p>
   <p>
     <label for="name">Name</label>
-    <input id="name" name="name" type="text" autocomplete="given-name" />
+    <input id="name" name="n" type="text" autocomplete="given-name" />
   </p>
   <p>
     <label for="email">Email Address</label>
-    <input id="email" name="email" type="email" autocomplete="email" />
+    <input id="email" name="e" type="email" autocomplete="email" />
   </p>
   <p>
     <label for="country">Country</label>
-    <input id="country" name="country" type="text" autocomplete="country-name" />
+    <input id="country" name="c" type="text" autocomplete="country-name" />
   </p>
 </form>
 ```
@@ -76,11 +76,11 @@ We include three HTML `<input>` elements, each with an associated {{htmlelement(
 <form method="post" action="">
   <p>
     <label for="name">Name: </label>
-    <input type="text" name="name" id="name" autocomplete="on" />
+    <input type="text" name="n" id="name" autocomplete="on" />
   </p>
   <p>
     <label for="email">Email: </label>
-    <input type="email" name="email" id="email" autocomplete="email" />
+    <input type="email" name="e" id="email" autocomplete="email" />
   </p>
   <p>
     <label for="pet">Your pet's name: </label>
