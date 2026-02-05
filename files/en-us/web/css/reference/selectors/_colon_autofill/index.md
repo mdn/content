@@ -77,11 +77,11 @@ We include three HTML `<input>` elements, each with an associated {{htmlelement(
 <form method="post" action="">
   <p>
     <label for="name">Name: </label>
-    <input type="text" name="n" id="name" autocomplete="on" />
+    <input type="text" name="name" id="name" autocomplete="on" />
   </p>
   <p>
     <label for="email">Email: </label>
-    <input type="email" name="e" id="email" autocomplete="email" />
+    <input type="email" name="email" id="email" autocomplete="email" />
   </p>
   <p>
     <label for="pet">Your pet's name: </label>
