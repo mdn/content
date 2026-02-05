@@ -51,8 +51,13 @@ The CSS custom functions and mixins module also introduces the `@mixin`, `@apply
 [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units)
 
 - {{cssxref("abs()")}}
+- {{cssxref("acos()")}}
+- {{cssxref("asin()")}}
+- {{cssxref("atan()")}}
+- {{cssxref("atan2()")}}
 - {{cssxref("calc()")}}
 - {{cssxref("clamp()")}}
+- {{cssxref("cos()")}}
 - {{cssxref("exp()")}}
 - {{cssxref("log()")}}
 - {{cssxref("max()")}}
@@ -62,16 +67,8 @@ The CSS custom functions and mixins module also introduces the `@mixin`, `@apply
 - {{cssxref("rem()")}}
 - {{cssxref("round()")}}
 - {{cssxref("sign()")}}
-- {{cssxref("sqrt()")}}
-
-Trigonometric functions
-
-- {{cssxref("acos()")}}
-- {{cssxref("asin()")}}
-- {{cssxref("atan()")}}
-- {{cssxref("atan2()")}}
-- {{cssxref("cos()")}}
 - {{cssxref("sin()")}}
+- {{cssxref("sqrt()")}}
 - {{cssxref("tan()")}}
 
 ## Specifications
