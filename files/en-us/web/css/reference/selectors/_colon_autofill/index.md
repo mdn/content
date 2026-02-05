@@ -49,7 +49,8 @@ Note that the user agent style sheets of many browsers use `!important` in their
 input:-internal-autofill-selected {
   appearance: menulist-button;
   background-image: none !important;
-  background-color: light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+  background-color:
+    light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
   color: fieldtext !important;
 }
 ```
@@ -135,4 +136,4 @@ If you allow the `name` to autocomplete, the `name` and `email` will both have a
 ## See also
 
 - [`<input>` pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#input_pseudo-classes)
-- [CSS selectors](/en-US/Docs/Web/CSS/Guides/Selectors) module
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module
