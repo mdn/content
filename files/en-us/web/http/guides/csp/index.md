@@ -18,7 +18,7 @@ Then we'll describe how it can be used to:
 1. [Control which resources are loaded](#controlling_resource_loading) to protect against XSS.
 2. [Restrict embedding](#clickjacking_protection), to protect against clickjacking.
 3. [Upgrade insecure requests](#upgrading_insecure_requests), to help ensure that all resources are served over HTTPS.
-4. [Requiring the use of trusted types](#requiring_trusted_types), to help defend against client-side XSS.
+4. [Require the use of trusted types](#requiring_trusted_types), to help defend against client-side XSS.
 
 Note that there's no dependency between the different use cases: if you want to add clickjacking protection but not XSS mitigation, you can just add the directives for that use case.
 
