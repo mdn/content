@@ -179,7 +179,7 @@ It is a good idea to write down some sub-goals below your main goal, to allow yo
 - Example website project built by next April
 - etc.
 
-If you are not sure what items to put on your goals list, our [curriculum](/en-US/curriculum/) can help.
+If you are not sure what items to put on your goals list, our [curriculum](/en-US/curriculum) can help.
 
 When you have worked out a weekly schedule then you should keep a record of what you manage to do each week in a simple spreadsheet or even in a notebook! Keep thinking about how much progress you are making, and adjust your plan if required.
 
