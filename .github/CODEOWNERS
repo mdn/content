@@ -23,14 +23,20 @@
 # CSS
 /files/en-us/web/css/ @mdn/css
 
+# Web
+files/en-us/web/ @mdn/web
+
 # HTML
-/files/en-us/web/html/ @mdn/web
+/files/en-us/web/html/ @mdn/html
 
 # HTTP
 /files/en-us/web/http/ @mdn/http
 
 # JavaScript
 /files/en-us/web/javascript/ @mdn/javascript
+
+# Learn
+/files/en-us/learn_web_development @mdn/learn
 
 # MathML
 /files/en-us/web/mathml/ @mdn/mathml
