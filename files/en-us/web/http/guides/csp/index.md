@@ -65,9 +65,15 @@ A cross-site scripting (XSS) attack is one in which an attacker is able to execu
 
 An XSS attack is possible when a website accepts some input which might have been crafted by an attacker (for example, URL parameters, or a comment on a blog post) and then includes it in the page without _sanitizing_ it: that is, without ensuring that it can't be executed as JavaScript.
 
-Websites should protect themselves against XSS by sanitizing this input before including it in the page. A CSP provides a complementary protection, which can protect the website even if sanitization fails.
+Websites should protect themselves against XSS by sanitizing this input before including it in the page.
 
-If sanitization does fail, there are various forms the injected malicious code can take in the document, including:
+> [!NOTE]
+> a CSP can actually help protect against XSS in two different ways:
+>
+> 1. It can help ensure that input is sanitized before being used in the client: we discuss this later on in [Requiring trusted types](#requiring_trusted_types).
+> 2. By controlling resource loads, a CSP can provide a defense in depth against XSS, protecting the website even if sanitization fails. This is the XSS defense that we will discuss in this section.
+
+If sanitization fails, there are various forms the injected malicious code can take in the document, including:
 
 - A {{htmlelement("script")}} tag that links to a malicious source:
 
@@ -104,7 +110,7 @@ If sanitization does fail, there are various forms the injected malicious code c
   eval("console.log(`You've been hacked!`)");
   ```
 
-A CSP can provide protection against all of these. With a CSP, you can:
+By controlling resource loading, a CSP can provide protection against all of these. With a CSP, you can:
 
 - define the permitted sources for JavaScript files and other resources, effectively blocking loads from `https://evil.example.com`
 - disable inline script tags
