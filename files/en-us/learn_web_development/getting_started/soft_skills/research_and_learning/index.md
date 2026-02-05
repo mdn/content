@@ -24,7 +24,7 @@ There is a lot to know as a web developer, and you are constantly learning. But 
           <li>Effective research methodologies.</li>
           <li>Making a learning plan.</li>
           <li>Staying motivated.</li>
-          <li>Rubber ducking</li>
+         <li><strong>Rubber ducking</strong>: explaining a problem out loud to clarify your own understanding and uncover gaps in logic.</li>
           <li>Effective problem solving.</li>
           <li>Getting into the mindset of constant learning.</li>
         </ul>
@@ -38,6 +38,19 @@ There is a lot to know as a web developer, and you are constantly learning. But 
 As a web developer, you will spend a lot of time searching for solutions to problems encountered in your work — you aren't expected to remember everything! Professional web developers use tools like MDN Web Docs to look up things they have forgotten all the time. As you'll discover, learning web development is more about problem-solving and learning patterns than it is about learning lots of syntaxes.
 
 To facilitate this and become more self-sufficient, you should learn effective strategies for finding answers — as discussed in the sections below — and when to use which strategy. For example, look up information online first, and only ask your mentor, classmates, or senior dev for help when you are truly stuck.
+
+### A practical workflow for researching problems
+
+When you encounter a problem or an unfamiliar concept, it can be helpful to follow a consistent research workflow:
+
+1. **Define the problem clearly** — write down what you are trying to achieve and what is not working.
+2. **Consult official documentation first** — for web platform features, MDN Web Docs should usually be your first stop.
+3. **Search for examples** — look for small, focused examples that demonstrate the concept in isolation.
+4. **Experiment locally** — try the solution in a minimal test project or sandbox to confirm your understanding.
+5. **Reflect and document** — note what worked, what didn’t, and why, so future problems are easier to solve.
+
+Using a structured approach like this helps reduce frustration and prevents unproductive searching.
+
 
 ### Choose high-quality resources
 
