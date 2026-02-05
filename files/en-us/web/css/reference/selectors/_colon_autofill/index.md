@@ -91,7 +91,7 @@ We include three HTML `<input>` elements, each with an associated {{htmlelement(
 
 ### CSS
 
-We apply a {{cssxref("border-radius")}}, large {{cssxref("outline")}}, and a  {{cssxref("border")}} to the `<input>` elements when they match the `:autofill` state.
+We apply a {{cssxref("border-radius")}}, large {{cssxref("outline")}}, and a {{cssxref("border")}} to the `<input>` elements when they match the `:autofill` state.
 
 ```css
 input {
