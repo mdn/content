@@ -26,9 +26,9 @@ const url = new URL(
 console.log(url.href); // Logs: 'https://developer.mozilla.org/en-US/docs/Web/API/URL/href'
 ```
 
-### Origin-only URL (trailing slash)
+### Origin-only URL
 
-For [hierarchical schemes](https://www.rfc-editor.org/rfc/rfc3986#section-1.2.3) such as `https:`, the pathname must always be non-empty. When the URL has no path (for example, only an origin), the URL parser sets the pathname to `"/"`, so `href` includes a trailing slash. See the {{domxref("URL/pathname", "pathname")}} property for more detail.
+For [hierarchical schemes](https://www.rfc-editor.org/rfc/rfc3986#section-1.2.3) such as `https:`, the pathname must always be non-empty. When the URL has no path (for example, only an origin), the URL parser sets the pathname to `"/"`, so `href` includes a trailing slash. See the {{domxref("URL/pathname", "pathname")}} property for more details.
 
 ```js
 const url = new URL("https://developer.mozilla.org");
@@ -46,4 +46,4 @@ console.log(url.href); // Logs: 'https://developer.mozilla.org/'
 ## See also
 
 - The {{domxref("URL")}} interface it belongs to.
-- {{domxref("URL/pathname", "pathname")}} — how empty paths become `"/"` for hierarchical schemes, affecting `href`.
+- {{domxref("URL.pathname")}}
