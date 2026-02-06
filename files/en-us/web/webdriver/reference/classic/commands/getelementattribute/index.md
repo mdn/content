@@ -1,6 +1,6 @@
 ---
 title: Get Element Attribute
-slug: Web/WebDriver/Reference/Commands/GetElementAttribute
+slug: Web/WebDriver/Reference/Classic/Commands/GetElementAttribute
 page-type: webdriver-command
 browser-compat: webdriver.classic.GetElementAttribute
 sidebar: webdriver

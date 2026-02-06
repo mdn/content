@@ -1,12 +1,12 @@
 ---
 title: Set Window Rect
-slug: Web/WebDriver/Reference/Commands/SetWindowRect
+slug: Web/WebDriver/Reference/Classic/Commands/SetWindowRect
 page-type: webdriver-command
 browser-compat: webdriver.classic.SetWindowRect
 sidebar: webdriver
 ---
 
-The _Set Window Rect_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API alters the size and position of the operating system window associated with the current [`window`](/en-US/docs/Web/API/Window). The command acts as the setter of [Get Window Rect](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowRect), which return object you can pass directly as this command's payload.
+The _Set Window Rect_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API alters the size and position of the operating system window associated with the current [`window`](/en-US/docs/Web/API/Window). The command acts as the setter of [Get Window Rect](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/GetWindowRect), which return object you can pass directly as this command's payload.
 
 Certain subsets of devices do not support setting the window dimensions or its position. On these configurations the command will return an [unsupported operating](/en-US/docs/Web/WebDriver/Reference/Errors/UnsupportedOperation) error. To avoid running into situations where calling this might error it is possible to call it conditionally on whether the [`setWindowRect` capability](/en-US/docs/Web/WebDriver/Reference/Capabilities/setWindowRect) is set to true for the session.
 
@@ -83,7 +83,7 @@ The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/Reference/Web
 
 - [`WebWindow`](/en-US/docs/Web/WebDriver/Reference/WebWindow) object
 - Associated commands:
-  - [Get Window Rect](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowRect)
+  - [Get Window Rect](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/GetWindowRect)
   - [Get Window Handle](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowHandle)
-  - [Get Window Handles](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowHandles)
-  - [Close Window](/en-US/docs/Web/WebDriver/Reference/Commands/CloseWindow)
+  - [Get Window Handles](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/GetWindowHandles)
+  - [Close Window](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CloseWindow)

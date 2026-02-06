@@ -1,12 +1,12 @@
 ---
 title: Get Element Property
-slug: Web/WebDriver/Reference/Commands/GetElementProperty
+slug: Web/WebDriver/Reference/Classic/Commands/GetElementProperty
 page-type: webdriver-command
 browser-compat: webdriver.classic.GetElementProperty
 sidebar: webdriver
 ---
 
-The _Get Element Property_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the property of the referenced [web element](/en-US/docs/Web/WebDriver/Reference/WebElement). Given `<input value=foo>` where the user changes the value to `bar`, the returned property is `bar` rather than the initial value `foo`. This is equivalent to accessing the property on the element.
+The _Get Element Property_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the property of the referenced [web element](/en-US/docs/Web/WebDriver/Reference/WebElement). Given `<input value=foo>` where the user changes the value to `bar`, the returned property is `bar` rather than the initial value `foo`. This is equivalent to accessing the property on the element.
 
 ## Syntax
 
@@ -70,5 +70,5 @@ bar
 
 ## See also
 
-- [Get Element Attribute](/en-US/docs/Web/WebDriver/Reference/Commands/GetElementAttribute) command
+- [Get Element Attribute](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/GetElementAttribute) command
 - _[What is the difference between properties and attributes?](https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html)_ on Stack Overflow

@@ -1,6 +1,6 @@
 ---
 title: Get Window Handles
-slug: Web/WebDriver/Reference/Commands/GetWindowHandles
+slug: Web/WebDriver/Reference/Classic/Commands/GetWindowHandles
 page-type: webdriver-command
 browser-compat: webdriver.classic.GetWindowHandles
 sidebar: webdriver
@@ -62,4 +62,4 @@ namespace MDNWebDriverExamples
 
 - [Switch To Window](/en-US/docs/Web/WebDriver/Reference/Commands/SwitchToWindow) command
 - [Get Window Handle](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowHandle) command
-- [Close Window](/en-US/docs/Web/WebDriver/Reference/Commands/CloseWindow) command
+- [Close Window](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CloseWindow) command

@@ -1,12 +1,12 @@
 ---
 title: Set Timeouts
-slug: Web/WebDriver/Reference/Commands/SetTimeouts
+slug: Web/WebDriver/Reference/Classic/Commands/SetTimeouts
 page-type: webdriver-command
 browser-compat: webdriver.classic.SetTimeouts
 sidebar: webdriver
 ---
 
-The _Set Timeouts_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API sets the timeouts associated with the current session. The [session timeout](/en-US/docs/Web/WebDriver/Reference/Timeouts) durations control such behavior as timeouts on [script injection](/en-US/docs/Web/WebDriver/Reference/Timeouts#script), [document navigation](/en-US/docs/Web/WebDriver/Reference/Timeouts#pageload), and [element retrieval](/en-US/docs/Web/WebDriver/Reference/Timeouts#implicit).
+The _Set Timeouts_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API sets the timeouts associated with the current session. The [session timeout](/en-US/docs/Web/WebDriver/Reference/Timeouts) durations control such behavior as timeouts on [script injection](/en-US/docs/Web/WebDriver/Reference/Timeouts#script), [document navigation](/en-US/docs/Web/WebDriver/Reference/Timeouts#pageload), and [element retrieval](/en-US/docs/Web/WebDriver/Reference/Timeouts#implicit).
 
 ## Syntax
 
@@ -46,4 +46,4 @@ The input is a [`Timeouts`](/en-US/docs/Web/WebDriver/Reference/Timeouts) object
 ## See also
 
 - [`Timeouts`](/en-US/docs/Web/WebDriver/Reference/Timeouts) object
-- [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Commands)
+- [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)

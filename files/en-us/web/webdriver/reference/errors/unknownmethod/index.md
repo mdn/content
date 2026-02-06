@@ -35,4 +35,4 @@ But it does not, for example, provide a `GET` method, and this will consequently
 ## See also
 
 - [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Errors)
-- [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Commands)
+- [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)

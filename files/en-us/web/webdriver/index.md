@@ -48,9 +48,9 @@ The [WebDriver reference](/en-US/docs/Web/WebDriver/Reference) provides detailed
 
 - [Timeouts](/en-US/docs/Web/WebDriver/Reference/Timeouts)
 
-### [Commands](/en-US/docs/Web/WebDriver/Reference/Commands)
+### [Commands](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)
 
-{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Commands")}}
+{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Classic/Commands")}}
 
 ### [Capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities)
 

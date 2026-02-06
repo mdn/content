@@ -6,7 +6,7 @@ page-type: landing-page
 sidebar: webdriver
 ---
 
-Any WebDriver [command](/en-US/docs/Web/WebDriver/Reference/Commands) that is sent to might plausibly receive an error [response](/en-US/docs/Web/WebDriver/Reference/Response). An error is represented by an [HTTP response](/en-US/docs/Web/HTTP) with an [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) in the 4xx or 5xx range, and a JSON payload holding details of the error.
+Any WebDriver [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) that is sent to might plausibly receive an error [response](/en-US/docs/Web/WebDriver/Reference/Response). An error is represented by an [HTTP response](/en-US/docs/Web/HTTP) with an [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) in the 4xx or 5xx range, and a JSON payload holding details of the error.
 
 ## Payload
 
@@ -90,4 +90,4 @@ In most [clients](/en-US/docs/Web/WebDriver/Reference/Clients) the error would b
 ## See also
 
 - [WebDriver responses](/en-US/docs/Web/WebDriver/Reference/Response)
-- [WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Commands)
+- [WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)

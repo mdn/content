@@ -1,6 +1,6 @@
 ---
 title: Get Element Tag Name
-slug: Web/WebDriver/Reference/Commands/GetElementTagName
+slug: Web/WebDriver/Reference/Classic/Commands/GetElementTagName
 page-type: webdriver-command
 browser-compat: webdriver.classic.GetElementTagName
 sidebar: webdriver

@@ -9,8 +9,8 @@ sidebar:
   - link: /Web/WebDriver/Reference/Timeouts
     title: Timeouts
   - type: listSubPages
-    path: /Web/WebDriver/Reference/Commands
-    link: /Web/WebDriver/Reference/Commands
+    path: /Web/WebDriver/Reference/Classic/Commands
+    link: /Web/WebDriver/Reference/Classic/Commands
     details: open
     code: true
   - type: listSubPages

@@ -8,9 +8,9 @@ sidebar: webdriver
 
 Associated with a [WebDriver](/en-US/docs/Web/WebDriver) session are various timeout definitions that control behavior for [script injection](#script), [document navigation](#pageload), and [element retrieval](#implicit).
 
-You will find the _[timeouts object](#payload)_ used in a few different contexts. It can be used as configuration when [creating a new session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession) through [capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities), it is returned as part of the matched, effective capabilities after the session has been created, and it is used as input and output for the [Set Timeouts](/en-US/docs/Web/WebDriver/Reference/Commands/SetTimeouts) and [Get Timeouts](/en-US/docs/Web/WebDriver/Reference/Commands/GetTimeouts) commands.
+You will find the _[timeouts object](#payload)_ used in a few different contexts. It can be used as configuration when [creating a new session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession) through [capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities), it is returned as part of the matched, effective capabilities after the session has been created, and it is used as input and output for the [Set Timeouts](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/SetTimeouts) and [Get Timeouts](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/GetTimeouts) commands.
 
-The default values can be overridden when [creating the session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession) and they will be effective until the session is closed. If you call [Set Timeouts](/en-US/docs/Web/WebDriver/Reference/Commands/SetTimeouts) during the session's lifetime, the defaults are overridden and will take effect for the lifetime of the session or until [Set Timeouts](/en-US/docs/Web/WebDriver/Reference/Commands/SetTimeouts) is called again.
+The default values can be overridden when [creating the session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession) and they will be effective until the session is closed. If you call [Set Timeouts](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/SetTimeouts) during the session's lifetime, the defaults are overridden and will take effect for the lifetime of the session or until [Set Timeouts](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/SetTimeouts) is called again.
 
 ## Payload
 
@@ -23,9 +23,9 @@ The **timeouts object** is a JSON Object that either describes the current sessi
 - `script`
   - : Scripts injected with [Execute Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteScript) or [Execute Async Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteAsyncScript) will run until they hit the script timeout duration, which is also given in milliseconds. The scripts will then be interrupted and a [script timeout error](/en-US/docs/Web/WebDriver/Reference/Errors/ScriptTimeoutError) will be returned. Defaults to 30 seconds (or 30,000 ms).
 
-When the object is used as input for the [Set Timeouts](/en-US/docs/Web/WebDriver/Reference/Commands/SetTimeouts) command or as part of the [timeouts capability](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities) when [creating a new session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession), all fields are optional. This means you can configure zero or more of the timeout duration values individually or all at once.
+When the object is used as input for the [Set Timeouts](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/SetTimeouts) command or as part of the [timeouts capability](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities) when [creating a new session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession), all fields are optional. This means you can configure zero or more of the timeout duration values individually or all at once.
 
-When it is returned by the driver, either by [Get Timeouts](/en-US/docs/Web/WebDriver/Reference/Commands/GetTimeouts) or in the matched capabilities from [having created a session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession), all fields will be present.
+When it is returned by the driver, either by [Get Timeouts](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/GetTimeouts) or in the matched capabilities from [having created a session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession), all fields will be present.
 
 ## Examples
 

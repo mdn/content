@@ -1,12 +1,12 @@
 ---
 title: Get Timeouts
-slug: Web/WebDriver/Reference/Commands/GetTimeouts
+slug: Web/WebDriver/Reference/Classic/Commands/GetTimeouts
 page-type: webdriver-command
 browser-compat: webdriver.classic.GetTimeouts
 sidebar: webdriver
 ---
 
-The _Get Timeouts_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the timeouts associated with the current session. The [session timeout](/en-US/docs/Web/WebDriver/Reference/Timeouts) durations control such behavior as timeouts on [script injection](/en-US/docs/Web/WebDriver/Reference/Timeouts#script), [document navigation](/en-US/docs/Web/WebDriver/Reference/Timeouts#pageload), and [element retrieval](/en-US/docs/Web/WebDriver/Reference/Timeouts#implicit).
+The _Get Timeouts_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the timeouts associated with the current session. The [session timeout](/en-US/docs/Web/WebDriver/Reference/Timeouts) durations control such behavior as timeouts on [script injection](/en-US/docs/Web/WebDriver/Reference/Timeouts#script), [document navigation](/en-US/docs/Web/WebDriver/Reference/Timeouts#pageload), and [element retrieval](/en-US/docs/Web/WebDriver/Reference/Timeouts#implicit).
 
 ## Syntax
 
@@ -46,5 +46,5 @@ The response payload is a [`Timeouts`](/en-US/docs/Web/WebDriver/Reference/Timeo
 ## See also
 
 - [`Timeouts`](/en-US/docs/Web/WebDriver/Reference/Timeouts) object
-- [Set Timeouts](/en-US/docs/Web/WebDriver/Reference/Commands/SetTimeouts) command
-- [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Commands)
+- [Set Timeouts](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/SetTimeouts) command
+- [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)

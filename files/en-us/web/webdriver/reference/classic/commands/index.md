@@ -1,7 +1,7 @@
 ---
 title: WebDriver commands
 short-title: Commands
-slug: Web/WebDriver/Reference/Commands
+slug: Web/WebDriver/Reference/Classic/Commands
 page-type: landing-page
 browser-compat: webdriver.classic
 sidebar: webdriver

@@ -1,6 +1,6 @@
 ---
 title: Close Window
-slug: Web/WebDriver/Reference/Commands/CloseWindow
+slug: Web/WebDriver/Reference/Classic/Commands/CloseWindow
 page-type: webdriver-command
 browser-compat: webdriver.classic.CloseWindow
 sidebar: webdriver
@@ -79,4 +79,4 @@ namespace MDNWebDriverExamples
 
 - [Switch To Window](/en-US/docs/Web/WebDriver/Reference/Commands/SwitchToWindow) command
 - [Get Window Handle](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowHandle) command
-- [Get Window Handles](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowHandles) command
+- [Get Window Handles](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/GetWindowHandles) command

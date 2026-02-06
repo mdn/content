@@ -124759,47 +124759,47 @@
     "modified": "2020-09-16T13:59:35.618Z",
     "contributors": ["Whimboo", "nalexander", "ato", "dfrase"]
   },
-  "Web/WebDriver/Reference/Commands": {
+  "Web/WebDriver/Reference/Classic/Commands": {
     "modified": "2020-10-15T22:03:17.012Z",
     "contributors": ["ExE-Boss", "chrisdavidmills"]
   },
-  "Web/WebDriver/Reference/Commands/CloseWindow": {
+  "Web/WebDriver/Reference/Classic/Commands/CloseWindow": {
     "modified": "2020-10-15T22:03:12.142Z",
     "contributors": ["ato", "MichaelTimbes", "fscholz"]
   },
-  "Web/WebDriver/Reference/Commands/GetElementAttribute": {
+  "Web/WebDriver/Reference/Classic/Commands/GetElementAttribute": {
     "modified": "2020-10-15T22:04:39.835Z",
     "contributors": ["ato", "fscholz", "automatedtester"]
   },
-  "Web/WebDriver/Reference/Commands/GetElementProperty": {
+  "Web/WebDriver/Reference/Classic/Commands/GetElementProperty": {
     "modified": "2020-10-15T22:04:39.942Z",
     "contributors": ["ato", "fscholz", "automatedtester"]
   },
-  "Web/WebDriver/Reference/Commands/GetElementTagName": {
+  "Web/WebDriver/Reference/Classic/Commands/GetElementTagName": {
     "modified": "2020-10-15T22:03:52.069Z",
     "contributors": ["fscholz", "ato"]
   },
-  "Web/WebDriver/Reference/Commands/GetTimeouts": {
+  "Web/WebDriver/Reference/Classic/Commands/GetTimeouts": {
     "modified": "2020-10-15T22:04:22.850Z",
     "contributors": ["fscholz", "ato", "automatedtester"]
   },
-  "Web/WebDriver/Reference/Commands/GetWindowHandles": {
+  "Web/WebDriver/Reference/Classic/Commands/GetWindowHandles": {
     "modified": "2020-10-15T22:03:22.509Z",
     "contributors": ["MichaelTimbes", "fscholz", "ato"]
   },
-  "Web/WebDriver/Reference/Commands/GetWindowRect": {
+  "Web/WebDriver/Reference/Classic/Commands/GetWindowRect": {
     "modified": "2020-10-15T22:03:22.611Z",
     "contributors": ["fscholz", "ato"]
   },
-  "Web/WebDriver/Reference/Commands/NewWindow": {
+  "Web/WebDriver/Reference/Classic/Commands/NewWindow": {
     "modified": "2020-10-15T22:14:19.358Z",
     "contributors": ["Whimboo"]
   },
-  "Web/WebDriver/Reference/Commands/SetTimeouts": {
+  "Web/WebDriver/Reference/Classic/Commands/SetTimeouts": {
     "modified": "2020-10-15T22:04:38.713Z",
     "contributors": ["ato", "PushpitaPikuDey", "fscholz", "automatedtester"]
   },
-  "Web/WebDriver/Reference/Commands/SetWindowRect": {
+  "Web/WebDriver/Reference/Classic/Commands/SetWindowRect": {
     "modified": "2020-10-15T22:03:22.535Z",
     "contributors": ["ato", "ExE-Boss", "fscholz"]
   },
