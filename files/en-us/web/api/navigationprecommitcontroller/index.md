@@ -59,6 +59,36 @@ navigation.addEventListener("navigate", (event) => {
 
 This pattern is simpler than the alternative of canceling the original navigation and starting a new one to the redirect location, because it avoids exposing the intermediate state. For example, only one {{domxref("Navigation.navigatesuccess_event", "navigatesuccess")}} or {{domxref("Navigation.navigateerror_event", "navigateerror")}} event fires, and if the navigation was triggered by a call to {{domxref("Navigation.navigate()")}}, the promise only fulfills once the redirect destination is reached.
 
+### Add handler that is conditional on precommit behavior
+
+This is a small modification of the previous example that also shows a message to the user indicating the reason they have landed on the sign-in page after the redirection.
+This uses `addHandler()` in the pre-commit handler to add the post-commit handler that displays the message.
+
+```js
+navigation.addEventListener("navigate", (event) => {
+  const url = new URL(event.destination.url);
+
+  if (url.pathname.startsWith("/restricted/") && !userSignedIn) {
+    event.intercept({
+      async precommitHandler(controller) {
+        controller.redirect("/signin/", {
+          state: "signin-redirect",
+          history: "push",
+        });
+
+        // Use addHandler to trigger logic once the /signin/ page commits
+        controller.addHandler(() => {
+          showMessage("Please sign in to view that content.");
+        });
+      },
+    });
+  }
+});
+```
+
+One benefit of this approach is that the handler only runs if the redirect is committed.
+The handler would be run for all events if it were added by passing [`options.handler`](/en-US/docs/Web/API/NavigateEvent/intercept) to `intercept()`.
+
 ## Specifications
 
 {{Specifications}}
