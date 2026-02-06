@@ -8,7 +8,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`table.set`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) changes the function reference stored in a particular table segment.
+The **`table.set`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) changes the function reference stored in a particular table element.
 
 {{InteractiveExample("Wat Demo: table.set", "tabbed-taller")}}
 
@@ -56,15 +56,15 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 ## Syntax
 
 ```wat
-table.set identifier segment_number function_reference
+table.set identifier element_number function_reference
 ```
 
 - `table.set`
   - : The `table.set` instruction type. Must always be included first.
 - `identifier`
   - : The identifier for the table you want to store a reference in; must begin with a `$` symbol. [EDITORIAL: is this optional?]
-- `segment_number`
-  - : The segment number to store the function reference in. This must be an `i32` value, for example `(i32.const 1)`.
+- `element_number`
+  - : The element number to store the function reference in. This must be an `i32` value, for example `(i32.const 1)`.
 - `function_reference`
   - : The function reference to store in the table. This should be a [`ref.func`](#) [EDITORIAL: does it make sense to have a reference page for this, under ref/function ("reference instructions"?)], for example `(ref.func $f1)`.
 
@@ -80,9 +80,9 @@ table.set identifier segment_number function_reference
 
 ## Description
 
-The `table.set` instruction is used to store a specified function in a particular segment of an existing table. Specifically, it allows wasm modules to mutate references contained in tables at runtime.
+The `table.set` instruction is used to store a specified function in a particular element of an existing table. Specifically, it allows wasm modules to mutate references contained in tables at runtime.
 
-This is convenient if different references are required later on in a program's lifecycle to the ones that table was initialized with. For example, you could create a table with one segment, define two functions, then initialize the table segment with a reference to one of those functions using the [`elem`](#) [EDITORIAL: ADDING DUMMY LINK TO THIS, AS IT'LL NEED DOCUMENTING SOMEWHERE] module segment:
+This is convenient if different references are required later on in a program's lifecycle to the ones that table was initialized with. For example, you could create a table with one element, define two functions, then initialize the table element with a reference to one of those functions using the [`elem`](#) [EDITORIAL: ADDING DUMMY LINK TO THIS, AS IT'LL NEED DOCUMENTING SOMEWHERE] module element:
 
 ```wat
 (module
@@ -113,7 +113,7 @@ When using instructions like `table.set`, you also need to forward-declare the f
   ...
 ```
 
-Later on, you can then dynamically change the function reference stored in the table segment using `table.set`:
+Later on, you can then dynamically change the function reference stored in the table element using `table.set`:
 
 ```wat
   ...
@@ -175,8 +175,8 @@ Next, we define a function `type` called `$ret_i32`, which returns an `i32` valu
 Finally, we export the `run()` function, which takes an `externref` named `$elem` as a parameter. Inside the function body, we:
 
 - Use `table.grow` to grow the table size by `1`, with an initial `ref.null` value, checking whether the operation result is `-1`, which would indicate failure.
-- Set our table segment to contain the `$f1` function using [`table.set`](/en-US/docs/WebAssembly/Reference/Table/set), then call the imported `$output` function, passing it as parameters the `$elem` `externref` passed into the `output()` function, and the value returned by the `$f1` function, which is being referenced from the table using `(call_indirect (type $ret_i32) (i32.const 0))`.
-- Set our table segment to contain the `$f2` function using `table.set`, then call the `output()` function again.
+- Set our table element to contain the `$f1` function using [`table.set`](/en-US/docs/WebAssembly/Reference/Table/set), then call the imported `$output` function, passing it as parameters the `$elem` `externref` passed into the `output()` function, and the value returned by the `$f1` function, which is being referenced from the table using `(call_indirect (type $ret_i32) (i32.const 0))`.
+- Set our table element to contain the `$f2` function using `table.set`, then call the `output()` function again.
 
 ```wat live-sample___basic-usage
 (module

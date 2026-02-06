@@ -8,7 +8,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`table.grow`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) increases the size of a table by a specified number of segments.
+The **`table.grow`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) increases the size of a table by a specified number of elements.
 
 {{InteractiveExample("Wat Demo: table.grow", "tabbed-taller")}}
 
@@ -64,13 +64,13 @@ table.grow identifier initial_value grow_amount
 - `identifier`
   - : The identifier for the table you want to grow; must begin with a `$` symbol. [EDITORIAL: is this optional?]
 - `initial_value`
-  - : The initial value to set for the new table segments. This can be one of the following:
+  - : The initial value to set for the new table elements. This can be one of the following:
     - `ref.null func`
       - : Sets the initial values to `null`.
     - OTHER
       - : EDITORIAL: what other values can be set for the initial value?
 - `grow_amount`
-  - : The number of segments to grow the table by. This must be an `i32` value, for example `(i32.const 1)`.
+  - : The number of elements to grow the table by. This must be an `i32` value, for example `(i32.const 1)`.
 
 ### Result
 
@@ -86,7 +86,7 @@ To retrieve the new table size after the `grow` instruction is applied to it, us
 
 ## Description
 
-`table.grow` is used to increase the size of a table by a specified number of segments.
+`table.grow` is used to increase the size of a table by a specified number of elements.
 
 Note that `table.grow` must be included inside a function. Trying to include the instruction at the top level of a module results in an error.
 
@@ -135,8 +135,8 @@ Next, we define a function `type` called `$ret_i32`, which returns an `i32` valu
 Finally, we export the `run()` function, which takes an `externref` named `$elem` as a parameter. Inside the function body, we:
 
 - Use `table.grow` to grow the table size by `1`, with an initial `ref.null` value, checking whether the operation result is `-1`, which would indicate failure.
-- Set our table segment to contain the `$f1` function using [`table.set`](/en-US/docs/WebAssembly/Reference/Table/set), then call the imported `$output` function, passing it as parameters the `$elem` `externref` passed into the `output()` function, and the value returned by the `$f1` function, which is being referenced from the table using `(call_indirect (type $ret_i32) (i32.const 0))`.
-- Set our table segment to contain the `$f2` function using `table.set`, then call the `output()` function again.
+- Set our table element to contain the `$f1` function using [`table.set`](/en-US/docs/WebAssembly/Reference/Table/set), then call the imported `$output` function, passing it as parameters the `$elem` `externref` passed into the `output()` function, and the value returned by the `$f1` function, which is being referenced from the table using `(call_indirect (type $ret_i32) (i32.const 0))`.
+- Set our table element to contain the `$f2` function using `table.set`, then call the `output()` function again.
 
 ```wat live-sample___basic-usage
 (module

@@ -17,11 +17,11 @@ This set of pages details the table instructions available in Wasm to create and
 - [`table`](/en-US/docs/WebAssembly/Reference/Table/table)
   - : Creates a new table.
 - [`table.grow`](/en-US/docs/WebAssembly/Reference/Table/grow)
-  - : Increases the size of the table by a specified number of segments.
+  - : Increases the size of the table by a specified number of elements.
 - [`table.set`](/en-US/docs/WebAssembly/Reference/Table/grow)
-  - : Changes the function reference stored in a particular table segment.
+  - : Changes the function reference stored in a particular table element.
 - [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size)
-  - : Returns the current number of segments contained in a table.
+  - : Returns the current number of elements contained in a table.
 
 ## Specifications
 

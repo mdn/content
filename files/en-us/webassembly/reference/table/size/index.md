@@ -8,7 +8,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`table.size`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) returns the current number of segments contained in a table.
+The **`table.size`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) returns the current number of elements contained in a table.
 
 {{InteractiveExample("Wat Demo: table.size", "tabbed-taller")}}
 
@@ -50,7 +50,7 @@ table.size identifier
 
 ### Result
 
-An `i32` equal to the current number of segments contained inside the table.
+An `i32` equal to the current number of elements contained inside the table.
 
 ### Opcodes
 
@@ -110,7 +110,7 @@ Finally, we export the `run()` function, which takes an `externref` named `$elem
 
 - Use `table.grow` to grow the table size by `1`, with an initial `ref.null` value.
 - Call the imported `$output` function, passing it as parameters the `$elem` `externref` passed into the `output()` function, and the return value of the `table.size` instruction. This results in the table size being outputted to the DOM.
-- Repeat the last two steps again, resulting in the table being grown by one more segment, and the size being outputted to the DOM again.
+- Repeat the last two steps again, resulting in the table being grown by one more element, and the size being outputted to the DOM again.
 
 ```wat live-sample___basic-usage
 (module
