@@ -143,7 +143,15 @@ With discoverable credentials, the private key material that represents the cred
 
 The advantage of a non-discoverable credential is that the authenticator doesn't have to maintain any state: in particular, it doesn't have to store credential private keys, and this means it could support an essentially infinite number of credentials.
 
-The main advantage of a discoverable credential is that the browser can retrieve from the authenticator the list of discoverable credentials associated with the RP, display their associated usernames to the user, and invite the user to choose the one they want to sign in with. With non-discoverable credentials, the user must first supply the username they want to sign in as, which the RP can then use to find a set of corresponding credential ID values. This is the foundation of the [autofill UI](autofill_ui) feature.
+The disadvantage is that to use a non-discoverable credential, the user must first supply the username they want to sign in as, which the RP can then use to find a set of corresponding credential ID values, which the browser can provide to the authenticator.
+
+By contrast, with discoverable credentials, the browser can:
+
+- Retrieve from the authenticator the list of discoverable credentials associated with the RP.
+- Display their associated usernames to the user.
+- Invite the user to choose the one they want to sign in with.
+
+This is the foundation of the [autofill UI](autofill_ui) feature.
 
 Use the [`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey) option in {{domxref("PublicKeyCredentialCreationOptions")}} to control whether a new public key credential will be discoverable or non-discoverable.
 
