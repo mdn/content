@@ -81,9 +81,9 @@ table.set identifier element_number function_reference
 
 ### Opcodes
 
-| Instruction | Binary opcode |
-| ----------- | ------------- |
-| `table.set` | `0x26`        |
+| Instruction | Binary opcode                                                                                           |
+| ----------- | ------------------------------------------------------------------------------------------------------- |
+| `table.set` | `𝟶𝚡𝟸𝟼` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
 
 ## Description
 

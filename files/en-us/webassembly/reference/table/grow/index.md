@@ -77,15 +77,15 @@ table.grow identifier initial_value grow_amount
 
 ### Result
 
-An `i32` equal to the size of the table before the `grow` instruction is applied to it, or `-1` if the table failed to grow, for example due to an out-of-memory (OOM) error or the new size being greater than the [table's maximum size](/en-US/docs/WebAssembly/Reference/Table/table#max_size).
+An `i32` equal to the size of the table before the `grow` instruction is applied to it, or `-1` if the table failed to grow, for example due to an out-of-memory (OOM) error or the new size being greater than the [table's maximum size](/en-US/docs/WebAssembly/Reference/Module_definitions/table#max_size).
 
 To retrieve the new table size after the `grow` instruction is applied to it, use the [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size) instruction.
 
 ### Opcodes
 
-| Instruction  | Binary opcode |
-| ------------ | ------------- |
-| `table.grow` | `0xFC` `0x0F` |
+| Instruction  | Binary opcode                                                                                                  |
+| ------------ | -------------------------------------------------------------------------------------------------------------- |
+| `table.grow` | `𝟶𝚡𝙵𝙲 15:𝚞𝟹𝟸` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
 
 ## Description
 

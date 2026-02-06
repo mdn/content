@@ -60,9 +60,9 @@ An `i32` equal to the current number of elements contained inside the table.
 
 ### Opcodes
 
-| Instruction  | Binary opcode |
-| ------------ | ------------- |
-| `table.size` | `0xFC` `0x10` |
+| Instruction  | Binary opcode                                                                                                  |
+| ------------ | -------------------------------------------------------------------------------------------------------------- |
+| `table.size` | `𝟶𝚡𝙵𝙲 16:𝚞𝟹𝟸` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
 
 ## Description
 
