@@ -48,13 +48,13 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 ## Syntax
 
 ```wat
-table identifier initial_size max_size storage_type
+table identifying_name initial_size max_size storage_type
 ```
 
 - `table`
   - : The `table` instruction type. Must always be included first.
-- `identifier` {{optional_inline}}
-  - : An optional identifier for the table; must begin with a `$` symbol.
+- `identifying_name` {{optional_inline}}
+  - : An optional identifying name for the table. This must begin with a `$` symbol, for example `$my_table`. If this is omitted, the table can be identified by its index, for example `0` for the first table in the wasm script, `1` for the second, etc.
 - `initial_size`
   - : An integer representing the initial size of the table.
 - `max_size` {{optional_inline}}
