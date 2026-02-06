@@ -193,7 +193,7 @@ This essentially enables a website to provide a unified autofill, including both
 > [!NOTE]
 > Note that only [discoverable credentials](#discoverable_and_non-discoverable_credentials) are included in calls that use conditional mediation, because the browser needs to request applicable credentials without knowing the credential ID values for them.
 
-#### Discoverable credential synchronization methods
+### Discoverable credential synchronization methods
 
 It is possible for the information stored in a user's authenticator about a discoverable credential to go out sync with the relying party's server. This might happen when the user deletes a credential or modifies their user/display name on the RP web app without updating the authenticator.
 
