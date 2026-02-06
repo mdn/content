@@ -68,10 +68,10 @@ An XSS attack is possible when a website accepts some input which might have bee
 Websites should protect themselves against XSS by sanitizing this input before including it in the page.
 
 > [!NOTE]
-> a CSP can actually help protect against XSS in two different ways:
+> A CSP can actually help protect against XSS in two different ways:
 >
-> 1. It can help ensure that input is sanitized before being used in the client: we discuss this later on in [Requiring trusted types](#requiring_trusted_types).
-> 2. By controlling resource loads, a CSP can provide a defense in depth against XSS, protecting the website even if sanitization fails. This is the XSS defense that we will discuss in this section.
+> - It can help ensure that input is sanitized before being used in the client: we discuss this later on in [Requiring trusted types](#requiring_trusted_types).
+> - By controlling resource loads, a CSP can provide a defense in depth against XSS, protecting the website even if sanitization fails. This is the XSS defense that we will discuss in this section.
 
 If sanitization fails, there are various forms the injected malicious code can take in the document, including:
 
@@ -527,13 +527,13 @@ The [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content
 
 Some APIs in the web platform are known as _injection sinks_. These are APIs that can be passed some input, usually in the form of a string, and that can interpret that input as code. In this guide we've already seen `eval()`, but there are many other injection sinks, such as {{domxref("Element.innerHTML")}} or {{domxref("Document.write()")}}.
 
-If an attacker can supply some specially crafted input to your website, and your website passes it to one of these injection sinks, then the attacker can execute a client-side [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attack.
+If an attacker can supply some specially crafted input to your website, and your website passes it to one of these injection sinks, then the attacker can execute malcious code.
 
 We've seen that we can use a CSP to disable APIs which are almost always dangerous, like `eval()`, but we might want to be able to use many injection sinks such as `innerHTML`, while ensuring that the input is safe. The practice of ensuring that the input is safe is called [_sanitizing_](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input.
 
 ### The Trusted Types API
 
-With the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API), you can pass _trusted types_ into injection sinks, instead of strings. Trusted types are the result of passing potentially dangerous input through a transformation function. This transformation typically sanitizes the input, by removing any elements that might make it executable (such as {{htmlelement("script")}} tags).
+With the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API), you can pass _trusted types_ into injection sinks, instead of strings. Trusted types are objects that result from passing potentially dangerous input through a transformation function. This transformation typically sanitizes the input, by removing any elements that might make it executable (such as {{htmlelement("script")}} tags).
 
 By default, your code could choose to pass trusted types or unsanitized strings to injection sinks. However, if you include the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) directive in your CSP, and give it a value of `'script'`, then the browser will only allow your site to pass trusted types to injection sinks. For example, the following code will throw an exception:
 
