@@ -1,11 +1,11 @@
 ---
 title: Invalid argument
-slug: Web/WebDriver/Reference/Errors/InvalidArgument
+slug: Web/WebDriver/Reference/Classic/Errors/InvalidArgument
 page-type: webdriver-error
 sidebar: webdriver
 ---
 
-The **invalid argument** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs when the arguments passed to a [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) are either invalid or malformed.
+The **invalid argument** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Classic/Errors) that occurs when the arguments passed to a [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) are either invalid or malformed.
 
 Invalid argument errors can be likened to [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)s in [JavaScript](/en-US/docs/Web/JavaScript), in that they can occur for a great many APIs when the input value is not of the expected type or malformed in some way. See the type- and bounds constraints for each [WebDriver command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands).
 
@@ -32,5 +32,5 @@ InvalidArgumentException: Expected -100 to be >= 0
 
 ## See also
 
-- [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Errors)
+- [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Classic/Errors)
 - [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)

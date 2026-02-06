@@ -56,9 +56,9 @@ The [WebDriver reference](/en-US/docs/Web/WebDriver/Reference) provides detailed
 
 {{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities")}}
 
-### [Errors](/en-US/docs/Web/WebDriver/Reference/Errors)
+### [Errors](/en-US/docs/Web/WebDriver/Reference/Classic/Errors)
 
-{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
+{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Classic/Errors")}}
 
 ## Specifications
 

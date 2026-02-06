@@ -37,7 +37,7 @@ The response payload is an object:
 
 ### Errors
 
-- [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
+- [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/InvalidSessionID)
   - : Session does not exist.
 - [No such window](/en-US/docs/Web/WebDriver/Reference/Errors/NoSuchWindow)
   - : If the [`window`](/en-US/docs/Web/API/Window) has been closed.

@@ -1,11 +1,11 @@
 ---
 title: Unknown command
-slug: Web/WebDriver/Reference/Errors/UnknownCommand
+slug: Web/WebDriver/Reference/Classic/Errors/UnknownCommand
 page-type: webdriver-error
 sidebar: webdriver
 ---
 
-The **unknown command** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs when the driver does not recognize the command/HTTP endpoint.
+The **unknown command** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Classic/Errors) that occurs when the driver does not recognize the command/HTTP endpoint.
 
 ## Examples
 
@@ -28,5 +28,5 @@ Date: Fri, 30 Mar 2018 15:30:51 GMT
 
 ## See also
 
-- [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Errors)
+- [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Classic/Errors)
 - [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)

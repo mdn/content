@@ -60,7 +60,7 @@ The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/Reference/Web
 
 - Invalid argument
   - : If any of the fields in the [`WindowRect`](/en-US/docs/Web/WebDriver/Reference/WindowRect) payload object do not meet the type or bounds constraints, or if only one of the `x`/`y` pair or `width`/`height` pair fields are specified.
-- [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
+- [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/InvalidSessionID)
   - : Session does not exist.
 - [No such window](/en-US/docs/Web/WebDriver/Reference/Errors/NoSuchWindow)
   - : If the [`window`](/en-US/docs/Web/API/Window) has been closed.

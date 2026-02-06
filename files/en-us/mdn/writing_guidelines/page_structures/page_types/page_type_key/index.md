@@ -165,7 +165,7 @@ This section lists `page-type` values for pages under [Web/WebDriver](/en-US/doc
 
 - `webdriver-command`: a webdriver command, like [`CloseWindow`](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CloseWindow).
 - `webdriver-capability`: a webdriver capability, like [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/acceptInsecureCerts).
-- `webdriver-error`: a webdriver error, like [Insecure certificate](/en-US/docs/Web/WebDriver/Reference/Errors/InsecureCertificate).
+- `webdriver-error`: a webdriver error, like [Insecure certificate](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/InsecureCertificate).
 
 ### WebExtensions page types
 

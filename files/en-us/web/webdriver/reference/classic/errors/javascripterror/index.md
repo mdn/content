@@ -1,11 +1,11 @@
 ---
 title: JavaScript error
-slug: Web/WebDriver/Reference/Errors/JavaScriptError
+slug: Web/WebDriver/Reference/Classic/Errors/JavaScriptError
 page-type: webdriver-error
 sidebar: webdriver
 ---
 
-The **JavaScript** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs when a script the supplied by the user fails to execute.
+The **JavaScript** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Classic/Errors) that occurs when a script the supplied by the user fails to execute.
 
 The underlying cause of the execution error is often supplied in the error message, along with a stacktrace provided by the JavaScript engine in the browser.
 
@@ -32,7 +32,7 @@ JavascriptException: ReferenceError: foo is not defined
 
 ## See also
 
-- [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Errors)
+- [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Classic/Errors)
 - Associated commands:
   - [Execute Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteScript)
   - [Execute Async Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteAsyncScript)

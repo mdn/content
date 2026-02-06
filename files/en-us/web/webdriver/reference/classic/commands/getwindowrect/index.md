@@ -36,7 +36,7 @@ The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/Reference/Web
 
 ### Errors
 
-- [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
+- [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/InvalidSessionID)
   - : Session does not exist.
 - [Unexpected alert open](/en-US/docs/Web/WebDriver/Reference/Errors/UnexpectedAlertOpen)
   - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.

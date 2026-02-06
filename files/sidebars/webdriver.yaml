@@ -19,7 +19,7 @@ sidebar:
     details: open
     code: true
   - type: listSubPages
-    path: /Web/WebDriver/Reference/Errors
-    link: /Web/WebDriver/Reference/Errors
+    path: /Web/WebDriver/Reference/Classic/Errors
+    link: /Web/WebDriver/Reference/Classic/Errors
     details: open
     code: true

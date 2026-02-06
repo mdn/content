@@ -1,11 +1,11 @@
 ---
 title: Invalid session ID
-slug: Web/WebDriver/Reference/Errors/InvalidSessionID
+slug: Web/WebDriver/Reference/Classic/Errors/InvalidSessionID
 page-type: webdriver-error
 sidebar: webdriver
 ---
 
-The **invalid session ID** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs when the server does not recognize the unique session identifier. This happens if the [session has been deleted](/en-US/docs/Web/WebDriver/Reference/Commands/DeleteSession) or if the session ID is invalid.
+The **invalid session ID** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Classic/Errors) that occurs when the server does not recognize the unique session identifier. This happens if the [session has been deleted](/en-US/docs/Web/WebDriver/Reference/Commands/DeleteSession) or if the session ID is invalid.
 
 ## Example
 
@@ -63,7 +63,7 @@ No active session with ID 46197c16-8373-469b-bc56-4c4d9e4132b4
 
 ## See also
 
-- [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Errors)
+- [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Classic/Errors)
 - [Session not created](/en-US/docs/Web/WebDriver/Reference/Errors/SessionNotCreated)
 - Related WebDriver commands:
   - [New Session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession)

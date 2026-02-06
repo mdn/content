@@ -32,7 +32,7 @@ The input is a [`Timeouts`](/en-US/docs/Web/WebDriver/Reference/Timeouts) object
 
 ### Errors
 
-- [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
+- [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/InvalidSessionID)
   - : Session does not exist.
 
 ## Specifications

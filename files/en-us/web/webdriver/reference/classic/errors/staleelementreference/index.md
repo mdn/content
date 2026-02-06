@@ -1,11 +1,11 @@
 ---
 title: Stale element reference
-slug: Web/WebDriver/Reference/Errors/StaleElementReference
+slug: Web/WebDriver/Reference/Classic/Errors/StaleElementReference
 page-type: webdriver-error
 sidebar: webdriver
 ---
 
-The **stale element reference** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs because the referenced [web element](/en-US/docs/Web/WebDriver/Reference/WebElement) is no longer attached to the [DOM](/en-US/docs/Glossary/DOM).
+The **stale element reference** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Classic/Errors) that occurs because the referenced [web element](/en-US/docs/Web/WebDriver/Reference/WebElement) is no longer attached to the [DOM](/en-US/docs/Glossary/DOM).
 
 Every DOM element is represented in WebDriver by a unique identifying reference, known as a _[web element](/en-US/docs/Web/WebDriver/Reference/WebElement)_.
 The web element reference is a {{Glossary("UUID")}} used to execute commands targeting specific elements, such as [getting an element's tag name](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/GetElementTagName) and [retrieving a property](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/GetElementProperty) off an element.
