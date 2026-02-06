@@ -779,6 +779,7 @@
         "HTMLFormControlsCollection",
         "HTMLFormElement",
         "HTMLFrameSetElement",
+        "HTMLGeolocationElement",
         "HTMLHeadElement",
         "HTMLHeadingElement",
         "HTMLHRElement",
