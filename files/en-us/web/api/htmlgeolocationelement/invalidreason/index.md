@@ -16,7 +16,7 @@ You can query the {{domxref("HTMLGeolocationElement.isValid")}} property to chec
 
 ## Value
 
-The empty string (`""`) if the element dos not have an active blocker, or one of the following values (in priority order):
+The empty string (`""`) if the element does not have an active blocker, or one of the following values (in priority order):
 
 - `illegal_subframe`
   - : The `<geolocation>` element is nested inside a {{htmlelement("fencedframe")}} element.
