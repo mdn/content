@@ -45,6 +45,13 @@ Some typical features for which you might want to use the device orientation eve
 - {{domxref("DeviceOrientationEvent")}}
   - : Represents changes in the physical orientation of a device.
 
+### Static methods
+
+- {{domxref("DeviceMotionEvent.requestPermission_static", "DeviceMotionEvent.requestPermission()")}} {{experimental_inline}}
+  - : Requests the user's permission to access device motion data. Returns a {{jsxref("Promise")}} that resolves with `"granted"` or `"denied"`.
+- {{domxref("DeviceOrientationEvent.requestPermission_static", "DeviceOrientationEvent.requestPermission()")}} {{experimental_inline}}
+  - : Requests the user's permission to access device orientation data. Returns a {{jsxref("Promise")}} that resolves with `"granted"` or `"denied"`.
+
 ### Extensions to other interfaces
 
 - {{domxref("Window.devicemotion_event", "devicemotion")}} event
