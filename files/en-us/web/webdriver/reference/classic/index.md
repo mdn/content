@@ -6,6 +6,6 @@ page-type: listing-page
 sidebar: webdriver
 ---
 
-This page lists reference documentation for WebDriver classic commands and capabilities.
+This page lists reference documentation for WebDriver classic.
 
 {{SubPagesWithSummaries}}

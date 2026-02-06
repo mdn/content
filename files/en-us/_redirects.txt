@@ -16379,7 +16379,7 @@
 /en-US/docs/Web/WebDriver/Errors/UnknownCommand	/en-US/docs/Web/WebDriver/Reference/Classic/Errors/UnknownCommand
 /en-US/docs/Web/WebDriver/Errors/UnknownError	/en-US/docs/Web/WebDriver/Reference/Classic/Errors/UnknownError
 /en-US/docs/Web/WebDriver/Errors/UnknownMethod	/en-US/docs/Web/WebDriver/Reference/Classic/Errors/UnknownMethod
-/en-US/docs/Web/WebDriver/Guides/Timeouts	/en-US/docs/Web/WebDriver/Reference/Timeouts
+/en-US/docs/Web/WebDriver/Guides/Timeouts	/en-US/docs/Web/WebDriver/Reference/Classic/Timeouts
 /en-US/docs/Web/WebDriver/Reference/Capabilities	/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities
 /en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts	/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/acceptInsecureCerts
 /en-US/docs/Web/WebDriver/Reference/Capabilities/firefoxOptions	/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/firefoxOptions
@@ -16407,7 +16407,8 @@
 /en-US/docs/Web/WebDriver/Reference/Errors/UnknownCommand	/en-US/docs/Web/WebDriver/Reference/Classic/Errors/UnknownCommand
 /en-US/docs/Web/WebDriver/Reference/Errors/UnknownError	/en-US/docs/Web/WebDriver/Reference/Classic/Errors/UnknownError
 /en-US/docs/Web/WebDriver/Reference/Errors/UnknownMethod	/en-US/docs/Web/WebDriver/Reference/Classic/Errors/UnknownMethod
-/en-US/docs/Web/WebDriver/Timeouts	/en-US/docs/Web/WebDriver/Reference/Timeouts
+/en-US/docs/Web/WebDriver/Reference/Timeouts	/en-US/docs/Web/WebDriver/Reference/Classic/Timeouts
+/en-US/docs/Web/WebDriver/Timeouts	/en-US/docs/Web/WebDriver/Reference/Classic/Timeouts
 /en-US/docs/Web/WebGL	/en-US/docs/Web/API/WebGL_API
 /en-US/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /en-US/docs/Web/WebGL/Animating_objects_with_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
