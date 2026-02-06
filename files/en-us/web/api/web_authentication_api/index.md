@@ -9,6 +9,8 @@ browser-compat: api.PublicKeyCredential
 
 The Web Authentication API (WebAuthn) is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables strong authentication with public key cryptography, enabling passwordless authentication and secure {{glossary("multi-factor authentication")}} (MFA) without SMS texts.
 
+On the web, [passkeys](/en-US/docs/Web/Security/Authentication/Passkeys) are implemented using the Web Authentication API.
+
 ## WebAuthn concepts and usage
 
 WebAuthn uses [asymmetric (public-key) cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) instead of passwords or SMS texts for registering, authenticating, and {{glossary("multi-factor authentication")}} with websites. This has some benefits:
@@ -115,31 +117,81 @@ A typical authentication flow is as follows:
 
 5. Once verified by the server, the authentication flow is considered successful.
 
-### Discoverable credentials and conditional mediation
+### Discoverable and non-discoverable credentials
 
-**Discoverable credentials** are retrieved from an authenticator — _discovered_ by the browser — to offer as login options when the user is logging in to a relying party web app. In contrast, non-discoverable credentials are provided by the relying party server for the browser to offer as login options.
+The WebAuthn API distinguishes between two types of public key credential:
 
-Discoverable credential IDs and associated metadata such as [user names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#name_2) and [display names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#displayname) are stored in a client-side authenticator such as a browser password manager, authenticator app, or hardware solution such as a YubiKey. Having this information available in the authenticator means that the user can log in conveniently without having to supply credentials, and the relying party does not have to provide a [`credentialId`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) when asserting it (although it can do if desired; if the credential is asserted by the RP then the non-discoverable workflow is followed).
+- _Discoverable credentials_, also known as _resident keys_
 
-A discoverable credential is created via a [`create()`](/en-US/docs/Web/API/CredentialsContainer/create) call with a specified [`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey). The `credentialId`, user metadata, and public key for the new credential is stored by the authenticator as discussed above, but also returned to the web app and stored on the RP server.
+- _Non-discoverable credentials_, also known as _non-resident keys_
 
-In order to authenticate, the RP server calls [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) with **conditional mediation** specified, that is [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) set to `conditional`, an empty [`allowCredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) list (meaning only discoverable credentials can be shown), and a challenge.
+With non-discoverable credentials, the private key material, as well as additional information such as the username, are stored outside the authenticator, typically in the RP server (which is why these credentials are also sometimes called _server-side credentials_). To keep the private key safe in the server, it is encrypted using a master key that is stored in the authenticator, and the resulting ciphertext is used as the credential ID.
 
-Conditional mediation results in discoverable credentials found in the authenticator being presented to the user in a non-modal UI along with an indication of the origin requesting credentials, rather than a modal dialog. In practice, this means autofilling available credentials in your login forms. The metadata stored in discoverable credentials can be displayed to help users choose a credential when logging in. To display discoverable credentials in your login forms, you also need to include [`autocomplete="webauthn"`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#webauthn) on your form fields.
+When the authenticator generates a non-discoverable credential, it:
 
-To reiterate, the relying party doesn't tell the authenticator what credentials to offer to the user — instead, the authenticator supplies the list it has available. Once the user selects a credential, the authenticator uses it to sign the challenge with the associated private key, and the browser returns the signed challenge and its `credentialId` to the RP server.
+1. Generates the key pair that will be used to authenticate the user
+2. Encrypts the private key with a master key stored in the authenticator
+3. Returns the encrypted private key to the RP as the new credential's {{domxref("Credential.id", "id")}}, along with the rest of the credential, such as the public key.
 
-The subsequent authentication process on the RP server is the same as for non-discoverable credentials.
+When the RP needs to sign in with a non-discoverable credential:
+
+1. The RP passes the credential ID into the {{domxref("CredentialsContainer.get()")}} call
+2. The authenticator decrypts the credential ID value into the private key, using the authenticator's stored master key.
+3. The authenticator uses the private key to sign an assertion.
+
+With discoverable credentials, the private key material that represents the credential, as well as the username associated with the credential, are stored inside the authenticator itself.
+
+The advantage of a non-discoverable credential is that the authenticator doesn't have to maintain any state: in particular, it doesn't have to store credential private keys, and this means it could support an essentially infinite number of credentials.
+
+The main advantage of a discoverable credential is that the browser can retrieve the list of discoverable credentials associated with the RP, display their associated usernames to the user, and invite the user to choose the one they want to sign in with. With non-discoverable credentials, the user must first supply the username they want to sign in as, which the RP can then use to find a set of corresponding credential ID values. This is the foundation of the [autofill UI](autofill_ui) feature.
+
+Use the [`residentkey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey) option in {{domxref("PublicKeyCredentialCreationOptions")}} to control whether a new public key credential will be discoverable or non-discoverable.
 
 > [!NOTE]
-> You can check whether conditional mediation is available on a specific user agent by calling the {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} method.
+> Note that by definition, [passkeys](/en-US/docs/Web/Security/Authentication/Passkeys) must always be discoverable credentials.
 
-[Passkeys](https://passkeys.dev/) are a significant use case for discoverable credentials; see [Create a passkey for passwordless logins](https://web.dev/articles/passkey-registration) and [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for implementation details. See also [Discoverable credentials deep dive](https://web.dev/articles/webauthn-discoverable-credentials) for more general information on discoverable credentials.
+### Autofill UI
 
-When conditional mediation is used for authentication, the prevent silent access flag (see {{domxref("CredentialsContainer.preventSilentAccess()")}}) is treated as being `true` regardless of its actual value: the conditional behavior always involves user mediation of some sort if applicable credentials are discovered.
+Autofill UI, also sometimes called _conditional mediation_, is a feature that makes it easier for users to work with public key credentials, especially when they also have passwords for the site.
+
+It's expected that websites that adopt passkeys will typically add them alongside existing support for password-based authentication, so a user might, for a given site, have a password, one or more passkeys, or both. In this situation, a UI that asks them which method they want to sign in with can be confusing: they might not remember which method they have for which account. Autofill UI helps with this problem, by inviting users to sign in with a passkey if and only if a suitable passkey is currently available.
+
+To enable autofill UI, the website's sign-in page contains a form, which invites them to sign in. In the field for the username, the website includes an [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) value of "webauthn":
+
+```html
+<input type="text" name="username" autocomplete="username webauthn" />
+```
+
+When the page loads, the website first checks that conditional mediation is supported, and if it is, makes a call to {{domxref("CredentialsContainer.get()")}}. The call:
+
+- Passes `"conditional"` as the value of the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option.
+- Omits the [`allowcredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) option, to indicate that any applicable credentials are acceptable.
+
+```js
+const supported = await PublicKeyCredential.isConditionalMediationAvailable();
+if (supported) {
+  const options = {
+    challenge: challengeFromServer,
+    rpId: "example.com",
+    userVerification: "required",
+    // allowcredentials is omitted here
+  };
+
+  const assertion = await navigator.credentials.get({
+    publicKey: options,
+    mediation: "conditional",
+  });
+}
+```
+
+This will wait until the user has interacted with the username field.
+
+If and when the user does interact with the field, the browser will ask any available authenticators for public key credentials that can be used to sign into this website, and display the associated usernames as autofill options for the user, alongside any saved passwords for the account. If the user selects one of these options, the browser will use that credential to sign the user in.
+
+This essentially enables a website to provide a unified autofill, including both passwords and public key credentials for a single account.
 
 > [!NOTE]
-> If no credentials are discovered, the non-modal dialog will not be visible, and the user agent can prompt the user to take action in a way that depends on the type of credential (for example, to insert a device containing credentials).
+> Note that only [discoverable credentials](#discoverable_and_non-discoverable_credentials) are included in calls that use conditional mediation, because the browser needs to request applicable credentials without knowing the credential ID values for them.
 
 #### Discoverable credential synchronization methods
 
