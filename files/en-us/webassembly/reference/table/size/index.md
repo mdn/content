@@ -122,11 +122,11 @@ Finally, we export the `run()` function, which takes an `externref` named `$elem
   (import "obj" "output" (func $output (param externref) (param i32)))
 
   ;; Define an initially empty table of funcrefs
-  (table $my_table 0 funcref)
+  (table 0 funcref)
 
   (func (export "run") (param $elem externref)
     ;; Grow the table by 1, setting the initial values to null.
-    (table.grow $my_table
+    (table.grow
       ref.null func
       (i32.const 1)
     )
@@ -139,7 +139,7 @@ Finally, we export the `run()` function, which takes an `externref` named `$elem
     )
 
     ;; Grow the table by 1, setting the initial values to null.
-    (table.grow $my_table
+    (table.grow
       ref.null func
       (i32.const 1)
     )
@@ -153,9 +153,6 @@ Finally, we export the `run()` function, which takes an `externref` named `$elem
   )
 )
 ```
-
-> [!NOTE]
-> In this code, we haven't specified the table identifier (`$my_table`) after the `table.size` instructions. This is OK, as when you omit the identifying name, an index value of `0` is used by default, which refers to the first table in the Wasm module.
 
 #### Result
 

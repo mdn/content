@@ -77,7 +77,7 @@ table.set identifier element_number function_reference
 
 ### Result
 
-`null`.
+No result.
 
 ### Opcodes
 
