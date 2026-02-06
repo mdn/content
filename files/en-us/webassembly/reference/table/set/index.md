@@ -73,7 +73,7 @@ table.set identifier element_number function_reference
 - `element_number`
   - : The element number to store the function reference in. This must be an `i32` value, for example `(i32.const 1)`.
 - `function_reference`
-  - : The function reference to store in the table. This should be a [`ref.func`](#) [EDITORIAL: does it make sense to have a reference page for this, under ref/function ("reference instructions"?)], for example `(ref.func $f1)`.
+  - : The function reference to store in the table. This should be a `ref.func`, for example `(ref.func $f1)`.
 
 ### Result
 
@@ -89,7 +89,7 @@ No result.
 
 The `table.set` instruction is used to store a specified function in a particular element of an existing table. Specifically, it allows wasm modules to mutate references contained in tables at runtime.
 
-This is convenient if different references are required later on in a program's lifecycle to the ones that table was initialized with. For example, you could create a table with one element, define two functions, then initialize the table element with a reference to one of those functions using the [`elem`](#) [EDITORIAL: ADDING DUMMY LINK TO THIS, AS IT'LL NEED DOCUMENTING SOMEWHERE] module element:
+This is convenient if different references are required later on in a program's lifecycle to the ones that table was initialized with. For example, you could create a table with one element, define two functions, then initialize the table element with a reference to one of those functions using the `elem` module definition:
 
 ```wat
 (module

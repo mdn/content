@@ -14,6 +14,8 @@ This set of pages details the table instructions available in Wasm to create and
 
 ## Instructions
 
+- [`table.fill`](/en-US/docs/WebAssembly/Reference/Table/fill)
+  - : Sets the function reference stored in a series of table elements to the same reference.
 - [`table.grow`](/en-US/docs/WebAssembly/Reference/Table/grow)
   - : Increases the size of the table by a specified number of elements.
 - [`table.set`](/en-US/docs/WebAssembly/Reference/Table/grow)
