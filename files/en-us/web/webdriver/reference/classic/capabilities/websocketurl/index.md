@@ -1,6 +1,6 @@
 ---
 title: webSocketUrl
-slug: Web/WebDriver/Reference/Capabilities/webSocketUrl
+slug: Web/WebDriver/Reference/Classic/Capabilities/webSocketUrl
 page-type: webdriver-capability
 sidebar: webdriver
 ---
@@ -34,6 +34,6 @@ Response:
 
 ## See also
 
-- [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
+- [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities)
 - [New Session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession) command
 - [Establishing a WebDriver BiDi connection](https://w3c.github.io/webdriver-bidi/#establishing)

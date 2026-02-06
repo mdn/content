@@ -9,7 +9,7 @@ The **insecure certificate** error is a [WebDriver error](/en-US/docs/Web/WebDri
 
 Web browsers prevent and block traffic to domains with broken certificates since the communication with the server would be compromised. It is strongly recommended to fix the certificate situation instead of disabling certificate checks, even in test environments.
 
-WebDriver does offer an [`acceptInsecureCerts` capability](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts) for disabling certificate checks for the length of the session's duration, but it is important to emphasize that its use is highly discouraged and that using it is widely considered a weakness of the test environment.
+WebDriver does offer an [`acceptInsecureCerts` capability](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/acceptInsecureCerts) for disabling certificate checks for the length of the session's duration, but it is important to emphasize that its use is highly discouraged and that using it is widely considered a weakness of the test environment.
 
 ## Example
 
@@ -35,5 +35,5 @@ Hit an insecure cert on https://self-signed.badssl.com/
 ## See also
 
 - [Navigate To](/en-US/docs/Web/WebDriver/Reference/Commands/NavigateTo) command
-- [Capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
+- [Capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities)
 - [badssl.com](https://badssl.com/)

@@ -1,6 +1,6 @@
 ---
 title: acceptInsecureCerts
-slug: Web/WebDriver/Reference/Capabilities/acceptInsecureCerts
+slug: Web/WebDriver/Reference/Classic/Capabilities/acceptInsecureCerts
 page-type: webdriver-capability
 sidebar: webdriver
 ---
@@ -28,6 +28,6 @@ https://self-signed.badssl.com/
 
 ## See also
 
-- [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
+- [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities)
 - [Navigate To](/en-US/docs/Web/WebDriver/Reference/Commands/NavigateTo) command
 - [New Session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession) command

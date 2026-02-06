@@ -1,7 +1,7 @@
 ---
 title: WebDriver capabilities
 short-title: Capabilities
-slug: Web/WebDriver/Reference/Capabilities
+slug: Web/WebDriver/Reference/Classic/Capabilities
 page-type: landing-page
 sidebar: webdriver
 ---
@@ -103,19 +103,19 @@ Which you choose of the two preceding examples is not important, but it can matt
 - [`browserName`](/en-US/docs/Web/WebDriver/Reference/Capabilities/browserName)
 - [`browserVersion`](/en-US/docs/Web/WebDriver/Reference/Capabilities/browserVersion)
 - [`platformName`](/en-US/docs/Web/WebDriver/Reference/Capabilities/platformName)
-- [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts): This capability communicates whether expired or invalid [TLS certificates](/en-US/docs/Glossary/TLS) are checked when [navigating](/en-US/docs/Web/WebDriver/Reference/Commands/NavigateTo). If the capability is false, an [insecure certificate](/en-US/docs/Web/WebDriver/Reference/Errors/InsecureCertificate) error will be returned as navigation encounters domains with certificate problems. Otherwise, self-signed or otherwise invalid certificates will be implicitly trusted by the browser on navigation. The capability has effect for the lifetime of the session.
+- [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/acceptInsecureCerts): This capability communicates whether expired or invalid [TLS certificates](/en-US/docs/Glossary/TLS) are checked when [navigating](/en-US/docs/Web/WebDriver/Reference/Commands/NavigateTo). If the capability is false, an [insecure certificate](/en-US/docs/Web/WebDriver/Reference/Errors/InsecureCertificate) error will be returned as navigation encounters domains with certificate problems. Otherwise, self-signed or otherwise invalid certificates will be implicitly trusted by the browser on navigation. The capability has effect for the lifetime of the session.
 - [`pageLoadStrategy`](/en-US/docs/Web/WebDriver/Reference/Capabilities/pageLoadStrategy)
 - [`proxy`](/en-US/docs/Web/WebDriver/Reference/Capabilities/proxy)
 - [`setWindowRect`](/en-US/docs/Web/WebDriver/Reference/Capabilities/setWindowRect)
 - [`timeouts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/timeouts)
 - [`unhandledPromptBehavior`](/en-US/docs/Web/WebDriver/Reference/Capabilities/unhandledPromptBehavior)
-- [`webSocketUrl`](/en-US/docs/Web/WebDriver/Reference/Capabilities/webSocketUrl)
+- [`webSocketUrl`](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/webSocketUrl)
 
 ## Vendor-specific capabilities
 
 In addition to the [standard capabilities](#list_of_capabilities) WebDriver allows third-parties to _extend_ the set of capabilities to match their needs. Browser vendors and suppliers of drivers typically use extension capabilities to provide configuration to the browser, but they can also be used by intermediaries for arbitrary blobs of information.
 
-- [Firefox capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities/firefoxOptions) (`moz:firefoxOptions`)
+- [Firefox capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/firefoxOptions) (`moz:firefoxOptions`)
 - [Chrome capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities/goog/chromeOptions) (`goog:chromeOptions`)
 
 ## Legacy capabilities

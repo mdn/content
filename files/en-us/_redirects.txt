@@ -16351,10 +16351,10 @@
 /en-US/docs/Web/URI/Schemes/data	/en-US/docs/Web/URI/Reference/Schemes/data
 /en-US/docs/Web/URI/Schemes/javascript	/en-US/docs/Web/URI/Reference/Schemes/javascript
 /en-US/docs/Web/URI/Schemes/resource	/en-US/docs/Web/URI/Reference/Schemes/resource
-/en-US/docs/Web/WebDriver/Capabilities	/en-US/docs/Web/WebDriver/Reference/Capabilities
-/en-US/docs/Web/WebDriver/Capabilities/acceptInsecureCerts	/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts
-/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions	/en-US/docs/Web/WebDriver/Reference/Capabilities/firefoxOptions
-/en-US/docs/Web/WebDriver/Capabilities/webSocketUrl	/en-US/docs/Web/WebDriver/Reference/Capabilities/webSocketUrl
+/en-US/docs/Web/WebDriver/Capabilities	/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities
+/en-US/docs/Web/WebDriver/Capabilities/acceptInsecureCerts	/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/acceptInsecureCerts
+/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions	/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/firefoxOptions
+/en-US/docs/Web/WebDriver/Capabilities/webSocketUrl	/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/webSocketUrl
 /en-US/docs/Web/WebDriver/Commands	/en-US/docs/Web/WebDriver/Reference/Commands
 /en-US/docs/Web/WebDriver/Commands/CloseWindow	/en-US/docs/Web/WebDriver/Reference/Commands/CloseWindow
 /en-US/docs/Web/WebDriver/Commands/GetElementAttribute	/en-US/docs/Web/WebDriver/Reference/Commands/GetElementAttribute
@@ -16380,6 +16380,10 @@
 /en-US/docs/Web/WebDriver/Errors/UnknownError	/en-US/docs/Web/WebDriver/Reference/Errors/UnknownError
 /en-US/docs/Web/WebDriver/Errors/UnknownMethod	/en-US/docs/Web/WebDriver/Reference/Errors/UnknownMethod
 /en-US/docs/Web/WebDriver/Guides/Timeouts	/en-US/docs/Web/WebDriver/Reference/Timeouts
+/en-US/docs/Web/WebDriver/Reference/Capabilities	/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities
+/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts	/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/acceptInsecureCerts
+/en-US/docs/Web/WebDriver/Reference/Capabilities/firefoxOptions	/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/firefoxOptions
+/en-US/docs/Web/WebDriver/Reference/Capabilities/webSocketUrl	/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/webSocketUrl
 /en-US/docs/Web/WebDriver/Timeouts	/en-US/docs/Web/WebDriver/Reference/Timeouts
 /en-US/docs/Web/WebGL	/en-US/docs/Web/API/WebGL_API
 /en-US/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context

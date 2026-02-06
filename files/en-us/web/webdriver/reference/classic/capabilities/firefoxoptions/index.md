@@ -1,6 +1,6 @@
 ---
 title: firefoxOptions
-slug: Web/WebDriver/Reference/Capabilities/firefoxOptions
+slug: Web/WebDriver/Reference/Classic/Capabilities/firefoxOptions
 page-type: webdriver-capability
 sidebar: webdriver
 ---
@@ -8,8 +8,8 @@ sidebar: webdriver
 The **`moz:firefoxOptions` capability** is a namespaced set of
 capabilities specific to [Firefox](https://www.firefox.com/en-US/). It is used to control the
 behavior of Firefox and can be used as a member of
-[`alwaysMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#alwaysmatch) or as a member of one of the
-[`firstMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#firstmatch) entries.
+[`alwaysMatch`](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities#alwaysmatch) or as a member of one of the
+[`firstMatch`](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities#firstmatch) entries.
 
 It is used to define options which control how Firefox gets started and run.
 
@@ -211,7 +211,7 @@ An example of an env object:
 
 ## Example
 
-The following is an example of a full [capabilities object](/en-US/docs/Web/WebDriver/Reference/Capabilities) that
+The following is an example of a full [capabilities object](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities) that
 selects a specific Firefox binary to run with a prepared [profile](#profile_string) from the filesystem in [headless mode](https://hacks.mozilla.org/2017/12/using-headless-mode-in-firefox/). It also increases the number of IPC processes
 through a preference, turns off chrome errors/warnings in the console, and enables more verbose logging:
 
@@ -238,8 +238,8 @@ through a preference, turns off chrome errors/warnings in the console, and enabl
 ```
 
 The `moz:firefoxOptions` must be placed—as above—inside
-[`alwaysMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#alwaysmatch), or in one of the
-[`firstMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#firstmatch) [capabilities objects](/en-US/docs/Web/WebDriver/Reference/Capabilities) as seen here:
+[`alwaysMatch`](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities#alwaysmatch), or in one of the
+[`firstMatch`](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities#firstmatch) [capabilities objects](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities) as seen here:
 
 ```json
 {
@@ -277,5 +277,5 @@ This runs the GeckoView example application as installed on the first Android em
 - [geckodriver's documentation on supported Firefox capabilities](https://firefox-source-docs.mozilla.org/testing/geckodriver/Capabilities.html)
 - [Chrome-specific WebDriver capabilities](https://developer.chrome.com/docs/chromedriver/capabilities)
   (`goog:chromeOptions)`
-- [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
+- [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities)
 - [New Session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession) command

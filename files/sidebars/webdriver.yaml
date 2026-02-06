@@ -14,8 +14,8 @@ sidebar:
     details: open
     code: true
   - type: listSubPages
-    path: /Web/WebDriver/Reference/Capabilities
-    link: /Web/WebDriver/Reference/Capabilities
+    path: /Web/WebDriver/Reference/Classic/Capabilities
+    link: /Web/WebDriver/Reference/Classic/Capabilities
     details: open
     code: true
   - type: listSubPages

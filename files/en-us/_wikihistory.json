@@ -124747,15 +124747,15 @@
       "kjb"
     ]
   },
-  "Web/WebDriver/Reference/Capabilities": {
+  "Web/WebDriver/Reference/Classic/Capabilities": {
     "modified": "2019-10-09T08:06:42.769Z",
     "contributors": ["ato", "arobins", "fscholz"]
   },
-  "Web/WebDriver/Reference/Capabilities/acceptInsecureCerts": {
+  "Web/WebDriver/Reference/Classic/Capabilities/acceptInsecureCerts": {
     "modified": "2019-03-18T21:37:56.893Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Reference/Capabilities/firefoxOptions": {
+  "Web/WebDriver/Reference/Classic/Capabilities/firefoxOptions": {
     "modified": "2020-09-16T13:59:35.618Z",
     "contributors": ["Whimboo", "nalexander", "ato", "dfrase"]
   },

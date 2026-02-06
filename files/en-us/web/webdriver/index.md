@@ -52,9 +52,9 @@ The [WebDriver reference](/en-US/docs/Web/WebDriver/Reference) provides detailed
 
 {{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Commands")}}
 
-### [Capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
+### [Capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities)
 
-{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Capabilities")}}
+{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities")}}
 
 ### [Errors](/en-US/docs/Web/WebDriver/Reference/Errors)
 
