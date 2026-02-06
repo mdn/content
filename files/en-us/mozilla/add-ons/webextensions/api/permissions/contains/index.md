@@ -68,7 +68,7 @@ let testPermissions5 = {
 };
 
 const testResult5 = await browser.permissions.contains(testPermissions4);
-console.log(testResult5); // false: "searchTerms" doesn't match data typer in `data_collection`
+console.log(testResult5); // false: "searchTerms" doesn't match data type in `data_collection`
 ```
 
 {{WebExtExamples}}
