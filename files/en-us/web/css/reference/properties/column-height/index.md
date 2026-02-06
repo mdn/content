@@ -341,9 +341,7 @@ p {
 @supports not (column-height: 15em) {
   body::before {
     content: "Your browser does not support the 'column-height' property.";
-    color: black;
-    background-color: #ffcd33;
-    display: block;
+    background-color: wheat;
     position: fixed;
     inset: 50% 2em;
     height: fit-content;

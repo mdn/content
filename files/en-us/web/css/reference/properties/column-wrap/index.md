@@ -50,8 +50,6 @@ The default value of `column-wrap` is `auto`, which resolves to `wrap` when `col
 
 As a result of this default behavior, generally you don't need to explicitly set `column-wrap` to get the effect you want.
 
-There is an exception. When `column-wrap` is explicitly set to `nowrap`, a `column-height` `<length>` value has no effect. This can be used to create layouts that switch between horizontal and vertical (see [`wrap` versus `nowrap` behavior](#wrap_versus_nowrap_behavior)).
-
 ## Formal definition
 
 {{cssinfo}}
@@ -333,11 +331,11 @@ The markup for this example contains multiple paragraphs of content, taken from 
 
 #### CSS
 
-We start by giving the {{htmlelement("body")}} element a {{cssxref("height")}} of `90vh` and a {{cssxref("column-count")}} of `3`. We then set a {{cssxref("gap")}} of `3em 2em`, resulting in a `3em` gap between rows and a `2em` gap between columns.
+We start by giving the {{htmlelement("body")}} element a {{cssxref("column-count")}} of `3`. We then set a {{cssxref("gap")}} of `3em 2em`, resulting in a `3em` gap between rows and a `2em` gap between columns.
 
-Finally, we set a `column-height` of `90vh` to make our columns as tall as the `<body>`. We also set `column-wrap` to `nowrap`. We are doing this because the initial `column-wrap` value is `auto`, which resolves to `wrap` when `column-height` is set to a `<length>` value. By setting `column-wrap` explicitly to `nowrap`, we force excess content columns to overflow horizontally, creating the horizontal layout. In addition, a `column-height` `<length>` value has no effect when `column-wrap` is set to `nowrap`.
+Finally, we set a `column-height` of `90vh` to make our columns nearly as tall as the viewport. We also set `column-wrap` to `nowrap`. We are doing this because the initial `column-wrap` value is `auto`, which resolves to `wrap` when `column-height` is set to a `<length>` value. By setting `column-wrap` explicitly to `nowrap`, we force excess content columns to overflow horizontally, making initial or default layout horizontal.
 
-When the user checks the checkbox, the `column-wrap` property is set to `wrap`, which causes the excess content columns to overflow into new columns vertically, creating the vertical layout. At this point, the `column-height` value has an effect — it causes each row of columns to fill the viewport, which works well for the vertical layout.
+When the user checks the checkbox, the `column-wrap` property is set to `wrap`, which causes the excess content columns to overflow into new columns vertically, creating the vertical layout. The `column-height` value causes each row of columns to fill the viewport, which works well for the vertical layout.
 
 ```css hidden live-sample___wrap-nowrap
 * {
@@ -354,12 +352,10 @@ p {
 
 @supports not (column-wrap: wrap) {
   body::before {
-    content: "Your browser does not support the 'column-wrap' and/or 'column-height' properties.";
-    color: black;
-    background-color: #ffcd33;
-    display: block;
+    content: "Your browser does not support the 'column-wrap' property.";
+    background-color: wheat;
     position: fixed;
-    inset: 50% 20em;
+    inset: 50% 2em;
     height: fit-content;
     text-align: center;
     font-weight: bold;
@@ -379,7 +375,6 @@ form {
 
 ```css live-sample___wrap-nowrap
 body {
-  height: 90vh;
   column-count: 3;
   gap: 3em 2em;
   column-height: 90vh;

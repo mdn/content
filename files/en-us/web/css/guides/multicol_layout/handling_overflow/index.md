@@ -93,11 +93,15 @@ img {
 
 ## More columns than will fit
 
-How overflowing columns are handled depends on whether the media context is fragmented, such as print, or is continuous, such as a web page. It also depends on whether {{cssxref("column-height")}} and {{cssxref("column-wrap")}} are being used to enforce [column wrapping](#using_column_wrapping_for_multicol).
+How overflowing columns are handled depends on whether the media context is fragmented, such as print, or is continuous, such as a web page.
 
-In fragmented media, after a fragment (for example, a page) is filled with columns, the columns will move to a new page and fill that up with columns. In continuous media, columns will overflow in the inline direction. On the web, this means that you will get a horizontal scrollbar.
+- In fragmented media, after a fragment (for example, a page) is filled with columns, the columns will move to a new page and fill that up with columns.
+- In continuous media, the default behavior is that columns overflow in the inline direction. On the web, this means that you will get a horizontal scrollbar. This behavior can be overidden by using {{cssxref("column-height")}} and {{cssxref("column-wrap")}} to enforce [column wrapping](#using_column_wrapping_for_multicol).
 
-The example below shows this overflow behavior. The multicol container has a set {{CSSXref("height")}} and there is more text than space to create columns; therefore, we get columns created outside of the container.
+> [!NOTE]
+> It is worth mentioning that overflow in the inline direction only occurs when you've restricted the height of the multicol container.
+
+The example below shows the default continuous media overflow behavior. The multicol container has a set {{CSSXref("height")}} and there is more text than space to create columns; therefore, we get columns created outside of the container.
 
 ```html live-sample___overflow-inline
 <div class="container">
