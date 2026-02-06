@@ -48,7 +48,7 @@ table.size identifier
 - `identifier` {{optional_inline}}
   - : The identifier for the table you want to retrieve the size of. This can be one of the following:
     - `identifying_name`
-      - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Table/table#identifying_name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
+      - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Module_definitions/table#identifying_name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
     - `index`
       - : The table's index number, for example `0` for the first table in the wasm script, `1` for the second, etc.
 
@@ -108,7 +108,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
 
 In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) and an `i32`.
 
-Next, we define a `table` called `$my_table`, which stores function references (hence `funcref` being specified) and is empty.
+Next, we define a `table` that stores function references (hence `funcref` being specified) and is empty.
 
 Finally, we export the `run()` function, which takes an `externref` named `$elem` as a parameter. Inside the function body, we:
 
@@ -155,7 +155,7 @@ Finally, we export the `run()` function, which takes an `externref` named `$elem
 ```
 
 > [!NOTE]
-> In this code, we haven't specified the table identifier (`$my_table`) after the `table.size` instructions. This is OK, as we've only got one table defined, so the compiler can work out which table the instruction is aimed at.
+> In this code, we haven't specified the table identifier (`$my_table`) after the `table.size` instructions. This is OK, as when you omit the identifying name, an index value of `0` is used by default, which refers to the first table in the Wasm module.
 
 #### Result
 

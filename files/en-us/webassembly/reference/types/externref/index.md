@@ -8,7 +8,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#reference-t
 sidebar: webassemblysidebar
 ---
 
-The **`externref`** type references an object defined in JavaScript, enabling it to be used inside a Wasm module without the need for copying or serializing.
+The **`externref`** value type holds a JavaScript value, enabling it to be given to a Wasm module without the need for copying or serializing.
 
 {{InteractiveExample("Wat Demo: externref", "tabbed-taller")}}
 
@@ -60,9 +60,9 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
 
 ## Description
 
-The `externref` type is used to reference objects defined in JavaScript from inside Wasm modules. Any object type can be referenced, which is very useful when importing functions into WebAssembly that manipulate DOM nodes, write to canvas contexts, or manipulate image data. There is no longer the need to represent data in appropriate formats (for example, serialize objects) before it is sent over to Wasm.
+The `externref` type is used to reference values defined in JavaScript from inside Wasm modules. Any value type can be referenced, which is very useful when importing functions into WebAssembly that manipulate DOM nodes, write to canvas contexts, or manipulate image data. There is no longer the need to represent data in appropriate formats (for example, serialize objects) before it is sent over to Wasm.
 
-Each `externref` introduces a performance cost to an application, so you need to use them as sparingly as possible. For example, if you want to do a load of calculations using a Wasm function, you should pass all the data over to the Wasm module once (for example, in an array), perform the calculations, end then pass the array back again. You should avoid using multiple exported function calls for individual calculations. If you are passing single number values into your Wasm module, you can avoid using `externref` altogether.
+WebAssembly code cannot directly access the JavaScript value and must either store it in a `global`/[`table`](/en-US/docs/WebAssembly/Reference/Module_definitions/table), or pass it to an imported JavaScript function.
 
 ### Garbage collection
 

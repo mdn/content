@@ -8,7 +8,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#reference-t
 sidebar: webassemblysidebar
 ---
 
-The **`funcref`** type references a function defined in Wasm, enabling higher-order functions to be used across the Wasm and JavaScript language boundaries.
+The **`funcref`** value type references a function defined in Wasm, enabling higher-order functions to be used across the Wasm and JavaScript language boundaries.
 
 {{InteractiveExample("Wat Demo: funcref", "tabbed-taller")}}
 

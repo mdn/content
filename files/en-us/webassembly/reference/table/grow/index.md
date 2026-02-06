@@ -64,18 +64,14 @@ table.grow identifier initial_value grow_amount
 - `identifier` {{optional_inline}}
   - : An identifier for the table you want to grow. This can be one of the following:
     - `identifying_name`
-      - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Table/table#identifying_name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
+      - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Module_definitions/table#identifying_name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
     - `index`
       - : The table's index number, for example `0` for the first table in the wasm script, `1` for the second, etc.
 
     If the `identifier` is omitted, it will default to `0`.
 
 - `initial_value`
-  - : The initial value to set for the new table elements. This can be one of the following:
-    - `ref.null func`
-      - : Sets the initial values to `null`.
-    - OTHER
-      - : EDITORIAL: what other values can be set for the initial value?
+  - : The initial value to set for the new table elements. Its type must be the same as the [`storage_type`](/en-US/docs/WebAssembly/Reference/Module_definitions/table#storage_type) initially set when the table was created.
 - `grow_amount`
   - : The number of elements to grow the table by. This must be an `i32` value, for example `(i32.const 1)`.
 
