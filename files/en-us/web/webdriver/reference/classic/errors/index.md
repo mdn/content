@@ -1,12 +1,12 @@
 ---
-title: WebDriver errors
+title: WebDriver classic errors
 short-title: Errors
 slug: Web/WebDriver/Reference/Classic/Errors
 page-type: landing-page
 sidebar: webdriver
 ---
 
-Any WebDriver [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) that is sent to might plausibly receive an error [response](/en-US/docs/Web/WebDriver/Reference/Response). An error is represented by an [HTTP response](/en-US/docs/Web/HTTP) with an [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) in the 4xx or 5xx range, and a JSON payload holding details of the error.
+Any WebDriver classic [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) that is sent might plausibly receive an error response. An error is represented by an [HTTP response](/en-US/docs/Web/HTTP) with an [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) in the 4xx or 5xx range, and a JSON payload holding details of the error.
 
 ## Payload
 

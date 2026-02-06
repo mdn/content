@@ -1,5 +1,5 @@
 ---
-title: WebDriver timeouts
+title: WebDriver classic timeouts
 short-title: Timeouts
 slug: Web/WebDriver/Reference/Classic/Timeouts
 page-type: reference
