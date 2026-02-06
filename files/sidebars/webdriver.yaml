@@ -15,7 +15,6 @@ sidebar:
         path: /Web/WebDriver/Reference/Classic/Commands
         link: /Web/WebDriver/Reference/Classic/Commands
         details: closed
-        code: true
       - type: listSubPages
         path: /Web/WebDriver/Reference/Classic/Capabilities
         link: /Web/WebDriver/Reference/Classic/Capabilities
@@ -25,6 +24,5 @@ sidebar:
         path: /Web/WebDriver/Reference/Classic/Errors
         link: /Web/WebDriver/Reference/Classic/Errors
         details: closed
-        code: true
       - link: /Web/WebDriver/Reference/Classic/Timeouts
         title: Timeouts
