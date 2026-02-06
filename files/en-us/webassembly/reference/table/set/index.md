@@ -135,8 +135,6 @@ Later on, you can then dynamically change the function reference stored in the t
   ...
 ```
 
-Note that `table.set` must be included inside a function. Trying to include the instruction at the top level of a module results in an error.
-
 A wasm table can be grown from JavaScript using the [`table.set()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/set) method.
 
 ## Examples

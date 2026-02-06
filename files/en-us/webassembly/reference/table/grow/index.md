@@ -89,13 +89,11 @@ To retrieve the new table size after the `grow` instruction is applied to it, us
 
 | Instruction  | Binary opcode |
 | ------------ | ------------- |
-| `table.grow` | `0xFC`        |
+| `table.grow` | `0xFC` `0x0F` |
 
 ## Description
 
 `table.grow` is used to increase the size of a table by a specified number of elements.
-
-Note that `table.grow` must be included inside a function. Trying to include the instruction at the top level of a module results in an error.
 
 A wasm table can be grown from JavaScript using the [`table.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/grow) method.
 

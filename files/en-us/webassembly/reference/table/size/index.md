@@ -62,13 +62,11 @@ An `i32` equal to the current number of elements contained inside the table.
 
 | Instruction  | Binary opcode |
 | ------------ | ------------- |
-| `table.size` | `0xFC`        |
+| `table.size` | `0xFC` `0x10` |
 
 ## Description
 
 `table.size` is used to return the size of a table.
-
-Note that `table.size` must be included inside a function. Trying to include the instruction at the top level of a module results in an error.
 
 A wasm table size can be retrieved via JavaScript using the [`table.length`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/length) property.
 
