@@ -8,7 +8,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`grow`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) increases the size of a table by a specified number of segments.
+The **`table.grow`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) increases the size of a table by a specified number of segments.
 
 {{InteractiveExample("Wat Demo: table.grow", "tabbed-taller")}}
 

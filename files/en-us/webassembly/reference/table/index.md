@@ -7,7 +7,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#tabl
 sidebar: webassemblysidebar
 ---
 
-This set of pages details the table instructions available in Wasm to create and manipulate [tables](#).
+This set of pages details the table instructions available in Wasm to create and manipulate tables.
 
 > [!NOTE]
 > Equivalent functionality is available to JavaScript via the [`WebAssembly.Table`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table) API.
@@ -23,10 +23,6 @@ This set of pages details the table instructions available in Wasm to create and
 - [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size)
   - : Returns the current number of segments contained in a table.
 
-## Examples
-
-xx Probably want a more involved example on the main landing page, showing multiple features
-
 ## Specifications
 
 {{Specifications}}
@@ -34,7 +30,3 @@ xx Probably want a more involved example on the main landing page, showing multi
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-xx

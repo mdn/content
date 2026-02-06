@@ -8,7 +8,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`set`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) changes the function reference stored in a particular table segment.
+The **`table.set`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) changes the function reference stored in a particular table segment.
 
 {{InteractiveExample("Wat Demo: table.set", "tabbed-taller")}}
 
