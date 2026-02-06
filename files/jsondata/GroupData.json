@@ -170,7 +170,12 @@
     },
     "Clipboard API": {
       "overview": ["Clipboard API"],
-      "interfaces": ["Clipboard", "ClipboardEvent", "ClipboardItem"],
+      "interfaces": [
+        "Clipboard",
+        "ClipboardChangeEvent",
+        "ClipboardEvent",
+        "ClipboardItem"
+      ],
       "methods": [],
       "properties": ["Navigator.clipboard"],
       "events": ["Element: copy", "Element: cut", "Element: paste"]
@@ -774,6 +779,7 @@
         "HTMLFormControlsCollection",
         "HTMLFormElement",
         "HTMLFrameSetElement",
+        "HTMLGeolocationElement",
         "HTMLHeadElement",
         "HTMLHeadingElement",
         "HTMLHRElement",

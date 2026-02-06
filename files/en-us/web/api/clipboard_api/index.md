@@ -4,6 +4,7 @@ slug: Web/API/Clipboard_API
 page-type: web-api-overview
 browser-compat:
   - api.Clipboard
+  - api.ClipboardChangeEvent
   - api.ClipboardEvent
   - api.ClipboardItem
 ---
@@ -34,6 +35,8 @@ The default action can be overridden by the event handler — see each of the ev
 - {{domxref("Clipboard")}} {{securecontext_inline}}
   - : Provides an interface for reading and writing text and data to or from the system clipboard.
     The specification refers to this as the 'Async Clipboard API'.
+- {{domxref("ClipboardChangeEvent")}}
+  - : Represents events fired whenever the contents of the system clipboard are changed.
 - {{domxref("ClipboardEvent")}}
   - : Represents events providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events.
     The specification refers to this as the 'Clipboard Event API'.
@@ -52,8 +55,6 @@ The Clipboard API extends the following APIs, adding the listed features.
   - : An event fired whenever the user initiates a cut action.
 - `Element` [`paste`](/en-US/docs/Web/API/Element/paste_event) event
   - : An event fired whenever the user initiates a paste action.
-
-<!-- Note `Window: clipboardchange` event is in spec but not implemented -->
 
 ## Security considerations
 
@@ -80,12 +81,10 @@ Firefox & Safari:
 - The paste-prompt is suppressed if reading same-origin clipboard content, but not cross-origin content.
 - The `clipboard-read` and `clipboard-write` permissions are not supported (and not planned to be supported) by Firefox or Safari.
 
-Firefox [Web Extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard):
+Firefox [web extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard):
 
-- Reading text is only available for extensions with the Web Extension [`clipboardRead`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardread) permission.
-  With this permission the extension does not require transient activation or a paste prompt.
-- Writing text is available in secure context and with transient activation.
-  With the Web Extension [`clipboardWrite`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardwrite) permission transient activation is not required.
+- Reading is available to extensions with the web extension [`clipboardRead`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardread) permission. With this permission, the extension doesn't require transient activation or use the paste prompt. From Firefox 147, reading is also available without the permission in a secure context, with transient activation, and after the user clicks the paste prompt in an ephemeral context menu.
+- Writing is available in a secure context and with transient activation. However, with the web extension [`clipboardWrite`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardwrite) permission transient activation is not required.
 
 ## Examples
 
@@ -111,7 +110,3 @@ navigator.clipboard
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
