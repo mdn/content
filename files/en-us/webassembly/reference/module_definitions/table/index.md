@@ -1,14 +1,13 @@
 ---
-title: "table: Wasm table instruction"
+title: "table: Wasm module definition"
 short-title: table
-slug: WebAssembly/Reference/Table/table
+slug: WebAssembly/Reference/Module_definitions/table
 page-type: webassembly-instruction
-browser-compat: webassembly.reference-types
 spec-urls: https://webassembly.github.io/spec/core/syntax/modules.html#syntax-table
 sidebar: webassemblysidebar
 ---
 
-The **`table`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) creates a new table.
+The **`table`** [module definition](/en-US/docs/WebAssembly/Reference/Module_definitions) creates a new table.
 
 {{InteractiveExample("Wat Demo: table", "tabbed-taller")}}
 
@@ -68,7 +67,7 @@ table identifying_name initial_size max_size storage_type
 
 ## Description
 
-WebAssembly tables allow storage function references, which can be later retrieved for efficient, indirect function access when needed. The `table` instruction creates a new table.
+WebAssembly tables allow storage of reference values separate from byte-oriented WebAssembly memories. The primary use-case is for storing function references that can be used with `call_indirect` to support indirect function calls for languages that have them. The `table` instruction creates a new table.
 
 A table has to be given an initial size and storage type. This example creates a table wth two storage slots, which will only store references to functions created inside Wasm:
 
@@ -147,7 +146,3 @@ This makes sense, as the exported `accessTable()` function has an index value pa
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

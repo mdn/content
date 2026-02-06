@@ -102,6 +102,11 @@ sidebar:
         title: <code>WebAssembly.RuntimeError</code>
         details: closed
         code: true
+  - type: listSubPages
+    path: /WebAssembly/Reference/Module_definitions
+    link: /WebAssembly/Reference/Module_definitions
+    title: Module definitions
+    details: closed
   - title: Instructions
     details: closed
     children:
