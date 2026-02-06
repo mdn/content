@@ -6,20 +6,25 @@ sidebar:
     title: WebDriver
   - type: section
     link: /Web/WebDriver/Reference
-  - link: /Web/WebDriver/Reference/Timeouts
-    title: Timeouts
-  - type: listSubPages
-    path: /Web/WebDriver/Reference/Classic/Commands
-    link: /Web/WebDriver/Reference/Classic/Commands
+    title: Reference
+  - link: /Web/WebDriver/Reference/Classic
+    title: Classic
     details: open
-    code: true
-  - type: listSubPages
-    path: /Web/WebDriver/Reference/Classic/Capabilities
-    link: /Web/WebDriver/Reference/Classic/Capabilities
-    details: open
-    code: true
-  - type: listSubPages
-    path: /Web/WebDriver/Reference/Classic/Errors
-    link: /Web/WebDriver/Reference/Classic/Errors
-    details: open
-    code: true
+    children:
+      - type: listSubPages
+        path: /Web/WebDriver/Reference/Classic/Commands
+        link: /Web/WebDriver/Reference/Classic/Commands
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Web/WebDriver/Reference/Classic/Capabilities
+        link: /Web/WebDriver/Reference/Classic/Capabilities
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Web/WebDriver/Reference/Classic/Errors
+        link: /Web/WebDriver/Reference/Classic/Errors
+        details: closed
+        code: true
+      - link: /Web/WebDriver/Reference/Classic/Timeouts
+        title: Timeouts
