@@ -7,7 +7,7 @@ browser-compat: api.MediaCapabilities
 
 {{DefaultAPISidebar("Media Capabilities API")}}
 
-The [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) enabled you to query the browser to determine its ability to encode or decode media given a specified set of encoding parameters. These parameters may include the codecs, resolutions, bit rates, frame rates, and other such details.
+The [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) enables you to query the browser to determine its ability to encode or decode media given a specified set of encoding parameters. These parameters may include the codecs, resolutions, bit rates, frame rates, and other such details.
 
 With the Media Capabilities API, you can determine not just whether the browser can support a given format, but whether or not it can do so efficiently and smoothly. In short, this API replaces—and improves upon—the {{domxref("MediaSource")}} method {{domxref("MediaSource/isTypeSupported_static", "isTypeSupported()")}} or the {{domxref("HTMLMediaElement")}} method {{domxref("HTMLMediaElement.canPlayType","canPlayType()")}}.
 
