@@ -496,6 +496,10 @@
       "inh": "",
       "impl": []
     },
+    "CrashReportContext": {
+      "inh": "",
+      "impl": []
+    },
     "CreateMonitor": {
       "inh": "EventTarget",
       "impl": []
