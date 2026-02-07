@@ -125,29 +125,33 @@ The WebAuthn API distinguishes between two types of public key credential:
 
 - _Non-discoverable credentials_, also known as _non-resident keys_
 
-With non-discoverable credentials, the private key material, as well as additional information such as the username, are stored outside the authenticator, typically in the RP server (which is why these credentials are also sometimes called _server-side credentials_). To keep the private key safe in the server, it is encrypted using a master key that is stored in the authenticator, and the resulting ciphertext is used as the credential ID.
+With non-discoverable credentials, the private key material, as well as additional information such as the username and the ID of the RP, are stored outside the authenticator, typically in the RP server (which is why these credentials are also sometimes called _server-side credentials_). To keep the private key safe in the server, it is encrypted using a master key that is stored in the authenticator, and the resulting ciphertext is used as the credential ID.
 
 When the authenticator generates a non-discoverable credential, it:
 
-1. Generates the key pair that will be used to authenticate the user
-2. Encrypts the private key with a master key stored in the authenticator
-3. Returns the encrypted private key to the RP as the new credential's {{domxref("Credential.id", "id")}}, along with the rest of the credential, such as the public key.
+1. Generates the key pair that will be used to authenticate the user.
+2. Encrypts the private key and other data with a master key stored in the authenticator.
+3. Returns the resulting ciphertext to the RP as the new credential's {{domxref("Credential.id", "id")}}, along with the rest of the credential, such as the public key.
 
 When the RP needs to sign in with a non-discoverable credential:
 
 1. The RP passes the credential ID into the {{domxref("CredentialsContainer.get()")}} call
-2. The authenticator decrypts the credential ID value into the private key, using the authenticator's stored master key.
+2. The authenticator decrypts the credential ID value into the private key and other data, using the authenticator's stored master key.
 3. The authenticator uses the private key to sign an assertion.
 
-With discoverable credentials, the private key material that represents the credential, as well as the username associated with the credential, are stored inside the authenticator itself.
+With discoverable credentials, the authenticator itself stores:
 
-The advantage of a non-discoverable credential is that the authenticator doesn't have to maintain any state: in particular, it doesn't have to store credential private keys, and this means it could support an essentially infinite number of credentials.
+- The private key material used to generate assertions.
+- The username associated with the credential.
+- The ID of the RP associated with the credential.
+
+The advantage of a non-discoverable credential is that the authenticator doesn't have to store any credential-specific data, and this means it could support an essentially infinite number of credentials.
 
 The disadvantage is that to use a non-discoverable credential, the user must first supply the username they want to sign in as, which the RP can then use to find a set of corresponding credential ID values, which the browser can provide to the authenticator.
 
 By contrast, with discoverable credentials, the browser can:
 
-- Retrieve from the authenticator the list of discoverable credentials associated with the RP.
+- Retrieve from the authenticator the information about all the discoverable credentials associated with the RP.
 - Display their associated usernames to the user.
 - Invite the user to choose the one they want to sign in with.
 
