@@ -177,7 +177,7 @@ To enable autofill UI, the website's sign-in page contains a form, which invites
 When the page loads, the website first checks that conditional mediation is supported, and if it is, makes a call to {{domxref("CredentialsContainer.get()")}}. The call:
 
 - Passes `"conditional"` as the value of the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option.
-- Omits the [`allowcredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) option, to indicate that any applicable credentials are acceptable.
+- Omits the [`allowCredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) option, to indicate that any applicable credentials are acceptable.
 
 ```js
 const supported = await PublicKeyCredential.isConditionalMediationAvailable();
