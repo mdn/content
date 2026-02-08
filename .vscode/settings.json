@@ -1,0 +1,11 @@
+{
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "liveshare.publishWorkspaceInfo": true,
+    "liveshare.diagnosticMode": true,
+    "liveshare.diagnosticLogging": true,
+    "liveshare.alwaysFollowHost": true,
+    "liveshare.allowGuestTaskControl": true,
+    "liveshare.allowGuestDebugControl": true
+}

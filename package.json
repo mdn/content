@@ -2,7 +2,7 @@
   "name": "@mdn/content",
   "version": "1.0.0",
   "description": "Content of https://developer.mozilla.org",
-  "private": true,
+  "private": false,
   "homepage": "https://github.com/mdn/content#readme",
   "bugs": {
     "url": "https://github.com/mdn/content/issues"

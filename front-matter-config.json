@@ -3,8 +3,12 @@
   "schema": {
     "title": "Front matter schema",
     "type": "object",
-    "additionalProperties": false,
-    "required": ["title", "slug", "page-type"],
+    "additionalProperties": true,
+    "required": [
+      "title",
+      "slug",
+      "page-type"
+    ],
     "properties": {
       "title": {
         "title": "Title",
@@ -31,7 +35,10 @@
       "sidebar": {
         "title": "Sidebar navigation",
         "description": "Sidebar navigation(s) to show, defined as YAML in /files/en-us/sidebars",
-        "type": ["array", "string"],
+        "type": [
+          "array",
+          "string"
+        ],
         "items": {
           "type": "string",
           "enum": [
@@ -51,18 +58,28 @@
         "uniqueItems": true,
         "items": {
           "type": "string",
-          "enum": ["deprecated", "experimental", "non-standard"]
+          "enum": [
+            "deprecated",
+            "experimental",
+            "non-standard"
+          ]
         }
       },
       "browser-compat": {
         "title": "Browser compatibility",
         "description": "Browser compatibility location",
-        "type": ["array", "string"]
+        "type": [
+          "array",
+          "string"
+        ]
       },
       "spec-urls": {
         "title": "Specification URLs",
         "description": "Specification locations",
-        "type": ["array", "string"],
+        "type": [
+          "array",
+          "string"
+        ],
         "format": "uri",
         "items": {
           "type": "string",
@@ -74,22 +91,31 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Glossary/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Glossary/"
+            }
           }
         },
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["glossary-definition", "glossary-disambiguation"]
+              "enum": [
+                "glossary-definition",
+                "glossary-disambiguation"
+              ]
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Learn_web_development/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Learn_web_development/"
+            }
           }
         },
         "then": {
@@ -107,12 +133,15 @@
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Learn_web_development/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Learn_web_development/"
+            }
           }
         },
         "then": {
@@ -130,11 +159,16 @@
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
-          "properties": { "slug": { "type": "string", "pattern": "^MDN/" } }
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^MDN/"
+            }
+          }
         },
         "then": {
           "properties": {
@@ -147,12 +181,15 @@
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Mozilla/Firefox" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Mozilla/Firefox"
+            }
           }
         },
         "then": {
@@ -167,25 +204,38 @@
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
-          "properties": { "slug": { "type": "string", "pattern": "^Web/SVG/" } }
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/SVG/"
+            }
+          }
         },
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "svg-attribute", "svg-element"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "svg-attribute",
+                "svg-element"
+              ]
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/HTML/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTML/"
+            }
           }
         },
         "then": {
@@ -201,7 +251,7 @@
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
@@ -228,11 +278,16 @@
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
-          "properties": { "slug": { "type": "string", "pattern": "^Web/API/" } }
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/API/"
+            }
+          }
         },
         "then": {
           "properties": {
@@ -254,11 +309,16 @@
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
-          "properties": { "slug": { "type": "string", "pattern": "^Web/CSS/" } }
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/CSS/"
+            }
+          }
         },
         "then": {
           "properties": {
@@ -283,12 +343,15 @@
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/JavaScript/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/JavaScript/"
+            }
           }
         },
         "then": {
@@ -316,7 +379,7 @@
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
@@ -330,16 +393,23 @@
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "web-manifest-member"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "web-manifest-member"
+              ]
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^WebAssembly/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^WebAssembly/"
+            }
           }
         },
         "then": {
@@ -359,12 +429,15 @@
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/WebDriver/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/WebDriver/"
+            }
           }
         },
         "then": {
@@ -381,7 +454,7 @@
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
@@ -393,9 +466,15 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["http-csp-directive"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "http-csp-directive"
+              ]
+            }
+          }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
@@ -408,10 +487,14 @@
         },
         "then": {
           "properties": {
-            "page-type": { "enum": ["http-permissions-policy-directive"] }
+            "page-type": {
+              "enum": [
+                "http-permissions-policy-directive"
+              ]
+            }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
@@ -423,9 +506,16 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["guide", "http-header"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "http-header"
+              ]
+            }
+          }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
@@ -437,9 +527,15 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["http-method"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "http-method"
+              ]
+            }
+          }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
@@ -451,9 +547,15 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["http-status-code"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "http-status-code"
+              ]
+            }
+          }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
@@ -465,9 +567,15 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["mathml-element"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "mathml-element"
+              ]
+            }
+          }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
@@ -479,9 +587,15 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["mathml-attribute"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "mathml-attribute"
+              ]
+            }
+          }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
@@ -493,9 +607,15 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["aria-attribute"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "aria-attribute"
+              ]
+            }
+          }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
@@ -507,9 +627,15 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["aria-role"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "aria-role"
+              ]
+            }
+          }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
@@ -521,29 +647,46 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["http-cors-error"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "http-cors-error"
+              ]
+            }
+          }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/URI" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/URI"
+            }
           }
         },
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "uri-scheme", "uri-component"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "uri-scheme",
+                "uri-component"
+              ]
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": ".*" }
+            "slug": {
+              "type": "string",
+              "pattern": ".*"
+            }
           }
         },
         "then": {
@@ -560,52 +703,74 @@
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/XML/XPath" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/XML/XPath"
+            }
           }
         },
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "xpath-function"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "xpath-function"
+              ]
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/XML/EXSLT" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/XML/EXSLT"
+            }
           }
         },
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "exslt-function"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "exslt-function"
+              ]
             }
           }
         },
-        "else": false
+        "else": true
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/XML/XSLT" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/XML/XSLT"
+            }
           }
         },
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "xslt-element", "xslt-axis"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "xslt-element",
+                "xslt-axis"
+              ]
             }
           }
         },
-        "else": false
+        "else": true
       }
     ]
   },
