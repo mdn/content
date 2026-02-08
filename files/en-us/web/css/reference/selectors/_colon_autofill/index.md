@@ -40,11 +40,11 @@ input:autofill {
 
 ## Description
 
-The `:auto-fill` pseudo-class selects the {{htmlelement("input")}} element containing un-edited content that was auto-filled by the user-agent. Autocompletion may occur when the browser setting are set to enable autocompletion or the [`autocomplete` attribute](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) is set on the element itself.
+The `:auto-fill` pseudo-class selects {{htmlelement("input")}} elements containing un-edited content that was auto-filled by the user-agent. Autocompletion may occur when browser settings are set to enable autocompletion or the [`autocomplete` attribute](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) is set on the element itself.
 
 When the user uses the browser's autocompletion feature to autofill a form control, all the form controls that can be autofilled based on the selection get populated. These will all match the `:autofill` UI state. If the user edits a control, that control will no longer match `:autofill`, even if the value is the same as the autofilled value.
 
-The specification includes the vendor-prefixed `:-webkit-autofill` pseudo-class as an alias, also matching input elements which have been autofilled by user agent and no longer matching if the user edits the autofilled field, whether the field was filled based on the `autocomplete` attribute or even without that attribute being involved.
+The specification includes the vendor-prefixed `:-webkit-autofill` pseudo-class as an alias. This also matches input elements autofilled by the user agent, and no longer matches if the user edits the autofilled field.
 
 Note that the user agent style sheets of many browsers use `!important` in their style declarations, making some styles non-overridable. For example, Chrome has the following in its internal stylesheet:
 
@@ -58,7 +58,7 @@ input:-internal-autofill-selected {
 }
 ```
 
-This means that you cannot override the default {{cssxref('background-color')}}, {{cssxref('background-image')}}, or {{cssxref('color')}} values on the currently selected input element in your own rules, but you can override the {{cssxref('appearance')}} and you can override these properties for the autofilled elements that aren't currently focused.
+This means that you cannot override the default {{cssxref('background-color')}}, {{cssxref('background-image')}}, or {{cssxref('color')}} values on selected autofilled input elements in your own rules, but you can override the {{cssxref('appearance')}}, and you can override these properties for the autofilled elements that aren't currently focused.
 
 ## Syntax
 
@@ -104,7 +104,7 @@ input {
 
 input:autofill {
   border-radius: 0.5lh;
-  outline: 5px dotted magenta;
+  outline: 5px dashed magenta;
   border-color: yellow;
 }
 ```
