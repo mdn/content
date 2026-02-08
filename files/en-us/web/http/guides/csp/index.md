@@ -531,7 +531,7 @@ Some APIs in the web platform are known as _injection sinks_. These are APIs tha
 
 If an attacker can supply some specially crafted input to your website, and your website passes it to one of these injection sinks, then the attacker can execute malcious code.
 
-We've seen that we can use a CSP to disable APIs which are almost always dangerous, like `eval()`, but we might want to be able to use many injection sinks such as `innerHTML`, while ensuring that the input is safe. The practice of ensuring that the input is safe is called [_sanitizing_](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input.
+Some injection sinks, like `eval()`, are very hard to use safely, and we've seen that a CSP will typically [block them entirely](#eval_and_similar_apis). Others can be made safer if the input to them is processed so as to remove unsafe elements. This practice is called [_sanitization_](/en-US/docs/Web/Security/Attacks/XSS#sanitization).
 
 ### The Trusted Types API
 
