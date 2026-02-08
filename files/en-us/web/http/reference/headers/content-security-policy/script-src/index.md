@@ -81,7 +81,7 @@ This is a pragmatic approach, in particular when your site uses many resources a
 
 An alternative method is to specify allowed scripts using file hashes.
 Using this approach an external file in a `<script>` element can only be loaded and executed if all the valid hash values in its [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute match the allowed values in the CSP header.
-The [Subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) feature additionally checks that the downloaded file has the indicated hash value, and therefore has not been modified.
+The [Subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) feature additionally checks that the downloaded file has the indicated hash value, and therefore has not been modified.
 This is safer than trusting a domain, because files will only be used if they are unmodified, even if loaded from a compromised site.
 It is however more granular, and requires that hash values are updated in CSP and script elements whenever the associated scripts are changed.
 
@@ -122,7 +122,7 @@ Values that are not recognized as hashes by the browser are ignored, so the foll
   crossorigin="anonymous"></script>
 ```
 
-[Subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) contains more information about calculating hashes and using the `integrity` attribute.
+[Subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) contains more information about calculating hashes and using the `integrity` attribute.
 
 ### Unsafe inline script
 
@@ -149,7 +149,7 @@ The following {{HTMLElement("script")}} element will be allowed by the policy:
 ```
 
 Allowing all inline scripts is considered a security risk, so it's recommended to use a nonce-source or a hash-source instead.
-To allow inline scripts and styles with a nonce-source, you need to generate a random nonce value (using a cryptographically secure random token generator) and include it in the policy.
+To allow inline scripts and styles with a nonce-source, you need to generate a random {{Glossary("Nonce", "nonce")}} value (using a cryptographically secure random token generator) and include it in the policy.
 It is important to note, this nonce value needs to be dynamically generated as it has to be unique for each HTTP request:
 
 ```http

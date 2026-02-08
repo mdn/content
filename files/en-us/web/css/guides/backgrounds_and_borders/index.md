@@ -17,7 +17,7 @@ Box shadows include inset and outset shadow, single or multiple shadows, and sol
 
 The properties in this module also let you define whether cells inside a {{HTMLElement("table")}} should have shared or separate borders.
 
-### Backgrounds, borders, and box shadows in action
+## Backgrounds, borders, and box shadows in action
 
 This sample of borders, backgrounds, and box shadows consists of centered background images made of linear and radial gradients. A series of box shadows make the border appear to "pop". The element on the left has a border image set. The element on the right has a rounded dotted border.
 
@@ -78,8 +78,6 @@ div:first-of-type {
 
 The background images are defined with {{cssxref("background-image")}}. The images are centered with {{cssxref("background-position")}}. Different values of the {{cssxref("background-clip")}} property for the multiple background images are used to make the background images stay within the content box. The background color gets clipped to the padding box preventing the background from appearing through the transparent sections for the {{cssxref("border-image")}} and the {{cssxref("border-style", "dotted")}} {{cssxref("border")}}. The rounded corners in the element on the right are created using the {{cssxref("border-radius")}} property. A single {{cssxref("box-shadow")}} declaration is used to set all the shadows, both inset and outset.
 
-Click "Play" in the example above to see or edit the code for the animation in the MDN Playground.
-
 ## Reference
 
 ### Properties
@@ -90,7 +88,9 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("background-image")}}
 - {{cssxref("background-origin")}}
 - {{cssxref("background-position")}}
-- {{cssxref("background-repeat")}}
+- {{cssxref("background-repeat-x")}}
+- {{cssxref("background-repeat-y")}}
+- {{cssxref("background-repeat")}} shorthand
 - {{cssxref("background-size")}}
 - {{cssxref("background")}} shorthand
 - {{cssxref("background-position-x")}}
@@ -128,7 +128,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("border-image")}} shorthand
 - {{cssxref("box-shadow")}}
 
-The CSS backgrounds module level 4 also introduces the `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y`, and `background-tbd` properties. Currently, no browsers support these features.
+The CSS backgrounds module level 4 also introduces the `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, and `background-tbd` properties. Currently, no browsers support these features.
 
 ### Data types
 
@@ -186,6 +186,7 @@ The CSS backgrounds module level 4 also introduces the `background-position-bloc
 - {{cssxref("backdrop-filter")}}
 - [`drop-shadow()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/drop-shadow) filter function
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color)
-- [Border-image generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
-- [Border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
-- [Box-shadow generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)
+- Tools:
+  - [Border-image generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
+  - [Border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
+  - [Box-shadow generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)

@@ -26,7 +26,7 @@ Technical job interviews can be very demanding, and some have quite specific req
         <ul>
           <li>Deciding what kind of job you want.</li>
           <li>Searching for jobs.</li>
-          <li>Developing qualities for that employers look for.</li>
+          <li>Developing qualities that employers look for.</li>
           <li>Selling yourself to would-be employers.</li>
           <li>Applying for jobs.</li>
           <li>Preparing yourself for job interviews.</li>
@@ -203,7 +203,7 @@ Above all:
 
 Not all job applications require the same things; you'll probably have to:
 
-- Fill out some details on an online form. Type out your answers locally (for example, in VSCode) or in an online document (for example, a Google Docs file) before entering them into the form fields, in case something (for example, a browser crash) causes you to lose your work. This can save you hours of frustration; text is also easier to review and get feedback on if you put it somewhere else first.
+- Fill out some details on an online form. Type out your answers locally (for example, in VS Code) or in an online document (for example, a Google Docs file) before entering them into the form fields, in case something (for example, a browser crash) causes you to lose your work. This can save you hours of frustration; text is also easier to review and get feedback on if you put it somewhere else first.
 - Upload your CV/résumé.
 - Write and upload a covering letter. There are many guides to writing effective covering letters elsewhere online, but in general, such a letter should provide a description of why you:
   - Want to work for the company.

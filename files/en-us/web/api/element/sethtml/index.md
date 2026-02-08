@@ -3,12 +3,10 @@ title: "Element: setHTML() method"
 short-title: setHTML()
 slug: Web/API/Element/setHTML
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Element.setHTML
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
 The **`setHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it into the DOM as a subtree of the element.
 
@@ -45,7 +43,8 @@ None (`undefined`).
 
 - `TypeError`
   - : This is thrown if `options.sanitizer` is passed a:
-    - non-normalized {{domxref("SanitizerConfig")}} (one that includes both "allowed" and "removed" configuration settings).
+    - {{domxref("SanitizerConfig")}} that isn't [valid](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
+      For example, a configuration that includes both "allowed" and "removed" configuration settings.
     - string that does not have the value `"default"`.
     - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
 

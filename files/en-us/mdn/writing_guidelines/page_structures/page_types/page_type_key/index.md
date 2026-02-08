@@ -63,14 +63,14 @@ This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/
 - `css-combinator`: a combinator, like the [descendant combinator](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator).
 - `css-function`: a [function](/en-US/docs/Web/CSS/Reference/Values/Functions), like {{cssxref("max")}}.
 - `css-keyword`: a keyword, like {{cssxref("inherit")}}.
-- `css-media-feature`: a [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features), like [`hover`](/en-US/docs/Web/CSS/Reference/At-rules/@media/hover).
+- `css-media-feature`: a [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features), like {{cssxref("@media/hover")}}.
 - `css-module`: a module, like [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations).
 - `css-property`: a property, like {{cssxref("background-color")}}.
 - `css-pseudo-class`: a [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), like {{cssxref(":enabled")}}.
 - `css-pseudo-element`: a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), like {{cssxref("::before")}}.
 - `css-selector`: a [basic selector](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#basic_selectors), like the [class selector](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors).
 - `css-shorthand-property`: a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties), like {{cssxref("background")}}.
-- `css-type`: a [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types), like [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value).
+- `css-type`: a [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types), like {{cssxref("&lt;color&gt;")}}.
 
 ### Glossary page types
 
@@ -157,7 +157,7 @@ This section lists `page-type` values for pages under [WebAssembly/](/en-US/docs
 - `webassembly-instance-property`: an instance property, like [`WebAssembly.Instance.exports`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports).
 - `webassembly-instance-method`: an instance method, like [`WebAssembly.Exception.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg).
 - `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module/exports_static).
-- `webassembly-instruction`: an instruction, or a set of instructions, like [`Wrap`](/en-US/docs/WebAssembly/Reference/Numeric/Wrap).
+- `webassembly-instruction`: an instruction, or a set of instructions, like [`wrap`](/en-US/docs/WebAssembly/Reference/Numeric/wrap).
 
 ### WebDriver page types
 

@@ -101,7 +101,7 @@ The `byte` values this API returns aren't comparable across browsers or between 
 
 ## Security requirements
 
-To use this method your document must be in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) and {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
+To use this method your document must be in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts) and {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
 
 You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties to check if the document is cross-origin isolated:
 

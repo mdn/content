@@ -42,7 +42,7 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Element with a {{cssxref("will-change")}} value specifying any property that would create a stacking context on non-initial value.
 - Element with a {{cssxref("contain")}} value of `layout` or `paint`, or a composite value that includes either of these values (i.e., `contain: strict`, `contain: content`).
 - Element placed into the [top layer](/en-US/docs/Glossary/Top_layer) and its corresponding {{cssxref("::backdrop")}}. Examples include [fullscreen](/en-US/docs/Web/API/Fullscreen_API) and [popover](/en-US/docs/Web/API/Popover_API) elements.
-- Element that has had stacking context-creating properties (such as `opacity`) animated using {{cssxref("@keyframes")}}, with [`animation-fill-mode`](/en-US/docs/Web/CSS/Reference/Properties/animation-fill-mode) set to [`forwards`](/en-US/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards).
+- Element that has had stacking context-creating properties (such as `opacity`) animated using {{cssxref("@keyframes")}}, with {{cssxref("animation-fill-mode")}} set to [`forwards`](/en-US/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards).
 
 ## Nested stacking contexts
 
@@ -104,7 +104,7 @@ To demonstrate how the stacking order of each element participates in the stacki
 </article>
 ```
 
-Every container element has an {{cssxref("opacity")}} of less than `1` and a {{cssxref("position")}} of either `relative` or `absolute` set. These property-value pairs create a stacking context when the element has `z-index` value other than `auto`.
+Every container element has an {{cssxref("opacity")}} of less than `1` (which creates a stacking context), and a {{cssxref("position")}} of either `relative` or `absolute` (which creates a stacking context when the element also has a `z-index` value other than `auto`).
 
 ```css hidden
 * {

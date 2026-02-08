@@ -1,6 +1,7 @@
 ---
-title: XOR
-slug: WebAssembly/Reference/Numeric/XOR
+title: "xor: Wasm text instruction"
+short-title: xor
+slug: WebAssembly/Reference/Numeric/xor
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---

@@ -193,6 +193,8 @@ ul::scroll-marker-group {
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::column")}}
 - {{cssxref(":target-current")}}
+- {{cssxref(":target-before")}}
+- {{cssxref(":target-after")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
 - [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module

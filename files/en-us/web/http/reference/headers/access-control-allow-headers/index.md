@@ -19,10 +19,6 @@ This header is required if the preflight request contains {{HTTPHeader("Access-C
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

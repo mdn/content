@@ -107,21 +107,111 @@ In some cases, an implicit anchor reference will be made between two elements, d
 If you wish to remove an explicit anchor association previously made between an anchor element and a positioned element, you can do one of the following:
 
 1. Set the anchor's `anchor-name` property value to `none`, or to a different `<dashed-ident>`, if you want a different element to be anchored to it.
-2. Set the `position-anchor` property of the positioned element to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`.
+2. Set the `position-anchor` property of the positioned element to `none`, or to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`.
 
-However, in the case of implicit anchor associations, you'll need to use the second method — the first method doesn't work. This is because the association is controlled internally, and you can't remove the `anchor-name` via CSS.
+In the case of implicit anchor associations, you'll need to use the second method — the first method doesn't work. This is because the association is controlled internally, and you can't remove the `anchor-name` via CSS.
 
 For example, to stop a customizable `<select>` element's picker from being anchored to the `<select>` element itself, you could use the following rule:
 
 ```css
 ::picker(select) {
-  position-anchor: --not-an-anchor-name;
+  position-anchor: none;
 }
 ```
 
+## Anchor scoping
+
+When multiple anchor elements are given the same {{cssxref("anchor-name")}} value and a positioned element has that name as its {{cssxref("position-anchor")}} property value, the positioned element will be associated with the _last_ anchor element in the source order with that `anchor-name` value.
+
+For example, if a document contains multiple repeated components, each with a positioned element tethered to an anchor, all the positioned elements will be anchored to the last anchor on the page unless each component uses a different anchor name. This is likely not the desired behavior.
+
+The {{cssxref("anchor-scope")}} property can fix this problem by limiting the visibility, or "scope", of an `anchor-name` value to a specific subtree. The result is that each positioned element can only be anchored to an element within the same subtree of the element that has the scope set on it.
+
+- `anchor-scope: all` sets the scope so that _any_ `anchor-name` values set in the subtree can only be bound to by positioned elements in the same subtree.
+- `anchor-scope: --my-anchor, --my-anchor2` sets the scope so that the specified `anchor-name` values, when set in the subtree, can only be bound to by positioned elements in the same subtree.
+- `anchor-scope: none` is the default value; it specifies that no anchor scoping is set.
+
+For example, let's say you have multiple anchors and anchor-positioned {{htmlelement("div")}} elements inside {{htmlelement("section")}} containers:
+
+```html live-sample___anchor-scope
+<section class="scoped">
+  <div class="anchor">⚓︎</div>
+  <div class="positioned">Positioned 1</div>
+</section>
+
+<section class="scoped">
+  <div class="anchor">⚓︎</div>
+  <div class="positioned">Positioned 2</div>
+</section>
+
+<section class="scoped">
+  <div class="anchor">⚓︎</div>
+  <div class="positioned">Positioned 3</div>
+</section>
+```
+
+We turn each `anchor` `<div>` into an anchor element by giving them an `anchor-name` of `--my-anchor`. We then position each `positioned` `<div>` relative to an element with the `--my-anchor` anchor name by giving them absolute positioning, a `position-anchor` value of `--my-anchor`, and a {{cssxref("position-area")}} value of `right`. Finally, we set the anchor scope of each `<section>` container using `anchor-scope: --my-anchor`:
+
+```css hidden live-sample___anchor-scope
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.scoped {
+  padding: 20px;
+  background: #eeeeee;
+}
+
+.anchor {
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background-color: blue;
+  width: fit-content;
+  padding: 3px;
+}
+
+.positioned {
+  background: orange;
+  width: fit-content;
+  padding: 3px;
+}
+```
+
+```css live-sample___anchor-scope
+.anchor {
+  anchor-name: --my-anchor;
+}
+
+.positioned {
+  position: absolute;
+  position-anchor: --my-anchor;
+  position-area: right;
+}
+
+.scoped {
+  anchor-scope: --my-anchor;
+}
+```
+
+This results in the following positioning behavior:
+
+{{ EmbedLiveSample("anchor-scope", "100%", "150") }}
+
+Each positioned element is positioned relative to the anchor inside the same `<section>` element. This is because each `<section>` element has an `anchor-scope` of `--my-anchor` set on it; positioned elements inside each scoped container can therefore only be positioned relative to `my-anchor` anchors inside the same container.
+
+If we didn't set `anchor-scope: --my-anchor` on the containers, all of the positioned elements would be positioned relative to the last anchor on the page.
+
 ## Positioning elements relative to their anchor
 
-As we saw above, associating a positioned element with an anchor is not really much use on its own. Our goal is to place the positioned element relative to its associated anchor element. This is done either by setting a [CSS `anchor()` function](#using_inset_properties_with_anchor_function_values) value on an [inset property](/en-US/docs/Glossary/Inset_properties), [specifying a `position-area`](#setting_a_position-area), or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
+As we saw earlier, associating a positioned element with an anchor is not really much use on its own. Our goal is to place the positioned element relative to its associated anchor element. This is done either by setting a [CSS `anchor()` function](#using_inset_properties_with_anchor_function_values) value on an [inset property](/en-US/docs/Glossary/Inset_properties), [specifying a `position-area`](#setting_a_position-area), or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
 
 > [!NOTE]
 > CSS anchor positioning also provides mechanisms for specifying fallback positions if the positioned element's default position causes it to overflow the viewport. See the [Fallback options and conditional hiding](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide for details.
@@ -142,7 +232,7 @@ anchor(<anchor-name> <anchor-side>, <fallback>)
 ```
 
 - `<anchor-name>`
-  - : The [`anchor-name`](/en-US/docs/Web/CSS/Reference/Properties/anchor-name) property value of the anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor** is used. This is the anchor referenced in its [`position-anchor`](/en-US/docs/Web/CSS/Reference/Properties/position-anchor) property, or associated with the element via the non-standard [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) HTML attribute.
+  - : The {{cssxref("anchor-name")}} property value of the anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor** is used. This is the anchor referenced in its {{cssxref("position-anchor")}} property, or associated with the element via the non-standard [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) HTML attribute.
     > [!NOTE]
     > Specifying an `<anchor-name>` positions the element relative to that anchor, but does not provide element association. While you can position an element's sides relative to multiple anchors by specifying [different `<anchor-name>` values](/en-US/docs/Web/CSS/Reference/Values/anchor#positioning_an_element_relative_to_multiple_anchors) inside different `anchor()` functions on the same element, the positioned element is only associated with a single anchor.
 
@@ -163,11 +253,11 @@ Both will place the positioned element `50px` above the bottom of the element's 
 
 The most common `anchor()` parameters you'll use will refer to a side of the default anchor. You will also often either add a {{cssxref("margin")}} to create spacing between the edge of the anchor and positioned element or use `anchor()` within a `calc()` function to add that spacing.
 
-For example, this rule positions the right edge of the positioned element flush to the anchor element's left edge, then adds some `margin-left` to make some space between the edges:
+For example, this rule positions the left edge of the positioned element flush to the anchor element's right edge, then adds some `margin-left` to make some space between the edges:
 
 ```css
 .positionedElement {
-  right: anchor(left);
+  left: anchor(right);
   margin-left: 10px;
 }
 ```
@@ -308,7 +398,7 @@ If you only specify one value, the effect is different depending on which value 
 > [!NOTE]
 > See the [`<position-area>`](/en-US/docs/Web/CSS/Reference/Values/position-area_value) value reference page for a detailed description of all the available values. Mixing a logical value with a physical value will invalidate the declaration.
 
-Let's demonstrate some of these values; this example uses the same HTML and base CSS styes as the previous example, except that we've included a {{htmlelement("select")}} element to enable changing the positioned element's `position-area` value.
+Let's demonstrate some of these values; this example uses the same HTML and base CSS styles as the previous example, except that we've included a {{htmlelement("select")}} element to enable changing the positioned element's `position-area` value.
 
 ```html hidden
 <p>
@@ -553,7 +643,7 @@ anchor-size(<anchor-name> <anchor-size>, <length-percentage>)
 ```
 
 - `<anchor-name>`
-  - : The `<dashed-ident>` name set as the value of the [`anchor-name`](/en-US/docs/Web/CSS/Reference/Properties/anchor-name) property of the anchor element you want to size the element relative to. If omitted, the element's **default anchor**, which is the anchor referenced in the [`position-anchor`](/en-US/docs/Web/CSS/Reference/Properties/position-anchor) property, is used.
+  - : The `<dashed-ident>` name set as the value of the {{cssxref("anchor-name")}} property of the anchor element you want to size the element relative to. If omitted, the element's **default anchor**, which is the anchor referenced in the {{cssxref("position-anchor")}} property, is used.
 - [`<anchor-size>`](/en-US/docs/Web/CSS/Reference/Values/anchor-size#anchor-size)
   - : Specifies the dimension of the anchor element that the positioned element will be sized relative to. This can be expressed using physical (`width` or `height`) or logical (`inline`, `block`, `self-inline`, or `self-block`) values.
 - {{cssxref("length-percentage")}}

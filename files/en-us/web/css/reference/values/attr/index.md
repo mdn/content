@@ -9,7 +9,7 @@ sidebar: cssref
 > [!NOTE]
 > The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental.
 
-The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to retrieve the value of an attribute of the selected element and use it in a property value, similar to how the {{cssxref("var", "var()")}} function substitutes a custom property value. It can also be used with [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), in which case the attribute's value on the pseudo-element's originating element is returned.
+The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to retrieve the value of an attribute of the selected element and use it in a property value, similar to how the {{cssxref("var()")}} function substitutes a custom property value. It can also be used with [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), in which case the attribute's value on the pseudo-element's originating element is returned.
 
 {{InteractiveExample("CSS Demo: attr()", "tabbed-shorter")}}
 
@@ -27,11 +27,13 @@ blockquote::after {
 
 ```html interactive-example
 <blockquote cite="https://mozilla.org/en-US/about/">
-  Mozilla makes browsers, apps, code, and tools that put people before profit.
+  Mozilla is working to put control of the internet back in the hands of the
+  people using it.
 </blockquote>
 
 <blockquote cite="https://web.dev/about/">
-  Google believes in an open, accessible, private, and secure web.
+  Build beautiful, accessible, fast, and secure websites that work
+  cross-browser.
 </blockquote>
 ```
 
@@ -119,6 +121,15 @@ The `attr()` function can reference attributes that were never intended for styl
 ```css
 span[data-icon] {
   background-image: url(attr(data-icon));
+}
+```
+
+However, this restriction applies only to places that strictly require a `<url>` type.
+Some functions — such as {{CSSxRef("image/image-set","image-set()")}} — can accept a `<string>` value that is later interpreted as a URL, allowing `attr()` to work in those contexts, depending on browser support:
+
+```css
+span[data-icon] {
+  background: image-set(attr(data-icon));
 }
 ```
 

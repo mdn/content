@@ -56,6 +56,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("alignment-baseline")}}
 - {{CSSxRef("all")}} (shorthand)
 - {{CSSxRef("anchor-name")}}
+- {{CSSxRef("anchor-scope")}}
 - {{CSSxRef("animation-composition")}}
 - {{CSSxRef("animation-delay")}}
 - {{CSSxRef("animation-direction")}}
@@ -89,6 +90,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("background-repeat")}}
 - {{CSSxRef("background-size")}}
 - {{CSSxRef("background")}} (shorthand)
+- {{CSSxRef("baseline-source")}}
 - {{CSSxRef("block-size")}}
 
 ### Border-\*
@@ -321,6 +323,9 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("inset")}} (shorthand)
 - {{CSSxRef("inset")}} (shorthand)
 - {{CSSxRef("interactivity")}}
+- {{CSSxRef("interest-delay")}}
+- {{CSSxRef("interest-delay-end")}}
+- {{CSSxRef("interest-delay-start")}}
 - {{CSSxRef("interpolate-size")}}
 - {{CSSxRef("isolation")}}
 
@@ -530,6 +535,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("text-box")}} (shorthand)
 - {{CSSxRef("text-combine-upright")}}
 - {{CSSxRef("text-decoration-color")}}
+- {{CSSxRef("text-decoration-inset")}}
 - {{CSSxRef("text-decoration-line")}}
 - {{CSSxRef("text-decoration-skip-ink")}}
 - {{CSSxRef("text-decoration-skip")}}

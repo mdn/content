@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content")}}
 
-In this challenge, we provide you with some data on the planets in our solar system. Your job is to structure it into an accessible HTML table.
+In this challenge, we provide data on the planets in our solar system. Your job is to structure it into an accessible HTML table.
 
 ## Starting point
 
@@ -16,13 +16,13 @@ In this challenge, we provide you with some data on the planets in our solar sys
 2. Save the following HTML listing inside a file inside your folder called `index.html` (or paste it into your online editor's HTML pane).
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
        <meta name="viewport" content="width=device-width" />
        <title>Planet data table</title>
-       <link href="minimal-table.css" rel="stylesheet" type="text/css" />
+       <link href="style.css" rel="stylesheet" type="text/css" />
      </head>
      <body>
        <h1>Planet data table</h1>
@@ -123,9 +123,9 @@ In this challenge, we provide you with some data on the planets in our solar sys
 
 ## Project brief
 
-You are working at a school; currently your students are studying the planets of our solar system, and you want to provide them with an easy-to-follow set of data to look up facts and figures about the planets. An HTML data table would be ideal — you need to take the raw data you have available and turn it into a table, following the steps below.
+You are working at a school; currently, your students are studying the planets of our solar system, and you want to provide them with an easy-to-follow set of data to look up facts and figures about the planets. An HTML data table would be ideal — you need to take the raw data you have available and turn it into a table, following the steps below.
 
-All the data you need is contained in the data listing provided above. If you have trouble visualizing the data, look at the live example below, or try drawing a diagram.
+All the data you need is contained in the data listing provided above. If you have trouble visualizing the data, take a look at the live example below, or try drawing a diagram.
 
 1. Start the table off by giving it an outer container, a table header, and a table body. You don't need a table footer for this example.
 2. Add the provided caption to your table.
@@ -143,7 +143,7 @@ All the data you need is contained in the data listing provided above. If you ha
 
 ## Example
 
-The table should look like the following after being marked up correctly. If you are getting stuck on how to achieve some of this, see the solution below the live example.
+The table should look like the following after being marked up correctly. If you get stuck, check out the solution below the live example.
 
 {{embedlivesample("planet-data-table", "100%", 650)}}
 
@@ -284,7 +284,7 @@ Your finished HTML should look like this:
       <td></td>
     </tr>
     <tr>
-      <th colspan="2" scope="row">Dwarf planets</th>
+      <th colspan="2" scope="rowgroup">Dwarf planets</th>
       <th scope="row">Pluto</th>
       <td>0.0146</td>
       <td>2,370</td>

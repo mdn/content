@@ -10,7 +10,7 @@ A content script is a part of your extension that runs in the context of a web p
 Content scripts can access [a small subset of the WebExtension APIs](#webextension_apis), but they can [communicate with background scripts](#communicating_with_background_scripts) using a messaging system and thereby indirectly access the WebExtension APIs. [Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) can access all the [WebExtension JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) but can't directly access the content of web pages.
 
 > [!NOTE]
-> Some Web APIs are restricted to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which also applies to content scripts running in these contexts. Except for {{domxref("PointerEvent.getCoalescedEvents()")}}, which can be called from content scripts in insecure contexts in Firefox.
+> Some Web APIs are restricted to [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts), which also applies to content scripts running in these contexts. Except for {{domxref("PointerEvent.getCoalescedEvents()")}}, which can be called from content scripts in insecure contexts in Firefox.
 
 ## Loading content scripts
 
@@ -49,7 +49,7 @@ Registered content scripts are only executed if the extension is granted [host p
 
 To inject scripts programmatically, the extension needs either the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). The `scripting` permission is required to use methods from the {{WebExtAPIRef("scripting")}} API.
 
-Starting with Manifest V3, host permissions are not automatically granted at install time. Users may opt in or out of host permissions after installing the extension.
+On installation, an extension can request host permissions for hosts in its `matches` lists of the `content_scripts` manifest key. Users can opt in or out of host permissions after installing the extension.
 
 ### Restricted domains
 

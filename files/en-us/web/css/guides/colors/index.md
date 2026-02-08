@@ -88,6 +88,8 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
   - : Explanation of contrast requirements between background and foreground content to ensure legibility.
+- [CSS value serialization](/en-US/docs/Web/API/CSS_Object_Model/CSS_value_serialization)
+  - : How [CSSOM APIs](/en-US/docs/Web/API/CSS_Object_Model) serialize color and other values into standardized string representations.
 
 ## Related concepts
 
@@ -118,8 +120,8 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
 - SVG [`color`](/en-US/docs/Web/SVG/Reference/Attribute/color) attribute
 - {{glossary("Color wheel")}} glossary term
 - {{glossary("Interpolation")}} glossary term
-- The [`@font-palette-values`](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values) at-rule [`override-colors`](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values/override-colors) descriptor
-- The [`@color-profile`](/en-US/docs/Web/CSS/Reference/At-rules/@color-profile) at-rule
+- The {{cssxref("@font-palette-values")}} at-rule [`override-colors`](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values/override-colors) descriptor
+- The {{cssxref("@color-profile")}} at-rule
 - The [`color-gamut`](/en-US/docs/Web/CSS/Reference/At-rules/@media/color-gamut) @media feature
 - The [`forced-colors`](/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors) @media feature
 
@@ -129,10 +131,11 @@ The CSS color module also introduces the `CSSColorProfileRule` interface. Curren
 
 ## See also
 
-- [CSS color adjustment](/en-US/docs/Web/CSS/Guides/Color_adjustment) module and the {{cssxref("print-color-adjust")}} property.
-- [CSS images](/en-US/docs/Web/CSS/Guides/Images) module, which is where CSS [`<gradient>`](/en-US/docs/Web/CSS/Reference/Values/gradient) images are defined.
+- [CSS color adjustment](/en-US/docs/Web/CSS/Guides/Color_adjustment) module and {{cssxref("print-color-adjust")}}
+- {{cssxref("gradient")}} defined in [CSS images](/en-US/docs/Web/CSS/Guides/Images) module
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
-- The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Reference/Element/feColorMatrix) element
+- [`<feColorMatrix>`](/en-US/docs/Web/SVG/Reference/Element/feColorMatrix) SVG element
 - [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
-- [Color format converter](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)
-- [Color mixer](/en-US/docs/Web/CSS/Guides/Colors/Color_mixer)
+- Tools:
+  - [Color format converter](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)
+  - [Color mixer](/en-US/docs/Web/CSS/Guides/Colors/Color_mixer)

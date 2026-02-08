@@ -14,7 +14,7 @@ sidebar: security
 
 If data is sent over the web unencrypted, it can be intercepted by third parties, who can access and modify the data — this is often known as a [manipulator-in-the-middle](/en-US/docs/Glossary/MitM) (MiTM) attack. MiTM attacks have severe consequences for the security of your system.
 
-All requests and responses should therefore be sent over HTTPS, which uses TLS to encrypt the data. The modern web practically enforces this — all browsers are moving towards requiring [HTTPS](/en-US/docs/Glossary/HTTPS) by default, and many web features can only be used in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+All requests and responses should therefore be sent over HTTPS, which uses TLS to encrypt the data. The modern web practically enforces this — all browsers are moving towards requiring [HTTPS](/en-US/docs/Glossary/HTTPS) by default, and many web features can only be used in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ### Solution
 
@@ -26,7 +26,7 @@ You should set up your server software to use a secure configuration that enforc
 
 All resources, regardless of their origin, should be loaded over secure channels.
 
-Secure (HTTPS) websites that attempt to load active resources such as JavaScript over insecure connections (HTTP) will be blocked by browsers. As a result, users will experience degraded UIs and [mixed content](/en-US/docs/Web/Security/Mixed_content) warnings. In the code below, for example, HTTP is being used incorrectly to load a JavaScript library:
+Secure (HTTPS) websites that attempt to load active resources such as JavaScript over insecure connections (HTTP) will be blocked by browsers. As a result, users will experience degraded UIs and [mixed content](/en-US/docs/Web/Security/Defenses/Mixed_content) warnings. In the code below, for example, HTTP is being used incorrectly to load a JavaScript library:
 
 ```html example-bad
 <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -141,7 +141,6 @@ Content-Security-Policy: upgrade-insecure-requests;
 
 ## See also
 
-- [Transport layer security (TLS)](/en-US/docs/Web/Security/Transport_Layer_Security)
-- [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency)
-- [Mixed content](/en-US/docs/Web/Security/Mixed_content)
-- [Weak signature algorithms](/en-US/docs/Web/Security/Weak_Signature_Algorithm)
+- [Transport layer security (TLS)](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)
+- [Certificate Transparency](/en-US/docs/Web/Security/Defenses/Certificate_Transparency)
+- [Mixed content](/en-US/docs/Web/Security/Defenses/Mixed_content)

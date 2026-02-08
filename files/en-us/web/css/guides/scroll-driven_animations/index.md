@@ -11,7 +11,7 @@ The **CSS scroll-driven animations** module provides functionality that builds o
 
 ## Scroll-driven animations in action
 
-You can define the scroller that controls the animation either by naming the animation or with the {{cssxref("scroll")}} function.
+You can define the scroller that controls the animation either by naming the animation or with the {{cssxref("animation-timeline/scroll", "scroll()")}} function.
 
 ```html hidden live-sample___scroll_animation
 <main>
@@ -96,11 +96,7 @@ div::after {
       content: "Your browser doesn't support scroll-driven animations.";
       background-color: wheat;
       display: block;
-      width: 100%;
       text-align: center;
-    }
-    body > * {
-      display: none;
     }
   }
 }
@@ -128,16 +124,13 @@ Scroll the element in the inline direction to see its background color change. S
 
 ### Data types and values
 
-<!--
 - {{cssxref("axis")}}
-- {{cssxref("scroller")}} -->
-
-- [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Properties/animation-range#timeline-range-name)
+- {{cssxref("timeline-range-name")}}
 
 ### Functions
 
-- [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
-- [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view)
+- {{cssxref("animation-timeline/scroll", "scroll()")}}
+- {{cssxref("animation-timeline/view", "view()")}}
 
 ### Interfaces
 
@@ -153,7 +146,8 @@ Scroll the element in the inline direction to see its background color change. S
 
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
   - {{cssxref("animation-timeline")}}
-  - {{cssxref("@keyframes")}}
+  - {{cssxref("@keyframes")}} at-rule
+  - [`<keyframe-selector>`](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
   - {{glossary("Scroll container")}}
   - [Scrollport](/en-US/docs/Glossary/Scroll_container#scrollport)

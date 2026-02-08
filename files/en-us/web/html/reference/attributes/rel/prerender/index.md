@@ -1,5 +1,5 @@
 ---
-title: rel=prerender
+title: rel="prerender"
 slug: Web/HTML/Reference/Attributes/rel/prerender
 page-type: html-attribute-value
 status:

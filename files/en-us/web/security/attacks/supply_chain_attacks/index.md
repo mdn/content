@@ -71,7 +71,7 @@ The [Concise Guide for Evaluating Open Source Software](https://best.openssf.org
 
 ### Updating dependencies
 
-Once you have added a dependency to your project, the dependency's supplier will typically release new versions with new features, bug fixes, and security fixes. You will usually want to take advantage of these updates, by implementing a mechanism to keep the dependency up to date. Tools such as GitHub's [dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) can help with this, by detecting new versions of dependencies and automatically opening pull requests to update your project.
+Once you have added a dependency to your project, the dependency's supplier will typically release new versions with new features, bug fixes, and security fixes. You will usually want to take advantage of these updates, by implementing a mechanism to keep the dependency up to date. Tools such as GitHub's [dependabot](https://docs.github.com/en/code-security/tutorials/secure-your-dependencies/dependabot-quickstart-guide) can help with this, by detecting new versions of dependencies and automatically opening pull requests to update your project.
 
 However, updating dependencies too eagerly comes with its own risks. For example, suppose you add a dependency on a trustworthy third-party package. An attacker then gets control of the package developer's account, and publishes a malicious update. If you immediately accept the update, your project is compromised.
 
@@ -160,7 +160,7 @@ The SBOM also lists vulnerabilities that have been identified in the product's d
 
 #### Creating an SBOM
 
-You can generate an SBOM for a product using a separate tool such as [cdxgen](https://cyclonedx.github.io/cdxgen/#/) or a command such as [`npm sbom`](https://docs.npmjs.com/cli/commands/npm-sbom/). An SBOM is usually generated as part of the build process, although it is possible to generate one at other stages of the software lifecycle.
+You can generate an SBOM for a product using a separate tool such as [cdxgen](https://cdxgen.github.io/cdxgen/#/) or a command such as [`npm sbom`](https://docs.npmjs.com/cli/commands/npm-sbom/). An SBOM is usually generated as part of the build process, although it is possible to generate one at other stages of the software lifecycle.
 
 #### Using an SBOM
 
@@ -194,7 +194,7 @@ This does add an extra maintenance burden: every time the source changes (for ex
 
 The {{htmlelement("link")}} element also supports the `integrity` attribute, so you can (and should) use it for CSS stylesheets as well as scripts.
 
-See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) for more details.
+See [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) for more details.
 
 ## Defense summary checklist
 
@@ -209,3 +209,8 @@ See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) for 
 ## See also
 
 - [Software Supply Chain Security](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
+- [OpenJS Security Collaboration Space](https://github.com/openjs-foundation/security-collab-space?tab=readme-ov-file#documents--guides) - A central hub for security guidance and resources for the JavaScript ecosystem, including:
+  - [SBOM and Supply Chain Security Challenges](https://github.com/openjs-foundation/security-collab-space/blob/main/docs/SBOM/OpenJS-SBOM-CSCRM-Challenges-Recommendations.md) - Recommendations for JavaScript SBOM and software attestation
+  - [Security Compliance Guidelines](https://github.com/openjs-foundation/security-collab-space/blob/main/docs/OpenJS_Security_Compliance_Guidelines/v1/readme.md) - A comprehensive checklist for operational security
+  - [npm Security Best Practices Guide](https://github.com/openjs-foundation/security-collab-space/blob/main/docs/npm-security-best-practices.md) - Best practices for securing npm packages and dependencies
+  - [Secure Releases Guide](https://github.com/openjs-foundation/security-collab-space/blob/main/docs/Secure_Releases/secure-releases.md) - Guidelines for creating secure software releases

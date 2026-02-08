@@ -40,7 +40,7 @@ Use `@import` together with the `layer` keyword or `layer()` function to import 
 
 ## Description
 
-Imported rules must come before all other types of rules, except {{CSSxRef("@charset")}} rules and layer creating [`@layer`](/en-US/docs/Web/CSS/Reference/At-rules/@layer) statements.
+Imported rules must come before all other types of rules, except {{CSSxRef("@charset")}} rules and layer creating {{cssxref("@layer")}} statements.
 
 ```css example-bad
 * {
@@ -82,7 +82,7 @@ The `@import` rule can also be used to create a [cascade layer](/en-US/docs/Web/
 
 ```css
 @import "custom.css";
-@import url("chrome://communicator/skin/");
+@import url("chrome://communicator/skin/communicator.css");
 ```
 
 The two examples above show how to specify the _url_ as a `<string>` and as a `url()` function.

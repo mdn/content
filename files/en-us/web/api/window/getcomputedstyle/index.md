@@ -69,10 +69,10 @@ However the `element.style` object can also be used to **set** styles on that el
 
 ### Color values
 
-For compatibility reasons, serialized color values specified using the traditional sRGB color space are expressed as [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) colors if the alpha channel value is exactly `1`, and `rgba()` colors otherwise.
+For compatibility reasons, serialized color values specified using the traditional sRGB color space are expressed as {{cssxref("color_value/rgb", "rgb()")}} colors if the alpha channel value is exactly `1`, and `rgba()` colors otherwise.
 The legacy syntax with commas is used, with commas as separators (for example `rgb(255, 0, 0)`).
 
-For other {{glossary("color space","color spaces")}} the values are serialized using the corresponding functional expressions: [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab), [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch) [`oklab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklab), [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch), [`color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color).
+For other {{glossary("color space","color spaces")}} the values are serialized using the corresponding functional expressions: {{cssxref("color_value/lab", "lab()")}}, {{cssxref("color_value/lch", "lch()")}} {{cssxref("color_value/oklab", "oklab()")}}, {{cssxref("color_value/oklch", "oklch()")}}, {{cssxref("color_value/color", "color()")}}.
 
 ## Examples
 

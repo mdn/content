@@ -3,22 +3,14 @@ title: "Sanitizer: removeUnsafe() method"
 short-title: removeUnsafe()
 slug: Web/API/Sanitizer/removeUnsafe
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Sanitizer.removeUnsafe
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
 The **`removeUnsafe()`** method of the {{domxref("Sanitizer")}} interface configures the sanitizer configuration so that it will remove all elements, attributes, and event handler content attributes that are considered XSS-unsafe by the browser.
 
-The unsafe elements and attributes are added to the configuration by calling {{domxref('Sanitizer.removeElement()')}} and {{domxref('Sanitizer.removeAttribute()')}} for each, respectively.
-This adds them to the sanitizer configuration disallow lists: [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) and [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes_2), and removes them (if present) from the configuration allow lists: [`elements`](/en-US/docs/Web/API/SanitizerConfig#removeelements), [`replaceWithChildrenElements`](/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements) and [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes).
-
 The method can be called to make any custom configuration XSS-safe.
-If used with a configuration that uses the allow lists, it will remove the XSS-unsafe entities from those lists.
-If used with a configuration that uses only the disallow ("remove") lists, then it ensures the configuration includes the unsafe elements in those lists.
-
 Note that if you're using the sanitizer with one of the "safe" HTML setters, such as {{domxref("Element.setHTML()")}} and {{domxref("ShadowRoot.setHTML()")}}, you do not need to call this method to make the sanitizer safe.
 When used in these setters the method is called implicitly, without modifying the `Sanitizer` instance that is passed.
 
@@ -34,7 +26,7 @@ None.
 
 ### Return value
 
-None (`undefined`).
+`true` if the operation removed any elements, attributes, or event handler content attributes that are considered XSS-unsafe, and `false` if no elements or attributes were removed.
 
 ## Examples
 

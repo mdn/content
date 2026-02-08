@@ -111,3 +111,4 @@ See the article about the {{HTMLElement("ruby")}} element for further examples.
 - {{HTMLElement("rt")}}
 - {{HTMLElement("rp")}}
 - {{HTMLElement("rtc")}}
+- [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module

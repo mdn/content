@@ -23,6 +23,8 @@ In the case of a same named group of {{HTMLElement("input/checkbox","checkbox")}
 > [!NOTE]
 > Setting [`aria-required="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) tells a screen reader that an element (any element) is required, but has no bearing on the optionality of the element.
 
+## Description
+
 ### Attribute interactions
 
 Because a read-only field cannot be changed, `required` does not have any effect on inputs with the [`readonly`](/en-US/docs/Web/HTML/Reference/Attributes/readonly) attribute also specified.
