@@ -33,7 +33,11 @@ input:autofill {
   </p>
   <p>
     <label for="country">Country</label>
-    <input id="country" name="country" type="text" autocomplete="country-name" />
+    <input
+      id="country"
+      name="country"
+      type="text"
+      autocomplete="country-name" />
   </p>
 </form>
 ```
