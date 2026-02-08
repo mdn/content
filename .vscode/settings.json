@@ -7,5 +7,8 @@
     "liveshare.diagnosticLogging": true,
     "liveshare.alwaysFollowHost": true,
     "liveshare.allowGuestTaskControl": true,
-    "liveshare.allowGuestDebugControl": true
+    "liveshare.allowGuestDebugControl": true,
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "main"
+    ]
 }
