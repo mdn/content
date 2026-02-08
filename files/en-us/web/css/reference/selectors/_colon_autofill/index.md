@@ -25,15 +25,15 @@ input:autofill {
   <p>Click on the text box and choose any option suggested by your browser.</p>
   <p>
     <label for="name">Name</label>
-    <input id="name" name="n" type="text" autocomplete="given-name" />
+    <input id="name" name="name" type="text" autocomplete="given-name" />
   </p>
   <p>
     <label for="email">Email Address</label>
-    <input id="email" name="e" type="email" autocomplete="email" />
+    <input id="email" name="email" type="email" autocomplete="email" />
   </p>
   <p>
     <label for="country">Country</label>
-    <input id="country" name="c" type="text" autocomplete="country-name" />
+    <input id="country" name="country" type="text" autocomplete="country-name" />
   </p>
 </form>
 ```
