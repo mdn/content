@@ -46,7 +46,7 @@ let results = await browser.scripting.executeScript(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of `InjectionResult` objects, which represent the result of the injected script in every injected frame.
+A {{JSxRef("Promise")}} that fulfills with an array of `InjectionResult` objects, which represent the result of the injected script in every injected frame.
 
 The promise is rejected if the injection fails, such as when the injection target is invalid. When script execution has started, its result is included in the result, whether successful (as `result`) or unsuccessfully (as `error`).
 
@@ -61,7 +61,7 @@ Each `InjectionResult` object has these properties:
 
     Chrome does not support the `error` property yet (see [Issue 1271527: Propagate errors from scripting.executeScript to InjectionResult](https://crbug.com/1271527)). As an alternative, runtime errors can be caught by wrapping the code to execute in a try-catch statement. Uncaught errors are also reported to the console of the target tab.
 
-The result of the script is the last evaluated statement, which is similar to the results seen if you executed the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (not any `console.log()` output). For example, consider a script like this:
+The result of a script is the value produced by the last evaluated statement. If the last statement produces a Promise, the result is the settled value of that Promise. This is similar to the results seen if you execute the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (excluding any `console.log()` output). For example, consider a script like this:
 
 ```js
 let foo = "my result";
