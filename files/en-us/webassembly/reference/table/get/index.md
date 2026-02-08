@@ -97,7 +97,7 @@ This example shows how to create a Wasm table in JavaScript and store strings in
 
 In our script, we start by grabbing a reference to a {{htmlelement("p")}} element that we will output results to. We then create a Wasm table from JavaScript using the [`WebAssembly.Table`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/Table) constructor, giving it an initial size of `0` and setting it to contain `externref` values.
 
-Next, we grow the size of the table to two elements using the [`table.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/grow) method, and use the [`table.set()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/set) method to store a different string in each table element.
+Next, we increase the size of the table to two elements using the [`table.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/grow) method, and use the [`table.set()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/set) method to store a different string in each table element.
 
 ```js live-sample___basic-usage
 const outputElem = document.querySelector("p");

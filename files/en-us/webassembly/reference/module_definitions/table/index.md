@@ -69,7 +69,7 @@ table identifying_name initial_size max_size storage_type
 
 WebAssembly tables allow storage of reference values separate from byte-oriented WebAssembly memories. The primary use-case is for storing function references that can be used with `call_indirect` to support indirect function calls for languages that have them. The `table` instruction creates a new table.
 
-A table has to be given an initial size and storage type. This example creates a table wth two storage slots, which will only store references to functions created inside Wasm:
+A table has to be given an initial size and storage type. This example creates a table wth two storage slots, which will only store references to functions created inside Wasm (signified by [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)):
 
 ```wat
 (table 2 funcref)
@@ -81,10 +81,81 @@ Optionally, you can also provide an identifier, which can be used to identify th
 (table $mytable 2 10 funcref)
 ```
 
-To call a function via a table later on, you have to reference the table and the index value the function refernce is stored at. The following example uses `call_indirect`:
+The following defines a function type, defines a basic function with that type that returns an `i32`, and and forward-declares it using `(elem declare func $f1)` so it can be referenced later on.
+
+```wat
+(type $ret_i32 (func (result i32)))
+
+(func $f1 (type $ret_i32)
+  (i32.const 42)
+)
+
+(elem declare func $f1)
+```
+
+To call a function referenced in a table, you have to reference the table and the index value the function reference is stored at. The following example uses `call_indirect`:
 
 ```wat
 (call_indirect (type $ret_i32) (local.get $index))
+```
+
+### External references
+
+You can also store external references defined in JavaScript inside a Wasm table, by specifying the [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) keyword. For example:
+
+```wat
+(table $mytable 2 10 externref)
+```
+
+### Multiple tables
+
+You can create multiple tables in the same Wasm module, for example:
+
+```wat
+(table $table_1 1 2 funcref)
+
+(table $table_2 1 2 funcref)
+```
+
+You could use a function like this to populate each table with a different function:
+
+```wat
+(func $populate
+  (table.set $table_1
+    (i32.const 0)
+    (ref.func $f1)
+  )
+  (table.set $table_2
+    (i32.const 0)
+    (ref.func $f2)
+  )
+)
+```
+
+You could then call the `$populate` function and use `call_indirect` to call the functions referenced in each table. The following snippet references the tables by their [identifying name](#identifying_name):
+
+```wat
+(func (export "accessTable")
+  (call $populate)
+  (call_indirect $table_1 (type $ret_i32) (i32.const 0))
+  (call_indirect $table_2 (type $ret_i32) (i32.const 0))
+
+  ...
+)
+```
+
+But you could instead reference the tables by their index values (`0` specifies the first table in the module, `1` the second table, etc.):
+
+```wat
+(call_indirect 0 (type $ret_i32) (i32.const 0))
+(call_indirect 1 (type $ret_i32) (i32.const 0))
+```
+
+If you don't specify an indentifying name _or_ an index, the index `0` is assumed:
+
+```wat
+;; Accesses the table with index 0
+(call_indirect (type $ret_i32) (i32.const 0))
 ```
 
 ## Examples
