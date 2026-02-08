@@ -38,7 +38,7 @@ The [HTML guides](/en-US/docs/Web/HTML/Guides) help you build with HTML on the w
 - [Using HTML form validation and the Constraint Validation API](/en-US/docs/Web/HTML/Guides/Constraint_validation)
   - : HTML5 introduced constraint validation to ease form validation on the client side. Basic constraints can be checked without JavaScript by setting attributes on form elements.
 - [Content categories](/en-US/docs/Web/HTML/Guides/Content_categories)
-  - : HTML is comprised of several kinds of content, each of which is allowed to be used in certain contexts and is disallowed in others. Similarly, each context has a set of other content categories it can contain and elements that can or can't be used in them. This is a guide to these categories.
+  - : HTML comprises of several kinds of content, each of which is allowed to be used in certain contexts and is disallowed in others. Similarly, each context has a set of other content categories it can contain and elements that can or can't be used in them. This is a guide to these categories.
 - [Using date and time formats in HTML](/en-US/docs/Web/HTML/Guides/Date_and_time_formats)
   - : Certain HTML elements use date and/or time values. This guide describes the formats of the strings that specify these values.
 - [Using microdata in HTML](/en-US/docs/Web/HTML/Guides/Microdata)
