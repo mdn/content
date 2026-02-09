@@ -17,9 +17,11 @@ For hardware and platforms that do not report tilt or angle, the value is `0`.
 
 ## Value
 
-An angle in radians between `0` and `π/2` where `0` is parallel to the device surface (X-Y plane), and `π/2` is perpendicular to the surface.
+An angle in radians between `0` and `π/2`, where `0` is parallel to the device surface (X-Y plane), and `π/2` is perpendicular to the surface.
 
 ## Example
+
+### Basic usage
 
 ```js
 someElement.addEventListener(

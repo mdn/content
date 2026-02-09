@@ -14,9 +14,11 @@ For hardware and platforms that do not report tilt or angle, the value is `0`. W
 
 ## Value
 
-An angle in radians between `0` and `2π` where `0` represents a transducer whose cap is pointing in the direction of increasing X values (point to "3 o'clock" if looking straight down) on the X-Y plane, and the values progressively increase when going clockwise (`π/2` at "6 o'clock", `π` at "9 o'clock", `3π/2` at "12 o'clock").
+An angle in radians between `0` and `2π`, where `0` represents a transducer whose cap is pointing in the direction of increasing X values (point to "3 o'clock" if looking straight down) on the X-Y plane, and the values progressively increase when going clockwise (`π/2` at "6 o'clock", `π` at "9 o'clock", `3π/2` at "12 o'clock").
 
 ## Example
+
+### Basic usage
 
 ```js
 someElement.addEventListener(

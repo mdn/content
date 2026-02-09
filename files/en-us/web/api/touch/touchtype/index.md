@@ -8,7 +8,7 @@ browser-compat: api.Touch.touchType
 
 {{ APIRef("Touch Events") }}
 
-The **`touchType`** read-only property of the {{domxref("Touch")}} interface returns the type of device that triggered the touch, indicating whether it was a direct touch from a finger or from a stylus.
+The **`touchType`** read-only property of the {{domxref("Touch")}} interface returns the type of device that triggered the touch, such as a stylus, or direct touch from a finger.
 
 ## Value
 
@@ -20,6 +20,8 @@ A string from the `TouchType` enumeration. Possible values are:
   - : The touch was made using a stylus or pen device.
 
 ## Example
+
+### Basic usage
 
 ```js
 someElement.addEventListener(
