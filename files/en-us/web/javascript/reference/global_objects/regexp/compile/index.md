@@ -16,8 +16,6 @@ sidebar: jsref
 
 The **`compile()`** method of {{jsxref("RegExp")}} instances is used to recompile a regular expression with new source and flags after the `RegExp` object has already been created.
 
-The method will throw a {{jsxref("TypeError")}} if called on a subclass of `RegExp`, or on a `RegExp` that was defined in a different realm.
-
 ## Syntax
 
 ```js-nolint
@@ -34,6 +32,12 @@ compile(pattern, flags)
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+#### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the `this` value is not an instance of the current realm's `RegExp` constructor.
+    This includes a subclass of `RegExp` and the `RegExp` constructor from a different realm.
 
 ## Examples
 
