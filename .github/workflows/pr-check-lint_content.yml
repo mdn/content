@@ -1,6 +1,9 @@
 name: Lint and review content files
 
 on:
+  pull_request:
+    paths:
+      - .github/workflows/pr-check-lint_content.yml
   pull_request_target:
     paths:
       - .nvmrc
