@@ -14,7 +14,7 @@ An `CSSFontFeatureValuesMap` instance is a read-only [Map-like object](/en-US/do
 ## Instance property
 
 - {{domxref('CSSFontFeatureValuesMap.size')}}
-  - : Returns an unsigned long integer containing the size of the `CSSFontFeatureValuesMap` object.
+  - : Returns a positive integer containing the size of the `CSSFontFeatureValuesMap` object.
 
 ## Instance Method
 
