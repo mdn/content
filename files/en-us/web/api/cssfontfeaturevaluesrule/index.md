@@ -56,7 +56,7 @@ We then use the CSSOM to read these declaration as `CSSFontFeatureValuesRule` in
 
 #### CSS
 
-```css
+```css-nolint
 /* At-rule for "nice-style" in Font One */
 @font-feature-values Font One {
   @styleset {
