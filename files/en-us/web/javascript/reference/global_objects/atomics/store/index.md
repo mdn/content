@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Atomics.store
 sidebar: jsref
 ---
 
-The **`Atomics.store()`** static
-method stores a given value at the given position in the array and returns that value.
+The **`Atomics.store()`** static method stores a given value at the given position in the array and returns that value.
 
 {{InteractiveExample("JavaScript Demo: Atomics.store()")}}
 
@@ -34,13 +33,9 @@ Atomics.store(typedArray, index, value)
 ### Parameters
 
 - `typedArray`
-  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
-    {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
-    {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or
-    {{jsxref("BigUint64Array")}}.
+  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or {{jsxref("BigUint64Array")}}.
 - `index`
-  - : The position in the `typedArray` to store a
-    `value` in.
+  - : The position in the `typedArray` to store a `value` in.
 - `value`
   - : The number to store.
 

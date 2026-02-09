@@ -7,10 +7,8 @@ browser-compat: javascript.builtins.Atomics.and
 sidebar: jsref
 ---
 
-The **`Atomics.and()`** static
-method computes a bitwise AND with a given value at a given position in the array, and
-returns the old value at that position. This atomic operation guarantees that no other
-write happens until the modified value is written back.
+The **`Atomics.and()`** static method computes a bitwise AND with a given value at a given position in the array, and returns the old value at that position.
+This atomic operation guarantees that no other write happens until the modified value is written back.
 
 {{InteractiveExample("JavaScript Demo: Atomics.and()")}}
 
@@ -37,10 +35,8 @@ Atomics.and(typedArray, index, value)
 ### Parameters
 
 - `typedArray`
-  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
-    {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
-    {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or
-    {{jsxref("BigUint64Array")}}.
+  - : An integer typed array.
+    One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or {{jsxref("BigUint64Array")}}.
 - `index`
   - : The position in the `typedArray` to compute the bitwise AND.
 - `value`
@@ -60,8 +56,7 @@ The old value at the given position
 
 ## Description
 
-The bitwise AND operation only yields 1, if both `a` and `b` are
-1\. The truth table for the AND operation is:
+The bitwise AND operation only yields 1, if both `a` and `b` are 1\. The truth table for the AND operation is:
 
 | `a` | `b` | `a & b` |
 | --- | --- | ------- |
@@ -70,8 +65,7 @@ The bitwise AND operation only yields 1, if both `a` and `b` are
 | 1   | 0   | 0       |
 | 1   | 1   | 1       |
 
-For example, a bitwise AND of `5 & 1` results in `0001` which
-is 1 in decimal.
+For example, a bitwise AND of `5 & 1` results in `0001` which is 1 in decimal.
 
 ```plain
 5  0101

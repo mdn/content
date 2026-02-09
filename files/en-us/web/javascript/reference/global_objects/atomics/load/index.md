@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Atomics.load
 sidebar: jsref
 ---
 
-The **`Atomics.load()`** static
-method returns a value at a given position in the array.
+The **`Atomics.load()`** static method returns a value at a given position in the array.
 
 {{InteractiveExample("JavaScript Demo: Atomics.load()")}}
 
@@ -35,10 +34,7 @@ Atomics.load(typedArray, index)
 ### Parameters
 
 - `typedArray`
-  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
-    {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
-    {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or
-    {{jsxref("BigUint64Array")}}.
+  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or {{jsxref("BigUint64Array")}}.
 - `index`
   - : The position in the `typedArray` to load from.
 

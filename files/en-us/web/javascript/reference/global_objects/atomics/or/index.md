@@ -7,10 +7,8 @@ browser-compat: javascript.builtins.Atomics.or
 sidebar: jsref
 ---
 
-The **`Atomics.or()`** static
-method computes a bitwise OR with a given value at a given position in the array, and
-returns the old value at that position. This atomic operation guarantees that no other
-write happens until the modified value is written back.
+The **`Atomics.or()`** static method computes a bitwise OR with a given value at a given position in the array, and returns the old value at that position.
+This atomic operation guarantees that no other write happens until the modified value is written back.
 
 {{InteractiveExample("JavaScript Demo: Atomics.or()")}}
 
@@ -37,10 +35,7 @@ Atomics.or(typedArray, index, value)
 ### Parameters
 
 - `typedArray`
-  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
-    {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
-    {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or
-    {{jsxref("BigUint64Array")}}.
+  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or {{jsxref("BigUint64Array")}}.
 - `index`
   - : The position in the `typedArray` to compute the bitwise OR.
 - `value`
@@ -70,8 +65,7 @@ The truth table for the OR operation is:
 | 1   | 0   | 1        |
 | 1   | 1   | 1        |
 
-For example, a bitwise OR of `5 | 1` results in `0101` which is 5
-in decimal.
+For example, a bitwise OR of `5 | 1` results in `0101` which is 5 in decimal.
 
 ```plain
 5  0101

@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Atomics.notify
 sidebar: jsref
 ---
 
-The **`Atomics.notify()`** static
-method notifies up some agents that are sleeping in the wait queue.
+The **`Atomics.notify()`** static method notifies up some agents that are sleeping in the wait queue.
 
 > [!NOTE]
 > This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
@@ -60,8 +59,7 @@ Atomics.wait(int32, 0, 0);
 console.log(int32[0]); // 123
 ```
 
-A writing thread stores a new value and notifies the waiting thread once it has
-written:
+A writing thread stores a new value and notifies the waiting thread once it has written:
 
 ```js
 console.log(int32[0]); // 0;

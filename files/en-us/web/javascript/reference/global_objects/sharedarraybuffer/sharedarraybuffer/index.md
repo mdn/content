@@ -43,16 +43,14 @@ new SharedArrayBuffer(length, options)
 
 ### Return value
 
-A new `SharedArrayBuffer` object of the specified size, with its {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} property set to the specified `maxByteLength` if one was specified. Its contents are
-initialized to 0.
+A new `SharedArrayBuffer` object of the specified size, with its {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} property set to the specified `maxByteLength` if one was specified.
+Its contents are initialized to 0.
 
 ## Examples
 
 ### Always use the new operator to create a SharedArrayBuffer
 
-`SharedArrayBuffer` constructors are required to be constructed with a
-{{jsxref("Operators/new", "new")}} operator. Calling a `SharedArrayBuffer`
-constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+`SharedArrayBuffer` constructors are required to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a `SharedArrayBuffer` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
 
 ```js example-bad
 const sab = SharedArrayBuffer(1024);
