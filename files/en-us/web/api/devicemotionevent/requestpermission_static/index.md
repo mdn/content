@@ -10,7 +10,7 @@ browser-compat: api.DeviceMotionEvent.requestPermission_static
 
 {{APIRef("Device Orientation Events")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The **`requestPermission()`** static method of the {{domxref("DeviceMotionEvent")}} interface requests the user's permission to access device motion data from the accelerometer and gyroscope sensors. This method must be called from a user gesture such as a click handler.
+The **`requestPermission()`** static method of the {{domxref("DeviceMotionEvent")}} interface requests the user's permission to access device motion data from the accelerometer and gyroscope sensors. This method requires {{Glossary("transient activation")}}, meaning that it must be triggered by a UI event such as a button click.
 
 ## Syntax
 
