@@ -7,7 +7,8 @@ name: PR review companion
 
 on:
   workflow_run:
-    workflows: ["PR Test", "PR Test Legacy"]
+    workflows:
+      - "PR Test"
     types:
       - completed
 
