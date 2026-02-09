@@ -27,7 +27,7 @@ The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gui
 
 @property --defaultSize {
   syntax: "<length> | <percentage>";
-  inherits: "true";
+  inherits: true;
   initial-value: 200px;
 }
 ```
