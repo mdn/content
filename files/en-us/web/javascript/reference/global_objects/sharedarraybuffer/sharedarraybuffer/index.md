@@ -12,16 +12,6 @@ sidebar: jsref
 
 The **`SharedArrayBuffer()`** constructor creates {{jsxref("SharedArrayBuffer")}} objects.
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer() constructor", "shorter")}}
-
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(8);
-
-console.log(buffer.byteLength);
-// Expected output: 8
-```
-
 ## Syntax
 
 ```js-nolint
@@ -47,6 +37,20 @@ A new `SharedArrayBuffer` object of the specified size, with its {{jsxref("Share
 Its contents are initialized to 0.
 
 ## Examples
+
+### Basic usage
+
+Create a buffer specifying its size in bytes.
+
+```js
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
+
+Note that `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
 ### Always use the new operator to create a SharedArrayBuffer
 

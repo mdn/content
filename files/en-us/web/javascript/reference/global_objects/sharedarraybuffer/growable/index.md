@@ -28,6 +28,8 @@ if (buffer.growable) {
 }
 ```
 
+Note that `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
+
 ## Specifications
 
 {{Specifications}}

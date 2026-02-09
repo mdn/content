@@ -9,21 +9,6 @@ sidebar: jsref
 
 The **`slice()`** method of {{jsxref("SharedArrayBuffer")}} instances returns a new `SharedArrayBuffer` whose contents are a copy of this `SharedArrayBuffer`'s bytes from `start`, inclusive, up to `end`, exclusive. If either `start` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.prototype.slice()")}}
-
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const int32View = new Int32Array(buffer); // Create the view
-// Produces Int32Array [0, 0, 0, 0]
-
-int32View[1] = 42;
-const sliced = new Int32Array(buffer.slice(4, 12));
-
-console.log(sliced);
-// Expected output: Int32Array [42, 0]
-```
-
 ## Syntax
 
 ```js-nolint
@@ -51,6 +36,23 @@ slice(start, end)
 A new {{jsxref("SharedArrayBuffer")}} containing the extracted elements.
 
 ## Examples
+
+### Basic usage
+
+```js
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const int32View = new Int32Array(buffer); // Create the view
+// Produces Int32Array [0, 0, 0, 0]
+
+int32View[1] = 42;
+const sliced = new Int32Array(buffer.slice(4, 12));
+
+console.log(sliced);
+// Expected output: Int32Array [42, 0]
+```
+
+Note that `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
 ### Using slice()
 
