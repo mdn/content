@@ -44,7 +44,7 @@ input:autofill {
 
 ## Description
 
-The `:auto-fill` pseudo-class selects {{htmlelement("input")}} elements containing un-edited content that was auto-filled by the user-agent. Autocompletion may occur when browser settings are set to enable autocompletion or the [`autocomplete` attribute](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) is set on the element itself.
+The `:autofill` pseudo-class selects {{htmlelement("input")}} elements containing un-edited content that was auto-filled by the user-agent. Autocompletion may occur when browser settings are set to enable autocompletion or the [`autocomplete` attribute](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) is set on the element itself.
 
 When the user uses the browser's autocompletion feature to autofill a form control, all the form controls that can be autofilled based on the selection get populated. These will all match the `:autofill` UI state. If the user edits a control, that control will no longer match `:autofill`, even if the value is the same as the autofilled value.
 
