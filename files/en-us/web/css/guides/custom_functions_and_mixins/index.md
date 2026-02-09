@@ -46,6 +46,31 @@ The CSS custom functions and mixins module also introduces the `@mixin`, `@apply
 - [Using CSS custom functions](/en-US/docs/Web/CSS/Guides/Custom_functions_and_mixins/Using_custom_functions)
   - : This guide teaches you how to use CSS custom functions and presents some typical use cases.
 
+## Related concepts
+
+[CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units)
+
+- {{cssxref("abs()")}}
+- {{cssxref("acos()")}}
+- {{cssxref("asin()")}}
+- {{cssxref("atan()")}}
+- {{cssxref("atan2()")}}
+- {{cssxref("calc()")}}
+- {{cssxref("clamp()")}}
+- {{cssxref("cos()")}}
+- {{cssxref("exp()")}}
+- {{cssxref("log()")}}
+- {{cssxref("max()")}}
+- {{cssxref("min()")}}
+- {{cssxref("mod()")}}
+- {{cssxref("pow()")}}
+- {{cssxref("rem()")}}
+- {{cssxref("round()")}}
+- {{cssxref("sign()")}}
+- {{cssxref("sin()")}}
+- {{cssxref("sqrt()")}}
+- {{cssxref("tan()")}}
+
 ## Specifications
 
 {{Specifications}}

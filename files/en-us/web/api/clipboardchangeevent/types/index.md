@@ -3,10 +3,12 @@ title: "ClipboardChangeEvent: types property"
 short-title: types
 slug: Web/API/ClipboardChangeEvent/types
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.ClipboardChangeEvent.types
 ---
 
-{{securecontext_header}}{{APIRef("Clipboard API")}}
+{{securecontext_header}}{{APIRef("Clipboard API")}}{{SeeCompatTable}}
 
 The **`types`** read-only property of the {{domxref("ClipboardChangeEvent")}} interface returns an array of strings representing the mandatory {{glossary("MIME type","MIME types")}} available on the system clipboard when the `ClipboardChangeEvent` event was fired. Optional types and custom formats are not included to limit {{glossary("fingerprinting")}}.
 

@@ -72,6 +72,10 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("MouseEvent.movementX", "movementX")}} and {{domxref("MouseEvent.movementY", "movementY")}} properties on the {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} event are now populated when the pointer is moved — previously these were set to zero.
   ([Firefox bug 1987671](https://bugzil.la/1987671)).
 
+- The {{domxref("NavigationPrecommitController.addHandler()")}} method of the [Navigation API](/en-US/docs/Web/API/Navigation_API) is now supported.
+  This can be used to dynamically register a post-commit navigation handler inside a pre-commit handler, which is useful when the actions of the committed navigation depend on data fetched in the pre-commit phase.
+  ([Firefox bug 2009004](https://bugzil.la/2009004)).
+
 #### DOM
 
 - The "paste" command can now be used with {{domxref("Document.execCommand()")}} in web content (in addition to web extensions).
