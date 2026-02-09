@@ -60,7 +60,7 @@ We then use the CSSOM to read these declaration as `CSSFontFeatureValuesRule` in
 /* At-rule for "nice-style" in Font One */
 @font-feature-values Font One {
   @styleset {
-    nice-style: 12; # name used to represent the alternate set of glyphs at index 12
+    nice-style: 12; /* name used to represent the alternate set of glyphs at index 12 */
   }
 }
 
