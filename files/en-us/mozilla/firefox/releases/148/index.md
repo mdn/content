@@ -46,6 +46,12 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
   They are useful when you need to combine data from multiple input iterators that are positionally aligned (the first value yielded by the first iterator corresponds to the first value yielded by the other iterators, and so on).
   ([Firefox bug 2003333](https://bugzil.la/2003333)).
 
+- The [TC39 Legacy RegExp features in JavaScript](https://github.com/tc39/proposal-regexp-legacy-features) proposal has been implemented.
+  This updates {{jsxref("RegExp.prototype.compile()")}} so that a {{jsxref("TypeError")}} is thrown if it is called on a subclass of {{jsxref("RegExp")}}, or if the method is called on a `RegExp` that was defined in a different realm.
+  `RegExp` static properties, such as `RegExp.$1` – `RegExp.$9` and `RegExp.input` (and its alias `RegExp.$_`), are normalized to be configurable and non-enumerable.
+  In particular this means that they can be deleted from the `RegExp` object.
+  ([Firefox bug 1306461](https://bugzil.la/1306461)).
+
 <!-- No notable changes. -->
 
 <!-- #### Removals -->
