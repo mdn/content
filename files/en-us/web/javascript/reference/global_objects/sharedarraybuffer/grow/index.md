@@ -37,6 +37,8 @@ The `grow()` method grows a `SharedArrayBuffer` to the size specified by the `ne
 
 ## Examples
 
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
+
 ### Using grow()
 
 In this example, we create a 8-byte buffer that is growable to a max length of 16 bytes, then check its {{jsxref("SharedArrayBuffer/growable", "growable")}} property, growing it if `growable` returns `true`:
@@ -49,8 +51,6 @@ if (buffer.growable) {
   buffer.grow(12);
 }
 ```
-
-Note that `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
 ## Specifications
 

@@ -50,11 +50,14 @@ A string which is either `"not-equal"`, `"ok"`, or `"timed-out"`.
 
 ## Examples
 
-### Using wait()
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
+
+### Using `wait()`
 
 Given a shared `Int32Array`:
 
 ```js
+// Create a SharedArrayBuffer with a size in bytes
 const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```

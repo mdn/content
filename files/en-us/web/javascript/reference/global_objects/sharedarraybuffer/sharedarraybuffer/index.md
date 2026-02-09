@@ -38,6 +38,8 @@ Its contents are initialized to 0.
 
 ## Examples
 
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
+
 ### Basic usage
 
 Create a buffer specifying its size in bytes.
@@ -49,8 +51,6 @@ const buffer = new SharedArrayBuffer(8);
 console.log(buffer.byteLength);
 // Expected output: 8
 ```
-
-Note that `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
 ### Always use the new operator to create a SharedArrayBuffer
 

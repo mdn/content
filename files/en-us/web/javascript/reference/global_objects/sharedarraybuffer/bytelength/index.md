@@ -15,14 +15,14 @@ The `byteLength` property is an accessor property whose set accessor function is
 
 ## Examples
 
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
+
 ### Using byteLength
 
 ```js
 const sab = new SharedArrayBuffer(1024);
 sab.byteLength; // 1024
 ```
-
-Note that `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
 ## Specifications
 

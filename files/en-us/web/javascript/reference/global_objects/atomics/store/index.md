@@ -9,21 +9,6 @@ sidebar: jsref
 
 The **`Atomics.store()`** static method stores a given value at the given position in the array and returns that value.
 
-{{InteractiveExample("JavaScript Demo: Atomics.store()")}}
-
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
-uint8[0] = 5;
-
-console.log(Atomics.store(uint8, 0, 2));
-// Expected output: 2
-
-console.log(Atomics.load(uint8, 0));
-// Expected output: 2
-```
-
 ## Syntax
 
 ```js-nolint
@@ -52,14 +37,21 @@ The value that has been stored.
 
 ## Examples
 
-### Using store()
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
+
+### Using `store()`
 
 ```js
+// Create a SharedArrayBuffer with a size in bytes
 const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
+uint8[0] = 5;
 
-Atomics.store(ta, 0, 12); // 12
+Atomics.store(ta, 0, 12); // returns 12, the new value
+Atomics.load(ta, 0); // returns 12, the new value
 ```
+
+Note that unlike many other `Atomic` methods, `store()` returns the new value instead of the old value.
 
 ## Specifications
 

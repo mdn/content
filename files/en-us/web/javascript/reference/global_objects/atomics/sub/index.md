@@ -10,22 +10,6 @@ sidebar: jsref
 The **`Atomics.sub()`** static method subtracts a given value at a given position in the array and returns the old value at that position.
 This atomic operation guarantees that no other write happens until the modified value is written back.
 
-{{InteractiveExample("JavaScript Demo: Atomics.sub()")}}
-
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
-uint8[0] = 7;
-
-// 7 - 2 = 5
-console.log(Atomics.sub(uint8, 0, 2));
-// Expected output: 7
-
-console.log(Atomics.load(uint8, 0));
-// Expected output: 5
-```
-
 ## Syntax
 
 ```js-nolint
@@ -54,15 +38,18 @@ The old value at the given position (`typedArray[index]`).
 
 ## Examples
 
-### Using sub
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
+
+### Using `sub()`
 
 ```js
+// Create a SharedArrayBuffer with a size in bytes
 const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 48;
 
 Atomics.sub(ta, 0, 12); // returns 48, the old value
-Atomics.load(ta, 0); // 36
+Atomics.load(ta, 0); // returns 36, the new/current value
 ```
 
 ## Specifications

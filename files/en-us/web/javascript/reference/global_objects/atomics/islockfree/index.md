@@ -41,7 +41,7 @@ A `true` or `false` value indicating whether the operation is lock free.
 
 ## Examples
 
-### Using isLockFree
+### Using `isLockFree()`
 
 ```js
 Atomics.isLockFree(1); // true (platform-dependent)

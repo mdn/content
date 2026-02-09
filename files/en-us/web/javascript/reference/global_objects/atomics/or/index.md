@@ -10,22 +10,6 @@ sidebar: jsref
 The **`Atomics.or()`** static method computes a bitwise OR with a given value at a given position in the array, and returns the old value at that position.
 This atomic operation guarantees that no other write happens until the modified value is written back.
 
-{{InteractiveExample("JavaScript Demo: Atomics.or()")}}
-
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
-uint8[0] = 5;
-
-// 5 (0101) OR 2 (0010) = 7 (0111)
-console.log(Atomics.or(uint8, 0, 2));
-// Expected output: 5
-
-console.log(Atomics.load(uint8, 0));
-// Expected output: 7
-```
-
 ## Syntax
 
 ```js-nolint
@@ -76,15 +60,19 @@ For example, a bitwise OR of `5 | 1` results in `0101` which is 5 in decimal.
 
 ## Examples
 
-### Using or
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
+
+### Using `or()`
 
 ```js
+// Create a SharedArrayBuffer with a size in bytes
 const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
-ta[0] = 2;
+ta[0] = 5;
 
-Atomics.or(ta, 0, 1); // returns 2, the old value
-Atomics.load(ta, 0); // 3
+// 5 (0101) OR 2 (0010) = 7 (0111)
+Atomics.or(ta, 0, 2); // returns 5, the old value
+Atomics.load(ta, 0); // returns 7, the new/current value
 ```
 
 ## Specifications

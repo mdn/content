@@ -37,6 +37,8 @@ A new {{jsxref("SharedArrayBuffer")}} containing the extracted elements.
 
 ## Examples
 
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
+
 ### Basic usage
 
 ```js
@@ -51,8 +53,6 @@ const sliced = new Int32Array(buffer.slice(4, 12));
 console.log(sliced);
 // Expected output: Int32Array [42, 0]
 ```
-
-Note that `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
 ### Using slice()
 
