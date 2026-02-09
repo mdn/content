@@ -15,7 +15,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number }}
+  group: ci-${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
@@ -82,8 +82,8 @@ jobs:
           git config --global user.name "mdn-bot"
 
           # Remove non-Markdown files from HEAD.
-          find pr_head/files -type f ! -name '*.md' -delete
-          git commit --no-status -m "Remove non-Markdown files from PR head" .
+          find files -type f ! -name '*.md' -delete
+          git commit --quiet -m "Remove non-Markdown files from PR head" files
 
           # Remove files from BASE.
           rm -r files *.md
