@@ -67,7 +67,9 @@ jobs:
           git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
           git config --global user.name "mdn-bot"
 
+          # Move Markdown files from HEAD.
           rm -r files *.md
+          find pr_head/files -type f ! -name '*.md' -delete
           mv pr_head/files pr_head/*.md .
           rm -r pr_head
 
