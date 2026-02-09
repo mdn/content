@@ -67,10 +67,16 @@ jobs:
           git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
           git config --global user.name "mdn-bot"
 
-          # Move Markdown files from HEAD.
+          # Remove files from BASE.
           rm -r files *.md
+
+          # Remove non-Markdown files from HEAD.
           find pr_head/files -type f ! -name '*.md' -delete
+
+          # Move Markdown files from HEAD into BASE.
           mv pr_head/files pr_head/*.md .
+
+          # Remove HEAD checkout.
           rm -r pr_head
 
           # To avoid contents of PR getting into the diff that we are going to generate
