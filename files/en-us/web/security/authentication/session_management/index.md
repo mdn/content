@@ -47,7 +47,7 @@ The defense against this is to implement the usual [defenses against XSS](/en-US
 
 ### Session fixation
 
-Ina session fixation attack, the attacker chooses a session ID value, and then convinces the website to use this value as the session ID for the target user. The attacker can then impersonate the user, because they know the ID. In this attack, the attacker doesn't have to steal the ID, because they knew it all along.
+In a session fixation attack, the attacker chooses a session ID value, and then convinces the website to use this value as the session ID for the target user. The attacker can then impersonate the user, because they know the ID. In this attack, the attacker doesn't have to steal the ID, because they knew it all along.
 
 For example, suppose the target website expects to see the session ID included as a URL parameter in requests that the client makes. Suppose also that initially, the target user has an account on the target website but is not signed in.
 
