@@ -30,7 +30,12 @@ pre-commit:
       run: node scripts/log-url-issues.js
 
     - name: Run unit tests
-      glob: "tests/**/*.*"
+      glob:
+        - "*.*"
+        - "scripts/**"
+        - "tests/**"
+      exclude:
+        - "*.md"
       run: npm test
 
     - name: Fix markdown

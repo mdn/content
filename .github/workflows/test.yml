@@ -5,6 +5,11 @@ on:
     branches:
       - main
   pull_request:
+    paths:
+      - "*"
+      - "scripts/**"
+      - "tests/**"
+      - "!**/*.md"
 
 # No GITHUB_TOKEN permissions, as we only use it to increase API limit.
 permissions: {}
