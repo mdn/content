@@ -25,7 +25,7 @@ Although the `swash` property itself is read-only in the sense that you can't re
 ```css
 @font-feature-values "MonteCarlo" {
   @swash {
-    my-swashes: 1;
+    my-swashes: 1;  /* Custom name for a particular set of swash alternate glyphs */
   }
 }
 ```
