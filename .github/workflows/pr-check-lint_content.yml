@@ -81,6 +81,10 @@ jobs:
           git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
           git config --global user.name "mdn-bot"
 
+          # Remove non-Markdown files from HEAD.
+          find pr_head/files -type f ! -name '*.md' -delete
+          git commit --no-status -m "Remove non-Markdown files from PR head" .
+
           # Remove files from BASE.
           rm -r files *.md
 
@@ -97,7 +101,7 @@ jobs:
           # after running the linters, here we make a dummy commit.
           # Note, this commit is not getting pushed.
           git add .
-          git commit -m "Code from PR head"
+          git commit -m "Use Markdown files from PR head"
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
