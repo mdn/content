@@ -33,7 +33,7 @@ compile(pattern, flags)
 
 None ({{jsxref("undefined")}}).
 
-#### Exceptions
+### Exceptions
 
 - {{jsxref("TypeError")}}
   - : Thrown if the `this` value is not an instance of the current realm's `RegExp` constructor.
