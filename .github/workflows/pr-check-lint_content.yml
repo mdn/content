@@ -100,8 +100,7 @@ jobs:
           # To avoid contents of PR getting into the diff that we are going to generate
           # after running the linters, here we make a dummy commit.
           # Note, this commit is not getting pushed.
-          git add .
-          git commit -m "Use Markdown files from PR head"
+          git commit -m "Use Markdown files from PR head" .
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
