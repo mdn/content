@@ -73,7 +73,9 @@ We then use the CSSOM to read these declaration as `CSSFontFeatureValuesRule` in
 
 /* Apply the at-rules with a single declaration */
 .nice-look {
-  font-variant-alternates: styleset(nice-style); /* name selects different index for same alternate in different fonts */
+  font-variant-alternates: styleset(
+    nice-style
+  ); /* name selects different index for same alternate in different fonts */
 }
 ```
 
