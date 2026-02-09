@@ -54,7 +54,7 @@ jobs:
     env:
       PR_NUMBER: ${{ needs.identify-pr.outputs.pr-number }}
       PREFIX: pr${{ needs.identify-pr.outputs.pr-number }}
-      STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.pull_requests[0].head.sha }}
+      STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}
       STATUS_CONTEXT: pr-review-companion
       STATUS_TARGET: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
@@ -73,7 +73,7 @@ jobs:
         run: echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
 
       - name: Mark status as pending
-        if: steps.check.outputs.HAS_ARTIFACT && github.event.workflow_run.pull_requests[0].number
+        if: steps.check.outputs.HAS_ARTIFACT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -149,7 +149,7 @@ jobs:
             $BUILD_OUT_ROOT
 
       - name: Mark status as success
-        if: steps.check.outputs.HAS_ARTIFACT && success() && github.event.workflow_run.pull_requests[0].number
+        if: steps.check.outputs.HAS_ARTIFACT && success()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -160,7 +160,7 @@ jobs:
             -f target_url="$STATUS_TARGET"
 
       - name: Mark status as failure
-        if: steps.check.outputs.HAS_ARTIFACT && failure() && github.event.workflow_run.pull_requests[0].number
+        if: steps.check.outputs.HAS_ARTIFACT && failure()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
