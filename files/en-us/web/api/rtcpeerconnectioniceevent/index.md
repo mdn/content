@@ -19,6 +19,8 @@ _A `RTCPeerConnectionIceEvent` being an {{domxref("Event")}}, this event also im
 
 - {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or `null` if this event indicates that there are no further candidates to come.
+- {{domxref("RTCPeerConnectionIceEvent.url")}} {{ReadOnlyInline}}
+  - : Contains a string indicating the URL of the {{Glossary("STUN")}} or {{Glossary("TURN")}} server used to gather the candidate, or `null` if the candidate was not gathered from a server.
 
 ## Constructors
 
