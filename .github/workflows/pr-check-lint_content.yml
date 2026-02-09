@@ -23,6 +23,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check if PR reviews can be posted
+        id: permissions
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          BASE_REPO: ${{ github.repository }}
+        run: |
+          if [[ "${EVENT_NAME}" == "pull_request_target" || "${HEAD_REPO}" == "${BASE_REPO}" ]]; then
+            echo "CAN_POST_REVIEWS=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Checkout BASE
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -164,13 +175,13 @@ jobs:
           git diff
 
       - name: Setup reviewdog
-        if: steps.lint.outputs.FILES_MODIFIED == 'true' || steps.lint.outputs.MD_LINT_FAILED == 'true'
+        if: (steps.lint.outputs.FILES_MODIFIED == 'true' || steps.lint.outputs.MD_LINT_FAILED == 'true') && steps.permissions.outputs.CAN_POST_REVIEWS == 'true'
         uses: reviewdog/action-setup@d8a7baabd7f3e8544ee4dbde3ee41d0011c3a93f # v1.5.0
         with:
           reviewdog_version: latest
 
       - name: Suggest changes using diff
-        if: steps.lint.outputs.FILES_MODIFIED == 'true'
+        if: steps.lint.outputs.FILES_MODIFIED == 'true' && steps.permissions.outputs.CAN_POST_REVIEWS == 'true'
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -185,7 +196,7 @@ jobs:
             -reporter=github-pr-review < "${TMPFILE}"
 
       - name: Add reviews for markdownlint errors
-        if: steps.lint.outputs.MD_LINT_FAILED == 'true'
+        if: steps.lint.outputs.MD_LINT_FAILED == 'true' && steps.permissions.outputs.CAN_POST_REVIEWS == 'true'
         env:
           MD_LINT_LOG: ${{ steps.lint.outputs.MD_LINT_LOG }}
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
