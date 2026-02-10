@@ -50,10 +50,6 @@ overflow-y: auto;
 }
 ```
 
-Note that support for `overflow-y` on {{glossary("replaced elements")}} was added in CSS Overflow Module Level 4.
-Prior to this specification, replaced elements were clipped to their bounding container.
-See [Browser compatibility](#browser_compatibility) for supporting browsers.
-
 ## Syntax
 
 ```css
