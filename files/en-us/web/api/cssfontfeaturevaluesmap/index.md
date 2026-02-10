@@ -43,7 +43,7 @@ An `CSSFontFeatureValuesMap` instance is a read-only [Map-like object](/en-US/do
 
 ### Logging user-defined names
 
-In this example, we declare a {{cssxref("@font-feature-values")}} for the _Font One_ font family. In this declaration we define that the name "nice-style" can be used to represent the styleset alternate glyphs for _Font One_ and specify the index for that alternate. The alternate glpyh is then applied for any `.nice-look` class, using {{CSSXRef("font-variant-alternates")}} property and passing the name to the [`styleset()`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates#styleset) function.
+In this example, we declare a {{cssxref("@font-feature-values")}} for the _Font One_ font family. In this declaration we define that the name "nice-style" can be used to represent the styleset alternate glyphs for _Font One_ and specify the index for that alternate. The alternate glpyhs are then applied for any `.nice-look` class, using {{CSSXRef("font-variant-alternates")}} property and passing the name to the [`styleset()`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates#styleset) function.
 
 We then use the [`keys()`](/en-US/docs/Web/API/CSSFontFeatureValuesMap/keys) instance method of `CSSFontFeatureValuesMap`, to log the user defined name theat has been defined for `styleset()` function.
 
