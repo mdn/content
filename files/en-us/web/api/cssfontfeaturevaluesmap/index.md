@@ -56,17 +56,17 @@ We then use the [`keys()`](/en-US/docs/Web/API/CSSFontFeatureValuesMap/keys) ins
 #### CSS
 
 ```css
-/* At-rule for "nice-style" in Font One */
+/* At-rule for "nice-style" and "swishy" in Font One */
 @font-feature-values Font One {
   @styleset {
-    nice-style: 12;
+    nice-style: 12; /* name used to represent the alternate set of glyphs at index 12 */
   }
   @swash {
-    swishy: 1;
+    swishy: 1; /* name used to represent the alternate set of glyphs at index 1 */
   }
 }
 
-/* Apply the at-rules with a single declaration */
+/* Apply the at-rules to the appropriate selectors */
 .nice-look {
   font-variant-alternates: styleset(nice-style);
 }
@@ -89,7 +89,7 @@ if (fontOne.styleset) {
     "Your Browser does not support CSSFontFeatureValuesMap.styleset property.\n";
 }
 if (fontOne.swash) {
-  // check to see if styleset property is supported
+  // check to see if swash property is supported
   log.textContent += `The user has defined a name for swash called: "${fontOne.swash.keys().next().value}".`;
 } else {
   log.textContent +=
