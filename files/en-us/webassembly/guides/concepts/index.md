@@ -9,7 +9,7 @@ This article explains the concepts behind how WebAssembly works including its go
 
 ## What is WebAssembly?
 
-WebAssembly (abbreviated as *Wasm*) is a low-level bytecode format originally designed for the web. It is not primarily intended to be written by hand, rather it is designed to be an effective compilation target for source languages like C, C++, Rust, etc.
+WebAssembly (abbreviated as _Wasm_) is a low-level bytecode format originally designed for the web. It is not primarily intended to be written by hand, rather it is designed to be an effective compilation target for source languages like C, C++, Rust, etc.
 
 This has huge implications for the web platform — it provides a way to run code written in multiple languages on the web at near-native speed, with client apps running on the web that previously couldn't have done so.
 
