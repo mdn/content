@@ -7,7 +7,7 @@ browser-compat: api.CSSFontFeatureValuesRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSFontFeatureValuesRule`** interface represents an {{cssxref("@font-feature-values")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
+The **`CSSFontFeatureValuesRule`** interface represents an {{cssxref("@font-feature-values")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules). The values of its instance properties can be accessed with the [`CSSFontFeatureValuesMap`](/en-US/docs/Web/API/CSSFontFeatureValuesMap)interface.
 
 `@font-feature-values` allows developers to associate, for a given font face, a human-readable name with a numeric index that controls a particular [OpenType font feature](/en-US/docs/Web/CSS/Guides/Fonts/OpenType_fonts).
 For features that select alternative glyphs (stylistic, styleset, character-variant, swash, ornament or annotation), the {{cssxref("font-variant-alternates")}} property can then reference the human-readable name in order to apply the associated feature.
