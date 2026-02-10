@@ -90,6 +90,7 @@ No notable changes.
 
 ## Changes for add-on developers
 
+- When using [navigator.clipboard.readText()](/en-US/docs/Web/API/Clipboard/readText) or [navigator.clipboard.read()](/en-US/docs/Web/API/Clipboard/read) without the `clipboardRead` permission, a clipboard paste button is displayed to obtain user confirmation. If the extension has `clipboardRead` permission, it continues to read the clipboard data without user confirmation, as before. For more information on working with the clipboard in extensions, see [Interact with the clipboard](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard). ([Firefox bug 1773681](https://bugzil.la/1773681))
 - Temporarily loaded Manifest Version 3 extensions can now load scripts from localhost, as explained in [Scripts from localhost](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#scripts_from_localhost) in the Content Security Policy article. ([Firefox bug 1864284](https://bugzil.la/1864284))
 
 ## Experimental web features

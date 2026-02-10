@@ -13,7 +13,14 @@ A CSP can have other purposes as well, including defending against [clickjacking
 
 In this guide we'll start by describing how a CSP is delivered to a browser and what it looks like at a high level.
 
-Then we'll describe how it can be used to [control which resources are loaded](#controlling_resource_loading) to protect against XSS, and then other use cases such as [clickjacking protection](#clickjacking_protection) and [upgrading insecure requests](#upgrading_insecure_requests). Note that there's no dependency between the different use cases: if you want to add clickjacking protection but not XSS mitigation, you can just add the directives for that use case.
+Then we'll describe how it can be used to:
+
+1. [Control which resources are loaded](#controlling_resource_loading), to protect against XSS.
+2. [Restrict embedding](#clickjacking_protection), to protect against clickjacking.
+3. [Upgrade insecure requests](#upgrading_insecure_requests), to help ensure that all resources are served over HTTPS.
+4. [Require the use of trusted types](#requiring_trusted_types), to help defend against client-side XSS.
+
+Note that there's no dependency between the different use cases: if you want to add clickjacking protection but not XSS mitigation, you can just add the directives for that use case.
 
 Finally we'll describe [strategies for deploying a CSP](#testing_your_policy) and tools that can help to make this process easier.
 
@@ -58,9 +65,15 @@ A cross-site scripting (XSS) attack is one in which an attacker is able to execu
 
 An XSS attack is possible when a website accepts some input which might have been crafted by an attacker (for example, URL parameters, or a comment on a blog post) and then includes it in the page without _sanitizing_ it: that is, without ensuring that it can't be executed as JavaScript.
 
-Websites should protect themselves against XSS by sanitizing this input before including it in the page. A CSP provides a complementary protection, which can protect the website even if sanitization fails.
+Websites should protect themselves against XSS by sanitizing this input before including it in the page.
 
-If sanitization does fail, there are various forms the injected malicious code can take in the document, including:
+> [!NOTE]
+> A CSP can actually help protect against XSS in two different ways:
+>
+> - It can help ensure that input is sanitized before being used in the client: we discuss this later on in [Requiring trusted types](#requiring_trusted_types).
+> - By controlling resource loads, a CSP can provide a defense in depth against XSS, protecting the website even if sanitization fails. This is the XSS defense that we will discuss in this section.
+
+If sanitization fails, there are various forms the injected malicious code can take in the document, including:
 
 - A {{htmlelement("script")}} tag that links to a malicious source:
 
@@ -97,7 +110,7 @@ If sanitization does fail, there are various forms the injected malicious code c
   eval("console.log(`You've been hacked!`)");
   ```
 
-A CSP can provide protection against all of these. With a CSP, you can:
+By controlling resource loading, a CSP can provide protection against all of these. With a CSP, you can:
 
 - define the permitted sources for JavaScript files and other resources, effectively blocking loads from `https://evil.example.com`
 - disable inline script tags
@@ -505,6 +518,36 @@ Suppose the document also contains this:
 The browser will upgrade the first link to HTTPS, but not the second, as it is navigating to a different origin.
 
 This directive is not a substitute for the {{httpheader("Strict-Transport-Security")}} header (also known as HSTS), because it does not upgrade external links to a site. Sites should include this directive and the `Strict-Transport-Security` header.
+
+## Requiring trusted types
+
+The [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) and [`trusted-types`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) directives enable you to defend against client-side [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, by ensuring that any input has been passed through a transformation to make it safe before it is passed to a web platform API that might otherwise execute it as code.
+The [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) and [`trusted-types`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) directives can be used to enforce the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
+This allows you to defend against client-side [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks by mandating that any input must be passed through a transformation function, providing an opportunity to make it safe before it is sent to a web platform API that might otherwise execute it as code.
+
+### Injection sinks and sanitization
+
+Some APIs in the web platform are known as _injection sinks_. These are APIs that can be passed some input, usually in the form of a string, and that can interpret that input as code. In this guide we've already seen `eval()`, but there are many other injection sinks, such as {{domxref("Element.innerHTML")}} or {{domxref("Document.write()")}}.
+
+If an attacker can supply some specially crafted input to your website, and your website passes it to one of these injection sinks, then the attacker can execute malcious code.
+
+Some injection sinks, like `eval()`, are very hard to use safely, and we've seen that a CSP will typically [block them entirely](#eval_and_similar_apis). Others can be made safer if the input to them is processed so as to remove unsafe elements. This practice is called [_sanitization_](/en-US/docs/Web/Security/Attacks/XSS#sanitization).
+
+### The Trusted Types API
+
+With the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API), you can pass _trusted types_ into injection sinks, instead of strings. Trusted types are objects that result from passing potentially dangerous input through a transformation function. This transformation typically sanitizes the input, by removing any elements that might make it executable (such as {{htmlelement("script")}} tags).
+
+By default, your code could choose to pass trusted types or unsanitized strings to injection sinks. However, if you include the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) directive in your CSP, and give it a value of `'script'`, then the browser will only allow your site to pass trusted types to injection sinks. For example, the following code will throw an exception:
+
+```js example-bad
+const possiblyXSS = "<p>I might be XSS</p>";
+const target = document.querySelector("#target");
+
+target.innerHTML = possiblyXSS;
+// Will throw an exception if `require-trusted-types-for` is set
+```
+
+Trusted type objects are created using a user-defined _policy_ object. Your code can create any kind of policy object, including ones whose transformation function doesn't actually sanitize the input, and therefore doesn't protect you. To minimize this risk, you can include the [`trusted-types`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) directive. This lists the names of acceptable policies, and the browser will only allow those named policies to be used.
 
 ## Testing your policy
 

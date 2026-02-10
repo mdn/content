@@ -126,3 +126,4 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 - {{HTMLElement("rp")}}
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rt")}}
+- [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module

@@ -138,8 +138,8 @@ element.innerHTML = userInput;
 
 This section provides a list of "direct" injection sink interfaces.
 
-Note that there are cases where untrusted strings may be "indirectly injected", such as when an untrusted string is added as the child node of a script element, and then the element is added to the document.
-These cases are evaluated the untrusted script is added to the document.
+These are the API properties and methods which perform trusted type checks when they are evaluated.
+They can be passed trusted types (`TrustedHTML`, `TrustedScript`, or `TrustedScriptURL`) as well as strings, and must be passed trusted types when trusted type enforcement is enabled and no default policy is defined.
 
 #### TrustedHTML
 
@@ -180,6 +180,40 @@ These cases are evaluated the untrusted script is added to the document.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
 - `url` argument to [`Worker()` constructor](/en-US/docs/Web/API/Worker/Worker#url)
 - `url` argument to [`SharedWorker()` constructor](/en-US/docs/Web/API/SharedWorker/SharedWorker#url)
+
+### Indirect injection sinks
+
+_Indirect injection sinks_ are sinks where untrusted strings are injected into the DOM via an intermediate mechanism that doesn't accept or enforce trusted types.
+These differ from the "direct" [Injection sink interfaces](#injection_sink_interfaces) listed in the previous section, which run trusted type checks on injected strings when they are called.
+
+For example, the following code sets script element source indirectly.
+First a text node is created using a string provided by a user, and then a {{htmlelement("script")}} element is constructed and the text node is appended as a child element.
+Next the script element is added to the document as a child of the {{htmlelement("body")}} element — at this point scripts defined in the original string may be executed.
+
+```js
+// Create a text node
+const untrustedString =
+  "console.log('A potentially malicious script from an untrusted source!');";
+const textNode = document.createTextNode(untrustedString);
+
+// Create a script element and append the text node
+const script = document.createElement("script");
+script.appendChild(textNode);
+
+// Add the script into the document, where it can run
+document.body.appendChild(script);
+```
+
+When the text node is created there is no reason for the browser to assume it is intended to be used as a trusted type source, so trusted types are serialized to string, and are not enforced.
+
+Instead, browsers run the checks when the script element becomes executable — i.e., in this example, when `document.body.appendChild(script)` is called to add the script element to the document.
+
+The browser will first check if the string used as the script content is trusted.
+Any operation that allows the text source of a {{htmlelement("script")}} to be modified without explicitly setting a {{domxref("TrustedScript")}} makes it untrusted.
+The {{domxref("Node.appendChild()")}} method used above is just one example (a number of others are listed in the WPT Live tests at <https://wpt.live/trusted-types/script-enforcement-001.htm>).
+
+If the string is not trusted and trusted types are enforced, the browser will attempt to obtain a `TrustedScript` from a [default policy](#the_default_policy) to use for source instead.
+If a default policy is not defined, or does not return a `TrustedScript`, the operation will throw an exception.
 
 ### Cross-browser support for trusted types
 

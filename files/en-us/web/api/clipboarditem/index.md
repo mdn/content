@@ -123,5 +123,6 @@ async function getClipboardContents() {
 
 ## See also
 
+- {{domxref("ClipboardChangeEvent")}}
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
