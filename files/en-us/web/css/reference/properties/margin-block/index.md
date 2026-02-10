@@ -103,7 +103,7 @@ The `margin-block` property may be specified using one or two values.
 
 ### Values
 
-The `margin-block` property takes the same values as the {{CSSxRef("margin", "", "#values")}} property.
+The `margin-block` property takes the same values as the {{CSSxRef("margin-top", "", "#values")}} property.
 
 ## Formal definition
 
