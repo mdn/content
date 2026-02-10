@@ -9,7 +9,7 @@ This article explains the concepts behind how WebAssembly works including its go
 
 ## What is WebAssembly?
 
-WebAssembly is a new type of code that can be run in modern web browsers and provides new features and major gains in performance. It is not primarily intended to be written by hand, rather it is designed to be an effective compilation target for source languages like C, C++, Rust, etc.
+WebAssembly (abbreviated as *Wasm*) is a low-level bytecode format originally designed for the web. It is not primarily intended to be written by hand, rather it is designed to be an effective compilation target for source languages like C, C++, Rust, etc.
 
 This has huge implications for the web platform — it provides a way to run code written in multiple languages on the web at near-native speed, with client apps running on the web that previously couldn't have done so.
 
@@ -17,7 +17,7 @@ What's more, you don't even have to know how to create WebAssembly code to take 
 
 ## WebAssembly goals
 
-WebAssembly is being created as an open standard inside the [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/) with the following goals:
+WebAssembly is an open standard developed inside the [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/) with the following goals:
 
 - Be fast, efficient, and portable — WebAssembly code can be executed at near-native speed across different platforms by taking advantage of [common hardware capabilities](https://webassembly.org/docs/portability/#assumptions-for-efficient-execution).
 - Be readable and debuggable — WebAssembly is a low-level assembly language, but it does have a human-readable text format (the specification for which is still being finalized) that allows code to be written, viewed, and debugged by hand.
@@ -25,7 +25,7 @@ WebAssembly is being created as an open standard inside the [W3C WebAssembly Com
 - Don't break the web — WebAssembly is designed so that it plays nicely with other web technologies and maintains backwards compatibility.
 
 > [!NOTE]
-> WebAssembly will also have uses outside web and JavaScript environments (see [Non-web embeddings](https://webassembly.org/docs/non-web/)).
+> Though WebAssembly was originally designed for the web, it has many uses outside browsers and JavaScript environments (see [Non-web embeddings](https://webassembly.org/docs/non-web/)).
 
 ## How does WebAssembly fit into the web platform?
 
