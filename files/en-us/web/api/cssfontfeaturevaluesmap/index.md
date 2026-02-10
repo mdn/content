@@ -43,9 +43,9 @@ An `CSSFontFeatureValuesMap` instance is a read-only [Map-like object](/en-US/do
 
 ### Logging user-defined names
 
-In this example, we declare a {{cssxref("@font-feature-values")}} for the _Font One_ font family. In this declaration we define that the name "nice-style" can be used to represent the styleset alternate glyphs for _Font One_ and specify the index for that alternate. The alternate glpyhs are then applied for any `.nice-look` class, using {{CSSXRef("font-variant-alternates")}} property and passing the name to the [`styleset()`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates#styleset) function.
+In this example, we declare a {{cssxref("@font-feature-values")}} for the _Font One_ font family. In this declaration we define that the name "nice-style" can be used to represent the `styleset` alternate glyphs for _Font One_ and specify the index for that alternate. The alternate glpyhs are then applied for any `.nice-look` class, using {{CSSXRef("font-variant-alternates")}} property and passing the name to the [`styleset()`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates#styleset) function. The same is done for the name "swishy" for the `swash` alternate glyphs, which is then passed to the [`swash()`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates#swash) function.
 
-We then use the [`keys()`](/en-US/docs/Web/API/CSSFontFeatureValuesMap/keys) instance method of `CSSFontFeatureValuesMap`, to log the user defined name theat has been defined for `styleset()` function.
+We then use the [`keys()`](/en-US/docs/Web/API/CSSFontFeatureValuesMap/keys) instance method of `CSSFontFeatureValuesMap`, to log the user defined names that has been defined for the `styleset()` and `swash()` functions.
 
 #### HTML
 
@@ -61,11 +61,17 @@ We then use the [`keys()`](/en-US/docs/Web/API/CSSFontFeatureValuesMap/keys) ins
   @styleset {
     nice-style: 12;
   }
+  @swash {
+    swishy: 1;
+  }
 }
 
 /* Apply the at-rules with a single declaration */
 .nice-look {
   font-variant-alternates: styleset(nice-style);
+}
+.swoosh {
+  font-variant-alternates: swash(swishy);
 }
 ```
 
@@ -77,10 +83,17 @@ const rules = document.querySelector("#css-output").sheet.cssRules;
 const fontOne = rules[0]; // A CSSFontFeatureValuesRule
 if (fontOne.styleset) {
   // check to see if styleset property is supported
-  log.textContent = `The user has defined a name for styleset called: "${fontOne.styleset.keys().next().value}".`;
+  log.textContent = `The user has defined a name for styleset called: "${fontOne.styleset.keys().next().value}".\n`;
 } else {
   log.textContent =
-    "Your Browser does not support CSSFontFeatureValuesMap.styleset property.";
+    "Your Browser does not support CSSFontFeatureValuesMap.styleset property.\n";
+}
+if (fontOne.swash) {
+  // check to see if styleset property is supported
+  log.textContent += `The user has defined a name for swash called: "${fontOne.swash.keys().next().value}".`;
+} else {
+  log.textContent +=
+    "Your Browser does not support CSSFontFeatureValuesMap.swash property.";
 }
 ```
 
