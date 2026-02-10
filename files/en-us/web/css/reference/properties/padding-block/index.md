@@ -84,7 +84,7 @@ The `padding-block` property may be specified with one or two values. If one val
 
 ### Values
 
-The `padding-block` property takes the same values as the {{cssxref("padding-left")}} property.
+The `padding-block` property takes the same values as the {{cssxref("padding-top")}} property.
 
 ## Description
 
