@@ -20,7 +20,8 @@ Only certain CSS properties can be used with `::highlight()`:
 - {{CSSxRef("background-color")}}
 - {{CSSxRef("text-decoration")}} and its associated properties
 - {{CSSxRef("text-shadow")}}
-- {{CSSxRef("stroke")}}, {{CSSxRef("fill")}}, and {{CSSxRef("stroke-width")}}
+- {{CSSxRef("stroke-color")}}, {{CSSxRef("fill-color")}}, and {{CSSxRef("stroke-width")}}
+- Custom properties ({{cssxref("--*")}})
 
 In particular, {{CSSxRef("background-image")}} is ignored.
 
