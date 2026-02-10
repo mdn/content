@@ -5,9 +5,9 @@ page-type: guide
 sidebar: security
 ---
 
-Once a website has authenticated a user, it typically needs to remember that user's identity across the subsequent requests that the user makes to the site. That's the function of a session management system.
+HTTP is commonly called a _stateless_ protocol, meaning that it provides no built-in mechanism to correlate a series of individual HTTP requests. This is a problem for websites that want to maintain some client-specific state. For example, a site might let any user choose a light or dark theme, and then their choice would represent state that should persist across subsequent requests to the site. To support this, the website needs to treat a series of requests from a single client as representing a _session_, which can be associated with this persistent state.
 
-Session management is not exclusive to authentication: for example, a site might let any user choose a light or dark theme, and then their choice would represent state that should persist across subsequent requests to the site. However, it's especially relevant to authentication, because an authenticated user's identity on the site represents state that is especially valuable to an attacker, so a site author has to be especially careful when implementing a session management solution for authenticated users.
+When a website has the ability to authenticate users, so as to grant individuals access to specific data or actions, it typically wants to treat an authenticated user's identity as state that persists across multiple requests from the client. Unlike a choice of theme, though, an authenticated user's identity on the site represents state that is especially valuable to an attacker, so a site author has to be especially careful when implementing a session management solution for authenticated users.
 
 In this guide we'll first describe the most common architecture for session management, in which the user's session state is kept in the server:
 
