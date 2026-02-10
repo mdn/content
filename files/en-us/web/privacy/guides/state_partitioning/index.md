@@ -90,6 +90,7 @@ As such, the following network APIs and caches are **permanently** partitioned b
 - Image Cache
 - Favicon Cache
 - Connection Pooling
+- Script Cache
 - Stylesheet Cache
 - [DNS](/en-US/docs/Glossary/DNS)
 - HTTP Authentication

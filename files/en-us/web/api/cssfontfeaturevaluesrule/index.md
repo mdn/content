@@ -44,7 +44,7 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
 In this example, we declare two {{cssxref("@font-feature-values")}} one for the _Font One_ font family, and the other for _Font Two_.
 In both declarations we define that the name "nice-style" can be used to represent the styleset alternate glyphs for both of the fonts, specifying the index for that alternate in each font family.
-The alternate glpyhs are then applied for any `.nice-clook` class, using {{cssxref("font-variant-alternates")}} and passing the name to the [`styleset()`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates#styleset) function.
+The alternate glpyhs are then applied for any `.nice-cook` class, using {{cssxref("font-variant-alternates")}} and passing the name to the [`styleset()`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates#styleset) function.
 
 We then use the CSSOM to read these declaration as `CSSFontFeatureValuesRule` instances, displaying them into the log.
 
