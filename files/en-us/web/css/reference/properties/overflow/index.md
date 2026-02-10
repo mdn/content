@@ -105,7 +105,7 @@ The following nuances should be kept in mind while using the various keywords fo
 - Setting overflow to `visible` in one direction (i.e., `overflow-x` or `overflow-y`) when it isn't set to `visible` or `clip` in the other direction results in the `visible` value behaving as `auto`.
 - Setting overflow to `clip` in one direction when it isn't set to `visible` or `clip` in the other direction results in the `clip` value behaving as `hidden`.
 - The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll through content in a scroll container, except when `overflow` is set to `clip`.
-- Setting `overflow` on images and other {{glossary("replaced elements")}} has no effect on browsers that don't support CSS Overflow Module Level 4, which are always clipped to the bounding container.
+- Setting `overflow` on images and other {{glossary("replaced elements")}} works as expected in browsers that support CSS Overflow Module Level 4; in previous versions of the specification, replaced elements were always clipped to the bounding container.
   See [Browser compatibility](#browser_compatibility) for supporting browsers.
 
 ## Formal definition

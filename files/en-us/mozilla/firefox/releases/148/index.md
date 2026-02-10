@@ -38,7 +38,7 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2008537](https://bugzil.la/2008537)).
 
 - The {{cssxref("overflow")}}, {{cssxref("overflow-x")}}, and {{cssxref("overflow-y")}} CSS properties can now be used on {{glossary("replaced elements")}} such as images, in the same way that they are used with other elements.
-  Previously replaced elements were always clipped to their bounding container.
+  Prior to this, replaced elements were always clipped to their bounding container.
   ([Firefox bug 1999100](https://bugzil.la/1999100)).
 
 <!-- #### Removals -->
