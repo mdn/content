@@ -51,9 +51,9 @@ An {{jsxref("Object")}} with the following properties:
 
 Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
-### Using `waitAsync()`
+### Using Atomics.waitAsync()
 
-Given a shared `Int32Array`.
+Given a shared `Int32Array`:
 
 ```js
 // Create a SharedArrayBuffer with a size in bytes

@@ -33,8 +33,7 @@ new SharedArrayBuffer(length, options)
 
 ### Return value
 
-A new `SharedArrayBuffer` object of the specified size, with its {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} property set to the specified `maxByteLength` if one was specified.
-Its contents are initialized to 0.
+A new `SharedArrayBuffer` object of the specified size, with its {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} property set to the specified `maxByteLength` if one was specified. Its contents are initialized to 0.
 
 ## Examples
 
@@ -48,8 +47,7 @@ Create a buffer specifying its size in bytes.
 // Create a SharedArrayBuffer with a size in bytes
 const buffer = new SharedArrayBuffer(8);
 
-console.log(buffer.byteLength);
-// Expected output: 8
+console.log(buffer.byteLength); // 8
 ```
 
 ### Always use the new operator to create a SharedArrayBuffer

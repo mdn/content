@@ -7,7 +7,9 @@ browser-compat: javascript.builtins.Atomics.store
 sidebar: jsref
 ---
 
-The **`Atomics.store()`** static method stores a given value at the given position in the array and returns that value.
+The **`Atomics.store()`** static method stores a given value at a given position in the array and returns that value. This atomic operation guarantees that the write is tear-free, and that all atomic writes are sequentially consistent.
+
+Note that unlike many other `Atomic` methods, `store()` returns the new value instead of the old value. To get the old value, use {{jsxref("Atomics.exchange()")}} instead.
 
 ## Syntax
 
@@ -39,19 +41,16 @@ The value that has been stored.
 
 Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
-### Using `store()`
+### Using Atomics.store()
 
 ```js
 // Create a SharedArrayBuffer with a size in bytes
 const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
-uint8[0] = 5;
 
-Atomics.store(ta, 0, 12); // returns 12, the new value
-Atomics.load(ta, 0); // returns 12, the new value
+console.log(Atomics.store(ta, 0, 12)); // 12, the new/current value
+console.log(Atomics.load(ta, 0)); // 12, the new/current value
 ```
-
-Note that unlike many other `Atomic` methods, `store()` returns the new value instead of the old value.
 
 ## Specifications
 
@@ -65,3 +64,4 @@ Note that unlike many other `Atomic` methods, `store()` returns the new value in
 
 - {{jsxref("Atomics")}}
 - {{jsxref("Atomics.load()")}}
+- {{jsxref("Atomics.exchange()")}}

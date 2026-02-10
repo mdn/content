@@ -52,7 +52,7 @@ A string which is either `"not-equal"`, `"ok"`, or `"timed-out"`.
 
 Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
-### Using `wait()`
+### Using Atomics.wait()
 
 Given a shared `Int32Array`:
 

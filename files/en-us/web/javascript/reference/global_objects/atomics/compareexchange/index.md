@@ -41,16 +41,17 @@ The old value at the given position (`typedArray[index]`). If the return value i
 
 Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
-### Using `compareExchange()`
+### Using Atomics.compareExchange()
 
 ```js
 // Create a SharedArrayBuffer with a size in bytes
 const sab = new SharedArrayBuffer(1024);
+// Create a view and set the value of the 0 index
 const ta = new Uint8Array(sab);
 ta[0] = 7;
 
-Atomics.compareExchange(ta, 0, 7, 12); // returns 7, the old value
-Atomics.load(ta, 0); // returns 12, the new/current value
+console.log(Atomics.compareExchange(ta, 0, 7, 12)); // 7, the old value
+console.log(Atomics.load(ta, 0)); // 12, the new/current value
 ```
 
 ### Checking the return value

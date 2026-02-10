@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Atomics.xor
 sidebar: jsref
 ---
 
-The **`Atomics.xor()`** static method computes a bitwise XOR with a given value at a given position in the array, and returns the old value at that position.
-This atomic operation guarantees that no other write happens until the modified value is written back.
+The **`Atomics.xor()`** static method computes a bitwise XOR with a given value at a given position in the array, and returns the old value at that position. This atomic operation guarantees that no other write happens until the modified value is written back.
 
 ## Syntax
 
@@ -38,8 +37,7 @@ The old value at the given position (`typedArray[index]`).
 
 ## Description
 
-The bitwise XOR operation yields 1, if `a` and `b` are different.
-The truth table for the XOR operation is:
+The bitwise XOR operation yields 1, if `a` and `b` are different. The truth table for the XOR operation is:
 
 | `a` | `b` | `a ^ b` |
 | --- | --- | ------- |
@@ -61,17 +59,18 @@ For example, a bitwise XOR of `5 ^ 1` results in `0100` which is 4 in decimal.
 
 Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
-### Using `xor()`
+### Using Atomics.xor()
 
 ```js
 // Create a SharedArrayBuffer with a size in bytes
 const sab = new SharedArrayBuffer(1024);
+// Create a view and set the value of the 0 index
 const ta = new Uint8Array(sab);
 ta[0] = 7;
 
 // 7 (0111) XOR 2 (0010) = 5 (0101)
-Atomics.xor(ta, 0, 1); // returns 7, the old value
-Atomics.load(ta, 0); // retursn 5, the new/current value
+console.log(Atomics.xor(ta, 0, 2)); // 7, the old value
+console.log(Atomics.load(ta, 0)); // 5, the new/current value
 ```
 
 ## Specifications

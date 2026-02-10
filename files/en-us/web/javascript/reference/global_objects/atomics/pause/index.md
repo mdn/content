@@ -36,7 +36,7 @@ None ({{jsxref("undefined")}}).
 
 Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
-### Using `pause()`
+### Using Atomics.pause()
 
 Calling {{jsxref("Atomics.wait()")}} or {{jsxref("Atomics.waitAsync()")}} in order to wait for access to shared memory causes the thread to be scheduled out of the core and then back in again after the wait. This is efficient during times of high contention, where access to the shared memory could take some time. When contention is low, then it is often more efficient to poll on the lock without yielding the thread: this approach is known as [busy waiting](https://en.wikipedia.org/wiki/Busy_waiting) or [spinlocking](https://en.wikipedia.org/wiki/Spinlock). The `pause()` method allows you to spinlock more efficiently while waiting, by providing a hint to the CPU about what the thread is doing, and hence its low need for resources.
 

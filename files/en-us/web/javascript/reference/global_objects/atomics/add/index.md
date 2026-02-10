@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Atomics.add
 sidebar: jsref
 ---
 
-The **`Atomics.add()`** static method adds a given value at a given position in the array and returns the old value at that position.
-This atomic operation guarantees that no other write happens until the modified value is written back.
+The **`Atomics.add()`** static method adds a given value at a given position in the array, and returns the old value at that position. This atomic operation guarantees that no other write happens until the modified value is written back.
 
 ## Syntax
 
@@ -40,7 +39,7 @@ The old value at the given position (`typedArray[index]`).
 
 Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
-### Using `add()`
+### Using Atomics.add()
 
 ```js
 // Create a SharedArrayBuffer with a size in bytes
@@ -49,8 +48,9 @@ const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 7;
 
-Atomics.add(ta, 0, 12); // returns 7, the old value at index 0
-Atomics.load(ta, 0); // returns 19, the new/current value at index 0
+// 7 + 12 = 19
+console.log(Atomics.add(ta, 0, 12)); // 7, the old value
+console.log(Atomics.load(ta, 0)); // 19, the new/current value
 ```
 
 ## Specifications
