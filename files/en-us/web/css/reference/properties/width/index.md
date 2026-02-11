@@ -59,8 +59,6 @@ The specified value of `width` applies to the content area so long as its value 
 /* <length> values */
 width: 300px;
 width: 25em;
-width: anchor-size(width);
-width: anchor-size(--my-anchor inline, 120%);
 
 /* <percentage> value */
 width: 75%;
@@ -69,9 +67,14 @@ width: 75%;
 width: max-content;
 width: min-content;
 width: fit-content;
-width: fit-content(20em);
 width: auto;
 width: stretch;
+
+/* function values */
+width: fit-content(20em);
+width: anchor-size(width);
+width: anchor-size(--my-anchor inline, 120%);
+width: calc-size(max-content, size / 2);
 
 /* Global values */
 width: inherit;
@@ -95,8 +98,12 @@ width: unset;
   - : The intrinsic minimum width.
 - {{cssxref("fit-content")}}
   - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/Reference/Values/max-content), i.e., `min(max-content, max(min-content, stretch))`.
+- {{cssxref("anchor-size()")}}
+  - : Sets the width relative to a dimension of an anchor element, with the dimension defaulting to the element's default anchor and the dimension defaulting to width if the element is an anchor-positioned element's; otherwise, sets the width to the fallback length value if present; otherwise, the declaration is ignored.
+- {{cssxref("calc-size()")}}
+  - : Sets the width to a modified intrinsic size.
 - [`fit-content(<length-percentage>)`](/en-US/docs/Web/CSS/Reference/Values/fit-content_function)
-  - : Uses the fit-content formula with the available space replaced by the specified argument, i.e., `min(max-content, max(min-content, <length-percentage>))`.
+  - : Uses the fit-content formula with the available space replaced by the specified argument, clamping the width according to the formula `min(maximum size, max(minimum size, <length-percentage>))`.
 - `stretch`
   - : Sets the width of the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the width of its [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/Reference/Properties/box-sizing).
 
@@ -119,23 +126,57 @@ Ensure that elements set with a `width` aren't truncated and/or don't obscure ot
 
 ### Default width
 
+This example demonstrates basic usage and the default `auto` value.
+
+#### HTML
+
+We include two paragraphs; one with a class name.
+
+```html
+<p>The MDN community writes really great documentation.</p>
+<p class="has-width">The MDN community writes really great documentation.</p>
+```
+
+#### CSS
+
+We make all paragraphs have a gold background, explicitly setting the second paragraph's `width` to `auto`.
+
 ```css
-p.gold {
+p {
   background: gold;
+}
+p.has-width {
+  width: auto;
 }
 ```
 
+#### Results
+
+{{EmbedLiveSample("Default width", 600, 100)}}
+
+As `width` defaults to `auto`, both paragraphs are the same width.
+
+### Using length units
+
+This example demonstrates length width values.
+
+#### HTML
+
+We include two {{htmlelement("div")}} elements with some text.
+
 ```html
-<p class="gold">The MDN community writes really great documentation.</p>
+<div class="px_length">Width measured in px</div>
+<div class="em_length">Width measured in em</div>
 ```
 
-{{EmbedLiveSample('Default_width', '500px', '64px')}}
+#### CSS
 
-### Example using pixels and ems
+The `px_length` element is set to `200px` while the `em_length` element is set to be `20em` wide. Both elements also have different {{cssxref("background-color")}}, {{cssxref("color")}}, and {{cssxref("border")}} values to enable differentiating between the two when rendered.
 
 ```css
 .px_length {
   width: 200px;
+
   background-color: red;
   color: white;
   border: 1px solid black;
@@ -143,92 +184,125 @@ p.gold {
 
 .em_length {
   width: 20em;
+
   background-color: white;
   color: red;
   border: 1px solid black;
 }
 ```
 
-```html
-<div class="px_length">Width measured in px</div>
-<div class="em_length">Width measured in em</div>
-```
+#### Results
 
-{{EmbedLiveSample('Example using pixels and ems', '500px', '64px')}}
+{{EmbedLiveSample("Using length units", 600, 60)}}
 
-### Example with percentage
+The `px_length` element will always be 200px wide. The rendered width of the `em_length` element depends on the font size.
 
-```css
-.percent {
-  width: 20%;
-  background-color: silver;
-  border: 1px solid red;
-}
-```
+### Using percentages
+
+This example demonstrates using percentage values.
+
+#### HTML
+
+We include one {{htmlelement("div")}} element with some text.
 
 ```html
 <div class="percent">Width in percentage</div>
 ```
 
-{{EmbedLiveSample('Example using percentage', '500px', '64px')}}
+#### CSS
 
-### Example using "max-content"
+We set the `width` of the element to be `20%` of the width of it's parent container.
 
 ```css
-p.max-green {
-  background: lightgreen;
-  width: max-content;
+.percent {
+  width: 20%;
+
+  background-color: silver;
+  border: 1px solid red;
 }
 ```
+
+#### Results
+
+{{EmbedLiveSample("Using percentages", 600, 60)}}
+
+### Using intrinsic sizes
+
+This example compares `max-content` and `min-content`, and introduces `calc-size`.
+
+#### HTML
+
+We include three paragraphs with the same content; just their class names differ.
 
 ```html
 <p class="max-green">The MDN community writes really great documentation.</p>
+<p class="min-blue">The MDN community writes really great documentation.</p>
+<p class="min-pink">The MDN community writes really great documentation.</p>
 ```
 
-{{EmbedLiveSample('Example using "max-content"', '500px', '64px')}}
+#### CSS
 
-### Example using "min-content"
+We set one paragraph's `width` to `max-content`, the second to `min-content`, and the third to be twice the size of the `min-content` by using the `calc-size()` function. Each is given a different{{cssxref("background-color")}} and {{cssxref("border-style")}} to enable differentiating between the two.
 
 ```css
+p.max-green {
+  width: max-content;
+
+  background-color: lightgreen;
+  border-style: dotted;
+}
+
 p.min-blue {
-  background: lightblue;
   width: min-content;
+
+  background-color: lightblue;
+  border-style: dashed;
+}
+
+p.min-pink {
+  width: calc-size(min-content, size * 2);
+
+  background-color: pink;
+  border-style: solid;
 }
 ```
 
-```html
-<p class="min-blue">The MDN community writes really great documentation.</p>
+```css hidden
+@supports not (width: calc-size(min-content, size * 2)) {
+  body::after {
+    content: "Your browser doesn't support the `calc-size()` function yet.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1em;
+  }
+}
 ```
 
-{{EmbedLiveSample('Example using "min-content"', '500px', '155px')}}
+#### Results
 
-### Stretch width to fill the containing block
+{{EmbedLiveSample("Using intrinsic sizes", 600, 230)}}
+
+The `max-content` example is as wide as the text. The `min-content` example is as wide as the widest word. The `calc-size()` example is set to be twice as wide as the `min-content`.
+
+### Using the stretch keyword
+
+This example demonstrates the `stretch` value within a [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) container.
 
 #### HTML
+
+We include a parent container with two child elements.
 
 ```html
 <div class="parent">
   <div class="child">text</div>
-</div>
-
-<div class="parent">
   <div class="child stretch">stretch</div>
 </div>
 ```
 
 #### CSS
 
-```css hidden
-@supports not (width: stretch) {
-  .parent {
-    display: none !important;
-  }
-
-  body::after {
-    content: "Your browser doesn't support the `stretch` value yet.";
-  }
-}
-```
+We use the {{cssxref("display")}} property to make the parent a flex container, and set the second child's `width` the `stretch`.
 
 ```css
 .parent {
@@ -247,9 +321,43 @@ p.min-blue {
 }
 ```
 
+```css hidden
+@supports not (width: stretch) {
+  body::after {
+    content: "Your browser doesn't support the `stretch` value yet.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1em;
+  }
+}
+```
+
 #### Result
 
-{{EmbedLiveSample('Stretch width to fill the containing block', 'auto', 250)}}
+{{EmbedLiveSample("Using the stretch keyword", "auto", 100)}}
+
+By default, flex items are as wide as their content. The `stretch` value makes the element as wide as the available space allows, with the element's margin box otherwise clamped to the width of its containing block.
+
+### Using the anchor-size() function
+
+In this example, we set the width of an anchor positioned element based on the height of it's associated anchor.
+
+#### HTML
+
+```html
+
+```
+
+#### CSS
+
+```css
+
+```
+
+#### Results
+
+{{EmbedLiveSample("Using the anchor-size() function", "auto", 200)}}
 
 ## Specifications
 
@@ -265,7 +373,8 @@ p.min-blue {
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}
 - {{cssxref("block-size")}}, {{cssxref("inline-size")}}
-- {{cssxref("anchor-size()")}}
 - SVG {{SVGAttr("width")}} attribute
 - [Introduction to the CSS box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) guide
 - [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
+- [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module
