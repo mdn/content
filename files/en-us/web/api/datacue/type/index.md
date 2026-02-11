@@ -10,7 +10,7 @@ browser-compat: api.DataCue.type
 
 {{APIRef("WebVTT")}}{{SeeCompatTable}}
 
-The **`type`** read-only property of the {{domxref("DataCue")}} interface returns a string identifying the type or schema of the data stored in the cue's {{domxref("DataCue.value", "value")}} property. This is typically a reverse-domain notation string that allows applications to interpret the cue's data payload correctly.
+The **`type`** read-only property of the {{domxref("DataCue")}} interface returns a string identifying the type or schema of the data stored in the cue's {{domxref("DataCue.value", "value")}} property. This is typically a reverse-domain notation string (e.g., `"org.id3"`, `"com.apple.itunes"`) that allows applications to interpret the cue's data payload correctly.
 
 When a user agent automatically generates `DataCue` objects for in-band timed metadata (for example, from an HTTP Live Streaming source), it sets this property to indicate the metadata format. When application code creates a `DataCue` using the {{domxref("DataCue.DataCue", "DataCue()")}} constructor, the `type` is set from the optional fourth argument and defaults to an empty string if omitted.
 
@@ -24,7 +24,7 @@ A string. Common values set by user agents for in-band metadata include:
 - `"com.apple.quicktime.mdta"` — QuickTime Metadata.
 - `"com.apple.itunes"` — iTunes metadata.
 
-Application-defined cues may use any string, but reverse-domain notation (e.g., `"org.example.myapp"`) is recommended to avoid collisions.
+Application-defined cues may use any string, but reverse-domain notation is recommended to avoid collisions.
 
 ## Examples
 

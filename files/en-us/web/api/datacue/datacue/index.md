@@ -26,7 +26,7 @@ new DataCue(startTime, endTime, value, type)
 - `endTime`
   - : A number representing the end time, in seconds, for the cue's time range. When the media playback reaches this time, the cue's {{domxref("TextTrackCue/exit_event", "exit")}} event fires. Use `Infinity` for a cue that remains active until the end of the media.
 - `value`
-  - : The data payload associated with the cue. This can be any type, such as a string, a {{Glossary("JSON")}} object, or an {{jsxref("ArrayBuffer")}}. The value is stored in the cue's {{domxref("DataCue.value", "value")}} property.
+  - : The data payload associated with the cue. This can be any type, such as a string, a JavaScript object, or an {{jsxref("ArrayBuffer")}}. The value is stored in the cue's {{domxref("DataCue.value", "value")}} property.
 - `type` {{optional_inline}}
   - : A string identifying the type or schema of the data in `value`. This is typically a reverse-domain notation string (e.g., `"org.id3"`, `"org.mp4ra"`). The value is stored in the cue's {{domxref("DataCue.type", "type")}} property and defaults to an empty string if not provided.
 

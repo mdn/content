@@ -13,7 +13,7 @@ The **`DataCue`** interface represents a cue that associates arbitrary timed dat
 
 Unlike {{domxref("VTTCue")}}, which is designed for displaying subtitle and caption text, `DataCue` is intended for non-rendered timed metadata. Use cases include dynamic content replacement, ad insertion, presentation of supplemental content alongside audio or video, or more generally, triggering application logic at specific points on the media timeline.
 
-Some user agents may also automatically generate `DataCue` objects for in-band timed metadata carried within media streams, such as ID3 tags in HTTP Live Streaming (HLS).
+Some user agents may also automatically generate `DataCue` objects for in-band timed metadata carried within media streams, such as ID3 tags in [HTTP Live Streaming (HLS)](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources#hls_encoding).
 
 {{InheritanceDiagram}}
 
