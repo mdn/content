@@ -49,7 +49,7 @@ setTimeout(func, delay, param1, param2, /* …, */ paramN)
       See [Reasons for longer delays than specified](#reasons_for_longer_delays_than_specified) for more information.
     - If the value isn't a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number.
       This can lead to unexpected and surprising results — see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
-    - If a negative value is specified, a 0 value is used.    
+    - If a negative value is specified, a 0 value is used.
 
 - `param1`, …, `paramN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by `func`.
