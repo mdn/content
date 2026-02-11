@@ -15,7 +15,7 @@ Values of this type are objects that can contain these properties:
 - `domain`
   - : A `string` representing the domain the cookie belongs to (e.g., "www.google.com" or "example.com").
 - `expirationDate` {{optional_inline}}
-  - : A `number` representing the expiration date of the cookie as the seconds after the UNIX epoch. Includes milliseconds in the fractional part. Not provided for session cookies.
+  - : A `number` representing the expiration date of the cookie as the seconds after the UNIX epoch.It can include milliseconds in the fractional part.If omitted, the cookie becomes a session cookie.
 - `firstPartyDomain`
   - : A `string` representing the first-party domain associated with the cookie. This is an empty string if the cookie was set while first-party isolation was off. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
 - `hostOnly`
@@ -23,7 +23,7 @@ Values of this type are objects that can contain these properties:
 - `httpOnly`
   - : A `boolean`, `true` if the cookie is marked as HttpOnly (i.e., the cookie is inaccessible to client-side scripts), or `false` otherwise.
 - `name`
-  - : A `string` representing the name of the cookie.
+  - : A `string` representing the name of the cookie. If omitted, the name defaults to an empty string (`""`).
 - `partitionKey` {{optional_inline}}
   - : An `object` representing the description of the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. This object is omitted (null) if the cookie is not in partitioned storage. This object contains the following properties:
     - `topLevelSite`
@@ -40,7 +40,7 @@ Values of this type are objects that can contain these properties:
 - `storeId`
   - : A `string` representing the ID of the cookie store containing this cookie, as provided by {{WebExtAPIRef("cookies.getAllCookieStores()")}}.
 - `value`
-  - : A `string` representing the value of the cookie.
+  - : A `string` representing the value of the cookie. If omitted, the value defaults to an empty string (`""`).
 
 ## Examples
 
