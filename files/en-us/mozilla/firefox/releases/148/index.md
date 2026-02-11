@@ -37,6 +37,10 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{cssxref("position-area")}} property in [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) now correctly keeps the anchored element within the viewport.
   ([Firefox bug 2008537](https://bugzil.la/2008537)).
 
+- The {{cssxref("overflow")}}, {{cssxref("overflow-x")}}, and {{cssxref("overflow-y")}} CSS properties can now be used on {{glossary("replaced elements")}} such as images, in the same way that they are used with other elements.
+  Prior to this, replaced elements were always clipped to their bounding container.
+  ([Firefox bug 1999100](https://bugzil.la/1999100)).
+
 <!-- #### Removals -->
 
 ### JavaScript
