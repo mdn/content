@@ -10,7 +10,7 @@ browser-compat: api.DataCue.value
 
 {{APIRef("WebVTT")}}{{SeeCompatTable}}
 
-The **`value`** property of the {{domxref("DataCue")}} interface represents the data payload of the cue. Unlike {{domxref("VTTCue")}}, which carries text content, `DataCue` can hold any data type — such as a {{Glossary("JSON")}} object, a string, or an {{jsxref("ArrayBuffer")}} — making it suitable for timed metadata use cases where structured data needs to be synchronized with media playback.
+The **`value`** property of the {{domxref("DataCue")}} interface represents the data payload of the cue. Unlike {{domxref("VTTCue")}}, which carries text content, `DataCue` can hold any data type — such as a JavaScript object, a string, or an {{jsxref("ArrayBuffer")}} — making it suitable for timed metadata use cases where structured data needs to be synchronized with media playback.
 
 The property is read-write for application-created cues, allowing the data to be updated after construction. For cues generated automatically by the user agent from in-band timed metadata (e.g., ID3 tags in an HTTP Live Streaming source), the value is set by the user agent and reflects the metadata payload.
 
