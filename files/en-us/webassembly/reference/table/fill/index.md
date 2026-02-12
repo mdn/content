@@ -8,7 +8,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`table.fill`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) sets every value stored in a series of table elements to the same value.
+The **`table.fill`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) sets a range of table elements to the same value.
 
 {{InteractiveExample("Wat Demo: table.fill", "tabbed-taller")}}
 
@@ -58,8 +58,8 @@ table.fill identifier
   - : The `table.fill` instruction type. Must always be included first.
 - `identifier` {{optional_inline}}
   - : The identifier for the table you want to fill. This can be one of the following:
-    - `identifying_name`
-      - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Definitions/table#identifying_name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
+    - `name`
+      - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Definitions/table#name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
     - `index` {{optional_inline}}
       - : The table's index number, for example `0` for the first table in the wasm module, `1` for the second, etc.
 

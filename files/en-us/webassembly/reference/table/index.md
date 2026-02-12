@@ -15,7 +15,7 @@ This set of pages details the table instructions available in Wasm to create and
 ## Instructions
 
 - [`table.fill`](/en-US/docs/WebAssembly/Reference/Table/fill)
-  - : Sets every value stored in a series of table elements to the same value.
+  - : Sets a range of table elements to the same value.
 - [`table.get`](/en-US/docs/WebAssembly/Reference/Table/get)
   - : Retrieves the reference stored at a particular table index.
 - [`table.grow`](/en-US/docs/WebAssembly/Reference/Table/grow)

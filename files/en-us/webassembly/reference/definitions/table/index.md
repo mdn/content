@@ -47,12 +47,12 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 ## Syntax
 
 ```plain
-table identifying_name initial_size max_size storage_type
+table name initial_size max_size type
 ```
 
 - `table`
   - : The `table` definition type. Must always be included first.
-- `identifying_name` {{optional_inline}}
+- `name` {{optional_inline}}
   - : An optional identifying name for the table. This must begin with a `$` symbol, for example `$my_table`. If this is omitted, the table can be identified by its index, for example `0` for the first table in the wasm script, `1` for the second, etc.
 - `initial_size`
   - : An integer representing the initial size of the table.
@@ -60,9 +60,9 @@ table identifying_name initial_size max_size storage_type
   - : An integer representing the maximum size the table is allowed to grow to. If this is not included, the table has no maximum size, and its growth is limited only by system constraints such as available memory.
 - `type`
   - : The name of the function type to store. Possible values are:
-    - `funcref`
+    - [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)
       - : Stores references to functions defined inside Wasm.
-    - `externref`
+    - [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
       - : Store references to external functions defined inside JavaScript.
 
 ## Description
@@ -134,7 +134,7 @@ You could use a function like this to populate each table with a different funct
 )
 ```
 
-You could then call the `$populate` function and use `call_indirect` to call the functions referenced in each table. The following snippet references the tables by their [identifying name](#identifying_name):
+You could then call the `$populate` function and use `call_indirect` to call the functions referenced in each table. The following snippet references the tables by their [identifying name](#name):
 
 ```wat
 (func (export "accessTable")

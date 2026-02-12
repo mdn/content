@@ -63,8 +63,8 @@ table.set identifier
   - : The `table.set` instruction type. Must always be included first.
 - `identifier` {{optional_inline}}
   - : An identifier for the table you want to store a reference in. This can be one of the following:
-    - `identifying_name`
-      - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Definitions/table#identifying_name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
+    - `name`
+      - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Definitions/table#name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
     - `index`
       - : The table's index number, for example `0` for the first table in the wasm script, `1` for the second, etc.
 
