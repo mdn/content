@@ -93,7 +93,7 @@ The shorthand for {{cssxref("inset-inline-start")}} and `inset-inline-end` is {{
 
 ### Values
 
-The `inset-inline-end` property takes the same values as the {{cssxref("left")}} property.
+The `inset-inline-end` property takes the same values as the {{cssxref("top")}} property.
 
 ## Formal definition
 
