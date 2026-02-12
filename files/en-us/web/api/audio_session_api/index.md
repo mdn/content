@@ -19,11 +19,6 @@ People increasingly consume media through the web: it is now a primary channel f
 
 A web page can perform audio processing in various ways using APIs such as {{domxref("HTMLMediaElement")}} and the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). An **audio session** represents the aggregated audio produced by a web page, enabling it to express the general nature of its audio output.
 
-The Audio Session API allows developers to:
-
-- **Specify the type of audio** their application produces (such as playback, transient sounds, or recording).
-- **Control how web audio interacts** with other applications playing audio on the device.
-
 ### Audio session types
 
 The API supports several audio session types, which specify the type of audio an application is producing:
