@@ -6,7 +6,7 @@ page-type: listing-page
 sidebar: webassemblysidebar
 ---
 
-This page lists references for [WebAssembly](/en-US/docs/WebAssembly) usage on the web.
+This page lists references for [WebAssembly](/en-US/docs/WebAssembly).
 
 ## JavaScript reference
 
