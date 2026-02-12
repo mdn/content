@@ -1,18 +1,19 @@
 ---
 title: Back command
+short-title: Back
 slug: Web/WebDriver/Reference/Classic/Commands/Back
 page-type: webdriver-command
 browser-compat: webdriver.classic.Back
 sidebar: webdriver
 ---
 
-The _Back_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API navigates to the previous page in the browsing history. This is equivalent to clicking the browser's back button or calling {{domxref("History.back()")}} in JavaScript.
+The _back_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API navigates to the previous page in the browsing history. This is equivalent to clicking the browser's back button or calling {{domxref("History.back()")}} in JavaScript.
 
 ## Syntax
 
-| Method | URI template                 |
-| ------ | ---------------------------- |
-| `POST` | `/session/{session id}/back` |
+| Method                                                | URI template                 |
+| ----------------------------------------------------- | ---------------------------- |
+| [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) | `/session/{session id}/back` |
 
 ### URL parameters
 
@@ -23,9 +24,9 @@ The _Back_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of th
 
 - [Invalid session id](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/InvalidSessionId)
   - : Session does not exist.
-- [No such window](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/NoSuchWindow)
+- No such window
   - : The [`window`](/en-US/docs/Web/API/Window) object has been discarded, indicating that the tab or window has been closed.
-- [Timeout](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/Timeout)
+- Timeout
   - : The navigation did not complete before its timeout expired.
 
 ### Return value
