@@ -90,6 +90,17 @@ The HTML below shows how to apply the attributes to a `<button>` element so it c
 
 The Popover API also provides properties that can be used to get and set the state in JavaScript.
 
+### Closing dialogs
+
+It is important to provide a closing mechanism for every `dialog` element, and to ensure that this works on devices that might not have a physical keyboard.
+
+There are numerous ways to close a dialog:
+
+- By submitting the form within the dialog form using the `dialog` method (see the [Using the dialog open attribute](#using_the_dialog_open_attribute) example).
+- Clicking outside the dialog area when "light dismiss" is enabled (see the [Popover API HTML attributes](/en-US/docs/Web/HTML/Reference/Elements/dialog#popover_api_html_attributes) example).
+- By pressing the <kbd>Esc</kbd> key, in dialogs where it is enabled (see the [Popover API HTML attributes](/en-US/docs/Web/HTML/Reference/Elements/dialog#popover_api_html_attributes) example).
+- By calling the {{domxref("HTMLDialogElement.close()")}} method (see the [modal example](#creating_a_modal_dialog)).
+
 ### CSS Styling
 
 A `<dialog>` can be selected using its element name (like any other element), and you can also match its state using pseudo-classes such as [`:modal`](/en-US/docs/Web/CSS/Reference/Selectors/:modal) and [`:open`](/en-US/docs/Web/CSS/Reference/Selectors/:open).
@@ -145,8 +156,8 @@ You can close the dialog by selecting the "Close" button or pressing the <kbd>Es
 This example demonstrates how you can open and close a non-modal dialog using the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover), [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget), and [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML attributes of the [Popover API](/en-US/docs/Web/API/Popover_API).
 
 The `<dialog>` is turned into a popover by adding the `popover` attribute.
-Since we haven't specified a value for the attribute,  the default value of `"auto"` is used.
-This enables "light dismiss" behavior, such that the dialog to be closed by clicking outside the the dialog or by pressing <kbd>Esc</kbd>.
+Since we haven't specified a value for the attribute, the default value of `"auto"` is used.
+This enables "light dismiss" behavior, such that the dialog to be closed by clicking outside the dialog or by pressing <kbd>Esc</kbd>.
 We could instead have set `popover="manual"` to disable `"light dismiss" and require that the dialog is closed with the "Close" button.
 
 Note that we haven't specified the `popovertargetaction` attribute for the `<button>` that opens the dialog.
@@ -296,6 +307,13 @@ When the dialog is closed, the return value is displayed under the "Show the dia
 
 #### JavaScript
 
+The dialog is opened using using an event listener on the "Show the dialog" button, which calls {{domxref("HTMLDialogElement.showModal()")}} when the button is clicked.
+
+The dialog is closed when the "Cancel" button is clicked, because `<button>` includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/input/submit#formmethod) attribute.
+When a form's method is [`dialog`](#additional_notes), the state of the form is saved but not submitted, and the dialog gets closed (the attribute overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} method).
+Without an `action`, submitting the form via the default {{HTTPMethod("GET")}} method causes a page to reload.
+We use JavaScript to prevent the submission and close the dialog with the {{domxref("event.preventDefault()")}} and {{domxref("HTMLDialogElement.close()")}} methods, respectively.
+
 ```js
 const showButton = document.getElementById("showDialog");
 const favDialog = document.getElementById("favDialog");
@@ -326,19 +344,6 @@ confirmBtn.addEventListener("click", (event) => {
 #### Result
 
 {{EmbedLiveSample("Handling the return value from the dialog", "100%", 300)}}
-
-The above examples demonstrate the following three methods of closing modal dialogs:
-
-- By submitting the form within the dialog form using the `dialog` method (as seen in the [HTML-only non-modal dialog](#html-only_non-modal_dialog) example).
-- By pressing the <kbd>Esc</kbd> key.
-- By calling the {{domxref("HTMLDialogElement.close()")}} method (as seen in the [modal example](#creating_a_modal_dialog)).
-  In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Confirm" button closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
-
-The "Cancel" button includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/input/submit#formmethod) attribute, which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} method. When a form's method is [`dialog`](#additional_notes), the state of the form is saved but not submitted, and the dialog gets closed.
-
-Without an `action`, submitting the form via the default {{HTTPMethod("GET")}} method causes a page to reload. We use JavaScript to prevent the submission and close the dialog with the {{domxref("event.preventDefault()")}} and {{domxref("HTMLDialogElement.close()")}} methods, respectively.
-
-It is important to provide a closing mechanism within every `dialog` element. The <kbd>Esc</kbd> key does not close non-modal dialogs by default, nor can one assume that a user will even have access to a physical keyboard (e.g., someone using a touch screen device without access to a keyboard).
 
 ### Closing a dialog with a required form input
 
