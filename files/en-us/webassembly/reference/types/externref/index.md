@@ -62,7 +62,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
 
 The `externref` type is used to reference values defined in JavaScript from inside Wasm modules. Any value type can be referenced, which is very useful when importing functions into WebAssembly that manipulate DOM nodes, write to canvas contexts, or manipulate image data. There is no longer the need to represent data in appropriate formats (for example, serialize objects) before it is sent over to Wasm.
 
-WebAssembly code cannot directly access the JavaScript value and must either store it in a `global`/[`table`](/en-US/docs/WebAssembly/Reference/Module_definitions/table), or pass it to an imported JavaScript function.
+WebAssembly code cannot directly access the JavaScript value and must either store it in a `global`/[`table`](/en-US/docs/WebAssembly/Reference/Definitions/table), or pass it to an imported JavaScript function.
 
 ### Garbage collection
 

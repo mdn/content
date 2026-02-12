@@ -13,10 +13,10 @@ This page lists references for [WebAssembly](/en-US/docs/WebAssembly).
 - [WebAssembly](/en-US/docs/WebAssembly/Reference/JavaScript_interface)
   - : The WebAssembly JavaScript object acts as the namespace for all WebAssembly-related functionality.
 
-## Module definitions
+## Definitions
 
-- [WebAssembly module definitions](/en-US/docs/WebAssembly/Reference/Module_definitions)
-  - : The top-level module definitions available in Wasm for defining module features such as tables, types, memories, functions, etc.
+- [WebAssembly definitions](/en-US/docs/WebAssembly/Reference/Definitions)
+  - : The top-level definitions available in Wasm for defining module features such as tables, types, memories, functions, etc.
 
 ## Types
 

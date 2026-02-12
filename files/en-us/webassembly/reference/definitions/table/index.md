@@ -1,13 +1,13 @@
 ---
-title: "table: Wasm module definition"
+title: "table: Wasm definition"
 short-title: table
-slug: WebAssembly/Reference/Module_definitions/table
+slug: WebAssembly/Reference/Definitions/table
 page-type: webassembly-instruction
 spec-urls: https://webassembly.github.io/spec/core/syntax/modules.html#syntax-table
 sidebar: webassemblysidebar
 ---
 
-The **`table`** [module definition](/en-US/docs/WebAssembly/Reference/Module_definitions) creates a new table.
+The **`table`** [definition](/en-US/docs/WebAssembly/Reference/Definitions) creates a new table.
 
 {{InteractiveExample("Wat Demo: table", "tabbed-taller")}}
 
@@ -51,7 +51,7 @@ table identifying_name initial_size max_size storage_type
 ```
 
 - `table`
-  - : The `table` instruction type. Must always be included first.
+  - : The `table` definition type. Must always be included first.
 - `identifying_name` {{optional_inline}}
   - : An optional identifying name for the table. This must begin with a `$` symbol, for example `$my_table`. If this is omitted, the table can be identified by its index, for example `0` for the first table in the wasm script, `1` for the second, etc.
 - `initial_size`

@@ -7,7 +7,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#tabl
 sidebar: webassemblysidebar
 ---
 
-This set of pages details the table instructions available in Wasm to create and manipulate [tables](/en-US/docs/WebAssembly/Reference/Module_definitions/table).
+This set of pages details the table instructions available in Wasm to create and manipulate [tables](/en-US/docs/WebAssembly/Reference/Definitions/table).
 
 > [!NOTE]
 > Equivalent functionality is available to JavaScript via the [`WebAssembly.Table`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table) API.

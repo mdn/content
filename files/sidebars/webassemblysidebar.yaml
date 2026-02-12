@@ -103,9 +103,9 @@ sidebar:
         details: closed
         code: true
   - type: listSubPages
-    path: /WebAssembly/Reference/Module_definitions
-    link: /WebAssembly/Reference/Module_definitions
-    title: Module definitions
+    path: /WebAssembly/Reference/Definitions
+    link: /WebAssembly/Reference/Definitions
+    title: Definitions
     details: closed
   - title: Instructions
     details: closed
