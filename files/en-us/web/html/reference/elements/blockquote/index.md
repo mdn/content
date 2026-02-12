@@ -14,7 +14,7 @@ The **`<blockquote>`** [HTML](/en-US/docs/Web/HTML) element indicates that the e
 <div>
   <blockquote cite="https://www.huxley.net/bnw/four.html">
     <p>
-      Words can be like X-rays, if you use them properly—they’ll go through
+      Words can be like X-rays, if you use them properly—they'll go through
       anything. You read and you're pierced.
     </p>
   </blockquote>
