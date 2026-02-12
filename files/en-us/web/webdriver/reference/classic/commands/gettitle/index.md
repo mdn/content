@@ -35,23 +35,19 @@ A string containing the title of the current document, equivalent to the value o
 
 ### Retrieving the page title
 
-This example navigates to a web page and retrieves its document title.
+With a WebDriver server running on `localhost:4444`, assume an active session has navigated to `https://example.org` and you have the `sessionId` from the response. You can retrieve the document title by using the following command:
 
-```python
-from selenium import webdriver
-
-session = webdriver.Firefox()
-session.get("https://www.selenium.dev/")
-
-print(session.title)
-
-session.quit()
+```bash
+curl -i http://localhost:4444/session/16005d0d-b0dd-4e71-ab38-025329c3baef/title
 ```
 
-Output:
+The server responds with the document title as shown here:
 
-```plain
-Selenium
+```http
+HTTP/1.1 200 OK
+content-type: application/json; charset=utf-8
+
+{"value":"Example Domain"}
 ```
 
 ## Specifications
