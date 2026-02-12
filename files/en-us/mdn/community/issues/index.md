@@ -42,12 +42,12 @@ Here are some hints for opening issues:
 - Choose the appropriate category to report the issue. For example, to report a content bug, use the [Content issue](https://github.com/mdn/content/issues/new?assignees=&labels=needs+triage&template=content-bug.yml) template in the `mdn/content` repository.
 - Provide sufficient information while reporting the issue:
   - **Issue title** must convey succinctly the _required action_.
-  - **Issue description** must clearly describe the bug and, if you could, the action required to resolve the issue.
+  - **Issue description** must clearly describe the bug and, if possible, the action required to resolve the issue.
 
-    For complex issues that need multiple steps to resolve, break down the work into smaller tasks using a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists). Update the status of a task in the issue description instead of commenting on the issue. This helps others who may otherwise need to scroll through comments on the issue to determine the status of various tasks. Comments in an issue should be limited to details or context that help resolve the issue.
+    For complex issues that need multiple steps to resolve, break down the work into smaller tasks using a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists). Update the status of a task in the issue description instead of commenting on the issue. This helps others who may otherwise need to scroll through comments on the issue to determine the status of various tasks. Comments in an issue should be limited to details or context that help with resolving the issue.
 
 - If you find yourself in one of the following situations, move the conversation to [MDN's discussion on GitHub](https://github.com/orgs/mdn/discussions):
-  - You are unsure if the issue is valid, or what the required action is.
+  - You are unsure if the issue is valid or what the required action is.
   - The issue has no clear consensus on its resolution.
 - For minor bugs, you can [make the changes yourself](#fixing_issues_yourself) and submit a pull request.
 
@@ -230,7 +230,7 @@ Next, set the following labels where possible:
   - `broken link external`: The issue reports a broken link to an external page.
   - `document not written`: The issue reports a necessary document that has not been written yet, usually because a link points to it. Note that we have a [Web Docs Backlog](https://openwebdocs.github.io/web-docs-backlog/all/) project that already tracks many unwritten reference pages, so if the issue is about one of those, you can [close the issue](#closing_an_issue_as_a_duplicate) with `closed: duplicate` and point to the backlog.
   - `screenshot`: The issue reports a missing or outdated screenshot.
-  - `baseline`: The issue reports an incorrect [baseline](/en-US/docs/Glossary/Baseline/Compatibility) banner. Note that this banner is not controlled by content, but through a collaboration of [browser compat data](https://github.com/mdn/browser-compat-data), [front-end code](https://github.com/mdn/fred), and the [web-platform-dx/web-features](https://github.com/web-platform-dx/web-features) project. You should almost always either close the issue as working as intended or transfer it somewhere else.
+  - `baseline`: The issue reports an incorrect [baseline](/en-US/docs/Glossary/Baseline/Compatibility) banner. Note that the data displayed in the baseline banner does not come from the `mdn/content` repository; instead, it's determined by a combination of inputs from [browser compat data](https://github.com/mdn/browser-compat-data), [front-end code](https://github.com/mdn/fred), and [web-platform-dx/web-features](https://github.com/web-platform-dx/web-features). You should almost always either close the issue to indicate it's working as intended or transfer it to the appropriate repository.
 
 - A "goal" label to indicate what the fix is trying to achieve:
   - `goal: accuracy`: The issue reports incorrect or inaccurate information. If the content was accurate at the time of writing, use `goal: up-to-date` instead.
@@ -254,9 +254,9 @@ Next, set the following labels where possible:
   - `help wanted`: Set this label if the issue requires help from someone who knows about or is familiar with the topic. This is a popular label, and some contributors use it to search for issues to work on in open source projects in their areas of familiarity or expertise.
   - `accepting PR`: Add this neutral label if the issue is not as straightforward as a `good first issue`, but not so complex or niche to require a `help wanted` label.
 
-  If an issue doesn't have any of the these labels, it generally indicates that community contributions are discouraged for the issue. This may be the case when further discussion is needed, the work requires someone familiar with MDN editorial conventions, or a team member intends to work on it. Contributors can still work on these issues if they are familiar enough with the process.
+  If an issue doesn't have any of the these labels, it generally indicates that community contributions are discouraged for the issue. This may be the case when further discussion is needed, the work requires someone familiar with MDN editorial conventions to take it on, or a team member intends to work on it. Contributors can still work on these issues if they are familiar enough with the process.
 
-- Issue status: if an issue is not marked as welcoming PRs or otherwise in progress, add a label indicating what it's blocked on.
+- Issue status: If an issue doesn't have a label showing that we're accepting PRs or that work on it is in progress, add one of the following labels to indicate what it's blocked on:
   - `needs BCD update`: Set this label if the issue involves documentation for new features or behavior that would first need data about when it's implemented.
   - `needs content update`: Set this label if the issue fix in another repository will need an equivalent fix in the `mdn/content` repository.
   - `needs decision`: Set this label if the issue involves a team consensus on the approach. The consensus can be reached via a discussion or a synchronous internal meeting.
@@ -269,7 +269,7 @@ After you've analyzed and validated the issue, and applied the appropriate label
 
 ### Closing an issue as not planned
 
-If an issue does not map to any action items, you should consider closing the issue as not planned. Click the drop down next to the **Close issue** button and select **Close as not planned**. Post a comment explaining the reason for closing the issue. Also add one of the following labels:
+If an issue does not map to any actionable task, you should consider closing the issue as not planned. Click the dropdown next to the **Close issue** button, and select **Close as not planned**. Post a comment explaining the reason for closing the issue. Also add one of the following labels:
 
 - `closed: browser bug`: The issue reports unexpected behavior (with their code or MDN's code) that's actually a browser bug, and it's not significant enough to warrant a BCD note.
 - `closed: question`: The issue is based on a user error or misunderstanding, and the content is sufficiently correct and clear. However, usually do give some acknowledgment of the issue and consider whether the content can be clarified further to avoid similar questions.
