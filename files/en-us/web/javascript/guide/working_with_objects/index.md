@@ -24,14 +24,17 @@ Object initializers are also called _object literals_. "Object initializer" is c
 The syntax for an object using an object initializer is:
 
 ```js
-const obj = {
-  property1: value1, // property name may be an identifier
-  2: value2, // or a number
-  "property n": value3, // or a string
+const key = "color";
+
+const example = {
+  id: 1, // unqouted name(valid Javascript identifier)
+  "user name": "Alex", // String literal
+  100: "numeric key", // Numeric literal
+  [key]: "blue", // Computed property name
 };
 ```
 
-Each property name before colons is an identifier (either a name, a number, or a string literal), and each `valueN` is an expression whose value is assigned to the property name. The property name can also be an expression; computed keys need to be wrapped in square brackets. The [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) reference contains a more detailed explanation of the syntax.
+Each property name before a colon can be written as an unquoted name (if it is a valid JavaScript identifier), a String literal, a numeric literal, or a computed property name in square brackets and each value after the `colon` is an `expression`, and its result becomes the `value` of the property. The [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) reference contains a more detailed explanation of the syntax.
 
 In this example, the newly created object is assigned to a variable `obj` — this is optional. If you do not need to refer to this object elsewhere, you do not need to assign it to a variable. (Note that you may need to wrap the object literal in parentheses if the object appears where a statement is expected, so as not to have the literal be confused with a block statement.)
 
