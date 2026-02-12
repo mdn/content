@@ -8,31 +8,59 @@ import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
 import { fdir } from "fdir";
+import { fileURLToPath } from "node:url";
 
 import { getAjvValidator, checkFrontMatter } from "./front-matter_utils.js";
 
+const EXCLUDED_DIRS = new Set(["conflicting", "orphaned"]);
+const EXCLUDED_PATH_SEGMENTS = [
+  "scripts/filecheck/fixtures/",
+  "tests/front-matter_test_files",
+];
+
+function normalizePathForMatch(filePath) {
+  return filePath.replaceAll("\\", "/");
+}
+
+function isExcludedFilePath(filePath) {
+  const normalizedPath = normalizePathForMatch(filePath);
+
+  if (
+    EXCLUDED_PATH_SEGMENTS.some((segment) => normalizedPath.includes(segment))
+  ) {
+    return true;
+  }
+
+  return [...EXCLUDED_DIRS].some((dirName) =>
+    normalizedPath.includes(`/${dirName}/`),
+  );
+}
+
+export { isExcludedFilePath, normalizePathForMatch };
+
 async function resolveDirectory(file) {
   const stats = await lstat(file);
+
   if (stats.isDirectory()) {
     const api = new fdir()
       .withErrors()
       .withFullPaths()
       .filter((filePath) => filePath.endsWith("index.md"))
-      .exclude((dirName) => dirName === "conflicting" || dirName === "orphaned")
+      .exclude((dirName) => EXCLUDED_DIRS.has(dirName))
       .crawl(file);
+
     return api.withPromise();
-  } else if (
+  }
+
+  if (
     stats.isFile() &&
     file.endsWith("index.md") &&
-    !file.includes("/conflicting/") &&
-    !file.includes("/orphaned/") &&
-    !file.includes("scripts/filecheck/fixtures/") &&
-    !file.includes("tests/front-matter_test_files")
+    !isExcludedFilePath(file)
   ) {
     return [file];
-  } else {
-    return [];
   }
+
+  return [];
 }
 
 // lint front matter
@@ -80,45 +108,50 @@ async function lintFrontMatter(filesAndDirectories, options) {
   }
 }
 
-yargs(hideBin(process.argv))
-  .command(
-    "$0 [files...]",
-    "Lint front matter in markdown files",
-    (yargs) => {
-      return yargs
-        .positional("files", {
-          type: "string",
-          array: true,
-          describe: "List of files and/or directories to check",
-          default: ["./files/en-us"],
-        })
-        .option("fix", {
-          type: "boolean",
-          describe: "Save corrected output",
-          default: false,
-        })
-        .option("config-file", {
-          type: "string",
-          describe: "Custom configuration file",
-          default: "./front-matter-config.json",
-        });
-    },
-    async (argv) => {
-      const cwd = process.cwd();
-      const files = (argv.files || []).map((f) => resolve(cwd, f));
+const __filename = fileURLToPath(import.meta.url);
+const isMain = process.argv[1] === __filename;
 
-      if (!files.length) {
-        console.info("No files to lint.");
-        return;
-      }
+if (isMain) {
+  yargs(hideBin(process.argv))
+    .command(
+      "$0 [files...]",
+      "Lint front matter in markdown files",
+      (yargs) => {
+        return yargs
+          .positional("files", {
+            type: "string",
+            array: true,
+            describe: "List of files and/or directories to check",
+            default: ["./files/en-us"],
+          })
+          .option("fix", {
+            type: "boolean",
+            describe: "Save corrected output",
+            default: false,
+          })
+          .option("config-file", {
+            type: "string",
+            describe: "Custom configuration file",
+            default: "./front-matter-config.json",
+          });
+      },
+      async (argv) => {
+        const cwd = process.cwd();
+        const files = (argv.files || []).map((f) => resolve(cwd, f));
 
-      // yargs converts dashed flags to camelCase by default.
-      const options = {
-        fix: argv.fix,
-        configFile: argv.configFile,
-      };
+        if (!files.length) {
+          console.info("No files to lint.");
+          return;
+        }
 
-      await lintFrontMatter(files, options);
-    },
-  )
-  .help().argv;
+        // yargs converts dashed flags to camelCase by default.
+        const options = {
+          fix: argv.fix,
+          configFile: argv.configFile,
+        };
+
+        await lintFrontMatter(files, options);
+      },
+    )
+    .help().argv;
+}
