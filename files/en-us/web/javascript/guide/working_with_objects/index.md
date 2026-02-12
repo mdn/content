@@ -27,7 +27,7 @@ The syntax for an object using an object initializer is:
 const key = "color";
 
 const example = {
-  id: 1, // unqouted name(valid Javascript identifier)
+  id: 2, // unqouted name(valid Javascript identifier)
   "user name": "Alex", // String literal
   100: "numeric key", // Numeric literal
   [key]: "blue", // Computed property name
