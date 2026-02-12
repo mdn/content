@@ -55,8 +55,8 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 
 ## Syntax
 
-```wat
-table.grow identifier initial_value grow_amount
+```plain
+table.grow identifier
 ```
 
 - `table.grow`
@@ -70,14 +70,18 @@ table.grow identifier initial_value grow_amount
 
     If the `identifier` is omitted, it will default to `0`.
 
+### Type
+
+```plain
+[initial_value, grow_amount] -> [previous_length]
+```
+
 - `initial_value`
-  - : The initial value to set for the new table elements. Its type must be the same as the [`storage_type`](/en-US/docs/WebAssembly/Reference/Definitions/table#storage_type) initially set when the table was created.
+  - : The initial value to set for the new table elements. Its type must be the same as the [`type`](/en-US/docs/WebAssembly/Reference/Definitions/table#type) initially set when the table was created.
 - `grow_amount`
   - : The number of elements to grow the table by. This must be an `i32` value, for example `(i32.const 1)`.
-
-### Result
-
-An `i32` equal to the size of the table before the `grow` instruction is applied to it, or `-1` if the table failed to grow, for example due to an out-of-memory (OOM) error or the new size being greater than the [table's maximum size](/en-US/docs/WebAssembly/Reference/Definitions/table#max_size).
+- `previous_length`
+  - : An `i32` equal to the size of the table before the `grow` instruction is applied to it, or `-1` if the table failed to grow, for example due to an out-of-memory (OOM) error or the new size being greater than the [table's maximum size](/en-US/docs/WebAssembly/Reference/Definitions/table#max_size).
 
 To retrieve the new table size after the `grow` instruction is applied to it, use the [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size) instruction.
 

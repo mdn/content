@@ -8,7 +8,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`table.set`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) changes the function reference stored in a particular table element.
+The **`table.set`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) changes the value stored in a particular table element.
 
 {{InteractiveExample("Wat Demo: table.set", "tabbed-taller")}}
 
@@ -55,8 +55,8 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 
 ## Syntax
 
-```wat
-table.set identifier element_number function_reference
+```plain
+table.set identifier
 ```
 
 - `table.set`
@@ -70,10 +70,16 @@ table.set identifier element_number function_reference
 
     If the `identifier` is omitted, it will default to `0`.
 
-- `element_number`
-  - : The element number to store the function reference in. This must be an `i32` value, for example `(i32.const 1)`.
-- `function_reference`
-  - : The function reference to store in the table. This should be a `ref.func`, for example `(ref.func $f1)`.
+### Type
+
+```plain
+[index, value] -> []
+```
+
+- `index`
+  - : The element index to store the value in. This must be an `i32` value, for example `(i32.const 1)`.
+- `value`
+  - : The value to store in the table. This must match the element type the table was defined with.
 
 ### Result
 

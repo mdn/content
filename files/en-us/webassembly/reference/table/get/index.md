@@ -8,7 +8,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`table.get`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) retrieves the reference stored in a particular table element.
+The **`table.get`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) retrieves the reference stored at a particular table index.
 
 {{InteractiveExample("Wat Demo: table.get", "tabbed-taller")}}
 
@@ -53,8 +53,8 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), imports).then(
 
 ## Syntax
 
-```wat
-table.get identifier element_number
+```plain
+table.get identifier
 ```
 
 - `table.get`
@@ -68,12 +68,16 @@ table.get identifier element_number
 
     If the `identifier` is omitted, it will default to `0`.
 
-- `element_number`
-  - : The element number to retrieve the function reference from. This must be an `i32` value, for example `(i32.const 1)`.
+### Type
 
-### Result
+```plain
+[index] -> [value]
+```
 
-The value stored in the referenced table element number.
+- `index`
+  - : The index in the table to retrieve the value of. This must be an `i32` value, for example `(i32.const 1)`.
+- `value`
+  - : The value stored in the table at the index.
 
 ### Opcodes
 
@@ -83,7 +87,9 @@ The value stored in the referenced table element number.
 
 ## Description
 
-The `table.get` instruction is used to retrieve a specified value from a particular element of an existing table. If the table was initialized to store [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)s, the values retrieved will be references to functions defined inside Wasm. If the table was initialized to store [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)s, the values retrieved can be just about any value type defined in JavaScript.
+The `table.get` instruction retrieves a value stored at a given index of an existing table.
+
+If the table was initialized to store [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)s, the values retrieved will be references to functions defined inside Wasm. If the table was initialized to store [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)s, the values retrieved can be just about any value type defined in JavaScript.
 
 Wasm table values can be retrieved from JavaScript using the [`table.get()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/get) method.
 

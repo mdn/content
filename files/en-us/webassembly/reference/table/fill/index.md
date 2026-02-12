@@ -8,7 +8,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`table.fill`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) sets the function reference stored in a series of table elements to the same reference.
+The **`table.fill`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) sets every value stored in a series of table elements to the same value.
 
 {{InteractiveExample("Wat Demo: table.fill", "tabbed-taller")}}
 
@@ -50,8 +50,8 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 
 ## Syntax
 
-```wat
-table.fill identifier starting_index function_reference element_span
+```plain
+table.fill identifier
 ```
 
 - `table.fill`
@@ -60,21 +60,23 @@ table.fill identifier starting_index function_reference element_span
   - : The identifier for the table you want to fill. This can be one of the following:
     - `identifying_name`
       - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Definitions/table#identifying_name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
-    - `index`
-      - : The table's index number, for example `0` for the first table in the wasm script, `1` for the second, etc.
+    - `index` {{optional_inline}}
+      - : The table's index number, for example `0` for the first table in the wasm module, `1` for the second, etc.
 
     If the `identifier` is omitted, it will default to `0`.
 
-- `starting_index`
-  - : The index of the first element to store the function reference in. This must be an `i32` value, for example `(i32.const 0)`.
-- `function_reference`
-  - : The function reference to store in the table. This should be a `ref.func`, for example `(ref.func $f1)`.
-- `element_span`
-  - : The number of elements to store the function reference in.
+### Type
 
-### Result
+```plain
+[index, value, length] -> []
+```
 
-No result.
+- `index`
+  - : The index of the first element to store the reference in. This must be an `i32` value, for example `(i32.const 0)`.
+- `value`
+  - : The reference to store in the table. This must be of the same [type](/en-US/docs/WebAssembly/Reference/Definitions/table#type) that the table is defined with.
+- `length`
+  - : The number of elements to store the value to, starting at `index`. This must be an `i32` value.
 
 ### Opcodes
 
@@ -82,15 +84,11 @@ No result.
 | ------------ | -------------------------------------------------------------------------------------------------------------- |
 | `table.fill` | `𝟶𝚡𝙵𝙲 17:𝚞𝟹𝟸` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
 
-## Description
-
-`table.fill` is used to fill multiple table elements with the same function reference.
-
 ## Examples
 
 ### Demonstrating `table.fill` behavior
 
-This example demonstrates that, when all of the elements of a table are referenced in a `table.fill` instruction, all of those elements will reference the same function.
+This example demonstrates that, when all of the elements of a table are referenced in a `table.fill` instruction, all of those elements will reference the same value.
 
 #### JavaScript
 

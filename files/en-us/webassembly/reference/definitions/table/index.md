@@ -46,7 +46,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 
 ## Syntax
 
-```wat
+```plain
 table identifying_name initial_size max_size storage_type
 ```
 
@@ -58,7 +58,7 @@ table identifying_name initial_size max_size storage_type
   - : An integer representing the initial size of the table.
 - `max_size` {{optional_inline}}
   - : An integer representing the maximum size the table is allowed to grow to. If this is not included, the table has no maximum size, and its growth is limited only by system constraints such as available memory.
-- `storage_type`
+- `type`
   - : The name of the function type to store. Possible values are:
     - `funcref`
       - : Stores references to functions defined inside Wasm.

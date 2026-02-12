@@ -39,7 +39,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 
 ## Syntax
 
-```wat
+```plain
 table.size identifier
 ```
 
@@ -54,9 +54,14 @@ table.size identifier
 
     If the `identifier` is omitted, it will default to `0`.
 
-### Result
+### Type
 
-An `i32` equal to the current number of elements contained inside the table.
+```plain
+[] -> [length]
+```
+
+- length
+  - : An `i32` equal to the current number of elements contained inside the table.
 
 ### Opcodes
 
