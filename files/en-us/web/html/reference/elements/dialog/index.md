@@ -43,22 +43,22 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 ## Description
 
 The HTML `<dialog>` element is used to create both modal and non-modal dialog boxes.
-Modal dialog boxes block interaction with the rest of the page, making UI elements "behind" the dialog" inert, while non-modal dialog boxes allow interaction with the rest of the page.
+Modal dialog boxes block interaction with other UI elements, making the rest of the page [inert](/en-US/docs/Web/HTML/Reference/Global_attributes/inert#:~:text=When,clicked), while non-modal dialog boxes allow interaction with the rest of the page.
 
 ### Controlling dialogs using JavaScript
 
-JavaScript can be used to show and close the `<dialog>` element.
+JavaScript can be used to display and close the `<dialog>` element.
 You can use the {{domxref("HTMLDialogElement.showModal()", "showModal()")}} method to display a modal dialog and the {{domxref("HTMLDialogElement.show()", "show()")}} method to display a non-modal dialog. The dialog box can be closed using the {{domxref("HTMLDialogElement.close()", "close()")}} method or using the [`dialog`](/en-US/docs/Web/HTML/Reference/Elements/form#method) method when submitting a `<form>` that is nested within the `<dialog>` element.
 Modal dialogs can also be closed by pressing the <kbd>Esc</kbd> key.
 
 ### Modal dialogs using invoker commands
 
-Modal dialogs can be declaratively opened and closed using the [Invoker Commands API](/en-US/docs/Web/API/Invoker_Commands_API) HTML attributes [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) defined on {{htmlelement("button")}} elements.
+Modal dialogs can be declaratively opened and closed using the [Invoker Commands API](/en-US/docs/Web/API/Invoker_Commands_API) HTML attributes [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command), which can be set on {{htmlelement("button")}} elements.
 
 The `command` attribute sets the particular command that is to be sent when the `<button>` element is clicked, while `commandfor` sets the `id` of the target dialog.
 The commands that can be sent for dialogs are [`"show-modal"`](/en-US/docs/Web/HTML/Reference/Elements/button#show-modal), [`"close"`](/en-US/docs/Web/HTML/Reference/Elements/button#close), and [`"request-close"`](/en-US/docs/Web/HTML/Reference/Elements/button#request-close).
 
-The HTML below shows how the attributes are applied to button elements so that they open and close the modal dialog with the `id` of "my-dialog".
+The HTML below demonstrates how to apply the attributes to a `<button>` element so it can be pressed to open a modal `<dialog>` with an `id` of "my-dialog".
 
 ```html
 <button command="show-modal" commandfor="my-dialog">Open dialog</button>
@@ -71,13 +71,13 @@ The HTML below shows how the attributes are applied to button elements so that t
 
 ### Non-modal dialogs using popover commands
 
-Non-modal dialogs can be declaratively opened, closed, and toggled using the [Popover API](/en-US/docs/Web/API/Popover_API) HTML attributes [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) and [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) defined on {{htmlelement("button")}} or {{htmlelement("input")}} elements.
+Non-modal dialogs can be declaratively opened, closed, and toggled using the [Popover API](/en-US/docs/Web/API/Popover_API) HTML attributes [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) and [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction), which can be defined on {{htmlelement("button")}} and {{htmlelement("input")}} elements.
 
 The `<dialog>` must be turned into a popover by adding the `popover` attribute.
-You can then use `popovertarget` on a button/input to indicate the target popover, and `popovertargetaction` for the action on the popover when the button is clicked.
-Note that because the dialog is a popover it will be modal, so you can close it by clicking outside the dialog.
+You can then use `popovertarget` on a button/input to indicate the target popover, and `popovertargetaction` to specify the action to occur on the popover when the button is clicked.
+Note that, because the dialog is a popover, it will be non-modal, so you can close it by clicking outside the dialog.
 
-The HTML below shows how the attributes are applied to button elements so that they show and hide the modal dialog with the `id` of "my-dialog".
+The HTML below shows how to apply the attributes to a `<button>` element so it can be pressed to show and hide a modal `<dialog>` with an `id` of "my-dialog".
 
 ```html
 <button popovertarget="my-dialog">Open dialog</button>
@@ -92,10 +92,10 @@ The Popover API also provides properties that can be used to get and set the sta
 
 ### CSS Styling
 
-A dialog can be selected using its element name (like any other element), and you can also match on its state using pseudo classes such as [`:modal`](/en-US/docs/Web/CSS/Reference/Selectors/:modal) and [`:open`](/en-US/docs/Web/CSS/Reference/Selectors/:open).
+A `<dialog>` can be selected using its element name (like any other element), and you can also match its state using pseudo-classes such as [`:modal`](/en-US/docs/Web/CSS/Reference/Selectors/:modal) and [`:open`](/en-US/docs/Web/CSS/Reference/Selectors/:open).
 
 The CSS {{cssxref('::backdrop')}} pseudo-element can be used to style the backdrop of a modal dialog, which is displayed behind the `<dialog>` element when the dialog is displayed using the {{domxref("HTMLDialogElement.showModal()")}} method.
-For example, this pseudo-element could be used to blur, darken, or otherwise obfuscate the inert content behind the modal dialog.
+This pseudo-element could be used, for example, to blur, darken, or otherwise obfuscate the inert content behind the modal dialog.
 
 ### Additional notes
 
@@ -121,7 +121,7 @@ The `<dialog>` element is exposed by browsers in a manner similar to custom dial
 
 This example demonstrates how you can use open and close a modal dialog using the [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) HTML attributes of the [Invoker Commands API](/en-US/docs/Web/API/Invoker_Commands_API).
 
-First we declare a {{htmlelement("button")}} element, setting the `command` to [`"show-modal"`](/en-US/docs/Web/HTML/Reference/Elements/button#show-modal), and the `commandfor` as the `id` of the dialog to open (`my-dialog`).
+First, we declare a {{htmlelement("button")}} element, setting the `command` attribute to [`"show-modal"`](/en-US/docs/Web/HTML/Reference/Elements/button#show-modal), and the `commandfor` attribute to the `id` of the dialog to open (`my-dialog`).
 Then we declare a {{htmlelement("dialog")}} element that contains a "Close" `<button>`. This button sends the [`"close"`](/en-US/docs/Web/HTML/Reference/Elements/button#close) command to the (same) dialog id.
 
 ```html
@@ -189,7 +189,7 @@ After clicking "OK", the dialog gets dismissed, leaving the Result frame empty.
 > [!NOTE]
 > Reload the page to reset the output.
 
-When the dialog is dismissed, there is no method provided to reopen it. For this reason, the preferred method to display non-modal dialogs is by using the {{domxref("HTMLDialogElement.show()")}} method.
+When the dialog is dismissed, there is no method provided to reopen it. The preferred method to display non-modal dialogs is to use the {{domxref("HTMLDialogElement.show()")}} method.
 It is possible to toggle the display of the dialog by adding or removing the boolean `open` attribute, but this is not the recommended practice.
 
 ### Creating a modal dialog
