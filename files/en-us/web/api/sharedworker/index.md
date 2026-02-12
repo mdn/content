@@ -7,7 +7,7 @@ browser-compat: api.SharedWorker
 
 {{APIRef("Web Workers API")}}
 
-The **`SharedWorker`** interface represents a specific kind of worker that can be _accessed_ from several browsing contexts, such as several windows, or iframes. They implement an interface different than dedicated workers, have a different global scope, {{domxref("SharedWorkerGlobalScope")}}, and are not accessible from dedicated workers.
+The **`SharedWorker`** interface represents a specific kind of worker that can be _accessed_ from several browsing contexts, such as multiple windows or iframes. Shared workers implement a different interface than dedicated workers, have a different global scope ({{domxref("SharedWorkerGlobalScope")}}), and their constructor is not exposed in {{domxref("DedicatedWorkerGlobalScope")}}, so they cannot be instantiated from dedicated workers.
 
 > [!NOTE]
 > If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host and port).
