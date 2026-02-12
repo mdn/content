@@ -12,7 +12,7 @@ browser-compat: api.AudioSession.type
 
 The **`type`** property of the {{domxref("AudioSession")}} interface returns or sets the type of the audio session.
 
-The audio session type describes the general nature of the audio processing done by the web page, allowing the platform to determine how web-based audio should interact with other audio playing on the device.
+The audio session type describes the general nature of a web page's audio output, allowing the platform to determine how web-based audio should interact with other audio playing on the device.
 
 ## Value
 
@@ -23,7 +23,7 @@ A string representing the audio session type. Possible values are:
 - `"playback"`
   - : Audio for media playback, such as video or music playback, podcasts, etc. This type should not mix with other playback audio, and may cause other audio to pause.
 - `"transient"`
-  - : Transient audio, such as notification sounds. This type usually plays on top of other audio and may cause other audio to duck (reduce volume).
+  - : Transient audio, such as notification sounds. This type usually plays on top of other audio and may cause it to duck (reduce in volume).
 - `"transient-solo"`
   - : Transient solo audio, such as driving directions or voice prompts. This type pauses or mutes all other audio and plays exclusively. When the audio ends, previously playing audio may resume.
 - `"ambient"`

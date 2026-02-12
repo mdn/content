@@ -12,7 +12,7 @@ browser-compat: api.Navigator.audioSession
 
 The **`audioSession`** read-only property of the {{domxref("Navigator")}} interface returns the {{domxref("AudioSession")}} object for the current document.
 
-The {{domxref("AudioSession")}} interface can be used to control how audio from a web application interacts with other audio playing on a device, allowing developers to specify the type of audio their application produces.
+The {{domxref("AudioSession")}} interface can be used to control how audio from a web application interacts with other audio playing on a device, for example, allowing developers to specify whether their application's audio should play on its own, or along with other device audio.
 
 ## Value
 

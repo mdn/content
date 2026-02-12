@@ -17,7 +17,7 @@ The **Audio Session API** provides a mechanism for web applications to control h
 
 People increasingly consume media through the web, which has become a primary channel for accessing audio and video content. However, media on the web often lacks seamless integration with underlying platforms. The Audio Session API addresses this gap by enhancing media handling across platforms that support audio session management or audio focus features.
 
-A web page can perform audio processing in various ways, combining different APIs like {{domxref("HTMLMediaElement")}} or {{domxref("AudioContext")}}. An **audio session** represents this aggregated audio processing and allows web pages to express the general nature of the audio processing done by the page.
+A web page can perform audio processing in various ways using APIs such as {{domxref("HTMLMediaElement")}} and the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). An **audio session** represents the aggregated audio produced by a web page, enabling it to express the general nature of its audio output.
 
 The Audio Session API allows developers to:
 
@@ -29,7 +29,7 @@ The Audio Session API allows developers to:
 The API supports several audio session types:
 
 - `"auto"` — The default. The user agent automatically chooses the best type based on the audio APIs being used.
-- `"playback"` — For media playback such as music or video. This type should not mix with other playback audio.
+- `"playback"` — For media playback such as music or video. This type should not mix with other audio playback .
 - `"transient"` — For short sounds like notifications. This type usually plays on top of other audio.
 - `"transient-solo"` — For audio that should play exclusively, pausing all other audio (such as voice prompts).
 - `"ambient"` — For audio that can mix with other audio sources.
@@ -51,7 +51,7 @@ The Audio Session API extends the following APIs:
 
 ## Examples
 
-### Setting up a video conferencing application
+### Setting up a video conferencing audio session
 
 ```js
 // Configure audio session for video conferencing
