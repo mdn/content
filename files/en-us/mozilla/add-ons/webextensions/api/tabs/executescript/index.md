@@ -16,6 +16,7 @@ You can inject code into pages whose URL you can express using a [match pattern]
 You must have the permission for the page's URL either explicitly, as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). Note that some special pages do not allow this permission, including reader view, view-source, and PDF viewer pages.
 
 You _cannot_ inject code into:
+
 - Any of the browser's built-in pages, such as `about:debugging`, or `about:addons`.
 - The page that opens when you open a new empty tab.
 - Pages packaged with your extension.

@@ -164,7 +164,7 @@ The intent of this permission is to enable extensions to fulfill a common use ca
 For example, consider an extension that wants to run a script in the current page when the user clicks a browser action. If the `activeTab` permission did not exist, the extension would need to ask for the host permission `<all_urls>`. But this gives the extension more power than it needs: it can now execute scripts in _any tab_, _any time_ it likes, instead of just the active tab and only in response to a user action.
 
 > [!NOTE]
-Your extension can only access the tab or data that existed when the user interaction occurred (e.g., a click). When the active tab navigates away (e.g., due to page load finishing or another event), the extension no longer has permission to access the tab.
+> Your extension can only access the tab or data that existed when the user interaction occurred (e.g., a click). When the active tab navigates away (e.g., due to page load finishing or another event), the extension no longer has permission to access the tab.
 
 The `activeTab` permission enables scripting access to the top-level tab's page and same-origin frames. Running scripts or modifying styles inside [cross-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_network_access) frames may require additional [host permissions](#host_permissions). Of course, [restrictions and limitations](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#permissions_restrictions_and_limitations) related to particular sites and URI schemes are applied as well.
 
