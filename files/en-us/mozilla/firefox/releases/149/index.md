@@ -74,6 +74,8 @@ Firefox 149 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- ### Removals -->
 
+The ability of extensions to dynamically execute code in their `moz-extension:` documents with {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, and {{WebExtAPIRef("scripting.removeCSS")}} is deprecated. The feature is no longer available in Firefox Nightly, and the beta and release versions of Firefox provide a warning. The intention is that this restriction will apply to all versions of Firefox 152 and later. ({{bug(2011234)}})
+
 <!-- ### Other -->
 
 ## Experimental web features
