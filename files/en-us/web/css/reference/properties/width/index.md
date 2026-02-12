@@ -341,23 +341,63 @@ By default, flex items are as wide as their content. The `stretch` value makes t
 
 ### Using the anchor-size() function
 
-In this example, we set the width of an anchor positioned element based on the height of it's associated anchor.
+This example demonstrates using the `anchor-size()` function to define the width of an anchor-positioned element; we defined it's width as a multiple of it's anchor's height.
 
 #### HTML
 
-```html
+We specify two {{htmlelement("div")}} elements: one `anchor` element and one `infobox` element that we'll position relative to the anchor.
 
+```html
+<div class="anchor">⚓︎</div>
+
+<div class="infobox">
+  <p>Infobox.</p>
+</div>
 ```
 
 #### CSS
 
-```css
+We declare the `anchor` `<div>` as an anchor element by giving it an {{cssxref("anchor-name")}}. The positioned element has its {{cssxref("position")}} property set to `absolute`, and is associated with the anchor element via its {{cssxref("position-anchor")}} property. We also set absolute {{cssxref("height")}} and {{cssxref("width")}} dimensions on the anchor and define the width of the anchor-positioned element to be the width of the anchor using the `anchor-size()` function as the value of the `width` property. As a bonues, we also uses the `anchor-size()` function to define the infobox's {{cssxref("left")}} position, making the gap between the anchor and the infobox one quarter of the height of the anchor.
 
+```css hidden
+.anchor {
+  anchor-name: --my-anchor;
+  width: 120px;
+  height: 60px;
+
+  font-size: 2rem;
+  background-color: lightpink;
+  text-align: center;
+  align-content: center;
+  outline: 1px solid black;
+}
+
+.infobox {
+  position-anchor: --my-anchor;
+  position: absolute;
+  position-area: right;
+  width: anchor-size(width);
+
+  left: calc( anchor-size(height) / 4 )
+
+  align-content: center;
+  color: darkblue;
+  background-color: azure;
+  outline: 1px solid #dddddd;
+}
+```
+
+```css hidden
+body {
+  padding: 5em;
+}
 ```
 
 #### Results
 
 {{EmbedLiveSample("Using the anchor-size() function", "auto", 200)}}
+
+Note how the infobox's width is always the same as the anchor element's width.
 
 ## Specifications
 
