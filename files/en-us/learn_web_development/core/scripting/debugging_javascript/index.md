@@ -120,7 +120,7 @@ The `console.log()` output shows that the return value of `fetch()` is not the J
 
 ### `console.error()` and call stacks
 
-As a brief digression, let's try using a different console method to report the error — {{domxref("console.error()")}}. In your code, replace
+As a brief digression, let's try using a different console method to report the error — {{domxref("console.error_static", "console.error()")}}. In your code, replace
 
 ```js
 console.log(`Response value: ${response}`);
@@ -139,7 +139,7 @@ showHeroes http://localhost:7800/js-debug-test/index.js:25
 <anonymous> http://localhost:7800/js-debug-test/index.js:10
 ```
 
-This means that the error is coming from the `showHeroes()` function, line 25, as we noted earlier. If you look at your code, you'll see that the anonymous call on line 10 is calling `showHeroes()`. These lines are referred to as a **call stack**, and can be really useful when trying to track down the source of an error involving several different locations in your code.
+This means that the error is caused by the `showHeroes()` function, line 25, as we noted earlier. If you look at your code, you'll see that the anonymous call on line 10 is calling `showHeroes()`. These lines are referred to as a **call stack**, and can be really useful when trying to track down the source of an error involving several different locations in your code.
 
 The `console.error()` call isn't particularly useful in this case, but it can be useful for generating a call stack if one is not already available.
 
@@ -323,7 +323,7 @@ Let's use `try...catch` in our code.
    ```
 
 2. Save and refresh, and you should now see two things:
-   - The error message and call stack as before, but this time, without a label of "uncaught", or "unhandled".
+   - The error message and call stack are as before, but this time, without a label of "uncaught" or "unhandled".
    - The logged message "Insert code to handle the error".
 
 3. Now try updating `num` to a good (number) value, and you'll see the result of the calculation logged, with no error message.
