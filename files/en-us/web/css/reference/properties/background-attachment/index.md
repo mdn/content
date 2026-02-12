@@ -33,21 +33,16 @@ background-attachment: scroll, local;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    <h1>A Lament for Confederation</h1>
-    <p>&mdash;Chief Dan George, 1967</p>
-    <p>
-      How long have I known you, Oh Canada? A hundred years? Yes, a hundred
-      years. And many, many tides more. And today, when you celebrate your
-      hundred years, Oh Canada, I am sad for all the Indian people throughout
-      the land.
-    </p>
-    <p>
-      For I have known you when your forests were mine; when they gave me my
-      meat and my clothing. I have known you in your fruits and rivers where
-      your fish flashed and danced in the sun, where the waters said ‘come and
-      eat of my abundance.’ I have known you in the freedom of your winds. And
-      my spirit, like your winds, once roamed this good lands.
-    </p>
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill. London. Michaelmas term
+    lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall.
+    Implacable November weather. As much mud in the streets as if the waters had
+    but newly retired from the face of the earth, and it would not be wonderful
+    to meet a Megalosaurus, forty feet long or so, waddling like an elephantine
+    lizard up Holborn Hill.
   </div>
 </section>
 ```
@@ -68,12 +63,14 @@ body {
     url("/shared-assets/images/examples/lizard.png") right 3rem top 1rem / 15rem
       no-repeat,
     url("/shared-assets/images/examples/moon.jpg") center / 10rem;
+  color: #ff5454;
+  font-size: 1.5em;
   font-weight: bold;
   overflow: auto;
   padding: 20px;
   text-shadow:
-    0 0 0.6rem white,
-    0 0 0.6rem white;
+    0 0 0.6rem black,
+    0 0 0.6rem black;
 }
 ```
 
@@ -118,28 +115,20 @@ The `background-attachment` property is specified as one of the keyword values f
 
 #### HTML
 
-We include a paragraph with some text.
-
 ```html
 <p>
-  When I fought to protect my home and my land, I was called a savage. When I
-  neither understood nor welcomed this new way of life, I was called lazy. When
-  I tried to rule my people, I was stripped of my authority.
+  There were doors all round the hall, but they were all locked; and when Alice
+  had been all the way down one side and up the other, trying every door, she
+  walked sadly down the middle, wondering how she was ever to get out again.
 </p>
 ```
 
 #### CSS
 
-We define a {{cssxref("background-image")}} and set the `background-attachment` to `fixed`. We also include a {{cssxref("height")}}, {{cssxref("width")}}, and {{cssxref("overflow")}} to ensure the element scrolls.
-
 ```css
 p {
   background-image: url("star-solid.gif");
   background-attachment: fixed;
-
-  width: 300px;
-  height: 70px;
-  overflow: scroll;
 }
 ```
 
@@ -147,61 +136,41 @@ p {
 
 {{EmbedLiveSample("Basic_example")}}
 
-Note how the background remains fixed relative to the paragraphs viewport when you scroll the overflowing text into view.
-
 ### Multiple background images
 
 This property supports multiple background images. You can specify a different `<attachment>` for each background, separated by commas. Each image is matched with the corresponding `<attachment>` type, from first specified to last.
 
 #### HTML
 
-We include two more paragraph from Chief Dan George's 1967 speech.
-
 ```html
-<div>
-  <p>
-    My nation was ignored in your history textbooks – we were less important in
-    the history of Canada than the buffalo that ranged the plains. I was
-    ridiculed in your plays and motion pictures, and when I drank your
-    fire-water, I got drunk – very, very drunk. And I forgot.
-  </p>
-  <p>
-    Oh Canada, how can I celebrate with you this centenary, this hundred years?
-    Shall I thank you for the reserves that are left me of my beautiful forests?
-    Shall I thank you for the canned fish of my rivers? Shall I thank you for
-    the loss of my pride and authority, even among my own people? For the lack
-    of my will to fight back? No! I must forget what is past and gone.
-  </p>
-</div>
+<p>
+  There were doors all round the hall, but they were all locked; and when Alice
+  had been all the way down one side and up the other, trying every door, she
+  walked sadly down the middle, wondering how she was ever to get out again.
+  Suddenly she came upon a little three-legged table, all made of solid glass;
+  there was nothing on it except a tiny golden key, and Alice's first thought
+  was that it might belong to one of the doors of the hall; but, alas! either
+  the locks were too large, or the key was too small, but at any rate it would
+  not open any of them. However, on the second time round, she came upon a low
+  curtain she had not noticed before, and behind it was a little door about
+  fifteen inches high: she tried the little golden key in the lock, and to her
+  great delight it fitted!
+</p>
 ```
 
 #### CSS
 
-We include a {{cssxref("height")}}, {{cssxref("width")}}, and {{cssxref("overflow")}} on the parent {{htmlelement("div")}} to ensure the contents scroll.
-
-We define two comma-separated background images on the paragraphs, and set the `background-attachment` to `fixed, scroll`, meaning the first background image will be `fixed` and the second will `scroll`. We set the {{cssxref("background-repeat")}} to make both background images repeat vertically, separating them with the {{cssxref("background-position")}} property.
-
 ```css
-div {
-  width: 300px;
-  height: 200px;
-  overflow: scroll;
-}
 p {
   background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
-  background-repeat: repeat-y;
-  background-position:
-    0 0,
-    100px 0;
+  background-repeat: no-repeat, repeat-y;
 }
 ```
 
 #### Result
 
 {{EmbedLiveSample("Multiple_background_images")}}
-
-Note how the first background image is fixed to the viewport while the the second background image is fixed relative to the paragraph.
 
 ## Specifications
 
@@ -214,4 +183,3 @@ Note how the first background image is fixed to the viewport while the the secon
 ## See also
 
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
-- [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
