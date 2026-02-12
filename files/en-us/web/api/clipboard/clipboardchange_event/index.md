@@ -29,7 +29,7 @@ A {{domxref("ClipboardChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 ### Basic `clipboardchange` event usage
 
-This example shows how to listen for the `clipboardchange` event and display the content that was copied to the clipboard.
+This example shows how to listen for system copy commands and display the content that was copied to the clipboard.
 
 #### HTML
 
