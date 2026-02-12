@@ -79,6 +79,12 @@ table.get identifier
 - `value`
   - : The value stored in the table at the index. This will be the element type of the table.
 
+### Traps
+
+`table.get` traps if:
+
+- `index` is greater than [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size).
+
 ### Opcodes
 
 | Instruction | Binary opcode                                                                                           |

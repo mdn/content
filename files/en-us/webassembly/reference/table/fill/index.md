@@ -78,6 +78,12 @@ table.fill identifier
 - `length`
   - : The number of elements to store the value to, starting at `index`. This must be an `i32` value.
 
+### Traps
+
+`table.fill` traps if:
+
+- `index` + `length` is greater than [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size).
+
 ### Opcodes
 
 | Instruction  | Binary opcode                                                                                                  |

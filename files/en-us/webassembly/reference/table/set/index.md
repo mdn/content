@@ -81,9 +81,11 @@ table.set identifier
 - `value`
   - : The value to store in the table. This must match the element type the table was defined with.
 
-### Result
+### Traps
 
-No result.
+`table.set` traps if:
+
+- `index` is greater than [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size).
 
 ### Opcodes
 
