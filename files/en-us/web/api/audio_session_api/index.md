@@ -15,7 +15,7 @@ The **Audio Session API** provides a mechanism for web applications to control h
 
 ## Concepts and usage
 
-People increasingly consume media through the web, which has become a primary channel for accessing audio and video content. However, media on the web often lacks seamless integration with underlying platforms. The Audio Session API addresses this gap by allowing developers to specify how the audio produced by their web applications interacts with audio from other applications on the device — for example, playing along with other audio, ducking it (reducing its volume), or pausing it so their audio can play on its own.
+People increasingly consume media through the web: it is now a primary channel for accessing audio and video content. However, media on the web often lacks seamless integration with underlying platforms. The Audio Session API addresses this gap by allowing developers to specify how the audio produced by their web applications interacts with audio from other applications on the device — for example, playing along with other audio, ducking it (reducing its volume), or pausing it so their audio can play on its own.
 
 A web page can perform audio processing in various ways using APIs such as {{domxref("HTMLMediaElement")}} and the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). An **audio session** represents the aggregated audio produced by a web page, enabling it to express the general nature of its audio output.
 
@@ -26,7 +26,7 @@ The Audio Session API allows developers to:
 
 ### Audio session types
 
-The API supports several audio session types:
+The API supports several audio session types, which specify the type of audio an application is producing:
 
 - `"auto"` — The default. The user agent automatically chooses the best type based on the audio APIs being used.
 - `"playback"` — For media playback such as music or video. This type should not mix with other audio playback .
@@ -49,13 +49,15 @@ The API supports several audio session types:
 
 ### Setting up a video conferencing audio session
 
-In a video conferencing application, both playback and recording happen simultaneously. First, we set the audio session type to `"play-and-record"` to inform the platform that this page requires microphone access alongside audio output. On supporting platforms, this may adjust system volume routing (for example, using the earpiece instead of the speaker on mobile devices) and prevent other applications' audio from interrupting the call.
+In a video conferencing application, both playback and recording are required simultaneously; this is something the Audio Session API can help with.
+
+First, we set the audio session type to `"play-and-record"` to inform the platform that this page requires microphone access alongside audio output. On supporting platforms, this may adjust system volume routing (for example, using the earpiece instead of the speaker on mobile devices) and prevent audio from other applications from interrupting the call.
 
 ```js
 navigator.audioSession.type = "play-and-record";
 ```
 
-Then we set up the media streams for the video call as usual. The platform will now handle the audio produced by these streams according to the `"play-and-record"` session type.
+Next, we set up the media streams for the video call as usual. The platform will now handle the audio produced by these streams according to the `"play-and-record"` session type.
 
 ```js
 // Start playing remote media
