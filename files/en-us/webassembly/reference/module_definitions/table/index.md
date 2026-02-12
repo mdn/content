@@ -99,6 +99,8 @@ To call a function referenced in a table, you have to reference the table and th
 (call_indirect (type $ret_i32) (local.get $index))
 ```
 
+It is possible to mutate tables at runtime using instructions like [`table.set`](/en-US/docs/WebAssembly/Reference/Table/get) and [`table.fill`](/en-US/docs/WebAssembly/Reference/Table/get), and retrieve values using [`table.get`](/en-US/docs/WebAssembly/Reference/Table/get).
+
 ### External references
 
 You can also store external references defined in JavaScript inside a Wasm table, by specifying the [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) keyword. For example:
@@ -217,3 +219,11 @@ This makes sense, as the exported `accessTable()` function has an index value pa
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [`table.fill`](/en-US/docs/WebAssembly/Reference/Table/fill)
+- [`table.get`](/en-US/docs/WebAssembly/Reference/Table/get)
+- [`table.grow`](/en-US/docs/WebAssembly/Reference/Table/grow)
+- [`table.set`](/en-US/docs/WebAssembly/Reference/Table/set)
+- [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size)
