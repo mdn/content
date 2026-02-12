@@ -1,5 +1,5 @@
 ---
-title: Back command
+title: Back
 short-title: Back
 slug: Web/WebDriver/Reference/Classic/Commands/Back
 page-type: webdriver-command
@@ -7,7 +7,7 @@ browser-compat: webdriver.classic.Back
 sidebar: webdriver
 ---
 
-The _back_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API navigates to the previous page in the browsing history. This is equivalent to clicking the browser's back button or calling {{domxref("History.back()")}} in JavaScript.
+The _Back_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API navigates to the previous page in the browsing history. This is equivalent to clicking the browser's back button or calling {{domxref("History.back()")}} in JavaScript.
 
 ## Syntax
 

@@ -1,5 +1,5 @@
 ---
-title: Forward command
+title: Forward
 short-title: Forward
 slug: Web/WebDriver/Reference/Classic/Commands/Forward
 page-type: webdriver-command
@@ -7,7 +7,7 @@ browser-compat: webdriver.classic.Forward
 sidebar: webdriver
 ---
 
-The _forward_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API navigates to the next page in the browsing history. This is equivalent to clicking the browser's forward button or calling {{domxref("History.forward()")}} in JavaScript.
+The _Forward_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API navigates to the next page in the browsing history. This is equivalent to clicking the browser's forward button or calling {{domxref("History.forward()")}} in JavaScript.
 
 ## Syntax
 
