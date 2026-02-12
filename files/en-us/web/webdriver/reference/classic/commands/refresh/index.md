@@ -1,5 +1,5 @@
 ---
-title: Refresh command
+title: Refresh
 short-title: Refresh
 slug: Web/WebDriver/Reference/Classic/Commands/Refresh
 page-type: webdriver-command
@@ -7,7 +7,7 @@ browser-compat: webdriver.classic.Refresh
 sidebar: webdriver
 ---
 
-The _refresh_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API reloads the current page in the active browsing context. This is equivalent to clicking the browser's reload button or calling {{domxref("Location.reload()")}} in JavaScript.
+The _Refresh_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API reloads the current page in the active browsing context. This is equivalent to clicking the browser's reload button or calling {{domxref("Location.reload()")}} in JavaScript.
 
 ## Syntax
 
