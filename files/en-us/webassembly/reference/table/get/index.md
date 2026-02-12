@@ -77,7 +77,7 @@ table.get identifier
 - `index`
   - : The index in the table to retrieve the value of. This must be an `i32` value, for example `(i32.const 1)`.
 - `value`
-  - : The value stored in the table at the index.
+  - : The value stored in the table at the index. This will be the element type of the table.
 
 ### Opcodes
 
