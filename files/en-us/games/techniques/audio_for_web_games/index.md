@@ -17,7 +17,7 @@ Browser autoplay policy now affects desktop _and_ mobile browsers. There is furt
 
 It is worth noting that autoplay with sound is allowed if:
 
-- the User has interacted with the domain.
+- the user has interacted with the domain.
 - on mobile the user has [made the application installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable).
 
 Many browsers will ignore any requests made by your game to automatically play audio; instead playback for audio needs to be started by a user-initiated event, such as a click or tap. This means you will have to structure your audio playback to take account of that. This is usually mitigated against by loading the audio in advance and priming it on a user-initiated event.
@@ -122,7 +122,7 @@ myAudio.addEventListener("timeupdate", () => {
 
 Music in games can have a powerful emotional effect. You can mix and match various music samples and assuming you can control the volume of your audio element you could cross-fade different musical pieces. Using the [`playbackRate()`](/en-US/docs/Web/API/HTMLMediaElement/playbackRate) method you can even adjust the speed of your music without affecting the pitch, to sync it up better with the action.
 
-All this is possible using the standard {{htmlelement("audio")}} element and associated {{domxref("HTMLMediaElement")}}, but it becomes much easier and more flexible with the more advanced [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). Let's look at this next.
+All this is possible using the standard {{htmlelement("audio")}} element and associated {{domxref("HTMLMediaElement")}}, but it becomes more flexible with the more advanced [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). Let's look at this next.
 
 ### Web Audio API for games
 

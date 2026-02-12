@@ -54253,23 +54253,6 @@
       "Gor1"
     ]
   },
-  "Web/API/Range/collapsed": {
-    "modified": "2020-10-15T21:17:55.746Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "jsx",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "DR",
-      "Mgjbot",
-      "Maian",
-      "Jonnyq"
-    ]
-  },
   "Web/API/Range/commonAncestorContainer": {
     "modified": "2020-10-15T21:11:04.954Z",
     "contributors": [
@@ -54387,34 +54370,6 @@
       "Sheppy",
       "ethertank",
       "Gor1"
-    ]
-  },
-  "Web/API/Range/endContainer": {
-    "modified": "2020-10-15T21:18:30.774Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "jsx",
-      "Khodaidad_Basharmand",
-      "Sheppy",
-      "ethertank",
-      "Jonnyq"
-    ]
-  },
-  "Web/API/Range/endOffset": {
-    "modified": "2020-10-15T21:18:27.338Z",
-    "contributors": [
-      "fscholz",
-      "gnepnaiL-oahZ",
-      "MarkRusciano",
-      "abbycar",
-      "teoli",
-      "jsx",
-      "shubham.hatwar",
-      "Sheppy",
-      "ethertank",
-      "Jonnyq"
     ]
   },
   "Web/API/Range/extractContents": {
@@ -54648,32 +54603,6 @@
       "Sheppy",
       "ethertank",
       "SkyLined",
-      "Gor1"
-    ]
-  },
-  "Web/API/Range/startContainer": {
-    "modified": "2020-10-15T21:18:27.123Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "kollishivagangadhar",
-      "Navin_Jadhav",
-      "Sheppy",
-      "Gor1"
-    ]
-  },
-  "Web/API/Range/startOffset": {
-    "modified": "2020-10-15T21:18:03.544Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "Brettz9",
-      "kollishivagangadhar",
-      "Navin_Jadhav",
-      "Sheppy",
-      "Ptak82",
       "Gor1"
     ]
   },
@@ -58809,26 +58738,6 @@
     "modified": "2020-10-15T21:59:08.104Z",
     "contributors": ["Sheppy", "fscholz", "connorshea", "jpmedley"]
   },
-  "Web/API/StaticRange/collapsed": {
-    "modified": "2020-10-15T21:59:08.677Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
-  },
-  "Web/API/StaticRange/endContainer": {
-    "modified": "2020-10-15T21:59:06.718Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
-  },
-  "Web/API/StaticRange/endOffset": {
-    "modified": "2020-10-15T21:59:05.929Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
-  },
-  "Web/API/StaticRange/startContainer": {
-    "modified": "2020-10-15T21:59:06.036Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
-  },
-  "Web/API/StaticRange/startOffset": {
-    "modified": "2020-10-15T21:59:04.874Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
-  },
   "Web/API/StereoPannerNode": {
     "modified": "2020-10-15T21:32:40.831Z",
     "contributors": [
@@ -62084,19 +61993,6 @@
   "Web/API/VisualViewport/width": {
     "modified": "2020-10-15T21:57:56.935Z",
     "contributors": ["chrisdavidmills", "connorshea", "jpmedley"]
-  },
-  "Web/API/Visual_Viewport_API": {
-    "modified": "2020-10-15T21:57:59.333Z",
-    "contributors": [
-      "mhjacobson",
-      "Sheppy",
-      "madebyfabian",
-      "mrvary",
-      "Rifler",
-      "ExE-Boss",
-      "fscholz",
-      "jpmedley"
-    ]
   },
   "Web/API/WEBGL_color_buffer_float": {
     "modified": "2020-10-15T21:43:41.363Z",
@@ -121192,6 +121088,18 @@
       "antoinegrant"
     ]
   },
+  "Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns": {
+    "modified": "2020-07-22T14:05:46.803Z",
+    "contributors": [
+      "mfuji09",
+      "bradyhanna",
+      "chrisdavidmills",
+      "..",
+      "vriojtg",
+      "cg",
+      "wbamberg"
+    ]
+  },
   "Web/Progressive_web_apps": {
     "modified": "2020-12-14T07:30:15.695Z",
     "contributors": [
@@ -124482,54 +124390,11 @@
     "modified": "2020-08-25T23:27:57.222Z",
     "contributors": ["jswisher"]
   },
-  "Web/Security/Certificate_Transparency": {
+  "Web/Security/Defenses/Certificate_Transparency": {
     "modified": "2020-11-12T17:20:50.893Z",
     "contributors": ["secdev-01", "Felicia.Ann.Kelley", "lol768"]
   },
-  "Web/Security/Firefox_Security_Guidelines": {
-    "modified": "2020-11-19T10:50:23.486Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jamoozy",
-      "c2the3rd",
-      "JulianNeal",
-      "psiinon"
-    ]
-  },
-  "Web/Security/Insecure_passwords": {
-    "modified": "2020-05-05T20:17:58.307Z",
-    "contributors": [
-      "jswisher",
-      "chrisdavidmills",
-      "PushpitaPikuDey",
-      "sultn711",
-      "Ajimi",
-      "bytesized",
-      "Sheppy",
-      "dannywu",
-      "mnoorenberghe",
-      "pinobatch",
-      "Nux",
-      "Luke314",
-      "esserj",
-      "Tonnes",
-      "hamsamuda14",
-      "TanviVyas",
-      "120301080",
-      "evairtalau",
-      "lleaff",
-      "NielsDeBlaauw",
-      "kscarfone",
-      "dreamness",
-      "gsarpong",
-      "dilsee",
-      "siyaam",
-      "k7hk7h",
-      "onlysomegetit",
-      "alagenchev"
-    ]
-  },
-  "Web/Security/Mixed_content": {
+  "Web/Security/Defenses/Mixed_content": {
     "modified": "2020-11-23T00:24:41.415Z",
     "contributors": [
       "hamishwillee",
@@ -124575,6 +124440,152 @@
       "gizmo_jaco",
       "ethertank",
       "evilpie"
+    ]
+  },
+  "Web/Security/Defenses/Same-origin_policy": {
+    "modified": "2020-11-09T22:18:21.002Z",
+    "contributors": [
+      "hamishwillee",
+      "Malvoz",
+      "mfuji09",
+      "alattalatta",
+      "leela52452",
+      "sideshowbarker",
+      "akusilvennoinen",
+      "harrycis",
+      "Tigt",
+      "dougjohnston",
+      "Sheppy",
+      "TrevorKarjanis",
+      "Akiq2016",
+      "falquaddoomi",
+      "wazz",
+      "Ajimi",
+      "xfq",
+      "Sir.Codewright",
+      "Jonathan_Watt",
+      "albinowax_",
+      "devurandom",
+      "LoTD",
+      "Minat",
+      "Penny",
+      "jensen",
+      "morello",
+      "jscape",
+      "bolshchikov",
+      "wbamberg",
+      "Dikrib",
+      "bibhas2",
+      "johnberberich",
+      "amuntner",
+      "jcfranco",
+      "tarwin",
+      "node",
+      "venkatreddy",
+      "shiba07",
+      "jswisher",
+      "john_smith",
+      "ethertank",
+      "oshiwoshy",
+      "teoli",
+      "naugtur",
+      "Ghostheaven",
+      "Potappo"
+    ]
+  },
+  "Web/Security/Defenses/Secure_Contexts": {
+    "modified": "2020-11-17T02:41:03.636Z",
+    "contributors": [
+      "hamishwillee",
+      "sideshowbarker",
+      "Malvoz",
+      "mfuji09",
+      "jamesdhurd",
+      "fscholz",
+      "brightghost",
+      "david_ross",
+      "Ajimi",
+      "Sheppy",
+      "chrisdavidmills",
+      "Jonathan_Watt",
+      "mnoorenberghe",
+      "johannh",
+      "jonathanKingston",
+      "cpeterson",
+      "rolfedh",
+      "PushpitaPikuDey"
+    ]
+  },
+  "Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts": {
+    "modified": "2020-11-29T21:11:04.703Z",
+    "contributors": [
+      "hamishwillee",
+      "sideshowbarker",
+      "mfuji09",
+      "Sheppy",
+      "darby",
+      "chrisdavidmills",
+      "fscholz",
+      "Malvoz",
+      "myakura",
+      "cletusw",
+      "jonathanKingston",
+      "erikadoyle",
+      "Annevk"
+    ]
+  },
+  "Web/Security/Defenses/Subresource_Integrity": {
+    "modified": "2020-10-15T21:38:19.213Z",
+    "contributors": [
+      "freddyb",
+      "sideshowbarker",
+      "kdkd",
+      "roy-vanegas",
+      "ianlyons",
+      "chrisdavidmills",
+      "iangcarroll",
+      "cdunklau",
+      "FranklinYu",
+      "mfuji09",
+      "fscholz",
+      "thedapperdev",
+      "markalanrichards",
+      "aeronox",
+      "jpmedley",
+      "Sheppy",
+      "julienw",
+      "binoculars",
+      "SphinxKnight",
+      "Bodo1445",
+      "fmarier",
+      "jwhitlock",
+      "jsx",
+      "wbamberg"
+    ]
+  },
+  "Web/Security/Defenses/Transport_Layer_Security": {
+    "modified": "2020-02-22T05:07:20.975Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "marumari",
+      "Malvoz",
+      "m_t",
+      "DustinC",
+      "ExE-Boss",
+      "Sheppy",
+      "rolfedh",
+      "adithya_mani"
+    ]
+  },
+  "Web/Security/Firefox_Security_Guidelines": {
+    "modified": "2020-11-19T10:50:23.486Z",
+    "contributors": [
+      "chrisdavidmills",
+      "jamoozy",
+      "c2the3rd",
+      "JulianNeal",
+      "psiinon"
     ]
   },
   "Web/Security/Practical_implementation": {
@@ -124641,205 +124652,6 @@
       "VicMan",
       "Pmsyyz",
       "Mathieu Deaudelin"
-    ]
-  },
-  "Web/Security/Referer_header:_privacy_and_security_concerns": {
-    "modified": "2020-07-22T14:05:46.803Z",
-    "contributors": [
-      "mfuji09",
-      "bradyhanna",
-      "chrisdavidmills",
-      "..",
-      "vriojtg",
-      "cg",
-      "wbamberg"
-    ]
-  },
-  "Web/Security/Same-origin_policy": {
-    "modified": "2020-11-09T22:18:21.002Z",
-    "contributors": [
-      "hamishwillee",
-      "Malvoz",
-      "mfuji09",
-      "alattalatta",
-      "leela52452",
-      "sideshowbarker",
-      "akusilvennoinen",
-      "harrycis",
-      "Tigt",
-      "dougjohnston",
-      "Sheppy",
-      "TrevorKarjanis",
-      "Akiq2016",
-      "falquaddoomi",
-      "wazz",
-      "Ajimi",
-      "xfq",
-      "Sir.Codewright",
-      "Jonathan_Watt",
-      "albinowax_",
-      "devurandom",
-      "LoTD",
-      "Minat",
-      "Penny",
-      "jensen",
-      "morello",
-      "jscape",
-      "bolshchikov",
-      "wbamberg",
-      "Dikrib",
-      "bibhas2",
-      "johnberberich",
-      "amuntner",
-      "jcfranco",
-      "tarwin",
-      "node",
-      "venkatreddy",
-      "shiba07",
-      "jswisher",
-      "john_smith",
-      "ethertank",
-      "oshiwoshy",
-      "teoli",
-      "naugtur",
-      "Ghostheaven",
-      "Potappo"
-    ]
-  },
-  "Web/Security/Secure_Contexts": {
-    "modified": "2020-11-17T02:41:03.636Z",
-    "contributors": [
-      "hamishwillee",
-      "sideshowbarker",
-      "Malvoz",
-      "mfuji09",
-      "jamesdhurd",
-      "fscholz",
-      "brightghost",
-      "david_ross",
-      "Ajimi",
-      "Sheppy",
-      "chrisdavidmills",
-      "Jonathan_Watt",
-      "mnoorenberghe",
-      "johannh",
-      "jonathanKingston",
-      "cpeterson",
-      "rolfedh",
-      "PushpitaPikuDey"
-    ]
-  },
-  "Web/Security/Secure_Contexts/features_restricted_to_secure_contexts": {
-    "modified": "2020-11-29T21:11:04.703Z",
-    "contributors": [
-      "hamishwillee",
-      "sideshowbarker",
-      "mfuji09",
-      "Sheppy",
-      "darby",
-      "chrisdavidmills",
-      "fscholz",
-      "Malvoz",
-      "myakura",
-      "cletusw",
-      "jonathanKingston",
-      "erikadoyle",
-      "Annevk"
-    ]
-  },
-  "Web/Security/Subresource_Integrity": {
-    "modified": "2020-10-15T21:38:19.213Z",
-    "contributors": [
-      "freddyb",
-      "sideshowbarker",
-      "kdkd",
-      "roy-vanegas",
-      "ianlyons",
-      "chrisdavidmills",
-      "iangcarroll",
-      "cdunklau",
-      "FranklinYu",
-      "mfuji09",
-      "fscholz",
-      "thedapperdev",
-      "markalanrichards",
-      "aeronox",
-      "jpmedley",
-      "Sheppy",
-      "julienw",
-      "binoculars",
-      "SphinxKnight",
-      "Bodo1445",
-      "fmarier",
-      "jwhitlock",
-      "jsx",
-      "wbamberg"
-    ]
-  },
-  "Web/Security/Transport_Layer_Security": {
-    "modified": "2020-02-22T05:07:20.975Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "marumari",
-      "Malvoz",
-      "m_t",
-      "DustinC",
-      "ExE-Boss",
-      "Sheppy",
-      "rolfedh",
-      "adithya_mani"
-    ]
-  },
-  "Web/Security/Weak_Signature_Algorithm": {
-    "modified": "2019-03-23T23:07:20.873Z",
-    "contributors": [
-      "mfuji09",
-      "Sheppy",
-      "Loadmaster",
-      "grazies",
-      "kcjoon",
-      "andespa87",
-      "jsx",
-      "jswisher",
-      "grozis28",
-      "zabaki",
-      "t9anef",
-      "grifted",
-      "cyfur",
-      "chuggs10",
-      "jaycarrigan1931",
-      "HUNTEDBOY",
-      "elho",
-      "sandhiller58",
-      "SphinxKnight",
-      "Rictrick",
-      "elmaystro56",
-      "DCS_princess",
-      "wiml",
-      "Qazal",
-      "suncross",
-      "jozefjuszkiewicz",
-      "nickgibson215",
-      "maichoibg",
-      "kscarfone",
-      "dwilestari555",
-      "marumari",
-      "teoli",
-      "oRyzh",
-      "Moelay",
-      "maybe",
-      "lilliandyer57",
-      "keni1",
-      "nasko83",
-      "mohideen.azam",
-      "01271425424",
-      "evisu",
-      "seahorse48",
-      "dwulive",
-      "wbamberg",
-      "michaelweghorn",
-      "mgoodwin"
     ]
   },
   "Web/URI": {

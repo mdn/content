@@ -482,9 +482,8 @@ AV1 currently offers three profiles: **main**, **high**, and **professional** wi
 
 For example, AV1 level 2.0 offers a maximum frame width of 2048 pixels and a maximum height of 1152 pixels, but its maximum frame size in pixels is 147,456, so you can't actually have a 2048x1152 video at level 2.0. It's worth noting, however, that at least for Firefox and Chrome, the levels are actually ignored at this time when performing software decoding, and the decoder just does the best it can to play the video given the settings provided. For compatibility's sake going forward, however, you should stay within the limits of the level you choose.
 
-The primary drawback to AV1 at this time is that it is very new, and support is still in the process of being integrated into most browsers. Additionally, encoders and decoders are still being optimized for performance, and hardware encoders and decoders are still mostly in development rather than production. For this reason, encoding a video into AV1 format takes a very long time, since all the work is done in software.
-
-For the time being, because of these factors, AV1 is not yet ready to be your first choice of video codec, but you should watch for it to be ready to use in the future.
+AV1 is supported in all browsers, but support in Safari is limited to devices that feature a hardware decoder, meaning
+M3 MacBooks and later, iPhone 15 Pro, and iPhone 16 and later. Many mobile and desktop devices have hardware decoders, making AV1 a great choice for serving video on the web, with a fallback for earlier Apple devices.
 
 <table class="standard-table">
   <tbody>
@@ -579,14 +578,17 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
             <tr>
               <th scope="row">AV1 support</th>
               <td>70</td>
-              <td>75</td>
+              <td>121</td>
               <td>67</td>
               <td>113</td>
               <td>57</td>
-              <td>17</td>
+              <td>17<sup>*</sup></td>
             </tr>
           </tbody>
         </table>
+        <p>
+          <sup>*</sup> Safari supports AV1 on M3 MacBooks and later, iPhone 15 Pro, and iPhone 16 and later.
+        </p>
       </td>
     </tr>
     <tr>
@@ -629,7 +631,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
 
 The MPEG-4 specification suite's **Advanced Video Coding** (**AVC**) standard is specified by the identical ITU H.264 specification and the MPEG-4 Part 10 specification. It's a motion compensation based codec that is widely used today for all sorts of media, including broadcast television, {{Glossary("RTP")}} videoconferencing, and as the video codec for Blu-Ray discs.
 
-AVC is highly flexible, with a number of profiles with varying capabilities; for example, the Constrained Baseline Profile is designed for use in videoconferencing and mobile scenarios, using less bandwidth than the Main Profile (which is used for standard definition digital TV in some regions) or the High Profile (used for Blu-Ray Disc video). Most of the profiles use 8-bit color components and 4:2:0 chroma subsampling; The High 10 Profile adds support for 10-bit color, and advanced forms of High 10 add 4:2:2 and 4:4:4 chroma subsampling.
+AVC is highly flexible, with a number of profiles with varying capabilities; for example, the Constrained Baseline Profile is designed for use in videoconferencing and mobile scenarios, using less bandwidth than the Main Profile (which is used for standard definition digital TV in some regions) or the High Profile (used for Blu-Ray Disc video). Most of the profiles use 8-bit color components and 4:2:0 chroma subsampling. The High 10 Profile adds support for 10-bit color, and advanced forms of High 10 add 4:2:2 and 4:4:4 chroma subsampling.
 
 AVC also has special features such as support for multiple views of the same scene (Multiview Video Coding), which allows, among other things, the production of stereoscopic video.
 
@@ -1623,11 +1625,9 @@ The [Theora Cookbook](https://archive.flossmanuals.net/ogg-theora/) offers addit
 
 The **Video Processor 8** (**VP8**) codec was initially created by On2 Technologies. Following their purchase of On2, Google released VP8 as an open and royalty-free video format under a promise not to enforce the relevant patents. In terms of quality and compression rate, VP8 is comparable to [AVC](#avc_h.264).
 
-If supported by the browser, VP8 allows video with an alpha channel, allowing the video to play with the background able to be seen through the video to a degree specified by each pixel's alpha component.
+If supported by the browser, VP8 allows video with an alpha channel, allowing the video to play with the background able to be seen through the video to a degree specified by each pixel's alpha component. Safari does not support alpha transparency in VP8 video.
 
 There is good browser support for VP8 in HTML content, especially within [WebM](/en-US/docs/Web/Media/Guides/Formats/Containers#webm) files.
-This makes VP8 a good candidate for your content, although VP9 is an even better choice if available to you.
-Web browsers are _required_ to support VP8 for WebRTC, but not all browsers that do so also support it in HTML audio and video elements.
 
 <table class="standard-table">
   <tbody>
@@ -1667,9 +1667,7 @@ Web browsers are _required_ to support VP8 for WebRTC, but not all browsers that
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        <p>All versions of Chrome, Edge, Firefox, Opera, and Safari<p>
-        <p><a href="https://webkit.org/blog/8672/on-the-road-to-webrtc-1-0-including-vp8/">iOS: Safari 12.1</a> and later support VP8 in WebRTC connections only.</p>
-        <p>Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} to check for availability.</p>
+        <p>All versions of Chrome, Edge, Firefox, Opera, and Safari. However, Safari does not support alpha transparency.</p>
       </td>
     </tr>
     <tr>
@@ -1714,10 +1712,7 @@ It supports several HDR implementations, and offers substantial freedom in selec
 
 VP9 is widely supported by browsers, and hardware implementations of the codec are fairly common.
 VP9 is one of the two video codecs mandated by [WebM](/en-US/docs/Web/Media/Guides/Formats/Containers#webm) (the other being [VP8](#vp8)).
-Note however that Safari support for WebM and VP9 was only introduced in version 14.1, so if you choose to use VP9, consider offering a fallback format such as AVC or HEVC for iPhone, iPad, and Mac users.
-
-VP9 is a good choice if you are able to use a WebM container (and can provide fallback video when needed).
-This is especially true if you wish to use an open codec rather than a proprietary one.
+Note however that Safari does not support alpha transparency in this format.
 
 <table class="standard-table">
   <tbody>
@@ -1801,12 +1796,7 @@ This is especially true if you wish to use an open codec rather than a proprieta
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        <p>All versions of Chrome, Edge, Firefox, Opera, and Safari<p>
-        <p>
-          Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use
-          {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} to check for availability.
-        </p>
-        </ul>
+        <p>All versions of Chrome, Edge, Firefox, Opera, and Safari. However, Safari does not support alpha transparency.</p>
       </td>
     </tr>
     <tr>
@@ -1853,46 +1843,29 @@ In the sections below, we offer recommended codec selections for specific use ca
 
 If you are only able to offer a single version of each video, you can choose the format that's most appropriate for your needs. The first one is recommended as being a good combination of quality, performance, and compatibility. The second option will be the most broadly compatible choice, at the expense of some amount of quality, performance, and/or size.
 
-### Recommendations for everyday videos
+### Recommendations for the web
 
 First, let's look at the best options for videos presented on a typical website such as a blog, informational site, small business website where videos are used to demonstrate products (but not where the videos themselves are a product), and so forth.
 
-1. A **[WebM](/en-US/docs/Web/Media/Guides/Formats/Containers#webm)** container using the **[VP9](#vp9)** codec for video and the **[Opus](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs#opus)** codec for audio. These are all open, royalty-free formats which are generally well-supported, although only in quite recent browsers, which is why a fallback is a good idea.
+1. A **[WebM](/en-US/docs/Web/Media/Guides/Formats/Containers#webm)** container using the **[AV1](#av1)** codec for video and the **[Opus](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs#opus)** codec for audio. These are all open, royalty-free formats which are generally well-supported, with the exception being Safari on older Apple devices.
 
    ```html
-   <video controls src="filename.webm"></video>
+   <video controls>
+     <source type="video/webm; codecs=av01,opus" src="filename.webm" />
+   </video>
    ```
 
 2. An **[MP4](/en-US/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs#aac_advanced_audio_coding)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
 
    ```html
    <video controls>
-     <source type="video/webm" src="filename.webm" />
+     <source type="video/webm; codecs=av01,opus" src="filename.webm" />
      <source type="video/mp4" src="filename.mp4" />
    </video>
    ```
 
 > [!NOTE]
 > The {{HTMLElement("video")}} element requires a closing `</video>` tag, whether or not you have any {{HTMLElement("source")}} elements inside it.
-
-### Recommendations for high-quality video presentation
-
-If your mission is to present video at the highest possible quality, you will probably benefit from offering as many formats as possible, as the codecs capable of the best quality tend also to be the newest, and thus the most likely to have gaps in browser compatibility.
-
-1. A WebM container using AV1 for video and Opus for audio. If you're able to use the High or Professional profile when encoding AV1, at a high level like 6.3, you can get very high bit rates at 4K or 8K resolution, while maintaining excellent video quality. Encoding your audio using Opus's Fullband profile at a 48 kHz sample rate maximizes the audio bandwidth captured, capturing nearly the entire frequency range that's within human hearing.
-
-   ```html
-   <video controls src="filename.webm"></video>
-   ```
-
-2. An MP4 container using the [HEVC](#hevc_h.265) codec using one of the advanced Main profiles, such as Main 4:2:2 with 10 or 12 bits of color depth, or even the Main 4:4:4 profile at up to 16 bits per component. At a high bit rate, this provides excellent graphics quality with remarkable color reproduction. In addition, you can optionally include HDR metadata to provide high dynamic range video. For audio, use the AAC codec at a high sample rate (at least 48 kHz but ideally 96kHz) and encoded with complex encoding rather than fast encoding.
-
-   ```html
-   <video controls>
-     <source type="video/webm" src="filename.webm" />
-     <source type="video/mp4" src="filename.mp4" />
-   </video>
-   ```
 
 ### Recommendations for archival, editing, or remixing
 

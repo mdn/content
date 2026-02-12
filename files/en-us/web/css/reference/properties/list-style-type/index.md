@@ -42,7 +42,7 @@ list-style-type: "\1F44D";
     <p>
       <code>space-counter</code> is defined with
       <a
-        href="//developer.mozilla.org/docs/Web/CSS/@counter-style"
+        href="//developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@counter-style"
         target="_parent"
         ><code>@counter-style</code></a
       >
@@ -136,7 +136,7 @@ Note that:
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : An identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:
-- {{cssxref("symbols", "symbols()")}}
+- {{cssxref("symbols()")}}
   - : Defines an anonymous style of the list.
 - {{cssxref("&lt;string&gt;")}}
   - : The specified string will be used as the item's marker.

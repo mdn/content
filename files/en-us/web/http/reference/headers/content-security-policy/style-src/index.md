@@ -131,7 +131,7 @@ The following {{HTMLElement("style")}} element and `style` attribute will be all
 ```
 
 You can use a nonce-source to only allow specific inline style blocks.
-You need to generate a random nonce value (using a cryptographically secure random token generator) and include it in the policy.
+You need to generate a random {{Glossary("Nonce", "nonce")}} value (using a cryptographically secure random token generator) and include it in the policy.
 It is important to note, this nonce value needs to be dynamically generated as it has to be unique for each HTTP request:
 
 ```http

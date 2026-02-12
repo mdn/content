@@ -6,7 +6,7 @@ browser-compat: css.types.filter-function.brightness
 sidebar: cssref
 ---
 
-The **`brightness()`** [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;filter-function&gt;")}} applies a linear multiplier value on an element or an input image, making the image appear brighter or darker.
+The **`brightness()`** [CSS](/en-US/docs/Web/CSS) {{cssxref("filter-function")}} applies a linear multiplier value on an element or an input image, making the image appear brighter or darker.
 
 {{InteractiveExample("CSS Demo: brightness()")}}
 
@@ -72,7 +72,7 @@ brightness(200%)
 
 ### Applying brightness using the backdrop-filter property
 
-This example shows how to apply the `brightness()` filter to a paragraph via the [`backdrop-filter`](/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter) CSS property.
+This example shows how to apply the `brightness()` filter to a paragraph via the {{cssxref("backdrop-filter")}} CSS property.
 
 #### CSS
 
@@ -115,7 +115,7 @@ In this example, the colors in the area behind the `<p>` element shift linearly.
 
 ### Applying brightness using the filter property
 
-In this example, a `brightness()` filter is applied to the entire element, including content, border, and background image via the [`filter`](/en-US/docs/Web/CSS/Reference/Properties/filter) CSS property. The result shows three variations of different brightness values.
+In this example, a `brightness()` filter is applied to the entire element, including content, border, and background image via the {{cssxref("filter")}} CSS property. The result shows three variations of different brightness values.
 
 ```css
 p:first-of-type {
@@ -243,7 +243,7 @@ svg:not(:root) {
 ## See also
 
 - [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module
-- The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+- The other {{cssxref("filter-function")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}
   - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}

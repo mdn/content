@@ -137,6 +137,8 @@ const myIterator = Iterator.from({
 
 ## Static methods
 
+- {{jsxref("Iterator.concat()")}}
+  - : Creates a new `Iterator` object from a list of iterable objects. The new iterator yields the values from each of the input iterables in sequence.
 - {{jsxref("Iterator.from()")}}
   - : Creates a new `Iterator` object from an iterator or iterable object.
 

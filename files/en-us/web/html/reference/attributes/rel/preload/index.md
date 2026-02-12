@@ -1,5 +1,5 @@
 ---
-title: rel=preload
+title: rel="preload"
 slug: Web/HTML/Reference/Attributes/rel/preload
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.preload

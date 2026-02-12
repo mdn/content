@@ -3,13 +3,9 @@ title: Temporal.Duration.compare()
 short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/compare
 page-type: javascript-static-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.Duration.compare
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`Temporal.Duration.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first duration is shorter, equal to, or longer than the second duration.
 

@@ -19,7 +19,7 @@ Before starting this module, you should have a basic work environment set up (as
 ## Tutorials and challenges
 
 - [What is CSS?](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS)
-  - : CSS allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS, what the basic syntax looks like, and how your browser applies CSS to HTML to style it.
+  - : CSS allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS is, what the basic syntax looks like, and how your browser applies CSS to HTML to style it.
 - [Getting started with CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started)
   - : In this article, we will take a simple HTML document and apply CSS to it, learning some practical details of the language along the way. We will also review the CSS syntax features you've not looked at yet.
 - [Styling a biography page](/en-US/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page) <sup>Challenge</sup>
@@ -45,7 +45,7 @@ Before starting this module, you should have a basic work environment set up (as
 - [Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : In this lesson, we will take a look at some of the creative things you can do with CSS backgrounds and borders. From adding gradients, background images, and rounded corners, backgrounds and borders are the answer to a lot of styling questions in CSS.
 - [Challenge: Sizing and decorating a content panel](/en-US/docs/Learn_web_development/Core/Styling_basics/Size_decorate_content_panel) <sup>Challenge</sup>
-  - : In this challenge you are provided with a lightly styled page structure that renders a content panel, with a heading at the top and a button bar at the bottom. we want you to follow the instructions to size and decorate it, producing an interesting layout as a result. Along the way, we'll test your knowledge of CSS values and units, sizing, and background and borders.
+  - : In this challenge you are provided with a lightly styled page structure that renders a content panel, with a heading at the top and a button bar at the bottom. We want you to follow the instructions to size and decorate it, producing an interesting layout as a result. Along the way, we'll test your knowledge of CSS values and units, sizing, and backgrounds and borders.
 - [Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)
   - : Overflow is what happens when there is too much content to fit inside an element box. In this lesson, you will learn how to manage overflow using CSS.
 - [Images, media, and form elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)

@@ -12,8 +12,8 @@ The authenticator data structure contains information from the authenticator abo
 
 Authenticator data is made available to the browser as an {{jsxref("ArrayBuffer")}}, and can be accessed in multiple ways. The two most convenient are:
 
-- In the {{domxref("AuthenticatorAssertionResponse.authenticatorData", "PublicKeyCredential.response.authenticatorData")}} property made available on the {{domxref("PublicKeyCredential")}} returned from a successful {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}} (credential creation) call.
-- Via the {{domxref("AuthenticatorAttestationResponse.getAuthenticatorData", "PublicKeyCredential.response.getAuthenticatorData()")}} method made available on the {{domxref("PublicKeyCredential")}} returned from a successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} (authentication) call.
+- Via the {{domxref("AuthenticatorAttestationResponse.getAuthenticatorData", "PublicKeyCredential.response.getAuthenticatorData()")}} method made available on the {{domxref("PublicKeyCredential")}} returned from a successful {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}} (credential creation) call.
+- In the {{domxref("AuthenticatorAssertionResponse.authenticatorData", "PublicKeyCredential.response.authenticatorData")}} property made available on the {{domxref("PublicKeyCredential")}} returned from a successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} (authentication) call.
 
 ## Data structure
 

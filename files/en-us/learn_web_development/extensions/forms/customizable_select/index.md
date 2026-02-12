@@ -35,7 +35,7 @@ You can build customizable `<select>` elements using the following HTML and CSS 
 - A {{htmlelement("button")}} element included as the first child inside the `<select>` element, which wasn't previously allowed in "classic" selects. When this is included, it replaces the default "button" rendering of the closed `<select>` element. This is commonly known as the **select button** (as it is the button you need to press to open the drop-down picker).
   > [!NOTE]
   > The select button is [inert](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) by default so that if interactive children (for example, links or buttons) are included inside it, it will still be treated like a single button for interaction purposes — for example, the child items won't be focusable or clickable.
-- The {{htmlelement("selectedcontent")}} element can optionally be included inside the `<select>` element's first child `<button>` element in order to display the currently selected value inside the _closed_ `<select>` element.
+- The {{htmlelement("selectedcontent")}} element can optionally be included inside the `<select>` element's first child `<button>` element to display the currently selected value inside the _closed_ `<select>` element.
   This contains a clone of the currently-selected `<option>` element's content (created using {{domxref("Node.cloneNode", "cloneNode()")}} under the hood).
 - The {{cssxref("::picker()", "::picker(select)")}} pseudo-element, which targets the entire contents of the picker. This includes all elements inside the `<select>` element, except the first child `<button>`.
 - The {{cssxref("appearance")}} property value `base-select`, which opts the `<select>` element and the `::picker(select)` pseudo-element into the browser-defined default styles and behavior for customizable select.
@@ -216,6 +216,9 @@ First of all, the picker's default black {{cssxref("border")}} is removed:
   border: none;
 }
 ```
+
+> [!NOTE]
+> The argument passed to the `::picker()` pseudo-element represents the type of element whose picker you want to target — in this case, `<select>` elements. If you want to select the picker of one specific `<select>` element rather than all of them, you can combine the `::picker()` pseudo-element with another selector. For example, our example `<select>` has an ID of `pet-select`, so its picker can be exclusively targeted with `#pet-select::picker(select) { ... }`.
 
 Now the `<option>` elements are styled. They are laid out with [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), aligning them all to the start of the flex container and including a `20px` {{cssxref("gap")}} between each one. Each `<option>` is also given the same {{cssxref("border")}}, {{cssxref("background")}}, {{cssxref("padding")}}, and {{cssxref("transition")}} as the `<select>`, to provide a consistent look and feel:
 

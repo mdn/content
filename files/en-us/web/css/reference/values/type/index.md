@@ -60,25 +60,25 @@ The `<syntax>` parameter is an expression defining the data type. This can take 
 - `<syntax-type>`
   - : A type name, written in angle brackets, representing a CSS data type. The following data types are supported:
     - `<angle>`
-      - : Accepts any valid {{cssxref("&lt;angle&gt;")}} value.
+      - : Accepts any valid {{cssxref("angle")}} value.
     - `<color>`
       - : Accepts any valid {{cssxref("&lt;color&gt;")}} value.
     - `<custom-ident>`
       - : Accepts any valid {{cssxref("&lt;custom-ident&gt;")}} value.
     - `<image>`
-      - : Accepts any valid {{cssxref("&lt;image&gt;")}} value.
+      - : Accepts any valid {{cssxref("image")}} value.
     - `<integer>`
       - : Accepts any valid {{cssxref("&lt;integer&gt;")}} value.
     - `<length>`
       - : Accepts any valid {{cssxref("&lt;length&gt;")}} value.
     - `<length-percentage>`
-      - : Accepts any valid {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value and any valid {{cssxref("calc", "calc()")}} expression combining `<length>` and `<percentage>` values.
+      - : Accepts any valid {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value and any valid {{cssxref("calc()")}} expression combining `<length>` and `<percentage>` values.
     - `<number>`
       - : Accepts any valid {{cssxref("&lt;number&gt;")}} value.
     - `<percentage>`
       - : Accepts any valid {{cssxref("&lt;percentage&gt;")}} value.
     - `<resolution>`
-      - : Accepts any valid {{cssxref("&lt;resolution&gt;")}} value.
+      - : Accepts any valid {{cssxref("resolution")}} value.
     - `<string>`
       - : Accepts any valid {{cssxref("&lt;string&gt;")}} value.
     - `<time>`

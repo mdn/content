@@ -8,7 +8,7 @@ sidebar: firefox
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) Firefox 49 was released on September 20, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -181,7 +181,7 @@ This marks the next step in the journey toward a plugin-free future. HTML is ver
 
 ## Security
 
-- The {{domxref("Window.isSecureContext")}} property, indicating whether a context is capable of using features that require [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), has been implemented ([Firefox bug 1162772](https://bugzil.la/1162772)).
+- The {{domxref("Window.isSecureContext")}} property, indicating whether a context is capable of using features that require [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts), has been implemented ([Firefox bug 1162772](https://bugzil.la/1162772)).
 
 ## Compatibility
 

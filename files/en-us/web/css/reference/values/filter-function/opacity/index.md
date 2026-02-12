@@ -6,7 +6,7 @@ browser-compat: css.types.filter-function.opacity
 sidebar: cssref
 ---
 
-The **`opacity()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies transparency to the samples in the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+The **`opacity()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies transparency to the samples in the input image. Its result is a {{cssxref("filter-function")}}.
 
 {{InteractiveExample("CSS Demo: opacity()")}}
 
@@ -80,7 +80,7 @@ opacity(1)
 
 ## See also
 
-- The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+- The other {{cssxref("filter-function")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/brightness", "brightness()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}

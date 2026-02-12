@@ -28,7 +28,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     See [Browser compatibility](#browser_compatibility) for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
 
-- `attributionsrc` {{experimental_inline}}
+- `attributionsrc` {{deprecated_inline}}
   - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the script resource request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers), respectively. Which response header should be sent back depends on the value of the `Attribution-Reporting-Eligible` header that triggered the registration.
 
     > [!NOTE]
@@ -87,11 +87,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         This is the default.
         It is used if no value or an invalid value is set.
 - `integrity`
-  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not be specified when the `src` attribute is absent. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
+  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not be specified when the `src` attribute is absent. See [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
 - `nomodule`
   - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
 - `nonce`
-  - : A cryptographic nonce (number used once) to allow scripts in a [script-src Content-Security-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
+  - : A cryptographic {{Glossary("Nonce", "nonce")}} (number used once) to allow scripts in a [script-src Content-Security-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - `referrerpolicy`
   - : Indicates which [referrer](/en-US/docs/Web/API/Document/referrer) to send when fetching the script, or resources fetched by the script:
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
@@ -344,5 +344,5 @@ so that the script doesn't block parsing but is guaranteed to be evaluated befor
 ## See also
 
 - {{domxref("document.currentScript")}}
-- [Flavio Copes' article on loading JavaScript efficiently and explaining the differences between `async` and `defer`](https://flaviocopes.com/javascript-async-defer/)
+- [Flavio Copes' article on loading JavaScript efficiently and explaining the differences between `async` and `defer`](https://thevalleyofcode.com/javascript-async-defer/)
 - [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide

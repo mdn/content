@@ -32,7 +32,7 @@ Both symbols appear literally in a value definition.
 
 #### Basic data types
 
-Some data types are used throughout CSS and are defined once for all values in the specification. Called _basic data types_, they are represented with their name surrounded by the symbols `<` and `>`: {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, …
+Some data types are used throughout CSS and are defined once for all values in the specification. Called _basic data types_, they are represented with their name surrounded by the symbols `<` and `>`: {{cssxref("angle")}}, {{CSSxRef("&lt;string&gt;")}}, …
 
 #### Non-terminal data types
 
@@ -282,7 +282,7 @@ But not:
 
 ## Bracketed range notation (`[min,max]`)
 
-Some types can accept numeric values within a certain range. For example, the [`column-count`](/en-US/docs/Web/CSS/Reference/Properties/column-count) property can accept an integer value between positive 1 and infinity, inclusive. The corresponding syntax looks like this:
+Some types can accept numeric values within a certain range. For example, the {{cssxref("column-count")}} property can accept an integer value between positive 1 and infinity, inclusive. The corresponding syntax looks like this:
 
 {{CSSSyntaxRaw(`example = <integer [1,∞]>`)}}
 

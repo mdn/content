@@ -1,7 +1,7 @@
 ---
 title: "size: Wasm text instruction"
 short-title: size
-slug: WebAssembly/Reference/Memory/Size
+slug: WebAssembly/Reference/Memory/size
 page-type: webassembly-instruction
 browser-compat:
   - webassembly.api.Memory

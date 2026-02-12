@@ -12,6 +12,9 @@ sidebar: cssref
 
 A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s).
 
+> [!NOTE]
+> This page is an index of all pseudo-elements in CSS. The [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) page introduces the module that defines some, but not all, of these pseudo-elements.
+
 ## Syntax
 
 ```css
@@ -92,9 +95,9 @@ These pseudo-elements are real elements that are not otherwise selectable.
 
 - {{CSSxRef("::details-content")}}
   - : The expandable/collapsible contents of a {{HTMLElement("details")}} element.
-- {{CSSxRef("::part", "::part()")}}
+- {{cssxref("::part()")}}
   - : Any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute.
-- {{CSSxRef("::slotted", "::slotted()")}}
+- {{cssxref("::slotted()")}}
   - : Any element placed into a slot inside an HTML template.
 
 ## Form-related pseudo-elements
@@ -129,7 +132,7 @@ C
 
 - {{CSSxRef("::column")}}
 - {{CSSxRef("::checkmark")}}
-- {{CSSxRef("::cue")}} (and {{CSSxRef("::cue", "::cue()")}})
+- {{CSSxRef("::cue")}} (and {{cssxref("::cue()")}})
 
 D
 
@@ -155,7 +158,7 @@ M
 
 P
 
-- {{CSSxRef("::part", "::part()")}}
+- {{cssxref("::part()")}}
 - {{CSSxRef("::picker()")}}
 - {{CSSxRef("::picker-icon")}}
 - {{CSSxRef("::placeholder")}}
@@ -166,7 +169,7 @@ S
 - {{CSSxRef("::scroll-marker")}}
 - {{CSSxRef("::scroll-marker-group")}}
 - {{CSSxRef("::selection")}}
-- {{CSSxRef("::slotted", "::slotted()")}}
+- {{cssxref("::slotted()")}}
 - {{CSSxRef("::spelling-error")}}
 
 T
@@ -180,6 +183,39 @@ V
 - {{cssxref("::view-transition-group()")}}
 - {{cssxref("::view-transition-new()")}}
 - {{cssxref("::view-transition-old()")}}
+
+### Non-standard pseudo-elements
+
+Non-standard vendor-prefixed pseudo-elements include:
+
+#### `-moz-` prefix
+
+- {{CSSxRef("::-moz-color-swatch")}}
+- {{CSSxRef("::-moz-focus-inner")}}
+- {{CSSxRef("::-moz-list-bullet")}}
+- {{CSSxRef("::-moz-list-number")}}
+- {{CSSxRef("::-moz-meter-bar")}}
+- {{CSSxRef("::-moz-progress-bar")}}
+- {{CSSxRef("::-moz-range-progress")}}
+- {{CSSxRef("::-moz-range-thumb")}}
+- {{CSSxRef("::-moz-range-track")}}
+
+#### `-webkit-` prefix
+
+- {{CSSxRef("::-webkit-inner-spin-button")}}
+- {{CSSxRef("::-webkit-meter-bar")}}
+- {{CSSxRef("::-webkit-meter-even-less-good-value")}}
+- {{CSSxRef("::-webkit-meter-inner-element")}}
+- {{CSSxRef("::-webkit-meter-optimum-value")}}
+- {{CSSxRef("::-webkit-meter-suboptimum-value")}}
+- {{CSSxRef("::-webkit-progress-bar")}}
+- {{CSSxRef("::-webkit-progress-inner-element")}}
+- {{CSSxRef("::-webkit-progress-value")}}
+- {{CSSxRef("::-webkit-scrollbar")}}
+- {{CSSxRef("::-webkit-search-cancel-button")}}
+- {{CSSxRef("::-webkit-search-results-button")}}
+- {{CSSxRef("::-webkit-slider-runnable-track")}}
+- {{CSSxRef("::-webkit-slider-thumb")}}
 
 ## Nesting pseudo-elements
 

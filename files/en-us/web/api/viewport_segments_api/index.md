@@ -55,7 +55,7 @@ If possible, you should view the demo on a foldable device. Current browser deve
 ## See also
 
 - [Using the Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API/Using)
-- [Viewport API](/en-US/docs/Web/API/Viewport_API)
+- [CSSOM view API](/en-US/docs/Web/API/CSSOM_view_API)
 - [Device Posture API](/en-US/docs/Web/API/Device_Posture_API)
 - [CSS environment variables](/en-US/docs/Web/CSS/Guides/Environment_variables) module
 - [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) via developer.chrome.com (2024)

@@ -190,7 +190,7 @@ The fourth mask layer has `none` declared, meaning the mask for this layer is tr
 
 The fifth mask layer is comprised of an SVG {{svgelement("mask")}} element that has `svg-mask` as its [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id). While the default mask mode of the other layers is `alpha`, the default [mask type of SVG `<mask>` elements](/en-US/docs/Web/CSS/Guides/Masking/Introduction#svg_mask_as_mask_source) is the `mask-type` value, or, if not set, the `mask-type` attribute. If that isn't defined either, the value defaults to `luminance`. In other words, the masking effect of the `<mask>` is determined by both the brightness and transparency of the `<mask>` element's colors.
 
-If we don't declare the `mask-mode` property at all, and allow it default to `match-source` for each mask layer, the result in this `.masked-element` case would resolve to:
+If we don't declare the `mask-mode` property at all, and allow it to default to `match-source` for each mask layer, the result in this `.masked-element` case would resolve to:
 
 ```css
 .masked-element {

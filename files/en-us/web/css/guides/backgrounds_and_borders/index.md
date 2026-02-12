@@ -17,6 +17,106 @@ Box shadows include inset and outset shadow, single or multiple shadows, and sol
 
 The properties in this module also let you define whether cells inside a {{HTMLElement("table")}} should have shared or separate borders.
 
+## Reference
+
+### Properties
+
+- {{cssxref("background-attachment")}}
+- {{cssxref("background-clip")}}
+- {{cssxref("background-color")}}
+- {{cssxref("background-image")}}
+- {{cssxref("background-origin")}}
+- {{cssxref("background-position")}}
+- {{cssxref("background-repeat-x")}}
+- {{cssxref("background-repeat-y")}}
+- {{cssxref("background-repeat")}} shorthand
+- {{cssxref("background-size")}}
+- {{cssxref("background")}} shorthand
+- {{cssxref("background-position-x")}}
+- {{cssxref("background-position-y")}}
+- {{cssxref("border-bottom-color")}}
+- {{cssxref("border-bottom-style")}}
+- {{cssxref("border-bottom-width")}}
+- {{cssxref("border-bottom")}} shorthand
+- {{cssxref("border-left-color")}}
+- {{cssxref("border-left-style")}}
+- {{cssxref("border-left-width")}}
+- {{cssxref("border-left")}} shorthand
+- {{cssxref("border-right-color")}}
+- {{cssxref("border-right-style")}}
+- {{cssxref("border-right-width")}}
+- {{cssxref("border-right")}} shorthand
+- {{cssxref("border-top-color")}}
+- {{cssxref("border-top-style")}}
+- {{cssxref("border-top-width")}}
+- {{cssxref("border-top")}} shorthand
+- {{cssxref("border-color")}} shorthand
+- {{cssxref("border-style")}} shorthand
+- {{cssxref("border-width")}} shorthand
+- {{cssxref("border")}} shorthand
+- {{cssxref("border-bottom-left-radius")}}
+- {{cssxref("border-bottom-right-radius")}}
+- {{cssxref("border-top-left-radius")}}
+- {{cssxref("border-top-right-radius")}}
+- {{cssxref("border-radius")}} shorthand
+- {{cssxref("border-image-outset")}}
+- {{cssxref("border-image-repeat")}}
+- {{cssxref("border-image-slice")}}
+- {{cssxref("border-image-source")}}
+- {{cssxref("border-image-width")}}
+- {{cssxref("border-image")}} shorthand
+- {{cssxref("box-shadow")}}
+
+The CSS backgrounds module level 4 also introduces the `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, and `background-tbd` properties. Currently, no browsers support these features.
+
+### Data types
+
+- {{cssxref("line-style")}} enumerated type
+
+## Guides
+
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+  - : Setting one or more backgrounds on an element.
+- [Resizing background images](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
+  - : Changing the size and repeating behavior of background images.
+- [Scaling SVG backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
+  - : How SVG aspect ratio, SVG dimension values, and the CSS `background-size` property impact the scaling of SVG background images.
+- [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
+  - : Creating CSS gradients and using them as background images.
+- [Learn CSS: background and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+  - : Learn how to implement decorative images using CSS background images.
+- [Learn CSS: the box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model)
+  - : Learn how borders and other box model properties impact the CSS box model.
+
+## Related concepts
+
+- {{cssxref("border-block-end-color")}}
+- {{cssxref("border-block-start-color")}}
+- {{cssxref("border-inline-end-color")}}
+- {{cssxref("border-inline-start-color")}}
+- {{cssxref("border-block-end-style")}}
+- {{cssxref("border-block-start-style")}}
+- {{cssxref("border-inline-end-style")}}
+- {{cssxref("border-inline-start-style")}}
+- {{cssxref("border-block-end-width")}}
+- {{cssxref("border-block-start-width")}}
+- {{cssxref("border-inline-end-width")}}
+- {{cssxref("border-inline-start-width")}}
+- {{cssxref("border-start-start-radius")}}
+- {{cssxref("border-start-end-radius")}}
+- {{cssxref("border-end-start-radius")}}
+- {{cssxref("border-end-end-radius")}}
+- {{cssxref("box-sizing")}}
+- {{cssxref("box-decoration-break")}}
+- {{cssxref("text-shadow")}}
+- {{cssxref("url_value", "&lt;url&gt;")}} data type
+- {{cssxref("url")}} data type
+- {{cssxref("image")}} data type
+- {{cssxref("position")}} data type
+- [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) keyword
+
+## Examples
+
 ### Backgrounds, borders, and box shadows in action
 
 This sample of borders, backgrounds, and box shadows consists of centered background images made of linear and radial gradients. A series of box shadows make the border appear to "pop". The element on the left has a border image set. The element on the right has a rounded dotted border.
@@ -80,102 +180,6 @@ The background images are defined with {{cssxref("background-image")}}. The imag
 
 Click "Play" in the example above to see or edit the code for the animation in the MDN Playground.
 
-## Reference
-
-### Properties
-
-- {{cssxref("background-attachment")}}
-- {{cssxref("background-clip")}}
-- {{cssxref("background-color")}}
-- {{cssxref("background-image")}}
-- {{cssxref("background-origin")}}
-- {{cssxref("background-position")}}
-- {{cssxref("background-repeat")}}
-- {{cssxref("background-size")}}
-- {{cssxref("background")}} shorthand
-- {{cssxref("background-position-x")}}
-- {{cssxref("background-position-y")}}
-- {{cssxref("border-bottom-color")}}
-- {{cssxref("border-bottom-style")}}
-- {{cssxref("border-bottom-width")}}
-- {{cssxref("border-bottom")}} shorthand
-- {{cssxref("border-left-color")}}
-- {{cssxref("border-left-style")}}
-- {{cssxref("border-left-width")}}
-- {{cssxref("border-left")}} shorthand
-- {{cssxref("border-right-color")}}
-- {{cssxref("border-right-style")}}
-- {{cssxref("border-right-width")}}
-- {{cssxref("border-right")}} shorthand
-- {{cssxref("border-top-color")}}
-- {{cssxref("border-top-style")}}
-- {{cssxref("border-top-width")}}
-- {{cssxref("border-top")}} shorthand
-- {{cssxref("border-color")}} shorthand
-- {{cssxref("border-style")}} shorthand
-- {{cssxref("border-width")}} shorthand
-- {{cssxref("border")}} shorthand
-- {{cssxref("border-bottom-left-radius")}}
-- {{cssxref("border-bottom-right-radius")}}
-- {{cssxref("border-top-left-radius")}}
-- {{cssxref("border-top-right-radius")}}
-- {{cssxref("border-radius")}} shorthand
-- {{cssxref("border-image-outset")}}
-- {{cssxref("border-image-repeat")}}
-- {{cssxref("border-image-slice")}}
-- {{cssxref("border-image-source")}}
-- {{cssxref("border-image-width")}}
-- {{cssxref("border-image")}} shorthand
-- {{cssxref("box-shadow")}}
-
-The CSS backgrounds module level 4 also introduces the `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y`, and `background-tbd` properties. Currently, no browsers support these features.
-
-### Data types
-
-- {{cssxref("line-style")}} enumerated type
-
-## Guides
-
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
-  - : Setting one or more backgrounds on an element.
-- [Resizing background images](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
-  - : Changing the size and repeating behavior of background images.
-- [Scaling SVG backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
-  - : How SVG aspect ratio, SVG dimension values, and the CSS `background-size` property impact the scaling of SVG background images.
-- [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
-  - : Creating CSS gradients and using them as background images.
-- [Learn CSS: background and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-  - : Learn how to implement decorative images using CSS background images.
-- [Learn CSS: the box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model)
-  - : Learn how borders and other box model properties impact the CSS box model.
-
-## Related concepts
-
-- {{cssxref("border-block-end-color")}}
-- {{cssxref("border-block-start-color")}}
-- {{cssxref("border-inline-end-color")}}
-- {{cssxref("border-inline-start-color")}}
-- {{cssxref("border-block-end-style")}}
-- {{cssxref("border-block-start-style")}}
-- {{cssxref("border-inline-end-style")}}
-- {{cssxref("border-inline-start-style")}}
-- {{cssxref("border-block-end-width")}}
-- {{cssxref("border-block-start-width")}}
-- {{cssxref("border-inline-end-width")}}
-- {{cssxref("border-inline-start-width")}}
-- {{cssxref("border-start-start-radius")}}
-- {{cssxref("border-start-end-radius")}}
-- {{cssxref("border-end-start-radius")}}
-- {{cssxref("border-end-end-radius")}}
-- {{cssxref("box-sizing")}}
-- {{cssxref("box-decoration-break")}}
-- {{cssxref("text-shadow")}}
-- {{cssxref("url_value", "&lt;url&gt;")}} data type
-- {{cssxref("url")}} data type
-- {{cssxref("image")}} data type
-- {{cssxref("position")}} data type
-- [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) keyword
-
 ## Specifications
 
 {{Specifications}}
@@ -186,5 +190,7 @@ The CSS backgrounds module level 4 also introduces the `background-position-bloc
 - {{cssxref("backdrop-filter")}}
 - [`drop-shadow()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/drop-shadow) filter function
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color)
-- [Border-image generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
-- [Border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
+- Tools:
+  - [Border-image generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
+  - [Border-radius generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
+  - [Box-shadow generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)

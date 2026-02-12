@@ -14,7 +14,7 @@ The `protocol_handlers` member specifies an array of objects that are protocols 
 
 After registering a web app as a protocol handler, when a user clicks on a hyperlink with a specific scheme such as `mailto://` or `web+music://` from a browser or native app, the registered PWA would open and receive the URL.
 
-### Values
+## Values
 
 Protocol handlers objects may contain the following values:
 

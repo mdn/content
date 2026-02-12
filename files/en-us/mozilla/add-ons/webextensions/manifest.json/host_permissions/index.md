@@ -36,7 +36,7 @@ sidebar: addonsidebar
 
 Use the `host_permissions` key to request access for the APIs in your extension that read or modify host data, such as {{WebExtAPIRef("cookies")}}, {{WebExtAPIRef("webRequest")}}, and {{WebExtAPIRef("tabs")}}. This key is an array of strings, and each string is a request for a permission.
 
-### Requested permissions and user prompts
+## Requested permissions and user prompts
 
 Users can [grant or revoke host permissions](https://support.mozilla.org/en-US/kb/extensions-button#w_website-permissions) on an ad hoc basis. Therefore, most browsers treat `host_permissions` as optional.
 
@@ -52,13 +52,13 @@ As the request to grant host permissions may impact users' willingness to instal
 
 For information on how to test and preview permission requests, see [Test permission requests](https://extensionworkshop.com/documentation/develop/test-permission-requests/) on the Extension Workshop site.
 
-### Format
+## Format
 
 Host permissions are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), and each pattern identifies a group of URLs for which the extension is requesting extra privileges. For example, a host permission could be `"*://developer.mozilla.org/*"`.
 
 The extra privileges include:
 
-- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [fetch](/en-US/docs/Web/API/Fetch_API) access to those origins without cross-origin restrictions (though not for requests from content scripts, as was the case in Manifest V2).
+- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [fetch](/en-US/docs/Web/API/Fetch_API) access to those origins without cross-origin restrictions, but not for requests from content scripts.
 - the ability to read tab-specific metadata without the "tabs" permission, such as the `url`, `title`, and `favIconUrl` properties of {{WebExtAPIRef("tabs.Tab")}} objects.
 - the ability to inject scripts programmatically (using {{webextAPIref("tabs/executeScript", "tabs.executeScript()")}}) into pages served from those origins.
 - the ability to receive events from the {{webextAPIref("webRequest")}} API for these hosts.

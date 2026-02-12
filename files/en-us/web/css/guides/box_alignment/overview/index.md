@@ -36,7 +36,7 @@ When aligning items on the block axis you will use the properties that begin wit
 - {{cssxref("align-self")}}
 - {{cssxref("align-content")}}
 
-Flexbox adds an additional complication in that the above is true when {{cssxref("flex-direction")}} is set to `row`. The properties are swapped when flexbox is set to `column`. Therefore, when working with flexbox it is easier to think about the main and cross axis rather than inline and block. The `justify-` properties are always used to align on the main axis, the `align-` properties on the cross axis.
+Flexbox adds an additional complication in that the above is true when {{cssxref("flex-direction")}} is set to `row`. The properties are swapped when flexbox is set to `column`. Therefore, when working with flexbox it is generally easier to think about the main and cross axis rather than inline and block. The `justify-` properties are always used to align on the main axis, the `align-` properties on the cross axis.
 
 ### The alignment subject
 
@@ -280,9 +280,10 @@ As the CSS box alignment properties are implemented differently depending on the
 
 ## See also
 
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
 - [CSS flex layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
 - [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module
-- [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)

@@ -17,8 +17,8 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 - `display`
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how the enclosed MathML markup should be rendered. It can have one of the following values:
-    - `block`, which means that this element will be displayed in its own block outside the current span of text and with [`math-style`](/en-US/docs/Web/CSS/Reference/Properties/math-style) set to `normal`.
-    - `inline`, which means that this element will be displayed inside the current span of text and with [`math-style`](/en-US/docs/Web/CSS/Reference/Properties/math-style) set to `compact`.
+    - `block`, which means that this element will be displayed in its own block outside the current span of text and with {{cssxref("math-style")}} set to `normal`.
+    - `inline`, which means that this element will be displayed inside the current span of text and with {{cssxref("math-style")}} set to `compact`.
 
     If not present, its default value is `inline`.
 

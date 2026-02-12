@@ -4,6 +4,7 @@ slug: Web/API/Clipboard_API
 page-type: web-api-overview
 browser-compat:
   - api.Clipboard
+  - api.ClipboardChangeEvent
   - api.ClipboardEvent
   - api.ClipboardItem
 ---
@@ -23,7 +24,7 @@ The **Clipboard API** provides the ability to respond to clipboard commands (cut
 The _system clipboard_ is a data buffer belonging to the operating system hosting the browser, which is used for short-term data storage and/or data transfers between documents or applications.
 It is usually implemented as an anonymous, temporary [data buffer](https://en.wikipedia.org/wiki/Data_buffer), sometimes called the _paste buffer_, that can be accessed from most or all programs within the environment via defined programming interfaces.
 
-The Clipboard API allows users to programmatically read and write text and other kinds of data to and from the system clipboard in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), provided the user has met the criteria outlined in the [Security considerations](#security_considerations).
+The Clipboard API allows users to programmatically read and write text and other kinds of data to and from the system clipboard in [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts), provided the user has met the criteria outlined in the [Security considerations](#security_considerations).
 
 Events are fired as the result of {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} operations modifying the clipboard.
 The events have a default action, for example the `copy` action copies the current selection to the system clipboard by default.
@@ -34,6 +35,8 @@ The default action can be overridden by the event handler — see each of the ev
 - {{domxref("Clipboard")}} {{securecontext_inline}}
   - : Provides an interface for reading and writing text and data to or from the system clipboard.
     The specification refers to this as the 'Async Clipboard API'.
+- {{domxref("ClipboardChangeEvent")}}
+  - : Represents events fired whenever the contents of the system clipboard are changed.
 - {{domxref("ClipboardEvent")}}
   - : Represents events providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events.
     The specification refers to this as the 'Clipboard Event API'.
@@ -53,14 +56,12 @@ The Clipboard API extends the following APIs, adding the listed features.
 - `Element` [`paste`](/en-US/docs/Web/API/Element/paste_event) event
   - : An event fired whenever the user initiates a paste action.
 
-<!-- Note `Window: clipboardchange` event is in spec but not implemented -->
-
 ## Security considerations
 
-The Clipboard API allows users to programmatically read and write text and other kinds of data to and from the system clipboard in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts).
+The Clipboard API allows users to programmatically read and write text and other kinds of data to and from the system clipboard in [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
-When reading from the clipboard, the specification requires that a user has recently interacted with the page ([transient user activation](/en-US/docs/Web/Security/User_activation)) and that the call is made as a result of the user interacting with a browser or OS "paste element" (such as choosing "Paste" on a native context menu). In practice, browsers often allow read operations that do not satisfy these requirements, while placing other requirements instead (such as a permission or per-operation prompt).
-For writing to the clipboard the specification expects that the page has been granted the [Permissions API](/en-US/docs/Web/API/Permissions_API) `clipboard-write` permission, and the browser may also require [transient user activation](/en-US/docs/Web/Security/User_activation).
+When reading from the clipboard, the specification requires that a user has recently interacted with the page ([transient user activation](/en-US/docs/Web/Security/Defenses/User_activation)) and that the call is made as a result of the user interacting with a browser or OS "paste element" (such as choosing "Paste" on a native context menu). In practice, browsers often allow read operations that do not satisfy these requirements, while placing other requirements instead (such as a permission or per-operation prompt).
+For writing to the clipboard the specification expects that the page has been granted the [Permissions API](/en-US/docs/Web/API/Permissions_API) `clipboard-write` permission, and the browser may also require [transient user activation](/en-US/docs/Web/Security/Defenses/User_activation).
 Browsers may place additional restrictions over use of the methods to access the clipboard.
 
 Browser implementations have diverged from the specification.
@@ -80,12 +81,10 @@ Firefox & Safari:
 - The paste-prompt is suppressed if reading same-origin clipboard content, but not cross-origin content.
 - The `clipboard-read` and `clipboard-write` permissions are not supported (and not planned to be supported) by Firefox or Safari.
 
-Firefox [Web Extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard):
+Firefox [web extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard):
 
-- Reading text is only available for extensions with the Web Extension [`clipboardRead`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardread) permission.
-  With this permission the extension does not require transient activation or a paste prompt.
-- Writing text is available in secure context and with transient activation.
-  With the Web Extension [`clipboardWrite`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardwrite) permission transient activation is not required.
+- Reading is available to extensions with the web extension [`clipboardRead`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardread) permission. With this permission, the extension doesn't require transient activation or use the paste prompt. From Firefox 147, reading is also available without the permission in a secure context, with transient activation, and after the user clicks the paste prompt in an ephemeral context menu.
+- Writing is available in a secure context and with transient activation. However, with the web extension [`clipboardWrite`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardwrite) permission transient activation is not required.
 
 ## Examples
 
@@ -111,7 +110,3 @@ navigator.clipboard
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)

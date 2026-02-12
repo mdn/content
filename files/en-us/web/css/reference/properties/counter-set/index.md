@@ -12,6 +12,9 @@ If the counters don't exist the `counter-set` property creates a new counter for
 
 If a named counter in the list is missing a value, the value of the counter will be set to `0`.
 
+> [!NOTE]
+> The counter's value can be incremented or decremented using the {{cssxref("counter-increment")}} CSS property.
+
 {{InteractiveExample("CSS Demo: counter-set")}}
 
 ```css interactive-example-choice
@@ -66,9 +69,6 @@ h2::before {
   content: "Chapter " counter(chapter-count) ": ";
 }
 ```
-
-> [!NOTE]
-> The counter's value can be incremented or decremented using the {{cssxref("counter-increment")}} CSS property.
 
 ## Syntax
 
@@ -141,7 +141,7 @@ h1 {
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("@counter-style")}}
-- {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
+- {{cssxref("counter()")}} and {{cssxref("counters()")}} functions
 - {{cssxref("content")}} property
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

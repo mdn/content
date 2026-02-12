@@ -227,18 +227,21 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch.
     The browser can use this to verify that the fetched resource has been delivered without unexpected manipulation.
     The attribute must only be specified when the `rel` attribute is specified to `stylesheet`, `preload`, or `modulepreload`.
-    See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
+    See [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
 - `media`
   - : This attribute specifies the media that the linked resource applies to. Its value must be a media type / [media query](/en-US/docs/Web/CSS/Guides/Media_queries).
     This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.
 
 - `referrerpolicy`
-  - : A string indicating which referrer to use when fetching the resource:
+  - : A string indicating which referrer to use when fetching the resource. For detailed explanations and examples of each policy, see the {{HTTPHeader("Referrer-Policy")}} header documentation.
     - `no-referrer` means that the {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade` means that no {{HTTPHeader("Referer")}} header will be sent when navigating to an origin without TLS (HTTPS).
       This is a user agent's default behavior, if no policy is otherwise specified.
     - `origin` means that the referrer will be the origin of the page, which is roughly the scheme, the host, and the port.
     - `origin-when-cross-origin` means that navigating to other origins will be limited to the scheme, the host, and the port, while navigating on the same origin will include the referrer's path.
+    - `same-origin` means that the referrer (origin, path, and query string) is sent for same-origin requests, but no referrer is sent for cross-origin requests.
+    - `strict-origin` means that only the origin is sent when the protocol security level stays the same (HTTPS→HTTPS). No referrer is sent to less secure destinations (HTTPS→HTTP). This is important for HTTPS pages because it prevents leaking referrer information to insecure origins.
+    - `strict-origin-when-cross-origin` means that the full referrer is sent for same-origin requests. For cross-origin requests, only the origin is sent when the protocol stays the same (HTTPS→HTTPS), and no referrer is sent when downgrading to HTTP. This is the default value, which balances functionality with privacy and security for HTTPS sites.
     - `unsafe-url` means that the referrer will include the origin and the path (but not the fragment, password, or username).
       This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
 
@@ -449,3 +452,4 @@ the rendering of the page will be blocked till the resource and its critical sub
 ## See also
 
 - {{HTTPHeader("Link")}} HTTP header
+- {{HTTPHeader("Referrer-Policy")}} HTTP header
