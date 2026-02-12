@@ -163,10 +163,10 @@ You can also close it by selecting outside the dialog, as it is non-modal.
 
 {{EmbedLiveSample("Popover API HTML attributes", "100%", 200)}}
 
-### HTML-only non-modal dialog
+### Using the dialog `open` attribute
 
-This example demonstrates the creation of a non-modal dialog using only HTML.
-Because of the boolean `open` attribute in the `<dialog>` element, the dialog appears open when the page loads.
+This example demonstrates how you can set the boolean `open` attribute on a `<dialog>` element, in order to create an HTML-only non-modal dialog that is already open when the page loads.
+
 The dialog can be closed by clicking the "OK" button because the `method` attribute in the `<form>` element is set to `"dialog"`.
 In this case, no JavaScript is needed to close the form.
 
