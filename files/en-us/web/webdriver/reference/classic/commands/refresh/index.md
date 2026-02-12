@@ -7,13 +7,13 @@ browser-compat: webdriver.classic.Refresh
 sidebar: webdriver
 ---
 
-The _Refresh_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API reloads the current page in the active browsing context. This is equivalent to clicking the browser's reload button or calling {{domxref("Location.reload()")}} in JavaScript.
+The _refresh_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API reloads the current page in the active browsing context. This is equivalent to clicking the browser's reload button or calling {{domxref("Location.reload()")}} in JavaScript.
 
 ## Syntax
 
-| Method | URI template                    |
-| ------ | ------------------------------- |
-| `POST` | `/session/{session id}/refresh` |
+| Method                                                | URI template                    |
+| ----------------------------------------------------- | ------------------------------- |
+| [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) | `/session/{session id}/refresh` |
 
 ### URL parameters
 
@@ -49,15 +49,15 @@ session = webdriver.Firefox()
 session.get("https://www.selenium.dev/")
 print(f"Initial load: {session.title}")
 
-# Wait a moment to simulate user activity
+# Wait before reloading
 time.sleep(1)
 
-# Refresh the page
+# Reload the page
 session.refresh()
-print(f"After refresh: {session.title}")
+print(f"After reload: {session.title}")
 
 # The page has been reloaded
-print("Page refreshed successfully")
+print("Page reloaded successfully.")
 
 session.quit()
 ```
@@ -66,8 +66,8 @@ Output:
 
 ```plain
 Initial load: Selenium
-After refresh: Selenium
-Page refreshed successfully
+After reload: Selenium
+Page reloaded successfully.
 ```
 
 ## Specifications
