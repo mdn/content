@@ -24,7 +24,7 @@ An audio session represents the aggregated audio output from a web page. It allo
 
 ### Setting the audio session type for a video conferencing app
 
-The following example sets the audio session type to `"play-and-record"`, which is appropriate for applications that both play and record audio, such as video conferencing applications:
+The following example sets the audio session type to `"play-and-record"` for a video conferencing application. On supporting platforms, this signals that the page needs simultaneous playback and recording, which may cause the system to route audio through the correct output (for example, earpiece instead of speaker on mobile devices) and prevent other applications' audio from interrupting the call.
 
 ```js
 navigator.audioSession.type = "play-and-record";

@@ -21,7 +21,7 @@ A string representing the audio session type. Possible values are:
 - `"auto"`
   - : The default value. The user agent automatically chooses the best audio session type based on the audio APIs used by the page.
 - `"playback"`
-  - : Audio for media playback, such as video or music playback, podcasts, etc. This type should not mix with other playback audio, and may cause other audio to pause.
+  - : Audio for media playback, such as video or music playback, podcasts, etc. This is an exclusive type that will pause other playback audio on the device, but may allow non-playback audio (such as notification sounds) to continue.
 - `"transient"`
   - : Transient audio, such as notification sounds. This type usually plays on top of other audio and may cause it to duck (reduce in volume).
 - `"transient-solo"`
