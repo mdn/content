@@ -27,7 +27,7 @@ A {{domxref("ClipboardChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
-### Basic `clipboardchange` event usage
+### Listening for system copy commands
 
 This example shows how to listen for system copy commands and display the content that was copied to the clipboard.
 
