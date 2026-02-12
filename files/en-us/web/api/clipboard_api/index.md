@@ -30,6 +30,8 @@ Events are fired as the result of {{domxref("Element/cut_event", "cut")}}, {{dom
 The events have a default action, for example the `copy` action copies the current selection to the system clipboard by default.
 The default action can be overridden by the event handler — see each of the events for more information.
 
+There is also a {{domxref("Clipboard.clipboardchange_event","clipboardchange")}} event fired directly on the {{domxref("Clipboard")}} object whenever the system clipboard's contents are changed. This is useful for notifying apps of a change to the system clipboard, for example if they have their own clipboard that needs to be kept in sync.
+
 ## Interfaces
 
 - {{domxref("Clipboard")}} {{securecontext_inline}}
