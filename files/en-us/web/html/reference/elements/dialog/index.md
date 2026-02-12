@@ -144,7 +144,13 @@ You can close the dialog by selecting the "Close" button or pressing the <kbd>Es
 
 This example demonstrates how you can open and close a non-modal dialog using the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover), [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget), and [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML attributes of the [Popover API](/en-US/docs/Web/API/Popover_API).
 
-Note that the `<dialog>` must be turned into a popover by adding the `popover` attribute, and that you don't need to specify `popovertargetaction` for the button to open the dialog.
+The `<dialog>` is turned into a popover by adding the `popover` attribute.
+Since we haven't specified a value for the attribute,  the default value of `"auto"` is used.
+This enables "light dismiss" behavior, such that the dialog to be closed by clicking outside the the dialog or by pressing <kbd>Esc</kbd>.
+We could instead have set `popover="manual"` to disable `"light dismiss" and require that the dialog is closed with the "Close" button.
+
+Note that we haven't specified the `popovertargetaction` attribute for the `<button>` that opens the dialog.
+It isn't needed in this case, because its default value is `toggle`, which will open the dialog when the button is clicked.
 
 ```html
 <button popovertarget="my-dialog">Open dialog</button>
