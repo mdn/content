@@ -23,11 +23,11 @@ background-attachment: local;
 ```
 
 ```css interactive-example-choice
-background-attachment: local, scroll;
+background-attachment: fixed, scroll;
 ```
 
 ```css interactive-example-choice
-background-attachment: scroll, local;
+background-attachment: scroll, fixed;
 ```
 
 ```html interactive-example
@@ -68,12 +68,14 @@ body {
     url("/shared-assets/images/examples/lizard.png") right 3rem top 1rem / 15rem
       no-repeat,
     url("/shared-assets/images/examples/moon.jpg") center / 10rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: bolder;
   overflow: auto;
   padding: 20px;
+  color: red;
   text-shadow:
-    0 0 0.6rem white,
-    0 0 0.6rem white;
+    0 0 0.5rem black,
+    0 0 0.5rem black;
 }
 ```
 
