@@ -23,7 +23,7 @@ The empty string (`""`) if the element does not have an active blocker, or one o
 
     Permanent blocker.
 
-- `unsuccesful_registration`
+- `unsuccessful_registration`
   - : More than three `<geolocation>` elements have been inserted into the same document.
 
     Temporary blocker.

@@ -46,7 +46,7 @@ For advice on designing your request for runtime permissions, to maximize the li
 - {{WebExtAPIRef("permissions.getAll()")}}
   - : Retrieves all the permissions currently granted to the extension.
 - {{WebExtAPIRef("permissions.remove()")}}
-  - : Givew up a set of permissions.
+  - : Gives up a set of permissions.
 - {{WebExtAPIRef("permissions.request()")}}
   - : Asks for a set of permissions.
 
