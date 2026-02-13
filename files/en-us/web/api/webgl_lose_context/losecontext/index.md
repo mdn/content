@@ -15,6 +15,10 @@ It triggers the steps described in the WebGL specification for handling context 
 The context will remain lost until {{domxref("WEBGL_lose_context.restoreContext()")}} is
 called.
 
+In addition to simulating context loss for debugging purposes, calling `loseContext()` destroys the underlying graphics context and all
+associated graphics resources. This is the recommended mechanism for applications to programmatically halt use of WebGL API and free GPU
+resources.
+
 ## Syntax
 
 ```js-nolint
