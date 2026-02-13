@@ -99,7 +99,7 @@ width: unset;
 - {{cssxref("fit-content")}}
   - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/Reference/Values/max-content), i.e., `min(max-content, max(min-content, stretch))`.
 - {{cssxref("anchor-size()")}}
-  - : Sets the width relative to a dimension of an anchor element, with the dimension defaulting to the element's default anchor and the dimension defaulting to width if the element is an anchor-positioned element's; otherwise, sets the width to the fallback length value if present; otherwise, the declaration is ignored.
+  - : Sets the width relative to a dimension of an anchor element. When defining the `width` of an anchor-positioned element, the first parameter defaults to the associated anchor's width. If applied to a non-anchor-positioned element, it sets the width to the fallback value. If no fallback is defined, the declaration is ignored.
 - {{cssxref("calc-size()")}}
   - : Sets the width to a modified intrinsic size.
 - [`fit-content(<length-percentage>)`](/en-US/docs/Web/CSS/Reference/Values/fit-content_function)
