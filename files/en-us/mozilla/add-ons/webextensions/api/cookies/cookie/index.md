@@ -15,15 +15,15 @@ Values of this type are objects that can contain these properties:
 - `domain`
   - : A `string` representing the domain the cookie belongs to (e.g., "www.google.com" or "example.com").
 - `expirationDate` {{optional_inline}}
-  - : A `number` representing the expiration date of the cookie as the seconds after the UNIX epoch.It can include milliseconds in the fractional part.If omitted, the cookie becomes a session cookie.
+  - : A `number` representing the expiration date of the cookie as the seconds after the UNIX epoch.Can include milliseconds in the fractional part.If omitted, the cookie becomes a session cookie.
 - `firstPartyDomain`
   - : A `string` representing the first-party domain associated with the cookie. This is an empty string if the cookie was set while first-party isolation was off. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
 - `hostOnly`
   - : A `boolean`, `true` if the cookie is a host-only cookie (i.e., the request's host must exactly match the domain of the cookie), or `false` otherwise.
 - `httpOnly`
-  - : A `boolean`, `true` if the cookie is marked as HttpOnly (i.e., the cookie is inaccessible to client-side scripts), or `false` otherwise.
+  - : A `boolean`, `true` if the cookie is marked as HttpOnly (i.e., the cookie is inaccessible to client-side scripts), or false otherwise.
 - `name`
-  - : A `string` representing the name of the cookie. If omitted, the name defaults to an empty string (`""`).
+  - : A `string` representing the name of the cookie.If omitted, this is empty by default.
 - `partitionKey` {{optional_inline}}
   - : An `object` representing the description of the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. This object is omitted (null) if the cookie is not in partitioned storage. This object contains the following properties:
     - `topLevelSite`
@@ -32,7 +32,7 @@ Values of this type are objects that can contain these properties:
 - `path`
   - : A `string` representing the path of the cookie.
 - `secure`
-  - : A `boolean`, `true` if the cookie is marked as secure (i.e., its scope is limited to secure channels, typically HTTPS), or `false` otherwise.
+  - : A `boolean`, `true` if the cookie is marked as secure (i.e., its scope is limited to secure channels, typically HTTPS), or false otherwise.
 - `session`
   - : A `boolean`, `true` if the cookie is a session cookie, or `false` if it is a persistent cookie with an expiration date.
 - `sameSite`
@@ -40,7 +40,7 @@ Values of this type are objects that can contain these properties:
 - `storeId`
   - : A `string` representing the ID of the cookie store containing this cookie, as provided by {{WebExtAPIRef("cookies.getAllCookieStores()")}}.
 - `value`
-  - : A `string` representing the value of the cookie. If omitted, the value defaults to an empty string (`""`).
+  - : A `string` representing the value of the cookie. If omitted, this is empty by default.
 
 ## Examples
 
