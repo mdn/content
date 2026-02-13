@@ -685,10 +685,21 @@ module.exports = router;
 
 The module requires Express and then uses it to create a `Router` object. The routes are all set up on the router, which is then exported.
 
-The routes are defined either using `.get()` or `.post()` methods on the router object. All the paths are defined using strings (we don't use string patterns or regular expressions).
+The routes are defined either using `.get()` or `.post()` methods on the router object.
+All the paths are defined using strings (we don't use string patterns or regular expressions).
 Routes that act on some specific resource (e.g., book) use path parameters to get the object id from the URL.
 
 The handler functions are all imported from the controller modules we created in the previous section.
+
+> [!NOTE]
+> The routes defined above use the `.post()` method to handle all the requests to create, update, and delete library data.
+> This is common for server-rendered applications, because by default HTML `<form>` elements only send `GET` and `POST` requests.
+>
+> If writing a client-rendered application, which does not need to use `<form>` elements, you should instead use the appropriate method for each operation.
+> For example, your client would send requests to delete objects using the DELETE HTTP method, and your router would specify the `.delete()` method.
+>
+> It is also possible to use middleware such as [method-override](https://www.npmjs.com/package/method-override) to encode the "desired" HTTP verb in a POST request, which can then be modified to the the desired HTTP verb before the request is passed to the router.
+> This may be worthwhile to improve server logging, or if the server needs to handle both server and client-side rendered content through the same endpoint.
 
 ### Update the index route module
 
