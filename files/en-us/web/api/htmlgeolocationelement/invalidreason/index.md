@@ -3,10 +3,12 @@ title: "HTMLGeolocationElement: invalidReason property"
 short-title: invalidReason
 slug: Web/API/HTMLGeolocationElement/invalidReason
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement.invalidReason
 ---
 
-{{APIRef("Navigation API")}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`invalidReason`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns an enumerated value representing the reason why the associated {{htmlelement("geolocation")}} element is invalid (blocked), if that is the case.
 

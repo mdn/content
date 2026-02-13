@@ -2,6 +2,8 @@
 title: "<geolocation>: The geolocation element"
 slug: Web/HTML/Reference/Elements/geolocation
 page-type: html-element
+status:
+  - experimental
 browser-compat: html.elements.geolocation
 sidebar: htmlsidebar
 ---
