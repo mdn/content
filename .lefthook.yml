@@ -29,6 +29,7 @@ pre-commit:
       glob: "files/**/*.md"
       run: node scripts/log-url-issues.js
 
+<<<<<<< HEAD
     - name: Run unit tests
       glob:
         - "*.*"
@@ -37,6 +38,11 @@ pre-commit:
       exclude:
         - "*.md"
       run: npm test
+=======
+    - name: Front matter tests
+      glob: "tests/**/*.*"
+      run: npm run test:front-matter-linter
+>>>>>>> 30471395d (window.setTimeout() - negative delay is set to 0 (#43078))
 
     - name: Fix markdown
       glob: "*.md"

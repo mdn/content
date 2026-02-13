@@ -42,13 +42,18 @@
     "test": "node --test",
     "up-to-date-check": "node scripts/up-to-date-check.js"
   },
+<<<<<<< HEAD
   "devDependencies": {
+=======
+  "dependencies": {
+>>>>>>> 30471395d (window.setTimeout() - negative delay is set to 0 (#43078))
     "@apideck/better-ajv-errors": "^0.3.6",
     "@mdn/fred": "2.2.1",
     "@octokit/rest": "^22.0.1",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "async": "^3.2.6",
+<<<<<<< HEAD
     "cheerio": "1.2.0",
     "cli-progress": "^3.12.0",
     "cross-env": "10.1.0",
@@ -59,6 +64,21 @@
     "file-type": "^21.3.0",
     "fs-extra": "^11.3.3",
     "gray-matter": "^4.0.3",
+=======
+    "cli-progress": "^3.12.0",
+    "cross-env": "10.1.0",
+    "env-cmd": "11.0.0",
+    "fdir": "^6.5.0",
+    "gray-matter": "^4.0.3",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "cheerio": "1.2.0",
+    "cspell": "9.6.4",
+    "cspell-group-by-file-reporter": "^1.0.1",
+    "file-type": "^21.3.0",
+    "fs-extra": "^11.3.3",
+>>>>>>> 30471395d (window.setTimeout() - negative delay is set to 0 (#43078))
     "imagemin": "^9.0.1",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^10.0.0",

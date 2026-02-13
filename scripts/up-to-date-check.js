@@ -1,7 +1,11 @@
 import fredPackageJson from "@mdn/fred/package.json" with { type: "json" };
 import thisPackageJson from "../package.json" with { type: "json" };
 
+<<<<<<< HEAD
 const availableFredVersion = thisPackageJson.devDependencies["@mdn/fred"];
+=======
+const availableFredVersion = thisPackageJson.dependencies["@mdn/fred"];
+>>>>>>> 30471395d (window.setTimeout() - negative delay is set to 0 (#43078))
 const installedFredVersion = fredPackageJson.version;
 
 if (installedFredVersion < availableFredVersion) {

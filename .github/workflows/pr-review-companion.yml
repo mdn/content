@@ -7,8 +7,12 @@ name: PR review companion
 
 on:
   workflow_run:
+<<<<<<< HEAD
     workflows:
       - "PR Test"
+=======
+    workflows: ["PR Test", "PR Test Legacy"]
+>>>>>>> 30471395d (window.setTimeout() - negative delay is set to 0 (#43078))
     types:
       - completed
 
@@ -30,6 +34,7 @@ permissions:
   statuses: write
 
 jobs:
+<<<<<<< HEAD
   identify-pr:
     if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
@@ -56,6 +61,14 @@ jobs:
       PR_NUMBER: ${{ needs.identify-pr.outputs.pr-number }}
       PREFIX: pr${{ needs.identify-pr.outputs.pr-number }}
       STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}
+=======
+  review:
+    environment: review
+    runs-on: ubuntu-latest
+    if: github.event.workflow_run.conclusion == 'success'
+    env:
+      STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.pull_requests[0].head.sha }}
+>>>>>>> 30471395d (window.setTimeout() - negative delay is set to 0 (#43078))
       STATUS_CONTEXT: pr-review-companion
       STATUS_TARGET: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
@@ -71,10 +84,21 @@ jobs:
       - name: Check for artifacts
         id: check
         if: hashFiles('build/') != ''
+<<<<<<< HEAD
         run: echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
 
       - name: Mark status as pending
         if: steps.check.outputs.HAS_ARTIFACT
+=======
+        run: |
+          echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
+          PR_NUMBER=`cat build/NR | tr -dc '0-9'`
+          echo "PR_NUMBER=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "PREFIX=pr$PR_NUMBER" >> "$GITHUB_OUTPUT"
+
+      - name: Mark status as pending
+        if: steps.check.outputs.HAS_ARTIFACT && github.event.workflow_run.pull_requests[0].number
+>>>>>>> 30471395d (window.setTimeout() - negative delay is set to 0 (#43078))
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -101,7 +125,11 @@ jobs:
         uses: google-github-actions/upload-cloud-storage@6397bd7208e18d13ba2619ee21b9873edc94427a # v3.0.0
         with:
           path: "build"
+<<<<<<< HEAD
           destination: "${{ vars.GCP_BUCKET_NAME }}/${{ env.PREFIX }}"
+=======
+          destination: "${{ vars.GCP_BUCKET_NAME }}/${{ steps.check.outputs.PREFIX }}"
+>>>>>>> 30471395d (window.setTimeout() - negative delay is set to 0 (#43078))
           resumable: false
           headers: |-
             cache-control: no-store
@@ -134,6 +162,11 @@ jobs:
         if: steps.check.outputs.HAS_ARTIFACT
         env:
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
+<<<<<<< HEAD
+=======
+          PREFIX: ${{ steps.check.outputs.PREFIX }}
+          PR_NUMBER: ${{ steps.check.outputs.PR_NUMBER }}
+>>>>>>> 30471395d (window.setTimeout() - negative delay is set to 0 (#43078))
         working-directory: content
         run: |
           echo "Pull request:"
@@ -150,7 +183,11 @@ jobs:
             $BUILD_OUT_ROOT
 
       - name: Mark status as success
+<<<<<<< HEAD
         if: steps.check.outputs.HAS_ARTIFACT && success()
+=======
+        if: steps.check.outputs.HAS_ARTIFACT && success() && github.event.workflow_run.pull_requests[0].number
+>>>>>>> 30471395d (window.setTimeout() - negative delay is set to 0 (#43078))
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -161,7 +198,11 @@ jobs:
             -f target_url="$STATUS_TARGET"
 
       - name: Mark status as failure
+<<<<<<< HEAD
         if: steps.check.outputs.HAS_ARTIFACT && failure()
+=======
+        if: steps.check.outputs.HAS_ARTIFACT && failure() && github.event.workflow_run.pull_requests[0].number
+>>>>>>> 30471395d (window.setTimeout() - negative delay is set to 0 (#43078))
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

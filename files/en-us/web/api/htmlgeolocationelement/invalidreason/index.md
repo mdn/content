@@ -23,7 +23,11 @@ The empty string (`""`) if the element does not have an active blocker, or one o
 
     Permanent blocker.
 
+<<<<<<< HEAD
 - `unsuccessful_registration`
+=======
+- `unsuccesful_registration`
+>>>>>>> 30471395d (window.setTimeout() - negative delay is set to 0 (#43078))
   - : More than three `<geolocation>` elements have been inserted into the same document.
 
     Temporary blocker.
