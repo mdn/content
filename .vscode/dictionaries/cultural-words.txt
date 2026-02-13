@@ -32,7 +32,7 @@ Henkan
 Hijri
 Hinckley
 Hiroko
-háček
+Huangdi
 Jeonja
 Kayah
 Khema
@@ -80,9 +80,11 @@ Tangsa
 Thaana
 Tham
 Tirhuta
+Tishrei
 Tlayolotl
 Totnes
 Wancho
 Warang
 Zenkaku
 zhuyin
+Śaka
