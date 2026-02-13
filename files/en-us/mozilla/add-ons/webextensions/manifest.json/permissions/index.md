@@ -70,9 +70,6 @@ The extra privileges include:
 - the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the `"cookies"` API permission.
 - bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards. Content scripts, however, can only bypass tracking protection for hosts specified with a full domain.
 
-> [!NOTE]
-> In Firefox, the automatic provision of host permissions or the ability to specify host permissions for an extension's origin was deprecated in Firefox 149 and removed in Firefox 152.
-
 ## API permissions
 
 You specify API permissions as keywords, and each keyword names a [WebExtension API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) that the extension would like to use.
