@@ -152,7 +152,7 @@ This example demonstrates the [`returnValue`](/en-US/docs/Web/API/HTMLDialogElem
 
 This example opens a modal dialog when the "Show the dialog" button is activated. The dialog contains a form with a {{HTMLElement("select")}} and two {{HTMLElement("button")}} elements, which default to `type="submit"`. An event listener updates the value of the "Confirm" button when the select option changes. If the "Confirm" button is activated to close the dialog, the current value of the button is the return value. If the dialog is closed by pressing the "Cancel" button, the `returnValue` is `cancel`.
 
-When the dialog is closed, the return value is displayed under the "Show the dialog" button. If the dialog is closed by pressing the <kbd>Esc</kbd> key, the `returnValue` is not updated, and the `close` event doesn't occur, so the text in the {{HTMLElement("output")}} is not updated.
+When the dialog is closed, the return value is displayed under the "Show the dialog" button. If the dialog is closed by pressing the <kbd>Esc</kbd> key, the dialog first triggers the [`cancel`](/en-US/docs/Web/API/HTMLDialogElement/cancel_event) event and then the [`close`](/en-US/docs/Web/API/HTMLDialogElement/close_event) event, leaving the `returnValue` as an empty string, so the {{HTMLElement("output")}} displays an empty return value.
 
 #### HTML
 
