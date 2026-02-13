@@ -8,7 +8,7 @@ browser-compat: api.Notification.show_event
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-The **`show`** event of the {{domxref("Notification")}} interface fires when a {{domxref("Notification")}} is displayed.
+The **`show`** event of the {{domxref("Notification")}} interface fires when a [non-persistent notification](/en-US/docs/Web/API/Notifications_API#non-persistent_notifications) is displayed.
 
 ## Syntax
 
