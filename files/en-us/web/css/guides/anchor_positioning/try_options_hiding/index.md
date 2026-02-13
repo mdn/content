@@ -374,6 +374,39 @@ Scroll the page and check out the effect of these position-try fallback options 
 
 {{ EmbedLiveSample("Custom fallback options", "100%", "250") }}
 
+## Styling anchor-positioned elements based on active fallback
+
+One problem the above functionality doesn't solve on its own is updating the styling of an anchor-positioned element to suit its different fallback options. For example, it is common to include a small arrow on a tooltip that points to the anchor element it is associated with, improving UX by making the visual association clearer. When the tooltip moves to a different position, you'll need to change the position and orientation of the arrow, otherwise it will look wrong.
+
+To solve this problem, you can use anchored container queries. These extend the functionality of [CSS container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries) to enable you to detect when a specific fallback option is applied to an anchor-positioned element, and apply CSS to its descendants as a result. Specifically, anchored container queries rely on two features:
+
+- The {{cssxref("container-type")}} property `anchored` value: Apply this to the anchor-positioned element to start detecting when different fallback options are applied to it.
+- The {{cssxref("@container")}} at-rule `anchored` keyword: This is followed by a set of parentheses inside which the `fallback` descriptor is included. The descriptor's value is a `position-try-fallbacks` value.
+
+For example, let's say we have an anchor-positioned tooltip element that is positioned above its anchor by default via a {{cssxref("position-area")}} value of `top`, but has a {{cssxref("position-try-fallbacks")}} value of `flip-block` specified. This will cause the tooltip to flip in the block direction to the bottom of its anchor when it starts to overflow the top of the viewport. If we want to detect when the fallback is applied to the tooltip, we first need to set `container-type: anchored` on it to turn it into an anchored query container.
+
+```css
+.tooltip {
+  position: absolute;
+  position-anchor: --myAnchor;
+  position-area: top;
+  position-try-fallbacks: flip-block;
+  container-type: anchored;
+}
+```
+
+With this in place, we can now write a container query like so:
+
+```css
+@container anchored(fallback: flip-block) {
+  /* Descendent styles here */
+}
+```
+
+The query test — `anchored(fallback: flip-block)` — will return true when the `flip-block` fallback option is applied to the tooltip, in which case the styles specified within the `@container` block will be applied. You might for example want to change the position and orientation of the arrow icon so that it continues to point towards the anchor, change the direction of a gradient, etc.
+
+For more information on anchored container queries and some examples, see [Using anchored container queries](/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries).
+
 ## Using `position-try-order`
 
 The {{cssxref("position-try-order")}} property has a slightly different focus to the rest of the position try functionality, in that it makes use of position try fallback options when the positioned element is first displayed, rather than when it is in the process of overflowing.
