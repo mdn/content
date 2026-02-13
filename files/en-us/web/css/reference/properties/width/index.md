@@ -211,7 +211,7 @@ We include one {{htmlelement("div")}} element with some text.
 
 #### CSS
 
-We set the `width` of the element to be `20%` of the width of it's parent container.
+We set the `width` of the element to be `20%` of the width of its parent container.
 
 ```css
 .percent {
@@ -242,7 +242,7 @@ We include three paragraphs with the same content; just their class names differ
 
 #### CSS
 
-We set one paragraph's `width` to `max-content`, the second to `min-content`, and the third to be twice the size of the `min-content` by using the `calc-size()` function. Each is given a different{{cssxref("background-color")}} and {{cssxref("border-style")}} to enable differentiating between the two.
+We set one paragraph's `width` to `max-content`, the second to `min-content`, and the third to be twice the size of the `min-content` by using the `calc-size()` function. Each is given a different {{cssxref("background-color")}} and {{cssxref("border-style")}} to enable differentiating between the two.
 
 ```css
 p.max-green {
@@ -270,7 +270,7 @@ p.min-pink {
 ```css hidden
 @supports not (width: calc-size(min-content, size * 2)) {
   body::after {
-    content: "Your browser doesn't support the `calc-size()` function yet.";
+    content: "Your browser doesn't support the calc-size() function yet.";
     background-color: wheat;
     display: block;
     text-align: center;
@@ -324,7 +324,7 @@ We use the {{cssxref("display")}} property to make the parent a flex container, 
 ```css hidden
 @supports not (width: stretch) {
   body::after {
-    content: "Your browser doesn't support the `stretch` value yet.";
+    content: "Your browser doesn't support the stretch value yet.";
     background-color: wheat;
     display: block;
     text-align: center;
@@ -341,7 +341,7 @@ By default, flex items are as wide as their content. The `stretch` value makes t
 
 ### Using the anchor-size() function
 
-This example demonstrates using the `anchor-size()` function to define the width of an anchor-positioned element; we defined it's width as a multiple of it's anchor's height.
+This example demonstrates using the `anchor-size()` function to define the width of an anchor-positioned element; we defined its width as a multiple of its anchor's height.
 
 #### HTML
 
@@ -357,7 +357,7 @@ We specify two {{htmlelement("div")}} elements: one `anchor` element and one `in
 
 #### CSS
 
-We declare the `anchor` `<div>` as an anchor element by giving it an {{cssxref("anchor-name")}}. The positioned element has its {{cssxref("position")}} property set to `absolute`, and is associated with the anchor element via its {{cssxref("position-anchor")}} property. We also set absolute {{cssxref("height")}} and {{cssxref("width")}} dimensions on the anchor and define the width of the anchor-positioned element to be the width of the anchor using the `anchor-size()` function as the value of the `width` property. As a bonues, we also uses the `anchor-size()` function to define the infobox's {{cssxref("left")}} position, making the gap between the anchor and the infobox one quarter of the height of the anchor.
+We declare the `anchor` `<div>` as an anchor element by giving it an {{cssxref("anchor-name")}}. The positioned element has its {{cssxref("position")}} property set to `absolute`, and is associated with the anchor element via its {{cssxref("position-anchor")}} property. We also set absolute {{cssxref("height")}} and {{cssxref("width")}} dimensions on the anchor and define the width of the anchor-positioned element to be the width of the anchor using the `anchor-size()` function as the value of the `width` property. As a bonus, we also use the `anchor-size()` function to define the infobox's {{cssxref("left")}} position, making the gap between the anchor and the infobox one quarter of the height of the anchor.
 
 ```css hidden
 .anchor {
