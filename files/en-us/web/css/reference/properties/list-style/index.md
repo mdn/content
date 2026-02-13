@@ -87,6 +87,9 @@ hr {
 
 The values of this property are applied to list items, including {{HTMLElement("li")}} elements and elements with `{{cssxref("display")}}: list-item;`. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the nested items.
 
+> [!NOTE]
+> HTML list elements ({{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("menu")}}) reset the `list-style` property to its initial value in their user-agent stylesheet. This means these elements interrupt inheritance of `list-style` from ancestor elements. To apply inherited list styles, you must explicitly set the property on these list elements.
+
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
