@@ -48,15 +48,9 @@ The alternate glpyhs are then applied for any `.nice-look` class, using {{cssxre
 
 We then use the CSSOM to read these declaration as `CSSFontFeatureValuesRule` instances, displaying them into the log.
 
-#### HTML
-
-```html
-<pre id="log"></pre>
-```
-
 #### CSS
 
-```css-nolint
+```css
 /* At-rule for "nice-style" in Font One */
 @font-feature-values Font One {
   @styleset {
@@ -79,20 +73,40 @@ We then use the CSSOM to read these declaration as `CSSFontFeatureValuesRule` in
 }
 ```
 
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 40px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
 #### JavaScript
 
 ```js
-const log = document.getElementById("log");
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+```js
 const rules = document.getElementById("css-output").sheet.cssRules;
 
 const fontOne = rules[0]; // A CSSFontFeatureValuesRule
-log.textContent = `The 1st '@font-feature-values' family: "${fontOne.fontFamily}".\n`;
+log(`The 1st '@font-feature-values' family: "${fontOne.fontFamily}".`);
 
 const fontTwo = rules[1]; // Another CSSFontFeatureValuesRule
-log.textContent += `The 2nd '@font-feature-values' family: "${fontTwo.fontFamily}".`;
+log(`The 2nd '@font-feature-values' family: "${fontTwo.fontFamily}"`);
 ```
 
-{{EmbedLiveSample("read_font_family", "100%", "75px")}}
+{{EmbedLiveSample("read_font_family", "100%", "100px")}}
 
 ## Specifications
 
