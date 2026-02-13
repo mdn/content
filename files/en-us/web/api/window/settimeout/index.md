@@ -38,7 +38,7 @@ setTimeout(func, delay, param1, param2, /* …, */ paramN)
   - : A {{domxref("TrustedScript")}} or a string of arbitrary code that is compiled and executed every `delay` milliseconds.
     This can be used instead of passing a function, but is _strongly discouraged_ for the same reasons that make using {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
 - `delay` {{optional_inline}}
-  - : A positive integer indicating how long the timer should wait before the specified function or code is executed, in milliseconds.
+  - : A non-negative integer indicating how long the timer should wait before the specified function or code is executed, in milliseconds.
     Defaults to 0 if not specified.
 
     Note:
