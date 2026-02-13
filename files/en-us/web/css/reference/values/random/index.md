@@ -8,7 +8,7 @@ browser-compat: css.types.random
 sidebar: cssref
 ---
 
-The **`random()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) generates a random numeric value within a specified range. This allows for dynamic, randomized styling using just CSS.
+The **`random()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) generates a random numeric value within a specified range. This allows for dynamic, randomized styling using CSS.
 
 {{InteractiveExample("CSS Demo: random()")}}
 
@@ -18,10 +18,10 @@ The **`random()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Ref
 
 ```css interactive-example
 .box {
-  rotate: random(--per-element, 0deg, 360deg);
-  width: random(--per-element, 100px, 500px);
-  background: hsl(random(--per-element, 0, 360), 50%, 50%);
-  height: random(--per-element, 100px, 500px);
+  rotate: random(element-shared, 0deg, 360deg);
+  width: random(element-shared, 100px, 500px);
+  background: hsl(random(element-shared, 0, 360), 50%, 50%);
+  height: random(element-shared, 100px, 500px);
 }
 ```
 
@@ -36,54 +36,89 @@ random(10px, 500px)
 random(0deg, 360deg)
 
 /* With step interval */
-random(0, 100, by 10)
+random(0, 100, 10)
 
-/* With per-element caching */
-random(--per-element, 0, 360)
+/* Random base value shared across elements */
+random(element-shared, 0, 360)
 
 /* Combined options */
-random(--per-element, 0deg, 360deg, by 45deg)
+random(element-shared, 0deg, 360deg, 45deg)
 
-/* With custom caching key */
+/* Using a custom key to share the random value */
 random(--my-key, 0, 100)
 ```
 
 ### Parameters
 
-The `random(<random-caching-options>, <calc-sum>, <calc-sum>)` function specified an optional random caching strategy, generating a new random value per-element, or caching the generated value with a custom named key.
-The `random(<random-caching-options>, <calc-sum>, <calc-sum>)` function specified an optional random caching strategy, generating a new random value per-element, or caching the generated value with a custom named key.
-
-
-- `angle`
-  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} or an {{cssxref("angle")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("angle")}}.
-
-
-
-- `<random-caching-options>` (optional)
-  - : Controls how random values are cached and reused.
+- `<random-value-sharing>` (optional)
+  - : Controls which random functions in the document will share a random base value and which will get distinct values.
     This can be either:
-    - `--per-element`
-      - : Each element gets its own unique random value
+    - `auto`
+      - : Each use of `random()` in an element's style gets its own unique random base value.
     - `<dashed-ident>`
-      - : A custom caching key (e.g., `--my-random-key`) for controlling value uniqueness
+      - : A custom key for sharing (e.g., `--my-random-key`) the same random base value across styles.
+    - `element-shared`
+      - : All elements that use `random()` with this parameter will share the same random base value.
+    - `fixed <number>`
+      - : Specifies a base value between 0 and 1 for the random value to be generated from.
 
 - `<calc-sum>` (minimum)
-  - : The minimum value of the random range. Can be a number, dimension, percentage, or calculation.
+  - : The minimum value of the random range. Can be a number, dimension, percentage, or calculation. Must use the same units as the maximum value and optional step interval value, if provided.
 
 - `<calc-sum>` (maximum)
-  - : The maximum value of the random range. Can be a number, dimension, percentage, or calculation.
+  - : The maximum value of the random range. Can be a number, dimension, percentage, or calculation. Must use the same units as the minimum value and optional step interval value, if provided.
 
-- `by <calc-sum>` (optional)
-  - : Specifies the step interval. Only values that are multiples of this step will be generated.
+- `<calc-sum>` (optional)
+  - : Specifies the step interval. Only values that are multiples of this step will be generated. Must use the same units as the minimum and maximum values.
+
+### Return value
+  
+A random value from the minimum to the maximum in the same units provided for the parameters.
+
+## Description
+  
+The `random(<calc-sum>, <calc-sum>)` function call specifies a minimum value and a maximum value and a random result is generated within the range specified. The values specified must be of the same value type and unit: a number, dimension, percentage, or a calculated value.
+
+### Random Base Value
+The random base value is an underlying deterministic number that generates the final random result similar to a seed given to a randomization algorithm. When the same random base value is used for different `random()` functions, the results will vary in a coordinated way. Different random base values will create independently random results.
+
+### Random Value Sharing
+You can optionally provide a `<random-value-sharing>` value as the first parameter which controls how the random base value is shared. Sharing is useful for being able to reuse the same randomly generated value which can be necessary for some design effects. The optional first parameter can use `auto`, an `element-shared` keyword, a custom `<dashed-ident>` or `fixed <number>`.
+
+Use the `element-shared` keyword as the first parameter to share the random base value across all elements that use `random()` with the keyword. When you specify a `<dashed-ident>` (e.g. `--custom-name`), each element gets its own random base value. Within that element, all properties that reference the same ident will share that base value. Combining a `<dashed-ident>` with `element-shared` (e.g. `random(--custom-name element-shared, 0, 100)`) shares the random base value across elements and properties that use the same `<random-value-sharing>` parameter.
+
+#### Automatic behavior
+When you omit the first parameter, `auto` is used which causes CSS to auto-generate an ident from the property name and a position. This behavior can cause some unexpected random base value sharing.
+
+```css
+.foo {
+  margin: random(1px, 100px) random(1px, 100px);
+}
+.bar {
+  width: random(element-shared, 100px, 200px);
+}
+.bar:hover {
+  width: random(element-shared, 200px, 300px);
+}
+```
+
+In the example above, the use of two `random()` functions for the `margin` property generate "margin 0" and "margin 1" names internal to CSS for each `random()` function, respectively. For the rules applying to `.bar`, each use of `random()` will generate the same name ("width 0") meaning they will both use the same random base value.
+
+To avoid this behavior, you can provide a unique `<dashed-ident>` that is not used elsewhere in the document in order to get a distinct random base value.
+
+### Custom Properties
+
+When using `random()` with custom properties it is important to be aware that custom properties in CSS work like  a text replacement mechanism rather than a variable that stores a result. This can lead to counterintuitive behavior.
+
+```css
+--random-size: random(1px, 100px);
+```
+
+In the above example, the `--random-size` custom property does not "store" the randomly generated result. When `var(--random-size)` is parsed it is effectively replaced with `random(1px, 100px)`, meaning each use creates a new `random()` call. It's important to note that each call will have its own base value. Use `element-shared`, or a `<dashed-ident>`, or both in `random()` calls assigned to a custom property to share random base values if that is the intent.
 
 ## Accessibility
 
 Because `random()` can generate an unknown value within a range, you don’t have full control over what you get and that can lead to inaccessible results. For example, if you use `random()` to generate color for text, you could end up with a value that has low contrast. So it’s important to be mindful of the context in which `random()` is being used so that your results are still accessible.
-
-
-### Return value
-
-`random()` returns a single value of the same type that was passed in.
 
 ## Formal syntax
 
@@ -99,6 +134,9 @@ Because `random()` can generate an unknown value within a range, you don’t hav
 <html>
   <body>
     <div class="badge"></div>
+    <div class="badge"></div>
+    <div class="badge unique"></div>
+    <div class="badge unique"></div>
   </body>
 </html>
 ```
@@ -110,7 +148,10 @@ Because `random()` can generate an unknown value within a range, you don’t hav
   width: 4em;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background: hsl(random(--per-element, 0, 360), 50%, 50%);
+  background: hsl(random(element-shared, 0, 360), 50%, 50%);
+}
+.badge.unique {
+  background: hsl(random(0, 360), 50%, 50%);
 }
 ```
 
@@ -125,9 +166,12 @@ Because `random()` can generate an unknown value within a range, you don’t hav
 ```html
 <html>
   <body>
-    <div class="star"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
     ...
-    <div class="star"></div>
+    <div class="particle"></div>
   </body>
 </html>
 ```
@@ -140,10 +184,11 @@ body {
 }
 
 .particle {
-  height: .25em;
-  width: .25em;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
   background: white;
   position: fixed;
+  width: random(0.25em, 1em);
   top: random(0%, 100%);
   left: random(0%, 100%);
 }
