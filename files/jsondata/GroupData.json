@@ -1291,7 +1291,12 @@
         "/docs/Web/API/Pointer_events/Multi-touch_interaction",
         "/docs/Web/API/Pointer_events/Pinch_zoom_gestures"
       ],
-      "interfaces": ["PointerEvent"],
+      "interfaces": [
+        "MouseScrollEvent",
+        "MouseEvent",
+        "PointerEvent",
+        "WheelEvent"
+      ],
       "methods": [
         "Element.hasPointerCapture()",
         "Element.releasePointerCapture()",
@@ -1299,7 +1304,18 @@
       ],
       "properties": ["Navigator.maxTouchPoints"],
       "events": [
+        "Element: auxclick",
+        "Element: click",
+        "Element: contextmenu",
+        "Element: dblclick",
         "Element: gotpointercapture",
+        "Element: mousedown",
+        "Element: mouseenter",
+        "Element: mouseleave",
+        "Element: mousemove",
+        "Element: mouseout",
+        "Element: mouseover",
+        "Element: mouseup",
         "Element: lostpointercapture",
         "Element: pointercancel",
         "Element: pointerdown",
@@ -1309,7 +1325,8 @@
         "Element: pointerout",
         "Element: pointerover",
         "Element: pointerrawupdate",
-        "Element: pointerup"
+        "Element: pointerup",
+        "Element: wheel"
       ]
     },
     "Pointer Lock API": {
@@ -1817,25 +1834,18 @@
         "FocusEvent",
         "InputEvent",
         "KeyboardEvent",
-        "MouseEvent",
-        "MouseScrollEvent",
         "MutationEvent",
         "TextEvent",
-        "UIEvent",
-        "WheelEvent"
+        "UIEvent"
       ],
       "methods": [],
       "properties": [],
       "events": [
-        "Element: auxclick",
         "Element: beforeinput",
         "Element: blur",
-        "Element: click",
         "Element: compositionstart",
         "Element: compositionupdate",
         "Element: compositionend",
-        "Element: contextmenu",
-        "Element: dblclick",
         "Element: focus",
         "Element: focusin",
         "Element: focusout",
@@ -1843,15 +1853,7 @@
         "Element: keydown",
         "Element: keypress",
         "Element: keyup",
-        "Element: mousedown",
-        "Element: mouseenter",
-        "Element: mouseleave",
-        "Element: mousemove",
-        "Element: mouseout",
-        "Element: mouseover",
-        "Element: mouseup",
         "Element: select",
-        "Element: wheel",
         "Window: abort",
         "Window: error",
         "Window: load",
