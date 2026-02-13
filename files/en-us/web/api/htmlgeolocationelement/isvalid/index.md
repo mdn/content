@@ -3,10 +3,12 @@ title: "HTMLGeolocationElement: isValid property"
 short-title: isValid
 slug: Web/API/HTMLGeolocationElement/isValid
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement.isValid
 ---
 
-{{APIRef("Navigation API")}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`isValid`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns a boolean value indicating whether the associated {{htmlelement("geolocation")}} element is valid or invalid (blocked).
 

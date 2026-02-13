@@ -35,7 +35,7 @@ _`Clipboard` is based on the {{domxref("EventTarget")}} interface, and includes 
 
 ## Events
 
-- {{domxref("Clipboard.clipboardchange_event","clipboardchange")}}
+- {{domxref("Clipboard.clipboardchange_event","clipboardchange")}} {{experimental_inline}}
   - : Fired when the system clipboard contents are changed in any way, for example via a system copy command, or via an API method such as {{domxref("Clipboard.writeText()")}}.
 
 ## Specifications
