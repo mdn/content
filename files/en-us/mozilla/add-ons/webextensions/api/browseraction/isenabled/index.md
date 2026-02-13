@@ -8,8 +8,6 @@ sidebar: addonsidebar
 
 Returns `true` if the browser action is enabled.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
 ## Syntax
 
 ```js-nolint
@@ -20,7 +18,7 @@ let gettingIsEnabled = browser.browserAction.isEnabled(
 
 ### Parameters
 
-- `details`
+- `details` {{optional_inline}}
   - : `object`. An object optionally containing the `tabId` or `windowId` to check.
     - `tabId` {{optional_inline}}
       - : `integer`. ID of a tab to check.
@@ -29,12 +27,12 @@ let gettingIsEnabled = browser.browserAction.isEnabled(
 
 <!---->
 
-- If windowId and tabId are both supplied, the function fails.
-- If windowId and tabId are both omitted, the global enabled/disabled status is returned.
+- If `windowId` and `tabId` are supplied, the function fails.
+- If `details`, or `windowId` and `tabId` are omitted, the global status is returned.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension's browser action is enabled, and `false` otherwise.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with `true` if the extension's browser action is enabled, and `false` otherwise.
 
 ## Examples
 
@@ -46,7 +44,7 @@ browser.browserAction.isEnabled({}).then((result) => {
 });
 ```
 
-Check the state of the currently active tab:
+Check the state of the active tab:
 
 ```js
 async function enabledInActiveTab() {
