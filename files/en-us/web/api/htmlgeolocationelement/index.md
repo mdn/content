@@ -86,7 +86,7 @@ See the [`<geolocation>`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#ba
 
 ### Embedded map example
 
-This example uses the `<geolocation>` element to retrieve your current location, which is plotted on a map rendered using [Leaflet JS](https://leafletjs.com/). The example also uses a regular `<button>` fallback to retrive the location data in non-supporting browsers.
+This example uses the `<geolocation>` element to retrieve your current location, which is plotted on a map rendered using [Leaflet JS](https://leafletjs.com/). The example also uses a regular `<button>` fallback to retrieve the location data in non-supporting browsers.
 
 #### HTML
 
