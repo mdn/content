@@ -127,8 +127,11 @@ Then open **/locallibrary/settings.py** and insert the following code after `BAS
 # Support env variables from .env file if defined
 import os
 from dotenv import load_dotenv
-env_path = load_dotenv(os.path.join(BASE_DIR, '.env'))
-load_dotenv(env_path)
+
+env_path = os.path.join(BASE_DIR, ".env")
+if os.path.exists(env_path):
+    load_dotenv(env_path)
+
 ```
 
 This loads the `.env` file from the root of the web application.
