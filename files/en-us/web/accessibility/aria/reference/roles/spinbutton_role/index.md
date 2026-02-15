@@ -44,7 +44,7 @@ The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/ar
 
 The [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) attribute defines the maximum value. If it is missing or not a number, it defaults to `100`.
 
-The [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) attribute value must be between the minimum and maximum values, both inclusive. This attribute is required for `spinbutton` and `meter`, and optional for `progressbar`.
+The [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) attribute value must be between the minimum and maximum values, both inclusive. This attribute is required for and `meter`, and optional for `progressbar`.
 
 For `spinbutton`, unless using semantic HTML elements like [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number), if the value is updated, the `aria-valuenow` value must also be updated programmatically.
 
@@ -63,7 +63,7 @@ There are some types of user interface components that, when represented in a pl
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
-  - : Set to a decimal value between `aria-valuemin` and `aria-valuemax`, indicating the current value of the spinbutton. If not present, there is no default value.
+  - : Set to a decimal value between `aria-valuemin` and `aria-valuemax`, indicating the current value of the spinbutton. If not present, the spinbutton element has no current value.
 
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
   - : Assistive technologies often present the value of `aria-valuenow` as a number. If `aria-valuenow` cannot be accurate, use `aria-valuetext` to provide the spinbutton with a more understandable value.

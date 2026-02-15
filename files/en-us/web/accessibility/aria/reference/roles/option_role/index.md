@@ -50,7 +50,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 #### Associated Roles
 
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
-  - : An `option` _must_ be contained in or owned by a `listbox`
+  - : An `option` _must_ be contained in or owned by a `listbox`.
 
 #### States and Properties
 
