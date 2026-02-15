@@ -131,7 +131,6 @@ from dotenv import load_dotenv
 env_path = os.path.join(BASE_DIR, ".env")
 if os.path.exists(env_path):
     load_dotenv(env_path)
-
 ```
 
 This loads the `.env` file from the root of the web application.
