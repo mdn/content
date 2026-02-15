@@ -394,6 +394,23 @@ To make your CSP implementation easier, you can use an online [CSP header genera
 </IfModule>
 ```
 
+1. Restricts all fetches by default to the origin of the current website by setting the `default-src` directive to `'self'` - which acts as a fallback to all [Fetch directives](/en-US/docs/Glossary/Fetch_directive).
+   - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc
+   - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from. Otherwise, it will be restricted to the same origin as the page making the request
+
+2. Disallows the `<base>` element on the website. This is to prevent attackers from changing the locations of resources loaded from relative URLs
+   - If you want to use the `<base>` element, then use `base-uri 'self'` instead
+
+3. Only allows form submissions are from the current origin with: `form-action 'self'`
+4. Prevents all websites (including your own) from embedding your webpages within e.g., the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
+   - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks and is similar to the `X-Frame-Options` header
+   - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
+
+5. Forces the browser to treat all the resources that are served over HTTP as if they were loaded securely over HTTPS by setting the `upgrade-insecure-requests` directive
+   - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
+
+6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#csp_in_workers)
+
 ## Directory access
 
 This directive will prevent access to directories that don't have an index file present in whatever format the server is configured to use, like `index.html`, or `index.php`.
@@ -453,23 +470,6 @@ Be aware that Strict Transport Security is not revokable, and you must ensure be
 ```
 
 ## Prevent some browsers from MIME-sniffing the response
-
-1. Restricts all fetches by default to the origin of the current website by setting the `default-src` directive to `'self'` - which acts as a fallback to all [Fetch directives](/en-US/docs/Glossary/Fetch_directive).
-   - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc
-   - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from. Otherwise, it will be restricted to the same origin as the page making the request
-
-2. Disallows the `<base>` element on the website. This is to prevent attackers from changing the locations of resources loaded from relative URLs
-   - If you want to use the `<base>` element, then use `base-uri 'self'` instead
-
-3. Only allows form submissions are from the current origin with: `form-action 'self'`
-4. Prevents all websites (including your own) from embedding your webpages within e.g., the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
-   - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks and is similar to the `X-Frame-Options` header
-   - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
-
-5. Forces the browser to treat all the resources that are served over HTTP as if they were loaded securely over HTTPS by setting the `upgrade-insecure-requests` directive
-   - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
-
-6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#csp_in_workers)
 
 Some older browsers would try and guess the content type of a resource, even when it isn't properly set up on the server configuration. This reduces exposure to drive-by download attacks and cross-origin data leaks.
 
