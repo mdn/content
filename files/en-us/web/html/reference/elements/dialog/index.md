@@ -92,14 +92,14 @@ The Popover API also provides properties that can be used to get and set the sta
 
 ### Closing dialogs
 
-It is important to provide a closing mechanism for every `dialog` element, and to ensure that this works on devices that might not have a physical keyboard.
+It is important to provide a closing mechanism for every `<dialog>` element, and to ensure that this works on devices that might not have a physical keyboard.
 
 There are numerous ways to close a dialog:
 
-- By submitting the form within the dialog form using the `dialog` method (see the [Using the dialog open attribute](#using_the_dialog_open_attribute) example).
+- Submitting the form within the `<dialog>` element with `method="dialog"` set on the `<form>` element (see the [Using the dialog open attribute](#using_the_dialog_open_attribute) example).
 - Clicking outside the dialog area when "light dismiss" is enabled (see the [Popover API HTML attributes](/en-US/docs/Web/HTML/Reference/Elements/dialog#popover_api_html_attributes) example).
-- By pressing the <kbd>Esc</kbd> key, in dialogs where it is enabled (see the [Popover API HTML attributes](/en-US/docs/Web/HTML/Reference/Elements/dialog#popover_api_html_attributes) example).
-- By calling the {{domxref("HTMLDialogElement.close()")}} method (see the [modal example](#creating_a_modal_dialog)).
+- Pressing the <kbd>Esc</kbd> key, in dialogs where it is enabled (see the [Popover API HTML attributes](/en-US/docs/Web/HTML/Reference/Elements/dialog#popover_api_html_attributes) example).
+- Calling the {{domxref("HTMLDialogElement.close()")}} method (see the [modal example](#creating_a_modal_dialog)).
 
 ### CSS Styling
 
@@ -157,11 +157,11 @@ This example demonstrates how you can open and close a non-modal dialog using th
 
 The `<dialog>` is turned into a popover by adding the `popover` attribute.
 Since we haven't specified a value for the attribute, the default value of `"auto"` is used.
-This enables "light dismiss" behavior, such that the dialog to be closed by clicking outside the dialog or by pressing <kbd>Esc</kbd>.
-We could instead have set `popover="manual"` to disable `"light dismiss" and require that the dialog is closed with the "Close" button.
+This enables "light dismiss" behavior, allowing the dialog to be closed by clicking outside the dialog or by pressing <kbd>Esc</kbd>.
+We could instead have set `popover="manual"` to disable "light dismiss" behavior, in which case the dialog would have to be closed using the "Close" button.
 
 Note that we haven't specified the `popovertargetaction` attribute for the `<button>` that opens the dialog.
-It isn't needed in this case, because its default value is `toggle`, which will open the dialog when the button is clicked.
+It isn't needed in this case, because its default value is `toggle`, which will toggle the dialog between its open and closed states when the button is clicked.
 
 ```html
 <button popovertarget="my-dialog">Open dialog</button>
@@ -309,7 +309,7 @@ When the dialog is closed, the return value is displayed under the "Show the dia
 
 The dialog is opened using using an event listener on the "Show the dialog" button, which calls {{domxref("HTMLDialogElement.showModal()")}} when the button is clicked.
 
-The dialog is closed when the "Cancel" button is clicked, because `<button>` includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/input/submit#formmethod) attribute.
+The dialog is closed when the "Cancel" button is clicked, because the `<button>` includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/input/submit#formmethod) attribute.
 When a form's method is [`dialog`](#additional_notes), the state of the form is saved but not submitted, and the dialog gets closed (the attribute overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} method).
 Without an `action`, submitting the form via the default {{HTTPMethod("GET")}} method causes a page to reload.
 We use JavaScript to prevent the submission and close the dialog with the {{domxref("event.preventDefault()")}} and {{domxref("HTMLDialogElement.close()")}} methods, respectively.
