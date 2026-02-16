@@ -49,7 +49,7 @@ The first section below provides a brief "primer" on how to use the Express [Rou
 
 ## Routes primer
 
-A route is a section of Express code that associates an HTTP verb (`GET`, `POST`, `PUT`, `DELETE`, etc.), a URL path/pattern, and a function that is called to handle that pattern.
+A route is a section of Express code that associates an [HTTP verb](/en-US/docs/Web/HTTP/Reference/Methods) (`GET`, `POST`, `PUT`, `DELETE`, etc.), a URL path/pattern, and a function that is called to handle that pattern.
 
 There are several ways to create routes. For this tutorial we're going to use the [`express.Router`](https://expressjs.com/en/guide/routing.html#express-router) middleware as it allows us to group the route handlers for a particular part of a site together and access them using a common route-prefix. We'll keep all our library-related routes in a "catalog" module, and, if we add routes for handling user accounts or other functions, we can keep them grouped separately.
 
@@ -119,9 +119,9 @@ The callback function here calls [`send()`](https://expressjs.com/en/5x/api.html
 
 ### HTTP verbs
 
-The example routes above use the `Router.get()` method to respond to HTTP GET requests with a certain path.
+The example routes above use the `Router.get()` method to respond to HTTP `GET` requests with a certain path.
 
-The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
+The `Router` also provides route methods for all the other [HTTP verbs](/en-US/docs/Web/HTTP/Reference/Methods), that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
 
 For example, the code below behaves just like the previous `/about` route, but only responds to HTTP POST requests.
 
@@ -130,6 +130,16 @@ router.post("/about", (req, res) => {
   res.send("About this wiki");
 });
 ```
+
+Websites should ideally use the route method (and HTTP method) that best corresponds to the operation being performed.
+For example, a client rendered application should use `Router.get()` for reading from the database, `Router.post()` for creating new records, `Router.put()` or `Router.patch()` for updating records, and `Router.delete()` for deleting data.
+
+Note however, that Server-rendered applications, such as the one demonstrated by this tutorial, commonly use `Router.post()` for all routes that modify data.
+The reason for this is that, by default, HTML `<form>` elements are only able to send [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) and [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) requests.
+
+There are various workarounds for this limitation, such as encoding the "desired" HTTP verb in a `POST` request and using the [method-override](https://www.npmjs.com/package/method-override) Express middleware to modify the request to the appropriate HTTP verb before it is passed to the router.
+For basic applications, rewriting code just to use the correct HTTP verbs is usually overkill.
+It may be worthwhile to improve server logging, or if the server needs to handle both server and client-side rendered content through the same endpoint.
 
 ### Route paths
 
@@ -690,17 +700,6 @@ All the paths are defined using strings (we don't use string patterns or regular
 Routes that act on some specific resource (e.g., book) use path parameters to get the object id from the URL.
 
 The handler functions are all imported from the controller modules we created in the previous section.
-
-> [!NOTE]
-> The routes defined above use the `.post()` method to handle all the requests to create, update, and delete library data.
-> This is common for server-rendered applications, because by default HTML `<form>` elements only send [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) and [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) requests.
->
-> If writing a client-rendered application, which does not need to use `<form>` elements, you should instead use the appropriate method for each operation.
-> For example, your client would send requests to delete objects using the DELETE HTTP method, and your router would specify the `.delete()` method.
->
-> It is also possible to use middleware such as [method-override](https://www.npmjs.com/package/method-override) to encode the "desired" HTTP verb in a `POST` request, which can then be modified to the desired HTTP verb before the request is passed to the router.
-> For basic applications, rewriting code just to use the correct HTTP verbs is overkill.
-> It may be worthwhile to improve server logging, or if the server needs to handle both server and client-side rendered content through the same endpoint.
 
 ### Update the index route module
 
