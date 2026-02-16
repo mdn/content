@@ -97,7 +97,7 @@ function updateColor(color) {
   root.style.setProperty("--button-color", colorPicker.value);
 }
 
-colorPicker.addEventListener("change", updateColor);
+colorPicker.addEventListener("input", updateColor);
 updateColor();
 ```
 
