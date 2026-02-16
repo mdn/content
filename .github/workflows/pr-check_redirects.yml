@@ -3,8 +3,7 @@ name: Check Redirects
 on:
   pull_request:
 
-    # No GITHUB_TOKEN permissions, as we only use it to increase API limit.
-permissions: {}
+permissions: {} # No GITHUB_TOKEN permissions, as we only use it to increase API limit.
 
 jobs:
   check-redirects:
