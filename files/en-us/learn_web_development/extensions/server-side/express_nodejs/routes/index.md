@@ -132,9 +132,9 @@ router.post("/about", (req, res) => {
 ```
 
 Websites should ideally use the route method (and HTTP method) that best corresponds to the operation being performed.
-For example, a client rendered application should use `Router.get()` for reading from the database, `Router.post()` for creating new records, `Router.put()` or `Router.patch()` for updating records, and `Router.delete()` for deleting data.
+For example, a client-rendered application should use `Router.get()` for reading from the database, `Router.post()` for creating new records, `Router.put()` or `Router.patch()` for updating records, and `Router.delete()` for deleting data.
 
-Note however, that Server-rendered applications, such as the one demonstrated by this tutorial, commonly use `Router.post()` for all routes that modify data.
+Note, however, that server-rendered applications, such as the one demonstrated by this tutorial, commonly use `Router.post()` for all routes that modify data.
 The reason for this is that, by default, HTML `<form>` elements are only able to send [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) and [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) requests.
 
 There are various workarounds for this limitation, such as encoding the "desired" HTTP verb in a `POST` request and using the [method-override](https://www.npmjs.com/package/method-override) Express middleware to modify the request to the appropriate HTTP verb before it is passed to the router.
