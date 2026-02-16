@@ -616,7 +616,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
     See [Client-side validation](#client-side_validation) for more information.
 
-- [`switch`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#switch) {{experimental_inline}}
+- [`switch`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#switch) {{experimental_inline}} {{non-standard_inline}}
   - : Valid for `checkbox` input only, `switch` is a Boolean attribute that indicates whether the checkbox input should be rendered as a switch.
 
     > [!NOTE]

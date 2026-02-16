@@ -3,10 +3,12 @@ title: "HTMLGeolocationElement: HTMLGeolocationElement() constructor"
 short-title: HTMLGeolocationElement()
 slug: Web/API/HTMLGeolocationElement/HTMLGeolocationElement
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement.HTMLGeolocationElement
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`HTMLGeolocationElement()`** constructor creates a new {{domxref("HTMLGeolocationElement")}} object instance.
 
