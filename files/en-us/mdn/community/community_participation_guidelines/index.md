@@ -70,7 +70,7 @@ Below is a summary of severity levels and enforcement actions.
 
 ### Reporting violations
 
-Reports can be sent to mdn-cpg-report@mozilla.com.
+Reports can be sent to cpg-report@mozilla.com.
 To report a violation or abuse on GitHub, see [GitHub's content reporting guide](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam).
 The **"Report to repository admins"** option must be checked for the MDN team to see a content report.
 
@@ -88,7 +88,7 @@ MDN Community Management assesses the severity of the violation, applies the enf
 
 ### Appeals
 
-Once an incident has been investigated and a decision has been communicated to the relevant parties, all have the opportunity to appeal this decision by sending an email to mdn-cpg-report@mozilla.com.
+Once an incident has been investigated and a decision has been communicated to the relevant parties, all have the opportunity to appeal this decision by sending an email to cpg-report@mozilla.com.
 Appeals are reviewed by a separate, impartial panel.
 
 ### Documentation and record keeping
