@@ -37,7 +37,7 @@ The `contrast-color()` function returns a value of `white` or `black`, depending
 
 ### Contrasting text for a button
 
-In the following example, the browser automatically applies a contrasting color to the submit {{htmlelement("button")}} text when you change its background color.
+In the following example, the browser automatically applies the selected color to the background of the "Button" {{htmlelement("button")}}, and the contrasting color (black or white) to its text.
 
 ```html hidden
 <label>
@@ -45,7 +45,7 @@ In the following example, the browser automatically applies a contrasting color 
   <input type="color" id="colorPicker" value="#660066" />
 </label>
 <br />
-<button>Submit</button>
+<button>Button</button>
 ```
 
 ```css
