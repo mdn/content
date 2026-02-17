@@ -2,7 +2,7 @@
 title: WebDriver BiDi reference
 short-title: BiDi
 slug: Web/WebDriver/Reference/BiDi
-page-type: listing-page
+page-type: landing-page
 sidebar: webdriver
 ---
 
