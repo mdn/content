@@ -2,7 +2,7 @@
 title: WebDriver BiDi commands
 short-title: Commands
 slug: Web/WebDriver/Reference/BiDi/Commands
-page-type: landing-page
+page-type: listing-page
 browser-compat: webdriver.bidi
 sidebar: webdriver
 ---
