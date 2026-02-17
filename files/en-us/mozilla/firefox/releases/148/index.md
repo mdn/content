@@ -37,6 +37,13 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{cssxref("position-area")}} property in [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) now correctly keeps the anchored element within the viewport.
   ([Firefox bug 2008537](https://bugzil.la/2008537)).
 
+- The {{cssxref("overflow")}}, {{cssxref("overflow-x")}}, and {{cssxref("overflow-y")}} CSS properties can now be used on {{glossary("replaced elements")}} such as images, in the same way that they are used with other elements.
+  Prior to this, replaced elements were always clipped to their bounding container.
+  ([Firefox bug 1999100](https://bugzil.la/1999100)).
+
+- The CSS {{cssxref("basic-shape/shape")}} function is now available by default. `shape()` is a {{cssxref("basic-shape")}} data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is similar in some respects to the {{cssxref("basic-shape/path","path()")}} function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, `shape()` uses standard CSS syntax. This allows you to use CSS units and CSS math functions, which makes it easy to create and edit shapes.
+  ([Firefox bug 1982941](https://bugzil.la/1982941)).
+
 <!-- #### Removals -->
 
 ### JavaScript

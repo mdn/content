@@ -19,7 +19,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 <div class="grid">
   <div class="wrapper">
     <p>
-      This item aligns to a central “wrapper” – columns that have a maximum
+      This item aligns to a central "wrapper" – columns that have a maximum
       width.
     </p>
   </div>
@@ -33,7 +33,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
     </p>
   </div>
   <div class="right-wrapper">
-    <p>This item aligns to the right edge of the “wrapper” columns.</p>
+    <p>This item aligns to the right edge of the "wrapper" columns.</p>
   </div>
 </div>
 ```

@@ -8,16 +8,12 @@ sidebar: htmlsidebar
 
 The **`<dialog>`** [HTML](/en-US/docs/Web/HTML) element represents a modal or non-modal dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.
 
-The HTML `<dialog>` element is used to create both modal and non-modal dialog boxes. Modal dialog boxes interrupt interaction with the rest of the page being inert, while non-modal dialog boxes allow interaction with the rest of the page.
-
-JavaScript should be used to display the `<dialog>` element. Use the {{domxref("HTMLDialogElement.showModal()", ".showModal()")}} method to display a modal dialog and the {{domxref("HTMLDialogElement.show()", ".show()")}} method to display a non-modal dialog. The dialog box can be closed using the {{domxref("HTMLDialogElement.close()", ".close()")}} method or using the [`dialog`](/en-US/docs/Web/HTML/Reference/Elements/form#method) method when submitting a `<form>` that is nested within the `<dialog>` element. Modal dialogs can also be closed by pressing the <kbd>Esc</kbd> key.
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 > [!WARNING]
-> The `tabindex` attribute must not be used on the `<dialog>` element. See [usage notes](#usage_notes).
+> The `tabindex` attribute must not be used on the `<dialog>` element. See [Additional notes](#additional_notes).
 
 - `closedby`
   - : Specifies the types of user actions that can be used to close the `<dialog>` element. This attribute distinguishes three methods by which a dialog might be closed:
@@ -44,10 +40,77 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     > [!NOTE]
     > While you can toggle between the open and closed states of non-modal dialog boxes by toggling the presence of the `open` attribute, this approach is not recommended. See {{domxref("HTMLDialogElement.open", "open")}} for more information.
 
-## Usage notes
+## Description
+
+The HTML `<dialog>` element is used to create both modal and non-modal dialog boxes.
+Modal dialog boxes block interaction with other UI elements, making the rest of the page [inert](/en-US/docs/Web/HTML/Reference/Global_attributes/inert#:~:text=When,clicked), while non-modal dialog boxes allow interaction with the rest of the page.
+
+### Controlling dialogs using JavaScript
+
+JavaScript can be used to display and close the `<dialog>` element.
+You can use the {{domxref("HTMLDialogElement.showModal()", "showModal()")}} method to display a modal dialog and the {{domxref("HTMLDialogElement.show()", "show()")}} method to display a non-modal dialog. The dialog box can be closed using the {{domxref("HTMLDialogElement.close()", "close()")}} method or using the [`dialog`](/en-US/docs/Web/HTML/Reference/Elements/form#method) method when submitting a `<form>` that is nested within the `<dialog>` element.
+Modal dialogs can also be closed by pressing the <kbd>Esc</kbd> key.
+
+### Modal dialogs using invoker commands
+
+Modal dialogs can be declaratively opened and closed using the [Invoker Commands API](/en-US/docs/Web/API/Invoker_Commands_API) HTML attributes [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command), which can be set on {{htmlelement("button")}} elements.
+
+The `command` attribute sets the particular command that is to be sent when the `<button>` element is clicked, while `commandfor` sets the `id` of the target dialog.
+The commands that can be sent for dialogs are [`"show-modal"`](/en-US/docs/Web/HTML/Reference/Elements/button#show-modal), [`"close"`](/en-US/docs/Web/HTML/Reference/Elements/button#close), and [`"request-close"`](/en-US/docs/Web/HTML/Reference/Elements/button#request-close).
+
+The HTML below demonstrates how to apply the attributes to a `<button>` element so it can be pressed to open a modal `<dialog>` with an `id` of "my-dialog".
+
+```html
+<button command="show-modal" commandfor="my-dialog">Open dialog</button>
+
+<dialog id="my-dialog">
+  <p>This dialog was opened using an invoker command.</p>
+  <button commandfor="my-dialog" command="close">Close</button>
+</dialog>
+```
+
+### Non-modal dialogs using popover commands
+
+Non-modal dialogs can be declaratively opened, closed, and toggled using the [Popover API](/en-US/docs/Web/API/Popover_API) HTML attributes [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) and [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction), which can be defined on {{htmlelement("button")}} and {{htmlelement("input")}} elements.
+
+The `<dialog>` must be turned into a popover by adding the `popover` attribute.
+You can then use `popovertarget` on a button/input to indicate the target popover, and `popovertargetaction` to specify the action to occur on the popover when the button is clicked.
+Note that, because the dialog is a popover, it will be non-modal, so you can close it by clicking outside the dialog.
+
+The HTML below shows how to apply the attributes to a `<button>` element so it can be pressed to show and hide a modal `<dialog>` with an `id` of "my-dialog".
+
+```html
+<button popovertarget="my-dialog">Open dialog</button>
+
+<dialog id="my-dialog" popover>
+  <p>This dialog was opened using a popovertargetaction attribute.</p>
+  <button popovertarget="my-dialog" popovertargetaction="hide">Close</button>
+</dialog>
+```
+
+The Popover API also provides properties that can be used to get and set the state in JavaScript.
+
+### Closing dialogs
+
+It is important to provide a closing mechanism for every `<dialog>` element, and to ensure that this works on devices that might not have a physical keyboard.
+
+There are numerous ways to close a dialog:
+
+- Submitting the form within the `<dialog>` element with `method="dialog"` set on the `<form>` element (see the [Using the dialog open attribute](#using_the_dialog_open_attribute) example).
+- Clicking outside the dialog area when "light dismiss" is enabled (see the [Popover API HTML attributes](/en-US/docs/Web/HTML/Reference/Elements/dialog#popover_api_html_attributes) example).
+- Pressing the <kbd>Esc</kbd> key, in dialogs where it is enabled (see the [Popover API HTML attributes](/en-US/docs/Web/HTML/Reference/Elements/dialog#popover_api_html_attributes) example).
+- Calling the {{domxref("HTMLDialogElement.close()")}} method (see the [modal example](#creating_a_modal_dialog)).
+
+### CSS Styling
+
+A `<dialog>` can be selected using its element name (like any other element), and you can also match its state using pseudo-classes such as [`:modal`](/en-US/docs/Web/CSS/Reference/Selectors/:modal) and [`:open`](/en-US/docs/Web/CSS/Reference/Selectors/:open).
+
+The CSS {{cssxref('::backdrop')}} pseudo-element can be used to style the backdrop of a modal dialog, which is displayed behind the `<dialog>` element when the dialog is displayed using the {{domxref("HTMLDialogElement.showModal()")}} method.
+This pseudo-element could be used, for example, to blur, darken, or otherwise obfuscate the inert content behind the modal dialog.
+
+### Additional notes
 
 - HTML {{HTMLElement("form")}} elements can be used to close a dialog box if they have the attribute `method="dialog"` or if the button used to submit the form has [`formmethod="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/input#formmethod) set. When a `<form>` within a `<dialog>` is submitted via the `dialog` method, the dialog box closes, the states of the form controls are saved but not submitted, and the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property gets set to the value of the button that was activated.
-- The CSS {{cssxref('::backdrop')}} pseudo-element can be used to style the backdrop of a modal dialog, which is displayed behind the `<dialog>` element when the dialog is displayed using the {{domxref("HTMLDialogElement.showModal()")}} method. For example, this pseudo-element could be used to blur, darken, or otherwise obfuscate the inert content behind the modal dialog.
 - The [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus) attribute should be added to the element the user is expected to interact with immediately upon opening a modal dialog. If no other element involves more immediate interaction, it is recommended to add `autofocus` to the close button inside the dialog, or the dialog itself if the user is expected to click/activate it to dismiss.
 - Do not add the `tabindex` property to the `<dialog>` element as it is not interactive and does not receive focus. The dialog's contents, including the close button contained in the dialog, can receive focus and be interactive.
 
@@ -65,9 +128,64 @@ The `<dialog>` element is exposed by browsers in a manner similar to custom dial
 
 ## Examples
 
-### HTML-only dialog
+### Invoker Command API HTML attributes
 
-This example demonstrates the creation of a non-modal dialog by using only HTML. Because of the boolean `open` attribute in the `<dialog>` element, the dialog appears open when the page loads. The dialog can be closed by clicking the "OK" button because the `method` attribute in the `<form>` element is set to `"dialog"`. In this case, no JavaScript is needed to close the form.
+This example demonstrates how you can use open and close a modal dialog using the [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) HTML attributes of the [Invoker Commands API](/en-US/docs/Web/API/Invoker_Commands_API).
+
+First, we declare a {{htmlelement("button")}} element, setting the `command` attribute to [`"show-modal"`](/en-US/docs/Web/HTML/Reference/Elements/button#show-modal), and the `commandfor` attribute to the `id` of the dialog to open (`my-dialog`).
+Then we declare a {{htmlelement("dialog")}} element that contains a "Close" `<button>`. This button sends the [`"close"`](/en-US/docs/Web/HTML/Reference/Elements/button#close) command to the (same) dialog id.
+
+```html
+<button command="show-modal" commandfor="my-dialog">Open dialog</button>
+
+<dialog id="my-dialog">
+  <p>This dialog was opened using an invoker command.</p>
+  <button commandfor="my-dialog" command="close">Close</button>
+</dialog>
+```
+
+#### Result
+
+Open the dialog by pressing the "Open dialog" button.
+You can close the dialog by selecting the "Close" button or pressing the <kbd>Esc</kbd> key.
+
+{{EmbedLiveSample("Open and close a dialog using Invoker Command API HTML attributes", "100%", 200)}}
+
+### Popover API HTML attributes
+
+This example demonstrates how you can open and close a non-modal dialog using the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover), [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget), and [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML attributes of the [Popover API](/en-US/docs/Web/API/Popover_API).
+
+The `<dialog>` is turned into a popover by adding the `popover` attribute.
+Since we haven't specified a value for the attribute, the default value of `"auto"` is used.
+This enables "light dismiss" behavior, allowing the dialog to be closed by clicking outside the dialog or by pressing <kbd>Esc</kbd>.
+We could instead have set `popover="manual"` to disable "light dismiss" behavior, in which case the dialog would have to be closed using the "Close" button.
+
+Note that we haven't specified the `popovertargetaction` attribute for the `<button>` that opens the dialog.
+It isn't needed in this case, because its default value is `toggle`, which will toggle the dialog between its open and closed states when the button is clicked.
+
+```html
+<button popovertarget="my-dialog">Open dialog</button>
+
+<dialog id="my-dialog" popover>
+  <p>This dialog was opened using a popovertargetaction attribute.</p>
+  <button popovertarget="my-dialog" popovertargetaction="hide">Close</button>
+</dialog>
+```
+
+#### Result
+
+Open the dialog by pressing the "Open dialog" button.
+You can close the dialog by selecting the "Close" button or pressing the <kbd>Esc</kbd> key.
+You can also close it by selecting outside the dialog, as it is non-modal.
+
+{{EmbedLiveSample("Popover API HTML attributes", "100%", 200)}}
+
+### Using the dialog `open` attribute
+
+This example demonstrates how you can set the boolean `open` attribute on a `<dialog>` element, in order to create an HTML-only non-modal dialog that is already open when the page loads.
+
+The dialog can be closed by clicking the "OK" button because the `method` attribute in the `<form>` element is set to `"dialog"`.
+In this case, no JavaScript is needed to close the form.
 
 ```html
 <dialog open>
@@ -80,12 +198,16 @@ This example demonstrates the creation of a non-modal dialog by using only HTML.
 
 #### Result
 
-{{EmbedLiveSample("HTML-only_dialog", "100%", 200)}}
+This dialog is initially open and non-modal because of the presence of the `open` attribute.
+After clicking "OK", the dialog gets dismissed, leaving the Result frame empty.
+
+{{EmbedLiveSample("HTML-only non-modal dialog", "100%", 200)}}
 
 > [!NOTE]
 > Reload the page to reset the output.
 
-This dialog is initially open because of the presence of the `open` attribute. Dialogs that are displayed using the `open` attribute are non-modal. After clicking "OK", the dialog gets dismissed, leaving the Result frame empty. When the dialog is dismissed, there is no method provided to reopen it. For this reason, the preferred method to display non-modal dialogs is by using the {{domxref("HTMLDialogElement.show()")}} method. It is possible to toggle the display of the dialog by adding or removing the boolean `open` attribute, but it is not the recommended practice.
+When the dialog is dismissed, there is no method provided to reopen it. The preferred method to display non-modal dialogs is to use the {{domxref("HTMLDialogElement.show()")}} method.
+It is possible to toggle the display of the dialog by adding or removing the boolean `open` attribute, but this is not the recommended practice.
 
 ### Creating a modal dialog
 
@@ -185,6 +307,13 @@ When the dialog is closed, the return value is displayed under the "Show the dia
 
 #### JavaScript
 
+The dialog is opened using using an event listener on the "Show the dialog" button, which calls {{domxref("HTMLDialogElement.showModal()")}} when the button is clicked.
+
+The dialog is closed when the "Cancel" button is clicked, because the `<button>` includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/input/submit#formmethod) attribute.
+When a form's method is [`dialog`](#additional_notes), the state of the form is saved but not submitted, and the dialog gets closed (the attribute overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} method).
+Without an `action`, submitting the form via the default {{HTTPMethod("GET")}} method causes a page to reload.
+We use JavaScript to prevent the submission and close the dialog with the {{domxref("event.preventDefault()")}} and {{domxref("HTMLDialogElement.close()")}} methods, respectively.
+
 ```js
 const showButton = document.getElementById("showDialog");
 const favDialog = document.getElementById("favDialog");
@@ -215,19 +344,6 @@ confirmBtn.addEventListener("click", (event) => {
 #### Result
 
 {{EmbedLiveSample("Handling the return value from the dialog", "100%", 300)}}
-
-The above examples demonstrate the following three methods of closing modal dialogs:
-
-- By submitting the form within the dialog form using the `dialog` method (as seen in the [HTML-only example](#html-only_dialog)).
-- By pressing the <kbd>Esc</kbd> key.
-- By calling the {{domxref("HTMLDialogElement.close()")}} method (as seen in the [modal example](#creating_a_modal_dialog)).
-  In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Confirm" button closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
-
-The "Cancel" button includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/input/submit#formmethod) attribute, which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} method. When a form's method is [`dialog`](#usage_notes), the state of the form is saved but not submitted, and the dialog gets closed.
-
-Without an `action`, submitting the form via the default {{HTTPMethod("GET")}} method causes a page to reload. We use JavaScript to prevent the submission and close the dialog with the {{domxref("event.preventDefault()")}} and {{domxref("HTMLDialogElement.close()")}} methods, respectively.
-
-It is important to provide a closing mechanism within every `dialog` element. The <kbd>Esc</kbd> key does not close non-modal dialogs by default, nor can one assume that a user will even have access to a physical keyboard (e.g., someone using a touch screen device without access to a keyboard).
 
 ### Closing a dialog with a required form input
 

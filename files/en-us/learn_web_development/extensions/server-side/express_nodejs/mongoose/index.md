@@ -205,11 +205,6 @@ You can `require()` and connect to a locally hosted database with `mongoose.conn
 // Import the mongoose module
 const mongoose = require("mongoose");
 
-// Set `strictQuery: false` to globally opt into filtering by properties that aren't in the schema
-// Included because it removes preparatory warnings for Mongoose 7.
-// See: https://mongoosejs.com/docs/migrating_to_6.html#strictquery-is-removed-and-replaced-by-strict
-mongoose.set("strictQuery", false);
-
 // Define the database URL to connect to.
 const mongoDB = "mongodb://127.0.0.1/my_database";
 
@@ -681,11 +676,19 @@ Replace the database URL string ('_insert_your_database_url_here_') with the loc
 // Set up mongoose connection
 const mongoose = require("mongoose");
 
-mongoose.set("strictQuery", false);
 const mongoDB = "insert_your_database_url_here";
 
 async function connectMongoose() {
   await mongoose.connect(mongoDB);
+
+  // Add connection error handlers
+  mongoose.connection.on("error", (err) => {
+    console.error("MongoDB connection error:", err);
+  });
+
+  mongoose.connection.on("disconnected", () => {
+    console.warn("MongoDB disconnected");
+  });
 }
 
 try {
