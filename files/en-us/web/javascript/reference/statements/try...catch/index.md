@@ -161,16 +161,16 @@ If control flow reaches two `return` statements (possibly in the `try` and `fina
 
 ```js
 function doIt() {
-  let order = ['z'];
+  let order = ["z"];
   try {
-    order.push('try');
-    return order.sort(); // 'z' is now after 'try'
+    order.push("try");
+    return order.sort(); // "z" is now after "try"
   } finally {
-    order.push('finally');
+    order.push("finally");
     return order; // overrides previously returned value
   }
 }
-doIt(); // returns ['try', 'z', 'finally']
+doIt(); // returns ["try", "z", "finally"]
 ```
 
 The same applies to other control flow statements.
@@ -178,14 +178,14 @@ The same applies to other control flow statements.
 ```js
 function doIt() {
   try {
-    throw 'try'; // makes control flow enter the `catch` block
+    throw "try"; // makes control flow enter the `catch` block
   } catch {
-    throw 'catch'; // makes control flow enter the `finally` block
+    throw "catch"; // makes control flow enter the `finally` block
   } finally {
-    return 'finally'; // returns 'finally' instead of throwing 'catch'
+    return "finally"; // returns "finally" instead of throwing "catch"
   }
 }
-doIt(); // returns 'finally'
+doIt(); // returns "finally"
 ```
 
 ## Examples
