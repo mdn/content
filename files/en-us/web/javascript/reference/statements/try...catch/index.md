@@ -120,11 +120,11 @@ function isValidJSON(text) {
 
 The `finally` block contains statements to execute after the `try` block and `catch` block(s) execute, but before the statements following the `try...catch...finally` block. Control flow will always enter the `finally` block, which can proceed in one of the following ways:
 
-- Immediately after the `try` block finishes execution normally (and no exceptions were thrown);
-- Immediately after the `catch` block finishes execution normally;
-- Immediately before the execution of a control-flow statement (`return`, `throw`, `break`, `continue`) in the `try` block or `catch` block that would exit the block.
+- Immediately after the control flow exits the `try` block in a `try...finally` construct (e.g., after the last statement or a `throw` or `return` statement);
+- Immediately after the control flow exits the `catch` block in a `try...catch...finally` construct;
+- Immediately after the control flow exits the `try` block in a `try...catch...finally` construct, unless it exits via a `throw` statement (in which case control flow enters the `catch` block first);
 
-If an exception is thrown from the `try` block, even when there's no `catch` block to handle the exception, the `finally` block still executes, in which case the exception is still thrown immediately after the `finally` block finishes executing.
+In most cases, if the `finally` block is entered after a control flow statement (`return`, `throw`, `break`, `continue`), the effect of this statement is deferred until after the last statement executed in the `finally` block. However, if the last statement executed in the `finally` block is itself a control flow statement, that statement will override the effect of the previous one (no deferral).
 
 The following example shows one use case for the `finally` block. The code opens a file and then executes statements that use the file; the `finally` block makes sure the file always closes after it is used even if an exception was thrown.
 
@@ -135,24 +135,58 @@ try {
   writeMyFile(theData);
 } finally {
   closeMyFile(); // always close the resource
+  // any uncaught exception is deferred here
 }
 ```
 
-Control flow statements (`return`, `throw`, `break`, `continue`) in the `finally` block will "mask" any completion value of the `try` block or `catch` block. In this example, the `try` block tries to return 1, but before returning, the control flow is yielded to the `finally` block first, so the `finally` block's return value is returned instead.
+In the same way, any `return` statement in the `try` block is deferred at the end of the `finally` block.
+
+```js
+function safeWriteMyFile() {
+  openMyFile();
+  try {
+    return writeMyFile(theData); // function call is evaluated
+  } finally {
+    closeMyFile(); // always close the resource
+    // return is deferred here
+  }
+}
+```
+
+It is generally a bad idea to use control flow statements (`return`, `throw`, `break`, `continue`) in the `finally` block, as it makes the code harder to read. Most of the time, the `finally` block should be reserved for cleanup code.
+
+The following examples illustrate this.
+
+If control flow reaches two `return` statements (possibly in the `try` and `finally` blocks or in the `catch` and `finally` blocks), both statements are executed in the correct order (which matters in the case of side effects). Only the function's returned value will be the one associated with the last `return` statement executed (which is the one in the `finally` block).
+
+```js
+function doIt() {
+  let order = ['z'];
+  try {
+    order.push('try');
+    return order.sort(); // 'z' is now after 'try'
+  } finally {
+    order.push('finally');
+    return order; // overrides previously returned value
+  }
+}
+doIt(); // returns ['try', 'z', 'finally']
+```
+
+The same applies to other control flow statements.
 
 ```js
 function doIt() {
   try {
-    return 1;
+    throw 'try'; // makes control flow enter the `catch` block
+  } catch {
+    throw 'catch'; // makes control flow enter the `finally` block
   } finally {
-    return 2;
+    return 'finally'; // returns 'finally' instead of throwing 'catch'
   }
 }
-
-doIt(); // returns 2
+doIt(); // returns 'finally'
 ```
-
-It is generally a bad idea to have control flow statements in the `finally` block. Only use it for cleanup code.
 
 ## Examples
 
