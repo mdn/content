@@ -18,6 +18,7 @@ export async function* walkSync(dir) {
 
 export function execGit(args, opts = {}, root = null) {
   const gitRoot = root || getRootDir();
+  const gitCommand = `git ${args.join(" ")}`;
   const { status, error, stdout, stderr } = childProcess.spawnSync(
     "git",
     args,
@@ -28,16 +29,17 @@ export function execGit(args, opts = {}, root = null) {
     },
   );
   if (error || status !== 0) {
-    if (stderr) {
-      console.log(args);
-      console.log(`Error running git ${args}`);
-      console.error(stderr);
+    if (stderr?.length) {
+      console.error(`Failed to run '${gitCommand}'.`);
+      console.error(stderr.toString());
+    } else {
+      console.error(`Failed to run '${gitCommand}'.`);
     }
     if (error) {
       throw error;
     }
     throw new Error(
-      `git command failed: ${stderr.toString() || stdout.toString()}`,
+      `git command failed (${gitCommand}): ${stderr.toString() || stdout.toString()}`,
     );
   }
   return stdout.toString().trim();
