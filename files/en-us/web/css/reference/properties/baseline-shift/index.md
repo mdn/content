@@ -14,11 +14,11 @@ The **`baseline-shift`** [CSS](/en-US/docs/Web/CSS) property repositioning of th
 ## Syntax
 
 ```css
-/* <length-percentage> */
+/* <length-percentage> values */
 baseline-shift: -0.5px;
 baseline-shift: 3%;
 
-/* keywords */
+/* keyword values */
 baseline-shift: sub;
 baseline-shift: super;
 
@@ -51,11 +51,11 @@ baseline-shift: unset;
 
 ### Using keyword values
 
-This example demonstrates the basic usage of the `sub` and `super` keyword values of the `baseline-shift` property, and how the CSS `baseline-shift` property takes precedence over the `baseline-shift` attribute.
+This example demonstrates the basic usage of the `sub` and `super` keyword values of the `baseline-shift` property, and how the `baseline-shift` CSS property takes precedence over the `baseline-shift` SVG attribute.
 
 #### HTML
 
-We define an SVG with two SVG {{SVGElement("text")}} elements each containing a {{SVGElement("tspan")}} element with the SVG {{SVGAttr("baseline-shift")}} attribute.
+We define an SVG with two SVG {{SVGElement("text")}} elements, each containing a {{SVGElement("tspan")}} element with the SVG {{SVGAttr("baseline-shift")}} attribute.
 
 ```html hidden
 <p>Original SVG</p>
@@ -105,11 +105,13 @@ We define an SVG with two SVG {{SVGElement("text")}} elements each containing a 
 </svg>
 ```
 
-The above SVG is repeated three times; we've only shown one copy for the sake of brevity.
+The SVG is repeated three times; we've only shown one copy for the sake of brevity.
 
 #### CSS
 
-The shapes nested in the first SVG have no CSS applied. We set the `<tspan>` inside the second SVG to use the `sub` value. The third SVG has both its nested `<tspan>` elements set to `super`.
+We make the text in all three SVG images large and cursive, adding some color to differentiate the content within the `<tspan>` elements.
+
+We set the `<tspan>` inside the second SVG to use the `baseline-shift` property's `sub` value; setting the value to `super` in the third SVG, while the first SVG has no additional CSS applied.
 
 ```css
 text {
@@ -122,6 +124,7 @@ text {
 [baseline-shift="super"] {
   fill: rebeccapurple;
 }
+
 svg:nth-of-type(2) tspan {
   baseline-shift: sub;
 }
