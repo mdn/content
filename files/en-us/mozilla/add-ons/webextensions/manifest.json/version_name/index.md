@@ -27,9 +27,9 @@ sidebar: addonsidebar
   </tbody>
 </table>
 
-In addition to the [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) field, which is used for update purposes, `version_name` can be set to a descriptive version string and will be used for display purposes if present.
+In addition to the [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) key, which is used for update purposes, `version_name` can be set to a descriptive version string and is used as the displayed version value.
 
-If no `version_name` is present, the `version` field will be used for display purposes as well.
+If `version_name` isn't present, the `version` property is used as the displayed version.
 
 ## Browser compatibility
 
@@ -37,4 +37,4 @@ If no `version_name` is present, the `version` field will be used for display pu
 
 ## See also
 
-- [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) manifest key
+- The [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) manifest key

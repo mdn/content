@@ -72,5 +72,5 @@ You see this in the console log:
 
 ## See also
 
-- {{WebExtAPIRef("runtime.getVersion()")}} method
-- [`version_name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) manifest key
+- The {{WebExtAPIRef("runtime.getVersion()")}} method
+- The [`version_name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) manifest key

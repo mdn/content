@@ -57,11 +57,11 @@ It also provides messaging APIs enabling you to:
 - {{WebExtAPIRef("runtime.getFrameId()")}}
   - : Gets the frame ID of any window global or frame element.
 - {{WebExtAPIRef("runtime.getManifest()")}}
-  - : Gets the object representation of complete [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+  - : Gets an object representation of the complete [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 - {{WebExtAPIRef("runtime.getURL()")}}
   - : Given a relative path from the [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to a resource packaged with the extension, returns a fully-qualified URL.
 - {{WebExtAPIRef("runtime.getVersion()")}}
-  - : Gets the extension version string from [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) field. The returned version may be distinct from the actual string in the file, because it may be parsed and then serializad by the browser.
+  - : Gets the extension version string from the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) key. The returned version may differ from the string in the file because the browser can parse and serialize it.
 - {{WebExtAPIRef("runtime.setUninstallURL()")}}
   - : Sets a URL to be visited when the extension is uninstalled.
 - {{WebExtAPIRef("runtime.reload()")}}
