@@ -6,7 +6,7 @@ browser-compat: css.properties.baseline-shift
 sidebar: cssref
 ---
 
-The **`baseline-shift`** [CSS](/en-US/docs/Web/CSS) property repositions the dominant-baseline relative to the dominant-baseline of the parent text content element. The shifted object might be a sub- or superscript. If the property is present, the value overrides the element's {{SVGAttr("baseline-shift")}} attribute.
+The **`baseline-shift`** [CSS](/en-US/docs/Web/CSS) property repositions the dominant-baseline of a text element relative to the dominant-baseline of its parent text content element. The shifted element might be a sub- or superscript. If the property is present, the value overrides the element's {{SVGAttr("baseline-shift")}} attribute.
 
 > [!NOTE]
 > The `baseline-shift` property only applies to {{SVGElement("textPath")}} and {{SVGElement("tspan")}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to other SVG, HTML, or pseudo-elements.
@@ -37,7 +37,7 @@ baseline-shift: unset;
 - `super`
   - : The dominant-baseline is shifted to the default position for superscripts.
 - `<length-percentage>`
-  - : Raises (positive value) or lowers (negative value) the dominant-baseline of the parent text content element by the specified length or percentage, with the percentage being relative to the dominant-baseline of the parent text content element's {{cssxref("line-height")}}.
+  - : Raises (if positive) or lowers (if negative) the dominant-baseline of the text content element by the specified length or percentage, with the percentage being relative to the dominant-baseline of the parent text content element's {{cssxref("line-height")}}.
 
 ## Formal definition
 
@@ -51,11 +51,11 @@ baseline-shift: unset;
 
 ### Using keyword values
 
-This example demonstrates the basic usage of the `sub` and `super` keyword values of the `baseline-shift` property, and how the `baseline-shift` CSS property takes precedence over the `baseline-shift` SVG attribute.
+This example demonstrates the basic usage of the `sub` and `super` keyword values of the `baseline-shift` property, as well as how the `baseline-shift` CSS property takes precedence over the `baseline-shift` SVG attribute.
 
 #### HTML
 
-We define an SVG with two SVG {{SVGElement("text")}} elements, each containing a {{SVGElement("tspan")}} element with the SVG {{SVGAttr("baseline-shift")}} attribute.
+We define an SVG with two SVG {{SVGElement("text")}} elements, each containing a {{SVGElement("tspan")}} element with the SVG {{SVGAttr("baseline-shift")}} attribute set on it.
 
 ```html hidden
 <p>Original SVG</p>
@@ -111,7 +111,7 @@ The SVG is repeated three times; we've only shown one copy for the sake of brevi
 
 We make the text in all three SVG images large and cursive, adding some color to differentiate the content within the `<tspan>` elements.
 
-We set the `<tspan>` inside the second SVG to use the `baseline-shift` property's `sub` value; setting the value to `super` in the third SVG, while the first SVG has no additional CSS applied.
+We set the `baseline-shift` property value to `sub` on the second SVG's `<tspan>` element and  `super` on the third SVG's `<tspan>` element. The first SVG has no additional CSS applied to it.
 
 ```css
 text {
@@ -155,7 +155,7 @@ svg {
 
 {{EmbedLiveSample("Using keyword values", "300", "370")}}
 
-The SVG `baseline-shift` attribute values are used in the first SVG example. In the second and third images, the `baseline-shift` overrides the attribute values.
+The SVG `baseline-shift` attribute values are used in the first SVG. In the second and third SVGs, the CSS `baseline-shift` values override the attribute values.
 
 ## Specifications
 
