@@ -6,7 +6,7 @@ browser-compat: css.properties.baseline-shift
 sidebar: cssref
 ---
 
-The **`baseline-shift`** [CSS](/en-US/docs/Web/CSS) property repositioning of the dominant-baseline relative to the dominant-baseline of the parent text content element. The shifted object might be a sub- or superscript. If present, it overrides the element's {{SVGAttr("baseline-shift")}} attribute.
+The **`baseline-shift`** [CSS](/en-US/docs/Web/CSS) property repositions the dominant-baseline relative to the dominant-baseline of the parent text content element. The shifted object might be a sub- or superscript. If the property is present, the value overrides the element's {{SVGAttr("baseline-shift")}} attribute.
 
 > [!NOTE]
 > The `baseline-shift` property only applies to {{SVGElement("textPath")}} and {{SVGElement("tspan")}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to other SVG, HTML, or pseudo-elements.
