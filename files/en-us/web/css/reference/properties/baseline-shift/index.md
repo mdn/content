@@ -66,12 +66,12 @@ We define an SVG with two SVG {{SVGElement("text")}} elements, each containing a
   <text x="10" y="50">
     Ceci
     <tspan baseline-shift="super">n'est pas</tspan>
-    une super pipe!
+    une pipe super!
   </text>
   <text x="10" y="90">
     Ceci
     <tspan baseline-shift="sub">n'est pas</tspan>
-    une sub pipe!
+    une pipe sub!
   </text>
 </svg>
 ```
@@ -82,12 +82,12 @@ We define an SVG with two SVG {{SVGElement("text")}} elements, each containing a
   <text x="10" y="50">
     Ceci
     <tspan baseline-shift="super">n'est pas</tspan>
-    une super pipe!
+    une pipe super!
   </text>
   <text x="10" y="90">
     Ceci
     <tspan baseline-shift="sub">n'est pas</tspan>
-    une sub pipe!
+    une pipe sub!
   </text>
 </svg>
 <p><code>baseline-shift: super;</code></p>
@@ -95,12 +95,12 @@ We define an SVG with two SVG {{SVGElement("text")}} elements, each containing a
   <text x="10" y="50">
     Ceci
     <tspan baseline-shift="super">n'est pas</tspan>
-    une super pipe!
+    une pipe super!
   </text>
   <text x="10" y="90">
     Ceci
     <tspan baseline-shift="sub">n'est pas</tspan>
-    une sub pipe!
+    une pipe sub!
   </text>
 </svg>
 ```
@@ -119,7 +119,7 @@ text {
   font-size: 2rem;
 }
 [baseline-shift="sub"] {
-  fill: magenta;
+  fill: deeppink;
 }
 [baseline-shift="super"] {
   fill: rebeccapurple;
