@@ -146,6 +146,17 @@ Scroll the element in the inline direction to see its background color change. S
 
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
   - {{cssxref("animation-timeline")}}
+  - {{cssxref("animation-trigger")}}
+  - {{cssxref("timeline-trigger")}} shorthand
+  - {{cssxref("timeline-trigger-name")}}
+  - {{cssxref("timeline-trigger-exit-range")}} shorthand
+  - {{cssxref("timeline-trigger-exit-range-end")}}
+  - {{cssxref("timeline-trigger-exit-range-start")}}
+  - {{cssxref("timeline-trigger-range")}} shorthand
+  - {{cssxref("timeline-trigger-range-end")}}
+  - {{cssxref("timeline-trigger-range-start")}}
+  - {{cssxref("timeline-trigger-source")}}
+  - {{cssxref("trigger-scope")}}
   - {{cssxref("@keyframes")}} at-rule
   - [`<keyframe-selector>`](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
@@ -164,4 +175,5 @@ Scroll the element in the inline direction to see its background color change. S
 
 ## See also
 
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations)
 - [Animate elements on scroll with scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) via developer.chrome.com (2023)
