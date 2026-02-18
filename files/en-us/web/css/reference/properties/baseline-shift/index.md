@@ -16,7 +16,7 @@ The **`baseline-shift`** [CSS](/en-US/docs/Web/CSS) property repositions the dom
 ```css
 /* <length-percentage> values */
 baseline-shift: -0.5px;
-baseline-shift: 3%;
+baseline-shift: 4%;
 
 /* keyword values */
 baseline-shift: sub;
