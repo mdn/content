@@ -63,21 +63,21 @@ random(--my-key, 0, 100)
       - : Specifies a base value between 0 and 1 for the random value to be generated from.
 
 - `<calc-sum>` (minimum)
-  - : The minimum value of the random range. Can be a number, dimension, percentage, or calculation. Must use the same units as the maximum value and optional step interval value, if provided.
+  - : The minimum value of the random range. Can be a number, dimension, percentage, or calculation. Must use the same type as the maximum value and optional step interval value, if provided.
 
 - `<calc-sum>` (maximum)
-  - : The maximum value of the random range. Can be a number, dimension, percentage, or calculation. Must use the same units as the minimum value and optional step interval value, if provided.
+  - : The maximum value of the random range. Can be a number, dimension, percentage, or calculation. Must use the same type as the minimum value and optional step interval value, if provided.
 
 - `<calc-sum>` (optional)
-  - : Specifies the step interval. Only values that are multiples of this step will be generated. Must use the same units as the minimum and maximum values.
+  - : Specifies the step interval. Only values that are multiples of this step will be generated. Must use the same type as the minimum and maximum values.
 
 ### Return value
   
-A random value from the minimum to the maximum in the same units provided for the parameters.
+A random value from the minimum to the maximum in the same type provided for the parameters.
 
 ## Description
   
-The `random(<calc-sum>, <calc-sum>)` function call specifies a minimum value and a maximum value and a random result is generated within the range specified. The values specified must be of the same value type and unit: a number, dimension, percentage, or a calculated value.
+The `random(<calc-sum>, <calc-sum>)` function call specifies a minimum value and a maximum value and a random result is generated within the range specified. The values specified must be of the same value type, [number](/en-US/docs/Web/CSS/Reference/Values/number), [dimension](/en-US/docs/Web/CSS/Reference/Values/dimension), or {{cssxref("percentage")}}, for the function to be valid. While the units in the two parameters don't need to be the same, they do need to be of the same dimension type, such as {{cssxref("length")}}, {{cssxref("angle")}}, {{cssxref("time")}}, or {{cssxref("frequency")}} to be valid.
 
 ### Random Base Value
 The random base value is an underlying deterministic number that generates the final random result similar to a seed given to a randomization algorithm. When the same random base value is used for different `random()` functions, the results will vary in a coordinated way. Different random base values will create independently random results.
