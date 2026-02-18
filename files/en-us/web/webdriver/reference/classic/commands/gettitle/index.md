@@ -7,7 +7,7 @@ browser-compat: webdriver.classic.GetTitle
 sidebar: webdriver
 ---
 
-The _Get Title_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the document title of the current top-level browsing context (window or tab). This is equivalent to reading the {{domxref("Document.title")}} property in JavaScript.
+The _Get Title_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the document title of the current top-level browsing context. This is equivalent to reading the {{domxref("Document.title")}} property in JavaScript.
 
 ## Syntax
 
