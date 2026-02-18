@@ -168,6 +168,7 @@ figcaption {
 @supports not (timeline-trigger-name: --t) {
   body::before {
     font-family: sans-serif;
+    font-size: 1.3rem;
     content: "Your browser does not support scroll-triggered animations.";
     color: black;
     background-color: wheat;
@@ -178,6 +179,7 @@ figcaption {
     top: 40%;
     text-align: center;
     padding: 1rem 0;
+    z-index: 1;
   }
 }
 ```
@@ -708,7 +710,7 @@ p {
 }
 
 section {
-  background: wheat;
+  background: #eee;
   padding: 10px 20px;
   margin-top: 20px;
 }

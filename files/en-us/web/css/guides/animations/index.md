@@ -247,13 +247,14 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("animation-trigger")}}
 - {{cssxref("timeline-trigger")}} shorthand
 - {{cssxref("timeline-trigger-name")}}
-- {{cssxref("timeline-trigger-exit-range")}} shorthand
-- {{cssxref("timeline-trigger-exit-range-end")}}
-- {{cssxref("timeline-trigger-exit-range-start")}}
 - {{cssxref("timeline-trigger-range")}} shorthand
-- {{cssxref("timeline-trigger-range-end")}}
-- {{cssxref("timeline-trigger-range-start")}}
 - {{cssxref("timeline-trigger-source")}}
+- {{cssxref("timeline-trigger-activation-range")}} shorthand
+- {{cssxref("timeline-trigger-activation-range-end")}}
+- {{cssxref("timeline-trigger-activation-range-start")}}
+- {{cssxref("timeline-trigger-active-range")}} shorthand
+- {{cssxref("timeline-trigger-active-range-end")}}
+- {{cssxref("timeline-trigger-active-range-start")}}
 - {{cssxref("trigger-scope")}}
 
 The CSS animations module level 2 also introduces the `event-trigger`, `event-trigger-name`, and `event-trigger-source` properties. Currently, no browsers support these features.
