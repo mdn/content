@@ -20,6 +20,10 @@ The _Back_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of th
 - `session id`
   - : Identifier of the session.
 
+### Return value
+
+`null` if successful.
+
 ### Errors
 
 - [Invalid session id](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/InvalidSessionID)
@@ -28,10 +32,6 @@ The _Back_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of th
   - : The [`window`](/en-US/docs/Web/API/Window) object has been discarded, indicating that the tab or window has been closed.
 - Timeout
   - : The navigation did not complete before its timeout expired.
-
-### Return value
-
-`null` if successful.
 
 ## Examples
 
@@ -87,3 +87,4 @@ Back command works as expected.
 ## See also
 
 - [Forward command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/Forward)
+- [Refresh command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/Refresh)

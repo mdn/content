@@ -20,16 +20,16 @@ The _Get Title_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) 
 - `session id`
   - : Identifier of the session.
 
+### Return value
+
+A string containing the title of the current document, equivalent to the value of {{domxref("Document.title")}}.
+
 ### Errors
 
 - [Invalid session id](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/InvalidSessionID)
   - : Session does not exist.
 - No such window
   - : The [`window`](/en-US/docs/Web/API/Window) object has been discarded, indicating that the tab or window has been closed.
-
-### Return value
-
-A string containing the title of the current document, equivalent to the value of {{domxref("Document.title")}}.
 
 ## Examples
 

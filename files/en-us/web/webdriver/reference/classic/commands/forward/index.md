@@ -20,6 +20,10 @@ The _Forward_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of
 - `session id`
   - : Identifier of the session.
 
+### Return value
+
+`null` if successful.
+
 ### Errors
 
 - [Invalid session id](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/InvalidSessionID)
@@ -28,10 +32,6 @@ The _Forward_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of
   - : The [`window`](/en-US/docs/Web/API/Window) object has been discarded, indicating that the tab or window has been closed.
 - Timeout
   - : The navigation did not complete before its timeout expired.
-
-### Return value
-
-`null` if successful.
 
 ## Examples
 
@@ -93,3 +93,4 @@ Forward command works as expected.
 ## See also
 
 - [Back command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/Back)
+- [Refresh command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/Refresh)

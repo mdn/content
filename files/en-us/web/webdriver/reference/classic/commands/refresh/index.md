@@ -20,6 +20,10 @@ The _Refresh_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of
 - `session id`
   - : Identifier of the session.
 
+### Return value
+
+`null` if successful.
+
 ### Errors
 
 - [Invalid session id](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/InvalidSessionID)
@@ -28,10 +32,6 @@ The _Refresh_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of
   - : The [`window`](/en-US/docs/Web/API/Window) object has been discarded, indicating that the tab or window has been closed.
 - Unexpected alert open
   - : A modal dialog was open, blocking this operation.
-
-### Return value
-
-`null` if successful.
 
 ## Examples
 
