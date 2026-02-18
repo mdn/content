@@ -72,6 +72,8 @@ Firefox 149 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for add-on developers
 
+- Adds support for `tabId` as a top-level parameter in {{WebExtAPIRef("action.isEnabled")}} and {{WebExtAPIRef("browserAction.isEnabled")}}. This change provides for compatibility with the Chrome implementation of `action.isEnabled`. ([Firefox bug 2013477](https://bugzil.la/2013477))
+
 <!-- ### Removals -->
 
 <!-- ### Other -->
