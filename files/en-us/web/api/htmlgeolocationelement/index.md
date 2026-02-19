@@ -2,10 +2,12 @@
 title: HTMLGeolocationElement
 slug: Web/API/HTMLGeolocationElement
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`HTMLGeolocationElement`** interface of the [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API) represents the {{htmlelement("geolocation")}} element, and provides access to its properties and events.
 

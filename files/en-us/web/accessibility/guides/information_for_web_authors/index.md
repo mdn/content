@@ -43,6 +43,6 @@ Tools to integrate into your build process, programmatically adding accessibilit
 
 {{glossary("Continuous integration")}} tools to find accessibility issues in your GitHub pull requests:
 
-- [AccessLint](https://accesslint.com/)
+- [AccessLint](https://www.accesslint.com/)
 
 While best to test your web applications with real users, you can simulate color blindness, low vision, low and contrast, and zooming. You should always test your site with out a mouse and touch to test keyboard navigation. You may also want to try your site using voice commands. Try disabling your mouse and using browser extensions like [Web Disability Simulator](https://chromewebstore.google.com/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla)

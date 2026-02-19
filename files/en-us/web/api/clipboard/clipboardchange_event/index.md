@@ -2,10 +2,12 @@
 title: "Clipboard: clipboardchange event"
 slug: Web/API/Clipboard/clipboardchange_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.Clipboard.clipboardchange_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`clipboardchange`** event of the {{domxref("Clipboard")}} interface is fired when the system clipboard contents are changed in any way, for example via a system copy command, or via an API method such as {{domxref("Clipboard.writeText()")}}.
 
@@ -67,7 +69,7 @@ body {
   margin: 0 5px;
 }
 #output {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   padding: 10px;
   border: 2px solid #ccc;
   border-radius: 5px;

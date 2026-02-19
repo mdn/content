@@ -13,7 +13,7 @@ The **CSS animations** module lets you animate the values of CSS properties, suc
 
 ## Animations in action
 
-To view the animation in the box below, click the checkbox 'Play the animation' or hover the cursor over the box. When the animating is active, the cloud at the top changes shape, snowflakes fall, and the snow level at the bottom rises. To pause the animation, uncheck the checkbox or move your cursor away from the box.
+To view the animation in the box below, click the checkbox 'Play the animation' or hover the cursor over the box. When the animation is active, the cloud at the top changes shape, snowflakes fall, and the snow level at the bottom rises. To pause the animation, uncheck the checkbox or move your cursor away from the box.
 
 ```html hidden live-sample___animation
 <!-- See aria-label: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label -->
