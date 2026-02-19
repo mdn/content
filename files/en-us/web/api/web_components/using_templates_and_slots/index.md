@@ -232,7 +232,7 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
 
 That {{HTMLElement("template")}} element has several features:
 
-- The {{HTMLElement("template")}} has a {{HTMLElement("style")}} element with a set of CSS styles that are scoped just to the document fragment the {{HTMLElement("template")}} creates.
+- The {{HTMLElement("template")}} has a {{HTMLElement("style")}} element with a set of CSS styles that are scoped just to the document fragment the {{HTMLElement("template")}} creates, These styles are scoped this way because that fragment will be inserted into a shadow root element.
 - The {{HTMLElement("template")}} uses {{HTMLElement("slot")}} and its [`name`](/en-US/docs/Web/HTML/Reference/Elements/slot#name) attribute to make three [named slots](/en-US/docs/Web/HTML/Reference/Elements/slot#name):
   - `<slot name="element-name">`
   - `<slot name="description">`

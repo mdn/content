@@ -369,7 +369,7 @@ The HTML contains four cards with different `id` attributes and a "Shuffle cards
 <div class="warning">
   <p>
     Your browser does not support advanced <code>attr()</code>. As a result,
-    this demo won’t do anything.
+    this demo won't do anything.
   </p>
 </div>
 ```
