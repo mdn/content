@@ -111,7 +111,7 @@ The SVG is repeated three times; we've only shown one copy for the sake of brevi
 
 We make the text in all three SVG images large and cursive, adding some color to differentiate the content within the `<tspan>` elements.
 
-We set the `baseline-shift` property value to `sub` on the second SVG's `<tspan>` element and  `super` on the third SVG's `<tspan>` element. The first SVG has no additional CSS applied to it.
+We set the `baseline-shift` property value to `sub` on the second SVG's `<tspan>` element and `super` on the third SVG's `<tspan>` element. The first SVG has no additional CSS applied to it.
 
 ```css
 text {
