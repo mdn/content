@@ -35,10 +35,10 @@ A string containing the title of the current document, equivalent to the value o
 
 ### Retrieving the page title
 
-With a WebDriver server running on `localhost:4444`, assume an active session has navigated to `https://example.org` and you have the `sessionId` from the response. You can retrieve the document title by using the following command:
+With a WebDriver server running on `localhost:4444`, assume an active session has navigated to `https://example.org`. You can retrieve the document title by using the following command, replacing `ID` with the `sessionId` from the [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) response:
 
 ```bash
-curl -i http://localhost:4444/session/16005d0d-b0dd-4e71-ab38-025329c3baef/title
+curl -i http://localhost:4444/session/ID/title
 ```
 
 The server responds with the document title as shown here:
