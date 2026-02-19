@@ -79,10 +79,10 @@ A random value from the minimum to the maximum in the same type provided for the
   
 The `random(<calc-sum>, <calc-sum>)` function call specifies a minimum value and a maximum value and a random result is generated within the range specified. The values specified must be of the same value type, [number](/en-US/docs/Web/CSS/Reference/Values/number), [dimension](/en-US/docs/Web/CSS/Reference/Values/dimension), or {{cssxref("percentage")}}, for the function to be valid. While the units in the two parameters don't need to be the same, they do need to be of the same dimension type, such as {{cssxref("length")}}, {{cssxref("angle")}}, {{cssxref("time")}}, or {{cssxref("frequency")}} to be valid.
 
-### Random Base Value
+### Random base value
 The random base value is an underlying deterministic number that generates the final random result similar to a seed given to a randomization algorithm. When the same random base value is used for different `random()` functions, the results will vary in a coordinated way. Different random base values will create independently random results.
 
-### Random Value Sharing
+### Random value sharing
 You can optionally provide a `<random-value-sharing>` value as the first parameter which controls how the random base value is shared. Sharing can be useful for reusing the same randomly generated value, a necessity for some design effects. The optional first parameter can use `auto`, an `element-shared` keyword, a custom {{cssxref("dashed-ident")}} or `fixed <number>`.
 
 Use the `element-shared` keyword as the first parameter to share the random base value across all elements that use `random()` with the keyword. When you specify a `<dashed-ident>` (e.g. `--custom-name`), each element gets its own random base value. Within that element, all properties that reference the same ident will share that base value. Combining a `<dashed-ident>` with `element-shared` (e.g. `random(--custom-name element-shared, 0, 100)`) shares the random base value across elements and properties that use the same `<random-value-sharing>` parameter.
@@ -106,7 +106,7 @@ In the example above, the use of two `random()` functions for the `margin` prope
 
 To avoid this behavior, you can provide a unique {{cssxref("dashed-ident")}} that is not used elsewhere in the document in order to get a distinct random base value.
 
-### Custom Properties
+### Custom properties
 
 When using `random()` with custom properties it is important to be aware that custom properties in CSS work like a text replacement mechanism rather than a variable that stores a result. This can lead to counterintuitive behavior.
 
