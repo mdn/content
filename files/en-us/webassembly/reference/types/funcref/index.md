@@ -154,4 +154,5 @@ The original array has all its values multiplied by `2`, and the resulting new a
 
 ## See also
 
-xx
+- [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
+- [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) definition

@@ -63,7 +63,7 @@ table name initial_size max_size type
     - [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)
       - : Stores references to functions defined inside Wasm.
     - [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
-      - : Store references to external functions defined inside JavaScript.
+      - : Store references to external values defined inside JavaScript.
 
 ## Description
 
@@ -81,7 +81,7 @@ Optionally, you can also provide an identifier, which can be used to identify th
 (table $mytable 2 10 funcref)
 ```
 
-The following defines a function type, defines a basic function with that type that returns an `i32`, and and forward-declares it using `(elem declare func $f1)` so it can be referenced later on.
+The following defines a function type, defines a basic function with that type that returns an `i32`, and forward-declares it using `(elem declare func $f1)` so it can be referenced later on.
 
 ```wat
 (type $ret_i32 (func (result i32)))
@@ -99,7 +99,7 @@ To call a function referenced in a table, you have to reference the table and th
 (call_indirect (type $ret_i32) (local.get $index))
 ```
 
-It is possible to mutate tables at runtime using instructions like [`table.set`](/en-US/docs/WebAssembly/Reference/Table/get) and [`table.fill`](/en-US/docs/WebAssembly/Reference/Table/get), and retrieve values using [`table.get`](/en-US/docs/WebAssembly/Reference/Table/get).
+It is possible to mutate tables at runtime using instructions like [`table.set`](/en-US/docs/WebAssembly/Reference/Table/set) and [`table.fill`](/en-US/docs/WebAssembly/Reference/Table/fill), and retrieve values using [`table.get`](/en-US/docs/WebAssembly/Reference/Table/get).
 
 ### External references
 
@@ -153,7 +153,7 @@ But you could instead reference the tables by their index values (`0` specifies 
 (call_indirect 1 (type $ret_i32) (i32.const 0))
 ```
 
-If you don't specify an indentifying name _or_ an index, the index `0` is assumed:
+If you don't specify an identifying name _or_ an index, the index `0` is assumed:
 
 ```wat
 ;; Accesses the table with index 0

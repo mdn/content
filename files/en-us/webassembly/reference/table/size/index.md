@@ -8,7 +8,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`table.size`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) returns the current number of elements contained in a table.
+The **`table.size`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) returns the current size of the table.
 
 {{InteractiveExample("Wat Demo: table.size", "tabbed-taller")}}
 

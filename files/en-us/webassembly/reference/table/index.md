@@ -23,7 +23,7 @@ This set of pages details the table instructions available in Wasm to create and
 - [`table.set`](/en-US/docs/WebAssembly/Reference/Table/set)
   - : Changes the value stored in a particular table element.
 - [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size)
-  - : Returns the current number of elements contained in a table.
+  - : Returns the current size of the table.
 
 ## Specifications
 

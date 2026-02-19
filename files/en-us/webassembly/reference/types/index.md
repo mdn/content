@@ -7,7 +7,7 @@ sidebar: webassemblysidebar
 
 This section documents the different WebAssembly types.
 
-## Value types
+## Reference types
 
 - [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
   - : References a JavaScript value, enabling it to be given to a Wasm module without the need for copying or serializing.

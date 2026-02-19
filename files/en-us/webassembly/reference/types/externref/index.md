@@ -8,7 +8,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#reference-t
 sidebar: webassemblysidebar
 ---
 
-The **`externref`** value type holds a JavaScript value, enabling it to be given to a Wasm module without the need for copying or serializing.
+The **`externref`** value type references a JavaScript value, enabling it to be given to a Wasm module without the need for copying or serializing.
 
 {{InteractiveExample("Wat Demo: externref", "tabbed-taller")}}
 
@@ -147,4 +147,5 @@ The value `16` is displayed inside the output `<p>` element. This makes sense, a
 
 ## See also
 
-xx
+- [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)
+- [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) definition
