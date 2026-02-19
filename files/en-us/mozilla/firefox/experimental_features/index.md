@@ -216,21 +216,6 @@ Specifically, this preference will disable the following prefixed properties:
 - `layout.css.prefixes.transforms`
   - : Set to `true` to enable.
 
-### `shape()` function
-
-The CSS {{cssxref("basic-shape/shape")}} function is a {{cssxref("basic-shape")}} data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is similar in some respects to the {{cssxref("basic-shape/path","path()")}} function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
-For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for the function's support in `offset-path`, and [Firefox bug 1884425](https://bugzil.la/1884425) for its interpolation support.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 126           | Yes                 |
-| Developer Edition | 126           | No                  |
-| Beta              | 126           | No                  |
-| Release           | 126           | No                  |
-
-- `layout.css.basic-shape-shape.enabled`
-  - : Set to `true` to enable.
-
 #### Relative control points in CSS `shape()` curve commands
 
 You can use [`<relative-control-point>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#relative-control-point) values when specifying a [`<curve-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#curve-command) or [`<smooth-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#smooth-command) in a CSS `shape()` function. These values let you specify control points that are positioned relative to the start or end point of the current command, or relative to the origin (top-left) of the container the shape is being drawn inside.
@@ -359,28 +344,6 @@ The {{domxref("CloseWatcher")}} interface allows developers to implement UI comp
 | Release           | 132           | No                           |
 
 - `dom.closewatcher.enabled`
-  - : Set to `true` to enable.
-
-### Trusted Types API
-
-The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) provides mechanisms to ensure that functions that can potentially be used as vectors for XSS attacks are only able to be called with data that has been validated or sanitized.
-The API is enabled in early beta releases ([Firefox bug 1992941](https://bugzil.la/1992941)).
-
-This includes (non-exhaustively):
-
-- Addition of the {{domxref("TrustedTypePolicyFactory")}}, {{domxref("TrustedTypePolicy")}}, {{domxref("TrustedHTML")}}, {{domxref("TrustedScript")}}, {{domxref("TrustedScriptURL")}} interfaces, and the `trustedTypes` property on {{domxref("Window/trustedTypes", "Window")}} and {{domxref("WorkerGlobalScope/trustedTypes", "WorkerGlobalScope")}}.
-- Updates to [injection sink interfaces](/en-US/docs/Web/API/Trusted_Types_API#injection_sink_interfaces), such as {{domxref("Element.innerHTML")}} and {{domxref("Document.write()", "document.write()")}}, to allow the `TrustedHTML`, `TrustedScript`, `TrustedScriptURL` to be passed as well as strings.
-- Support for the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) and [`trusted-types`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) directives, and the [`'trusted-types-eval'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) keyword, of the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
-  These can be used to enforce trusted types instead of strings, name the specific policies that are allowed, and to enable [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and similar functions to be used when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are supported and enforced.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 145           | Yes                 |
-| Developer Edition | 145           | Yes                 |
-| Beta              | 145           | Yes                 |
-| Release           | 133           | No                  |
-
-- `dom.security.trusted_types.enabled`
   - : Set to `true` to enable.
 
 ### HTML Sanitizer API

@@ -55,6 +55,7 @@ Binaryen
 Birtles
 bitsies
 Bitsov
+Bitwarden
 Bixa
 Blackman
 Blackmoon
@@ -305,6 +306,7 @@ Kaku
 Kang
 Kaply
 Karmadrome
+KASI
 Kaspersky
 Katari
 Kazam

@@ -25,7 +25,7 @@ font-kerning: none;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    “We took Tracy to see ‘THE WATERFALL’ in W. Virginia.”
+    "We took Tracy to see 'THE WATERFALL' in W. Virginia."
   </div>
 </section>
 ```

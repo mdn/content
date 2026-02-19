@@ -9,26 +9,35 @@ sidebar:
     title: Guides
   - link: /WebAssembly/Guides/Concepts
     title: WebAssembly_concepts
-  - link: /WebAssembly/Guides/C_to_Wasm
-    title: Compiling_to_Wasm
-  - link: /WebAssembly/Guides/Existing_C_to_Wasm
-    title: Existing_C_to_Wasm
-  - link: /WebAssembly/Guides/Rust_to_Wasm
-    title: Compiling_Rust_to_Wasm
-  - link: /WebAssembly/Guides/Using_the_JavaScript_API
-    title: JavaScript_API
-  - link: /WebAssembly/Guides/Understanding_the_text_format
-    title: Text_format
-  - link: /WebAssembly/Guides/Text_format_to_Wasm
-    title: Text_format_to_Wasm
-  - link: /WebAssembly/Guides/Loading_and_running
-    title: Loading_and_running
-  - link: /WebAssembly/Guides/Exported_functions
-    title: Exported_functions
-  - link: /WebAssembly/Guides/JavaScript_builtins
-    title: JavaScript_builtins
-  - link: /WebAssembly/Guides/Imported_string_constants
-    title: Imported_string_constants
+  - title: Compiling_WebAssembly
+    details: closed
+    children:
+      - link: /WebAssembly/Guides/C_to_Wasm
+        title: Compiling_to_Wasm
+      - link: /WebAssembly/Guides/Existing_C_to_Wasm
+        title: Existing_C_to_Wasm
+      - link: /WebAssembly/Guides/Rust_to_Wasm
+        title: Compiling_Rust_to_Wasm
+  - title: Language_guide
+    details: closed
+    children:
+      - link: /WebAssembly/Guides/Understanding_the_text_format
+        title: Text_format
+      - link: /WebAssembly/Guides/Text_format_to_Wasm
+        title: Text_format_to_Wasm
+      - link: /WebAssembly/Guides/Exported_functions
+        title: Exported_functions
+      - link: /WebAssembly/Guides/JavaScript_builtins
+        title: JavaScript_builtins
+      - link: /WebAssembly/Guides/Imported_string_constants
+        title: Imported_string_constants
+  - title: API_guide
+    details: closed
+    children:
+      - link: /WebAssembly/Guides/Using_the_JavaScript_API
+        title: JavaScript_API
+      - link: /WebAssembly/Guides/Loading_and_running
+        title: Loading_and_running
   - type: section
     link: /WebAssembly/Reference
     title: Reference
@@ -102,6 +111,11 @@ sidebar:
         title: <code>WebAssembly.RuntimeError</code>
         details: closed
         code: true
+  - type: listSubPages
+    path: /WebAssembly/Reference/Definitions
+    link: /WebAssembly/Reference/Definitions
+    title: Definitions
+    details: closed
   - title: Instructions
     details: closed
     children:
@@ -121,10 +135,20 @@ sidebar:
         title: Numeric
         details: closed
       - type: listSubPages
+        path: /WebAssembly/Reference/Table
+        link: /WebAssembly/Reference/Table
+        title: Table
+        details: closed
+      - type: listSubPages
         path: /WebAssembly/Reference/Variables
         link: /WebAssembly/Reference/Variables
         title: Variables
         details: closed
+  - type: listSubPages
+    path: /WebAssembly/Reference/Types
+    link: /WebAssembly/Reference/Types
+    title: Types
+    details: closed
 l10n:
   de:
     WebAssembly_concepts: WebAssembly-Konzepte
@@ -141,12 +165,15 @@ l10n:
     JavaScript_interface: JavaScript-Schnittstelle
   en-US:
     WebAssembly_concepts: WebAssembly concepts
-    Compiling_to_Wasm: Compiling from C/C++ to WebAssembly
+    Compiling_WebAssembly: Compiling WebAssembly
+    Language_guide: WebAssembly language
+    API_guide: JavaScript API guide
+    Compiling_to_Wasm: Compiling a new C/C++ module to WebAssembly
     Existing_C_to_Wasm: Compiling an existing C module to WebAssembly
     Compiling_Rust_to_Wasm: Compiling from Rust to WebAssembly
     JavaScript_API: Using the WebAssembly JavaScript API
     Text_format: Understanding WebAssembly text format
-    Text_format_to_Wasm: Converting WebAssembly text format
+    Text_format_to_Wasm: Converting WebAssembly text format to binary
     Loading_and_running: Loading and running WebAssembly code
     Exported_functions: Exported WebAssembly functions
     JavaScript_builtins: JavaScript builtins
