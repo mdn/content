@@ -10,7 +10,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`size`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) is used to get the current number of pages in a memory.
+The **`memory.size`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) is used to get the current number of pages in a memory.
 
 The instruction adds the size (in pages) to the top of the stack.
 Currently each page is 64KiB.

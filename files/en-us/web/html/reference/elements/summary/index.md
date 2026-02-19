@@ -13,7 +13,7 @@ The **`<summary>`** [HTML](/en-US/docs/Web/HTML) element specifies a summary, ca
 ```html interactive-example
 <details>
   <summary>
-    I have keys but no doors. I have space but no room. You can enter but can’t
+    I have keys but no doors. I have space but no room. You can enter but can't
     leave. What am I?
   </summary>
   A keyboard.

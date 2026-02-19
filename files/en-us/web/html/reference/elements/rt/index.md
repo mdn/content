@@ -115,3 +115,4 @@ body {
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
 - {{CSSXRef("text-transform", "text-transform: full-size-kana")}}
+- [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module
