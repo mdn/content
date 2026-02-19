@@ -529,7 +529,7 @@ This allows you to defend against client-side [cross-site scripting (XSS)](/en-U
 
 Some APIs in the web platform are known as _injection sinks_. These are APIs that can be passed some input, usually in the form of a string, and that can interpret that input as code. In this guide we've already seen `eval()`, but there are many other injection sinks, such as {{domxref("Element.innerHTML")}} or {{domxref("Document.write()")}}.
 
-If an attacker can supply some specially crafted input to your website, and your website passes it to one of these injection sinks, then the attacker can execute malcious code.
+If an attacker can supply some specially crafted input to your website, and your website passes it to one of these injection sinks, then the attacker can execute malicious code.
 
 Some injection sinks, like `eval()`, are very hard to use safely, and we've seen that a CSP will typically [block them entirely](#eval_and_similar_apis). Others can be made safer if the input to them is processed so as to remove unsafe elements. This practice is called [_sanitization_](/en-US/docs/Web/Security/Attacks/XSS#sanitization).
 

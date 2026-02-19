@@ -25,7 +25,7 @@ Although the `styleset` property itself is read-only in the sense that you can't
 ```css
 @font-feature-values "MonteCarlo" {
   @styleset {
-    my-stylesets: 1;
+    my-styleset: 1;
   }
 }
 ```
