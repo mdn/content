@@ -104,7 +104,7 @@ inset: unset;
 
 ### Values
 
-The `inset` property takes the same values as the {{cssxref("left")}} property.
+The `inset` property takes the same values as the {{cssxref("top")}} property.
 
 ## Formal definition
 

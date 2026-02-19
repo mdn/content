@@ -464,7 +464,7 @@ Railway is an attractive hosting option for several reasons:
 
 - Railway takes care of most of the infrastructure so you don't have to.
   Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
-- Railway has a [focus on developer experience for development and deployment](https://docs.railway.com/maturity/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
+- Railway has a [focus on developer experience for development and deployment](https://docs.railway.com/platform/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
 - The skills and concepts you will learn when using Railway are transferrable.
   While Railway has some excellent new features, other popular hosting services use many of the same ideas and approaches.
 - [Railway documentation](https://docs.railway.com/) is clear and complete.
@@ -487,11 +487,11 @@ Having installed all the dependencies, Railway will look for scripts named "buil
 > Railway uses [Nixpacks](https://nixpacks.com/docs) to recognize various web application frameworks written in different programming languages.
 > You don't need to know anything else for this tutorial, but you can find out more about options for deploying node applications in [Nixpacks Node](https://nixpacks.com/docs/providers/node).
 
-Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.com/guides/variables).
+Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.com/variables).
 For example, an application that uses a database must get the address using a variable.
 The database service itself may be hosted by Railway or some other provider.
 
-Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.com/guides/cli) tool.
+Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.com/cli) tool.
 The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
 One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
@@ -608,7 +608,7 @@ You can add data through the website interface and it should work in the same wa
 
 ### Install the client
 
-Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.com/guides/cli).
+Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.com/cli).
 
 After the client is installed you will be able run commands.
 Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to GitHub), and running your project locally using the same settings as you have on the production server.
@@ -636,7 +636,7 @@ That's the end of this tutorial on setting up Express apps in production, and al
 - [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) (Express docs)
 - [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html) (Express docs)
 - Railway Docs
-  - [CLI](https://docs.railway.com/guides/cli)
+  - [CLI](https://docs.railway.com/cli)
 
 - DigitalOcean
   - [Express](https://www.digitalocean.com/community/tutorials?q=express) tutorials

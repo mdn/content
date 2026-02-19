@@ -2,9 +2,13 @@
 title: ::search-text
 slug: Web/CSS/Reference/Selectors/::search-text
 page-type: css-pseudo-element
+status:
+  - experimental
 browser-compat: css.selectors.search-text
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`::search-text`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) applies styles to search results identified by the user agent's "Find" or "Find in page" text search feature.
 
@@ -113,7 +117,7 @@ In our CSS, we start by styling the `::search-text` pseudo-element. We give it c
 
 ```css hidden live-sample___custom-search-results
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
 }
 
 p {

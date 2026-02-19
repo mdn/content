@@ -10,7 +10,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`copy`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) copies data from one region of a memory to another.
+The **`memory.copy`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) copies data from one region of a memory to another.
 
 The instruction does not return a value.
 If either the source or destination range is out of bounds, the instruction traps.

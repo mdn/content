@@ -3,10 +3,12 @@ title: "HTMLGeolocationElement: HTMLGeolocationElement() constructor"
 short-title: HTMLGeolocationElement()
 slug: Web/API/HTMLGeolocationElement/HTMLGeolocationElement
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement.HTMLGeolocationElement
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`HTMLGeolocationElement()`** constructor creates a new {{domxref("HTMLGeolocationElement")}} object instance.
 
@@ -30,7 +32,7 @@ Developers cannot use the `HTMLGeolocationElement()` constructor directly to cre
 
 #### Creating a new `HTMLGeolocationElement` instance programmatically
 
-To programmatically create a new `HTMLGeolocationElement` instance, instead of trying to use the contructor directly, you would create a new {{htmlelement("geolocation")}} element instance using {{domxref("Document.createElement()")}}:
+To programmatically create a new `HTMLGeolocationElement` instance, instead of trying to use the constructor directly, you would create a new {{htmlelement("geolocation")}} element instance using {{domxref("Document.createElement()")}}:
 
 ```js
 const geo = document.createElement("geolocation");

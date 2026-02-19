@@ -7,26 +7,7 @@ browser-compat: javascript.builtins.Atomics.xor
 sidebar: jsref
 ---
 
-The **`Atomics.xor()`** static
-method computes a bitwise XOR with a given value at a given position in the array, and
-returns the old value at that position. This atomic operation guarantees that no other
-write happens until the modified value is written back.
-
-{{InteractiveExample("JavaScript Demo: Atomics.xor()")}}
-
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
-uint8[0] = 7;
-
-// 7 (0111) XOR 2 (0010) = 5 (0101)
-console.log(Atomics.xor(uint8, 0, 2));
-// Expected output: 7
-
-console.log(Atomics.load(uint8, 0));
-// Expected output: 5
-```
+The **`Atomics.xor()`** static method computes a bitwise XOR with a given value at a given position in the array, and returns the old value at that position. This atomic operation guarantees that no other write happens until the modified value is written back.
 
 ## Syntax
 
@@ -37,10 +18,7 @@ Atomics.xor(typedArray, index, value)
 ### Parameters
 
 - `typedArray`
-  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
-    {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
-    {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or
-    {{jsxref("BigUint64Array")}}.
+  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or {{jsxref("BigUint64Array")}}.
 - `index`
   - : The position in the `typedArray` to compute the bitwise XOR.
 - `value`
@@ -59,8 +37,7 @@ The old value at the given position (`typedArray[index]`).
 
 ## Description
 
-The bitwise XOR operation yields 1, if `a` and `b` are different.
-The truth table for the XOR operation is:
+The bitwise XOR operation yields 1, if `a` and `b` are different. The truth table for the XOR operation is:
 
 | `a` | `b` | `a ^ b` |
 | --- | --- | ------- |
@@ -69,8 +46,7 @@ The truth table for the XOR operation is:
 | 1   | 0   | 1       |
 | 1   | 1   | 0       |
 
-For example, a bitwise XOR of `5 ^ 1` results in `0100` which is
-4 in decimal.
+For example, a bitwise XOR of `5 ^ 1` results in `0100` which is 4 in decimal.
 
 ```plain
 5  0101
@@ -81,15 +57,20 @@ For example, a bitwise XOR of `5 ^ 1` results in `0100` which is
 
 ## Examples
 
-### Using xor
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
+
+### Using Atomics.xor()
 
 ```js
+// Create a SharedArrayBuffer with a size in bytes
 const sab = new SharedArrayBuffer(1024);
+// Create a view and set the value of the 0 index
 const ta = new Uint8Array(sab);
-ta[0] = 5;
+ta[0] = 7;
 
-Atomics.xor(ta, 0, 1); // returns 5, the old value
-Atomics.load(ta, 0); // 4
+// 7 (0111) XOR 2 (0010) = 5 (0101)
+console.log(Atomics.xor(ta, 0, 2)); // 7, the old value
+console.log(Atomics.load(ta, 0)); // 5, the new/current value
 ```
 
 ## Specifications
