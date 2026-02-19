@@ -9,6 +9,7 @@ sidebar: webdriver
 
 The WebDriver BiDi protocol is organized into modules.
 Each module represents a collection of related commands and events pertaining to a specific aspect of browser automation.
+
 Both command and event names use the module name as a prefix: `module_name.command_name` for commands and `module_name.event_name` for events.
 
 ## List of modules

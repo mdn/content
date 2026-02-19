@@ -7,8 +7,9 @@ sidebar: webdriver
 ---
 
 WebDriver BiDi is a bidirectional protocol for browser automation that provides event-driven communication between the local end (the automation client) and the remote end (the browser).
-Unlike the HTTP request-response model of [WebDriver classic](/en-US/docs/Web/WebDriver/Reference/Classic), BiDi enables real-time events and supports advanced automation scenarios through WebSocket-based communication.
 This reference documents the modules, commands, events, capabilities, and errors available in WebDriver BiDi.
+
+Unlike the HTTP request-response model of [WebDriver classic](/en-US/docs/Web/WebDriver/Reference/Classic), BiDi enables real-time events and supports advanced automation scenarios through WebSocket-based communication.
 
 - [Modules](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules)
   - : Collections of related commands and events pertaining to specific aspects of browser automation.
