@@ -168,7 +168,7 @@ body {
 ```css hidden
 @supports not (columns: 3 auto / 5em) {
   body::before {
-    content: "Your browser does not support the 'column-height' value in the 'columns' property.";
+    content: "Your browser does not support the 'column-height' value in the 'columns' shorthand.";
     color: black;
     background-color: #ffcd33;
     display: block;
