@@ -7,7 +7,8 @@ name: PR review companion
 
 on:
   workflow_run:
-    workflows: ["PR Test", "PR Test Legacy"]
+    workflows:
+      - "PR Test"
     types:
       - completed
 
@@ -29,12 +30,32 @@ permissions:
   statuses: write
 
 jobs:
+  identify-pr:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    outputs:
+      pr-number: ${{ steps.identify-pr.outputs.number }}
+    steps:
+      - name: Identify PR
+        id: identify-pr
+        run: |
+          PR_NUMBER=$(gh api "repos/$HEAD_REPO/commits/$HEAD_SHA/pulls" --jq ".[] | select(.base.repo.full_name == \"$BASE_REPO\") | .number")
+          echo "number=$PR_NUMBER" >> $GITHUB_OUTPUT
+        env:
+          BASE_REPO: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ github.token }}
+          HEAD_REPO: ${{ github.event.workflow_run.head_repository.full_name }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+
   review:
+    needs: identify-pr
     environment: review
     runs-on: ubuntu-latest
-    if: github.event.workflow_run.conclusion == 'success'
+    if: needs.identify-pr.outputs.pr-number
     env:
-      STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.pull_requests[0].head.sha }}
+      PR_NUMBER: ${{ needs.identify-pr.outputs.pr-number }}
+      PREFIX: pr${{ needs.identify-pr.outputs.pr-number }}
+      STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}
       STATUS_CONTEXT: pr-review-companion
       STATUS_TARGET: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
@@ -50,14 +71,10 @@ jobs:
       - name: Check for artifacts
         id: check
         if: hashFiles('build/') != ''
-        run: |
-          echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
-          PR_NUMBER=`cat build/NR | tr -dc '0-9'`
-          echo "PR_NUMBER=$PR_NUMBER" >> "$GITHUB_OUTPUT"
-          echo "PREFIX=pr$PR_NUMBER" >> "$GITHUB_OUTPUT"
+        run: echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
 
       - name: Mark status as pending
-        if: steps.check.outputs.HAS_ARTIFACT && github.event.workflow_run.pull_requests[0].number
+        if: steps.check.outputs.HAS_ARTIFACT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -84,7 +101,7 @@ jobs:
         uses: google-github-actions/upload-cloud-storage@6397bd7208e18d13ba2619ee21b9873edc94427a # v3.0.0
         with:
           path: "build"
-          destination: "${{ vars.GCP_BUCKET_NAME }}/${{ steps.check.outputs.PREFIX }}"
+          destination: "${{ vars.GCP_BUCKET_NAME }}/${{ env.PREFIX }}"
           resumable: false
           headers: |-
             cache-control: no-store
@@ -117,8 +134,6 @@ jobs:
         if: steps.check.outputs.HAS_ARTIFACT
         env:
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
-          PREFIX: ${{ steps.check.outputs.PREFIX }}
-          PR_NUMBER: ${{ steps.check.outputs.PR_NUMBER }}
         working-directory: content
         run: |
           echo "Pull request:"
@@ -135,7 +150,7 @@ jobs:
             $BUILD_OUT_ROOT
 
       - name: Mark status as success
-        if: steps.check.outputs.HAS_ARTIFACT && success() && github.event.workflow_run.pull_requests[0].number
+        if: steps.check.outputs.HAS_ARTIFACT && success()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -146,7 +161,7 @@ jobs:
             -f target_url="$STATUS_TARGET"
 
       - name: Mark status as failure
-        if: steps.check.outputs.HAS_ARTIFACT && failure() && github.event.workflow_run.pull_requests[0].number
+        if: steps.check.outputs.HAS_ARTIFACT && failure()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

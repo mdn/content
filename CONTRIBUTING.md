@@ -342,7 +342,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
    git add .
    git commit -m "Delete Learn/Accessibility pages"
    git push
-   # or git push --set-upstream origin moving-a11y
+   # or git push --set-upstream origin deleting-a11y
    ```
 
 ### Redirecting a document
