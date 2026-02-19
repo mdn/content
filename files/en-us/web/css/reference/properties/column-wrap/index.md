@@ -355,10 +355,9 @@ p {
     content: "Your browser does not support the 'column-wrap' property.";
     background-color: wheat;
     position: fixed;
-    inset: 50% 2em;
+    inset: 40% 0;
     height: fit-content;
     text-align: center;
-    font-weight: bold;
     padding: 1rem 0;
   }
 }

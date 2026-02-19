@@ -81,19 +81,19 @@ columns: revert-layer;
 columns: unset;
 ```
 
-The `columns` property may be specified as a [`<column-count>`](/en-US/docs/Web/CSS/Reference/Properties/column-count) and/or a [`<column-width>`](/en-US/docs/Web/CSS/Reference/Properties/column-width) value, optionally followed by a forward slash and a [`<column-height>`](/en-US/docs/Web/CSS/Reference/Properties/column-height) value. If both `<column-count>` and `<column-width>` values are specified, they can be specified in any order.
+The `columns` property value may be specified as a [`<column-count>`](/en-US/docs/Web/CSS/Reference/Properties/column-count) and/or a [`<column-width>`](/en-US/docs/Web/CSS/Reference/Properties/column-width) value, in any order, optionally followed by a [`<column-height>`](/en-US/docs/Web/CSS/Reference/Properties/column-height) value preceded by a forward slash.
 
 ### Values
 
 - `<'column-width'>`
   - : The ideal column width, defined as a {{cssxref("&lt;length&gt;")}} or the keyword `auto`. The actual width may be wider or narrower to fit the available space. See {{cssxref("column-width")}}.
 - `<'column-count'>`
-  - : The ideal number of columns into which the element's content should be flowed, defined as an {{cssxref("&lt;integer&gt;")}} or the keyword `auto`. If neither this value nor the column's width are `auto`, it indicates the maximum allowable number of columns. See {{cssxref("column-count")}}.
+  - : The ideal number of columns into which the element's content should be flowed, defined as an {{cssxref("&lt;integer&gt;")}} or the keyword `auto`. If specified as an `<integer>`, it defines the maximum allowable number of columns. See {{cssxref("column-count")}}.
 - `<'column-height'>`
   - : The height of the columns defined as a {{cssxref("&lt;length&gt;")}} or the keyword `auto`. See {{cssxref("column-height")}}.
 
 > [!NOTE]
-> In browsers that support the `column-height` property, the `columns` property also resets the {{cssxref("column-wrap")}} property to its initial value, `auto`.
+> Setting a `<column-height>` value resets the {{cssxref("column-wrap")}} property to its initial value, `auto`. When `<column-height>` is set to a `<length>`, the {{cssxref("column-wrap")}} `auto` value behaves as `wrap`. When `<column-height>` is set to `auto`, it behaves as `nowrap`.
 
 ## Formal definition
 
@@ -107,9 +107,13 @@ The `columns` property may be specified as a [`<column-count>`](/en-US/docs/Web/
 
 ### Setting three equal columns
 
+This example shows how to split a text container into three equal columns.
+
 #### HTML
 
-```html
+We include a basic {{htmlelement("p")}} element containing text content.
+
+```html live-sample___three_equal_columns
 <p class="content-box">
   This is a bunch of text split into three columns using the CSS
   <code>columns</code>
@@ -119,12 +123,16 @@ The `columns` property may be specified as a [`<column-count>`](/en-US/docs/Web/
 
 #### CSS
 
-```css
+We set a `columns` property value on the paragraph that includes a `<column-count>` value of `3` and a `<column-width>` value of `auto`.
+
+```css hidden live-sample___three_equal_columns
 body {
   width: 60%;
   margin: 0 auto;
 }
+```
 
+```css live-sample___three_equal_columns
 .content-box {
   columns: 3 auto;
 }
@@ -132,13 +140,21 @@ body {
 
 #### Result
 
-{{EmbedLiveSample('Setting_three_equal_columns', 'auto', 120)}}
+The example renders like this:
 
-### Setting three wrapping, fixed height columns
+{{EmbedLiveSample('three_equal_columns', 'auto', 120)}}
+
+Note how the text is split up into three columns.
+
+### Creating wrapping, fixed height columns
+
+This example demonstrates including a `<column-height>` value in a `columns` property to split a text container into fixed-height columns that wrap onto new lines when the container inline edge is reached.
 
 #### HTML
 
-```html
+We include a basic {{htmlelement("p")}} element containing text content.
+
+```html live-sample___fixed-height
 <p class="content-box">
   This is a bunch of text split into three columns using the CSS
   <code>columns</code> property. This includes a <code>column-count</code> value
@@ -154,29 +170,30 @@ body {
 
 #### CSS
 
-```css
+We set a `columns` property value on the paragraph that includes a `<column-count>` value of `3`, a `<column-width>` value of `auto`, and a `<column-height>` value of `5em`. Because the `<column-height>` is set to a `<length>`, the paragraph's {{cssxref("column-wrap")}} value computes to `wrap`, which allows the columns to wrap onto multiple rows.
+
+```css hidden live-sample___fixed-height
 body {
   width: 60%;
   margin: 0 auto;
 }
+```
 
+```css live-sample___fixed-height
 .content-box {
   columns: 3 auto / 5em;
 }
 ```
 
-```css hidden
+```css hidden live-sample___fixed-height
 @supports not (columns: 3 auto / 5em) {
   body::before {
-    content: "Your browser does not support the 'column-height' value in the 'columns' shorthand.";
-    color: black;
-    background-color: #ffcd33;
-    display: block;
+    content: "Your browser does not support the 'column-height' property.";
+    background-color: wheat;
     position: fixed;
-    inset: 40% 2em;
+    inset: 40% 0;
     height: fit-content;
     text-align: center;
-    font-weight: bold;
     padding: 1rem 0;
   }
 }
@@ -184,7 +201,11 @@ body {
 
 #### Result
 
-{{EmbedLiveSample('Setting_three_equal_columns_of_equal_height', 'auto', 320)}}
+The example renders like this:
+
+{{EmbedLiveSample('fixed-height', 'auto', 320)}}
+
+Note how the text is split up into three columns. Each column is `5em` height. After every third column, the columns wrap onto a new line in the block direction.
 
 ## Specifications
 

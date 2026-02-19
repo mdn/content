@@ -10,7 +10,7 @@ In this guide, we look at how to deal with overflow in a multi-column (_multicol
 
 ## Overflow inside column boxes
 
-An overflow situation happens when an item's size is larger than the column box. For example, the situation could happen when an image in a column is wider than the `column-width` value or the width of the column based on the number of columns declared with `column-count`.
+An overflow situation happens when an item's size is larger than the column box. For example, the situation could happen when an image in a column is wider than the {{cssxref("column-width")}} value or the width of the column based on the number of columns declared with {{cssxref("column-count")}}.
 
 In this situation, the content should visibly overflow into the next column, rather than be clipped by the column box.
 
@@ -176,7 +176,7 @@ body {
 
 ## Using column wrapping for multicol
 
-The {{cssxref("column-height")}} and {{cssxref("column-wrap")}} properties can be used to assign a fixed height to generated columns, and force excess columns to overflow into additional rows of columns in the block direction. In horizontal writing mode content, this means that you'll end up with vertically-scrolling rows of columns, rather than a horizontally scrolling single row. Let's look at an example.
+The {{cssxref("column-height")}} and {{cssxref("column-wrap")}} properties can be used to assign a fixed height to generated columns and force excess columns to overflow into additional rows of columns in the block direction. In horizontal writing mode content, this means that you'll end up with vertically-scrolling rows of columns, rather than a horizontally scrolling single row. Let's look at an example.
 
 The HTML contains basic text content, which we have hidden for brevity.
 
@@ -201,7 +201,7 @@ The HTML contains basic text content, which we have hidden for brevity.
 </p>
 ```
 
-We give our content some styles. Most notably, we set the `<body>` element's `column-count` to `2`, and its `column-height` to `95vh` so that each row of columns fills up the viewport. We don't need to explicitly set `column-wrap` to `wrap`: when `column-height` is set to a {{cssxref("&lt;length>")}} value, the initial value of `column-wrap` (`auto`) resolves to `wrap`, which is usually the behavior you'll want.
+We give our content some styles. Most notably, we set the `<body>` element's {{cssxref("column-count")}} to `2`, and its `column-height` to `95vh` so that each row of columns fills up the viewport. We don't need to explicitly set `column-wrap` to `wrap`: when `column-height` is set to a {{cssxref("&lt;length>")}} value, the initial value of `column-wrap` (`auto`) resolves to `wrap`, which is usually the behavior you'll want.
 
 ```css hidden
 html {
@@ -231,14 +231,11 @@ body {
 @supports not (column-height: 5em) {
   body::before {
     content: "Your browser does not support the 'column-height' property.";
-    color: black;
-    background-color: #ffcd33;
-    display: block;
+    background-color: wheat;
     position: fixed;
-    inset: 40% 2em;
+    inset: 40% 0;
     height: fit-content;
     text-align: center;
-    font-weight: bold;
     padding: 1rem 0;
   }
 }
