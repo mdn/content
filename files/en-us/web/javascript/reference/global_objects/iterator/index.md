@@ -141,9 +141,9 @@ const myIterator = Iterator.from({
   - : Creates a new `Iterator` object from a list of iterable objects. The new iterator yields the values from each of the input iterables in sequence.
 - {{jsxref("Iterator.from()")}}
   - : Creates a new `Iterator` object from an iterator or iterable object.
-- {{jsxref("Iterator.zip()")}}
+- {{jsxref("Iterator.zip()")}} {{experimental_inline}}
   - : Creates a new `Iterator` object that aggregates elements from multiple iterable objects by yielding arrays containing elements at the same position.
-- {{jsxref("Iterator.zipKeyed()")}}
+- {{jsxref("Iterator.zipKeyed()")}} {{experimental_inline}}
   - : Creates a new `Iterator` object that aggregates elements from multiple iterable objects by yielding objects containing elements at the same position, with keys specified by the input.
 
 ## Instance properties

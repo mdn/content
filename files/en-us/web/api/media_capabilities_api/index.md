@@ -7,19 +7,17 @@ browser-compat: api.MediaCapabilities
 
 {{DefaultAPISidebar("Media Capabilities API")}}{{AvailableInWorkers}}
 
-The **Media Capabilities API** allows developers to determine decoding and encoding abilities of the device, exposing information such as whether media is supported and whether playback should be smooth and power efficient, with real time feedback about playback to better enable adaptive streaming, and access to display property information.
+The **Media Capabilities API** allows developers to determine decoding and encoding abilities of the device, exposing information such as whether media is supported and whether playback should be smooth and power efficient.
 
 ## Concepts
 
 There are a myriad of video and audio codecs. Different browsers support different media types and new media types are always being developed. With the Media Capabilities API, developers can ensure each user is getting the best bitrate and storage savings for their browser, device, and OS capabilities.
 
-Whether a device uses hardware or software decoding impacts how smooth and power efficient the video decoding is and how efficient the playback will be. The Media Capabilities API enables determining which codecs are supported and how performant a media file will be both in terms of smoothness and power efficiency.
+Whether a device uses hardware or software decoding impacts how smooth and power efficient the video decoding is and how efficient the playback will be. The Media Capabilities API enables developers to determine which codecs are supported and how performant a media file will be both in terms of smoothness and power efficiency.
 
-The Media Capabilities API provide more powerful features than say {{DOMxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}} or {{DOMxRef("HTMLMediaElement.canPlayType()")}}, which only address general browser support, not performance. The API also provides abilities to access display property information such as supported color {{glossary("gamut")}}, dynamic range abilities, and real-time feedback about the playback.
+The Media Capabilities API provide more powerful features than other APIs such as {{DOMxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}} or {{DOMxRef("HTMLMediaElement.canPlayType()")}}, which only address general browser support, not performance.
 
 To test support, smoothness, and power efficiency for encoding and decoding video or audio content, you use the {{DOMxRef("MediaCapabilities")}} interface's {{DOMxRef("MediaCapabilities.encodingInfo()","encodingInfo()")}} and {{DOMxRef("MediaCapabilities.decodingInfo()","decodingInfo()")}} methods.
-
-Media capabilities information enables websites to enable adaptive streaming to alter the quality of content based on actual user-perceived quality, and react to a pick of CPU/GPU usage in real time.
 
 ## Interfaces
 

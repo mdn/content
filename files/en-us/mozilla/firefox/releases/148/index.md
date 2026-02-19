@@ -37,6 +37,13 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{cssxref("position-area")}} property in [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) now correctly keeps the anchored element within the viewport.
   ([Firefox bug 2008537](https://bugzil.la/2008537)).
 
+- The {{cssxref("overflow")}}, {{cssxref("overflow-x")}}, and {{cssxref("overflow-y")}} CSS properties can now be used on {{glossary("replaced elements")}} such as images, in the same way that they are used with other elements.
+  Prior to this, replaced elements were always clipped to their bounding container.
+  ([Firefox bug 1999100](https://bugzil.la/1999100)).
+
+- The CSS {{cssxref("basic-shape/shape")}} function is now available by default. `shape()` is a {{cssxref("basic-shape")}} data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is similar in some respects to the {{cssxref("basic-shape/path","path()")}} function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, `shape()` uses standard CSS syntax. This allows you to use CSS units and CSS math functions, which makes it easy to create and edit shapes.
+  ([Firefox bug 1982941](https://bugzil.la/1982941)).
+
 <!-- #### Removals -->
 
 ### JavaScript
@@ -45,6 +52,12 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
   These "zip" together multiple input iterators, returning a new iterator that yields the group of input elements at each iteration step.
   They are useful when you need to combine data from multiple input iterators that are positionally aligned (the first value yielded by the first iterator corresponds to the first value yielded by the other iterators, and so on).
   ([Firefox bug 2003333](https://bugzil.la/2003333)).
+
+- The [TC39 Legacy RegExp features in JavaScript](https://github.com/tc39/proposal-regexp-legacy-features) proposal has been implemented.
+  This updates {{jsxref("RegExp.prototype.compile()")}} so that a {{jsxref("TypeError")}} is thrown if it is called on a subclass of {{jsxref("RegExp")}}, or if the method is called on a `RegExp` that was defined in a different realm.
+  `RegExp` static properties, such as `RegExp.$1` – `RegExp.$9` and `RegExp.input` (and its alias `RegExp.$_`), are normalized to be configurable and non-enumerable.
+  In particular this means that they can be deleted from the `RegExp` object.
+  ([Firefox bug 1306461](https://bugzil.la/1306461)).
 
 <!-- No notable changes. -->
 
@@ -71,6 +84,10 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{domxref("MouseEvent.movementX", "movementX")}} and {{domxref("MouseEvent.movementY", "movementY")}} properties on the {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} event are now populated when the pointer is moved — previously these were set to zero.
   ([Firefox bug 1987671](https://bugzil.la/1987671)).
+
+- The {{domxref("NavigationPrecommitController.addHandler()")}} method of the [Navigation API](/en-US/docs/Web/API/Navigation_API) is now supported.
+  This can be used to dynamically register a post-commit navigation handler inside a pre-commit handler, which is useful when the actions of the committed navigation depend on data fetched in the pre-commit phase.
+  ([Firefox bug 2009004](https://bugzil.la/2009004)).
 
 #### DOM
 

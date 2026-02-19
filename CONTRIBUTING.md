@@ -198,7 +198,7 @@ This will make it easier to submit a pull request for your changes.
 1. When the server is running, make the changes you would like to make to one or more `index.md` files.
 
 2. Open a browser and navigate to the equivalent pages you've changed.
-   If you changed `files/en-us/web/javascript/index.md`, you would navigate to `http://localhost:5042/en-us/docs/web/javascript` in your browser, for example.
+   If you changed `files/en-us/web/javascript/index.md`, you would navigate to `http://localhost:5042/en-US/docs/web/javascript` in your browser, for example.
 
 3. Check for detected flaws at the top of the previewed page. Some flaws may be automatically fixable.
 
@@ -340,7 +340,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
    git add .
    git commit -m "Delete Learn/Accessibility pages"
    git push
-   # or git push --set-upstream origin moving-a11y
+   # or git push --set-upstream origin deleting-a11y
    ```
 
 ### Redirecting a document

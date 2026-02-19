@@ -6,11 +6,9 @@ browser-compat: webextensions.api.permissions.remove
 sidebar: addonsidebar
 ---
 
-Ask to give up the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
+Revokes the permissions listed in a {{WebExtAPIRef("permissions.Permissions")}} object.
 
-The `Permissions` argument may contain either an `origins` property, which is an array of [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), or a `permissions` property, which is an array of [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), or both. Permissions must come from the set of permissions defined in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json key.
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Permissions must come from those defined in the extension's [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) key or [`gecko.data_collection_permissions.optional`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#optional) property of the `browser_specific_settings` key of its manifest.json file.
 
 ## Syntax
 
@@ -27,11 +25,11 @@ let removing = browser.permissions.remove(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with `true` if the permissions listed in the `permissions` argument are now not granted to the extension, or `false` otherwise.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with `true` if the browser is no longer granting the permissions listed in the `permissions` argument to the extension, or `false` otherwise.
 
 ## Examples
 
-This code adds a click handler that removes a given permission.
+This code adds a click handler that removes a permission.
 
 ```js
 const permissionToRemove = {
