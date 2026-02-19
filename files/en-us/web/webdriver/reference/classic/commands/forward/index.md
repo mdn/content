@@ -37,49 +37,19 @@ The _Forward_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of
 
 ### Navigating forward in browsing history
 
-This example demonstrates navigating from one page to the next, going back, and then using the `forward` command to return to the second page.
+With a WebDriver server running on `localhost:4444`, assume an active session has navigated to at least two pages and gone back. To navigate forward to the next page, use the `forward` command, replacing `ID` with the `sessionId` from the [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) response:
 
-```python
-from selenium import webdriver
-
-session = webdriver.Firefox()
-
-# Navigate to the first page
-session.get("https://www.selenium.dev/")
-first_url = session.current_url
-print(f"First page: {first_url}")
-
-# Navigate to the second page
-session.get("https://www.selenium.dev/documentation/")
-second_url = session.current_url
-print(f"Second page: {second_url}")
-
-# Navigate back to the first page
-session.back()
-print(f"After back: {session.current_url}")
-
-# Navigate forward to the second page
-session.forward()
-current_url = session.current_url
-print(f"After forward: {current_url}")
-
-# Verify navigation forward to the second page
-if current_url == second_url:
-    print("Forward command works as expected.")
-else:
-    print(f"Expected {second_url}, but got {current_url}")
-
-session.quit()
+```bash
+curl -i -H "Content-Type: application/json" -d '{}' http://localhost:4444/session/ID/forward
 ```
 
-Output:
+The server responds with a null value to indicate success:
 
-```plain
-First page: https://www.selenium.dev/
-Second page: https://www.selenium.dev/documentation/
-After back: https://www.selenium.dev/
-After forward: https://www.selenium.dev/documentation/
-Forward command works as expected.
+```http
+HTTP/1.1 200 OK
+content-type: application/json; charset=utf-8
+
+{"value":null}
 ```
 
 ## Specifications

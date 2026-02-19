@@ -37,37 +37,19 @@ The _Refresh_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of
 
 ### Reloading the current page
 
-This example demonstrates navigating to a page and then using the `refresh` command to reload it.
+With a WebDriver server running on `localhost:4444`, assume an active session has navigated to a page. To reload the current page, use the `refresh` command, replacing `ID` with the `sessionId` from the [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) response:
 
-```python
-from selenium import webdriver
-import time
-
-session = webdriver.Firefox()
-
-# Navigate to a page
-session.get("https://www.selenium.dev/")
-print(f"Initial load: {session.title}")
-
-# Wait before reloading
-time.sleep(1)
-
-# Reload the page
-session.refresh()
-print(f"After reload: {session.title}")
-
-# The page has been reloaded
-print("Page reloaded successfully.")
-
-session.quit()
+```bash
+curl -i -H "Content-Type: application/json" -d '{}' http://localhost:4444/session/ID/refresh
 ```
 
-Output:
+The server responds with a null value to indicate success:
 
-```plain
-Initial load: Selenium
-After reload: Selenium
-Page reloaded successfully.
+```http
+HTTP/1.1 200 OK
+content-type: application/json; charset=utf-8
+
+{"value":null}
 ```
 
 ## Specifications

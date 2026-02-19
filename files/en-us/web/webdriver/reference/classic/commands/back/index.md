@@ -37,43 +37,19 @@ The _Back_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of th
 
 ### Navigating back in browsing history
 
-This example demonstrates navigating from one page to the next and then using the `back` command to return to the first page.
+With a WebDriver server running on `localhost:4444`, assume an active session has navigated to at least two pages. To navigate back to the previous page, use the `back` command, replacing `ID` with the `sessionId` from the [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) response:
 
-```python
-from selenium import webdriver
-
-session = webdriver.Firefox()
-
-# Navigate to the first page
-session.get("https://www.selenium.dev/")
-first_url = session.current_url
-print(f"First page: {first_url}")
-
-# Navigate to the second page
-session.get("https://www.selenium.dev/documentation/")
-second_url = session.current_url
-print(f"Second page: {second_url}")
-
-# Navigate back to the first page
-session.back()
-current_url = session.current_url
-print(f"After back: {current_url}")
-
-# Verify navigation back to the first page
-if current_url == first_url:
-    print("Back command works as expected.")
-else:
-    print(f"Expected {first_url}, but got {current_url}")
-session.quit()
+```bash
+curl -i -H "Content-Type: application/json" -d '{}' http://localhost:4444/session/ID/back
 ```
 
-Output:
+The server responds with a null value to indicate success:
 
-```plain
-First page: https://www.selenium.dev/
-Second page: https://www.selenium.dev/documentation/
-After back: https://www.selenium.dev/
-Back command works as expected.
+```http
+HTTP/1.1 200 OK
+content-type: application/json; charset=utf-8
+
+{"value":null}
 ```
 
 ## Specifications
