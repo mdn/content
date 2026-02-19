@@ -83,7 +83,7 @@ The `random(<calc-sum>, <calc-sum>)` function call specifies a minimum value and
 The random base value is an underlying deterministic number that generates the final random result similar to a seed given to a randomization algorithm. When the same random base value is used for different `random()` functions, the results will vary in a coordinated way. Different random base values will create independently random results.
 
 ### Random Value Sharing
-You can optionally provide a `<random-value-sharing>` value as the first parameter which controls how the random base value is shared. Sharing is useful for being able to reuse the same randomly generated value which can be necessary for some design effects. The optional first parameter can use `auto`, an `element-shared` keyword, a custom `<dashed-ident>` or `fixed <number>`.
+You can optionally provide a `<random-value-sharing>` value as the first parameter which controls how the random base value is shared. Sharing is useful for being able to reuse the same randomly generated value which can be necessary for some design effects. The optional first parameter can use `auto`, an `element-shared` keyword, a custom {{cssxref("dashed-ident")}} or `fixed <number>`.
 
 Use the `element-shared` keyword as the first parameter to share the random base value across all elements that use `random()` with the keyword. When you specify a `<dashed-ident>` (e.g. `--custom-name`), each element gets its own random base value. Within that element, all properties that reference the same ident will share that base value. Combining a `<dashed-ident>` with `element-shared` (e.g. `random(--custom-name element-shared, 0, 100)`) shares the random base value across elements and properties that use the same `<random-value-sharing>` parameter.
 
@@ -114,7 +114,7 @@ When using `random()` with custom properties it is important to be aware that cu
 --random-size: random(1px, 100px);
 ```
 
-In the above example, the `--random-size` custom property does not "store" the randomly generated result. When `var(--random-size)` is parsed it is effectively replaced with `random(1px, 100px)`, meaning each use creates a new `random()` call. Each call will may have its own base value depending on the context in which its used. 
+In the above example, the `--random-size` custom property does not "store" the randomly generated result. When `var(--random-size)` is parsed it is effectively replaced with `random(1px, 100px)`, meaning each use creates a new `random()` call with its own base value depending on the context in which its used. 
 
 Use `element-shared`, or a {{cssxref("dashed-ident")}}, or both in `random()` calls assigned to a custom property to share random base values if that is the intent, or use a registered custom property. Registered custom properties using {{cssxref("@property")}} will compute the random value and store it. 
 
