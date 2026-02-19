@@ -265,6 +265,23 @@ img {
 }
 ```
 
+```css hidden live-sample___scrollable live-sample___scrolled live-sample___snapped live-sample___stuck
+@supports not (container-type: scroll-state) {
+  body::before {
+    content: "Your browser does not support the `scroll-state` value of the 'container-type' property.";
+    color: black;
+    background-color: wheat;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 1;
+  }
+}
+```
+
 ```css live-sample___scrollable
 .back-to-top {
   width: 64px;
