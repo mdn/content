@@ -111,7 +111,7 @@ The SVG is repeated three times; we've only shown one copy for the sake of brevi
 
 We make the text in all three SVG images large and cursive, adding some color to differentiate the content within the `<tspan>` elements.
 
-We set the `baseline-shift` property value to `sub` on the second SVG's `<tspan>` element and  `super` on the third SVG's `<tspan>` element. The first SVG has no additional CSS applied to it.
+We set the `baseline-shift` property value to `sub` on the second SVG's `<tspan>` element and `super` on the third SVG's `<tspan>` element. The first SVG has no additional CSS applied to it.
 
 ```css
 text {
@@ -168,4 +168,4 @@ The SVG `baseline-shift` attribute values are used in the first SVG. In the seco
 ## See also
 
 - SVG {{SVGAttr("baseline-shift")}} attribute
-- Presentation properties: `baseline-shift`, {{cssxref("clip-rule")}}, {{cssxref("color-interpolation-filters")}}, {{cssxref("fill-opacity")}}, {{cssxref("fill-rule")}},{{cssxref("fill")}}, {{cssxref("marker-end")}}, {{cssxref("marker-mid")}}, {{cssxref("marker-start")}}, {{cssxref("shape-rendering")}}, {{cssxref("stop-color")}}, {{cssxref("stop-opacity")}}, {{cssxref("stroke")}}, {{cssxref("stroke-dasharray")}}, {{cssxref("stroke-dashoffset")}}, {{cssxref("stroke-linecap")}}, {{cssxref("stroke-linejoin")}}, {{cssxref("stroke-miterlimit")}}, {{cssxref("stroke-opacity")}}, {{cssxref("stroke-width")}}, {{cssxref("text-anchor")}}, and {{cssxref("vector-effect")}}
+- Presentation properties: `baseline-shift`, {{cssxref("clip-rule")}}, {{cssxref("color-interpolation-filters")}}, {{cssxref("fill-opacity")}}, {{cssxref("fill-rule")}}, {{cssxref("fill")}}, {{cssxref("marker-end")}}, {{cssxref("marker-mid")}}, {{cssxref("marker-start")}}, {{cssxref("shape-rendering")}}, {{cssxref("stop-color")}}, {{cssxref("stop-opacity")}}, {{cssxref("stroke")}}, {{cssxref("stroke-dasharray")}}, {{cssxref("stroke-dashoffset")}}, {{cssxref("stroke-linecap")}}, {{cssxref("stroke-linejoin")}}, {{cssxref("stroke-miterlimit")}}, {{cssxref("stroke-opacity")}}, {{cssxref("stroke-width")}}, {{cssxref("text-anchor")}}, and {{cssxref("vector-effect")}}

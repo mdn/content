@@ -8,7 +8,7 @@ browser-compat: api.CSSFontFeatureValuesRule.characterVariant
 
 {{ APIRef("CSSOM") }}
 
-The read-only **characterVariant** property of the {{domXRef("CSSFontFeatureValuesRule")}} interface contains a {{domXRef("CSSFontFeatureValuesMap")}} object representing the [user-defined-ident](/en-US/docs/Web/CSS/Reference/Values/custom-ident) and [feature index](/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings#optional_value) for a variable font which supports {{CSSXRef("font-variant-alternates", "characterVariant()", "#characterVariant")}}.
+The read-only **characterVariant** property of the {{domXRef("CSSFontFeatureValuesRule")}} interface contains a {{domXRef("CSSFontFeatureValuesMap")}} object representing the [user-defined-ident](/en-US/docs/Web/CSS/Reference/Values/custom-ident) and [feature index](/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings#optional_value) for a variable font which supports {{CSSXRef("font-variant-alternates", "character-variant()", "#character-variant")}}.
 
 ## Value
 
@@ -24,8 +24,8 @@ Although the `characterVariant` property itself is read-only in the sense that y
 
 ```css
 @font-feature-values "MonteCarlo" {
-  @charactervariant {
-    my-charactervariant: 1;
+  @character-variant {
+    my-character-variant: 1;
   }
 }
 ```
