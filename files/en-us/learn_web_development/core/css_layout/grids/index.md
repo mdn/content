@@ -878,7 +878,7 @@ In the next article, we'll give you some tests that you can use to check how wel
 
 - [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout)
   - : The main CSS grid layout module page, containing lots of further resources.
-- [CSS grid layout guide](https://css-tricks.com/css-grid-layout-guide/)
+- [CSS grid layout guide](https://css-tricks.com/complete-guide-css-grid-layout/)
   - : A visual guide on CSS-Tricks (2021).
 - [Grid Garden](https://cssgridgarden.com/)
   - : An educational game to learn and better understand the basics of grid on cssgridgarden.com.

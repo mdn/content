@@ -32,7 +32,7 @@ Developers cannot use the `HTMLGeolocationElement()` constructor directly to cre
 
 #### Creating a new `HTMLGeolocationElement` instance programmatically
 
-To programmatically create a new `HTMLGeolocationElement` instance, instead of trying to use the contructor directly, you would create a new {{htmlelement("geolocation")}} element instance using {{domxref("Document.createElement()")}}:
+To programmatically create a new `HTMLGeolocationElement` instance, instead of trying to use the constructor directly, you would create a new {{htmlelement("geolocation")}} element instance using {{domxref("Document.createElement()")}}:
 
 ```js
 const geo = document.createElement("geolocation");

@@ -11,12 +11,12 @@ The **`CSSFontFeatureValuesMap`** interface of the [CSS Object Model (CSSOM)](/e
 
 An `CSSFontFeatureValuesMap` instance is a read-only [Map-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis), in which each key is the user-defined name used to reference a font feature, and the corresponding value is the index for the font feature within the font.
 
-## Instance property
+## Instance properties
 
 - {{domxref('CSSFontFeatureValuesMap.size')}}
   - : Returns a positive integer containing the size of the `CSSFontFeatureValuesMap` object.
 
-## Instance Method
+## Instance methods
 
 - {{domxref('CSSFontFeatureValuesMap.clear()')}}
   - : Removes all declarations in the `CSSFontFeatureValuesMap`.
@@ -51,7 +51,7 @@ First we declare a {{cssxref("@font-feature-values")}} for the _Font One_ font f
 This includes the declaration of the names "nice-style" and "odd-style" that can be used to represent the `styleset` alternate glyphs for _Font One_ and specify the index values for those alternates.
 It also includes the declaration of the name "swishy" that can be used to represent the `swash` alternate glyphs for _Font One_ and specify the index for that alternate.
 
-The "nice-style" alternate glpyhs are then applied for any `.nice-look` class, using {{CSSXRef("font-variant-alternates")}} property and passing the name to the [`styleset()`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates#styleset) function.
+The "nice-style" alternate glyphs are then applied for any `.nice-look` class, using {{CSSXRef("font-variant-alternates")}} property and passing the name to the [`styleset()`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates#styleset) function.
 The same is done for the name "swishy" for the `swash` alternate glyphs, which is then passed to the [`swash()`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates#swash) function.
 The "odd-style" glyphs are not used (they are just added to demonstrate that multiple values may be defined in the map.)
 
