@@ -36,9 +36,9 @@ The `scroll-initial-target` property enables defining elements that should be sn
 
 If multiple elements or pseudo-elements in the scroll container are set to `nearest`, the first element in the tree order is the initial scroll-snapping target.
 
-The initial value is `none`, meaning a scroll-snappable element is not by default an initial scroll target. The `none` value can also be set on an element to explicitly make it not be an initial scroll target. When a scroll snap container contains no descendant scroll snap elements set to be the scroll container's initial scroll target,
+The initial value is `none`, meaning a scroll-snappable element is not by default an initial scroll target. The `none` value can also be set on an element to explicitly make it not be an initial scroll target.
 
-If a scroll container's initial scroll position is potentially set by both the {{cssxref("place-content")}} content-distribution property and by `scroll-initial-target` on any descendants, the first descendant with `scroll-initial-target: nearest` wins.
+If a scroll container's initial scroll position is potentially set by both the {{cssxref("place-content")}} content-distribution property and by `scroll-initial-target` on any descendants — the first descendant with `scroll-initial-target: nearest` wins.
 
 ## Formal definition
 
@@ -189,7 +189,8 @@ p {
 
 {{EmbedLiveSample("Using scroll-initial-target", "100%", "500")}}
 
-The property's effect is demonstrated when the scroll-snap container is drawn to the page. When this example is loaded, the initially targeted elements are 1, 4, 2, 1, 3.
+The property's effect is demonstrated when the scroll-snap container is drawn to the page.
+Each row snaps to the first element with `nearest` set, in tree order.
 
 ## Specifications
 
