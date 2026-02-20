@@ -8,6 +8,7 @@ sidebar: webdriver
 ---
 
 The _New Session_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API creates a new WebDriver session with the browser.
+The session identifier returned in the response is required for all subsequent commands.
 
 ## Syntax
 
