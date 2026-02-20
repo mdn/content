@@ -7,7 +7,7 @@ sidebar: cssref
 ---
 
 > [!NOTE]
-> The `font-width` property is the modern replacement for {{cssxref("font-stretch")}}, which is a legacy alias. While `font-width` is the specification's preferred name, `font-stretch` currently has broader browser support. Check the [browser compatibility](#browser_compatibility) table for details.
+> The `font-width` property is the modern replacement for {{cssxref("font-stretch")}}, which is a legacy alias. While `font-width` is the specification's preferred name, `font-stretch` currently has broader browser support. Check the [fallback example](#providing_a_font-stretch_fallback) and [browser compatibility](#browser_compatibility) table for details.
 
 The **`font-width`** [CSS](/en-US/docs/Web/CSS) property selects a normal, condensed, or expanded face from a font.
 
@@ -306,6 +306,17 @@ p {
 ```
 
 {{EmbedLiveSample("Setting font width percentages", "100%", 200)}}
+
+### Providing a font-stretch fallback
+
+Because `font-width` does not yet have broad browser support, you may want to include the legacy {{cssxref("font-stretch")}} property as a fallback. Place `font-stretch` before `font-width` so that supporting browsers use the modern property:
+
+```css
+p {
+  font-stretch: condensed; /* for browsers that don't support font-width */
+  font-width: condensed;
+}
+```
 
 ## Specifications
 

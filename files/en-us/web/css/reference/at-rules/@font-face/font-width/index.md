@@ -7,7 +7,7 @@ sidebar: cssref
 ---
 
 > [!NOTE]
-> The `font-width` descriptor is the modern replacement for the {{cssxref("@font-face/font-stretch")}} descriptor, which is a legacy alias. While `font-width` is the specification's preferred name, `font-stretch` currently has broader browser support. Check the [browser compatibility](#browser_compatibility) table for details.
+> The `font-width` descriptor is the modern replacement for the {{cssxref("@font-face/font-stretch")}} descriptor, which is a legacy alias. While `font-width` is the specification's preferred name, `font-stretch` currently has broader browser support. Check the [fallback example](#providing_a_font-stretch_fallback) and [browser compatibility](#browser_compatibility) table for details.
 
 The **`font-width`** [CSS](/en-US/docs/Web/CSS) descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} at-rule.
 
@@ -169,6 +169,19 @@ p:nth-child(3) {
 ```
 
 {{EmbedLiveSample("Setting font width percentages", "100%", 200)}}
+
+### Providing a font-stretch fallback
+
+Because `font-width` does not yet have broad browser support, you may want to include the legacy {{cssxref("@font-face/font-stretch")}} descriptor as a fallback. Place `font-stretch` before `font-width` so that supporting browsers use the modern descriptor:
+
+```css
+@font-face {
+  font-family: "MyFont";
+  src: url("myfont.woff2") format("woff2");
+  font-stretch: condensed; /* for browsers that don't support font-width */
+  font-width: condensed;
+}
+```
 
 ## Specifications
 
