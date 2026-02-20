@@ -6,7 +6,7 @@ browser-compat: css.properties.scroll-initial-target
 sidebar: cssref
 ---
 
-The **`scroll-initial-target`** [CSS](/en-US/docs/Web/CSS) property enables defining elements that should be snapped when scroll containers are first rendered.
+The **`scroll-initial-target`** [CSS](/en-US/docs/Web/CSS) property enables the definition of elements that are potential snap targets when their ancestor {{glossary("scroll container")}} is first rendered.
 
 ## Syntax
 
@@ -32,7 +32,7 @@ scroll-initial-target: unset;
 
 ## Description
 
-The `scroll-initial-target` property enables defining elements that should be snapped when scroll snap containers are first rendered. Setting the value to `nearest` defines the element as a potential target that should be snapped when the nearest ancestor {{glossary("scroll container")}} what that container first shows up on the page.
+The `scroll-initial-target` property enables defining elements that should be snapped when {{glossary("scroll snap")}} containers are first rendered. Setting the value to `nearest` defines the element as a potential target that should be snapped when the nearest ancestor {{glossary("scroll container")}} what that container first shows up on the page.
 
 If multiple elements or pseudo-elements in the scroll container are set to `nearest`, the first element in the tree order is the initial scroll-snapping target.
 
