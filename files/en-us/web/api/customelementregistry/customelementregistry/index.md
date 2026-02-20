@@ -10,7 +10,10 @@ browser-compat: api.CustomElementRegistry.CustomElementRegistry
 
 The **`CustomElementRegistry()`** constructor creates a new {{domxref("CustomElementRegistry")}} object for scoped usage.
 
-The global `CustomElementRegistry` object associated with a {{domxref("Window")}} is not created using this constructor; it is automatically created when the window is set up, and is accessible via the {{domxref("window.customElements")}} property. The `CustomElementRegistry()` constructor is specifically for creating scoped registries that limit [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) definitions to a particular scope.
+The constructor is specifically used for creating scoped registries that limit [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) definitions to a particular scope, such as an element or {{domxref("ShadowRoot")}}.
+
+> [!NOTE]
+> The global `CustomElementRegistry` object associated with a {{domxref("Window")}} is not created using this constructor; it is automatically created when the window is set up, and is accessible via the {{domxref("window.customElements")}} property.
 
 ## Syntax
 

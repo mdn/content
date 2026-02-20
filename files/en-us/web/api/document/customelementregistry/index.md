@@ -12,7 +12,7 @@ The **`customElementRegistry`** read-only property of the {{domxref("Document")}
 
 For documents associated with a {{domxref("Window")}} (such as the main document of a page), this is the global `CustomElementRegistry` that is also accessible through the {{domxref("window.customElements")}} property. Documents created programmatically (for example, via {{domxref("DOMImplementation.createHTMLDocument()")}}) have a `null` custom element registry by default.
 
-This property is also available on {{domxref("ShadowRoot")}} objects via the same `customElementRegistry` property name.
+This property is also available on {{domxref("ShadowRoot")}} objects via the same {{domxref("ShadowRoot/customElementRegistry","customElementRegistry")}} property name.
 
 ## Value
 

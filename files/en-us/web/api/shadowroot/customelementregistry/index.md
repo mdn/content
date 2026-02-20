@@ -12,7 +12,7 @@ The **`customElementRegistry`** read-only property of the {{domxref("ShadowRoot"
 
 A shadow root's `customElementRegistry` determines which [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) definitions are used for upgrading elements within that shadow tree. It can be set when the shadow root is created via the `customElementRegistry` option of {{domxref("Element.attachShadow()")}}, or later using {{domxref("CustomElementRegistry.initialize()")}}. Once set to a `CustomElementRegistry` object, it cannot be changed.
 
-This property is also available on {{domxref("Document")}} objects via the same `customElementRegistry` property name.
+This property is also available on {{domxref("Document")}} objects via the same {{domxref("Document/customElementRegistry","customElementRegistry")}} property name.
 
 ## Value
 
