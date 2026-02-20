@@ -190,7 +190,8 @@ p {
 {{EmbedLiveSample("Using scroll-initial-target", "100%", "500")}}
 
 The property's effect is demonstrated when the scroll-snap container is drawn to the page.
-Each row snaps to the first element with `nearest` set, in tree order.
+
+Each row snaps to the first element with `nearest` set, if any, in tree order. In the last example, we've overridden the `nearest` value with `none` on the first element, so the first element with `nearest` applied is #3.
 
 ## Specifications
 
