@@ -19,9 +19,9 @@ The **`random()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Ref
 ```css interactive-example
 .box {
   rotate: random(element-shared, 0deg, 360deg);
-  width: random(element-shared, 100px, 500px);
-  background: hsl(random(element-shared, 0, 360), 50%, 50%);
-  height: random(element-shared, 100px, 500px);
+  width: random(element-shared, 50px, 300px);
+  background-color: hsl(random(element-shared, 0, 360) 50% 50%);
+  height: random(element-shared, 50px, 300px);
 }
 ```
 
