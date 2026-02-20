@@ -18,6 +18,6 @@ Most PRNGs are not cryptographically secure.
 
 ## See also
 
-- [Pseudorandom number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) on Wikipedia
 - JavaScript's {{jsxref("Math.random()")}} and CSS's {{cssxref("random()")}} built-in PRNG functions. Note that these are not a cryptographically secure PRNG.
 - {{domxref("Crypto.getRandomValues()")}}: this is intended to provide cryptographically secure numbers.
+- [Pseudorandom number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) on Wikipedia
