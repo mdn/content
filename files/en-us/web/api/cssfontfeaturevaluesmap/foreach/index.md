@@ -3,10 +3,12 @@ title: "CSSFontFeatureValuesMap: forEach() method"
 short-title: forEach()
 slug: Web/API/CSSFontFeatureValuesMap/forEach
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CSSFontFeatureValuesMap.forEach
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`forEach()`** method of {{domxref("CSSFontFeatureValuesMap")}} instances executes a provided function once per each key/value pair in this map, in insertion order.
 

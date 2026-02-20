@@ -3,10 +3,12 @@ title: "CSSFontFeatureValuesMap: has() method"
 short-title: has()
 slug: Web/API/CSSFontFeatureValuesMap/has
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CSSFontFeatureValuesMap.has
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`has()`** method of the {{domxref("CSSFontFeatureValuesMap")}} interface returns a boolean indicating whether an entry with the specified key exists in this `CSSFontFeatureValuesMap` or not.
 
