@@ -98,7 +98,7 @@ Each individual animation is specified as:
 - an optional name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}
 
 > [!NOTE]
-> {{cssxref("animation-timeline")}}, {{cssxref("animation-range-start")}}, and {{cssxref("animation-range-end")}} are not currently included in this list, as current implementations are reset-only. This means that including `animation` resets a previously-declared `animation-timeline` value to `auto` and previously-declared `animation-range-start` and `animation-range-end` values to `normal`, but these properties cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare these properties after declaring any `animation` shorthand for it to take effect.
+> {{cssxref("animation-timeline")}}, {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} and {{cssxref("animation-trigger")}} are not currently included in this list, as current implementations are reset-only. This means that including `animation` resets a previously-declared `animation-timeline` value to `auto`, previously-declared `animation-range-start` and `animation-range-end` values to `normal`, and a previously-declared `animation-trigger` to `none`, but these properties cannot be set via `animation`. When creating CSS [scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) or [scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations), you need to declare these properties after declaring any `animation` shorthand for them to take effect.
 
 ### Values
 
