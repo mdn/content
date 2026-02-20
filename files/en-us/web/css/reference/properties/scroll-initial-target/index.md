@@ -32,7 +32,7 @@ scroll-initial-target: unset;
 
 ## Description
 
-The `scroll-initial-target` property enables defining elements that should be snapped when {{glossary("scroll snap")}} containers are first rendered. Setting the value to `nearest` defines the element as a potential target that should be snapped when the nearest ancestor {{glossary("scroll container")}} what that container first shows up on the page.
+The `scroll-initial-target` property enables defining elements that should be snapped when their parent {{glossary("scroll snap")}} containers are first rendered. Setting the value to `nearest` defines the element as a potential target that should be snapped to when the nearest ancestor {{glossary("scroll container")}} first shows up on the page.
 
 If multiple elements or pseudo-elements in the scroll container are set to `nearest`, the first element in the tree order is the initial scroll-snapping target.
 
