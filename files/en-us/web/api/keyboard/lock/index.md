@@ -61,10 +61,10 @@ navigator.keyboard.lock();
 
 ### Capturing specific keys
 
-The following example captures the "W", "A", "S", and "D" keys. It captures these keys
+The following example captures the <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, and <kbd>D</kbd> keys. It captures these keys
 regardless of which modifiers are used with the key press. Assuming a standard US QWERTY
-layout, registering `"KeyW"` ensures that "W", Shift+"W", Control+"W",
-Control+Shift+"W", and all other key modifier combinations with "W" are sent to the app.
+layout, registering `"KeyW"` ensures that <kbd>W</kbd>, <kbd>Shift+W</kbd>, <kbd>Control+W</kbd>,
+<kbd>Control+Shift+W</kbd>, and all other key modifier combinations with <kbd>W</kbd> are sent to the app.
 The same applies to for `"KeyA"`, `"KeyS"` and
 `"KeyD"`.
 
