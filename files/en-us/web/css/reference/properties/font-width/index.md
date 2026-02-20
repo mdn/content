@@ -6,6 +6,9 @@ browser-compat: css.properties.font-width
 sidebar: cssref
 ---
 
+> [!NOTE]
+> The `font-width` property is the modern replacement for {{cssxref("font-stretch")}}, which is a legacy alias. While `font-width` is the specification's preferred name, `font-stretch` currently has broader browser support. Check the [browser compatibility](#browser_compatibility) table for details.
+
 The **`font-width`** [CSS](/en-US/docs/Web/CSS) property selects a normal, condensed, or expanded face from a font.
 
 {{InteractiveExample("CSS Demo: font-width")}}
@@ -251,7 +254,7 @@ td:nth-child(10) {
 
 {{EmbedLiveSample('Font face selection', "100%", "250px")}}
 
-A browser rendering of the above example in case your browser doesn't support `font-width` property:
+The following screenshot shows how the above table is rendered, in case your browser doesn't support the `font-width` property:
 
 ![A two-row comparison table showing the lowercase letter e rendered at different widths (50%, 62.5%, 75%, 87.5%, 100%, 112.5%, 125%, 150%, 200%). The top row is labeled Inconsolata and the bottom row Anek Malayalam. Both fonts are sans-serif and Inconsolata's letters are slightly wider compared to Anek Malayalam's.](font-face-selection.png)
 

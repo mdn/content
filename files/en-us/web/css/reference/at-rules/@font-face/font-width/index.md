@@ -6,6 +6,9 @@ browser-compat: css.at-rules.font-face.font-width
 sidebar: cssref
 ---
 
+> [!NOTE]
+> The `font-width` descriptor is the modern replacement for the {{cssxref("@font-face/font-stretch")}} descriptor, which is a legacy alias. While `font-width` is the specification's preferred name, `font-stretch` currently has broader browser support. Check the [browser compatibility](#browser_compatibility) table for details.
+
 The **`font-width`** [CSS](/en-US/docs/Web/CSS) descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} at-rule.
 
 For a particular font family, authors can download various font faces which correspond to the different styles of the same font family, and then use the `font-width` descriptor to explicitly specify the font face's width. The available `font-width` descriptor values are the same as those of the corresponding {{cssxref("font-width")}} property.
@@ -27,7 +30,7 @@ font-width: 50%;
 font-width: 100%;
 font-width: 200%;
 
-/* multiple values */
+/* Multiple values */
 font-width: 75% 125%;
 font-width: condensed ultra-condensed;
 ```

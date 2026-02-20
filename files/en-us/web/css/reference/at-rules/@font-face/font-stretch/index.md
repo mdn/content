@@ -30,7 +30,7 @@ font-stretch: 50%;
 font-stretch: 100%;
 font-stretch: 200%;
 
-/* multiple values */
+/* Multiple values */
 font-stretch: 75% 125%;
 font-stretch: condensed ultra-condensed;
 ```
