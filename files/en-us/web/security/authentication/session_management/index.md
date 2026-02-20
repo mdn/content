@@ -35,7 +35,7 @@ The defense against this is to serve the site over [TLS](/en-US/docs/Web/Securit
 
 If an attacker can predict, guess, or brute-force the value of the session ID that's assigned to a legitimate user, then they can use that ID to impersonate them, without having to steal the user's copy.
 
-The defense against this is to [ensure that session ID values are long enough and random enough to be unpredictable](#session_id_recommendations).
+The defense against this is to [ensure that session ID values are long enough and random enough to be unpredictable](#session_id_values).
 
 #### Attacking the client
 
@@ -67,7 +67,7 @@ The key defense against session fixation, though, is that the server must always
 
 The session ID should:
 
-- Contain enough entropy to protect against [guessing or prediction attacks](predicting_the_session_id). The [OWASP guide to session management](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#session-id-properties) recommends at least 64 bits of entropy.
+- Contain enough entropy to protect against [guessing or prediction attacks](#predicting_the_session_id). The [OWASP guide to session management](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#session-id-properties) recommends at least 64 bits of entropy.
 
 - Be meaningless except as a key for the server: that is, it should not contain any information about the user or their account.
 
@@ -95,7 +95,7 @@ If the [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) attr
 
 ### Controlling cookie destinations
 
-The [`Domain`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#domain) and [`Path`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#path) attributes control the URLs to which the cookie will be sent, and should be set to the most restrictive values possible, given the needs of your site.
+The [`Domain`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#domaindomain-value) and [`Path`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#pathpath-value) attributes control the URLs to which the cookie will be sent, and should be set to the most restrictive values possible, given the needs of your site.
 
 By default, the cookie will only be sent to the same host that set it. For example, a cookie set from `https://login.example.org` will not be included in requests to `https://products.example.org` or even `https://example.org`. If you need to relax this, you can do so using the `Domain` attribute, but you can't allow the cookie to be included in requests to a completely different {{glossary("Site")}}. For example, if the cookie is set from `https://example.org`, you can't arrange for it to be sent to `https://example.com`.
 
@@ -103,7 +103,7 @@ By default, the cookie will only be sent to the same host that set it. For examp
 
 If a website uses cookies to transmit session identifiers, it must implement protection against [cross-site request forgery (CSRF)](/en-US/docs/Web/Security/Attacks/CSRF) attacks. The risk here is that the browser may include cookies in a request from the attacker's site to the target website, and if these cookies include a valid session ID, then the server will treat the request as if it came from a legitimate user, and carry out the attacker's request.
 
-Our CSRF guide describes [recommended defenses](/en-US/docs/Web/Security/Attacks/CSRF#defenses_against_csrf) here: note that setting the [`SameSite`](#samesite) cookie attribute is only part of a complete defense.
+Our CSRF guide describes [recommended defenses](/en-US/docs/Web/Security/Attacks/CSRF#defenses_against_csrf) here: note that setting the [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) cookie attribute is only part of a complete defense.
 
 ## Session lifetime
 
@@ -213,7 +213,7 @@ Rather than implement all the details of session management yourself, we recomme
 
 ## Session management checklist
 
-We can summarise the recommendations above as follows:
+We can summarize the recommendations above as follows:
 
 - Choose a centralized model for session management, if your app's architecture allows it.
 - Prefer to store your session ID in a cookie. If you do:
