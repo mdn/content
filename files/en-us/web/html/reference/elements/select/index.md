@@ -85,7 +85,7 @@ On a desktop computer, there are a number of ways to select multiple options in 
 Mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd> keys (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.
 
 > [!WARNING]
-> The mechanism for selecting multiple non-contiguous items via the keyboard described below currently only seems to work in Firefox.
+> Support for selecting multiple non-contiguous items via the keyboard may vary depending on browser version and operating system configuration. Developers should verify behavior across their target environments.
 >
 > On macOS, the <kbd>Ctrl</kbd> + <kbd>Up</kbd> and <kbd>Ctrl</kbd> + <kbd>Down</kbd> shortcuts conflict with the OS default shortcuts for _Mission Control_ and _Application windows_, so you'll have to turn these off before it will work.
 
