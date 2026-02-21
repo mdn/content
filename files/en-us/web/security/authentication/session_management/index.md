@@ -9,7 +9,13 @@ HTTP is commonly called a _stateless_ protocol, meaning that it provides no buil
 
 When a website has the ability to authenticate users, so as to grant individuals access to specific data or actions, it typically wants to treat an authenticated user's identity as state that persists across multiple requests from the client. Unlike a choice of theme, though, an authenticated user's identity on the site represents state that is especially valuable to an attacker, so a site author has to be very careful when implementing a session management solution for authenticated users.
 
-In this guide we'll first describe the most common architecture for session management, in which the user's session state is kept in the server:
+In this guide we'll first describe the most common model for session management, in which the user's session state is stored in the server. We call this [centralized session management](#centralized_session_management). We'll outline this model and then describe potential attacks and implementation considerations.
+
+In an alternative model, which is useful in certain web application architectures, the client stores the session state as an object that's been {{glossary("digital signature", "digitally signed")}} by the server. We call this [decentralized session management](#decentralized_session_management). We'll outline this model, compare it to the more common approach, and discuss when to use which.
+
+## Centralized session management
+
+In a centralized session management, the user's session state is kept in the server:
 
 - When the user is authenticated, the server records their state and generates a _session ID_, which it associates with this state. The server returns a copy of the session ID to the client. The client stores the session ID.
 
