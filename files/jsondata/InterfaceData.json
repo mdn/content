@@ -1352,10 +1352,6 @@
       "inh": "",
       "impl": []
     },
-    "GeolocationSensor": {
-      "inh": "Sensor",
-      "impl": []
-    },
     "Global": {
       "inh": "",
       "impl": []
@@ -2333,6 +2329,14 @@
       "impl": []
     },
     "MLTensor": {
+      "inh": "",
+      "impl": []
+    },
+    "ModelContext": {
+      "inh": "",
+      "impl": []
+    },
+    "ModelContextClient": {
       "inh": "",
       "impl": []
     },
