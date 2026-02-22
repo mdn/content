@@ -28,8 +28,8 @@ let gettingIsEnabled = browser.action.isEnabled(
     - `windowId` {{optional_inline}}
       - : `integer`. ID of a window to check.
 
- or
- 
+or
+
 - `tabId` {{optional_inline}}
   - : `integer`. ID of a tab to check.
 
