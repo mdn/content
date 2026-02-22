@@ -25,13 +25,13 @@ let setting = browser.cookies.set(
     - `domain` {{optional_inline}}
       - : A `string` representing the domain of the cookie. If omitted, the cookie becomes a host-only cookie.
     - `expirationDate` {{optional_inline}}
-      - : A `number` that represents the expiration date of the cookie as the seconds after the UNIX epoch.It can include milliseconds in the fractional part.If omitted, the cookie becomes a session cookie.
+      - : A `number` that represents the expiration date of the cookie as the seconds after the UNIX epoch. It can include milliseconds in the fractional part. If omitted, the cookie becomes a session cookie.
     - `firstPartyDomain` {{optional_inline}}
       - : A `string` representing the first-party domain with which the cookie is associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
     - `httpOnly` {{optional_inline}}
       - : A `boolean` that specifies whether the cookie is marked as HttpOnly (`true`), or not (`false`). If omitted, it defaults to `false`.
     - `name` {{optional_inline}}
-      - : A `string` representing the name of the cookie.If omitted, the name defaults to an empty string (`""`).
+      - : A `string` representing the name of the cookie. If omitted, the name defaults to an empty string (`""`).
     - `partitionKey` {{optional_inline}}
       - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) to set the cookie in. Include this object to set a cookie in partitioned storage. This object contains:
         - `topLevelSite` {{optional_inline}}
