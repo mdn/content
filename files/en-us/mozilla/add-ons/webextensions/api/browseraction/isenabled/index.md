@@ -12,7 +12,6 @@ Returns `true` if the browser action is enabled. Returns the global status if th
 
 ```js-nolint
 let gettingIsEnabled = browser.browserAction.isEnabled(
-  details,    // optional object
   details // optional object, or tabId integer
 )
 ```
