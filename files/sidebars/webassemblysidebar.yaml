@@ -134,6 +134,14 @@ sidebar:
         link: /WebAssembly/Reference/Numeric
         title: Numeric
         details: closed
+      - title: SIMD
+        details: closed
+        children:
+          - type: listSubPages
+            path: /WebAssembly/Reference/SIMD/extract
+            link: /WebAssembly/Reference/SIMD/extract
+            title: extract instructions
+            details: closed
       - type: listSubPages
         path: /WebAssembly/Reference/Table
         link: /WebAssembly/Reference/Table
