@@ -13,7 +13,7 @@ Returns `true` if the browser action is enabled. Returns the global status if th
 ```js-nolint
 let gettingIsEnabled = browser.browserAction.isEnabled(
   details,    // optional object
-  tabId       // optional integer
+  details // optional object, or tabId integer
 )
 ```
 
@@ -25,8 +25,13 @@ let gettingIsEnabled = browser.browserAction.isEnabled(
       - : `integer`. ID of a tab to check.
     - `windowId` {{optional_inline}}
       - : `integer`. ID of a window to check.
+
+or
+
 - `tabId` {{optional_inline}}
   - : `integer`. ID of a tab to check.
+
+If `details` and `tabId` are supplied, the function fails.
 
 ### Return value
 
