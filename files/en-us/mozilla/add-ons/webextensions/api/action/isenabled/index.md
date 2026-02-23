@@ -6,7 +6,7 @@ browser-compat: webextensions.api.action.isEnabled
 sidebar: addonsidebar
 ---
 
-Returns `true` if the browser action is enabled. Returns the global status if the parameters are omitted or all are empty.
+Returns `true` if the browser action is enabled. Returns the global status if the `details` parameter is omitted or empty, or all its properties are empty.
 
 > [!NOTE]
 > This API is available in Manifest V3 or higher.
@@ -15,28 +15,23 @@ Returns `true` if the browser action is enabled. Returns the global status if th
 
 ```js-nolint
 let gettingIsEnabled = browser.action.isEnabled(
-  details // optional object, or tabId integer
+  details // optional object or integer
 )
 ```
 
 ### Parameters
 
 - `details` {{optional_inline}}
-  - : `object`. An object optionally containing the `tabId` or `windowId` to check. If `windowId` and `tabId` are supplied, the function fails.
+  - : `integer` or `object`. An an `integer` it defines the ID of a tab to check. As an `object` it contains:
     - `tabId` {{optional_inline}}
       - : `integer`. ID of a tab to check.
     - `windowId` {{optional_inline}}
       - : `integer`. ID of a window to check.
 
-or
-
-- `tabId` {{optional_inline}}
-  - : `integer`. ID of a tab to check.
-
-If `details` and `tabId` are supplied, the function fails.
+    If `windowId` and `tabId` are supplied, the function fails.
 
 > [!NOTE]
-> Chrome doesn't support the `details` object. It provides for setting an optional `tabId` only.
+> Chrome only support the `details` as an `integer`, the ID of a tab to check.
 
 ### Return value
 
