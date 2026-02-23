@@ -134,7 +134,8 @@ sidebar:
         link: /WebAssembly/Reference/Numeric
         title: Numeric
         details: closed
-      - title: SIMD
+      - link: /WebAssembly/Reference/SIMD
+        title: SIMD
         details: closed
         children:
           - type: listSubPages

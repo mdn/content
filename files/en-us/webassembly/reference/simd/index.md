@@ -7,5 +7,5 @@ sidebar: webassemblysidebar
 
 WebAssembly SIMD (single instruction, multiple data) instructions.
 
-- [`extract`](/en-US/docs/WebAssembly/Reference/SIMD/extract)
+- [extract instructions](/en-US/docs/WebAssembly/Reference/SIMD/extract)
   - : SIMD extract instructions.

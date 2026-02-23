@@ -34,17 +34,17 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ## Syntax
 
 ```plain
-interpretation.extract_lane
+value_type.extract_lane
 ```
 
-- `interpretation`
-  - : The [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation the instruction is being run on. The following interpretations support `extract_lane`:
+- `value_type`
+  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations support `extract_lane`:
     - `i32x4`
     - `i64x2`
     - `f32x4`
     - `f64x2`
 - `extract_lane`
-  - : The `extract_lane` instruction. Must always be included after the `interpretation` and a period (`.`).
+  - : The `extract_lane` instruction. Must always be included after the `value_type` and a period (`.`).
 
 ### Type
 
