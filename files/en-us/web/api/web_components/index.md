@@ -27,7 +27,7 @@ Web Components aims to solve such problems — it consists of three main technol
 The basic approach for implementing a web component generally looks something like this:
 
 1. Create a class in which you specify your web component functionality, using the [class](/en-US/docs/Web/JavaScript/Reference/Classes) syntax.
-2. Register your new custom element using the {{domxref("CustomElementRegistry.define()")}} method, passing it the element name to be defined, the class or function in which its functionality is specified, and optionally, what element it inherits from.
+2. Register your new custom element using the {{domxref("CustomElementRegistry.define()")}} method, passing it the element name to be defined, the class or function in which its functionality is specified, and optionally, what element it inherits from. You can register on the global registry via {{domxref("Window.customElements")}}, or create a [scoped registry](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) using the {{domxref("CustomElementRegistry.CustomElementRegistry()", "CustomElementRegistry()")}} constructor to avoid name conflicts between components.
 3. If required, attach a shadow DOM to the custom element using {{domxref("Element.attachShadow()")}} method. Add child elements, event listeners, etc., to the shadow DOM using regular DOM methods.
 4. If required, define an HTML template using {{htmlelement("template")}} and {{htmlelement("slot")}}. Again use regular DOM methods to clone the template and attach it to your shadow DOM.
 5. Use your custom element wherever you like on your page, just like you would any regular HTML element.
@@ -46,9 +46,13 @@ The basic approach for implementing a web component generally looks something li
 ### Custom elements
 
 - {{domxref("CustomElementRegistry")}}
-  - : Contains functionality related to custom elements, most notably the {{domxref("CustomElementRegistry.define()")}} method used to register new custom elements so they can then be used in your document.
+  - : Contains functionality related to custom elements, most notably the {{domxref("CustomElementRegistry.define()")}} method used to register new custom elements so they can then be used in your document. The {{domxref("CustomElementRegistry.CustomElementRegistry()", "CustomElementRegistry()")}} constructor can be used to create scoped registries, and the {{domxref("CustomElementRegistry.initialize()")}} method associates a scoped registry with a DOM subtree.
 - {{domxref("Window.customElements")}}
-  - : Returns a reference to the `CustomElementRegistry` object.
+  - : Returns a reference to the global `CustomElementRegistry` object.
+- {{domxref("Document.customElementRegistry")}}
+  - : The {{domxref("CustomElementRegistry")}} associated with the document.
+- {{domxref("Element.customElementRegistry")}}
+  - : The {{domxref("CustomElementRegistry")}} associated with the element.
 - [Life cycle callbacks](/en-US/docs/Web/API/Web_components/Using_custom_elements#custom_element_lifecycle_callbacks)
   - : Special callback functions defined inside the custom element's class definition, which affect its behavior:
     - `connectedCallback()`
@@ -90,6 +94,8 @@ The basic approach for implementing a web component generally looks something li
 
 - {{domxref("ShadowRoot")}}
   - : Represents the root node of a shadow DOM subtree.
+- {{domxref("ShadowRoot.customElementRegistry")}}
+  - : The {{domxref("CustomElementRegistry")}} associated with the shadow root. Can be set via the `customElementRegistry` option of {{domxref("Element.attachShadow()")}}, or later using {{domxref("CustomElementRegistry.initialize()")}}.
 - {{domxref("Element")}} extensions
   - : Extensions to the `Element` interface related to shadow DOM:
     - The {{domxref("Element.attachShadow()")}} method attaches a shadow DOM tree to the specified element.
