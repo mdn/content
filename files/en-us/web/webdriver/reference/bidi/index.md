@@ -14,7 +14,7 @@ Unlike the HTTP request-response model of [WebDriver classic](/en-US/docs/Web/We
 - [Modules](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules)
   - : Collections of related commands and events used in specific browser automation cases.
 - Commands
-  - : Asynchronous operations to inspect and control the behavior of browsers, manage browser sessions and contexts, execute scripts, monitor network activity, and interact with DOM elements.
+  - : Asynchronous operations to inspect and control the behavior of browsers, manage browser sessions and contexts, execute scripts, monitor network activity, interact with DOM elements, and emulate browser APIs.
 - Events
   - : Notifications sent by the remote end (the browser) signaling that something of interest has occurred.
 - Capabilities
