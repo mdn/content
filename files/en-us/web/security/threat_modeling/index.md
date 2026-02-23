@@ -140,7 +140,7 @@ For example, an XSS vulnerability may primarily harm users, while credential lea
 
 Note that you don't model potential attackers. Over-characterizing attackers can lead to analysis bias.
 
-To reference identified stakeholders, you index them with the letter E (E1, E2, E3, ...) in your diagram and in your table of contents.
+To reference identified stakeholders, you index them with the letter S (S1, S2, S3, ...) in your diagram and in your table of contents.
 
 ## 2. What can go wrong?
 
