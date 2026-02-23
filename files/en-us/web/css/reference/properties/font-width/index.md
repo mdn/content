@@ -129,7 +129,7 @@ You can use `font-width` to select a condensed or expanded face from such fonts.
 
 The face selected for a given value of `font-width` depends on the faces supported by the font in question. If the font does not provide a face that exactly matches the given value, then values less than 100% map to a condensed face, and values greater than or equal to 100% map to an expanded face.
 
-The table below demonstrates the effect of supplying various different percentage values of `font-width` on two different fonts:
+The table below demonstrates the effect of setting different percentage values of `font-width` on two different fonts:
 
 ```css hidden
 @font-face {
