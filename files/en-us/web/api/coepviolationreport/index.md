@@ -16,10 +16,10 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
 
 ## Instance properties
 
-- `body` {{ReadOnlyInline}}
+- `body`
   - : The body of the report, containing more information about the violation.
     This is an object with the following properties:
-    - `type` {{ReadOnlyInline}}
+    - `type`
       - : A string representing the cause of the violation that triggered the report.
         This can have one of the following values:
         - `"corp"`
@@ -31,12 +31,12 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
         - `"worker initialization"`
           - : A dedicated worker created by a document with either the COEP `require-corp` or `credentialless` directives tries to load a worker script with neither of these set.
 
-    - `blockedURL` {{ReadOnlyInline}}
+    - `blockedURL`
       - : A string containing the URL of the resource that was blocked from loading by an enforced COEP violation.
-    - `destination` {{ReadOnlyInline}} {{non-standard_inline}}
+    - `destination` {{non-standard_inline}}
       - : A string indicating the _destination_ of the of the blocked resource.
         This can can have one of the values of [`Request.destination`](/en-US/docs/Web/API/Request/destination#value).
-    - `disposition` {{ReadOnlyInline}}
+    - `disposition`
       - : A string indicating whether the violation was enforced or only reported.
         This can have one of the following values:
         - `"enforce"`
@@ -46,10 +46,10 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
           - : The violation was reported without blocking the resource from loading.
             This is set for violations of policies set with {{httpheader("Cross-Origin-Embedder-Policy-Report-Only")}}.
 
-- `type` {{ReadOnlyInline}}
+- `type`
   - : The string `"coep"` indicating that this is a COEP violation report.
 
-- `url` {{ReadOnlyInline}}
+- `url`
   - : A string representing the URL of the document that generated the report.
 
 ## Description
@@ -59,18 +59,18 @@ A document's policies for loading and embedding cross-origin resources that are 
 COEP policy violations may be reported whenever a policy set by those headers blocks (or would block) the loading of a resource.
 
 You can monitor for COEP violation reports within the page in which they are triggered using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
-To do this you construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"coep"`, passing a callback method (and optionally specifying the type of report to observe).
-The callback method is called for every COEP violation with a {{domxref("COEPViolationReport")}} instance that has the [`type`](#type) of `coep`.
+To do this you construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"coep"`, passing a callback method (optionally specifying the type of report to observe).
+The callback method is called for every COEP violation with an instance of this dictionary that has the [`type`](#type) property set to `coep`.
 
 The structure of a typical report is shown below.
-Note that we can see the URL of both the page that had its policy violated (`url`) and the resource that was blocked from loading (`body.blockedURL`).
-We can also see that the report was triggered by a `corp` violation, and from the `body.disposition` that it was enforced (and not just reported).
+Note that we can see the URL of both the page that had its policy violated (`url`) and the resource that was blocked from loading (`.blockedURL`).
+We can also see that the report was triggered by a `corp` violation, and from the `.disposition` that it was enforced (and not just reported).
 
 ```json
 {
   "type": "coep",
   "url": "https://url-of-page-attempting-to-load-resource-in-violation",
-  "body": {
+  "": {
     "type": "corp",
     "blockedURL": "https://url-of-blocked-resource",
     "destination": "image",
@@ -91,7 +91,7 @@ The structure of the server report is almost exactly the same as `COEPViolationR
   "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
   "type": "coep",
   "url": "https://url-of-page-attempting-to-load-resource-in-violation",
-  "body": {
+  "": {
     "type": "corp",
     "blockedURL": "https://url-of-blocked-resource",
     "destination": "image",
@@ -106,7 +106,7 @@ The structure of the server report is almost exactly the same as `COEPViolationR
 
 This example shows how you can obtain COEP violation reports using a {{domxref("ReportingObserver")}}.
 
-First consider the case where we have an HTML file hosted on the origin `https://example.com`, which includes in its body an {{htmlelement("img")}} element that sets as its source the (cross-origin) resource `some-image.png`.
+First consider the case where we have an HTML file hosted on the origin `https://example.com`, which includes in its  an {{htmlelement("img")}} element that sets as its source the (cross-origin) resource `some-image.png`.
 Since the element does not set the [`cross-origin` attribute](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute, it will be requested in `no-cors` mode.
 By default, if `some-image.png` is not served with the {{httpheader("Cross-Origin-Embedder-Policy")}} header, this request will succeed.
 
@@ -149,7 +149,7 @@ Note that the `type` is `"coep"`.
 {
   "type": "coep",
   "url": "https://example.com",
-  "body": {
+  "": {
     "type": "corp",
     "blockedURL": "https://another-example.com/some-image.png",
     "destination": "image",
@@ -180,7 +180,7 @@ The report object has the same structure as returned from the `ReportingObserver
 [
   {
     "age": 717139,
-    "body": {
+    "": {
       "blockedURL": "https://another-example.com/some-image.png",
       "destination": "image",
       "disposition": "enforce",
