@@ -1,7 +1,7 @@
 ---
 title: "InterventionReportBody: columnNumber property"
 short-title: columnNumber
-slug: Web/API/InterventionReportBody/columnNumber
+slug: Web/API/InterventionReport/columnNumber
 page-type: web-api-instance-property
 status:
   - experimental

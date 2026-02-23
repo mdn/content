@@ -1,7 +1,7 @@
 ---
 title: "InterventionReportBody: message property"
 short-title: message
-slug: Web/API/InterventionReportBody/message
+slug: Web/API/InterventionReport/message
 page-type: web-api-instance-property
 status:
   - experimental

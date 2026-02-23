@@ -1,7 +1,7 @@
 ---
 title: "InterventionReportBody: id property"
 short-title: id
-slug: Web/API/InterventionReportBody/id
+slug: Web/API/InterventionReport/id
 page-type: web-api-instance-property
 status:
   - experimental

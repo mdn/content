@@ -43363,7 +43363,7 @@
     "modified": "2019-03-23T22:12:06.007Z",
     "contributors": ["Sheppy", "Giveitup007"]
   },
-  "Web/API/InterventionReportBody": {
+  "Web/API/InterventionReport": {
     "modified": "2020-10-15T22:16:18.407Z",
     "contributors": ["chrisdavidmills"]
   },

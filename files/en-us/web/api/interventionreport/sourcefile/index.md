@@ -1,7 +1,7 @@
 ---
 title: "InterventionReportBody: sourceFile property"
 short-title: sourceFile
-slug: Web/API/InterventionReportBody/sourceFile
+slug: Web/API/InterventionReport/sourceFile
 page-type: web-api-instance-property
 status:
   - experimental

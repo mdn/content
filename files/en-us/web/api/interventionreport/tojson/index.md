@@ -1,7 +1,7 @@
 ---
 title: "InterventionReportBody: toJSON() method"
 short-title: toJSON()
-slug: Web/API/InterventionReportBody/toJSON
+slug: Web/API/InterventionReport/toJSON
 page-type: web-api-instance-method
 status:
   - experimental
