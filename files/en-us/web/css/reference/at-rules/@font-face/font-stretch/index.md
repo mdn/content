@@ -11,7 +11,7 @@ sidebar: cssref
 
 The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} at-rule.
 
-For a particular font family, authors can download various font faces which correspond to the different styles of the same font family, and then use the `font-stretch` descriptor to explicitly specify the font face's stretch.
+For a particular font family, authors can download various font faces corresponding to the different styles of the same font family, and then use the `font-stretch` descriptor to specify the font face's stretch explicitly.
 
 ## Syntax
 
@@ -50,7 +50,7 @@ The `font-stretch` descriptor can take a single value from the list below.
 
 In earlier versions of the `font-stretch` specification, the descriptor accepts only the nine keyword values. CSS Fonts Level 4 extends the syntax to accept a `<percentage>` value as well. This enables variable fonts to offer a continuous variation of character widths. For TrueType or OpenType variable fonts, the `wdth` variation is used to implement varying widths.
 
-If the font does not provide a face that exactly matches the given value, then values less than 100% map to a narrower face, and values greater than or equal to 100% map to a wider face.
+If the font does not provide a face that exactly matches the given value, then values less than `100%` map to a condensed face, and values greater than or equal to `100%` map to an expanded face.
 
 ### Keyword to numeric mapping
 
@@ -128,7 +128,7 @@ People with dyslexia and other cognitive conditions may have difficulty reading 
 
 ### Setting a percentage range for font-stretch
 
-The following example uses the [League Mono](https://www.theleagueofmoveabletype.com/league-mono) font to synthesize different font families from the same font file using the `font-stretch` descriptor with different keywords and percentages.
+The following example uses the [League Mono](https://www.theleagueofmoveabletype.com/league-mono) font. It synthesizes different font families from the same font file using the `font-stretch` descriptor with different keywords and percentages.
 
 ```html
 <p>League Mono</p>
