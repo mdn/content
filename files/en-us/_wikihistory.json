@@ -26244,7 +26244,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/DeprecationReportBody": {
+  "Web/API/DeprecationReport": {
     "modified": "2020-10-15T22:16:17.596Z",
     "contributors": ["chrisdavidmills"]
   },

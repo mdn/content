@@ -1,7 +1,7 @@
 ---
 title: "DeprecationReportBody: anticipatedRemoval property"
 short-title: anticipatedRemoval
-slug: Web/API/DeprecationReportBody/anticipatedRemoval
+slug: Web/API/DeprecationReport/anticipatedRemoval
 page-type: web-api-instance-property
 status:
   - experimental

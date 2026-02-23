@@ -1,7 +1,7 @@
 ---
 title: "DeprecationReportBody: columnNumber property"
 short-title: columnNumber
-slug: Web/API/DeprecationReportBody/columnNumber
+slug: Web/API/DeprecationReport/columnNumber
 page-type: web-api-instance-property
 status:
   - experimental

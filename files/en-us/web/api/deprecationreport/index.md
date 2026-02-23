@@ -1,10 +1,10 @@
 ---
 title: DeprecationReportBody
-slug: Web/API/DeprecationReportBody
+slug: Web/API/DeprecationReport
 page-type: web-api-interface
 status:
   - experimental
-browser-compat: api.DeprecationReportBody
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.deprecation
 ---
 
 {{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
@@ -13,28 +13,35 @@ The `DeprecationReportBody` interface of the [Reporting API](/en-US/docs/Web/API
 
 A deprecation report is generated when a deprecated feature (for example a deprecated API method) is used on a document being observed by a {{domxref("ReportingObserver")}}. In addition to the support of this API, receiving useful deprecation warnings relies on browser vendors adding these warnings for deprecated features.
 
-{{InheritanceDiagram}}
-
 ## Constructor
 
 An instance of `DeprecationReportBody` is returned as the value of {{domxref("Report.body")}} when {{domxref("Report.Type")}} is `deprecation`. The interface has no constructor.
 
 ## Instance properties
 
-This interface also inherits properties from {{domxref("ReportBody")}}.
+- `body`
+  - : The body of the report, containing more information about the deprecation.
+    This is an object with the following properties:
+    - `id` {{experimental_inline}}
+      - : A string representing the feature or API that is deprecated, for example `NavigatorGetUserMedia`.
+        This can be used to group reports by deprecated feature.
+    - {{domxref("DeprecationReportBody.anticipatedRemoval")}} {{Experimental_Inline}}
+      - : A {{jsxref("Date")}} object (rendered as a string) representing the date when the feature is expected to be removed from the current browser. If the date is not known, this property will return `null`.
+    - `message` {{experimental_inline}}
+      - : A string containing a human-readable description of the deprecation, including information such as what newer feature has superseded it, if any.
+        This typically matches the message a browser will display in its DevTools console when a deprecated feature is used, if one is available.
+    - `sourceFile` {{experimental_inline}}
+      - : A string containing the path to the source file where the deprecated feature was used, if known, or `null` otherwise.
+    - `lineNumber` {{experimental_inline}}
+      - : A number representing the line in the source file in which the deprecated feature was used, if known, or `null` otherwise.
+    - `columnNumber` {{experimental_inline}}
+      - : A number representing the column in the source file in which the deprecated feature was first used, if known, or `null` otherwise.
 
-- {{domxref("DeprecationReportBody.id")}} {{experimental_inline}}
-  - : A string representing the feature or API that is deprecated, for example `NavigatorGetUserMedia`. This can be used to group reports by deprecated feature.
-- {{domxref("DeprecationReportBody.anticipatedRemoval")}} {{Experimental_Inline}}
-  - : A {{jsxref("Date")}} object (rendered as a string) representing the date when the feature is expected to be removed from the current browser. If the date is not known, this property will return `null`.
-- {{domxref("DeprecationReportBody.message")}} {{experimental_inline}}
-  - : A string containing a human-readable description of the deprecation, including information such as what newer feature has superseded it, if any. This typically matches the message a browser will display in its DevTools console when a deprecated feature is used, if one is available.
-- {{domxref("DeprecationReportBody.sourceFile")}} {{experimental_inline}}
-  - : A string containing the path to the source file where the deprecated feature was used, if known, or `null` otherwise.
-- {{domxref("DeprecationReportBody.lineNumber")}} {{experimental_inline}}
-  - : A number representing the line in the source file in which the deprecated feature was used, if known, or `null` otherwise.
-- {{domxref("DeprecationReportBody.columnNumber")}} {{experimental_inline}}
-  - : A number representing the column in the source file in which the deprecated feature was used, if known, or `null` otherwise.
+- `type`
+  - : The string `"intervention"` indicating that this is an intervention report.
+
+- `url`
+  - : A string representing the URL of the document that generated the report.
 
 ## Instance methods
 

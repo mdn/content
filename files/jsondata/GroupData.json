@@ -1459,7 +1459,7 @@
       "interfaces": [
         "CSPViolationReportBody",
         "DeprecationReportBody",
-        "InterventionReportBody",
+        "InterventionReport",
         "IntegrityViolationReportBody",
         "Report",
         "ReportBody",

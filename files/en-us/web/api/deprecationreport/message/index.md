@@ -1,7 +1,7 @@
 ---
 title: "DeprecationReportBody: message property"
 short-title: message
-slug: Web/API/DeprecationReportBody/message
+slug: Web/API/DeprecationReport/message
 page-type: web-api-instance-property
 status:
   - experimental

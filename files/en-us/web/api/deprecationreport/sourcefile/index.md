@@ -1,7 +1,7 @@
 ---
 title: "DeprecationReportBody: sourceFile property"
 short-title: sourceFile
-slug: Web/API/DeprecationReportBody/sourceFile
+slug: Web/API/DeprecationReport/sourceFile
 page-type: web-api-instance-property
 status:
   - experimental
