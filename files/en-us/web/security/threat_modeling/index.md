@@ -108,14 +108,17 @@ Things an attacker wants and are in need of protection. This could be:
 
 To reference identified assets, you index them with the letter A (A1, A2, A3, ...) in your diagram and in your table of contents.
 
-### Data flows
+### Data flows and trust boundaries
 
 We identify the mechanism by which assets move between components. They may be uni- or bi-directional.
 
 - Authentication flows
 - Contact form flow
+- Data flows to external services
 
-To reference identified data flows, you index them with the letter F (F1, F2, F3, ...) in your diagram and in your table of contents.
+When data flows between the user and your application, or between your application and third party services, it moves across trusted boundaries that are controlled by different authorities. Attacks often happen between these unequally privileged components and we should make ourselves aware of these attack surfaces, identifying where validation, encryption or other security controls are necessary.
+
+To reference identified data flows, you index them with the letter F (F1, F2, F3, ...) in your diagram and in your table of contents. Trust boundaries are usually visualized using a dashed line.
 
 ### External dependencies
 
