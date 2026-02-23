@@ -124,7 +124,7 @@ This header enforces that all resources must be served with the {{HTTPHeader("Cr
 Provided the server hosting `some-image.png` doesn't set the header we don't need to do anything else to trigger a COEP violation.
 
 To observe violations within the page, we construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"coep"`, passing a callback that will receive and log the reports.
-This code needs to be loaded before the script that causes the violation, in the same page:
+This code needs to be loaded before the script that causes the violation:
 
 ```js
 const options = {
