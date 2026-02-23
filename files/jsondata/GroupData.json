@@ -1458,7 +1458,7 @@
       "guides": [],
       "interfaces": [
         "CSPViolationReportBody",
-        "DeprecationReportBody",
+        "DeprecationReport",
         "InterventionReport",
         "IntegrityViolationReportBody",
         "Report",

@@ -9,9 +9,9 @@ browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_
 
 {{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-The `InterventionReport` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of an intervention report.
+The `InterventionReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents an intervention report.
 
-An intervention report is generated when usage of a feature in a web document has been blocked by the browser for reasons such as security, performance, or user annoyance.
+An intervention report may be generated when usage of a feature in a web document has been blocked by the browser for reasons such as security, performance, or user annoyance.
 Reports of this type can be observed from within a page using a {{domxref("ReportingObserver")}}, or a serialized version can be sent to a [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
 
 ## Instance properties
@@ -44,8 +44,8 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
 
 ## Description
 
-An intervention report is generated when usage of a feature in a web document has been blocked by the browser for reasons such as security, performance, or user annoyance.
-For example, an advertisement may trigger a [Heavy Ad Intervention](https://developer.chrome.com/docs/web-platform/heavy-ads-intervention) (developer.chrome.com) if it slows page responsiveness or otherwise affects the user experience.
+An intervention report may be generated when usage of a feature in a web document has been blocked by the browser for reasons such as security, performance, or user annoyance.
+For example, an advertisement can trigger a [Heavy Ad Intervention](https://developer.chrome.com/docs/web-platform/heavy-ads-intervention) (developer.chrome.com) if it slows page responsiveness or otherwise affects the user experience.
 
 You can monitor for intervention reports within the page in which they are triggered using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
 To do this you create a {{domxref("ReportingObserver")}} object to listen for reports, passing a callback method and an (optional) options property specifying the types of reports that you want to report on.
@@ -69,10 +69,10 @@ Note that `url` represents the original page that was loaded, while `body.source
 }
 ```
 
-Intervention reports are also sent as a JSON object in a `POST` to the default [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints), if specified.
-The default reporting server endpoint and its mapping to a particular URL are defined using the {{httpheader("Reporting-Endpoints")}} header.
+Intervention reports are also sent as a JSON object in a `POST` to the [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) named `"default"`, if it is defined.
+The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} header.
 
-The structure of the server report is almost exactly the same as `COEPVioInterventionReportlationReport`, except that it additionally includes `age` and `user_agent` fields.
+The structure of the server report is almost exactly the same as `InterventionReport`, except that it additionally includes `age` and `user_agent` fields.
 
 ```json
 {
@@ -94,8 +94,8 @@ The structure of the server report is almost exactly the same as `COEPVioInterve
 
 ### Reporting using the API
 
-To observe interventions within the page, we construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"intervention"`, passing a callback that will receive and log the reports.
-This code needs to be loaded before the script that causes the violation, in the same page:
+To observe intervention reports within the page, we construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"intervention"`, passing a callback that will receive and log the reports.
+This code needs to be loaded before the script that causes the violation:
 
 ```js
 const options = {
@@ -110,10 +110,11 @@ const observer = new ReportingObserver((reports, observer) => {
   });
 }, options);
 
+// Start the observer
 observer.observe();
 ```
 
-Above, we log each report object and a JSON-string version of the object, which might look similar to the object below.
+The stringified version of the report might look similar to the object below.
 Note that the `type` is `"intervention"`.
 
 ```json
@@ -132,6 +133,9 @@ Note that the `type` is `"intervention"`.
 
 ### Sending a report to a reporting endpoint
 
+Configuring a web page to send a intervention report requires that you set a [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) named "default" using the {{httpheader("Reporting-Endpoints")}} header.
+Below we set the `default` endpoint to `https://some-example.com/intervention`:
+
 Configuring a web page to send an intervention report requires that you set the default [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
 This is just an endpoint with the name "default", as shown below:
 
@@ -140,7 +144,7 @@ Reporting-Endpoints: default="https://some-example.com/intervention"
 ```
 
 The report will then be sent as a JSON object in a `POST` to the endpoint whenever a intervention occurs.
-It has the same structure as the object returned from the `ReportingObserver` callback, except for the addition of `age` and `user_agent` properties.
+It has the same structure as `InterventionReport`, except for the addition of `age` and `user_agent` properties.
 
 ```json
 [
