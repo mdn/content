@@ -16,8 +16,6 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
 
 ## Instance properties
 
-This interface also inherits properties from {{domxref("ReportBody")}}.
-
 - `body`
   - : The body of the report, containing more information about the intervention.
     This is an object with the following properties:
