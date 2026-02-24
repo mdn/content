@@ -56,7 +56,7 @@ random(--my-base, 1em, 3rem, 2px)
 
 ### Parameters
 
-- `<random-value-sharing>` (optional)
+- `<random-value-sharing>` {{optional_inline}}
   - : Controls which random functions in the document will share a random base value and which will get distinct values.
     This can be either:
     - `auto`
