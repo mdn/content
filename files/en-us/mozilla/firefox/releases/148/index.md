@@ -67,39 +67,26 @@ Firefox 148 was released on [February 24, 2026](https://whattrainisitnow.com/rel
   This is implemented using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) and shares the same [Security considerations](/en-US/docs/Web/API/Clipboard_API#security_considerations), such as requiring transient activation and user acknowledgement when pasting cross-origin content.
   ([Firefox bug 1998195](https://bugzil.la/1998195)).
 
-<<<<<<< firefox-148
-<!-- #### Media, WebRTC, and Web Audio -->
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
-
-### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### General
 
 - Fixed a race condition during initialization of required browser features when opening a new window, preventing issues when navigating immediately to another URL ([Firefox bug 1891028](https://bugzil.la/1891028)).
 - Fixed an interoperability issue between Marionette and WebDriver BiDi where the BiDi `clientWindow` ID was incorrectly used as a window handle in Marionette ([Firefox bug 2002949](https://bugzil.la/2002949)).
-- Improved the performance of WebDriver BiDi commands by approximately 100 ms when the selected context is no longer available during the command execution ([Firefox bug 1934326](https://bugzil.la/1934326)).
 
 #### WebDriver BiDi
 
 - Added initial support for interacting with the browser's chrome scope (the Firefox window itself). The `browsingContext.getTree` command now accepts the vendor specific `moz:scope` parameter and returns chrome contexts when set to `chrome` and Firefox was started with the `--remote-allow-system-access` argument. These contexts can be used with `script.evaluate` and `script.callFunction` to execute privileged JavaScript with access to Gecko APIs. Other commands do not yet support chrome contexts, but support will be added incrementally as needed ([Firefox bug 1944568](https://bugzil.la/1944568), [Firefox bug 1944570](https://bugzil.la/1944570), and [Firefox bug 1851788](https://bugzil.la/1851788)).
-- Updated the `emulation.setGeolocationOverride` and `emulation.setScreenOrientationOverride` commands to implement the new reset behavior: contexts are reset only when the `context` parameter is provided, and user contexts only when the `userContext` parameter is specified ([Firefox bug 1998732](https://bugzil.la/1998732) and [Firefox bug 1998734](https://bugzil.la/1998734)).
+- Updated the `emulation.setGeolocationOverride` and `emulation.setScreenOrientationOverride` commands to implement the new reset behavior: contexts are reset only when the `contexts` parameter is provided, and user contexts only when the `userContexts` parameter is specified ([Firefox bug 1998732](https://bugzil.la/1998732) and [Firefox bug 1998734](https://bugzil.la/1998734)).
 - Fixed a race condition in `browsingContext.create` where opening a new tab in the foreground could return before the document became visible ([Firefox bug 2003857](https://bugzil.la/2003857)).
 - Fixed an issue that occurred when a navigation redirected to an error page ([Firefox bug 2013822](https://bugzil.la/2013822)).
 - Fixed an issue in `network.getData` that caused a `RangeError` when decoding chunked response bodies due to a size mismatch ([Firefox bug 2004973](https://bugzil.la/2004973)).
 - Fixed an issue where the `browsingContext.userPromptOpened` and `browsingContext.userPromptClosed` events incorrectly reported the top-level context ID instead of the iframe's context ID ([Firefox bug 1964905](https://bugzil.la/1964905)).
-
+- Improved the performance of WebDriver BiDi commands by approximately 100 ms when the selected context is no longer available during the command execution ([Firefox bug 1934326](https://bugzil.la/1934326)).
+- 
 #### Marionette
 
 - Added the `Reporting:GenerateTestReport` command to [generate a test report via the Reporting API](https://www.w3.org/TR/reporting-1/#generate-test-report-command) ([Firefox bug 1909662](https://bugzil.la/1909662)).
-
-=======
->>>>>>> main
-## Changes for add-on developers
 
 ## Experimental web features
 
