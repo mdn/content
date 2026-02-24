@@ -141,14 +141,10 @@ Because `random()` can generate an unknown value within a range, you don’t hav
 #### HTML
 
 ```html
-<html>
-  <body>
-    <div class="badge"></div>
-    <div class="badge"></div>
-    <div class="badge unique"></div>
-    <div class="badge unique"></div>
-  </body>
-</html>
+<div class="badge"></div>
+<div class="badge"></div>
+<div class="badge unique"></div>
+<div class="badge unique"></div>
 ```
 
 #### CSS
