@@ -467,7 +467,7 @@ The rendered result looks like this:
 
 {{EmbedLiveSample("column-playground", "100%", "400")}}
 
-Try adjusting the number of columns and the column height to see the effect in the live rendering.
+Adjust the number of columns and the column height to see the effect of these properties.
 
 ## Specifications
 
