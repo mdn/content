@@ -421,9 +421,7 @@ The HTML is the same as the previous example, with the addition of a form contai
 
 #### CSS
 
-The CSS is nearly identical to the previous example, except that we specify the number of columns with {{cssxref("column-count")}} rather than `column-width`, we don't set the `column-height` to the same height as the viewport, and we don't set the scroll snapping behavior.
-
-In the `body` rule, we set an initial `column-count` of `3` to divide our content into three columns, and set an initial `column-height` of `20em`. We also set the same `column-rule` and `gap` values as the previous example.
+We specify the {{cssxref("column-rule")}} and {{cssxref("gap")}} with the same values as the previous example. We don't specify a `column-width`; instead, we create a multi-column layout using the {{cssxref("column-count")}} property, interactively setting the number of columns and the height of the column rows using JavaScript. Scroll snapping is not included in this example.
 
 ```css live-sample___column-playground
 body {
