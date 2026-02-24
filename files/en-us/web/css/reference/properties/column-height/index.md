@@ -60,7 +60,7 @@ As a result of this default behavior, generally you don't need to explicitly set
 
 ### Basic `column-height` usage
 
-This example shows how to create a multi-column layout with multiple rows of columns, where each row fits inside the viewport for comfortable reading. It also uses [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) to make it so that each scrolling action snaps the top of a new row of columns to the top of the viewport.
+This example combines a wrapped multi-column layout with [CSS scroll snapping](/en-US/docs/Web/CSS/Guides/Scroll_snap), creating a usable experience where each scrolling action snaps a new row of columns neatly inside the full height of the viewport for comfortable reading.
 
 #### HTML
 
