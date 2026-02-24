@@ -62,7 +62,7 @@ As a result of this default behavior, generally you don't need to explicitly set
 
 ### Comparing `wrap` and `nowrap`
 
-This example shows how to create a multi-column layout with multiple rows of columns, which allows you to toggle the layout between horizontally and vertically scrolling by changing the column container's `column-wrap` value.
+This example features a multi-column layout that demonstrates the difference between the `wrap` and `nowrap` values by allowing you to toggle the column container's `column-wrap` value between the two. The result is a layout that dynamically changes between horizontal and vertical scrolling.
 
 #### HTML
 
