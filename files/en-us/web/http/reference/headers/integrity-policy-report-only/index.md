@@ -12,7 +12,7 @@ The HTTP **`Integrity-Policy-Report-Only`** response header allows website admin
 Reports may be generated for requests on specified [request destinations](#blocked-destinations) that omit integrity metadata, or that are made in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
 For reports to be sent to a reporting endpoint, the `Integrity-Policy-Report-Only` header must specify a valid reporting endpoint name that matches an endpoint declared using the {{HTTPHeader("Reporting-Endpoints")}} header.
 Reports are generated using the [Reporting API](/en-US/docs/Web/API/Reporting_API), and may also be observed in the page for which the integrity policy is being reported, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver).
-The format of the report body is given by the {{domxref("IntegrityViolationReportBody")}} dictionary (a JSON-serialized form of this body is sent in POSTs to reporting server endpoints).
+The format of the report is given by the {{domxref("IntegrityViolationReport")}} dictionary (a JSON-serialized form is sent in POSTs to reporting server endpoints).
 
 The header allows developers to test [integrity policies](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy) and fix any content issues before eventually deploying an {{HTTPHeader("Integrity-Policy")}} header to enforce the policy.
 
@@ -68,17 +68,20 @@ Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrit
 ```
 
 The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) might look like this.
+Note that the `body.reportOnly` property is `true`, because this report was triggered by a violation of `Integrity-Policy-Report-Only`.
 
 ```json
 {
+  "age": "176279",
   "type": "integrity-violation",
   "url": "https://example.com",
   "body": {
     "documentURL": "https://example.com",
     "blockedURL": "https://example.com/main.js",
     "destination": "script",
-    "reportOnly": false
-  }
+    "reportOnly": "true"
+  },
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
 }
 ```
 
@@ -95,4 +98,5 @@ The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoint
 - {{HTTPHeader("Integrity-Policy")}}
 - {{HTTPHeader("Reporting-Endpoints")}}
 - [Integrity Policy](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy)
+- {{domxref("IntegrityViolationReport")}}
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)

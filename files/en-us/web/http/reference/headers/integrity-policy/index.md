@@ -10,11 +10,6 @@ sidebar: http
 The HTTP **`Integrity-Policy`** response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) guarantees.
 
 When set the user agent will block requests on specified [request destinations](#blocked-destinations) that omit integrity metadata, and will also block requests in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made.
-
-Violation reports may also be sent to if the header includes a reporting endpoint name that matches an endpoint declared using the {{HTTPHeader("Reporting-Endpoints")}} header.
-Reports are generated using the [Reporting API](/en-US/docs/Web/API/Reporting_API), and may also be observed in the page for which the integrity policy is being enforced, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver).
-The format of the report body is given by the {{domxref("IntegrityViolationReportBody")}} dictionary (a JSON-serialized form of this body is sent in POSTs to reporting server endpoints).
-
 This helps guard against content manipulation of fetched subresources.
 
 <table class="properties">
@@ -54,6 +49,56 @@ The header values are defined as structured field dictionaries with the followin
 - `endpoints` {{optional_inline}}
   - : A list of [reporting endpoint names](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint) that indicate where reports will be sent.
     The reporting endpoints must be defined in a {{httpheader("Reporting-Endpoints")}} header.
+
+## Description
+
+The `Integrity-Policy`\*\* response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) guarantees, which helps guard against content manipulation of fetched subresources.
+
+When set the user agent will block requests on specified [request destinations](#blocked-destinations) that omit integrity metadata, and will also block requests in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made.
+
+### Violation reports
+
+Integrity-Policy violations may be sent as JSON objects in `POST` requests to a remote server, or observed in the violating page as using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+
+Reports may be observed in the page for which the integrity policy is being enforced, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver).
+The report is an instance of a {{domxref("IntegrityViolationReport")}} dictionary, with its `type` property is set to `"integrity-violation"`.
+
+The format of the `IntegrityViolationReport` report is shown below:
+
+```json
+{
+  "type": "integrity-violation",
+  "url": "https://url-of-page-attempting-to-load-resource-in-violation",
+  "body": {
+    "documentURL": "https://localhost:8443/",
+    "blockedURL": "https://url-of-blocked-resource.js",
+    "destination": "script",
+    "reportOnly": false
+  }
+}
+```
+
+Violation reports may also be sent to a remote server if the header includes one or more reporting endpoint names that match an endpoint declared using the {{HTTPHeader("Reporting-Endpoints")}} header.
+The format of the JSON report object is a serialized version of `IntegrityViolationReport` that additionally includes `age` and `user_agent` properties:
+
+```json
+[
+  {
+    "age": "176279",
+    "body": {
+      "documentURL": "https://localhost:8443/",
+      "blockedURL": "https://url-of-blocked-resource.js",
+      "destination": "script",
+      "reportOnly": false
+    },
+    "type": "integrity-violation",
+    "url": "https://url-of-page-attempting-to-load-resource-in-violation",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+  }
+]
+```
+
+For more information and examples see {{domxref("IntegrityViolationReport")}} and the [Reporting API](/en-US/docs/Web/API/Reporting_API).
 
 ## Examples
 
@@ -96,3 +141,4 @@ The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoint
 - {{HTTPHeader("Integrity-Policy-Report-Only")}}
 - [Integrity Policy](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy)
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
+- {{domxref("IntegrityViolationReport")}}

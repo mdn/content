@@ -1460,7 +1460,7 @@
         "CSPViolationReportBody",
         "DeprecationReport",
         "InterventionReport",
-        "IntegrityViolationReportBody",
+        "IntegrityViolationReport",
         "Report",
         "ReportBody",
         "ReportingObserver",
