@@ -93,7 +93,7 @@ The `columns` property value may be specified as a [`<column-count>`](/en-US/doc
   - : The height of the columns defined as a {{cssxref("&lt;length&gt;")}} or the keyword `auto`. See {{cssxref("column-height")}}.
 
 > [!NOTE]
-> Setting a `<column-height>` value resets the {{cssxref("column-wrap")}} property to its initial value, `auto`. When `<column-height>` is set to a `<length>`, the {{cssxref("column-wrap")}} `auto` value behaves as `wrap`. When `<column-height>` is set to `auto`, it behaves as `nowrap`.
+> Setting a `<column-height>` value resets the {{cssxref("column-wrap")}} property to its initial value, `auto`. When `<column-height>` is set to a `<length>`, the {{cssxref("column-wrap")}} `auto` value resolves to `wrap`. When `<column-height>` is set to `auto`, it resolves to `nowrap`.
 
 ## Formal definition
 
