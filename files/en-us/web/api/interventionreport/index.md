@@ -133,17 +133,14 @@ Note that the `type` is `"intervention"`.
 
 ### Sending a report to a reporting endpoint
 
-Configuring a web page to send a intervention report requires that you set a [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) named "default" using the {{httpheader("Reporting-Endpoints")}} header.
+Configuring a web page to send an intervention report requires that you set a [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) named "default" using the {{httpheader("Reporting-Endpoints")}} header.
 Below we set the `default` endpoint to `https://some-example.com/intervention`:
-
-Configuring a web page to send an intervention report requires that you set the default [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
-This is just an endpoint with the name "default", as shown below:
 
 ```http
 Reporting-Endpoints: default="https://some-example.com/intervention"
 ```
 
-The report will then be sent as a JSON object in a `POST` to the endpoint whenever a intervention occurs.
+The report will then be sent as a JSON object in a `POST` to the endpoint whenever an intervention occurs.
 It has the same structure as `InterventionReport`, except for the addition of `age` and `user_agent` properties.
 
 ```json

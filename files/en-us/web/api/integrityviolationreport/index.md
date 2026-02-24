@@ -26,7 +26,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
         This can currently only be `"script"`.
     - `reportOnly`
       - : A boolean: `false` if the policy was enforced, and `true` if the violation was only reported.
-        The values indicate that the policy was set with {{httpheader(Integrity-Policy)}} and {{httpheader(Integrity-Policy-Report-Only)}}, respectively.
+        The values indicate that the policy was set with {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}}, respectively.
 
 - `type`
   - : The string `"integrity-violation"` indicating that this is an integrity violation report.

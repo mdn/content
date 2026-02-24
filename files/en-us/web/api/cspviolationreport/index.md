@@ -157,7 +157,7 @@ const observer = new ReportingObserver(
 observer.observe();
 ```
 
-Above we log the each violation report object and a JSON-string version of the object, which might look similar to the object below.
+Above we log each violation report object and a JSON-string version of the object, which might look similar to the object below.
 Note that the report is an instance of the `CSPViolationReport` and the `type` is `"csp-violation"`.
 
 ```json
@@ -240,7 +240,7 @@ As you can see from the example below, the `type` is `"csp-violation"` and the `
 
 - {{domxref("ReportingObserver")}}
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{HTTPHeader("Content-Security-Policy-ReportOnly")}}
+- {{HTTPHeader("Content-Security-Policy-Report-Only")}}
 - {{domxref("SecurityPolicyViolationEvent")}}
 - {{HTTPHeader("Reporting-Endpoints")}}
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)

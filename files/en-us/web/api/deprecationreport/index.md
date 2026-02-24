@@ -48,7 +48,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
 
 A deprecation report may be generated when a deprecated feature (for example a deprecated API method) is used on a document.
 
-You can monitor for intervention reports within the page in which they are triggered using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+You can monitor for deprecation reports within the page in which they are triggered using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
 To do this you create a {{domxref("ReportingObserver")}} object to listen for reports, passing a callback method, and optionally an `options` property specifying the types of reports that you want to report on.
 The callback method is then called with reports of the requested types, passing a report object.
 For deprecation reports, the object will be an `DeprecationReport` instance (which has the [`type`](#type) property set to `"deprecation"`).

@@ -75,7 +75,7 @@ Each time the callback function is invoked, we get the body of the first entry o
 // main.js
 const observer = new ReportingObserver(
   (reports, observer) => {
-    console.log(`documentURL: ${reports[0].body.referrer}`);
+    console.log(`documentURL: ${reports[0].body.documentURL}`);
     console.log(`referrer: ${reports[0].body.referrer}`);
     console.log(`blockedURL: ${reports[0].body.blockedURL}`);
   },

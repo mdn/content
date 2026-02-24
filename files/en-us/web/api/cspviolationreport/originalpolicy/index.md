@@ -11,7 +11,7 @@ browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_
 The **`originalPolicy`** property of the {{domxref("CSPViolationReport")}} dictionary is a string that represents the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) whose enforcement uncovered the violation.
 
 This is the string in the {{HTTPHeader("Content-Security-Policy")}} HTTP response header that contains the list of [directives](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives) and their values that make the CSP policy.
-Note that differs from the {{domxref("CSPViolationReport.effectiveDirective","effectiveDirective")}}, which is the specific directive that is effectively being violated (and which might not be explicitly listed in the policy if `default-src` is used).
+Note that this differs from the {{domxref("CSPViolationReport.effectiveDirective","effectiveDirective")}}, which is the specific directive that is effectively being violated (and which might not be explicitly listed in the policy if `default-src` is used).
 
 ## Value
 

@@ -11,7 +11,7 @@ The HTTP **`Integrity-Policy-Report-Only`** response header allows website admin
 
 Violations of the policy may be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
 Reports can be observed in the page for which the policy is being enforced, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver), and sent to server endpoints defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header and selected using the [`endpoints`](#endpoints) field.
-For more information see {{domxref("CSPViolationReport")}}.
+For more information see {{domxref("IntegrityViolationReport")}}.
 
 The header allows developers to test [integrity policies](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy) and fix any content issues before eventually deploying an {{HTTPHeader("Integrity-Policy")}} header to enforce the policy.
 
