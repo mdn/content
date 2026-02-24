@@ -148,7 +148,7 @@ In some situations, a website might want to invalidate a user's sessions and req
 
 ## Decentralized session management
 
-The model we've described so far might be called "centralized session management": the session state is maintained in a database on the server, and the client is given an identifier for the state, which it gives to the server when it makes a request.
+In the "centralized session management" model that we've described so far, the session state is maintained in a database on the server, and the client is given an identifier for the state, which it gives to the server when it makes a request.
 
 An alternative model might be called "decentralized session management". In this model, the session state is maintained as a {{glossary("digital signature", "digitally signed")}} object in the client. These signed objects are typically represented as [JSON Web Tokens (JWTs)](https://www.jwt.io/).
 
