@@ -36,22 +36,22 @@ The **`random()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Ref
 ```css
 /* Basic usage */
 random(0, 100)
-
-/* With range and units */
 random(10px, 500px)
 random(0deg, 360deg)
 
 /* With step interval */
-random(0, 100, 10)
+random(0, 100, by 10)
+random(0rad, 1turn, 30deg)
 
-/* Random base value shared across elements */
-random(element-shared, 0, 360)
+/* With base value */
+random(auto, 0, 360)
+random(element-shared, 0s, 5s)
+random(--unique-base, 400px, 100px)
+random(fixed 0.5,  1em, 40vw)
 
-/* Combined options */
+/* With base and step values */
 random(element-shared, 0deg, 360deg, 45deg)
-
-/* Using a custom key to share the random value */
-random(--my-key, 0, 100)
+random(--my-base, 1em, 3rem, 2px)
 ```
 
 ### Parameters
