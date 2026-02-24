@@ -1182,20 +1182,6 @@
       "properties": ["Document.hidden", "Document.visibilityState"],
       "events": ["Document: visibilitychange"]
     },
-    "Payment Handler API": {
-      "overview": ["Payment Handler API"],
-      "interfaces": [
-        "CanMakePaymentEvent",
-        "PaymentManager",
-        "PaymentRequestEvent"
-      ],
-      "methods": [],
-      "properties": ["ServiceWorkerRegistration.paymentManager"],
-      "events": [
-        "ServiceWorkerGlobalScope: canmakepayment",
-        "ServiceWorkerGlobalScope: paymentrequest"
-      ]
-    },
     "Payment Request API": {
       "overview": ["Payment Request API"],
       "guides": [
@@ -2044,6 +2030,20 @@
       ],
       "properties": [],
       "events": []
+    },
+    "Web-Based Payment Handler API": {
+      "overview": ["Web-based Payment Handler API"],
+      "interfaces": [
+        "CanMakePaymentEvent",
+        "PaymentManager",
+        "PaymentRequestEvent"
+      ],
+      "methods": [],
+      "properties": ["ServiceWorkerRegistration.paymentManager"],
+      "events": [
+        "ServiceWorkerGlobalScope: canmakepayment",
+        "ServiceWorkerGlobalScope: paymentrequest"
+      ]
     },
     "Web Components": {
       "overview": ["Web components"],

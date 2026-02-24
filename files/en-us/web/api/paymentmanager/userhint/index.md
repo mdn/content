@@ -8,9 +8,9 @@ status:
 browser-compat: api.PaymentManager.userHint
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Web-based Payment Handler API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`userHint`** property of the {{domxref("PaymentManager")}} interface provides a hint for the browser to display along with the payment app's name and icon in the Payment Handler UI.
+The **`userHint`** property of the {{domxref("PaymentManager")}} interface provides a hint for the browser to display along with the payment app's name and icon in the Web-based Payment Handler UI.
 
 ## Value
 
@@ -42,7 +42,7 @@ navigator.serviceWorker.register("serviceworker.js").then((registration) => {
 
 ## See also
 
-- {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}}
+- {{domxref("Web-based Payment Handler API", "", "", "nocode")}}
 - [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
 - [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
 - [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)
