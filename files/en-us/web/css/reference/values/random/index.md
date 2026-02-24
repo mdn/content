@@ -57,14 +57,14 @@ random(--my-base, 1em, 3rem, 2px)
 ### Parameters
 
 - `<random-value-sharing>` (optional)
-  - : Controls which `random()` functions in the document will share a random base value and which will get distinct values.
-    Valid values include:
+  - : Controls which random functions in the document will share a random base value and which will get distinct values.
+    This can be either:
     - `auto`
       - : Each use of `random()` in an element's style gets its own unique random base value.
     - {{cssxref("dashed-ident")}}
       - : A custom key for sharing (e.g., `--my-random-key`) the same random base value across styles.
     - `element-shared`
-      - : All elements that use `random()` with this parameter will share the same random base value.
+      - : A random base value is shared across all elements for a property using `random()` with this key term, while other properties on the same element using `random()` get a unique random base value.
     - `fixed <number>`
       - : Specifies a base value between 0 and 1 for the random value to be generated from.
 
