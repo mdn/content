@@ -1,7 +1,7 @@
 ---
 title: "CSPViolationReportBody: lineNumber property"
 short-title: lineNumber
-slug: Web/API/CSPViolationReportBody/lineNumber
+slug: Web/API/CSPViolationReport/lineNumber
 page-type: web-api-instance-property
 browser-compat: api.CSPViolationReportBody.lineNumber
 ---

@@ -12,6 +12,10 @@ The HTTP **`Integrity-Policy`** response header allows website administrators to
 When set the user agent will block requests on specified [request destinations](#blocked-destinations) that omit integrity metadata, and will also block requests in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made.
 This helps guard against content manipulation of fetched subresources.
 
+Violations of the policy may be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+Reports can be observed in the page for which the policy is being enforced, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver), and sent to server endpoints defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header and selected using the [`endpoints`](#endpoints) field.
+For more information see {{domxref("CSPViolationReport")}}.
+
 <table class="properties">
   <tbody>
     <tr>
@@ -50,61 +54,11 @@ The header values are defined as structured field dictionaries with the followin
   - : A list of [reporting endpoint names](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint) that indicate where reports will be sent.
     The reporting endpoints must be defined in a {{httpheader("Reporting-Endpoints")}} header.
 
-## Description
-
-The `Integrity-Policy`\*\* response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) guarantees, which helps guard against content manipulation of fetched subresources.
-
-When set the user agent will block requests on specified [request destinations](#blocked-destinations) that omit integrity metadata, and will also block requests in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made.
-
-### Violation reports
-
-Integrity-Policy violations may be sent as JSON objects in `POST` requests to a remote server, or observed in the violating page as using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
-
-Reports may be observed in the page for which the integrity policy is being enforced, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver).
-The report is an instance of a {{domxref("IntegrityViolationReport")}} dictionary, with its `type` property is set to `"integrity-violation"`.
-
-The format of the `IntegrityViolationReport` report is shown below:
-
-```json
-{
-  "type": "integrity-violation",
-  "url": "https://url-of-page-attempting-to-load-resource-in-violation",
-  "body": {
-    "documentURL": "https://localhost:8443/",
-    "blockedURL": "https://url-of-blocked-resource.js",
-    "destination": "script",
-    "reportOnly": false
-  }
-}
-```
-
-Violation reports may also be sent to a remote server if the header includes one or more reporting endpoint names that match an endpoint declared using the {{HTTPHeader("Reporting-Endpoints")}} header.
-The format of the JSON report object is a serialized version of `IntegrityViolationReport` that additionally includes `age` and `user_agent` properties:
-
-```json
-[
-  {
-    "age": "176279",
-    "body": {
-      "documentURL": "https://localhost:8443/",
-      "blockedURL": "https://url-of-blocked-resource.js",
-      "destination": "script",
-      "reportOnly": false
-    },
-    "type": "integrity-violation",
-    "url": "https://url-of-page-attempting-to-load-resource-in-violation",
-    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
-  }
-]
-```
-
-For more information and examples see {{domxref("IntegrityViolationReport")}} and the [Reporting API](/en-US/docs/Web/API/Reporting_API).
-
 ## Examples
 
 ### Blocking and reporting when scripts lack integrity metadata
 
-This example shows a document that blocks and reports when any {{htmlelement("script")}} (or `HTMLScriptElement`) does not specify an `integrity` attribute, or when a script resource is requested in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
+This example shows a document that blocks and reports to a server endpoint when any {{htmlelement("script")}} (or `HTMLScriptElement`) does not specify an `integrity` attribute, or when a script resource is requested in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
 
 Note that the `integrity-endpoint` used in `Integrity-Policy` is defined in the {{httpheader("Reporting-Endpoints")}} header.
 
@@ -139,6 +93,8 @@ The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoint
 ## See also
 
 - {{HTTPHeader("Integrity-Policy-Report-Only")}}
-- [Integrity Policy](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy)
-- [Reporting API](/en-US/docs/Web/API/Reporting_API)
+- {{HTTPHeader("Reporting-Endpoints")}}
+- {{domxref("ReportingObserver")}}
 - {{domxref("IntegrityViolationReport")}}
+- [Integrity Policy](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy) in [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy)
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

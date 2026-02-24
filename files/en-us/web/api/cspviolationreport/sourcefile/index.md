@@ -1,7 +1,7 @@
 ---
 title: "CSPViolationReportBody: sourceFile property"
 short-title: sourceFile
-slug: Web/API/CSPViolationReportBody/sourceFile
+slug: Web/API/CSPViolationReport/sourceFile
 page-type: web-api-instance-property
 browser-compat: api.CSPViolationReportBody.sourceFile
 ---

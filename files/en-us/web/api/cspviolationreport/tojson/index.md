@@ -1,7 +1,7 @@
 ---
 title: "CSPViolationReportBody: toJSON() method"
 short-title: toJSON()
-slug: Web/API/CSPViolationReportBody/toJSON
+slug: Web/API/CSPViolationReport/toJSON
 page-type: web-api-instance-method
 status:
   - deprecated

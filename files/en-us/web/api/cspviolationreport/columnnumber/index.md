@@ -1,7 +1,7 @@
 ---
 title: "CSPViolationReportBody: columnNumber property"
 short-title: columnNumber
-slug: Web/API/CSPViolationReportBody/columnNumber
+slug: Web/API/CSPViolationReport/columnNumber
 page-type: web-api-instance-property
 browser-compat: api.CSPViolationReportBody.columnNumber
 ---

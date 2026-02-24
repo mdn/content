@@ -1,7 +1,7 @@
 ---
 title: "CSPViolationReportBody: effectiveDirective property"
 short-title: effectiveDirective
-slug: Web/API/CSPViolationReportBody/effectiveDirective
+slug: Web/API/CSPViolationReport/effectiveDirective
 page-type: web-api-instance-property
 browser-compat: api.CSPViolationReportBody.effectiveDirective
 ---

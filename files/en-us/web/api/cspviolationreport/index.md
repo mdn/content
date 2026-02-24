@@ -1,18 +1,18 @@
 ---
-title: CSPViolationReportBody
-slug: Web/API/CSPViolationReportBody
+title: CSPViolationReport
+slug: Web/API/CSPViolationReport
 page-type: web-api-interface
-browser-compat: api.CSPViolationReportBody
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
 ---
 
-{{APIRef("Reporting API")}} {{SecureContext_Header}}
+{{APIRef("Reporting API")}}
 
-The `CSPViolationReportBody` interface is an extension of the [Reporting API](/en-US/docs/Web/API/Reporting_API) that represents the body of a Content Security Policy (CSP) violation report.
+The `CSPViolationReport` interface is an extension of the [Reporting API](/en-US/docs/Web/API/Reporting_API) that represents the body of a Content Security Policy (CSP) violation report.
 
 CSP violations are thrown when the webpage attempts to load a resource that violates the policy set by the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
 
 CSP violation reports are returned in the [reports](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#reports) parameter of {{domxref("ReportingObserver")}} callbacks that have a `type` of `"csp-violation"`.
-The `body` property of those reports is an instance of `CSPViolationReportBody`.
+The `body` property of those reports is an instance of `CSPViolationReport`.
 
 CSP violation reports may also be sent as JSON objects to the endpoint specified in the [`report-to`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to) policy directive of the {{HTTPHeader("Content-Security-Policy")}} header.
 These reports similarly have a `type` of `"csp-violation"`, and a `body` property containing a serialization of an instance of this interface.
@@ -21,47 +21,44 @@ These reports similarly have a `type` of `"csp-violation"`, and a `body` propert
 > CSP violation reports sent by the Reporting API, when an endpoint is specified using the CSP [`report-to`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to) directive, are similar (but not identical) to the "CSP report" [JSON objects](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri#violation_report_syntax) sent when endpoints are specified using the [`report-uri`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri) directive.
 > The Reporting API and `report-to` directive are intended to replace the older report format and the `report-uri` directive.
 
-{{InheritanceDiagram}}
-
 ## Instance properties
 
-_Also inherits properties from its parent interface, {{DOMxRef("ReportBody")}}._
+- `body`
+  - : The body of the report.
+    This is an object with the following properties:
+    - {{domxref("CSPViolationReport.blockedURL")}} {{ReadOnlyInline}}
+      - : A string representing either the type or the URL of the resource that was blocked because it violates the CSP.
+    - {{domxref("CSPViolationReport.columnNumber")}} {{ReadOnlyInline}}
+      - : The column number in the script at which the violation occurred.
+    - {{domxref("CSPViolationReport.disposition")}} {{ReadOnlyInline}}
+      - : Indicates how the violated policy is configured to be treated by the user agent. This will be `"enforce"` or `"report"`.
+    - {{domxref("CSPViolationReport.documentURL")}} {{ReadOnlyInline}}
+      - : A string representing the URL of the document or worker in which the violation was found.
+    - {{domxref("CSPViolationReport.effectiveDirective")}} {{ReadOnlyInline}}
+      - : A string representing the directive whose enforcement uncovered the violation.
+    - {{domxref("CSPViolationReport.lineNumber")}} {{ReadOnlyInline}}
+      - : The line number in the script at which the violation occurred.
+    - {{domxref("CSPViolationReport.originalPolicy")}} {{ReadOnlyInline}}
+      - : A string containing the policy whose enforcement uncovered the violation.
+    - {{domxref("CSPViolationReport.referrer")}} {{ReadOnlyInline}}
+      - : A string representing the URL for the referrer of the resources whose policy was violated, or `null`.
+    - {{domxref("CSPViolationReport.sample")}} {{ReadOnlyInline}}
+      - : A string representing a sample of the resource that caused the violation, usually the first 40 characters. This will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.
+    - {{domxref("CSPViolationReport.sourceFile")}} {{ReadOnlyInline}}
+      - : If the violation occurred as a result of a script, this will be the URL of the script; otherwise, it will be `null`. Both `columnNumber` and `lineNumber` should have non-null values if this property is not `null`.
+    - {{domxref("CSPViolationReport.statusCode")}} {{ReadOnlyInline}}
+      - : A number representing the HTTP status code of the document or worker in which the violation occurred.
 
-- {{domxref("CSPViolationReportBody.blockedURL")}} {{ReadOnlyInline}}
-  - : A string representing either the type or the URL of the resource that was blocked because it violates the CSP.
-- {{domxref("CSPViolationReportBody.columnNumber")}} {{ReadOnlyInline}}
-  - : The column number in the script at which the violation occurred.
-- {{domxref("CSPViolationReportBody.disposition")}} {{ReadOnlyInline}}
-  - : Indicates how the violated policy is configured to be treated by the user agent. This will be `"enforce"` or `"report"`.
-- {{domxref("CSPViolationReportBody.documentURL")}} {{ReadOnlyInline}}
-  - : A string representing the URL of the document or worker in which the violation was found.
-- {{domxref("CSPViolationReportBody.effectiveDirective")}} {{ReadOnlyInline}}
-  - : A string representing the directive whose enforcement uncovered the violation.
-- {{domxref("CSPViolationReportBody.lineNumber")}} {{ReadOnlyInline}}
-  - : The line number in the script at which the violation occurred.
-- {{domxref("CSPViolationReportBody.originalPolicy")}} {{ReadOnlyInline}}
-  - : A string containing the policy whose enforcement uncovered the violation.
-- {{domxref("CSPViolationReportBody.referrer")}} {{ReadOnlyInline}}
-  - : A string representing the URL for the referrer of the resources whose policy was violated, or `null`.
-- {{domxref("CSPViolationReportBody.sample")}} {{ReadOnlyInline}}
-  - : A string representing a sample of the resource that caused the violation, usually the first 40 characters. This will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.
-- {{domxref("CSPViolationReportBody.sourceFile")}} {{ReadOnlyInline}}
-  - : If the violation occurred as a result of a script, this will be the URL of the script; otherwise, it will be `null`. Both `columnNumber` and `lineNumber` should have non-null values if this property is not `null`.
-- {{domxref("CSPViolationReportBody.statusCode")}} {{ReadOnlyInline}}
-  - : A number representing the HTTP status code of the document or worker in which the violation occurred.
-
-## Instance methods
-
-_Also inherits methods from its parent interface, {{DOMxRef("ReportBody")}}._
-
-- {{DOMxRef("CSPViolationReportBody.toJSON()")}} {{deprecated_inline}}
-  - : A _serializer_ which returns a JSON representation of the `CSPViolationReportBody` object.
+- `type`
+  - : The string `"csp-violation"`, indicating that this is a CSP violation report.
+- `url`
+  - : A string representing the URL of the document that generated the report.
 
 ## Examples
 
-### Obtaining a `CSPViolationReportBody` object
+### Obtaining a `CSPViolationReport` object
 
-To obtain a `CSPViolationReportBody` object, you must configure your page so that a CSP violation will occur.
+To obtain a `CSPViolationReport` object, you must configure your page so that a CSP violation will occur.
 In this example, we will set our CSP to only allow content from the site's own origin, and then attempt to load a script from `apis.google.com`, which is an external origin.
 
 First, we will set our {{HTTPHeader("Content-Security-Policy")}} header in the HTTP response:
@@ -103,7 +100,7 @@ observer.observe();
 ```
 
 Above we log the each violation report object and a JSON-string version of the object, which might look similar to the object below.
-Note that the `body` is an instance of the `CSPViolationReportBody` and the `type` is `"csp-violation"`.
+Note that the report is an instance of the `CSPViolationReport` and the `type` is `"csp-violation"`.
 
 ```json
 {

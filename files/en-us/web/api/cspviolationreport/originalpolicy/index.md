@@ -1,7 +1,7 @@
 ---
 title: "CSPViolationReportBody: originalPolicy property"
 short-title: originalPolicy
-slug: Web/API/CSPViolationReportBody/originalPolicy
+slug: Web/API/CSPViolationReport/originalPolicy
 page-type: web-api-instance-property
 browser-compat: api.CSPViolationReportBody.originalPolicy
 ---

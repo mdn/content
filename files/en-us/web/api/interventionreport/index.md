@@ -7,7 +7,7 @@ status:
 browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.intervention
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `InterventionReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents an intervention report.
 
@@ -92,7 +92,7 @@ The structure of the server report is almost exactly the same as `InterventionRe
 
 ## Examples
 
-### Reporting using the API
+### Using the `ReportingObserver` interface
 
 To observe intervention reports within the page, we construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"intervention"`, passing a callback that will receive and log the reports.
 This code needs to be loaded before the script that causes the violation:
@@ -174,5 +174,7 @@ It has the same structure as `InterventionReport`, except for the addition of `a
 
 ## See also
 
+- {{domxref("ReportingObserver")}}
+- {{HTTPHeader("Reporting-Endpoints")}}
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
-- [The Reporting API](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api)
+- [The Reporting API](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api) (developer.chrome.com)

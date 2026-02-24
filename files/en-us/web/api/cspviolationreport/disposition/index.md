@@ -1,7 +1,7 @@
 ---
 title: "CSPViolationReportBody: disposition property"
 short-title: disposition
-slug: Web/API/CSPViolationReportBody/disposition
+slug: Web/API/CSPViolationReport/disposition
 page-type: web-api-instance-property
 browser-compat: api.CSPViolationReportBody.disposition
 ---

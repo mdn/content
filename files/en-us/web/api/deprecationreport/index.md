@@ -7,7 +7,7 @@ status:
 browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.deprecation
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `DeprecationReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents a deprecation report.
 
@@ -95,7 +95,7 @@ The structure of the server report is almost exactly the same as `DeprecationRep
 
 ## Examples
 
-### Reporting using the API
+### Using the `ReportingObserver` interface
 
 To observe deprecation reports within the page, we construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"deprecation"`, passing a callback that will receive and log the reports.
 
@@ -185,5 +185,7 @@ It has the same structure as `DeprecationReport`, except for the addition of `ag
 
 ## See also
 
+- {{domxref("ReportingObserver")}}
+- {{HTTPHeader("Reporting-Endpoints")}}
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
-- [The Reporting API](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api)
+- [The Reporting API](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api) (developer.chrome.com)

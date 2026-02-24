@@ -1,7 +1,7 @@
 ---
 title: "CSPViolationReportBody: referrer property"
 short-title: referrer
-slug: Web/API/CSPViolationReportBody/referrer
+slug: Web/API/CSPViolationReport/referrer
 page-type: web-api-instance-property
 browser-compat: api.CSPViolationReportBody.referrer
 ---

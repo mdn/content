@@ -1,7 +1,7 @@
 ---
 title: "CSPViolationReportBody: documentURL property"
 short-title: documentURL
-slug: Web/API/CSPViolationReportBody/documentURL
+slug: Web/API/CSPViolationReport/documentURL
 page-type: web-api-instance-property
 browser-compat: api.CSPViolationReportBody.documentURL
 ---

@@ -6,7 +6,7 @@ browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_
 spec-urls: https://w3c.github.io/webappsec-subresource-integrity/#report-violations
 ---
 
-{{APIRef("Reporting API")}} {{SecureContext_Header}}
+{{APIRef("Reporting API")}}
 
 The `IntegrityViolationReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents a report that is generated when a document violates its [Integrity Policy](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy).
 
@@ -45,8 +45,8 @@ The callback method is then called with reports of the requested types, passing 
 For integrity violations, the object will be an `IntegrityViolationReport` instance (which has the [`type`](#type) property set to `"integrity-violation"`).
 
 The structure of a typical report is shown below.
-Note that we can see the URL of both the page that had its policy violated (`url`), the document that attempted to load the resource (`documentURL`) and the resource that was blocked from loading (`body.blockedURL`).
-We can also see that the report was due to loading a script, and that it was triggered by a violation that was it was enforced (and not just reported).
+Note that we can see the URL of both the page that had its policy violated (`url`), the document that attempted to load the resource (`body.documentURL`), and the resource that was blocked from loading (`body.blockedURL`).
+We can also see that the report was due to loading a script, and that it was triggered by a violation that was enforced (and not just reported).
 
 ```json
 {
@@ -84,7 +84,7 @@ The structure of the server report is almost exactly the same as `IntegrityViola
 
 ## Examples
 
-### Reporting using the API
+### Using the `ReportingObserver` interface
 
 This example shows how you can obtain Integrity Policy violation reports using a {{domxref("ReportingObserver")}}.
 

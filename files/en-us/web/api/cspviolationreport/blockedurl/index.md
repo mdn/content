@@ -1,7 +1,7 @@
 ---
 title: "CSPViolationReportBody: blockedURL property"
 short-title: blockedURL
-slug: Web/API/CSPViolationReportBody/blockedURL
+slug: Web/API/CSPViolationReport/blockedURL
 page-type: web-api-instance-property
 browser-compat: api.CSPViolationReportBody.blockedURL
 ---

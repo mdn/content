@@ -1,7 +1,7 @@
 ---
 title: "CSPViolationReportBody: sample property"
 short-title: sample
-slug: Web/API/CSPViolationReportBody/sample
+slug: Web/API/CSPViolationReport/sample
 page-type: web-api-instance-property
 browser-compat: api.CSPViolationReportBody.sample
 ---

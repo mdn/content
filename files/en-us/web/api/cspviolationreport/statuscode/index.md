@@ -1,7 +1,7 @@
 ---
 title: "CSPViolationReportBody: statusCode property"
 short-title: statusCode
-slug: Web/API/CSPViolationReportBody/statusCode
+slug: Web/API/CSPViolationReport/statusCode
 page-type: web-api-instance-property
 browser-compat: api.CSPViolationReportBody.statusCode
 ---

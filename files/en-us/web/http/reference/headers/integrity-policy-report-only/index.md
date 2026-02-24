@@ -9,10 +9,9 @@ sidebar: http
 
 The HTTP **`Integrity-Policy-Report-Only`** response header allows website administrators to report on resources that the user agent loads that would violate [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) guarantees if the integrity policy was enforced (using the {{HTTPHeader("Integrity-Policy")}} header).
 
-Reports may be generated for requests on specified [request destinations](#blocked-destinations) that omit integrity metadata, or that are made in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
-For reports to be sent to a reporting endpoint, the `Integrity-Policy-Report-Only` header must specify a valid reporting endpoint name that matches an endpoint declared using the {{HTTPHeader("Reporting-Endpoints")}} header.
-Reports are generated using the [Reporting API](/en-US/docs/Web/API/Reporting_API), and may also be observed in the page for which the integrity policy is being reported, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver).
-The format of the report is given by the {{domxref("IntegrityViolationReport")}} dictionary (a JSON-serialized form is sent in POSTs to reporting server endpoints).
+Violations of the policy may be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+Reports can be observed in the page for which the policy is being enforced, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver), and sent to server endpoints defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header and selected using the [`endpoints`](#endpoints) field.
+For more information see {{domxref("CSPViolationReport")}}.
 
 The header allows developers to test [integrity policies](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy) and fix any content issues before eventually deploying an {{HTTPHeader("Integrity-Policy")}} header to enforce the policy.
 
@@ -58,7 +57,7 @@ The header values are defined as structured field dictionaries with the followin
 
 ### Reporting when scripts lack integrity metadata
 
-This example shows a document that reports when any {{htmlelement("script")}} (or `HTMLScriptElement`) does not specify an `integrity` attribute, or when a script resource is requested in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
+This example shows a document that reports to a server endpoint when any {{htmlelement("script")}} (or `HTMLScriptElement`) does not specify an `integrity` attribute, or when a script resource is requested in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
 
 Note that the `integrity-endpoint` used in `Integrity-Policy-Report-Only` is defined in the {{httpheader("Reporting-Endpoints")}} header.
 
@@ -97,6 +96,7 @@ Note that the `body.reportOnly` property is `true`, because this report was trig
 
 - {{HTTPHeader("Integrity-Policy")}}
 - {{HTTPHeader("Reporting-Endpoints")}}
-- [Integrity Policy](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy)
+- {{domxref("ReportingObserver")}}
 - {{domxref("IntegrityViolationReport")}}
+- [Integrity Policy](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy) in [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy)
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
