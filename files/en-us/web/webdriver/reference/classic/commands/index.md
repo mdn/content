@@ -2,7 +2,7 @@
 title: WebDriver classic commands
 short-title: Commands
 slug: Web/WebDriver/Reference/Classic/Commands
-page-type: landing-page
+page-type: listing-page
 browser-compat: webdriver.classic
 sidebar: webdriver
 ---

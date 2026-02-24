@@ -1,41 +1,27 @@
 ---
-title: Firefox 148 release notes for developers (Beta)
-short-title: Firefox 148 (Beta)
+title: Firefox 148 release notes for developers (Stable)
+short-title: Firefox 148 (Stable)
 slug: Mozilla/Firefox/Releases/148
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 148 that affect developers.
-Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [February 24, 2026](https://whattrainisitnow.com/release/?version=148).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 148 was released on [February 24, 2026](https://whattrainisitnow.com/release/?version=148).
 
 ## Changes for web developers
-
-<!-- ### Developer Tools -->
 
 ### HTML
 
 - The initial `about:blank` document now loads synchronously. A browsing context's first navigation may resolve to `about:blank` (for example, when the initial URL is empty or explicitly set to `about:blank`). In these cases, Firefox no longer replaces the initial empty document with a second, asynchronously loaded one, and instead fires the `load` event synchronously on the initial document. ([Firefox bug 543435](https://bugzil.la/543435)).
 
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
-
 ### CSS
 
 - The {{cssxref("position-area")}} property in [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) now correctly keeps the anchored element within the viewport.
   ([Firefox bug 2008537](https://bugzil.la/2008537)).
+
+- The {{cssxref("position-try-order")}} property in [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) is now supported and allows changing the order in which position fallback options are tried based on the space available. This also affects the {{cssxref("position-try")}} shorthand property.
+  ([Firefox bug 1989059](https://bugzil.la/1989059)).
 
 - The {{cssxref("overflow")}}, {{cssxref("overflow-x")}}, and {{cssxref("overflow-y")}} CSS properties can now be used on {{glossary("replaced elements")}} such as images, in the same way that they are used with other elements.
   Prior to this, replaced elements were always clipped to their bounding container.
@@ -43,8 +29,6 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The CSS {{cssxref("basic-shape/shape")}} function is now available by default. `shape()` is a {{cssxref("basic-shape")}} data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is similar in some respects to the {{cssxref("basic-shape/path","path()")}} function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, `shape()` uses standard CSS syntax. This allows you to use CSS units and CSS math functions, which makes it easy to create and edit shapes.
   ([Firefox bug 1982941](https://bugzil.la/1982941)).
-
-<!-- #### Removals -->
 
 ### JavaScript
 
@@ -58,18 +42,6 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
   `RegExp` static properties, such as `RegExp.$1` – `RegExp.$9` and `RegExp.input` (and its alias `RegExp.$_`), are normalized to be configurable and non-enumerable.
   In particular this means that they can be deleted from the `RegExp` object.
   ([Firefox bug 1306461](https://bugzil.la/1306461)).
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
 
 ### APIs
 
@@ -95,27 +67,7 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This is implemented using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) and shares the same [Security considerations](/en-US/docs/Web/API/Clipboard_API#security_considerations), such as requiring transient activation and user acknowledgement when pasting cross-origin content.
   ([Firefox bug 1998195](https://bugzil.la/1998195)).
 
-<!-- #### Media, WebRTC, and Web Audio -->
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
-
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
-
-<!-- #### General -->
-
-<!-- #### WebDriver BiDi -->
-
-<!-- #### Marionette -->
-
 ## Changes for add-on developers
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 

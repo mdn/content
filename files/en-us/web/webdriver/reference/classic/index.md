@@ -2,7 +2,7 @@
 title: WebDriver classic reference
 short-title: Classic
 slug: Web/WebDriver/Reference/Classic
-page-type: listing-page
+page-type: landing-page
 sidebar: webdriver
 ---
 

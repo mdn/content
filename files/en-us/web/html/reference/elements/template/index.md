@@ -33,6 +33,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : Sets the value of the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If set, a clone of the shadow host (the parent element of this `<template>`) created with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a shadow root in the copy.
 
+- `shadowrootcustomelementregistry`
+  - : Sets the [`customElementRegistry`](/en-US/docs/Web/API/ShadowRoot/customElementRegistry) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `null`, rather than the document's [custom element registry](/en-US/docs/Web/API/Document/customElementRegistry).
+    This allows a scoped {{domxref("CustomElementRegistry")}} to be attached later using {{domxref("CustomElementRegistry.initialize()")}}.
+
 - `shadowrootdelegatesfocus`
   - : Sets the value of the [`delegatesFocus`](/en-US/docs/Web/API/ShadowRoot/delegatesFocus) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If this is set and a non-focusable element in the shadow tree is selected, then focus is delegated to the first focusable element in the tree.
