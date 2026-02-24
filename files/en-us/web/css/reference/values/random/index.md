@@ -116,7 +116,7 @@ To avoid this behavior, you can provide a unique {{cssxref("dashed-ident")}} tha
 
 ### Custom properties
 
-When using `random()` with custom properties it is important to be aware that custom properties in CSS work like a text replacement mechanism rather than a variable that stores a result. This can lead to counterintuitive behavior.
+As with all CSS functions, when a `random()` function is included within a custom property value, the value remains a function; behaving like a text replacement mechanism, not storing a single return value.
 
 ```css
 --random-size: random(1px, 100px);
