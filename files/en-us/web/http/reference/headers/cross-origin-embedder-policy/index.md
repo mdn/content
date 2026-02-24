@@ -60,8 +60,6 @@ The `<parameter>` is optional, and can be one of:
 
 ## Description
 
-The **`Cross-Origin-Embedder-Policy`** (COEP) response header configures the current document's policy for loading and embedding cross-origin resources requested in `no-cors` mode.
-
 The policy for whether a particular resource is embeddable cross-site may be defined for that resource using the {{HTTPHeader("Cross-Origin-Resource-Policy")}} (CORP) header in a response to a `no-cors` fetch, or using [CORS](/en-US/docs/Web/HTTP/Guides/CORS).
 If neither of these policies are set, then by default, resources can be loaded or embedded into a document as though they had a CORP value of `cross-origin` (meaning that they _can_ be loaded cross origin).
 
@@ -80,47 +78,9 @@ This is one of the conditions needed for a document to be [cross-origin isolated
 
 ### Violation reports
 
-Violations of a COEP may be sent as JSON objects in `POST` requests to a remote server, or observed in the violating page as using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
-
-To observe violations using the [Reporting API](/en-US/docs/Web/API/Reporting_API) you create a {{domxref("ReportingObserver")}} to observe {{domxref("COEPViolationReport")}} instances that have the `type` of `"coep"`.
-The format of the `COEPViolationReport` report is shown below:
-
-```js
-[
-  {
-    type: "coep",
-    url: "https://url-of-document-that-generated-report",
-    body: {
-      type: "navigation",
-      blockedURL: "https://url-of-resource-that-was-blocked",
-      destination: "image",
-      disposition: "enforce",
-    },
-  },
-];
-```
-
-To send violation reports to a remote server, you specify an endpoint name in the COEP header's [`report-to`](#report-to_endpoint_name) parameter, and provide a mapping from this name to a server address in the {{HTTPHeader("Reporting-Endpoints")}} header.
-The format of the JSON report object a serialized version of `COEPViolationReport` that additionally includes `age` and `user_agent` properties:
-
-```json
-[
-  {
-    "age": 967132,
-    "body": {
-      "blockedURL": "https://url-of-resource-that-was-blocked",
-      "destination": "image",
-      "disposition": "enforce",
-      "type": "corp"
-    },
-    "type": "coep",
-    "url": "https://url-of-document-that-generated-report",
-    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
-  }
-]
-```
-
-For more information and examples see {{domxref("COEPViolationReport")}} and [Reporting API](/en-US/docs/Web/API/Reporting_API).
+Violations of the policy may be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+Reports can be observed in the page for which the policy is being set using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver), and sent to server endpoints defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header and selected using the [`report-to`](#report-to_endpoint_name) parameter.
+For more information see {{domxref("COEPViolationReport")}}.
 
 ## Examples
 
@@ -222,5 +182,8 @@ If CORS is not supported for some images, a COEP value of `credentialless` can b
 - {{HTTPHeader("Cross-Origin-Embedder-Policy-Report-Only")}}
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}}
 - {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}}
+- {{domxref("ReportingObserver")}}
+- {{domxref("COEPViolationReport")}}
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)
 - [Cross Origin Opener Policy](https://web.dev/articles/why-coop-coep#coep) in _Why you need "cross-origin isolated" for powerful features_ on web.dev (2020)
 - [COOP and COEP explained: Artur Janc, Charlie Reis, Anne van Kesteren](https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit?tab=t.0) (2020)

@@ -9,14 +9,12 @@ sidebar: http
 
 The HTTP **`Cross-Origin-Embedder-Policy-Report-Only`** (COEP) {{Glossary("response header")}} configures the current document's _report-only_ policy for loading and embedding cross-origin resources that are requested in `no-cors` mode.
 
-The header allows website administrators to report on resources that would be blocked by COEP, without preventing them from being loaded.
+The header allows website administrators to report on resources that would be blocked by {{HTTPHeader("Cross-Origin-Embedder-Policy")}}, without preventing them from being loaded.
 This allows for a softer rollout of enforcement.
 
-> [!NOTE]
-> See {{HTTPHeader("Cross-Origin-Embedder-Policy")}} and {{domxref("COEPViolationReport")}} for more complete information and examples.
->
-> The headers are the same except `Cross-Origin-Embedder-Policy` blocks resources from loading is needed for a document to be [cross-origin isolated](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy#cross-origin_isolation).
-> In addition, [Violation reports](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy#violation_reports) from `Cross-Origin-Embedder-Policy-Report-Only` have a [`disposition`](/en-US/docs/Web/API/COEPViolationReport#disposition) of `"reporting"` instead of `"enforce"`.
+Violations of the policy may be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+Reports can be observed in the page for which the policy is being set using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver), and sent to server endpoints defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header and selected using the [`report-to`](#report-to_endpoint_name) parameter.
+For more information see {{domxref("COEPViolationReport")}}.
 
 <table class="properties">
   <tbody>
@@ -80,5 +78,8 @@ The `<parameter>` is optional, and can be one of:
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}}
 - {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}}
+- {{domxref("ReportingObserver")}}
+  {{domxref("COEPViolationReport")}}
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)
 - [Cross Origin Opener Policy](https://web.dev/articles/why-coop-coep#coep) in _Why you need "cross-origin isolated" for powerful features_ on web.dev (2020)
 - [COOP and COEP explained: Artur Janc, Charlie Reis, Anne van Kesteren](https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit?tab=t.0) (2020)

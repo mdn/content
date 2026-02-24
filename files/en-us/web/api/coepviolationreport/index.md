@@ -59,8 +59,9 @@ A document's policies for loading and embedding cross-origin resources that are 
 COEP policy violations may be reported whenever a policy set by those headers blocks (or would block) the loading of a resource.
 
 You can monitor for COEP violation reports within the page that sets the policy using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
-To do this you construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"coep"`, passing a callback method (optionally specifying the type of report to observe).
-The callback method is called for every COEP violation with an instance of this dictionary that has the [`type`](#type) property set to `coep`.
+To do this you create a {{domxref("ReportingObserver")}} object to listen for reports, passing a callback method and an (optional) `options` property specifying the types of reports that you want to report on.
+The callback method is then called with reports of the requested types, passing a report object.
+For COEP violations, the object will be a `COEPViolationReport` instance (which has the [`type`](#type) property set to `"coep"`).
 
 The structure of a typical report is shown below.
 Note that we can see the URL of both the page that had its policy violated (`url`) and the resource that was blocked from loading (`body.blockedURL`).
@@ -77,14 +78,38 @@ We can also see that the report was triggered by a `corp` violation, and from th
     "disposition": "enforce"
   }
 }
+```
+
+Violation reports may also sent as a JSON object in a `POST` to a configured [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
+The reporting server endpoint name is specified in the [`report-to`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy#report-to_endpoint_name) policy directive of the {{httpheader("Cross-Origin-Embedder-Policy")}} or {{httpheader("Cross-Origin-Embedder-Policy-Report-Only")}} header.
+Valid endpoint names and their mapping to a particular URL are defined using the {{httpheader("Reporting-Endpoints")}} header.
+
+The structure of the server report is almost exactly the same as `CSPViolationReport`, except that it additionally includes `age` and `user_agent` fields.
+
+```json
+[
+  {
+    "age": 967132,
+    "body": {
+      "blockedURL": "https://url-of-resource-that-was-blocked",
+      "destination": "image",
+      "disposition": "enforce",
+      "type": "corp"
+    },
+    "type": "coep",
+    "url": "https://url-of-document-that-generated-report",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  }
+]
+```
 
 ## Examples
 
-### Reporting using the API
+### Using the `ReportingObserver` interface
 
 This example shows how you can obtain COEP violation reports using a {{domxref("ReportingObserver")}}.
 
-First consider the case where we have an HTML file hosted on the origin `https://example.com`, which includes in its  an {{htmlelement("img")}} element that sets as its source the (cross-origin) resource `some-image.png`.
+First consider the case where we have an HTML file hosted on the origin `https://example.com`, which includes in its an {{htmlelement("img")}} element that sets as its source the (cross-origin) resource `some-image.png`.
 Since the element does not set the [`cross-origin` attribute](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute, it will be requested in `no-cors` mode.
 By default, if `some-image.png` is not served with the {{httpheader("Cross-Origin-Embedder-Policy")}} header, this request will succeed.
 
@@ -183,5 +208,9 @@ The same report would be generated if we set {{httpheader("Cross-Origin-Embedder
 
 ## See also
 
-- {{httpheader("Reporting-Endpoints")}}
+- {{domxref("ReportingObserver")}}
+- {{httpheader("Cross-Origin-Embedder-Policy")}}
+- {{httpheader("Cross-Origin-Embedder-Policy-Report-Only")}}
+- {{HTTPHeader("Reporting-Endpoints")}}
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)
 - [The Reporting API](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api) (developer.chrome.com)
