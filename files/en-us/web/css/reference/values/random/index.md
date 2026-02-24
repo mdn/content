@@ -23,6 +23,12 @@ The **`random()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Ref
   background-color: hsl(random(element-shared, 0, 360) 50% 50%);
   height: random(element-shared, 50px, 300px);
 }
+
+@supports not (order: random(1, 2)) {
+  body::before {
+    content: "Your browser doesn't support the random() function.";
+  }
+}
 ```
 
 ## Syntax
@@ -155,6 +161,12 @@ Because `random()` can generate an unknown value within a range, you don’t hav
 .badge.unique {
   background: hsl(random(0, 360), 50%, 50%);
 }
+
+@supports not (order: random(1, 2)) {
+  :root::after {
+    content: "Your browser doesn't support the random() function.";
+  }
+}
 ```
 
 #### Result
@@ -193,6 +205,14 @@ body {
   width: random(0.25em, 1em);
   top: random(0%, 100%);
   left: random(0%, 100%);
+  animation: move 1s alternate-reverse infinite;
+}
+
+@supports not (order: random(1, 2)) {
+  body::before {
+    color: white;
+    content: "Your browser doesn't support the random() function.";
+  }
 }
 ```
 
