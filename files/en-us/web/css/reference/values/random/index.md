@@ -68,11 +68,8 @@ random(--my-base, 1em, 3rem, 2px)
     - `fixed <number>`
       - : Specifies a base value between 0 and 1 for the random value to be generated from.
 
-- `<calc-sum>` (minimum)
-  - : The minimum value of the random range. Can be a number, dimension, percentage, or calculation. Must use the same type as the maximum value and optional step interval value, if provided.
-
-- `<calc-sum>` (maximum)
-  - : The maximum value of the random range. Can be a number, dimension, percentage, or calculation. Must use the same type as the minimum value and optional step interval value, if provided.
+- `<calc-sum>, <calc-sum>`
+  - : Two required, comma-separated, `<number>`, `<dimension>`,  or `<percentage>` values, or calculations resolving to one of these types, defining the minimum and maximum values, respectively. Both values must be resolvable the same [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types).
 
 - `<calc-sum>` {{optional_inline}}
   - : Specifies the step interval. Only values that are multiples of this step will be generated. Must use the same type as the minimum and maximum values.
