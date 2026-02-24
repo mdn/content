@@ -17,7 +17,7 @@ You must have the permission for the page's URL either explicitly, as a [host pe
 
 You _cannot_ inject code into any of the browser's built-in pages, such as `about:debugging`, or `about:addons`, or the page that opens when you open a new empty tab.
 
-Extensions cannot run content scripts in extension documents. If an extension wants to dynamically run code in an extension document, a script in the extension's document can register a {{WebExtAPIRef("runtime.onMessage")}} listener and the extension send a message there to execute code in the script.
+Extensions cannot run content scripts in extension documents. If an extension wants to dynamically run code in an extension document, a script in the extension's document can register a {{WebExtAPIRef("runtime.onMessage")}} listener and send a message there to trigger the execution of code in that listener.
 
 > [!NOTE]
 > The ability to inject code into pages packaged with your extension was deprecated in Firefox 149 and removed in Firefox 152.
