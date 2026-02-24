@@ -35,7 +35,7 @@ column-height: unset;
 - `auto`
   - : The initial value. If the content container has a set height, the content columns will grow to that height, overflowing to the side if the content doesn't fit inside the container. If the content container does not have a set height, the content will be equally distributed between the columns generated inside the container.
 - {{cssxref("&lt;length>")}}
-  - : The height to set for the columns.
+  - : The height of the columns. Must be non-negative.
 
 ## Description
 
