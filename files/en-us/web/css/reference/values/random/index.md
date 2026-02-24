@@ -92,7 +92,33 @@ The random base value works like a [seed for randomness](/en-US/docs/Glossary/RN
 
 The optional first`<random-value-sharing>` parameter controls how the random base value is shared. Sharing enables reusing the same randomly generated value, a necessity for some design effects. The value can be set to use `auto`, an `element-shared` keyword, a custom {{cssxref("dashed-ident")}} , or `fixed <number>`.
 
-Use the `element-shared` keyword as the first parameter to share the random base value across all elements that use `random()` with the keyword. When you specify a `<dashed-ident>` (e.g. `--custom-name`), each element gets its own random base value. Within that element, all properties that reference the same ident will share that base value. Combining a `<dashed-ident>` with `element-shared` (e.g. `random(--custom-name element-shared, 0, 100)`) shares the random base value across elements and properties that use the same `<random-value-sharing>` parameter.
+All the `random()` functions with the `element-shared` keyword share the random base value for the other elements but only for the same property. For example, when the following is declared, A, B, and C will be identically sized rectangles with all the same random width and all the same random height:
+
+```css
+A, B, C {
+  width: random(element-shared, 10px, 200px);
+  height: random(element-shared, 10px, 200px);
+}
+```
+ 
+When you specify a `<dashed-ident>` (e.g. `--custom-name`), each element in an element’s styles with the same name shares the same random base value, and ones with different `<dashed-ident>` values will be assigned distinct random base values. When the following is declared, A, B, and C will all be squares, because within each element, all properties that reference the same ident will share the same base value. Therefore, the width of each will be the same as it's height, but A, B, and C will have distinct sizes.
+
+```css
+A, B, C {
+  width: random(--custom-name, 10px, 200px);
+  height: random(--custom-name, 10px, 200px);
+}
+
+```
+ 
+Combining a `<dashed-ident>` with `element-shared` (e.g. `random(--custom-name element-shared, 0, 100)`) shares the random base value across elements and properties that use the same `<random-value-sharing>` parameter. Given the following, A, B, and C will all be squares of the same size:
+
+```css
+A, B, C {
+  width: random(--custom-name element-shared,, 10px, 200px);
+  height: random(--custom-name element-shared, 10px, 200px);
+}
+```
 
 #### Automatic behavior
 
