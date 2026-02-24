@@ -10,7 +10,7 @@ Alongside detailed reference documentation, we provide extensive learning resour
 MDN's mission is to provide a blueprint for a better internet and empower a new generation of developers and content creators to build it.
 
 The strength of MDN Web Docs lies in its vast community of active readers and contributors.
-Since 2005, approximately 45,000 contributors have created the documentation we know and love.
+ Since its launched in 2005, more than 45,000 contributors have helped build and improve MDN Web Docs.
 Together, contributors have created over 45,000 documents that make up an up-to-date, comprehensive, and free resource for web developers worldwide.
 
 In addition to English-language articles, over 35 volunteers lead translation and localization efforts for Chinese, French, Japanese, Korean, Portuguese, Russian, and Spanish.
