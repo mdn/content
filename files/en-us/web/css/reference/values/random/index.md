@@ -150,7 +150,19 @@ As with all CSS functions, when a `random()` function is included within a custo
 
 In the above example, the `--random-size` custom property does not "store" the randomly generated result. When `var(--random-size)` is parsed it is effectively replaced with `random(1px, 100px)`, meaning each use creates a new `random()` call with its own base value depending on the context in which its used. 
 
-If the intent is to use a shared random value, use `element-shared`, or a {{cssxref("dashed-ident")}}, or both in `random()` calls assigned to a custom property. Alternatively, you can use a registered custom property with {{cssxref("@property")}}. Registered custom properties will compute the random value and store it.
+This is not true in the case of using `random()` when registering a custom property with {{cssxref("@property")}}. Registered custom properties compute random values and store them. In this example, A, B, and C will be squares of equal size: 
+
+```css
+@property --defaultSize {
+  syntax: "<length> | <percentage>";
+  inherits: true;
+  initial-value: random(100px, 200px);
+}
+A, B, C {
+  height: var(--defaultSize);
+  width: var(--defaultSize);
+}
+```
 
 ## Accessibility
 
