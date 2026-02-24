@@ -88,7 +88,7 @@ The minimum, maximum and step values specified must be of the same {{cssxref("nu
 The random base value works like a seed for randomness. It's a starting number that is used to generate the final random result. When two `random()` functions share the same base value, their results vary together in a predictable pattern. When they have different base values, their results are completely independent of each other.
 
 ### Random value sharing
-You can optionally provide a `<random-value-sharing>` value as the first parameter which controls how the random base value is shared. Sharing can be useful for reusing the same randomly generated value, a necessity for some design effects. The optional first parameter can use `auto`, an `element-shared` keyword, a custom {{cssxref("dashed-ident")}} or `fixed <number>`.
+The optional first`<random-value-sharing>` parameter controls how the random base value is shared. Sharing enables reusing the same randomly generated value, a necessity for some design effects. The value can be set to use `auto`, an `element-shared` keyword, a custom {{cssxref("dashed-ident")}} , or `fixed <number>`.
 
 Use the `element-shared` keyword as the first parameter to share the random base value across all elements that use `random()` with the keyword. When you specify a `<dashed-ident>` (e.g. `--custom-name`), each element gets its own random base value. Within that element, all properties that reference the same ident will share that base value. Combining a `<dashed-ident>` with `element-shared` (e.g. `random(--custom-name element-shared, 0, 100)`) shares the random base value across elements and properties that use the same `<random-value-sharing>` parameter.
 
