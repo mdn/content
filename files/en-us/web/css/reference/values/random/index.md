@@ -86,7 +86,7 @@ The minimum, maximum and step values specified must be of the same {{cssxref("nu
 
 ### Random base value
 
-The random base value works like a seed for randomness. It's a starting number that is used to generate the final random result. When two `random()` functions share the same base value, their results vary together in a predictable pattern. When they have different base values, their results are completely independent of each other.
+The random base value works like a [seed for randomness](/en-US/docs/Glossary/RNG). It's a starting number that is used to generate the final random result. When two `random()` functions share the same base value, their results vary together in a predictable pattern. When they have different base values, their results are completely independent of each other.
 
 ### Random value sharing
 
