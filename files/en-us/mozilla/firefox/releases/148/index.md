@@ -83,7 +83,8 @@ Firefox 148 was released on [February 24, 2026](https://whattrainisitnow.com/rel
 - Fixed an issue in `network.getData` that caused a `RangeError` when decoding chunked response bodies due to a size mismatch ([Firefox bug 2004973](https://bugzil.la/2004973)).
 - Fixed an issue where the `browsingContext.userPromptOpened` and `browsingContext.userPromptClosed` events incorrectly reported the top-level context ID instead of the iframe's context ID ([Firefox bug 1964905](https://bugzil.la/1964905)).
 - Improved the performance of WebDriver BiDi commands by approximately 100 ms when the selected context is no longer available during the command execution ([Firefox bug 1934326](https://bugzil.la/1934326)).
-- 
+-
+
 #### Marionette
 
 - Added the `Reporting:GenerateTestReport` command to [generate a test report via the Reporting API](https://www.w3.org/TR/reporting-1/#generate-test-report-command) ([Firefox bug 1909662](https://bugzil.la/1909662)).
