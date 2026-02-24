@@ -1,43 +1,34 @@
 ---
-title: Firefox 148 release notes for developers (Beta)
-short-title: Firefox 148 (Beta)
+title: Firefox 148 release notes for developers (Stable)
+short-title: Firefox 148 (Stable)
 slug: Mozilla/Firefox/Releases/148
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 148 that affect developers.
-Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [February 24, 2026](https://whattrainisitnow.com/release/?version=148).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 148 was released on [February 24, 2026](https://whattrainisitnow.com/release/?version=148).
 
 ## Changes for web developers
-
-<!-- ### Developer Tools -->
 
 ### HTML
 
 - The initial `about:blank` document now loads synchronously. A browsing context's first navigation may resolve to `about:blank` (for example, when the initial URL is empty or explicitly set to `about:blank`). In these cases, Firefox no longer replaces the initial empty document with a second, asynchronously loaded one, and instead fires the `load` event synchronously on the initial document. ([Firefox bug 543435](https://bugzil.la/543435)).
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
 
 ### CSS
 
 - The {{cssxref("position-area")}} property in [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) now correctly keeps the anchored element within the viewport.
   ([Firefox bug 2008537](https://bugzil.la/2008537)).
 
-<!-- #### Removals -->
+- The {{cssxref("position-try-order")}} property in [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) is now supported and allows changing the order in which position fallback options are tried based on the space available. This also affects the {{cssxref("position-try")}} shorthand property.
+  ([Firefox bug 1989059](https://bugzil.la/1989059)).
+
+- The {{cssxref("overflow")}}, {{cssxref("overflow-x")}}, and {{cssxref("overflow-y")}} CSS properties can now be used on {{glossary("replaced elements")}} such as images, in the same way that they are used with other elements.
+  Prior to this, replaced elements were always clipped to their bounding container.
+  ([Firefox bug 1999100](https://bugzil.la/1999100)).
+
+- The CSS {{cssxref("basic-shape/shape")}} function is now available by default. `shape()` is a {{cssxref("basic-shape")}} data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is similar in some respects to the {{cssxref("basic-shape/path","path()")}} function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, `shape()` uses standard CSS syntax. This allows you to use CSS units and CSS math functions, which makes it easy to create and edit shapes.
+  ([Firefox bug 1982941](https://bugzil.la/1982941)).
 
 ### JavaScript
 
@@ -52,19 +43,11 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
   In particular this means that they can be deleted from the `RegExp` object.
   ([Firefox bug 1306461](https://bugzil.la/1306461)).
 
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
-
 ### APIs
+
+- The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) is now supported, along with related methods like {{domxref("Element.setHTML", "setHTML()")}}.
+  This allows you to sanitize HTML before inserting it into the DOM, giving you full control over the resulting content, and reducing the risk of XSS attacks.
+  ([Firefox bug 1650370](https://bugzil.la/1650370)).
 
 - The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) is now supported.
   This provides mechanisms to ensure that properties and functions that can potentially be used as vectors for XSS attacks are only able to be called with data that has been passed through a transformation function.
@@ -88,27 +71,26 @@ Firefox 148 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This is implemented using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) and shares the same [Security considerations](/en-US/docs/Web/API/Clipboard_API#security_considerations), such as requiring transient activation and user acknowledgement when pasting cross-origin content.
   ([Firefox bug 1998195](https://bugzil.la/1998195)).
 
-<!-- #### Media, WebRTC, and Web Audio -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### Removals -->
+#### General
 
-<!-- ### WebAssembly -->
+- Fixed a race condition during initialization of required browser features when opening a new window, preventing issues when navigating immediately to another URL ([Firefox bug 1891028](https://bugzil.la/1891028)).
+- Fixed an interoperability issue between Marionette and WebDriver BiDi where the BiDi `clientWindow` ID was incorrectly used as a window handle in Marionette ([Firefox bug 2002949](https://bugzil.la/2002949)).
 
-<!-- #### Removals -->
+#### WebDriver BiDi
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+- Added initial support for interacting with the browser's chrome scope (the Firefox window itself). The `browsingContext.getTree` command now accepts the vendor specific `moz:scope` parameter and returns chrome contexts when set to `chrome` and Firefox was started with the `--remote-allow-system-access` argument. These contexts can be used with `script.evaluate` and `script.callFunction` to execute privileged JavaScript with access to Gecko APIs. Other commands do not yet support chrome contexts, but support will be added incrementally as needed ([Firefox bug 1944568](https://bugzil.la/1944568), [Firefox bug 1944570](https://bugzil.la/1944570), and [Firefox bug 1851788](https://bugzil.la/1851788)).
+- Updated the `emulation.setGeolocationOverride` and `emulation.setScreenOrientationOverride` commands to implement the new reset behavior: contexts are reset only when the `contexts` parameter is provided, and user contexts only when the `userContexts` parameter is specified ([Firefox bug 1998732](https://bugzil.la/1998732) and [Firefox bug 1998734](https://bugzil.la/1998734)).
+- Fixed a race condition in `browsingContext.create` where opening a new tab in the foreground could return before the document became visible ([Firefox bug 2003857](https://bugzil.la/2003857)).
+- Fixed an issue that occurred when a navigation redirected to an error page ([Firefox bug 2013822](https://bugzil.la/2013822)).
+- Fixed an issue in `network.getData` that caused a `RangeError` when decoding chunked response bodies due to a size mismatch ([Firefox bug 2004973](https://bugzil.la/2004973)).
+- Fixed an issue where the `browsingContext.userPromptOpened` and `browsingContext.userPromptClosed` events incorrectly reported the top-level context ID instead of the iframe's context ID ([Firefox bug 1964905](https://bugzil.la/1964905)).
+- Improved the performance of WebDriver BiDi commands by approximately 100 ms when the selected context is no longer available during the command execution ([Firefox bug 1934326](https://bugzil.la/1934326)).
 
-<!-- #### General -->
+#### Marionette
 
-<!-- #### WebDriver BiDi -->
-
-<!-- #### Marionette -->
-
-## Changes for add-on developers
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
+- Added the `Reporting:GenerateTestReport` command to [generate a test report via the Reporting API](https://www.w3.org/TR/reporting-1/#generate-test-report-command) ([Firefox bug 1909662](https://bugzil.la/1909662)).
 
 ## Experimental web features
 

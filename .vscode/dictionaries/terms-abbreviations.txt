@@ -771,6 +771,8 @@ superpowered
 superscaling
 supersets
 SVCB
+swashy
+swooshy
 syncbase
 tablists
 tabstrip

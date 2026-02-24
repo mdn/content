@@ -3,12 +3,10 @@ title: "PerformanceResourceTiming: firstInterimResponseStart property"
 short-title: firstInterimResponseStart
 slug: Web/API/PerformanceResourceTiming/firstInterimResponseStart
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.PerformanceResourceTiming.firstInterimResponseStart
 ---
 
-{{APIRef("Performance API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`firstInterimResponseStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives the first byte of the interim 1xx response (for example, 100 Continue or 103 Early Hints) from the server.
 
