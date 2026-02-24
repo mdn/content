@@ -7,6 +7,14 @@ sidebar:
   - type: section
     link: /Web/WebDriver/Reference
     title: Reference
+  - link: /Web/WebDriver/Reference/BiDi
+    title: BiDi
+    details: open
+    children:
+      - type: listSubPages
+        path: /Web/WebDriver/Reference/BiDi/Modules
+        link: /Web/WebDriver/Reference/BiDi/Modules
+        details: closed
   - link: /Web/WebDriver/Reference/Classic
     title: Classic
     details: open
