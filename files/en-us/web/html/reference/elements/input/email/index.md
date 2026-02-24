@@ -244,7 +244,7 @@ Browsers automatically provide validation to ensure that only text that matches 
 To learn more about how form validation works and how to take advantage of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid, see [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 > [!NOTE]
-> There are known specification issues related to international domain names and the validation of email addresses in HTML. See [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) for details.
+> There are known specification issues related to international domain names and the validation of email addresses in HTML. See [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) and [whatwg/html#4562](https://github.com/whatwg/html/issues/4562) for details.
 
 ### Pattern validation
 
