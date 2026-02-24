@@ -58,7 +58,7 @@ A document's policies for loading and embedding cross-origin resources that are 
 
 COEP policy violations may be reported whenever a policy set by those headers blocks (or would block) the loading of a resource.
 
-You can monitor for COEP violation reports within the page in which they are triggered using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+You can monitor for COEP violation reports within the page that sets the policy using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
 To do this you construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"coep"`, passing a callback method (optionally specifying the type of report to observe).
 The callback method is called for every COEP violation with an instance of this dictionary that has the [`type`](#type) property set to `coep`.
 
