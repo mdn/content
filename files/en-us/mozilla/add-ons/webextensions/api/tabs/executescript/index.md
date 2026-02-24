@@ -15,7 +15,7 @@ You can inject code into pages whose URL you can express using a [match pattern]
 
 You must have the permission for the page's URL either explicitly, as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). Note that some special pages do not allow this permission, including reader view, view-source, PDF viewer, and other built-in browser UI pages.
 
-Extensions cannot run content scripts in extension documents. If an extension wants to run code in an extension document dynamically, it can inclucde a script in the document. This script includes the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that provides a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
+Extensions cannot run content scripts in extension documents. If an extension wants to run code in an extension document dynamically, it can include a script in the document. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
 
 > [!NOTE]
 > The ability to inject code into pages packaged with your extension was deprecated in Firefox 149 and removed in Firefox 152.
