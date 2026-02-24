@@ -27,6 +27,9 @@ timeline-trigger-source: view();
 timeline-trigger-source: view(inline);
 timeline-trigger-source: view(x 200px auto);
 
+/* Multiple source values */
+timeline-trigger-source: view(), none, --my-timeline;
+
 /* Global values */
 timeline-trigger-source: inherit;
 timeline-trigger-source: initial;
@@ -35,7 +38,7 @@ timeline-trigger-source: revert-layer;
 timeline-trigger-source: unset;
 ```
 
-The `timeline-trigger-source` property may be specified using the keywords `none` or `auto`, a {{cssxref("dashed-ident")}}, or a [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function.
+The `timeline-trigger-source` property may be specified as one or more single animation timelines, separated by commas. Each animation timeline is specified using a `none` or `auto` keyword, a {{cssxref("dashed-ident")}}, or a [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function.
 
 ### Values
 
@@ -62,10 +65,25 @@ The trigger element's view progress timeline is specified via its `timeline-trig
 > [!NOTE]
 > According to the specification, it is also possible to set the `timeline-trigger-source` to a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) or to the default time-based timeline. However, these options don't provide any useful effect, and result in the animation starting on page load.
 
-By default, the activation range along the timeline is `cover` — the animation activates as soon as the start edge of the trigger enters the end edge of the viewport, and deactivates when the end edge of the trigger has exited the start edge of the viewport. Consult the {{cssxref("timeline-range-name")}} reference page to see what other range settings are available. A scroll-triggered animation trigger's activation range is set via the {{cssxref("timeline-trigger-activation-range")}} property.
+By default, the activation range along the timeline is `cover` — the animation activates as soon as the start edge of the trigger enters the end edge of the viewport, and deactivates when the end edge of the trigger has exited either edge of the viewport. Consult the {{cssxref("timeline-range-name")}} reference page to see what other range settings are available. A scroll-triggered animation trigger's activation range is set via the {{cssxref("timeline-trigger-activation-range")}} property.
 
 > [!NOTE]
 > The `timeline-trigger-source` property can also be specified as part of the {{cssxref("timeline-trigger")}} shorthand property.
+
+### Multiple sources
+
+When multiple timeline values are specified in a single `timeline-trigger-source` property, they are distributed between the specified {{cssxref("timeline-trigger-name")}} values in the same fashion as multiple {{cssxref("animation")}} values are distributed (see [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values)).
+
+If multiple `timeline-trigger-name` values are set, but only a single `timeline-trigger-source` value is set, the `timeline-trigger-source` will apply to all the `timeline-trigger-name`s. If two `timeline-trigger-source` values are set, they will cycle between the `timeline-trigger-name`s until all of them have an `timeline-trigger-source` value set. And so on.
+
+For example, consider these declarations:
+
+```css
+timeline-trigger-name: --my-trigger, --my-other-trigger, --another-trigger;
+timeline-trigger-source: view(), --my-source;
+```
+
+In this case, the first name will use the `view()` source, and the second name will use the `--my-source` source. The third name will cycle back to using the `view()` source again.
 
 ## Formal definition
 
