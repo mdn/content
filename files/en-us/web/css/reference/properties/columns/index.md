@@ -148,7 +148,7 @@ Note how the text is split up into three columns.
 
 ### Creating wrapping, fixed height columns
 
-This example demonstrates including a `<column-height>` value in a `columns` property to split a text container into fixed-height columns that wrap onto new lines when the container inline edge is reached.
+This example demonstrates including a `<column-height>` value with the `columns` shorthand property to split a text container into fixed-height columns that wrap onto new lines when the container inline edge is reached.
 
 #### HTML
 
