@@ -66,7 +66,7 @@ random(--my-base, 1em, 3rem, 2px)
     - `element-shared`
       - : A random base value is shared across all elements for a property using `random()` with this key term, while other properties on the same element using `random()` get a unique random base value.
     - `fixed <number>`
-      - : Specifies a base value between 0 and 1 for the random value to be generated from.
+      - : Specifies a fixed base `<number>`, between `0` and `1`, from which to {{glossary("RNG", "generate the random")}} value.
 
 - `<calc-sum>` (minimum)
   - : The minimum value of the random range. Can be a number, dimension, percentage, or calculation. Must use the same type as the maximum value and optional step interval value, if provided.
