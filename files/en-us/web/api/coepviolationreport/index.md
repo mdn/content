@@ -26,7 +26,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
           - : A document with {{httpheader("Cross-Origin-Embedder-Policy")}} set to [`require-corp`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy#require-corp) attempted to load a cross-origin sub-resource that does not explicitly allow itself to be embedded (by setting an appropriate {{httpheader("Cross-Origin-Resource-Policy")}}).
         - `"navigation"`
           - : An {{htmlelement("iframe")}} in a document that has either COEP `require-corp` or `credentialless` directives loads a document that:
-            - Has neither COEP `require-corp` or `credentialless` directive
+            - Has neither COEP `require-corp` nor `credentialless` directive
             - Is cross-origin with the embedding document, and does not have a CORP header that allows embedding in the parent
         - `"worker initialization"`
           - : A dedicated worker created by a document with either the COEP `require-corp` or `credentialless` directives tries to load a worker script with neither of these set.
@@ -34,8 +34,8 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
     - `blockedURL`
       - : A string containing the URL of the resource that was blocked from loading by an enforced COEP violation.
     - `destination` {{non-standard_inline}}
-      - : A string indicating the _destination_ of the of the blocked resource.
-        This can can have one of the values of [`Request.destination`](/en-US/docs/Web/API/Request/destination#value).
+      - : A string indicating the _destination_ of the blocked resource.
+        This can have one of the values of [`Request.destination`](/en-US/docs/Web/API/Request/destination#value).
     - `disposition`
       - : A string indicating whether the violation was enforced or only reported.
         This can have one of the following values:
@@ -61,7 +61,7 @@ COEP policy violations may be reported whenever a policy set by those headers bl
 You can monitor for COEP violation reports within the page that sets the policy using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
 To do this you create a {{domxref("ReportingObserver")}} object to listen for reports, passing a callback method and an (optional) `options` property specifying the types of reports that you want to report on.
 The callback method is then called with reports of the requested types, passing a report object.
-For COEP violations, the object will be a `COEPViolationReport` instance (which has the [`type`](#type) property set to `"coep"`).
+For COEP violations, the object will be a `COEPViolationReport` (which has the [`type`](#type) property set to `"coep"`).
 
 The structure of a typical report is shown below.
 Note that we can see the URL of both the page that had its policy violated (`url`) and the resource that was blocked from loading (`body.blockedURL`).
@@ -80,11 +80,11 @@ We can also see that the report was triggered by a `corp` violation, and from th
 }
 ```
 
-Violation reports may also sent as a JSON object in a `POST` to a configured [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
+Violation reports may also be sent as a JSON object in a `POST` to a configured [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
 The reporting server endpoint name is specified in the [`report-to`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy#report-to_endpoint_name) policy directive of the {{httpheader("Cross-Origin-Embedder-Policy")}} or {{httpheader("Cross-Origin-Embedder-Policy-Report-Only")}} header.
 Valid endpoint names and their mapping to a particular URL are defined using the {{httpheader("Reporting-Endpoints")}} header.
 
-The structure of the server report is almost exactly the same as `CSPViolationReport`, except that it additionally includes `age` and `user_agent` fields.
+The structure of the server report is almost exactly the same as `COEPViolationReport`, except that it additionally includes `age` and `user_agent` fields.
 
 ```json
 [
@@ -109,8 +109,8 @@ The structure of the server report is almost exactly the same as `CSPViolationRe
 
 This example shows how you can obtain COEP violation reports using a {{domxref("ReportingObserver")}}.
 
-First consider the case where we have an HTML file hosted on the origin `https://example.com`, which includes in its an {{htmlelement("img")}} element that sets as its source the (cross-origin) resource `some-image.png`.
-Since the element does not set the [`cross-origin` attribute](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute, it will be requested in `no-cors` mode.
+First consider the case where we have an HTML file hosted on the origin `https://example.com`, which includes an {{htmlelement("img")}} element that sets as its source the (cross-origin) resource `some-image.png`.
+Since the element does not set the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute, it will be requested in `no-cors` mode.
 By default, if `some-image.png` is not served with the {{httpheader("Cross-Origin-Embedder-Policy")}} header, this request will succeed.
 
 ```html
@@ -124,7 +124,7 @@ Cross-Origin-Embedder-Policy: require-corp
 ```
 
 This header enforces that all resources must be served with the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header and a value of `cross-origin` in order to be loaded into the document's origin (`https://example.com`).
-Provided the server hosting `some-image.png` doesn't set the header we don't need to do anything else to trigger a COEP violation.
+Provided the server hosting `some-image.png` doesn't set the header, we don't need to do anything else to trigger a COEP violation.
 
 To observe violations within the page, we construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"coep"`, passing a callback that will receive and log the reports.
 This code needs to be loaded before the script that causes the violation:
@@ -152,7 +152,7 @@ Note that the `type` is `"coep"`.
 {
   "type": "coep",
   "url": "https://example.com",
-  "": {
+  "body": {
     "type": "corp",
     "blockedURL": "https://another-example.com/some-image.png",
     "destination": "image",
@@ -161,7 +161,7 @@ Note that the `type` is `"coep"`.
 }
 ```
 
-The same report couple be generated using {{httpheader("Cross-Origin-Embedder-Policy-Report-Only")}}, except that the [disposition](#disposition) would be reported as `"reporting"`.
+The same report could be generated using {{httpheader("Cross-Origin-Embedder-Policy-Report-Only")}}, except that the [disposition](#disposition) would be reported as `"reporting"`.
 
 ### Sending a report to a reporting endpoint
 
@@ -175,7 +175,7 @@ Reporting-Endpoints: coep-endpoint="https://some-example.com/coep"
 Cross-Origin-Embedder-Policy: require-corp; report-to="coep-endpoint"
 ```
 
-The violation report will then be sent as a JSON object in a `POST` to the endpoint referenced by coep-endpoint.
+The violation report will then be sent as a JSON object in a `POST` to the endpoint referenced by `coep-endpoint`.
 
 The report object has the same structure as returned from the `ReportingObserver` callback except for the addition of `age` and `user_agent` properties.
 
@@ -183,7 +183,7 @@ The report object has the same structure as returned from the `ReportingObserver
 [
   {
     "age": 717139,
-    "": {
+    "body": {
       "blockedURL": "https://another-example.com/some-image.png",
       "destination": "image",
       "disposition": "enforce",

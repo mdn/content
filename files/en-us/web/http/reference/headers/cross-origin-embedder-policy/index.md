@@ -104,7 +104,7 @@ Reporting-Endpoints: coep-endpoint="https://some-example.com/coep"
 Cross-Origin-Embedder-Policy: require-corp; report-to="coep-endpoint"
 ```
 
-In order for the `some-image.png` to be loaded without triggering a violation it would need to set a {{HTTPHeader("Cross-Origin-Resource-Policy")}} or `cross-origin`.
+In order for the `some-image.png` to be loaded without triggering a violation it would need to set {{HTTPHeader("Cross-Origin-Resource-Policy")}} to `cross-origin`.
 If we omit the header or don't include it as `cross-origin` a violation will occur.
 
 The report sent in the report POST request will be similar to the JSON object shown below:
