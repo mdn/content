@@ -7,7 +7,7 @@ status:
 browser-compat: api.PaymentRequestEvent
 ---
 
-{{DefaultAPISidebar("Web-based Payment Handler API")}}{{securecontext_header}}{{SeeCompatTable}}{{AvailableInWorkers}}
+{{DefaultAPISidebar("Web Based Payment Handler API")}}{{securecontext_header}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The Web-based Payment Handler API provides a standardized set of functionality for web applications to directly handle payments, rather than having to be redirected to a separate site for payment handling.
 
