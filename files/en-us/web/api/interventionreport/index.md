@@ -12,12 +12,12 @@ browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_
 The `InterventionReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents an intervention report.
 
 An intervention report may be generated when usage of a feature in a web document has been blocked by the browser for reasons such as security, performance, or user annoyance.
-Reports of this type can be observed from within a page using a {{domxref("ReportingObserver")}}, or a serialized version can be sent to a [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
+Reports of this type can be observed from within a page using a {{domxref("ReportingObserver")}}, and a serialized version can be sent to a [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
 
 ## Instance properties
 
 - `body`
-  - : The body of the report, containing more information about the intervention.
+  - : The body of the report.
     This is an object with the following properties:
     - `columnNumber` {{experimental_inline}}
       - : A string representing the column in the source file in which the intervention occurred, if known, or `null` otherwise.

@@ -14,12 +14,12 @@ The `DeprecationReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Re
 A deprecation report may be generated when a deprecated feature (for example a deprecated API method) is used on a document.
 Note that receiving useful deprecation reports relies on browser vendors adding these warnings for deprecated features.
 
-Reports of this type can be observed from within a page using a {{domxref("ReportingObserver")}}, or a serialized version can be sent to the default [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
+Reports of this type can be observed from within a page using a {{domxref("ReportingObserver")}}, and a serialized version can be sent to the default [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
 
 ## Instance properties
 
 - `body`
-  - : The body of the report, containing more information about the deprecation.
+  - : The body of the report.
     This is an object with the following properties:
     - `id` {{experimental_inline}}
       - : A string representing the feature or API that is deprecated, for example `NavigatorGetUserMedia`.
@@ -41,7 +41,6 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
 
 - `type`
   - : The string `"deprecation"` indicating that this is a deprecation report.
-
 - `url`
   - : A string representing the URL of the document that generated the report.
 
@@ -50,9 +49,9 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
 A deprecation report may be generated when a deprecated feature (for example a deprecated API method) is used on a document.
 
 You can monitor for intervention reports within the page in which they are triggered using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
-To do this you create a {{domxref("ReportingObserver")}} object to listen for reports, passing a callback method and an (optional) options property specifying the types of reports that you want to report on.
+To do this you create a {{domxref("ReportingObserver")}} object to listen for reports, passing a callback method, and optionally an `options` property specifying the types of reports that you want to report on.
 The callback method is then called with reports of the requested types, passing a report object.
-For intervention reports, the object will be an `DeprecationReport` instance (which has the [`type`](#type) property set to `"deprecation"`).
+For deprecation reports, the object will be an `DeprecationReport` instance (which has the [`type`](#type) property set to `"deprecation"`).
 
 A typical deprecation report is shown below.
 Note that `url` represents the original page that was loaded, while `body.sourceFile`, `body.lineNumber` and `body.columnNumber` indicate the specific location of the API call that triggered the intervention (in this example they are the same file).
