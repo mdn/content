@@ -63,42 +63,20 @@ To do this you construct a new {{domxref("ReportingObserver")}} object to listen
 The callback method is called for every COEP violation with an instance of this dictionary that has the [`type`](#type) property set to `coep`.
 
 The structure of a typical report is shown below.
-Note that we can see the URL of both the page that had its policy violated (`url`) and the resource that was blocked from loading (`.blockedURL`).
-We can also see that the report was triggered by a `corp` violation, and from the `.disposition` that it was enforced (and not just reported).
+Note that we can see the URL of both the page that had its policy violated (`url`) and the resource that was blocked from loading (`body.blockedURL`).
+We can also see that the report was triggered by a `corp` violation, and from the `body.disposition` that it was enforced (and not just reported).
 
 ```json
 {
   "type": "coep",
   "url": "https://url-of-page-attempting-to-load-resource-in-violation",
-  "": {
+  "body": {
     "type": "corp",
     "blockedURL": "https://url-of-blocked-resource",
     "destination": "image",
     "disposition": "enforce"
   }
 }
-```
-
-COEP violation reports can also be sent as a JSON object in a `POST` to a [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
-The reporting server endpoint name is specified in the [`report-to`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy#report-to_endpoint_name) parameter when setting {{httpheader("Cross-Origin-Embedder-Policy")}} or {{httpheader("Cross-Origin-Embedder-Policy-Report-Only")}}.
-Valid endpoint names and their mapping to a particular URL are defined using the {{httpheader("Reporting-Endpoints")}} header.
-
-The structure of the server report is almost exactly the same as `COEPViolationReport`, except that it additionally includes `age` and `user_agent` fields.
-
-```json
-{
-  "age": 412139,
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
-  "type": "coep",
-  "url": "https://url-of-page-attempting-to-load-resource-in-violation",
-  "": {
-    "type": "corp",
-    "blockedURL": "https://url-of-blocked-resource",
-    "destination": "image",
-    "disposition": "enforce"
-  }
-}
-```
 
 ## Examples
 
