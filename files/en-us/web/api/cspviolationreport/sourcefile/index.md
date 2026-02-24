@@ -1,14 +1,14 @@
 ---
-title: "CSPViolationReportBody: sourceFile property"
+title: "CSPViolationReport: sourceFile property"
 short-title: sourceFile
 slug: Web/API/CSPViolationReport/sourceFile
 page-type: web-api-instance-property
-browser-compat: api.CSPViolationReportBody.sourceFile
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
 ---
 
 {{APIRef("Reporting API")}}
 
-The **`sourceFile`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the URL of the source file that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
+The **`sourceFile`** property of the {{domxref("CSPViolationReport")}} dictionary indicates the URL of the source file that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
 
 For a violation triggered by the use of an inline script, `sourceFile` is the URL of the current document.
 Similarly, if a document successfully loads a script that then violates the document CSP, the `sourceFile` is the URL of the script.
@@ -17,7 +17,7 @@ Note however that if a document with a CSP that blocks external resources attemp
 This is because the browser extracts the value from _the global object_ of the file that triggered the violation.
 Because of the CSP restriction the external resource is never loaded, and therefore has no corresponding global object.
 
-This property is most useful alongside {{domxref("CSPViolationReportBody.lineNumber")}} and {{domxref("CSPViolationReportBody.columnNumber")}}, which provide the location within the file that resulted in a violation.
+This property is most useful alongside {{domxref("CSPViolationReport.lineNumber")}} and {{domxref("CSPViolationReport.columnNumber")}}, which provide the location within the file that resulted in a violation.
 
 ## Value
 

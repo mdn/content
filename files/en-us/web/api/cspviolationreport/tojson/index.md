@@ -1,18 +1,18 @@
 ---
-title: "CSPViolationReportBody: toJSON() method"
+title: "CSPViolationReport: toJSON() method"
 short-title: toJSON()
 slug: Web/API/CSPViolationReport/toJSON
 page-type: web-api-instance-method
 status:
   - deprecated
-browser-compat: api.CSPViolationReportBody.toJSON
+browser-compat: api.CSPViolationReport.toJSON
 ---
 
 {{APIRef("Reporting API")}}{{deprecated_header}}
 
-The **`toJSON()`** method of the {{domxref("CSPViolationReportBody")}} interface is a _serializer_, which returns a JSON representation of the `CSPViolationReportBody` object.
+The **`toJSON()`** method of the {{domxref("CSPViolationReport")}} interface is a _serializer_, which returns a JSON representation of the `CSPViolationReport` object.
 
-The existence of a `toJSON()` method allows `CSPViolationReportBody` objects to be converted to a string using the {{jsxref("JSON.stringify()")}} method.
+The existence of a `toJSON()` method allows `CSPViolationReport` objects to be converted to a string using the {{jsxref("JSON.stringify()")}} method.
 
 This is used by the reporting API when creating a serialized version of a violation report to send to a reporting endpoint.
 
@@ -28,7 +28,7 @@ None.
 
 ### Return value
 
-A JSON object that is the serialization of the {{domxref("CSPViolationReportBody")}} object.
+A JSON object that is the serialization of the {{domxref("CSPViolationReport")}} object.
 
 ## Examples
 

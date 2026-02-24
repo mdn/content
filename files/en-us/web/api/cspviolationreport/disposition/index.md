@@ -1,14 +1,14 @@
 ---
-title: "CSPViolationReportBody: disposition property"
+title: "CSPViolationReport: disposition property"
 short-title: disposition
 slug: Web/API/CSPViolationReport/disposition
 page-type: web-api-instance-property
-browser-compat: api.CSPViolationReportBody.disposition
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
 ---
 
 {{APIRef("Reporting API")}}
 
-The **`disposition`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates whether the user agent is configured to enforce [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violations or only report them.
+The **`disposition`** property of the {{domxref("CSPViolationReport")}} dictionary indicates whether the user agent is configured to enforce [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violations or only report them.
 
 ## Value
 
@@ -16,8 +16,10 @@ Possible values are:
 
 - `"enforce"`
   - : The policy is enforced and the resource request is blocked.
+    This is used for violations of policies set with {{httpheader("Content-Security-Policy")}}.
 - `"report"`
   - : The violation is reported but the resource request is not blocked.
+    This is used for violations of policies set with {{httpheader("Content-Security-Policy-Report-Only")}}.
 
 ## Examples
 

@@ -12,7 +12,9 @@ This header allows you to test or repair violations before a specific {{HTTPHead
 
 The CSP {{CSP("report-to")}} directive must be specified for reports to be sent: if not, the operation won't have any effect.
 
-Violation reports are sent using the [Reporting API](/en-US/docs/Web/API/Reporting_API) to endpoints defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header and selected using the CSP {{CSP("report-to")}} directive.
+Violations of the policy may be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+Reports can be observed in the page for which the policy is being enforced, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver), and sent to server endpoints defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header and selected using the CSP {{CSP("report-to")}} directive.
+For more information see {{domxref("CSPViolationReport")}}.
 
 For more information, see our [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) guide.
 
@@ -82,4 +84,7 @@ Content-Security-Policy-Report-Only: default-src https:;
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - CSP {{CSP("report-to")}} directive
+- {{httpheader("Reporting-Endpoints")}}
+- {{domxref("CSPViolationReport")}}
 - CSP {{CSP("report-uri")}} directive {{deprecated_inline}}
+- [Reporting API](/en-US/docs/Web/API/Reporting_API).

@@ -5,7 +5,7 @@ page-type: web-api-overview
 browser-compat: http.headers.Reporting-Endpoints
 spec-urls:
   - https://w3c.github.io/reporting/#intro
-  - https://w3c.github.io/webappsec-csp/#cspviolationreportbody
+  - https://w3c.github.io/webappsec-csp/#CSPViolationReport
   - https://wicg.github.io/deprecation-reporting/#deprecationreportbody
   - https://wicg.github.io/intervention-reporting/#intervention-report
 ---
@@ -41,7 +41,7 @@ For example, the CSP {{CSP("report-to")}} directive can be used on the {{HTTPHea
 
 The reports themselves are sent to the target endpoint by the user agent in a `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
 They are serializations of {{domxref("Report")}} objects, where the `type` indicates the type of report, the `url` indicates the origin of the report, and the `body` contains a serialization of the API interface that corresponds to the report type.
-For example, CSP violation reports have a `type` of `csp-violation` and a `body` that is a serialization of a {{domxref("CSPViolationReportBody")}} object.
+For example, CSP violation reports have a `type` of `csp-violation` and a `body` that is a serialization of a {{domxref("CSPViolationReport")}} object.
 
 Reports sent to endpoints can be retrieved independently of the running of the websites they relate to, which is useful — a crash for example could bring down a website and stop anything running, but a report could still be obtained to give the developer some clues as to why it happened.
 
@@ -66,10 +66,10 @@ The mapping of report `type` to `body` is shown below.
 
 | `type`                | `body`                                      | Items reported                                                                   |
 | --------------------- | ------------------------------------------- | -------------------------------------------------------------------------------- |
-| `deprecation`         | {{domxref("DeprecationReportBody")}}        | Deprecated features used by the site.                                            |
-| `integrity-violation` | {{domxref("IntegrityViolationReportBody")}} | Violations of the page's integrity policy.                                       |
-| `intervention`        | {{domxref("InterventionReportBody")}}       | Features blocked by the user agent, for example, if permissions are not granted. |
-| `csp-violation`       | {{domxref("CSPViolationReportBody")}}       | Violations of the site's CSP policy.                                             |
+| `deprecation`         | {{domxref("DeprecationReport")}}        | Deprecated features used by the site.                                            |
+| `integrity-violation` | {{domxref("IntegrityViolationReport")}} | Violations of the page's integrity policy.                                       |
+| `intervention`        | {{domxref("InterventionReport")}}       | Features blocked by the user agent, for example, if permissions are not granted. |
+| `csp-violation`       | {{domxref("CSPViolationReport")}}       | Violations of the site's CSP policy.                                             |
 
 ### Generating reports via WebDriver
 
@@ -77,27 +77,30 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
 
 ## Interfaces
 
-- {{domxref("DeprecationReportBody")}}
-  - : Contains details of deprecated web platform features that a website is using.
-- {{domxref("InterventionReportBody")}}
-  - : Contains details of an intervention report, which is generated when a request made by the website has been denied by the browser; e.g., for security reasons.
 - {{domxref("Report")}}
   - : An object representing a single report.
 - {{domxref("ReportingObserver")}}
   - : An object that can be used to collect and access reports as they are generated.
 
+## Dictionaries
+
+- {{domxref("DeprecationReport")}}
+  - : Contains details of deprecated web platform features that a website is using.
+- {{domxref("InterventionReport")}}
+  - : Contains details of an intervention report, which is generated when a request made by the website has been denied by the browser; e.g., for security reasons.
+
 ### Related interfaces
 
 These interfaces are defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) specifications:
 
-- {{domxref("CSPViolationReportBody")}}
+- {{domxref("CSPViolationReport")}}
   - : Contains details of a CSP violation.
 - {{domxref("SecurityPolicyViolationEvent")}}
   - : Represents the event object of a `securitypolicyviolation` event fired on an element, document, or worker when its CSP is violated.
 
 This interface is defined as part of the [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) specification:
 
-- {{domxref("IntegrityViolationReportBody")}}
+- {{domxref("IntegrityViolationReport")}}
   - : Contains information about a resource that was blocked because it did not meet the Subresource Integrity guarantees required by its {{httpheader("Integrity-Policy")}}, or that would be blocked for report-only policies set using {{httpheader("Integrity-Policy-Report-Only")}}.
 
 ## Related HTTP Headers

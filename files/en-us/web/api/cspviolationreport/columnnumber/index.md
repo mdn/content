@@ -1,20 +1,20 @@
 ---
-title: "CSPViolationReportBody: columnNumber property"
+title: "CSPViolationReport: columnNumber property"
 short-title: columnNumber
 slug: Web/API/CSPViolationReport/columnNumber
 page-type: web-api-instance-property
-browser-compat: api.CSPViolationReportBody.columnNumber
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
 ---
 
 {{APIRef("Reporting API")}}
 
-The **`columnNumber`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the column number in the source file that triggered the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violation.
+The **`columnNumber`** property of the {{domxref("CSPViolationReport")}} dictionary indicates the column number in the source file that triggered the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violation.
 
 Note that the browser extracts the value from _the global object_ of the file that triggered the violation.
 If the resource that triggers the CSP violation is not loaded, the value will be `null`.
-See {{domxref("CSPViolationReportBody.sourceFile")}} for more information.
+See {{domxref("CSPViolationReport.sourceFile")}} for more information.
 
-This property is most useful alongside {{domxref("CSPViolationReportBody.sourceFile")}} and {{domxref("CSPViolationReportBody.lineNumber")}}, as it provides the location of the column in that file and line that resulted in a violation.
+This property is most useful alongside {{domxref("CSPViolationReport.sourceFile")}} and {{domxref("CSPViolationReport.lineNumber")}}, as it provides the location of the column in that file and line that resulted in a violation.
 
 ## Value
 

@@ -1,14 +1,14 @@
 ---
-title: "CSPViolationReportBody: statusCode property"
+title: "CSPViolationReport: statusCode property"
 short-title: statusCode
 slug: Web/API/CSPViolationReport/statusCode
 page-type: web-api-instance-property
-browser-compat: api.CSPViolationReportBody.statusCode
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
 ---
 
 {{APIRef("Reporting API")}}
 
-The **`statusCode`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a number representing the [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) of the response to the request that triggered a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violation (when loading a window or worker).
+The **`statusCode`** property of the {{domxref("CSPViolationReport")}} dictionary is a number representing the [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) of the response to the request that triggered a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violation (when loading a window or worker).
 
 ## Value
 

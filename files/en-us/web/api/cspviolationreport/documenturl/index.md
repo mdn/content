@@ -1,14 +1,14 @@
 ---
-title: "CSPViolationReportBody: documentURL property"
+title: "CSPViolationReport: documentURL property"
 short-title: documentURL
 slug: Web/API/CSPViolationReport/documentURL
 page-type: web-api-instance-property
-browser-compat: api.CSPViolationReportBody.documentURL
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
 ---
 
 {{APIRef("Reporting API")}}
 
-The **`documentURL`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the URL of the document or worker that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
+The **`documentURL`** property of the {{domxref("CSPViolationReport")}} dictionary is a string that represents the URL of the document or worker that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
 
 ## Value
 

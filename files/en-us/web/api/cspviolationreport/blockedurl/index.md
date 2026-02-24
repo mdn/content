@@ -1,14 +1,14 @@
 ---
-title: "CSPViolationReportBody: blockedURL property"
+title: "CSPViolationReport: blockedURL property"
 short-title: blockedURL
 slug: Web/API/CSPViolationReport/blockedURL
 page-type: web-api-instance-property
-browser-compat: api.CSPViolationReportBody.blockedURL
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
 ---
 
 {{APIRef("Reporting API")}}
 
-The **`blockedURL`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string value that represents the resource that was blocked because it violates a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
+The **`blockedURL`** property of the {{domxref("CSPViolationReport")}} dictionary is a string value that represents the resource that was blocked because it violates a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
 
 ## Value
 

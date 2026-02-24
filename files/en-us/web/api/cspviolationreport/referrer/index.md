@@ -1,14 +1,14 @@
 ---
-title: "CSPViolationReportBody: referrer property"
+title: "CSPViolationReport: referrer property"
 short-title: referrer
 slug: Web/API/CSPViolationReport/referrer
 page-type: web-api-instance-property
-browser-compat: api.CSPViolationReportBody.referrer
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
 ---
 
 {{APIRef("Reporting API")}}
 
-The **`referrer`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the URL of the referring page of the resource who's [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) was violated.
+The **`referrer`** property of the {{domxref("CSPViolationReport")}} dictionary is a string that represents the URL of the referring page of the resource who's [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) was violated.
 
 The referrer is the page that caused the page with the CSP violation to be loaded. For example, if we followed a link to a page with a CSP violation, the `referrer` is the page that we navigated from.
 

@@ -1,14 +1,14 @@
 ---
-title: "CSPViolationReportBody: sample property"
+title: "CSPViolationReport: sample property"
 short-title: sample
 slug: Web/API/CSPViolationReport/sample
 page-type: web-api-instance-property
-browser-compat: api.CSPViolationReportBody.sample
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
 ---
 
 {{APIRef("Reporting API")}}
 
-The **`sample`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that contains a part of the resource that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
+The **`sample`** property of the {{domxref("CSPViolationReport")}} dictionary is a string that contains a part of the resource that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
 
 This sample is usually the first 40 characters of the inline script, event handler, or style that violated a CSP restriction.
 If not populated it is the empty string `""`.

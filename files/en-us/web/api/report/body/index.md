@@ -18,7 +18,7 @@ A `ReportBody` object containing the detailed report information. Depending
 on what `type` the {{domxref("Report")}} is, the object returned will
 actually be a
 {{domxref("DeprecationReportBody")}}, {{domxref("InterventionReportBody")}}, or
-{{domxref("CSPViolationReportBody")}}.
+{{domxref("CSPViolationReport")}}.
 These all inherit from the base `ReportBody` class — study their reference
 pages for more information on what the particular report body types contain.
 
