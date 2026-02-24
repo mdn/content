@@ -2,12 +2,15 @@
 title: Reporting API
 slug: Web/API/Reporting_API
 page-type: web-api-overview
-browser-compat: http.headers.Reporting-Endpoints
+browser-compat:
+  - api.ReportingObserver
 spec-urls:
   - https://w3c.github.io/reporting/#intro
   - https://w3c.github.io/webappsec-csp/#CSPViolationReport
   - https://wicg.github.io/deprecation-reporting/#deprecationreportbody
   - https://wicg.github.io/intervention-reporting/#intervention-report
+  - https://html.spec.whatwg.org/multipage/browsers.html#embedder-policy-checks
+  - https://html.spec.whatwg.org/multipage/browsers.html#coep
 ---
 
 {{DefaultAPISidebar("Reporting API")}}{{AvailableInWorkers}}
@@ -33,15 +36,19 @@ Each unique origin you want to get reports for can be given a series of "endpoin
 A reporting server at these endpoints can collect the reports, and process and present them as needed by your application.
 
 The {{httpheader("Reporting-Endpoints")}} HTTP header is used to specify details about the different endpoints that a user-agent has available to it for delivering reports.
-The `report-to` directive can then be used on particular HTTP response headers to indicate the specific endpoint that will be used for the associated report.
-For example, the CSP {{CSP("report-to")}} directive can be used on the {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP headers to specify the endpoint that CSP violation reports should be sent to.
+The endpoints can then be used on particular HTTP response headers to indicate the specific endpoint (or in some cases endpoints) that will be used for the associated report.
+The directive or parameter used to specify an endpoint depends on the header.
+For example, the CSP {{CSP("report-to")}} directive can be used on the {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP headers to specify the endpoint that CSP violation reports should be sent to, while the [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) field is used on {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}} to specify where to send integrity-policy violation fields.
+
+Report types that don't have an associated HTTP header, such as `crash`, `deprecation`, and `intervention` reports, will usually send reports to the "default reporting endpoint".
+This is just an endpoint named "default" specified using the `Reporting-Endpoints` header.
 
 > [!NOTE]
 > There is no absolute guarantee of report delivery — a report could still fail to be collected if a serious error occurs.
 
 The reports themselves are sent to the target endpoint by the user agent in a `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
-They are serializations of {{domxref("Report")}} objects, where the `type` indicates the type of report, the `url` indicates the origin of the report, and the `body` contains a serialization of the API interface that corresponds to the report type.
-For example, CSP violation reports have a `type` of `csp-violation` and a `body` that is a serialization of a {{domxref("CSPViolationReport")}} object.
+They are serializations of corresponding dictionary for each [report type](#report_types).
+For example, CSP violation reports are a serialization of a {{domxref("CSPViolationReport")}} object.
 
 Reports sent to endpoints can be retrieved independently of the running of the websites they relate to, which is useful — a crash for example could bring down a website and stop anything running, but a report could still be obtained to give the developer some clues as to why it happened.
 
@@ -53,23 +60,20 @@ This method is not as failsafe as sending reports to the server because any page
 A `ReportingObserver` object is created using the {{domxref("ReportingObserver.ReportingObserver", "ReportingObserver()")}} constructor, which is passed two parameters:
 
 - A callback function with two parameters — an array of the reports available in the observer's report queue and a copy of the same `ReportingObserver` object, which allows observation to be controlled directly from inside the callback. The callback runs when observation starts.
-- An options dictionary that allows you to specify the type of reports to collect, and whether reports generated before the observer was created should be observable (`buffered: true`).
+- An options dictionary that allows you to specify the [types](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#types) of reports to collect, and whether reports generated before the observer was created should be observable (`buffered: true`).
 
 Methods are then available on the observer to start collecting reports ({{domxref("ReportingObserver.observe()")}}), retrieve the reports currently in the report queue ({{domxref("ReportingObserver.takeRecords()")}}), and disconnect the observer so it can no longer collect records ({{domxref("ReportingObserver.disconnect()")}}).
 
 ### Report types
 
-Reports sent to reporting endpoints and reporting observers are essentially the same: they have an origin `url`, a `type`, and a `body` that is an instance of the interface corresponding with that type.
-The only difference is that server reports are JSON serializations of the objects.
+Reports sent to reporting observers are instances of dictionary objects, such as {{domxref("DeprecationReport")}}, {{domxref("IntegrityViolationReport")}}, {{domxref("InterventionReport")}}, and {{domxref("CSPViolationReport")}}.
+These all have an origin `url`, a `type`, and a `body` that is specific to the report type.
+The type of report can be determined from its `type` property, which for the reports above would be `deprecation`, `integrity-violation`, `intervention` and `csp-violation`.
 
-The mapping of report `type` to `body` is shown below.
+Reports sent to reporting endpoints and reporting observers are essentially the same.
+The only difference is that server reports are JSON serializations of the objects that have additional `user_agent` and `age` fields.
 
-| `type`                | `body`                                      | Items reported                                                                   |
-| --------------------- | ------------------------------------------- | -------------------------------------------------------------------------------- |
-| `deprecation`         | {{domxref("DeprecationReport")}}        | Deprecated features used by the site.                                            |
-| `integrity-violation` | {{domxref("IntegrityViolationReport")}} | Violations of the page's integrity policy.                                       |
-| `intervention`        | {{domxref("InterventionReport")}}       | Features blocked by the user agent, for example, if permissions are not granted. |
-| `csp-violation`       | {{domxref("CSPViolationReport")}}       | Violations of the site's CSP policy.                                             |
+The full list of supported report types and their corresponding report dictionary are given in the [`options.types`](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#types) parameter passed to the `ReportingObserver()` constructor.
 
 ### Generating reports via WebDriver
 
@@ -77,10 +81,14 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
 
 ## Interfaces
 
-- {{domxref("Report")}}
-  - : An object representing a single report.
 - {{domxref("ReportingObserver")}}
   - : An object that can be used to collect and access reports as they are generated.
+
+### Related interfaces
+
+- {{domxref("SecurityPolicyViolationEvent")}}
+  - : Represents the event object of a `securitypolicyviolation` event fired on an element, document, or worker when its CSP is violated.
+    This is defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) specifications
 
 ## Dictionaries
 
@@ -88,20 +96,12 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
   - : Contains details of deprecated web platform features that a website is using.
 - {{domxref("InterventionReport")}}
   - : Contains details of an intervention report, which is generated when a request made by the website has been denied by the browser; e.g., for security reasons.
-
-### Related interfaces
-
-These interfaces are defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) specifications:
-
 - {{domxref("CSPViolationReport")}}
   - : Contains details of a CSP violation.
-- {{domxref("SecurityPolicyViolationEvent")}}
-  - : Represents the event object of a `securitypolicyviolation` event fired on an element, document, or worker when its CSP is violated.
-
-This interface is defined as part of the [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) specification:
-
+    This is defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) specifications.
 - {{domxref("IntegrityViolationReport")}}
   - : Contains information about a resource that was blocked because it did not meet the Subresource Integrity guarantees required by its {{httpheader("Integrity-Policy")}}, or that would be blocked for report-only policies set using {{httpheader("Integrity-Policy-Report-Only")}}.
+    This is defined as part of the [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) specification,
 
 ## Related HTTP Headers
 

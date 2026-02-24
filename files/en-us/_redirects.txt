@@ -10180,6 +10180,8 @@
 /en-US/docs/Web/API/Report/body	/en-US/docs/Web/API/ReportingObserver
 /en-US/docs/Web/API/Report/type	/en-US/docs/Web/API/ReportingObserver
 /en-US/docs/Web/API/Report/url	/en-US/docs/Web/API/ReportingObserver
+/en-US/docs/Web/API/ReportBody	/en-US/docs/Web/API/ReportingObserver
+/en-US/docs/Web/API/ReportBody/toJSON	/en-US/docs/Web/API/ReportingObserver
 /en-US/docs/Web/API/ReportingObserverOptions	/en-US/docs/Web/API/ReportingObserver
 /en-US/docs/Web/API/Request/context	/en-US/docs/Web/API/Request/destination
 /en-US/docs/Web/API/RequestDestination	/en-US/docs/Web/API/Request/destination

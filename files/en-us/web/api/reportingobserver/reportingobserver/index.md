@@ -36,10 +36,27 @@ new ReportingObserver(callback, options)
 - `options` {{optional_inline}}
   - : An object allowing you to set the options for creating the object. The available options are:
     - `types`
-      - : An array of strings representing the types of report to be
-        collected by this observer. Available types include `deprecation`,
-        `intervention`, and `crash` (although this last type usually
-        isn't retrievable via a `ReportingObserver`). If this option is omitted, all supported types are collected.
+      - : An array of strings representing the types of report to be collected by this observer.
+        Available types include:
+        - `deprecation`
+          - : Deprecated features used by the site.
+            Reports are {{domxref("DeprecationReport")}} instances.
+        - `integrity-violation`
+          - : Violations of the page's integrity policy.  
+            Reports are {{domxref("IntegrityViolationReport")}} instances.
+        - `intervention`
+          - : Features blocked by the user agent, for example, if an ad significantly impacts page performance.  
+            Reports are {{domxref("InterventionReport")}} instances.
+        - `csp-violation`
+          - : Violations of the site's CSP policy.  
+            Reports are {{domxref("CSPViolationReport")}} instances.
+        - `crash`
+          - : Browser crash reports.
+            (crash reports aren't retrievable via a `ReportingObserver` but can be sent to a server).
+            <!-- Reports are {{domxref("TBD")}} instances. -->
+
+        If this option is omitted, all supported types are collected.
+
     - `buffered`
       - : a boolean that defines whether the reports that were
         generated before the observer was able to be created should be observable

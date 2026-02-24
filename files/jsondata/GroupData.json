@@ -1461,8 +1461,6 @@
         "DeprecationReport",
         "InterventionReport",
         "IntegrityViolationReport",
-        "Report",
-        "ReportBody",
         "ReportingObserver",
         "SecurityPolicyViolationEvent"
       ],
