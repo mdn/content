@@ -398,7 +398,7 @@ Try scrolling the content. Note how each new row of columns fills the viewport, 
 
 ### `column-height` and `column-count` playground
 
-This example provides scrolling text content laid out in multiple columns. It is very similar to the previous example, except that in this case you are provided with two range sliders that allow you to adjust the number of columns and the column height.
+This example builds upon the previous one by including two range sliders that allow you to adjust the multiple-column layout's column count and column height.
 
 #### HTML
 
