@@ -74,7 +74,7 @@ random(--my-base, 1em, 3rem, 2px)
 - `<calc-sum>` (maximum)
   - : The maximum value of the random range. Can be a number, dimension, percentage, or calculation. Must use the same type as the minimum value and optional step interval value, if provided.
 
-- `<calc-sum>` (optional)
+- `<calc-sum>` {{optional_inline}}
   - : Specifies the step interval. Only values that are multiples of this step will be generated. Must use the same type as the minimum and maximum values.
 
 ### Return value
