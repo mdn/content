@@ -376,7 +376,7 @@ p:first-of-type {
 }
 ```
 
-Finally, we set {{cssxref("scroll-snap-type")}} to `y mandatory` on the {{htmlelement("html")}} element, and {{cssxref("scroll-snap-align")}} to `start` on the {{cssxref("::column")}} pseudo-elements that represent each generated column. This causes the content to snap to the top of a new column each time it is scrolled.
+Finally, we add scroll snapping by setting {{cssxref("scroll-snap-type")}} to `y mandatory` on the {{htmlelement("html")}} element, and {{cssxref("scroll-snap-align")}} to `start` on the {{cssxref("::column")}} pseudo-elements that represent each generated column. This causes the content to snap to the top of a new column each time it is scrolled.
 
 ```css live-sample___basic-column-height
 html {
