@@ -136,28 +136,39 @@ Because `random()` can generate an unknown value within a range, you don’t hav
 
 ## Examples
 
-### Generate random colors for circular badge
+### Basic Usage
+
+In this example, we'll generate random colors for circular badge, to demonstrate the basic usage of the `random()` function.
 
 #### HTML
+
+We include five badges, one using the `desaturated` class, two with the `unique` class.
 
 ```html
 <div class="badge"></div>
 <div class="badge"></div>
+<div class="badge desaturated"></div>
 <div class="badge unique"></div>
 <div class="badge unique"></div>
 ```
 
 #### CSS
 
+We render the five badges as circles. We use the `random()` function to define the {{cssxref("angle")}} of the {{cssxref("hue")}} of an {{cssxref("hsl()")}} color function. We set `element-shared` to share the random base value, which shared with the `desaturated` badge so that it uses the same {{cssxref("hue")}} {{cssxref("angle")}} but with reduced saturation. We then override the base value sharing allowing the `unique` badges to default to `auto` for unique hues.
+
 ```css
 .badge {
-  width: 4em;
+  display: inline-block;
+  width: 5em;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background: hsl(random(element-shared, 0, 360), 50%, 50%);
+  background: hsl(random(element-shared, 0, 360) 50% 50%);
+}
+.badge.desaturated {
+  background: hsl(random(element-shared, 0, 360) 10% 50%);
 }
 .badge.unique {
-  background: hsl(random(0, 360), 50%, 50%);
+  background: hsl(random(0, 360) 50% 50%);
 }
 
 @supports not (order: random(1, 2)) {
