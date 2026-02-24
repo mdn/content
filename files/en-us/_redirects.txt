@@ -8156,6 +8156,7 @@
 /en-US/docs/Web/API/ByteLengthQueueingStrategy/size	/en-US/docs/Web/API/ByteLengthQueuingStrategy/size
 /en-US/docs/Web/API/ByteLengthQueuingStrategy/ByteLengthQueueingStrategy	/en-US/docs/Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 /en-US/docs/Web/API/ByteString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+/en-US/docs/Web/API/CSPViolationReport/toJSON	/en-US/docs/Web/API/CSPViolationReport
 /en-US/docs/Web/API/CSPViolationReportBody	/en-US/docs/Web/API/CSPViolationReport
 /en-US/docs/Web/API/CSPViolationReportBody/blockedURL	/en-US/docs/Web/API/CSPViolationReport/blockedURL
 /en-US/docs/Web/API/CSPViolationReportBody/columnNumber	/en-US/docs/Web/API/CSPViolationReport/columnNumber
@@ -8168,7 +8169,7 @@
 /en-US/docs/Web/API/CSPViolationReportBody/sample	/en-US/docs/Web/API/CSPViolationReport/sample
 /en-US/docs/Web/API/CSPViolationReportBody/sourceFile	/en-US/docs/Web/API/CSPViolationReport/sourceFile
 /en-US/docs/Web/API/CSPViolationReportBody/statusCode	/en-US/docs/Web/API/CSPViolationReport/statusCode
-/en-US/docs/Web/API/CSPViolationReportBody/toJSON	/en-US/docs/Web/API/CSPViolationReport/toJSON
+/en-US/docs/Web/API/CSPViolationReportBody/toJSON	/en-US/docs/Web/API/CSPViolationReport
 /en-US/docs/Web/API/CSS.escape	/en-US/docs/Web/API/CSS/escape_static
 /en-US/docs/Web/API/CSS.supports	/en-US/docs/Web/API/CSS/supports_static
 /en-US/docs/Web/API/CSS/escape	/en-US/docs/Web/API/CSS/escape_static
