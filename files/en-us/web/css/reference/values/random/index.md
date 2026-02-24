@@ -80,7 +80,9 @@ A random value from the minimum to the maximum in the same type provided for the
 
 ## Description
   
-The `random(<calc-sum>, <calc-sum>)` function call specifies a minimum value and a maximum value and a random result is generated within the range specified. The values specified must be of the same value type, [number](/en-US/docs/Web/CSS/Reference/Values/number), [dimension](/en-US/docs/Web/CSS/Reference/Values/dimension), or {{cssxref("percentage")}}, for the function to be valid. While the units in the two parameters don't need to be the same, they do need to be of the same dimension type, such as {{cssxref("length")}}, {{cssxref("angle")}}, {{cssxref("time")}}, or {{cssxref("frequency")}} to be valid.
+The `random(<random-value-sharing>, <calc-sum>, <calc-sum>, <calc-sum>)` function specifies a minimum value and a maximum value and a random result is generated within the range specified. An [optional `<random-value-sharing>`](#random-value-sharing) parameter enables setting the same or differing random base values between differing properties and different elements.
+
+The minimum, maximum and step values specified must be of the same {{cssxref("number")}}, {{cssxref("dimension")}}, or {{cssxref("percentage")}} data type, for the function to be valid. While the units in the two to three `<calc-sum>` parameters don't need to be the same, they do need to be of the same data type, such as {{cssxref("length")}}, {{cssxref("angle")}}, {{cssxref("time")}}, or {{cssxref("frequency")}} to be valid.
 
 ### Random base value
 The random base value is an underlying deterministic number that generates the final random result similar to a seed given to a randomization algorithm. When the same random base value is used for different `random()` functions, the results will vary in a coordinated way. Different random base values will create independently random results.
