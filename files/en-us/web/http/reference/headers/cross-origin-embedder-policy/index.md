@@ -85,6 +85,24 @@ Violations of a COEP may be sent as JSON objects in `POST` requests to a remote 
 To observe violations using the [Reporting API](/en-US/docs/Web/API/Reporting_API) you create a {{domxref("ReportingObserver")}} to observe {{domxref("COEPViolationReport")}} instances that have the `type` of `"coep"`.
 The format of the `COEPViolationReport` report is shown below:
 
+```js
+[
+  {
+    type: "coep",
+    url: "https://url-of-document-that-generated-report",
+    body: {
+      type: "navigation",
+      blockedURL: "https://url-of-resource-that-was-blocked",
+      destination: "image",
+      disposition: "enforce",
+    },
+  },
+];
+```
+
+To send violation reports to a remote server, you specify an endpoint name in the COEP header's [`report-to`](#report-to_endpoint_name) parameter, and provide a mapping from this name to a server address in the {{HTTPHeader("Reporting-Endpoints")}} header.
+The format of the JSON report object a serialized version of `COEPViolationReport` that additionally includes `age` and `user_agent` properties:
+
 ```json
 [
   {
@@ -100,24 +118,6 @@ The format of the `COEPViolationReport` report is shown below:
     "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
   }
 ]
-```
-
-To send violation reports to a remote server, you specify an endpoint name in the COEP header's [`report-to`](#report-to_endpoint_name) parameter, and provide a mapping from this name to a server address in the {{HTTPHeader("Reporting-Endpoints")}} header.
-The format of the JSON report object a serialized version of `COEPViolationReport` that additionally includes `age` and `user_agent` properties:
-
-```js
-[
-  {
-    type: "coep",
-    url: "https://url-of-document-that-generated-report",
-    body: {
-      type: "navigation",
-      blockedURL: "https://url-of-resource-that-was-blocked",
-      destination: "image",
-      disposition: "enforce",
-    },
-  },
-];
 ```
 
 For more information and examples see {{domxref("COEPViolationReport")}} and [Reporting API](/en-US/docs/Web/API/Reporting_API).
