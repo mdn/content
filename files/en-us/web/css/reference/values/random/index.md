@@ -57,7 +57,7 @@ random(--my-base, 1em, 3rem, 2px)
 ### Parameters
 
 - `<random-value-sharing>` (optional)
-  - : Controls which random functions in the document will share a random base value and which will get distinct values.
+  - : Controls which `random()` functions in the document will share a random base value and which will get distinct values.
     Valid values include:
     - `auto`
       - : Each use of `random()` in an element's style gets its own unique random base value.
