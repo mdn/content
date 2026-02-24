@@ -45,6 +45,10 @@ Firefox 148 was released on [February 24, 2026](https://whattrainisitnow.com/rel
 
 ### APIs
 
+- The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) is now supported, along with related methods like {{domxref("Element.setHTML", "setHTML()")}}.
+  This allows you to sanitize HTML before inserting it into the DOM, giving you full control over the resulting content, and reducing the risk of XSS attacks.
+  ([Firefox bug 1650370](https://bugzil.la/1650370)).
+
 - The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) is now supported.
   This provides mechanisms to ensure that properties and functions that can potentially be used as vectors for XSS attacks are only able to be called with data that has been passed through a transformation function.
   The mechanisms allow auditing of unsafe uses of code.
