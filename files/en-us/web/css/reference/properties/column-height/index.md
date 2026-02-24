@@ -360,7 +360,6 @@ body {
   gap: 3em 2em;
   column-height: 95vh;
 
-  /* Default value if column-height is set; doesn't need to be set */
   column-wrap: wrap;
 }
 ```
