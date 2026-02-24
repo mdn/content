@@ -333,7 +333,7 @@ The markup for this example contains multiple paragraphs of content, taken from 
 
 We start by giving the {{htmlelement("body")}} element a {{cssxref("column-count")}} of `3`. We then set a {{cssxref("gap")}} of `3em 2em`, resulting in a `3em` gap between rows and a `2em` gap between columns.
 
-Finally, we set a `column-height` of `90vh` to make our columns nearly as tall as the viewport. We also set `column-wrap` to `nowrap`. We are doing this because the initial `column-wrap` value is `auto`, which resolves to `wrap` when `column-height` is set to a `<length>` value. By setting `column-wrap` explicitly to `nowrap`, we force excess content columns to overflow horizontally, making initial or default layout horizontal.
+We then set a `column-height` of `90vh`, making the columns nearly as tall as the viewport. We also set `column-wrap` to `nowrap`. Because the initial `column-wrap` value is `auto`, which resolves to `wrap` when `column-height` is set to a `<length>` value, this forces excess content columns to overflow horizontally.
 
 When the user checks the checkbox, the `column-wrap` property is set to `wrap`, which causes the excess content columns to overflow into new columns vertically, creating the vertical layout. The `column-height` value causes each row of columns to fill the viewport, which works well for the vertical layout.
 
