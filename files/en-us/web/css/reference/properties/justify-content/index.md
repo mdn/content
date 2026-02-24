@@ -119,7 +119,7 @@ justify-content: unset;
   - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property's axis is not parallel with the inline axis (in a grid container) or the main-axis (in a flexbox container), this value behaves like `start`.
 
 - `normal`
-  - : Behaves as `stretch`, except in the case of multi-column containers with a non-`auto` [`column-width`](/en-US/docs/Web/CSS/Reference/Properties/column-width), in which case the columns take their specified `column-width` rather than stretching to fill the container. As `stretch` behaves as `start` in flex containers, `normal` also behaves as `start`.
+  - : Behaves as `stretch`, except in the case of multi-column containers with a non-`auto` {{cssxref("column-width")}}, in which case the columns take their specified `column-width` rather than stretching to fill the container. As `stretch` behaves as `start` in flex containers, `normal` also behaves as `start`.
 
 - `space-between`
   - : The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. The first item is flush with the main-start edge, and the last item is flush with the main-end edge.

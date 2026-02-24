@@ -5,9 +5,9 @@ page-type: guide
 sidebar: cssref
 ---
 
-**_Shorthand properties_** are CSS properties that let you set the values of multiple other CSS properties simultaneously. Using a shorthand property, you can write more concise (and often more readable) style sheets, saving time and energy.
+**_Shorthand properties_** are CSS properties that let you set the values of multiple other CSS properties in one declaration. Using a shorthand property, you can write more concise (and often more readable) style sheets, saving time and energy.
 
-The CSS specification defines shorthand properties to group the definition of common properties acting on the same theme. For instance, the CSS {{cssxref("background")}} property is a shorthand property that's able to define the values of {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-repeat")}}, and {{cssxref("background-position")}}. Similarly, the most common font-related properties can be defined using the shorthand {{cssxref("font")}}, and the different margins around a box can be defined using the {{cssxref("margin")}} shorthand.
+The CSS specification defines shorthand properties to group the definition of common properties acting on the same theme. For example, the CSS {{cssxref("background")}} property is a shorthand property that's able to define the values of {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-repeat")}}, and {{cssxref("background-position")}}.
 
 ## Tricky edge cases
 
@@ -15,7 +15,11 @@ There are a few edge cases to keep in mind when using shorthand properties.
 
 ### Omitting properties
 
-A value which is not specified is set to its initial value. That means that it **overrides** previously set values. For example:
+A value which is not specified is set to a default value defined by the shorthand,
+which may differ from the property's initial value.
+
+That means that it **overrides** previously set values.
+For example:
 
 ```css
 p {

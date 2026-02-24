@@ -31,9 +31,9 @@ get(options)
 - `options` {{optional_inline}}
   - : An object that contains options for the request. It can contain the following properties:
     - `mediation` {{optional_inline}}
-      - : A string indicating whether the user will be required to login for every visit to a client app. The value can be one of the following:
+      - : A string indicating how the user is involved in retrieving the credential. The value can be one of the following:
         - `"conditional"`
-          - : Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more details of how this is used; {{domxref("PublicKeyCredential.isConditionalMediationAvailable_static", "PublicKeyCredential.isConditionalMediationAvailable()")}} also provides some useful information.
+          - : Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Autofill UI](/en-US/docs/Web/API/Web_Authentication_API#autofill_ui) for more details of how this is used.
 
         - `"optional"`
           - : If credentials can be handed over for a given operation without user mediation, they will be, enabling automatic reauthentication without user mediation. If user mediation is required, then the user agent will ask the user to authenticate. This value is intended for situations where you have reasonable confidence that a user won't be surprised or confused at seeing a login dialog box — for example on a site that doesn't automatically log users in, when a user has just clicked a "Login/Signup" button.
@@ -50,7 +50,7 @@ get(options)
         > In the case of a [federated authentication (FedCM API)](/en-US/docs/Web/API/FedCM_API) request, a `mediation` value of `optional` or `silent` may result in attempted [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication). Whether this occurred is communicated to the identity provider (IdP) via the [`is_auto_selected`](/en-US/docs/Web/API/FedCM_API/IDP_integration#is_auto_selected) parameter sent to the IdP's `id_assertion_endpoint` during validation and the relying party (RP) via the {{domxref("IdentityCredential.isAutoSelected")}} property. This is useful for performance evaluation, security requirements (the IdP may wish to reject automatic reauthentication requests and always require user mediation), and general UX (an IdP or RP may wish to present different UX for auto and non-auto login experiences).
 
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `get()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an `AbortError` {{domxref("DOMException")}}.
+      - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `get()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with the signal's reason (which is an `AbortError` {{domxref("DOMException")}} by default, or a custom value if one was provided when calling {{domxref("AbortController.abort", "abort()")}}).
 
     - `password` {{optional_inline}}
       - : This option asks the browser to retrieve a stored [password](/en-US/docs/Web/API/Credential_Management_API/Credential_types#passwords) as a {{domxref("PasswordCredential")}} object. It is a boolean value.
@@ -99,6 +99,10 @@ If a single credential cannot be unambiguously obtained, the promise resolves wi
 
 - `AbortError` {{domxref("DOMException")}}
   - : The request was aborted by a call to the {{domxref("AbortController.abort", "abort()")}} method of the {{domxref("AbortController")}} associated with this method's [`signal`](#signal) option.
+    Note that if the caller of `abort()` provided a `reason` argument, then `get()` will be rejected with the value of `reason`, instead of an `AbortController` exception.
+
+- `TimeoutError` {{domxref("DOMException")}}
+  - : The request was automatically aborted due to a timeout set using {{domxref("AbortSignal.timeout_static", "AbortSignal.timeout()")}}.
 
 - {{domxref("IdentityCredentialError")}}
   - : When requesting an {{domxref("IdentityCredential")}}, the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, and rejects with an error response containing information about the reason.
@@ -134,7 +138,9 @@ async function signIn() {
         {
           configURL: "https://accounts.idp.example/config.json",
           clientId: "********",
-          nonce: "******",
+          params: {
+            /* IdP-specific parameters */
+          },
         },
       ],
     },
@@ -155,7 +161,9 @@ async function signIn() {
         {
           configURL: "https://accounts.idp.example/config.json",
           clientId: "********",
-          nonce: "******",
+          params: {
+            /* IdP-specific parameters */
+          },
           loginHint: "user1@example.com",
         },
       ],
@@ -175,7 +183,9 @@ async function signIn() {
           {
             configURL: "https://accounts.idp.example/config.json",
             clientId: "********",
-            nonce: "******",
+            params: {
+              /* IdP-specific parameters */
+            },
           },
         ],
       },
@@ -249,6 +259,42 @@ navigator.credentials
   .catch((err) => {
     console.error(err);
   });
+```
+
+### Implementing a timeout
+
+In this example, we use {{domxref("AbortSignal.timeout_static", "AbortSignal.timeout()")}} to automatically abort the request if it takes longer than 10 seconds.
+
+```js
+async function authenticateUser() {
+  const publicKey = {
+    challenge: new Uint8Array([139, 66, 181, 87, 7, 203 /* ,… */]),
+    rpId: "acme.com",
+    allowCredentials: [
+      {
+        type: "public-key",
+        id: new Uint8Array([64, 66, 25, 78, 168, 226, 174 /* ,… */]),
+      },
+    ],
+    userVerification: "required",
+  };
+
+  try {
+    const credential = await navigator.credentials.get({
+      publicKey,
+      signal: AbortSignal.timeout(10000), // Abort after 10 seconds
+    });
+    console.log("Authentication successful:", credential);
+  } catch (err) {
+    if (err.name === "TimeoutError") {
+      console.error("The authentication request timed out.");
+    } else if (err.name === "AbortError") {
+      console.log("The request was cancelled by the user.");
+    } else {
+      console.error("An unexpected error occurred:", err);
+    }
+  }
+}
 ```
 
 ## Specifications

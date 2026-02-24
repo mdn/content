@@ -156,13 +156,13 @@ typeof (someData + " foo"); // "string"
 
 ### Interaction with undeclared and uninitialized variables
 
-`typeof` is generally always guaranteed to return a string for any operand it is supplied with. Even with undeclared identifiers, `typeof` will return `"undefined"` instead of throwing an error.
+`typeof` works with undeclared identifiers, returning `"undefined"` instead of throwing an error.
 
 ```js
 typeof undeclaredVariable; // "undefined"
 ```
 
-However, using `typeof` on lexical declarations ({{jsxref("Statements/let", "let")}} {{jsxref("Statements/const", "const")}}, and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)) in the same block before the place of declaration will throw a {{jsxref("ReferenceError")}}. Block scoped variables are in a _[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)_ from the start of the block until the initialization is processed, during which it will throw an error if accessed.
+However, using `typeof` on lexical declarations ({{jsxref("Statements/let", "let")}} {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/using", "using")}} {{jsxref("Statements/await_using", "await using")}}, and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)) in the same block before the place of declaration will throw a {{jsxref("ReferenceError")}}. Block scoped variables are in a _[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)_ from the start of the block until the initialization is processed, during which it will throw an error if accessed.
 
 ```js example-bad
 typeof newLetVariable; // ReferenceError
@@ -173,6 +173,8 @@ let newLetVariable;
 const newConstVariable = "hello";
 class newClass {}
 ```
+
+See [`typeof` operator and `undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined#typeof_operator_and_undefined) for more details.
 
 ### Exceptional behavior of document.all
 

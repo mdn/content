@@ -15,7 +15,7 @@ The **`HTMLAnchorElement`** interface represents hyperlink elements and provides
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLAnchorElement.attributionSrc")}} {{securecontext_inline}} {{experimental_inline}}
+- {{domxref("HTMLAnchorElement.attributionSrc")}} {{securecontext_inline}} {{deprecated_inline}}
   - : Gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Reference/Elements/a#attributionsrc) attribute on an {{htmlelement("a")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to register a navigation-based attribution source.
 - {{domxref("HTMLAnchorElement.download")}}
   - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represents the proposed name of the file. If the name is not a valid filename of the underlying OS, the browser will adapt it.
@@ -29,6 +29,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string that is the result of parsing the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) HTML attribute relative to the document, containing a valid URL of a linked resource.
 - {{domxref("HTMLAnchorElement.hreflang")}}
   - : A string that reflects the [`hreflang`](/en-US/docs/Web/HTML/Reference/Elements/a#hreflang) HTML attribute, indicating the language of the linked resource.
+- {{domxref("HTMLAnchorElement.interestForElement")}} {{experimental_inline}} {{non-standard_inline}}
+  - : Gets or sets the target element of an interest invoker, in cases where the associated {{htmlelement("a")}} element is specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers#creating_an_interest_invoker).
 - {{domxref("HTMLAnchorElement.origin")}} {{ReadOnlyInline}}
   - : Returns a string containing the origin of the URL, that is its scheme, its domain and its port.
 - {{domxref("HTMLAnchorElement.password")}}

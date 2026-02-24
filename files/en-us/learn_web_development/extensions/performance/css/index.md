@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
 
 When developing a website, you need to consider how the browser is handling the CSS on your site. To mitigate any performance issues that CSS might be causing, you should optimize it. For example, you should optimize the CSS to mitigate [render-blocking](/en-US/docs/Glossary/Render_blocking) and minimize the number of required reflows. This article walks you through key CSS performance optimization techniques.
 
@@ -127,7 +127,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
 
 Animations can improve perceived performance, making interfaces feel snappier and making users feel like progress is being made when they are waiting for a page to load (loading spinners, for example). However, larger animations and a higher number of animations will naturally require more processing power to handle, which can degrade performance.
 
-The simplest advice is to cut down on all unnecessary animations. You could also provide users with a control/site preference to turn off animations if they are using a low-powered device or a mobile device with limited battery power. You could also use JavaScript to control whether or not animation is applied to the page in the first place. There is also a media query called [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) that can be used to selectively serve animation styles or not based on a user's OS-level preferences for animation.
+The simplest advice is to cut down on all unnecessary animations. You could also provide users with a control/site preference to turn off animations if they are using a low-powered device or a mobile device with limited battery power. You could also use JavaScript to control whether or not animation is applied to the page in the first place. There is also a media query called {{cssxref("@media/prefers-reduced-motion")}} that can be used to selectively serve animation styles or not based on a user's OS-level preferences for animation.
 
 For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript).
 
@@ -135,33 +135,33 @@ For essential DOM animations, you are advised to use [CSS animations](/en-US/doc
 
 Next, animation performance relies heavily on what properties you are animating. Certain properties, when animated, trigger a [reflow](/en-US/docs/Glossary/Reflow) (and therefore also a [repaint](/en-US/docs/Glossary/Repaint)) and should be avoided. These include properties that:
 
-- Alter an element's dimensions, such as [`width`](/en-US/docs/Web/CSS/Reference/Properties/width), [`height`](/en-US/docs/Web/CSS/Reference/Properties/height), [`border`](/en-US/docs/Web/CSS/Reference/Properties/border), and [`padding`](/en-US/docs/Web/CSS/Reference/Properties/padding).
-- Reposition an element, such as [`margin`](/en-US/docs/Web/CSS/Reference/Properties/margin), [`top`](/en-US/docs/Web/CSS/Reference/Properties/top), [`bottom`](/en-US/docs/Web/CSS/Reference/Properties/bottom), [`left`](/en-US/docs/Web/CSS/Reference/Properties/left), and [`right`](/en-US/docs/Web/CSS/Reference/Properties/right).
-- Change an element's layout, such as [`align-content`](/en-US/docs/Web/CSS/Reference/Properties/align-content), [`align-items`](/en-US/docs/Web/CSS/Reference/Properties/align-items), and [`flex`](/en-US/docs/Web/CSS/Reference/Properties/flex).
-- Add visual effects that change the element geometry, such as [`box-shadow`](/en-US/docs/Web/CSS/Reference/Properties/box-shadow).
+- Alter an element's dimensions, such as {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("border")}}, and {{cssxref("padding")}}.
+- Reposition an element, such as {{cssxref("margin")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}}.
+- Change an element's layout, such as {{cssxref("align-content")}}, {{cssxref("align-items")}}, and {{cssxref("flex")}}.
+- Add visual effects that change the element geometry, such as {{cssxref("box-shadow")}}.
 
 Modern browsers are smart enough to repaint only the changed area of the document, rather than the entire page. As a result, larger animations are more costly.
 
 If at all possible, it is better to animate properties that do not cause reflow/repaint. This includes:
 
 - [Transforms](/en-US/docs/Web/CSS/Guides/Transforms)
-- [`opacity`](/en-US/docs/Web/CSS/Reference/Properties/opacity)
-- [`filter`](/en-US/docs/Web/CSS/Reference/Properties/filter)
+- {{cssxref("opacity")}}
+- {{cssxref("filter")}}
 
 ### Animating on the GPU
 
 To further improve performance, you should consider moving animation work off the main thread and onto the device's GPU (also referred to as compositing). This is done by choosing specific types of animations that the browser will automatically send to the GPU to handle; these include:
 
-- 3D transform animations such as [`transform: translateZ()`](/en-US/docs/Web/CSS/Reference/Properties/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate3d).
+- 3D transform animations such as [`transform: translateZ()`](/en-US/docs/Web/CSS/Reference/Properties/transform) and {{cssxref("transform-function/rotate3d")}}.
 - Elements with certain other properties animated such as [`position: fixed`](/en-US/docs/Web/CSS/Reference/Properties/position).
-- Elements with [`will-change`](/en-US/docs/Web/CSS/Reference/Properties/will-change) applied (see the section below).
+- Elements with {{cssxref("will-change")}} applied (see the section below).
 - Certain elements that are rendered in their own layer, including [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video), [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas), and [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe).
 
 Animation on the GPU can result in improved performance, especially on mobile. However, moving animations to GPU is not always that simple. Read [CSS GPU Animation: Doing It Right](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/) (smashingmagazine.com, 2016) for a very useful and detailed analysis.
 
 ## Optimizing element changes with `will-change`
 
-Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before it is required. The CSS [`will-change`](/en-US/docs/Web/CSS/Reference/Properties/will-change) property hints to browsers how an element is expected to change.
+Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before it is required. The CSS {{cssxref("will-change")}} property hints to browsers how an element is expected to change.
 
 > [!NOTE]
 > `will-change` is intended to be used as a last resort to try to deal with existing performance problems. It should not be used to anticipate performance problems.
@@ -197,7 +197,7 @@ In general, think carefully about the fonts you use on your site. Some font file
 
 ### Font loading
 
-Bear in mind that a font is only loaded when it is actually applied to an element using the [`font-family`](/en-US/docs/Web/CSS/Reference/Properties/font-family) property, not when it is first referenced using the [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face) at-rule:
+Bear in mind that a font is only loaded when it is actually applied to an element using the {{cssxref("font-family")}} property, not when it is first referenced using the {{cssxref("@font-face")}} at-rule:
 
 ```css
 /* Font not loaded here */
@@ -293,4 +293,4 @@ The {{cssxref(":has", ":has()")}} pseudo-class enables powerful selection capabi
 - [Best practices for fonts](https://web.dev/articles/font-best-practices) on web.dev (2022)
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) on web.dev (2022)
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}

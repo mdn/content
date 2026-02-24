@@ -247,7 +247,7 @@ body {
 
 ### Resetting all property values
 
-The CSS shorthand property [`all`](/en-US/docs/Web/CSS/Reference/Properties/all) can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `revert`, `revert-layer`, or `unset`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
+The CSS shorthand property {{cssxref("all")}} can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `revert`, `revert-layer`, or `unset`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
 
 In the below example, we have two blockquotes. The first has styling applied to the blockquote element itself. The second has a class applied to the blockquote, which sets the value of `all` to `unset`.
 
@@ -337,7 +337,7 @@ The amount of specificity a selector has is measured using three different value
 - **Elements**: Score one in this column (1 point) for each element selector or pseudo-element contained inside the overall selector.
 
 > [!NOTE]
-> The universal selector ([`*`](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), and specificity adjustment selector ([`:where()`](/en-US/docs/Web/CSS/Reference/Selectors/:where)) along with its parameters, have no effect on specificity.
+> The universal selector ([`*`](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), and specificity adjustment selector ({{cssxref(":where()")}}) along with its parameters, have no effect on specificity.
 
 The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. You can find details of each selector in the MDN [selectors reference](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators).
 

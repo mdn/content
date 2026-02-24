@@ -41,8 +41,8 @@ To solve this challenge we are expecting you to create a simple website project,
            <h1>Creepy-crawlies splash page!</h1>
 
            <p>
-             In casual language, people use “bugs” to mean all sorts of small
-             creepy-crawlies: insects, spiders, etc. However, “Bugs” (true bugs)
+             In casual language, people use "bugs" to mean all sorts of small
+             creepy-crawlies: insects, spiders, etc. However, "Bugs" (true bugs)
              are actually just one order of insects (Hemiptera). This page
              provides a summary of the main classes or groups of
              creepy-crawlies.
@@ -89,7 +89,7 @@ To solve this challenge we are expecting you to create a simple website project,
              possess distinctive piercing-sucking mouthparts. These mouthparts
              are adapted for feeding on plant sap, blood, or other insects. Many
              true bugs have scent glands that produce strong odors as a defense
-             mechanism, which is why some are called “stink bugs.”
+             mechanism, which is why some are called "stink bugs."
            </p>
 
            <p>
@@ -153,8 +153,8 @@ To solve this challenge we are expecting you to create a simple website project,
            <h2>Flies & Mosquitoes (Diptera)</h2>
 
            <p>
-             Flies and mosquitoes belong to the order Diptera, meaning “two
-             wings.” Unlike most other insects, they have only one functional
+             Flies and mosquitoes belong to the order Diptera, meaning "two
+             wings." Unlike most other insects, they have only one functional
              pair of wings; the hind pair has evolved into tiny balancing organs
              called halteres. This adaptation gives them incredible agility in
              flight. Their mouthparts vary widely: some species have sponging
@@ -233,7 +233,7 @@ To solve this challenge we are expecting you to create a simple website project,
              a danger to humans. In fact, spiders are highly beneficial because
              they help control insect populations, including pests. They play a
              crucial role in balancing ecosystems, making them one of the most
-             important non-insect “bugs” people commonly encounter.
+             important non-insect "bugs" people commonly encounter.
            </p>
 
            <p class="copyright">
@@ -362,7 +362,6 @@ In this assessment we are presenting you with a mostly-finished splash page abou
 
 Just below the `<h1>`, add a `<video>` element that embeds our header video into the page. We'd like it to do the following:
 
-- Specify the [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) of the video.
 - Autoplay the video on load (for this to work in at least some browsers, you'll also need to specify that the video should be muted).
 - Loop endlessly rather than playing once.
 - Preload the video content.
@@ -419,15 +418,14 @@ Your finished HTML should look something like this:
 
         <video
           src="https://mdn.github.io/shared-assets/videos/learn/bug_video_640.mp4"
-          type="video/mp4"
           autoplay
           loop
           muted
           preload="auto"></video>
 
         <p>
-          In casual language, people use “bugs” to mean all sorts of small
-          creepy-crawlies: insects, spiders, etc. However, “Bugs” (true bugs)
+          In casual language, people use "bugs" to mean all sorts of small
+          creepy-crawlies: insects, spiders, etc. However, "Bugs" (true bugs)
           are actually just one order of insects (Hemiptera). This page provides
           a summary of the main classes or groups of creepy-crawlies.
         </p>
@@ -490,7 +488,7 @@ Your finished HTML should look something like this:
           piercing-sucking mouthparts. These mouthparts are adapted for feeding
           on plant sap, blood, or other insects. Many true bugs have scent
           glands that produce strong odors as a defense mechanism, which is why
-          some are called “stink bugs.”
+          some are called "stink bugs."
         </p>
 
         <p>
@@ -571,7 +569,7 @@ Your finished HTML should look something like this:
         </figure>
 
         <p>
-          Flies and mosquitoes belong to the order Diptera, meaning “two wings.”
+          Flies and mosquitoes belong to the order Diptera, meaning "two wings."
           Unlike most other insects, they have only one functional pair of
           wings; the hind pair has evolved into tiny balancing organs called
           halteres. This adaptation gives them incredible agility in flight.
@@ -665,7 +663,7 @@ Your finished HTML should look something like this:
           danger to humans. In fact, spiders are highly beneficial because they
           help control insect populations, including pests. They play a crucial
           role in balancing ecosystems, making them one of the most important
-          non-insect “bugs” people commonly encounter.
+          non-insect "bugs" people commonly encounter.
         </p>
 
         <p class="copyright">

@@ -54,8 +54,8 @@ overflow: auto;
 
 This property is a shorthand for the following CSS properties:
 
-- [`overflow-x`](/en-US/docs/Web/CSS/Reference/Properties/overflow-x)
-- [`overflow-y`](/en-US/docs/Web/CSS/Reference/Properties/overflow-y)
+- {{cssxref("overflow-x")}}
+- {{cssxref("overflow-y")}}
 
 ## Syntax
 
@@ -85,7 +85,7 @@ The `overflow` property is specified as one or two {{CSSXref("overflow_value", "
 - `hidden`
   - : Overflow content is clipped at the element's padding box. There are no scroll bars, and the clipped content is not visible (i.e., clipped content is hidden), but the content still exists. User agents do not add scroll bars and also do not allow users to view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse. The content _can_ be scrolled programmatically (for example, by linking to anchor text, by tabbing to a hidden yet focusable element, or by setting the value of the {{domxref("Element.scrollLeft", "scrollLeft")}} property or the {{domxref("Element.scrollTo", "scrollTo()")}} method), in which case the element box is a scroll container.
 - `clip`
-  - : Overflow content is clipped at the element's _overflow clip edge_ that is defined using the [`overflow-clip-margin`](/en-US/docs/Web/CSS/Reference/Properties/overflow-clip-margin) property. As a result, content overflows the element's padding box by the {{cssxref("&lt;length&gt;")}} value of `overflow-clip-margin` or by `0px` if not set. Overflow content outside the clipped region is not visible, user agents do not add a scroll bar, and programmatic scrolling is also not supported. No new [formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) is created. To establish a formatting context, use `overflow: clip` along with {{cssxref("display", "display: flow-root", "#flow-root")}}. The element box is not a scroll container.
+  - : Overflow content is clipped at the element's _overflow clip edge_ that is defined using the {{cssxref("overflow-clip-margin")}} property. As a result, content overflows the element's padding box by the {{cssxref("&lt;length&gt;")}} value of `overflow-clip-margin` or by `0px` if not set. Overflow content outside the clipped region is not visible, user agents do not add a scroll bar, and programmatic scrolling is also not supported. No new [formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) is created. To establish a formatting context, use `overflow: clip` along with {{cssxref("display", "display: flow-root", "#flow-root")}}. The element box is not a scroll container.
 - `scroll`
   - : Overflow content is clipped at the element's padding box, and overflow content can be scrolled into view using scroll bars. User agents display scroll bars whether or not any content is overflowing, so in the horizontal and vertical directions if the value applies to both directions. The use of this keyword, therefore, can prevent scroll bars from appearing and disappearing as content changes. Printers may still print overflow content. The element box is a scroll container.
 - `auto`
@@ -105,6 +105,8 @@ The following nuances should be kept in mind while using the various keywords fo
 - Setting overflow to `visible` in one direction (i.e., `overflow-x` or `overflow-y`) when it isn't set to `visible` or `clip` in the other direction results in the `visible` value behaving as `auto`.
 - Setting overflow to `clip` in one direction when it isn't set to `visible` or `clip` in the other direction results in the `clip` value behaving as `hidden`.
 - The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll through content in a scroll container, except when `overflow` is set to `clip`.
+- Setting `overflow` on images and other {{glossary("replaced elements")}} works as expected in browsers that support CSS Overflow Module Level 4; in previous versions of the specification, replaced elements were always clipped to the bounding container.
+  See [Browser compatibility](#browser_compatibility) for supporting browsers.
 
 ## Formal definition
 

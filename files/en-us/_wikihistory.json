@@ -54253,23 +54253,6 @@
       "Gor1"
     ]
   },
-  "Web/API/Range/collapsed": {
-    "modified": "2020-10-15T21:17:55.746Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "jsx",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "DR",
-      "Mgjbot",
-      "Maian",
-      "Jonnyq"
-    ]
-  },
   "Web/API/Range/commonAncestorContainer": {
     "modified": "2020-10-15T21:11:04.954Z",
     "contributors": [
@@ -54387,34 +54370,6 @@
       "Sheppy",
       "ethertank",
       "Gor1"
-    ]
-  },
-  "Web/API/Range/endContainer": {
-    "modified": "2020-10-15T21:18:30.774Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "jsx",
-      "Khodaidad_Basharmand",
-      "Sheppy",
-      "ethertank",
-      "Jonnyq"
-    ]
-  },
-  "Web/API/Range/endOffset": {
-    "modified": "2020-10-15T21:18:27.338Z",
-    "contributors": [
-      "fscholz",
-      "gnepnaiL-oahZ",
-      "MarkRusciano",
-      "abbycar",
-      "teoli",
-      "jsx",
-      "shubham.hatwar",
-      "Sheppy",
-      "ethertank",
-      "Jonnyq"
     ]
   },
   "Web/API/Range/extractContents": {
@@ -54648,32 +54603,6 @@
       "Sheppy",
       "ethertank",
       "SkyLined",
-      "Gor1"
-    ]
-  },
-  "Web/API/Range/startContainer": {
-    "modified": "2020-10-15T21:18:27.123Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "kollishivagangadhar",
-      "Navin_Jadhav",
-      "Sheppy",
-      "Gor1"
-    ]
-  },
-  "Web/API/Range/startOffset": {
-    "modified": "2020-10-15T21:18:03.544Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "Brettz9",
-      "kollishivagangadhar",
-      "Navin_Jadhav",
-      "Sheppy",
-      "Ptak82",
       "Gor1"
     ]
   },
@@ -58808,26 +58737,6 @@
   "Web/API/StaticRange/StaticRange": {
     "modified": "2020-10-15T21:59:08.104Z",
     "contributors": ["Sheppy", "fscholz", "connorshea", "jpmedley"]
-  },
-  "Web/API/StaticRange/collapsed": {
-    "modified": "2020-10-15T21:59:08.677Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
-  },
-  "Web/API/StaticRange/endContainer": {
-    "modified": "2020-10-15T21:59:06.718Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
-  },
-  "Web/API/StaticRange/endOffset": {
-    "modified": "2020-10-15T21:59:05.929Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
-  },
-  "Web/API/StaticRange/startContainer": {
-    "modified": "2020-10-15T21:59:06.036Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
-  },
-  "Web/API/StaticRange/startOffset": {
-    "modified": "2020-10-15T21:59:04.874Z",
-    "contributors": ["Sheppy", "sideshowbarker", "fscholz", "jpmedley"]
   },
   "Web/API/StereoPannerNode": {
     "modified": "2020-10-15T21:32:40.831Z",
@@ -121179,6 +121088,18 @@
       "antoinegrant"
     ]
   },
+  "Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns": {
+    "modified": "2020-07-22T14:05:46.803Z",
+    "contributors": [
+      "mfuji09",
+      "bradyhanna",
+      "chrisdavidmills",
+      "..",
+      "vriojtg",
+      "cg",
+      "wbamberg"
+    ]
+  },
   "Web/Progressive_web_apps": {
     "modified": "2020-12-14T07:30:15.695Z",
     "contributors": [
@@ -124657,16 +124578,6 @@
       "adithya_mani"
     ]
   },
-  "Web/Security/Firefox_Security_Guidelines": {
-    "modified": "2020-11-19T10:50:23.486Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jamoozy",
-      "c2the3rd",
-      "JulianNeal",
-      "psiinon"
-    ]
-  },
   "Web/Security/Practical_implementation": {
     "modified": "2020-06-03T13:43:23.202Z",
     "contributors": [
@@ -124731,18 +124642,6 @@
       "VicMan",
       "Pmsyyz",
       "Mathieu Deaudelin"
-    ]
-  },
-  "Web/Security/Referer_header:_privacy_and_security_concerns": {
-    "modified": "2020-07-22T14:05:46.803Z",
-    "contributors": [
-      "mfuji09",
-      "bradyhanna",
-      "chrisdavidmills",
-      "..",
-      "vriojtg",
-      "cg",
-      "wbamberg"
     ]
   },
   "Web/URI": {
@@ -124838,111 +124737,111 @@
       "kjb"
     ]
   },
-  "Web/WebDriver/Reference/Capabilities": {
+  "Web/WebDriver/Reference/Classic/Capabilities": {
     "modified": "2019-10-09T08:06:42.769Z",
     "contributors": ["ato", "arobins", "fscholz"]
   },
-  "Web/WebDriver/Reference/Capabilities/acceptInsecureCerts": {
+  "Web/WebDriver/Reference/Classic/Capabilities/acceptInsecureCerts": {
     "modified": "2019-03-18T21:37:56.893Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Reference/Capabilities/firefoxOptions": {
+  "Web/WebDriver/Reference/Classic/Capabilities/firefoxOptions": {
     "modified": "2020-09-16T13:59:35.618Z",
     "contributors": ["Whimboo", "nalexander", "ato", "dfrase"]
   },
-  "Web/WebDriver/Reference/Commands": {
+  "Web/WebDriver/Reference/Classic/Commands": {
     "modified": "2020-10-15T22:03:17.012Z",
     "contributors": ["ExE-Boss", "chrisdavidmills"]
   },
-  "Web/WebDriver/Reference/Commands/CloseWindow": {
+  "Web/WebDriver/Reference/Classic/Commands/CloseWindow": {
     "modified": "2020-10-15T22:03:12.142Z",
     "contributors": ["ato", "MichaelTimbes", "fscholz"]
   },
-  "Web/WebDriver/Reference/Commands/GetElementAttribute": {
+  "Web/WebDriver/Reference/Classic/Commands/GetElementAttribute": {
     "modified": "2020-10-15T22:04:39.835Z",
     "contributors": ["ato", "fscholz", "automatedtester"]
   },
-  "Web/WebDriver/Reference/Commands/GetElementProperty": {
+  "Web/WebDriver/Reference/Classic/Commands/GetElementProperty": {
     "modified": "2020-10-15T22:04:39.942Z",
     "contributors": ["ato", "fscholz", "automatedtester"]
   },
-  "Web/WebDriver/Reference/Commands/GetElementTagName": {
+  "Web/WebDriver/Reference/Classic/Commands/GetElementTagName": {
     "modified": "2020-10-15T22:03:52.069Z",
     "contributors": ["fscholz", "ato"]
   },
-  "Web/WebDriver/Reference/Commands/GetTimeouts": {
+  "Web/WebDriver/Reference/Classic/Commands/GetTimeouts": {
     "modified": "2020-10-15T22:04:22.850Z",
     "contributors": ["fscholz", "ato", "automatedtester"]
   },
-  "Web/WebDriver/Reference/Commands/GetWindowHandles": {
+  "Web/WebDriver/Reference/Classic/Commands/GetWindowHandles": {
     "modified": "2020-10-15T22:03:22.509Z",
     "contributors": ["MichaelTimbes", "fscholz", "ato"]
   },
-  "Web/WebDriver/Reference/Commands/GetWindowRect": {
+  "Web/WebDriver/Reference/Classic/Commands/GetWindowRect": {
     "modified": "2020-10-15T22:03:22.611Z",
     "contributors": ["fscholz", "ato"]
   },
-  "Web/WebDriver/Reference/Commands/NewWindow": {
+  "Web/WebDriver/Reference/Classic/Commands/NewWindow": {
     "modified": "2020-10-15T22:14:19.358Z",
     "contributors": ["Whimboo"]
   },
-  "Web/WebDriver/Reference/Commands/SetTimeouts": {
+  "Web/WebDriver/Reference/Classic/Commands/SetTimeouts": {
     "modified": "2020-10-15T22:04:38.713Z",
     "contributors": ["ato", "PushpitaPikuDey", "fscholz", "automatedtester"]
   },
-  "Web/WebDriver/Reference/Commands/SetWindowRect": {
+  "Web/WebDriver/Reference/Classic/Commands/SetWindowRect": {
     "modified": "2020-10-15T22:03:22.535Z",
     "contributors": ["ato", "ExE-Boss", "fscholz"]
   },
-  "Web/WebDriver/Reference/Errors": {
+  "Web/WebDriver/Reference/Classic/Errors": {
     "modified": "2019-03-18T21:37:51.907Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Reference/Errors/InsecureCertificate": {
+  "Web/WebDriver/Reference/Classic/Errors/InsecureCertificate": {
     "modified": "2019-03-18T21:38:03.943Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Reference/Errors/InvalidArgument": {
+  "Web/WebDriver/Reference/Classic/Errors/InvalidArgument": {
     "modified": "2019-03-18T21:37:04.346Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Reference/Errors/InvalidCookieDomain": {
+  "Web/WebDriver/Reference/Classic/Errors/InvalidCookieDomain": {
     "modified": "2019-03-18T21:37:06.158Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Reference/Errors/InvalidSelector": {
+  "Web/WebDriver/Reference/Classic/Errors/InvalidSelector": {
     "modified": "2019-03-18T21:37:07.934Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Reference/Errors/InvalidSessionID": {
+  "Web/WebDriver/Reference/Classic/Errors/InvalidSessionID": {
     "modified": "2019-03-18T21:38:02.239Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Reference/Errors/JavaScriptError": {
+  "Web/WebDriver/Reference/Classic/Errors/JavaScriptError": {
     "modified": "2019-03-18T21:36:36.448Z",
     "contributors": ["kaveh", "ato"]
   },
-  "Web/WebDriver/Reference/Errors/ScriptTimeout": {
+  "Web/WebDriver/Reference/Classic/Errors/ScriptTimeout": {
     "modified": "2019-03-18T21:36:24.796Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Reference/Errors/StaleElementReference": {
+  "Web/WebDriver/Reference/Classic/Errors/StaleElementReference": {
     "modified": "2019-03-18T21:36:58.660Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Reference/Errors/UnknownCommand": {
+  "Web/WebDriver/Reference/Classic/Errors/UnknownCommand": {
     "modified": "2019-03-18T21:37:08.267Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Reference/Errors/UnknownError": {
+  "Web/WebDriver/Reference/Classic/Errors/UnknownError": {
     "modified": "2019-03-18T21:37:03.216Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Reference/Errors/UnknownMethod": {
+  "Web/WebDriver/Reference/Classic/Errors/UnknownMethod": {
     "modified": "2019-03-18T21:32:58.905Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Reference/Timeouts": {
+  "Web/WebDriver/Reference/Classic/Timeouts": {
     "modified": "2019-04-29T05:32:47.095Z",
     "contributors": ["chrisdavidmills", "evertones", "ato"]
   },

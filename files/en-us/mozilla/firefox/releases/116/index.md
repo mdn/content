@@ -10,6 +10,14 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ## Changes for web developers
 
+### Developer Tools
+
+- Added support for [Custom Formatters](https://firefox-source-docs.mozilla.org/devtools-user/custom_formatters/index.html) ([Firefox bug 1752760](https://bugzil.la/1752760)).
+- Added "container" badges in markup view on elements with a `container-type` property with `size` or `inline-size` values ([Firefox bug 1789193](https://bugzil.la/1789193)).
+- Fixed an issue in the Inspector where CSS custom properties set on the Custom Element Root were not displayed ([Firefox bug 1836755](https://bugzil.la/1836755)).
+- Show if request was resolved with DNS over HTTPS in Network Monitor ([Firefox bug 1810195](https://bugzil.la/1810195)).
+- Removed `Proxy-Authorization` header in Network Monitor ([Firefox bug 1816115](https://bugzil.la/1816115)).
+
 ### HTML
 
 - The [`dirname`](/en-US/docs/Web/HTML/Reference/Elements/input#dirname) attribute is now supported on [`input`](/en-US/docs/Web/HTML/Reference/Elements/input#dirname) and [`textarea`](/en-US/docs/Web/HTML/Reference/Elements/textarea#dirname) elements.
@@ -58,7 +66,7 @@ This article provides information about the changes in Firefox 116 that affect d
 #### WebDriver BiDi
 
 - Added support for the `session.end` command that allows users to terminate the automation session. This was previously only possible for sessions using both WebDriver Classic and WebDriver BiDi. It is now possible also for WebDriver BiDi-only sessions ([Firefox bug 1829337](https://bugzil.la/1829337)).
-- Added support for [capability matching](/en-US/docs/Web/WebDriver/Reference/Capabilities) for the `session.new` command. It allows to define expectations about the target browser, such as browser name, platform name, etc. It can also be used to configure the session, for example, to specify if insecure certificates should be accepted ([Firefox bug 1731730](https://bugzil.la/1731730)).
+- Added support for [capability matching](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities) for the `session.new` command. It allows to define expectations about the target browser, such as browser name, platform name, etc. It can also be used to configure the session, for example, to specify if insecure certificates should be accepted ([Firefox bug 1731730](https://bugzil.la/1731730)).
 - Shadow roots are now correctly serialized when they are the root of a returned value ([Firefox bug 1836514](https://bugzil.la/1836514)).
 - The `network` event time origin information was renamed from `originTime` to `timeOrigin` ([Firefox bug 1836926](https://bugzil.la/1836926)).
 - The `network` event `network.responseCompleted` is now correctly emitted for navigation requests involving a redirect ([Firefox bug 1838238](https://bugzil.la/1838238)).
@@ -74,11 +82,3 @@ This article provides information about the changes in Firefox 116 that affect d
 - The URL of a page visited when an extension is uninstalled, provided in {{WebExtAPIRef("runtime.setUninstallURL")}}, can now be up to 1023 characters instead of 255 ([Firefox bug 1835723](https://bugzil.la/1835723)).
 - Adds {{WebExtAPIRef("action.getUserSettings")}} and {{WebExtAPIRef("browserAction.getUserSettings")}} providing the user-specified settings for an extension's browser action ([Firefox bug 1814905](https://bugzil.la/1814905)).
 - `autoDiscardable` is now supported in {{WebExtAPIRef("tabs.Tab")}}, {{WebExtAPIRef("tabs.onUpdated")}}, {{WebExtAPIRef("tabs.update")}}, and {{WebExtAPIRef("tabs.query")}} ([Firefox bug 1809094](https://bugzil.la/1809094)).
-
-## Developer Tools
-
-- Added support for [Custom Formatters](https://firefox-source-docs.mozilla.org/devtools-user/custom_formatters/index.html) ([Firefox bug 1752760](https://bugzil.la/1752760)).
-- Added "container" badges in markup view on elements with a `container-type` property with `size` or `inline-size` values ([Firefox bug 1789193](https://bugzil.la/1789193)).
-- Fixed an issue in the Inspector where CSS custom properties set on the Custom Element Root were not displayed ([Firefox bug 1836755](https://bugzil.la/1836755)).
-- Show if request was resolved with DNS over HTTPS in Network Monitor ([Firefox bug 1810195](https://bugzil.la/1810195)).
-- Removed `Proxy-Authorization` header in Network Monitor ([Firefox bug 1816115](https://bugzil.la/1816115)).

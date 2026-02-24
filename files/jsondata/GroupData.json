@@ -28,6 +28,13 @@
       "properties": ["HTMLMediaElement.sinkId"],
       "events": []
     },
+    "Audio Session API": {
+      "overview": ["Audio Session API"],
+      "interfaces": ["AudioSession"],
+      "methods": [],
+      "properties": ["Navigator.audioSession"],
+      "events": []
+    },
     "Background Fetch API": {
       "overview": ["Background Fetch API"],
       "interfaces": [
@@ -170,7 +177,12 @@
     },
     "Clipboard API": {
       "overview": ["Clipboard API"],
-      "interfaces": ["Clipboard", "ClipboardEvent", "ClipboardItem"],
+      "interfaces": [
+        "Clipboard",
+        "ClipboardChangeEvent",
+        "ClipboardEvent",
+        "ClipboardItem"
+      ],
       "methods": [],
       "properties": ["Navigator.clipboard"],
       "events": ["Element: copy", "Element: cut", "Element: paste"]
@@ -329,6 +341,7 @@
         "CSSNamespaceRule",
         "CSSPageRule",
         "CSSPageDescriptors",
+        "CSSFontFeatureValuesMap",
         "CSSFontFeatureValuesRule",
         "CSSFontPaletteValuesRule",
         "CSSPropertyRule",
@@ -546,17 +559,23 @@
     },
     "Fetch API": {
       "overview": ["Fetch API"],
-      "guides": ["/docs/Web/API/Fetch_API/Using_Fetch"],
-      "interfaces": ["Headers", "Request", "RequestInit", "Response"],
-      "methods": ["Window.fetch()", "WorkerGlobalScope.fetch()"],
-      "properties": [],
-      "events": []
-    },
-    "fetchLater API": {
-      "overview": ["fetchLater API"],
-      "guides": ["/docs/Web/API/fetchLater_API/fetchLater_quotas"],
-      "interfaces": ["DeferredRequestInit", "FetchLaterResult"],
-      "methods": ["Window.fetchLater()"],
+      "guides": [
+        "/docs/Web/API/Fetch_API/Using_Fetch",
+        "/docs/Web/API/Fetch_API/Using_Deferred_Fetch"
+      ],
+      "interfaces": [
+        "DeferredRequestInit",
+        "FetchLaterResult",
+        "Headers",
+        "Request",
+        "RequestInit",
+        "Response"
+      ],
+      "methods": [
+        "Window.fetch()",
+        "WorkerGlobalScope.fetch()",
+        "Window.fetchLater()"
+      ],
       "properties": [],
       "events": []
     },
@@ -768,6 +787,7 @@
         "HTMLFormControlsCollection",
         "HTMLFormElement",
         "HTMLFrameSetElement",
+        "HTMLGeolocationElement",
         "HTMLHeadElement",
         "HTMLHeadingElement",
         "HTMLHRElement",
@@ -1280,7 +1300,12 @@
         "/docs/Web/API/Pointer_events/Multi-touch_interaction",
         "/docs/Web/API/Pointer_events/Pinch_zoom_gestures"
       ],
-      "interfaces": ["PointerEvent"],
+      "interfaces": [
+        "MouseScrollEvent",
+        "MouseEvent",
+        "PointerEvent",
+        "WheelEvent"
+      ],
       "methods": [
         "Element.hasPointerCapture()",
         "Element.releasePointerCapture()",
@@ -1288,7 +1313,18 @@
       ],
       "properties": ["Navigator.maxTouchPoints"],
       "events": [
+        "Element: auxclick",
+        "Element: click",
+        "Element: contextmenu",
+        "Element: dblclick",
         "Element: gotpointercapture",
+        "Element: mousedown",
+        "Element: mouseenter",
+        "Element: mouseleave",
+        "Element: mousemove",
+        "Element: mouseout",
+        "Element: mouseover",
+        "Element: mouseup",
         "Element: lostpointercapture",
         "Element: pointercancel",
         "Element: pointerdown",
@@ -1298,7 +1334,8 @@
         "Element: pointerout",
         "Element: pointerover",
         "Element: pointerrawupdate",
-        "Element: pointerup"
+        "Element: pointerup",
+        "Element: wheel"
       ]
     },
     "Pointer Lock API": {
@@ -1315,8 +1352,11 @@
     },
     "Popover API": {
       "overview": ["Popover API"],
-      "guides": ["/docs/Web/API/Popover_API/Using"],
-      "interfaces": ["ToggleEvent"],
+      "guides": [
+        "/docs/Web/API/Popover_API/Using",
+        "/docs/Web/API/Popover_API/Using_interest_invokers"
+      ],
+      "interfaces": ["InterestEvent", "ToggleEvent"],
       "methods": [
         "HTMLElement.hidePopover()",
         "HTMLElement.showPopover()",
@@ -1327,9 +1367,18 @@
         "HTMLButtonElement.popoverTargetElement",
         "HTMLElement.popover",
         "HTMLInputElement.popoverTargetAction",
-        "HTMLInputElement.popoverTargetElement"
+        "HTMLInputElement.popoverTargetElement",
+        "HTMLAnchorElement.interestForElement",
+        "HTMLAreaElement.interestForElement",
+        "HTMLButtonElement.interestForElement",
+        "SVGAElement.interestForElement"
       ],
-      "events": ["HTMLElement: beforetoggle", "HTMLElement: toggle"]
+      "events": [
+        "HTMLElement: beforetoggle",
+        "HTMLElement: toggle",
+        "HTMLElement: interest",
+        "HTMLElement: loseinterest"
+      ]
     },
     "Presentation API": {
       "overview": ["Presentation API"],
@@ -1363,6 +1412,18 @@
         "Window.scheduler",
         "WorkerGlobalScope.scheduler"
       ],
+      "events": []
+    },
+    "Private State Token API": {
+      "overview": ["Private State Token API"],
+      "guides": ["/docs/Web/API/Private_State_Token_API/Using"],
+      "methods": [
+        "Document.hasPrivateToken()",
+        "Document.hasRedemptionRecord()",
+        "Window.fetch()",
+        "XMLHttpRequest.setPrivateToken()"
+      ],
+      "properties": ["HTMLIFrameElement.privateToken"],
       "events": []
     },
     "Push API": {
@@ -1782,25 +1843,18 @@
         "FocusEvent",
         "InputEvent",
         "KeyboardEvent",
-        "MouseEvent",
-        "MouseScrollEvent",
         "MutationEvent",
         "TextEvent",
-        "UIEvent",
-        "WheelEvent"
+        "UIEvent"
       ],
       "methods": [],
       "properties": [],
       "events": [
-        "Element: auxclick",
         "Element: beforeinput",
         "Element: blur",
-        "Element: click",
         "Element: compositionstart",
         "Element: compositionupdate",
         "Element: compositionend",
-        "Element: contextmenu",
-        "Element: dblclick",
         "Element: focus",
         "Element: focusin",
         "Element: focusout",
@@ -1808,15 +1862,7 @@
         "Element: keydown",
         "Element: keypress",
         "Element: keyup",
-        "Element: mousedown",
-        "Element: mouseenter",
-        "Element: mouseleave",
-        "Element: mousemove",
-        "Element: mouseout",
-        "Element: mouseover",
-        "Element: mouseup",
         "Element: select",
-        "Element: wheel",
         "Window: abort",
         "Window: error",
         "Window: load",
@@ -1872,8 +1918,15 @@
     },
     "View Transition API": {
       "overview": ["View Transition API"],
-      "guides": ["/docs/Web/API/View_Transition_API/Using"],
-      "interfaces": ["ViewTransition"],
+      "guides": [
+        "/docs/Web/API/View_Transition_API/Using",
+        "/docs/Web/API/View_Transition_API/Using_types"
+      ],
+      "interfaces": [
+        "CSSViewTransitionRule",
+        "ViewTransition",
+        "ViewTransitionTypeSet"
+      ],
       "methods": ["Document.startViewTransition()"],
       "properties": [],
       "events": ["Window: pagereveal", "Window: pageswap"]

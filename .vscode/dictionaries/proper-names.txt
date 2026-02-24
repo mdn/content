@@ -55,6 +55,7 @@ Binaryen
 Birtles
 bitsies
 Bitsov
+Bitwarden
 Bixa
 Blackman
 Blackmoon
@@ -187,6 +188,7 @@ Elly
 Emscripten
 Endtest
 Ensatina
+Ente
 Envato
 Ephesis
 Eplepsia
@@ -304,6 +306,7 @@ Kaku
 Kang
 Kaply
 Karmadrome
+KASI
 Kaspersky
 Katari
 Kazam

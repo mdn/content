@@ -25,6 +25,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 ### At-rules and descriptors
 
 - {{cssxref("@import")}}
+- {{cssxref("@custom-media")}}
 - {{cssxref("@media")}}
   - {{cssxref("@media/any-hover", "any-hover")}}
   - {{cssxref("@media/any-pointer", "any-pointer")}}
@@ -70,7 +71,7 @@ The CSS media queries level 5 module also introduces the `environment-blending`,
 
 - [`<media-types>`](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_types)
 - [`<media-features>`](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features)
-- [`<resolution>`](/en-US/docs/Web/CSS/Reference/Values/resolution)
+- {{cssxref("resolution")}}
 - [Logical operators](/en-US/docs/Web/CSS/Reference/At-rules/@media#logical_operators)
 
 ### Glossary terms

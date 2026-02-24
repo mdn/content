@@ -25,7 +25,7 @@ The `Referer` should also be sent in requests following a {{httpheader("Refresh"
 
 > [!WARNING]
 > This header may have undesirable consequences for user security and privacy.
-> See [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for more information and mitigation hints.
+> See [Referer header: privacy and security concerns](/en-US/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) for more information and mitigation hints.
 
 <table class="properties">
   <tbody>

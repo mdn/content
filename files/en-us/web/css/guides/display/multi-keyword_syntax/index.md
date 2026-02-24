@@ -6,7 +6,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [CSS display module](/en-US/docs/Web/CSS/Guides/Display) defines a multi-keyword syntax for the CSS [`display`](/en-US/docs/Web/CSS/Reference/Properties/display) property. This guide explains the multi-keyword syntax.
+The [CSS display module](/en-US/docs/Web/CSS/Guides/Display) defines a multi-keyword syntax for the CSS {{cssxref("display")}} property. This guide explains the multi-keyword syntax.
 
 > [!NOTE]
 > Multi-keyword syntax is also referred to as "two-value syntax" or "multi-value syntax."
@@ -157,21 +157,20 @@ Change the selected option in the `<select>` element to see the effect of differ
 You can use any value with `flow-root` to create a new formatting context for the parent, making the child element margin relative to its parent's outer edge and avoiding the margin collapse.
 Changing between `display: flow-root` and `display: block flow-root` will achieve the same effect as the single-value `flow-root` keyword.
 
-```js hidden
+```js hidden live-sample___flow-root
 const parentDiv = document.getElementById("parent");
 const siblingDiv = document.getElementById("sibling");
 const displayTypeSelect = document.getElementById("displayType");
-const displayType = displayTypeSelect.value;
 
 function changeDisplayType() {
-  parentDiv.style.display = displayType;
-  siblingDiv.style.display = displayType;
+  parentDiv.style.display = displayTypeSelect.value;
+  siblingDiv.style.display = displayTypeSelect.value;
 }
 
 displayTypeSelect.addEventListener("change", changeDisplayType);
 ```
 
-```css hidden
+```css hidden live-sample___flow-root
 #controls {
   padding: 1rem;
   outline: 2px dashed black;
@@ -182,7 +181,7 @@ body {
 }
 ```
 
-```css
+```css live-sample___flow-root
 div,
 p {
   outline: 2px solid black;
@@ -206,7 +205,7 @@ p {
 }
 ```
 
-```html hidden
+```html hidden live-sample___flow-root
 <div id="controls">
   <label for="displayType">display:</label>
   <select id="displayType">
@@ -219,14 +218,14 @@ p {
 </div>
 ```
 
-```html
+```html live-sample___flow-root
 <div id="parent">
   <p id="child">The #child paragraph (nested in #parent).</p>
 </div>
 <p id="sibling">The #sibling paragraph (sibling of #parent).</p>
 ```
 
-{{EmbedLiveSample("display_block_flow-root_and_display_inline_flow-root", '90%', 380)}}
+{{EmbedLiveSample("flow-root", '90%', 380)}}
 
 The `flow-root` value makes sense if you think about block and inline layout, which is sometimes called [normal flow](/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction#normal_layout_flow). Our HTML page creates a new formatting context (floats and margins cannot extend out from the boundaries) and our content lays out in normal flow, using block and inline layout, unless we change the value of `display` to use some other formatting context. Creating a grid or flex container also creates a new formatting context (a grid or flex formatting context, respectively.) These also contain everything inside them. However, if you want to contain floats and margins but continue using block and inline layout, you can create a new flow root, and start over with block and inline layout. From that point downwards everything is contained inside the new flow root.
 

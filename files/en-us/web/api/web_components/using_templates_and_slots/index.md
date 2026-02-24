@@ -48,13 +48,13 @@ customElements.define(
       let templateContent = template.content;
 
       const shadowRoot = this.attachShadow({ mode: "open" });
-      shadowRoot.appendChild(templateContent.cloneNode(true));
+      shadowRoot.appendChild(document.importNode(templateContent, true));
     }
   },
 );
 ```
 
-The key point to note here is that we append a clone of the template content to the shadow root, created using the {{domxref("Node.cloneNode()")}} method.
+The key point to note here is that we append a clone of the template content to the shadow root, created using the {{domxref("Document.importNode()")}} method.
 
 And because we are appending its contents to a shadow DOM, we can include some styling information inside the template in a {{htmlelement("style")}} element, which is then encapsulated inside the custom element.
 This wouldn't work if we just appended it to the standard DOM.
@@ -232,7 +232,7 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
 
 That {{HTMLElement("template")}} element has several features:
 
-- The {{HTMLElement("template")}} has a {{HTMLElement("style")}} element with a set of CSS styles that are scoped just to the document fragment the {{HTMLElement("template")}} creates.
+- The {{HTMLElement("template")}} has a {{HTMLElement("style")}} element with a set of CSS styles that are scoped just to the document fragment the {{HTMLElement("template")}} creates, These styles are scoped this way because that fragment will be inserted into a shadow root element.
 - The {{HTMLElement("template")}} uses {{HTMLElement("slot")}} and its [`name`](/en-US/docs/Web/HTML/Reference/Elements/slot#name) attribute to make three [named slots](/en-US/docs/Web/HTML/Reference/Elements/slot#name):
   - `<slot name="element-name">`
   - `<slot name="description">`
@@ -255,7 +255,7 @@ customElements.define(
         "element-details-template",
       ).content;
       const shadowRoot = this.attachShadow({ mode: "open" });
-      shadowRoot.appendChild(template.cloneNode(true));
+      shadowRoot.appendChild(document.importNode(template, true));
     }
   },
 );

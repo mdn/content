@@ -22,6 +22,3 @@ sidebar:
     link: /Web/Security/Practical_implementation_guides
     title: Practical implementation guides
     details: closed
-  - /Web/Security/IFrame_credentialless
-  - /Web/Security/Referer_header:_privacy_and_security_concerns
-  - /Web/Security/Firefox_Security_Guidelines

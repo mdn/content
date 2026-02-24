@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **`contrast-color()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) takes a {{cssxref("color_value","color")}} value and returns a contrasting color. The function commonly ensures [the WCAG AA minimum contrast](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum). The browsers may use different and better algorithms.
 
-`contrast-color()` makes it easy, for example, to specify a text color and automatically generate a contrasting background color, or vice versa. It avoids the need to maintain background-text color pairs.
+The `contrast-color()` function enables specifying a text color and automatically generating a contrasting background color, or vice versa. It avoids the need to maintain background-text color pairs.
 
 ## Syntax
 
@@ -37,7 +37,7 @@ The `contrast-color()` function returns a value of `white` or `black`, depending
 
 ### Contrasting text for a button
 
-In the following example, the browser automatically applies a contrasting color to the submit {{htmlelement("button")}} text when you change its background color.
+In the following example, the browser automatically applies the selected color to the background of the "Button" {{htmlelement("button")}}, and the contrasting color (black or white) to its text.
 
 ```html hidden
 <label>
@@ -45,7 +45,7 @@ In the following example, the browser automatically applies a contrasting color 
   <input type="color" id="colorPicker" value="#660066" />
 </label>
 <br />
-<button>Submit</button>
+<button>Button</button>
 ```
 
 ```css
@@ -97,7 +97,7 @@ function updateColor(color) {
   root.style.setProperty("--button-color", colorPicker.value);
 }
 
-colorPicker.addEventListener("change", updateColor);
+colorPicker.addEventListener("input", updateColor);
 updateColor();
 ```
 

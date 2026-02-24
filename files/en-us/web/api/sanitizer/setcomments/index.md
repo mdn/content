@@ -3,16 +3,12 @@ title: "Sanitizer: setComments() method"
 short-title: setComments()
 slug: Web/API/Sanitizer/setComments
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Sanitizer.setComments
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
 The **`setComments()`** method of the {{domxref("Sanitizer")}} interface sets whether comments will be allowed or removed by the sanitizer.
-
-The method sets the [`comments`](/en-US/docs/Web/API/SanitizerConfig#comments) property in this sanitizer's configuration.
 
 ## Syntax
 
@@ -27,7 +23,7 @@ setComments(allow);
 
 ### Return value
 
-None (`undefined`).
+`true` if the operation changed the configuration, and `false` if the configuration already set [`comments`](/en-US/docs/Web/API/SanitizerConfig#comments) to the specified value.
 
 ## Examples
 

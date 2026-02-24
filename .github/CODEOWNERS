@@ -8,6 +8,9 @@
 # Default content owners
 /files/en-us/ @mdn/web
 
+# Learn
+/files/en-us/learn_web_development @mdn/learn
+
 # MDN Firefox release notes
 /files/en-us/mozilla/ @mdn/content-team
 
@@ -23,8 +26,11 @@
 # CSS
 /files/en-us/web/css/ @mdn/css
 
+# Web
+files/en-us/web/ @mdn/web
+
 # HTML
-/files/en-us/web/html/ @mdn/web
+/files/en-us/web/html/ @mdn/html
 
 # HTTP
 /files/en-us/web/http/ @mdn/http
@@ -35,8 +41,9 @@
 # MathML
 /files/en-us/web/mathml/ @mdn/mathml
 
-# Templates and sidebars (rari)
+# L10n for Macros (rari)
 /files/jsondata/L10n-Template.json @mdn/engineering
+/files/jsondata/L10n-CSSFormalDefinitions.json @mdn/engineering
 
 # ============================= CONTROL FILES ============================= #
 # The CODEOWNERS file must end with these matches: Any pull request changing
@@ -59,9 +66,10 @@
 /SECURITY.md @mdn/engineering
 # Scripts and Tests
 /scripts @mdn/engineering
+/scripts/content @mdn/content-team
 /tests   @mdn/engineering
 
-# These are @mdn-bot because the auto-merge GHA workflow uses the PAT of this account.
-# If another reviewer is specified, update the PAT token or auto-merge will cease to be automatic.
-/package.json @mdn/engineering @mdn-bot
-/yarn.lock    @mdn/engineering @mdn-bot
+# Dependencies
+/package.json      @mdn/engineering @mdn-bot
+/package-lock.json @mdn/engineering @mdn-bot
+/yarn.lock         @mdn/engineering @mdn-bot

@@ -47,7 +47,7 @@ customElements.define(
 
       const template = document.getElementById("card-template");
       const shadow = this.attachShadow({ mode: "open" });
-      shadow.appendChild(template.content.cloneNode(true));
+      shadow.appendChild(document.importNode(template.content, true));
 
       const elementStyle = document.createElement("style");
       elementStyle.textContent = `
@@ -117,12 +117,11 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById("person-template");
-      let templateContent = template.content;
+      const template = document.getElementById("person-template");
 
       const shadowRoot = this.attachShadow({ mode: "open" });
 
-      let style = document.createElement("style");
+      const style = document.createElement("style");
       style.textContent =
         "div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }" +
         "h2 { margin: 0 0 10px; }" +
@@ -132,7 +131,7 @@ customElements.define(
         "::slotted(span) {text-decoration: underline;} ";
 
       shadowRoot.appendChild(style);
-      shadowRoot.appendChild(templateContent.cloneNode(true));
+      shadowRoot.appendChild(document.importNode(template.content, true));
     }
   },
 );
@@ -177,8 +176,8 @@ Our markup includes three custom elements, including a custom element with an in
 ## See also
 
 - {{cssxref(":host")}}
-- {{cssxref(":host_function", ":host()")}}
-- {{cssxref(":host-context", ":host-context()")}}
+- {{cssxref(":host()")}}
+- {{cssxref(":host-context()")}}
 - {{cssxref(":has-slotted")}}
 - [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
 - HTML [`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) attribute
