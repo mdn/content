@@ -323,7 +323,9 @@ The markup for this example contains multiple paragraphs of content, taken from 
 
 #### CSS
 
-We start by giving the {{htmlelement("body")}} element a {{cssxref("column-width")}} of `200px` to set a preferred width for our columns that the browser will try to match as closely as possible, and a {{cssxref("column-rule")}} of `2px solid red`. We then set a {{cssxref("gap")}} of `3em 2em`, resulting in a `3em` gap between rows and a `2em` gap between columns. Finally, we set a `column-height` of `95vh` to make our columns nearly as tall as the viewport. We also set {{cssxref("column-wrap")}} to `wrap` to remind you that this is the value `column-wrap` resolves to if `column-height` is given a specific `<length>` value; it is not necessary to set this explicitly.
+We start by giving the {{htmlelement("body")}} element a {{cssxref("column-width")}} of `200px` to set a preferred width for our columns, and a {{cssxref("column-rule")}} of `2px solid red`. We then set a {{cssxref("gap")}} of `3em 2em`, resulting in a `3em` gap between rows, and a `2em` gap between columns with a red rule in the center of each. Finally, we set a `column-height` of `95vh` to make our columns nearly as tall as the viewport.
+
+We also set {{cssxref("column-wrap")}} to `wrap`. This is the value `column-wrap` resolves to if `column-height` is given a specific `<length>` value, so it is not necessary to set this explicitly; however, we wanted to remind you of this fact.
 
 ```css hidden live-sample___basic-column-height live-sample___column-playground
 * {
