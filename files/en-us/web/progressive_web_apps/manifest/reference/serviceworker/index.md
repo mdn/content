@@ -11,7 +11,7 @@ sidebar: pwasidebar
 
 {{SeeCompatTable}}{{Non-standard_header}}
 
-The `serviceworker` member specifies a serviceworker that is Just-In-Time (JIT)-installed and registered to run a web-based payment app providing a payment mechanism for a specified payment method in a merchant website. See {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}} for more details.
+The `serviceworker` member specifies a serviceworker that is Just-In-Time (JIT)-installed and registered to run a web-based payment app providing a payment mechanism for a specified payment method in a merchant website. See {{domxref("Web-based Payment Handler API", "Web-based Payment Handler API", "", "nocode")}} for more details.
 
 ## Values
 
@@ -31,7 +31,7 @@ The `serviceworker` member specifies a serviceworker that is Just-In-Time (JIT)-
 
 ## Examples
 
-See [Payment Handler API > Concepts and usage](/en-US/docs/Web/API/Payment_Handler_API#concepts_and_usage).
+See [Web-based Payment Handler API > Concepts and usage](/en-US/docs/Web/API/Web_Based_Payment_Handler_API#concepts_and_usage).
 
 ## Specifications
 
@@ -44,7 +44,7 @@ See [Payment Handler API > Concepts and usage](/en-US/docs/Web/API/Payment_Handl
 ## See also
 
 - {{domxref("Service Worker API", "Service Worker API", "", "nocode")}}
-- {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}}
+- {{domxref("Web-based Payment Handler API", "Web-based Payment Handler API", "", "nocode")}}
 - [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
 - [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
 - [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)

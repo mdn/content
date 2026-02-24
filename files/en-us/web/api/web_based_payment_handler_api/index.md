@@ -1,17 +1,17 @@
 ---
-title: Payment Handler API
-slug: Web/API/Payment_Handler_API
+title: Web-based Payment Handler API
+slug: Web/API/Web_Based_Payment_Handler_API
 page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.PaymentRequestEvent
 ---
 
-{{DefaultAPISidebar("Payment Handler API")}}{{securecontext_header}}{{SeeCompatTable}}{{AvailableInWorkers}}
+{{DefaultAPISidebar("Web-based Payment Handler API")}}{{securecontext_header}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
-The Payment Handler API provides a standardized set of functionality for web applications to directly handle payments, rather than having to be redirected to a separate site for payment handling.
+The Web-based Payment Handler API provides a standardized set of functionality for web applications to directly handle payments, rather than having to be redirected to a separate site for payment handling.
 
-When a merchant website initiates payment via the {{domxref("Payment Request API", "Payment Request API", "", "nocode")}}, the Payment Handler API handles discovery of applicable payment apps, presenting them as choices to the user, opening a payment handler window once a choice has been made to allow the user to enter their payment details, and handling the payment transaction with the payment app.
+When a merchant website initiates payment via the {{domxref("Payment Request API", "Payment Request API", "", "nocode")}}, the Web-based Payment Handler API handles discovery of applicable payment apps, presenting them as choices to the user, opening a payment handler window once a choice has been made to allow the user to enter their payment details, and handling the payment transaction with the payment app.
 
 Communication with payment apps (authorization, passing of payment credentials) is handled via Service Workers.
 
@@ -85,7 +85,7 @@ From the payment method manifest, the browser gets the URL of the default paymen
 {
   "name": "Pay with BobBucks",
   "short_name": "BobBucks",
-  "description": "This is an example of the Payment Handler API.",
+  "description": "This is an example of the Web-based Payment Handler API.",
   "icons": [
     {
       "src": "images/manifest/icon-192x192.png",
@@ -148,7 +148,7 @@ async function checkCanMakePayment() {
 }
 ```
 
-The Payment Handler API adds an additional mechanism to prepare for handling a payment. The {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} event is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor. The service worker can then use the {{domxref("CanMakePaymentEvent.respondWith()")}} method to respond appropriately:
+The Web-based Payment Handler API adds an additional mechanism to prepare for handling a payment. The {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} event is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor. The service worker can then use the {{domxref("CanMakePaymentEvent.respondWith()")}} method to respond appropriately:
 
 ```js
 self.addEventListener("canmakepayment", (e) => {
@@ -216,7 +216,7 @@ navigator.serviceWorker.register("serviceworker.js").then((registration) => {
 });
 ```
 
-- {{domxref("PaymentManager.userHint")}} is used to provide a hint for the browser to display along with the payment app's name and icon in the Payment Handler UI.
+- {{domxref("PaymentManager.userHint")}} is used to provide a hint for the browser to display along with the payment app's name and icon in the Web-based Payment Handler UI.
 - {{domxref("PaymentManager.enableDelegations()")}} is used to delegate responsibility for providing various parts of the required payment information to the payment app rather than collecting it from the browser (for example, via autofill).
 
 ## Interfaces

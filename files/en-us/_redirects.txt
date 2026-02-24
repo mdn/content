@@ -9818,6 +9818,7 @@
 /en-US/docs/Web/API/PaymentResponse/onpayerdetailchange	/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event
 /en-US/docs/Web/API/PaymentResponse/payerdetail_event	/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event
 /en-US/docs/Web/API/PaymentValidationErrors	/en-US/docs/Web/API/PaymentResponse/retry
+/en-US/docs/Web/API/Payment_Handler_API	/en-US/docs/Web/API/Web_Based_Payment_Handler_API
 /en-US/docs/Web/API/Performance.navigation	/en-US/docs/Web/API/Performance/navigation
 /en-US/docs/Web/API/Performance.now	/en-US/docs/Web/API/Performance/now
 /en-US/docs/Web/API/Performance.now()	/en-US/docs/Web/API/Performance/now
