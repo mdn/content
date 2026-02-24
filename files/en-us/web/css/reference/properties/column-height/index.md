@@ -402,9 +402,7 @@ This example builds upon the previous one by including two range sliders that al
 
 #### HTML
 
-Our markup is the same as the previous example, except that we provide a form containing two [`<input="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) elements to allow you to change the `column-count` and `column-height` values. This functionality is powered by some basic JavaScript.
-
-We won't show the markup, or the JavaScript, for brevity.
+The HTML is the same as the previous example, with the addition of a form containing two [`<input="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) elements that update the `column-count` and `column-height` values via JavaScript. The HTML and JavaScript are hidden for brevity.
 
 ```html hidden live-sample___column-playground
 <form>
