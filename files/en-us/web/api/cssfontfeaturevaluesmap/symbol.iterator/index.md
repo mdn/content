@@ -1,6 +1,6 @@
 ---
 title: "CSSFontFeatureValuesMap: [Symbol.iterator]() method"
-short-title: [Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/API/CSSFontFeatureValuesMap/Symbol.iterator
 page-type: web-api-instance-method
 status:
