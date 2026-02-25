@@ -12,13 +12,13 @@ TLS secures a network connection in three ways:
 
 - **Encryption**: the data exchanged between client and server is encrypted while in transit, so it can't be read by any attackers.
 - **Integrity**: an attacker can't, without detection, modify data while it is in transit between client and server.
-- **Authentication**: client and server are each able to prove to the other party that they are the entity they claim to be.
+- **Authentication**: client and server are each able to prove to the other party that they are the entity they claim to be. On the web, servers usually authenticate themselves to clients, but clients don't usually authenticate themselves to servers.
 
 In particular, HTTPS is the defense against a [manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM) attack, in which the attacker inserts themselves between the user's browser and the server they are connecting to, and can read and modify the traffic exchanged.
 
 Browsers consider pages delivered over HTTPS as providing a [secure context](/en-US/docs/Web/Security/Secure_Contexts). Many powerful web APIs are only available to code running in a secure context.
 
-All websites should serve all their pages and subresources over HTTPS, and implement server authentication.
+**All websites should serve all their pages and subresources over HTTPS, and implement server authentication.**
 
 ## TLS handshake
 
@@ -31,7 +31,7 @@ The first step in creating a TLS connection is the _handshake_, in which:
 
 After the handshake, client and server use the secret key to encrypt and decrypt any messages, including HTTP headers as well as bodies.
 
-## Configuring TLS
+### Configuring TLS
 
 Choosing the right TLS server configuration has a big impact on the security of the connection. In particular, it determines the TLS version and cryptographic algorithms that will be used. If you need to configure your own server, consult a resource such as Mozilla's [TLS Recommended Configurations](https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_configurations).
 
