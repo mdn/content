@@ -56,7 +56,14 @@ The `timeline-trigger-activation-range-end` shorthand property is specified as o
 
 When creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations), the `timeline-trigger-activation-range-end` property can be set on the trigger element to explicitly define the end of the trigger's **activation range**. Read the linked guide and the [`timeline-trigger-activation-range` description](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-activation-range#description) for more information on how this animation type works.
 
-Allowed values for the `timeline-trigger-activation-range-end` property are `normal`, a `<length-percentage>`, a `<timeline-range-name>`, or a `<timeline-range-name>` and a `<length-percentage>` separated by a space. If the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `100%`. See {{cssxref("timeline-trigger-activation-range")}} for additional information about the available values.
+Allowed values for the `timeline-trigger-activation-range-end` property are:
+
+- `normal`
+- A `<length-percentage>`
+- A `<timeline-range-name>`
+- A `<timeline-range-name>` and a `<length-percentage>` separated by a space.
+
+If the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `100%`.
 
 The `timeline-trigger-activation-range-end`, along with the {{cssxref("timeline-trigger-activation-range-start")}} property, can both be set in a single declaration using the {{cssxref("timeline-trigger-activation-range")}} shorthand.
 

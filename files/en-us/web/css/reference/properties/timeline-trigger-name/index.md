@@ -44,16 +44,34 @@ The `timeline-trigger-name` property may be specified using the keyword `none`, 
 
 ## Description
 
-[CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) allow you specify that [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) applied to an element should be activated when a corresponding trigger element reaches a certain offset inside the viewport. In other words, an animation should play when its trigger element is scrolled into view, rather than immediately when it is applied to an element.
+The `timeline-trigger-name` property specifies an identifying name for a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) trigger element.
 
-Two things are needed to set up a scroll-triggered animation:
+For example:
 
-- An animated element: An element with one or more valid {{cssxref("animation")}} values applied to it. An animated element can select a particular trigger to trigger its animation by referencing the trigger's `timeline-trigger-name` `<dashed-ident>` value in its {{cssxref("animation-trigger")}} property.
-- A trigger element: An element contained inside a scrollport. When the scrollport is scrolled such that the trigger element moves inside its activation range, the animation will activate. When the trigger element reaches the end of the activation range, the animation will deactivate. How the animation behaves on activation and deactivation depends on which `<animation-action>` values were set in the `animation-trigger`.
+```css
+.trigger {
+  timeline-trigger-name: --my-trigger;
+  timeline-trigger-source: view();
+}
+```
 
-  The trigger element is defined using the {{cssxref("timeline-trigger")}} property, or its associated longhand properties — `timeline-trigger-name`, {{cssxref("timeline-trigger-source")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}}.
+An element with these declarations set will have an identifying `timeline-trigger-name` of `--my-trigger`, and a {{cssxref("timeline-trigger-source")}} value of `view()`, which selects the element's nearest ancestor scrolling element to define the [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) that its **activation range** will be measured against.
 
-For a basic example that shows how to use these features, see our [Basic usage example](#basic_usage).
+An animated element can set itself up to be triggered by the previously-described trigger element by referencing the trigger's identifying name in its {{cssxref("animation-trigger")}} property.
+
+For example:
+
+```css
+.animated {
+  animation: rotate 3s infinite linear both;
+  animation-trigger: --my-trigger play-forwards play-backwards;
+}
+```
+
+In this case, the animation will be triggered by the trigger element with a `timeline-trigger-name` of `--my-trigger`. Its {{cssxref("animation-action")}} keywords — `play-forwards play-backwards` — specify that the animation should play forwards on activation (when the trigger element is scrolled into its activation range), and backwards on deactivation (when the trigger element is scrolled out of its activation range).
+
+> [!NOTE]
+> The `timeline-trigger-name` property can also be set via the {{cssxref("timeline-trigger")}} shorthand property.
 
 > [!NOTE]
 > It is possible for the animated element and the trigger element to be the same element.
