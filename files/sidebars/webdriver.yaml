@@ -7,30 +7,44 @@ sidebar:
   - type: section
     link: /Web/WebDriver/Reference
     title: Reference
-  - link: /Web/WebDriver/Reference/BiDi
-    title: BiDi
+  - type: section
+    link: /Web/WebDriver/Reference/BiDi
+    title: Bidi
+  - link: /Web/WebDriver/Reference/BiDi/Modules
+    title: Modules
     details: open
     children:
-      - type: listSubPages
-        path: /Web/WebDriver/Reference/BiDi/Modules
-        link: /Web/WebDriver/Reference/BiDi/Modules
-        details: closed
-  - link: /Web/WebDriver/Reference/Classic
-    title: Classic
-    details: open
-    children:
-      - type: listSubPages
-        path: /Web/WebDriver/Reference/Classic/Commands
-        link: /Web/WebDriver/Reference/Classic/Commands
-        details: closed
-      - type: listSubPages
-        path: /Web/WebDriver/Reference/Classic/Capabilities
-        link: /Web/WebDriver/Reference/Classic/Capabilities
+      - link: /Web/WebDriver/Reference/BiDi/Modules/session
         details: closed
         code: true
-      - type: listSubPages
-        path: /Web/WebDriver/Reference/Classic/Errors
-        link: /Web/WebDriver/Reference/Classic/Errors
-        details: closed
-      - link: /Web/WebDriver/Reference/Classic/Timeouts
-        title: Timeouts
+        children:
+          - title: Commands
+            details: open
+            children:
+              - link: /Web/WebDriver/Reference/BiDi/Modules/session/end
+                title: end
+                code: true
+              - link: /Web/WebDriver/Reference/BiDi/Modules/session/new
+                title: new
+                code: true
+              - link: /Web/WebDriver/Reference/BiDi/Modules/session/status
+                title: status
+                code: true
+  - type: section
+    link: /Web/WebDriver/Reference/Classic
+    title: Classic
+  - type: listSubPages
+    path: /Web/WebDriver/Reference/Classic/Commands
+    link: /Web/WebDriver/Reference/Classic/Commands
+    details: closed
+  - type: listSubPages
+    path: /Web/WebDriver/Reference/Classic/Capabilities
+    link: /Web/WebDriver/Reference/Classic/Capabilities
+    details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/WebDriver/Reference/Classic/Errors
+    link: /Web/WebDriver/Reference/Classic/Errors
+    details: closed
+  - link: /Web/WebDriver/Reference/Classic/Timeouts
+    title: Timeouts
