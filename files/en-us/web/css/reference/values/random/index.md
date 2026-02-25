@@ -148,7 +148,7 @@ As with all CSS functions, when a `random()` function is included within a custo
 --random-size: random(1px, 100px);
 ```
 
-In the above example, the `--random-size` custom property does not "store" the randomly generated result. When `var(--random-size)` is parsed it is effectively replaced with `random(1px, 100px)`, meaning each use creates a new `random()` call with its own base value depending on the context in which its used. 
+In this example, the `--random-size` custom property does not "store" the randomly generated result. When `var(--random-size)` is parsed it is effectively replaced with `random(1px, 100px)`, meaning each use creates a new `random()` function call with its own base value depending on the context in which its used. 
 
 This is not true in the case of using `random()` when registering a custom property with {{cssxref("@property")}}. Registered custom properties compute random values and store them. In this example, A, B, and C will be squares of equal size: 
 
