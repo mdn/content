@@ -33,22 +33,19 @@ column-wrap: unset;
 - `auto`
   - : The initial value. If the content container's {{cssxref("column-height")}} is set to a specific {{cssxref("&lt;length>")}}, `auto` resolves to `wrap`, otherwise it resolves to `nowrap`.
 - `nowrap`
-  - : Overflow columns are created in the inline direction.
+  - : Columns overflow in the inline direction.
 - `wrap`
   - : Overflow columns are placed in a new row in the block direction.
 
 ## Description
 
-When setting content to display in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) (using the {{cssxref("column-count")}} or {{cssxref("column-width")}} property), one issue is that it can be hard to constrain the column height for readability when it exceeds the size of the viewport:
+The `column-wrap` property can be used to set the columns of a [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) to wrap onto a new row when they start to overflow the column width. This is useful for creating more readable layouts when using the {{cssxref("column-count")}} or {{cssxref("column-width")}} property to set multiple columns.
 
-- If you set a fixed height on the content container, excess columns will overflow to the side, and readers will have to scroll in the inline direction to read all the content.
-- If you don't set a fixed height on the content container, the columns of content will be very long and require readers to scroll down to the end of a column and then back up to the top of the next column.
-
-The {{cssxref("column-height")}} property, along with `column-wrap`, solves this problem by allowing you to set a specific height for your columns and having them wrap onto a new row of columns when the container edge is reached.
+Without `column-wrap`, excess columns will overflow to the side, and readers will have to scroll in the inline direction to read all the content. The {{cssxref("column-height")}} property, along with `column-wrap`, allows you to set a specific height for the columns and wrap them onto a new row of columns when the container edge is reached.
 
 The default value of `column-wrap` is `auto`, which resolves to `wrap` when `column-height` is set to a `<length>` value; `wrap` allows the fixed-height columns to wrap onto multiple rows. When `column-height` is equal to `auto`, `column-wrap: auto` resolves to `nowrap`, allowing the columns to overflow horizontally if a fixed container height is set.
 
-As a result of this default behavior, generally you don't need to explicitly set `column-wrap` to get the effect you want.
+As a result of this default behavior, generally you don't need to explicitly set the `column-wrap` property.
 
 ## Formal definition
 
@@ -59,6 +56,75 @@ As a result of this default behavior, generally you don't need to explicitly set
 {{csssyntax}}
 
 ## Examples
+
+### Basic usage
+
+This example demonstrates basic usage of the `column-wrap` property to create a wrapped multi-col layout via setting a `column-height` property.
+
+#### HTML
+
+We include a poem by Dr. Seuss using an {{htmlelement("ol")}} containing 28 {{htmlelement("li")}}s, followed by the author's name in a {{htmlelement("p")}}.
+
+```html
+<ol>
+  <li>One fish</li>
+  <li>Two fish</li>
+  <li>Red fish</li>
+  <li>Blue fish</li>
+  ...
+</ol>
+<p>-- Dr. Seuss</p>
+```
+
+```html hidden live-sample___basic-example
+<ol>
+  <li>One fish</li>
+  <li>Two fish</li>
+  <li>Red fish</li>
+  <li>Blue fish</li>
+  <li>Black fish</li>
+  <li>Blue fish</li>
+  <li>Old fish</li>
+  <li>New fish.</li>
+  <li>This one has a little star.</li>
+  <li>This one has a little car.</li>
+  <li>Say! What a lot</li>
+  <li>Of fish there are.</li>
+  <li>Yes. Some are red. And some are blue.</li>
+  <li>Some are old. And some are new.</li>
+  <li>Some are sad.</li>
+  <li>And some are glad.</li>
+  <li>And some are very, very bad.</li>
+  <li>Why are they</li>
+  <li>Sad and glad and bad?</li>
+  <li>I do not know.</li>
+  <li>Go ask your dad.</li>
+  <li>Some are thin.</li>
+  <li>And some are fat.</li>
+  <li>The fat one has</li>
+  <li>A yellow hat.</li>
+  <li>From there to here, from here to there,</li>
+  <li>Funny things</li>
+  <li>Are everywhere.</li>
+</ol>
+<p>--Dr. Seuss</p>
+```
+
+#### CSS
+
+We define the `<ol>` to be a multi-column container by setting the {{cssxref("column-width")}} property to `150px`, meaning the container will contain as many columns as possible with each being at least `150px` wide. The {{cssxref("gap")}} property of `2em` sets a horizontal gap between columns and a vertical gap between rows of columns. We then set the `column-height` to `2em`, causing the `column-wrap` property's default `auto` value to resolve to `wrap` to create wrapped rows of columns.
+
+```css live-sample___basic-example
+ol {
+  column-width: 150px;
+  gap: 2em;
+  column-height: 3em;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("basic-example", "100%", "300")}}
 
 ### Comparing `wrap` and `nowrap`
 
@@ -337,6 +403,28 @@ We then set a `column-height` of `90vh`, making the columns nearly as tall as th
 
 When the user checks the checkbox, the `column-wrap` property is set to `wrap`, which causes the excess content columns to overflow into new columns vertically, creating the vertical layout. The `column-height` value causes each row of columns to fill the viewport, which works well for the vertical layout.
 
+```css live-sample___wrap-nowrap
+body {
+  column-count: 3;
+  gap: 3em 2em;
+  padding: 0 2em;
+  column-height: 90vh;
+  column-wrap: nowrap;
+}
+```
+
+Next, we set the [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) element's {{cssxref("column-span")}} property to `all`, to make the heading span across all the columns, and set the {{cssxref("margin-top")}} property of the first {{htmlelement("p")}} to `0` so that it lines up with the top of the columns.
+
+```css live-sample___wrap-nowrap
+h1 {
+  column-span: all;
+}
+
+p:first-of-type {
+  margin-top: 0;
+}
+```
+
 ```css hidden live-sample___wrap-nowrap
 * {
   box-sizing: border-box;
@@ -369,27 +457,6 @@ form {
   background-color: white;
   padding: 5px;
   border: 1px solid black;
-}
-```
-
-```css live-sample___wrap-nowrap
-body {
-  column-count: 3;
-  gap: 3em 2em;
-  column-height: 90vh;
-  column-wrap: nowrap;
-}
-```
-
-Next, we set the [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) element's {{cssxref("column-span")}} property to `all`, to make the heading span across all the columns, and set the {{cssxref("margin-top")}} property of the first {{htmlelement("p")}} to `0` so that it lines up with the top of the columns.
-
-```css live-sample___wrap-nowrap
-h1 {
-  column-span: all;
-}
-
-p:first-of-type {
-  margin-top: 0;
 }
 ```
 

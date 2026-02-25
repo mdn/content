@@ -39,14 +39,13 @@ column-height: unset;
 
 ## Description
 
-When setting content to display in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) (using the {{cssxref("column-count")}} or {{cssxref("column-width")}} property), one issue is that it can be hard to constrain the column height for readability when it exceeds the size of the viewport:
+The `column-height` property sets the height of the columns in a [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). This is useful for constraining the column height for readability when setting multiple columns using the {{cssxref("column-count")}} or {{cssxref("column-width")}} property.
 
-- If you set a fixed height on the content container, excess columns will overflow to the side, and readers will have to scroll in the inline direction to read all the content.
-- If you don't set a fixed height on the content container, the columns of content will be very long and require readers to scroll down to the end of a column and then back up to the top of the next column.
+Without `column-height`, if the height of the multi-col content exceeds the viewport height, the columns of content will require readers to scroll down to the end of a column and then back up to the top of the next column. One possible fix would be to set a fixed height on the content container, however, excess columns will then overflow to the side, and readers will have to scroll in the inline direction to read all the content.
 
-The `column-height` property, along with {{cssxref("column-wrap")}}, solves this problem by allowing you to set a specific height for your columns and having them wrap onto a new row of columns when the container edge is reached. The default value of `column-wrap` is `auto`, which resolves to `wrap` when `column-height` is set to a `<length>` value; `wrap` allows the fixed-height columns to wrap onto multiple rows. When `column-height` is equal to `auto`, `column-wrap: auto` resolves to `nowrap`, allowing the columns to overflow horizontally if a fixed container height is set.
+The `column-height` property, along with {{cssxref("column-wrap")}}, allows you to set a specific height for the columns and wrap them onto a new row of columns when the container edge is reached. The default value of `column-wrap` is `auto`, which resolves to `wrap` when `column-height` is set to a `<length>` value; `wrap` allows the fixed-height columns to wrap onto multiple rows. When `column-height` is equal to `auto`, `column-wrap: auto` resolves to `nowrap`, allowing the columns to overflow horizontally if a fixed container height is set.
 
-As a result of this default behavior, generally you don't need to explicitly set `column-wrap` to get the effect you want.
+As a result of this default behavior, generally you don't need to explicitly set the `column-wrap` property.
 
 ## Formal definition
 
@@ -58,7 +57,76 @@ As a result of this default behavior, generally you don't need to explicitly set
 
 ## Examples
 
-### Basic `column-height` usage
+### Basic usage
+
+This example demonstrates basic usage of the `column-height` property to create a wrapped multi-col layout.
+
+#### HTML
+
+We include a poem by Dr. Seuss using an {{htmlelement("ol")}} containing 28 {{htmlelement("li")}}s, followed by the author's name in a {{htmlelement("p")}}.
+
+```html
+<ol>
+  <li>One fish</li>
+  <li>Two fish</li>
+  <li>Red fish</li>
+  <li>Blue fish</li>
+  ...
+</ol>
+<p>-- Dr. Seuss</p>
+```
+
+```html hidden live-sample___basic-example
+<ol>
+  <li>One fish</li>
+  <li>Two fish</li>
+  <li>Red fish</li>
+  <li>Blue fish</li>
+  <li>Black fish</li>
+  <li>Blue fish</li>
+  <li>Old fish</li>
+  <li>New fish.</li>
+  <li>This one has a little star.</li>
+  <li>This one has a little car.</li>
+  <li>Say! What a lot</li>
+  <li>Of fish there are.</li>
+  <li>Yes. Some are red. And some are blue.</li>
+  <li>Some are old. And some are new.</li>
+  <li>Some are sad.</li>
+  <li>And some are glad.</li>
+  <li>And some are very, very bad.</li>
+  <li>Why are they</li>
+  <li>Sad and glad and bad?</li>
+  <li>I do not know.</li>
+  <li>Go ask your dad.</li>
+  <li>Some are thin.</li>
+  <li>And some are fat.</li>
+  <li>The fat one has</li>
+  <li>A yellow hat.</li>
+  <li>From there to here, from here to there,</li>
+  <li>Funny things</li>
+  <li>Are everywhere.</li>
+</ol>
+<p>--Dr. Seuss</p>
+```
+
+#### CSS
+
+We define the `<ol>` to be a multi-column container by setting the {{cssxref("column-width")}} property to `150px`, meaning the container will contain as many columns as possible with each being at least `150px` wide. The {{cssxref("gap")}} property of `2em` sets a horizontal gap between columns and a vertical gap between rows of columns. We then set the `column-height` to `2em`, causing the `column-wrap` property's default `auto` value to resolve to `wrap` to create wrapped rows of columns.
+
+```css live-sample___basic-example
+ol {
+  column-width: 150px;
+  gap: 2em;
+  column-height: 3em;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("basic-example", "100%", "300")}}
+
+### Scroll-snapped columns
 
 This example combines a wrapped multi-column layout with [CSS scroll snapping](/en-US/docs/Web/CSS/Guides/Scroll_snap), creating a usable experience where each scrolling action snaps a new row of columns neatly inside the full height of the viewport for comfortable reading.
 
@@ -66,7 +134,7 @@ This example combines a wrapped multi-column layout with [CSS scroll snapping](/
 
 The markup for this example contains multiple paragraphs of content, taken from MDN landing pages. We won't show the HTML source here for brevity.
 
-```html hidden live-sample___basic-column-height live-sample___column-playground
+```html hidden live-sample___scroll-snapped live-sample___column-playground
 <h1>HTML, CSS, and JavaScript summaries</h1>
 <p>
   <strong>HTML</strong> (HyperText Markup Language) is the most basic building
@@ -327,7 +395,42 @@ We start by giving the {{htmlelement("body")}} element a {{cssxref("column-width
 
 We also set {{cssxref("column-wrap")}} to `wrap`. This is the value `column-wrap` resolves to if `column-height` is given a specific `<length>` value, so it is not necessary to set this explicitly; however, we wanted to remind you of this fact.
 
-```css hidden live-sample___basic-column-height live-sample___column-playground
+```css live-sample___scroll-snapped
+body {
+  column-width: 150px;
+  column-rule: 2px solid red;
+  gap: 3em 2em;
+  padding: 0 2em;
+  column-height: 95vh;
+  column-wrap: wrap;
+}
+```
+
+Next, we set the [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) element's {{cssxref("column-span")}} property to `all`, to make the heading span across all the columns, and set the {{cssxref("margin-top")}} property of the first {{htmlelement("p")}} to `0` so that it lines up with the top of the columns.
+
+```css live-sample___scroll-snapped live-sample___column-playground
+h1 {
+  column-span: all;
+}
+
+p:first-of-type {
+  margin-top: 0;
+}
+```
+
+Finally, we add scroll snapping by setting {{cssxref("scroll-snap-type")}} to `y mandatory` on the {{htmlelement("html")}} element, and {{cssxref("scroll-snap-align")}} to `start` on the {{cssxref("::column")}} pseudo-elements that represent each generated column. This causes the content to snap to the top of a new column each time it is scrolled.
+
+```css live-sample___scroll-snapped
+html {
+  scroll-snap-type: y mandatory;
+}
+
+::column {
+  scroll-snap-align: start;
+}
+```
+
+```css hidden live-sample___scroll-snapped live-sample___column-playground
 * {
   box-sizing: border-box;
 }
@@ -353,46 +456,11 @@ p {
 }
 ```
 
-```css live-sample___basic-column-height
-body {
-  column-width: 200px;
-  column-rule: 2px solid red;
-  gap: 3em 2em;
-  column-height: 95vh;
-
-  column-wrap: wrap;
-}
-```
-
-Next, we set the [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) element's {{cssxref("column-span")}} property to `all`, to make the heading span across all the columns, and set the {{cssxref("margin-top")}} property of the first {{htmlelement("p")}} to `0` so that it lines up with the top of the columns.
-
-```css live-sample___basic-column-height live-sample___column-playground
-h1 {
-  column-span: all;
-}
-
-p:first-of-type {
-  margin-top: 0;
-}
-```
-
-Finally, we add scroll snapping by setting {{cssxref("scroll-snap-type")}} to `y mandatory` on the {{htmlelement("html")}} element, and {{cssxref("scroll-snap-align")}} to `start` on the {{cssxref("::column")}} pseudo-elements that represent each generated column. This causes the content to snap to the top of a new column each time it is scrolled.
-
-```css live-sample___basic-column-height
-html {
-  scroll-snap-type: y mandatory;
-}
-
-::column {
-  scroll-snap-align: start;
-}
-```
-
 #### Result
 
 The rendered result looks like this:
 
-{{EmbedLiveSample("basic-column-height", "100%", "400")}}
+{{EmbedLiveSample("scroll-snapped", "100%", "400")}}
 
 Try scrolling the content. Note how each new row of columns fills the viewport, and how the content snaps neatly to the top of a new row with each scroll.
 
@@ -407,14 +475,16 @@ The HTML is the same as the previous example, with the addition of a form contai
 ```html hidden live-sample___column-playground
 <form>
   <div>
-    <label for="columns">No. of columns: </label>
+    <label for="columns">
+      <code>column-count <output id="columns-output">3</output></code>
+    </label>
     <input type="range" min="3" max="6" value="3" id="columns" />
-    <output id="columns-output">3</output>
   </div>
   <div>
-    <label for="column-height">Column height: </label>
+    <label for="column-height">
+      <code>column-height <output id="column-height-output">20em</output></code>
+    </label>
     <input type="range" min="10" max="30" value="20" id="column-height" />
-    <output id="column-height-output">20em</output>
   </div>
 </form>
 ```
@@ -427,9 +497,9 @@ We specify the {{cssxref("column-rule")}} and {{cssxref("gap")}} with the same v
 body {
   column-count: 3;
   column-height: 20em;
-
   column-rule: 2px solid red;
   gap: 3em 2em;
+  padding: 0 2em;
 }
 ```
 
@@ -441,6 +511,13 @@ form {
   position: fixed;
   bottom: 1px;
   right: 1px;
+}
+
+form div {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
 }
 ```
 

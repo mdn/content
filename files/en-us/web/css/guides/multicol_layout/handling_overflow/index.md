@@ -183,10 +183,10 @@ The HTML contains basic text content, which we have hidden for brevity.
 ```html hidden
 <p>
   This is a bunch of text split into three columns using the CSS
-  <code>columns</code> property. This includes a <code>column-count</code> value
-  of <code>2</code> and a <code>column-height</code> value of <code>95vh</code>.
-  The <code>column-wrap</code> value is set to its initial value,
-  <code>auto</code>; when a <code>column-height</code> value is included,
+  <code>column-count</code> property with a value of <code>3</code>. It also
+  includes a <code>column-height</code> value of <code>95vh</code>. The
+  <code>column-wrap</code> value is set to its initial value, <code>auto</code>;
+  when a <code>column-height</code> value is included,
   <code>column-wrap: auto</code> resolves to <code>wrap</code>, which allows the
   columns to wrap onto multiple rows. The text is equally distributed over the
   columns, and placed into multiple rows.
@@ -203,27 +203,27 @@ The HTML contains basic text content, which we have hidden for brevity.
 
 We give our content some styles. Most notably, we set the `<body>` element's {{cssxref("column-count")}} to `2`, and its `column-height` to `95vh` so that each row of columns fills up the viewport. We don't need to explicitly set `column-wrap` to `wrap`: when `column-height` is set to a {{cssxref("&lt;length>")}} value, the initial value of `column-wrap` (`auto`) resolves to `wrap`, which is usually the behavior you'll want.
 
+```css
+body {
+  font-size: 1.3em;
+  line-height: 1.5;
+  column-count: 3;
+  column-height: 95vh;
+}
+```
+
 ```css hidden
 html {
   font-family: sans-serif;
 }
 
 body {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 }
 
 p:first-of-type {
   margin-top: 0;
-}
-```
-
-```css
-body {
-  font-size: 1.3em;
-  line-height: 1.5;
-  column-count: 2;
-  column-height: 95vh;
 }
 ```
 

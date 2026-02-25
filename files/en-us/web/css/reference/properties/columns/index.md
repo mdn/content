@@ -172,16 +172,16 @@ We include a basic {{htmlelement("p")}} element containing text content.
 
 We set a `columns` property value on the paragraph that includes a `<column-count>` value of `3`, a `<column-width>` value of `auto`, and a `<column-height>` value of `5em`. Because the `<column-height>` is set to a `<length>`, the paragraph's {{cssxref("column-wrap")}} value computes to `wrap`, which allows the columns to wrap onto multiple rows.
 
+```css live-sample___fixed-height
+.content-box {
+  columns: 3 auto / 5em;
+}
+```
+
 ```css hidden live-sample___fixed-height
 body {
   width: 60%;
   margin: 0 auto;
-}
-```
-
-```css live-sample___fixed-height
-.content-box {
-  columns: 3 auto / 5em;
 }
 ```
 
