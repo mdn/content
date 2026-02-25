@@ -76,7 +76,7 @@ random(--my-base, 1em, 3rem, 2px)
 
 ### Return value
   
-A random value from the minimum to the maximum in the same type provided for the parameters.
+Returns a random `<number>`, `<dimension>`,  or `<percentage>` between the minimum and maximum range values, inclusive, in the same type as the `<calc-sum>` parameters.
 
 ## Description
   
