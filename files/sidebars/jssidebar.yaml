@@ -107,7 +107,7 @@ sidebar:
   - type: listSubPages
     path: /Web/JavaScript/Reference/Regular_expressions
     link: /Web/JavaScript/Reference/Regular_expressions
-    title: Guide_RegExp
+    title: Reference_RegExp
     details: closed
   - type: listSubPages
     path: /Web/JavaScript/Reference/Errors
