@@ -94,7 +94,7 @@ const numbers = (function* () {
     yield n++;
   }
 })();
-for (const [index, [name, age]] of Iterator.zip([numbers(), ages])) {
+for (const [index, [name, age]] of Iterator.zip([numbers, ages])) {
   console.log(`${index}: ${name} is ${age} years old.`);
 }
 
@@ -104,7 +104,7 @@ for (const [index, [name, age]] of Iterator.zip([numbers(), ages])) {
 // 2: Evelyn is 35 years old.
 ```
 
-`numbers()` is an infinite iterator that generates incrementing numbers starting from `0`. Because `Iterator.zip()` stops by default when the shortest input iterable is exhausted, the loop iterates exactly three times. The `numbers()` iterator is properly closed after the loop ends; it doesn't cause an infinite loop.
+`numbers` is an infinite iterator that generates incrementing numbers starting from `0`. Because `Iterator.zip()` stops by default when the shortest input iterable is exhausted, the loop iterates exactly three times. The `numbers` iterator is properly closed after the loop ends; it doesn't cause an infinite loop.
 
 ### Creating a Map from lists of keys and values
 

@@ -2,10 +2,12 @@
 title: CSSFontFeatureValuesMap
 slug: Web/API/CSSFontFeatureValuesMap
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.CSSFontFeatureValuesMap
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`CSSFontFeatureValuesMap`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents an iterable and read-only set of the [CSSFontFeatureValuesRule](/en-US/docs/Web/API/CSSFontFeatureValuesRule) properties, such as [`swash`](/en-US/docs/Web/API/CSSFontFeatureValuesRule/swash), [`annotation`](/en-US/docs/Web/API/CSSFontFeatureValuesRule/annotation), [`ornaments`](/en-US/docs/Web/API/CSSFontFeatureValuesRule/ornaments), etc.
 
@@ -13,28 +15,28 @@ An `CSSFontFeatureValuesMap` instance is a read-only [Map-like object](/en-US/do
 
 ## Instance properties
 
-- {{domxref('CSSFontFeatureValuesMap.size')}}
+- {{domxref('CSSFontFeatureValuesMap.size')}} {{experimental_inline}}
   - : Returns a positive integer containing the size of the `CSSFontFeatureValuesMap` object.
 
 ## Instance methods
 
-- {{domxref('CSSFontFeatureValuesMap.clear()')}}
+- {{domxref('CSSFontFeatureValuesMap.clear()')}} {{experimental_inline}}
   - : Removes all declarations in the `CSSFontFeatureValuesMap`.
-- {{domxref('CSSFontFeatureValuesMap.delete()')}}
+- {{domxref('CSSFontFeatureValuesMap.delete()')}} {{experimental_inline}}
   - : Removes the CSS declaration with the given property in the `CSSFontFeatureValuesMap`.
-- {{domxref('CSSFontFeatureValuesMap.entries()')}}
+- {{domxref('CSSFontFeatureValuesMap.entries()')}} {{experimental_inline}}
   - : Returns a new [map iterator](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator) object that contains the `[key, value]` pairs for each declaration in this `CSSFontFeatureValuesMap` in insertion order.
-- {{domxref('CSSFontFeatureValuesMap.forEach()')}}
+- {{domxref('CSSFontFeatureValuesMap.forEach()')}} {{experimental_inline}}
   - : Executes a provided function once per each key/value pair in this `CSSFontFeatureValuesMap` in insertion order.
-- {{domxref('CSSFontFeatureValuesMap.get()')}}
+- {{domxref('CSSFontFeatureValuesMap.get()')}} {{experimental_inline}}
   - : Returns value corresponding to the key in this `CSSFontFeatureValuesMap`, or `undefined` if there is none.
-- {{domxref('CSSFontFeatureValuesMap.has()')}}
+- {{domxref('CSSFontFeatureValuesMap.has()')}} {{experimental_inline}}
   - : Returns a boolean indicating whether an entry with the specified key exists in this `CSSFontFeatureValuesMap` or not.
-- {{domxref('CSSFontFeatureValuesMap.keys()')}}
+- {{domxref('CSSFontFeatureValuesMap.keys()')}} {{experimental_inline}}
   - : Returns a new [map iterator](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator) object that contains the `key` for each declaration in this `CSSFontFeatureValuesMap` in insertion order.
-- {{domxref('CSSFontFeatureValuesMap.set()')}}
+- {{domxref('CSSFontFeatureValuesMap.set()')}} {{experimental_inline}}
   - : Adds a new entry with a specified key and value to this `CSSFontFeatureValuesMap`, or updates an existing entry if the key already exists.
-- {{domxref('CSSFontFeatureValuesMap.values()')}}
+- {{domxref('CSSFontFeatureValuesMap.values()')}} {{experimental_inline}}
   - : Returns a new [map iterator](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator) object that contains the `value` for each declaration in this `CSSFontFeatureValuesMap` in insertion order.
 - [`CSSFontFeatureValuesMap.[Symbol.iterator]()`](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator)
   - : Returns the iterator object itself. This allows iterator objects to also be iterable.
