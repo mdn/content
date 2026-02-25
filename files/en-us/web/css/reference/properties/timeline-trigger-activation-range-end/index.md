@@ -26,7 +26,7 @@ timeline-trigger-activation-range-end: exit;
 timeline-trigger-activation-range-end: entry 100%;
 timeline-trigger-activation-range-end: contain 600px;
 
-/* Multiple range start values */
+/* Multiple range end values */
 timeline-trigger-activation-range-end:
   contain,
   entry 100%;
@@ -54,7 +54,7 @@ The `timeline-trigger-activation-range-end` shorthand property is specified as o
 
 ## Description
 
-When creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations), the `timeline-trigger-activation-range-end` property can be set on the trigger element to explicitly define the end of the trigger's **activation range**. Read the linked guide and the [`timeline-trigger-activation-range` description](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-activation-range#description) for more information on how this animation type works.
+When creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations), the `timeline-trigger-activation-range-end` property can be set on the trigger element to explicitly define the end of the trigger's **activation range**. Read the linked guide and the [`timeline-trigger-activation-range` description](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-activation-range#description) for more information.
 
 Allowed values for the `timeline-trigger-activation-range-end` property are:
 
@@ -71,7 +71,7 @@ The `timeline-trigger-activation-range-end`, along with the {{cssxref("timeline-
 
 When multiple values are specified in a single `timeline-trigger-activation-range-end` property, they are distributed between the specified {{cssxref("timeline-trigger-name")}} values in the same fashion as multiple {{cssxref("animation")}} values are distributed (see [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values)).
 
-If multiple `timeline-trigger-name` values are set, but only a single `timeline-trigger-activation-range-end` value is set, the `timeline-trigger-activation-range-end` will apply to all the `timeline-trigger-name`s. If two `timeline-trigger-activation-range-end` values are set, they will cycle between the `timeline-trigger-name`s until all of them have an `timeline-trigger-activation-range-end` value set. And so on.
+If multiple `timeline-trigger-name` values are set, but only a single `timeline-trigger-activation-range-end` value is set, the `timeline-trigger-activation-range-end` will apply to all the `timeline-trigger-name`s. If two `timeline-trigger-activation-range-end` values are set, they will cycle between the `timeline-trigger-name`s until all of them have a `timeline-trigger-activation-range-end` value set. And so on.
 
 For example, consider these declarations:
 
@@ -96,7 +96,7 @@ In this case, the first name will use the `cover` range end, and the second name
 
 ### Basic usage
 
-In this example, we show how to create a basic scroll-triggered animation that uses a custom timeline range end value.
+In this example, we show how to create a basic scroll-triggered animation that uses a custom timeline activation range end value.
 
 #### HTML
 
@@ -180,7 +180,7 @@ The animated {{htmlelement("div")}} element has an `animation` applied that rota
 
 The trigger `<div>` element is defined as the animated `<div>`'s trigger using a {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together. It also includes a {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the element providing the view progress timeline as the nearest scrolling ancestor element.
 
-Finally for this rule, we specify a `timeline-trigger-activation-range-end` of `contain 60%`, which sets the trigger's activation range end point to 60% of the way through the `contain` range (when the trigger element has scrolled a little over half way through the viewport in either direction). The {{cssxref("timeline-trigger-activation-range-start")}} value defaults to 0% of the way through the `cover` range, meaning that the animation will start when the trigger element has started to enter the viewport.
+We specify a `timeline-trigger-activation-range-end` of `contain 60%`, which sets the trigger's activation range end point to 60% of the way through the `contain` range (when the trigger element has scrolled a little over half way through the viewport in either direction). The {{cssxref("timeline-trigger-activation-range-start")}} value defaults to 0% of the way through the `cover` range, meaning that the animation will start when the trigger element has started to enter the viewport.
 
 ```css hidden live-sample___basic-example live-sample___compare-multiple-values
 body {
@@ -277,7 +277,8 @@ Try scrolling the content up. When the trigger `<div>` starts to enter the viewp
 ## See also
 
 - {{cssxref("timeline-trigger-activation-range-start")}}
-- {{cssxref("timeline-trigger")}} shorthand property
+- {{cssxref("timeline-trigger-activation-range")}} shorthand property
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, and {{cssxref("timeline-trigger-active-range")}}
+- {{cssxref("timeline-trigger")}} shorthand property
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

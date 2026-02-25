@@ -140,7 +140,7 @@ When defining a `timeline-trigger-activation-range-start` value explicitly and l
 
 When multiple ranges are specified in a single `timeline-trigger-activation-range` property, they are distributed between the specified {{cssxref("timeline-trigger-name")}} values in the same fashion as multiple {{cssxref("animation")}} values are distributed (see [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values)).
 
-If multiple `timeline-trigger-name` values are set, but only a single `timeline-trigger-activation-range` value is set, the `timeline-trigger-activation-range` will apply to all the `timeline-trigger-name`s. If two `timeline-trigger-activation-range` values are set, they will cycle between the `timeline-trigger-name`s until all of them have an `timeline-trigger-activation-range` value set. And so on.
+If multiple `timeline-trigger-name` values are set, but only a single `timeline-trigger-activation-range` value is set, the `timeline-trigger-activation-range` will apply to all the `timeline-trigger-name`s. If two `timeline-trigger-activation-range` values are set, they will cycle between the `timeline-trigger-name`s until all of them have a `timeline-trigger-activation-range` value set. And so on.
 
 For example, consider these declarations:
 
@@ -165,7 +165,7 @@ In this case, the first name will use the `contain` range, and the second name w
 
 ### Basic usage
 
-In this example, we show how to create a basic scroll-triggered animation that uses a custom timeline range.
+In this example, we show how to create a basic scroll-triggered animation that uses a custom timeline activation range.
 
 #### HTML
 
@@ -440,8 +440,8 @@ Try selecting different range values from the `<select>` dropdown and then for e
 ## See also
 
 - {{cssxref("animation-trigger")}}
-- {{cssxref("timeline-trigger")}} shorthand property
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, and {{cssxref("timeline-trigger-active-range")}}
+- {{cssxref("timeline-trigger")}} shorthand property
 - {{cssxref("trigger-scope")}}
 - {{cssxref("animation-action")}} type
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations)

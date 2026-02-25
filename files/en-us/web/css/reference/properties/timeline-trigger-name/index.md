@@ -455,8 +455,8 @@ Try scrolling the content up. When the `<div>` fully appears in the viewport, it
 ## See also
 
 - {{cssxref("animation-trigger")}}
-- {{cssxref("timeline-trigger")}} shorthand property
 - {{cssxref("timeline-trigger-source")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}}
+- {{cssxref("timeline-trigger")}} shorthand property
 - {{cssxref("trigger-scope")}}
 - {{cssxref("animation-action")}} type
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations)
