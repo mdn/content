@@ -107,7 +107,7 @@ sidebar:
   - type: listSubPages
     path: /Web/JavaScript/Reference/Regular_expressions
     link: /Web/JavaScript/Reference/Regular_expressions
-    title: Guide_RegExp
+    title: Reference_RegExp
     details: closed
   - type: listSubPages
     path: /Web/JavaScript/Reference/Errors
@@ -147,6 +147,7 @@ l10n:
     Guide_Numbers: Zahlen und Zeichenketten
     Guide_Dates: Darstellung von Daten und Uhrzeiten
     Guide_RegExp: Reguläre Ausdrücke
+    Reference_RegExp: Reguläre Ausdrücke
     Guide_Indexed_collections: Indexierte Sammlungen
     Guide_keyed_collections: Schlüsselbasierte Sammlungen
     Guide_Objects: Arbeiten mit Objekten
@@ -195,6 +196,7 @@ l10n:
     Guide_Numbers: Numbers and strings
     Guide_Dates: Representing dates & times
     Guide_RegExp: Regular expressions
+    Reference_RegExp: Regular expressions
     Guide_Indexed_collections: Indexed collections
     Guide_keyed_collections: Keyed collections
     Guide_Objects: Working with objects
@@ -243,6 +245,7 @@ l10n:
     Guide_Numbers: Numbers and strings
     Guide_Dates: Representing dates & times
     Guide_RegExp: Регулярные выражения
+    Reference_RegExp: Регулярные выражения
     Guide_Indexed_collections: Упорядоченные наборы данных
     Guide_keyed_collections: Коллекции
     Guide_Objects: Работа с объектами
@@ -291,6 +294,7 @@ l10n:
     Guide_Numbers: Numbers and strings
     Guide_Dates: Representing dates & times
     Guide_RegExp: Expressions rationnelles
+    Reference_RegExp: Expressions rationnelles
     Guide_Indexed_collections: Collections indexées
     Guide_keyed_collections: Collections avec clés
     Guide_Objects: Manipuler les objets
@@ -339,6 +343,7 @@ l10n:
     Guide_Numbers: 数字与字符串
     Guide_Dates: 表达日期与时间
     Guide_RegExp: 正则表达式
+    Reference_RegExp: 正则表达式
     Guide_Indexed_collections: 索引集合类
     Guide_keyed_collections: 带键的集合
     Guide_Objects: 使用对象
@@ -387,6 +392,7 @@ l10n:
     Guide_Numbers: 数値と文字列
     Guide_Dates: 日付と時刻の表現
     Guide_RegExp: 正規表現
+    Reference_RegExp: 正規表現
     Guide_Indexed_collections: インデックス付きコレクション
     Guide_keyed_collections: キー付きコレクション
     Guide_Objects: オブジェクトの利用
@@ -435,6 +441,7 @@ l10n:
     Guide_Numbers: Numbers and strings
     Guide_Dates: Representing dates & times
     Guide_RegExp: 정규 표현식
+    Reference_RegExp: 정규 표현식
     Guide_Indexed_collections: index 기반의 컬렉션
     Guide_keyed_collections: key 기반의 컬렉션
     Guide_Objects: 객체로 작업하기
@@ -483,6 +490,7 @@ l10n:
     Guide_Numbers: Numbers and strings
     Guide_Dates: Representing dates & times
     Guide_RegExp: Expressões Regulares
+    Reference_RegExp: Expressões Regulares
     Guide_Indexed_collections: Coleções indexadas
     Guide_keyed_collections: Coleções com chave (chave-valor)
     Guide_Objects: Trabalhando com objetos
