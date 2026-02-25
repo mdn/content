@@ -56,7 +56,7 @@ An event is a notification sent by the browser to the client when something of i
 - `method`: The event name, in the form `module_name.event_name`.
 - `params`: An object containing data about the event.
 
-To receive events, the client must first subscribe to them using the [`session.subscribe`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) command. The subscription message has the same `id` and `method` fields as any other command, and the `params` field takes an `events` array containing the event names to subscribe to:
+To receive events, the client must first subscribe to them using the `session.subscribe` command. The subscription message has the same `id` and `method` fields as any other command, and the `params` field takes an `events` array containing the event names to subscribe to:
 
 ```json
 {
