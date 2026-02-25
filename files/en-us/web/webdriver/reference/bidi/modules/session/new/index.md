@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.session.new
 sidebar: webdriver
 ---
 
-The `session.new` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`session`](/en-us/docs/web/webdriver/reference/bidi/modules/session) module creates a new BiDi session with the browser.
+The `session.new` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`session`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session) module creates a new BiDi session with the browser.
 
 This is a static command; it can run without an active session.
 

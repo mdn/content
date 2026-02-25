@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.session.end
 sidebar: webdriver
 ---
 
-The `session.end` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`session`](/en-us/docs/web/webdriver/reference/bidi/modules/session) module ends the current BiDi session with the browser.
+The `session.end` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`session`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session) module ends the current BiDi session with the browser.
 
 ## Syntax
 
