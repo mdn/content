@@ -122,23 +122,21 @@ A, B, C {
 
 #### Automatic behavior
 
-When you omit the first parameter, `auto` is used which causes CSS to auto-generate an ident from the property name and a position. This behavior can cause some unexpected random base value sharing.
+When the first parameter is omitted, `auto` is used which causes CSS to auto-generate an ident from the property name and a position. This behavior can cause some unexpected random base value sharing.
 
 ```css
 .foo {
   margin: random(1px, 100px) random(1px, 100px);
 }
 .bar {
-  width: random(element-shared, 100px, 200px);
+  width: random(100px, 200px);
 }
 .bar:hover {
-  width: random(element-shared, 200px, 300px);
+  width: random(100px, 200px);
 }
 ```
 
-In the example above, the use of two `random()` functions for the `margin` property generate "margin 0" and "margin 1" names internal to CSS for each `random()` function, respectively. For the rules applying to `.bar`, each use of `random()` will generate the same name ("width 0") meaning they will both use the same random base value.
-
-To avoid this behavior, you can provide a unique {{cssxref("dashed-ident")}} that is not used elsewhere in the document in order to get a distinct random base value.
+When CSS auto-generates names, rules targeting the same element and property, such as `.bar` and `.bar:hover` in this example, both `random()` functions end up with the same random base value, so the value won't visibly change between states. To get an independent value for each rule, provide a unique {{cssxref("dashed-ident")}}.
 
 ### Custom properties
 
