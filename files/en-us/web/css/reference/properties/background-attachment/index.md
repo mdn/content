@@ -33,21 +33,38 @@ background-attachment: scroll, fixed;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    <h1>A Lament for Confederation</h1>
-    <p>&mdash;Chief Dan George, 1967</p>
-    <p>
-      How long have I known you, Oh Canada? A hundred years? Yes, a hundred
-      years. And many, many tides more. And today, when you celebrate your
-      hundred years, Oh Canada, I am sad for all the Indian people throughout
-      the land.
-    </p>
-    <p>
-      For I have known you when your forests were mine; when they gave me my
-      meat and my clothing. I have known you in your fruits and rivers where
-      your fish flashed and danced in the sun, where the waters said ‘come and
-      eat of my abundance.’ I have known you in the freedom of your winds. And
-      my spirit, like your winds, once roamed this good lands.
-    </p>
+    ```html hidden live-sample___basic-example
+<ol>
+  <li>One fish</li>
+  <li>Two fish</li>
+  <li>Red fish</li>
+  <li>Blue fish</li>
+  <li>Black fish</li>
+  <li>Blue fish</li>
+  <li>Old fish</li>
+  <li>New fish.</li>
+  <li>This one has a little star.</li>
+  <li>This one has a little car.</li>
+  <li>Say! What a lot</li>
+  <li>Of fish there are.</li>
+  <li>Yes. Some are red. And some are blue.</li>
+  <li>Some are old. And some are new.</li>
+  <li>Some are sad.</li>
+  <li>And some are glad.</li>
+  <li>And some are very, very bad.</li>
+  <li>Why are they</li>
+  <li>Sad and glad and bad?</li>
+  <li>I do not know.</li>
+  <li>Go ask your dad.</li>
+  <li>Some are thin.</li>
+  <li>And some are fat.</li>
+  <li>The fat one has</li>
+  <li>A yellow hat.</li>
+  <li>From there to here, from here to there,</li>
+  <li>Funny things</li>
+  <li>Are everywhere.</li>
+</ol>
+<p>--Dr. Seuss</p>
   </div>
 </section>
 ```
@@ -120,14 +137,23 @@ The `background-attachment` property is specified as one of the keyword values f
 
 #### HTML
 
-We include a paragraph with some text.
+We include an unordered list ({{htmlelement("ul")}}) with some list items (({{htmlelement("li")}}).
 
 ```html
-<p>
-  When I fought to protect my home and my land, I was called a savage. When I
-  neither understood nor welcomed this new way of life, I was called lazy. When
-  I tried to rule my people, I was stripped of my authority.
-</p>
+<ul>
+  <li>One fish</li>
+  <li>Two fish</li>
+  <li>Red fish</li>
+  <li>Blue fish</li>
+  <li>Black fish</li>
+  <li>Blue fish</li>
+  <li>Old fish</li>
+  <li>New fish.</li>
+  <li>This one has a little star.</li>
+  <li>This one has a little car.</li>
+  <li>Say! What a lot</li>
+  <li>Of fish there are.</li>
+</ul>
 ```
 
 #### CSS
@@ -135,7 +161,7 @@ We include a paragraph with some text.
 We define a {{cssxref("background-image")}} and set the `background-attachment` to `fixed`. We also include a {{cssxref("height")}}, {{cssxref("width")}}, and {{cssxref("overflow")}} to ensure the element scrolls.
 
 ```css
-p {
+ul {
   background-image: url("star-solid.gif");
   background-attachment: fixed;
 
@@ -149,7 +175,7 @@ p {
 
 {{EmbedLiveSample("Basic_example")}}
 
-Note how the background remains fixed relative to the paragraphs viewport when you scroll the overflowing text into view.
+Note how the background remains fixed relative to the list's viewport when you scroll the overflowing text into view.
 
 ### Multiple background images
 
@@ -157,23 +183,41 @@ This property supports multiple background images. You can specify a different `
 
 #### HTML
 
-We include two more paragraph from Chief Dan George's 1967 speech.
+We include all of Dr. Suess's poem.
 
 ```html
 <div>
-  <p>
-    My nation was ignored in your history textbooks – we were less important in
-    the history of Canada than the buffalo that ranged the plains. I was
-    ridiculed in your plays and motion pictures, and when I drank your
-    fire-water, I got drunk – very, very drunk. And I forgot.
-  </p>
-  <p>
-    Oh Canada, how can I celebrate with you this centenary, this hundred years?
-    Shall I thank you for the reserves that are left me of my beautiful forests?
-    Shall I thank you for the canned fish of my rivers? Shall I thank you for
-    the loss of my pride and authority, even among my own people? For the lack
-    of my will to fight back? No! I must forget what is past and gone.
-  </p>
+<ul>
+  <li>One fish</li>
+  <li>Two fish</li>
+  <li>Red fish</li>
+  <li>Blue fish</li>
+  <li>Black fish</li>
+  <li>Blue fish</li>
+  <li>Old fish</li>
+  <li>New fish.</li>
+  <li>This one has a little star.</li>
+  <li>This one has a little car.</li>
+  <li>Say! What a lot</li>
+  <li>Of fish there are.</li>
+  <li>Yes. Some are red. And some are blue.</li>
+  <li>Some are old. And some are new.</li>
+  <li>Some are sad.</li>
+  <li>And some are glad.</li>
+  <li>And some are very, very bad.</li>
+  <li>Why are they</li>
+  <li>Sad and glad and bad?</li>
+  <li>I do not know.</li>
+  <li>Go ask your dad.</li>
+  <li>Some are thin.</li>
+  <li>And some are fat.</li>
+  <li>The fat one has</li>
+  <li>A yellow hat.</li>
+  <li>From there to here, from here to there,</li>
+  <li>Funny things</li>
+  <li>Are everywhere.</li>
+</ul>
+<p>--Dr. Seuss</p>
 </div>
 ```
 
@@ -181,7 +225,7 @@ We include two more paragraph from Chief Dan George's 1967 speech.
 
 We include a {{cssxref("height")}}, {{cssxref("width")}}, and {{cssxref("overflow")}} on the parent {{htmlelement("div")}} to ensure the contents scroll.
 
-We define two comma-separated background images on the paragraphs, and set the `background-attachment` to `fixed, scroll`, meaning the first background image will be `fixed` and the second will `scroll`. We set the {{cssxref("background-repeat")}} to make both background images repeat vertically, separating them with the {{cssxref("background-position")}} property.
+We define two comma-separated background images on the list, and set the `background-attachment` to `fixed, scroll`, meaning the first background image will be `fixed` and the second will `scroll`. We set the {{cssxref("background-repeat")}} to make both background images repeat vertically, separating them with the {{cssxref("background-position")}} property.
 
 ```css
 div {
@@ -189,7 +233,7 @@ div {
   height: 200px;
   overflow: scroll;
 }
-p {
+ol {
   background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: repeat-y;
@@ -203,7 +247,7 @@ p {
 
 {{EmbedLiveSample("Multiple_background_images")}}
 
-Note how the first background image is fixed to the viewport while the the second background image is fixed relative to the paragraph.
+Note how the first background image is fixed to the viewport while the the second background image is fixed relative to the list.
 
 ## Specifications
 
