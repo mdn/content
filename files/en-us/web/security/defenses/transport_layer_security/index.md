@@ -22,7 +22,7 @@ Browsers consider pages delivered over HTTPS as providing a [secure context](/en
 
 ## TLS handshake
 
-The first step in creating a TLS connection is the _handshake_, in which:
+When a client connects to a server using TLS, an initial _handshake_ sets the security parameters for the protocol:
 
 - Client and server agree on which version of TLS to use. The current version of TLS is 1.3 ({{RFC(8446)}}), and this is the most widely-used version, although TLS 1.2 is still used in some websites. TLS 1.1 and 1.0 should no longer be used.
 - Client and server agree on the {{glossary("cipher suite")}} that they will use: this defines the algorithms that they will use for key agreement, authentication, encryption, and message authentication.
@@ -31,7 +31,7 @@ The first step in creating a TLS connection is the _handshake_, in which:
 
 After the handshake, client and server use the secret key to encrypt and decrypt any messages, including HTTP headers as well as bodies.
 
-### Configuring TLS
+## Configuring TLS
 
 Choosing the right TLS server configuration has a big impact on the security of the connection. In particular, it determines the TLS version and cryptographic algorithms that will be used. If you need to configure your own server, consult a resource such as Mozilla's [TLS Recommended Configurations](https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_configurations).
 
@@ -47,47 +47,21 @@ Modern web hosting services support HTTPS for you, either by default or through 
 
 ## Mixed content
 
-If a page is loaded over HTTPS and it attempts to load subresources (such as scripts, images, or fonts) over HTTP, this is called _mixed content_.
+A website should use HTTPS for not only the main document but all subresources that it loads, such as scripts, stylesheets, images, and fonts. If a website loads the main document over HTTPS but then loads any of its subresources over HTTP, this is called _mixed content_.
+
+For example, if a document served from `https://example.org` includes the following content, then it will constitute mixed content:
+
+```html
+<img src="http://example.org/my-image.png" />
+```
 
 Mixed content is unsafe because the subresources don't get the protection that HTTPS offers, so an attacker can not only read them but potentially modify them, and this can undermine the integrity of the page as a whole. For example, we could imagine an attacker modifying a script to behave harmfully. Other resources are less dangerous than scripts but still potentially dangerous: for example, an attacker could modify images so as to confuse or mislead users.
 
-For this reason, browsers don't allow secure pages to load insecure subresources. Instead, they either upgrade the load request to use HTTPS, or block the request entirely.
-
-### Upgradable and blockable content
-
-When a browser encounters mixed content, it categorises it as _upgradable content_ or _blockable content_.
-
-When the browser encounters upgradable mixed content, it will attempt to load the content over HTTPS, and if that fails, will block the content. When the browser encounters blockable mixed content, it blocks it.
-
-The following elements are treated as upgradable (except where the URL host is specified as an IP address — see the following section):
-
-- {{HTMLElement("img")}} where origin is set via `src` attribute, including SVG documents (but not when setting resources with `srcset` or `<picture>`).
-- CSS image elements such as: `background-image`, `border-image`, etc.
-- {{HTMLElement("audio")}} where origin is set with `src` attribute.
-- {{HTMLElement("video")}} where origin is set with `src` attribute
-- {{HTMLElement("source")}} where video or origin resource is set.
-
-All other types are blockable. This includes (not exhaustively):
-
-- {{HTMLElement("script")}} where origin is set via `src` attribute
-- {{HTMLElement("link")}} where the origin is set in the `href` attribute, and includes stylesheets
-- {{HTMLElement("iframe")}} where origin is set via `src` attribute
-- {{domxref("Window/fetch", "fetch()")}} requests
-- {{domxref("XMLHttpRequest")}} requests
-- All cases in CSS where a {{CSSXref("url_value", "&lt;url&gt;")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
-- {{HTMLElement("object")}} (`data` attribute)
-- {{domxref("Navigator.sendBeacon")}} (`url` attribute)
-- {{HTMLElement("img")}} where origin is set via `srcset` or `<picture>`.
-- Web fonts
-
-Mixed content requests that would otherwise be upgraded are blocked if the URL's host is an IP address rather than a domain name.
-So `<img src="http://example.com/image.png">` will be upgraded, but `<img src="http://93.184.215.14/image.png">` is blocked.
-
-### Avoiding mixed content
-
-You should avoid serving mixed content, instead serving all content, including subresources, over HTTPS.
+For this reason, browsers don't allow secure pages to load insecure subresources. Instead, depending on the type of subresource, they either upgrade the load request to use HTTPS, or block the request entirely.
 
 If it's not possible for you to update your code to load resources from HTTPS URLs (for example, because your HTML has been archived) your server can set a [content security policy](/en-US/docs/Web/HTTP/Guides/CSP) that contains the [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Guides/CSP#upgrading_insecure_requests) directive, and the browser will automatically upgrade these requests to HTTPS.
+
+See [Mixed content](/en-US/docs/Web/Security/Defenses/Mixed_content) for more details.
 
 ## Upgrading HTTP connections
 
@@ -101,8 +75,9 @@ With HSTS, SSL stripping is prevented except for the first time the browser trie
 
 ## See also
 
-- The [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/) and [Cipherlist.eu](https://cipherlist.eu/) can help you generate configuration files for your server to secure your site.
-- The Mozilla Operations Security (OpSec) team maintains a wiki page with [reference TLS configurations](https://wiki.mozilla.org/Security/Server_Side_TLS).
-- Use [HTTP Observatory](/en-US/observatory) and [SSL Labs](https://www.ssllabs.com/ssltest/) to test how secure a site's HTTP/TLS configuration is.
-- [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts)
-- [Strict-Transport-Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP header
+- Testing HTTPS/TLS configurations:
+  - [Mozilla HTTP Observatory](/en-US/observatory)
+  - [SSL Labs](https://www.ssllabs.com/ssltest/)
+- Recommended TLS configurations:
+  - [Mozilla recommended configurations](https://ssl-config.mozilla.org/)
+  - [Cipherlist.eu recommended TLS configurations](https://cipherlist.eu/)
