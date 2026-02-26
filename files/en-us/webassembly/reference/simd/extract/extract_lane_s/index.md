@@ -57,10 +57,10 @@ value_type.extract_lane_s
 
 ### Opcodes
 
-| Instruction            | Binary opcode                                                                                           |
-| ---------------------- | ------------------------------------------------------------------------------------------------------- |
-| `i8x16.extract_lane_s` | `0x15` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
-| `i16x8.extract_lane_s` | `0x18` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
+| Instruction            | Binary opcode             | Example text => binary                        |
+| ---------------------- | ------------------------- | --------------------------------------------- |
+| `i8x16.extract_lane_s` | `𝟶𝚡𝙵𝙳  21:𝚞𝟹𝟸  𝑙:𝚕𝚊𝚗𝚎𝚒𝚍𝚡` | `i8x16.extract_lane_s 11` => `0xfd 0x15 0x0b` |
+| `i16x8.extract_lane_s` | `𝟶𝚡𝙵𝙳  24:𝚞𝟹𝟸  𝑙:𝚕𝚊𝚗𝚎𝚒𝚍𝚡` | `i16x8.extract_lane_s 7` => `0xfd 0x18 0x07`  |
 
 ## Specifications
 

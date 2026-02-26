@@ -55,16 +55,12 @@ value_type.const
     - For a non-SIMD `value_type`, this will be a basic numeric value such as `3` or `3.5`.
     - For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `value_type`, this will be a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation followed by a SIMD value, for example `f32x4 0x9 0xa 0xb 0xc`.
 
-### Traps
-
-?
-
 ### Opcodes
 
-| Instruction  | Binary opcode                                                                                           |
-| ------------ | ------------------------------------------------------------------------------------------------------- |
-| `i32.const`  | `0x41` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
-| `i64.const`  | `0x42` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
-| `f32.const`  | `0x43` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
-| `f64.const`  | `0x44` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
-| `v128.const` | `0x0c` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
+| Instruction  | Binary opcode              | Example text => binary                                                                                                      |
+| ------------ | -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `i32.const`  | `𝟶𝚡𝟺𝟷  𝑖:𝚒𝟹𝟸`              | `i32.const 2` => `0x41 0x02`                                                                                                |
+| `i64.const`  | `𝟶𝚡𝟺𝟸  𝑖:𝚒𝟼𝟺`              | `i64.const 1` => `0x42 0x01`                                                                                                |
+| `f32.const`  | `𝟶𝚡𝟺𝟹  𝑝:𝚏𝟹𝟸`              | `f32.const 2` => `0x43 0x02`                                                                                                |
+| `f64.const`  | `𝟶𝚡𝟺𝟺  𝑝:𝚏𝟼𝟺`              | `f64.const 1` => `0x44 0x01`                                                                                                |
+| `v128.const` | `𝟶𝚡𝙵𝙳  12:𝚞𝟹𝟸  (𝑏:𝚋𝚢𝚝𝚎)¹⁶` | `v128.const f32x4 0x9 0xa 0xb 0xc` => `0xfd 0x1b 0x9 0xa 0xb 0xc` (EDITORIAL: I DON'T THINK THIS IS RIGHT, CAN YOU ADVISE?) |

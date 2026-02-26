@@ -55,18 +55,14 @@ value_type.extract_lane
 - `lane`
   - : The index of the lane whose value you wish to extract, for example `0`.
 
-### Traps
-
-?
-
 ### Opcodes
 
-| Instruction          | Binary opcode                                                                                           |
-| -------------------- | ------------------------------------------------------------------------------------------------------- |
-| `i32x4.extract_lane` | `0x1b` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
-| `i64x2.extract_lane` | `0x1d` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
-| `f32x4.extract_lane` | `0x1f` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
-| `f64x2.extract_lane` | `0x21` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
+| Instruction          | Binary opcode             | Example text => binary                     |
+| -------------------- | ------------------------- | ------------------------------------------ |
+| `i32x4.extract_lane` | `𝟶𝚡𝙵𝙳  27:𝚞𝟹𝟸  𝑙:𝚕𝚊𝚗𝚎𝚒𝚍𝚡` | `i32x4.extract_lane 3` => `0xfd 0x1b 0x03` |
+| `i64x2.extract_lane` | `𝟶𝚡𝙵𝙳  29:𝚞𝟹𝟸  𝑙:𝚕𝚊𝚗𝚎𝚒𝚍𝚡` | `i64x2.extract_lane 1` => `0xfd 0x1d 0x01` |
+| `f32x4.extract_lane` | `𝟶𝚡𝙵𝙳  31:𝚞𝟹𝟸  𝑙:𝚕𝚊𝚗𝚎𝚒𝚍𝚡` | `f32x4.extract_lane 3` => `0xfd 0x1f 0x03` |
+| `f64x2.extract_lane` | `𝟶𝚡𝙵𝙳  33:𝚞𝟹𝟸  𝑙:𝚕𝚊𝚗𝚎𝚒𝚍𝚡` | `f64x2.extract_lane 1` => `0xfd 0x21 0x01` |
 
 ## Specifications
 

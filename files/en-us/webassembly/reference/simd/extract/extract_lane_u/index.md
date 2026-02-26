@@ -51,16 +51,12 @@ value_type.extract_lane_u
 - `lane`
   - : The index of the lane whose value you wish to extract, for example `0`.
 
-### Traps
-
-?
-
 ### Opcodes
 
-| Instruction            | Binary opcode                                                                                           |
-| ---------------------- | ------------------------------------------------------------------------------------------------------- |
-| `i8x16.extract_lane_u` | `0x16` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
-| `i16x8.extract_lane_u` | `0x19` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
+| Instruction            | Binary opcode             | Example text => binary                        |
+| ---------------------- | ------------------------- | --------------------------------------------- |
+| `i8x16.extract_lane_u` | `𝟶𝚡𝙵𝙳  22:𝚞𝟹𝟸  𝑙:𝚕𝚊𝚗𝚎𝚒𝚍𝚡` | `i8x16.extract_lane_u 11` => `0xfd 0x16 0x0b` |
+| `i16x8.extract_lane_u` | `𝟶𝚡𝙵𝙳  25:𝚞𝟹𝟸  𝑙:𝚕𝚊𝚗𝚎𝚒𝚍𝚡` | `i16x8.extract_lane_u 7` => `0xfd 0x19 0x07`  |
 
 ## Specifications
 
