@@ -30,7 +30,7 @@ background-attachment: fixed, scroll;
 background-attachment: scroll, fixed;
 ```
 
-````html interactive-example
+```html interactive-example
 <section id="default-example">
   <div id="example-element">
     <p>
