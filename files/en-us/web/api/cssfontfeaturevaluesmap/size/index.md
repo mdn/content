@@ -3,10 +3,12 @@ title: "CSSFontFeatureValuesMap: size property"
 short-title: size
 slug: Web/API/CSSFontFeatureValuesMap/size
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.CSSFontFeatureValuesMap.size
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`size`** read-only property of the {{domxref("CSSFontFeatureValuesMap")}} interface returns a positive integer containing the size of the `CSSFontFeatureValuesMap` object.
 

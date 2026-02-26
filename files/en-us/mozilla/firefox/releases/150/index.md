@@ -1,13 +1,13 @@
 ---
-title: Firefox 149 release notes for developers (Beta)
-short-title: Firefox 149 (Beta)
-slug: Mozilla/Firefox/Releases/149
+title: Firefox 150 release notes for developers (Nightly)
+short-title: Firefox 150 (Nightly)
+slug: Mozilla/Firefox/Releases/150
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
-This article provides information about the changes in Firefox 149 that affect developers.
-Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [March 24, 2026](https://whattrainisitnow.com/release/?version=149).
+This article provides information about the changes in Firefox 150 that affect developers.
+Firefox 150 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [April 21, 2026](https://whattrainisitnow.com/release/?version=150).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -78,6 +78,6 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Experimental web features
 
-These features are shipping in Firefox 149 but are disabled by default.
+These features are shipping in Firefox 150 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.

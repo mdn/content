@@ -3,10 +3,12 @@ title: "CSSFontFeatureValuesMap: delete() method"
 short-title: delete()
 slug: Web/API/CSSFontFeatureValuesMap/delete
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CSSFontFeatureValuesMap.delete
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`delete()`** method of the {{domxref("CSSFontFeatureValuesMap")}} interface removes the CSS declaration with the given property in the `CSSFontFeatureValuesMap`.
 
