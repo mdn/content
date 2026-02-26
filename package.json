@@ -63,7 +63,7 @@
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^10.0.0",
-    "imagemin-svgo": "^11.0.1",
+    "imagemin-svgo": "^12.0.0",
     "is-svg": "^6.1.0",
     "lefthook": "^2.1.1",
     "markdownlint-cli2": "0.21.0",
