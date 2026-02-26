@@ -55,9 +55,9 @@ value_type.extract_lane
 - `lane`
   - : The index of the lane whose value you wish to extract, for example `0`.
 
-### Opcodes
+### Binary encoding
 
-| Instruction          | Binary opcode             | Example text => binary                     |
+| Instruction          | Binary equivalent         | Example text => binary                     |
 | -------------------- | ------------------------- | ------------------------------------------ |
 | `i32x4.extract_lane` | `𝟶𝚡𝙵𝙳  27:𝚞𝟹𝟸  𝑙:𝚕𝚊𝚗𝚎𝚒𝚍𝚡` | `i32x4.extract_lane 3` => `0xfd 0x1b 0x03` |
 | `i64x2.extract_lane` | `𝟶𝚡𝙵𝙳  29:𝚞𝟹𝟸  𝑙:𝚕𝚊𝚗𝚎𝚒𝚍𝚡` | `i64x2.extract_lane 1` => `0xfd 0x1d 0x01` |
