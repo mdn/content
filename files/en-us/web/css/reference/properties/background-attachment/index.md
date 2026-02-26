@@ -208,7 +208,7 @@ div {
   height: 200px;
   overflow: scroll;
 }
-ol {
+ul {
   background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: repeat-y;
