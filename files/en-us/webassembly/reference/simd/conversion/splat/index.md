@@ -15,15 +15,25 @@ The **`splat`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/
 (module
   (import "console" "log" (func $log (param f32)))
   (func $main
-    ;; Create a v128 value
-    (local v128)
-    ;; Fill it with 4 32-bit float lanes, each containing the value 16
+    (local $s v128)
     (f32x4.splat (f32.const 16))
+    local.set $s
 
-    ;; Extract the value of the third lane
+    local.get $s
+    f32x4.extract_lane 0
+    call $log ;; log the result
+
+    local.get $s
+    f32x4.extract_lane 1
+    call $log ;; log the result
+
+    local.get $s
+    f32x4.extract_lane 2
+    call $log ;; log the result
+
+    local.get $s
     f32x4.extract_lane 3
-    ;; Log the value
-    call $log
+    call $log ;; log the result
   )
   (start $main)
 )
