@@ -139,9 +139,14 @@ sidebar:
         details: closed
         children:
           - type: listSubPages
+            path: /WebAssembly/Reference/SIMD/conversion
+            link: /WebAssembly/Reference/SIMD/conversion
+            title: Conversion
+            details: closed
+          - type: listSubPages
             path: /WebAssembly/Reference/SIMD/extract
             link: /WebAssembly/Reference/SIMD/extract
-            title: extract instructions
+            title: Extract
             details: closed
       - type: listSubPages
         path: /WebAssembly/Reference/Table
