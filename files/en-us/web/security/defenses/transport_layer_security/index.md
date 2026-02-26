@@ -6,12 +6,12 @@ page-type: guide
 sidebar: security
 ---
 
-Transport Layer Security (TLS) is a protocol which enables a client to communicate securely with a server across an untrusted network. Most notably, on the web, it's used to secure HTTP connections: the resulting protocol is called {{glossary("HTTPS")}}.
+Transport Layer Security (TLS) is a protocol which enables a client to communicate securely with a server across an untrusted network. Most notably it's used to secure HTTP connections on the web: the resulting protocol is called {{glossary("HTTPS")}}.
 
 TLS secures a network connection in three ways:
 
 - **Encryption**: the data exchanged between client and server is encrypted while in transit, so it can't be read by any attackers.
-- **Integrity**: an attacker can't, without detection, modify data while it is in transit between client and server.
+- **Integrity**: an attacker can't secretly modify data (without detection) while it is in transit between client and server.
 - **Authentication**: client and server are each able to prove to the other party that they are the entity they claim to be. On the web, servers usually authenticate themselves to clients, but clients don't usually authenticate themselves to servers.
 
 In particular, HTTPS is the defense against a [manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM) attack, in which the attacker inserts themselves between the user's browser and the server they are connecting to, and can read and modify the traffic exchanged.
@@ -24,7 +24,7 @@ Browsers consider pages delivered over HTTPS as providing a [secure context](/en
 
 When a client connects to a server using TLS, an initial _handshake_ sets the security parameters for the protocol:
 
-- Client and server agree on which version of TLS to use. The current version of TLS is 1.3 ({{RFC(8446)}}), and this is the most widely-used version, although TLS 1.2 is still used in some websites. TLS 1.1 and 1.0 should no longer be used.
+- Client and server agree on which version of TLS to use. The current version of TLS is 1.3 ({{RFC(8446)}}), and this is the most widely-used version. TLS 1.2 is still used by some websites, and TLS 1.1 and 1.0 should no longer be used.
 - Client and server agree on the {{glossary("cipher suite")}} that they will use: this defines the algorithms that they will use for key agreement, authentication, encryption, and message authentication.
 - Optionally, client and server authenticate each other. Client authentication, in which the client proves who they are to the server, is rare on the web outside some specialized applications. However, server authentication, in which the server proves who they are to the client, is a fundamental part of web security.
 - Client and server agree on a {{glossary("Symmetric-key cryptography", "secret key")}} that they will use to encrypt and decrypt messages.
@@ -47,7 +47,7 @@ Modern web hosting services support HTTPS for you, either by default or through 
 
 ## Mixed content
 
-A website should use HTTPS for not only the main document but all subresources that it loads, such as scripts, stylesheets, images, and fonts. If a website loads the main document over HTTPS but then loads any of its subresources over HTTP, this is called _mixed content_.
+A website should use HTTPS not only for the main document, but also for all subresources that it loads, such as scripts, stylesheets, images, and fonts. If a website loads the main document over HTTPS but then loads any of its subresources over HTTP, this is called _mixed content_.
 
 For example, if a document served from `https://example.org` includes the following content, then it will constitute mixed content:
 
@@ -55,11 +55,11 @@ For example, if a document served from `https://example.org` includes the follow
 <img src="http://example.org/my-image.png" />
 ```
 
-Mixed content is unsafe because the subresources don't get the protection that HTTPS offers, so an attacker can not only read them but potentially modify them, and this can undermine the integrity of the page as a whole. For example, we could imagine an attacker modifying a script to behave harmfully. Other resources are less dangerous than scripts but still potentially dangerous: for example, an attacker could modify images so as to confuse or mislead users.
+Mixed content is unsafe because the subresources don't get the protection that HTTPS offers, so an attacker can not only read them but potentially also modify them. This can undermine the integrity of the page as a whole! For example, we could imagine an attacker modifying a script to behave harmfully. Other resources are less dangerous than scripts, but still potentially dangerous: for example, an attacker could modify images so as to confuse or mislead users.
 
 For this reason, browsers don't allow secure pages to load insecure subresources. Instead, depending on the type of subresource, they either upgrade the load request to use HTTPS, or block the request entirely.
 
-If it's not possible for you to update your code to load resources from HTTPS URLs (for example, because your HTML has been archived) your server can set a [content security policy](/en-US/docs/Web/HTTP/Guides/CSP) that contains the [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Guides/CSP#upgrading_insecure_requests) directive, and the browser will automatically upgrade these requests to HTTPS.
+If it's not possible for you to update your code to load resources from HTTPS URLs (for example, because your HTML has been archived), your server can set a [content security policy](/en-US/docs/Web/HTTP/Guides/CSP) that contains the [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Guides/CSP#upgrading_insecure_requests) directive, and the browser will automatically upgrade these requests to HTTPS.
 
 See [Mixed content](/en-US/docs/Web/Security/Defenses/Mixed_content) for more details.
 
@@ -69,9 +69,9 @@ Even if a site is only served over HTTPS, users may still request it over HTTP: 
 
 However, this gives attackers the opportunity to intercept the initial exchange, and then prevent the upgrade to HTTPS from happening. This is sometimes called an _SSL stripping_ attack ({{glossary("SSL")}} is the precursor to TLS).
 
-To reduce the risk of this attack, the server should also send the {{httpheader("Strict-Transport-Security")}} HTTP response header (also known as HSTS): this informs clients that the sites wishes them to use HTTPS, and will cause the browser to connect using HTTPS directly for any subsequent visits, even those made using HTTP URLs.
+To reduce the risk of this attack, the server should also send the {{httpheader("Strict-Transport-Security")}} HTTP response header (also known as HSTS): this informs clients that the site wishes them to use HTTPS, and will cause the browser to connect using HTTPS directly for any subsequent visits, even those made using HTTP URLs.
 
-With HSTS, SSL stripping is prevented except for the first time the browser tries to connect to your site (or, since HSTS has an expiry, the first time after an HSTS record in the browser has expired). To protect the site even on first connection or HSTS record expiry, Chrome maintains a list of domains called the [HSTS preload list](https://hstspreload.org/): if a domain is on this list, then Chrome will always upgrade HTTP request to HTTPS, effectively behaving as if the server has already sent the HSTS header. Safari and Firefox have similar behavior, using a list that is derived from the Chrome list.
+With HSTS, SSL stripping is prevented except for the first time the browser tries to connect to your site (or, since HSTS has an expiry, the first time after an HSTS record in the browser has expired). To protect the site even on first connection or HSTS record expiry, Chrome maintains a list of domains called the [HSTS preload list](https://hstspreload.org/): if a domain is on this list, then Chrome will always upgrade HTTP requests to HTTPS, effectively behaving as if the server has already sent the HSTS header. Safari and Firefox have similar behavior, using a list that is derived from the Chrome list.
 
 ## See also
 
