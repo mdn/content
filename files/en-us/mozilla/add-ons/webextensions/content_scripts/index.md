@@ -25,10 +25,6 @@ You can load a content script into a web page:
 
 There is only one global scope _per frame, per extension_. This means that variables from a content script can be accessed by any other content scripts, regardless of how the content script was loaded.
 
-Using methods (1) and (2), you can only load scripts into pages whose URLs can be represented using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
-
-Using method (3), you cannot load scripts into pages packaged with your extension, privileged browser UI pages (such as `about:debugging`, `about:addons`, reader view, view-source, or the PDF viewer).
-
 > [!NOTE]
 > [Dynamic JS module imports](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading) are now working in content scripts. For more details, see [Firefox bug 1536094](https://bugzil.la/1536094).
 > Only URLs with the _moz-extension_ scheme are allowed, which excludes data URLs ([Firefox bug 1587336](https://bugzil.la/1587336)).
@@ -76,6 +72,12 @@ Other browsers have similar restrictions over the websites extensions can be ins
 > Because these restrictions include addons.mozilla.org, users who try to use your extension immediately after installation may find that it doesn't work. To avoid this, you should add an appropriate warning or an [onboarding page](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/) to move users away from `addons.mozilla.org`.
 
 The set of domains can be restricted further through enterprise policies: Firefox recognizes the `restricted_domains` policy as documented at [ExtensionSettings in mozilla/policy-templates](https://github.com/mozilla/policy-templates/blob/master/README.md#extensionsettings). Chrome's `runtime_blocked_hosts` policy is documented at [Configure ExtensionSettings policy](https://support.google.com/chrome/a/answer/9867568).
+
+### Restricted peges
+
+Extensions cannot load scripts into [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) or privileged browser UI pages (such as `about:debugging`, `about:addons`, reader view, view-source, or the PDF viewer).
+
+If an extension wants to run code in an extension page dynamically, it can include a script in the page. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
 
 ### Limitations
 

@@ -17,7 +17,7 @@ In Firefox and Safari, partial lack of host permissions can result in a successf
 
 The scripts you inject are called [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
-Extensions cannot run content scripts in extension documents. If an extension wants to run code in an extension document dynamically, it can include a script in the document. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
+Extensions cannot run content scripts in [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages). If an extension wants to run code in an extension page dynamically, it can include a script in the document. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
 
 ## Syntax
 
