@@ -47,7 +47,7 @@ Modern web hosting services support HTTPS for you, either by default or through 
 
 ## Mixed content
 
-A website should use HTTPS not only for the main document, but also for all subresources that it loads, such as scripts, stylesheets, images, and fonts. If a website loads the main document over HTTPS but then loads any of its subresources over HTTP, this is called _mixed content_.
+A website should use HTTPS not only for the main document, but also for all subresources that it loads, such as scripts, stylesheets, images, and fonts. If a website loads the main document over HTTPS but then loads any of its subresources over HTTP, this is called [mixed content](/en-US/docs/Web/Security/Defenses/Mixed_content).
 
 For example, if a document served from `https://example.org` includes the following content, then it will constitute mixed content:
 
