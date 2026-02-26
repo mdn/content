@@ -34,9 +34,9 @@ background-attachment: scroll, fixed;
 <section id="default-example">
   <div id="example-element">
     <p>
-      From there to here<br/>
-      from here to there,<br/>
-      Funny things<br/>
+      From there to here<br />
+      from here to there,<br />
+      Funny things<br />
       Are everywhere.
     </p>
     <p>--Dr. Seuss</p>
