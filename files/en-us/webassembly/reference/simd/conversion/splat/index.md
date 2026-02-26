@@ -75,12 +75,12 @@ value_type.splat
 
 | Instruction   | Binary equivalent | Example text => binary                           |
 | ------------- | ----------------- | ------------------------------------------------ |
-| `i8x16.splat` | `𝟶𝚡𝙵𝙳  15:𝚞𝟹𝟸`    | `i8x16.splat (f32.const 15)` => `0xfd 0x0f 0x0f` |
-| `i16x8.splat` | `𝟶𝚡𝙵𝙳  16:𝚞𝟹𝟸`    | `i16x8.splat (f32.const 15)` => `0xfd 0x10 0x0f` |
-| `i32x4.splat` | `𝟶𝚡𝙵𝙳  17:𝚞𝟹𝟸`    | `i32x4.splat (f32.const 15)` => `0xfd 0x11 0x0f` |
-| `i64x2.splat` | `𝟶𝚡𝙵𝙳  18:𝚞𝟹𝟸`    | `i64x2.splat (f32.const 15)` => `0xfd 0x12 0x0f` |
-| `f32x4.splat` | `𝟶𝚡𝙵𝙳  19:𝚞𝟹𝟸`    | `f32x4.splat (f32.const 15)` => `0xfd 0x13 0x0f` |
-| `f64x2.splat` | `𝟶𝚡𝙵𝙳  20:𝚞𝟹𝟸`    | `f64x2.splat (f32.const 15)` => `0xfd 0x14 0x0f` |
+| `i8x16.splat` | `0xfd 15:u32`     | `i8x16.splat (f32.const 15)` => `0xfd 0x0f 0x0f` |
+| `i16x8.splat` | `0xfd 16:u32`     | `i16x8.splat (f32.const 15)` => `0xfd 0x10 0x0f` |
+| `i32x4.splat` | `0xfd 17:u32`     | `i32x4.splat (f32.const 15)` => `0xfd 0x11 0x0f` |
+| `i64x2.splat` | `0xfd 18:u32`     | `i64x2.splat (f32.const 15)` => `0xfd 0x12 0x0f` |
+| `f32x4.splat` | `0xfd 19:u32`     | `f32x4.splat (f32.const 15)` => `0xfd 0x13 0x0f` |
+| `f64x2.splat` | `0xfd 20:u32`     | `f64x2.splat (f32.const 15)` => `0xfd 0x14 0x0f` |
 
 ## Specifications
 

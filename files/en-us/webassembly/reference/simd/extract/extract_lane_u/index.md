@@ -53,10 +53,10 @@ value_type.extract_lane_u
 
 ### Binary encoding
 
-| Instruction            | Binary equivalent         | Example text => binary                        |
-| ---------------------- | ------------------------- | --------------------------------------------- |
-| `i8x16.extract_lane_u` | `𝟶𝚡𝙵𝙳  22:𝚞𝟹𝟸  𝑙:𝚕𝚊𝚗𝚎𝚒𝚍𝚡` | `i8x16.extract_lane_u 11` => `0xfd 0x16 0x0b` |
-| `i16x8.extract_lane_u` | `𝟶𝚡𝙵𝙳  25:𝚞𝟹𝟸  𝑙:𝚕𝚊𝚗𝚎𝚒𝚍𝚡` | `i16x8.extract_lane_u 7` => `0xfd 0x19 0x07`  |
+| Instruction            | Binary equivalent       | Example text => binary                        |
+| ---------------------- | ----------------------- | --------------------------------------------- |
+| `i8x16.extract_lane_u` | `0xfd 22:u32 l:laneidx` | `i8x16.extract_lane_u 11` => `0xfd 0x16 0x0b` |
+| `i16x8.extract_lane_u` | `0xfd 25:u32 l:laneidx` | `i16x8.extract_lane_u 7` => `0xfd 0x19 0x07`  |
 
 ## Specifications
 
