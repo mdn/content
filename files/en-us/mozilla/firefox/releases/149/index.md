@@ -72,6 +72,11 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
+- Adds initial support for split view. This support covers:
+  - Inclusion of the split view ID in {{WebExtAPIRef("tabs.query")}}, {{WebExtAPIRef("tabs.onUpdated")}}, and {{WebExtAPIRef("tabs.Tab")}}
+  - Documentation of the behavior when {{WebExtAPIRef("tabs.move")}} or {{WebExtAPIRef("tabs.remove")}} include tabs in a split view.
+    ([Firefox bug 1993037](https://bugzil.la/1993037))
+
 <!-- ### Removals -->
 
 <!-- ### Other -->

@@ -1,66 +1,14 @@
 ---
-title: tabs.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
-page-type: webextension-api-function
-browser-compat: webextensions.api.tabs.remove
+title: tabs.SPLIT_VIEW_ID_NONE
+slug: Mozilla/Add-ons/WebExtensions/API/tabs/SPLIT_VIEW_ID_NONE
+page-type: webextension-api-property
+browser-compat: webextensions.api.tabs.SPLIT_VIEW_ID_NONE
 sidebar: addonsidebar
 ---
 
-Closes one or more tabs.
+A special ID value given to tabs that aren't in a split view.
 
-If any of the tabs are:
-
-- part of a split view, the split view is removed.
-- the last tab in a group, the group is removed.
-
-## Syntax
-
-```js-nolint
-let removing = browser.tabs.remove(
-  tabIds          // integer or integer array
-)
-```
-
-### Parameters
-
-- `tabIds`
-  - : `integer` or `array` of `integer` The ids of the tab or tabs to close.
-
-### Return value
-
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with no arguments when all the specified tabs have been removed or their `beforeunload` prompts have been handled. If any error occurs, the promise is rejected with an error message.
-
-## Examples
-
-Close a single tab:
-
-```js
-function onRemoved() {
-  console.log(`Removed`);
-}
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-let removing = browser.tabs.remove(2);
-removing.then(onRemoved, onError);
-```
-
-Close multiple tabs:
-
-```js
-function onRemoved() {
-  console.log(`Removed`);
-}
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-let removing = browser.tabs.remove([15, 14, 1]);
-removing.then(onRemoved, onError);
-```
+Its value is `-1`.
 
 {{WebExtExamples}}
 
@@ -69,7 +17,7 @@ removing.then(onRemoved, onError);
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-remove) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#property-TAB_ID_NONE) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
