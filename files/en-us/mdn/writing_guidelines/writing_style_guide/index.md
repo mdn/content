@@ -96,9 +96,9 @@ Here are some alternatives to common terms used in documentation:
 - **Sanity** should be replaced with **coherence**.
 - Instead of **dummy**, use **placeholder**.
 - You should not need to use the terms **crazy** and **insane** in documentation; however, if the case arises, consider using **fantastic** instead.
-- Avoid figurative idioms that use animals in violent or harmful contexts. For example:
+- Avoid figurative idioms that imply violence or cruelty. For example:
   - Instead of "kill two birds with one stone," use "solve two problems at once."
-  - Instead of "beating a dead horse," use "belaboring the point" or "going in circles."
+  - Instead of "beating a dead horse," use "belaboring the point" or "going round in circles."
   - Instead of "more than one way to skin a cat," use "more than one way to do this."
 
 It is best to use gender-neutral language in any writing where gender is irrelevant to the subject matter.
