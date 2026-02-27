@@ -16,7 +16,7 @@ The **`CSSFontFaceRule`** interface represents an {{cssxref("@font-face")}} [at-
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSFontFaceRule.style")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("CSSStyleDeclaration")}}.
+  - : Returns a {{domxref("CSSFontFaceDescriptors")}} object that allows reading and setting the descriptors of the associated {{cssxref("@font-face")}} at-rule.
 
 ## Instance methods
 
