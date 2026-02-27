@@ -64,6 +64,7 @@ Events have three functions:
         - "mutedInfo"
         - "openerTabId"
         - "pinned"
+        - "splitViewId"
         - "status"
         - "title"
         - "url"
