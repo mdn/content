@@ -84,11 +84,11 @@ table.fill identifier
 
 - `index` + `length` is greater than [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size).
 
-### Opcodes
+### Binary encoding
 
-| Instruction  | Binary opcode                                                                                                  |
-| ------------ | -------------------------------------------------------------------------------------------------------------- |
-| `table.fill` | `𝟶𝚡𝙵𝙲 17:𝚞𝟹𝟸` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
+| Instruction  | Binary equivalent | Example text => binary                                                                                        |
+| ------------ | ----------------- | ------------------------------------------------------------------------------------------------------------- |
+| `table.fill` | `0xfc 17:u32`     | `(table.fill 0 (i32.const 0) (ref.func $f1) (i32.const 3))` => `0xfc 0x11 0x00 0x41 0x00 0xd2 0x00 0x41 0x03` |
 
 ## Examples
 
