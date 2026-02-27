@@ -51,6 +51,8 @@ _Also inherits properties from its parent interface, {{domxref("EventTarget")}}_
   - : The URL of an image to be displayed as part of the notification, as specified in the constructor's `options` parameter.
 - {{domxref("Notification.lang")}} {{ReadOnlyInline}}
   - : The language code of the notification as specified in the constructor's `options` parameter.
+- {{domxref("Notification.navigate")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : The navigation URL of the notification. When set, activating the notification navigates to this URL instead of firing a click event.
 - {{domxref("Notification.renotify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies whether the user should be notified after a new notification replaces an old one.
 - {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}}
