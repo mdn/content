@@ -167,7 +167,7 @@ font-stretch: 115%;
 font-variation-settings: "wdth" 115;
 ```
 
-Click "Play" in the code blocks below to edit the example in the MDN Playground. Edit the CSS code to play with font-width values.
+Click "Play" in the code blocks below to edit the example in the MDN Playground. Edit the CSS code to play with font width values.
 
 ```html hidden live-sample___variable-fonts-width-example
 <div>
