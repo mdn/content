@@ -3,10 +3,12 @@ title: "CSSFontFeatureValuesMap: keys() method"
 short-title: keys()
 slug: Web/API/CSSFontFeatureValuesMap/keys
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CSSFontFeatureValuesMap.keys
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`keys()`** method of {{domxref("CSSFontFeatureValuesMap")}} instances returns a new [map iterator](/en-US/docs/Web/API/CSSFontFeatureValuesMap/Symbol.iterator) object that contains the `[key, value]` pairs for each declaration in this `CSSFontFeatureValuesMap` in insertion order.
 
