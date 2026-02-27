@@ -4,7 +4,7 @@ slug: Web/API/User_Preferences_API
 page-type: web-api-overview
 browser-compat:
   - api.Navigator.preferences
-  - api.PreferencesManager
+  - api.PreferenceManager
   - api.PreferenceObject
 spec-urls: https://drafts.csswg.org/mediaqueries-5/#preferences-attribute
 ---
@@ -15,7 +15,7 @@ The **User Preferences API** allows users to override user preference related {{
 
 ## Concepts and Usage
 
-A user agent defines values for the CSS media queries {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}, {{cssxref("@media/prefers-contrast", "prefers-contrast")}}, {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}, {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}, and {{cssxref("@media/prefers-reduced-data", "prefers-reduced-data")}}. The {{domxref("PreferencesManager")}} object provides programmatic access to these preferences, allowing you to listen for preference changes and override them.
+A user agent defines values for the CSS media queries {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}, {{cssxref("@media/prefers-contrast", "prefers-contrast")}}, {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}, {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}, and {{cssxref("@media/prefers-reduced-data", "prefers-reduced-data")}}. The {{domxref("PreferenceManager")}} object provides programmatic access to these preferences, allowing you to listen for preference changes and override them.
 
 ## Examples
 

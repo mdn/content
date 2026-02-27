@@ -8,11 +8,11 @@ browser-compat: api.Navigator.preferences
 
 {{SeeCompatTable}}
 
-The **`preferences`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("PreferencesManager")}} object for the current document, providing access to [User Preferences API](/en-US/docs/Web/API/User_Preferences_API) functionality.
+The **`preferences`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("PreferenceManager")}} object for the current document, providing access to [User Preferences API](/en-US/docs/Web/API/User_Preferences_API) functionality.
 
 ## Value
 
-A {{domxref('PreferencesManager')}} object.
+A {{domxref('PreferenceManager')}} object.
 
 ## Specifications
 

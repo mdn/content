@@ -12,9 +12,9 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#preference-object-interface
 
 The **`PreferenceObject`** interface of the [User Peferences API](/en-US/docs/Web/API/User_Preferences_API) provides attributes and methods for reading and overriding user preferences.
 
-Use {{domxref("PreferencesManager")}} to get access to the `PreferenceObject` object.
+Use {{domxref("PreferenceManager")}} to get access to the `PreferenceObject` object.
 
-The `PreferencesManager` interface inherits from {{domxref("EventTarget")}}.
+The `PreferenceManager` interface inherits from {{domxref("EventTarget")}}.
 
 {{InheritanceDiagram}}
 

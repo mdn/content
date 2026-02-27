@@ -11,7 +11,7 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#preference-value-attribute
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`value`** read-only property of the {{domxref("PreferencesManager")}} interface returns the override of a preference if one is set, the UA defined value otherwise.
+The **`value`** read-only property of the {{domxref("PreferenceManager")}} interface returns the override of a preference if one is set, the UA defined value otherwise.
 
 ## Value
 

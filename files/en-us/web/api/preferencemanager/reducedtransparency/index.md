@@ -1,17 +1,17 @@
 ---
-title: "PreferencesManager: reducedTransparency property"
+title: "PreferenceManager: reducedTransparency property"
 short-title: reducedTransparency
-slug: Web/API/PreferencesManager/reducedTransparency
+slug: Web/API/PreferenceManager/reducedTransparency
 page-type: web-api-instance-property
 status:
   - experimental
-browser-compat: api.PreferencesManager.reducedTransparency
+browser-compat: api.PreferenceManager.reducedTransparency
 spec-urls: https://drafts.csswg.org/mediaqueries-5/#reduced-transparency-attribute
 ---
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`reducedTransparency`** read-only property of the {{domxref("PreferencesManager")}} interface returns the {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-reduced-transparency", "reduced transparency")}} of the site. Its valid values are `reduce` and `no-preference`.
+The **`reducedTransparency`** read-only property of the {{domxref("PreferenceManager")}} interface returns the {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-reduced-transparency", "reduced transparency")}} of the site. Its valid values are `reduce` and `no-preference`.
 
 ## Value
 
