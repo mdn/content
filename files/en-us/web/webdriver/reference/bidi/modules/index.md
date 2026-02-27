@@ -14,22 +14,11 @@ Both command and event names use the module name as a prefix: `module_name.comma
 
 ## List of modules
 
-- `bluetooth`
-- `browser`
-- `browsingContext`
-- `emulation`
-- `input`
-- `log`
-- `network`
-- `permission`
-- `script`
-- [`session`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session)
-- `storage`
-- `webExtension`
+{{SubpagesWithSummaries}}
 
 ## Commands
 
-A command is an asynchronous operation sent from the client to the browser. Each command message has three fields:
+A command is an asynchronous operation sent from the client to the browser. Each command message you send to the browser has three fields:
 
 - `id`: A number you assign to the command. Unlike HTTP where each request waits for a response, a WebSocket connection can have multiple commands in flight at the same time and responses may arrive out of order. The `id` lets you match each response to the command that triggered it.
 - `method`: The command to run, in the form `module_name.command_name`.
@@ -47,28 +36,31 @@ For example, to create a new session, you would send the [`session.new`](/en-US/
 
 Each command results in either a success response containing a `result` field or an error response containing an `error` field. The structure of `result` is specific to each command.
 
-Most commands require an active session. However, some commands are **static** — they can run without an active session. For example, the [`session.status`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/status) command is static because it can be used to check whether the browser is ready to create a new session before actually creating one.
+All commands except [`session.new`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) and [`session.status`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/status) require an active WebDriver BiDi session in order to be properly targeted.
 
 ## Events
 
-An event is a notification sent by the browser to the client when something of interest occurs. Unlike commands, the browser sends events on its own, without the client requesting them. Each event message has two fields:
+An event is a notification sent by the browser to the client when something of interest occurs.
+To receive events, the client must first subscribe to them using the `session.subscribe` command.
 
-- `method`: The event name, in the form `module_name.event_name`.
-- `params`: An object containing data about the event.
+The client can subscribe to a specific event or to all events in a module. For example, subscribing to `"browsingContext.contextCreated"` subscribes the client to that single event, while subscribing to `"browsingContext"` subscribes the client to every event in the `browsingContext` module. Once subscribed, the browser sends matching events on its own, without the client having to request each one.
 
-To receive events, the client must first subscribe to them using the `session.subscribe` command. The subscription message has the same `id` and `method` fields as any other command, and the `params` field takes an `events` array containing the event names to subscribe to:
+The following is a sample event message sent by the browser when the client is subscribed to `log.entryAdded` and a console message is logged (some fields have been omitted for brevity):
 
 ```json
 {
-  "id": 2,
-  "method": "session.subscribe",
+  "type": "event",
+  "method": "log.entryAdded",
   "params": {
-    "events": ["network.responseCompleted"]
+    "type": "console",
+    "method": "log",
+    "realm": null,
+    "level": "info",
+    "text": "Hello world",
+    "timestamp": 1657282076037
   }
 }
 ```
-
-`session.subscribe` returns a subscription ID, which can be used with `session.unsubscribe` to stop receiving those events.
 
 ## Browser compatibility
 
