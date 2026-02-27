@@ -1,13 +1,13 @@
 ---
-title: Firefox 149 release notes for developers (Nightly)
-short-title: Firefox 149 (Nightly)
+title: Firefox 149 release notes for developers (Beta)
+short-title: Firefox 149 (Beta)
 slug: Mozilla/Firefox/Releases/149
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 149 that affect developers.
-Firefox 149 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [March 24, 2026](https://whattrainisitnow.com/release/?version=149).
+Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [March 24, 2026](https://whattrainisitnow.com/release/?version=149).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
