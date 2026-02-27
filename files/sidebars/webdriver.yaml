@@ -17,18 +17,15 @@ sidebar:
             details: closed
             code: true
             children:
-              - title: Commands
-                details: open
-                children:
-                  - link: /Web/WebDriver/Reference/BiDi/Modules/session/end
-                    title: end
-                    code: true
-                  - link: /Web/WebDriver/Reference/BiDi/Modules/session/new
-                    title: new
-                    code: true
-                  - link: /Web/WebDriver/Reference/BiDi/Modules/session/status
-                    title: status
-                    code: true
+              - link: /Web/WebDriver/Reference/BiDi/Modules/session/end
+                title: end
+                code: true
+              - link: /Web/WebDriver/Reference/BiDi/Modules/session/new
+                title: new
+                code: true
+              - link: /Web/WebDriver/Reference/BiDi/Modules/session/status
+                title: status
+                code: true
   - link: /Web/WebDriver/Reference/Classic
     details: open
     children:
