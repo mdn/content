@@ -32,8 +32,8 @@ const el = document.createElement("div");
 if (typeof trustedTypes !== "undefined") {
   // Create a policy that can create TrustedHTML values
   // after sanitizing the input strings with DOMPurify library.
-  const sanitizer = trustedTypes.createPolicy("foo", {
-    createHTML: (input) => DOMPurify.sanitize(input),
+  const sanitizer = trustedTypes.createPolicy("my-policy", {
+    createHTML: (input) => DOMPurify.sanitize(input, { RETURN_TRUSTED_TYPE: false }),
   });
 
   el.innerHTML = sanitizer.createHTML(attackerInput); // Puts the sanitized value into the DOM.

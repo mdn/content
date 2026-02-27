@@ -184,7 +184,7 @@ Commonly, implementations of `createHTML()` use a library such as [DOMPurify](ht
 
 ```js
 const policy = trustedTypes.createPolicy("my-policy", {
-  createHTML: (input) => DOMPurify.sanitize(input),
+  createHTML: (input) => DOMPurify.sanitize(input, { RETURN_TRUSTED_TYPE: false }),
 });
 ```
 

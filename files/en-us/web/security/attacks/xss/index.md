@@ -289,7 +289,7 @@ Instead, a developer must pass a _trusted type_ to one of these APIs. A trusted 
 // Create a policy that can create TrustedHTML values
 // by sanitizing the input strings with DOMPurify library.
 const sanitizer = trustedTypes.createPolicy("my-policy", {
-  createHTML: (input) => DOMPurify.sanitize(input),
+  createHTML: (input) => DOMPurify.sanitize(input, { RETURN_TRUSTED_TYPE: false }),
 });
 
 const userInput = "I might be XSS";

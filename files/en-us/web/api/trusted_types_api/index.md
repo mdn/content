@@ -57,7 +57,7 @@ For example, this code creates a `TrustedTypePolicy` that can create `TrustedHTM
 
 ```js
 const policy = trustedTypes.createPolicy("my-policy", {
-  createHTML: (input) => DOMPurify.sanitize(input),
+  createHTML: (input) => DOMPurify.sanitize(input, { RETURN_TRUSTED_TYPE: false }),
 });
 ```
 
@@ -246,7 +246,7 @@ With this tinyfill in place, suppose we create a policy:
 
 ```js
 const policy = trustedTypes.createPolicy("my-policy", {
-  createHTML: (input) => DOMPurify.sanitize(input),
+  createHTML: (input) => DOMPurify.sanitize(input, { RETURN_TRUSTED_TYPE: false }),
 });
 ```
 
