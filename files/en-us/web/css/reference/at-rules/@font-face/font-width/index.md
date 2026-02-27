@@ -128,7 +128,7 @@ People with dyslexia and other cognitive conditions may have difficulty reading 
 
 ### Setting a percentage range for font-width
 
-The following example uses the [League Mono](https://www.theleagueofmoveabletype.com/league-mono) font. It synthesizes different font families from the same font file using the `font-stretch` descriptor with different keywords and percentages.
+The following example uses the [League Mono](https://www.theleagueofmoveabletype.com/league-mono) font. It synthesizes different font families from the same font file using the `font-width` descriptor with different keywords and percentages.
 
 ```html
 <p>League Mono</p>
