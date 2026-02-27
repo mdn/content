@@ -3,12 +3,10 @@ title: "CloseWatcher: requestClose() method"
 short-title: requestClose()
 slug: Web/API/CloseWatcher/requestClose
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CloseWatcher.requestClose
 ---
 
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`requestClose()`** method of the {{domxref("CloseWatcher")}} interface fires a `cancel` event and if that event is not canceled with {{domxref("Event.preventDefault()")}}, proceeds to fire a `close` event, and then finally deactivates the close watcher as if `destroy()` was called.
 
