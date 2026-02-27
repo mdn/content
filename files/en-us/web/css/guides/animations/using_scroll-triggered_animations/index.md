@@ -558,7 +558,7 @@ When an animated element has an `animation-trigger` set on it, the browser deter
 2. If it can't find a suitable ancestor trigger, it will use the _last_ element in the HTML source order with that `timeline-trigger-name` value.
 3. If it can't find an element anywhere in the DOM with that `timeline-trigger-name` value, the animated element won't be scroll-triggered; it will be animated on page load.
 
-Having multiple non-ancestor elements with the same `timeline-trigger-name` set can create a problem. For example, if a document contains multiple repeated components, each containing a scroll-triggered animation where the animated element and trigger are different elements, all of the animated elements will have their animations controlled by the last component's trigger element. This is likely not the desired behavior. You could fix this by using a different `timeline-trigger-name` in each component, but this is inconvenient.
+Having multiple elements with the same `timeline-trigger-name` set can create a problem. For example, if a document contains multiple repeated components, each containing a scroll-triggered animation where the animated element and trigger are different elements, all of the animated elements will have their animations controlled by the last component's trigger element. This is likely not the desired behavior. You could fix this by using a different `timeline-trigger-name` in each component, but this is inconvenient.
 
 The {{cssxref("trigger-scope")}} property can fix this problem by limiting the visibility, or "scope", of a `timeline-trigger-name` value to a specific subtree. The result is that each animated element can only have its animation triggered by a trigger element within the same subtree of the element that has the scope set on it.
 
@@ -749,7 +749,7 @@ Each `.animated` `<div>` is then given a different `animation`, and a different 
 }
 
 #two .animated {
-  animation: color-cycle 2s infinite alternate linear both;
+  animation: color-cycle 1s infinite alternate linear both;
   left: 110px;
 }
 
@@ -779,7 +779,7 @@ We then define a `.scoped` class style, which sets a `trigger-scope` value of `a
 }
 ```
 
-Finally, we define the `fade-in` {{cssxref("@keyframes")}} referenced in the `animation` properties set earlier.
+Finally, we define the {{cssxref("@keyframes")}} referenced in the `animation` properties set earlier.
 
 ```css live-sample___trigger-scope
 @keyframes fade-in {

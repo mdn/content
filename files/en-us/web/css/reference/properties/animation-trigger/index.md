@@ -1,5 +1,6 @@
 ---
-title: animation-trigger
+title: animation-trigger CSS property
+short-title: animation-trigger
 slug: Web/CSS/Reference/Properties/animation-trigger
 page-type: css-property
 status:

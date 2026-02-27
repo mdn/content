@@ -1,5 +1,6 @@
 ---
-title: timeline-trigger-name
+title: timeline-trigger-name CSS property
+short-title: timeline-trigger-name
 slug: Web/CSS/Reference/Properties/timeline-trigger-name
 page-type: css-property
 status:

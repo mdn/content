@@ -1,5 +1,6 @@
 ---
-title: timeline-trigger-active-range
+title: timeline-trigger-active-range CSS property
+short-title: timeline-trigger-active-range
 slug: Web/CSS/Reference/Properties/timeline-trigger-active-range
 page-type: css-shorthand-property
 status:
