@@ -3,12 +3,10 @@ title: "CloseWatcher: close() method"
 short-title: close()
 slug: Web/API/CloseWatcher/close
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CloseWatcher.close
 ---
 
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`close()`** method of the {{domxref("CloseWatcher")}} interface lets you skip any logic in the `cancel` event handler and immediately fire the `close` event. It then deactivates the close watcher as if `destroy()` was called.
 
