@@ -84,9 +84,9 @@ jobs:
           git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
           git config --global user.name "mdn-bot"
 
-          # Remove non-Markdown files from HEAD.
+          # Remove non-Markdown files from BASE.
           find files -type f ! -name '*.md' -delete
-          git commit --quiet -m "Remove non-Markdown files from PR head" files
+          git commit --quiet -m "Remove non-Markdown files from PR base" files
 
           # Remove files from BASE.
           rm -r files *.md
