@@ -73,9 +73,11 @@ Other browsers have similar restrictions over the websites extensions can be ins
 
 The set of domains can be restricted further through enterprise policies: Firefox recognizes the `restricted_domains` policy as documented at [ExtensionSettings in mozilla/policy-templates](https://github.com/mozilla/policy-templates/blob/master/README.md#extensionsettings). Chrome's `runtime_blocked_hosts` policy is documented at [Configure ExtensionSettings policy](https://support.google.com/chrome/a/answer/9867568).
 
-### Restricted peges
+### Limitations
 
-Extensions cannot load scripts into [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) or privileged browser UI pages (such as `about:debugging`, `about:addons`, reader view, view-source, or the PDF viewer).
+By default, content scripts do not run in `about:blank`, `about:srcdoc`, `data:` and `blob:`-pages. To opt into its execution, use the [`match_origin_as_fallback` option in the `content_scripts` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#match_origin_as_fallback) or the [`matchOriginAsFallback` option in the `scripting` API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/RegisteredContentScript#matchoriginasfallback).
+
+Extensions cannot inject content scripts into privileged browser UI pages (such as `about:debugging`, `about:addons`, reader view, view-source, or the PDF viewer) or [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages).
 
 If an extension wants to run code in an extension page dynamically, it can include a script in the page. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
 
