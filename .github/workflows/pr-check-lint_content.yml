@@ -37,6 +37,9 @@ jobs:
       - name: Checkout BASE
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
+          # explicitly specify base ref to ensure `pull_request` runs
+          # behave the same as `pull_request_target` runs
+          ref: ${{ github.event.pull_request.base.sha }}
           persist-credentials: false
 
       - name: Get changed files
