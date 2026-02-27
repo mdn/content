@@ -14,22 +14,35 @@ sidebar:
     title: Modules
     details: open
     children:
+      - link: /Web/WebDriver/Reference/BiDi/Modules/browser
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/input
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/log
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/network
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/script
+        code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/session
         details: closed
         code: true
         children:
-          - title: Commands
-            details: open
-            children:
-              - link: /Web/WebDriver/Reference/BiDi/Modules/session/end
-                title: end
-                code: true
-              - link: /Web/WebDriver/Reference/BiDi/Modules/session/new
-                title: new
-                code: true
-              - link: /Web/WebDriver/Reference/BiDi/Modules/session/status
-                title: status
-                code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/end
+            title: end
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/new
+            title: new
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/status
+            title: status
+            code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/storage
+        code: true
   - type: section
     link: /Web/WebDriver/Reference/Classic
     title: Classic
