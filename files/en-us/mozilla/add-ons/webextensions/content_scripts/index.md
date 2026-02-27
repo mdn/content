@@ -75,13 +75,11 @@ The set of domains can be restricted further through enterprise policies: Firefo
 
 ### Limitations
 
-By default, content scripts do not run in `about:blank`, `about:srcdoc`, `data:` and `blob:`-pages. To opt into its execution, use the [`match_origin_as_fallback` option in the `content_scripts` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#match_origin_as_fallback) or the [`matchOriginAsFallback` option in the `scripting` API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/RegisteredContentScript#matchoriginasfallback).
+By default, content scripts do not run in `about:blank`, `about:srcdoc`, `data:`, and `blob:` pages. To enable their execution, use the [`match_origin_as_fallback`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#match_origin_as_fallback) option in the `content_scripts` manifest key or the [`matchOriginAsFallback`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/RegisteredContentScript#matchoriginasfallback) option in the `scripting` API.
 
 Extensions cannot inject content scripts into privileged browser UI pages (such as `about:debugging`, `about:addons`, reader view, view-source, or the PDF viewer) or [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages).
 
 If an extension wants to run code in an extension page dynamically, it can include a script in the page. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
-
-### Limitations
 
 Whole tabs or frames may be loaded using [`data:` URI](/en-US/docs/Web/URI/Reference/Schemes/data), {{DOMxRef("URL.createObjectURL_static", "Blob")}} objects, and other similar techniques. Support of content scripts injection into such special documents varies across browsers, see the Firefox [bug #1411641 comment 41](https://bugzil.la/1411641#c41) for some details.
 
