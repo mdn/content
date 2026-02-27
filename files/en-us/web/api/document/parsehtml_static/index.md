@@ -26,7 +26,7 @@ Document.parseHTML(input, options)
 - `options` {{optional_inline}}
   - : An options object with the following optional parameters:
     - `sanitizer`
-      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the default sanitizer configuration.
+      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the [default Sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration).
         Note that generally a `"Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to reused.
         If not specified, the XSS-safe default sanitizer configuration is used.
 
@@ -48,8 +48,9 @@ A {{domxref("Document")}}.
 The **`parseHTML()`** method parses and sanitize a string of HTML in order to create a new {{domxref("Document")}} instance that is XSS-safe.
 The resulting `Document` will have a [content type](/en-US/docs/Web/API/Document/contentType) of "text/html", a [character set](/en-US/docs/Web/API/Document/characterSet) of UTF-8, and a URL of "about:blank".
 
-If no sanitizer configuration is specified in the `options.sanitizer` parameter, `parseHTML()` is used with the default {{domxref("Sanitizer")}} configuration.
-This configuration allows all elements and attributes that are considered XSS-safe, thereby disallowing entities that are considered unsafe.
+If no sanitizer configuration is specified in the `options.sanitizer` parameter, `parseHTML()` is used with the [default Sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration).
+This configuration is suitable for the majority of sanitization use cases (note that it removes more than just the XSS-unsafe elements and attributes).
+
 A custom sanitizer or sanitizer configuration can be specified to choose which elements, attributes, and comments are allowed or removed.
 Note that even if unsafe options are allowed by the sanitizer configuration, they will still be removed when using this method (which implicitly calls {{domxref('Sanitizer.removeUnsafe()')}}).
 

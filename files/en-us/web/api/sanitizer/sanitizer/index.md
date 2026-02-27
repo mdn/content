@@ -20,7 +20,9 @@ new Sanitizer(configuration)
 ### Parameters
 
 - `configuration` {{optional_inline}}
-  - : A {{domxref("SanitizerConfig")}} defining a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration), or the string `"default"` to indicate the default configuration.
+  - : A {{domxref("SanitizerConfig")}} defining a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration), or the string `"default"` to indicate the [default Sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration).
+
+    If omitted, the constructor returns a `Sanitizer` with the default configuration.
 
 ### Returns
 
@@ -38,7 +40,8 @@ An instance of the {{domxref("Sanitizer")}} object.
 
 The constructor creates a new {{domxref("Sanitizer")}} object, which can be used to filter unwanted elements and attributes from HTML or documents before they are inserted/parsed into the DOM.
 
-The default `Sanitizer` allows only XSS-safe input by default, omitting elements such as {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, `<use>`, and event handler attributes from their respective allow lists, and disallowing data attributes, and comments.
+The [default Sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration) is an [allow sanitizer](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations) that omits XSS-unsafe input, along with a number of other elements that are considered problematic — or often unwanted, such as data attributes, and comments.
+This configuration is suitable for the majority of sanitization use cases.
 It is created if `"default"` or no object is passed to the constructor.
 
 The constructor can be passed a {{domxref("SanitizerConfig")}} with a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration) to customize the sanitizer behavior.
