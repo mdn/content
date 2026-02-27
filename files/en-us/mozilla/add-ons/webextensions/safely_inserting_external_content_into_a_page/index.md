@@ -82,7 +82,9 @@ You can use any method to add the sanitized HTML to your DOM, for example jQuery
 
 ```js
 let elem = $("<div/>");
-let cleanHTML = DOMPurify.sanitize(externalHTML, { RETURN_TRUSTED_TYPE: false });
+let cleanHTML = DOMPurify.sanitize(externalHTML, {
+  RETURN_TRUSTED_TYPE: false,
+});
 elem.html(cleanHTML);
 ```
 
