@@ -9,7 +9,7 @@ sidebar:
     title: Reference
   - type: section
     link: /Web/WebDriver/Reference/BiDi
-    title: Bidi
+    title: BiDi
   - link: /Web/WebDriver/Reference/BiDi/Modules
     title: Modules
     details: open
