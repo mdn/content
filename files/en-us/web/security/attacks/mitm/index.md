@@ -25,7 +25,7 @@ The [TLS guide](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security) desc
 
 - [Serve all resources over TLS](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security#mixed_content): not only HTML documents but all subresources such as scripts, stylesheets, images, and fonts.
 
-- If you redirect HTTP requests to use HTTPS, implement [strict transport security (HSTS)](/en-US/docs/Web/Security/Attacks/MITM#use_hsts_when_upgrading_http_requests).
+- If you redirect HTTP requests to use HTTPS, implement [strict transport security (HSTS)](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security#upgrading_http_connections).
 
 ## See also
 
