@@ -32,8 +32,8 @@ The configuration defines the HTML entities that will be filtered out of the inp
 The {{domxref('Element')}} methods are context aware, and will additionally drop any elements that the HTML specification does not allow in the target element.
 
 The safe methods always remove XSS-unsafe elements and attributes.
-If no sanitizer is passed as a parameter they will use the default sanitizer configuration, which allows all elements and attributes except those that are known to be unsafe, such as {{htmlelement("script")}} elements and `onclick` event handlers.
-If a custom sanitizer is used, it is implicitly updated to remove any elements and attributes that are not XSS-safe (note that the passed sanitizer is not modified, and might still allow unsafe entities if used with an unsafe method).
+If no sanitizer is passed as a parameter they will use the [default sanitizer configuration](#default_sanitizer_configuration), which removes both XSS-unsafe elements and attributes, such as {{htmlelement("script")}} elements and `onclick` event handlers, and others that are problematic for other reasons.
+If a custom sanitizer is used with a safe method, it is implicitly updated to remove any elements and attributes that are not XSS-safe (note that the passed sanitizer is not modified, and might still allow unsafe entities if used with an unsafe method).
 
 The safe methods should be used instead of {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, or {{domxref("ShadowRoot.innerHTML")}}, for injecting untrusted HTML content.
 For example, in most cases you can use {{domxref('Element.setHTML()')}} with the default sanitizer as a drop-in replacement for {{domxref("Element.innerHTML")}}.
@@ -192,6 +192,19 @@ The methods return `true` or `false` to indicate whether or not they modified th
 So if you call `allowElement()` on an allow configuration and the specified element is not present, it will be added to the `elements` array and the method will return `true`.
 But if the element is already present then the method would return `false`.
 Note that if you call the same method to set a per-element attribute, this will return `false` if called on a remove sanitizer, because the change cannot be made.
+
+#### Default Sanitizer configuration
+
+The default Sanitizer configuration defines the {{domxref("Sanitizer")}} that is used if you call {{domxref("Element.setHTML()")}} or the other [safe sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods) without a custom sanitizer.
+It is also the configuration that is returned by the [`Sanitizer()` constructor](/en-US/docs/Web/API/Sanitizer/Sanitizer) when no configuration is set.
+
+This sanitizes elements and attributes that are known to be XSS-unsafe, along with other elements and attributes that are considered problematic for other reasons.
+It therefore provides a sanitizer with a minimal attack surface, which is still suitable for the majority of sanitization use cases.
+
+Note that if you specify a custom sanitizer for a safe sanitization method, it will always be updated to ensure XSS-unsafe elements and event handler content attributes are sanitized.
+However, it will not be updated to remove the additional "problematic" elements that aren't allowed by the default configuration.
+
+For a listing of the allowed elements and attributes, see [Default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
 
 ### Sanitization and Trusted Types
 

@@ -55,10 +55,11 @@ The **`setHTML()`** method provides an XSS-safe method to parse and sanitize a s
 `setHTML()` drops any elements in the HTML input string that are invalid in the context of the current element, such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
 It then removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer configuration.
 
-If no sanitizer configuration is specified in the `options.sanitizer` parameter, `setHTML()` is used with the default {{domxref("Sanitizer")}} configuration.
-This configuration allows all elements and attributes that are considered XSS-safe, thereby disallowing entities that are considered unsafe; see the [`Sanitizer()`](/en-US/docs/Web/API/Sanitizer/Sanitizer) constructor for more information.
+If no sanitizer configuration is specified in the `options.sanitizer` parameter, `setHTML()` is used with the [default Sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration).
+This configuration is suitable for the majority of sanitization use cases (note that it removes more than just the XSS-unsafe elements and attributes).
+
 A custom sanitizer or sanitizer configuration can be specified to choose which elements, attributes, and comments are allowed or removed.
-Note that even if unsafe options are allowed by the sanitizer configuration, they will still be removed when using this method (which implicitly calls {{domxref('Sanitizer.removeUnsafe()')}}).
+Note that even if XSS-unsafe options are allowed by the sanitizer configuration, they will still be removed when using this method (which implicitly calls {{domxref('Sanitizer.removeUnsafe()')}}).
 
 `setHTML()` should be used instead of {{domxref("Element.innerHTML")}} for inserting untrusted strings of HTML into an element.
 It should also be used instead of {{domxref("Element.setHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
