@@ -47,6 +47,8 @@ sidebar:
             code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/storage
         code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/userAgentClientHints
+        code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/webExtension
         code: true
   - type: section
