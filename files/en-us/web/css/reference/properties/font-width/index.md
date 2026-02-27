@@ -318,6 +318,9 @@ p {
 }
 ```
 
+> [!NOTE]
+> You can automate this fallback pattern using the [postcss-preset-env](https://preset-env.cssdb.org/) plugin for PostCSS, which includes the [postcss-font-width-property](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-font-width-property) transform to convert `font-width` properties to `font-stretch` automatically.
+
 ## Specifications
 
 {{Specifications}}
