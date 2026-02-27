@@ -12,6 +12,9 @@ browser-compat: api.IntersectionObserverEntry.IntersectionObserverEntry
 
 The **`IntersectionObserverEntry()`** constructor creates and returns a new {{domxref("IntersectionObserverEntry")}} object.
 
+> [!NOTE]
+> In typical usage, you don't need to call this constructor yourself. `IntersectionObserverEntry` objects are created automatically by the browser and delivered to the {{domxref("IntersectionObserver")}} callback when an intersection is observed, or returned by {{domxref("IntersectionObserver.takeRecords()")}}.
+
 ## Syntax
 
 ```js-nolint
@@ -47,7 +50,7 @@ A new {{domxref("IntersectionObserverEntry")}} object whose properties are initi
 
 ### Creating an IntersectionObserverEntry
 
-This example creates a basic `IntersectionObserverEntry` describing a fully visible element.
+This example creates a basic `IntersectionObserverEntry` describing a fully visible element. While you can construct an entry manually like this, in practice these objects are created by the browser and passed to your {{domxref("IntersectionObserver")}} callback automatically.
 
 ```js
 const entry = new IntersectionObserverEntry({
