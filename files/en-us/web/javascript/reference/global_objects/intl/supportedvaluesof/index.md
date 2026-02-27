@@ -109,12 +109,12 @@ Below are all values that are commonly supported by browsers for the `collation`
 | `eor`      | European ordering rules (ENV 13710). This order is designed not to be language-specific. While the API requires attaching this to a language, the requested language has no effect on the order.   |
 | `phonebk`  | Phonebook style ordering (for German). Also recognized as `phonebook`.                                                                                                                             |
 | `phonetic` | Phonetic ordering (sorting based on pronunciation; for Lingala)                                                                                                                                    |
-| `pinyin`   | Pinyin ordering for Latin and for CJK characters (for Chinese)                                                                                                                                     |
+| `pinyin`   | Pinyin ordering for Latin and for Han characters (for Chinese)                                                                                                                                     |
 | `searchjl` | Special collation type for Korean initial consonant search. **Warning:** This collation is not for sorting, even though you can only use it with {{jsxref("Intl.Collator")}} of `usage: "sort"`.   |
-| `stroke`   | Pinyin ordering for Latin, stroke order for CJK characters (for Chinese)                                                                                                                           |
+| `stroke`   | Pinyin ordering for Latin, stroke order for Han characters (for Chinese)                                                                                                                           |
 | `trad`     | Traditional style ordering (such as in Spanish). Also recognized as `traditional`.                                                                                                                 |
-| `unihan`   | Pinyin ordering for Latin, Unihan radical-stroke ordering for CJK characters (for Chinese, Japanese, and Korean)                                                                                   |
-| `zhuyin`   | Pinyin ordering for Latin, zhuyin order for Bopomofo and CJK characters (for Chinese)                                                                                                              |
+| `unihan`   | Unihan radical-stroke ordering for Han characters (for Chinese, Japanese, and Korean), Pinyin ordering for Latin for Chinese and Japanese standard kana ordering for Japanese                      |
+| `zhuyin`   | Pinyin ordering for Latin, zhuyin order for Bopomofo and Han characters (for Chinese)                                                                                                              |
 
 The types below are specified in CLDR data, but are deprecated, are discouraged from explicit usage, and/or may not be indicated by browsers as supported for various reasons. Avoid using them:
 
