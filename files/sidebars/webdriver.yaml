@@ -14,6 +14,8 @@ sidebar:
     title: Modules
     details: open
     children:
+      - link: /Web/WebDriver/Reference/BiDi/Modules/bluetooth
+        code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/browser
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext
@@ -25,6 +27,8 @@ sidebar:
       - link: /Web/WebDriver/Reference/BiDi/Modules/log
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/network
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/script
         code: true
@@ -42,6 +46,8 @@ sidebar:
             title: status
             code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/storage
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/webExtension
         code: true
   - type: section
     link: /Web/WebDriver/Reference/Classic
