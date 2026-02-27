@@ -101,20 +101,20 @@ References:
 
 Below are all values that are commonly supported by browsers for the `collation` key. These values can be used for the `collation` option or the `co` [Unicode extension key](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument) when creating objects such as {{jsxref("Intl.Collator")}}.
 
-| Value      | Description                                                                                                                                                                                      |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `compat`   | A previous version of the ordering, for compatibility (for Arabic)                                                                                                                               |
-| `dict`     | Dictionary style ordering (such as in Sinhala). Also recognized as `dictionary`.                                                                                                                 |
-| `emoji`    | Recommended ordering for emoji characters                                                                                                                                                        |
-| `eor`      | European ordering rules                                                                                                                                                                          |
-| `phonebk`  | Phonebook style ordering (such as in German). Also recognized as `phonebook`.                                                                                                                    |
-| `phonetic` | Phonetic ordering (sorting based on pronunciation; for Lingala)                                                                                                                                  |
-| `pinyin`   | Pinyin ordering for Latin and for CJK characters (used in Chinese)                                                                                                                               |
-| `searchjl` | Special collation type for Korean initial consonant search. **Warning:** This collation is not for sorting, even though you can only use it with {{jsxref("Intl.Collator")}} of `usage: "sort"`. |
-| `stroke`   | Pinyin ordering for Latin, stroke order for CJK characters (used in Chinese)                                                                                                                     |
-| `trad`     | Traditional style ordering (such as in Spanish). Also recognized as `traditional`.                                                                                                               |
-| `unihan`   | Pinyin ordering for Latin, Unihan radical-stroke ordering for CJK characters (used in Chinese)                                                                                                   |
-| `zhuyin`   | Pinyin ordering for Latin, zhuyin order for Bopomofo and CJK characters (used in Chinese)                                                                                                        |
+| Value      | Description                                                                                                                                                                                        |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `compat`   | A previous version of the ordering, for compatibility (for Arabic)                                                                                                                                 |
+| `dict`     | Dictionary style ordering (for Sinhala). Also recognized as `dictionary`.                                                                                                                          |
+| `emoji`    | Recommended ordering for emoji characters. The requested language has no effect, so combining this with a language that requires language-specific rules breaks sorting for text in that language! |
+| `eor`      | European ordering rules (ENV 13710). This order is designed not to be language-specific. While the API requires attaching this to a language, the requested language has no effect on the order.   |
+| `phonebk`  | Phonebook style ordering (for German). Also recognized as `phonebook`.                                                                                                                             |
+| `phonetic` | Phonetic ordering (sorting based on pronunciation; for Lingala)                                                                                                                                    |
+| `pinyin`   | Pinyin ordering for Latin and for CJK characters (for Chinese)                                                                                                                                     |
+| `searchjl` | Special collation type for Korean initial consonant search. **Warning:** This collation is not for sorting, even though you can only use it with {{jsxref("Intl.Collator")}} of `usage: "sort"`.   |
+| `stroke`   | Pinyin ordering for Latin, stroke order for CJK characters (for Chinese)                                                                                                                           |
+| `trad`     | Traditional style ordering (such as in Spanish). Also recognized as `traditional`.                                                                                                                 |
+| `unihan`   | Pinyin ordering for Latin, Unihan radical-stroke ordering for CJK characters (for Chinese, Japanese, and Korean)                                                                                   |
+| `zhuyin`   | Pinyin ordering for Latin, zhuyin order for Bopomofo and CJK characters (for Chinese)                                                                                                              |
 
 The types below are specified in CLDR data, but are deprecated, are discouraged from explicit usage, and/or may not be indicated by browsers as supported for various reasons. Avoid using them:
 
