@@ -81,8 +81,6 @@ Extensions cannot inject content scripts into privileged browser UI pages (such 
 
 If an extension wants to run code in an extension page dynamically, it can include a script in the page. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
 
-Whole tabs or frames may be loaded using [`data:` URI](/en-US/docs/Web/URI/Reference/Schemes/data), {{DOMxRef("URL.createObjectURL_static", "Blob")}} objects, and other similar techniques. Support of content scripts injection into such special documents varies across browsers, see the Firefox [bug #1411641 comment 41](https://bugzil.la/1411641#c41) for some details.
-
 ## Content script environment
 
 ### DOM access
