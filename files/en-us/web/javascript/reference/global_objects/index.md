@@ -150,16 +150,6 @@ Control abstractions can help to structure code, especially async code (without 
 
 ### Internationalization
 
-Additions to the ECMAScript core for language-sensitive functionalities.
+Addition to the ECMAScript core for language-sensitive functionalities.
 
 - {{jsxref("Intl")}}
-- {{jsxref("Intl.Collator")}}
-- {{jsxref("Intl.DateTimeFormat")}}
-- {{jsxref("Intl.DisplayNames")}}
-- {{jsxref("Intl.DurationFormat")}}
-- {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Intl.Locale")}}
-- {{jsxref("Intl.NumberFormat")}}
-- {{jsxref("Intl.PluralRules")}}
-- {{jsxref("Intl.RelativeTimeFormat")}}
-- {{jsxref("Intl.Segmenter")}}
