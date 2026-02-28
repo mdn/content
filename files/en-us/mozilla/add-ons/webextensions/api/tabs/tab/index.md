@@ -64,6 +64,8 @@ Values of this type are objects. They contain the following properties:
   - : `boolean`. Whether the tab is selected. This property has been replaced by `active` and `highlighted`.
 - `sessionId` {{optional_inline}}
   - : `string`. The session ID used to uniquely identify a `Tab` obtained from the {{WebExtAPIRef('sessions')}} API.
+- `splitViewId` {{optional_inline}}
+  - : `integer`. The ID of the split view the tab belongs to. Set to {{WebExtAPIRef('tabs.SPLIT_VIEW_ID_NONE')}} when the tab doesn't belong to a split view.
 - `status` {{optional_inline}}
   - : `string`. Either _loading_ or _complete_.
 - `successorTabId` {{optional_inline}}
