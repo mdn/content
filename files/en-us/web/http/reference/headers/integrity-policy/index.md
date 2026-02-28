@@ -10,12 +10,11 @@ sidebar: http
 The HTTP **`Integrity-Policy`** response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) guarantees.
 
 When set the user agent will block requests on specified [request destinations](#blocked-destinations) that omit integrity metadata, and will also block requests in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made.
-
-Violation reports may also be sent to if the header includes a reporting endpoint name that matches an endpoint declared using the {{HTTPHeader("Reporting-Endpoints")}} header.
-Reports are generated using the [Reporting API](/en-US/docs/Web/API/Reporting_API), and may also be observed in the page for which the integrity policy is being enforced, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver).
-The format of the report body is given by the {{domxref("IntegrityViolationReportBody")}} dictionary (a JSON-serialized form of this body is sent in POSTs to reporting server endpoints).
-
 This helps guard against content manipulation of fetched subresources.
+
+Violations of the policy may be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+Reports can be observed in the page for which the policy is being enforced, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver), and sent to server endpoints defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header and selected using the [`endpoints`](#endpoints) field.
+For more information see {{domxref("IntegrityViolationReport")}}.
 
 <table class="properties">
   <tbody>
@@ -59,7 +58,7 @@ The header values are defined as structured field dictionaries with the followin
 
 ### Blocking and reporting when scripts lack integrity metadata
 
-This example shows a document that blocks and reports when any {{htmlelement("script")}} (or `HTMLScriptElement`) does not specify an `integrity` attribute, or when a script resource is requested in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
+This example shows a document that blocks and reports to a server endpoint when any {{htmlelement("script")}} (or `HTMLScriptElement`) does not specify an `integrity` attribute, or when a script resource is requested in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
 
 Note that the `integrity-endpoint` used in `Integrity-Policy` is defined in the {{httpheader("Reporting-Endpoints")}} header.
 
@@ -94,5 +93,8 @@ The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoint
 ## See also
 
 - {{HTTPHeader("Integrity-Policy-Report-Only")}}
-- [Integrity Policy](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy)
+- {{HTTPHeader("Reporting-Endpoints")}}
+- {{domxref("ReportingObserver")}}
+- {{domxref("IntegrityViolationReport")}}
+- [Integrity Policy](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy) in [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy)
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)

@@ -7,8 +7,13 @@ browser-compat: http.headers.Content-Security-Policy
 sidebar: http
 ---
 
-The HTTP **`Content-Security-Policy`** response header allows website administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints.
+The HTTP **`Content-Security-Policy`** response header allows website administrators to control resources the user agent is allowed to load for a given page.
+With a few exceptions, policies mostly involve specifying server origins and script endpoints.
 This helps guard against {{Glossary("cross-site scripting")}} attacks.
+
+Violations may be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+Reports can be observed in the page for which the policy is being enforced, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver), and sent to server endpoints defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header and selected using the CSP {{CSP("report-to")}} directive.
+For more information see {{domxref("CSPViolationReport")}}.
 
 See the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) guide for details about how a CSP is delivered to the browser, what it looks like, along with use cases and deployment strategies.
 
@@ -368,7 +373,7 @@ See [The `strict-dynamic` keyword](/en-US/docs/Web/HTTP/Guides/CSP#the_strict-dy
 
 ### 'report-sample'
 
-If this expression is included in a directive controlling scripts or styles, and the directive causes the browser to block any inline scripts, inline styles, or event handler attributes, then the [violation report](/en-US/docs/Web/HTTP/Guides/CSP#violation_reporting) that the browser generates will contain a {{domxref("CSPViolationReportBody.sample", "sample")}} property containing the first 40 characters of the blocked resource.
+If this expression is included in a directive controlling scripts or styles, and the directive causes the browser to block any inline scripts, inline styles, or event handler attributes, then the [violation report](/en-US/docs/Web/HTTP/Guides/CSP#violation_reporting) that the browser generates will contain a {{domxref("CSPViolationReport.sample", "sample")}} property containing the first 40 characters of the blocked resource.
 
 ## CSP in workers
 
@@ -461,6 +466,10 @@ See [Content Security Policy (CSP) implementation](/en-US/docs/Web/Security/Prac
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
+- CSP {{CSP("report-to")}} directive
+- {{httpheader("Reporting-Endpoints")}}
+- {{domxref("CSPViolationReport")}}
+- [Reporting API](/en-US/docs/Web/API/Reporting_API).
 - [Learn about: Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP)
 - [Content Security in WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Adopting a strict policy](https://csp.withgoogle.com/docs/strict-csp.html)

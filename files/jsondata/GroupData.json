@@ -1457,12 +1457,10 @@
       "overview": ["Reporting API"],
       "guides": [],
       "interfaces": [
-        "CSPViolationReportBody",
-        "DeprecationReportBody",
-        "InterventionReportBody",
-        "IntegrityViolationReportBody",
-        "Report",
-        "ReportBody",
+        "CSPViolationReport",
+        "DeprecationReport",
+        "InterventionReport",
+        "IntegrityViolationReport",
         "ReportingObserver",
         "SecurityPolicyViolationEvent"
       ],
