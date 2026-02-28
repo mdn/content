@@ -71,7 +71,7 @@ browser.browserAction.onClicked.addListener(() => {
     progress = 0;
     browser.notifications.create(cakeNotification, {
       type: "progress",
-      iconUrl: browser.extension.getURL("icons/cake-48.png"),
+      iconUrl: browser.runtime.getURL("icons/cake-48.png"),
       title: "Your cake is being prepared…",
       message: "Something something cake",
       progress,

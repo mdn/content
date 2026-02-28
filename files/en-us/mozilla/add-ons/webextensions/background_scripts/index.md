@@ -339,7 +339,7 @@ browser.alarms.onAlarm.addListener(() => {
 
 ### Update calls for background script functions
 
-Extensions commonly host their primary functionality in the background script. Some extensions access functions and variables defined in the background page through the `window` returned by {{WebExtAPIRef("extension.getBackgroundPage")}}.
+Extensions commonly host their primary functionality in the background script. Some extensions access functions and variables defined in the background page through the `window` returned by {{WebExtAPIRef("runtime.getBackgroundPage")}}.
 The method returns `null` when:
 
 - extension pages are isolated, such as extension pages in Private Browsing mode or container tabs.
@@ -350,11 +350,11 @@ The method returns `null` when:
 > The `getBackgroundPage()` methods discussed in this section cannot be used in a cross-browser extension, because Manifest Version 3 extensions in Chrome cannot use background or event pages.
 
 If your extension requires a reference to the `window` of the background page, use {{WebExtAPIRef("runtime.getBackgroundPage")}} to ensure the event page is running.
-If the call is optional (that is, only needed if the event page is alive) then use {{WebExtAPIRef("extension.getBackgroundPage")}}.
+If the call is optional (that is, only needed if the event page is alive) then use {{WebExtAPIRef("runtime.getBackgroundPage")}}.
 
 ```js example-bad
 document.getElementById("target").addEventListener("click", async () => {
-  let backgroundPage = browser.extension.getBackgroundPage();
+  let backgroundPage = browser.runtime.getBackgroundPage();
   // Warning: backgroundPage is likely null.
   backgroundPage.backgroundFunction();
 });
