@@ -8,6 +8,8 @@ sidebar: cssref
 
 The **`column-count`** [CSS](/en-US/docs/Web/CSS) property breaks an element's content into the specified number of columns.
 
+The {{cssxref("columns")}} shorthand property can be used to set the `column-count`, {{cssxref("column-height")}}, and {{cssxref("column-width")}} property values in a single declaration.
+
 {{InteractiveExample("CSS Demo: column-count")}}
 
 ```css interactive-example-choice
@@ -114,7 +116,9 @@ column-count: unset;
 
 ## See also
 
-- {{CSSXref("column-width")}}, {{CSSXref("columns")}} shorthand
+- {{cssxref("column-height")}}
+- {{cssxref("column-width")}}
+- {{cssxref("columns")}} shorthand
 - {{CSSXref("column-rule-color")}}, {{CSSXref("column-rule-style")}}, {{CSSXref("column-rule-width")}}, {{CSSXref("column-rule")}} shorthand
 - [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) (Learn Layout)
 - [Basic Concepts of Multicol](/en-US/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)
