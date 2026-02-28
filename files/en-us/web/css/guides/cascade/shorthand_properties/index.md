@@ -57,13 +57,13 @@ Shorthands handling properties related to edges of a box, like {{cssxref("border
 
 Similarly, shorthands handling properties related to corners of a box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
 
-- **1-value syntax:** `border-radius: 1em` — The single value represents all corners: ![Box corners with one-value syntax](corner1.png)
+- **1-value syntax:** `border-radius: 1em` — A single value represents all corners: ![Box corners with one-value syntax](corner1.png)
 
-- **2-value syntax:** `border-radius: 1em 2em` — The first value represents the top left and bottom right corner, the second the top right and bottom left ones: ![Box corners with two-value syntax](corner2.png)
+- **2-value syntax:** `border-radius: 1em 2em` — The first value represents the top-left and bottom-right corner and the second values represents the top-right and bottom-left corners: ![Box corners with two-value syntax](corner2.png)
 
-- **3-value syntax:** `border-radius: 1em 2em 3em` — The first value represents the top left corner, the second the top right and bottom left ones, and the third value the bottom right corner: ![Box corners with three-value syntax](corner3.png)
+- **3-value syntax:** `border-radius: 1em 2em 3em` — The first value represents the top-left corner, the second value represents the top-right and bottom-left corners, and the third value represents the bottom-right corner: ![Box corners with three-value syntax](corner3.png)
 
-- **4-value syntax:** `border-radius: 1em 2em 3em 4em` — The four values represent the top left, top right, bottom right and bottom left corners respectively, always in that order, that is clock-wise starting at the top left: ![Box corners with four-value syntax](corner4.png)
+- **4-value syntax:** `border-radius: 1em 2em 3em 4em` — The four values represent the top-left, top-right, bottom-right and bottom-left corners respectively, always in that order, that is clock-wise starting at the top-left: ![Box corners with four-value syntax](corner4.png)
 
 ## Background properties
 
