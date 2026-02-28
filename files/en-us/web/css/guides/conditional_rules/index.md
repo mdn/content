@@ -33,6 +33,16 @@ There are plans to further extend possible queries by adding the generalized con
 ### At-rules and descriptors
 
 - {{cssxref("@container")}}
+  - [`aspect-ratio`](/en-US/docs/Web/CSS/Reference/At-rules/@container#aspect-ratio)
+  - [`block-size`](/en-US/docs/Web/CSS/Reference/At-rules/@container#block-size)
+  - [`fallback`](/en-US/docs/Web/CSS/Reference/At-rules/@container#fallback)
+  - [`height`](/en-US/docs/Web/CSS/Reference/At-rules/@container#height)
+  - [`inline-size`](/en-US/docs/Web/CSS/Reference/At-rules/@container#inline-size)
+  - [`orientation`](/en-US/docs/Web/CSS/Reference/At-rules/@container#orientation)
+  - [`scrollable`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrollable)
+  - [`snapped`](/en-US/docs/Web/CSS/Reference/At-rules/@container#snapped)
+  - [`stuck`](/en-US/docs/Web/CSS/Reference/At-rules/@container#stuck)
+  - [`width`](/en-US/docs/Web/CSS/Reference/At-rules/@container#width)
 - {{cssxref("@media")}}
 - {{cssxref("@supports")}}
 
@@ -115,6 +125,9 @@ The CSS conditional rules module also introduces a `media()` CSS function. Curre
 
 - [CSS namespaces](/en-US/docs/Web/CSS/Guides/Namespaces) module
   - {{cssxref("@namespace")}} at-rule
+
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
+  - [Using anchored container queries](/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 
 ## Specifications
 
