@@ -169,7 +169,7 @@ div {
 
 {{EmbedLiveSample('Setting_flex_item_shrink_factor', 500, 100)}}
 
-The flex items don't overflow their container because they are able to shrink: the `500px` of negative free space is distributed among the five items based on their `flex-shrink` values. The first three items have `flex-shrink: 1` set. D has `flex-shrink: 1.5` and E has `flex-shrink: 2` set. The final width of D and E is less than the others, with E smaller than D.
+The flex items don't overflow their container because they are able to shrink: the `500px` of negative free space is distributed among the five items based on their `flex-shrink` values. Since a total of shrink values for the five items is `6.5`, width of items with `flex-shrink: 1` is reduced by `1/6.5 * 500px = 76.92px` and of item with `flex-shink: 2` by `2/6.5 * 500px = 153.85px`.
 
 ## Specifications
 
