@@ -177,7 +177,7 @@ Because `font-width` does not yet have broad browser support, you may want to in
 ```css
 @font-face {
   font-family: "MyFont";
-  src: url("myfont.woff2") format("woff2");
+  src: url("my-font.woff2") format("woff2");
   font-stretch: condensed; /* for browsers that don't support font-width */
   font-width: condensed;
 }

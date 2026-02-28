@@ -97,7 +97,7 @@ When the result is returned, we invoke the exported Wasm `run()` function availa
 const outputElem = document.querySelector("p");
 
 const obj = {
-  output: function (elem, val) {
+  output(elem, val) {
     elem.textContent += `${val} `;
   },
 };
