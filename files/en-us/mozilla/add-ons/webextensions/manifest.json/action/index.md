@@ -298,6 +298,10 @@ In Firefox:
 - The default height and width for icons in the toolbar is 16 \* [`window.devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio).
 - The default height and width for icons in the menu panel is 32 \* [`window.devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio).
 
+In Opera, the height and width for icons is chosed based on the [`window.devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio), one of 16, 20, 24, 32, or 40.
+
+In Chromium, Chrome, Edge, Brave, etc, the height and width for icons is chosed based on the [`window.devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio), either 16 or 32.
+
 So you can specify icons that match exactly, on both normal and Retina displays, by supplying three icon files, and specifying them like this:
 
 ```json
