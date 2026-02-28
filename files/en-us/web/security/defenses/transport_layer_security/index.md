@@ -16,7 +16,7 @@ TLS secures a network connection in three ways:
 
 In particular, HTTPS is the defense against a [manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM) attack, in which the attacker inserts themselves between the user's browser and the server they are connecting to, and can read and modify the traffic exchanged.
 
-Browsers consider pages delivered over HTTPS as providing a [secure context](/en-US/docs/Web/Security/Secure_Contexts). Many powerful web APIs are only available to code running in a secure context.
+Browsers consider pages delivered over HTTPS as providing a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts). Many powerful web APIs are only available to code running in a secure context.
 
 **All websites should serve all their pages and subresources over HTTPS, and implement server authentication.**
 

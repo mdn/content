@@ -90,7 +90,7 @@ Firefox 148 was released on [February 24, 2026](https://whattrainisitnow.com/rel
 
 #### Marionette
 
-- Added the `Reporting:GenerateTestReport` command to [generate a test report via the Reporting API](https://www.w3.org/TR/reporting-1/#generate-test-report-command) ([Firefox bug 1909662](https://bugzil.la/1909662)).
+- Added the `Reporting:GenerateTestReport` command to [generate a test report via the Reporting API](https://w3c.github.io/reporting/#generate-test-report-command) ([Firefox bug 1909662](https://bugzil.la/1909662)).
 
 ## Experimental web features
 
