@@ -65,19 +65,6 @@ The extra privileges include:
 - the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the `"cookies"` API permission is also included.
 - bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards.
 
-In Firefox extensions get host permissions for their origin, which is of the form:
-
-```url
-moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
-```
-
-where `60a20a9b-1ad4-af49-9b6c-c64c98c37920` is the extension's internal ID. The extension can get this URL programmatically by calling {{webextAPIref("extension/getURL", "extension.getURL()")}}:
-
-```js
-browser.extension.getURL("");
-// moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
-```
-
 ## Example
 
 ```json

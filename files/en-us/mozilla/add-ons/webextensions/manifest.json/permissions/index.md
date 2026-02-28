@@ -33,9 +33,9 @@ sidebar: addonsidebar
   </tbody>
 </table>
 
-Use the `permissions` key to request special powers for your extension. This key is an array of strings, and each string is a request for a permission.
+Use the `permissions` key to request special powers for your extension. This key is an array of strings, each of which is a permission request.
 
-If you request permissions using this key, then the browser may inform the user at install time that the extension is requesting certain privileges, and ask them to confirm that they are happy to grant these privileges. The browser may also allow the user to inspect an extension's privileges after installation. As the request to grant privileges may impact on users' willingness to install your extension, requesting privileges is worth careful consideration. For example, you want to avoid requesting unnecessary permissions and may want to provide information about why you are requesting permissions in your extension's store description. More information on the issues you should consider is provided in the article [Request the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/).
+If you request permissions using this key, the browser may inform the user at install time that the extension is requesting certain privileges and ask them to confirm they are happy to grant privileges. The browser may also allow the user to inspect an extension's privileges after installation. As requesting privileges may impact users' willingness to install your extension, it's worth careful consideration. For example, avoid requesting unnecessary permissions and explain why you are requesting permissions in your extension's store description. For more information on the issues you should consider, see the article [Request the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/).
 
 For information on how to test and preview permission requests, see [Test permission requests](https://extensionworkshop.com/documentation/develop/test-permission-requests/) on the Extension Workshop site.
 
@@ -67,25 +67,12 @@ The extra privileges include:
 - the ability to read tab-specific metadata without the "tabs" permission, such as the `url`, `title`, and `favIconUrl` properties of {{WebExtAPIRef("tabs.Tab")}} objects
 - the ability to [inject content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#loading_content_scripts) and styles programmatically into pages served from those origins.
 - the ability to receive events from the {{webextAPIref("webRequest")}} API for these hosts
-- the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the `"cookies"` API permission is also included.
+- the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the `"cookies"` API permission.
 - bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards. Content scripts, however, can only bypass tracking protection for hosts specified with a full domain.
-
-In Firefox, from version 56 onwards, extensions automatically get host permissions for their own origin, which is of the form:
-
-```url
-moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
-```
-
-where `60a20a9b-1ad4-af49-9b6c-c64c98c37920` is the extension's internal ID. The extension can get this URL programmatically by calling {{webextAPIref("extension/getURL", "extension.getURL()")}}:
-
-```js
-browser.extension.getURL("");
-// moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
-```
 
 ## API permissions
 
-API permissions are specified as keywords, and each keyword names a [WebExtension API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) that the extension would like to use.
+You specify API permissions as keywords, and each keyword names a [WebExtension API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) that the extension would like to use.
 
 These permissions are available in Manifest V2 and above unless otherwise noted:
 
@@ -142,10 +129,10 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 - `webRequestFilterResponse`
 - `webRequestFilterResponse.serviceWorkerScript`
 
-In most cases the permission just grants access to the API, with the following exceptions:
+In most cases, the permission grants access to the API only, with these exceptions:
 
 - `tabs` gives you access to [privileged parts of the `tabs` API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs) without the need for [host permissions](#host_permissions): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`.
-  - In Firefox 85 and earlier, you also need `tabs` if you want to include `url` in the `queryInfo` parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The rest of the `tabs` API can be used without requesting any permission.
+  - In Firefox 85 and earlier, you also need `tabs` if you want to include `url` in the `queryInfo` parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The extension can use the rest of the `tabs` API without requesting any permission.
   - As of Firefox 86 and Chrome 50, matching [host permissions](#host_permissions) can also be used instead of the "tabs" permission.
 
 - `webRequestBlocking` enables you to use the `"blocking"` argument, so you can [modify and cancel requests](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
@@ -169,16 +156,16 @@ The extra privileges are:
 - The ability to inject JavaScript or CSS into the tab programmatically (see [Loading content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#loading_content_scripts)).
 - Access to the privileged parts of the tabs API for the current tab: `Tab.url`, `Tab.title`, and `Tab.faviconUrl`.
 
-The intention of this permission is to enable extensions to fulfill a common use case, without having to give them very powerful permissions. Many extensions want to "do something to the current page when the user asks".
+The intent of this permission is to enable extensions to fulfill a common use case without granting them overly powerful permissions. Many extensions want to "do something to the current page when the user asks".
 
-For example, consider an extension that wants to run a script in the current page when the user clicks a browser action. If the `activeTab` permission did not exist, the extension would need to ask for the host permission `<all_urls>`. But this gives the extension more power than it needs: it could now execute scripts in _any tab_, _any time_ it likes, instead of just the active tab and only in response to a user action.
+For example, consider an extension that wants to run a script in the current page when the user clicks a browser action. If the `activeTab` permission did not exist, the extension would need to ask for the host permission `<all_urls>`. But this gives the extension more power than it needs: it can now execute scripts in _any tab_, _any time_ it likes, instead of just the active tab and only in response to a user action.
 
 > [!NOTE]
-> You can only get access to the tab/data that was there, when the user interaction occurred (e.g., the click). When the active tab navigates away (e.g., due to finishing loading or some other event), the permission does not grant you access to the tab anymore.
+> Your extension can only access the tab or data that existed when the user interaction occurred (e.g., a click). When the active tab navigates away (e.g., due to page load finishing or another event), the extension no longer has permission to access the tab.
 
-The `activeTab` permission enables scripting access to the top level tab's page and same origin frames. Running scripts or modifying styles inside [cross-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_network_access) frames may require additional [host permissions](#host_permissions). Of course, [restrictions and limitations](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#permissions_restrictions_and_limitations) related to particular sites and URI schemes are applied as well.
+The `activeTab` permission enables scripting access to the top-level tab's page and same-origin frames. Running scripts or modifying styles inside [cross-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_network_access) frames may require additional [host permissions](#host_permissions). Of course, [restrictions and limitations](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#permissions_restrictions_and_limitations) related to particular sites and URI schemes are applied as well.
 
-Usually, the tab that's granted `activeTab` is the active tab, with one exception. An extension can create a menu item with the {{webextAPIref("menus")}} API that displays when the user context-clicks a tab. That is, a menu on an element in the tabstrip that enables the user to switch from one tab to another. If the user clicks this menu, then the `activeTab` permission is granted for the tab the user clicked, even if it's not the active tab (as of Firefox 63, [Firefox bug 1446956](https://bugzil.la/1446956)).
+Usually, the tab that's granted `activeTab` is the active tab, with one exception. An extension can create a menu item using the {{webextAPIref("menus")}} API that displays when the user context-clicks a tab. That is, a menu on an element in the tabstrip that lets the user switch between tabs. If the user clicks this menu, then the `activeTab` permission is granted for the tab the user clicked, even if it's not the active tab (as of Firefox 63, [Firefox bug 1446956](https://bugzil.la/1446956)).
 
 ## Clipboard access
 

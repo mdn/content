@@ -11,13 +11,13 @@ Injects a script into a target context. The script is run at `document_idle` by 
 > [!NOTE]
 > This method is available in Manifest V3 or higher in Chrome and Firefox 101. In Safari and Firefox 102+, this method is also available in Manifest V2.
 
-To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the target's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). Note that some special pages do not allow this permission, including reader view, view-source, and PDF viewer pages.
+To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the target's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). Note that some special pages do not allow this permission, including reader view, view-source, PDF viewer, and other built-in browser UI pages.
 
 In Firefox and Safari, partial lack of host permissions can result in a successful execution (with the partial results in the resolved promise). In Chrome, any missing permission prevents any execution from happening (see [Issue 1325114](https://crbug.com/1325114)).
 
 The scripts you inject are called [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Extensions cannot run content scripts in [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages). If an extension wants to run code in an extension page dynamically, it can include a script in the document. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
 
 ## Syntax
 
