@@ -10,13 +10,11 @@ browser-compat: api.AudioBufferSourceNode.buffer
 
 The **`buffer`** property of the {{domxref("AudioBufferSourceNode")}} interface provides the ability to play back audio using an {{domxref("AudioBuffer")}} as the source of the sound data.
 
-If the `buffer` property is set to the value `null`, the node
-generates a single channel containing silence (that is, every sample is 0).
-
 ## Value
 
-An {{domxref("AudioBuffer")}} which contains the data representing the sound which the
-node will play.
+An {{domxref("AudioBuffer")}} which contains the data representing the sound which the node will play, or `null`.
+
+If set to `null`, the node outputs a single channel of silence in which every sample is 0, and stops immediately if `start()` has been called.
 
 ## Exceptions
 
