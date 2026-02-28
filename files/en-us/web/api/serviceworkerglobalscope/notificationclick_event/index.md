@@ -8,12 +8,9 @@ browser-compat: api.ServiceWorkerGlobalScope.notificationclick_event
 
 {{APIRef("Web Notifications")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-The **`notificationclick`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired to indicate that a system notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}} has been clicked.
+The **`notificationclick`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired to indicate that the user has clicked a [persistent notification](/en-US/docs/Web/API/Notifications_API#persistent_notifications) associated with this service worker.
 
-Notifications created on the main thread or in workers which aren't service workers
-using the {{domxref("Notification.Notification","Notification()")}} constructor will
-instead receive a {{domxref("Notification/click_event", "click")}} event on the {{domxref("Notification")}} object
-itself.
+[Non-persistent notifications](/en-US/docs/Web/API/Notifications_API#non-persistent_notifications), created using the {{domxref("Notification.Notification","Notification()")}} constructor on the main thread or in workers which aren't service workers, will instead receive a {{domxref("Notification/click_event", "click")}} event on the {{domxref("Notification")}} object itself.
 
 This event is not cancelable and does not bubble.
 

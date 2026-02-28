@@ -8,8 +8,7 @@ browser-compat: api.Notification.click_event
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-The **`click`** event of the {{domxref("Notification")}}
-interface fires when the user clicks on displayed {{domxref("Notification")}}.
+The **`click`** event of the {{domxref("Notification")}} interface fires when the user clicks on a [non-persistent notification](/en-US/docs/Web/API/Notifications_API#non-persistent_notifications).
 
 The default behavior is to move the focus to the viewport of the notification's related
 [browsing context](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context).

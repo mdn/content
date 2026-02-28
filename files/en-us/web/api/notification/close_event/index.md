@@ -8,7 +8,7 @@ browser-compat: api.Notification.close_event
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-The **`close`** event of the {{domxref("Notification")}} interface fires when a {{domxref("Notification")}} is closed.
+The **`close`** event of the {{domxref("Notification")}} interface fires when a [non-persistent notification](/en-US/docs/Web/API/Notifications_API#non-persistent_notifications) is closed.
 
 ## Syntax
 
