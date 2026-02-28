@@ -68,18 +68,27 @@ font-family: "Gill Sans Extrabold", sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;
 
 /* A generic family name only */
+
+/* generic-complete */
 font-family: serif;
 font-family: sans-serif;
 font-family: monospace;
 font-family: cursive;
 font-family: fantasy;
 font-family: system-ui;
+font-family: math;
+
+/* generic-incomplete */
 font-family: ui-serif;
 font-family: ui-sans-serif;
 font-family: ui-monospace;
 font-family: ui-rounded;
-font-family: math;
-font-family: fangsong;
+
+/* generic-script-specific */
+font-family: generic(fangsong);
+font-family: generic(kai);
+font-family: generic(nastaliq);
+font-family: generic(khmer-mul);
 
 /* Global values */
 font-family: inherit;
@@ -107,49 +116,65 @@ font-family: "Gill Sans Extrabold", sans-serif;
     See also [Valid family names](#valid_family_names).
 
 - `<generic-name>`
-  - : Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:
-    - `serif`
-      - : Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.
+  - : Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted.
+    - `<generic-complete>`
+      - : Generic font family that are available on any platforms and browsers, and should be the last item in the list of font family names. The following keywords are defined:
+        - `serif`
+          - : Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.
 
-        For example: Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, URW Palladio, serif.
+            For example: Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, URW Palladio, serif.
 
-    - `sans-serif`
-      - : Glyphs have stroke endings that are plain.
+        - `sans-serif`
+          - : Glyphs have stroke endings that are plain.
 
-        For example: Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L, sans-serif.
+            For example: Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L, sans-serif.
 
-    - `monospace`
-      - : All glyphs have the same fixed width.
+        - `monospace`
+          - : All glyphs have the same fixed width.
 
-        For example: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace.
+            For example: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace.
 
-    - `cursive`
-      - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letter work.
+        - `cursive`
+          - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letter work.
 
-        For example: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive.
+            For example: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive.
 
-    - `fantasy`
-      - : Fantasy fonts are primarily decorative fonts that contain playful representations of characters.
+        - `fantasy`
+          - : Fantasy fonts are primarily decorative fonts that contain playful representations of characters.
 
-        For example: Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.
+            For example: Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.
 
-    - `system-ui`
-      - : Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.
-        > [!NOTE]
-        > As the name implies, `system-ui` is intended to make UI elements look like native apps, and not for typesetting large paragraphs of text. It may cause the displayed typeface to be undesirable for some users—for example, the default Windows CJK font may render Latin scripts poorly, and the `lang` attribute may not affect the displayed font. Some operating systems do not allow customizing `system-ui`, while browsers generally allow customizing the `sans-serif` font family. For large paragraphs, use `sans-serif` or some other non-UI font family instead.
-    - `ui-serif`
-      - : The default user interface serif font.
-    - `ui-sans-serif`
-      - : The default user interface sans-serif font.
-    - `ui-monospace`
-      - : The default user interface monospace font.
-    - `ui-rounded`
-      - : The default user interface font that has rounded features.
-    - `math`
-      - : This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.
-        UA stylesheets may set `math { font-family: math }` so that the {{MathMLElement("math")}} element uses appropriate fonts by default.
-    - `fangsong`
-      - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
+        - `math`
+          - : This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.
+
+            UA stylesheets may set `math { font-family: math }` so that the {{MathMLElement("math")}} element uses appropriate fonts by default.
+
+        - `system-ui`
+          - : Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.
+            > [!NOTE]
+            > As the name implies, `system-ui` is intended to make UI elements look like native apps, and not for typesetting large paragraphs of text. It may cause the displayed typeface to be undesirable for some users—for example, the default Windows CJK font may render Latin scripts poorly, and the `lang` attribute may not affect the displayed font. Some operating systems do not allow customizing `system-ui`, while browsers generally allow customizing the `sans-serif` font family. For large paragraphs, use `sans-serif` or some other non-UI font family instead.
+
+    - `<generic-incomplete>`
+      - : Generic font family that may or may not be provided by the platform. The following keywords are defined:
+        - `ui-serif`
+          - : The default user interface serif font.
+        - `ui-sans-serif`
+          - : The default user interface sans-serif font.
+        - `ui-monospace`
+          - : The default user interface monospace font.
+        - `ui-rounded`
+          - : The default user interface font that has rounded features.
+
+    - `<generic-script-specific>`
+      - : Generic family names for specific writing systems. These should be wrapped with the keyword `generic()` and must not be quoted. A generic script-specific font family usually appears before the other generic families above. The following keywords are defined:
+        - `generic(fangsong)`
+          - : A style of Chinese characters that are between serif-style Song and cursive-style Kai forms.
+        - `generic(kai)`
+          - : A cursive-style of Chinese characters in Kai forms.
+        - `generic(nastaliq)`
+          - : A cursive-style of Perso-Arabic script for writing Urdu and Kashmiri.
+        - `generic(khmer-mul)`
+          - : A style of Khmer script for titles, headings or proper nouns.
 
 ## Formal definition
 
