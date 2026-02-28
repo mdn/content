@@ -104,11 +104,16 @@ Events have three functions:
       - : `string`. The server's [hostname](https://en.wikipedia.org/wiki/Hostname#Internet_hostnames).
     - `port`
       - : `integer`. The server's port number.
-
+- `documentId` {{optional_inline}}
+  - : `string`. The UUID of the document making the request.
+- `documentLifecycle`
+  - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, or `"pending_deletion"`.
 - `cookieStoreId`
   - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `frameId`
   - : `integer`. This is `0` if the request occurs in the main frame; a positive value is the ID of a subframe where the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates this frame's ID, not the outer frame's ID. Frame IDs are unique within a tab.
+- `frameType`
+  - : `string`. The type of frame the request occurred in. Returns the values `"outermost_frame"`, `"fenced_frame"`, or `"sub_frame"`.
 - `incognito`
   - : `boolean`. Whether the request is from a private browsing window.
 - `isProxy`
@@ -117,6 +122,8 @@ Events have three functions:
     > `webRequest.onAuthRequired` is only called for HTTP and HTTPS/TLS proxy servers requiring authentication, not for SOCKS proxy servers requiring authentication.
 - `method`
   - : `string`. Standard HTTP method (For example, `"GET"` or `"POST"`).
+- `parentDocumentId`{{optional_inline}}
+  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
 - `parentFrameId`
   - : `integer`. ID of the frame that contains the frame that sent the request. Set to `-1` if no parent frame exists.
 - `proxyInfo`
