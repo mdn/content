@@ -333,7 +333,7 @@ Let's check in again on how the example is rendering. The updated state after th
 
 ## Animating the picker using popover states
 
-The customizable `<select>` element's select `button` and drop-down picker are automatically given an invoker/popover relationship, as described in [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using). There are many advantages that this brings to `<select>` elements; our example takes advantage of the ability to animate between popover hidden and showing states using transitions. The {{cssxref(":popover-open")}} pseudo-class represents popovers in the showing state.
+The customizable `<select>` element's select `button` and drop-down picker are automatically given an invoker/popover relationship, as described in [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using). There are many advantages that this brings to `<select>` elements; our example takes advantage of the ability to animate between popover hidden and showing states using transitions. The {{cssxref(":open")}} pseudo-class represents select elements in an open state.
 
 The technique is covered quickly in this section — read [Animating popovers](/en-US/docs/Web/API/Popover_API/Using#animating_popovers) for a more detailed description.
 
@@ -356,10 +356,10 @@ The list of transitioned properties features `opacity`, however it also includes
 > [!NOTE]
 > The [`allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) value is needed to enable discrete property animations.
 
-Next, the picker is selected in the showing state using `::picker(select):popover-open` and given an `opacity` value to `1` — this is the end state of the transition:
+Next, the picker is selected in the showing state using `:open::picker(select)` and given an `opacity` value to `1` — this is the end state of the transition:
 
 ```css live-sample___full-render
-::picker(select):popover-open {
+:open::picker(select) {
   opacity: 1;
 }
 ```
@@ -368,7 +368,7 @@ Finally, because the picker is being transitioned while it is moving from `displ
 
 ```css live-sample___full-render
 @starting-style {
-  ::picker(select):popover-open {
+  :open::picker(select) {
     opacity: 0;
   }
 }
