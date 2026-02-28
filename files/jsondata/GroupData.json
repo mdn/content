@@ -1901,6 +1901,13 @@
       ],
       "events": []
     },
+    "User Preferences API": {
+      "overview": ["User Preferences API"],
+      "interfaces": ["PreferenceManager", "PreferenceObject"],
+      "methods": [],
+      "properties": ["Navigator.preferences"],
+      "events": []
+    },
     "Vibration API": {
       "overview": ["Vibration API"],
       "interfaces": [],
