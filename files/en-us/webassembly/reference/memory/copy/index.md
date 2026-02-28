@@ -33,20 +33,26 @@ memory.copy  ;; Copy memory
 Copy specified memory (if multi-memory supported)
 
 ```wat
-;; Copy data in specific memory  [100, 125] to [50, 75]
-i32.const 50 ;; Destination address to copy to
-i32.const 100 ;; Source address to copy from
-i32.const 25 ;; Number of bytes to copy
-memory.copy (memory 2)  ;; Copy memory within memory with index 2
+;; Copy data within specific memory from [100, 125] to [50, 75]
+i32.const 50    ;; Destination address to copy to
+i32.const 100   ;; Source address to copy from
+i32.const 25    ;; Number of bytes to copy
+memory.copy 2 2 ;; Copy memory within memory with index 2
 
 ;; Copy within memory referenced by its name
-i32.const 50 ;; Destination address to copy to
-i32.const 100 ;; Source address to copy from
-i32.const 25 ;; Number of bytes to copy
-memory.copy (memory $memoryName) ;; Copy memory with memory named "$memoryName"
+i32.const 50
+i32.const 100
+i32.const 25
+memory.copy $memoryName $memoryName ;; Copy within memory named "$memoryName"
 
-;; Copy same memory using an S function
-(memory.copy (memory $memoryName) (i32.const 50) (i32.const 100) (i32.const 25))
+;; Copy between different memories
+i32.const 50         ;; Destination address (in $destMem)
+i32.const 100        ;; Source address (in $sourceMem)
+i32.const 25         ;; Number of bytes to copy
+memory.copy $destMem $sourceMem ;; Copy memory from "$sourceMem" to "$destMem"
+
+;; Copy within the same memory using an S-expression
+(memory.copy $memoryName $memoryName (i32.const 50) (i32.const 100) (i32.const 25))
 ```
 
 ### Instructions and opcodes
