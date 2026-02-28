@@ -29,6 +29,7 @@ jobs:
         with:
           cache: npm
           node-version-file: .nvmrc
+          check-latest: true
 
       - name: Install
         run: npm ci

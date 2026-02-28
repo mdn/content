@@ -6,8 +6,7 @@ on:
     - cron: "0 0 * * 6"
   workflow_dispatch:
 
-# No GITHUB_TOKEN permissions, as we use AUTOMERGE_TOKEN instead.
-permissions: {}
+permissions: {} # No GITHUB_TOKEN permissions, as we use AUTOMERGE_TOKEN instead.
 
 jobs:
   update:
@@ -26,6 +25,7 @@ jobs:
         uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
         with:
           node-version-file: "mdn-content/.nvmrc"
+          check-latest: true
           package-manager-cache: false
 
       - name: Checkout webref
