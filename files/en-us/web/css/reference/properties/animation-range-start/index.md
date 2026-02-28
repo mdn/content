@@ -202,5 +202,6 @@ Scroll to see the element animate. Notice how the element is already scaled and 
 - {{cssxref("view-timeline-inset")}}
 - {{domxref("Element.animate()")}} `rangeStart` property
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [View progress timeline: Ranges and animation progress visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)
