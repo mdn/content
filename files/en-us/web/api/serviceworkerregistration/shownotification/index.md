@@ -33,6 +33,8 @@ showNotification(title, options)
           - : A string containing action text to be shown to the user.
         - `icon` {{optional_inline}}
           - : A string containing the URL of an icon to display with the action.
+        - `navigate` {{optional_inline}} {{experimental_inline}}
+          - : A string containing a URL to navigate to when the user activates this action. When set, the user agent navigates to this URL instead of firing the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event. See {{domxref("Notification.navigate")}} for more information.
 
         Appropriate responses are built using `event.action` within the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
@@ -50,6 +52,8 @@ showNotification(title, options)
       - : A string containing the URL of an image to be displayed in the notification.
     - `lang` {{optional_inline}}
       - : The notification's language, as specified using a string representing a {{glossary("BCP 47 language tag")}}. The default is the empty string.
+    - `navigate` {{optional_inline}} {{experimental_inline}}
+      - : A string containing a URL to navigate to when the user activates the notification. When set, the user agent navigates to this URL instead of firing the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event. The value is parsed relative to the base URL of the service worker. See {{domxref("Notification.navigate")}} for more information.
     - `renotify` {{optional_inline}} {{experimental_inline}}
       - : A boolean value specifying whether the user should be notified after a new notification replaces an old one. The default is `false`, which means they won't be notified. If `true`, then `tag` also must be set.
     - `requireInteraction` {{optional_inline}} {{experimental_inline}}
