@@ -619,7 +619,7 @@ function showEventProperties(e) {
   document.body.appendChild(table);
 }
 
-showEventProperties(event);
+onload = showEventProperties;
 ```
 
 {{EmbedLiveSample("Displaying event object properties", "", "300")}}
