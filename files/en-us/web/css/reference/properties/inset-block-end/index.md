@@ -89,7 +89,7 @@ inset-block-end: unset;
 
 ### Values
 
-The `inset-block-end` property takes the same values as the {{cssxref("left")}} property.
+The `inset-block-end` property takes the same values as the {{cssxref("top")}} property.
 
 ## Formal definition
 

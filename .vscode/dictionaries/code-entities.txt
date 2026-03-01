@@ -62,6 +62,7 @@ associationlistitemvalue
 attributionsrc
 audiocontext
 authorid
+autolocate
 autospace
 backdrag
 backgroundfetchabort
@@ -69,6 +70,7 @@ backgroundfetchclick
 backgroundfetchfail
 backgroundfetchsuccess
 BACKTAB
+backzone
 Basetime
 bbaw
 beforeinstallprompt
@@ -84,6 +86,7 @@ BPPV1
 Brai
 braillelabel
 brailleroledescription
+broc
 browser-bottombox
 browser.safebrowsing
 browser.sessionhistory
@@ -123,6 +126,8 @@ color-colrv0
 color-colrv1
 color-sbix
 colorMaskiOES
+com.apple.quicktime.mdta
+com.apple.quicktime.udta
 commandfor
 congres
 connectionavailable
@@ -148,6 +153,7 @@ CSS_RGBCOLOR
 csslint
 cssref
 cssruleview
+cssxref
 ctron
 ctrz
 Cubehelix
@@ -173,6 +179,7 @@ docbook
 documentboundary
 dom.abortablepromise
 dom.closewatcher
+dom.documentpip
 dom.element.customstateset
 dom.input.dirpicker
 dom.media.webcodecs
@@ -240,6 +247,7 @@ fullscreenbutton
 fullwide
 FunciOES
 funcref
+funcrefs
 fwdred
 fwid
 gara
@@ -260,6 +268,7 @@ GPOS
 grba
 Grek
 greklow
+gsettings
 GSUB
 gujr
 gukh
@@ -325,6 +334,7 @@ jssidebar
 jsval
 kaios
 kawi
+kdeglobals
 kerx
 Key_Codeinput
 KEY_dead_abovecomma
@@ -360,6 +370,7 @@ KIND_NONHEAP
 knda
 Kore
 krai
+kwriteconfig
 lanatham
 laoo
 largeop
@@ -516,6 +527,7 @@ onao
 onbeforematch
 oncanmakepayment
 oncharacterboundsupdate
+onclipboardchange
 oncontentvisibilityautostatechange
 oncurrententrychange
 oncurrentscreenchange
@@ -525,6 +537,7 @@ ondownloadprogress
 onefive
 ongesturestart
 oninterest
+onlocation
 onloseinterest
 onnavigate
 onnavigateerror
@@ -534,6 +547,8 @@ onpageswap
 onpaymentrequest
 onpointerrawupdate
 onprerenderingchange
+onpromptaction
+onpromptdismiss
 onrtctransform
 onsamplebufferfull
 onscreenschange
@@ -543,6 +558,7 @@ onsinkchange
 ontextformatupdate
 ontextupdate
 onuncapturederror
+onvalidationstatuschange
 onwebkitmouseforcewillbegin
 onzoomlevelchange
 opendocument
@@ -612,6 +628,8 @@ privacy.clearsitedata
 privacy.globalprivacycontrol
 privacy.restrict3rdpartystorage
 privatebrowsingmode
+promptaction
+promptdismiss
 propfind
 prophoto-rgb
 proportional-nums
@@ -694,6 +712,8 @@ serviceworker
 setenvif
 SHA-256-sess
 SHA-512-sess
+shadowrootcustomelementregistry
+shadowrootreferencetarget
 sharpyuv
 shrd
 shtm
@@ -801,6 +821,7 @@ utterleft
 uuencode
 uvec
 vaii
+validationstatuschange
 validlink
 vcard
 vcdiff

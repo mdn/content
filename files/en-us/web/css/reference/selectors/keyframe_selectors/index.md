@@ -83,7 +83,7 @@ For example, if an element has a `red` background color, and the following anima
 }
 ```
 
-The background color will be `red` at the start of the animation, transitioning to `purple` a quarter of the way through the animation, remaining `purple` for half the animation, and transitioning back to `red`, the original background color, starting `75%` of the way through the {{cssxref("animation-timeline", "animation timeline", "", "nocode")}}. See the example that [omits the `to` and `from`](#omitting_to_and_from).
+The background color will be `red` at the start of the animation, transitioning to `purple` a quarter of the way through the animation, remaining `purple` for half the animation, and transitioning back to `red`, the original background color, starting `75%` of the way through the [animation timeline](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline). See the example that [omits the `to` and `from`](#omitting_to_and_from).
 
 #### Omitted property declarations
 
@@ -100,22 +100,22 @@ This animation repeats non-changing values in multiple selector blocks, which is
 ```css
 @keyframes uglyAnimation {
   0% {
-    transform: translatex(0);
+    transform: translateX(0);
     opacity: 0;
     background-color: purple;
   }
   50% {
-    transform: translatex(0);
+    transform: translateX(0);
     opacity: 1;
     background-color: purple;
   }
   75% {
-    transform: translatex(0);
+    transform: translateX(0);
     opacity: 0;
     background-color: green;
   }
   100% {
-    transform: translatex(50vw);
+    transform: translateX(50vw);
     opacity: 0;
     background-color: purple;
   }
@@ -130,7 +130,7 @@ We can use the cascade to group values in one selector block, then override them
   50%,
   75%,
   100% {
-    transform: translatex(0);
+    transform: translateX(0);
     opacity: 0;
     background-color: purple;
   }
@@ -141,7 +141,7 @@ We can use the cascade to group values in one selector block, then override them
     background-color: green;
   }
   100% {
-    transform: translatex(50vw);
+    transform: translateX(50vw);
   }
 }
 ```
@@ -160,13 +160,13 @@ Order is important! We can't ignore the cascade. If we reorder the above incorre
     background-color: green;
   }
   100% {
-    transform: translatex(50vw);
+    transform: translateX(50vw);
   }
   0%,
   50%,
   75%,
   100% {
-    transform: translatex(0);
+    transform: translateX(0);
     opacity: 1;
     background-color: purple;
   }
@@ -233,14 +233,14 @@ We create an {{cssxref("@keyframes")}} animation, applying styles to the `from` 
 ```css
 @keyframes slide-and-fade {
   from {
-    transform: translatex(0);
+    transform: translateX(0);
     opacity: 0;
   }
   50% {
     opacity: 1;
   }
   to {
-    transform: translatex(50vw);
+    transform: translateX(50vw);
     opacity: 0;
   }
 }
@@ -375,6 +375,6 @@ The `background-color` and `outline-width` properties are set in `30%` and `40%`
 - {{cssxref("@keyframes")}}
 - {{cssxref("animation")}}
 - {{cssxref("animation-range")}}
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
-- [CSS animations](/en-US/docs/Web/CSS/CSS_Animations) module
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)

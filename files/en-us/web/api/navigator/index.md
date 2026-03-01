@@ -17,6 +17,8 @@ _Doesn't inherit any properties._
 
 ### Standard properties
 
+- {{domxref("Navigator.audioSession")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns an {{domxref("AudioSession")}} object that can be used to control how audio from the web application interacts with other audio playing on the device.
 - {{domxref("Navigator.bluetooth")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("Bluetooth")}} object for the current document, providing access to [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) functionality.
 - {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}} {{securecontext_inline}}

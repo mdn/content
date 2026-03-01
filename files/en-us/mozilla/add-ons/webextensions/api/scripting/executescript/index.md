@@ -11,13 +11,13 @@ Injects a script into a target context. The script is run at `document_idle` by 
 > [!NOTE]
 > This method is available in Manifest V3 or higher in Chrome and Firefox 101. In Safari and Firefox 102+, this method is also available in Manifest V2.
 
-To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the target's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). Note that some special pages do not allow this permission, including reader view, view-source, and PDF viewer pages.
+To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the target's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). Note that some special pages do not allow this permission, including reader view, view-source, PDF viewer, and other built-in browser UI pages.
 
 In Firefox and Safari, partial lack of host permissions can result in a successful execution (with the partial results in the resolved promise). In Chrome, any missing permission prevents any execution from happening (see [Issue 1325114](https://crbug.com/1325114)).
 
 The scripts you inject are called [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Extensions cannot run content scripts in [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages). If an extension wants to run code in an extension page dynamically, it can include a script in the document. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
 
 ## Syntax
 
@@ -46,7 +46,7 @@ let results = await browser.scripting.executeScript(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of `InjectionResult` objects, which represent the result of the injected script in every injected frame.
+A {{JSxRef("Promise")}} that fulfills with an array of `InjectionResult` objects, which represent the result of the injected script in every injected frame.
 
 The promise is rejected if the injection fails, such as when the injection target is invalid. When script execution has started, its result is included in the result, whether successful (as `result`) or unsuccessfully (as `error`).
 
@@ -61,7 +61,7 @@ Each `InjectionResult` object has these properties:
 
     Chrome does not support the `error` property yet (see [Issue 1271527: Propagate errors from scripting.executeScript to InjectionResult](https://crbug.com/1271527)). As an alternative, runtime errors can be caught by wrapping the code to execute in a try-catch statement. Uncaught errors are also reported to the console of the target tab.
 
-The result of the script is the last evaluated statement, which is similar to the results seen if you executed the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (not any `console.log()` output). For example, consider a script like this:
+The result of a script is the value produced by the last evaluated statement. If the last statement produces a Promise, the result is the settled value of that Promise. This is similar to the results seen if you execute the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (excluding any `console.log()` output). For example, consider a script like this:
 
 ```js
 let foo = "my result";

@@ -44,21 +44,21 @@ This might produce output akin to this:
 
 ## Reference
 
-The [WebDriver reference](/en-US/docs/Web/WebDriver/Reference) provides detailed information about the WebDriver API, including the available commands, capabilities, and errors.
+Browse the complete [WebDriver reference](/en-US/docs/Web/WebDriver/Reference) documentation.
 
-- [Timeouts](/en-US/docs/Web/WebDriver/Reference/Timeouts)
+### WebDriver classic reference
 
-### [Commands](/en-US/docs/Web/WebDriver/Reference/Commands)
+- [Commands](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)
+  - : Reference for all WebDriver classic commands.
 
-{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Commands")}}
+- [Capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities)
+  - : Reference for all WebDriver classic capabilities.
 
-### [Capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
+- [Errors](/en-US/docs/Web/WebDriver/Reference/Classic/Errors)
+  - : Reference for WebDriver classic errors.
 
-{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Capabilities")}}
-
-### [Errors](/en-US/docs/Web/WebDriver/Reference/Errors)
-
-{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
+- [Timeouts](/en-US/docs/Web/WebDriver/Reference/Classic/Timeouts)
+  - : Reference for WebDriver classic timeouts.
 
 ## Specifications
 

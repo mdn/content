@@ -206,6 +206,7 @@ The [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) and [CSS borders and box dec
 - {{cssxref("system-color")}}
 - {{cssxref("text-edge")}}
 - {{cssxref("time")}}
+- {{cssxref("timeline-range-name")}}
 - {{cssxref("time-percentage")}}
 - {{cssxref("transform-function")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}

@@ -48,13 +48,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : Set to `true` if the `<iframe>` can activate fullscreen mode by calling the {{domxref("Element.requestFullscreen", "requestFullscreen()")}} method.
 
     > [!NOTE]
-    > This attribute is considered a legacy attribute and redefined as `allow="fullscreen"`.
+    > This attribute is considered a legacy attribute and redefined as `allow="fullscreen *"`.
 
 - `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
   - : Set to `true` if a cross-origin `<iframe>` should be allowed to invoke the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API).
 
     > [!NOTE]
-    > This attribute is considered a legacy attribute and redefined as `allow="payment"`.
+    > This attribute is considered a legacy attribute and redefined as `allow="payment *"`.
 
 - `browsingtopics` {{non-standard_inline}} {{deprecated_inline}}
   - : A boolean attribute that, if present, specifies that the selected topics for the current user should be sent with the request for the `<iframe>`'s source. See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
@@ -125,6 +125,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : Allows embedders to have control over whether an iframe can start a [presentation session](/en-US/docs/Web/API/PresentationRequest).
     - `allow-same-origin`
       - : If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}} (potentially preventing access to [data storage/cookies](/en-US/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs).
+        > [!NOTE]
+        > When `allow-same-origin` is present, a same-origin parent document can still access and interact with the iframe's DOM even if `allow-scripts` is not set. The `allow-scripts` token only controls script execution within the embedded browsing context and does not affect DOM access from the parent.
     - `allow-scripts`
       - : Allows the page to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
     - `allow-storage-access-by-user-activation` {{experimental_inline}}

@@ -324,6 +324,8 @@ I
 
 - {{CSSxRef(":in-range")}}
 - {{CSSxRef(":indeterminate")}}
+- {{CSSxRef(":interest-source")}}
+- {{CSSxRef(":interest-target")}}
 - {{CSSxRef(":invalid")}}
 - {{cssxref(":is()")}}
 
@@ -384,7 +386,9 @@ S
 T
 
 - {{CSSxRef(":target")}}
+- {{CSSxRef(":target-after")}}
 - {{CSSxRef(":target-current")}}
+- {{CSSxRef(":target-before")}}
 
 U
 

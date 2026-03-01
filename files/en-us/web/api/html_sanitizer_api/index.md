@@ -2,12 +2,10 @@
 title: HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat: api.Sanitizer
 ---
 
-{{DefaultAPISidebar("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("HTML Sanitizer API")}}
 
 The **HTML Sanitizer API** allows developers to take strings of HTML and filter out unwanted elements, attributes, and other HTML entities when they are inserted into the DOM or a shadow DOM.
 
@@ -38,7 +36,7 @@ If no sanitizer is passed as a parameter they will use the default sanitizer con
 If a custom sanitizer is used, it is implicitly updated to remove any elements and attributes that are not XSS-safe (note that the passed sanitizer is not modified, and might still allow unsafe entities if used with an unsafe method).
 
 The safe methods should be used instead of {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, or {{domxref("ShadowRoot.innerHTML")}}, for injecting untrusted HTML content.
-For example, in most case you can use {{domxref('Element.setHTML()')}} with the default sanitizer as a drop-in replacement for {{domxref("Element.innerHTML")}}.
+For example, in most cases you can use {{domxref('Element.setHTML()')}} with the default sanitizer as a drop-in replacement for {{domxref("Element.innerHTML")}}.
 The same methods can also be used for injecting trusted HTML strings that do not need to contain any XSS-unsafe elements.
 
 The XSS-unsafe methods will use whatever sanitizer configuration is passed as an argument.
@@ -219,7 +217,7 @@ They may be useful with the unsafe HTML methods and trusted types, depending on 
 
 ## Interfaces
 
-- {{domxref('Sanitizer')}} {{experimental_inline}}
+- {{domxref('Sanitizer')}}
   - : A reusable sanitizer configuration object that defines what elements and attributes should be allowed/removed when sanitizing untrusted strings of HTML.
     This is used in the methods that insert strings of HTML into the DOM or Document.
 - {{domxref('SanitizerConfig')}}

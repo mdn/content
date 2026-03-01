@@ -325,8 +325,8 @@ In this example, we demonstrate how to create and apply a named view progress ti
 Our HTML includes a lot of text in a container within a scroller, which we've hidden for brevity. In the middle of the wall of text, we include two `<div>` elements that we will animate based on the visibility of the element itself in the first case and based on the visibility of its parent in the second case:
 
 ```html live-sample___named_view
-<div class="animatedElement self">SELF</div>
-<div class="animatedElement parent">PARENT</div>
+<div class="animated-element self">SELF</div>
+<div class="animated-element parent">PARENT</div>
 ```
 
 ```html-nolint hidden live-sample___named_view
@@ -349,7 +349,7 @@ Our HTML includes a lot of text in a container within a scroller, which we've hi
 We create a keyframe animation that changes the opacity and scale of the element, and apply it to both animated elements:
 
 ```css live-sample___named_view
-@keyframes animationEffect {
+@keyframes animation-effect {
   0% {
     opacity: 0;
     scale: 0;
@@ -360,8 +360,8 @@ We create a keyframe animation that changes the opacity and scale of the element
   }
 }
 
-.animatedElement {
-  animation: animationEffect 1ms linear;
+.animated-element {
+  animation: animation-effect 1ms linear;
 }
 ```
 
@@ -369,14 +369,14 @@ The `self` element is explicitly named as the scroller for itself by setting the
 
 ```css live-sample___named_view
 .self {
-  view-timeline-name: --selfScrollerElement;
-  animation-timeline: --selfScrollerElement;
+  view-timeline-name: --self-scroller-element;
+  animation-timeline: --self-scroller-element;
 }
 .container {
-  view-timeline-name: --parentScrollerElement;
+  view-timeline-name: --parent-scroller-element;
 }
 .parent {
-  animation-timeline: --parentScrollerElement;
+  animation-timeline: --parent-scroller-element;
 }
 ```
 
@@ -402,7 +402,7 @@ Additional CSS declarations were hidden for brevity.
     margin-bottom: 0.75lh;
   }
 
-  .animatedElement {
+  .animated-element {
     height: 200px;
     width: calc(100% - 2em);
     margin: auto;

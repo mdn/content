@@ -9,7 +9,7 @@ browser-compat: api.SVGAnimatedString.baseVal
 {{APIRef("SVG")}}
 
 > [!WARNING]
-> The [`baseVal`](/en-US/docs/Web/API/SVGAnimatedString/baseVal) property can be used to set the non-animated value of a reflected attribute.
+> The `baseVal` property can be used to set the non-animated value of a reflected attribute.
 > In the case of {{domxref("SVGScriptElement/href","SVGScriptElement.href.baseVal")}} this property represents the URL of an external script loaded into the SVG script element.
 > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 >
@@ -24,7 +24,7 @@ This is the value of the reflected attribute before any animations are applied.
 
 Getting the property returns a string that represents the non-animated value of the reflected attribute, if it has been set.
 If the reflected attribute is not specified but has an alternative deprecated version that has been set, then its value will be returned instead.
-If neither reflected attribute is set, then the property will return an iniital value for the reflected attribute if one exists, and otherwise the empty string (`""`).
+If neither reflected attribute is set, then the property will return an initial value for the reflected attribute if one exists, and otherwise the empty string (`""`).
 
 The property must be set to a {{domxref("TrustedScriptURL")}} if the reflected attribute's element is an {{domxref("SVGScriptElement")}} and [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
 For all other cases, the value can be a string (or an object that can be resolved to a string).

@@ -52,31 +52,18 @@ As the request to grant host permissions may impact users' willingness to instal
 
 For information on how to test and preview permission requests, see [Test permission requests](https://extensionworkshop.com/documentation/develop/test-permission-requests/) on the Extension Workshop site.
 
-### Format
+## Format
 
 Host permissions are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), and each pattern identifies a group of URLs for which the extension is requesting extra privileges. For example, a host permission could be `"*://developer.mozilla.org/*"`.
 
 The extra privileges include:
 
-- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [fetch](/en-US/docs/Web/API/Fetch_API) access to those origins without cross-origin restrictions (though not for requests from content scripts, as was the case in Manifest V2).
+- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [fetch](/en-US/docs/Web/API/Fetch_API) access to those origins without cross-origin restrictions, but not for requests from content scripts.
 - the ability to read tab-specific metadata without the "tabs" permission, such as the `url`, `title`, and `favIconUrl` properties of {{WebExtAPIRef("tabs.Tab")}} objects.
 - the ability to inject scripts programmatically (using {{webextAPIref("tabs/executeScript", "tabs.executeScript()")}}) into pages served from those origins.
 - the ability to receive events from the {{webextAPIref("webRequest")}} API for these hosts.
 - the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the `"cookies"` API permission is also included.
 - bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards.
-
-In Firefox extensions get host permissions for their origin, which is of the form:
-
-```url
-moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
-```
-
-where `60a20a9b-1ad4-af49-9b6c-c64c98c37920` is the extension's internal ID. The extension can get this URL programmatically by calling {{webextAPIref("runtime/getURL", "runtime.getURL()")}}:
-
-```js
-browser.runtime.getURL("");
-// moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
-```
 
 ## Example
 

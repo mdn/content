@@ -21,17 +21,17 @@ Watch the embedded scrim, and complete the task on the timeline (the little ghos
 
 <mdn-scrim-inline url="https://scrimba.com/learn-javascript-c0v/~011" scrimtitle="Variables practice" survey="true"></scrim-inline>
 
-## Task 1
+## Variables 1
 
 To complete this task, add a new line to correct the value stored in the existing `myName` variable to your own name.
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___variables-1 live-sample___variables-2
+```html hidden live-sample___variables-1 live-sample___variables-2 live-sample___variables-1-finish live-sample___variables-2-finish
 <section></section>
 ```
 
-```css hidden live-sample___variables-1 live-sample___variables-2
+```css hidden live-sample___variables-1 live-sample___variables-2 live-sample___variables-1-finish live-sample___variables-2-finish
 * {
   box-sizing: border-box;
 }
@@ -43,6 +43,12 @@ p {
 ```
 
 <!-- Example-specific code -->
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("variables-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___variables-1
 let myName = "Paul";
@@ -59,7 +65,9 @@ para.textContent = myName;
 section.appendChild(para);
 ```
 
-{{ EmbedLiveSample("variables-1", "100%", 60) }}
+The updated output should look like this:
+
+{{ EmbedLiveSample("variables-1-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -76,11 +84,28 @@ myName = "Chris";
 // ...
 ```
 
+```js hidden live-sample___variables-1-finish
+let myName = "Paul";
+
+myName = "Chris";
+
+const section = document.querySelector("section");
+const para = document.createElement("p");
+para.textContent = myName;
+section.appendChild(para);
+```
+
 </details>
 
-## Task 2
+## Variables 2
 
 The final task for now — in this case you are provided with some existing code, which has two errors present in it. The results panel should be outputting the name `Chris`, and a statement about how old Chris will be in 20 years' time. We want you to fix the problem and correct the output.
+
+The starting point of the task looks like this (nothing is shown yet):
+
+{{ EmbedLiveSample("variables-2", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___variables-2
 // Fix the following code
@@ -101,7 +126,9 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-{{ EmbedLiveSample("variables-2", "100%", 60) }}
+The updated output should look like this:
+
+{{ EmbedLiveSample("variables-2-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -120,10 +147,24 @@ let myAge = 42;
 // ...
 ```
 
+```js hidden live-sample___variables-2-finish
+let myName = "Default";
+myName = "Chris";
+let myAge = 42;
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const para2 = document.createElement("p");
+para1.textContent = myName;
+para2.textContent = `In 20 years, I will be ${myAge + 20}`;
+section.appendChild(para1);
+section.appendChild(para2);
+```
+
 </details>
 
 ## See also
 
-Also check out [Practice time - Part 3: let and const](https://scrimba.com/learn-javascript-c0v/~059?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba: An interactive challenge providing multiple tests concerning `let` and `const`.
+Check out [Practice time - Part 3: let and const](https://scrimba.com/learn-javascript-c0v/~059?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba: An interactive challenge providing multiple tests concerning `let` and `const`.
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}

@@ -25,7 +25,7 @@ respondWith(promise)
     - `methodName`
       - : The payment method identifier for the payment method that the user selected to fulfill the transaction.
     - `details`
-      - : A JSON-serializable object that provides a payment method-specific message used by the merchant to process the transaction and determine a successful fund transfer. See [7.1.2 details attribute](https://w3c.github.io/payment-handler/#details-attribute) for more details.
+      - : A JSON-serializable object that provides a payment method-specific message used by the merchant to process the transaction and determine a successful fund transfer. See [8.1.2 `details` attribute](https://w3c.github.io/web-based-payment-handler/#details-attribute) for more details.
 
 ### Return value
 

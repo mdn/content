@@ -92,7 +92,7 @@ It relates to {{cssxref("margin-block-start")}}, {{cssxref("margin-inline-start"
 
 ### Values
 
-The `margin-block-end` property takes the same values as the {{cssxref("margin-left")}} property.
+The `margin-block-end` property takes the same values as the {{cssxref("margin-top")}} property.
 
 ## Formal definition
 
