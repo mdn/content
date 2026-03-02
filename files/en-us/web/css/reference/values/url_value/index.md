@@ -17,7 +17,7 @@ The **`<url>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Refer
 
 ### Values
 
-The value is either of the following:
+The value must be absolute or relative URL.
 
 - [`<url()>`](/en-US/docs/Web/CSS/Reference/Values/url_function)
   - : The `url()` function accepts only a URL literal string (with or without quotes).
