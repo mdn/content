@@ -24,8 +24,6 @@ body {
 }
 ```
 
-Keep in mind, `<url>` is not an HTML Tag, it's a CSS data type.
-
 ### Values
 
 The value is either of the following:
