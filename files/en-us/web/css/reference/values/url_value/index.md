@@ -14,7 +14,6 @@ The **`<url>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Refer
 <url> = url( <link> )
 ```
 
-
 ### Values
 
 The value must be absolute or relative URL.
