@@ -34,11 +34,25 @@ The ability to import external resources via the `<url>` value is implementation
 
 Depending on the CSS property on which a `<url>` referencing external resources is applied, the resource may be subject to [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) restrictions.
 
-Some CSS properties, including {{cssxref("mask-image")}}, {{cssxref("filter")}}, {{cssxref("content")}}, and {{cssxref("border-image")}}, as well as {{cssxref("clip-path")}} when referring to {{htmlelement("svg")}} image elements, require successful CORS validation when loading external, cross-origin resources. If CORS validation fails, the resource is treated as though it failed to load.
+Some CSS properties, including {{cssxref("mask-image")}}, {{cssxref("filter")}}, {{cssxref("content")}}, and {{cssxref("border-image")}}, as well as {{cssxref("clip-path")}} when referring to {{htmlelement("svg")}} image elements, require successful CORS validation when loading external, cross-origin resources. If CORS validation fails, the resource fails to load.
 
 Note that the `<url>` value type does not enforce CORS validation itself, but individual CSS properties do.
 
+When opening an HTML file directly with `file://`, resources may fail because CORS rules apply locally. Modern browsers treat `file://` as a unique origin, meaning cross-file resources can get blocked. In this case, an [HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) may be hosted to avoid CORS errors.
+
 ## Examples
+Relative URL
+```css
+body {
+  background-image: url("images/background.jpg");
+}
+```
+Absolute URL
+```css
+body {
+  background-image: url("https://example.com/images/background.jpg");
+}
+```
 
 ## Specifications
 
