@@ -32,7 +32,7 @@ The value is either of the following:
   - : The `url()` function accepts only a URL literal string (with or without quotes).
 
 > [!NOTE]
-> The specification defines an alternative function called `src()` that accepts a URL string or a [CSS variable](/en-US/docs/Web/CSS/Reference/Values/var). But no web browser has implemented the function yet.
+> The [CSS values and units module](/en-US/docs/Web/CSS/Guides/Values_and_units) also introduces the `src()` function as a `<url>` value. Currently, no browser supports this feature.
 
 ## Description
 
