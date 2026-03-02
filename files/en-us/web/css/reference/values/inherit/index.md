@@ -15,29 +15,138 @@ For [inherited properties](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance#inheri
 
 ## Examples
 
-### Exclude selected elements from a rule
+### Basic usage
+
+In this example, we demonstrated the effect of the `inherit` value by comparing nested elements that `inherit` individual property values with elements with their browser default styles.
+
+#### HTML
+
+We include two identical paragraphs with several inline elements.
+
+```html
+<p>
+  This paragraph has <em>emphasized text</em>, <strong>strong text</strong>, and
+  <a href="#">a link to top</a>.
+</p>
+<p>
+  This paragraph has <em>emphasized text</em>, <strong>strong text</strong>, and
+  <a href="#">a link to top</a>.
+</p>
+```
+
+#### CSS
+
+In the second paragraph, we set individual properties on individual elements to `inherit` the default styles from the parent {{htmlelement("p")}} element instead of applying their default browser styles.
 
 ```css
-/* Make second-level headers green */
-h2 {
-  color: green;
+p:nth-of-type(2) {
+  a {
+    text-decoration: inherit;
+    color: inherit;
+  }
+  em {
+    font-style: inherit;
+  }
+  strong {
+    font-weight: inherit;
+  }
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("Basic usage", "100%", 100)}}
+
+### Inheriting all property values
+
+In this example, we use the same HTML as in the previous example, to demonstrate the issues that can occur when the `inherit` value is applied to all properties.
+
+```html hidden
+<p>
+  This paragraph has <em>emphasized text</em>, <strong>strong text</strong>, and
+  <a href="#">a link to top</a>.
+</p>
+<p>
+  This paragraph has <em>emphasized text</em>, <strong>strong text</strong>, and
+  <a href="#">a link to top</a>.
+</p>
+```
+
+#### CSS
+
+In the second paragraph, instead of setting individual properties to `inherit`, we set {{cssxref("all")}} the nested elements to `inherit` all the default styles of their parent {{htmlelement("p")}}.
+
+```css
+p:nth-of-type(2) > * {
+  all: inherit;
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("Inheriting all property values", "100%", 270)}}
+
+Note how the inline element inherited all the properties of the parent `<p>`, including the paragraphs block-level {{cssxref("display ")}} value. This is likely not the effect you would want.
+
+### Exclude selected elements from a rule
+
+This example demonstrates allowing elements to inherit normally inherited values, overriding colors set on their element type.
+
+#### HTML
+
+We include some semantically structured content.
+
+```html
+<heading>
+  <h1>This is my blog</h1>
+  <h2>This is the subtitle of my blog in the HEADER</h2>
+  <p>My blog is not very interesting</p>
+</heading>
+<main>
+  <h2>This first blog post in MAIN</h2>
+  <p>I really have nothing to say.</p>
+  <section>
+    <h2>This second blog post is in a SECTION within MAIN</h2>
+    <p>
+      It is in a section because it is important even though it isn't the least
+      bit interesting.
+    </p>
+  </section>
+</main>
+<footer>
+  <h2>Contact in FOOTER</h2>
+  <p>Find me on Mastodon</p>
+  <section>
+    <h2>Copyright in SECTION within FOOTER</h2>
+    <p>1996</p>
+  </section>
+</footer>
+```
+
+#### CSS
+
+We define the main section to have blue text, all second-level headers to have `green` text and be rendered in a `monospace` font, while setting second-level headers in a {{htmlelement("section")}} to inherit their parent's text color.
+
+```css
+main {
+  color: blue;
 }
 
-/* Leave those in the sidebar alone so they use their parent's color */
-#sidebar h2 {
+h2 {
+  color: green;
+  font-family: monospace;
+}
+
+section h2 {
   color: inherit;
 }
 ```
 
-In this example, the `h2` elements inside the sidebar might be different colors. For example, consider one of them that would by the child of a `div` matched by the rule:
+#### Results
 
-```css
-div#current {
-  color: blue;
-}
-```
+{{EmbedLiveSample("Exclude selected elements from a rule", "100%", 470)}}
 
-Then, it would be blue.
+The `<h2>` elements are all set to be green, but if they are nested within a {{htmlelement("section")}} element, they inherit the color from their parent, which is `blue` within {{htmlelement("main")}}, generally black otherwise.
 
 ## Specifications
 
@@ -49,9 +158,5 @@ Then, it would be blue.
 
 ## See also
 
+- {{cssxref("initial")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, and {{cssxref("unset")}} keywords
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
-- Use the {{cssxref("initial")}} keyword to set a property to its initial value.
-- Use the {{cssxref("revert")}} keyword to reset a property to the value established by the user-agent stylesheet (or by user styles, if any exist).
-- Use the {{cssxref("revert-layer")}} keyword to reset a property to the value established in a previous cascade layer.
-- Use the {{cssxref("unset")}} keyword to set a property to its inherited value if it inherits or to its initial value if not.
-- The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.
