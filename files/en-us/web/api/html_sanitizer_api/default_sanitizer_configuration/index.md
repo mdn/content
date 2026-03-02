@@ -17,7 +17,7 @@ Comments and `data-*` attributes are removed by default.
 Note that this is derived from the specification, where it is referred to as the [built-in safe default configuration](https://wicg.github.io/sanitizer-api/#built-in-safe-default-configuration).
 
 > [!NOTE]
-> The specification also defines the [built-in safe baseline configuration](https://wicg.github.io/sanitizer-api/#built-in-safe-baseline-configuration), which lists the elements that must minimally be removed to block script-content: {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}}, and `use`.
+> The specification also defines the [built-in safe baseline configuration](https://wicg.github.io/sanitizer-api/#built-in-safe-baseline-configuration), which lists the elements that must minimally be removed to block script-content: {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}}, and {{SVGElement("use")}} .
 > "Safe" sanitization methods will remove these elements from a custom sanitizer automatically, along with any event handler content attributes (such as `onafterprint`, `onbeforeinput`, and so on).
 
 ## Allowed elements
