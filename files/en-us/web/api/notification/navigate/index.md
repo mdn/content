@@ -10,9 +10,11 @@ browser-compat: api.Notification.navigate
 
 {{APIRef("Web Notifications")}}{{securecontext_header}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
-The **`navigate`** read-only property of the {{domxref("Notification")}} interface contains the URL the user agent will navigate to when the user activates the notification, as specified in the `navigate` option of the {{domxref("Notification.Notification", "Notification()")}} constructor or {{domxref("ServiceWorkerRegistration.showNotification()")}}.
+The **`navigate`** read-only property of the {{domxref("Notification")}} interface contains the URL the user agent will navigate to when the user activates the notification.
 
-When a notification with a navigation URL is activated, the user agent navigates to the specified URL instead of firing the {{domxref("Notification.click_event", "click")}} event or the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event. This allows notifications to direct users to a specific page without requiring a click event handler.
+This is the resolved value of the URL, if any, that was specified in the `navigate` option of the {{domxref("Notification.Notification", "Notification()")}} constructor or {{domxref("ServiceWorkerRegistration.showNotification()")}}.
+
+When a notification with a navigation URL is accepted (by clicking its acknowledge button) the user agent navigates to the specified URL instead of firing the {{domxref("Notification.click_event", "click")}} event or the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event. This allows notifications to direct users to a specific page without requiring a click event handler.
 
 ## Value
 
