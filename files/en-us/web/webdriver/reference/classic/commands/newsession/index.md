@@ -20,7 +20,7 @@ The session identifier returned in the response is required for all subsequent c
 
 - `capabilities`
   - : Used to define the features the driver must satisfy when creating a new session.
-    See [Capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities#list_of_capabilities) for available options.
+    See [Capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities#list_of_capabilities) for available options.
 
 ### Response
 
@@ -65,4 +65,4 @@ content-type: application/json; charset=utf-8
 
 ## See also
 
-- [Capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities)
+- [Capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
