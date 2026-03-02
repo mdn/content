@@ -1,27 +1,24 @@
 ---
-title: "CSPViolationReportBody: sourceFile property"
-short-title: sourceFile
-slug: Web/API/CSPViolationReportBody/sourceFile
+title: "CSPViolationReport: columnNumber property"
+short-title: columnNumber
+slug: Web/API/CSPViolationReport/columnNumber
 page-type: web-api-instance-property
-browser-compat: api.CSPViolationReportBody.sourceFile
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
 ---
 
 {{APIRef("Reporting API")}}
 
-The **`sourceFile`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the URL of the source file that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
+The **`columnNumber`** property of the {{domxref("CSPViolationReport")}} dictionary indicates the column number in the source file that triggered the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violation.
 
-For a violation triggered by the use of an inline script, `sourceFile` is the URL of the current document.
-Similarly, if a document successfully loads a script that then violates the document CSP, the `sourceFile` is the URL of the script.
+Note that the browser extracts the value from _the global object_ of the file that triggered the violation.
+If the resource that triggers the CSP violation is not loaded, the value will be `null`.
+See {{domxref("CSPViolationReport.sourceFile")}} for more information.
 
-Note however that if a document with a CSP that blocks external resources attempts to load an external resource, `sourceFile` will be `null`.
-This is because the browser extracts the value from _the global object_ of the file that triggered the violation.
-Because of the CSP restriction the external resource is never loaded, and therefore has no corresponding global object.
-
-This property is most useful alongside {{domxref("CSPViolationReportBody.lineNumber")}} and {{domxref("CSPViolationReportBody.columnNumber")}}, which provide the location within the file that resulted in a violation.
+This property is most useful alongside {{domxref("CSPViolationReport.sourceFile")}} and {{domxref("CSPViolationReport.lineNumber")}}, as it provides the location of the column in that file and line that resulted in a violation.
 
 ## Value
 
-A string containing the URL of the file that triggered the violation, or `null`.
+An integer containing the column number that triggered the violation, or `null`.
 
 ## Examples
 
@@ -120,4 +117,4 @@ The value on Firefox represents the position of the first character after the en
 
 ## See also
 
-- {{domxref("SecurityPolicyViolationEvent.sourceFile")}}
+- {{domxref("SecurityPolicyViolationEvent.columnNumber")}}

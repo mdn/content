@@ -1,18 +1,23 @@
 ---
-title: "CSPViolationReportBody: documentURL property"
-short-title: documentURL
-slug: Web/API/CSPViolationReportBody/documentURL
+title: "CSPViolationReport: referrer property"
+short-title: referrer
+slug: Web/API/CSPViolationReport/referrer
 page-type: web-api-instance-property
-browser-compat: api.CSPViolationReportBody.documentURL
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
 ---
 
 {{APIRef("Reporting API")}}
 
-The **`documentURL`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the URL of the document or worker that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
+The **`referrer`** property of the {{domxref("CSPViolationReport")}} dictionary is a string that represents the URL of the referring page of the resource who's [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) was violated.
+
+The referrer is the page that caused the page with the CSP violation to be loaded. For example, if we followed a link to a page with a CSP violation, the `referrer` is the page that we navigated from.
 
 ## Value
 
-A string containing the URL of the document or worker that violated the CSP.
+A string representing the URL for the referrer of the page with the CSP violation, or null.
+
+Note that if the referrer is an HTTP(S) URL then any username, password or fragment is removed.
+If the URL scheme is not `http:` or `https:` then just the scheme is returned.
 
 ## Examples
 
@@ -100,7 +105,7 @@ referrer: http://127.0.0.1:9999/bounce/
 blockedURL: inline
 ```
 
-Note that `referrer` is the page we navigated from, `documentURL` is the page with the CSP violation, and `blockedURL` is not a URL at all in this case, but an indication that the violation was caused by an inline script.
+Note that `referrer` is the page we navigated from, `documentURL` is the page with the CSP violation, and `blockedURL` is not a URL at all in this case, but an indication that the violation was caused by an unsafe inline script.
 
 ## Specifications
 
@@ -112,4 +117,5 @@ Note that `referrer` is the page we navigated from, `documentURL` is the page wi
 
 ## See also
 
-- {{domxref("SecurityPolicyViolationEvent.documentURI")}}
+- {{domxref("SecurityPolicyViolationEvent.referrer")}}
+- {{httpheader("Referer")}}

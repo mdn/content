@@ -9,7 +9,7 @@ sidebar: http
 
 The `Content-Security-Policy` **`report-to`** directive indicates the name of the endpoint that the browser should use for reporting CSP violations.
 
-If a CSP violation occurs, a report is generated that contains a serialized {{domxref("CSPViolationReportBody")}} object instance.
+If a CSP violation occurs, a report is generated that contains a serialized {{domxref("CSPViolationReport")}} object instance.
 This report is sent to the URL that corresponds to the endpoint name, using the generic mechanisms defined in the [Reporting API](/en-US/docs/Web/API/Reporting_API).
 
 The server must separately provide the mapping between endpoint names and their corresponding URLs in the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
@@ -43,7 +43,7 @@ It can also be the name of a group that is provided by the server in the {{HTTPH
 
 ### Violation report syntax
 
-A CSP violation report is a JSON-serialized {{domxref("Report")}} object instance, with a `type` property that has a value of `"csp-violation"`, and a `body` that is the serialized form of a {{domxref("CSPViolationReportBody")}} object (see the respective objects for their property definitions).
+A CSP violation report is a JSON-serialized {{domxref("Report")}} object instance, with a `type` property that has a value of `"csp-violation"`, and a `body` that is the serialized form of a {{domxref("CSPViolationReport")}} object (see the respective objects for their property definitions).
 Reports are sent to the target endpoint(s) via a `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
 
 The JSON for a single report might look like this:

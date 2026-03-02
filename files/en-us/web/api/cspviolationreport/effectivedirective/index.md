@@ -1,21 +1,20 @@
 ---
-title: "CSPViolationReportBody: originalPolicy property"
-short-title: originalPolicy
-slug: Web/API/CSPViolationReportBody/originalPolicy
+title: "CSPViolationReport: effectiveDirective property"
+short-title: effectiveDirective
+slug: Web/API/CSPViolationReport/effectiveDirective
 page-type: web-api-instance-property
-browser-compat: api.CSPViolationReportBody.originalPolicy
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
 ---
 
 {{APIRef("Reporting API")}}
 
-The **`originalPolicy`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) whose enforcement uncovered the violation.
+The **`effectiveDirective`** property of the {{domxref("CSPViolationReport")}} dictionary is a string that represents the effective [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) directive that was violated.
 
-This is the string in the {{HTTPHeader("Content-Security-Policy")}} HTTP response header that contains the list of [directives](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives) and their values that make the CSP policy.
-Note that differs from the {{domxref("CSPViolationReportBody.effectiveDirective","effectiveDirective")}}, which is the specific directive that is effectively being violated (and which might not be explicitly listed in the policy if `default-src` is used).
+Note that this contains the specific directive that was effectively violated, such as [`script-src-elem`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem) for violations related to script elements, and not the policy that was specified, which may have been the (more general) [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src).
 
 ## Value
 
-A string representing the policy whose enforcement uncovered the violation.
+A string representing the effective [`Content-Security-Policy` directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives) that was violated.
 
 ## Examples
 
@@ -36,7 +35,6 @@ The document also includes an inline script, which should trigger a CSP violatio
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; report-to csp-endpoint" />
-    <!-- This is the (original) CSP policy -->
     <meta
       http-equiv="Reporting-Endpoints"
       content="csp-endpoint='https://example.com/csp-reports'" />
@@ -104,4 +102,4 @@ This is the specific directive that has effectively been violated, even though `
 
 ## See also
 
-- {{domxref("SecurityPolicyViolationEvent.originalPolicy")}}
+- {{domxref("SecurityPolicyViolationEvent.effectiveDirective")}}

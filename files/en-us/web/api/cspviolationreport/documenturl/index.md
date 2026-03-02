@@ -1,23 +1,18 @@
 ---
-title: "CSPViolationReportBody: referrer property"
-short-title: referrer
-slug: Web/API/CSPViolationReportBody/referrer
+title: "CSPViolationReport: documentURL property"
+short-title: documentURL
+slug: Web/API/CSPViolationReport/documentURL
 page-type: web-api-instance-property
-browser-compat: api.CSPViolationReportBody.referrer
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
 ---
 
 {{APIRef("Reporting API")}}
 
-The **`referrer`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the URL of the referring page of the resource who's [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) was violated.
-
-The referrer is the page that caused the page with the CSP violation to be loaded. For example, if we followed a link to a page with a CSP violation, the `referrer` is the page that we navigated from.
+The **`documentURL`** property of the {{domxref("CSPViolationReport")}} dictionary is a string that represents the URL of the document or worker that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
 
 ## Value
 
-A string representing the URL for the referrer of the page with the CSP violation, or null.
-
-Note that if the referrer is an HTTP(S) URL then any username, password or fragment is removed.
-If the URL scheme is not `http:` or `https:` then just the scheme is returned.
+A string containing the URL of the document or worker that violated the CSP.
 
 ## Examples
 
@@ -80,7 +75,7 @@ Each time the callback function is invoked, we get the body of the first entry o
 // main.js
 const observer = new ReportingObserver(
   (reports, observer) => {
-    console.log(`documentURL: ${reports[0].body.referrer}`);
+    console.log(`documentURL: ${reports[0].body.documentURL}`);
     console.log(`referrer: ${reports[0].body.referrer}`);
     console.log(`blockedURL: ${reports[0].body.blockedURL}`);
   },
@@ -105,7 +100,7 @@ referrer: http://127.0.0.1:9999/bounce/
 blockedURL: inline
 ```
 
-Note that `referrer` is the page we navigated from, `documentURL` is the page with the CSP violation, and `blockedURL` is not a URL at all in this case, but an indication that the violation was caused by an unsafe inline script.
+Note that `referrer` is the page we navigated from, `documentURL` is the page with the CSP violation, and `blockedURL` is not a URL at all in this case, but an indication that the violation was caused by an inline script.
 
 ## Specifications
 
@@ -117,5 +112,4 @@ Note that `referrer` is the page we navigated from, `documentURL` is the page wi
 
 ## See also
 
-- {{domxref("SecurityPolicyViolationEvent.referrer")}}
-- {{httpheader("Referer")}}
+- {{domxref("SecurityPolicyViolationEvent.documentURI")}}
