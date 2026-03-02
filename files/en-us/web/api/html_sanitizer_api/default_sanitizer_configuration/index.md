@@ -9,7 +9,7 @@ page-type: guide
 The default Sanitizer configuration defines the {{domxref("Sanitizer")}} that is used by default if you call the [safe sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods), such as {{domxref("Element.setHTML()")}}, {{domxref("ShadowRoot.setHTML()")}}, and {{domxref("Document.parseHTML_static","Document.parseHTML()")}}, without specifying a custom sanitizer.
 It is also the default configuration returned by the [`Sanitizer()` constructor](/en-US/docs/Web/API/Sanitizer/Sanitizer) if no configuration is set.
 
-The set of elements and attributes [allowed](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations) by the default configuration omits those that are known to be XSS-unsafe, along with other elements and attributes that are considered problematic for other reasons.
+The set of elements and attributes [allowed](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations) by the default configuration omits those that are known to be XSS-unsafe, along with other elements and attributes that might be used for clickjacking or spoofing, or are otherwise potentially unsafe if provided by a user.
 It therefore provides a "more than XSS safe" sanitizer, that minimizes the attack surface while still being suitable for the majority of sanitization use cases.
 
 The HTML, SVG, and MathML elements and attributes allowed by the configuration are specified in the following sections.
