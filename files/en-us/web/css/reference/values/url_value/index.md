@@ -42,18 +42,15 @@ The `<url>` data type, written with the [`url()`] function, represents a `URL`, 
 
 ### External resources and CORS
 
-When a `<url>` references an external resource, the resource is subject to [Cross-origin restrictions](/en-US/docs/Web/HTTP/Guides/CORS).
-CORS applies depending on the CSS property that uses the `<url>` value. Certain CSS features require successful CORS validation when loading cross-origin resources.
+The ability to import external resources via the `<url>` value is implementation-defined and often restricted for security reasons.
 
-Examples:
+Depending on the CSS property on which a `<url>` referencing external resources is applied, the resource may be subject to [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) restrictions.
 
-- [mask-image](/en-US/docs/Web/CSS/Reference/Properties/mask-image)
-- [filter](/en-US/docs/Web/CSS/Reference/Properties/filter)
-- [clip-path](/en-US/docs/Web/CSS/Reference/Properties/clip-path) (when referring to an external SVG)
-- [content](/en-US/docs/Web/CSS/Reference/Properties/content)
-- [border-image](/en-US/docs/Web/CSS/Reference/Properties/border-image)
+Some CSS properties, including {{cssxref("mask-image")}}, {{cssxref("filter")}}, {{cssxref("content")}}, and {{cssxref("border-image")}}, as well as {{cssxref("clip-path")}} when referring to {{htmlelement("svg")}} image elements, require successful CORS validation when loading external, cross-origin resources. If CORS validation fails, the resource is treated as though it failed to load.
 
-If CORS validation fails, the resource is treated as though it failed to load. `<url>` does not enforce CORS itself, but the property does.
+Note that the `<url>` value type does not enforce CORS validation itself, but individual CSS properties do.
+
+## Examples
 
 ## Specifications
 
