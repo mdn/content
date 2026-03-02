@@ -28,7 +28,7 @@ A generic {{domxref("Event")}}.
 
 ### Pausing fetches in response to endstreaming
 
-This example creates a {{domxref("ManagedMediaSource")}}, attaches it to a video element, and uses the `startstreaming` and `endstreaming` events to control when media segments are fetched.
+This example creates a {{domxref("ManagedMediaSource")}}, attaches it to a {{htmlelement("video")}} element, and uses the `startstreaming` and `endstreaming` events to control when media segments are fetched.
 
 ```js
 const videoUrl =

@@ -20,7 +20,7 @@ A boolean. Initially `false`.
 
 ### Checking the streaming state
 
-This example creates a {{domxref("ManagedMediaSource")}}, attaches it to a video element, and logs the value of `streaming` whenever it changes.
+This example creates a {{domxref("ManagedMediaSource")}}, attaches it to a {{htmlelement("video")}} element, and logs the value of `streaming` whenever it changes between `true` and `false`.
 
 ```js
 const mediaType = 'video/mp4; codecs="avc1.64001F, mp4a.40.2"';

@@ -8,7 +8,7 @@ browser-compat: api.ManagedMediaSource.ManagedMediaSource
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`ManagedMediaSource()`** constructor of the {{domxref("ManagedMediaSource")}} interface constructs and returns a new `ManagedMediaSource` object with no associated source buffers.
+The **`ManagedMediaSource()`** constructor of the {{domxref("ManagedMediaSource")}} interface constructs and returns a new `ManagedMediaSource` object instance with no associated source buffers.
 
 ## Syntax
 
@@ -22,13 +22,13 @@ None.
 
 ### Return value
 
-A new {{domxref("ManagedMediaSource")}} object.
+A new {{domxref("ManagedMediaSource")}} object instance.
 
 ## Examples
 
 ### Creating a ManagedMediaSource and attaching it to a video element
 
-The following example creates a new `ManagedMediaSource`, attaches it to a video element, and uses the {{domxref("ManagedMediaSource.startstreaming_event", "startstreaming")}} event to begin fetching media data.
+The following example creates a new `ManagedMediaSource`, attaches it to a {{htmlelement("video")}} element, and uses the {{domxref("ManagedMediaSource.startstreaming_event", "startstreaming")}} event to begin fetching media data.
 
 ```js
 const videoUrl =

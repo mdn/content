@@ -8,7 +8,7 @@ browser-compat: api.BufferedChangeEvent.removedRanges
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`removedRanges`** read-only property of the {{domxref("BufferedChangeEvent")}} interface returns a {{domxref("TimeRanges")}} object representing the time ranges that were removed from the {{domxref("ManagedSourceBuffer")}}'s buffer. These are the ranges removed between the last `updatestart` and `updateend` events, during the most recent run of the coded frame removal or coded frame eviction algorithm, or as a consequence of the user agent running the memory cleanup algorithm.
+The **`removedRanges`** read-only property of the {{domxref("BufferedChangeEvent")}} interface returns a {{domxref("TimeRanges")}} object representing the time ranges that were removed from the associated {{domxref("ManagedSourceBuffer")}}. These are the ranges removed between the last `updatestart` and `updateend` events, during the most recent run of the coded frame removal or coded frame eviction algorithm, or as a consequence of the user agent running the memory cleanup algorithm.
 
 ## Value
 
@@ -18,7 +18,7 @@ A {{domxref("TimeRanges")}} object.
 
 ### Logging removed ranges on buffer change
 
-This example creates a {{domxref("ManagedMediaSource")}}, attaches it to a video element, fetches a fragmented MP4 file, and then removes a portion of the buffered data. The `bufferedchange` event handler logs any removed time ranges.
+This example creates a {{domxref("ManagedMediaSource")}}, attaches it to a {{htmlelement("video")}} element, fetches a fragmented MP4 file, and then removes a portion of the buffered data. The `bufferedchange` event handler logs any removed time ranges.
 
 ```js
 const videoUrl =

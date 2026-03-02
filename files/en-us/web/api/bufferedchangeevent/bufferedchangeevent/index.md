@@ -8,7 +8,7 @@ browser-compat: api.BufferedChangeEvent.BufferedChangeEvent
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`BufferedChangeEvent()`** constructor of the {{domxref("BufferedChangeEvent")}} interface creates a new `BufferedChangeEvent` object.
+The **`BufferedChangeEvent()`** constructor of the {{domxref("BufferedChangeEvent")}} interface creates a new `BufferedChangeEvent` object instance.
 
 ## Syntax
 
@@ -30,13 +30,15 @@ new BufferedChangeEvent(type, options)
 
 ### Return value
 
-A new {{domxref("BufferedChangeEvent")}} object.
+A new {{domxref("BufferedChangeEvent")}} object instance.
 
 ## Examples
 
 ### Inspecting a bufferedchange event
 
-The browser creates `BufferedChangeEvent` objects when a {{domxref("ManagedSourceBuffer")}}'s buffered ranges change. The event's properties describe what changed:
+The `BufferedChangeEvent()` constructor isn't generally called manually. When a {{domxref("ManagedSourceBuffer")}}'s `bufferedchange` event fires (meaning its buffered ranges change), the browser will construct a `BufferedChangeEvent` object to use as the event object.
+
+The event's properties describe what changed:
 
 ```js
 sourceBuffer.addEventListener("bufferedchange", (event) => {

@@ -28,7 +28,7 @@ A generic {{domxref("Event")}}.
 
 ### Fetching data in response to startstreaming
 
-This example creates a {{domxref("ManagedMediaSource")}}, attaches it to a video element, and uses the `startstreaming` event to begin fetching and appending media data.
+This example creates a {{domxref("ManagedMediaSource")}}, attaches it to a {{htmlelement("video")}} element, and uses the `startstreaming` event to begin fetching and appending media data.
 
 ```js
 const videoUrl =

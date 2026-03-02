@@ -19,7 +19,7 @@ When {{domxref("MediaSource.addSourceBuffer", "addSourceBuffer()")}} is called o
 ## Constructor
 
 - {{domxref("ManagedMediaSource.ManagedMediaSource", "ManagedMediaSource()")}}
-  - : Creates and returns a new `ManagedMediaSource` object with no associated source buffers.
+  - : Creates and returns a new `ManagedMediaSource` object instance with no associated source buffers.
 
 ## Instance properties
 
@@ -37,15 +37,15 @@ _Inherits methods from its parent interface, {{domxref("MediaSource")}}._
 _Also inherits events from its parent interface, {{domxref("MediaSource")}}._
 
 - {{domxref("ManagedMediaSource.startstreaming_event", "startstreaming")}}
-  - : Fired when the `ManagedMediaSource`'s {{domxref("ManagedMediaSource.streaming", "streaming")}} property changes from `false` to `true`.
+  - : Fired when the `ManagedMediaSource`'s {{domxref("ManagedMediaSource.streaming", "streaming")}} property changes from `false` to `true`, meaning the media source has started streaming.
 - {{domxref("ManagedMediaSource.endstreaming_event", "endstreaming")}}
-  - : Fired when the `ManagedMediaSource`'s {{domxref("ManagedMediaSource.streaming", "streaming")}} property changes from `true` to `false`.
+  - : Fired when the `ManagedMediaSource`'s {{domxref("ManagedMediaSource.streaming", "streaming")}} property changes from `true` to `false`, meaning the media source has stopped streaming.
 
 ## Examples
 
 ### Setting up a managed media source
 
-The following example sets up a `ManagedMediaSource`, connects it to a video element, and listens for the {{domxref("ManagedMediaSource.startstreaming_event", "startstreaming")}} and {{domxref("ManagedMediaSource.endstreaming_event", "endstreaming")}} events to control when media data is fetched. {{domxref("ManagedSourceBuffer.bufferedchange_event", "bufferedchange")}} events are logged below the video.
+The following example sets up a `ManagedMediaSource`, connects it to a {{htmlelement("video")}} element, and listens for the {{domxref("ManagedMediaSource.startstreaming_event", "startstreaming")}} and {{domxref("ManagedMediaSource.endstreaming_event", "endstreaming")}} events to control when media data is fetched. {{domxref("ManagedSourceBuffer.bufferedchange_event", "bufferedchange")}} events are logged below the video.
 
 ```html
 <video controls width="300" height="169"></video> <output id="log"></output>

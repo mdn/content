@@ -8,7 +8,7 @@ browser-compat: api.BufferedChangeEvent.addedRanges
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`addedRanges`** read-only property of the {{domxref("BufferedChangeEvent")}} interface returns a {{domxref("TimeRanges")}} object representing the time ranges that were added to the {{domxref("ManagedSourceBuffer")}}'s buffer. These are the ranges added between the last `updatestart` and `updateend` events, during the most recent run of the coded frame processing algorithm.
+The **`addedRanges`** read-only property of the {{domxref("BufferedChangeEvent")}} interface returns a {{domxref("TimeRanges")}} object representing the time ranges that were added to the associated {{domxref("ManagedSourceBuffer")}}. These are the ranges added between the last `updatestart` and `updateend` events, during the most recent run of the coded frame processing algorithm.
 
 ## Value
 

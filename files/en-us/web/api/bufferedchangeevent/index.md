@@ -21,15 +21,15 @@ The **`BufferedChangeEvent`** interface of the {{domxref("Media Source Extension
 _Also inherits properties from its parent interface, {{domxref("Event")}}._
 
 - {{domxref("BufferedChangeEvent.addedRanges")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("TimeRanges")}} object representing the time ranges that were added to the {{domxref("ManagedSourceBuffer")}}'s buffer.
+  - : A {{domxref("TimeRanges")}} object representing the time ranges that were added to the {{domxref("ManagedSourceBuffer")}}'s buffer.
 - {{domxref("BufferedChangeEvent.removedRanges")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("TimeRanges")}} object representing the time ranges that were removed from the {{domxref("ManagedSourceBuffer")}}'s buffer.
+  - : A {{domxref("TimeRanges")}} object representing the time ranges that were removed from the {{domxref("ManagedSourceBuffer")}}'s buffer.
 
 ## Examples
 
 ### Handling buffered range changes
 
-This example creates a {{domxref("ManagedMediaSource")}}, attaches it to a video element, fetches a fragmented MP4 file, and listens for the `bufferedchange` event. When the event fires, it logs the added time ranges.
+This example creates a {{domxref("ManagedMediaSource")}}, attaches it to a {{htmlelement("video")}} element, fetches a fragmented MP4 file, and listens for the `bufferedchange` event. When the event fires, it logs the added time ranges.
 
 ```js
 const videoUrl =
