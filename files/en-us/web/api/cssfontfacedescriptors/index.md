@@ -96,7 +96,7 @@ function log(text) {
 const myRules = document.getElementById("css-output").sheet.cssRules;
 for (const rule of myRules) {
   if (rule instanceof CSSFontFaceRule) {
-    const style = rule.style;
+    const style = rule.style; // a CSSFontFaceDescriptors
     log(`font-family: ${style.fontFamily}`);
     log(`src: ${style.src}`);
     log(`font-weight: ${style["font-weight"]}`);
