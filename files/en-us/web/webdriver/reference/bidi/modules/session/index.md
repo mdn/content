@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.session
 sidebar: webdriver
 ---
 
-The **`session`** module contains commands for monitoring the status of the browser and for managing the lifecycle and event subscriptions of a WebDriver BiDi session.
+The **`session`** module contains commands for managing the lifecycle and event subscriptions of a WebDriver BiDi session.
 
 ## Commands
 
