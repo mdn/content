@@ -51,7 +51,7 @@ For example, if you wanted to inject unsafe HTML but for some reason you needed 
 const sanitizer = new Sanitizer(); // Default sanitizer
 sanitizer.allowAttribute("onblur"); // Allow onblur
 
-someElement.setHTMLUnsafe(untrustedString, { sanitizer });
+someElement.setHTMLUnsafe(untrustedString, { sanitizer: sanitizer });
 ```
 
 ### Sanitizer configuration
@@ -291,7 +291,7 @@ All other elements in the input string would be removed.
 
 ```js
 const sanitizer = new Sanitizer({ elements: ["p", "b", "div"] });
-someElement.setHTMLUnsafe(untrustedString, { sanitizer });
+someElement.setHTMLUnsafe(untrustedString, { sanitizer: sanitizer });
 ```
 
 Note that in this case you should normally use `setHTML()`.
