@@ -8,9 +8,7 @@ browser-compat: api.ReportingObserver.ReportingObserver
 
 {{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`ReportingObserver()`** constructor of the [Reporting API](/en-US/docs/Web/API/Reporting_API) creates a new
-{{domxref("ReportingObserver")}} object instance, which can be used to collect and
-access reports.
+The **`ReportingObserver()`** constructor of the [Reporting API](/en-US/docs/Web/API/Reporting_API) creates a new {{domxref("ReportingObserver")}} object instance, which can be used to collect and access reports.
 
 ## Syntax
 
@@ -22,34 +20,61 @@ new ReportingObserver(callback, options)
 ### Parameters
 
 - `callback`
-  - : A callback function that runs when the observer starts to collect reports (i.e., via
-    {{domxref("ReportingObserver.observe()")}}). The callback function is given two
-    parameters:
+  - : A callback function that runs when the observer starts to collect reports (i.e., via {{domxref("ReportingObserver.observe()")}}).
+    The callback function is given two parameters:
     - `reports`
-      - : A sequence of {{domxref("Report")}} objects representing
-        the reports collected in the observer's report queue. This is probably the most
-        common way to retrieve the reports.
+      - : A sequence of objects representing the reports collected in the observer's report queue.
+
+        Report objects are expected to have the following properties:
+        - `body`
+          - : An object representing the body of the report.
+            The structure of the report (in particular of its body), depends on its [`type`](#type).
+        - `type`
+          - : A string indicating the type of the report.
+            For information on report types see [`options.types`](#types) below.
+        - `url`
+          - : A string representing the URL of the document that generated the report.
+
     - `observer`
-      - : A reference to the same `ReportingObserver`
-        object, allowing for recursive report collection, etc.
+      - : A reference to the same `ReportingObserver` object, allowing for recursive report collection, and so on.
 
 - `options` {{optional_inline}}
-  - : An object allowing you to set the options for creating the object. The available options are:
+  - : An object allowing you to set the options for creating the object.
+    The available options are:
     - `types`
-      - : An array of strings representing the types of report to be
-        collected by this observer. Available types include `deprecation`,
-        `intervention`, and `crash` (although this last type usually
-        isn't retrievable via a `ReportingObserver`). If this option is omitted, all supported types are collected.
+      - : An array of strings representing the types of report to be collected by this observer.
+        Available types include:
+        - `deprecation`
+          - : Deprecated features used by the site.
+            Reports are {{domxref("DeprecationReport")}} instances.
+        - `integrity-violation`
+          - : Violations of the page's integrity policy.
+            Reports are {{domxref("IntegrityViolationReport")}} instances.
+        - `intervention`
+          - : Features blocked by the user agent, for example, if an ad significantly impacts page performance.
+            Reports are {{domxref("InterventionReport")}} instances.
+        - `csp-violation`
+          - : Violations of the site's CSP policy.
+            Reports are {{domxref("CSPViolationReport")}} instances.
+        - `crash`
+          - : Browser crash reports.
+            (crash reports aren't retrievable via a `ReportingObserver` but can be sent to a server).
+            <!-- Reports are {{domxref("TBD")}} instances. -->
+
+        If this option is omitted, all supported types are collected.
+
     - `buffered`
-      - : a boolean that defines whether the reports that were
-        generated before the observer was able to be created should be observable
-        (`true`) or not (`false`).
+      - : A boolean that defines whether the reports that were generated before the observer was able to be created should be observable (`true`) or not (`false`).
 
 ## Examples
 
+### Display specific report types
+
+This code shows how to create a `ReportingObserver` that could be used to observe [`deprecation`](#deprecation) and [`integrity-violation`](#integrity-violation) reports.
+
 ```js
 const options = {
-  types: ["deprecation"],
+  types: ["deprecation", "integrity-violation"],
   buffered: true,
 };
 

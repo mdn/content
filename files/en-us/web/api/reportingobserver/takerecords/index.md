@@ -8,9 +8,7 @@ browser-compat: api.ReportingObserver.takeRecords
 
 {{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`takeRecords()`** method of the
-{{domxref("ReportingObserver")}} interface returns the current list of reports contained
-in the observer's report queue, and empties the queue.
+The **`takeRecords()`** method of the {{domxref("ReportingObserver")}} interface returns the current list of reports contained in the observer's report queue, and empties the queue.
 
 ## Syntax
 
@@ -27,6 +25,8 @@ None.
 An array of {{domxref("Report")}} objects.
 
 ## Examples
+
+### Basic usage
 
 ```js
 const options = {
