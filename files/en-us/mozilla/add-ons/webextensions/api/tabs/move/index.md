@@ -13,6 +13,8 @@ You can only move tabs to and from windows whose {{WebExtAPIRef('windows.WindowT
 Where the call moves a tab or the tabs from a split view:
 
 - If only one tab in the split view is specified, the other tab in the split view is moved with it to maintain the view. If the call moves the tab to the index occupied by the other tab in the split, the split's tab order is swapped.
+  > [!NOTE]
+  > In Chrome, tabs in a split view move independently, so moving one tab alone removes the split view.
 - If both tabs in a split view are included, then:
   - If the tabs remain adjacent, the split view is maintained. The tabs in the split view are ordered according to the new index order.
   - If a third tab separates the tabs, then the split view is removed.
