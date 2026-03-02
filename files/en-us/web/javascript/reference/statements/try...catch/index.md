@@ -155,7 +155,7 @@ function safeWriteMyFile() {
 }
 ```
 
-It is generally a bad idea to use control flow statements (`return`, `throw`, `break`, `continue`) in the `finally` block because they override the effect of any previously executed control flow statement, which is rarely intended. Most of the time, the `finally` block should be reserved for cleanup code.
+It is generally a bad idea to use control flow statements (`return`, `throw`, `break`, `continue`) in the `finally` block because they can override the effect of previously executed control flow statement, which is rarely intended. Most of the time, the `finally` block should be reserved for cleanup code.
 
 The following example illustrates how the effect of a `return` statement can be overridden by another in the `finally` block. When control flow exits the `try` block via the first `return` statement, the return value expression (`order.sort()`) is evaluated before entering the `finally` block, and the function is planned to return that value after the `finally` block finishes executing. Because the `finally` block also exits via a `return` statement, the function returns the value evaluated in this last statement instead.
 
