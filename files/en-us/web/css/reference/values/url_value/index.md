@@ -16,13 +16,6 @@ Support for file: URLs is implementation-defined and often restricted for securi
 <url> = url( <link> )
 ```
 
-Here's an example:
-
-```plain
-body {
-  background-image: url("/images/background.jpg");
-}
-```
 
 ### Values
 
