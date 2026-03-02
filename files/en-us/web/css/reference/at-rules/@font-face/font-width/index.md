@@ -2,9 +2,13 @@
 title: font-width
 slug: Web/CSS/Reference/At-rules/@font-face/font-width
 page-type: css-at-rule-descriptor
+status:
+  - experimental
 browser-compat: css.at-rules.font-face.font-width
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 > [!NOTE]
 > The `font-width` descriptor is the modern replacement for the {{cssxref("@font-face/font-stretch")}} descriptor, which is a legacy alias. While `font-width` is the specification's preferred name, `font-stretch` currently has broader browser support. Check the [fallback example](#providing_a_font-stretch_fallback) and [browser compatibility](#browser_compatibility) table for details.
@@ -177,7 +181,7 @@ Because `font-width` does not yet have broad browser support, you may want to in
 ```css
 @font-face {
   font-family: "MyFont";
-  src: url("myfont.woff2") format("woff2");
+  src: url("my-font.woff2") format("woff2");
   font-stretch: condensed; /* for browsers that don't support font-width */
   font-width: condensed;
 }

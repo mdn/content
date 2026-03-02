@@ -137,7 +137,7 @@ When the result is returned, we invoke the exported Wasm `run()` function availa
 ```js live-sample___basic-usage
 let imports = {
   funcs: {
-    output: function (elem, val) {
+    output(elem, val) {
       elem.textContent += `${val} `;
     },
   },
