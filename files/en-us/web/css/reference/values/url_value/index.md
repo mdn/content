@@ -36,7 +36,11 @@ The value is either of the following:
 > [!NOTE]
 > The specification defines an alternative function called `src()` that accepts a URL string or a [CSS variable](/en-US/docs/Web/CSS/Reference/Values/var). But no web browser has implemented the function yet.
 
-## Cross-origin restrictions
+## Description
+
+The `<url>` data type, written with the [`url()`] function, represents a `URL`, which is a pointer to a resource. The internal or external resource can be an image, a video, a CSS file, a font file, an SVG feature etc. The URL may be absolute or relative.
+
+### External resources and CORS
 
 When a `<url>` references an external resource, the resource is subject to [Cross-origin restrictions](/en-US/docs/Web/HTTP/Guides/CORS).
 CORS applies depending on the CSS property that uses the `<url>` value. Certain CSS features require successful CORS validation when loading cross-origin resources.
