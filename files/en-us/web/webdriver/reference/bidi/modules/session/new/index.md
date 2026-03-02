@@ -47,7 +47,7 @@ Each object may include any of the following optional capabilities:
 - `browserVersion` {{optional_inline}}
   - : A string that specifies the browser version to match (for example, `"120.0"`).
 - `platformName` {{optional_inline}}
-  - : A string that specifies the operating system to match (for example, `"windows"`, `"mac"`, or `"linux"`).
+  - : A string that specifies the operating system to match (for example, `"windows"`, `"mac"`, `"android"`, or `"linux"`).
 - `proxy` {{optional_inline}}
   - : An object that specifies the proxy configuration the browser should use for network requests.
 - `unhandledPromptBehavior` {{optional_inline}}
