@@ -54,7 +54,7 @@ Browse the complete [WebDriver reference](/en-US/docs/Web/WebDriver/Reference) d
 - [Capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
   - : Reference for all WebDriver classic capabilities.
 
-- [Errors](/en-US/docs/Web/WebDriver/Reference/Classic/Errors)
+- [Errors](/en-US/docs/Web/WebDriver/Reference/Errors)
   - : Reference for WebDriver classic errors.
 
 - [Timeouts](/en-US/docs/Web/WebDriver/Reference/Classic/Timeouts)

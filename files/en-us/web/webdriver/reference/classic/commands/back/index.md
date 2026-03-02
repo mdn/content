@@ -26,7 +26,7 @@ The _Back_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of th
 
 ### Errors
 
-- [Invalid session id](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/InvalidSessionID)
+- [Invalid session id](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
   - : Session does not exist.
 - No such window
   - : The [`window`](/en-US/docs/Web/API/Window) object has been discarded, indicating that the tab or window has been closed.

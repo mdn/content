@@ -29,8 +29,8 @@ sidebar:
         details: closed
         code: true
       - type: listSubPages
-        path: /Web/WebDriver/Reference/Classic/Errors
-        link: /Web/WebDriver/Reference/Classic/Errors
+        path: /Web/WebDriver/Reference/Errors
+        link: /Web/WebDriver/Reference/Errors
         details: closed
       - link: /Web/WebDriver/Reference/Classic/Timeouts
         title: Timeouts
