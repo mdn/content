@@ -1,7 +1,7 @@
 ---
 title: WebDriver classic capabilities
 short-title: Capabilities
-slug: Web/WebDriver/Reference/Classic/Capabilities
+slug: Web/WebDriver/Reference/Capabilities
 page-type: landing-page
 sidebar: webdriver
 ---
@@ -103,19 +103,19 @@ Which you choose of the two preceding examples is not important, but it can matt
 - [`browserName`](/en-US/docs/Web/WebDriver/Reference/Capabilities/browserName)
 - [`browserVersion`](/en-US/docs/Web/WebDriver/Reference/Capabilities/browserVersion)
 - [`platformName`](/en-US/docs/Web/WebDriver/Reference/Capabilities/platformName)
-- [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/acceptInsecureCerts)
+- [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts)
 - [`pageLoadStrategy`](/en-US/docs/Web/WebDriver/Reference/Capabilities/pageLoadStrategy)
 - [`proxy`](/en-US/docs/Web/WebDriver/Reference/Capabilities/proxy)
 - [`setWindowRect`](/en-US/docs/Web/WebDriver/Reference/Capabilities/setWindowRect)
 - [`timeouts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/timeouts)
 - [`unhandledPromptBehavior`](/en-US/docs/Web/WebDriver/Reference/Capabilities/unhandledPromptBehavior)
-- [`webSocketUrl`](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/webSocketUrl)
+- [`webSocketUrl`](/en-US/docs/Web/WebDriver/Reference/Capabilities/webSocketUrl)
 
 ### Vendor-specific capabilities
 
 In addition to the [standard capabilities](#list_of_capabilities) WebDriver allows third-parties to _extend_ the set of capabilities to match their needs. Browser vendors and suppliers of drivers typically use extension capabilities to provide configuration to the browser, but they can also be used by intermediaries for arbitrary blobs of information.
 
-- [Firefox capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/firefoxOptions) (`moz:firefoxOptions`)
+- [Firefox capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities/firefoxOptions) (`moz:firefoxOptions`)
 - [Chrome capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities/goog/chromeOptions) (`goog:chromeOptions`)
 
 ### Legacy capabilities

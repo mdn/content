@@ -11,7 +11,7 @@ This reference documents the commands, capabilities, errors, and timeouts availa
 
 - [Commands](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)
   - : HTTP-based operations to inspect and control the behavior of browsers, manage browser sessions and windows, and interact with DOM elements.
-- [Capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities)
+- [Capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
   - : Configuration options used to communicate the features supported by a session and to define which features the driver must satisfy when creating a new session.
 - [Errors](/en-US/docs/Web/WebDriver/Reference/Classic/Errors)
   - : Error responses that commands can return, including HTTP status codes and JSON error payloads.

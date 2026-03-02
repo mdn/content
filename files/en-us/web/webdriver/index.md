@@ -51,7 +51,7 @@ Browse the complete [WebDriver reference](/en-US/docs/Web/WebDriver/Reference) d
 - [Commands](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)
   - : Reference for all WebDriver classic commands.
 
-- [Capabilities](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities)
+- [Capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
   - : Reference for all WebDriver classic capabilities.
 
 - [Errors](/en-US/docs/Web/WebDriver/Reference/Classic/Errors)

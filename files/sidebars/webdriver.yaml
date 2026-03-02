@@ -24,8 +24,8 @@ sidebar:
         link: /Web/WebDriver/Reference/Classic/Commands
         details: closed
       - type: listSubPages
-        path: /Web/WebDriver/Reference/Classic/Capabilities
-        link: /Web/WebDriver/Reference/Classic/Capabilities
+        path: /Web/WebDriver/Reference/Capabilities
+        link: /Web/WebDriver/Reference/Capabilities
         details: closed
         code: true
       - type: listSubPages
