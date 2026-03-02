@@ -14,6 +14,12 @@ The `<timeline-range-name>` keyword values are used in [keyframe selectors](/en-
 - {{cssxref("animation-range-end")}}
 - {{cssxref("animation-range-start")}}
 - {{cssxref("animation-range")}} shorthand
+- {{cssxref("timeline-trigger-activation-range-end")}}
+- {{cssxref("timeline-trigger-activation-range-start")}}
+- {{cssxref("timeline-trigger-activation-range")}} shorthand
+- {{cssxref("timeline-trigger-active-range-end")}}
+- {{cssxref("timeline-trigger-active-range-start")}}
+- {{cssxref("timeline-trigger-active-range")}} shorthand
 
 ## Syntax
 

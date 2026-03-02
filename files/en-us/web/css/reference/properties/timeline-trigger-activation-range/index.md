@@ -81,7 +81,7 @@ Each longhand property value is specified as one of:
 
 ## Description
 
-The `timeline-trigger-activation-range` property can be used to set a custom **activation-range** for a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations). The activation range is the range between the scrolling offset at which the animated element's animation is activated, and the scrolling offset at which the animated element's animation is deactivated.
+The `timeline-trigger-activation-range` property can be used to set a custom **activation range** for a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) trigger. The activation range is the range between the scrolling offset at which the animated element's animation is activated, and the scrolling offset at which the animated element's animation is deactivated.
 
 By default, the activation range along the timeline is `cover`, which means that the animation activates when the start edge of the trigger enters the end edge of the viewport, and deactivates when the end edge of the trigger has exited either edge of the viewport. This can be changed by setting a different `timeline-trigger-activation-range` value.
 
@@ -99,7 +99,7 @@ An element with these declarations set will have an identifying {{cssxref("timel
 
 We also set a `timeline-trigger-activation-range` value of `entry 100% exit 50%`, which sets the start of the activation range to 100% of the way through the entry range and the end of the activation range to 50% of the way through the `exit` range. The result is that the animated element's animation will activate when the trigger element has completely entered the viewport, and deactivate when 50% of the trigger element has left the viewport.
 
-An animated element can set itself up to be triggered by the previously-described trigger element by referencing the trigger's identifying name in its {{cssxref("animation-trigger")}} property.
+An animated element can be triggered by the previously-described trigger element by referencing the trigger's identifying name in its {{cssxref("animation-trigger")}} property.
 
 For example:
 

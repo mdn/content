@@ -82,7 +82,7 @@ Each longhand property value is specified as one of:
 
 ## Description
 
-The `timeline-trigger-active-range` property can be used to set a custom **active range** for a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations). The active range is the range within which the trigger can stay to keep the animated element's animation active, after the animation has been activated by the trigger entering the **activation range**.
+The `timeline-trigger-active-range` property can be used to set a custom **active range** for a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) trigger. The active range is the range within which the trigger can stay to keep the animated element's animation active, after the animation has been activated by the trigger entering the **activation range**.
 
 This is useful in situations where you want an animation to be triggered in a small activation range, but then you want the animation to stay active within a larger range. The animation will only deactivate when the trigger leaves the active range.
 
@@ -108,7 +108,7 @@ We also set a `timeline-trigger-activation-range` value of `entry` and a `timeli
 > [!NOTE]
 > The active range is designed to be a superset of the activation range — you activate the animation over a certain range, and then have it staying active over a larger range. If you set the `timeline-trigger-active-range` to a smaller range than the `timeline-trigger-activation-range`, it doesn't invalidate your CSS, but the `timeline-trigger-active-range` property has no effect.
 
-An animated element can set itself up to be triggered by the previously-described trigger element by referencing the trigger's identifying name in its {{cssxref("animation-trigger")}} property.
+An animated element can be triggered by the previously-described trigger element by referencing the trigger's identifying name in its {{cssxref("animation-trigger")}} property.
 
 For example:
 

@@ -58,7 +58,7 @@ For example:
 
 An element with these declarations set will have an identifying `timeline-trigger-name` of `--my-trigger`, and a {{cssxref("timeline-trigger-source")}} value of `view()`, which selects the element's nearest ancestor scrolling element to define the [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) that its **activation range** will be measured against.
 
-An animated element can set itself up to be triggered by the previously-described trigger element by referencing the trigger's identifying name in its {{cssxref("animation-trigger")}} property.
+An animated element can be triggered by the previously-described trigger element by referencing the trigger's identifying name in its {{cssxref("animation-trigger")}} property.
 
 For example:
 
