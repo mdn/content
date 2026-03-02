@@ -6,9 +6,7 @@ spec-urls: https://drafts.csswg.org/css-values/#url-value
 sidebar: cssref
 ---
 
-The **`<url>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) is a pointer to a resource. The resource could be an image, a video, a CSS file, a font file, an SVG feature etc. The URL may be absolute or relative.
-
-Support for file: URLs is implementation-defined and often restricted for security reasons.
+The **`<url>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) is a pointer to an absolute or relative resource. The resource could be an image, a video, a CSS file, a font file, an SVG feature, etc.
 
 ## Syntax
 
