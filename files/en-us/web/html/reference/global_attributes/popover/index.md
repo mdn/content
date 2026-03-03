@@ -103,10 +103,18 @@ The final part of the `HTML` we declare the `popovers` for each _menu item_. Eac
 
 ```html
 <!-- info popovers -->
-<div id="new-info" class="info-popover" popover="hint">This is some information about <strong>creating a new</strong> thing.</div>
-<div id="open-info" class="info-popover" popover="hint">This is some information about <strong>opening an existing</strong> thing.</div>
-<div id="save-info" class="info-popover" popover="hint">This is some information about <strong>saving the current</strong> thing.</div>
-<div id="close-info" class="info-popover" popover="hint">This is some information about <strong>closing the current</strong> thing.</div>
+<div id="new-info" class="info-popover" popover="hint">
+  This is some information about <strong>creating a new</strong> thing.
+</div>
+<div id="open-info" class="info-popover" popover="hint">
+  This is some information about <strong>opening an existing</strong> thing.
+</div>
+<div id="save-info" class="info-popover" popover="hint">
+  This is some information about <strong>saving the current</strong> thing.
+</div>
+<div id="close-info" class="info-popover" popover="hint">
+  This is some information about <strong>closing the current</strong> thing.
+</div>
 ```
 
 #### CSS
