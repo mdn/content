@@ -166,7 +166,7 @@ If the browser can satisfy the requested capabilities, it responds with the sess
 
 ### Attempting to create a session when one already exists
 
-If a session is already active, sending `session.new` results in an error response:
+In browsers that don't support multiple sessions (e.g., Firefox), sending `session.new` when a session is already active results in an error response:
 
 ```json
 {
