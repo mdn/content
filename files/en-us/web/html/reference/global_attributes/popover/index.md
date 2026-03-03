@@ -73,7 +73,7 @@ In the first part of the `HTML` we declare the {{htmlElement("button")}} that wi
   <button popovertarget="menu">Click to open Menu</button>
 </header>
 <main>
-<!--  content would go here  -->
+  <!--  content would go here  -->
 </main>
 ```
 
