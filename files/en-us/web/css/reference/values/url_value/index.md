@@ -11,15 +11,15 @@ The **`<url>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Refer
 ## Syntax
 
 ```plain
-<url> = url( <link> )
+<url> = url()
 ```
 
 ### Values
 
-The value must be absolute or relative URL.
+The value may be an absolute or relative URL.
 
 - [`<url()>`](/en-US/docs/Web/CSS/Reference/Values/url_function)
-  - : The `url()` function accepts only a URL literal string (with or without quotes).
+  - : The `url()` function accepts a URL, which may be written as a quoted string or as an unquoted URL token.
 
 > [!NOTE]
 > The [CSS values and units module](/en-US/docs/Web/CSS/Guides/Values_and_units) also introduces the `src()` function as a `<url>` value. Currently, no browser supports this feature.
@@ -32,7 +32,9 @@ The `<url>` data type, written with the [`url()`](/en-US/docs/Web/CSS/Reference/
 url(http://example.com/fonts/myFont.ttf)
 url(styles.css)
 url("data:image/svg+xml,%3Csvg'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3C/svg%3E")
-```endcss
+url("image.png")
+url(../assets/icon.svg)
+```
 
 ### External resources and CORS
 
@@ -44,7 +46,7 @@ Some CSS properties, including {{cssxref("mask-image")}}, {{cssxref("filter")}},
 
 Note that the `<url>` value type does not enforce CORS validation itself, but individual CSS properties do.
 
-When opening an HTML file directly with `file://`, resources may fail because CORS rules apply locally. Modern browsers treat `file://` as a unique origin, meaning cross-file resources can get blocked. In this case, an [HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) may be hosted to avoid CORS errors.
+When opening an HTML file directly with `file://`, resources may fail because CORS rules apply locally. Modern browsers treat `file://` as a unique origin, meaning cross-file resources can get blocked. In this case, an [HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) may be hosted to avoid CORS errors. The security behavior of `file://` URLs may also vary depending on the browser and the operating system’s file permissions.
 
 ## Examples
 
