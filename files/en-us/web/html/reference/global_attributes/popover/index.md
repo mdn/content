@@ -48,7 +48,9 @@ For detailed information on usage, see the {{domxref("Popover API", "Popover API
 
 ## Examples
 
-The following renders a button that will open a popover element when activated.
+### Basic example of popover
+
+The following renders a button that will open a popover element when activated, it uses only `HTML`.
 
 ```html
 <button popovertarget="my-popover">Open Popover</button>
@@ -56,7 +58,112 @@ The following renders a button that will open a popover element when activated.
 <div popover id="my-popover">Greetings, one and all!</div>
 ```
 
-{{EmbedLiveSample('Examples', 600, 200)}}
+{{EmbedLiveSample('basic_example_of_popover', 600, 100)}}
+
+### Popover hint
+
+The following renders a button that will open a popover element when activated. That popover allows more popovers to be activated, without closing the original popover.
+
+#### HTML
+
+In the first part of the `HTML` we declare the {{htmlElement("button")}} that will open the main `popover` or _menu_.
+
+```html
+<header>
+  <button popovertarget="menu">Click to open Menu</button>
+</header>
+<main>
+<!--  content would go here  -->
+</main>
+```
+
+The second part of the `HTML` we declare the `popover` (_menu_) that is opened by the `<button>`, in the previous `HTML` block. This contains an unordered list that contains our _menu items_. Each _menu item_ contains an info `<button>` that activates another `popover`. This uses `popover="auto"`, which means this will not be closed by opening the _menu item_ popovers.
+
+```html
+<!-- menu popover -->
+<div id="menu" popover="auto">
+<ul>
+  <li><a href="#">New thing</a><button popovertarget="new-info">ⓘ</button></li>
+  <li><a href="#">Open thing</a><button  popovertarget="open-info">ⓘ</button></li>
+  <li><a href="#">Save thing</a><button popovertarget="save-info">ⓘ</button></li>
+  <li><a href="#">Close thing</a><button popovertarget="close-info">ⓘ</button></li>
+</ul>
+</div>
+```
+
+The final part of the `HTML` we declare the `popovers` for each _menu item_. Each popover includes `popover="hint"` which means it will not close the original popover but will close the other info popovers.
+
+```html
+<!-- info popovers -->
+<div id="new-info" class="info-popover" popover="hint">This is some information about <strong>creating a new</strong> thing.</div>
+<div id="open-info" class="info-popover" popover="hint">This is some information about <strong>opening an existing</strong> thing.</div>
+<div id="save-info" class="info-popover" popover="hint">This is some information about <strong>saving the current</strong> thing.</div>
+<div id="close-info" class="info-popover" popover="hint">This is some information about <strong>closing the current</strong> thing.</div>
+```
+
+#### CSS
+
+The first part of the CSS positions the `<button>` in a `<header>` and aligns it in the center.
+
+```css
+header {
+  display: flex;
+  justify-content: center;
+}
+header button {
+  margin: 0.4rem auto;
+}
+```
+
+The second part of the CSS uses [Anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/) to position the _menu_ below the `<button>` and [CSS Grid](/en-US/docs/Web/CSS/Guides/Grid_layout/) to layout the _menu items_ and info buttons.
+
+```css
+#menu {
+  margin: 0;
+  margin-top: 0.4rem;
+  inset: auto;
+  position-area: bottom;
+}
+#menu ul {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem;
+  padding: 0.4rem;
+}
+#menu li {
+  grid-column: span 2;
+  display: grid;
+  grid: inherit;
+  grid-template-columns: subgrid;
+  gap: 1.4rem;
+}
+li [popovertarget] {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+li button {
+  border: none;
+  padding: 0;
+  background-color: inherit;
+}
+```
+
+The final part of the CSS uses anchor positioning to make the info popover appear to the right of the info button.
+
+```css
+div.info-popover {
+  margin: 2rem;
+  inset: auto;
+  max-width: 300px;
+  position-area: right;
+}
+```
+
+#### Result
+
+Click the _Click to open Menu_ `<button>` then click on the ⓘ icons to open the _info-popovers_.
+
+{{EmbedLiveSample('popover_hint', 600, 250)}}
 
 > [!NOTE]
 > See our [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/) to access the full collection of MDN popover examples.
