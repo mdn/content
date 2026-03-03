@@ -210,7 +210,7 @@ Instead, browsers run the checks when the script element becomes executable — 
 
 The browser will first check if the string used as the script content is trusted.
 Any operation that allows the text source of a {{htmlelement("script")}} to be modified without explicitly setting a {{domxref("TrustedScript")}} makes it untrusted.
-The {{domxref("Node.appendChild()")}} method used above is just one example (a number of others are listed in the WPT Live tests at <https://wpt.live/trusted-types/script-enforcement-001.htm>).
+The {{domxref("Node.appendChild()")}} method used above is just one example (a number of others are listed in the WPT Live tests at <https://wpt.live/trusted-types/script-enforcement-001.html>).
 
 If the string is not trusted and trusted types are enforced, the browser will attempt to obtain a `TrustedScript` from a [default policy](#the_default_policy) to use for source instead.
 If a default policy is not defined, or does not return a `TrustedScript`, the operation will throw an exception.

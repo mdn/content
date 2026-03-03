@@ -1,13 +1,13 @@
 ---
-title: Firefox 149 release notes for developers (Nightly)
-short-title: Firefox 149 (Nightly)
+title: Firefox 149 release notes for developers (Beta)
+short-title: Firefox 149 (Beta)
 slug: Mozilla/Firefox/Releases/149
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 149 that affect developers.
-Firefox 149 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [March 24, 2026](https://whattrainisitnow.com/release/?version=149).
+Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [March 24, 2026](https://whattrainisitnow.com/release/?version=149).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -73,6 +73,8 @@ Firefox 149 is the current [Nightly version of Firefox](https://www.firefox.com/
 ## Changes for add-on developers
 
 <!-- ### Removals -->
+
+The ability of extensions to dynamically execute code in their `moz-extension:` documents with {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, and {{WebExtAPIRef("scripting.removeCSS")}} is deprecated. The feature is no longer available in Firefox Nightly, and the beta and release versions of Firefox provide a warning in the tab's console. This restriction will apply to all versions of Firefox 152 and later. As an alternative, an extension can run code in its documents dynamically by registering a {{WebExtAPIRef("runtime.onMessage")}} listener in the document's script, then sending a message to trigger execution of the required code.({{bug(2011234)}})
 
 <!-- ### Other -->
 

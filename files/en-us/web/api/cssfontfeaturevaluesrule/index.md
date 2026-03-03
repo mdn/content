@@ -7,7 +7,7 @@ browser-compat: api.CSSFontFeatureValuesRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSFontFeatureValuesRule`** interface represents an {{cssxref("@font-feature-values")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules). The values of its instance properties can be accessed with the [`CSSFontFeatureValuesMap`](/en-US/docs/Web/API/CSSFontFeatureValuesMap)interface.
+The **`CSSFontFeatureValuesRule`** interface represents an {{cssxref("@font-feature-values")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules). The values of its instance properties can be accessed with the [`CSSFontFeatureValuesMap`](/en-US/docs/Web/API/CSSFontFeatureValuesMap) interface.
 
 `@font-feature-values` allows developers to associate, for a given font face, a human-readable name with a numeric index that controls a particular [OpenType font feature](/en-US/docs/Web/CSS/Guides/Fonts/OpenType_fonts).
 For features that select alternative glyphs (stylistic, styleset, character-variant, swash, ornament or annotation), the {{cssxref("font-variant-alternates")}} property can then reference the human-readable name in order to apply the associated feature.
@@ -19,19 +19,19 @@ This is convenient, because it allows the same name to be used of represent a se
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-- {{domxref("CSSFontFeatureValuesRule.annotation")}}
+- {{domxref("CSSFontFeatureValuesRule.annotation")}} {{experimental_inline}}
   - : A user defined value definition and value that applies an alternate annotation of the font.
-- {{domxref("CSSFontFeatureValuesRule.characterVariant")}}
+- {{domxref("CSSFontFeatureValuesRule.characterVariant")}} {{experimental_inline}}
   - : A user defined value definition and value that applies a stylistic alternatives for characters of the font.
 - {{domxref("CSSFontFeatureValuesRule.fontFamily")}}
   - : A string that identifies the font family this rule applies to.
-- {{domxref("CSSFontFeatureValuesRule.ornaments")}}
+- {{domxref("CSSFontFeatureValuesRule.ornaments")}} {{experimental_inline}}
   - : A user defined value definition and value that applies alternative ornaments of the font.
-- {{domxref("CSSFontFeatureValuesRule.styleset")}}
+- {{domxref("CSSFontFeatureValuesRule.styleset")}} {{experimental_inline}}
   - : A user defined value definition and value that applies alternate style sets of the font.
-- {{domxref("CSSFontFeatureValuesRule.stylistic")}}
+- {{domxref("CSSFontFeatureValuesRule.stylistic")}} {{experimental_inline}}
   - : A user defined value definition and value that applies alternative glyphs of the font.
-- {{domxref("CSSFontFeatureValuesRule.swash")}}
+- {{domxref("CSSFontFeatureValuesRule.swash")}} {{experimental_inline}}
   - : A user defined value definition and value that applies alternative swashes of the font.
 
 ## Instance methods
@@ -44,7 +44,7 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
 In this example, we declare two {{cssxref("@font-feature-values")}} one for the _Font One_ font family, and the other for _Font Two_.
 In both declarations we define that the name "nice-style" can be used to represent the styleset alternate glyphs for both of the fonts, specifying the index for that alternate in each font family.
-The alternate glpyhs are then applied for any `.nice-look` class, using {{cssxref("font-variant-alternates")}} and passing the name to the [`styleset()`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates#styleset) function.
+The alternate glyphs are then applied for any `.nice-look` class, using {{cssxref("font-variant-alternates")}} and passing the name to the [`styleset()`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates#styleset) function.
 
 We then use the CSSOM to read these declaration as `CSSFontFeatureValuesRule` instances, displaying them into the log.
 

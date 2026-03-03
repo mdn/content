@@ -3,10 +3,12 @@ title: "CSSFontFeatureValuesMap: [Symbol.iterator]() method"
 short-title: "[Symbol.iterator]()"
 slug: Web/API/CSSFontFeatureValuesMap/Symbol.iterator
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CSSFontFeatureValuesMap.@@iterator
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`[Symbol.iterator]()`** method of {{domxref("CSSFontFeatureValuesMap")}} interface implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows built-in iterators to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns the value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), which is the iterator object itself.
 

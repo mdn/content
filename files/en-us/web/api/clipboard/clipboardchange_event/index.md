@@ -69,9 +69,9 @@ body {
   margin: 0 5px;
 }
 #output {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   padding: 10px;
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
   border-radius: 5px;
 }
 ```

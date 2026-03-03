@@ -357,7 +357,7 @@ We specify two {{htmlelement("div")}} elements: one `anchor` element and one `in
 
 #### CSS
 
-We declare the `anchor` `<div>` as an anchor element by giving it an {{cssxref("anchor-name")}}. The positioned element has its {{cssxref("position")}} property set to `absolute`, and is associated with the anchor element via its {{cssxref("position-anchor")}} property. We also set absolute {{cssxref("height")}} and {{cssxref("width")}} dimensions on the anchor and define the width of the anchor-positioned element to be the width of the anchor using the `anchor-size()` function as the value of the `width` property. As a bonus, we also use the `anchor-size()` function to define the infobox's {{cssxref("left")}} position, making the gap between the anchor and the infobox one quarter of the height of the anchor.
+We declare the `anchor` `<div>` as an anchor element by giving it an {{cssxref("anchor-name")}}. The positioned element has its {{cssxref("position")}} property set to `absolute`, and is associated with the anchor element via its {{cssxref("position-anchor")}} property. We also set absolute {{cssxref("height")}} and `width` dimensions on the anchor and define the width of the anchor-positioned element to be the width of the anchor using the `anchor-size()` function as the value of the `width` property. As a bonus, we also use the `anchor-size()` function to define the infobox's {{cssxref("left")}} position, making the gap between the anchor and the infobox one quarter of the height of the anchor.
 
 ```css hidden
 .anchor {

@@ -97,8 +97,8 @@ It is important to provide a closing mechanism for every `<dialog>` element, and
 There are numerous ways to close a dialog:
 
 - Submitting the form within the `<dialog>` element with `method="dialog"` set on the `<form>` element (see the [Using the dialog open attribute](#using_the_dialog_open_attribute) example).
-- Clicking outside the dialog area when "light dismiss" is enabled (see the [Popover API HTML attributes](/en-US/docs/Web/HTML/Reference/Elements/dialog#popover_api_html_attributes) example).
-- Pressing the <kbd>Esc</kbd> key, in dialogs where it is enabled (see the [Popover API HTML attributes](/en-US/docs/Web/HTML/Reference/Elements/dialog#popover_api_html_attributes) example).
+- Clicking outside the dialog area when "light dismiss" is enabled (see the [Popover API HTML attributes](#popover_api_html_attributes) example).
+- Pressing the <kbd>Esc</kbd> key, in dialogs where it is enabled (see the [Popover API HTML attributes](#popover_api_html_attributes) example).
 - Calling the {{domxref("HTMLDialogElement.close()")}} method (see the [modal example](#creating_a_modal_dialog)).
 
 ### CSS Styling
@@ -133,7 +133,7 @@ The `<dialog>` element is exposed by browsers in a manner similar to custom dial
 This example demonstrates how you can use open and close a modal dialog using the [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) HTML attributes of the [Invoker Commands API](/en-US/docs/Web/API/Invoker_Commands_API).
 
 First, we declare a {{htmlelement("button")}} element, setting the `command` attribute to [`"show-modal"`](/en-US/docs/Web/HTML/Reference/Elements/button#show-modal), and the `commandfor` attribute to the `id` of the dialog to open (`my-dialog`).
-Then we declare a {{htmlelement("dialog")}} element that contains a "Close" `<button>`. This button sends the [`"close"`](/en-US/docs/Web/HTML/Reference/Elements/button#close) command to the (same) dialog id.
+Then we declare a `<dialog>` element that contains a "Close" `<button>`. This button sends the [`"close"`](/en-US/docs/Web/HTML/Reference/Elements/button#close) command to the (same) dialog id.
 
 ```html
 <button command="show-modal" commandfor="my-dialog">Open dialog</button>

@@ -44,10 +44,7 @@ You can build customizable `<select>` elements using the following HTML and CSS 
 - The {{cssxref(":checked")}} pseudo-class, which targets the currently-selected `<option>` element.
 - The {{cssxref("::checkmark")}} pseudo-element, which targets the checkmark placed inside the currently-selected `<option>` element to provide a visual indication of which one is selected.
 
-In addition, the `<select>` element and its drop-down picker have the following behavior assigned to them automatically:
-
-- They have an invoker/popover relationship, as specified by the [Popover API](/en-US/docs/Web/API/Popover_API), which provides the ability to select the picker when open via the {{cssxref(":popover-open")}} pseudo-class. See [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using) for more details of popover behavior.
-- They have an implicit anchor reference, meaning that the picker is automatically associated with the `<select>` element via [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning). The browser default styles position the picker relative to the button (the anchor) and you can customize this position as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor). The browser default styles also define some position-try fallbacks that reposition the picker if it is in danger of overflowing the viewport. Position try fallback are explained in [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding).
+In addition, the `<select>` element and its drop-down picker have an implicit anchor reference, meaning that the picker is automatically associated with the `<select>` element via [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning). The browser default styles position the picker relative to the button (the anchor) and you can customize this position as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor). The browser default styles also define some position-try fallbacks that reposition the picker if it is in danger of overflowing the viewport. Position try fallback are explained in [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding).
 
 > [!NOTE]
 > You can check browser support for customizable `<select>` by viewing the browser compatibility tables on the reference pages for related features such as {{htmlelement("selectedcontent")}}, {{cssxref("::picker()", "::picker(select)")}}, and {{cssxref("::checkmark")}}.
@@ -333,7 +330,7 @@ Let's check in again on how the example is rendering. The updated state after th
 
 ## Animating the picker using popover states
 
-The customizable `<select>` element's select `button` and drop-down picker are automatically given an invoker/popover relationship, as described in [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using). There are many advantages that this brings to `<select>` elements; our example takes advantage of the ability to animate between popover hidden and showing states using transitions. The {{cssxref(":popover-open")}} pseudo-class represents popovers in the showing state.
+The customizable `<select>` element's select `button` and drop-down picker are automatically given an invoker/popover relationship, as described in [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using). There are many advantages that this brings to `<select>` elements; our example takes advantage of the ability to animate between popover hidden and showing states using transitions. The {{cssxref(":open")}} pseudo-class represents select elements in an open state.
 
 The technique is covered quickly in this section — read [Animating popovers](/en-US/docs/Web/API/Popover_API/Using#animating_popovers) for a more detailed description.
 
@@ -356,10 +353,10 @@ The list of transitioned properties features `opacity`, however it also includes
 > [!NOTE]
 > The [`allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) value is needed to enable discrete property animations.
 
-Next, the picker is selected in the showing state using `::picker(select):popover-open` and given an `opacity` value to `1` — this is the end state of the transition:
+Next, the picker is selected in the showing state using `:open::picker(select)` and given an `opacity` value to `1` — this is the end state of the transition:
 
 ```css live-sample___full-render
-::picker(select):popover-open {
+:open::picker(select) {
   opacity: 1;
 }
 ```
@@ -368,7 +365,7 @@ Finally, because the picker is being transitioned while it is moving from `displ
 
 ```css live-sample___full-render
 @starting-style {
-  ::picker(select):popover-open {
+  :open::picker(select) {
     opacity: 0;
   }
 }
