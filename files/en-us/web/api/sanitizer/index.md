@@ -9,14 +9,6 @@ browser-compat: api.Sanitizer
 
 The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) defines a configuration object that specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
 
-A `Sanitizer` instance is effectively a wrapper around a {{domxref("SanitizerConfig")}}, and can be passed as a configuration alternative in the same [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods):
-
-- {{domxref("Element/setHTML","setHTML()")}} or {{domxref("Element/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("Element")}}.
-- {{domxref("ShadowRoot/setHTML","setHTML()")}} or {{domxref("ShadowRoot/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("ShadowRoot")}}.
-- [`Document.parseHTML()`](/en-US/docs/Web/API/Document/parseHTML_static) or [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static) static methods.
-
-Note that `Sanitizer` is expected to be more efficient to reuse and modify when needed.
-
 ## Constructors
 
 - {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}}
@@ -43,6 +35,30 @@ Note that `Sanitizer` is expected to be more efficient to reuse and modify when 
 - {{domxref('Sanitizer.setDataAttributes()')}}
   - : Sets whether data attributes on elements will be allowed or removed by the sanitizer.
 
+## Description
+
+A `Sanitizer` is a reusable configuration object that specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
+It can be used with the following [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods):
+
+- Safe methods: {{domxref("Element.setHTML()")}}, {{domxref("ShadowRoot.setHTML()")}}, and [`Document.parseHTML()`](/en-US/docs/Web/API/Document/parseHTML_static).
+- Unsafe methods: {{domxref("Element.setHTMLUnsafe()")}}, {{domxref("ShadowRoot.setHTMLUnsafe()")}}, and [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static).
+
+A `Sanitizer` instance can be constructed from a {{domxref("SanitizerConfig")}}, and is effectively a wrapper around that object (it can be used with the same methods as `SanitizerConfig`, but is expected to be more efficient to reuse and modify when needed).
+If no `SanitizerConfig` is passed to the constructor, the sanitizer is created with the [default Sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration), which removes XSS-unsafe elements and attributes, along with other elements and attributes that can potentially be used in other attacks, such as clickjacking and spoofing.
+
+Note that any `Sanitizer` can be made XSS-safe by calling {{domxref("Sanitizer.removeUnsafe()")}}, but other potentially dangerous elements and attributes — which are removed by the default configuration — may still be present.
+
+### Using `Sanitizer` with the sanitization methods
+
+The default Sanitizer configuration is automatically used if no `Sanitizer` is passed to {{domxref("Element.setHTML")}} or the other safe sanitization methods.
+This is a reasonable default as it restricts the attack surface while still allowing the majority of use cases.
+
+If a custom sanitizer is passed to these methods, any XSS-unsafe elements and attributes allowed by the sanitizer would also be removed.
+Note that although this removes the same elements as {{domxref("Sanitizer.removeUnsafe()")}}, the passed `Sanitizer` is not actually changed by the operation: it would be "unsafe" if used in an unsafe method.
+
+The unsafe sanitization methods perform no sanitization by default.
+However, as noted, you can call {{domxref("Sanitizer.removeUnsafe()")}} to remove any XSS-unsafe elements (if you want to use the default configuration, you should use the safe methods).
+
 ## Examples
 
 For more examples see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and the individual methods.
@@ -61,19 +77,16 @@ The XSS-safe [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanit
 ### Creating an empty sanitizer
 
 To create an empty sanitizer, pass an empty object to the constructor.
-The resulting sanitizer configuration is shown below.
+The resulting sanitizer configuration is a [remove configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#remove_configurations) with empty arrays.
 
 ```js
 const sanitizer = new Sanitizer({});
+console.log(sanitizer.get());
 /*
 {
-  "attributes": [],
   "comments": true,
-  "dataAttributes": true,
-  "elements": [],
   "removeAttributes": [],
-  "removeElements": [],
-  "replaceWithChildrenElements": []
+  "removeElements": []
 }
 */
 ```

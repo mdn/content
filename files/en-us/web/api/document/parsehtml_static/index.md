@@ -27,8 +27,10 @@ Document.parseHTML(input, options)
   - : An options object with the following optional parameters:
     - `sanitizer`
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the [default Sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration).
+        The method will remove any XSS-unsafe elements and attributes, even if allowed by the sanitizer.
+        If not specified, the default Sanitizer configuration is used.
+
         Note that generally a `"Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to reused.
-        If not specified, the XSS-safe default sanitizer configuration is used.
 
 ### Return value
 
@@ -49,7 +51,7 @@ The **`parseHTML()`** method parses and sanitize a string of HTML in order to cr
 The resulting `Document` will have a [content type](/en-US/docs/Web/API/Document/contentType) of "text/html", a [character set](/en-US/docs/Web/API/Document/characterSet) of UTF-8, and a URL of "about:blank".
 
 If no sanitizer configuration is specified in the `options.sanitizer` parameter, `parseHTML()` is used with the [default Sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration).
-This configuration is suitable for the majority of sanitization use cases (note that it removes more than just the XSS-unsafe elements and attributes).
+This configuration is suitable for the majority of use cases as it prevents XSS attacks, as well as other attacks like clickjacking or spoofing.
 
 A custom sanitizer or sanitizer configuration can be specified to choose which elements, attributes, and comments are allowed or removed.
 Note that even if unsafe options are allowed by the sanitizer configuration, they will still be removed when using this method (which implicitly calls {{domxref('Sanitizer.removeUnsafe()')}}).
