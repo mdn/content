@@ -50,9 +50,13 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
-<!-- #### DOM -->
+#### DOM
+
+- The {{domxref("CloseWatcher")}} interface is now supported.
+  This allows developers to implement components that can be closed using device-native mechanisms, such as the <kbd>Esc</kbd> on Windows or the <kbd>Back</kbd> key on Android, in the same way as built-in components such as [dialogs](/en-US/docs/Web/HTML/Reference/Elements/dialog) and [popovers](/en-US/docs/Web/API/Popover_API).
+  ([Firefox bug 1966073](https://bugzil.la/1966073)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
