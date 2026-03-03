@@ -2,7 +2,7 @@
 title: <animation-action>
 slug: Web/CSS/Reference/Values/animation-action
 page-type: css-type
-browser-compat: css.types.animation-action
+browser-compat: css.properties.animation-trigger.animation-action
 sidebar: cssref
 ---
 
