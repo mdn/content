@@ -82,12 +82,20 @@ The second part of the `HTML` we declare the `popover` (_menu_) that is opened b
 ```html
 <!-- menu popover -->
 <div id="menu" popover="auto">
-<ul>
-  <li><a href="#">New thing</a><button popovertarget="new-info">ⓘ</button></li>
-  <li><a href="#">Open thing</a><button  popovertarget="open-info">ⓘ</button></li>
-  <li><a href="#">Save thing</a><button popovertarget="save-info">ⓘ</button></li>
-  <li><a href="#">Close thing</a><button popovertarget="close-info">ⓘ</button></li>
-</ul>
+  <ul>
+    <li>
+      <a href="#">New thing</a><button popovertarget="new-info">ⓘ</button>
+    </li>
+    <li>
+      <a href="#">Open thing</a><button popovertarget="open-info">ⓘ</button>
+    </li>
+    <li>
+      <a href="#">Save thing</a><button popovertarget="save-info">ⓘ</button>
+    </li>
+    <li>
+      <a href="#">Close thing</a><button popovertarget="close-info">ⓘ</button>
+    </li>
+  </ul>
 </div>
 ```
 
