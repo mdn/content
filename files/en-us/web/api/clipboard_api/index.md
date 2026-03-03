@@ -75,6 +75,7 @@ Chromium browsers:
 - Writing requires either the `clipboard-write` permission or transient activation.
   If the permission is granted, it persists, and further transient activation is not required.
 - The HTTP [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) permissions `clipboard-read` and `clipboard-write` must be allowed for {{HTMLElement("iframe")}} elements that access the clipboard.
+- Firing {{domxref("Clipboard.clipboardchange_event", "clipboardchange")}} events requires [sticky activation](/en-US/docs/Glossary/Sticky_activation) or the `clipboard-read` permission to be granted.
 
 Firefox & Safari:
 
