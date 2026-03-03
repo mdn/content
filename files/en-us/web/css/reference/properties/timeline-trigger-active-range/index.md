@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`timeline-trigger-active-range`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) specifies a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) trigger's active range.
+The **`timeline-trigger-active-range`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) specifies a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger's active range.
 
 ## Constituent properties
 
@@ -82,7 +82,7 @@ Each longhand property value is specified as one of:
 
 ## Description
 
-The `timeline-trigger-active-range` property can be used to set a custom **active range** for a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) trigger. The active range is the range within which the trigger can stay to keep the animated element's animation active, after the animation has been activated by the trigger entering the **activation range**.
+The `timeline-trigger-active-range` property can be used to set a custom **active range** for a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger. The active range is the range within which the trigger can stay to keep the animated element's animation active, after the animation has been activated by the trigger entering the **activation range**.
 
 This is useful in situations where you want an animation to be triggered in a small activation range, but then you want the animation to stay active within a larger range. The animation will only deactivate when the trigger leaves the active range.
 
@@ -389,5 +389,5 @@ Try scrolling the content. Initially the rotation will start when the trigger en
 - {{cssxref("timeline-trigger")}} shorthand property
 - {{cssxref("trigger-scope")}}
 - {{cssxref("animation-action")}} type
-- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations)
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

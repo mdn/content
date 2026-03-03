@@ -1,7 +1,7 @@
 ---
 title: Using CSS scroll-triggered animations
 short-title: Scroll-triggered animations
-slug: Web/CSS/Guides/Animations/Using_scroll-triggered_animations
+slug: Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations
 page-type: guide
 sidebar: cssref
 ---
@@ -474,9 +474,6 @@ This example renders like so:
 
 Scroll the images into view, and then scroll them carefully up and down. Note how both figure captions fade into view at a point roughly one third up the page. The first caption fades out again slightly further up, whereas the second one doesn't fade out until it has been moved complete out of the viewport. This is because both `<img>` triggers have the same activation range, but only the second one has the much larger active range applied to it.
 
-> [!NOTE]
-> You can set both the activation and active ranges in a single property using the {{cssxref("timeline-trigger-range")}} shorthand property.
-
 ## The timeline-trigger shorthand
 
 So far, we've written all of our scroll-triggered animation CSS out as a mixture of shorthand and longhand properties. This is cumbersome and wordy, but it helps you to understand each of the values we've set and what they do. However, now you've understood what they all do, let's look at the shortest possible equivalent, which you'll probably write in all your code going forward.
@@ -499,12 +496,6 @@ img {
   timeline-trigger: --t view() contain 25% contain 75% / entry 0% exit 100%;
 }
 ```
-
-Note that there is a multi-level hierarchy to the range properties:
-
-- `contain 25% contain 75% / entry 0% exit 100%` is equal to the value of the `timeline-trigger-range` shorthand property, which in turn is equivalent to the `timeline-trigger-activation-range` and `timeline-trigger-active-range` shorthand property values separated by a forward slash.
-- The `timeline-trigger-activation-range` shorthand value, `contain 25% contain 75%`, is equivalent to the `timeline-trigger-activation-range-start` and `timeline-trigger-activation-range-end` values separated by a space.
-- The `timeline-trigger-active-range` shorthand value, `entry 0% exit 100%`, is equivalent to the `timeline-trigger-active-range-start` and `timeline-trigger-active-range-end` values separated by a space.
 
 ## Adjusting the animation's action
 

@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`timeline-trigger`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) specifies a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) trigger.
+The **`timeline-trigger`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) specifies a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger.
 
 ## Constituent properties
 
@@ -75,7 +75,7 @@ If specified, the {{cssxref("timeline-trigger-activation-range")}} value can opt
 
 ## Description
 
-The `timeline-trigger` property can be used to set all the properties used to specify a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) trigger element in a single declaration.
+The `timeline-trigger` property can be used to set all the properties used to specify a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger element in a single declaration.
 
 For example:
 
@@ -447,5 +447,5 @@ Try scrolling the content. The first animated element will start to rotate when 
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}}
 - {{cssxref("trigger-scope")}}
 - {{cssxref("animation-action")}} type
-- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations)
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

@@ -6,7 +6,7 @@ browser-compat: css.types.animation-action
 sidebar: cssref
 ---
 
-The **`<animation-action>`** {{glossary("enumerated")}} data type is a CSS identifier that specifies how a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) should behave when activated and deactivated.
+The **`<animation-action>`** {{glossary("enumerated")}} data type is a CSS identifier that specifies how a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) should behave when activated and deactivated.
 
 The `<animation-action>` keyword values are used in the following properties:
 
@@ -423,5 +423,5 @@ The effects are:
 - {{cssxref("timeline-trigger")}} shorthand property
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}}
 - {{cssxref("trigger-scope")}}
-- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations)
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

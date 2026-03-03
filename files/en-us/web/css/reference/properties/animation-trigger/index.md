@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`animation-trigger`** [CSS](/en-US/docs/Web/CSS) property specifies whether [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) declared on an element are [scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations), and if so, what their triggers are and how they should behave when triggered.
+The **`animation-trigger`** [CSS](/en-US/docs/Web/CSS) property specifies whether [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) declared on an element are [scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations), and if so, what their triggers are and how they should behave when triggered.
 
 ## Syntax
 
@@ -54,7 +54,7 @@ The `animation-trigger` property may be specified using one or more `animation-t
 
 ## Description
 
-The `animation-trigger` property specifies which trigger element will trigger an animated element's animations, turning them into [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations). The trigger is identified via a `<dashed-ident>` value, which is defined in the trigger element's {{cssxref("timeline-trigger-name")}} property. If the `<dashed-ident>` specified inside the `animation-trigger` isn't set as a `timeline-trigger-name` on a suitable element inside the same document, `animation-trigger` is ignored.
+The `animation-trigger` property specifies which trigger element will trigger an animated element's animations, turning them into [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations). The trigger is identified via a `<dashed-ident>` value, which is defined in the trigger element's {{cssxref("timeline-trigger-name")}} property. If the `<dashed-ident>` specified inside the `animation-trigger` isn't set as a `timeline-trigger-name` on a suitable element inside the same document, `animation-trigger` is ignored.
 
 You can also include one or two {{cssxref("animation-action")}} keywords in an `animation-trigger` value, which specify the behavior of the animation once activated and deactivated.
 
@@ -98,7 +98,7 @@ The {{cssxref("animation-trigger")}} property works in the same way as the {{css
 - If two `animation-trigger` values are set, they will cycle between the animations until all of them have an `animation-trigger` value set.
 - And so on.
 
-See [Using CSS scroll-triggered animations > Multiple scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations#multiple_scroll-triggered_animations) for a working example.
+See [Using CSS scroll-triggered animations > Multiple scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations#multiple_scroll-triggered_animations) for a working example.
 
 ## Formal definition
 
@@ -435,5 +435,5 @@ Try scrolling the content up. When the `<div>` fully appears in the viewport, it
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}}
 - {{cssxref("trigger-scope")}}
 - {{cssxref("animation-action")}} type
-- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations)
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

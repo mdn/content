@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`timeline-trigger-activation-range-end`** [CSS](/en-US/docs/Web/CSS) property specifies the end point of a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) trigger's activation range.
+The **`timeline-trigger-activation-range-end`** [CSS](/en-US/docs/Web/CSS) property specifies the end point of a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger's activation range.
 
 ## Syntax
 
@@ -55,7 +55,7 @@ The `timeline-trigger-activation-range-end` shorthand property is specified as o
 
 ## Description
 
-When creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations), the `timeline-trigger-activation-range-end` property can be set on the trigger element to explicitly define the end of the trigger's **activation range**. Read the linked guide and the [`timeline-trigger-activation-range` description](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-activation-range#description) for more information.
+When creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations), the `timeline-trigger-activation-range-end` property can be set on the trigger element to explicitly define the end of the trigger's **activation range**. Read the linked guide and the [`timeline-trigger-activation-range` description](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-activation-range#description) for more information.
 
 Allowed values for the `timeline-trigger-activation-range-end` property are:
 
@@ -281,5 +281,5 @@ Try scrolling the content up. When the trigger `<div>` starts to enter the viewp
 - {{cssxref("timeline-trigger-activation-range")}} shorthand property
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, and {{cssxref("timeline-trigger-active-range")}}
 - {{cssxref("timeline-trigger")}} shorthand property
-- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations)
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

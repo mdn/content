@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`timeline-trigger-active-range-end`** [CSS](/en-US/docs/Web/CSS) property specifies the end point of a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) trigger's active range.
+The **`timeline-trigger-active-range-end`** [CSS](/en-US/docs/Web/CSS) property specifies the end point of a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger's active range.
 
 ## Syntax
 
@@ -56,7 +56,7 @@ The `timeline-trigger-active-range-end` shorthand property is specified as one o
 
 ## Description
 
-When creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations), the `timeline-trigger-active-range-end` property can be set on the trigger element to explicitly define the end of the trigger's **active range**. Read the linked guide and the [`timeline-trigger-active-range` description](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description) for more information.
+When creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations), the `timeline-trigger-active-range-end` property can be set on the trigger element to explicitly define the end of the trigger's **active range**. Read the linked guide and the [`timeline-trigger-active-range` description](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description) for more information.
 
 Allowed values for the `timeline-trigger-active-range-end` property are:
 
@@ -282,5 +282,5 @@ Try scrolling the content up. When the trigger `<div>` moves into the narrow act
 - {{cssxref("timeline-trigger-active-range")}} shorthand property
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, and {{cssxref("timeline-trigger-activation-range")}}
 - {{cssxref("timeline-trigger")}} shorthand property
-- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations)
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

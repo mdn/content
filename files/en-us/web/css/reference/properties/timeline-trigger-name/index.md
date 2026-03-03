@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`timeline-trigger-name`** [CSS](/en-US/docs/Web/CSS) property specifies an element as a trigger for a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) and defines its identifier(s).
+The **`timeline-trigger-name`** [CSS](/en-US/docs/Web/CSS) property specifies an element as a trigger for a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) and defines its identifier(s).
 
 ## Syntax
 
@@ -45,7 +45,7 @@ The `timeline-trigger-name` property may be specified using the keyword `none`, 
 
 ## Description
 
-The `timeline-trigger-name` property specifies an identifying name for a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) trigger element.
+The `timeline-trigger-name` property specifies an identifying name for a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger element.
 
 For example:
 
@@ -460,5 +460,5 @@ Try scrolling the content up. When the `<div>` fully appears in the viewport, it
 - {{cssxref("timeline-trigger")}} shorthand property
 - {{cssxref("trigger-scope")}}
 - {{cssxref("animation-action")}} type
-- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations)
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

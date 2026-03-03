@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`timeline-trigger-source`** [CSS](/en-US/docs/Web/CSS) property specifies the timeline along which a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) trigger will measure its progress and determine its activation and deactivation.
+The **`timeline-trigger-source`** [CSS](/en-US/docs/Web/CSS) property specifies the timeline along which a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger will measure its progress and determine its activation and deactivation.
 
 ## Syntax
 
@@ -310,5 +310,5 @@ Try scrolling the content up. When any part of the trigger `<div>` appears in th
 - {{cssxref("timeline-trigger")}} shorthand property
 - {{cssxref("trigger-scope")}}
 - {{cssxref("animation-action")}} type
-- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations)
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

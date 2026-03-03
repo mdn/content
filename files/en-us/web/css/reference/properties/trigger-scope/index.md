@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`trigger-scope`** [CSS](/en-US/docs/Web/CSS) property can be used to limit the scope within which an animated element can be associated with a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) trigger to a particular subtree.
+The **`trigger-scope`** [CSS](/en-US/docs/Web/CSS) property can be used to limit the scope within which an animated element can be associated with a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger to a particular subtree.
 
 ## Syntax
 
@@ -45,7 +45,7 @@ The `trigger-scope` property is specified as the keyword `none`, the keyword `al
 
 ## Description
 
-The `trigger-scope` property is used to limit [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations) trigger scope to particular element subtrees. When such a scope is set on an element, this means that when that element or its descendents are specified as triggers (using the {{cssxref("timeline-trigger-name")}} property), animated elements can only associate themselves with those triggers (using the {{cssxref("animation-trigger")}} property) if they are within the same subtree.
+The `trigger-scope` property is used to limit [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger scope to particular element subtrees. When such a scope is set on an element, this means that when that element or its descendents are specified as triggers (using the {{cssxref("timeline-trigger-name")}} property), animated elements can only associate themselves with those triggers (using the {{cssxref("animation-trigger")}} property) if they are within the same subtree.
 
 When an animated element has an `animation-trigger` set on it, the browser determines what its trigger element is as follows:
 
@@ -359,5 +359,5 @@ Now scroll up to the top of the content, check the checkbox to apply `trigger-sc
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}}
 - {{cssxref("timeline-trigger")}} shorthand property
 - {{cssxref("animation-action")}} type
-- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animations/Using_scroll-triggered_animations)
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
