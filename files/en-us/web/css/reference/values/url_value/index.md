@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/css-values/#url-value
 sidebar: cssref
 ---
 
-The **`<url>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) is a pointer to an absolute or relative resource. The resource could be an image, a video, a CSS file, a font file, an SVG feature, etc.
+The **`<url>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) is a pointer to a resource.
 
 ## Syntax
 
@@ -26,7 +26,13 @@ The value must be absolute or relative URL.
 
 ## Description
 
-The `<url>` data type, written with the [`url()`] function, represents a `URL`, which is a pointer to a resource. The internal or external resource can be an image, a video, a CSS file, a font file, an SVG feature etc. The URL may be absolute or relative.
+The `<url>` data type, written with the [`url()`](/en-US/docs/Web/CSS/Reference/Values/url_function) function, represents a `URL`, which is a pointer to a resource. The internal or external resource can be an image, a video, a CSS file, a font file, an SVG feature, etc. The URL may be absolute or relative.
+
+```css
+url(http://example.com/fonts/myFont.ttf)
+url(styles.css)
+url("data:image/svg+xml,%3Csvg'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3C/svg%3E")
+```endcss
 
 ### External resources and CORS
 
