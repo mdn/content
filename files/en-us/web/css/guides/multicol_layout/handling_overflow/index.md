@@ -176,7 +176,7 @@ body {
 
 ## Using column wrapping for multicol
 
-The {{cssxref("column-height")}} and {{cssxref("column-wrap")}} properties can be used to assign a fixed height to generated columns and force excess columns to overflow into additional rows of columns in the block direction. In horizontal writing mode content, this means that you'll end up with vertically-scrolling rows of columns, rather than a horizontally scrolling single row. Let's look at an example.
+The {{cssxref("column-height")}} and {{cssxref("column-wrap")}} properties can be used to set a fixed height for generated columns and force excess columns to overflow into additional rows in the block direction. In horizontal writing mode content, this results in vertically-scrolling rows of columns, rather than a horizontally scrolling single row. Let's look at an example.
 
 The HTML contains basic text content, which we have hidden for brevity.
 
