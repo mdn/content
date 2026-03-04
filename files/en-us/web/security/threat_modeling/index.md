@@ -7,9 +7,9 @@ sidebar: security
 
 This article describes how to perform threat modeling for a website or a web application. We will provide a lightweight overview of the threat modeling process.
 
-Depending on your goal, threat modeling can be more involved than described here. Maybe you or your team wants to exercise lightweight threat modeling for your own benefit, so that security isn't an afterthought or neglected at all. Or maybe you are required to perform a more heavyweight assessment because, for example, your software will be audited for an Information Security Management System (ISMS) certification ([ISO 27001](https://www.iso.org/standard/27001)) and you use threat modeling to be prepared for that.
+Depending on your goal, threat modeling can be more involved than described here. Maybe you or your team wants to exercise lightweight threat modeling for your own benefit, so that security isn't an afterthought or neglected at all, or maybe you are required to perform a more heavyweight assessment because your software will be audited and you use threat modeling to be prepared for that.
 
-In any case, it always makes sense to think about threats and implementing a process to regularly assess the security of your systems. The goal of this article is to provide some inspiration for how to do threat modeling, but ultimately you'll have to introduce a process that works for you, your team, and your goals.
+In any case, it always makes sense to think about threats and a process that regularly assesses the security of your systems. The goal of this article is to provide some inspiration for how to do threat modeling, but ultimately you'll have to introduce a process that works for you, your team, and your goals.
 
 This page describes the overall threat modeling process. The following pages give practical advice and inspiration for threat modeling as well:
 
@@ -26,11 +26,11 @@ In practice, security is about reducing the chances that a threat can reach some
 
 Threats are always present but they don't have to turn into attacks. An attack is a realization of a threat on an operational system (a system is a collection of assets) and ideally, if the security posture of a system is strong enough, potential threats won't turn into actual attacks.
 
-When thinking about threats, we can identify system weaknesses (vulnerabilities), unpatched software or cross-site scripting (XSS) are examples of this.
+When thinking about threats, we can identify system weaknesses (vulnerabilities), like unpatched software or cross-site scripting (XSS).
 
 We then implement mitigations as a response to vulnerabilities: they defend the system to the extent they are able to.
 
-Risk is typically a combination of how likely a threat is to occur and how severe its impact would be.
+How likely a threat is to occur and how severe its impact would be is typically described as risk.
 
 To illustrate the different terms, let's take a house as an example:
 
@@ -42,7 +42,7 @@ To illustrate the different terms, let's take a house as an example:
 
 ## What is threat modeling?
 
-Threat modeling is a structured, repeatable process with the goal to secure systems and to identify vulnerabilities and to prioritize mitigations. It is a form of risk assessment with the goal to analyze the most probable attack vectors and to identify assets most desired by an attacker. Per the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org) you typically try to answer four key questions:
+Threat modeling is a structured, repeatable process with the goal to secure systems, to identify vulnerabilities, and to prioritize mitigations. It is a form of risk assessment with the goal to analyze the most probable attack vectors and to identify assets most desired by an attacker. Per the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org) you typically try to answer four key questions:
 
 1. What are we working on?
 2. What can go wrong?
@@ -95,7 +95,7 @@ Things that run code or store data. For example, we could say that our blog webs
 
 Of course, your website's complexity can vary quite a lot. Maybe you are building a static website, primarily with HTML and CSS, maybe you host a site with a CMS, a server, and a database, or maybe you are building a complex web application like an online game, an email client, or a drawing webapp. Depending on what you are doing, your threat model can either be quite short and self-contained, or it can be very long and maybe you prefer to create several threat models for different parts of your system, focusing on one part at a time.
 
-To reference identified components, you index them with the letter C (C1, C2, C3, ...) in your diagram and in your table of contents.
+To reference identified components, you index them with the letter C (C1, C2, C3, ...) in your threat model.
 
 ### Assets
 
@@ -106,7 +106,7 @@ Things an attacker wants and are in need of protection. This could be:
 - Cookies and session information.
 - Private content assets (for example, draft blog posts)
 
-To reference identified assets, you index them with the letter A (A1, A2, A3, ...) in your diagram and in your table of contents.
+To reference identified assets, you index them with the letter A (A1, A2, A3, ...) in your threat model.
 
 ### Data flows and trust boundaries
 
@@ -118,7 +118,7 @@ We identify the mechanism by which assets move between components. They may be u
 
 When data flows between the user and your application, or between your application and third party services, it moves across trusted boundaries that are controlled by different authorities. Attacks often happen between these unequally privileged components and we should make ourselves aware of these attack surfaces, identifying where validation, encryption or other security controls are necessary.
 
-To reference identified data flows, you index them with the letter F (F1, F2, F3, ...) in your diagram and in your table of contents. Trust boundaries are usually visualized using a dashed line.
+To reference identified data flows, you index them with the letter F (F1, F2, F3, ...) in your threat model. Trust boundaries are usually visualized using a dashed line.
 
 ### External dependencies
 
@@ -128,7 +128,7 @@ You do not model external dependencies in detail, but you should document your a
 - Browser and the web platform (see also [web platform threat model](https://github.com/w3c/threat-model-web/blob/main/index.md))
 - Browser extensions (WebExtensions)
 
-To reference identified external dependencies, you index them with the letter E (E1, E2, E3, ...) in your diagram and in your table of contents.
+To reference identified external dependencies, you index them with the letter E (E1, E2, E3, ...) in your threat model.
 
 ### Stakeholders
 
@@ -143,7 +143,7 @@ For example, an XSS vulnerability may primarily harm users, while credential lea
 
 Note that you don't model potential attackers. Over-characterizing attackers can lead to analysis bias.
 
-To reference identified stakeholders, you index them with the letter S (S1, S2, S3, ...) in your diagram and in your table of contents.
+To reference identified stakeholders, you index them with the letter S (S1, S2, S3, ...) in your threat model.
 
 ## 2. What can go wrong?
 
@@ -159,7 +159,7 @@ Another common way to identify threats is to use [threat analysis frameworks](#t
 
 You can decide whether you present identified threats in a table or prefer describing them more analytical, for example by writing down the chain of events that leading up to an attack ("kill chain"). The [W3C Threat Modeling Guide](https://w3c.github.io/threat-modeling-guide/#curatorial-storytelling) recommends to tell a story and give threats priorities, so that the most important threats are discussed first and that readers are not overwhelmed with extraneous details.
 
-To reference the identified threats, you index them with the letter T (T1, T2, T3, ...) in your diagram and in your table of contents.
+To reference the identified threats, you index them with the letter T (T1, T2, T3, ...) in your threat model.
 
 ## 3. What are we going to do about it?
 
@@ -181,7 +181,7 @@ Examples:
 
 Document your responses and decisions. You will likely come back to them in step 4 when asking if these responses are good enough.
 
-To reference the identified responses, you index them with the letter R (R1, R2, R3, ...) in your diagram and in your table of contents.
+To reference the identified responses, you index them with the letter R (R1, R2, R3, ...) in your threat model.
 
 ## 4. Did we do a good enough job?
 
@@ -195,7 +195,7 @@ We provide an [example threat model](/en-US/docs/Web/Security/Threat_modeling/Ex
 
 In our threat modeling above, we focus on the four key questions as defined in the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org). There are also existing frameworks providing you with structure for threat modeling processes. Maybe you want to adopt some of these frameworks, or your security audit or certification process requires you to do threat modeling with them.
 
-A diverse set of frameworks and techniques can help you to think about threats from different perspectives. In essence, these frameworks can help you to explore more structured answers to the second question "What can go wrong?" by thinking about a variety of threat categories. In your threat modeling diagram and in your table of contents you reference these categories (for example, "STRIDE: Tampering") to signal that you have thought about a certain threat category. However, you don't need to use all categories necessarily.
+A diverse set of frameworks and techniques can help you to think about threats from different perspectives. In essence, these frameworks can help you to explore more structured answers to the second question "What can go wrong?" by thinking about a variety of threat categories. In your threat model you can reference these categories (for example, "STRIDE: Tampering") to signal that you have thought about a certain threat category. However, you don't need to use all categories necessarily.
 
 Two popular threat analysis frameworks are STRIDE (focus on security) and LINDDUN (focus on privacy):
 
