@@ -44,7 +44,7 @@ column-height: unset;
 
 The `column-height` property sets the height of the columns in a [multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). This is useful for constraining the column height for readability when setting multiple columns using the {{cssxref("column-count")}} or {{cssxref("column-width")}} property.
 
-Without `column-height`, if the height of the multi-col content exceeds the viewport height, the columns of content will require readers to scroll down to the end of a column and then back up to the top of the next column. One possible fix would be to set a fixed height on the content container, however, excess columns will then overflow to the side, and readers will have to scroll in the inline direction to read all the content.
+Without `column-height`, if the height of the multi-col content exceeds the viewport height, readers will need to scroll down to the end of a column and then back up to the top of the next column. One possible fix would be to set a fixed height on the content container, however, excess columns will then overflow to the side, and readers will have to scroll in the inline direction to read all the content.
 
 The `column-height` property, along with {{cssxref("column-wrap")}}, allows you to set a specific height for the columns and wrap them onto a new row of columns when the container edge is reached. The default value of `column-wrap` is `auto`, which resolves to `wrap` when `column-height` is set to a `<length>` value; `wrap` allows the fixed-height columns to wrap onto multiple rows. When `column-height` is equal to `auto`, `column-wrap: auto` resolves to `nowrap`, allowing the columns to overflow horizontally if a fixed container height is set.
 
