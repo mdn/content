@@ -47,6 +47,8 @@ body {
 }
 ```
 
+This example renders like so:
+
 {{EmbedLiveSample("image", "", "440px")}}
 
 There are two columns of text. In the left column, there is a photo that is wider than the column. The image expands into that second column, appearing behind the text of the right column. The flow of text in the right column isn't affected by the protruding photo, but the appearance is.
@@ -89,6 +91,8 @@ img {
 }
 ```
 
+The updated rendering looks like this:
+
 {{EmbedLiveSample("image-max-width", "", "440px")}}
 
 ## More columns than will fit
@@ -100,7 +104,7 @@ How overflowing columns are handled depends on whether the media context is frag
 
 This example shows the default continuous media overflow behavior. The multicol container has a set {{CSSXref("height")}} and there is more text than space to create columns; therefore, we get columns created outside of the container.
 
-```html live-sample___overflow-inline
+```html hidden live-sample___overflow-inline
 <div class="container">
   <p>
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
@@ -132,7 +136,11 @@ body {
 }
 ```
 
+This example renders like so:
+
 {{EmbedLiveSample("overflow-inline", "", "240px")}}
+
+Scroll horizontally to see the overflowing columns.
 
 ## Using vertical media queries
 
@@ -171,6 +179,8 @@ body {
   }
 }
 ```
+
+This example renders like so:
 
 {{EmbedLiveSample("min-height", "", "340px")}}
 
@@ -241,7 +251,7 @@ p:first-of-type {
 }
 ```
 
-This example renders like so:
+This example renders as follows:
 
 {{EmbedLiveSample('Using column wrapping for multicol', 'auto', 240)}}
 

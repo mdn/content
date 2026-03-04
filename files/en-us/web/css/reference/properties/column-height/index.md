@@ -17,6 +17,9 @@ The {{cssxref("columns")}} shorthand property can be used to set the `column-hei
 ## Syntax
 
 ```css
+/* Keyword */
+column-height: auto;
+
 /* <length> value */
 column-height: 300px;
 column-height: 25em;
@@ -466,7 +469,7 @@ Try scrolling the content. Note how each new row of columns fills the viewport, 
 
 This example builds upon the previous one by including two range sliders that allow you to adjust the multiple-column layout's column count and column height.
 
-#### HTML
+#### HTML and JavaScript
 
 The HTML is the same as the previous example, with the addition of a form containing two [`<input="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) elements that update the `column-count` and `column-height` values via JavaScript. The HTML and JavaScript are hidden for brevity.
 
@@ -485,6 +488,23 @@ The HTML is the same as the previous example, with the addition of a form contai
     <input type="range" min="10" max="30" value="20" id="column-height" />
   </div>
 </form>
+```
+
+```js hidden live-sample___column-playground
+const columnsRange = document.getElementById("columns");
+const columnsOutput = document.getElementById("columns-output");
+const columnHeightRange = document.getElementById("column-height");
+const columnHeightOutput = document.getElementById("column-height-output");
+
+columnsRange.addEventListener("input", () => {
+  document.body.style.columnCount = columnsRange.value;
+  columnsOutput.textContent = columnsRange.value;
+});
+
+columnHeightRange.addEventListener("input", () => {
+  document.body.style.columnHeight = `${columnHeightRange.value}em`;
+  columnHeightOutput.textContent = `${columnHeightRange.value}em`;
+});
 ```
 
 #### CSS
@@ -517,23 +537,6 @@ form div {
   align-items: center;
   justify-content: space-between;
 }
-```
-
-```js hidden live-sample___column-playground
-const columnsRange = document.getElementById("columns");
-const columnsOutput = document.getElementById("columns-output");
-const columnHeightRange = document.getElementById("column-height");
-const columnHeightOutput = document.getElementById("column-height-output");
-
-columnsRange.addEventListener("input", () => {
-  document.body.style.columnCount = columnsRange.value;
-  columnsOutput.textContent = columnsRange.value;
-});
-
-columnHeightRange.addEventListener("input", () => {
-  document.body.style.columnHeight = `${columnHeightRange.value}em`;
-  columnHeightOutput.textContent = `${columnHeightRange.value}em`;
-});
 ```
 
 #### Result

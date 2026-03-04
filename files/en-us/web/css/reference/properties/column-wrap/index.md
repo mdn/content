@@ -130,9 +130,9 @@ ol {
 
 This example features a multi-column layout that demonstrates the difference between the `wrap` and `nowrap` values by allowing you to toggle the column container's `column-wrap` value between the two. The result is a layout that dynamically changes between horizontal and vertical scrolling.
 
-#### HTML
+#### HTML and JavaScript
 
-The markup for this example contains multiple paragraphs of content, taken from MDN HTML, CSS, and JavaScript home pages, and a [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) element to toggle the container's `column-wrap` property value between `nowrap` and `wrap`. The HTML has been hidden for brevity.
+The markup for this example contains multiple paragraphs of content, taken from MDN HTML, CSS, and JavaScript home pages, and a JavaScript-powered [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) element to toggle the container's `column-wrap` property value between `nowrap` and `wrap`. The HTML and JavaScript have been hidden for brevity.
 
 ```html hidden live-sample___wrap-nowrap
 <form>
@@ -395,6 +395,17 @@ The markup for this example contains multiple paragraphs of content, taken from 
 </p>
 ```
 
+```js hidden live-sample___wrap-nowrap
+const checkbox = document.getElementById("set-wrap");
+checkbox.addEventListener("change", () => {
+  if (checkbox.checked) {
+    document.body.style.columnWrap = "wrap";
+  } else {
+    document.body.style.columnWrap = "nowrap";
+  }
+});
+```
+
 #### CSS
 
 We make the {{htmlelement("body")}} element a multi-col container by setting the {{cssxref("column-count")}} to `3`. We then set a {{cssxref("gap")}} of `3em 2em`, resulting in a `3em` gap between rows and a `2em` gap between columns.
@@ -458,21 +469,6 @@ form {
   padding: 5px;
   border: 1px solid black;
 }
-```
-
-#### JavaScript
-
-In our JavaScript, we set a `change` event listener on the checkbox. When its value changes, we set the `<body>` element's `column-wrap` value to `wrap` if it is checked, and `nowrap` otherwise.
-
-```js live-sample___wrap-nowrap
-const checkbox = document.getElementById("set-wrap");
-checkbox.addEventListener("change", () => {
-  if (checkbox.checked) {
-    document.body.style.columnWrap = "wrap";
-  } else {
-    document.body.style.columnWrap = "nowrap";
-  }
-});
 ```
 
 #### Result
