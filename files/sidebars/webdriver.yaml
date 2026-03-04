@@ -3,12 +3,9 @@
 sidebar:
   - type: section
     link: /Web/WebDriver
-    title: WebDriver
   - type: section
     link: /Web/WebDriver/Reference
-    title: Reference
   - link: /Web/WebDriver/Reference/BiDi
-    title: BiDi
     details: open
     children:
       - type: listSubPages
@@ -16,21 +13,19 @@ sidebar:
         link: /Web/WebDriver/Reference/BiDi/Modules
         details: closed
   - link: /Web/WebDriver/Reference/Classic
-    title: Classic
     details: open
     children:
       - type: listSubPages
         path: /Web/WebDriver/Reference/Classic/Commands
         link: /Web/WebDriver/Reference/Classic/Commands
         details: closed
-      - type: listSubPages
-        path: /Web/WebDriver/Reference/Classic/Capabilities
-        link: /Web/WebDriver/Reference/Classic/Capabilities
-        details: closed
-        code: true
-      - type: listSubPages
-        path: /Web/WebDriver/Reference/Classic/Errors
-        link: /Web/WebDriver/Reference/Classic/Errors
-        details: closed
       - link: /Web/WebDriver/Reference/Classic/Timeouts
-        title: Timeouts
+  - type: listSubPages
+    path: /Web/WebDriver/Reference/Capabilities
+    link: /Web/WebDriver/Reference/Capabilities
+    details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/WebDriver/Reference/Errors
+    link: /Web/WebDriver/Reference/Errors
+    details: closed

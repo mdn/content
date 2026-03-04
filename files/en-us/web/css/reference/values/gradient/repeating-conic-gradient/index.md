@@ -49,7 +49,7 @@ repeating-conic-gradient(
 )
 
 /* Interpolation in polar color space
-  with longer hue interpolation method */
+  with shorter hue interpolation method */
 repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 ```
 

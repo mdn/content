@@ -35,7 +35,7 @@ The **`externref`** value type references a JavaScript value, enabling it to be 
 ```js interactive-example
 // Define double() function inside obj
 const obj = {
-  double: function (num) {
+  double(num) {
     return num * 2;
   },
 };
@@ -84,10 +84,10 @@ First of all, we define our two functions — `double()` and `output()` — insi
 
 ```js live-sample___basic-usage
 const obj = {
-  double: function (num) {
+  double(num) {
     return num * 2;
   },
-  output: function (elem, val) {
+  output(elem, val) {
     elem.textContent = val;
   },
 };
@@ -109,7 +109,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { obj }).then(
 
 Over in our Wasm module, we first import the `double()` and `output()` functions from the imported `obj` namespace, giving them reference names of `$double` and `$output`. Note how the first `param` in each case is given an `externref` type. This is because these params are provided by JavaScript when the exported `outputDouble()` function is called. The `output()` function's second `param` is not an `externref`; it is an `i32`, provided as the result of the `double()` function when called from inside the Wasm module.
 
-Next, we define the exported `outputDouble()` function. Its two `params` — `$num` and `$elem` — are `externref` types, which makes sense, as we are calling it from JavaScript and providing the values there. Inside, we define a local variable called `$doublenum`, call the imported `double()` function, passing it the `$num` `externref` as its parameter, and assign its return value to `$doublenum`. Finally, we complete the `outputDouble()` function by calling the imported `output()` function, passing it the `$elem` `externref` as its first parameter, and the `$doublenum` value as its second parameter.
+Next, we define the exported `outputDouble()` function. Its two `params` — `$num` and `$elem` — are `externref` types, which makes sense, as we are calling it from JavaScript and providing the values there. Inside, we define a local variable called `$double_num`, call the imported `double()` function, passing it the `$num` `externref` as its parameter, and assign its return value to `$double_num`. Finally, we complete the `outputDouble()` function by calling the imported `output()` function, passing it the `$elem` `externref` as its first parameter, and the `$double_num` value as its second parameter.
 
 ```wat live-sample___basic-usage
 (module
@@ -119,12 +119,12 @@ Next, we define the exported `outputDouble()` function. Its two `params` — `$n
     (param $num externref)
     (param $elem externref)
 
-    (local $doublenum i32)
+    (local $double_num i32)
 
     (call $double (local.get $num))
-    (local.set $doublenum)
+    (local.set $double_num)
 
-    (call $output (local.get $elem) (local.get $doublenum))
+    (call $output (local.get $elem) (local.get $double_num))
   )
 )
 ```

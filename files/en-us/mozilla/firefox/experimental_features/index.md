@@ -329,37 +329,6 @@ The {{cssxref("@custom-media")}} CSS at-rule defines aliases for long or complex
 
 ## APIs
 
-### CloseWatcher Interface
-
-Built-in web components with "open" and "close" semantics, such as modal dialogs and popovers, can be closed using device-native mechanisms.
-For example, on Android you can close a dialog using the back button.
-The {{domxref("CloseWatcher")}} interface allows developers to implement UI components, such as custom sidebars, that can similarly be closed using native mechanisms.
-([Firefox bug 1888729](https://bugzil.la/1888729)).
-
-| Release channel   | Version added | Enabled by default?          |
-| ----------------- | ------------- | ---------------------------- |
-| Nightly           | 140           | Yes (Desktop). No (Android). |
-| Developer Edition | 132           | No                           |
-| Beta              | 132           | No                           |
-| Release           | 132           | No                           |
-
-- `dom.closewatcher.enabled`
-  - : Set to `true` to enable.
-
-### HTML Sanitizer API
-
-The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 146           | Yes                 |
-| Developer Edition | 147           | Yes                 |
-| Beta              | 147           | Yes                 |
-| Release           | 138           | No                  |
-
-- `dom.security.sanitizer.enabled`
-  - : Set to `true` to enable.
-
 ### Removal of `beforescriptexecute` and `afterscriptexecute` events
 
 The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) and [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) on the {{domxref("Document")}} interface, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) on the {{domxref("Element")}} interface are on the path to removal. They have been disabled in Nightly.

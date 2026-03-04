@@ -630,6 +630,7 @@ scorpionfish
 screenful
 scriptable
 scriptless
+scroll-snappable
 scrollers
 scrollport
 SECAM
