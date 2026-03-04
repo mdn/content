@@ -8,14 +8,22 @@ browser-compat: api.Window.pageshow_event
 
 {{APIRef("HTML DOM")}}
 
-The **`pageshow`** event is sent to a {{domxref("Window")}} when the browser displays the window's document due to navigation.
+The **`pageshow`** event is sent to a {{domxref("Window")}} when the browser navigates to a new document.
 
 This includes:
 
-- Initially loading the page
-- Navigating to the page from another page in the same window or tab
-- Restoring a frozen page on mobile OSes
-- Returning to the page using the browser's forward or back buttons
+- Initially loading the page.
+- Navigating to the page from another page in the same window or tab.
+- Restoring a frozen page on mobile OSes.
+- Returning to the page using the browser's forward or back buttons (including when restored from the {{Glossary("bfcache")}}).
+- Opening a page in a background tab.
+- {{Glossary("Prerender", "Prerendering")}} a page, event before being activated.
+
+> [!WARNING]
+> Despite the name, the `pageshow` event does not mean the page is actually _shown_ to the user. For example it may be opened in a background tab or prerendered. If you are interested when pages are shown, use the following events:
+> - The {{domxref("window/pagereveal_event", "pagereveal event")}} is sent when a page is first rendered.
+> - The {{domxref("document/visibilitychange_event", "visibilitychange event")}} is sent each time the page's visibility changes.
+> - The {{domxref("document/prerenderingchange_event", "prerenderingchange event")}} is sent when a prerendered page is activated.
 
 > [!NOTE]
 > During the initial page load, the `pageshow` event fires _after_ the {{domxref("Window/load_event", "load")}} event.
