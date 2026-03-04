@@ -28,15 +28,15 @@ The input is an object with the following fields:
   - : An array of one or more strings that specifies event names for subscription.
     Each string can be either a specific event name (for example, `"log.entryAdded"`) or a module name (for example, `"log"`) that subscribes the client to all events in that module.
 - `contexts` {{optional_inline}}
-  - : An array of one or more browsing context IDs.
+  - : An array of one or more browsing context IDs, each corresponding to a tab or frame.
     If specified, events are received only for those contexts and their descendants.
     This field cannot be used if `userContexts` is also specified.
 - `userContexts` {{optional_inline}}
-  - : An array of one or more user context IDs.
-    If specified, events are received only for contexts belonging to those user contexts.
+  - : An array of one or more user context IDs, each corresponding to a browser profile or container.
+    If specified, events are received only for those user contexts.
     This field cannot be used if `contexts` is also specified.
 
-If neither `contexts` nor `userContexts` is provided, the subscription is global and events are received for all browsing contexts.
+If neither `contexts` nor `userContexts` is provided, the subscription is global, so events are received for all browsing contexts.
 
 ### Return value
 
@@ -92,7 +92,7 @@ To subscribe to all events in the `log` module and a specific event from the `ne
 }
 ```
 
-The browser responds with a subscription ID for the specified events as follows:
+The browser responds with a subscription ID as follows:
 
 ```json
 {
@@ -116,3 +116,4 @@ The browser responds with a subscription ID for the specified events as follows:
 
 - [`session.unsubscribe`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/unsubscribe) command
 - [`session.new`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) command
+- [`session.end`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/end) command
