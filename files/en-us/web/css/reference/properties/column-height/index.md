@@ -393,7 +393,7 @@ The HTML, which contains multiple paragraphs of content from the MDN HTML, CSS, 
 
 We start by setting {{cssxref("column-width")}} on the {{htmlelement("body")}} element to define the preferred width for the columns. A {{cssxref("gap")}} of `3em 2em` results in a `3em` gap between rows and a `2em` gap between columns. The {{cssxref("column-rule")}} adds a line in the center of the gap between the columns. The `column-height` of `95vh` makes the columns nearly as tall as the viewport.
 
-We also set {{cssxref("column-wrap")}} to `wrap`. This is the value `column-wrap` resolves to if `column-height` is given a specific `<length>` value, so it is not necessary to set this explicitly; however, we wanted to remind you of this fact.
+We explicitly set {{cssxref("column-wrap")}} to `wrap` as a reminder of the applied wrapping behavior. We could have set the value to `auto` or omitted the property altogether, as, by default, `column-wrap` resolves to `wrap` when the `column-height` is set to a `<length>` value.
 
 ```css live-sample___scroll-snapped
 body {
