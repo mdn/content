@@ -319,6 +319,20 @@ The {{cssxref("@custom-media")}} CSS at-rule defines aliases for long or complex
 - `layout.css.custom-media.enabled`
   - : Set to `true` to enable.
 
+### `attr()` function
+
+The {{cssxref("attr")}} CSS function now supports [`<attr-type>`s](/en-US/docs/Web/CSS/Reference/Values/attr#attr-type). This allows you to specify how an attribute value is parsed into a CSS value and take those values directly from [HTML `data-attributes`](/en-US/docs/Web/HTML/How_to/Use_data_attributes) ([Firefox bug 1986631](https://bugzil.la/1986631) & [Firefox bug 1998245](https://bugzil.la/1998245)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 149           | No                  |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `layout.css.attr.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**

@@ -89,3 +89,7 @@ The ability of extensions to dynamically execute code in their `moz-extension:` 
 These features are shipping in Firefox 149 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`<attr-type>` values in `attr()` CSS funtion**: `layout.css.attr.enabled`
+
+  The {{cssxref("attr")}} CSS function now supports [`<attr-type>`s](/en-US/docs/Web/CSS/Reference/Values/attr#attr-type). This allows you to specify how an attribute value is parsed into a CSS value and take those values directly from [HTML `data-attributes`](/en-US/docs/Web/HTML/How_to/Use_data_attributes) ([Firefox bug 1986631](https://bugzil.la/1986631) & [Firefox bug 1998245](https://bugzil.la/1998245)).
