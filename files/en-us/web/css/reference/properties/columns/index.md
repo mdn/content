@@ -140,8 +140,6 @@ body {
 
 #### Result
 
-The example renders like this:
-
 {{EmbedLiveSample('three_equal_columns', 'auto', 120)}}
 
 Note how the text is split up into three columns.
