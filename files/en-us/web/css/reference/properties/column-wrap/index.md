@@ -31,7 +31,7 @@ column-wrap: unset;
 ### Values
 
 - `auto`
-  - : The initial value. If the content container's {{cssxref("column-height")}} is set to a specific {{cssxref("&lt;length>")}}, `auto` resolves to `wrap`, otherwise it resolves to `nowrap`.
+  - : The initial value. If the content container's {{cssxref("column-height")}} is set to a {{cssxref("&lt;length>")}}, `auto` resolves to `wrap`, otherwise it resolves to `nowrap`.
 - `nowrap`
   - : Columns overflow in the inline direction.
 - `wrap`
