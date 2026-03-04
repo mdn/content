@@ -399,7 +399,7 @@ The markup for this example contains multiple paragraphs of content, taken from 
 
 We make the {{htmlelement("body")}} element a multi-col container by setting the {{cssxref("column-count")}} to `3`. We then set a {{cssxref("gap")}} of `3em 2em`, resulting in a `3em` gap between rows and a `2em` gap between columns.
 
-We then set a `column-height` of `90vh`, making the columns nearly as tall as the viewport. We also set `column-wrap` to `nowrap`. Because the initial `column-wrap` value is `auto`, which resolves to `wrap` when `column-height` is set to a `<length>` value, this forces excess content columns to overflow horizontally.
+We then set a `column-height` of `90vh`, making the columns nearly as tall as the viewport. We also set `column-wrap` to `nowrap`, causing excess content columns to overflow horizontally. This is required because the initial `column-wrap` value is `auto`, which resolves to `wrap` when `column-height` is set to a `<length>` value.
 
 The checkbox toggles the `column-wrap` property between `nowrap` and `wrap`. When set to `wrap`, the excess content columns overflow vertically into new rows of columns, creating the vertical layout. The `column-height` value causes each row of columns to fill the viewport.
 
