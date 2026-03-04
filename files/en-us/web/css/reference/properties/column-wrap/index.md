@@ -481,7 +481,7 @@ The rendered result looks like this:
 
 {{EmbedLiveSample("wrap-nowrap", "100%", "400")}}
 
-Initially, try scrolling the content horizontally to see the effect of `content-wrap: nowrap`. Now check the checkbox, and note how the layout switches to vertically scrolling, with each new row of columns filling the viewport.
+Toggle the checkbox to change the value of the `column-wrap` property and switch the layout between horizontally and vertically scrolling. When `column-wrap` is set to `nowrap`, the columns overflow horizontally; when `column-wrap` is set to `wrap`, new rows of columns are added vertically.
 
 ## Specifications
 
