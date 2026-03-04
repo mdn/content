@@ -81,7 +81,7 @@ columns: revert-layer;
 columns: unset;
 ```
 
-The `columns` property value may be specified as a [`<column-count>`](/en-US/docs/Web/CSS/Reference/Properties/column-count) and/or a [`<column-width>`](/en-US/docs/Web/CSS/Reference/Properties/column-width) value, in any order, optionally followed by a [`<column-height>`](/en-US/docs/Web/CSS/Reference/Properties/column-height) value preceded by a forward slash.
+The `columns` property value may be specified as a [`<column-count>`](/en-US/docs/Web/CSS/Reference/Properties/column-count) and/or a [`<column-width>`](/en-US/docs/Web/CSS/Reference/Properties/column-width) value, in any order, optionally followed by a [`<column-height>`](/en-US/docs/Web/CSS/Reference/Properties/column-height) value preceded by a forward slash (`/`).
 
 ### Values
 
