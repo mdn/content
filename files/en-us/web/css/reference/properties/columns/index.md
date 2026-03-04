@@ -152,7 +152,7 @@ This example demonstrates including a `<column-height>` value with the `columns`
 
 #### HTML
 
-We include a basic {{htmlelement("p")}} element containing text content.
+We include a basic {{htmlelement("p")}} element with some text.
 
 ```html live-sample___fixed-height
 <p class="content-box">
