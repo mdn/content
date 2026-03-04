@@ -537,9 +537,6 @@ columnHeightRange.addEventListener("input", () => {
 ```
 
 #### Result
-
-The rendered result looks like this:
-
 {{EmbedLiveSample("column-playground", "100%", "400")}}
 
 Adjust the number of columns and the column height to see the effect of these properties.
