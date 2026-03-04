@@ -199,8 +199,6 @@ body {
 
 #### Result
 
-The example renders like this:
-
 {{EmbedLiveSample('fixed-height', 'auto', 320)}}
 
 Note how the text is split up into three columns. Each column is `5em` high. After every third column, the columns wrap onto a new line in the block direction.
