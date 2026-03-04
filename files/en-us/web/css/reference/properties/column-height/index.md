@@ -458,8 +458,6 @@ p {
 
 #### Result
 
-The rendered result looks like this:
-
 {{EmbedLiveSample("scroll-snapped", "100%", "400")}}
 
 Try scrolling the content. Note how each new row of columns fills the viewport, and how the content snaps neatly to the top of a new row with each scroll.
