@@ -48,13 +48,13 @@ An object with the following fields:
 ### Errors
 
 - [invalid argument](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
-  - : An event name is not recognized, or values for both `contexts` and `userContexts` were provided in the same request.
+  - : The `events` array is empty or omitted, an event name is not recognized, `contexts` or `userContexts` is provided but empty, or values for both `contexts` and `userContexts` were provided in the same request.
 
 ## Examples
 
 ### Subscribing to an event globally
 
-With a WebDriver BiDi connection and an active session, to subscribe to the `log.entryAdded` event for all browsing contexts, send the following message:
+With a WebDriver BiDi connection and an active session, send the following message to subscribe to the `log.entryAdded` event for all browsing contexts:
 
 ```json
 {
@@ -80,7 +80,7 @@ The browser responds with a subscription ID as follows:
 
 ### Subscribing to multiple events
 
-To subscribe to all events in the `log` module and a specific event from the `network` module, specify them in the `events` array:
+With a WebDriver BiDi connection and an active session, send the following message to subscribe to all events in the `log` module and a specific event from the `network` module:
 
 ```json
 {
