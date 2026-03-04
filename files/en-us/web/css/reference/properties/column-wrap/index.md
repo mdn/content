@@ -475,7 +475,7 @@ form {
 
 {{EmbedLiveSample("wrap-nowrap", "100%", "400")}}
 
-Toggle the checkbox to change the value of the `column-wrap` property and switch the layout between horizontally and vertically scrolling. When `column-wrap` is set to `nowrap`, the columns overflow horizontally; when `column-wrap` is set to `wrap`, new rows of columns are added vertically.
+Toggle the checkbox to change the value of the `column-wrap` property and switch the layout between horizontal and vertical scrolling. When `column-wrap` is set to `nowrap`, the columns overflow horizontally; when `column-wrap` is set to `wrap`, new rows of columns are added vertically.
 
 ## Specifications
 
