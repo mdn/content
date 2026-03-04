@@ -132,7 +132,7 @@ This example combines a wrapped multi-column layout with [CSS scroll snapping](/
 
 #### HTML
 
-The markup for this example contains multiple paragraphs of content, taken from MDN landing pages. We won't show the HTML source here for brevity.
+The HTML, which contains multiple paragraphs of content from the MDN HTML, CSS, and JavaScript home pages, has been hidden for brevity.
 
 ```html hidden live-sample___scroll-snapped live-sample___column-playground
 <h1>HTML, CSS, and JavaScript summaries</h1>
