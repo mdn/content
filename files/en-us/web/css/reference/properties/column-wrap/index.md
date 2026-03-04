@@ -112,7 +112,7 @@ We include a poem by Dr. Seuss using an {{htmlelement("ol")}} containing 28 {{ht
 
 #### CSS
 
-We define the `<ol>` to be a multi-column container by setting the {{cssxref("column-width")}} property to `150px`, meaning the container will contain as many columns as possible with each being at least `150px` wide. The {{cssxref("gap")}} property of `2em` sets a horizontal gap between columns and a vertical gap between rows of columns. We then set the `column-height` to `2em`, causing the `column-wrap` property's default `auto` value to resolve to `wrap` to create wrapped rows of columns.
+We define the `<ol>` to be a multi-column container by setting the {{cssxref("column-width")}} property to `150px`, meaning the container will contain as many columns as possible with each being at least `150px` wide. The {{cssxref("gap")}} property sets a horizontal gap between columns and a vertical gap between rows of columns. We then set the `column-height` to `3em`, causing the `column-wrap` property's default `auto` value to resolve to `wrap` to create wrapped rows of columns.
 
 ```css live-sample___basic-example
 ol {
