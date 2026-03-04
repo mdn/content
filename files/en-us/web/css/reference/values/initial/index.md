@@ -61,8 +61,6 @@ With the `initial` keyword in this example, the `color` and `font-size` values o
 
 ## See also
 
-- {{cssxref("inherit")}} keyword: makes the element's property value the same as its parent.
-- {{cssxref("revert")}} keyword: resets a property to the value established by the user-agent stylesheet (or by user styles, if any exist).
-- {{cssxref("revert-layer")}} keyword: resets a property to the value established in a previous cascade layer.
-- {{cssxref("unset")}} keyword: sets a property to its inherited value if it inherits or to its initial value if not.
-- {{cssxref("all")}} property: can be used to reset all properties to `initial`, `inherit`, `revert`, or `unset` at once.
+- {{cssxref("inherit")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, and {{cssxref("unset")}} keywords
+- {{cssxref("all")}}
+- [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)
