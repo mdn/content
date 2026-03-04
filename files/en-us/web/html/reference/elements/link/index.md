@@ -155,7 +155,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         <tr>
           <td>script</td>
           <td>
-            <code>&#x3C;script></code> elements, Worker <code>importScripts</code>
+            <code>&#x3C;script></code> elements, Worker <code>importScripts</code>, and  and <code>modulepreload</code> destinations.
           </td>
         </tr>
         <tr>
