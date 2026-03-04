@@ -3,10 +3,12 @@ title: "RTCDataChannel: priority property"
 short-title: priority
 slug: Web/API/RTCDataChannel/priority
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCDataChannel.priority
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The read-only **`priority`** property of the {{domxref("RTCDataChannel")}} interface returns a string indicating the priority of the data channel. The priority is assigned by the user agent at channel creation time based on the `priority` option in the `dataChannelDict` parameter passed to {{domxref("RTCPeerConnection.createDataChannel()")}}, or from the remote peer for incoming data channels.
 

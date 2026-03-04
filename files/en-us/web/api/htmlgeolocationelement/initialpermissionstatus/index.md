@@ -3,10 +3,12 @@ title: "HTMLGeolocationElement: initialPermissionStatus property"
 short-title: initialPermissionStatus
 slug: Web/API/HTMLGeolocationElement/initialPermissionStatus
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement.initialPermissionStatus
 ---
 
-{{APIRef("Navigation API")}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`initialPermissionStatus`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns an enumerated value representing the permission status for the `geolocation` feature when the page first loads.
 

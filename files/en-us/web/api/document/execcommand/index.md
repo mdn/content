@@ -116,7 +116,7 @@ execCommand(commandName, showDefaultUI, valueArgument)
 
         This feature is specified as disabled for _web content_, but has been implemented via the [Clipboard API](/en-US/docs/Web/API/Clipboard_API#security_considerations) on some browsers.
         On these browsers the feature requires {{glossary("transient activation")}}, and acknowledgement of a popup UI when pasting cross-origin content.
-        See the [Browser compatibility table](/en-US/docs/Web/API/Document/execCommand#browser_compatibility) for more information.
+        See the [Browser compatibility table](#browser_compatibility) for more information.
 
     - `redo`
       - : Redoes the previous undo command.

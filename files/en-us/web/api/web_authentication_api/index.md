@@ -155,7 +155,7 @@ By contrast, with discoverable credentials, the browser can:
 - Display their associated usernames to the user.
 - Invite the user to choose the one they want to sign in with.
 
-This is the foundation of the [autofill UI](autofill_ui) feature.
+This is the foundation of the [autofill UI](#autofill_ui) feature.
 
 Use the [`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey) option in {{domxref("PublicKeyCredentialCreationOptions")}} to control whether a new public key credential will be discoverable or non-discoverable.
 
@@ -186,7 +186,7 @@ if (supported) {
     challenge: challengeFromServer,
     rpId: "example.com",
     userVerification: "required",
-    // allowcredentials is omitted here
+    // allowCredentials is omitted here
   };
 
   const assertion = await navigator.credentials.get({

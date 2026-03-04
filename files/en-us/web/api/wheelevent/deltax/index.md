@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WheelEvent.deltaX
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("Pointer Events")}}
 
 The **`WheelEvent.deltaX`** read-only property is a
 `double` representing the horizontal scroll amount in the

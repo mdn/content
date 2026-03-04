@@ -3,10 +3,12 @@ title: "RTCPeerConnectionIceEvent: url property"
 short-title: url
 slug: Web/API/RTCPeerConnectionIceEvent/url
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.RTCPeerConnectionIceEvent.url
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
 The read-only **`url`** property of the {{domxref("RTCPeerConnectionIceEvent")}} interface returns the URL of the {{Glossary("STUN")}} or {{Glossary("TURN")}} server used to gather the ICE candidate that caused the event. If the candidate was not gathered from a {{Glossary("STUN")}} or {{Glossary("TURN")}} server, the value is `null`.
 

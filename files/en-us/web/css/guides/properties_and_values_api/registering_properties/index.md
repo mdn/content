@@ -21,11 +21,11 @@ main {
   --myColor: #cacaca;
 }
 main:hover {
-  --myColor: #abba;
+  --myColor: #aabbbbaa;
 }
 @media (width < 750px) {
   main {
-    --myColor: #abba;
+    --myColor: #aabbbbaa;
   }
 }
 

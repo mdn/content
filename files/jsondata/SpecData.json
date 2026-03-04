@@ -1256,7 +1256,7 @@
   },
   "Payment Handler": {
     "name": "Payment Handler API",
-    "url": "https://w3c.github.io/payment-handler/",
+    "url": "https://w3c.github.io/web-based-payment-handler/",
     "status": "WD"
   },
   "Payment Method Identifiers": {
