@@ -132,7 +132,7 @@ This example features a multi-column layout that demonstrates the difference bet
 
 #### HTML
 
-The markup for this example contains multiple paragraphs of content, taken from MDN landing pages, and a [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) element to enable you to toggle the column container's `column-wrap` value between `nowrap` and `wrap`. We won't show the HTML source here for brevity.
+The markup for this example contains multiple paragraphs of content, taken from MDN HTML, CSS, and JavaScript home pages, and a [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) element to toggle the container's `column-wrap` property value between `nowrap` and `wrap`. The HTML has been hidden for brevity.
 
 ```html hidden live-sample___wrap-nowrap
 <form>
