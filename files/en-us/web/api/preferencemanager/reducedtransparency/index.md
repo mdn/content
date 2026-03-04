@@ -11,11 +11,27 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#reduced-transparency-attribu
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`reducedTransparency`** read-only property of the {{domxref("PreferenceManager")}} interface returns the {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-reduced-transparency", "reduced transparency")}} of the site. Its valid values are `reduce` and `no-preference`.
+The **`reducedTransparency`** read-only property of the {{domxref("PreferenceManager")}} interface returns the {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-reduced-transparency", "reduced transparency")}} of the site.
+
+Valid `reducedTransparency` {{domxref("PreferenceObject.value")}} settings are `reduce` and `no-preference`.
 
 ## Value
 
 A {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-reduced-transparency", "reduced transparency")}} of the site.
+
+## Examples
+
+### Basic usage
+
+This examples demonstrates how to see the user's reduced motion preference.
+
+```js
+if (navigator.preferences.reducedTransparency.value === "reduce") {
+  // The user prefers reduced translatancy.
+} else {
+  // The user has stated no preference regarding transparency.
+}
+```
 
 ## Specifications
 

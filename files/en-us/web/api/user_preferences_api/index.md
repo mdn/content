@@ -11,11 +11,11 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#preferences-attribute
 
 {{DefaultAPISidebar("User Preferences API")}}{{SeeCompatTable}}
 
-The **User Preferences API** allows users to override user preference related {{cssxref("Guides/Media_queries", "media queries")}}.
+The **User Preferences API** allows page authors to programmatically override user preference-related {{cssxref("Guides/Media_queries", "media query")}} settings.
 
 ## Concepts and Usage
 
-A user agent defines values for the CSS media queries {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}, {{cssxref("@media/prefers-contrast", "prefers-contrast")}}, {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}, {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}, and {{cssxref("@media/prefers-reduced-data", "prefers-reduced-data")}}. The {{domxref("PreferenceManager")}} object provides programmatic access to these preferences, allowing you to listen for preference changes and override them.
+Supporting user agents define values for the CSS media queries {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}, {{cssxref("@media/prefers-contrast", "prefers-contrast")}}, {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}, {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}, and {{cssxref("@media/prefers-reduced-data", "prefers-reduced-data")}}. The {{domxref("PreferenceManager")}} object provides programmatic access to these preferences, allowing page authors to listen for preference changes and override them.
 
 ## Examples
 
@@ -24,6 +24,8 @@ A user agent defines values for the CSS media queries {{cssxref("@media/prefers-
 The following code implements a minimal dark mode toggle.
 
 #### HTML
+
+The HTML has a form with 3 radio buttons. These radio buttons set the `color-scheme` field to either `system`, `light`, or `dark`.
 
 ```html
 <form>
@@ -38,6 +40,8 @@ The following code implements a minimal dark mode toggle.
 ```
 
 #### JavaScript
+
+The JavaScript registers change event listeners for all elements named `color-scheme`. If the value is `system`, the handler clears the color scheme override. Otherwise, it requests a color scheme override with the value of the input element.
 
 ```js
 for (const input of document.getElementsByName("color-scheme")) {

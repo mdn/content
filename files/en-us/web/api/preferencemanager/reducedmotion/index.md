@@ -11,11 +11,27 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#reduced-motion-attribute
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`reducedMotion`** read-only property of the {{domxref("PreferenceManager")}} interface returns the {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-reduced-motion", "reduced motion")}} of the site. Its valid values are `reduce` and `no-preference`.
+The **`reducedMotion`** read-only property of the {{domxref("PreferenceManager")}} interface returns the {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-reduced-motion", "reduced motion")}} of the site.
+
+Valid `reducedMotion` {{domxref("PreferenceObject.value")}} settings are `reduce` and `no-preference`.
 
 ## Value
 
 A {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-reduced-motion", "reduced motion")}} of the site.
+
+## Examples
+
+### Basic usage
+
+This examples demonstrates how to see the user's reduced motion preference.
+
+```js
+if (navigator.preferences.reducedMotion.value === "reduce") {
+  // The user prefers reduced motion.
+} else {
+  // The user has stated no preference regarding motion.
+}
+```
 
 ## Specifications
 

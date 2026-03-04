@@ -11,11 +11,29 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#contrast-attribute
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`contrast`** read-only property of the {{domxref("PreferenceManager")}} interface returns the {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-color-scheme", "color scheme")}} of the site. Its valid values are `more`, `less`, and `no-preference`.
+The **`contrast`** read-only property of the {{domxref("PreferenceManager")}} interface returns a {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-color-scheme", "color scheme")}} of the site.
+
+Valid `contrast` {{domxref("PreferenceObject.value")}} settings are `more`, `less`, and `no-preference`.
 
 ## Value
 
 A {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-color-scheme", "color scheme")}} of the site.
+
+## Examples
+
+### Basic usage
+
+This examples demonstrates how to see the user's contrast preference.
+
+```js
+if (navigator.preferences.contrast.value === "more") {
+  // The user prefers a high color contrast.
+} else if (navigator.preferences.contrast.value === "less") {
+  // The user prefers a low color contrast.
+} else {
+  // The user has stated no preference regarding color contrast.
+}
+```
 
 ## Specifications
 

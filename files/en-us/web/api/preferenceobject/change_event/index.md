@@ -11,7 +11,7 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#onchange-attribute
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`change`** event of the {{domxref("PreferenceObject")}} interface is fired on a specific PreferenceObject its `override` value changes.
+The **`change`** event of the {{domxref("PreferenceObject")}} interface is fired when a `PreferenceObject` {{domxref("PreferenceObject.override", "override")}} value changes. This can happen because of the {{domxref("PreferenceObject.requestOverride", "requestOverride")}} or {{domxref("PreferenceObject.clearOverride", "clearOverride")}} method.
 
 ## Syntax
 
@@ -29,6 +29,10 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
+### Basic usage
+
+The following snippet logs the user's preferred color scheme to the console when it changes.
+
 ```js
 navigator.preferences.colorScheme.addEventListener("change", (event) => {
   console.log(navigator.preferences.colorScheme.value);
@@ -42,7 +46,3 @@ navigator.preferences.colorScheme.addEventListener("change", (event) => {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Window Management API](/en-US/docs/Web/API/Window_Management_API)

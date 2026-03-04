@@ -2,7 +2,7 @@
 title: "PreferenceObject: override property"
 short-title: override
 slug: Web/API/PreferenceObject/override
-page-type: web-api-instance-property
+page-type: web-api-instance-method
 status:
   - experimental
 browser-compat: api.PreferenceObject.override
@@ -15,7 +15,27 @@ The **`override`** read-only property of the {{domxref("PreferenceObject")}} int
 
 ## Value
 
-The override of the {{domxref("PreferenceObject")}} interface if set, `null` otherwise.
+The override of the {{domxref("PreferenceObject")}} interface, if set, or `null` if an override is not set.
+
+## Examples
+
+## Basic usage
+
+This example demonstrates how to disambiguate between the color scheme preference set by the user agent vs a programmatic override.
+
+```js
+if (navigator.preferences.colorScheme.override == null) {
+  console.log(
+    "The user agent set the following color scheme:",
+    navigator.preferences.colorScheme.value,
+  );
+} else {
+  console.log(
+    "The following color scheme was set programmatically:",
+    navigator.preferences.colorScheme.override,
+  );
+}
+```
 
 ## Specifications
 

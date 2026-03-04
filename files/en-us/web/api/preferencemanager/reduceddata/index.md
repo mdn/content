@@ -11,11 +11,27 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#reduced-data-attribute
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`reducedData`** read-only property of the {{domxref("PreferenceManager")}} interface returns the {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-reduced-data", "reduced data")}} of the site. Its valid values are `reduce` and `no-preference`.
+The **`reducedData`** read-only property of the {{domxref("PreferenceManager")}} interface returns a {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-reduced-data", "reduced data")}} of the site.
+
+Valid `reducedData` {{domxref("PreferenceObject.value")}} settings are `reduce` and `no-preference`.
 
 ## Value
 
 A {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-reduced-data", "reduced data")}} of the site.
+
+## Examples
+
+### Basic usage
+
+This examples demonstrates how to see the user's reduced data preference.
+
+```js
+if (navigator.preferences.reducedData.value === "reduce") {
+  // The user prefers you use less data.
+} else {
+  // The user has stated no preference regarding data use.
+}
+```
 
 ## Specifications
 

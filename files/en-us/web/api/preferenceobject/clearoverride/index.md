@@ -11,7 +11,7 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#clear-override-method
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`clearOverrides`** method of the {{domxref("PreferenceObject")}} interface resets the {{domxref("PreferenceObject.override" "override")}} value.
+The **`clearOverride`** method of the {{domxref("PreferenceObject")}} interface resets the {{domxref("PreferenceObject.override" "override")}} value.
 
 ## Syntax
 
@@ -28,6 +28,8 @@ None.
 None ({{jsxref("undefined")}}).
 
 ## Examples
+
+### Basic usage
 
 The following example clears the override of the {{domxref("PreferenceObject.colorScheme" "color scheme")}}.
 

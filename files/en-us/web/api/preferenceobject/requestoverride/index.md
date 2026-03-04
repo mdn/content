@@ -11,7 +11,7 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#request-override-method
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`requestOverrides`** method of the {{domxref("PreferenceObject")}} interface sets the {{domxref("PreferenceObject.override" "override")}} value.
+The **`requestOverride`** method of the {{domxref("PreferenceObject")}} interface sets an {{domxref("PreferenceObject.override" "override")}} value for a particular preference.
 
 ## Syntax
 
@@ -26,9 +26,16 @@ requestOverrides(value)
 
 ### Return value
 
-A {{jsxref("Promise")}} which resolves to {{jsxref("undefined")}} on success, or rejects with `ConstraintError` {{domxref("DOMException")}} on failure.
+A {{jsxref("Promise")}} which resolves to {{jsxref("undefined")}} on success, or rejects on failure.
+
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if the given value is not allowed.
 
 ## Examples
+
+### Basic usage
 
 The following example requests the override of the {{domxref("PreferenceObject.colorScheme" "color scheme")}}.
 

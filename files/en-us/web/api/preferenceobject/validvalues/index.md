@@ -17,6 +17,16 @@ The **`validValues`** read-only property of the {{domxref("PreferenceObject")}} 
 
 An array containing the valid values to override the {{domxref("PreferenceObject")}} value with.
 
+## Examples
+
+### Basic usage
+
+This example demonstrates how to log all possible contrast values.
+
+```js
+console.log(navigator.preferences.contrast.validValues);
+```
+
 ## Specifications
 
 {{Specifications}}

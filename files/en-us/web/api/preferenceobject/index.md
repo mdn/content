@@ -12,7 +12,7 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#preference-object-interface
 
 The **`PreferenceObject`** interface of the [User Peferences API](/en-US/docs/Web/API/User_Preferences_API) provides attributes and methods for reading and overriding user preferences.
 
-Use {{domxref("PreferenceManager")}} to get access to the `PreferenceObject` object.
+Use the document's {{domxref("PreferenceManager")}} (accessed via {{domxref("Navigator.preferences")}}) to get access to the `PreferenceObject` objects representing each available preference.
 
 The `PreferenceManager` interface inherits from {{domxref("EventTarget")}}.
 
@@ -30,9 +30,9 @@ The `PreferenceManager` interface inherits from {{domxref("EventTarget")}}.
 ## Instance methods
 
 - {{domxref("PreferenceObject.clearOverride()")}} {{Experimental_Inline}}
-  - : If the override is set, reset it to `null` and fire {{xdomref("PreferenceObject.change_event" "change")}}
+  - : Resets any previously set override to `null` and fires the {{domxref("PreferenceObject.change_event" "change")}} event.
 - {{domxref("PreferenceObject.requestOverride()")}} {{Experimental_Inline}}
-  - : Request an override of the preference.
+  - : Requests an override of the preference and fires the {{domxref("PreferenceObject.change_event" "change")}} event on success.
 
 ## Events
 
