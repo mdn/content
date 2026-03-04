@@ -397,7 +397,7 @@ The markup for this example contains multiple paragraphs of content, taken from 
 
 #### CSS
 
-We start by giving the {{htmlelement("body")}} element a {{cssxref("column-count")}} of `3`. We then set a {{cssxref("gap")}} of `3em 2em`, resulting in a `3em` gap between rows and a `2em` gap between columns.
+We make the {{htmlelement("body")}} element a multi-col container by setting the {{cssxref("column-count")}} to `3`. We then set a {{cssxref("gap")}} of `3em 2em`, resulting in a `3em` gap between rows and a `2em` gap between columns.
 
 We then set a `column-height` of `90vh`, making the columns nearly as tall as the viewport. We also set `column-wrap` to `nowrap`. Because the initial `column-wrap` value is `auto`, which resolves to `wrap` when `column-height` is set to a `<length>` value, this forces excess content columns to overflow horizontally.
 
