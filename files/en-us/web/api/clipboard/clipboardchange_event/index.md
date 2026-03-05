@@ -11,7 +11,7 @@ browser-compat: api.Clipboard.clipboardchange_event
 
 The **`clipboardchange`** event of the {{domxref("Clipboard")}} interface is fired when the system clipboard contents are changed in any way, for example via a system copy command, or via an API method such as {{domxref("Clipboard.writeText()")}}.
 
-Firing `clipboardchange` events requires [sticky activation](/en-US/docs/Glossary/Sticky_activation) or the `clipboard-read` permission to be granted.
+The `clipboardchange` event is only fired with [sticky activation](/en-US/docs/Glossary/Sticky_activation) or after the `clipboard-read` permission is granted.
 
 ## Syntax
 
