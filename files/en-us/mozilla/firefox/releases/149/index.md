@@ -64,8 +64,8 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{domxref("HTMLMediaElement.captureStream()", "captureStream()")}} method of the {{domxref("HTMLMediaElement")}} interface is now supported.
   This returns an object that streams the real-time capture of the content in the element.
-  This can be used, for example, as a source for a WebRTC {{domxref("RTCPeerConnection")}}.
-  Previously this was available only as `mozCaptureStream()`, and the method was not compliant with the specification.
+  The stream can be used, for example, as a source for a WebRTC {{domxref("RTCPeerConnection")}}.
+  Previously, `captureStream()` was available only as the non-standard `mozCaptureStream()` method.
   ([Firefox bug 2017708](https://bugzil.la/2017708)).
 
 <!-- #### Removals -->

@@ -31,7 +31,7 @@ A {{domxref('MediaStream')}} object which can be used as a source for audio and/
 ### Basic usage
 
 In this example, an event handler is established so that clicking a button starts capturing the contents of a media element with the ID `"playback"` into a {{domxref("MediaStream")}}.
-The stream can then be used for other purposes—like a source for streaming over WebRTC, to allow sharing prerecorded videos with another person during a video call.
+The stream can then be used for other purposes, such as a WebRTC stream to share prerecorded videos with another person during a video call.
 
 ```js
 document.querySelector(".playAndRecord").addEventListener("click", () => {
