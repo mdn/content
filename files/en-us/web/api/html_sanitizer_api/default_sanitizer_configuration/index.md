@@ -173,20 +173,35 @@ The default configuration allows the following attributes on **all** elements.
 - [`mathsize`](/en-US/docs/Web/MathML/Reference/Global_attributes/mathsize)
 - [`scriptlevel`](/en-US/docs/Web/MathML/Reference/Global_attributes/scriptlevel)
 
-### SVG presentation attributes
+### SVG attributes
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
+- {{SVGAttr("clip-path")}}
 - {{SVGAttr("clip-rule")}}
+- {{SVGAttr("color")}}
 - {{SVGAttr("color-interpolation")}}
+- {{SVGAttr("cursor")}}
+- {{SVGAttr("direction")}}
+- {{SVGAttr("display")}}
 - {{SVGAttr("dominant-baseline")}}
 - {{SVGAttr("fill")}}
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("fill-rule")}}
+- {{SVGAttr("font-family")}}
+- {{SVGAttr("font-size")}}
+- {{SVGAttr("font-size-adjust")}}
+- {{SVGAttr("font-stretch")}}
+- {{SVGAttr("font-style")}}
+- {{SVGAttr("font-variant")}}
+- {{SVGAttr("font-weight")}}
+- {{SVGAttr("letter-spacing")}}
 - {{SVGAttr("marker-end")}}
 - {{SVGAttr("marker-mid")}}
 - {{SVGAttr("marker-start")}}
+- {{SVGAttr("opacity")}}
 - {{SVGAttr("paint-order")}}
+- {{SVGAttr("pointer-events")}}
 - {{SVGAttr("shape-rendering")}}
 - {{SVGAttr("stop-color")}}
 - {{SVGAttr("stop-opacity")}}
@@ -199,32 +214,14 @@ The default configuration allows the following attributes on **all** elements.
 - {{SVGAttr("stroke-opacity")}}
 - {{SVGAttr("stroke-width")}}
 - {{SVGAttr("text-anchor")}}
+- {{SVGAttr("text-decoration")}}
+- {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
+- {{SVGAttr("transform")}}
+- {{SVGAttr("transform-origin")}}
+- {{SVGAttr("unicode-bidi")}}
 - {{SVGAttr("vector-effect")}}
-
-### CSS properties
-
-- {{CSSxRef("clip-path")}}
-- {{CSSxRef("color")}}
-- {{CSSxRef("cursor")}}
-- {{CSSxRef("direction")}}
-- {{CSSxRef("display")}}
-- {{CSSxRef("font-family")}}
-- {{CSSxRef("font-size")}}
-- {{CSSxRef("font-size-adjust")}}
-- {{CSSxRef("font-stretch")}}
-- {{CSSxRef("font-style")}}
-- {{CSSxRef("font-variant")}}
-- {{CSSxRef("font-weight")}}
-- {{CSSxRef("letter-spacing")}}
-- {{CSSxRef("opacity")}}
-- {{CSSxRef("pointer-events")}}
-- {{CSSxRef("text-decoration")}}
-- {{CSSxRef("text-overflow")}}
-- {{CSSxRef("transform")}}
-- {{CSSxRef("transform-origin")}}
-- {{CSSxRef("unicode-bidi")}}
-- {{CSSxRef("visibility")}}
-- {{CSSxRef("white-space")}}
-- {{CSSxRef("word-spacing")}}
-- {{CSSxRef("writing-mode")}}
+- {{SVGAttr("visibility")}}
+- {{SVGAttr("white-space")}}
+- {{SVGAttr("word-spacing")}}
+- {{SVGAttr("writing-mode")}}
