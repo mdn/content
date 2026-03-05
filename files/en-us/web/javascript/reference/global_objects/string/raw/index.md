@@ -109,7 +109,7 @@ String.raw`Hi ${"$"}{name}!`;
 String.raw`This is a backtick: ${"`"}`;
 // 'This is a backtick: `', the substitution inserts a single backtick.
 String.raw`A trailing backslash: ${"\\"}`;
-// 'A trailing backslash: \\', the substitution inserts a single backslash.
+// 'A trailing backslash: \', the substitution inserts a single backslash.
 ```
 
 This approach works for `String.raw` because it just concatenates the raw strings and the substitutions. In general, unfortunately, there's no way for a template literal tag to receive a `raw` string that contains unescaped template literal syntax.
