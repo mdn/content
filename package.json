@@ -68,7 +68,7 @@
     "lefthook": "^2.1.2",
     "markdownlint-cli2": "0.21.0",
     "markdownlint-rule-search-replace": "1.2.0",
-    "node-html-parser": "^7.0.2",
+    "node-html-parser": "^7.1.0",
     "parse-diff": "^0.11.1",
     "prettier": "3.8.1",
     "tempy": "^3.2.0",
