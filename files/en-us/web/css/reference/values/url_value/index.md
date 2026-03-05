@@ -26,7 +26,7 @@ The value may be an absolute or relative URL.
 
 ## Description
 
-The `<url>` data type, written with the [`url()`](/en-US/docs/Web/CSS/Reference/Values/url_function) function, represents a `URL`, which is a pointer to a resource. The internal or external resource can be an image, a video, a CSS file, a font file, an SVG feature, etc. The URL may be absolute or relative.
+The `<url>` data type, written with the [`url()`](/en-US/docs/Web/CSS/Reference/Values/url_function) function, represents a `URL`, which is a pointer to an internal or external resource. The resource can be an image, a video, a CSS file, a font file, an SVG feature, etc. The URL may be absolute or relative.
 
 ```css
 /* Relative URL */
