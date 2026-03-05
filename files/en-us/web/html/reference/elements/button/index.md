@@ -61,9 +61,16 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - `"show-modal"`
       - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.showModal()")}} method on the `<dialog>` element.
     - `"close"`
-      - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.close()")}} method on the `<dialog>` element.
+      - : The button will close a {{htmlelement("dialog")}} element.
+        If the dialog is already closed, no action will be taken.
+        This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.close()")}} method on the `<dialog>` element.
+        When used with the `value` attribute, the button's value will be passed as the dialog's {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property.
     - `"request-close"`
-      - : The button will trigger a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} event on a {{htmlelement("dialog")}} element to request that the browser dismiss it, followed by a {{domxref("HTMLDialogElement.close_event", "close")}} event. This differs from the `close` command in that authors can call {{domxref("Event.preventDefault()")}} on the `cancel` event to prevent the `<dialog>` from closing. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.requestClose()")}} method on the `<dialog>` element.
+      - : The button will trigger a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} event on a {{htmlelement("dialog")}} element to request that the browser dismiss it, followed by a {{domxref("HTMLDialogElement.close_event", "close")}} event.
+        This differs from the `close` command in that authors can call {{domxref("Event.preventDefault()")}} on the `cancel` event to prevent the `<dialog>` from closing.
+        If the dialog is already closed, no action will be taken.
+        This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.requestClose()")}} method on the `<dialog>` element.
+        When used with the button's `value` attribute, the value will be passed as the dialog's `returnValue` property.
     - `"show-popover"`
       - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to setting a value of `show` for the [`popovertargetaction`](#popovertargetaction) attribute, and also provides a declarative equivalent to calling the {{domxref("HTMLElement.showPopover()")}} method on the popover element.
     - `"hide-popover"`
@@ -139,7 +146,9 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - `button`: The button has no default behavior, and does nothing when pressed by default. It can have client-side scripts listen to the element's events, which are triggered when the events occur.
 
 - `value`
-  - : Defines the value associated with the button's `name` when it's submitted with the form data. This value is passed to the server in params when the form is submitted using this button.
+  - : Defines the value associated with the button's `name` when it's submitted with the form data.
+    This value is passed to the server in params when the form is submitted using this button.
+    When used with the `close` or `request-close` commands, the `value` attribute sets the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} of the {{htmlelement("dialog")}} element being controlled.
 
 ## Notes
 
@@ -305,6 +314,80 @@ When the event is `cancelable`, the value of the radio buttons is checked:
 
 - If set to `yes`, the dialog is closed.
 - If set to `no`, the `hidden` attribute is turned off on the warning and the [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) method is called, which prevents the default `<dialog>` closing behavior.
+
+### Using the `value` attribute with dialog `close` command
+
+This example demonstrates how to use the button `value` attribute with `close` command to populate the value of a dialog's {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property.
+
+When either the **Cancel** or **Delete** button is clicked, the dialog closes and sets its `returnValue` to the button's `value` attribute.
+The `close` event listener checks `dialog.returnValue` to determine which action the user chose and logs the result to the screen.
+
+#### HTML
+
+The HTML first defines a **Delete Record** button that uses the `commandfor` attribute to specify the dialog to be opened.
+
+Within the dialog **Cancel** and **Delete** buttons use the `commandfor` attribute to indicate that they apply to the current dialog.
+They also set the `command` attribute to "close" and set the `value` attribute to "cancel" and "delete" respectively — the value of the selected button is automatically copied to the dialog `returnValue` when the button is clicked.
+
+```html
+<button commandfor="confirm-dialog" command="show-modal">Delete Record</button>
+<dialog id="confirm-dialog">
+  <header>
+    <h1>Delete Record?</h1>
+  </header>
+  <p>Are you sure? This action cannot be undone</p>
+  <footer>
+    <button commandfor="confirm-dialog" command="close" value="cancel">
+      Cancel
+    </button>
+    <button commandfor="confirm-dialog" command="close" value="delete">
+      Delete
+    </button>
+  </footer>
+</dialog>
+```
+
+```html
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 20px;
+}
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = text;
+}
+```
+
+#### JavaScript
+
+The code uses a `close` event listener to log the dialog's `returnValue`.
+
+```js
+const dialog = document.getElementById("confirm-dialog");
+
+dialog.addEventListener("close", () => {
+  switch (dialog.returnValue) {
+    case "cancel":
+      log("Cancel was clicked");
+      break;
+    case "delete":
+      log("Delete was clicked");
+      break;
+    default:
+      log("Closed with value:", dialog.returnValue);
+  }
+});
+```
+
+#### Results
+
+{{ EmbedLiveSample('using_the_value_attribute_with_dialog_close_command', 100, 200) }}
 
 ## Technical summary
 

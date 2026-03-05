@@ -15,7 +15,7 @@ To complete these tasks you should only edit the CSS, not the HTML.
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Selectors 1
 
 To complete the task:
 
@@ -23,9 +23,11 @@ To complete the task:
 2. Give `<h2>` headings a blue background and white text.
 3. Cause text wrapped in a `<span>` to have a font-size of `200%`.
 
-Your final result should look like the following finished rendering:
+The starting point of the task looks like this:
 
-{{EmbedLiveSample("selectors1-finish", "", "400px")}}
+{{EmbedLiveSample("selectors1-start", "", "370px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___selectors1-start live-sample___selectors1-finish
 <div class="container">
@@ -51,9 +53,9 @@ body {
 /* Add styles here */
 ```
 
-This is the starting state of the task:
+The updated styling should look like this:
 
-{{EmbedLiveSample("selectors1-start", "", "370px")}}
+{{EmbedLiveSample("selectors1-finish", "", "400px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -77,7 +79,7 @@ span {
 
 </details>
 
-## Task 2
+## Selectors 2
 
 To complete the task:
 
@@ -86,9 +88,11 @@ To complete the task:
 3. If the element with a class of `alert` also has a class of `stop`, make the background red.
 4. If the element with a class of `alert` also has a class of `go`, make the background green.
 
-Your final result should look like the following finished rendering:
+The starting point of the task looks like this:
 
-{{EmbedLiveSample("selectors2-finish", "", "480px")}}
+{{EmbedLiveSample("selectors2-start", "", "480px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___selectors2-start live-sample___selectors2-finish
 <div class="container">
@@ -116,9 +120,9 @@ body {
 /* Add styles here */
 ```
 
-This is the starting state of the task:
+The updated styling should look like this:
 
-{{EmbedLiveSample("selectors2-start", "", "480px")}}
+{{EmbedLiveSample("selectors2-finish", "", "480px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -145,7 +149,7 @@ This tests that you understand the difference between class and id selectors and
 
 </details>
 
-## Task 3
+## Selectors 3
 
 To complete the task:
 
@@ -153,9 +157,11 @@ To complete the task:
 2. Make the first element inside the container `font-size: 150%` and the first line of that element red.
 3. Stripe every other row in the table by selecting these rows and giving them a background color of `#333333` and foreground white.
 
-Your final result should look like the following finished rendering:
+The starting point of the task looks like this:
 
-{{EmbedLiveSample("selectors3-finish", "", "540px")}}
+{{EmbedLiveSample("selectors3-start", "", "440px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___selectors3-start live-sample___selectors3-finish
 <div class="container">
@@ -222,9 +228,9 @@ th {
 /* Add styles here */
 ```
 
-This is the starting state of the task:
+The updated styling should look like this:
 
-{{EmbedLiveSample("selectors3-start", "", "440px")}}
+{{EmbedLiveSample("selectors3-finish", "", "540px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -261,7 +267,7 @@ tr:nth-child(even) {
 
 </details>
 
-## Task 4
+## Selectors 4
 
 To complete the task:
 
@@ -270,9 +276,11 @@ To complete the task:
    - Remove their bullets.
    - Give them a `1px` grey bottom border.
 
-Your final result should look like the following finished rendering:
+The starting point of the task looks like this:
 
-{{EmbedLiveSample("selectors4-finish", "", "500px")}}
+{{EmbedLiveSample("selectors4-start", "", "500px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___selectors4-start live-sample___selectors4-finish
 <div class="container">
@@ -304,9 +312,9 @@ body {
 /* Add styles here */
 ```
 
-This is the starting state of the task:
+The updated styling should look like this:
 
-{{EmbedLiveSample("selectors4-start", "", "500px")}}
+{{EmbedLiveSample("selectors4-finish", "", "500px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -327,7 +335,7 @@ h2 + p {
 
 </details>
 
-## Task 5
+## Selectors 5
 
 To complete the task, provide solutions for the following challenges using attribute selectors:
 
@@ -335,9 +343,11 @@ To complete the task, provide solutions for the following challenges using attri
 2. Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).
 3. Target the `<a>` element with an `href` value starting with `https` and give it a green border (`border-color: green`).
 
-Your final result should look like the following finished rendering:
+The starting point of the task looks like this:
 
-{{EmbedLiveSample("selectors5-finish", "", "300px")}}
+{{EmbedLiveSample("selectors5-start", "", "300px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___selectors5-start live-sample___selectors5-finish
 <ul>
@@ -375,9 +385,9 @@ a {
 /* Add styles here */
 ```
 
-This is the starting state of the task:
+The updated styling should look like this:
 
-{{EmbedLiveSample("selectors5-start", "", "300px")}}
+{{EmbedLiveSample("selectors5-finish", "", "300px")}}
 
 <details>
 <summary>Click here to show the solution</summary>

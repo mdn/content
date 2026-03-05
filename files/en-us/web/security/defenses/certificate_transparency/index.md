@@ -38,8 +38,7 @@ Chrome had previously required CT inclusion for _Extended Validation_ (EV) and S
 
 Apple [requires](https://support.apple.com/en-gb/103214) a varying number of SCTs in order for Safari and other servers to trust server certificates.
 
-Firefox desktop from version 135 requires CT log inclusion for all certificates issued by certificate authorities in Mozilla's Root CA Program.
-Firefox for Android does not currently require CT log inclusion.
+Firefox desktop, starting from version 135, and Firefox for Android, starting from version 145, require CT log inclusion for all certificates issued by certificate authorities in Mozilla's Root CA Program.
 
 ## Specifications
 

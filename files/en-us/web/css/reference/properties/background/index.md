@@ -6,7 +6,7 @@ browser-compat: css.properties.background
 sidebar: cssref
 ---
 
-The **`background`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method. Component properties not set in the `background` shorthand property value declaration are set to their default values.
+The **`background`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin, size, and repeat method.
 
 {{InteractiveExample("CSS Demo: background")}}
 
@@ -84,21 +84,6 @@ background: revert-layer;
 background: unset;
 ```
 
-The `background` property is specified as one or more background layers, separated by commas.
-
-The syntax of each layer is as follows:
-
-- Each layer may include zero or one occurrences of any of the following values:
-  - `<attachment>`
-  - `<bg-image>`
-  - `<bg-position>`
-  - `<bg-size>`
-  - `<repeat-style>`
-
-- The `<bg-size>` value may only be included immediately after `<bg-position>`, separated with the '/' character, like this: `center/80%`.
-- The `<visual-box>` value may be included zero, one, or two times. If included once, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If it is included twice, the first occurrence sets {{cssxref("background-origin")}}, and the second sets {{cssxref("background-clip")}}.
-- The `<'background-color'>` value may only be included in the last layer specified.
-
 ### Values
 
 - `<attachment>`
@@ -110,19 +95,60 @@ The syntax of each layer is as follows:
 - `<bg-image>`
   - : See {{Cssxref("background-image")}}. Default: `none`.
 - `<bg-position>`
-  - : See {{cssxref("background-position")}}. Default: 0% 0%.
+  - : See {{cssxref("background-position")}}. Default: `0% 0%`.
 - `<repeat-style>`
   - : See {{cssxref("background-repeat")}}. Default: `repeat`.
 - `<bg-size>`
   - : See {{cssxref("background-size")}}. Default: `auto`.
 
-The following three lines of CSS are equivalent:
+## Description
+
+The `background` shorthand property enables you to declare all CSS background properties in a single declaration. The background lies underneath the content of an element. When you have multiple, comma-separated background values, each is a background layer that is painted on top of the previous layers.
+
+The `background` property is specified as one or more background layers, separated by commas. Each layer may include zero, one, or two `<visual-box>` components and zero or one `<attachment>`, `<bg-image>`, `<bg-position>`, `<bg-size>`, and `<repeat-style>` components. If two `<bg-position>`, `<bg-size>`, or `<repeat-style>` components are specified, the first value is the horizontal value and the second value is the vertical value. If only a single value is set, that value is applied to both dimensions.
+
+The `<'background-color'>` component may only be included in the last background layer specified.
+
+Component properties not set in the `background` shorthand property value declaration are set to their default values.
+
+### Component property order
+
+Because some of the component properties share value types, the order of those component properties within the shorthand is important.
+
+The `<bg-size>` value may only be included immediately after `<bg-position>`, separated with the `/` character. For example: `10px 10px / 80% 80%` means the background image is `80%` as tall and as wide as the element, and will be positioned `10px` from the top and `10px` from the left of the element's top-left corner. Within the `<bg-position>`, if both values are lengths, or one is a length and the other is `center`, the first value refers to the horizontal position and the second value refers to the vertical position.
+
+Each background layer can include zero, one, or two [`<visual-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#visual-box) values. If only one value is included, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If two values are present, the first occurrence specifies the `background-origin` and the second specifies the `background-clip` value. If no `<visual-box>` values are present, the `background-origin` defaults to `border-box` and the `background-clip` defaults to `padding-box`.
+
+While there is no order requirement for the other background properties, the following order is recommended for consistency and legibility; remember that none of the values are required:
+
+`<bg-image> <bg-position> / <bg-size> <repeat-style> <attachment> <bg-clip> <bg-origin> <'background-color'>`
+
+The following `background` explicitly sets all the default values in this order:
+
+```css
+background: none 0% 0% / auto auto repeat scroll border-box padding-box
+  transparent;
+```
+
+The following three lines of CSS are equivalent to the above, even if the order differs:
 
 ```css
 background: none;
 background: transparent;
 background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
 ```
+
+### Image painting order
+
+If multiple comma-separated backgrounds are included, they create multiple background layers on top of one another. The first background in the list creates the top layer. If the top layer contains no transparent areas, this is the only layer that will be visible.
+
+The last layer is the bottom layer. The background color is always included in this layer.
+
+### Body background applied to the entire document
+
+If the document {{htmlelement("html")}} `:root` element's computed `background-image` value is `none` and its `background-color` is `transparent`, the browser will transfer the `background` styles set on the {{htmlelement("body")}} element onto the `:root` and treat the `<body>` as if `background: initial` were set. In other words, the `<html>` element gets all the `background` styles set on the `<body>` element, and the `<body>` element's background properties are set to their initial values.
+
+Because of this behavior, the specification authors recommend setting your document's background styles in your `body` style block rather than your `html` style block. However, it's important to note that using containment disables this behavior. When the {{cssxref("contain")}} property is set to anything other than `none` on either the `<html>` or `<body>` element, the `background` property and any longhand components do not propagate from the `<body>` element to the root `<html>` element.
 
 ## Formal definition
 

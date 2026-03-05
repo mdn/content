@@ -116,7 +116,7 @@ if ("x" in window) {
 }
 ```
 
-However, none of the techniques above work if the variable is declared with `let`, `const`, or other lexical declarations. Using `typeof` before the line of declaration still produces a `ReferenceError`, due to the {{jsxref("Statements/let#temporal_dead_zone_tdz", "temporal dead zone (TDZ)")}}.
+However, none of the techniques above work if the variable is declared with `let`, `const`, or other lexical declarations. Using `typeof` before the line of declaration still produces a `ReferenceError`, due to the [temporal dead zone (TDZ)](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz).
 
 ```js example-bad
 if (typeof z === "undefined") {

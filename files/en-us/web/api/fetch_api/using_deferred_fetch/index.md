@@ -63,7 +63,7 @@ The top-level origin can give selected cross-origin subframes an increased quota
 
 The top-level origin can also restrict the 128KiB shared quota to named cross-origin subframes by listing those origins in the {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} Permissions Policy. It can also revoke the entire 128KiB default subframe quota and instead keep the full 640KiB quota for itself and any named `deferred-fetch` cross-origins by setting the {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} Permissions Policy to `()`.
 
-### Delegating quotes to subframes of subframes
+### Delegating quotas to subframes of subframes
 
 By default, subframes of subframes are not allocated a quota and so cannot use `fetchLater()`. Subframes allocated the increased 64KiB quota can delegate the full 64KiB quota to further subframes and allow them to use `fetchLater()` by setting their own `deferred-fetch` Permissions Policy. They can only delegate their full quota to further subframes, not parts of it, and cannot specify new quotas. Subframes using the minimal 8KiB quota cannot delegate quotas to subframes. To be delegated quota, sub-subframes must be included in both the top-level and the subframe `deferred-fetch` {{httpheader('Permissions-Policy')}} directives.
 

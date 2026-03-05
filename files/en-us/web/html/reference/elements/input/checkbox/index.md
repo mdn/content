@@ -2,7 +2,9 @@
 title: <input type="checkbox">
 slug: Web/HTML/Reference/Elements/input/checkbox
 page-type: html-attribute-value
-browser-compat: html.elements.input.type_checkbox
+browser-compat:
+  - html.elements.input.type_checkbox
+  - html.elements.input.switch
 sidebar: htmlsidebar
 ---
 
@@ -82,6 +84,15 @@ In addition to the [common attributes](/en-US/docs/Web/HTML/Reference/Elements/i
 - `value`
   - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `checkbox`: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
 
+- `switch`
+  - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute that applies only to `checkbox` inputs. When present, it indicates that the `checkbox` represents an on/off `switch` rather than a normal `checkbox`. It alters the appearance of the `checkbox` control, but the underlying behavior remains the same as that of a normal `checkbox`.
+
+    > [!NOTE]
+    > This attribute allows user agents to expose `switch` ARIA semantics to assistive technologies — without requiring documents to explicitly specify `role="switch"`. The markup and API are similar to those of checkboxes, except that the `:indeterminate` pseudo-class never matches.
+
+    > [!WARNING]
+    > This attribute is still experimental and has limited browser support. The attribute is ignored on unsupported browsers.
+
 ## Using checkbox inputs
 
 We already covered the most basic use of checkboxes above. Let's now look at the other common checkbox-related features and techniques you'll need.
@@ -129,6 +140,32 @@ To make a checkbox checked by default, you give it the `checked` attribute. See 
 ```
 
 {{EmbedLiveSample('Checking_boxes_by_default', 600, 100)}}
+
+### Switch as a checkbox
+
+The following example shows how to make a checkbox look and act like an on/off switch.
+
+```html
+<form>
+  <fieldset>
+    <legend>Adjust your setting</legend>
+    <div>
+      <label for="theme">Dark mode</label>
+      <input type="checkbox" name="theme" id="theme" switch checked />
+    </div>
+    <div>
+      <label for="notifications">Notifications</label>
+      <input type="checkbox" name="notifications" id="notifications" switch />
+    </div>
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
+```
+
+> [!NOTE]
+> While only some browsers render the checkbox as a switch, the behavior is the same across all browsers.
+
+{{EmbedLiveSample('Switch_as_a_checkbox', 600, 100)}}
 
 ### Providing a bigger hit area for your checkboxes
 
@@ -354,7 +391,10 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>
-      <td><code><a href="#checked">checked</a></code></td>
+      <td>
+        <code><a href="#checked">checked</a></code> and
+        <code><a href="#switch">switch</a></code>
+      </td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>

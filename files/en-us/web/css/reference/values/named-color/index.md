@@ -882,7 +882,6 @@ In addition to these 16 colors, about 150 other colors have a keyword associated
       <td><code>#9acd32</code></td>
       <td style="background: yellowgreen"></td>
     </tr>
-    <tr>
   </tbody>
 </table>
 

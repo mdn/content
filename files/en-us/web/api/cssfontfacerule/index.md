@@ -16,7 +16,7 @@ The **`CSSFontFaceRule`** interface represents an {{cssxref("@font-face")}} [at-
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSFontFaceRule.style")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("CSSStyleDeclaration")}}.
+  - : Returns a {{domxref("CSSFontFaceDescriptors")}} object that allows reading and setting the descriptors of the associated {{cssxref("@font-face")}} at-rule.
 
 ## Instance methods
 
@@ -31,7 +31,7 @@ This example uses the CSS found as an example on the {{cssxref("@font-face")}} p
   font-family: "MyHelvetica";
   src:
     local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-    url("MgOpenModernaBold.ttf");
+    url("MgOpenModernaBold.woff2");
   font-weight: bold;
 }
 ```

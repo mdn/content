@@ -17,7 +17,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gu
     local("Trickster"),
     url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
     url("trickster-outline.otf") format("opentype"),
-    url("trickster-outline.woff") format("woff");
+    url("trickster-outline.woff2") format("woff2");
 }
 ```
 
@@ -59,6 +59,8 @@ If the `local()` function is provided, specifying a font name to look for on the
 Browsers attempt to load resources in their list declaration order, so usually `local()` should be written before `url()`. Both functions are optional, so a rule block containing only one or more `local()` without `url()` is possible.
 If more specific fonts with `format()` or `tech()` values are desired, these should be listed _before_ versions that don't have these values, as the less specific variant would otherwise be tried and used first.
 
+For web delivery, it's generally best to serve fonts in WOFF2 format, because it compresses fonts more efficiently than older formats like WOFF or OpenType, reducing file size and improving load times. WOFF2 is also well supported in modern browsers, making it a safe default choice for most websites.
+
 By allowing authors to provide their own fonts, `@font-face` makes it possible to design content without being limited to the so-called "web-safe" fonts (that is, the fonts that are so common that they're considered to be universally available). The ability to specify the name of a locally-installed font to look for and use makes it possible to customize the font beyond the basics while making it possible to do so without relying on an internet connection.
 
 > [!NOTE]
@@ -86,7 +88,7 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
       font-family: "MyHelvetica";
       src:
         local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-        url("MgOpenModernaBold.ttf");
+        url("MgOpenModernaBold.woff2");
       font-weight: bold;
     }
   }
@@ -111,7 +113,7 @@ This example specifies a downloadable font to use, applying it to the entire bod
 ```css live-sample___web-font-example
 @font-face {
   font-family: "Bitstream Vera Serif Bold";
-  src: url("https://mdn.github.io/shared-assets/fonts/VeraSeBd.ttf");
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Regular.woff2");
 }
 
 body {
@@ -123,14 +125,14 @@ body {
 
 ### Specifying local font alternatives
 
-In this example, the user's local copy of "Helvetica Neue Bold" is used; if the user does not have that font installed (both the full font name and the Postscript name are tried), then the downloadable font named "MgOpenModernaBold.ttf" is used instead:
+In this example, the user's local copy of "Helvetica Neue Bold" is used; if the user does not have that font installed (both the full font name and the Postscript name are tried), then the downloadable font named "MgOpenModernaBold.woff2" is used instead:
 
 ```css
 @font-face {
   font-family: "MyHelvetica";
   src:
     local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-    url("MgOpenModernaBold.ttf");
+    url("MgOpenModernaBold.woff2");
   font-weight: bold;
 }
 ```

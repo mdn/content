@@ -3,12 +3,10 @@ title: "Sanitizer: get() method"
 short-title: get()
 slug: Web/API/Sanitizer/get
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Sanitizer.get
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
 The **`get()`** method of the {{domxref("Sanitizer")}} interface returns a {{domxref('SanitizerConfig')}} dictionary instance that represents the current `Sanitizer` configuration.
 

@@ -13,15 +13,17 @@ The aim of this skill test is to help you assess whether you understand universa
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Cascade 1
 
 In this task, we want you to use one of the special values we looked at in the [controlling inheritance](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#controlling_inheritance) section.
 
 To complete the task, write a declaration in a new rule that will reset the background color back to white, without using an actual color value.
 
-Your final result should look like the following finished rendering:
+The starting point of the task looks like this:
 
-{{EmbedLiveSample("cascade1-finish")}}
+{{EmbedLiveSample("cascade1-start", "100%", "110px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___cascade1-start live-sample___cascade1-finish
 <div class="container" id="outer">
@@ -47,9 +49,9 @@ div div li a {
 }
 ```
 
-This is the starting state of the task:
+The updated styling should look like this:
 
-{{EmbedLiveSample("cascade1-start")}}
+{{EmbedLiveSample("cascade1-finish", "100%", "110px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -68,15 +70,17 @@ Then you need to remember there are special keyword values for all properties. I
 
 </details>
 
-## Task 2
+## Cascade 2
 
 To complete this task, manipulate the cascade layer order to color the links `rebeccapurple`. No editing the `lightgreen` declaration!
 
 This task is a stretch goal — it requires knowledge of cascade layers, which we didn't cover in the [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) article. You can find the information you need to attempt this task at [Cascade layers > Determining the precedence based on the order of layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#determining_the_precedence_based_on_the_order_of_layers).
 
-Your final result should look like the following finished rendering:
+The starting point of the task looks like this:
 
-{{EmbedLiveSample("cascade2-finish")}}
+{{EmbedLiveSample("cascade2-start", "100%", "110px")}}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___cascade2-start live-sample___cascade2-finish
 <div class="container" id="outer">
@@ -111,9 +115,9 @@ Your final result should look like the following finished rendering:
 }
 ```
 
-This is the starting state of the task:
+The updated styling should look like this:
 
-{{EmbedLiveSample("cascade2-start")}}
+{{EmbedLiveSample("cascade2-finish", "100%", "110px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
