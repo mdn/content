@@ -33,8 +33,6 @@ position-visibility: unset;
 - `no-overflow`
   - : If the positioned element starts to overflow its containing element or the viewport, it will be strongly hidden.
 
-The specification also defines the `anchors-valid` value, which has not yet been implemented in any browser.
-
 ## Description
 
 In some situations you might not want to display an anchor-positioned element. For example, if its associated anchor has been scrolled offscreen but the anchor positioned element would otherwise still be partially or fully visible, it might be unclear what it refers to and take up space unnecessarily, so you may want to hide it altogether.
