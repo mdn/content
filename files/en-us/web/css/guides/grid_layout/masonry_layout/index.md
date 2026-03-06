@@ -190,7 +190,7 @@ This example includes an item which has positioning for columns. Items with defi
 
 ## Fallbacks for masonry layout
 
-In browsers [that do not support masonry](#browser_compatibility), `display: grid-lanes` is not recognized. You can use a fallback such as `display: grid` (without a masonry axis) so that regular grid auto-placement is used instead, or use `@supports (display: grid-lanes)` to scope masonry-specific styles.
+In browsers [that do not support masonry](#browser_compatibility), regular grid auto-placement will be used instead.
 
 ## Specifications
 
@@ -200,9 +200,7 @@ In browsers [that do not support masonry](#browser_compatibility), `display: gri
 
 {{Compat}}
 
-The compatibility table above may reflect support for the previous switch syntax (`grid-template-rows: masonry` / `grid-template-columns: masonry`). Support for **`display: grid-lanes`** will be tracked in browser-compat data as implementations ship.
-
 ## See also
 
 - {{cssxref("grid-auto-flow")}} for controlling grid auto-placement
-- [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/) (Smashing Magazine, 2020 — covers the previous `grid-template-*: masonry` syntax)
+- [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/) via Smashing Magazine (2020)
