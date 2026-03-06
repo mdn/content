@@ -44,6 +44,16 @@ new ReportingObserver(callback, options)
     - `types`
       - : An array of strings representing the types of report to be collected by this observer.
         Available types include:
+        - `coep`
+          - : Violations of the site's {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP).
+            Reports are {{domxref("COEPViolationReport")}} instances.
+        - `crash`
+          - : Browser crash reports.
+            (crash reports aren't retrievable via a `ReportingObserver` but can be sent to a server).
+            <!-- Reports are {{domxref("TBD")}} instances. -->
+        - `csp-violation`
+          - : Violations of the site's CSP policy.
+            Reports are {{domxref("CSPViolationReport")}} instances.
         - `deprecation`
           - : Deprecated features used by the site.
             Reports are {{domxref("DeprecationReport")}} instances.
@@ -53,13 +63,6 @@ new ReportingObserver(callback, options)
         - `intervention`
           - : Features blocked by the user agent, for example, if an ad significantly impacts page performance.
             Reports are {{domxref("InterventionReport")}} instances.
-        - `csp-violation`
-          - : Violations of the site's CSP policy.
-            Reports are {{domxref("CSPViolationReport")}} instances.
-        - `crash`
-          - : Browser crash reports.
-            (crash reports aren't retrievable via a `ReportingObserver` but can be sent to a server).
-            <!-- Reports are {{domxref("TBD")}} instances. -->
 
         If this option is omitted, all supported types are collected.
 

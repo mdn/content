@@ -23,6 +23,7 @@ There are several different features and problems on the web platform that gener
 - [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) violations.
 - [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) violations.
 - [Integrity-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy) violations.
+- [Cross-Origin-Embedder-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) violations.
 - Deprecated feature usage (when you are using something that will stop working soon in browsers).
 - Occurrence of crashes.
 - Occurrence of user-agent interventions (when the browser blocks something your code is trying to do because it is deemed a security risk for example, or just plain annoying, like auto-playing audio).
@@ -65,9 +66,9 @@ Methods are then available on the observer to start collecting reports ({{domxre
 
 ### Report types
 
-Reports sent to reporting observers are instances of dictionary objects, such as {{domxref("DeprecationReport")}}, {{domxref("IntegrityViolationReport")}}, {{domxref("InterventionReport")}}, and {{domxref("CSPViolationReport")}}.
+Reports sent to reporting observers are instances of dictionary objects, such as {{domxref("COEPViolationReport")}}, {{domxref("DeprecationReport")}}, {{domxref("IntegrityViolationReport")}}, {{domxref("InterventionReport")}}, and {{domxref("CSPViolationReport")}}.
 These all have an origin `url`, a `type`, and a `body` that is specific to the report type.
-The type of report can be determined from its `type` property, which for the reports above would be `deprecation`, `integrity-violation`, `intervention` and `csp-violation`.
+The type of report can be determined from its `type` property, which for the reports above would be `coep`, `deprecation`, `integrity-violation`, `intervention` and `csp-violation`.
 
 Reports sent to reporting endpoints and reporting observers are essentially the same.
 The only difference is that server reports are JSON serializations of the objects that have additional `user_agent` and `age` fields.
@@ -91,13 +92,15 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
 
 ## Dictionaries
 
+- {{domxref("COEPViolationReport")}}
+  - : Contains details of a {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) violation.
+- {{domxref("CSPViolationReport")}}
+  - : Contains details of a CSP violation.
+    This is defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) specifications.
 - {{domxref("DeprecationReport")}}
   - : Contains details of deprecated web platform features that a website is using.
 - {{domxref("InterventionReport")}}
   - : Contains details of an intervention report, which is generated when a request made by the website has been denied by the browser; e.g., for security reasons.
-- {{domxref("CSPViolationReport")}}
-  - : Contains details of a CSP violation.
-    This is defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) specifications.
 - {{domxref("IntegrityViolationReport")}}
   - : Contains information about a resource that was blocked because it did not meet the Subresource Integrity guarantees required by its {{httpheader("Integrity-Policy")}}, or that would be blocked for report-only policies set using {{httpheader("Integrity-Policy-Report-Only")}}.
     This is defined as part of the [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) specification,
@@ -112,8 +115,10 @@ These HTTP response headers define the endpoints where reports are sent.
 - {{HTTPHeader("Report-To")}} {{deprecated_inline}}
   - : No longer part of the Reporting API but still supported by some browsers. This sets the name and URL of reporting endpoint groups, which may be used with a number of HTTP headers especially for [Network Error Logging](/en-US/docs/Web/HTTP/Guides/Network_Error_Logging) that has not yet been updated to support `Reporting-Endpoints`. Other Reporting API reports should use `Reporting-Endpoints` instead for better future support.
 
-Report endpoints can be set for the following reports using the {{CSP("report-to")}} directive on the corresponding headers:
+Report endpoints can be set for the following reports using the {{CSP("report-to")}} directive or parameter on the corresponding headers:
 
+- COEP violations
+  - : {{HTTPHeader("Cross-Origin-Embedder-Policy")}} or {{HTTPHeader("Cross-Origin-Embedder-Policy-Report-Only")}}.
 - CSP violations
   - : {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 
