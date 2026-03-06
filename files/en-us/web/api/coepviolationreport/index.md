@@ -26,7 +26,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
           - : A document with {{httpheader("Cross-Origin-Embedder-Policy")}} set to [`require-corp`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy#require-corp) attempted to load a cross-origin sub-resource that does not explicitly allow itself to be embedded (by setting an appropriate {{httpheader("Cross-Origin-Resource-Policy")}}).
         - `"navigation"`
           - : An {{htmlelement("iframe")}} in a document that has either COEP `require-corp` or `credentialless` directives loads a document that:
-            - Has neither COEP `require-corp` nor `credentialless` directive
+            - Has neither the COEP `require-corp` nor `credentialless` directive
             - Is cross-origin with the embedding document, and does not have a CORP header that allows embedding in the parent
         - `"worker initialization"`
           - : A dedicated worker created by a document with either the COEP `require-corp` or `credentialless` directives tries to load a worker script with neither of these set.
@@ -47,7 +47,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
             This is set for violations of policies set with {{httpheader("Cross-Origin-Embedder-Policy-Report-Only")}}.
 
 - `type`
-  - : The string `"coep"` indicating that this is a COEP violation report.
+  - : The string `"coep"`, indicating that this is a COEP violation report.
 
 - `url`
   - : A string representing the URL of the document that generated the report.

@@ -13,7 +13,7 @@ The header allows website administrators to report on resources that would be bl
 This allows for a softer rollout of enforcement.
 
 Violations of the policy may be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
-Reports can be observed in the page for which the policy is being set using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver), and sent to server endpoints defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header and selected using the [`report-to`](#report-to_endpoint_name) parameter.
+Reports can be observed in the page for which the policy is being set using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver), and sent to server endpoints defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header, and selected using the [`report-to`](#report-to_endpoint_name) parameter.
 For more information see {{domxref("COEPViolationReport")}}.
 
 <table class="properties">
@@ -49,7 +49,7 @@ The `<token>` value can be one of:
 
     Cross-origin resource loading will be blocked by COEP unless:
     - The resource is requested in `no-cors` mode and the response includes a {{HTTPHeader("Cross-Origin-Resource-Policy")}} header that allows it to be loaded into the document origin.
-    - The resource is requested in `cors` mode, for example, in HTML using the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute, or in JavaScript by making a request with [`{mode="cors"}`](/en-US/docs/Web/API/RequestInit#cors).
+    - The resource is requested in `cors` mode; for example, in HTML using the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute, or in JavaScript by making a request with [`{mode="cors"}`](/en-US/docs/Web/API/RequestInit#cors).
       Note that requests made in `cors` mode won't be blocked by COEP or trigger COEP violations, but must still be permitted by CORS.
 
 - `credentialless`

@@ -42,7 +42,7 @@ The `<token>` value can be one of:
 
     Cross-origin resource loading will be blocked by COEP unless:
     - The resource is requested in `no-cors` mode and the response includes a {{HTTPHeader("Cross-Origin-Resource-Policy")}} header that allows it to be loaded into the document origin.
-    - The resource is requested in `cors` mode, for example, in HTML using the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute, or in JavaScript by making a request with [`{mode="cors"}`](/en-US/docs/Web/API/RequestInit#cors).
+    - The resource is requested in `cors` mode; for example, in HTML using the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute, or in JavaScript by making a request with [`{mode="cors"}`](/en-US/docs/Web/API/RequestInit#cors).
       Note that requests made in `cors` mode won't be blocked by COEP or trigger COEP violations, but must still be permitted by CORS.
 
 - `credentialless`
@@ -69,11 +69,11 @@ The policy applies to loaded resources, and resources in {{htmlelement("iframe")
 
 > [!NOTE]
 > The `Cross-Origin-Embedder-Policy` doesn't override or affect the embedding behavior for a resource for which CORP or CORS has been set.
-> If CORP restricts a resource to being embedded only `same-origin`, it won't be loaded cross-origin into a resource irrespective of the COEP value.
+> If CORP restricts a resource to being embedded only `same-origin`, it won't be loaded cross-origin into a resource — irrespective of the COEP value.
 
 ### Cross-origin isolation
 
-COEP and CORS together ensure that the browser process only contains resources that have consented to be shared or contain no private data.
+COEP and CORS together ensure that the browser process only contains resources that have consented to be shared, or that contain no private data.
 This is one of the conditions needed for a document to be [cross-origin isolated](/en-US/docs/Web/API/Window/crossOriginIsolated).
 
 ### Violation reports
@@ -104,8 +104,8 @@ Reporting-Endpoints: coep-endpoint="https://some-example.com/coep"
 Cross-Origin-Embedder-Policy: require-corp; report-to="coep-endpoint"
 ```
 
-In order for the `some-image.png` to be loaded without triggering a violation it would need to set {{HTTPHeader("Cross-Origin-Resource-Policy")}} to `cross-origin`.
-If we omit the header or don't include it as `cross-origin` a violation will occur.
+In order for the `some-image.png` to be loaded without triggering a violation, it would need to set {{HTTPHeader("Cross-Origin-Resource-Policy")}} to `cross-origin`.
+If we omit the header or don't include it as `cross-origin`, a violation will occur.
 
 The report sent in the report POST request will be similar to the JSON object shown below:
 
@@ -126,7 +126,7 @@ The report sent in the report POST request will be similar to the JSON object sh
 ]
 ```
 
-The `type` of the report is `coep`, the `url` is the document in which the violation occurred.
+The `type` of the report is `coep`, and the `url` is the document in which the violation occurred.
 The `body` of the report provides the URL of the blocked resource (`blockedURL`), its destination (`image`), the type of violation (`corp`), and that the report was for an enforced violation (`disposition`).
 
 ### Features that depend on cross-origin isolation
