@@ -8,7 +8,9 @@ browser-compat: api.Document.createElement
 
 {{APIRef("DOM")}}
 
-In an [HTML](/en-US/docs/Web/HTML) document, the **`document.createElement()`** method creates the HTML element specified by `localName`, or an {{domxref("HTMLUnknownElement")}} if `localName` isn't recognized.
+The **`createElement()`** method of the {{domxref("Document")}} interface creates a new {{domxref("HTMLElement")}} that has the specified `localName`.
+
+If `localName` isn't recognized, the method creates an {{domxref("HTMLUnknownElement")}}.
 
 ## Syntax
 
@@ -20,19 +22,40 @@ createElement(localName, options)
 ### Parameters
 
 - `localName`
-  - : A string that specifies the type of element to be created. Don't use qualified names (like "html:a") with this method. When called on an HTML document, `createElement()` converts `localName` to lower case before creating the element. In Firefox, Opera, and Chrome, `createElement(null)` works like `createElement("null")`.
-- `options` {{optional_inline}}
-  - : An object with the following properties:
-    - `is`
-      - : The tag name of a custom element previously defined via `customElements.define()`.
+  - : A string that specifies the type of element to be created.
+    Don't use qualified names (like "html:a") with this method.
+    When called on an HTML document, `createElement()` converts `localName` to lower case before creating the element.
+    In Firefox, Opera, and Chrome, `createElement(null)` works like `createElement("null")`.
+- `options` {{Optional_Inline}}
+  - : An object with the following optional properties (note that only one of `is` and `customElementRegistry` may be set):
+    - `is` {{Optional_Inline}}
+      - : A string defining the tag name for a custom element (that was previously defined using {{domxref("CustomElementRegistry/define", "customElements.define()")}}).
+        The new element will be given an `is` attribute whose value is the custom element's tag name.
         See [Web component example](#web_component_example) for more details.
+    - `customElementRegistry` {{Optional_Inline}}
+      - : A {{domxref("CustomElementRegistry")}} that sets the [Scoped custom element registry](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) of a custom element.
 
 ### Return value
 
 The new {{domxref("Element")}}.
 
 > [!NOTE]
-> A new {{domxref("HTMLElement", "HTMLElement", "", "1")}} is returned if the document is an {{domxref("HTMLDocument", "HTMLDocument", "", "1")}}, which is the most common case. Otherwise a new {{domxref("Element","Element","","1")}} is returned.
+> A new {{domxref("HTMLElement", "HTMLElement", "", "1")}} is returned if the document is an {{domxref("HTMLDocument", "HTMLDocument", "", "1")}}, which is the most common case.
+> Otherwise a new {{domxref("Element","Element","","1")}} is returned.
+
+### Exceptions
+
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : Thrown if the [`localName`](#localName) value is not a valid element name.
+    A string is a valid element name if its length is at least 1 and:
+    - it starts with an alphabet character and does not contain ASCII whitespace, `NULL`, `/` , or `>` (U+0000, U+002F, or U+003E, respectively).
+    - it starts with `:` (U+003A ), `_` (U+005F), or any characters in the range U+0080 to U+10FFFF (inclusive), AND the remaining code points only include those same characters along with the ASCII alphanumeric characters, `-` (U+002D), and `.` (U+002E),
+
+    > [!NOTE]
+    > Earlier versions of the specification were more restrictive, requiring that the `localName` be a valid [XML name](https://www.w3.org/TR/xml/#dt-name).
+
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if both the [`is`](#is) and [`customElementRegistry`](#customElementRegistry) options are specified.
 
 ## Examples
 

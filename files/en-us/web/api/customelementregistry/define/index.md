@@ -26,8 +26,8 @@ define(name, constructor, options)
 - `options` {{optional_inline}}
   - : Object that controls how the element is defined. One option is currently supported:
     - `extends`
-      - : String specifying the name of a built-in element to
-        extend. Used to create a customized built-in element.
+      - : String specifying the name of a built-in element to extend.
+        Used to create a customized built-in element.
 
 ### Return value
 
@@ -38,10 +38,10 @@ None ({{jsxref("undefined")}}).
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if:
     - The {{domxref("CustomElementRegistry")}} already contains an entry with the same name or the same constructor (or is otherwise already defined).
-    - The <code>extends</code> option is specified and it is a [valid custom element name](#valid_custom_element_names)
-    - The <code>extends</code> option is specified but the element it is trying to extend is an unknown element.
+    - The `extends` option is specified and it is a [valid custom element name](#valid_custom_element_names) (i.e., you're trying to extend a custom element).
+    - The `extends` option is specified but the element it is trying to extend is an unknown element.
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if the provided name is not a [valid custom element name](#valid_custom_element_names).
+  - : Thrown if the provided [name](#name) is not a [valid custom element name](#valid_custom_element_names).
 - {{jsxref("TypeError")}}
   - : Thrown if the referenced constructor is not a constructor.
 
@@ -65,7 +65,7 @@ Custom element names must:
 - start with an ASCII lowercase letter (a-z)
 - contain a hyphen
 - not contain any ASCII uppercase letters
-- not contain certain other characters, as documented in the [valid custom element names](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name) section of the Web Components specification
+- not contain ASCII whitespace, `NULL`, `/` , or `>` (U+0000, U+002F, or U+003E, respectively)
 - not be any of:
   - "annotation-xml"
   - "color-profile"
@@ -90,7 +90,8 @@ class MyAutonomousElement extends HTMLElement {
 }
 ```
 
-This element doesn't do anything: a real autonomous element would implement its functionality in its constructor and in the lifecycle callbacks provided by the standard. See [Implementing a custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) in our guide to working with custom elements.
+This element doesn't do anything: a real autonomous element would implement its functionality in its constructor and in the lifecycle callbacks provided by the standard.
+See [Implementing a custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) in our guide to working with custom elements.
 
 However, the above class definition satisfies the requirements of the `define()` method, so we can define it with the following code:
 
@@ -118,7 +119,8 @@ class MyCustomizedBuiltInElement extends HTMLParagraphElement {
 
 This element extends the built-in {{htmlelement("p")}} element.
 
-In this minimal example the element doesn't implement any customization, so it will behave just like a normal `<p>` element. However, it does satisfy the requirements of `define()`, so we can define it like this:
+In this minimal example the element doesn't implement any customization, so it will behave just like a normal `<p>` element.
+However, it does satisfy the requirements of `define()`, so we can define it like this:
 
 ```js
 customElements.define(

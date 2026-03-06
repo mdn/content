@@ -23,14 +23,21 @@ If you need to work with the {{domxref("Attr")}} node (such as cloning from anot
 ## Syntax
 
 ```js-nolint
-setAttribute(name, value)
+setAttribute(qualifiedName, value)
 ```
 
 ### Parameters
 
-- `name`
-  - : A string specifying the name of the attribute whose value is to be set.
+- `qualifiedName`
+  - : A string containing the qualified name of the attribute whose value is to be set.
     The attribute name is automatically converted to all lower-case when `setAttribute()` is called on an HTML element in an HTML document.
+
+    The format of the qualified name is `prefix:localName` or `localName`, where the parts are defined as:
+    - `prefix` {{optional_inline}}
+      - : A "short alias" for the namespace, as returned by the {{DOMxRef("Attr.prefix", "prefix")}} property.
+    - `localName`:
+      - : The local name of the attribute, as returned by the {{DOMxRef("Attr.localName", "localName")}} property.
+
 - `value`
   - : A trusted type or string containing the value to assign to the attribute.
 
@@ -55,8 +62,13 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : Thrown if the [`name`](#name) value is not a valid [XML name](https://www.w3.org/TR/xml/#dt-name).
-    For example, if it starts with a number, a hyphen, or a period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
+  - : Thrown if either the [`prefix`](#prefix) or [`localName`](#localname) is not valid:
+    - The `prefix` must have at least one character, and cannot contain ASCII whitespace, `NULL`, `/` , or `>` (U+0000, U+002F, or U+003E, respectively).
+    - The `localName` must have at least 1 character, and may not contain ASCII whitespace, `NULL`, `/` , `=` or `>` (U+0000, U+002F, U+003D or U+003E, respectively).
+
+    > [!NOTE]
+    > Earlier versions of the specification were more restrictive, requiring that the `qualifiedName` be a valid [XML name](https://www.w3.org/TR/xml/#dt-name).
+
 - `TypeError`
   - : Thrown if [`value`](#value) is passed a string instead of a trusted type object (for those attributes that require them) when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 

@@ -8,10 +8,9 @@ browser-compat: api.Document.createElementNS
 
 {{APIRef("DOM")}}
 
-Creates an element with the specified namespace URI and qualified name.
+The **`createElementNS()`** method of the {{domxref("Document")}} interface creates a new element with the specified namespace URI and qualified name.
 
-To create an element without specifying a namespace URI, use the
-{{DOMxRef("Document.createElement()", "createElement()")}} method.
+To create an element without specifying a namespace URI, use the {{DOMxRef("Document.createElement()", "createElement()")}} method.
 
 ## Syntax
 
@@ -30,15 +29,35 @@ createElementNS(namespaceURI, qualifiedName, options)
       - : `http://www.w3.org/2000/svg`
     - [MathML](/en-US/docs/Web/MathML)
       - : `http://www.w3.org/1998/Math/MathML`
+
 - `qualifiedName`
-  - : A string that specifies the type of element to be created.
-    The {{DOMxRef("node.nodeName", "nodeName")}} property of the created element is initialized with the value of _qualifiedName_.
+  - : A string containing the qualified name of the new element.
+    The {{DOMxRef("node.nodeName", "nodeName")}} property of the created element is initialized with this value.
+
+    The format of the qualified name is `prefix:localName` or `localName`, where the parts are defined as:
+    - `prefix` {{optional_inline}}
+      - : A "short alias" for the namespace.
+        The prefix is optional, but if it is specified the `namespaceURI` parameter must also be specified.
+        If the prefix is set to `xml` or `xmlns`, the `namespaceURI` must be set to `http://www.w3.org/XML/1998/namespace` or `http://www.w3.org/2000/xmlns/`, respectively.
+
+        The value is used to initialize the new element's {{DOMxRef("Element/prefix", "prefix")}} property.
+        If not set, its value is `null`.
+
+    - `localName`:
+      - : The local name of the element.
+        The value is used to initialize the new Element's {{DOMxRef("Element.localName", "localName")}} property.
+
 - `options` {{Optional_Inline}}
-  - : An optional `ElementCreationOptions` object containing a single property named `is`, whose value is the tag name for a custom element previously defined using `customElements.define()`.
+  - : An object with the following optional properties (note that only one of `is` and `customElementRegistry` may be set):
+    - `is` {{Optional_Inline}}
+      - : A string defining the tag name for a custom element (that was previously defined using {{domxref("CustomElementRegistry/define", "customElements.define()")}}).
+        The new element will be given an `is` attribute whose value is the custom element's tag name.
+        See [Web component example](#web_component_example) for more details.
+    - `customElementRegistry` {{Optional_Inline}}
+      - : A {{domxref("CustomElementRegistry")}} that sets the [Scoped custom element registry](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) of a custom element.
+
     For backwards compatibility, some browsers allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
     See [Extending native HTML elements](https://web.dev/articles/web-components) for more information on how to use this parameter.
-
-    The new element will be given an `is` attribute whose value is the custom element's tag name. Custom elements are an experimental feature only available in some browsers.
 
 ### Return value
 
@@ -47,11 +66,26 @@ The new {{DOMxRef("Element")}}.
 ### Exceptions
 
 - `NamespaceError` {{domxref("DOMException")}}
-  - : Thrown if the [`namespaceURI`](#namespaceuri) value is not a valid namespace URI.
+  - : Thrown if the [`namespaceURI`](#namespaceURI) value is:
+    - not a valid namespace URI
+    - set to the empty string when `prefix` has a value
+    - not the value `http://www.w3.org/XML/1998/namespace` or `http://www.w3.org/2000/xmlns/` when [`prefix`](#prefix) is set to `xml` or `xmlns`, respectively.
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : Thrown if the [`qualifiedName`](#qualifiedname) value is not a valid [XML name](https://www.w3.org/TR/xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
+  - : Thrown if either the `prefix` or `localName` is not valid:
+    - The `prefix` must have at least one character, and cannot contain ASCII whitespace, `NULL`, `/` , or `>` (U+0000, U+002F, or U+003E, respectively).
+    - The `localName` is a valid element name if it has a length of at least 1 and:
+      - it starts with an alphabet character and does not contain ASCII whitespace, `NULL`, `/` , or `>` (U+0000, U+002F, or U+003E, respectively).
+      - it starts with `:` (U+003A ), `_` (U+005F), or any characters in the range U+0080 to U+10FFFF (inclusive), AND the remaining code points only include those same characters along with the ASCII alphanumeric characters, `-` (U+002D), and `.` (U+002E),
+
+    > [!NOTE]
+    > Earlier versions of the specification were more restrictive, requiring that the `qualifiedName` be a valid [XML name](https://www.w3.org/TR/xml/#dt-name).
+
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if both the [`is`](#is) and [`customElementRegistry`](#customElementRegistry) options are specified.
 
 ## Examples
+
+### Basic usage
 
 This creates a new `<div>` element in the {{Glossary("XHTML")}} namespace and
 appends it to the vbox element. Although this is not an extremely useful XUL document, it does demonstrate the use of
@@ -90,9 +124,8 @@ function init() {
 ```
 
 > [!NOTE]
-> The example given above uses inline script which is not recommended in XHTML
-> documents. This particular example is actually an XUL document with embedded XHTML,
-> however, the recommendation still applies.
+> The example given above uses inline script which is not recommended in XHTML documents.
+> This particular example is actually an XUL document with embedded XHTML, however, the recommendation still applies.
 
 ## Specifications
 
