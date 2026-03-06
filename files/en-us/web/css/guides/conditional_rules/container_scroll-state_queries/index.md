@@ -359,7 +359,7 @@ Let's look at an example of a scroll container with a `scrolled` query that disp
 
 ### HTML
 
-In the HTML we have an {{htmlelement("article")}} element containing enough content to cause the document to scroll, preceded by a couple of {{htmlelement("div")}} elements that represent our top and bottom "bars":
+In our HTML, we have an {{htmlelement("article")}} element containing enough content to cause the document to scroll, preceded by two {{htmlelement("div")}} elements that represent our top and bottom "bars":
 
 ```html
 <div class="bar" id="top-bar">You're currently scrolling towards the top.</div>
