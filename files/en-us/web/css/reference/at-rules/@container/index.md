@@ -178,7 +178,7 @@ Scroll-state container descriptors are specified inside the `<container-conditio
 }
 ```
 
-Supported keywords for scroll-state container descriptors include physical and {{glossary("flow relative values")}}.
+Supported keywords for scroll-state container descriptors include {{glossary("physical properties", "physical")}} and {{glossary("flow relative values", "flow relative")}} values.
 
 - `scrollable`
   - : Queries whether the container can be scrolled in the given direction via user-initiated scrolling, such as by dragging the scrollbar or using a trackpad gesture. In other words, is there overflowing content in the given direction that can be scrolled to? Valid `scrollable` values include the following keywords:
@@ -222,7 +222,7 @@ Supported keywords for scroll-state container descriptors include physical and {
 - `scrolled`
   - : Queries whether the container was most recently scrolled in a specified direction. Valid `scrolled` values include the following keywords:
     - `none`
-      - : The container is not a {{glossary("scroll container")}} or otherwise has not recently been scrolled in any direction.
+      - : The container is not a {{glossary("scroll container")}} or otherwise has not previously been scrolled in any direction.
     - `top`
       - : The container was most recently scrolled towards its top edge.
     - `right`

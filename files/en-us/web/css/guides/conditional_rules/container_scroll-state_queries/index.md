@@ -44,9 +44,9 @@ Here, we query only containers named `my-container` to determine whether the con
 
 ## Using `scrollable` queries
 
-Scroll-state [`scrollable`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrollable) queries, written as `scroll-state(scrollable: value)`, test whether a container's scrolling ancestor can be scrolled in the given direction via user-initiated scrolling. If not, the query returns false.
+Scroll-state [`scrollable`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrollable) queries, written as `scroll-state(scrollable: <keyword>)`, test whether a container's scrolling ancestor can be scrolled in the given direction via user-initiated scrolling. If not, the query returns false.
 
-The `value` indicates the direction you are testing for scrolling availability in, for example:
+The keyword value indicates the direction you are testing for scrolling availability in, for example:
 
 - `top`: Tests whether the container can be scrolled towards its top edge.
 - `inline-end`: Tests whether the container can be scrolled towards its inline-end edge.
@@ -265,23 +265,6 @@ img {
 }
 ```
 
-```css hidden live-sample___scrollable live-sample___scrolled live-sample___snapped live-sample___stuck
-@supports not (container-type: scroll-state) {
-  body::before {
-    content: "Your browser does not support the `scroll-state` value of the 'container-type' property.";
-    color: black;
-    background-color: wheat;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 40%;
-    text-align: center;
-    padding: 1rem 0;
-    z-index: 1;
-  }
-}
-```
-
 ```css live-sample___scrollable
 .back-to-top {
   width: 64px;
@@ -345,13 +328,13 @@ Try scrolling the document down, and note how the "back-to-top" link appears as 
 
 ## Using `scrolled` queries
 
-Scroll-state [`scrolled`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrolled) queries, written as `scroll-state(scrolled: value)`, test whether a container's scrolling ancestor was most recently scrolled in the given direction. If not, the query returns false.
+Scroll-state [`scrolled`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrolled) queries, written as `scroll-state(scrolled: <keyword>)`, test whether a container's scrolling ancestor was most recently scrolled in the given direction. If not, the query returns false.
 
-The `value` indicates the direction you are testing for, for example:
+The keyword value indicates the direction you are testing for, for example:
 
 - `block-start`: Tests whether the container was most recently scrolled towards its block-start edge.
 - `right`: Tests whether the container was most recently scrolled towards its right-hand edge.
-- `y`: Tests whether the container was most recently scrolled in either direction along its y axis.
+- `y`: Tests whether the container was most recently scrolled up or down along the y axis.
 
 If the test returns true, the rules inside the `@container` block are applied to the descendants of the matching scroll container.
 
@@ -536,7 +519,7 @@ We have hidden most of the HTML for brevity.
 
 ### CSS
 
-The "bars" are given some rudimentary styling. Most significantly, they are given a {{cssxref("position")}} value of `fixed`, and given a little bit of spacing on either side using {{cssxref("left")}} and {{cssxref("right")}} values.
+The "bars" are given some rudimentary styling. Most significantly, they are given a {{cssxref("position")}} value of `fixed`, which we offset from either side using {{cssxref("left")}} and {{cssxref("right")}} values.
 
 ```css hidden live-sample___scrolled
 /* General styling */
@@ -574,30 +557,31 @@ img {
 .bar {
   border-radius: 10px;
   border: 1px solid #000;
-  background: #0009;
+  background-color: #0009;
   padding: 10px;
   color: white;
   text-shadow: 1px 1px 1px black;
   display: flex;
   justify-content: center;
   align-items: center;
+
   position: fixed;
   left: 5px;
   right: 5px;
 }
 ```
 
-Next, we give the top "bar" a {{cssxref("top")}} value of `-50px`, and the bottom "bar" a {{cssxref("bottom")}} value of `-50px` to hide them off the top and bottom of the screen by default. We also give them both a {{cssxref("transition")}} so that they smoothly animate when their `top`/`bottom` values are changed.
+Next, we set negative {{cssxref("top")}} and {{cssxref("bottom")}} length values on the top and bottom bars so they are hidden above and below the viewport by default. We add a {{cssxref("transition")}} to smoothly animate them into view when their {{cssxref("translate")}} values change.
 
 ```css live-sample___scrolled
 #top-bar {
   top: -50px;
-  transition: 0.6s top;
+  transition: 0.6s translate;
 }
 
 #bottom-bar {
   bottom: -50px;
-  transition: 0.6s bottom;
+  transition: 0.6s translate;
 }
 ```
 
@@ -610,18 +594,18 @@ html {
 }
 ```
 
-Next, we define two {{cssxref("@container")}} blocks that set the container name targeted by these queries, and queries of `scrolled: block-end` and `scrolled: block-start`. Respectively, these queries apply the rules contained within the block only if the `<html>` element was most recently scrolled toward its block-end edge or block-start edge — in other words, when the container is scrolled downwards or upwards. When those conditions become true, the bar referenced inside the block has a new `bottom`/`top` value set to cause it to transition on-screen.
+Next, we define two {{cssxref("@container")}} blocks that set the container name targeted by these queries, and queries of `scrolled: block-end` and `scrolled: block-start`. These queries apply the rules contained within the block only if the `<html>` element was most recently scrolled toward its block-end edge or block-start edge — in other words, when the container is scrolled down or up. When either condition becomes true, the bar referenced inside the block has a `translate` value set to cause it to transition on-screen. The bar referenced in the `@condition` that is no longer true transitions off the screen.
 
 ```css live-sample___scrolled
-@container scroller scroll-state(scrolled: block-end) {
-  #bottom-bar {
-    bottom: 5px;
+@container scroller scroll-state(scrolled: block-start) {
+  #top-bar {
+    translate: 0 55px;
   }
 }
 
-@container scroller scroll-state(scrolled: block-start) {
-  #top-bar {
-    top: 5px;
+@container scroller scroll-state(scrolled: block-end) {
+  #bottom-bar {
+    translate: 0 -55px;
   }
 }
 ```
@@ -636,9 +620,9 @@ Try scrolling the document up and down, and note how the different bars appear a
 
 ## Using `snapped` queries
 
-Relevant only when [scroll snapping](/en-US/docs/Web/CSS/Guides/Scroll_snap) is implemented, scroll-state [`snapped`](/en-US/docs/Web/CSS/Reference/At-rules/@container#snapped) queries (written as `scroll-state(snapped: value)`) test whether a container is going to be snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor along the given axis. If not, the query returns false.
+Relevant only when [scroll snapping](/en-US/docs/Web/CSS/Guides/Scroll_snap) is implemented, scroll-state [`snapped`](/en-US/docs/Web/CSS/Reference/At-rules/@container#snapped) queries, written as `scroll-state(snapped: <keyword>)`, test whether a container is going to be snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor along the given axis. If not, the query returns false.
 
-The `value` in this case indicates the direction you are testing the element's ability to snap in, for example:
+The keyword value in this case indicates the direction you are testing the element's ability to snap in, for example:
 
 - `x`: Tests whether the container is snapping horizontally to its scroll-snap container ancestor.
 - `inline`: Tests whether the container is snapping to its scroll-snap container ancestor in the inline direction.
@@ -858,9 +842,9 @@ The rendered result is shown below. Try scrolling the container up and down, and
 
 ## Using `stuck` queries
 
-Scroll-state [`stuck`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrollable) queries, written as `scroll-state(stuck: value)`, test whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scroll container ancestor. If not, the query returns false.
+Scroll-state [`stuck`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrollable) queries, written as `scroll-state(stuck: <keyword>)`, test whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scroll container ancestor. If not, the query returns false.
 
-The `value` in this case indicates the scroll container edge you are testing, for example:
+The keyword value in this case indicates the scroll container edge you are testing, for example:
 
 - `top`: Tests whether the container is stuck to the top edge of its scroll container ancestor.
 - `block-end`: Tests whether the container is stuck to the block-end edge of its scroll container ancestor.
@@ -1131,6 +1115,23 @@ Next, we define a {{cssxref("@container")}} block that sets the container name w
   p {
     background: #cccccc;
     box-shadow: 0 5px 2px #00000077;
+  }
+}
+```
+
+```css hidden live-sample___scrollable live-sample___scrolled live-sample___snapped live-sample___stuck
+@supports not (container-type: scroll-state) {
+  body::before {
+    content: "Your browser does not support the `scroll-state` value of the 'container-type' property.";
+    color: black;
+    background-color: wheat;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 1;
   }
 }
 ```
