@@ -71,6 +71,7 @@ The `action` key is an object that may have any of these properties, all optiona
     - `"personaltoolbar"`: the button is placed in the bookmarks toolbar.
 
     This property is only supported in Firefox. This property is optional, and defaults to `"menupanel"`. Firefox remembers the `default_area` setting for an extension, even if that extension is uninstalled and subsequently reinstalled. To force the browser to acknowledge a new value for `default_area`, the id of the extension must be changed. An extension can't change the location of the button after it has been installed, but the user may be able to move the button using the browser's built-in UI customization mechanism.
+
 - `default_icon` {{optional_inline}}
   - : `Object` or `String`. Use this to specify one or more icons for the action. The icon is shown in the browser toolbar by default. Icons are specified as URLs relative to the manifest.json file itself.
 
