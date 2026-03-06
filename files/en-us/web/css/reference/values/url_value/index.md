@@ -49,7 +49,7 @@ The ability to import external resources via the `<url>` value is implementation
 
 Depending on the CSS property on which a `<url>` referencing external resources is applied, the resource may be subject to [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) restrictions.
 
-Some CSS properties, including {{cssxref("mask-image")}}, {{cssxref("filter")}}, {{cssxref("content")}}, and {{cssxref("border-image")}}, as well as {{cssxref("clip-path")}} when referring to {{htmlelement("svg")}} image elements, may require successful CORS validation when they cause external, cross-origin resources to be fetched in CORS mode. If CORS validation fails, the resource may be blocked and therefore not used for rendering.
+Some CSS properties, including {{cssxref("mask-image")}}, {{cssxref("filter")}}, as well as {{cssxref("clip-path")}} and a few others when referring to {{htmlelement("svg")}} image elements, may require successful CORS validation when they cause external, cross-origin resources to be fetched in CORS mode. If CORS validation fails, the resource may be blocked and therefore not used for rendering.
 
 Note that the `<url>` value type does not enforce CORS validation itself, but individual CSS properties do.
 
