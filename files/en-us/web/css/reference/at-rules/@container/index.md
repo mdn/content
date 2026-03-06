@@ -248,7 +248,7 @@ Supported keywords for scroll-state container descriptors include physical and {
     - `inline`
       - : The container was most recently scrolled towards either its inline-start or inline-end edges.
 
-    If the test passes, the rules inside the `@container` block are applied to descendants of the scroll container.
+    If the test returns true, the rules nested in the `@container` block are applied to the descendants of the scroll container.
 
     To evaluate whether a container has recently been scrolled, without being concerned about the direction, use the `none` value with the `not` operator:
 
