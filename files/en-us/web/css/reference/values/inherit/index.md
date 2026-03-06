@@ -126,7 +126,7 @@ We include some semantically structured content.
 
 #### CSS
 
-We set the text color of the `<main>` element to `blue` and all `<h2>` elements to `green` in  `monospace` font. The `<h2>` elements inside a `<section>` are set to `inherit` their parent's text color.
+We set the text color of the `<main>` element to `blue` and all `<h2>` elements to `green` in `monospace` font. The `<h2>` elements inside a `<section>` are set to `inherit` their parent's text color.
 
 ```css
 main {
