@@ -60,7 +60,13 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This allows developers to implement components that can be closed using device-native mechanisms, such as the <kbd>Esc</kbd> on Windows or the <kbd>Back</kbd> key on Android, in the same way as built-in components such as [dialogs](/en-US/docs/Web/HTML/Reference/Elements/dialog) and [popovers](/en-US/docs/Web/API/Popover_API).
   ([Firefox bug 1966073](https://bugzil.la/1966073)).
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The {{domxref("HTMLMediaElement.captureStream()", "captureStream()")}} method of the {{domxref("HTMLMediaElement")}} interface is now supported.
+  This returns an object that streams the real-time capture of the content in the element.
+  The stream can be used, for example, as a source for a WebRTC {{domxref("RTCPeerConnection")}}.
+  Previously, `captureStream()` was available only as the non-standard `mozCaptureStream()` method.
+  ([Firefox bug 2017708](https://bugzil.la/2017708)).
 
 <!-- #### Removals -->
 
