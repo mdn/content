@@ -98,11 +98,11 @@ This example demonstrates allowing elements to inherit normally inherited values
 We include some semantically structured content.
 
 ```html
-<heading>
+<header>
   <h1>This is my blog</h1>
   <h2>This is the subtitle of my blog in the HEADER</h2>
   <p>My blog is not very interesting</p>
-</heading>
+</header>
 <main>
   <h2>This first blog post in MAIN</h2>
   <p>I really have nothing to say.</p>
