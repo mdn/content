@@ -12,16 +12,27 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) specification includes a `masonry` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what masonry layout is and how to use it.
+Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) specification defines **masonry layout** (also known as **grid-lanes** layout) via the {{cssxref("display")}} values `grid-lanes` and `inline-grid-lanes`. This guide details what masonry layout is and how to use it.
 
-Masonry layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other a masonry layout. On the masonry axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to completely fill the gaps.
+Masonry layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other a **stacking** (masonry) axis. On the stacking axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to completely fill the gaps.
+
+> [!NOTE]
+> The CSS Working Group obsoleted the previous switch syntax—`grid-template-rows: masonry` and `grid-template-columns: masonry` with `display: grid`—in favor of the display-based switch. See [CSS Working Group issue #12022](https://github.com/w3c/csswg-drafts/issues/12022) and the [Masonry feature overview](https://web-platform-dx.github.io/web-features-explorer/features/masonry/).
+
+## Masonry switch syntax
+
+You enable masonry layout by using one of these {{cssxref("display")}} values:
+
+- **`grid-lanes`** — block-level grid-lanes container
+- **`inline-grid-lanes`** — inline-level grid-lanes container
+
+The grid axis (strict tracks) is defined with {{cssxref("grid-template-columns")}} or {{cssxref("grid-template-rows")}}; the other axis is the stacking (lanes) axis and does not take a template. The previous syntax that used `grid-template-rows: masonry` or `grid-template-columns: masonry` with `display: grid` was obsoleted (see the note above).
 
 ## Creating a masonry layout
 
-To create the most common masonry layout, your columns will be the grid axis and the rows the masonry axis, defined with `grid-template-columns` and `grid-template-rows`.
-The child elements of this container will now lay out item by item along the rows, as they would with regular grid layout automatic placement.
+To create the most common masonry layout, use **`display: grid-lanes`** and define the **grid axis** (here, columns) with {{cssxref("grid-template-columns")}}. The other axis is the stacking axis and does not use a template.
 
-As the items move onto new rows, they will display according to the masonry algorithm. Items will load into the column with the most room, causing a tightly packed layout without strict row tracks.
+The child elements of this container will lay out item by item along the stacking axis according to the masonry algorithm: items load into the lane (column) with the most room, causing a tightly packed layout without strict row tracks.
 
 ```css hidden live-sample___block-axis live-sample___inline-axis live-sample___spanners live-sample___positioned
 * {
@@ -49,10 +60,9 @@ body {
 
 ```css live-sample___block-axis
 .grid {
-  display: grid;
+  display: grid-lanes;
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
 }
 ```
 
@@ -101,9 +111,8 @@ for (let i = 0; i < items.length; i++) {
 
 ```css live-sample___inline-axis
 .grid {
-  display: grid;
+  display: grid-lanes;
   gap: 10px;
-  grid-template-columns: masonry;
   grid-template-rows: repeat(3, 100px);
 }
 ```
@@ -135,10 +144,9 @@ In this example two of the items span two tracks, and the masonry items work aro
 
 ```css live-sample___spanners
 .grid {
-  display: grid;
+  display: grid-lanes;
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
 }
 
 .span-2 {
@@ -167,10 +175,9 @@ This example includes an item which has positioning for columns. Items with defi
 
 ```css live-sample___positioned
 .grid {
-  display: grid;
+  display: grid-lanes;
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
 }
 
 .positioned {
@@ -183,7 +190,7 @@ This example includes an item which has positioning for columns. Items with defi
 
 ## Fallbacks for masonry layout
 
-In browsers [that do not support masonry](#browser_compatibility), regular grid auto-placement will be used instead.
+In browsers [that do not support masonry](#browser_compatibility), `display: grid-lanes` is not recognized. You can use a fallback such as `display: grid` (without a masonry axis) so that regular grid auto-placement is used instead, or use `@supports (display: grid-lanes)` to scope masonry-specific styles.
 
 ## Specifications
 
@@ -193,7 +200,9 @@ In browsers [that do not support masonry](#browser_compatibility), regular grid 
 
 {{Compat}}
 
+The compatibility table above may reflect support for the previous switch syntax (`grid-template-rows: masonry` / `grid-template-columns: masonry`). Support for **`display: grid-lanes`** will be tracked in browser-compat data as implementations ship.
+
 ## See also
 
 - {{cssxref("grid-auto-flow")}} for controlling grid auto-placement
-- [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/) via Smashing Magazine (2020)
+- [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/) (Smashing Magazine, 2020 — covers the previous `grid-template-*: masonry` syntax)
