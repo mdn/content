@@ -353,7 +353,7 @@ The `value` indicates the direction you are testing for, for example:
 - `right`: Tests whether the container was most recently scrolled towards its right-hand edge.
 - `y`: Tests whether the container was most recently scrolled in either direction along its y axis.
 
-If the test passes, the rules inside the `@container` block are applied to descendants of the matching scroll container.
+If the test returns true, the rules inside the `@container` block are applied to the descendants of the matching scroll container.
 
 Let's look at an example with a scrolling container full of content, in which we use a `scrolled` query to display top and bottom content "bars", only when the user is scrolling up or down, respectively.
 
