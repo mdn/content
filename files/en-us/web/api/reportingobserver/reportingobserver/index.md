@@ -50,7 +50,6 @@ new ReportingObserver(callback, options)
         - `crash`
           - : Browser crash reports.
             (crash reports aren't retrievable via a `ReportingObserver` but can be sent to a server).
-            <!-- Reports are {{domxref("TBD")}} instances. -->
         - `csp-violation`
           - : Violations of the site's CSP policy.
             Reports are {{domxref("CSPViolationReport")}} instances.

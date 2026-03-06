@@ -43,7 +43,7 @@ It can also be the name of a group that is provided by the server in the {{HTTPH
 
 ### Violation report syntax
 
-A CSP violation report is a JSON-serialized {{domxref("Report")}} object instance, with a `type` property that has a value of `"csp-violation"`, and a `body` that is the serialized form of a {{domxref("CSPViolationReport")}} object (see the respective objects for their property definitions).
+A CSP violation report is a JSON-serialized {{domxref("CSPViolationReport")}} object, with a `type` property that has a value of `"csp-violation"`.
 Reports are sent to the target endpoint(s) via a `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
 
 The JSON for a single report might look like this:

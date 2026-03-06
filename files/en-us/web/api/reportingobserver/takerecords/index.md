@@ -22,7 +22,9 @@ None.
 
 ### Return value
 
-An array of {{domxref("Report")}} objects.
+An array of report objects, such as {{domxref("COEPViolationReport")}} and {{domxref("IntegrityViolationReport")}}.
+
+The object dictionaries are listed in [Reporting API](/en-US/docs/Web/API/Reporting_API#dictionaries).
 
 ## Examples
 
