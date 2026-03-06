@@ -91,7 +91,7 @@ Notice how the inline element inherit all the properties of the parent `<p>`, in
 
 ### Excluding selected elements from a rule
 
-This example demonstrates allowing elements to inherit normally inherited values, overriding colors set on their element type.
+This example demonstrates how the inherit keyword can be used to exclude selected elements from a color rule, allowing them to use their parent's color instead.
 
 #### HTML
 
