@@ -97,7 +97,6 @@ It then gets and logs the cookie that was just set.
 
 ```js
 async function cookieTest() {
-  const day = 24 * 60 * 60 * 1000;
   const cookieName = "cookie2";
   try {
     // Set cookie: passing options
