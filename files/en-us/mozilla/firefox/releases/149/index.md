@@ -62,10 +62,18 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Media, WebRTC, and Web Audio
 
-- The {{domxref("HTMLMediaElement.captureStream()", "captureStream()")}} method of the {{domxref("HTMLMediaElement")}} interface is now supported.
+- The {{domxref("HTMLMediaElement.captureStream()")}} method is now supported.
   This returns an object that streams the real-time capture of the content in the element.
   The stream can be used, for example, as a source for a WebRTC {{domxref("RTCPeerConnection")}}.
   Previously, `captureStream()` was available only as the non-standard `mozCaptureStream()` method.
+  ([Firefox bug 2017708](https://bugzil.la/2017708)).
+
+- {{domxref("MediaElementAudioSourceNode")}} now respects the media element's volume when capturing audio for all types of sources (as required by the specification).
+  Previously setting the volume of the element did not affect the captured audio for {{domxref("MediaStream")}} sources.
+  ([Firefox bug 2017708](https://bugzil.la/2017708)).
+
+- The {{domxref("HTMLMediaElement.captureStream()", "HTMLMediaElement.mozCaptureStream()")}} method now captures raw audio from the source without applying the media element's volume, regardless of the type of source the media element is playing (as required by the specification).
+  Previously the media element's volume affected the volume of the captured stream.
   ([Firefox bug 2017708](https://bugzil.la/2017708)).
 
 <!-- #### Removals -->
