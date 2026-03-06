@@ -1,13 +1,13 @@
 ---
-title: Firefox 149 release notes for developers (Nightly)
-short-title: Firefox 149 (Nightly)
+title: Firefox 149 release notes for developers (Beta)
+short-title: Firefox 149 (Beta)
 slug: Mozilla/Firefox/Releases/149
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 149 that affect developers.
-Firefox 149 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [March 24, 2026](https://whattrainisitnow.com/release/?version=149).
+Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [March 24, 2026](https://whattrainisitnow.com/release/?version=149).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -18,7 +18,9 @@ Firefox 149 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- ### Developer Tools -->
 
-<!-- ### HTML -->
+### HTML
+
+- The [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) global attribute now supports the [`hint`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover#hint) value. Popovers with the `hint` value will not close `auto` popovers when they are displayed, but will close other hint popovers. ([Firefox bug 1867743](https://bugzil.la/1867743)).
 
 <!-- No notable changes. -->
 
@@ -50,11 +52,21 @@ Firefox 149 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
-<!-- #### DOM -->
+#### DOM
 
-<!-- #### Media, WebRTC, and Web Audio -->
+- The {{domxref("CloseWatcher")}} interface is now supported.
+  This allows developers to implement components that can be closed using device-native mechanisms, such as the <kbd>Esc</kbd> on Windows or the <kbd>Back</kbd> key on Android, in the same way as built-in components such as [dialogs](/en-US/docs/Web/HTML/Reference/Elements/dialog) and [popovers](/en-US/docs/Web/API/Popover_API).
+  ([Firefox bug 1966073](https://bugzil.la/1966073)).
+
+#### Media, WebRTC, and Web Audio
+
+- The {{domxref("HTMLMediaElement.captureStream()", "captureStream()")}} method of the {{domxref("HTMLMediaElement")}} interface is now supported.
+  This returns an object that streams the real-time capture of the content in the element.
+  The stream can be used, for example, as a source for a WebRTC {{domxref("RTCPeerConnection")}}.
+  Previously, `captureStream()` was available only as the non-standard `mozCaptureStream()` method.
+  ([Firefox bug 2017708](https://bugzil.la/2017708)).
 
 <!-- #### Removals -->
 
@@ -73,6 +85,8 @@ Firefox 149 is the current [Nightly version of Firefox](https://www.firefox.com/
 ## Changes for add-on developers
 
 <!-- ### Removals -->
+
+The ability of extensions to dynamically execute code in their `moz-extension:` documents with {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, and {{WebExtAPIRef("scripting.removeCSS")}} is deprecated. The feature is no longer available in Firefox Nightly, and the beta and release versions of Firefox provide a warning in the tab's console. This restriction will apply to all versions of Firefox 152 and later. As an alternative, an extension can run code in its documents dynamically by registering a {{WebExtAPIRef("runtime.onMessage")}} listener in the document's script, then sending a message to trigger execution of the required code.({{bug(2011234)}})
 
 <!-- ### Other -->
 

@@ -3,10 +3,12 @@ title: "CSSFontFeatureValuesRule: characterVariant property"
 short-title: characterVariant
 slug: Web/API/CSSFontFeatureValuesRule/characterVariant
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.CSSFontFeatureValuesRule.characterVariant
 ---
 
-{{ APIRef("CSSOM") }}
+{{ APIRef("CSSOM") }}{{SeeCompatTable}}
 
 The read-only **characterVariant** property of the {{domXRef("CSSFontFeatureValuesRule")}} interface contains a {{domXRef("CSSFontFeatureValuesMap")}} object representing the [user-defined-ident](/en-US/docs/Web/CSS/Reference/Values/custom-ident) and [feature index](/en-US/docs/Web/CSS/Reference/Properties/font-feature-settings#optional_value) for a variable font which supports {{CSSXRef("font-variant-alternates", "character-variant()", "#character-variant")}}.
 

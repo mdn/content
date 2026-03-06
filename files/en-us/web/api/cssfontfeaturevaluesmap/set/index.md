@@ -3,10 +3,12 @@ title: "CSSFontFeatureValuesMap: set() method"
 short-title: set()
 slug: Web/API/CSSFontFeatureValuesMap/set
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CSSFontFeatureValuesMap.set
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`set()`** method of {{domxref("CSSFontFeatureValuesMap")}} instances adds a new entry with a specified key and value to this `CSSFontFeatureValuesMap`, or updates an existing entry if the key already exists.
 

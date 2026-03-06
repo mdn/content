@@ -247,6 +247,7 @@ fullscreenbutton
 fullwide
 FunciOES
 funcref
+funcrefs
 fwdred
 fwid
 gara
@@ -557,6 +558,7 @@ onsinkchange
 ontextformatupdate
 ontextupdate
 onuncapturederror
+onvalidationstatuschange
 onwebkitmouseforcewillbegin
 onzoomlevelchange
 opendocument
@@ -710,6 +712,7 @@ serviceworker
 setenvif
 SHA-256-sess
 SHA-512-sess
+shadowrootcustomelementregistry
 shadowrootreferencetarget
 sharpyuv
 shrd

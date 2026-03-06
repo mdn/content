@@ -3,10 +3,12 @@ title: "CSSFontFeatureValuesMap: clear() method"
 short-title: clear()
 slug: Web/API/CSSFontFeatureValuesMap/clear
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CSSFontFeatureValuesMap.clear
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`clear()`** method of the {{domxref("CSSFontFeatureValuesMap")}} interface removes all declarations in the `CSSFontFeatureValuesMap`.
 
