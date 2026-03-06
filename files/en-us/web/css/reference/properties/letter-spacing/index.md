@@ -6,7 +6,7 @@ browser-compat: css.properties.letter-spacing
 sidebar: cssref
 ---
 
-The **`letter-spacing`** [CSS](/en-US/docs/Web/CSS) property sets the horizontal spacing behavior between text characters. This value is added to the natural spacing between characters while rendering the text. Positive values of `letter-spacing` causes characters to spread farther apart, while negative values of `letter-spacing` bring characters closer together.
+The **`letter-spacing`** [CSS](/en-US/docs/Web/CSS) property sets the spacing between text characters. This value is added to the natural spacing between characters while rendering the text. Positive values of `letter-spacing` spread characters further apart, while negative values of `letter-spacing` bring characters closer together.
 
 {{InteractiveExample("CSS Demo: letter-spacing")}}
 
@@ -20,6 +20,10 @@ letter-spacing: 0.2rem;
 
 ```css interactive-example-choice
 letter-spacing: 1px;
+```
+
+```css interactive-example-choice
+letter-spacing: 30%;
 ```
 
 ```css interactive-example-choice
@@ -55,10 +59,11 @@ section {
 /* Keyword value */
 letter-spacing: normal;
 
-/* <length> values */
+/* <length-percentage> values */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
-letter-spacing: 0.3px;
+letter-spacing: -0.5px;
+letter-spacing: 50%;
 
 /* Global values */
 letter-spacing: inherit;
@@ -72,8 +77,10 @@ letter-spacing: unset;
 
 - `normal`
   - : The normal letter spacing for the current font. Unlike a value of `0`, this keyword allows the {{glossary("user agent")}} to alter the space between characters in order to justify text.
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxref("&lt;length-percentage&gt;")}}
   - : Specifies extra inter-character space _in addition to_ the default space between characters. Values may be negative, but there may be implementation-specific limits. User agents may not further increase or decrease the inter-character space in order to justify text.
+
+    Percentage values are calculated relative to the width of the space character of the font applied to the text.
 
 ## Accessibility
 
@@ -86,9 +93,13 @@ Legible letter-spacing must be determined on a case-by-case basis, as different 
 
 ## Internationalization concerns
 
-Some written languages should not have any letter spacing applied. For instance, languages that use the Arabic script expect connected letters to remain visually connected, as in the following example. Applying letter spacing will lead the text to look broken.
+Some written languages should not have any letter spacing applied. For instance, languages that use the Arabic script expect connected letters to remain visually connected, as in the following example. Applying letter spacing may lead to the text looking broken.
 
-> <p lang="ar" dir="rtl">شسيبتنمك</p>
+```html live-sample___i18n-sample
+<p lang="ar" dir="rtl">شسيبتنمك</p>
+```
+
+{{ EmbedLiveSample("i18n-sample", "100%", 60) }}
 
 ## Formal definition
 
@@ -100,11 +111,15 @@ Some written languages should not have any letter spacing applied. For instance,
 
 ## Examples
 
-### Setting letter spacing
+### Letter spacing length values
+
+This example shows several paragraphs with different length `letter-spacing` values set, allowing you to compare them.
 
 #### HTML
 
-```html
+The HTML contains several {{htmlelement("p")}} elements containing text content.
+
+```html live-sample___length-letter-spacing
 <p class="normal">letter spacing</p>
 <p class="em-wide">letter spacing</p>
 <p class="em-wider">letter spacing</p>
@@ -114,7 +129,9 @@ Some written languages should not have any letter spacing applied. For instance,
 
 #### CSS
 
-```css
+Our CSS applies a different `letting-spacing` value to each paragraph.
+
+```css live-sample___length-letter-spacing
 .normal {
   letter-spacing: normal;
 }
@@ -134,7 +151,85 @@ Some written languages should not have any letter spacing applied. For instance,
 
 #### Result
 
-{{ EmbedLiveSample('Setting_letter_spacing', 440, 185) }}
+The rendered result looks like this:
+
+{{ EmbedLiveSample("length-letter-spacing", "100%", 200) }}
+
+### Length and percentage letter spacing comparison
+
+In this example, we show several paragraphs of increasing font size with the same letter spacing set. We provide functionality to switch between a length and a percentage `letter-spacing` value, so you can observe the responsive qualities of the percentage value.
+
+#### HTML
+
+The HTML contains several {{htmlelement("p")}} elements containing text content, and an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) that we'll use to toggle between a length `letter-spacing` and a percentage `letter-spacing` value.
+
+```html live-sample___percentage-versus-length
+<p class="x-small">X-small font-size (0.8em)</p>
+<p class="small">Small font-size (1.3em)</p>
+<p class="medium">Medium font-size (2em)</p>
+<p class="large">Large font-size (3em)</p>
+<p class="x-large">X-Large (3.5em)</p>
+
+<form>
+  <label for="ls-toggle">
+    Toggle <code>letter-spacing</code> (off: <code>8px</code>, on:
+    <code>12%</code>)
+  </label>
+  <input type="checkbox" id="ls-toggle" />
+</form>
+```
+
+#### CSS
+
+Our CSS starts by applying increasing {{cssxref("font-size")}} values to each successive paragraph:
+
+```css hidden live-sample___percentage-versus-length
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+```
+
+```css live-sample___percentage-versus-length
+.x-small {
+  font-size: 0.8em;
+}
+
+.small {
+  font-size: 1.3em;
+}
+
+.medium {
+  font-size: 2em;
+}
+
+.large {
+  font-size: 3em;
+}
+
+.x-large {
+  font-size: 3.5em;
+}
+```
+
+We apply a `letter-spacing` value of `8px` to all paragraphs by default. When the checkbox is checked, however, we change the `letter-spacing` value to `12%`:
+
+```css live-sample___percentage-versus-length
+p {
+  letter-spacing: 8px;
+}
+
+p:has(~ form > input:checked) {
+  letter-spacing: 12%;
+}
+```
+
+#### Result
+
+The rendered result looks like this:
+
+{{ EmbedLiveSample("percentage-versus-length", "100%", 460) }}
+
+First, note how the initial length letter spacing value looks OK when applied to the larger font sizes, but it doesn't look good on the smaller font sizes. Now check the checkbox, and note how the percentage letter spacing looks appropriate on all lines, as it scales with the font size. Percentage `letter-spacing` values are useful for responsive text sizing.
 
 ## Specifications
 
