@@ -17,7 +17,7 @@ For [inherited properties](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance#inheri
 
 ### Basic usage
 
-In this example, we demonstrated the effect of the `inherit` value by comparing nested elements that `inherit` individual property values with elements with their browser default styles.
+In this example, we demonstrate the effect of the `inherit` keyword by comparing two paragraphs with nested elements: the inline elements in one use their browser default styles, while those in the other inherit individual property values from their parent.
 
 #### HTML
 
@@ -36,7 +36,8 @@ We include two identical paragraphs with several inline elements.
 
 #### CSS
 
-In the second paragraph, we set individual properties on individual elements to `inherit` the default styles from the parent {{htmlelement("p")}} element instead of applying their default browser styles.
+We don't style the inline elements in the first paragraph, so they use their default browser styles.
+In the second paragraph, we set properties on each inline element to `inherit`, so they get the computed styles from the parent {{htmlelement("p")}} element.
 
 ```css
 p:nth-of-type(2) {
@@ -53,13 +54,13 @@ p:nth-of-type(2) {
 }
 ```
 
-#### Results
+#### Result
 
 {{EmbedLiveSample("Basic usage", "100%", 100)}}
 
 ### Inheriting all property values
 
-In this example, we use the same HTML as in the previous example, to demonstrate the issues that can occur when the `inherit` value is applied to all properties.
+In this example, we use the same HTML as in the previous example to demonstrate the issues that can occur when the `inherit` keyword is applied to all properties.
 
 ```html hidden
 <p>
@@ -74,7 +75,7 @@ In this example, we use the same HTML as in the previous example, to demonstrate
 
 #### CSS
 
-In the second paragraph, instead of setting individual properties to `inherit`, we set {{cssxref("all")}} the nested elements to `inherit` all the default styles of their parent {{htmlelement("p")}}.
+In the second paragraph, instead of setting individual properties to `inherit`, we set the {{cssxref("all")}} property on all inline elements to `inherit`, so they all get computed styles from their parent {{htmlelement("p")}}.
 
 ```css
 p:nth-of-type(2) > * {
@@ -82,13 +83,13 @@ p:nth-of-type(2) > * {
 }
 ```
 
-#### Results
+#### Result
 
 {{EmbedLiveSample("Inheriting all property values", "100%", 270)}}
 
-Note how the inline element inherited all the properties of the parent `<p>`, including the paragraphs block-level {{cssxref("display ")}} value. This is likely not the effect you would want.
+Notice how the inline element inherit all the properties of the parent `<p>`, including the paragraph's block-level {{cssxref("display")}} value. This is likely not the effect you would want.
 
-### Exclude selected elements from a rule
+### Excluding selected elements from a rule
 
 This example demonstrates allowing elements to inherit normally inherited values, overriding colors set on their element type.
 
@@ -125,7 +126,7 @@ We include some semantically structured content.
 
 #### CSS
 
-We define the main section to have blue text, all second-level headers to have `green` text and be rendered in a `monospace` font, while setting second-level headers in a {{htmlelement("section")}} to inherit their parent's text color.
+We set the text color of the `<main>` element to `blue` and all `<h2>` elements to `green` in  `monospace` font. The `<h2>` elements inside a `<section>` are set to `inherit` their parent's text color.
 
 ```css
 main {
@@ -142,11 +143,11 @@ section h2 {
 }
 ```
 
-#### Results
+#### Result
 
 {{EmbedLiveSample("Exclude selected elements from a rule", "100%", 470)}}
 
-The `<h2>` elements are all set to be green, but if they are nested within a {{htmlelement("section")}} element, they inherit the color from their parent, which is `blue` within {{htmlelement("main")}}, generally black otherwise.
+The `<h2>` elements are all `green`. However, if they are nested in a {{htmlelement("section")}} element, they inherit their color from their parent, which is `blue` within {{htmlelement("main")}}. The default text color is black otherwise.
 
 ## Specifications
 
