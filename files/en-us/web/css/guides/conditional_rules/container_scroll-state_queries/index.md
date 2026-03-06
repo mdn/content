@@ -355,7 +355,7 @@ The `value` indicates the direction you are testing for, for example:
 
 If the test returns true, the rules inside the `@container` block are applied to the descendants of the matching scroll container.
 
-Let's look at an example with a scrolling container full of content, in which we use a `scrolled` query to display top and bottom content "bars", only when the user is scrolling up or down, respectively.
+Let's look at an example of a scroll container with a `scrolled` query that displays top and bottom content "bars" only when the user is scrolling up or down, respectively.
 
 ### HTML
 
