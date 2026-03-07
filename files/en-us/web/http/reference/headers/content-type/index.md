@@ -153,9 +153,9 @@ When forms don't involve file uploads and are using simpler fields, URL-encoded 
 POST /submit HTTP/1.1
 Host: example.com
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 14
+Content-Length: 16
 
-comment=Hello!
+comment=Hello%21
 ```
 
 ### `Content-Type` in a REST API using JSON
