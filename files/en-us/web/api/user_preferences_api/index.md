@@ -28,32 +28,70 @@ The following code implements a minimal dark mode toggle.
 The HTML has a form with 3 radio buttons. These radio buttons set the `color-scheme` field to either `system`, `light`, or `dark`.
 
 ```html
-<form>
-  <label>
-    <input type="radio" name="color-scheme" value="system" /> System default
-  </label>
-  <label>
-    <input type="radio" name="color-scheme" value="light" /> Light
-  </label>
-  <label> <input type="radio" name="color-scheme" value="dark" /> Dark </label>
-</form>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta name="color-scheme" content="light dark" />
+  </head>
+  <body>
+    <form>
+      <label>
+        <input type="radio" name="color-scheme" value="light" />
+        Light
+      </label>
+      <label>
+        <input type="radio" name="color-scheme" value="dark" />
+        Dark
+      </label>
+    </form>
+  </body>
+</html>
 ```
 
 #### JavaScript
 
 The JavaScript registers change event listeners for all elements named `color-scheme`. If the value is `system`, the handler clears the color scheme override. Otherwise, it requests a color scheme override with the value of the input element.
 
-```js
-for (const input of document.getElementsByName("color-scheme")) {
-  input.addEventListener("change", () => {
-    if (input.value === "system") {
-      navigator.preferences.colorScheme.clearOverride();
-    } else {
-      navigator.preferences.colorScheme.requestOverride(input.value);
-    }
-  });
+#### Result
+
+```css hidden
+body {
+  font-family: system-ui, sans-serif;
+}
+
+label {
+  display: block;
+  margin: 0.5em 0;
 }
 ```
+
+```js
+if (navigator.preferences) {
+  const inputs = {
+    light: document.querySelector('[name="color-scheme"][value="light"]'),
+    dark: document.querySelector('[name="color-scheme"][value="dark"]'),
+  };
+
+  inputs[navigator.preferences.colorScheme.value].checked = true;
+
+  inputs.light.addEventListener("change", () => {
+    navigator.preferences.colorScheme.requestOverride("light");
+  });
+  inputs.dark.addEventListener("change", () => {
+    navigator.preferences.colorScheme.requestOverride("dark");
+  });
+
+  navigator.preferences.colorScheme.addEventListener("change", () => {
+    inputs[navigator.preferences.colorScheme.value].checked = true;
+  });
+} else {
+  document.body.append(
+    "Your browser doesn’t support the navigator.preferences API",
+  );
+}
+```
+
+{{EmbedLiveSample("Dark Mode Toggle")}}
 
 ## Specifications
 
