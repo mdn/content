@@ -34,9 +34,9 @@ The client in this example sends a `POST` request to submit a form with the comm
 POST /submit HTTP/1.1
 Host: example.com
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 14
+Content-Length: 16
 
-comment=Hello!
+comment=Hello%21
 ```
 
 After successfully processing the form submission, the server responds with the following `205` response, indicating that the client should reset the form.
