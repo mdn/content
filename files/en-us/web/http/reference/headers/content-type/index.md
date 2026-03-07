@@ -153,7 +153,7 @@ When forms don't involve file uploads and are using simpler fields, URL-encoded 
 POST /submit HTTP/1.1
 Host: example.com
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 15
+Content-Length: 14
 
 comment=Hello!
 ```

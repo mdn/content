@@ -34,7 +34,7 @@ The client in this example sends a `POST` request to submit a form with the comm
 POST /submit HTTP/1.1
 Host: example.com
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 15
+Content-Length: 14
 
 comment=Hello!
 ```
