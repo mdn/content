@@ -8,7 +8,7 @@ status:
 browser-compat: api.CanMakePaymentEvent.CanMakePaymentEvent
 ---
 
-{{APIRef("Web-based Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
+{{APIRef("Web-Based Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`CanMakePaymentEvent()`** constructor creates a new {{domxref("CanMakePaymentEvent")}} object instance.
 

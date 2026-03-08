@@ -7,7 +7,7 @@ status:
 browser-compat: api.PaymentManager
 ---
 
-{{APIRef("Web-based Payment Handler API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Web-Based Payment Handler API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`PaymentManager`** interface of the {{domxref("Web-based Payment Handler API", "", "", "nocode")}} is used to manage various aspects of payment app functionality.
 

@@ -7,7 +7,7 @@ status:
 browser-compat: api.PaymentRequestEvent
 ---
 
-{{SeeCompatTable}}{{APIRef("Web-based Payment Handler API")}}{{AvailableInWorkers("service")}}
+{{SeeCompatTable}}{{APIRef("Web-Based Payment Handler API")}}{{AvailableInWorkers("service")}}
 
 The **`PaymentRequestEvent`** interface of the {{domxref("Web-based Payment Handler API", "", "", "nocode")}} is the object passed to a payment handler when a {{domxref("PaymentRequest")}} is made.
 
