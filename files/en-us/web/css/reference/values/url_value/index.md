@@ -53,7 +53,7 @@ Some CSS properties, including {{cssxref("mask-image")}}, {{cssxref("filter")}},
 
 Note that the `<url>` value type does not enforce CORS validation itself, but individual CSS properties do.
 
-When opening an HTML file directly with `file://`, resources may fail because CORS rules apply locally. Modern browsers treat `file://` as a unique origin, meaning cross-file resources can get blocked. In this case, an [HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) may be hosted to avoid CORS errors. The security behavior of `file://` URLs may also vary depending on the browser and the operating system's file permissions.
+When opening an HTML file directly with `file://`, resources may fail because CORS rules apply locally. Modern browsers treat `file://` as a unique origin, meaning cross-file resources can get blocked. In this case, an [HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) may be hosted to avoid CORS errors. The security behavior of `file://` URLs also varies depending on the browser and the operating system's file permissions.
 
 ## Examples
 
