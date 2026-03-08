@@ -84,7 +84,7 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
-- A user gesture is no longer require for {{WebExtAPIRef("action.openPopup")}} and {{WebExtAPIRef("browserAction.openPopup")}} to open a popup. This feature was available behind the `extensions.openPopupWithoutUserGesture.enabled` preference from Firefox 108. This change aligns Firefox's behavior with Chrome and Safari. ([Firefox bug 1799344](https://bugzil.la/1799344))
+- A user gesture is no longer required for {{WebExtAPIRef("action.openPopup")}} and {{WebExtAPIRef("browserAction.openPopup")}} to open a popup. This feature was available behind the `extensions.openPopupWithoutUserGesture.enabled` preference from Firefox 108. This change aligns Firefox's behavior with Chrome and Safari. ([Firefox bug 1799344](https://bugzil.la/1799344))
 
 <!-- ### Removals -->
 
