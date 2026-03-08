@@ -13,8 +13,7 @@ which the media will be played.
 
 ## Value
 
-A double-precision floating-point value. Must fall between 0 and 1, where 0 is effectively muted
-and 1 is the loudest possible value.
+A number between 0 and 1, where 0 is effectively muted, and 1 is the loudest possible value.
 
 ## Examples
 
