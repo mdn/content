@@ -17,7 +17,6 @@ The instruction to "reset content" can mean clearing the contents of a form, res
 
 Note that the response must not include any content, and browsers may reject responses that do so.
 The response should not include the {{HTTPHeader("Content-Length")}} header either, but if it does the value must be `0`.
- 
 The empty response may also be indicated using the {{HTTPHeader("Transfer-Encoding", "Transfer-Encoding: chunked")}} header with an empty chunk.
 
 ## Status
