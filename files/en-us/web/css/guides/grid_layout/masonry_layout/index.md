@@ -30,7 +30,7 @@ The grid layout axis is defined with {{cssxref("grid-template-columns")}} or {{c
 
 ## Creating a masonry layout
 
-To create the most common masonry layout, use **`display: grid-lanes`** and define the **grid axis** (here, columns) with {{cssxref("grid-template-columns")}}. The other axis is the stacking axis and does not use a template.
+To create the most common masonry layout where the columns are laid out in a grid, and the rows stack like masonry, use **`display: grid-lanes`** along with {{cssxref("grid-template-columns")}}. 
 
 The child elements of this container will lay out item by item along the stacking axis according to the masonry algorithm: items load into the lane (column) with the most room, causing a tightly packed layout without strict row tracks.
 
