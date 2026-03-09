@@ -339,7 +339,7 @@ The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) 
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 150           | Yes                  |
+| Nightly           | 150           | Yes                 |
 | Developer Edition | 149           | No                  |
 | Beta              | 149           | No                  |
 | Release           | 149           | No                  |
