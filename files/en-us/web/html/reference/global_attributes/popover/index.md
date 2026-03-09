@@ -60,7 +60,7 @@ The following code renders a button that, when activated, will open a popover el
 
 {{EmbedLiveSample('basic_example_of_popover', 600, 100)}}
 
-### Popover hint
+### Nesting popovers
 
 The following renders a button that will open a popover element when activated. That popover allows more popovers to be activated, without closing the original popover.
 
