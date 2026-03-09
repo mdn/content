@@ -16,18 +16,6 @@ Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) specifi
 
 Masonry layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other a **stacking** (masonry) layout. On the stacking axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to fill the gaps.
 
-> [!NOTE]
-> The CSS Working Group obsoleted the previous switch syntax—`grid-template-rows: masonry` and `grid-template-columns: masonry` with `display: grid`—in favor of the display-based switch. See [CSS Working Group issue #12022](https://github.com/w3c/csswg-drafts/issues/12022) and the [Masonry feature overview](https://web-platform-dx.github.io/web-features-explorer/features/masonry/).
-
-## Masonry switch syntax
-
-You enable masonry layout by using one of these {{cssxref("display")}} values:
-
-- **`grid-lanes`** — block-level grid-lanes container
-- **`inline-grid-lanes`** — inline-level grid-lanes container
-
-The grid layout axis is defined with {{cssxref("grid-template-columns")}} or {{cssxref("grid-template-rows")}}; the masonry axis does not take a template.
-
 ## Creating a masonry layout
 
 To create the most common masonry layout where the columns are laid out in a grid, and the rows stack like masonry, use **`display: grid-lanes`** along with {{cssxref("grid-template-columns")}}.
