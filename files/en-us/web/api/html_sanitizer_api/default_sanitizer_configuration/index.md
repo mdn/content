@@ -14,7 +14,7 @@ It therefore provides a "more than XSS safe" sanitizer, that minimizes the attac
 
 The HTML, SVG, and MathML elements and attributes allowed by the configuration are specified in the following sections.
 Comments and `data-*` attributes are removed by default.
-Note that this is derived from the specification, where it is referred to as the [built-in safe default configuration](https://wicg.github.io/sanitizer-api/#built-in-safe-default-configuration).
+The specification calls this configuration the [built-in safe default configuration](https://wicg.github.io/sanitizer-api/#built-in-safe-default-configuration).
 
 > [!NOTE]
 > The specification also defines the [built-in safe baseline configuration](https://wicg.github.io/sanitizer-api/#built-in-safe-baseline-configuration), which lists the elements that must minimally be removed to block script-content: {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}}, and {{SVGElement("use")}} .

@@ -198,11 +198,16 @@ Note that if you call the same method to set a per-element attribute, this will 
 The default `Sanitizer` configuration defines the {{domxref("Sanitizer")}} that is used if you call {{domxref("Element.setHTML()")}} or the other [safe sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods) without a custom sanitizer.
 It is also the configuration that is returned by the [`Sanitizer()` constructor](/en-US/docs/Web/API/Sanitizer/Sanitizer) when no configuration is set.
 
-This sanitizes elements and attributes that are known to be XSS-unsafe, along with others that might be be used in clickjacking, spoofing, or other attacks, if provided as user input.
+This configuration removes these sorts of items:
+
+ 1. Those that are known to be XSS-unsafe.
+ 2. Additional items that might be be used in clickjacking, spoofing, or other attacks.
+ 3. Comments and `data-*` attributes.
+
 It therefore provides a sanitizer with a minimal attack surface, which is still suitable for the majority of sanitization use cases.
 
-Note that if you specify a custom sanitizer for a safe sanitization method, it will always be updated to ensure XSS-unsafe elements and event handler content attributes are sanitized.
-However, it will not be updated to remove the additional "problematic" elements that aren't allowed by the default configuration.
+Note that if you specify a custom sanitizer for a safe sanitization method, it will always be updated to ensure XSS-unsafe items are removed.
+However, it will not be updated to remove the additional items, comments or `data-*` attributes that aren't allowed by the default configuration.
 
 For a listing of the allowed elements and attributes, see [Default `Sanitizer` configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
 
