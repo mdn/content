@@ -231,7 +231,7 @@ The rendered result looks like this:
 
 {{ EmbedLiveSample("percentage-versus-length", "100%", 460) }}
 
-First, note how the initial length letter spacing value looks OK when applied to the larger font sizes, but it doesn't look good on the smaller font sizes. Now check the checkbox, and note how the percentage letter spacing looks appropriate on all lines, as it scales with the font size. Percentage `letter-spacing` values are useful for responsive text sizing.
+First, note how the initial length letter spacing value looks OK when applied to the larger font sizes, but it doesn't look good on the smaller font sizes. Now select the checkbox, and note how the percentage letter spacing looks appropriate on all lines, as it scales with the font size.
 
 ## Specifications
 
