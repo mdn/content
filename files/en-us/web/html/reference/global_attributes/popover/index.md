@@ -62,7 +62,7 @@ The following code renders a button that, when activated, will open a popover el
 
 ### Nesting popovers
 
-The following renders a button that will open a popover element when activated. That popover allows more popovers to be activated, without closing the original popover.
+In this example, a button opens a popover that contains additional nested popovers. The nested popovers can be opened without closing the original menu popover.
 
 #### HTML
 
