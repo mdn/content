@@ -99,7 +99,7 @@ In the second part of the HTML, we create the menu popover that is opened by the
 </div>
 ```
 
-In the final part of the `HTML`, we create the info popovers for each menu item. Each popover includes `popover="hint"`, which means it will not close the original menu popover but will close the other open info popovers.
+In the final part of the HTML, we create the info popovers for each menu item. Each popover includes `popover="hint"`, which means it will not close the original menu popover but will close the other open info popovers.
 
 ```html
 <!-- info popovers -->
