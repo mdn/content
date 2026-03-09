@@ -13,7 +13,6 @@ The **`BufferedChangeEvent()`** constructor of the {{domxref("BufferedChangeEven
 ## Syntax
 
 ```js-nolint
-new BufferedChangeEvent(type)
 new BufferedChangeEvent(type, options)
 ```
 
@@ -23,6 +22,9 @@ new BufferedChangeEvent(type, options)
   - : A string representing the type of event. In the case of `BufferedChangeEvent` this is always `bufferedchange`.
 - `options` {{optional_inline}}
   - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
+
+    > [!NOTE]
+    > Although the spec marks `options` as optional, Safari (currently the only implementation) throws a `TypeError` if the argument is omitted entirely. Passing an empty object (`{}`) works correctly.
     - `addedRanges` {{optional_inline}}
       - : A {{domxref("TimeRanges")}} object representing the time ranges added to the buffer.
     - `removedRanges` {{optional_inline}}
