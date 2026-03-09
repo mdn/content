@@ -35,7 +35,7 @@ The `PreferenceManager` interface inherits from {{domxref("EventTarget")}}.
 
 ### Basic usage
 
-This examples demonstrates how to see the user's preferred color scheme.
+This example demonstrates how to query the user's preferred color scheme.
 
 ```js
 if (navigator.preferences.colorScheme.value === "dark") {
