@@ -92,7 +92,7 @@ jobs:
           rm -r files *.md
 
           # Remove non-Markdown files from HEAD.
-          find pr_head/files -type f ! -name '*.md' -delete
+          find pr_head -type f ! -name '*.md' -delete
 
           # Move Markdown files from HEAD into BASE.
           mv pr_head/files pr_head/*.md .
