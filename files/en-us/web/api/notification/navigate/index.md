@@ -29,13 +29,17 @@ A string containing a {{glossary("URL")}}, or an empty string if no navigation U
 The `navigate` property returns the resolved URL string when a navigation URL has been set, or an empty string otherwise.
 
 ```js
-const withNav = new Notification("With navigation", {
-  navigate: "/inbox",
+const notification = new Notification("New message from Alice", {
+  body: "Hey, are you free for lunch?",
+  navigate: "/messages/alice",
 });
-console.log(withNav.navigate); // A resolved absolute URL, e.g. "https://example.com/inbox"
 
-const withoutNav = new Notification("Without navigation");
-console.log(withoutNav.navigate); // ""
+// The property contains the resolved absolute URL
+console.log(notification.navigate); // e.g. "https://example.com/messages/alice"
+
+// Without a navigate option, the property is an empty string
+const basic = new Notification("Hello!");
+console.log(basic.navigate); // ""
 ```
 
 ### Using navigate with a service worker
