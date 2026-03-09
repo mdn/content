@@ -62,11 +62,19 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Media, WebRTC, and Web Audio
 
-- The {{domxref("HTMLMediaElement.captureStream()", "captureStream()")}} method of the {{domxref("HTMLMediaElement")}} interface is now supported.
+- The {{domxref("HTMLMediaElement.captureStream()")}} method is now supported.
   This returns an object that streams the real-time capture of the content in the element.
   The stream can be used, for example, as a source for a WebRTC {{domxref("RTCPeerConnection")}}.
   Previously, `captureStream()` was available only as the non-standard `mozCaptureStream()` method.
   ([Firefox bug 2017708](https://bugzil.la/2017708)).
+
+- {{domxref("MediaElementAudioSourceNode")}} now respects the media element's volume when capturing audio for all types of sources (as required by the specification).
+  Previously, setting the volume of the element did not affect the captured audio for {{domxref("MediaStream")}} sources.
+  ([Firefox bug 2010427](https://bugzil.la/2010427)).
+
+- The {{domxref("HTMLMediaElement.captureStream()", "HTMLMediaElement.mozCaptureStream()")}} method now captures raw audio from the source without applying the media element's volume, regardless of the type of source the media element is playing (as required by the specification).
+  Prior to this change, the media element's volume affected the volume of the captured stream.
+  ([Firefox bug 2010427](https://bugzil.la/2010427)).
 
 <!-- #### Removals -->
 
@@ -95,3 +103,7 @@ The ability of extensions to dynamically execute code in their `moz-extension:` 
 These features are shipping in Firefox 149 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`<attr-type>` values in `attr()` CSS function**: `layout.css.attr.enabled`
+
+  The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/Web/CSS/Reference/Values/attr#attr-type) values. This allows you to specify how an attribute value is parsed into a CSS value and take those values directly from [`data-*`](/en-US/docs/Web/HTML/How_to/Use_data_attributes). ([Firefox bug 1986631](https://bugzil.la/1986631) & [Firefox bug 1998245](https://bugzil.la/1998245)).
