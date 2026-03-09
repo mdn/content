@@ -58,7 +58,7 @@ A non-exhaustive list of permission-aware APIs includes:
 - [Local Font Access API](/en-US/docs/Web/API/Local_Font_Access_API): `local-fonts`
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API): `microphone`, `camera`
 - [Notifications API](/en-US/docs/Web/API/Notifications_API): `notifications`
-- [Payment Handler API](/en-US/docs/Web/API/Payment_Handler_API): `payment-handler`
+- [Web-based Payment Handler API](/en-US/docs/Web/API/Web_Based_Payment_Handler_API): `payment-handler`
 - [Push API](/en-US/docs/Web/API/Push_API): `push`
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): `captured-surface-control`, `display-capture`
 - [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API): `screen-wake-lock`
