@@ -23,7 +23,7 @@ A {{domxref("PreferenceObject")}} used to override the user's preference for the
 
 ### Basic usage
 
-This examples demonstrates how to see the user's preferred color scheme.
+This examples demonstrates how to query the user's preferred color scheme.
 
 ```js
 if (navigator.preferences.colorScheme.value === "dark") {
