@@ -23,7 +23,7 @@ A {{domxref("PreferenceObject")}} used to override the user's preference for the
 
 ### Basic usage
 
-This examples demonstrates how to see the user's reduced data preference.
+This example demonstrates how to query the user's reduced data preference.
 
 ```js
 if (navigator.preferences.reducedData.value === "reduce") {
