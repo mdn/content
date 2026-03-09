@@ -16,40 +16,7 @@ A {{domxref("TimeRanges")}} object.
 
 ## Examples
 
-### Logging added ranges on buffer change
-
-This example creates a {{domxref("ManagedMediaSource")}}, attaches it to a video element, fetches a fragmented MP4 file, and logs any time ranges added to the buffer.
-
-```js
-const videoUrl =
-  "https://mdn.github.io/shared-assets/videos/flower-fragmented.mp4";
-const mediaType = 'video/mp4; codecs="avc1.64001F, mp4a.40.2"';
-
-if (ManagedMediaSource.isTypeSupported(mediaType)) {
-  const video = document.createElement("video");
-  const source = new ManagedMediaSource();
-
-  video.controls = true;
-  video.disableRemotePlayback = true;
-  video.src = URL.createObjectURL(source);
-  document.body.appendChild(video);
-
-  source.addEventListener("sourceopen", async () => {
-    const sourceBuffer = source.addSourceBuffer(mediaType);
-
-    sourceBuffer.addEventListener("bufferedchange", (event) => {
-      const added = event.addedRanges;
-      for (let i = 0; i < added.length; i++) {
-        console.log(`Added range: ${added.start(i)}s - ${added.end(i)}s`);
-      }
-    });
-
-    const response = await fetch(videoUrl);
-    const data = await response.arrayBuffer();
-    sourceBuffer.appendBuffer(data);
-  });
-}
-```
+See the main {{domxref("BufferedChangeEvent")}} page for an example showing the use of `addedRanges`.
 
 ## Specifications
 
