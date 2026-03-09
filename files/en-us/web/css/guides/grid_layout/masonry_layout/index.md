@@ -26,7 +26,7 @@ You enable masonry layout by using one of these {{cssxref("display")}} values:
 - **`grid-lanes`** — block-level grid-lanes container
 - **`inline-grid-lanes`** — inline-level grid-lanes container
 
-The grid axis (strict tracks) is defined with {{cssxref("grid-template-columns")}} or {{cssxref("grid-template-rows")}}; the other axis is the stacking (lanes) axis and does not take a template. The previous syntax that used `grid-template-rows: masonry` or `grid-template-columns: masonry` with `display: grid` was obsoleted (see the note above).
+The grid layout axis is defined with {{cssxref("grid-template-columns")}} or {{cssxref("grid-template-rows")}}; the masonry axis does not take a template.
 
 ## Creating a masonry layout
 
