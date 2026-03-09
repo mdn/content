@@ -14,7 +14,7 @@ sidebar: cssref
 
 Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) specification defines **masonry layout** (also known as **grid-lanes** layout) via the {{cssxref("display")}} values `grid-lanes` and `inline-grid-lanes`. This guide details what masonry layout is and how to use it.
 
-Masonry layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other a **stacking** (masonry) axis. On the stacking axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to completely fill the gaps.
+Masonry layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other a **stacking** (masonry) layout. On the stacking axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to fill the gaps.
 
 > [!NOTE]
 > The CSS Working Group obsoleted the previous switch syntax—`grid-template-rows: masonry` and `grid-template-columns: masonry` with `display: grid`—in favor of the display-based switch. See [CSS Working Group issue #12022](https://github.com/w3c/csswg-drafts/issues/12022) and the [Masonry feature overview](https://web-platform-dx.github.io/web-features-explorer/features/masonry/).
