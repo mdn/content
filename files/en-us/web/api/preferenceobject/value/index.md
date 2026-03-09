@@ -21,7 +21,7 @@ The override of the {{domxref("PreferenceObject")}} interface if one is set, or 
 
 ### Basic usage
 
-This examples demonstrates how to see the user's reduced motion preference.
+This example demonstrates how to query the user's reduced motion preference.
 
 ```js
 if (navigator.preferences.reducedMotion.value === "reduce") {
