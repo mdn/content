@@ -23,7 +23,7 @@ A {{domxref("PreferenceObject")}} used to override the user's preference for the
 
 ### Basic usage
 
-This examples demonstrates how to see the user's contrast preference.
+This example demonstrates how to query the user's contrast preference.
 
 ```js
 if (navigator.preferences.contrast.value === "more") {
