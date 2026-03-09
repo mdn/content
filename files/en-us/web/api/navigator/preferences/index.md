@@ -8,7 +8,7 @@ browser-compat: api.Navigator.preferences
 
 {{SeeCompatTable}}
 
-The **`preferences`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("PreferenceManager")}} object for the current document, This is the entry point for the [User Preferences API](/en-US/docs/Web/API/User_Preferences_API) functionality.
+The **`preferences`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("PreferenceManager")}} object for the current document. This is the entry point for the [User Preferences API](/en-US/docs/Web/API/User_Preferences_API) functionality.
 
 ## Value
 
@@ -18,7 +18,7 @@ A {{domxref('PreferenceManager')}} object.
 
 ### Get color scheme preference
 
-This examples demonstrates how to see the user's preferred color scheme.
+This example demonstrates how to query the user's preferred color scheme.
 
 ```js
 if (navigator.preferences.colorScheme.value === "dark") {
