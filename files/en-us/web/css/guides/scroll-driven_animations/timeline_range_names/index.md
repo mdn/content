@@ -13,9 +13,9 @@ This guide explains how to modify timeline range names, specifically examining t
 
 [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) are created by attaching {{cssxref("@keyframes")}} animations to an element using the {{cssxref("animation-name")}} property (or {{cssxref("animation")}} shorthand). The keyframes define the animation's behavior, while the {{cssxref("animation-timeline")}} determines when and how the element progresses through those keyframes.
 
-With [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines), the animation's timeline, or progress, is driven by user scroll and element visibility.
+By default, the animation's timeline is the document's default time-based {{domxref("DocumentTimeline")}}. With [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines), the animation's timeline, or progress, is driven either by user scroll ([scroll progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines)) or element visibility ([view-progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines)), instead of the passage of time.
 
-In [view-progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines), keyframe progression is tied to how much of the subject element is visible within the scroller, and its position within the scroller. As the element enters the viewport, the timeline advances. If the user reverses the scrolling, the timeline reverses: as the view progress element comes into or moves out of view, the timeline progresses or reverses, respectively. The animation only occurs when the element is visible within its scrollport. If scrolling stops while the element is in view, the animation pauses.
+In view-progress timelines, keyframe progression is tied to how much of the subject element is visible within the scroller, and its position within the scroller. As the element enters the viewport, the timeline advances. If the user reverses the scrolling, the timeline reverses: as the view progress element comes into or moves out of view, the timeline progresses or reverses, respectively. The animation only occurs when the element is visible within its scrollport. If scrolling stops while the element is in view, the animation pauses.
 
 By default, the [view timeline progress](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) starts when the tracked subject's start edge intersects the scrollport at the end edge and ends when the subject's end edge exits the scrollport at the start edge. These are the subject and scrollport's top and bottom edges when scrolling vertically, and the left and right or right and left edges when scrolling horizontally, depending on the writing mode.
 
@@ -60,7 +60,7 @@ By default, the [view timeline progress](/en-US/docs/Web/CSS/Guides/Scroll-drive
   <legend>Select the animation range</legend>
 
   <label><input name="range" value="0" type="radio" checked /> 0% / 100%</label>
-  <label><input name="range" value="30" type="radio" />30% / 70%</label>
+  <label><input name="range" value="30" type="radio" />20% / 60%</label>
 </fieldset>
 ```
 
@@ -196,48 +196,61 @@ In the following example, try scrolling down. Note how the animation begins just
 
 ### The animation attachment range
 
-By default, the element is being animated the entire time any portion of the subject element is visible. This means the **animation attachment range** is the sum of the height of the scroll container and the height of the subject element, with that extra height being at the scroll end edge. For example, if the scroll container is `250px` tall and the animated element is `50px` tall, the vertical animation attachment range will be `300px` tall, starting at the bottom of the scrollport in our example. If the element is `250px` tall, the range becomes `500px`; if it's `500px` tall, the range becomes `750px`. This behavior is consistent regardless of element size; so we can use scroll view timelines even when we don't know the exact dimensions of our scroll containers or the dimensions of our subjects.
+By default, the element is being animated the entire time any portion of the subject element is visible. This means the default **animation attachment range** is the sum of the height of the scroll container and the height of the subject element, with that extra height being at the scroll end edge.
 
-The {{cssxref("animation-range")}} properties define the attachment range for the animation timeline, including the animation attachment range's start and end edges, including insets. The [CSS scroll driven animations module](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) provides properties and values that accept {{cssxref("length-percentage")}} values (such as `30%` or `100px`) and {{cssxref("timeline-range-name")}} keywords that specify the edges those values are relative to.
+In the previous example, the scroll container was `250px` tall and the animated element was originally `50px` tall; which meant the vertical animation attachment range was `300px` tall. The default animation attachment range starts from the scrollport container's block-end edge and continues above it's block-start edge, with the total size being the sum of the block-size of the container and the block-size of the subject. In our example, when we set the subject to `250px`, the range became `500px`; when the element was set to `500px`, the animation attachment range size grew to `750px`.
+
 The scroll container's writing mode and scroll direction determine the scroll container's start and end edges.
 
+The [CSS scroll driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module provides mechanisms for defining different animation attachment ranges. The {{cssxref("animation-range")}} properties define the attachment range for the animation timeline, including the animation attachment range's start and end edges and insets.
+
 #### Setting insets using percentages
+
+The animation-range properties allow insetting animations from the animation attachment ranges using {{cssxref("length-percentage")}} insets values, such as `20%` or `100px`. In this guide, we are focusing on the {{cssxref("timeline-range-name")}} keywords, which specify the edges the inset values are relative to, so we will only briefly discuss the inset values here. <!-- see [timeline insets](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets) when it's published -->
 
 The {{cssxref("animation-range-start")}} and {{cssxref("animation-range-end")}} properties—which can both be set using the `animation-range` shorthand—define an animation's attachment range, limiting the keyframe's active interval to that specific portion of the range.
 
 ```css live-sample___insets
 .animated_element {
-  animation-range-start: 30%;
-  animation-range-end: 70%;
+  animation-range-start: 20%;
+  animation-range-end: 60%;
 }
 ```
 
 ```css hidden live-sample___insets live-sample___inset_cover live-sample___inset_contain
-main,
 i {
   background-image: linear-gradient(
+    to bottom,
+    transparent calc(20% - 1px),
+    black calc(20% - 1px) calc(20% + 1px),
+    transparent calc(20% + 1px) calc(60% - 1px),
+    black calc(60% - 1px) calc(60% + 1px),
+    transparent calc(60% + 1px)
+  );
+}
+main {
+  background-image: linear-gradient(
     to top,
-    transparent calc(30% - 1px),
-    black calc(30% - 1px) calc(30% + 1px),
-    transparent calc(30% + 1px) calc(70% - 1px),
-    black calc(70% - 1px) calc(70% + 1px),
-    transparent calc(70% + 1px)
+    transparent calc(20% - 1px),
+    black calc(20% - 1px) calc(20% + 1px),
+    transparent calc(20% + 1px) calc(60% - 1px),
+    black calc(60% - 1px) calc(60% + 1px),
+    transparent calc(60% + 1px)
   );
   background-origin: content-box;
 }
 ```
 
-Here we use `animation-range-start` and `animation-range-end` to inset the animation timeline, defining a subsection of the element's full animation attachment range as the active interval. In this example, the active interval begins `30%` into the default attachment range and ends at `70%` of that same range. Because no `<named-timeline-range>` keyword is included, these values are interpreted relative to the default `cover` animation attachment range. The `cover` value represents the full range of a view progress timeline, from the point where the subject element's start border edge first enters the scrollport's view progress visibility range to the point where the end border edge has completely left it.
+Here we use `animation-range-start` and `animation-range-end` to inset the animation timeline, defining a subsection of the element's full animation attachment range as the active interval. In this example, the active interval begins `20%` into the default attachment range and ends at `60%` of that same range. Because no `<named-timeline-range>` keyword is included, these values are interpreted relative to the default animation attachment range, from the point where the subject element's start border edge first enters the scrollport's view progress visibility range to the point where the end border edge has completely left it.
 
 {{EmbedLiveSample("insets", "100%", "400")}}
 
-For illustrative purposes, horizontal lines were added `30%` from the top and bottom of both the container and the animated element. You may notice when the animation begins and ends, the lines in the element do not line up with the lines in the container. This is because the scroll-port's line percentages are relative to the height of the container and the animated element's lines are relative to the height of the animated element. Neither is relative to the height of the animation attachment range, which is the sum of both the element and the container. Because the full attachment range equals the container height plus the element height, the 30% mark does not occur when the top edge of the animated element aligns with the 30% mark.
+For illustrative purposes, horizontal lines were added `20%` and `60%` from the bottom of the container and `20%` and `60%` from the top of the subject element. Notice the animation begins when the the line that is 20% from the start edge of the subject crosses the line that is 20% from the end edge of the container, and the animation ends at the 60% marks.
 
-Fortunately, the properties defining the start and end of the range properties accept a `<timeline-range-name>`, which can be used to make the lines align (with the `cover` value).
+The offsets are relative to the animation attachment range.
+The animation-range properties accept the keyword `normal`, a {{cssxref("timeline-range-name")}}, a {{cssxref("length-percentage")}}, or both a `<timeline-range-name>` and the `<length-percentage>` we see here. If you wanted the animation to start when 20% of the animation was in view instead of when it's 20% mark was 20% through the viewport, you would set a different `<timeline-range-name>`, which defines the start and end of the range the offsets are relative to.
 
 ## Timeline range names
-
-The animation-range properties accept the keyword `normal`, a {{cssxref("timeline-range-name")}}, a {{cssxref("length-percentage")}}, or both a `<timeline-range-name>` and a `<length-percentage>`.
 
 The `<timeline-range-name>` value type accepts six keywords: `cover`, `contain`, `entry`, `exit`, `entry-crossing`, and `exit-crossing`. Each of these represents a predefined named timeline range. A _named timeline range_ is a named segment of an animation timeline. These keywords allow the developer to set the animation attachment range base that offsets are relative to. The start of the segment is represented as `0%` progress through the range; the end of the segment is represented as `100%` progress through the range. Where these points are depend on the named range used.
 
@@ -249,8 +262,8 @@ The `cover` named timeline is the default range. We could have explicitly set th
 
 ```css
 .animated_element {
-  animation-range-start: cover 30%;
-  animation-range-end: cover 70%;
+  animation-range-start: cover 20%;
+  animation-range-end: cover 60%;
 }
 ```
 
@@ -271,20 +284,20 @@ The `cover` named timeline is the default range. We could have explicitly set th
     <text y="760" x="360">0%</text>
   </svg>
   <svg viewBox="-1 -1 462 1252" xmlns="http://www.w3.org/2000/svg">
-    <rect class="small end" width="100" height="50" x="10" y="540" />
-    <rect class="medium end" width="100" height="250" x="120" y="400" />
-    <rect class="large end" width="100" height="500" x="230" y="225" />
+    <rect class="small end" width="100" height="50" x="10" y="571" />
+    <rect class="medium end" width="100" height="250" x="120" y="450" />
+    <rect class="large end" width="100" height="500" x="230" y="300" />
     <rect class="container" width="350" height="250" x="0" y="500" />
-    <rect class="small start" width="100" height="50" x="10" y="660" />
-    <rect class="medium start" width="100" height="250" x="120" y="600" />
-    <rect class="large start" width="100" height="500" x="230" y="525" />
+    <rect class="small start" width="100" height="50" x="10" y="689" />
+    <rect class="medium start" width="100" height="250" x="120" y="649" />
+    <rect class="large start" width="100" height="500" x="230" y="600" />
     <rect width="96" height="48" x="122" y="602" fill="url(#g)" />
     <rect width="96" height="198" x="232" y="527" fill="url(#g)" />
-    <text y="625" x="5">cover</text>
-    <text y="590" x="360">70%</text>
-    <line x1="0" x2="350" y1="575" y2="575" />
-    <line x1="0" x2="350" y1="675" y2="675" />
-    <text y="690" x="360">30%</text>
+    <text y="655" x="5">cover</text>
+    <text y="590" x="360">60%</text>
+    <line x1="0" x2="350" y1="600" y2="600" />
+    <line x1="0" x2="350" y1="700" y2="700" />
+    <text y="690" x="360">20%</text>
   </svg>
 </div>
 ```
@@ -298,9 +311,9 @@ body svg {
 
 {{EmbedLiveSample("svg_cover", "100%", "680")}}
 
-The image demonstrates the animation timeline. Before the element reaches the start of the animation range, either the `0%` view progress or the `30%` view progress mark depending on the `animation-range-start`, the element is shown in yellow. This represents the position of the element when the `from` keyframe is applied. The red represents the location of the animated element relative to the scrollport when the `to` keyframe is applied. This is the position of the animated element when it reaches the end of the animation. The animation occurs when the element is between these areas, represented by the striped areas.
+The image demonstrates the animation timeline. Before the element reaches the start of the animation range, either the `0%` view progress or the `20%` view progress mark depending on the `animation-range-start`, the element is shown in yellow. This represents the position of the element when the `from` keyframe is applied. The red represents the location of the animated element relative to the scrollport when the `to` keyframe is applied. This is the position of the animated element when it reaches the end of the animation. The animation occurs when the element is between these areas, represented by the striped areas.
 
-We can set the attachment range to a different named timeline range to have the animation start when 30% of it is 30% of the way through the container and end when 70% of it is 70% of the way through.
+We can set the attachment range to a different named timeline range to have the animation start when 20% of it is 20% of the way through the container and end when 60% of it is 60% of the way through.
 
 ### Contain
 
@@ -340,14 +353,14 @@ In the next example, we use the same percentage inset values as we did in our `c
 
 ```css live-sample___inset_contain
 .animated_element {
-  animation-range-start: contain 30%;
-  animation-range-end: contain 70%;
+  animation-range-start: contain 20%;
+  animation-range-end: contain 60%;
 }
 ```
 
 ```css hidden live-sample___inset_contain
 body::before {
-  content: "contain 30% contain 70%";
+  content: "contain 20% contain 60%";
   text-align: right;
 }
 ```
@@ -356,9 +369,9 @@ body::before {
 
 Again we use the `animation-range-start` and `animation-range-end` properties to inset the animation timeline, defining a subsection of the element's full animation attachment range as the active interval.
 
-If the element is smaller than the scrollport in the scroll direction, the `30%` occurs when the point that is 30% from the animated element's end border edge (which is 70% from its start edge) is 30% of the way from the end edge of the scrollport. The `70%` range end occurs when 30% of the element, which is 70% from the end edge, is 70% of the way through that viewport.
+If the element is smaller than the scrollport in the scroll direction, the `20%` occurs when the point that is 20% from the animated element's end border edge (which is 60% from its start edge) is 20% of the way from the end edge of the scrollport. The `60%` range end occurs when 20% of the element, which is 60% from the end edge, is 60% of the way through that viewport.
 
-The positions are different when the animated element is larger than the scrollport. In that case, the `30%` animation start is reached when the point that is 30% from the animated element's start end is 30% of the way from the scrollport's start end. The 70% animation end is when the 70% of the animated element has progressed to 70% of the way from the start edge. When the element is the same size as the scrollport in the scroll direction, the start and end of the range occur at the same point, so the animation occurs, but over `0px`, so is not visible.
+The positions are different when the animated element is larger than the scrollport. In that case, the `20%` animation start is reached when the point that is 20% from the animated element's start end is 20% of the way from the scrollport's start end. The 60% animation end is when the 60% of the animated element has progressed to 60% of the way from the start edge. When the element is the same size as the scrollport in the scroll direction, the start and end of the range occur at the same point, so the animation occurs, but over `0px`, so is not visible.
 
 ```html hidden live-sample___svg_contain
 <div>
@@ -379,20 +392,20 @@ The positions are different when the animated element is larger than the scrollp
     <text y="760" x="360">0%</text>
   </svg>
   <svg viewBox="-1 -1 462 1252" xmlns="http://www.w3.org/2000/svg">
-    <rect class="small end" width="100" height="50" x="10" y="560" />
+    <rect class="small end" width="100" height="50" x="10" y="580" />
     <rect class="medium end" width="100" height="250" x="120" y="500" />
-    <rect class="large end" width="100" height="500" x="230" y="325" />
+    <rect class="large end" width="100" height="500" x="230" y="350" />
     <rect class="container" width="350" height="250" x="0" y="500" />
-    <rect class="small start" width="100" height="50" x="10" y="640" />
+    <rect class="small start" width="100" height="50" x="10" y="660" />
     <rect class="medium start" width="100" height="250" x="120" y="500" />
-    <rect class="large start" width="100" height="500" x="230" y="425" />
+    <rect class="large start" width="100" height="500" x="230" y="450" />
     <rect width="100" height="250" x="120" y="500" fill="url(#g)" />
     <rect width="100" height="400" x="230" y="425" fill="url(#g)" />
     <text y="460" x="10">contain</text>
-    <text y="590" x="360">70%</text>
-    <line x1="0" x2="350" y1="575" y2="575" />
-    <line x1="0" x2="350" y1="675" y2="675" />
-    <text y="690" x="360">30%</text>
+    <text y="590" x="360">60%</text>
+    <line x1="0" x2="350" y1="600" y2="600" />
+    <line x1="0" x2="350" y1="700" y2="700" />
+    <text y="690" x="360">20%</text>
   </svg>
 </div>
 ```
@@ -423,10 +436,10 @@ We can also use the shorthand to declare offsets:
 
 ```css
 #A {
-  animation-range: contain 30% contain 70%;
+  animation-range: contain 20% contain 60%;
 }
 #B {
-  animation-range: cover 30% cover 70%;
+  animation-range: cover 20% cover 60%;
 }
 ```
 
@@ -446,11 +459,11 @@ body:has([value="30"]:checked) #A,
 body:has([value="30"]:checked) #B {
   background-image: linear-gradient(
     to top,
-    transparent calc(30% - 1px),
-    black calc(30% - 1px) calc(30% + 1px),
-    transparent calc(30% + 1px) calc(70% - 1px),
-    black calc(70% - 1px) calc(70% + 1px),
-    transparent calc(70% + 1px)
+    transparent calc(20% - 1px),
+    black calc(20% - 1px) calc(20% + 1px),
+    transparent calc(20% + 1px) calc(60% - 1px),
+    black calc(60% - 1px) calc(60% + 1px),
+    transparent calc(60% + 1px)
   );
   background-origin: content-box;
 }
@@ -462,10 +475,10 @@ body:has([value="30"]:checked) #B {
   content: " ( cover ) ";
 }
 body:has([value="30"]:checked) #A {
-  animation-range: contain 30% contain 70%;
+  animation-range: contain 20% contain 60%;
 }
 body:has([value="30"]:checked) #B {
-  animation-range: cover 30% cover 70%;
+  animation-range: cover 20% cover 60%;
 }
 ```
 
@@ -566,19 +579,19 @@ body::before {
   content: " ( exit ) ";
 }
 body:has([value="30"]:checked) #A {
-  animation-range: entry 30% entry 70%;
+  animation-range: entry 20% entry 60%;
 }
 body:has([value="30"]:checked) #B {
-  animation-range: exit 30% exit 70%;
+  animation-range: exit 20% exit 60%;
 }
 body:has([value="30"]:checked) i {
   background-image: linear-gradient(
     to top,
-    transparent calc(30% - 0.5px),
-    black calc(30% - 0.5px) calc(30% + 0.5px),
-    transparent calc(30% + 0.5px) calc(70% - 0.5px),
-    black calc(70% - 0.5px) calc(70% + 0.5px),
-    transparent calc(70% + 0.5px)
+    transparent calc(20% - 0.5px),
+    black calc(20% - 0.5px) calc(20% + 0.5px),
+    transparent calc(20% + 0.5px) calc(60% - 0.5px),
+    black calc(60% - 0.5px) calc(60% + 0.5px),
+    transparent calc(60% + 0.5px)
   );
   background-origin: content-box;
 }
@@ -602,11 +615,11 @@ body:has([value="30"]:checked) article {
   background-image:
     linear-gradient(
       to top,
-      transparent calc(30% - 0.5px),
-      black calc(30% - 0.5px) calc(30% + 0.5px),
-      transparent calc(30% + 0.5px) calc(70% - 0.5px),
-      black calc(70% - 0.5px) calc(70% + 0.5px),
-      transparent calc(70% + 0.5px)
+      transparent calc(20% - 0.5px),
+      black calc(20% - 0.5px) calc(20% + 0.5px),
+      transparent calc(20% + 0.5px) calc(60% - 0.5px),
+      black calc(60% - 0.5px) calc(60% + 0.5px),
+      transparent calc(60% + 0.5px)
     ),
     linear-gradient(
       to bottom,
