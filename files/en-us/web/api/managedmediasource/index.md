@@ -47,77 +47,45 @@ _Also inherits events from its parent interface, {{domxref("MediaSource")}}._
 
 The following example sets up a `ManagedMediaSource`, connects it to a {{htmlelement("video")}} element, and listens for the {{domxref("ManagedMediaSource.startstreaming_event", "startstreaming")}} and {{domxref("ManagedMediaSource.endstreaming_event", "endstreaming")}} events to control when media data is fetched. {{domxref("ManagedSourceBuffer.bufferedchange_event", "bufferedchange")}} events are logged below the video.
 
-```html
-<video controls width="300" height="169"></video> <output id="log"></output>
-```
-
-```css hidden
-body {
-  font-family: system-ui;
-}
-
-video {
-  display: block;
-  margin-bottom: 1rem;
-}
-
-output {
-  display: block;
-  white-space: pre;
-  height: 5rem;
-  overflow: scroll;
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-}
-```
-
 ```js
-const output = document.querySelector("#log");
-function log(msg) {
-  output.textContent += msg + "\n";
-  output.scrollTop = output.scrollHeight;
-}
-
 const videoUrl =
   "https://mdn.github.io/shared-assets/videos/flower-fragmented.mp4";
 const mediaType = 'video/mp4; codecs="avc1.64001F, mp4a.40.2"';
 const video = document.querySelector("video");
 
 if (!window.ManagedMediaSource?.isTypeSupported(mediaType)) {
-  log("ManagedMediaSource is not supported in this browser.");
+  console.log("ManagedMediaSource is not supported in this browser.");
 } else {
   const source = new ManagedMediaSource();
   video.disableRemotePlayback = true;
   video.src = URL.createObjectURL(source);
-
-  video.addEventListener("canplay", () => log("canplay — video is ready"));
 
   source.addEventListener("sourceopen", () => {
     const sourceBuffer = source.addSourceBuffer(mediaType);
 
     sourceBuffer.addEventListener("bufferedchange", (event) => {
       for (let i = 0; i < event.addedRanges.length; i++) {
-        log(
+        console.log(
           `Buffered: ${event.addedRanges.start(i).toFixed(2)}s – ${event.addedRanges.end(i).toFixed(2)}s`,
         );
       }
     });
 
     source.addEventListener("startstreaming", async () => {
-      log("startstreaming — fetching media data…");
+      console.log("startstreaming — fetching media data…");
       const response = await fetch(videoUrl);
       const data = await response.arrayBuffer();
       sourceBuffer.appendBuffer(data);
     });
 
     source.addEventListener("endstreaming", () => {
-      log("endstreaming — enough data buffered");
+      console.log("endstreaming — enough data buffered");
     });
   });
 }
 ```
 
-{{EmbedLiveSample("Setting up a managed media source", "", "300px")}}
+{{EmbedGHLiveSample("dom-examples/media-source-extensions/managed-media-source/", '100%', 420)}}
 
 ## Specifications
 
