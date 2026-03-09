@@ -157,7 +157,9 @@ The rendered result looks like this:
 
 ### Comparing letter-spacing set with length and percentage
 
-In this example, we show several paragraphs of increasing font size with the same letter spacing set. We provide functionality to switch between a length and a percentage `letter-spacing` value, so you can observe the responsive qualities of the percentage value.
+This example demonstrates that percentage `letter-spacing` values are useful for responsive text sizing.
+
+The code displays several paragraphs that have the same `letter-spacing` set on text with increasing font size. We provide functionality to switch between a length and a percentage `letter-spacing` value, so that you can observe the responsive qualities of using a percentage value.
 
 #### HTML
 
