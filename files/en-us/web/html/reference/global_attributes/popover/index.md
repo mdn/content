@@ -162,7 +162,7 @@ li button {
 }
 ```
 
-The final part of the CSS uses anchor positioning to make the info popover appear to the right of the info button.
+Here, we've used anchor positioning to make the info popovers appear to the right of their respective info buttons.
 
 ```css
 div.info-popover {
