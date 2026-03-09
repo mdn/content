@@ -99,7 +99,14 @@ Some written languages should not have any letter spacing applied. For instance,
 <p lang="ar" dir="rtl">شسيبتنمك</p>
 ```
 
-{{ EmbedLiveSample("i18n-sample", "100%", 60) }}
+```css hidden live-sample___i18n-sample
+p {
+  font-size: 3em;
+  margin-inline-start: 5px;
+}
+```
+
+{{ EmbedLiveSample("i18n-sample", "100%", 180) }}
 
 ## Formal definition
 
@@ -231,7 +238,7 @@ The rendered result looks like this:
 
 {{ EmbedLiveSample("percentage-versus-length", "100%", 460) }}
 
-First, note how the initial length letter spacing value looks OK when applied to the larger font sizes, but it doesn't look good on the smaller font sizes. Now select the checkbox, and note how the percentage letter spacing looks appropriate on all lines, as it scales with the font size.
+First, note how the initial length letter spacing value looks OK when applied to the larger font sizes, but it doesn't look good on the smaller font sizes. Now toggle the checkbox, and note how the percentage letter spacing looks appropriate on all lines, as it scales with the font size.
 
 ## Specifications
 

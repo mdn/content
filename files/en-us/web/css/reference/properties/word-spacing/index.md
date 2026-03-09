@@ -82,7 +82,7 @@ word-spacing: unset;
 
 ## Accessibility
 
-A large positive or negative `word-spacing` value will make the sentences the styling is applied to unreadable. For text styled with a very large positive value, the words will be so far apart that it will no longer appear to be a sentence. For text styled with a large negative value, the words will overlap each other to the point where the beginning and end of each word is unrecognizable.
+A large positive or negative `word-spacing` value will make the sentences the styling is applied to unreadable. For text styled with a very large positive value, the words will be so far apart that it will no longer appear to be a sentence. For text styled with a large negative value, the words can overlap each other to the point where the beginning and end of each word is unrecognizable.
 
 Legible `word-spacing` must be determined on a case-by-case basis, as different font families have different character widths. There is no one value that can ensure all font families automatically maintain their legibility.
 
@@ -124,9 +124,11 @@ The example renders like so:
 
 {{ EmbedLiveSample("live-sample___basic-usage", "100%", "100") }}
 
-### Length and percentage word spacing comparison
+### Comparing word-spacing set with length and percentage
 
-In this example, we show several paragraphs of increasing font size with the same word spacing set. We provide functionality to switch between a length and a percentage `word-spacing` value, so you can observe the responsive qualities of the percentage value.
+This example demonstrates that percentage `word-spacing` values are useful for responsive text sizing.
+
+The code displays several paragraphs that have the same `word-spacing` set on text with increasing font size. We provide functionality to switch between a length and a percentage `word-spacing` value, so that you can observe the responsive qualities of using a percentage value.
 
 #### HTML
 
@@ -198,7 +200,7 @@ The rendered result looks like this:
 
 {{ EmbedLiveSample("percentage-versus-length", "100%", 460) }}
 
-First, note how the initial length word spacing value looks OK when applied to the larger font sizes, but it doesn't look good on the smaller font sizes. Now check the checkbox, and note how the percentage word spacing looks appropriate on all lines, as it scales with the font size. Percentage `word-spacing` values are useful for responsive text sizing.
+First, note how the initial length letter spacing value looks OK when applied to the larger font sizes, but it doesn't look good on the smaller font sizes. Now toggle the checkbox, and note how the percentage letter spacing looks appropriate on all lines, as it scales with the font size.
 
 ## Formal definition
 
