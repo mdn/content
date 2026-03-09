@@ -140,6 +140,13 @@ There are four events that are triggered on the {{domxref("Notification")}} inst
 
 These events can be tracked using the {{domxref("Notification.click_event","onclick")}}, {{domxref("Notification.close_event","onclose")}}, {{domxref("Notification.error_event","onerror")}}, and {{domxref("Notification.show_event","onshow")}} handlers. Because {{domxref("Notification")}} also inherits from {{domxref("EventTarget")}}, it's possible to use the {{domxref("EventTarget.addEventListener","addEventListener()")}} method on it.
 
+> [!NOTE]
+> The events listed above apply to non-persistent notifications created with the {{domxref("Notification.Notification", "Notification()")}} constructor. Persistent notifications created via {{domxref("ServiceWorkerRegistration.showNotification()")}} instead fire the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} and {{domxref("ServiceWorkerGlobalScope.notificationclose_event", "notificationclose")}} events on the {{domxref("ServiceWorkerGlobalScope")}}.
+
+### Navigating on activation
+
+Instead of handling click events, you can set the {{domxref("Notification.navigate", "navigate")}} option to automatically open a URL when the user activates the notification. This bypasses both the `click` and `notificationclick` events. See {{domxref("Notification.navigate")}} for details.
+
 ## Replacing existing notifications
 
 It is usually undesirable for a user to receive a lot of notifications in a short space of time — for example, what if a messenger application notified a user for each incoming message, and they were being sent a lot? To avoid spamming the user with too many notifications, it's possible to modify the pending notifications queue, replacing single or multiple pending notifications with a new one.
