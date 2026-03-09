@@ -14,7 +14,9 @@ The **`navigate`** read-only property of the {{domxref("Notification")}} interfa
 
 This is the resolved value of the URL, if any, that was specified in the `navigate` option of the {{domxref("Notification.Notification", "Notification()")}} constructor or {{domxref("ServiceWorkerRegistration.showNotification()")}}.
 
-When a notification with a navigation URL is activated by the user, the user agent navigates to the specified URL instead of firing an event on the notification. Normally, activating a non-persistent notification fires the {{domxref("Notification.click_event", "click")}} event on its {{domxref("Notification")}} object, and activating a persistent notification fires the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event on the {{domxref("ServiceWorkerGlobalScope")}}. Setting a navigation URL bypasses both, allowing notifications to direct users to a specific page without requiring an event handler.
+Normally, activating a non-persistent notification fires the {{domxref("Notification.click_event", "click")}} event on its {{domxref("Notification")}} object, and activating a persistent notification fires the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event on the {{domxref("ServiceWorkerGlobalScope")}}.
+
+When a notification with a navigation URL is activated by the user, the user agent navigates to the specified URL instead of firing either of these events. This allows notifications to direct users to a specific page without requiring an event handler.
 
 ## Value
 
