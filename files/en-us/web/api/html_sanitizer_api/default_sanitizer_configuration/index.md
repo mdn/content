@@ -22,7 +22,7 @@ It therefore provides a sanitizer with a minimal attack surface, which is still 
 > [!NOTE]
 > The specification calls this configuration the [built-in safe default configuration](https://wicg.github.io/sanitizer-api/#built-in-safe-default-configuration).
 
-The following sections list all the elements, with a &check; mark indicating those that are allowed by the default configuration, and also the attributes that are allowed only for particular elements.
+The following sections list all the elements, with a &check; mark indicating those that are allowed by the default configuration, and also listing the attributes that are allowed only for particular elements.
 The [Global attributes](#global_attributes) section lists the attributes that are allowed on all elements (the attributes that are not removed when the configuration is used).
 
 ## HTML elements
