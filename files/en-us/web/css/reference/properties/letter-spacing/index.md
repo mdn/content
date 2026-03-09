@@ -155,7 +155,7 @@ The rendered result looks like this:
 
 {{ EmbedLiveSample("length-letter-spacing", "100%", 200) }}
 
-### Length and percentage letter spacing comparison
+### Comparing letter-spacing set with length and percentage
 
 In this example, we show several paragraphs of increasing font size with the same letter spacing set. We provide functionality to switch between a length and a percentage `letter-spacing` value, so you can observe the responsive qualities of the percentage value.
 
