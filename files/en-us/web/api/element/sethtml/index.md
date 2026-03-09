@@ -33,7 +33,7 @@ setHTML(input, options)
         The method will remove any XSS-unsafe elements and attributes, even if allowed by the sanitizer.
         If not specified, the [default `Sanitizer` configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration) is used.
 
-        Note that generally a `Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to be reused.
+        Note that if you're using the same configuration multiple times, it's expected to be more efficient to use a `Santitizer` and modify it when you need to.
 
 ### Return value
 

@@ -1,5 +1,5 @@
 ---
-title: Default Sanitizer configuration
+title: Default `Sanitizer` configuration
 slug: Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration
 page-type: guide
 ---

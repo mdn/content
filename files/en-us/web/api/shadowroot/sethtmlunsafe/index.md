@@ -38,7 +38,7 @@ setHTMLUnsafe(input, options)
         This can also be a string with the value `"default"`, which applies a `Sanitizer` with the (XSS-safe) [default `Sanitizer` configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration).
         If not specified, no sanitizer is used.
 
-        Note that generally a `Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to reused.
+        Note that if you're using the same configuration multiple times, it's expected to be more efficient to use a `Santitizer` and modify it when you need to.
 
 ### Return value
 
