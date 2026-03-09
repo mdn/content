@@ -23,11 +23,11 @@ A {{domxref("PreferenceObject")}} used to override the user's preference for the
 
 ### Basic usage
 
-This examples demonstrates how to see the user's reduced motion preference.
+This example demonstrates how to query the user's reduced transparency preference.
 
 ```js
 if (navigator.preferences.reducedTransparency.value === "reduce") {
-  // The user prefers reduced translatancy.
+  // The user prefers reduced transparency.
 } else {
   // The user has stated no preference regarding transparency.
 }
