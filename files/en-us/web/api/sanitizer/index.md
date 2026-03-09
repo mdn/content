@@ -43,7 +43,7 @@ It can be used with the following [sanitization methods](/en-US/docs/Web/API/HTM
 - Safe methods: {{domxref("Element.setHTML()")}}, {{domxref("ShadowRoot.setHTML()")}}, and [`Document.parseHTML()`](/en-US/docs/Web/API/Document/parseHTML_static).
 - Unsafe methods: {{domxref("Element.setHTMLUnsafe()")}}, {{domxref("ShadowRoot.setHTMLUnsafe()")}}, and [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static).
 
-A `Sanitizer` instance can be constructed from a {{domxref("SanitizerConfig")}}, and is effectively a wrapper around that object (it can be used with the same methods as `SanitizerConfig`, but is expected to be more efficient to reuse and modify when needed).
+A `Sanitizer` instance can be constructed from a {{domxref("SanitizerConfig")}}, and is effectively a wrapper around that object. A `Sanitizer` and a `SanitizerConfig` can be used with the same methods, but if you're using the same configuration multiple times, it's expected to be more efficient to use a `Santitizer` and modify it when you need to.
 If no `SanitizerConfig` is passed to the constructor, the sanitizer is created with the [default `Sanitizer` configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration), which removes XSS-unsafe elements and attributes, along with other elements and attributes that can potentially be used in other attacks, such as clickjacking and spoofing.
 
 Note that any `Sanitizer` can be made XSS-safe by calling {{domxref("Sanitizer.removeUnsafe()")}}, but other potentially dangerous elements and attributes — which are removed by the default configuration — may still be present.
