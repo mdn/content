@@ -177,7 +177,7 @@ div.info-popover {
 
 #### Result
 
-Click the _Click to open Menu_ `<button>` then click on the ⓘ icons to open the _info-popovers_.
+Click the _Open Menu_ button, then click the info icons (ⓘ) next to the menu options to open the info popovers.
 
 {{EmbedLiveSample('popover_hint', 600, 250)}}
 
