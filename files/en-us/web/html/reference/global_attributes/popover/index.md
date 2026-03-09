@@ -66,7 +66,7 @@ The following renders a button that will open a popover element when activated. 
 
 #### HTML
 
-In the first part of the `HTML` we declare the {{htmlElement("button")}} that will open the main `popover` or _menu_.
+In the first part of the HTML, we create a {{htmlElement("button")}} that will open the main popover, which is a menu containing a few options.
 
 ```html
 <header>
