@@ -28,6 +28,8 @@ position-visibility: unset;
 
 - `always`
   - : The positioned element is always displayed.
+- `anchors-valid`
+  - : If the anchor reference doesn’t point to a valid anchor element, the positioned element will be strongly hidden.
 - `anchors-visible`
   - : If the anchor is completely hidden, either by overflowing its containing element (or the viewport) or being covered by other elements, the positioned element will be strongly hidden.
 - `no-overflow`
@@ -37,7 +39,7 @@ position-visibility: unset;
 
 In some situations you might not want to display an anchor-positioned element. For example, if its associated anchor has been scrolled offscreen but the anchor positioned element would otherwise still be partially or fully visible, it might be unclear what it refers to and take up space unnecessarily, so you may want to hide it altogether.
 
-The `position-visibility` property can be used to `always` show the anchor-positioned element, or conditionally hide it if the associated anchor element is completely hidden (`anchors-visible`) or if the anchor-positioned element itself is partially hidden (`no-overflow`).
+The `position-visibility` property can be used to `always` show the anchor-positioned element, or conditionally hide it in certain situations: when the associated anchor element is completely hidden (`anchors-visible`), when the `position-anchor` property points to an invalid anchor (`anchors-valid`), or when the anchor-positioned element itself is partially hidden (`no-overflow`).
 
 When an element is hidden due to `position-visibility`, it is referred to as **strongly hidden**. This means that it will act as though it and its descendant elements have a {{cssxref("visibility")}} value of `hidden` set, regardless of what their actual visibility value is.
 
