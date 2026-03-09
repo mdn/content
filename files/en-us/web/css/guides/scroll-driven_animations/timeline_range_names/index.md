@@ -320,7 +320,11 @@ body::before {
 
 {{EmbedLiveSample("contains", "100%", "400")}}
 
-When the animated element is smaller than the scroll container, the `contain` value ranges from the point where the subject element is first completely contained by the scroll port (`0%`), to the point where it is no longer completely contained by the scroll port (`100%`). If the animated element is the same size as the scroll container in the scroll direction, the animation occurs over `0px`, which is not visible to the user. If the animation is larger than its container, the animated element is never fully visible as it is not "contained" within the viewport, and the animation starts when the start edge reaches the start edge of the scrollport, and ends when the animated element's end edge reaches the end edge of the container. Change the size of the animated element in the demonstration and scroll to see this in action.
+The behavior varies depending on whether the subject element is smaller (fully contained by), the same size, or larger (fully contains), the scrollport:
+
+- When the animated element is smaller than the scroll container, the `contain` value ranges from the point where the subject element is first completely contained by the scroll port (`0%`), to the point where it is no longer completely contained by the scroll port (`100%`).
+- If the animated element is the same size as the scroll container in the scroll direction, the animation occurs over `0px`, which is not visible to the user.
+- If the animation is larger than its container, the animated element is never fully-visible as it is not "contained" within the viewport. The animation starts when the start edge reaches the start edge of the scrollport, and ends when the animated element's end edge reaches the end edge of the container.
 
 In this example, the original height of the animated element is 20% of the height of the viewport, and therefore can be completely contained within it.
 
@@ -350,7 +354,11 @@ body::before {
 
 {{EmbedLiveSample("inset_contain", "100%", "400")}}
 
-Again we use the `animation-range-start` and `animation-range-end` properties to inset the animation timeline, defining a subsection of the element's full animation attachment range as the active interval. If the element is smaller than the scrollport in the scroll direction, the `30%` occurs when the point that is 30% from the animated element's end border edge (which is 70% from its start edge) is 30% of the way from the end edge of the scrollport. The `70%` range end occurs when 30% of the element, which is 70% from the end edge, is 70% of the way through that viewport. The positions are different when the animated element is larger than the scrollport. In that case, the `30%` animation start is reached when the point that is 30% from the animated element's start end is 30% of the way from the scrollport's start end. The 70% animation end is when the 70% of the animated element has progressed to 70% of the way from the start edge. When the element is the same size as the scrollport in the scroll direction, the start and end of the range occur at the same point, so the animation occurs, but over `0px`, so is not visible.
+Again we use the `animation-range-start` and `animation-range-end` properties to inset the animation timeline, defining a subsection of the element's full animation attachment range as the active interval.
+
+If the element is smaller than the scrollport in the scroll direction, the `30%` occurs when the point that is 30% from the animated element's end border edge (which is 70% from its start edge) is 30% of the way from the end edge of the scrollport. The `70%` range end occurs when 30% of the element, which is 70% from the end edge, is 70% of the way through that viewport.
+
+The positions are different when the animated element is larger than the scrollport. In that case, the `30%` animation start is reached when the point that is 30% from the animated element's start end is 30% of the way from the scrollport's start end. The 70% animation end is when the 70% of the animated element has progressed to 70% of the way from the start edge. When the element is the same size as the scrollport in the scroll direction, the start and end of the range occur at the same point, so the animation occurs, but over `0px`, so is not visible.
 
 ```html hidden live-sample___svg_contain
 <div>
@@ -644,7 +652,7 @@ If the animated element is the size of the viewport or larger, the animation doe
 
 ### Entry- and exit-crossing
 
-If the animated element is smaller than the scrollport, and you want the full animation to occur fully, from beginning to end, as it enters or as it exits the scrollport, use `entry` or `exit`, respectively. If your animated element is larger than the viewport, the animation range is contained in the scrollport, while the element is not. The `entry` value sets the `100%` progress to be when the element's start edge reaches the start-edge of the scrollport, and `exit` only reaches the `0%` that is when the element's end-edge reaches the scroll container's end edge; when the animated element has already partially scrolled past the scrollport's start edge.
+If the subject element is smaller than the scrollport, and you want the full animation to occur as it enters or exits the scrollport, you can happily use `entry` or `exit`, respectively. If your animated element is larger than the viewport, the animation range is contained in the scrollport, while the element is not. The `entry` value sets the `100%` progress to be when the element's start edge reaches the start-edge of the scrollport, and `exit` only reaches the `0%` that is when the element's end-edge reaches the scroll container's end edge; when the animated element has already partially scrolled past the scrollport's start edge.
 
 #### Entry-crossing
 
