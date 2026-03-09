@@ -111,7 +111,7 @@ Some written languages should not have any letter spacing applied. For instance,
 
 ## Examples
 
-### Letter spacing length values
+### Setting letter-spacing with length values
 
 This example shows several paragraphs with different length `letter-spacing` values set, allowing you to compare them.
 
