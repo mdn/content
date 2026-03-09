@@ -8,13 +8,13 @@ browser-compat: api.ManagedMediaSource.streaming
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`streaming`** read-only property of the {{domxref("ManagedMediaSource")}} interface is a boolean indicating whether the application should actively fetch and append media data. When `true`, the user agent needs more data to ensure uninterrupted playback. When `false`, the user agent has enough data buffered and the application can stop fetching new segments.
+The **`streaming`** read-only property of the {{domxref("ManagedMediaSource")}} interface is a boolean indicating whether the application should actively fetch and append media data.
 
 The value of this property is updated by the user agent's monitoring algorithm. When it changes, the corresponding {{domxref("ManagedMediaSource.startstreaming_event", "startstreaming")}} or {{domxref("ManagedMediaSource.endstreaming_event", "endstreaming")}} event is fired.
 
 ## Value
 
-A boolean. Initially `false`.
+A boolean. Initially `false`. When `true`, the user agent needs more data to ensure uninterrupted playback. When `false`, the user agent has enough data buffered and the application can stop fetching new segments.
 
 ## Examples
 
