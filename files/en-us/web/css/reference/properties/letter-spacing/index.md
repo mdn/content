@@ -78,7 +78,7 @@ letter-spacing: unset;
 - `normal`
   - : The normal letter spacing for the current font. Unlike a value of `0`, this keyword allows the {{glossary("user agent")}} to alter the space between characters in order to justify text.
 - {{cssxref("&lt;length-percentage&gt;")}}
-  - : Specifies extra inter-character space _in addition to_ the default space between characters. Values may be negative, but there may be implementation-specific limits. User agents may not further increase or decrease the inter-character space in order to justify text.
+  - : Specifies extra inter-character space _in addition to_ the default space between characters. While values can be negative, these may be constrained to implementation-specific limits. User agents may not further increase or decrease the inter-character space in order to justify text.
 
     Percentage values are calculated relative to the width of the space character of the font applied to the text.
 
