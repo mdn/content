@@ -10,7 +10,7 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#preference-manager
 
 {{APIRef("Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`PreferenceManager`** interface of the [User Peferences API](/en-US/docs/Web/API/User_Preferences_API) provides access to {{domxref("PreferenceObject")}} objects used to query and modify user preferences.
+The **`PreferenceManager`** interface of the [User Preferences API](/en-US/docs/Web/API/User_Preferences_API) provides access to {{domxref("PreferenceObject")}} objects used to query and modify user preferences.
 
 The `PreferenceManager` for the current document can be accessed via the {{domxref("Navigator.preferences")}} property.
 
