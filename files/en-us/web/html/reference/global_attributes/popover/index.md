@@ -119,9 +119,7 @@ In the final part of the `HTML`, we create the info popovers for each menu item.
 
 #### CSS
 
-The first part of the CSS positions the `<button>` in a `<header>` and aligns it in the center.
-
-```css
+```css hidden
 header {
   display: flex;
   justify-content: center;
