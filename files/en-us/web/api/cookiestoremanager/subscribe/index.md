@@ -64,11 +64,13 @@ cookieStore.set({ name: "cookie1", value: "cookie-value", path: "/path/one/" });
 cookieStore.set({ name: "cookie1", value: "cookie-value", path: "/path/two/" }); // does not receive a change event
 ```
 
-If the URL is outside the service worker’s scope, `subscribe()` will fail and throw a `TypeError`. This means you can only subscribe to cookies within the service worker’s own scope.
+If the URL is outside the service worker's scope, `subscribe()` will fail and throw a `TypeError`. This means you can only subscribe to cookies within the service worker's own scope.
 
 ```js
 // This will throw a TypeError because "/out-of-scope/" is outside the service worker scope
-await registration.cookies.subscribe([{ name: "cookie1", url: "/out-of-scope/" }]);
+await registration.cookies.subscribe([
+  { name: "cookie1", url: "/out-of-scope/" },
+]);
 ```
 
 ## Specifications
