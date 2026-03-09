@@ -29,7 +29,7 @@ position-visibility: unset;
 - `always`
   - : The positioned element is always displayed.
 - `anchors-valid`
-  - : If the anchor reference doesn’t point to a valid anchor element, the positioned element will be strongly hidden.
+  - : If the anchor reference doesn't point to a valid anchor element, the positioned element will be strongly hidden.
 - `anchors-visible`
   - : If the anchor is completely hidden, either by overflowing its containing element (or the viewport) or being covered by other elements, the positioned element will be strongly hidden.
 - `no-overflow`
