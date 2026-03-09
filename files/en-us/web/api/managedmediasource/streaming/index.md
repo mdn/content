@@ -14,7 +14,7 @@ The value of this property is updated by the user agent's monitoring algorithm. 
 
 ## Value
 
-A boolean. Initially `false`. When `true`, the user agent needs more data to ensure uninterrupted playback. When `false`, the user agent has enough data buffered and the application can stop fetching new segments.
+A boolean, initially `false`. When `true`, the user agent needs more data to ensure uninterrupted playback. When `false`, the user agent has enough data buffered and the application can stop fetching new segments.
 
 ## Examples
 
