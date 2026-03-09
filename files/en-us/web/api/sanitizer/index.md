@@ -44,13 +44,13 @@ It can be used with the following [sanitization methods](/en-US/docs/Web/API/HTM
 - Unsafe methods: {{domxref("Element.setHTMLUnsafe()")}}, {{domxref("ShadowRoot.setHTMLUnsafe()")}}, and [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static).
 
 A `Sanitizer` instance can be constructed from a {{domxref("SanitizerConfig")}}, and is effectively a wrapper around that object (it can be used with the same methods as `SanitizerConfig`, but is expected to be more efficient to reuse and modify when needed).
-If no `SanitizerConfig` is passed to the constructor, the sanitizer is created with the [default Sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration), which removes XSS-unsafe elements and attributes, along with other elements and attributes that can potentially be used in other attacks, such as clickjacking and spoofing.
+If no `SanitizerConfig` is passed to the constructor, the sanitizer is created with the [default `Sanitizer` configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration), which removes XSS-unsafe elements and attributes, along with other elements and attributes that can potentially be used in other attacks, such as clickjacking and spoofing.
 
 Note that any `Sanitizer` can be made XSS-safe by calling {{domxref("Sanitizer.removeUnsafe()")}}, but other potentially dangerous elements and attributes — which are removed by the default configuration — may still be present.
 
 ### Using `Sanitizer` with the sanitization methods
 
-The default Sanitizer configuration is automatically used if no `Sanitizer` is passed to {{domxref("Element.setHTML")}} or the other safe sanitization methods.
+The default `Sanitizer` configuration is automatically used if no `Sanitizer` is passed to {{domxref("Element.setHTML")}} or the other safe sanitization methods.
 This is a reasonable default as it restricts the attack surface while still allowing the majority of use cases.
 
 If a custom sanitizer is passed to these methods, any XSS-unsafe elements and attributes allowed by the sanitizer would also be removed.

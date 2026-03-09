@@ -26,9 +26,9 @@ Document.parseHTML(input, options)
 - `options` {{optional_inline}}
   - : An options object with the following optional parameters:
     - `sanitizer`
-      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the [default Sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration).
+      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the [default `Sanitizer` configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration).
         The method will remove any XSS-unsafe elements and attributes, even if allowed by the sanitizer.
-        If not specified, the default Sanitizer configuration is used.
+        If not specified, the default `Sanitizer` configuration is used.
 
         Note that generally a `"Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to reused.
 
@@ -50,11 +50,11 @@ A {{domxref("Document")}}.
 The **`parseHTML()`** method parses and sanitize a string of HTML in order to create a new {{domxref("Document")}} instance that is XSS-safe.
 The resulting `Document` will have a [content type](/en-US/docs/Web/API/Document/contentType) of "text/html", a [character set](/en-US/docs/Web/API/Document/characterSet) of UTF-8, and a URL of "about:blank".
 
-If no sanitizer configuration is specified in the `options.sanitizer` parameter, `parseHTML()` is used with the [default Sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration).
+If no sanitizer is specified in the `options.sanitizer` parameter, `parseHTML()` is used with the [default `Sanitizer` configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration).
 This configuration is suitable for the majority of use cases as it prevents XSS attacks, as well as other attacks like clickjacking or spoofing.
 
-A custom sanitizer or sanitizer configuration can be specified to choose which elements, attributes, and comments are allowed or removed.
-Note that even if unsafe options are allowed by the sanitizer configuration, they will still be removed when using this method (which implicitly calls {{domxref('Sanitizer.removeUnsafe()')}}).
+A custom `Sanitizer` or `SanitizerConfig` can be specified to choose which elements, attributes, and comments are allowed or removed.
+Note that even if unsafe options are allowed by the sanitizer, they will still be removed when using this method (it removes the same elements as a sanitizer on which {{domxref('Sanitizer.removeUnsafe()')}} has been called).
 
 The input HTML may include [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom).
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as {{htmlelement("template")}} elements within that shadow root.

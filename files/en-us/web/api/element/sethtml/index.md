@@ -31,7 +31,7 @@ setHTML(input, options)
     - `sanitizer`
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the default configuration.
         The method will remove any XSS-unsafe elements and attributes, even if allowed by the sanitizer.
-        If not specified, the [default Sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration) is used.
+        If not specified, the [default `Sanitizer` configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration) is used.
 
         Note that generally a `Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to be reused.
 
@@ -53,13 +53,13 @@ None (`undefined`).
 The **`setHTML()`** method provides an XSS-safe method to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, and then insert it into the DOM as a subtree of the element.
 
 `setHTML()` drops any elements in the HTML input string that are invalid in the context of the current element, such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
-It then removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer configuration.
+It then removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer.
 
-If no sanitizer configuration is specified in the `options.sanitizer` parameter, `setHTML()` is used with the [default Sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration).
+If no sanitizer is specified in the `options.sanitizer` parameter, `setHTML()` is used with the [default `Sanitizer` configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration).
 This configuration is suitable for the majority of use cases as it prevents XSS attacks, as well as other attacks like clickjacking or spoofing.
 
-A custom sanitizer or sanitizer configuration can be specified to choose which elements, attributes, and comments are allowed or removed.
-Note that even if XSS-unsafe options are allowed by the sanitizer configuration, they will still be removed when using this method (which implicitly calls {{domxref('Sanitizer.removeUnsafe()')}}).
+A custom `Sanitizer` or `SanitizerConfig` can be specified to choose which elements, attributes, and comments are allowed or removed.
+Note that even if unsafe options are allowed by the sanitizer, they will still be removed when using this method (it removes the same elements as a sanitizer on which {{domxref('Sanitizer.removeUnsafe()')}} has been called).
 
 `setHTML()` should be used instead of {{domxref("Element.innerHTML")}} for inserting untrusted strings of HTML into an element.
 It should also be used instead of {{domxref("Element.setHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.

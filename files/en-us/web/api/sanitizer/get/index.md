@@ -10,7 +10,7 @@ browser-compat: api.Sanitizer.get
 
 The **`get()`** method of the {{domxref("Sanitizer")}} interface returns a {{domxref('SanitizerConfig')}} dictionary instance that represents the current `Sanitizer` configuration.
 
-This may be used to create a sanitizer that is slightly modified from the default; by first getting and then modifying the default sanitizer configuration, and then using it to construct a new sanitizer.
+This may be used to create a sanitizer that is slightly modified from the default; by first getting and then modifying the default `Sanitizer` configuration, and then using it to construct a new `Sanitizer`.
 
 The returned configuration can also be used to inspect the configuration, and can be passed directly the HTML parsing functions.
 Note however that it will be more efficient to pass a {{domxref("Sanitizer")}} rather than a configuration dictionary, particularly where the `Sanitizer` is to be used multiple times.
@@ -140,7 +140,7 @@ log(JSON.stringify(defaultConfig, null, 2));
 
 #### Results
 
-The default sanitizer configuration is logged below.
+The [default `Sanitizer` configuration](/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration) is logged below.
 Note that the default configuration is quite big, allowing many elements and attributes.
 
 {{EmbedLiveSample("Getting the default sanitizer","100","480px")}}
