@@ -11,7 +11,7 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#onchange-attribute
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`change`** event of the {{domxref("PreferenceObject")}} interface is fired when a `PreferenceObject` {{domxref("PreferenceObject.override", "override")}} value changes. This can happen because of the {{domxref("PreferenceObject.requestOverride", "requestOverride")}} or {{domxref("PreferenceObject.clearOverride", "clearOverride")}} method.
+The **`change`** event of the {{domxref("PreferenceObject")}} interface is fired when a `PreferenceObject` {{domxref("PreferenceObject.override", "override")}} value changes. This can happen due to {{domxref("PreferenceObject.requestOverride", "requestOverride")}} or {{domxref("PreferenceObject.clearOverride", "clearOverride")}} method calls.
 
 ## Syntax
 
