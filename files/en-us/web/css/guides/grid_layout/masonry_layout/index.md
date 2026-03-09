@@ -12,16 +12,15 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) specification includes a `masonry` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what masonry layout is and how to use it.
+Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) specification defines **masonry layout** (also known as **grid-lanes** layout), which is accessed via the {{cssxref("display")}} values `grid-lanes` and `inline-grid-lanes`. This guide details what masonry layout is and how to use it.
 
-Masonry layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other a masonry layout. On the masonry axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to completely fill the gaps.
+Masonry layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other a **stacking** (masonry) layout. On the stacking axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to fill the gaps.
 
 ## Creating a masonry layout
 
-To create the most common masonry layout, your columns will be the grid axis and the rows the masonry axis, defined with `grid-template-columns` and `grid-template-rows`.
-The child elements of this container will now lay out item by item along the rows, as they would with regular grid layout automatic placement.
+To create the most common masonry layout where the columns are laid out in a grid, and the rows stack like masonry, use **`display: grid-lanes`** along with {{cssxref("grid-template-columns")}}.
 
-As the items move onto new rows, they will display according to the masonry algorithm. Items will load into the column with the most room, causing a tightly packed layout without strict row tracks.
+The child elements of this container will lay out item by item along the stacking axis according to the masonry algorithm: each row of items loads into the column with the most room, causing a tightly packed layout without strict row tracks.
 
 ```css hidden live-sample___block-axis live-sample___inline-axis live-sample___spanners live-sample___positioned
 * {
@@ -49,10 +48,9 @@ body {
 
 ```css live-sample___block-axis
 .grid {
-  display: grid;
+  display: grid-lanes;
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
 }
 ```
 
@@ -101,9 +99,8 @@ for (let i = 0; i < items.length; i++) {
 
 ```css live-sample___inline-axis
 .grid {
-  display: grid;
+  display: grid-lanes;
   gap: 10px;
-  grid-template-columns: masonry;
   grid-template-rows: repeat(3, 100px);
 }
 ```
@@ -135,10 +132,9 @@ In this example two of the items span two tracks, and the masonry items work aro
 
 ```css live-sample___spanners
 .grid {
-  display: grid;
+  display: grid-lanes;
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
 }
 
 .span-2 {
@@ -167,10 +163,9 @@ This example includes an item which has positioning for columns. Items with defi
 
 ```css live-sample___positioned
 .grid {
-  display: grid;
+  display: grid-lanes;
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
 }
 
 .positioned {
