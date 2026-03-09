@@ -77,7 +77,7 @@ In the first part of the HTML, we create a {{htmlElement("button")}} that will o
 </main>
 ```
 
-In the second part of the `HTML`, we create the menu popover that is opened by the button we created in the previous code block. This menu popover contains an unordered list of menu items, each with an info button that opens a nested popover. The menu popover uses `popover="auto"`, which means it will not be closed when the nested popovers are opened.
+In the second part of the HTML, we create the menu popover that is opened by the button we created in the previous code block. This menu popover contains an unordered list of menu items, each with an info button that opens a nested popover. The menu popover uses `popover="auto"`, which means it will not be closed when the nested popovers are opened.
 
 ```html
 <!-- menu popover -->
