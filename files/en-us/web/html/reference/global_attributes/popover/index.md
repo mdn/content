@@ -50,7 +50,7 @@ For detailed information on usage, see the {{domxref("Popover API", "Popover API
 
 ### Basic example of popover
 
-The following renders a button that will open a popover element when activated, it uses only `HTML`.
+The following code renders a button that, when activated, will open a popover element. This behaviour can be achieved using HTML alone.
 
 ```html
 <button popovertarget="my-popover">Open Popover</button>
