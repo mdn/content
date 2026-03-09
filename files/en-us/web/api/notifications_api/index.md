@@ -41,14 +41,14 @@ In addition, the Notifications API spec specifies a number of additions to the [
 ## Interfaces
 
 - {{domxref("Notification")}}
-  - : Defines a notification object.
+  - : Defines a notification object. When activated, a non-persistent notification fires a {{domxref("Notification.click_event", "click")}} event, unless a {{domxref("Notification.navigate", "navigate")}} URL is set, in which case the user agent navigates to that URL instead.
 - {{domxref("NotificationEvent")}}
   - : Represents a notification event dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}.
 
 ### Extensions to other interfaces
 
 - {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}} event
-  - : Occurs when a user clicks on a displayed notification.
+  - : Occurs when a user clicks on a displayed persistent notification, unless a {{domxref("Notification.navigate", "navigate")}} URL is set.
 - {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}} event
   - : Occurs when a user closes a displayed notification.
 - {{domxref("ServiceWorkerRegistration.getNotifications()")}}
