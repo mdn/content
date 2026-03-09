@@ -2,10 +2,12 @@
 title: CSSFontFaceDescriptors
 slug: Web/API/CSSFontFaceDescriptors
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.CSSFontFaceDescriptors
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`CSSFontFaceDescriptors`** interface represents a CSS declaration block for an {{cssxref("@font-face")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
@@ -23,25 +25,25 @@ _Inherits properties from its ancestor {{domxref("CSSStyleDeclaration")}}._
 
 The following property names, in kebab-case (accessed using bracket notation) and camel-case (accessed using dot notation), each represent the value of a descriptor in the corresponding `@font-face` at-rule:
 
-- `font-display` or `fontDisplay`
+- `font-display` or `fontDisplay` {{experimental_inline}}
   - : A string representing the value of the {{cssxref("@font-face/font-display", "font-display")}} descriptor.
-- `font-family` or `fontFamily`
+- `font-family` or `fontFamily` {{experimental_inline}}
   - : A string representing the value of the {{cssxref("@font-face/font-family", "font-family")}} descriptor.
-- `font-feature-settings` or `fontFeatureSettings`
+- `font-feature-settings` or `fontFeatureSettings` {{experimental_inline}}
   - : A string representing the value of the {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}} descriptor.
-- `font-stretch` or `fontStretch`
+- `font-stretch` or `fontStretch` {{experimental_inline}}
   - : A string representing the value of the {{cssxref("@font-face/font-stretch", "font-stretch")}} descriptor.
-- `font-style` or `fontStyle`
+- `font-style` or `fontStyle` {{experimental_inline}}
   - : A string representing the value of the {{cssxref("@font-face/font-style", "font-style")}} descriptor.
-- `font-weight` or `fontWeight`
+- `font-weight` or `fontWeight` {{experimental_inline}}
   - : A string representing the value of the {{cssxref("@font-face/font-weight", "font-weight")}} descriptor.
-- `font-width` or `fontWidth`
+- `font-width` or `fontWidth` {{experimental_inline}}
   - : A string representing the value of the {{cssxref("@font-face/font-width", "font-width")}} descriptor.
-- `size-adjust` or `sizeAdjust`
+- `size-adjust` or `sizeAdjust` {{experimental_inline}}
   - : A string representing the value of the {{cssxref("@font-face/size-adjust", "size-adjust")}} descriptor.
-- `src`
+- `src` {{experimental_inline}}
   - : A string representing the value of the {{cssxref("@font-face/src", "src")}} descriptor.
-- `unicode-range` or `unicodeRange`
+- `unicode-range` or `unicodeRange` {{experimental_inline}}
   - : A string representing the value of the {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor.
 
 ## Instance methods
