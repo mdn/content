@@ -72,7 +72,7 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
   - : Specifies the color for the shadow. If not specified, the value of the {{cssxref("color")}} property defined in the parent element is used.
 
 - `<length>`
-  - : Specifies the offset length of the shadow. This parameter accepts two or three values. If two values are specified, they are interpreted as `<offset-x>` (horizontal offset) and `<offset-y>` (vertical offset) values. Negative `<offset-x>` value places the shadow to the left of the element. Negative `<offset-y>` value places the shadow above the element. If not specified, the value of `0` is used for the missing length. If a third value is specified, it is interpreted as `<standard-deviation>`, which is the value of the standard deviation to the [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) function. A larger `<standard-deviation>` value creates a larger and more blurred shadow. Negative values for `<standard-deviation>` are not allowed.
+  - : Specifies the offset length of the shadow. This parameter accepts two or three values. If two values are specified, they are interpreted as `<offset-x>` (horizontal offset) and `<offset-y>` (vertical offset) values. Negative `<offset-x>` value places the shadow to the left of the element. Negative `<offset-y>` value places the shadow above the element. If a third value is specified, it is interpreted as `<standard-deviation>`, which is the value of the standard deviation to the [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) function. A larger `<standard-deviation>` value creates a larger and more blurred shadow. Negative values for `<standard-deviation>` are not allowed.
 
 ## Formal syntax
 
