@@ -25,9 +25,9 @@ The following code implements a minimal dark mode toggle.
 
 #### HTML
 
-The HTML has a form with 3 radio buttons. These radio buttons set the `color-scheme` field to either `system`, `light`, or `dark`.
+The HTML features a form containing three radio buttons. These radio buttons set the `color-scheme` field to either `system`, `light`, or `dark`.
 
-```html
+```html live-sample___dark-mode-toggle
 <!doctype html>
 <html lang="en-US">
   <head>
@@ -52,20 +52,7 @@ The HTML has a form with 3 radio buttons. These radio buttons set the `color-sch
 
 The JavaScript registers change event listeners for all elements named `color-scheme`. If the value is `system`, the handler clears the color scheme override. Otherwise, it requests a color scheme override with the value of the input element.
 
-#### Result
-
-```css hidden
-body {
-  font-family: system-ui, sans-serif;
-}
-
-label {
-  display: block;
-  margin: 0.5em 0;
-}
-```
-
-```js
+```js live-sample___dark-mode-toggle
 if (navigator.preferences) {
   const inputs = {
     light: document.querySelector('[name="color-scheme"][value="light"]'),
@@ -91,7 +78,20 @@ if (navigator.preferences) {
 }
 ```
 
-{{EmbedLiveSample("Dark Mode Toggle")}}
+#### Result
+
+```css hidden live-sample___dark-mode-toggle
+body {
+  font-family: system-ui, sans-serif;
+}
+
+label {
+  display: block;
+  margin: 0.5em 0;
+}
+```
+
+{{EmbedLiveSample("dark-mode-toggle", "100%", 200)}}
 
 ## Specifications
 
