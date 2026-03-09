@@ -59,7 +59,9 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the origin can not be {{glossary("Serialization", "serialized")}} to a URL.
 - {{jsxref("TypeError")}}
-  - : Thrown if setting the cookie with the given `name` and `value` or `options` fails.
+  - : Thrown if:
+    - Both the `expires` and `maxAge` properties are set.
+    - Setting the cookie with the given `name` and `value` or `options` fails in any other way.
 
 ## Examples
 
@@ -90,20 +92,21 @@ async function cookieTest() {
 
 ### Setting a cookie with options
 
-This example sets a cookie by passing an `options` object with `name`, `value`, `maxAge`, and `partitioned`.
+This example sets a cookie by passing an `options` object with `name`, `value`, `expires`, and `partitioned`.
 
 The code first waits for the cookie to be set: as this operation can fail, the operation is performed in a `try...catch` block and any errors are logged to the console.
 It then gets and logs the cookie that was just set.
 
 ```js
 async function cookieTest() {
+  const day = 24 * 60 * 60 * 1000;
   const cookieName = "cookie2";
   try {
     // Set cookie: passing options
     await cookieStore.set({
       name: cookieName,
       value: `${cookieName}-value`,
-      maxAge: 34560000,
+      expires: Date.now() + day,
       partitioned: true,
     });
   } catch (error) {
