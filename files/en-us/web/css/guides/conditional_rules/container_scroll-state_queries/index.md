@@ -335,6 +335,7 @@ The keyword value indicates the direction you are testing. For example:
 - `block-start`: Tests whether the container was most recently scrolled towards its block-start edge.
 - `right`: Tests whether the container was most recently scrolled towards its right-hand edge.
 - `y`: Tests whether the container was most recently scrolled up or down along the y axis.
+- `none`: Tests whether the container is not a {{glossary("scroll container")}} or has not been scrolled in any direction since rendering.
 
 If the test returns true, the rules inside the `@container` block are applied to the descendants of the matching scroll container.
 
