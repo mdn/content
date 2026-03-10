@@ -511,7 +511,7 @@ The {{cssxref("animation-action")}} values `play-forwards` and `play-backwards` 
 animation: fade-in 1s ease-in both;
 ```
 
-We have also specified an {{cssxref("animation-fill-mode")}} of `both` — this is important for making the animation behave as expected when `play-forwards play-backwards` is set — these values apply the effect of `animation-fill-mode: both` to before the animation activates and after it deactivates, when the trigger enters and exits the activation range. Without `animation-fill-mode`, the animated element enters the viewport at full opacity, and then disappears and fades in when it enters the activation range; you get a similarly strange effect when it leaves the activation range. This is not what we want, so `animation-fill-mode` is important.
+We have also specified an {{cssxref("animation-fill-mode")}} of `both` — this is important for making the animation behave as expected when `play-forwards play-backwards` is set — these values apply the effect of `animation-fill-mode: both` to before the animation's trigger activates (when it enters the activation range) and after it deactivates (when it exits the active range). Without `animation-fill-mode`, the animated element enters the viewport at full opacity, and then disappears and fades in when its trigger enters the activation range; you get a similarly strange effect when its trigger leaves the active range. This is not what we want, so `animation-fill-mode` is important.
 
 There are other `animation-action` values that can be set to produce different effects. For example:
 
