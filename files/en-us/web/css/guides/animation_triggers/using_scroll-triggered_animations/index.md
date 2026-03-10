@@ -505,7 +505,7 @@ So far, all of our examples have had the following `animation-trigger` value set
 animation-trigger: --t play-forwards play-backwards;
 ```
 
-The {{cssxref("animation-action")}} values `play-forwards` and `play-backwards` specify that the animation plays forwards when the animation activates, and backwards when the animation deactivates. In each case, the animation only happens once: we didn't specify an {{cssxref("animation-iteration-count")}} in our `animation` shorthand, therefore the default value, `1`, is used. For reference, our `animation` declaration looks like this:
+The {{cssxref("animation-action")}} values `play-forwards` and `play-backwards` specify that the animation plays forwards when the trigger activates, and backwards when the trigger deactivates. In each case, the animation only happens once: we didn't specify an {{cssxref("animation-iteration-count")}} in our `animation` shorthand, therefore the default value, `1`, is used. For reference, our `animation` declaration looks like this:
 
 ```css
 animation: fade-in 1s ease-in both;
