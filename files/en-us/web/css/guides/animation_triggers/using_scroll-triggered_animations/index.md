@@ -273,7 +273,7 @@ We can change the activation range using the {{cssxref("timeline-trigger-activat
 - A different `timeline-range-name` keyword to specify a different range.
 - A `timeline-range-name` and a `<length-percentage>` to specify a certain point along a different range.
 
-So for example, the following would cause the animation to activate at the end of the `entry` range (when the trigger's end edge crosses the viewport's end edge) and deactivate `70%` of the way through the `exit` range (slightly before the trigger's end edge crosses the viewport's start edge):
+So for example, the following would cause the animation to activate at the end of the `entry` range (when the subject's end edge crosses the viewport's end edge) and deactivate `70%` of the way through the `exit` range (slightly before the subject's end edge crosses the viewport's start edge):
 
 ```css
 timeline-trigger-activation-range: entry 100% exit 70%;
