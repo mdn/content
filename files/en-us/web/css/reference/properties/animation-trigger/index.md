@@ -356,7 +356,7 @@ We then specify a `timeline-trigger` value of `--t view() contain` on the same `
 - A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the trigger will activate when the `<div>` is fully inside the viewport, and deactivate when it stops being fully inside the viewport.
 
   > [!NOTE]
-  > This is in contrast to the default activation range, [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover), which would cause the animation to activate when any part of the `<div>` enters the viewport and deactivate only when it has fully left the viewport.
+  > This is in contrast to the default activation range, [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover), which would cause the trigger to activate when any part of the `<div>` enters the viewport and deactivate only when it has fully left the viewport.
 
 ```css hidden live-sample___same-element
 body {
