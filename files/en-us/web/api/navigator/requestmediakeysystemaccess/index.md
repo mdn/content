@@ -39,7 +39,7 @@ requestMediaKeySystemAccess(keySystem, supportedConfigurations)
       - : An optional label for the configuration, which defaults to `""`.
         This label is preserved for configurations fetched using {{domxref("MediaKeySystemAccess.getConfiguration")}}
     - `initDataTypes`
-      - : An array of strings that indicate the data type names for the supported initialization data formats (default to an empty array).
+      - : An array of strings that indicate the data type names for the supported initialization data formats (defaults to an empty array).
         These names are names like `"cenc"`, `"keyids"` and `"webm"` that are defined in the [Encrypted Media Extensions Initialization Data Format Registry](https://w3c.github.io/encrypted-media/format-registry/initdata/).
     - `audioCapabilities`
       - : An array of supported audio capabilities.

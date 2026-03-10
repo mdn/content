@@ -98,7 +98,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Time picker in `datetime-local` and `time` input elements:** `dom.forms.datetime.timepicker`.
 
-  HTML datetime-local and time input elements ([`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local) and [`<input type="time">`](/en-US/docs/Web/HTML/Reference/Elements/input/time)) now includes a time picker. ([Firefox bug 1726108](https://bugzil.la/1726108)).
+  The HTML [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local) and [`<input type="time">`](/en-US/docs/Web/HTML/Reference/Elements/input/time) elements support a time picker. ([Firefox bug 1726108](https://bugzil.la/1726108)).
 
 - **:heading():** `layout.css.heading-selector.enabled`
 

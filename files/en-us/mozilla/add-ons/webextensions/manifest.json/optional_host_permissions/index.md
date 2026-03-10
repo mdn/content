@@ -40,6 +40,9 @@ See [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json
 
 Use the {{webextapiref("permissions")}} API to request an optional host permission at runtime. Requesting a host permission may present the user with a dialog asking whether they want to grant the permission to your extension.
 
+> [!NOTE]
+> [Users may opt in or out of optional host permissions](https://support.mozilla.org/en-US/kb/manage-optional-permissions-extensions) from the extension's **Permissions** tab in the Firefox Add-ons Manager. Extensions that use optional host permissions can check for the permissions granted by the user with {{webextapiref("permissions.getAll()")}} and listen for {{webextapiref("permissions.onAdded")}} and {{webextapiref("permissions.onRemoved")}} to know when a user grants or revokes permissions.
+
 ## Example
 
 ```json

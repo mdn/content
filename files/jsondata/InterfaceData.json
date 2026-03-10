@@ -176,6 +176,10 @@
       "inh": "",
       "impl": []
     },
+    "AutofillEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "BackgroundFetchEvent": {
       "inh": "ExtendableEvent",
       "impl": []
@@ -492,6 +496,10 @@
       "inh": "",
       "impl": []
     },
+    "CrashReportContext": {
+      "inh": "",
+      "impl": []
+    },
     "CreateMonitor": {
       "inh": "EventTarget",
       "impl": []
@@ -520,6 +528,14 @@
       "inh": "Animation",
       "impl": []
     },
+    "CSSApplyBlockRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
+    "CSSApplyStatementRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
     "CSSColor": {
       "inh": "CSSColorValue",
       "impl": []
@@ -538,6 +554,14 @@
     },
     "CSSContainerRule": {
       "inh": "CSSConditionRule",
+      "impl": []
+    },
+    "CSSContentsBlockRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
+    "CSSContentsStatementRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSCounterStyleRule": {
@@ -672,6 +696,10 @@
       "inh": "CSSConditionRule",
       "impl": []
     },
+    "CSSMixinRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSNamespaceRule": {
       "inh": "CSSRule",
       "impl": []
@@ -749,7 +777,7 @@
       "impl": []
     },
     "CSSPseudoElement": {
-      "inh": "EventTarget",
+      "inh": "",
       "impl": []
     },
     "CSSRGB": {
@@ -1322,10 +1350,6 @@
     },
     "GeolocationPositionError": {
       "inh": "",
-      "impl": []
-    },
-    "GeolocationSensor": {
-      "inh": "Sensor",
       "impl": []
     },
     "Global": {
@@ -2220,6 +2244,10 @@
       "inh": "Event",
       "impl": []
     },
+    "MediaStreamTrackHandle": {
+      "inh": "",
+      "impl": []
+    },
     "MediaStreamTrackProcessor": {
       "inh": "",
       "impl": []
@@ -2301,6 +2329,14 @@
       "impl": []
     },
     "MLTensor": {
+      "inh": "",
+      "impl": []
+    },
+    "ModelContext": {
+      "inh": "",
+      "impl": []
+    },
+    "ModelContextClient": {
       "inh": "",
       "impl": []
     },

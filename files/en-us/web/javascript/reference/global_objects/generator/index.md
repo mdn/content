@@ -8,7 +8,7 @@ sidebar: jsref
 
 The **`Generator`** object is returned by a {{jsxref("Statements/function*", "generator function", "", 1)}} and it conforms to both the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
 
-`Generator` is a subclass of the hidden {{jsxref("Iterator")}} class.
+`Generator` is a subclass of the {{jsxref("Iterator")}} class.
 
 ## Constructor
 

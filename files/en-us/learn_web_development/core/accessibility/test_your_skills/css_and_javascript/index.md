@@ -21,7 +21,7 @@ To complete the task, create new rules to make the links look and behave like li
 
 <!-- Code shared across examples -->
 
-```css hidden live-sample___css-js-ally-1 live-sample___css-js-ally-2 live-sample___css-js-ally-3
+```css hidden live-sample___css-js-ally-1 live-sample___css-js-ally-2 live-sample___css-js-ally-3 live-sample___css-js-ally-1-finish live-sample___css-js-ally-2-finish
 body {
   background-color: white;
   color: #333333;
@@ -41,7 +41,13 @@ body {
 
 <!-- Example-specific code -->
 
-```html live-sample___css-js-ally-1
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("css-js-ally-1", "100%", 200) }}
+
+Here's the underlying code for this starting point:
+
+```html live-sample___css-js-ally-1 live-sample___css-js-ally-1-finish
 <ul>
   <li><a href="">Animals</a></li>
   <li><a href="">Computers</a></li>
@@ -64,7 +70,9 @@ a {
 /* Add your code here */
 ```
 
-{{ EmbedLiveSample("css-js-ally-1", "100%", 200) }}
+When the task is complete, the links should look something like this:
+
+{{ EmbedLiveSample("css-js-ally-1-finish", "100%", 200) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -74,6 +82,25 @@ Your finished CSS could look something like this:
 ```css
 /* ... */
 /* Don't edit the above code! */
+
+li a {
+  text-decoration: underline;
+  color: rgb(150 0 0);
+}
+
+li a:hover,
+li a:focus {
+  text-decoration: none;
+  color: red;
+}
+```
+
+```css hidden live-sample___css-js-ally-1-finish
+a {
+  text-decoration: none;
+  color: #666666;
+  outline: none;
+}
 
 li a {
   text-decoration: underline;
@@ -99,9 +126,15 @@ To complete the task:
 2. Update the CSS with new values for the color and font-size to fix the problem.
 3. Test the code to make sure the problem is now fixed. Explain what tools or methods you used to select the new values and test the code.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("css-js-ally-2", "100%", 240) }}
+
+Here's the underlying code for this starting point:
+
 <!-- spellchecker: disable -->
 
-```html live-sample___css-js-ally-2
+```html live-sample___css-js-ally-2 live-sample___css-js-ally-2-finish
 <main>
   <h1>I am the eggman</h1>
 
@@ -156,7 +189,9 @@ p {
 }
 ```
 
-{{ EmbedLiveSample("css-js-ally-2", "100%", 240) }}
+The updated content should look like this:
+
+{{ EmbedLiveSample("css-js-ally-2-finish", "100%", 600) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -173,7 +208,7 @@ p {
 
 For the updated code, something like this would fix the color contrast:
 
-```css
+```css live-sample___css-js-ally-2-finish
 main {
   padding: 20px;
   background-color: red;
@@ -188,7 +223,7 @@ p {
 
 And something like this would work for the font sizing:
 
-```css
+```css live-sample___css-js-ally-2-finish
 h1 {
   font-size: 2.5rem;
 }
@@ -225,6 +260,12 @@ p {
 In our final accessibility task, you have some JavaScripting to do. We have an app that presents a list of animal names. Clicking one of the animal names causes a further description of that animal to appear in a box below the list.
 
 But it is not very accessible — in its current state you can only operate it with the mouse. We'd like you to add some HTML and JavaScript to make it keyboard accessible too.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("css-js-ally-3", "100%", 400) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___css-js-ally-3
 <section class="preview">
@@ -288,7 +329,7 @@ function handleSelection(e) {
 }
 ```
 
-{{ EmbedLiveSample("css-js-ally-3", "100%", 400) }}
+We've not provided finished content for this task, as it looks the same as the starting point.
 
 <details>
 <summary>Click here to show the solution</summary>

@@ -33,6 +33,11 @@ _`Clipboard` is based on the {{domxref("EventTarget")}} interface, and includes 
 - {{domxref("Clipboard.writeText()","writeText()")}}
   - : Writes text to the system clipboard, returning a {{jsxref("Promise")}} that is resolved once the text is fully copied into the clipboard.
 
+## Events
+
+- {{domxref("Clipboard.clipboardchange_event","clipboardchange")}} {{experimental_inline}}
+  - : Fired when the system clipboard contents are changed in any way, for example via a system copy command, or via an API method such as {{domxref("Clipboard.writeText()")}}.
+
 ## Specifications
 
 {{Specifications}}
