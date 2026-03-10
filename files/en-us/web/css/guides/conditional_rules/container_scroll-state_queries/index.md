@@ -595,7 +595,7 @@ html {
 }
 ```
 
-Next, we define two {{cssxref("@container")}} blocks that set the container name targeted by these queries, and queries of `scrolled: block-end` and `scrolled: block-start`. These queries apply the rules contained within the block only if the `<html>` element was most recently scrolled toward its block-end edge or block-start edge — in other words, when the container is scrolled down or up. When either condition becomes true, the bar referenced inside the block has a `translate` value set to cause it to transition on-screen. The bar referenced in the `@condition` that is no longer true transitions off the screen.
+Next, we define two {{cssxref("@container")}} blocks, both of which target the `scroller` container name. The first block defines a query `scrolled: block-end` and the second defines a query `scrolled: block-start`. Respectively, these queries apply the rules contained within their block only if the `<html>` element was most recently scrolled toward its block-end edge or block-start edge. In other words, when the container is scrolled down or up. When either condition becomes true, the bar referenced inside the block has a `translate` value set to cause it to transition on-screen. The bar referenced in the `@condition` that is no longer true transitions off-screen.
 
 ```css live-sample___scrolled
 @container scroller scroll-state(scrolled: block-start) {
