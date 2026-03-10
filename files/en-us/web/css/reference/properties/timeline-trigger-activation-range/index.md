@@ -118,7 +118,7 @@ In this case, the animation will be triggered by the trigger element with the `t
 > [!NOTE]
 > It is possible for the animated element and the trigger element to be the same element.
 
-Optionally, you can also set a longer **active range**, which is the range in which the animation stays active before it deactivates, using the {{cssxref("timeline-trigger-active-range")}} shorthand property or its longhands.
+Optionally, you can also set a longer **active range**, which is the range in which the trigger stays active before it deactivates, using the {{cssxref("timeline-trigger-active-range")}} shorthand property or its longhands.
 
 ### `timeline-trigger-activation-range` value explanation
 
