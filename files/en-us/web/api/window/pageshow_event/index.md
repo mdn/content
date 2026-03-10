@@ -17,14 +17,14 @@ This includes:
 - Restoring a frozen page on mobile OSes.
 - Returning to the page using the browser's forward or back buttons (including when restored from the {{Glossary("bfcache")}}).
 - Opening a page in a background tab.
-- {{Glossary("Prerender", "Prerendering")}} a page, event before being activated.
+- {{Glossary("Prerender", "Prerendering")}} a page, even before it is activated.
 
 > [!WARNING]
-> Despite the name, the `pageshow` event does not mean the page is actually _shown_ to the user. For example it may be opened in a background tab or prerendered. If you are interested when pages are shown, use the following events:
+> Despite the name, the `pageshow` event does not fire when the page is actually _shown_ to the user. For example, it may be opened in a background tab or prerendered. If you are interested in responding to the pages being shown to the user, use the following events:
 >
-> - The {{domxref("window/pagereveal_event", "pagereveal")}} event is sent when a page is first rendered.
-> - The {{domxref("document/visibilitychange_event", "visibilitychange")}} event is sent each time the page's visibility changes.
-> - The {{domxref("document/prerenderingchange_event", "prerenderingchange")}} event is sent when a prerendered page is activated.
+> - {{domxref("window/pagereveal_event", "pagereveal")}}: Sent when a page is first rendered.
+> - {{domxref("document/visibilitychange_event", "visibilitychange")}}: Sent each time the page's visibility changes.
+> - {{domxref("document/prerenderingchange_event", "prerenderingchange")}}: Sent when a prerendered page is activated.
 
 > [!NOTE]
 > During the initial page load, the `pageshow` event fires _after_ the {{domxref("Window/load_event", "load")}} event.
