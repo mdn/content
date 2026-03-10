@@ -301,7 +301,7 @@ There is an additional range type to consider when creating scroll-triggered ani
 
 By default, the active range is the same as the activation range. However, it is possible to set a different active range using the {{cssxref("timeline-trigger-active-range-start")}} and {{cssxref("timeline-trigger-active-range-end")}} properties, or the {{cssxref("timeline-trigger-active-range")}} shorthand to set both values in a single declaration.
 
-You might want to do this for example if you have an animation that activates and deactivates only over a small range, but once activated, you want the finished state of the animation to stay applied over a larger range. Only when the trigger moves out of the active range does the animation become inactive; after that, you can activate it again by moving the trigger back into the activation range.
+You might want to do this, for example, if you have an animation that activates only within a small range, but once activated, you want the finished state of the animation to stay applied over a larger range. Only when the subject moves out of the active range does the trigger become inactive; after that, you can activate it again by moving the subject back into the activation range.
 
 Let's look at an example that is similar to our previous examples, but different, to demonstrate the effect of the active range. In this example, the HTML is the same, except that we've got two identical `<figure>` elements with classes of `.one` and `.two`, contained within a wrapper `<div>`, which we've placed next to one another using flexbox:
 
