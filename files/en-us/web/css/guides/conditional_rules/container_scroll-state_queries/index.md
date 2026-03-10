@@ -586,7 +586,7 @@ Next, we set negative {{cssxref("top")}} and {{cssxref("bottom")}} length values
 }
 ```
 
-The {{glossary("scroll container")}} in this example is the `<html>` element itself, denoted as a scroll-state query container with a {{cssxref("container-type")}} value of `scroll-state`. The {{cssxref("container-name")}} isn't strictly necessary but is useful in cases where the code is added to a codebase with multiple scroll-state query containers targeted with different queries.
+The {{glossary("scroll container")}} in this example is the `<html>` element itself, denoted as a scroll-state query container with a {{cssxref("container-type")}} value of `scroll-state`. The {{cssxref("container-name")}} isn't strictly necessary, but it is useful when a codebase has multiple scroll-state query containers targeted with different queries.
 
 ```css live-sample___scrolled
 html {
