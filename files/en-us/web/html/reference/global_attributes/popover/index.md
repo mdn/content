@@ -19,7 +19,7 @@ The `popover` attribute can take one of the following values:
     > [!NOTE]
     > Setting an empty value for `popover` — `popover` or `popover=""` — is equivalent to setting `popover="auto"`.
 
-- `"hint"` {{experimental_inline}}
+- `"hint"`
   - : [`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers.
     They can be light dismissed and will respond to close requests.
 
@@ -48,7 +48,9 @@ For detailed information on usage, see the {{domxref("Popover API", "Popover API
 
 ## Examples
 
-The following renders a button that will open a popover element when activated.
+### Making an element a popover
+
+The following code renders a button that, when activated, will open a popover element. This behaviour can be achieved using HTML alone.
 
 ```html
 <button popovertarget="my-popover">Open Popover</button>
@@ -56,7 +58,126 @@ The following renders a button that will open a popover element when activated.
 <div popover id="my-popover">Greetings, one and all!</div>
 ```
 
-{{EmbedLiveSample('Examples', 600, 200)}}
+{{EmbedLiveSample('basic_example_of_popover', 600, 100)}}
+
+### Nesting popovers
+
+In this example, a button opens a popover that contains additional nested popovers. The nested popovers can be opened without closing the original menu popover.
+
+#### HTML
+
+In the first part of the HTML, we create a {{htmlElement("button")}} that will open the main popover, which is a menu containing a few options.
+
+```html
+<header>
+  <button popovertarget="menu">Open Menu</button>
+</header>
+<main>
+  <!--  Page content goes here  -->
+</main>
+```
+
+In the second part of the HTML, we create the menu popover that is opened by the button we created in the previous code block. This menu popover contains an unordered list of menu items, each with an info button that opens a nested popover. The menu popover uses `popover="auto"`, which means it will not be closed when the nested popovers are opened.
+
+```html
+<!-- menu popover -->
+<div id="menu" popover="auto">
+  <ul>
+    <li>
+      <a href="#">New thing</a><button popovertarget="new-info">ⓘ</button>
+    </li>
+    <li>
+      <a href="#">Open thing</a><button popovertarget="open-info">ⓘ</button>
+    </li>
+    <li>
+      <a href="#">Save thing</a><button popovertarget="save-info">ⓘ</button>
+    </li>
+    <li>
+      <a href="#">Close thing</a><button popovertarget="close-info">ⓘ</button>
+    </li>
+  </ul>
+</div>
+```
+
+In the final part of the HTML, we create the info popovers for each menu item. Each popover includes `popover="hint"`, which means it will not close the original menu popover but will close the other open info popovers.
+
+```html
+<!-- info popovers -->
+<div id="new-info" class="info-popover" popover="hint">
+  This is some information about <strong>creating a new</strong> thing.
+</div>
+<div id="open-info" class="info-popover" popover="hint">
+  This is some information about <strong>opening an existing</strong> thing.
+</div>
+<div id="save-info" class="info-popover" popover="hint">
+  This is some information about <strong>saving the current</strong> thing.
+</div>
+<div id="close-info" class="info-popover" popover="hint">
+  This is some information about <strong>closing the current</strong> thing.
+</div>
+```
+
+#### CSS
+
+```css hidden
+header {
+  display: flex;
+  justify-content: center;
+}
+header button {
+  margin: 0.4rem auto;
+}
+```
+
+We've used [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) to position the menu popover below the `<button>` and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) to lay out the menu items and info buttons.
+
+```css
+#menu {
+  margin: 0;
+  margin-top: 0.4rem;
+  inset: auto;
+  position-area: bottom;
+}
+#menu ul {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem;
+  padding: 0.4rem;
+}
+#menu li {
+  grid-column: span 2;
+  display: grid;
+  grid: inherit;
+  grid-template-columns: subgrid;
+  gap: 1.4rem;
+}
+li [popovertarget] {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+li button {
+  border: none;
+  padding: 0;
+  background-color: inherit;
+}
+```
+
+Here, we've used anchor positioning to make the info popovers appear to the right of their respective info buttons.
+
+```css
+div.info-popover {
+  margin: 2rem;
+  inset: auto;
+  max-width: 300px;
+  position-area: right;
+}
+```
+
+#### Result
+
+Click the _Open Menu_ button, then click the info icons (ⓘ) next to the menu options to open the info popovers.
+
+{{EmbedLiveSample('popover_hint', 600, 250)}}
 
 > [!NOTE]
 > See our [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/) to access the full collection of MDN popover examples.

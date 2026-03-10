@@ -60,7 +60,21 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This allows developers to implement components that can be closed using device-native mechanisms, such as the <kbd>Esc</kbd> on Windows or the <kbd>Back</kbd> key on Android, in the same way as built-in components such as [dialogs](/en-US/docs/Web/HTML/Reference/Elements/dialog) and [popovers](/en-US/docs/Web/API/Popover_API).
   ([Firefox bug 1966073](https://bugzil.la/1966073)).
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The {{domxref("HTMLMediaElement.captureStream()")}} method is now supported.
+  This returns an object that streams the real-time capture of the content in the element.
+  The stream can be used, for example, as a source for a WebRTC {{domxref("RTCPeerConnection")}}.
+  Previously, `captureStream()` was available only as the non-standard `mozCaptureStream()` method.
+  ([Firefox bug 2017708](https://bugzil.la/2017708)).
+
+- {{domxref("MediaElementAudioSourceNode")}} now respects the media element's volume when capturing audio for all types of sources (as required by the specification).
+  Previously, setting the volume of the element did not affect the captured audio for {{domxref("MediaStream")}} sources.
+  ([Firefox bug 2010427](https://bugzil.la/2010427)).
+
+- The {{domxref("HTMLMediaElement.captureStream()", "HTMLMediaElement.mozCaptureStream()")}} method now captures raw audio from the source without applying the media element's volume, regardless of the type of source the media element is playing (as required by the specification).
+  Prior to this change, the media element's volume affected the volume of the captured stream.
+  ([Firefox bug 2010427](https://bugzil.la/2010427)).
 
 <!-- #### Removals -->
 
@@ -90,3 +104,11 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 149 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`<attr-type>` values in `attr()` CSS function**: `layout.css.attr.enabled`
+
+  The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/Web/CSS/Reference/Values/attr#attr-type) values. This allows you to specify how an attribute value is parsed into a CSS value and take those values directly from [`data-*`](/en-US/docs/Web/HTML/How_to/Use_data_attributes). ([Firefox bug 1986631](https://bugzil.la/1986631) & [Firefox bug 1998245](https://bugzil.la/1998245)).
+
+- **`color-mix()` accepts multiple color arguments**: `layout.css.color-mix-multi-color.enabled`
+
+  The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now supports multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix many colors and set the percentages of each. ([Firefox bug 2007772](https://bugzil.la/2007772)).

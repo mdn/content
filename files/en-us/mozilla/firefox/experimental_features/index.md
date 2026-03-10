@@ -319,6 +319,34 @@ The {{cssxref("@custom-media")}} CSS at-rule defines aliases for long or complex
 - `layout.css.custom-media.enabled`
   - : Set to `true` to enable.
 
+### `<attr-type>` values in `attr()` CSS function
+
+The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/Web/CSS/Reference/Values/attr#attr-type) values. This allows you to specify how an attribute value is parsed into a CSS value and take those values directly from [`data-*`](/en-US/docs/Web/HTML/How_to/Use_data_attributes). ([Firefox bug 1986631](https://bugzil.la/1986631) & [Firefox bug 1998245](https://bugzil.la/1998245))
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 149           | No                  |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `layout.css.attr.enabled`
+  - : Set to `true` to enable.
+
+### `color-mix()` accepts multiple color arguments
+
+The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now supports multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix many colors and set the percentages of each. ([Firefox bug 2007772](https://bugzil.la/2007772)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 150           | Yes                 |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `layout.css.color-mix-multi-color.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -565,24 +593,6 @@ This feature is enabled on Android in all builds, but behind a preference on Des
 | Release           | 71              | No (Desktop). Yes (Android).                |
 
 - `dom.webshare.enabled`
-  - : Set to `true` to enable.
-
-### Screen Orientation API
-
-#### ScreenOrientation.lock()
-
-The {{domxref("ScreenOrientation.lock()")}} method allows a device to be locked to a particular orientation, if supported by the device and allowed by browser pre-lock requirements.
-Typically locking the orientation is only allowed on mobile devices when the document is being displayed full screen.
-See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 111             | Yes                 |
-| Developer Edition | 97              | No                  |
-| Beta              | 97              | No                  |
-| Release           | 97              | No                  |
-
-- `dom.screenorientation.allow-lock`
   - : Set to `true` to enable.
 
 ### Notifications API
