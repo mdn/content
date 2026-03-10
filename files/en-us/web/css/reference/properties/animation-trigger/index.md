@@ -50,7 +50,7 @@ The `animation-trigger` property may be specified using one or more `animation-t
 - {{cssxref("dashed-ident")}}
   - : An identifier equal to the {{cssxref("timeline-trigger-name")}} of the element that will trigger the animation.
 - {{cssxref("animation-action")}}
-  - : Specifies the behavior of the animation once activated (in the case of the first value) and deactivated (in the case of the second, optional value).
+  - : Specifies the behavior of the animation once the trigger is activated (in the case of the first value) and deactivated (in the case of the second, optional value).
 
 ## Description
 
