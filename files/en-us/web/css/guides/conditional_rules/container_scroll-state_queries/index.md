@@ -330,7 +330,7 @@ Try scrolling the document down, and note how the "back-to-top" link appears as 
 
 Scroll-state [`scrolled`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrolled) queries, written as `scroll-state(scrolled: <keyword>)`, test whether a container's scrolling ancestor was most recently scrolled in the given direction. If not, the query returns false.
 
-The keyword value indicates the direction you are testing for, for example:
+The keyword value indicates the direction you are testing. For example:
 
 - `block-start`: Tests whether the container was most recently scrolled towards its block-start edge.
 - `right`: Tests whether the container was most recently scrolled towards its right-hand edge.
