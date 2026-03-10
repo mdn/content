@@ -85,7 +85,7 @@ if (!window.ManagedMediaSource?.isTypeSupported(mediaType)) {
 }
 ```
 
-{{EmbedGHLiveSample("dom-examples/media-source-extensions/managed-media-source/", '100%', 420)}}
+{{EmbedGHLiveSample("dom-examples/media-source-extensions/managed-media-source/", '100%', 470)}}
 
 ## Specifications
 
