@@ -30,17 +30,17 @@ The `<url>` data type, written with the [`url()`](/en-US/docs/Web/CSS/Reference/
 
 ```css
 /* Relative URL */
-url(styles.css)
-url(assets/icon.svg)
+url("styles.css")
+url("assets/icon.svg")
 url("../assets/image.png")
 
 /* Absolute URL */
-url(http://example.com/fonts/myFont.ttf)
+url("http://example.com/fonts/myFont.ttf")
 url("https://example.com/images/background.jpg")
 
 /* Data URL */
 url("data:image/svg+xml,%3Csvg'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3C/svg%3E")
- url("data:image/png;base64,iVBORw0KGgoAAA...")
+url("data:image/png;base64,iVBORw0KGgoAAA...")
 ```
 
 ### External resources and CORS
@@ -49,7 +49,7 @@ The ability to import external resources via the `<url>` value is implementation
 
 Depending on the CSS property on which a `<url>` referencing external resources is applied, the resource may be subject to [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) restrictions.
 
-Some CSS properties, including {{cssxref("mask-image")}}, {{cssxref("filter")}}, as well as {{cssxref("clip-path")}} and a few others when referring to {{htmlelement("svg")}} image elements, may require successful CORS validation when they cause external, cross-origin resources to be fetched in CORS mode. If CORS validation fails, the resource may be blocked and therefore not used for rendering.
+Some CSS properties, including {{cssxref("mask-image")}}, {{cssxref("filter")}}, as well as {{cssxref("clip-path")}} and a few others when referring to {{SVGElement("svg")}} image elements, may require successful CORS validation when they cause external, cross-origin resources to be fetched in CORS mode. If CORS validation fails, the resource may be blocked and therefore not used for rendering.
 
 Note that the `<url>` value type does not enforce CORS validation itself, but individual CSS properties do.
 
