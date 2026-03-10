@@ -15,6 +15,8 @@ The **`HTMLAnchorElement`** interface represents hyperlink elements and provides
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
+- {{domxref("HTMLAnchorElement.attributionSourceId")}} {{experimental_inline}}
+  - : A non-negative integer representing the attribution source identifier for Private Click Measurement. Valid values are from `0` to `255`.
 - {{domxref("HTMLAnchorElement.attributionSrc")}} {{securecontext_inline}} {{deprecated_inline}}
   - : Gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Reference/Elements/a#attributionsrc) attribute on an {{htmlelement("a")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to register a navigation-based attribution source.
 - {{domxref("HTMLAnchorElement.download")}}
