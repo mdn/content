@@ -40,7 +40,7 @@ timeline-trigger-activation-range-start: revert-layer;
 timeline-trigger-activation-range-start: unset;
 ```
 
-The `timeline-trigger-activation-range-start` shorthand property is specified as one or more values, separated by commas.
+The `timeline-trigger-activation-range-start` property is specified as one or more values, separated by commas.
 
 ### Values
 
@@ -97,7 +97,7 @@ In this case, the first name will use the `cover` range start, and the second na
 
 ### Basic usage
 
-In this example, we show how to create a basic scroll-triggered animation that uses a custom timeline activation range start value.
+In this example, we show how to create a basic scroll-triggered animation with a custom activation range start value.
 
 #### HTML
 
@@ -108,7 +108,7 @@ Our markup contains two {{htmlelement("div")}} elements, plus some basic text co
 
 ...
 
-<div class="trigger">I am the trigger</div>
+<div class="trigger">I create the trigger</div>
 
 ...
 ```
@@ -144,7 +144,7 @@ Our markup contains two {{htmlelement("div")}} elements, plus some basic text co
   tristique tellus, sed tincidunt velit.
 </p>
 
-<div class="trigger">I am the trigger</div>
+<div class="trigger">I create the trigger</div>
 
 <p>
   Fusce dictum ex quis ipsum consectetur placerat. Cras sed lectus ex. Quisque
@@ -177,11 +177,13 @@ Our markup contains two {{htmlelement("div")}} elements, plus some basic text co
 
 #### CSS
 
-The animated {{htmlelement("div")}} element has an `animation` applied that rotates it. We set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
+The `.animated` {{htmlelement("div")}} element has an `animation` applied that rotates it. We set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
 
-The trigger `<div>` element is defined as the animated `<div>`'s trigger using a {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together. It also includes a {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the element providing the view progress timeline as the nearest scrolling ancestor element.
+The `.trigger` `<div>` element creates the animated `<div>`'s trigger using:
 
-We specify a `timeline-trigger-activation-range-start` of `entry 50%`, which sets the trigger's activation range start point to 50% through the `entry` range (when 50% of the trigger element has entered the viewport). The {{cssxref("timeline-trigger-activation-range-end")}} value defaults to 100% of the way through the `cover` range, meaning that the animation won't pause until the trigger element has left the viewport in either direction.
+- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
+- A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
+- A `timeline-trigger-activation-range-start` of `entry 50%`, which sets the trigger's activation range start point to 50% through the `entry` range (when 50% of the tracked element has entered the viewport). The {{cssxref("timeline-trigger-activation-range-end")}} value defaults to 100% of the way through the `cover` range, meaning that the animation won't pause until the tracked element has left the viewport in either direction.
 
 ```css hidden live-sample___basic-example live-sample___compare-multiple-values
 body {
@@ -265,7 +267,7 @@ The rendered result looks like this:
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up. When 50% of the trigger `<div>` has entered the viewport, the animation will play; when the trigger has completely exited the viewport at either edge, the animation will pause.
+Try scrolling the content up. When 50% of the tracked `<div>` has entered the viewport, the animation will play; when the tracked `<div>` has completely exited the viewport at either edge, the animation will pause.
 
 ## Specifications
 

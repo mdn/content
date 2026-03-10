@@ -69,4 +69,5 @@ See the [View timeline range visualizer](https://scroll-driven-animations.style/
 - {{cssxref("view-timeline-inset")}}
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers) module
 - [View timeline range visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/animation-triggers-1/
 sidebar: cssref
 ---
 
-The **CSS animation triggers** module provides functionality for triggering standard time-based [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) when a particular trigger occurs, such as the user scrolling a trigger element to a certain scroll offset inside the viewport, or a JavaScript event firing on an element.
+The **CSS animation triggers** module provides functionality for triggering standard time-based [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) when a particular trigger occurs, such as the user scrolling an element to a certain scroll offset inside the viewport, or a JavaScript event firing on an element.
 
 ## Reference
 
