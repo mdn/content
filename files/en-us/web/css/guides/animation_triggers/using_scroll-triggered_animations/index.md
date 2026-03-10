@@ -297,7 +297,7 @@ The animation of the `<figcaption>` is now a bit more useful — it only starts 
 
 ## Setting a trigger active range
 
-There is an additional range type to consider when creating scroll-triggered animations. Whereas the [activation range](#adjusting_the_trigger_activation_range) governs the range between the animation activating and deactivating, the **active range** governs the range within which the animation is active.
+There is an additional range type to consider when creating scroll-triggered animations. Whereas the [activation range](#adjusting_the_trigger_activation_range) governs the range within which the animation activates, the **active range** governs the range within which the animation is active. When the subject is outside this active range, the trigger deactivates.
 
 By default, the active range is the same as the activation range. However, it is possible to set a different active range using the {{cssxref("timeline-trigger-active-range-start")}} and {{cssxref("timeline-trigger-active-range-end")}} properties, or the {{cssxref("timeline-trigger-active-range")}} shorthand to set both values in a single declaration.
 
