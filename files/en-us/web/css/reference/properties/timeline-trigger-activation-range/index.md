@@ -250,7 +250,7 @@ The animated {{htmlelement("div")}} element has an `animation` applied that rota
 
 The trigger `<div>` element is defined as the animated `<div>`'s trigger using a {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together. It also includes a {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the element providing the view progress timeline as the nearest scrolling ancestor element.
 
-Finally for this rule, we specify a `timeline-trigger-activation-range` of `entry 50% exit 50%`, which sets the trigger's activation range to a range between 50% through the `entry` range (when 50% of the trigger element has entered the viewport) and 50% through the `exit` range (when 50% of the trigger element has exited the viewport).
+Finally for this rule, we specify a `timeline-trigger-activation-range` of `entry 50% exit 50%`, which sets the trigger's activation range to a range between 50% through the `entry` range (when 50% of the trigger element has entered the viewport) and 50% through the `exit` range (when 50% of the tracked element has exited the viewport).
 
 ```css hidden live-sample___basic-example live-sample___compare-multiple-values
 body {
