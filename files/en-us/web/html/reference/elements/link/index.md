@@ -143,20 +143,26 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
           </td>
         </tr>
         <tr>
+          <td>json</td>
+          <td>
+            <code>modulepreload</code> destinations.
+          </td>
+        </tr>
+        <tr>
           <td>object</td>
           <td><code>&#x3C;object></code> elements</td>
         </tr>
         <tr>
           <td>script</td>
           <td>
-            <code>&#x3C;script></code> elements, Worker <code>importScripts</code>
+            <code>&#x3C;script></code> elements, Worker <code>importScripts</code>, and <code>modulepreload</code> destinations.
           </td>
         </tr>
         <tr>
           <td>style</td>
           <td>
             <code>&#x3C;link rel=stylesheet></code> elements, CSS
-            <code>@import</code>
+            <code>@import</code> and <code>modulepreload</code> destinations.
           </td>
         </tr>
         <tr>

@@ -91,9 +91,9 @@ body {
 
 ```html hidden
 <ul>
-  <li>one</li>
-  <li>two</li>
-  <li>there</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
 </ul>
 ```
 

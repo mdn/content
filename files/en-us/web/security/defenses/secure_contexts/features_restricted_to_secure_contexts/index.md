@@ -37,7 +37,7 @@ This section lists APIs that specifications make available only in secure contex
 - {{domxref("Keyboard API", "", "", "nocode")}}
 - {{domxref("Local Font Access API", "", "", "nocode")}}
 - [Notifications API](/en-US/docs/Web/API/Notifications_API)
-- {{domxref("Payment Handler API", "", "", "nocode")}}
+- {{domxref("Web-based Payment Handler API", "", "", "nocode")}}
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Presentation API](/en-US/docs/Web/API/Presentation_API)
 - [Push API](/en-US/docs/Web/API/Push_API)
