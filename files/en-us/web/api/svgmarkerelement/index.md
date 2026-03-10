@@ -39,6 +39,8 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
     - 2
       - : `SVG_MARKERUNITS_ORIENT_ANGLE` which means that the {{SVGattr("orient")}} attribute has an {{cssxref("angle")}} or {{cssxref("number")}} value indicating the angle.
 
+- {{domxref("SVGMarkerElement.orient")}}
+  - : A string corresponding to the {{SVGattr("orient")}} attribute of the given {{SVGElement("marker")}} element.
 - {{domxref("SVGMarkerElement.orientAngle")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedAngle")}} object containing the angle of the {{SVGattr("orient")}} attribute.
 - {{domxref("SVGMarkerElement.refX")}} {{ReadOnlyInline}}
