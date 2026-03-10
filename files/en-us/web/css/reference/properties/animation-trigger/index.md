@@ -41,7 +41,7 @@ animation-trigger: revert-layer;
 animation-trigger: unset;
 ```
 
-The `animation-trigger` property may be specified using one or more `animation-trigger` values separated by commas. Each `animation-trigger` value consists of the keyword `none`, or a {{cssxref("dashed-ident")}} followed by one or two {{cssxref("animation-action")}} values.
+The `animation-trigger` property may be specified using one or more `animation-trigger` values separated by commas. Each `animation-trigger` value consists of the keyword `none`, or a {{cssxref("dashed-ident")}} followed by one or more {{cssxref("animation-action")}} values.
 
 ### Values
 
