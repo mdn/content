@@ -54,7 +54,7 @@ The `animation-trigger` property may be specified using one or more `animation-t
 
 ## Description
 
-The `animation-trigger` property specifies which trigger element will trigger an animated element's animations, turning them into [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations). The trigger is identified via a `<dashed-ident>` value, which is defined in the trigger element's {{cssxref("timeline-trigger-name")}} property. If the `<dashed-ident>` specified inside the `animation-trigger` isn't set as a `timeline-trigger-name` on a suitable element inside the same document, `animation-trigger` is ignored.
+The `animation-trigger` property specifies which trigger will control an animated element's animations, turning them, for example, into [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations). The trigger is identified via a `<dashed-ident>` value, which is defined in the subject element's {{cssxref("timeline-trigger-name")}} property. If the `<dashed-ident>` specified inside the `animation-trigger` isn't set as a `timeline-trigger-name` on a suitable element inside the same document, `animation-trigger` is ignored.
 
 You can also include one or two {{cssxref("animation-action")}} keywords in an `animation-trigger` value, which specify the behavior of the animation once activated and deactivated.
 
