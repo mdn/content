@@ -1025,7 +1025,7 @@ section {
 }
 ```
 
-Next, we give each one of the `<div>` elements a {{cssxref("timeline-trigger")}} value equal to the identifiers specified in the `<section>` element's `animation-trigger` property value. This means that as the user scrolls, when each `<div>` appears inside the viewport, a different one of the animations will be activated. In this case, our triggers are invisible — they don't contain any useful content and are only here to trigger the animations.
+Next, we create timeline triggers on the `<div>` elements, setting their {{cssxref("timeline-trigger-name")}} equal to the identifiers specified in the `<section>` elements' `animation-trigger` property values. This means that as the user scrolls, when each `<div>` enters the viewport, a different animation will be activated. In this case, our subject elements are invisible — they don't contain any useful content and are only here to create the triggers.
 
 ```css live-sample___multiple-triggers
 #one {
