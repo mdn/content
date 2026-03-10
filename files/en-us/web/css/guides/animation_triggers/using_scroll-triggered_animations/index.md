@@ -435,7 +435,7 @@ figcaption {
 
 Next, we set the same `timeline-trigger-source` and `timeline-trigger-activation-range` on both `<img>` elements. We then set two different `timeline-trigger-name` values on the two `<img>` elements — the same ones referenced in the previous code block, which means that each `<img>`'s timeline trigger acts as the trigger for the animation on its corresponding `<figcaption>`.
 
-The `timeline-trigger-activation-range` of `contain 40% contain 60%` means that the fade-in animation activates when the trigger reaches a narrow range in the middle of the viewport. However, we additionally set a `timeline-trigger-active-range` range of `entry 50% exit 100%` on the second `<img>`. This means that, once faded in, the second `<figcaption>` will only fade out again when it has completely left the viewport.
+The `timeline-trigger-activation-range` of `contain 40% contain 60%` means that the trigger activates—and thus the animation starts playing—when the subject reaches a narrow range in the middle of the viewport. However, we additionally set a `timeline-trigger-active-range` range of `entry 50% exit 100%` on the second `<img>`. This means that, once faded in, the second `<figcaption>` will only fade out again when it has completely left the viewport.
 
 ```css live-sample___set-active-range
 img {
