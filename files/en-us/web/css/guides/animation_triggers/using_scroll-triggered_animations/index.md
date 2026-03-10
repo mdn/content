@@ -11,7 +11,7 @@ sidebar: cssref
 This article covers how to use CSS scroll-triggered animations.
 
 > [!NOTE]
-> Scroll-triggered animations sound similar to [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), but they are different. Scroll-triggered animations trigger regular time-based animations when a trigger element scrolls to a certain position inside a scrolling container. With scroll-driven animations, the normal time-based animation timeline is replaced by a scroll-based timeline, meaning that the animation progresses forwards and backwards as you scroll towards the start and end of the content.
+> Scroll-triggered animations sound similar to [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), but they are different. Scroll-triggered animations are regular time-based animations that play when a trigger becomes active, for example when an element scrolls to a certain scroll position inside a scrolling container. With scroll-driven animations, the normal time-based animation timeline is replaced by a scroll-based timeline, meaning that the animation progresses forwards and backwards as you scroll towards the start and end of the content.
 
 ## Scroll-triggered animation concepts
 
