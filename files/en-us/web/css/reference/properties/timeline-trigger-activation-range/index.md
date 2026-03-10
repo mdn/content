@@ -83,7 +83,7 @@ Each longhand property value is specified as one of:
 
 The `timeline-trigger-activation-range` property can be used to set a custom **activation range** for a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger. The activation range is the range between the scrolling offset at which the trigger is activated, and the scrolling offset at which the trigger is deactivated.
 
-By default, the activation range along the timeline is `cover`, which means that the animation activates when the start edge of the trigger enters the end edge of the viewport, and deactivates when the end edge of the trigger has exited either edge of the viewport. This can be changed by setting a different `timeline-trigger-activation-range` value.
+By default, the activation range along the timeline is `cover`, which means that the trigger activates when the start edge of the tracked element enters the end edge of the viewport, and deactivates when the end edge of the tracked element has exited either edge of the viewport. This can be changed by setting a different `timeline-trigger-activation-range` value.
 
 For example:
 
