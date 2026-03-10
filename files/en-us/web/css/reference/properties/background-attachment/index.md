@@ -87,12 +87,12 @@ background-attachment: revert-layer;
 background-attachment: unset;
 ```
 
-The `background-attachment` property is specified as one of the keyword values from the list below.
+The `background-attachment` property is specified as one or more of the keyword values, separated by commas.
 
 ### Values
 
 - `fixed`
-  - : The background is fixed relative to the viewport. Even if an element has a scrolling mechanism, the background doesn't move with the element.
+  - : The background is fixed relative to the viewport. Even if an element has a scrolling mechanism, the background doesn't move with the element. If set, the {{cssxref("background-origin")}} property is ignored.
 - `local`
   - : The background is fixed relative to the element's contents. If the element has a scrolling mechanism, the background scrolls with the element's contents, and the background painting area and background positioning area are relative to the scrollable area of the element rather than to the border framing them.
 - `scroll`
@@ -234,5 +234,13 @@ Note how the first background image is fixed to the viewport while the the secon
 
 ## See also
 
+- The other {{cssxref("background")}} CSS properties:
+  - {{cssxref("background-clip")}}
+  - {{cssxref("background-color")}}
+  - {{cssxref("background-image")}}
+  - {{cssxref("background-origin")}}
+  - {{cssxref("background-position")}}
+  - {{cssxref("background-repeat")}}
+  - {{cssxref("background-size")}}
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
