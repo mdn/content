@@ -95,7 +95,7 @@ For example:
 }
 ```
 
-An element with these declarations set will have an identifying {{cssxref("timeline-trigger-name")}} of `--my-trigger`, and a {{cssxref("timeline-trigger-source")}} value of `view()`, which selects the element's nearest ancestor scrolling element to define the timeline along which the activation range is measured.
+An element with these declarations set will have an identifying {{cssxref("timeline-trigger-name")}} of `--my-trigger`, and a {{cssxref("timeline-trigger-source")}} value of `view()`, which sets the source of the trigger to the view progress timeline tracking the element inside its nearest scrolling ancestor element along which the activation range is measured.
 
 We also set a `timeline-trigger-activation-range` value of `entry 100% exit 50%`, which sets the start of the activation range to 100% of the way through the entry range and the end of the activation range to 50% of the way through the `exit` range. The result is that the animated element's animation will activate when the trigger element has completely entered the viewport, and deactivate when 50% of the trigger element has left the viewport.
 
