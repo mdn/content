@@ -156,3 +156,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The CSS Typed Object Model Level 1 specification is being implemented.
   In this release, support for the {{domxref("CSSNumericValue/to","to()")}} method of the {{domxref("CSSNumericValue")}} interface was added, allowing the conversion of a CSS numeric value from one unit to another. ([Firefox bug 1278697](https://bugzil.la/1278697)).
+
+- **JPEG XL image support: Rust-based decoder**: `image.jxl.enabled`
+
+  The previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decoder has been replaced with a new Rust-based implementation that uses the `jxl-rs` library. ([Firefox bug 1986393](https://bugzil.la/1986393)).
