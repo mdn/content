@@ -63,6 +63,17 @@ The HTML [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elemen
 - `dom.forms.datetime.timepicker`
   - : Set to `true` to enable.
 
+### `alpha` & `colorspace` attributes in `color` input elements
+
+The HTML [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) element supports [`alpha`](/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha) & [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attributes in Nightly only. ([Firefox bug 1919718](https://bugzil.la/1919718)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 149           | Yes                 |
+| Developer Edition | -             |                     |
+| Beta              | -             |                     |
+| Release           | -             |                     |
+
 ## CSS
 
 ### Hex boxes to display stray control characters
