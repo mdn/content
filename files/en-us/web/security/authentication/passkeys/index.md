@@ -7,8 +7,6 @@ sidebar: security
 
 Passkeys enable websites to authenticate users without the user having to enter any passwords or other secret codes on the site itself. They address [many of the most serious weaknesses of other authentication methods](#security_properties_of_passkeys) such as passwords.
 
-They're considered [the most secure authentication method available to websites](#security_properties_of_passkeys), and we recommend that sites should adopt passkeys as their preferred authentication method, and [phase out the use of passwords](#migrating_from_passwords).
-
 Instead of a shared secret, passkeys rely on public-key cryptography. A passkey is a {{glossary("Public-key cryptography", "public/private key pair")}} bound to a specific user's account on a particular website.
 
 The private key is stored in a module called an _authenticator_, that's [in, or attached to, the user's device](#platform_and_roaming_authenticators). An authenticator might be built into the platform, or a separate hardware key like a [YubiKey](https://en.wikipedia.org/wiki/YubiKey), or a credential manager app like [KeePassXC](https://keepassxc.org/).
@@ -121,7 +119,7 @@ The WebAuthn specification distinguishes between _discoverable_ and _non-discove
 
 The advantage of using non-discoverable credentials is that an authenticator with limited storage can support a potentially unlimited number of accounts, because the key material for each account is not stored in the authenticator.
 
-The advantage of using discoverable credentials is that they enable a browser to implement [autofill](/en-US/docs/Web/Security/Authentication/Passkeys#autofill_ui) with public key credentials, which makes it much easier for users to sign in, especially when they might have both public key credentials and passwords for a given site.
+The advantage of using discoverable credentials is that they enable a browser to implement [autofill](#autofill_ui) with public key credentials, which makes it much easier for users to sign in, especially when they might have both public key credentials and passwords for a given site.
 
 **For this reason, passkeys must always be discoverable credentials, so RPs implementing passkey-based authentication should always make them discoverable**.
 

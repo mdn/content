@@ -38,7 +38,7 @@ setTimeout(func, delay, param1, param2, /* …, */ paramN)
   - : A {{domxref("TrustedScript")}} or a string of arbitrary code that is compiled and executed every `delay` milliseconds.
     This can be used instead of passing a function, but is _strongly discouraged_ for the same reasons that make using {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
 - `delay` {{optional_inline}}
-  - : The time that the timer should wait before the specified function or code is executed, in milliseconds.
+  - : A non-negative integer indicating how long the timer should wait before the specified function or code is executed, in milliseconds.
     Defaults to 0 if not specified.
 
     Note:
@@ -49,6 +49,7 @@ setTimeout(func, delay, param1, param2, /* …, */ paramN)
       See [Reasons for longer delays than specified](#reasons_for_longer_delays_than_specified) for more information.
     - If the value isn't a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number.
       This can lead to unexpected and surprising results — see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
+    - Negative values behave the same as 0.
 
 - `param1`, …, `paramN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by `func`.

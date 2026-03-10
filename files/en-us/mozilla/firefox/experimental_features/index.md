@@ -216,21 +216,6 @@ Specifically, this preference will disable the following prefixed properties:
 - `layout.css.prefixes.transforms`
   - : Set to `true` to enable.
 
-### `shape()` function
-
-The CSS {{cssxref("basic-shape/shape")}} function is a {{cssxref("basic-shape")}} data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is similar in some respects to the {{cssxref("basic-shape/path","path()")}} function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
-For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for the function's support in `offset-path`, and [Firefox bug 1884425](https://bugzil.la/1884425) for its interpolation support.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 126           | Yes                 |
-| Developer Edition | 126           | No                  |
-| Beta              | 126           | No                  |
-| Release           | 126           | No                  |
-
-- `layout.css.basic-shape-shape.enabled`
-  - : Set to `true` to enable.
-
 #### Relative control points in CSS `shape()` curve commands
 
 You can use [`<relative-control-point>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#relative-control-point) values when specifying a [`<curve-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#curve-command) or [`<smooth-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#smooth-command) in a CSS `shape()` function. These values let you specify control points that are positioned relative to the start or end point of the current command, or relative to the origin (top-left) of the container the shape is being drawn inside.
@@ -334,6 +319,34 @@ The {{cssxref("@custom-media")}} CSS at-rule defines aliases for long or complex
 - `layout.css.custom-media.enabled`
   - : Set to `true` to enable.
 
+### `<attr-type>` values in `attr()` CSS function
+
+The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/Web/CSS/Reference/Values/attr#attr-type) values. This allows you to specify how an attribute value is parsed into a CSS value and take those values directly from [`data-*`](/en-US/docs/Web/HTML/How_to/Use_data_attributes). ([Firefox bug 1986631](https://bugzil.la/1986631) & [Firefox bug 1998245](https://bugzil.la/1998245))
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 149           | No                  |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `layout.css.attr.enabled`
+  - : Set to `true` to enable.
+
+### `color-mix()` accepts multiple color arguments
+
+The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now supports multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix many colors and set the percentages of each. ([Firefox bug 2007772](https://bugzil.la/2007772)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 150           | Yes                 |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `layout.css.color-mix-multi-color.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -343,59 +356,6 @@ The {{cssxref("@custom-media")}} CSS at-rule defines aliases for long or complex
 **No experimental features in this release cycle.**
 
 ## APIs
-
-### CloseWatcher Interface
-
-Built-in web components with "open" and "close" semantics, such as modal dialogs and popovers, can be closed using device-native mechanisms.
-For example, on Android you can close a dialog using the back button.
-The {{domxref("CloseWatcher")}} interface allows developers to implement UI components, such as custom sidebars, that can similarly be closed using native mechanisms.
-([Firefox bug 1888729](https://bugzil.la/1888729)).
-
-| Release channel   | Version added | Enabled by default?          |
-| ----------------- | ------------- | ---------------------------- |
-| Nightly           | 140           | Yes (Desktop). No (Android). |
-| Developer Edition | 132           | No                           |
-| Beta              | 132           | No                           |
-| Release           | 132           | No                           |
-
-- `dom.closewatcher.enabled`
-  - : Set to `true` to enable.
-
-### Trusted Types API
-
-The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) provides mechanisms to ensure that functions that can potentially be used as vectors for XSS attacks are only able to be called with data that has been validated or sanitized.
-The API is enabled in early beta releases ([Firefox bug 1992941](https://bugzil.la/1992941)).
-
-This includes (non-exhaustively):
-
-- Addition of the {{domxref("TrustedTypePolicyFactory")}}, {{domxref("TrustedTypePolicy")}}, {{domxref("TrustedHTML")}}, {{domxref("TrustedScript")}}, {{domxref("TrustedScriptURL")}} interfaces, and the `trustedTypes` property on {{domxref("Window/trustedTypes", "Window")}} and {{domxref("WorkerGlobalScope/trustedTypes", "WorkerGlobalScope")}}.
-- Updates to [injection sink interfaces](/en-US/docs/Web/API/Trusted_Types_API#injection_sink_interfaces), such as {{domxref("Element.innerHTML")}} and {{domxref("Document.write()", "document.write()")}}, to allow the `TrustedHTML`, `TrustedScript`, `TrustedScriptURL` to be passed as well as strings.
-- Support for the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) and [`trusted-types`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) directives, and the [`'trusted-types-eval'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) keyword, of the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
-  These can be used to enforce trusted types instead of strings, name the specific policies that are allowed, and to enable [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and similar functions to be used when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are supported and enforced.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 145           | Yes                 |
-| Developer Edition | 145           | Yes                 |
-| Beta              | 145           | Yes                 |
-| Release           | 133           | No                  |
-
-- `dom.security.trusted_types.enabled`
-  - : Set to `true` to enable.
-
-### HTML Sanitizer API
-
-The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 146           | Yes                 |
-| Developer Edition | 147           | Yes                 |
-| Beta              | 147           | Yes                 |
-| Release           | 138           | No                  |
-
-- `dom.security.sanitizer.enabled`
-  - : Set to `true` to enable.
 
 ### Removal of `beforescriptexecute` and `afterscriptexecute` events
 
@@ -633,24 +593,6 @@ This feature is enabled on Android in all builds, but behind a preference on Des
 | Release           | 71              | No (Desktop). Yes (Android).                |
 
 - `dom.webshare.enabled`
-  - : Set to `true` to enable.
-
-### Screen Orientation API
-
-#### ScreenOrientation.lock()
-
-The {{domxref("ScreenOrientation.lock()")}} method allows a device to be locked to a particular orientation, if supported by the device and allowed by browser pre-lock requirements.
-Typically locking the orientation is only allowed on mobile devices when the document is being displayed full screen.
-See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 111             | Yes                 |
-| Developer Edition | 97              | No                  |
-| Beta              | 97              | No                  |
-| Release           | 97              | No                  |
-
-- `dom.screenorientation.allow-lock`
   - : Set to `true` to enable.
 
 ### Notifications API

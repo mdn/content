@@ -70,6 +70,7 @@ window.CSS.registerProperty({
 ## See also
 
 - Other {{cssxref("@property")}} descriptors: {{cssxref("@property/initial-value", "initial-value")}} and {{cssxref("@property/syntax","syntax")}}
+- [Registering CSS custom properties](/en-US/docs/Web/CSS/Guides/Properties_and_values_API/Registering_properties)
 - [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
