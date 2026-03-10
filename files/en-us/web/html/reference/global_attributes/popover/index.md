@@ -129,7 +129,7 @@ header button {
 }
 ```
 
-We've used [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/) to position the menu popover below the `<button>` and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout/) to lay out the menu items and info buttons.
+We've used [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) to position the menu popover below the `<button>` and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) to lay out the menu items and info buttons.
 
 ```css
 #menu {
