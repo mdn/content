@@ -46,7 +46,7 @@ The `animation-trigger` property may be specified using one or more `animation-t
 ### Values
 
 - `none`
-  - : Specifies that the animation is not a scroll-triggered animation.
+  - : Specifies that the animation is not a triggered animation.
 - {{cssxref("dashed-ident")}}
   - : An identifier equal to the {{cssxref("timeline-trigger-name")}} of the element that will trigger the animation.
 - {{cssxref("animation-action")}}
