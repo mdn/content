@@ -14,7 +14,7 @@ On [inherited properties](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance#inherit
 
 ### Basic usage
 
-In this example, we use the `initial` value to reset {{cssxref("color")}} and {{cssxref("font-size")}} for an element.
+In this example, we use the `initial` keyword to reset an element's {{cssxref("color")}} and {{cssxref("font-size")}} property values.
 
 #### HTML
 
@@ -31,7 +31,7 @@ In this example, we use the `initial` value to reset {{cssxref("color")}} and {{
 
 #### CSS
 
-We define a `color` and `font-size` on the paragraph, and reset the values on the {{htmlelement("em")}} by setting these property values to `initial`.
+We set `color` and `font-size` on the `<p>` element, then set those properties to `initial` on the {{htmlelement("em")}} element to reset them.
 
 ```css
 p {
@@ -49,7 +49,7 @@ em {
 
 {{EmbedLiveSample('Using_initial_to_reset_color_for_an_element')}}
 
-With the `initial` keyword in this example, the `color` and `font-size` values on the `em` element are restored to the initial values of [`color`](/en-US/docs/Web/CSS/Reference/Properties/color#formal_definition) and [`font-size`](/en-US/docs/Web/CSS/Reference/Properties/color#formal_definition), respectively, as defined in the specification.
+With the `initial` keyword in this example, the `color` and `font-size` values on the `em` element are restored to the initial values for [`color`](/en-US/docs/Web/CSS/Reference/Properties/color#formal_definition) and [`font-size`](/en-US/docs/Web/CSS/Reference/Properties/font-size#formal_definition), respectively.
 
 ## Specifications
 
