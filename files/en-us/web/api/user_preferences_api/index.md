@@ -11,7 +11,7 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#preferences-attribute
 
 {{DefaultAPISidebar("User Preferences API")}}{{SeeCompatTable}}
 
-The **User Preferences API** allows page authors to programmatically override user preference-related {{cssxref("Guides/Media_queries", "media query")}} settings.
+The **User Preferences API** allows page authors to programmatically override user preference-related [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using) settings.
 
 ## Concepts and Usage
 

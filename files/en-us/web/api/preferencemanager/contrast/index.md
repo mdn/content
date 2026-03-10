@@ -11,13 +11,13 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#contrast-attribute
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`contrast`** read-only property of the {{domxref("PreferenceManager")}} interface returns a {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-color-scheme", "color scheme")}} of the site.
+The **`contrast`** read-only property of the {{domxref("PreferenceManager")}} interface returns a {{domxref("PreferenceObject")}} used to override the user's preference for the [contrast](/en-US/docs/Web/CSS/Reference/Reference/At-rules/@media/prefers-contrast) of the site.
 
 Valid `contrast` {{domxref("PreferenceObject.value")}} settings are `more`, `less`, and `no-preference`.
 
 ## Value
 
-A {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-color-scheme", "color scheme")}} of the site.
+A {{domxref("PreferenceObject")}} used to override the user's preference for the [contrast](/en-US/docs/Web/CSS/Reference/Reference/At-rules/@media/prefers-contrast) of the site.
 
 ## Examples
 

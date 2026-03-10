@@ -11,13 +11,13 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#color-scheme-attribute
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`colorScheme`** read-only property of the {{domxref("PreferenceManager")}} interface returns a {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-color-scheme", "color scheme")}} of the site.
+The **`colorScheme`** read-only property of the {{domxref("PreferenceManager")}} interface returns a {{domxref("PreferenceObject")}} used to override the user's preference for the [color scheme](/en-US/docs/Web/CSS/Reference/Reference/At-rules/@media/prefers-color-scheme) of the site.
 
 Valid `colorScheme` {{domxref("PreferenceObject.value")}} settings are `dark` and `light`.
 
 ## Value
 
-A {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-color-scheme", "color scheme")}} of the site.
+A {{domxref("PreferenceObject")}} used to override the user's preference for the [color scheme](/en-US/docs/Web/CSS/Reference/Reference/At-rules/@media/prefers-color-scheme) of the site.
 
 ## Examples
 
