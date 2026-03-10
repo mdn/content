@@ -60,10 +60,9 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This allows developers to implement components that can be closed using device-native mechanisms, such as the <kbd>Esc</kbd> on Windows or the <kbd>Back</kbd> key on Android, in the same way as built-in components such as [dialogs](/en-US/docs/Web/HTML/Reference/Elements/dialog) and [popovers](/en-US/docs/Web/API/Popover_API).
   ([Firefox bug 1966073](https://bugzil.la/1966073)).
 
-- Methods that create and set DOM elements, custom elements, attributes and documents now allow more characters in name and namespaces arguments.
+- DOM methods now allow the same characters to be used for element and attribute names as the HTML parser (previously DOM methods were far more restrictive about the set of allowed characters).
   ([Firefox bug 1773312](https://bugzil.la/1773312)).
 
-  This follows a specification update that allows the same set of characters that are permitted by the HTML parser (previously allowed characters were restricted to those permitted in [XML names](https://www.w3.org/TR/xml/#dt-name)).
   The affected methods are: {{domxref("Document/createAttribute","createAttribute()")}}, {{domxref("Document/createAttributeNS","createAttributeNS()")}}, {{domxref("Document/createElement","createElement()")}} and {{domxref("Document/createElementNS","createElementNS()")}} of the {{domxref("Document")}} interface, {{domxref("Element/toggleAttribute","toggleAttribute()")}}, {{domxref("Element/setAttribute","setAttribute()")}}, {{domxref("Element/setAttributeNS","setAttributeNS()")}} of the {{domxref("Element")}} interface, {{domxref("DOMImplementation/createDocument","createDocument()")}} of the {{domxref("DOMImplementation")}} interface, and {{domxref("CustomElementRegistry/define","define()")}} and {{domxref("CustomElementRegistry/whenDefined","whenDefined()")}} of the {{domxref("CustomElementRegistry/whenDefined","whenDefined()")}} interface.
 
 #### Media, WebRTC, and Web Audio
