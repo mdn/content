@@ -1123,7 +1123,7 @@ Next, we define a {{cssxref("@container")}} block that sets the container name w
 ```css hidden live-sample___scrollable live-sample___scrolled live-sample___snapped live-sample___stuck
 @supports not (container-type: scroll-state) {
   body::before {
-    content: "Your browser does not support the `scroll-state` value of the 'container-type' property.";
+    content: "Your browser does not support `scroll-state` container queries.";
     color: black;
     background-color: wheat;
     position: fixed;
