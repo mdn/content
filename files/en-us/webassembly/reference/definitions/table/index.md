@@ -78,7 +78,7 @@ A table has to be given an initial size and storage type. This example creates a
 Optionally, you can also provide an identifier, which can be used to identify the table elsewhere, and a maximum growth size. For example:
 
 ```wat
-(table $mytable 2 10 funcref)
+(table $my_table 2 10 funcref)
 ```
 
 The following defines a function type, defines a basic function with that type that returns an `i32`, and forward-declares it using `(elem declare func $f1)` so it can be referenced later on.
@@ -106,7 +106,7 @@ It is possible to mutate tables at runtime using instructions like [`table.set`]
 You can also store external references defined in JavaScript inside a Wasm table, by specifying the [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) keyword. For example:
 
 ```wat
-(table $mytable 2 10 externref)
+(table $my_table 2 10 externref)
 ```
 
 ### Multiple tables
@@ -214,7 +214,7 @@ The outputted value is as follows:
 
 {{embedlivesample("basic-usage", "100%", 100)}}
 
-This makes sense, as the exported `accessTable()` function has an index value passed into it. Inside the Wasm module, we call the function availale at that index in the defined table, which returns the value we see output.
+This makes sense, as the exported `accessTable()` function has an index value passed into it. Inside the Wasm module, we call the function available at that index in the defined table, which returns the value we see output.
 
 ## Specifications
 

@@ -62,8 +62,8 @@ gap: calc(20px + 10%);
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("column-gap")}}
 - {{cssxref("row-gap")}}
+- {{cssxref("column-gap")}}
 
 ## Syntax
 
