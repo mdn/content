@@ -22,7 +22,7 @@ This is a static command; it can run without an active session.
 
 ### Parameters
 
-None. However, an empty params object `{}` must be sent.
+None. However, you must include a `params` field and set it to an empty object (`{}`).
 
 ### Return value
 

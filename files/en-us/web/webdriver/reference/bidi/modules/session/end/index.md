@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.session.end
 sidebar: webdriver
 ---
 
-The `session.end` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`session`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session) module ends the current BiDi session with the browser.
+The `session.end` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`session`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session) module ends the client's current BiDi session with the browser.
 
 ## Syntax
 
@@ -20,11 +20,11 @@ The `session.end` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#com
 
 ### Parameters
 
-None. However, an empty params object `{}` must be sent.
+None. However, you must include a `params` field and set it to an empty object (`{}`).
 
 ### Return value
 
-None.
+The `result` field is an empty object (`{}`).
 
 ## Examples
 

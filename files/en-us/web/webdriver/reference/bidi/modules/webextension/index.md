@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.webExtension
 sidebar: webdriver
 ---
 
-The **`webExtension`** module contains commands for managing browser extensions.
+The **`webExtension`** module contains commands for managing [browser extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
 
 ## Specifications
 
