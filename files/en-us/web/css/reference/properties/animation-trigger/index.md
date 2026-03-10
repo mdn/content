@@ -353,7 +353,7 @@ The {{htmlelement("div")}} element has an `animation` applied that smoothly inve
 We then specify a `timeline-trigger` value of `--t view() contain` on the same `<div>`, meaning that it is the trigger for its own animation. This value includes the identifier referenced in the `animation-trigger` property, plus:
 
 - A `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the source of the trigger to the view progress timeline tracking the element inside its nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the animation will activate when the `<div>` is fully inside the viewport, and deactivate when it stops being fully inside the viewport.
+- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the trigger will activate when the `<div>` is fully inside the viewport, and deactivate when it stops being fully inside the viewport.
 
   > [!NOTE]
   > This is in contrast to the default activation range, [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover), which would cause the animation to activate when any part of the `<div>` enters the viewport and deactivate only when it has fully left the viewport.
