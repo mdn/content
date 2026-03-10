@@ -139,7 +139,7 @@ The animated {{htmlelement("div")}} element has an `animation` applied that rota
 The trigger `<div>` element is defined as the animated `<div>`'s trigger using a `timeline-trigger` value of `--t view()`. This value includes the identifier referenced in the animated `<div>`'s `animation-trigger` property value (the `timeline-trigger-name`), associating the two together. It also includes:
 
 - A `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the source of the trigger to the view progress timeline tracking the element inside its nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the animation will activate when the `<div>` is fully inside the viewport, and deactivate when it stops being fully inside the viewport.
+- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the trigger will activate when the `<div>` is fully inside the viewport, and deactivate when it stops being fully inside the viewport.
 
 ```css hidden live-sample___basic-example
 body {
