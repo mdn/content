@@ -6,6 +6,7 @@ page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.gamepad
+spec-urls: https://www.w3.org/TR/gamepad/#permission-policy
 sidebar: http
 ---
 
@@ -26,7 +27,7 @@ Permissions-Policy: gamepad=<allowlist>;
 
 ## Default policy
 
-The default allowlist for `gamepad` is `self`.
+The default allowlist for `gamepad` is `*`.
 
 ## Examples
 

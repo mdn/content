@@ -13,7 +13,7 @@ The aim of this skill test is to help you assess whether you understand [images 
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Images 1
 
 In this task, we want you to embed an image of some Blueberries into the page.
 
@@ -22,6 +22,12 @@ To complete the task:
 1. Add the path to the image to an appropriate attribute to embed it on the page. The image is called `blueberries.jpg`, and it is available at a path of `https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images/blueberries.jpg?raw=true`.
 2. Add some alternative text to an appropriate attribute to describe the image, for people that cannot see it.
 3. Give the `<img>` element a `width` attribute of `400` and an appropriate `height` attribute so that it displays at the correct {{glossary("aspect ratio")}}, and doesn't cause a re-render when it loads. The image's {{glossary("intrinsic size")}} is 615 x 419 pixels.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('images-1', "100%", 200) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___images-1
 <h1>Basic image embed</h1>
@@ -33,7 +39,7 @@ To complete the task:
 
 <!-- Shared/setup CSS code -->
 
-```css hidden live-sample___images-1 live-sample___images-2 live-sample___images-3
+```css hidden live-sample___images-1 live-sample___images-2 live-sample___images-3 live-sample___images-1-finished live-sample___images-2-finished live-sample___images-3-finished
 body {
   background-color: white;
   color: #333333;
@@ -55,14 +61,16 @@ img {
 }
 ```
 
-{{ EmbedLiveSample('images-1', "100%", 200) }}
+The updated content should look like this:
+
+{{ EmbedLiveSample('images-1-finished', "100%", 460) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html-nolint
+```html-nolint live-sample___images-1-finished
 <h1>Basic image embed</h1>
 
 <img src="https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images/blueberries.jpg?raw=true"
@@ -75,9 +83,15 @@ We calculated the correct `height` value to set using the calculation 400 x 419/
 
 </details>
 
-## Task 2
+## Images 2
 
 In this task, you already have a full-featured image, but we'd like you to add a tooltip that appears when the image is moused over. You should put some appropriate information into the tooltip.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('images-2', "100%", 600) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___images-2
 <h1>Basic image title</h1>
@@ -87,14 +101,14 @@ In this task, you already have a full-featured image, but we'd like you to add a
   alt="Several tall evergreen trees called larches" />
 ```
 
-{{ EmbedLiveSample('images-2', "100%", 600) }}
+We've not provided finished content for this task, as it looks the same as the starting point.
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html-nolint
+```html-nolint live-sample___images-2-finished
 <h1>Basic image title</h1>
 
 <img
@@ -105,9 +119,15 @@ Your finished HTML should look like this:
 
 </details>
 
-## Task 3
+## Images 3
 
 In this task, you are provided with both a full-featured image and some caption text. What you need to do here is add elements that will associate the image with the caption.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('images-3', "100%", 600) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___images-3
 <h1>Image and caption</h1>
@@ -120,20 +140,22 @@ In this task, you are provided with both a full-featured image and some caption 
 The 2019 Firefox logo
 ```
 
-```css hidden live-sample___images-3
+```css hidden live-sample___images-3 live-sample___images-3-finished
 figcaption {
   font-style: italic;
 }
 ```
 
-{{ EmbedLiveSample('images-3', "100%", 600) }}
+The updated content should look like this:
+
+{{ EmbedLiveSample('images-3-finished', "100%", 640) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html
+```html live-sample___images-3-finished
 <h1>Image and caption</h1>
 
 <figure>

@@ -95,71 +95,71 @@ Each of the pages below contains detailed information about a math function's sy
 
 ### Basic arithmetic
 
-- {{CSSxRef("calc", "calc()")}}
+- {{cssxref("calc()")}}
   - : Performs basic arithmetic calculations on numerical values.
-- {{CSSxRef("calc-size", "calc-size()")}}
+- {{cssxref("calc-size()")}}
   - : Perform calculations on intrinsic size values such as `auto`, `fit-content`, and `max-content`, which are not supported by the `calc()` function.
 
 ### Comparison functions
 
-- {{CSSxRef("min", "min()")}}
+- {{cssxref("min()")}}
   - : Calculates the smallest of a list of values.
-- {{CSSxRef("max", "max()")}}
+- {{cssxref("max()")}}
   - : Calculates the largest of a list of values.
-- {{CSSxRef("clamp", "clamp()")}}
+- {{cssxref("clamp()")}}
   - : Calculates the central of a minimum, central, and maximum values.
 
 ### Stepped value functions
 
-- {{CSSxRef("round", "round()")}}
+- {{cssxref("round()")}}
   - : Calculates a rounded number based on a rounding strategy.
-- {{CSSxRef("mod", "mod()")}}
+- {{cssxref("mod()")}}
   - : Calculates a modulus (with the same sign as the divisor) when dividing one number by another.
-- {{CSSxRef("progress", "progress()")}}
+- {{cssxref("progress()")}}
   - : Calculates the position of a value between two other values — a start value and an end value. The result is expressed as a number between 0 and 1 representing the progress between the start and end values.
-- {{CSSxRef("rem", "rem()")}}
+- {{cssxref("rem()")}}
   - : Calculates a remainder (with the same sign as the dividend) when dividing one number by another.
 
 ### Trigonometric functions
 
-- {{CSSxRef("sin", "sin()")}}
+- {{cssxref("sin()")}}
   - : Calculates the trigonometric sine of a number.
-- {{CSSxRef("cos", "cos()")}}
+- {{cssxref("cos()")}}
   - : Calculates the trigonometric cosine of a number.
-- {{CSSxRef("tan", "tan()")}}
+- {{cssxref("tan()")}}
   - : Calculates the trigonometric tangent of a number.
-- {{CSSxRef("asin", "asin()")}}
+- {{cssxref("asin()")}}
   - : Calculates the trigonometric inverse sine of a number.
-- {{CSSxRef("acos", "acos()")}}
+- {{cssxref("acos()")}}
   - : Calculates the trigonometric inverse cosine of a number.
-- {{CSSxRef("atan", "atan()")}}
+- {{cssxref("atan()")}}
   - : Calculates the trigonometric inverse tangent of a number.
-- {{CSSxRef("atan2", "atan2()")}}
+- {{cssxref("atan2()")}}
   - : Calculates the trigonometric inverse tangent of two-numbers in a plane.
 
 ### Exponential functions
 
-- {{CSSxRef("pow", "pow()")}}
+- {{cssxref("pow()")}}
   - : Calculates the base raised to the power of a number.
-- {{CSSxRef("sqrt", "sqrt()")}}
+- {{cssxref("sqrt()")}}
   - : Calculates the square root of a number.
-- {{CSSxRef("hypot", "hypot()")}}
+- {{cssxref("hypot()")}}
   - : Calculates the square root of the sum of the squares of its arguments.
-- {{CSSxRef("log", "log()")}}
+- {{cssxref("log()")}}
   - : Calculates the logarithm of a number.
-- {{CSSxRef("exp", "exp()")}}
+- {{cssxref("exp()")}}
   - : Calculates `e` raised to the power of a number.
 
 ### Sign-related functions
 
-- {{CSSxRef("abs", "abs()")}}
+- {{cssxref("abs()")}}
   - : Calculates the absolute value of a number.
-- {{CSSxRef("sign", "sign()")}}
+- {{cssxref("sign()")}}
   - : Calculates the sign (positive or negative) of the number.
 
 ## Filter functions
 
-The {{CSSxRef("&lt;filter-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a graphical effect that can change the appearance of an input image. It is used in the {{CSSxRef("filter")}} and {{CSSxRef("backdrop-filter")}} properties.
+The {{cssxref("filter-function")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a graphical effect that can change the appearance of an input image. It is used in the {{CSSxRef("filter")}} and {{CSSxRef("backdrop-filter")}} properties.
 
 - {{CSSxRef("filter-function/blur", "blur()")}}
   - : Increases the image gaussian blur.
@@ -215,7 +215,7 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
 
 ## Image functions
 
-The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) provides graphical representation of images or gradients.
+The {{cssxref("image")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) provides graphical representation of images or gradients.
 
 ### Gradient functions
 
@@ -235,32 +235,32 @@ The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/Reference/V
 ### Image functions
 
 - {{CSSxRef("image/image","image()")}}
-  - : Defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{cssxref("url_value", "&lt;url&gt;")}} type, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
+  - : Defines an {{cssxref("image")}} in a similar fashion to the {{cssxref("url_value", "&lt;url&gt;")}} type, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
 - {{CSSxRef("image/image-set","image-set()")}}
   - : Picks the most appropriate CSS image from a given set, primarily for high pixel density screens.
-- {{CSSxRef("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}
   - : Blends two or more images at a defined transparency.
-- {{CSSxRef("element", "element()")}}
-  - : Defines an {{CSSxRef("&lt;image&gt;")}} value generated from an arbitrary HTML element.
+- {{cssxref("element()")}}
+  - : Defines an {{cssxref("image")}} value generated from an arbitrary HTML element.
 - {{CSSxRef("image/paint", "paint()")}}
-  - : Defines an {{CSSxRef("&lt;image&gt;")}} value generated with a PaintWorklet.
+  - : Defines an {{cssxref("image")}} value generated with a PaintWorklet.
 
 ## Counter functions
 
 CSS counter functions are generally used with the {{CSSxRef("content")}} property, although in theory, they may be used wherever a {{CSSxRef("&lt;string&gt;")}} is supported.
 
-- {{CSSxRef("counter", "counter()")}}
+- {{cssxref("counter()")}}
   - : Returns a string representing the current value of the named counter if there is one.
-- {{CSSxRef("counters", "counters()")}}
+- {{cssxref("counters()")}}
   - : Enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any.
-- {{CSSxRef("symbols", "symbols()")}}
+- {{cssxref("symbols()")}}
   - : Defines the counter styles inline, directly as the value of a property.
 
 ## Shape functions
 
 ### Basic shapes
 
-The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a graphical shape. It is used in the {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, and {{CSSxRef("shape-outside")}} properties.
+The {{cssxref("basic-shape")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a graphical shape. It is used in the {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, and {{CSSxRef("shape-outside")}} properties.
 
 - {{CSSxRef("basic-shape/circle","circle()")}}
   - : Defines a circle shape.
@@ -281,7 +281,7 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/Refer
 
 ### Other shape functions
 
-- {{CSSxRef("ray", "ray()")}}
+- {{cssxref("ray()")}}
   - : Valid with {{cssxref("offset-path")}}; defines the line segment an animated element can follow.
 - {{CSSxRef("superellipse()")}}
   - : Defines the curvature of an ellipse; can be used to specify a {{cssxref("corner-shape-value")}}, which is used with {{cssxref("corner-shape")}} and its [constituent](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#constituent_properties) and [related](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#properties_that_follow_the_corner_shape) properties.
@@ -290,26 +290,26 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/Refer
 
 The following functions are used as a value of properties to reference a value defined elsewhere:
 
-- {{CSSxRef("attr", "attr()")}}
+- {{cssxref("attr()")}}
   - : Uses the attributes defined on HTML element.
-- {{CSSxRef("env", "env()")}}
+- {{cssxref("env()")}}
   - : Uses the user-agent defined as environment variable.
-- {{CSSxRef("if", "if()")}}
+- {{cssxref("if()")}}
   - : Conditionally sets a property value depending on the result of a [style query](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries), [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using), or [feature query](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
 - {{cssxref("url_function", "url()")}}
   - : Uses a file from the specified URL.
-- {{CSSxRef("var", "var()")}}
+- {{cssxref("var()")}}
   - : Uses the custom property value instead of any part of a value of another property.
 
 ## Grid functions
 
 The following functions are used to define a [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout):
 
-- {{CSSxRef("fit-content_function", "fit-content()")}}
+- {{cssxref("fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
-- {{CSSxRef("minmax", "minmax()")}}
+- {{cssxref("minmax()")}}
   - : Defines a size range greater-than or equal-to _min_ and less-than or equal-to _max_.
-- {{CSSxRef("repeat", "repeat()")}}
+- {{cssxref("repeat()")}}
   - : Represents a repeated fragment of the track list, allowing a large number of columns or rows that exhibit a recurring pattern.
 
 ## Font functions
@@ -331,7 +331,7 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 
 ## Easing functions
 
-The {{CSSxRef("&lt;easing-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a mathematical function. It is used in transition and animation properties:
+The {{cssxref("easing-function")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a mathematical function. It is used in transition and animation properties:
 
 - {{cssxref("easing-function/linear", "linear()")}}
   - : Easing function that interpolates linearly between its points.
@@ -353,18 +353,18 @@ The following functions are used as a value of different {{CSSxRef("animation-ti
 
 The anchor positioning functions are used when positioning and sizing anchor-positioned elements relative to the location and size of their associated anchor elements.
 
-- {{cssxref("anchor", "anchor()")}}
+- {{cssxref("anchor()")}}
   - : Returns a length relative to the position of the edges of an anchor-positioned element's associated anchor element.
-- {{cssxref("anchor-size", "anchor-size()")}}
+- {{cssxref("anchor-size()")}}
   - : Returns a length relative to the size of the associated anchor element.
 
 ## Tree counting functions
 
 The following functions return an integer value based on the DOM tree, rather than the flat tree like most CSS values do:
 
-- {{cssxref("sibling-index", "sibling-index()")}}
+- {{cssxref("sibling-index()")}}
   - : Returns an integer reflecting the position of the selected element among its siblings.
-- {{cssxref("sibling-count", "sibling-count()")}}
+- {{cssxref("sibling-count()")}}
   - : Returns an integer reflecting the total number of siblings, including the selected element.
 
 ## Alphabetical index of functions
@@ -401,7 +401,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("basic-shape/ellipse", "ellipse()")}}
 - {{cssxref("env")}}
 - {{cssxref("exp")}}
-- {{cssxref("fit-content_function", "fit-content()")}}
+- {{cssxref("fit-content()")}}
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
 - {{cssxref("color_value/hsl", "hsl()")}}
 - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
@@ -477,7 +477,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("transform-function/translateY", "translateY()")}}
 - {{cssxref("transform-function/translateZ", "translateZ()")}}
 - {{cssxref("type")}} {{experimental_inline}}
-- {{cssxref("url_function")}}
+- {{cssxref("url_function", "url()")}}
 - {{cssxref("var")}}
 - {{cssxref("animation-timeline/view", "view()")}}
 - {{cssxref("basic-shape/xywh", "xywh()")}}

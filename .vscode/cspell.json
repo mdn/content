@@ -28,7 +28,8 @@
   "ignorePaths": [
     ".vscode/cspell.json",
     ".vscode/extensions.json",
-    ".markdownlint-cli2.jsonc"
+    ".markdownlint-cli2.jsonc",
+    "files/jsondata/L10n-*.json"
   ],
   "ignoreRegExpList": [
     // macros

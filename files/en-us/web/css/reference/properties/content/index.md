@@ -51,6 +51,7 @@ content: image-set("image1x.png" 1x, "image2x.png" 2x);
 
 /* speech output: alternative text after a "/"  */
 content: url("../img/test.png") / "This is the alt text";
+content: counter(chapter) / "Chapter " counter(chapter);
 
 /* <string> value */
 content: "unparsed text";
@@ -91,7 +92,7 @@ The value can be:
 - One of two keywords: `none` or `normal`. `normal` is the default property value.
 - `<content-replacement>` when replacing a DOM node. `<content-replacement>` is always an `<image>`.
 - A `<content-list>` when replacing pseudo-elements and margin boxes. A `<content-list>` is a list of one or more anonymous inline boxes appearing in the order specified. Each `<content-list>` item is of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader).
-- An optional alternative text value of a `<string>` or `<counter>`, preceded by a slash (`/`).
+- An optional alternative text value that can include `<string>`, `<counter>`, or [`attr()`](#attrx) function values, preceded by a slash (`/`).
 
 The keywords and data types mentioned above are described in more detail below:
 
@@ -105,15 +106,15 @@ The keywords and data types mentioned above are described in more detail below:
 - {{cssxref("&lt;string&gt;")}}
   - : A sequence of characters enclosed in matching single or double quotes. Multiple string values will be concatenated (there is no concatenation operator in CSS).
 
-- {{cssxref("&lt;image&gt;")}}
-  - : An {{cssxref("&lt;image&gt;")}}, representing an image to display. This can be equal to a {{cssxref("url_value", "&lt;url&gt;")}}, {{cssxref("image/image-set", "image-set()")}}, or {{cssxref("&lt;gradient&gt;")}} data type, or a part of the webpage itself, defined by the {{cssxref("element", "element()")}} function.
+- {{cssxref("image")}}
+  - : An {{cssxref("image")}}, representing an image to display. This can be equal to a {{cssxref("url_value", "&lt;url&gt;")}}, {{cssxref("image/image-set", "image-set()")}}, or {{cssxref("gradient")}} data type, or a part of the webpage itself, defined by the {{cssxref("element()")}} function.
 
 - `<counter>`
-  - : The `<counter>` value is a [CSS counter](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters), generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function.
-    - {{cssxref("counter", "counter()")}}
-      - : The {{cssxref("counter", "counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
-    - {{cssxref("counters", "counters()")}}
-      - : The {{cssxref("counters", "counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
+  - : The `<counter>` value is a [CSS counter](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters), generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter()")}} or {{cssxref("counters()")}} function.
+    - {{cssxref("counter()")}}
+      - : The {{cssxref("counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
+    - {{cssxref("counters()")}}
+      - : The {{cssxref("counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
 
 - `<quote>`
   - : The `<quote>` data type includes language- and position-dependent keywords:
@@ -131,8 +132,8 @@ The keywords and data types mentioned above are described in more detail below:
 - `attr(x)`
   - : The `attr(x)` CSS function retrieves the value of an attribute of the selected element, or the pseudo-element's originating element. The value of the element's attribute `x` is an unparsed string representing the attribute name. If there is no attribute `x`, an empty string is returned. The case sensitivity of the attribute name parameter depends on the document language.
 
-- alternative text: `/ <string> | <counter>`
-  - : Alternative text may be specified for an image or any `<content-list>` items, by appending a forward slash and then a string of text or a counter. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers. The {{cssxref("string", "/ &lt;string>")}} or {{cssxref("counter", "/ &lt;counter>")}} data types specify the "alt text" for the element.
+- alternative text: `/ <string> | <counter> | attr()`
+  - : Alternative text may be specified for an image or any `<content-list>` items, by appending a forward slash and then a combination of strings, counters, and `attr()` functions. The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers.
 
 ## Formal definition
 
@@ -280,7 +281,7 @@ li::marker {
 
 {{EmbedLiveSample('Adding_text_to_list_item_counters', '100%', 200)}}
 
-The generated content on each list item's marker adds the text "item " as a prefix, including a space to separate the prefix from the counter, which is followed by ": ", a colon and an additional space. The {{cssxref("counters", "counters()")}} function defines a numeric `items` counter, in which the numbers of nested ordered lists have their numbers separated with a period (`.`) in most browsers.
+The generated content on each list item's marker adds the text "item " as a prefix, including a space to separate the prefix from the counter, which is followed by ": ", a colon and an additional space. The {{cssxref("counters()")}} function defines a numeric `items` counter, in which the numbers of nested ordered lists have their numbers separated with a period (`.`) in most browsers.
 
 ### Strings with attribute values
 
@@ -341,6 +342,56 @@ a::before {
 > The alternative text value is exposed in the browser's accessibility tree. Refer to the [See also](#see_also) section for browser-specific accessibility panels.
 
 If using a screen reader, it should speak the word "MOZILLA" when it reaches the image. You can select the `::before` pseudo-element with your developer tools selection tool, and view the {{glossary("accessible name")}} in the accessibility panel.
+
+### Including counters in alternative text
+
+This example features a list of links to a set of book chapters, and shows how to use generated content to include a book icon and a counter before each one, with alternative text that includes the literal word "Chapter" in place of the icon. This results in the word "chapter" and the chapter number preceding the text in each link's {{glossary("accessible name")}}, which will be announced to screen reader users when the link receives focus.
+
+#### HTML
+
+We include a heading followed by an ordered list of chapter title links using {{htmlelement("ol")}}, {{htmlelement("li")}}, and {{htmlelement("a")}} elements.
+
+```html live-sample___alt-counter
+<h2>Chapter list</h2>
+<ol>
+  <li><a href="#">A stranger calls</a></li>
+  <li><a href="#">Two owls</a></li>
+  <li><a href="#">Dinner was bland</a></li>
+  <li><a href="#">Three owls</a></li>
+  <li><a href="#">No-one answered the door</a></li>
+  <li><a href="#">The stranger leaves</a></li>
+  <li><a href="#">Bedtime</a></li>
+</ol>
+```
+
+#### CSS
+
+The CSS includes a {{cssxref("counter-reset")}} for the `chapter` counter on the `<ol>` element. We also increment the `chapter` counter on each `<li>` element using {{cssxref("counter-increment")}}, and remove the list markers by setting a {{cssxref("list-style-type")}} value of `none`.
+
+```css live-sample___alt-counter
+ol {
+  counter-reset: chapter;
+}
+
+li {
+  counter-increment: chapter;
+  list-style-type: none;
+}
+```
+
+Next, we set the `<a>` elements' {{cssxref("::before")}} pseudo-elements to have generated `content` equal to a book emoji to represent a chapter, plus the current `chapter` counter value, and a space character so that the generated content is separated from the link text. Finally, we set the generated content's alt text to the current `chapter` counter value preceded by the word "Chapter".
+
+```css live-sample___alt-counter
+a::before {
+  content: "📖 " counter(chapter) " " / "Chapter " counter(chapter);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('alt-counter', '100%', 270)}}
+
+When a screen reader navigates to a link within the list, supporting browsers will announce "Chapter" followed by the current counter number, followed by the link text, for example, "Chapter 1 A stranger calls" and "Chapter 2 Two owls".
 
 ### Element replacement with URL
 

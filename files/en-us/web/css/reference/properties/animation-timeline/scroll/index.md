@@ -6,7 +6,7 @@ browser-compat: css.properties.animation-timeline.scroll
 sidebar: cssref
 ---
 
-The **`scroll()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used to define the scroller and axis of an [anonymous scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_scroll_progress_timelines).
+The **`scroll()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used with the {{cssxref("animation-timeline")}} property to create an [anonymous scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_scroll_progress_timelines), defining the scroller and axis of the timeline.
 
 ## Syntax
 

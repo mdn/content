@@ -22,7 +22,7 @@ class ExampleScene extends Phaser.Scene {
 
 ## Loading the ball sprite
 
-Loading images and printing them on our canvas is a lot easier using Phaser than using pure JavaScript. To load the asset, we will use the `Phaser.Scene`'s `load.image()` method, available as `this.load.image`. Add the following new line inside the `preload()` method:
+With Phaser, Loading images and printing them on our canvas is less complex than doing so using pure JavaScript. To load the asset, we will use the `Phaser.Scene`'s `load.image()` method, available as `this.load.image`. Add the following new line inside the `preload()` method:
 
 ```js
 class ExampleScene extends Phaser.Scene {
@@ -33,7 +33,7 @@ class ExampleScene extends Phaser.Scene {
 }
 ```
 
-The first parameter gives the asset its name that will be used across our game code. For consistency, use the same name as the backing property, which is `ball`. The second parameter is the relative path to the graphic asset. In our case, we will load the image for our ball. (Note that the file name does not need to be called `ball`, but we'd recommend it, as it makes everything easier to follow.)
+The first parameter gives the asset its name that will be used across our game code. For consistency, use the same name as the backing property, which is `ball`. The second parameter is the relative path to the graphic asset. In our case, we will load the image for our ball. (Note that the file name does not need to be called `ball`, but we'd recommend it, as it makes everything more intuitive to follow.)
 
 Of course, to load the image, it must be available in our code directory. [Grab the ball image from our assets website](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png), and save it inside an `/img` directory in the same place as your `index.html` file.
 

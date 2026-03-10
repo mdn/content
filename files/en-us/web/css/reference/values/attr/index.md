@@ -9,7 +9,7 @@ sidebar: cssref
 > [!NOTE]
 > The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental.
 
-The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to retrieve the value of an attribute of the selected element and use it in a property value, similar to how the {{cssxref("var", "var()")}} function substitutes a custom property value. It can also be used with [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), in which case the attribute's value on the pseudo-element's originating element is returned.
+The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to retrieve the value of an attribute of the selected element and use it in a property value, similar to how the {{cssxref("var()")}} function substitutes a custom property value. It can also be used with [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), in which case the attribute's value on the pseudo-element's originating element is returned.
 
 {{InteractiveExample("CSS Demo: attr()", "tabbed-shorter")}}
 
@@ -369,7 +369,7 @@ The HTML contains four cards with different `id` attributes and a "Shuffle cards
 <div class="warning">
   <p>
     Your browser does not support advanced <code>attr()</code>. As a result,
-    this demo won’t do anything.
+    this demo won't do anything.
   </p>
 </div>
 ```

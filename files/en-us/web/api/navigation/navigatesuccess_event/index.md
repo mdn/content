@@ -3,12 +3,10 @@ title: "Navigation: navigatesuccess event"
 short-title: navigatesuccess
 slug: Web/API/Navigation/navigatesuccess_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Navigation.navigatesuccess_event
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`navigatesuccess`** event of the {{domxref("Navigation")}} interface is fired when a successful navigation has finished.
 

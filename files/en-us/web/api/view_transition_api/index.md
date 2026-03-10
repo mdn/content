@@ -5,7 +5,9 @@ page-type: web-api-overview
 browser-compat:
   - api.Document.startViewTransition
   - css.at-rules.view-transition
-spec-urls: https://drafts.csswg.org/css-view-transitions/
+spec-urls:
+  - https://drafts.csswg.org/css-view-transitions-2/
+  - https://drafts.csswg.org/css-view-transitions/
 ---
 
 {{DefaultAPISidebar("View Transition API")}}
@@ -34,8 +36,12 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 
 ## Interfaces
 
+- {{domxref("CSSViewTransitionRule")}}
+  - : Represents a {{cssxref("@view-transition")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 - {{domxref("ViewTransition")}}
   - : Represents a view transition, and provides functionality to react to the transition reaching different states (e.g., ready to run the animation, or animation finished) or skip the transition altogether.
+- {{domxref("ViewTransitionTypeSet")}}
+  - : A [set-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) representing the types of an active view transition, which enables the types to be queried or modified on-the-fly during a transition.
 
 ## Extensions to other interfaces
 
@@ -74,7 +80,7 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 - {{cssxref(":active-view-transition")}}
   - : Matches elements when a view transition is in progress.
 - {{cssxref(":active-view-transition-type()")}}
-  - : Matches elements when a view transition of a specific type is in progress.
+  - : Matches elements when a view transition with one or more specific types is in progress.
 
 ### Pseudo-elements
 

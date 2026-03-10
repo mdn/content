@@ -85,7 +85,7 @@ Opacity alone should not be used to provide information to screen readers. Use t
 
 ### Transitioning opacity
 
-When [transitioning](/en-US/docs/Web/CSS/Guides/Transitions) the opacity of elements as you add them to the page when content was formerly hidden with [`visibility: hidden`](/en-US/docs/Web/CSS/Reference/Properties/visibility#hidden), [`display: none`](/en-US/docs/Web/CSS/Reference/Properties/display#none), or [`content-visibility: hidden`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility#hidden), you need to include both a [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style) and [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete):
+When [transitioning](/en-US/docs/Web/CSS/Guides/Transitions) the opacity of elements as you add them to the page when content was formerly hidden with [`visibility: hidden`](/en-US/docs/Web/CSS/Reference/Properties/visibility#hidden), [`display: none`](/en-US/docs/Web/CSS/Reference/Properties/display#none), or [`content-visibility: hidden`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility#hidden), you need to include both a {{cssxref("@starting-style")}} and [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete):
 
 ```css
 .card {
@@ -106,7 +106,7 @@ When [transitioning](/en-US/docs/Web/CSS/Guides/Transitions) the opacity of elem
 }
 ```
 
-To enable first-style transitions, `@starting-style` rules are needed. In the above code, setting `opacity: 0` in `@starting-style` provides a starting point for the transition when the element receives its initial style update. For more details, see [`@starting-style`](/en-US/docs/Web/CSS/Reference/At-rules/@starting-style).
+To enable first-style transitions, `@starting-style` rules are needed. In the above code, setting `opacity: 0` in `@starting-style` provides a starting point for the transition when the element receives its initial style update. For more details, see {{cssxref("@starting-style")}}.
 
 Setting `transition-behavior: allow-discrete` is required to transition to `display: none`. See the {{cssxref("transition-behavior")}} property for more details.
 

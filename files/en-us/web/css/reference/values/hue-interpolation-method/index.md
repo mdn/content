@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-color/#hue-interpolation
 sidebar: cssref
 ---
 
-The **`<hue-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents the algorithm used for interpolation between {{CSSXref("&lt;hue&gt;")}} values.
+The **`<hue-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents the algorithm used for interpolation between {{cssxref("hue")}} values.
 The interpolation method specifies how to find a midpoint between two hue values based on a color wheel.
 It is used as a component of the {{CSSXref("&lt;color-interpolation-method&gt;")}} data type.
 
@@ -234,4 +234,4 @@ p {
 ## See also
 
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
-- {{CSSXref("&lt;hue&gt;")}} data type
+- {{cssxref("hue")}} data type

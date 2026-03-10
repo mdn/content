@@ -3,13 +3,9 @@ title: WeakMap.prototype.getOrInsertComputed()
 short-title: getOrInsertComputed()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/getOrInsertComputed
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.WeakMap.getOrInsertComputed
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`getOrInsertComputed()`** method of {{jsxref("WeakMap")}} instances returns the value corresponding to the specified key in this `WeakMap`. If the key is not present, it inserts a new entry with the key and a default value computed from a given callback, and returns the inserted value.
 
@@ -48,6 +44,13 @@ getOrInsertComputed(key, callback)
 ### Return value
 
 The value associated with the specified key in the `WeakMap` object. If the key can't be found, the result of `callback(key)` is inserted and returned.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown in one of the following cases:
+    - `key` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
+    - `callback` isn't callable.
 
 ## Examples
 

@@ -9,7 +9,7 @@ browser-compat: api.CSSImageValue
 
 The **`CSSImageValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents values for properties that take an image, for example {{cssxref('background-image')}}, {{cssxref('list-style-image')}}, or {{cssxref('border-image-source')}}.
 
-The CSSImageValue object represents an [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) that involves a URL, such as [`url()`](/en-US/docs/Web/CSS/Reference/Values/url_function) or [`image()`](/en-US/docs/Web/CSS/Reference/Values/image), but not [`linear-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient) or [`element()`](/en-US/docs/Web/CSS/Reference/Values/element).
+The CSSImageValue object represents an {{cssxref("image")}} that involves a URL, such as {{cssxref("url_function", "url()")}} or {{cssxref("image()")}}, but not {{cssxref("gradient/linear-gradient", "linear-gradient()")}} or {{cssxref("element()")}}.
 
 {{InheritanceDiagram}}
 

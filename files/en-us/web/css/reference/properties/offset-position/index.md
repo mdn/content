@@ -113,7 +113,7 @@ In this example, the {{cssxref("offset-path")}} property is used to define the p
 
 ### Comparing various offset starting positions
 
-This example visually compares various initial offset starting position of an element when {{cssxref("ray", "ray()")}} is used to specify a value for the {{cssxref("offset-path")}} property. The number inside the element box indicates the element to which CSS is applied as well as the element's anchor point.
+This example visually compares various initial offset starting position of an element when {{cssxref("ray()")}} is used to specify a value for the {{cssxref("offset-path")}} property. The number inside the element box indicates the element to which CSS is applied as well as the element's anchor point.
 
 ```html hidden
 <div class="wrap">

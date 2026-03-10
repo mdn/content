@@ -3,12 +3,10 @@ title: "Sanitizer: removeUnsafe() method"
 short-title: removeUnsafe()
 slug: Web/API/Sanitizer/removeUnsafe
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Sanitizer.removeUnsafe
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
 The **`removeUnsafe()`** method of the {{domxref("Sanitizer")}} interface configures the sanitizer configuration so that it will remove all elements, attributes, and event handler content attributes that are considered XSS-unsafe by the browser.
 

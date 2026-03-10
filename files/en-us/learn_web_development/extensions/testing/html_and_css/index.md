@@ -264,13 +264,13 @@ Here we are providing an [RGB](/en-US/docs/Web/CSS/Reference/Values/color_value/
 To sort this out, we have added a second `background-color` declaration, which just specifies the `red` color keyword — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGB colors. If not, it will just ignore the entire declaration and move on.
 
 > [!NOTE]
-> The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using), [`@font-face`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face) and [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) blocks — if they are not supported, the browser just ignores them.
+> The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using), {{cssxref("@font-face")}} and {{cssxref("@supports")}} blocks — if they are not supported, the browser just ignores them.
 
 ### Selector support
 
 Of course, no CSS features will apply at all if you don't use the right [selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) to select the element you want to style!
 
-In a comma-separated list of selectors, if you just write a selector incorrectly, it may not match any element. If, however, a selector is invalid, the **entire** list of selectors is ignored, along with the entire style block. For this reason, only include a `:-moz-` prefixed pseudo class or pseudo-element in a [forgiving selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list), such as `:where(::-moz-thumb)`. Don't include a `:-moz-` prefixed pseudo class or pseudo-element within a comma-separated group of selectors outside of a [`:is()`](/en-US/docs/Web/CSS/Reference/Selectors/:is) or [`:where()`](/en-US/docs/Web/CSS/Reference/Selectors/:where) forgiving selector list as all browsers other than Firefox will ignore the entire block. Note that both `:is()` and `:where()` can be passed as parameters in other selector lists, including [`:has()`](/en-US/docs/Web/CSS/Reference/Selectors/:has) and [`:not()`](/en-US/docs/Web/CSS/Reference/Selectors/:not).
+In a comma-separated list of selectors, if you just write a selector incorrectly, it may not match any element. If, however, a selector is invalid, the **entire** list of selectors is ignored, along with the entire style block. For this reason, only include a `:-moz-` prefixed pseudo class or pseudo-element in a [forgiving selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list), such as `:where(::-moz-thumb)`. Don't include a `:-moz-` prefixed pseudo class or pseudo-element within a comma-separated group of selectors outside of a {{cssxref(":is()")}} or {{cssxref(":where()")}} forgiving selector list as all browsers other than Firefox will ignore the entire block. Note that both `:is()` and `:where()` can be passed as parameters in other selector lists, including {{cssxref(":has()")}} and {{cssxref(":not()")}}.
 
 We find that it is helpful to inspect the element you are trying to style using your browser's dev tools, then look at the DOM tree breadcrumb trail that DOM inspectors tend to provide to see if your selector makes sense compared to it.
 
@@ -326,7 +326,7 @@ Try this simple example:
 
 As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in {{Glossary("camel_case", "lower camel case")}}, not {{Glossary("kebab_case", "kebab-case")}}), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what properties are implemented in that browser.
 
-If you do need to include modern features, test for feature support using [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports), which allows you to implement native feature detection tests, and nest the prefixed or new feature within the `@supports` block.
+If you do need to include modern features, test for feature support using {{cssxref("@supports")}}, which allows you to implement native feature detection tests, and nest the prefixed or new feature within the `@supports` block.
 
 ### Responsive design problems
 

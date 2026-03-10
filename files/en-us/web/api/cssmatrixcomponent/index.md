@@ -7,7 +7,7 @@ browser-compat: api.CSSMatrixComponent
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMatrixComponent`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the [matrix()](/en-US/docs/Web/CSS/Reference/Values/transform-function/matrix) and [matrix3d()](/en-US/docs/Web/CSS/Reference/Values/transform-function/matrix3d) values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
+The **`CSSMatrixComponent`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the {{cssxref("transform-function/matrix", "matrix()")}} and {{cssxref("transform-function/matrix3d", "matrix3d()")}} values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
 
 {{InheritanceDiagram}}
 

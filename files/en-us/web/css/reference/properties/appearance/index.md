@@ -238,7 +238,7 @@ We set the element with the class of `text` to look like a text field.
 
 {{EmbedLiveSample("Basic example", 600, 100)}}
 
-Depending on the browser, the spinner may be visually removed when the control is set to look like a text field. The `appearance` property has no effect on the functionality: for example, while there may no longer be a spinner to click on,the up and down cursor keys will still increment and decrement the value.
+Depending on the browser, the spinner may be visually removed when the control is set to look like a text field. The `appearance` property has no effect on the functionality: for example, while there may no longer be a spinner to click on, the up and down cursor keys will still increment and decrement the value.
 
 ### Appearance set to `none`
 

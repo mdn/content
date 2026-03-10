@@ -3,12 +3,10 @@ title: "Element: setHTML() method"
 short-title: setHTML()
 slug: Web/API/Element/setHTML
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Element.setHTML
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
 The **`setHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML and insert it into the DOM as a subtree of the element.
 

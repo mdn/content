@@ -56,6 +56,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("alignment-baseline")}}
 - {{CSSxRef("all")}} (shorthand)
 - {{CSSxRef("anchor-name")}}
+- {{CSSxRef("anchor-scope")}}
 - {{CSSxRef("animation-composition")}}
 - {{CSSxRef("animation-delay")}}
 - {{CSSxRef("animation-direction")}}
@@ -89,6 +90,8 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("background-repeat")}}
 - {{CSSxRef("background-size")}}
 - {{CSSxRef("background")}} (shorthand)
+- {{CSSxRef("baseline-shift")}}
+- {{CSSxRef("baseline-source")}}
 - {{CSSxRef("block-size")}}
 
 ### Border-\*
@@ -188,12 +191,14 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("column-count")}}
 - {{CSSxRef("column-fill")}}
 - {{CSSxRef("column-gap")}}
+- {{CSSxRef("column-height")}}
 - {{CSSxRef("column-rule-color")}}
 - {{CSSxRef("column-rule-style")}}
 - {{CSSxRef("column-rule-width")}}
 - {{CSSxRef("column-rule")}} (shorthand)
 - {{CSSxRef("column-span")}}
 - {{CSSxRef("column-width")}}
+- {{CSSxRef("column-wrap")}}
 - {{CSSxRef("columns")}} (shorthand)
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-height")}}
@@ -279,6 +284,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("font-variant")}} (shorthand)
 - {{CSSxRef("font-variation-settings")}}
 - {{CSSxRef("font-weight")}}
+- {{CSSxRef("font-width")}}
 - {{CSSxRef("font")}} (shorthand)
 - {{CSSxRef("forced-color-adjust")}}
 
@@ -321,6 +327,9 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("inset")}} (shorthand)
 - {{CSSxRef("inset")}} (shorthand)
 - {{CSSxRef("interactivity")}}
+- {{CSSxRef("interest-delay")}}
+- {{CSSxRef("interest-delay-end")}}
+- {{CSSxRef("interest-delay-start")}}
 - {{CSSxRef("interpolate-size")}}
 - {{CSSxRef("isolation")}}
 
@@ -468,6 +477,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("ry")}}
 - {{CSSxRef("scale")}}
 - {{CSSxRef("scroll-behavior")}}
+- {{CSSxRef("scroll-initial-target")}}
 - {{CSSxRef("scroll-margin-block-end")}}
 - {{CSSxRef("scroll-margin-block-start")}}
 - {{CSSxRef("scroll-margin-block")}} (shorthand)

@@ -7,7 +7,7 @@ browser-compat: api.CSSScale
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSScale`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the [scale()](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale) and [scale3d()](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale3d) values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
+The **`CSSScale`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the {{cssxref("transform-function/scale", "scale()")}} and {{cssxref("transform-function/scale3d", "scale3d()")}} values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
 
 {{InheritanceDiagram}}
 

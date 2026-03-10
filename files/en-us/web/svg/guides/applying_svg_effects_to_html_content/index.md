@@ -8,7 +8,7 @@ sidebar: svgref
 
 Modern browsers support using [SVG](/en-US/docs/Web/SVG) within [CSS](/en-US/docs/Web/CSS) styles to apply graphical effects to HTML content.
 
-You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: [`mask`](/en-US/docs/Web/CSS/Reference/Properties/mask), [`clip-path`](/en-US/docs/Web/CSS/Reference/Properties/clip-path), and [`filter`](/en-US/docs/Web/CSS/Reference/Properties/filter).
+You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: {{cssxref("mask")}}, {{cssxref("clip-path")}}, and {{cssxref("filter")}}.
 
 > [!NOTE]
 > References to SVG in external files must be to the [same origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) as the referencing document.
@@ -248,7 +248,7 @@ pre.target:hover {
 
 ### Example: Blurred Text
 
-In order to blur text, there is a CSS filter function called [`blur()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/blur). You can achieve the same effect using SVG filters.
+In order to blur text, there is a CSS filter function called {{cssxref("filter-function/blur")}}. You can achieve the same effect using SVG filters.
 
 ```html
 <p class="blur">Time to clean my glasses</p>

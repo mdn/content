@@ -4,12 +4,12 @@ short-title: context
 slug: Web/API/WorkletSharedStorage/context
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
   - non-standard
 browser-compat: api.WorkletSharedStorage.context
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}{{Non-standard_Header}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}{{Non-standard_Header}}
 
 The **`context`** read-only property of the {{domxref("WorkletSharedStorage")}} interface contains contextual data passed into the shared storage worklet from the associated browsing context via the {{domxref("FencedFrameConfig.setSharedStorageContext()")}} method.
 

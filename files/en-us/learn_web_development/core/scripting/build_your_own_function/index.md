@@ -178,6 +178,9 @@ and saving and reloading, you'll see that the message box appears without the bu
 
 If you tried the last experiment, make sure to undo the last change before carrying on.
 
+> [!NOTE]
+> For more practice with functions, check out the Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> challenge [Write your first function](https://scrimba.com/fullstack-path-c0fullstack/~04h?via=mdn).
+
 ## Improving the function with parameters
 
 As it stands, the function is still not very useful — we don't want to just show the same default message every time. Let's improve our function by adding some parameters, allowing us to call it with some different options.
@@ -233,7 +236,7 @@ On to the next parameter. This one is going to involve slightly more work — we
 1. First of all, download the icons needed for this exercise ([warning](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/warning.png) and [chat](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/chat.png)) from GitHub. Save them in a new folder called `icons` in the same location as your HTML file.
 
    > [!NOTE]
-   > The warning and chat icons were originally found on [iconfinder.com](https://www.iconfinder.com/), and designed by [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) — Thanks! (The actual icon pages were since moved or removed.)
+   > The warning and chat icons were originally found on iconfinder.com, and designed by Nazarrudin Ansyari — Thanks! (The actual icon pages were since moved or removed.)
 
 2. Next, find the CSS inside your HTML file. We'll make a few changes to make way for the icons. First, update the `.msgBox` width from:
 

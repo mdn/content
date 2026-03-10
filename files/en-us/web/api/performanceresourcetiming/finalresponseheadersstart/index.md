@@ -3,12 +3,10 @@ title: "PerformanceResourceTiming: finalResponseHeadersStart property"
 short-title: finalResponseHeadersStart
 slug: Web/API/PerformanceResourceTiming/finalResponseHeadersStart
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.PerformanceResourceTiming.finalResponseHeadersStart
 ---
 
-{{APIRef("Performance API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`finalResponseHeadersStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives the first byte of the final document response (for example, 200 OK) from the server.
 

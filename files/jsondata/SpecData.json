@@ -1254,11 +1254,6 @@
     "url": "https://w3c.github.io/payment-request/",
     "status": "CR"
   },
-  "Payment Handler": {
-    "name": "Payment Handler API",
-    "url": "https://w3c.github.io/payment-handler/",
-    "status": "WD"
-  },
   "Payment Method Identifiers": {
     "name": "Payment Method Identifiers",
     "url": "https://w3c.github.io/payment-method-id/",
@@ -1858,6 +1853,11 @@
     "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
     "url": "https://w3c.github.io/webauthn/",
     "status": "REC"
+  },
+  "Web-based Payment Handler": {
+    "name": "Web-based Payment Handler API",
+    "url": "https://w3c.github.io/web-based-payment-handler/",
+    "status": "WD"
   },
   "WebDriver": {
     "name": "WebDriver",

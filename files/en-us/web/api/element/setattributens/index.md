@@ -13,7 +13,7 @@ browser-compat: api.Element.setAttributeNS
 > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the value originally came from an attacker.
 >
 > You can mitigate this risk by always passing the appropriate trusted type object ({{domxref("TrustedHTML")}}, {{domxref("TrustedScript")}}, or {{domxref("TrustedScriptURL")}}) instead of strings for those attributes that require them, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
-> See [Security considerations](#/en-US/docs/Web/API/Element/setAttribute#security_considerations) in {{domxref("Element.setAttribute())}} for more information.
+> See [Security considerations](/en-US/docs/Web/API/Element/setAttribute#security_considerations) in {{domxref("Element.setAttribute()")}} for more information.
 
 The **`setAttributeNS()`** method of the {{domxref("Element")}} interface adds a new attribute or changes the value of an attribute with the given namespace and name.
 

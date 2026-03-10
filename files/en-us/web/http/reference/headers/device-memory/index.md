@@ -3,11 +3,17 @@ title: Device-Memory header
 short-title: Device-Memory
 slug: Web/HTTP/Reference/Headers/Device-Memory
 page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Device-Memory
 sidebar: http
 ---
 
-{{securecontext_header}}
+{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
+
+> [!WARNING]
+> The `Device-Memory` header was standardized as {{HTTPHeader("Sec-CH-Device-Memory")}} and the new name is now preferred.
 
 The HTTP **`Device-Memory`** {{Glossary("request header")}} is used in [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) to indicate the approximate amount of available RAM on the client device, in gigabytes.
 The header is part of the {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}.
@@ -41,8 +47,13 @@ Device-Memory: <number>
 ## Directives
 
 - `<number>`
-  - : The approximate amount of device RAM. Possible values are: `0.25`, `0.5`, `1`, `2`, `4`, `8`.
+  - : The approximate amount of device RAM.
+
     The amount of device RAM can be used as a {{glossary("fingerprinting")}} variable, so values for the header are intentionally coarse to reduce the potential for its misuse.
+    Values are only reported in powers of two, and are clamped to an implementation-defined minimum lower value and a maximum upper value.
+    These bounds may change over time (see [browser compatibility table](#browser_compatibility)).
+
+    For example, if a browser does not report below `2` or above `32` then the value is one of: `2`, `4`, `8`, `16`, `32`.
 
 ## Examples
 
@@ -72,10 +83,15 @@ Device-Memory: 1
 - {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}
 - {{DOMxRef("Navigator.deviceMemory")}}
 - {{DOMxRef("WorkerNavigator.deviceMemory")}}
-- Device client hints
-  - {{HTTPHeader("Content-DPR")}}
-  - {{HTTPHeader("DPR")}}
-  - {{HTTPHeader("Viewport-Width")}}
-  - {{HTTPHeader("Width")}}
+- Device and responsive image client hints
+  - {{HTTPHeader("Sec-CH-Device-Memory")}}
+  - {{HTTPHeader("Sec-CH-DPR")}}
+  - {{HTTPHeader("Sec-CH-Viewport-Height")}}
+  - {{HTTPHeader("Sec-CH-Viewport-Width")}}
+  - {{HTTPHeader("Sec-CH-Width")}}
+  - {{HTTPHeader("DPR")}} {{deprecated_inline}}
+  - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}
+  - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}
+  - {{HTTPHeader("Width")}} {{deprecated_inline}}
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}}

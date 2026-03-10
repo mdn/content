@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 11 shipped on March 13, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### HTML
 

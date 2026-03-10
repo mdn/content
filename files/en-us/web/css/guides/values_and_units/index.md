@@ -58,38 +58,35 @@ The CSS values and units module also introduces the `calc-mix()`, `crossorigin()
 
 ### Data types
 
-- [`<angle-percentage>`](/en-US/docs/Web/CSS/Reference/Values/angle-percentage)
-- [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle)
-- [`<animation-timeline>`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)
+- {{cssxref("angle-percentage")}}
+- {{cssxref("angle")}}
 - [`<attr-name>`](/en-US/docs/Web/CSS/Reference/Values/attr#attr-name)
 - [`<attr-type>`](/en-US/docs/Web/CSS/Reference/Values/attr#attr-type)
 - {{CSSxRef("&lt;calc-keyword&gt;")}} (`e`, `pi`, `infinity`, {{glossary("NaN")}})
 - [`<calc-size-basis>`](/en-US/docs/Web/CSS/Reference/Values/calc-size#calc-size-basis)
-- [`<calc-sum>`](/en-US/docs/Web/CSS/Reference/Values/calc-sum)
-- [`<custom-ident>`](/en-US/docs/Web/CSS/Reference/Values/custom-ident)
-- [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident)
-- [`<dimension>`](/en-US/docs/Web/CSS/Reference/Values/dimension)
-- [`<easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function)
-- [`<first-valid()>`](/en-US/docs/Web/CSS)
-- [`<ident>`](/en-US/docs/Web/CSS/Reference/Values/ident)
-- [`<integer>`](/en-US/docs/Web/CSS/Reference/Values/integer)
-- [`<length-percentage>`](/en-US/docs/Web/CSS/Reference/Values/length-percentage)
-- [`<length>`](/en-US/docs/Web/CSS/Reference/Values/length)
-- [`<number>`](/en-US/docs/Web/CSS/Reference/Values/number)
-- [`<percentage>`](/en-US/docs/Web/CSS/Reference/Values/percentage)
-- [`<position>`](/en-US/docs/Web/CSS/Reference/Properties/position)
-- [`<ratio>`](/en-US/docs/Web/CSS/Reference/Values/ratio)
-- [`<resolution>`](/en-US/docs/Web/CSS/Reference/Values/resolution)
+- {{cssxref("calc-sum")}}
+- {{cssxref("custom-ident")}}
+- {{cssxref("dashed-ident")}}
+- {{cssxref("dimension")}}
+- {{cssxref("easing-function")}}
+- {{cssxref("ident")}}
+- {{cssxref("integer")}}
+- {{cssxref("length-percentage")}}
+- {{cssxref("length")}}
+- {{cssxref("number")}}
+- {{cssxref("percentage")}}
+- {{cssxref("&lt;position&gt;")}}
+- {{cssxref("ratio")}}
+- {{cssxref("resolution")}}
 - [`<rounding-strategy>`](/en-US/docs/Web/CSS/Reference/Values/round#rounding-strategy) (`down`, `up`, `to-zero`)
-- [`<string>`](/en-US/docs/Web/CSS/Reference/Values/string)
+- {{cssxref("string")}}
 - [`<syntax>`](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
-- [`<time-percentage>`](/en-US/docs/Web/CSS/Reference/Values/time-percentage)
-- [`<time>`](/en-US/docs/Web/CSS/Reference/Values/time)
-- [`<url>`](/en-US/docs/Web/CSS/Reference/Values/url_value)
+- {{cssxref("time-percentage")}}
+- {{cssxref("time")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - [`<url-modifier>`](/en-US/docs/Web/CSS/Reference/Values/url_function#url-modifier)
-- [`<view-timeline-name>`](/en-US/docs/Web/CSS/Reference/Properties/view-timeline-name)
 
-The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/Web/CSS/Reference/Values/frequency) and [`<frequency-percentage>`](/en-US/docs/Web/CSS/Reference/Values/frequency-percentage) data types. Currently, no browsers support these features.
+The CSS values and units module also introduces the {{cssxref("frequency")}} and {{cssxref("frequency-percentage")}} data types. Currently, no browsers support these features.
 
 #### Units
 
@@ -241,8 +238,8 @@ The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/
   - [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix)
 
 - [CSS images](/en-US/docs/Web/CSS/Guides/Images) module
-  - {{cssxref("&lt;image&gt;")}}
-  - {{cssxref("&lt;gradient&gt;")}}
+  - {{cssxref("image")}}
+  - {{cssxref("gradient")}}
 
 ## Specifications
 

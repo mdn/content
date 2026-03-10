@@ -51,7 +51,7 @@ const feedForward = [0.00020298, 0.0004059599, 0.00020298];
 Our `feedback` values cannot start with zero, otherwise on the first pass nothing would be sent back:
 
 ```js
-const feedBackward = [1.0126964558, -1.9991880801, 0.9873035442];
+const feedBack = [1.0126964558, -1.9991880801, 0.9873035442];
 ```
 
 > [!NOTE]

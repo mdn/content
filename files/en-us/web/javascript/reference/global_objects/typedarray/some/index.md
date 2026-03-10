@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.TypedArray.some
 sidebar: jsref
 ---
 
-The **`some()`** method of {{jsxref("TypedArray")}} instances returns `true` if it finds one element in the array that satisfies the provided testing function. Otherwise, it returns `false`. This method has the same algorithm as {{jsxref("Array.prototype.some()")}}.
+The **`some()`** method of {{jsxref("TypedArray")}} instances returns `true` if it finds an element in the array that satisfies the provided testing function. Otherwise, it returns `false`. This method has the same algorithm as {{jsxref("Array.prototype.some()")}}.
 
 {{InteractiveExample("JavaScript Demo: TypedArray.prototype.some()")}}
 

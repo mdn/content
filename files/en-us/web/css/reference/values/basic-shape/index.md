@@ -76,7 +76,7 @@ The parameters common across the syntax of some basic shape functions include:
     The `closest-side` keyword value uses the length from the center of the shape to the closest side of the reference box to create the radius length. The `farthest-side` keyword value uses the length from the center of the shape to the farthest side of the reference box.
 
 - `<position>`
-  - : Defines the center [`<position>`](/en-US/docs/Web/CSS/Reference/Values/position_value) of a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). It defaults to `center` if omitted.
+  - : Defines the center {{cssxref("&lt;position&gt;")}} of a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). It defaults to `center` if omitted.
 
 - `<fill-rule>`
   - : Sets the {{SVGAttr("fill-rule")}} that is used to determine how the interior of the shape defined by the basic shapes [polygon](#syntax_for_polygons), [path](#syntax_for_paths), and [shape](#syntax_for_shapes) is to be filled. Possible values are `nonzero` (the default) and `evenodd`.
@@ -191,7 +191,7 @@ The values in a `<basic-shape>` function are computed as specified, with the fol
 
 When animating between two `<basic-shape>` functions, the {{Glossary("interpolation")}} rules listed below are followed. The parameter values of each `<basic-shape>` function form a list. For interpolation to occur between two shapes, both shapes must use the same reference box and the number and type of values in both `<basic-shape>` lists must match.
 
-Each value in the lists of the two `<basic-shape>` functions is interpolated based on its computed value as a {{cssxref("number")}}, {{cssxref("length")}}, {{cssxref("percentage")}}, {{cssxref("angle")}}, or {{cssxref("calc", "calc()")}} where possible. Interpolation can still occur if the values are not one of those data types but are identical between the two interpolating basic shape functions, such as `nonzero`.
+Each value in the lists of the two `<basic-shape>` functions is interpolated based on its computed value as a {{cssxref("number")}}, {{cssxref("length")}}, {{cssxref("percentage")}}, {{cssxref("angle")}}, or {{cssxref("calc()")}} where possible. Interpolation can still occur if the values are not one of those data types but are identical between the two interpolating basic shape functions, such as `nonzero`.
 
 - **Both shapes are of type `ellipse()` or type `circle()`**: Interpolation is applied between each corresponding value if their radii are specified as either a {{cssxref("length")}} or a {{cssxref("percentage")}} (rather than keywords such as `closest-side` or `farthest-side`).
 

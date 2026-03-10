@@ -3,12 +3,10 @@ title: "Document: activeViewTransition property"
 short-title: activeViewTransition
 slug: Web/API/Document/activeViewTransition
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Document.activeViewTransition
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`activeViewTransition`** read-only property of the {{domxref("Document")}} interface returns a {{domxref("ViewTransition")}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on the document.
 

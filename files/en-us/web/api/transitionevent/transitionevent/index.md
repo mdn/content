@@ -30,7 +30,7 @@ new TransitionEvent(type, options)
     - `elapsedTime` {{optional_inline}}
       - : A number giving the amount of time the animation has been running,
         in seconds, when this event fired, excluding any time the animation was paused.
-        For an `"animationstart"` event, `elapsedTime` is `0.0` unless there was a negative value for [`animation-delay`](/en-US/docs/Web/CSS/Reference/Properties/animation-delay),
+        For an `"animationstart"` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}},
         in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`.
         It defaults to `0.0`.
     - `pseudoElement` {{optional_inline}}

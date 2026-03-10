@@ -6,7 +6,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-**Custom properties** (sometimes referred to as **CSS variables** or **cascading variables**) are entities defined by CSS authors that represent specific values to be reused throughout a document. They are set using the {{cssxref("@property")}} at-rule or by [custom property syntax](/en-US/docs/Web/CSS/Reference/Properties/--*) (e.g., **`--primary-color: blue;`**). Custom properties are accessed using the CSS {{cssxref("var", "var()")}} function (e.g., **`color: var(--primary-color);`**).
+**Custom properties** (sometimes referred to as **CSS variables** or **cascading variables**) are entities defined by CSS authors that represent specific values to be reused throughout a document. They are set using the {{cssxref("@property")}} at-rule or by [custom property syntax](/en-US/docs/Web/CSS/Reference/Properties/--*) (e.g., **`--primary-color: blue;`**). Custom properties are accessed using the CSS {{cssxref("var()")}} function (e.g., **`color: var(--primary-color);`**).
 
 Complex websites have very large amounts of CSS, and this often results in a lot of repeated CSS values. For example, it's common to see the same color used in hundreds of different places in stylesheets. Changing a color that's been duplicated in many places requires a search and replace across all rules and CSS files. Custom properties allow a value to be defined in one place, then referenced in multiple other places so that it's easier to work with. Another benefit is readability and semantics. For example, `--main-text-color` is easier to understand than the hexadecimal color `#00ff00`, especially if the color is used in different contexts.
 
@@ -15,8 +15,8 @@ The {{cssxref("@property")}} at-rule allows more control over the custom propert
 
 > [!NOTE]
 > Variables do not work inside media queries and container queries.
-> You can use the {{cssxref("var", "var()")}} function in any part of a value in any property on an element.
-> You cannot use {{cssxref("var", "var()")}} for property names, selectors, or anything aside from property values, which means you can't use it in a media query or container query.
+> You can use the {{cssxref("var()")}} function in any part of a value in any property on an element.
+> You cannot use {{cssxref("var()")}} for property names, selectors, or anything aside from property values, which means you can't use it in a media query or container query.
 
 ## Declaring custom properties
 
@@ -27,7 +27,7 @@ The following sections describe how to use these two methods.
 
 A custom property prefixed with two dashes begins with `--`, followed by the property name (e.g., `--my-property`), and a property value that can be any [valid CSS value](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 Like any other property, this is written inside a ruleset.
-The following example shows how to create a custom property `--main-bg-color` and uses a [`<named-color>`](/en-US/docs/Web/CSS/Reference/Values/named-color) value of `brown`:
+The following example shows how to create a custom property `--main-bg-color` and uses a {{cssxref("named-color")}} value of `brown`:
 
 ```css
 section {
@@ -52,7 +52,7 @@ This doesn't always have to be the case: you maybe have a good reason for limiti
 ### Using the `@property` at-rule
 
 The {{cssxref("@property")}} at-rule allows you to be more expressive with the definition of a custom property with the ability to associate a type with the property, set default values, and control inheritance.
-The following example creates a custom property called `--logo-color` which expects a [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value):
+The following example creates a custom property called `--logo-color` which expects a {{cssxref("&lt;color&gt;")}}:
 
 ```css
 @property --logo-color {
@@ -67,7 +67,7 @@ You can read about how this works in the [CSS Properties and Values API](/en-US/
 
 ### Referencing custom properties with `var()`
 
-Regardless of which method you choose to define a custom property, you use them by referencing the property in a {{cssxref("var", "var()")}} function in place of a standard property value:
+Regardless of which method you choose to define a custom property, you use them by referencing the property in a {{cssxref("var()")}} function in place of a standard property value:
 
 ```css
 details {
@@ -293,7 +293,7 @@ The property is only set for the matching selector and its descendants.
 
 The `@property` at-rule lets you explicitly state whether the property inherits or not.
 The following example creates a custom property using the `@property` at-rule.
-Inheritance is disabled, there's a [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type defined, and an initial value of `teal`.
+Inheritance is disabled, there's a {{cssxref("&lt;color&gt;")}} data type defined, and an initial value of `teal`.
 
 The parent element sets `--box-color` to a value of `green` and uses `--box-color` as a value for its background color.
 The child element also uses `background-color: var(--box-color)`, and we would expect it to have the color `green` if inheritance was enabled (or if it was defined using the double dash syntax).

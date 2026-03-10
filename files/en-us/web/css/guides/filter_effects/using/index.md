@@ -11,7 +11,7 @@ Have you ever hovered over a black-and-white or sepia image and the full-color i
 
 The [Filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module in CSS provides properties and functions that let you apply the visual effects described above without using Photoshop or sending extra HTTP requests. The only software required is the user's browser. Moreover, unlike pre-set image effects, CSS filter effects are responsive and animatable.
 
-The CSS filter effects module provides the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties that you can use to impact the rendering of text, images, backgrounds, and borders, or any element on which you apply these properties. This module also defines the {{cssxref("&lt;filter-function&gt;")}} data type that lets you add graphical effects such as blurring or color shifting. Using the filter functions, you can not only alter the appearance of an element but also reference an SVG filter using a filter that you create.
+The CSS filter effects module provides the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties that you can use to impact the rendering of text, images, backgrounds, and borders, or any element on which you apply these properties. This module also defines the {{cssxref("filter-function")}} data type that lets you add graphical effects such as blurring or color shifting. Using the filter functions, you can not only alter the appearance of an element but also reference an SVG filter using a filter that you create.
 
 ## Filter effect properties
 
@@ -25,7 +25,7 @@ The `filter` and `backdrop-filter` properties accept a space-separated list of f
 
 ## Filter functions
 
-The CSS filter effects module provides 10 [`<filter-function>`](/en-US/docs/Web/CSS/Reference/Properties/filter#functions) functions, as well as the ability to define an almost endless array of effects using SVG filters applied via a `url()` reference.
+The CSS filter effects module provides 10 {{cssxref("filter-function")}} functions, as well as the ability to define an almost endless array of effects using SVG filters applied via a `url()` reference.
 
 The following table lists the 10 filter functions, along with their value types, the minimum valid value if applicable, the largest value that creates an effect, and the initial value used for [interpolation](/en-US/docs/Glossary/Interpolation).
 
@@ -36,7 +36,7 @@ The following table lists the 10 filter functions, along with their value types,
 | {{cssxref("filter-function/contrast", "contrast()")}}       | {{cssxref("&lt;length&gt;")}}                                      | `0`       |            | `1` or `100%`             |
 | {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} | `<shadow>`                                                         |           |            | `0 0 0 currentColor`      |
 | {{cssxref("filter-function/grayscale", "grayscale()")}}     | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0` or `0%`               |
-| {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("&lt;angle&gt;")}}                                       |           |            | `0deg`                    |
+| {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("angle")}}                                               |           |            | `0deg`                    |
 | {{cssxref("filter-function/invert", "invert()")}}           | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0` or `0%`               |
 | {{cssxref("filter-function/opacity", "opacity()")}}         | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `1` or `100%`             |
 | {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `100%`                    |
@@ -56,7 +56,7 @@ The `filter` and `backdrop-filter` properties accept a filter function list, whi
 
 If you hover over the sepia image below, you'll see the full-color image come into view instantly.
 
-The image is set to be sepia by specifying the value of the `filter` property as the [`sepia()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/sepia) filter function. The filter is removed on [`:hover`](/en-US/docs/Web/CSS/Reference/Selectors/:hover) and [`:focus`](/en-US/docs/Web/CSS/Reference/Selectors/:focus) by setting `filter: none`.
+The image is set to be sepia by specifying the value of the `filter` property as the [`sepia()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/sepia) filter function. The filter is removed on {{cssxref(":hover")}} and {{cssxref(":focus")}} by setting `filter: none`.
 
 ```html
 <img tabindex="0" alt="Four trans-people, circa 1912" src="activists.jpg" />
