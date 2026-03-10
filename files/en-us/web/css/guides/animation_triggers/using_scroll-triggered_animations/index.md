@@ -265,7 +265,7 @@ In this case, the `<figcaption>` fades into view when the `<img>` starts to appe
 
 In the previous couple of examples, the animation is triggered (fade-in starts) when the trigger starts to enter the viewport from either edge, and the animation reverses (fades out) when the trigger has completely left the viewport at either edge — hence the fade out never being visible.
 
-This is because the default range between the animation activating and deactivating (the **activation range**) is the {{cssxref("timeline-range-name")}} `cover` value — the animation activates as soon as the start edge of the trigger enters the end edge of the viewport, and deactivates (reverses, in our case) when the end edge of the trigger has exited the start edge of the viewport.
+This is because the default range between the trigger activating and deactivating is the {{cssxref("timeline-range-name")}} `cover` value — the trigger activates as soon as the start edge of the subject enters the end edge of the viewport, and deactivates (reverses, in our case) when the end edge of the subject has exited the start edge of the viewport.
 
 We can change the activation range using the {{cssxref("timeline-trigger-activation-range-start")}} and {{cssxref("timeline-trigger-activation-range-end")}} properties, respectively, or the {{cssxref("timeline-trigger-activation-range")}} shorthand to set both values in a single declaration. Each these properties can take as values:
 
