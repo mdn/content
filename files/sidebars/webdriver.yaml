@@ -47,7 +47,6 @@ sidebar:
     details: closed
   - link: /Web/WebDriver/Reference/Classic/Timeouts
   - type: section
-    link: /Web/WebDriver/Reference
     title: Shared
   - type: listSubPages
     path: /Web/WebDriver/Reference/Capabilities
