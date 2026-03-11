@@ -8,9 +8,9 @@ browser-compat: api.SVGMarkerElement.orient
 
 {{APIRef("SVG")}}
 
-The **`orient`** property of the {{domxref("SVGMarkerElement")}} interface is a string that reflects the {{SVGAttr("orient")}} attribute of the given {{SVGElement("marker")}} element. It defines how the marker is rotated when it is placed at its position on the shape.
+The **`orient`** property of the {{domxref("SVGMarkerElement")}} interface defines how the marker is rotated when it is placed at its position on the shape. It reflects the {{SVGAttr("orient")}} attribute value of the corresponding {{SVGElement("marker")}} element.
 
-Unlike {{domxref("SVGMarkerElement.orientType")}} and {{domxref("SVGMarkerElement.orientAngle")}}, which provide read-only access to the orientation as an enumerated type and angle respectively, the `orient` property allows directly getting and setting the `orient` attribute as a string.
+Unlike {{domxref("SVGMarkerElement.orientType")}} and {{domxref("SVGMarkerElement.orientAngle")}}, which provide read-only access to the orientation and angle, respectively, the `orient` property allows you to get and set the `orient` attribute directly as a string.
 
 ## Value
 

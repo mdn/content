@@ -15,13 +15,13 @@ The **`edgeMode`** read-only property of the {{domxref("SVGFEGaussianBlurElement
 An {{domxref("SVGAnimatedEnumeration")}} object. The `baseVal` property of this object contains one of the following values:
 
 - `0`
-  - : `SVG_EDGEMODE_UNKNOWN` which means that the {{SVGAttr("edgeMode")}} attribute has a value other than the predefined keywords.
+  - : Represents `SVG_EDGEMODE_UNKNOWN`, which means that the {{SVGAttr("edgeMode")}} attribute has a value other than the predefined keywords.
 - `1`
-  - : `SVG_EDGEMODE_DUPLICATE` which means that the input image is extended along each of its borders as necessary by duplicating the color values at the given edge of the input image.
+  - : Represents `SVG_EDGEMODE_DUPLICATE`, which means that the input image is extended along each of its borders as necessary by duplicating the color values at the given edge of the input image.
 - `2`
-  - : `SVG_EDGEMODE_WRAP` which means that the input image is extended by taking the color values from the opposite edge of the image.
+  - : Represents `SVG_EDGEMODE_WRAP`, which means that the input image is extended by taking the color values from the opposite edge of the image.
 - `3`
-  - : `SVG_EDGEMODE_NONE` which means that the input image is extended with pixel values of zero for R, G, B, and A.
+  - : Represents `SVG_EDGEMODE_NONE`, which means that the input image is extended with pixel values of zero for the R, G, B, and A channels.
 
 ## Examples
 
