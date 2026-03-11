@@ -10,9 +10,13 @@ sidebar: learnsidebar
 
 This article follows on from the previous one, looking at how to style customizable listbox {{htmlelement("select")}} elements.
 
+One of the major advantages of customizable `<select>` listboxes over "classic" select listboxes is that you can fully style all parts of the control, and you can include a much wider variety of child elements inside them, which means greater flexibility in terms of design and functionality.
+
 ## Dropdown selects versus listboxes
 
-When we talk about "dropdown" `<select>` elements, we are talking about the controls rendered for HTML like `<select>`. These feature a select button that, when pressed, shows a dropdown picker from which you can select different options. "Listbox" select elements on the other hand are controls rendered for HTML like `<select multiple>` or `<select size="3">`. These feature a box that shows multiple options at once, from which you can select one or multiple options.
+When we talk about "dropdown" `<select>` elements, we are talking about controls featuring a select button that, when pressed, shows a dropdown picker from which you can select an option. These are specified using basic HTML such as `<select>`.
+
+"Listbox" `<select>` elements on the other hand are controls featuring a box that shows multiple options at once, from which you can select one or multiple options. You opt into rendering a "listbox" select by specifying the `multiple` attribute (to allow multiple selections) and/or a `size` value of more than `1`. For example, `<select multiple>` or `<select size="3">`.
 
 The following live example illustrates the difference:
 
@@ -56,13 +60,16 @@ form {
 
 {{EmbedLiveSample("select-comparison", "100%", "200px")}}
 
-It is simpler to style a customizable listbox `<select>` than it is to style the dropdown variant:
+> [!NOTE]
+> The `multiple` attribute, as well as any `size` value greater than `1`, opts the `<select>` element into listbox mode.
 
-- There is no dropdown picker, so you don't need to worry about styling it with the {{cssxref("::picker()", "::picker(select)")}} pseudo-element, its {{cssxref(":open")}} and closed states, etc.
+### How do customizable listboxes compared to customizable dropdowns?
+
+A customizable listbox `<select>` is easier to style than the dropdown variant:
+
+- There is no dropdown picker, so you don't need to worry about styling it with the {{cssxref("::picker()", "::picker(select)")}} pseudo-element or its {{cssxref(":open")}} and closed states.
 - You don't need to worry about styling the select button's icon using {{cssxref("::picker-icon")}}, or manipulating how the currently selected `<option>` is displayed inside the button using the {{htmlelement("selectedcontent")}} element.
 - There is only a single container involved; you don't need to worry about the position of the picker relative to the button.
-
-One of the major advantages of customizable `<select>` listboxes over "classic" select listboxes is that you can include a much wider variety of child elements inside them, which means great flexibility in terms of design and functionality. See [A more complex listbox](#a_more_complex_listbox) for an idea of what's possible.
 
 ## A basic customized listbox
 
@@ -185,7 +192,7 @@ The example now renders like this:
 
 In this example, we present the listbox options horizontally rather than vertically.
 
-The HTML is the same as the previous examples, except that we've included an extra wrapper `<div>` to allow us to set a `width` on the `<select>` and then a different `width` on the wrapper so that all the `<options>` can be kept on one line and scrolled when the `<select>` becomes too narrow to fit them all.
+The HTML is the same as the previous examples, except that we've included an extra wrapper `<div>` to allow us to set a `width` on the `<select>` and then a different `width` on the wrapper so that all the `<option>` elements can be kept on one line and scrolled when the `<select>` becomes too narrow to fit them all.
 
 ```html live-sample___horizontal-listbox
 <p>
@@ -223,7 +230,7 @@ select {
 }
 ```
 
-Next, we give the `<option>` elements some extra padding to space them out horizontally, and a {{cssxref("position")}} value of relative so we can position their descendents relative to them.
+Next, we give the `<option>` elements some extra padding to space them out horizontally, and a {{cssxref("position")}} value of relative so we can position their descendants relative to them.
 
 ```css live-sample___horizontal-listbox
 option {

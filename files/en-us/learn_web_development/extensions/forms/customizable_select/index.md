@@ -29,9 +29,9 @@ In addition, they provide a progressive enhancement on top of existing functiona
 You'll find out how to build this example in the sections below.
 
 > [!NOTE]
-> This article covers the background behind customizable selects and shows how to build "single dropdown" selects that take advantage of these features — that is, dropdown menus that display a single option at a time and allow a single option to be selected, created by `<select>`.
+> This article covers the background behind customizable selects and shows how to build "single dropdown" selects that take advantage of these features — that is, dropdown menus that display a single option at a time and allow a single option to be selected.
 >
-> For information on creating "listbox" selects — menus that display multiple options at once and allow a single option or multiple options to be selected, created by `<select multiple>` or `<select size="3">`, see [Customizable select listboxes](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes).
+> For information on creating "listbox" selects — menus that display multiple options at once and allow a single option or multiple options to be selected — see [Customizable select listboxes](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes).
 
 ## What features comprise a customizable select?
 
@@ -429,7 +429,7 @@ Let's look at a basic example. Our HTML looks like this:
 </select>
 ```
 
-We start our CSS by styling the `<optgroup>` elements themselves. These are mostly rudimentary styles to make the optgroups look like containers for their descendent `<option>` elements. We've given them some {{cssxref("margin-top")}} to put some space between each optgroup, and between the top optgroup and the select button.
+We start our CSS by styling the `<optgroup>` elements themselves. These are mostly rudimentary styles to make the optgroups look like containers for their descendant `<option>` elements. We've given them some {{cssxref("margin-top")}} to put some space between each optgroup, and between the top optgroup and the select button.
 
 ```css hidden live-sample___optgroup-example
 * {
