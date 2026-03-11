@@ -555,6 +555,23 @@ The example renders like so:
 
 {{EmbedLiveSample("complex-listbox", "100%", "360px")}}
 
+```css hidden live-sample___basic-listbox live-sample___expanding-listbox live-sample___horizontal-listbox live-sample___complex-listbox
+@supports not (appearance: base-select) {
+  body::before {
+    content: "Your browser does not support `appearance: base-select`.";
+    color: black;
+    background-color: wheat;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 1;
+  }
+}
+```
+
 ## Next up
 
 In the next article of this module, we will explore the different [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes) available to us in modern browsers for styling forms in different states.

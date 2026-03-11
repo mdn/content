@@ -504,6 +504,23 @@ The example renders like this:
 
 {{EmbedLiveSample("optgroup-example", "100%", "410px")}}
 
+```css hidden live-sample___plain-render live-sample___second-render live-sample___third-render live-sample___fourth-render live-sample___full-render live-sample___optgroup-example
+@supports not (appearance: base-select) {
+  body::before {
+    content: "Your browser does not support `appearance: base-select`.";
+    color: black;
+    background-color: wheat;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 1;
+  }
+}
+```
+
 ## Browser compatibility
 
 {{Compat}}
