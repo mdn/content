@@ -79,41 +79,13 @@ The {{cssxref("animation-action")}} keywords specified in the `animation-trigger
 
 ### Multiple trigger names
 
-You can specify multiple, comma-separated `<dashed-ident>` values in the same trigger's `timeline-trigger-name` value, meaning that it can be referenced by multiple identifiers. This can be useful in more complex UIs where you want different animations to be triggered by certain triggers, and want different identifiers to help keep track of them. For example:
+You can specify multiple, comma-separated `<dashed-ident>` values in the same trigger's `timeline-trigger-name` value, meaning that it can be referenced by multiple identifiers. For example, this might be useful in a situation where you have multiple components dropped into a page that you want to trigger animations on, but which use predefined `animation-trigger` values that you can't edit.
+
+You could use multiple `timeline-trigger-name` values to create a trigger for all the animations:
 
 ```css
-.animated1 {
-  animation:
-    fade-in 2s infinite linear both,
-    rotate 2s infinite linear both,
-    fade-out 2s infinite linear both;
-  animation-trigger:
-    --fade-in-trigger play-once,
-    --rotate-trigger play-forwards play-backwards,
-    --fade-out-trigger play-once;
-}
-
-.animated2 {
-  animation:
-    fade-out 2s infinite linear both,
-    rotate 2s infinite linear both;
-  animation-trigger:
-    --fade-out-trigger play-once,
-    --rotate-trigger play-once;
-}
-
-.trigger1 {
-  timeline-trigger-name: --fade-in-trigger, --rotate-trigger;
-  timeline-trigger-source: view();
-}
-
-.trigger2 {
-  timeline-trigger-name: --rotate-trigger;
-  timeline-trigger-source: view();
-}
-
-.trigger3 {
-  timeline-trigger-name: --fade-out-trigger, --rotate-trigger;
+.trigger {
+  timeline-trigger-name: --animation-trigger-1, --animation-trigger-2;
   timeline-trigger-source: view();
 }
 ```
