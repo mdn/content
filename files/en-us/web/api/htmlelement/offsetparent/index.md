@@ -21,13 +21,14 @@ A positioned ancestor might be:
 If there is no positioned ancestor element, the `body` is returned.
 
 > [!NOTE]
-> `offsetParent` returns `null` in the following
-> situations:
+> `offsetParent` returns `null` in the following situations:
 >
 > - The element or any ancestor has the `display` property set to
 >   `none`.
-> - The element has the `position` property set to `fixed`
->   (Firefox returns `<body>`).
+> - The element has the `position` property set to `fixed`. In this case,
+>   `offsetParent` is `null` if the containing block is the viewport; otherwise
+>   it returns the nearest ancestor that forms the containing block
+>   (e.g., an ancestor with `transform`, `perspective`, or `filter`).
 > - The element is `<body>` or `<html>`.
 
 `offsetParent` is useful because
