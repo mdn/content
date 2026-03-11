@@ -36,7 +36,7 @@ For example, to create a new session, you would send the [`session.new`](/en-US/
 
 Each command results in either a success response containing a `result` field or an error response containing an `error` field. The structure of `result` is specific to each command.
 
-All commands except [`session.new`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) and [`session.status`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/status) require an active WebDriver BiDi session in order to be properly targeted.
+All commands except [`session.new`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) and [`session.status`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/status) require an active WebDriver BiDi session.
 
 ## Events
 

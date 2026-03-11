@@ -20,7 +20,7 @@ The `session.end` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#com
 
 ### Parameters
 
-None. However, you must include a `params` field and set it to an empty object (`{}`).
+None. However, you must include the `params` field and set it to an empty object (`{}`).
 
 ### Return value
 

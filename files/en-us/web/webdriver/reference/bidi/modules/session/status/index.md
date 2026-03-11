@@ -9,7 +9,7 @@ sidebar: webdriver
 
 The `session.status` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`session`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session) module returns information about whether the browser is able to create new BiDi sessions and may additionally include arbitrary meta information.
 
-This is a static command; it can run without an active session.
+Since this command is used to check the status of the browser before creating a new session, it runs without an already active session. (In BiDi, such a command is called a static command.)
 
 ## Syntax
 
@@ -22,7 +22,7 @@ This is a static command; it can run without an active session.
 
 ### Parameters
 
-None. However, you must include a `params` field and set it to an empty object (`{}`).
+None. However, you must include the `params` field and set it to an empty object (`{}`).
 
 ### Return value
 

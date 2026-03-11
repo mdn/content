@@ -9,7 +9,7 @@ sidebar: webdriver
 
 The `session.new` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`session`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session) module creates a new BiDi session with the browser.
 
-This is a static command; it can run without an active session.
+Since this command is used to create a new session, it runs without an already active session. (In BiDi, such a command is called a static command.)
 
 > [!NOTE]
 > A session created this way is only accessible over WebSocket and cannot be managed using classic WebDriver HTTP commands.
@@ -27,18 +27,19 @@ This is a static command; it can run without an active session.
 
 ### Parameters
 
-The input is an object with the following fields:
+The `params` field contains:
 
 - `capabilities`
-  - : An object with the following optional fields:
+  - : An object that specifies the requested features for the session. It can include the following fields:
     - `alwaysMatch` {{optional_inline}}
-      - : An object that specifies features that the session must match.
-        If the browser cannot satisfy all capabilities in this object, the session is not created.
+      - : An object that specifies the requested features that must all be satisfied by the browser for session creation.
+        If the browser cannot satisfy all requested features in this object, the session is not created.
     - `firstMatch` {{optional_inline}}
-      - : An array of objects that specify alternative capability sets.
-        The browser tries each entry in the order specified and creates a session using the first it can fully satisfy. If none can be satisfied, the session is not created.
+      - : An array of objects, each specifying an alternative set of requested features for session creation.
+        The browser tries each set in the order specified and creates a session using the first where all requested features can be satisfied.
+        If the browser cannot satisfy all requested features in any of the sets, the session is not created.
 
-Each object may include any of the following optional capabilities:
+The `alwaysMatch` and `firstMatch` objects can include the following features:
 
 - `acceptInsecureCerts` {{optional_inline}}
   - : A boolean that indicates whether untrusted TLS certificates (for example, self-signed or expired) are accepted for the duration of the session.
@@ -55,7 +56,7 @@ Each object may include any of the following optional capabilities:
 
 ### Return value
 
-The `result` object in the response with the following fields:
+The following fields in the `result` object of the response describe the characteristics of the created session:
 
 - `sessionId`
   - : A string that contains the unique identifier for the newly created session.
@@ -64,13 +65,13 @@ The `result` object in the response with the following fields:
     - `acceptInsecureCerts`
       - : A boolean that indicates whether untrusted TLS certificates (for example, self-signed or expired) are accepted for the duration of the session.
     - `browserName`
-      - : A string with the name of the browser.
+      - : A string that contains the name of the browser.
     - `browserVersion`
-      - : A string with the version of the browser.
+      - : A string that contains the version of the browser.
     - `platformName`
-      - : A string with the name of the operating system.
+      - : A string that contains the name of the operating system.
     - `setWindowRect`
-      - : A boolean that indicates whether the browser supports the `setWindowRect` command.
+      - : A boolean that indicates whether the browser window can be resized and repositioned using the [Set Window Rect](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/SetWindowRect) command.
     - `userAgent`
       - : A string that contains the browser's user agent string (for example, `"Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0"`).
     - `proxy` {{optional_inline}}
