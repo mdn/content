@@ -25,10 +25,9 @@ If there is no positioned ancestor element, the `body` is returned.
 >
 > - The element or any ancestor has the `display` property set to
 >   `none`.
-> - The element has the `position` property set to `fixed`. In this case,
->   `offsetParent` is `null` if the containing block is the viewport; otherwise
->   it returns the nearest ancestor that forms the containing block
->   (e.g., an ancestor with `transform`, `perspective`, or `filter`).
+> - The element has the `position` property set to `fixed` and it's the containing block is the viewport.
+>   If the containing block is not the viewport, `offsetParent` it returns the nearest ancestor that forms
+>   a containing block, for example, an ancestor with `transform`, `perspective`, or `filter` styles set.
 > - The element is `<body>` or `<html>`.
 
 `offsetParent` is useful because
