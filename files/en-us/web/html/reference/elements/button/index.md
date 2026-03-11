@@ -192,7 +192,7 @@ If you want to visually hide the button's text, an accessible way to do so is to
 
 However, it is worth noting that leaving the button text visible can help people who may not be familiar with the icon's meaning or understand the button's purpose. This is especially important for people who are not technologically sophisticated or who may have different cultural interpretations of the icon the button uses.
 
-- [What is an accessible name? | The Paciello Group](https://www.tpgi.com/what-is-an-accessible-name/)
+- [What is an accessible name? | Vispero](https://vispero.com/resources/what-is-an-accessible-name/)
 - [MDN Understanding WCAG, Guideline 4.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust#guideline_4.1_—_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies)
 - [Understanding Success Criterion 4.1.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 

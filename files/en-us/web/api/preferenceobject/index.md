@@ -8,7 +8,7 @@ browser-compat: api.PreferenceObject
 spec-urls: https://drafts.csswg.org/mediaqueries-5/#preference-object-interface
 ---
 
-{{APIRef("Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`PreferenceObject`** interface of the [User Preferences API](/en-US/docs/Web/API/User_Preferences_API) provides attributes and methods for reading and overriding user preferences.
 

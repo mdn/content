@@ -451,7 +451,6 @@ Orendorff
 Osmani
 Owlman
 Paavo
-Paciello
 Pacman
 Pagella
 Paletton
@@ -611,6 +610,7 @@ Verou
 Vieno
 Vint
 Visio
+Vispero
 Voikko
 Volkman
 Vorbis

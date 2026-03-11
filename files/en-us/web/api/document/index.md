@@ -45,6 +45,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the Content-Type from the MIME Header of the current document.
 - {{DOMxRef("Document.currentScript")}} {{ReadOnlyInline}}
   - : Returns the {{HTMLElement("script")}} element whose script is currently being processed and [isn't a JavaScript module](https://github.com/whatwg/html/issues/997).
+- {{DOMxRef("Document.customElementRegistry")}} {{ReadOnlyInline}}
+  - : The {{domxref("CustomElementRegistry")}} object associated with this document, or `null` if one has not been set.
 - {{DOMxRef("Document.doctype")}} {{ReadOnlyInline}}
   - : Returns the Document Type Definition (DTD) of the current document.
 - {{DOMxRef("Document.documentElement")}} {{ReadOnlyInline}}

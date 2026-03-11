@@ -92,9 +92,11 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
+- A user gesture is no longer required for {{WebExtAPIRef("action.openPopup")}} and {{WebExtAPIRef("browserAction.openPopup")}} to open a popup. This feature was available behind the `extensions.openPopupWithoutUserGesture.enabled` preference from Firefox 108. This change aligns Firefox's behavior with Chrome and Safari. ([Firefox bug 1799344](https://bugzil.la/1799344))
+
 <!-- ### Removals -->
 
-The ability of extensions to dynamically execute code in their `moz-extension:` documents with {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, and {{WebExtAPIRef("scripting.removeCSS")}} is deprecated. The feature is no longer available in Firefox Nightly, and the beta and release versions of Firefox provide a warning in the tab's console. This restriction will apply to all versions of Firefox 152 and later. As an alternative, an extension can run code in its documents dynamically by registering a {{WebExtAPIRef("runtime.onMessage")}} listener in the document's script, then sending a message to trigger execution of the required code.({{bug(2011234)}})
+The ability of extensions to dynamically execute code in their `moz-extension:` documents with {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, and {{WebExtAPIRef("scripting.removeCSS")}} is deprecated. The feature is no longer available in Firefox Nightly, and the beta and release versions of Firefox provide a warning in the tab's console. This restriction will apply to all versions of Firefox 152 and later. As an alternative, an extension can run code in its documents dynamically by registering a {{WebExtAPIRef("runtime.onMessage")}} listener in the document's script, then sending a message to trigger execution of the required code.([Firefox bug 2011234](https://bugzil.la/2011234))
 
 <!-- ### Other -->
 
@@ -107,3 +109,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`<attr-type>` values in `attr()` CSS function**: `layout.css.attr.enabled`
 
   The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/Web/CSS/Reference/Values/attr#attr-type) values. This allows you to specify how an attribute value is parsed into a CSS value and take those values directly from [`data-*`](/en-US/docs/Web/HTML/How_to/Use_data_attributes). ([Firefox bug 1986631](https://bugzil.la/1986631) & [Firefox bug 1998245](https://bugzil.la/1998245)).
+
+- **`color-mix()` accepts multiple color arguments**: `layout.css.color-mix-multi-color.enabled`
+
+  The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now supports multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix many colors and set the percentages of each. ([Firefox bug 2007772](https://bugzil.la/2007772)).

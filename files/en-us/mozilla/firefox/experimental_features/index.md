@@ -333,6 +333,20 @@ The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/We
 - `layout.css.attr.enabled`
   - : Set to `true` to enable.
 
+### `color-mix()` accepts multiple color arguments
+
+The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now supports multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix many colors and set the percentages of each. ([Firefox bug 2007772](https://bugzil.la/2007772)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 150           | Yes                 |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `layout.css.color-mix-multi-color.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -342,21 +356,6 @@ The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/We
 **No experimental features in this release cycle.**
 
 ## APIs
-
-### Removal of `beforescriptexecute` and `afterscriptexecute` events
-
-The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) and [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) on the {{domxref("Document")}} interface, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) on the {{domxref("Element")}} interface are on the path to removal. They have been disabled in Nightly.
-([Firefox bug 1954685](https://bugzil.la/1954685)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 139           | No                  |
-| Developer Edition | 139           | Yes                 |
-| Beta              | 139           | Yes                 |
-| Release           | 139           | Yes                 |
-
-- `dom.events.script_execute.enable`
-  - : Set to `true` to enable.
 
 ### Notification actions and maxActions properties
 
