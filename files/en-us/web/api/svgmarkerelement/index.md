@@ -93,7 +93,7 @@ console.log(marker.markerWidth.baseVal.value); // 6
 
 ### Updating the Orientation Angle
 
-In the following example the value of the `orient` attribute is updated using `setOrientToAngle()` using an {{domxref("SVGAngle")}} created using {{domxref("SVGElement.createSVGAngle()")}}.
+In the following example the value of the `orient` attribute is updated using `setOrientToAngle()` using an {{domxref("SVGAngle")}} created using {{domxref("SVGSVGElement.createSVGAngle()")}}.
 
 ```js
 let svg = document.getElementById("svg");
