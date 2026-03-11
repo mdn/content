@@ -258,28 +258,33 @@ Our second variation renders like this:
 
 ## A more complex listbox
 
-In this section we'll walk through a more complex example to give you an idea of what's possible with customizable `<select>` listboxes. This example provides a contact picker listbox with a built-in filter field and a link to access a (fictional) contact editing mode.
+In this section we'll walk through a more complex example, which provides a contact picker listbox with a built-in filter field and a link to access a (fictional) contact editing mode.
 
 ### HTML
 
-In the markup, we include a listbox `<select>` that contains a text {{htmlelement("input")}} representing our filter field, and a link. We also include an additional empty `<div>` element that we'll populate with our contact choices via JavaScript.
+In the markup, we include a {{htmlelement("form")}} that contains a heading and a wrapper {{htmlelement("div")}}. Inside the wrapper, we include three more `<div>` elements that respectively contain a text {{htmlelement("input")}} representing our filter field, a listbox {{htmlelement("select")}}, and a link. The `<select>` will be populated with {{htmlelement("option")}} elements representing our contact choices via JavaScript.
 
 ```html live-sample___complex-listbox
-<p>
-  <label for="contact-select">Select contacts:</label><br />
-  <select id="contact-select" multiple>
+<form>
+  <h2>Contact select</h2>
+  <div class="wrapper">
     <div class="filter">
       <input
         type="text"
         aria-label="Filter contacts"
         placeholder="Filter by name, e.g. amara" />
     </div>
-    <div class="options"></div>
+    <div class="options">
+      <select
+        multiple
+        name="contact-select"
+        aria-label="Select contacts"></select>
+    </div>
     <div class="edit">
       <a href="#">Edit contacts</a>
     </div>
-  </select>
-</p>
+  </div>
+</form>
 ```
 
 ### CSS
@@ -302,19 +307,18 @@ select {
 }
 ```
 
-Most of the styling is fairly rudimentary, but we'll run throught it, pointing out anything significant along the way. The `<select>` element is given a `height` of `fit-content` so that it exactly fits its three child containers.
+Most of the styling is fairly rudimentary, but we'll run through it, pointing out anything significant along the way. First of all, we style the `.wrapper` `<div>`, giving it a fixed {{cssxref("width")}} that controls the horizontal sizing of the entire control.
 
 ```css live-sample___complex-listbox
-select {
+.wrapper {
   border: 2px solid #ddd;
   border-radius: 8px;
   background: #ddd;
   width: 250px;
-  height: fit-content;
 }
 ```
 
-Next, we style the three child containers — the filter `<input>`, the `.options` `<div>` that will contain our `<options>`, and the `.edit` `<div>` containing the link. Most notable here is that we give the `.options` `<div>` a fixed `height` and an {{cssxref("overflow-y")}} value of `scroll` so that the contained `<option>` elements will scroll inside it.
+Next, we style the filter `<input>`, the `.options` `<div>` and the contained `<select>`, and the `.edit` `<div>` containing the link. Most notably, we give the `<select>` a fixed {{cssxref("height")}} and an {{cssxref("overflow-y")}} value of `scroll` so that the contained `<option>` elements will scroll inside it.
 
 ```css live-sample___complex-listbox
 .filter input {
@@ -323,27 +327,26 @@ Next, we style the three child containers — the filter `<input>`, the `.option
   border-radius: 5px;
   border: 1px solid #bbb;
   width: 95%;
-  margin: 6px auto 10px auto;
+  margin: 8px auto;
 }
 
 .options {
+  padding: 0 5px;
+  background: #ddd;
+}
+
+select {
   height: 200px;
   overflow-y: scroll;
-  width: 95%;
-  margin: 0 auto;
-  background: #ddd;
+  width: 100%;
   border: 1px solid #bbb;
 }
 
 .edit {
-  height: 40px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.edit a {
-  color: #333;
 }
 ```
 
@@ -353,7 +356,6 @@ We style our `<option>` elements in a similar manner to earlier examples, giving
 option {
   background: #eee;
   padding: 10px;
-  height: 40px;
 }
 
 option:nth-of-type(odd) {
@@ -383,6 +385,10 @@ input:hover,
 input:focus {
   border: 1px solid #999;
   background: #eef;
+}
+
+.edit a {
+  color: #333;
 }
 
 a:hover,
@@ -469,25 +475,24 @@ const contacts = [
 ];
 ```
 
-We start by grabbing references to our `.filter` `<input>`, `.options` `<div>`, and `<select>` elements:
+We start by grabbing references to our `.filter` `<input>` and `<select>` elements:
 
 ```js live-sample___complex-listbox
 const filterInput = document.querySelector(".filter input");
-const optionsElem = document.querySelector(".options");
 const select = document.querySelector("select");
 ```
 
-Next, we define a function called `populateOptions()`, which takes an array of objects as a parameter. Inside the function we first empty the contents of the `.options` `<div>`. We then loop through the input array and create an `<option>` element for each object in the array, setting its `textContent` and `selected` properties to equal the object's `name` and `selected` properties. Each `<option>` element is appended to the DOM as a child of the `.options` `<div>`.
+Next, we define a function called `populateOptions()`, which takes an array of objects as a parameter. Inside the function we first empty the contents of the `<select>` element. We then loop through the input array and create an `<option>` element for each object in the array, setting its `textContent` and `selected` properties to equal the object's `name` and `selected` properties. Each `<option>` element is appended to the DOM as a child of the `<select>`.
 
 ```js live-sample___complex-listbox
 function populateOptions(array) {
-  optionsElem.innerHTML = "";
+  select.innerHTML = "";
 
   array.forEach((obj) => {
     const option = document.createElement("option");
     option.textContent = obj.name;
     option.selected = obj.selected;
-    optionsElem.appendChild(option);
+    select.appendChild(option);
   });
 }
 ```
@@ -522,9 +527,9 @@ The next bit of code adds a {{domxref("HTMLElement.change_event", "change")}} ev
 
 There is no way to detect exactly which `<option>` has been changed each time one is toggled, so we have solved the problem like this:
 
-1. Get an array of all the currently displayed `<option>`'s values by creating an array from the {{domxref("HTMLSelectElement.options", "select.options")}} collection using {{jsxref("Array.from")}}, then mapping it using its {{jsxref("Array.map", "map()")}} method to change each `<option>` in the array to its value.
-2. Get an array of all the currently selected `<option>`'s values using the same methodology, except that this time we create the input array from the {{domxref("HTMLSelectElement.selectedOptions", "select.selectedOptions")}} collection.
-3. For each contact object in the `contacts` array, check whether the contact `name` property value is included in the `allCurrentValues` array using the {{jsxref("Array.includes", "includes()")}} method. If not, ignore it, so that we don't end up toggling the selected status of the contacts that aren't even displayed. If so, set the contact `selected` property to the result of checking whether the `currentSelectedValues` array includes the contact `name` — if it is selected, set the object property to `true`; `false` otherwise.
+1. Get an array of all the currently displayed `<option>` values by creating an array from the {{domxref("HTMLSelectElement.options", "select.options")}} collection using {{jsxref("Array.from")}}, then mapping it using its {{jsxref("Array.map", "map()")}} method to replace each `<option>` in the array with its value.
+2. Get an array of all the currently selected `<option>` values using the same methodology, except that this time we create the input array from the {{domxref("HTMLSelectElement.selectedOptions", "select.selectedOptions")}} collection.
+3. For each contact object in the `contacts` array, check whether the contact `name` property value is included in the `allCurrentValues` array using the {{jsxref("Array.includes", "includes()")}} method. If not, ignore it, so that we don't end up toggling the selected status of the contacts that aren't even displayed. If so, set the contact `selected` property to the result of checking whether the `currentSelectedValues` array {{jsxref("Array.includes", "includes()")}} the contact `name` — if this is the case, set the object property to `true`, or `false` otherwise.
 
 ```js live-sample___complex-listbox
 select.addEventListener("change", () => {
@@ -553,7 +558,7 @@ populateOptions(contacts);
 
 The example renders like so:
 
-{{EmbedLiveSample("complex-listbox", "100%", "360px")}}
+{{EmbedLiveSample("complex-listbox", "100%", "380px")}}
 
 ```css hidden live-sample___basic-listbox live-sample___expanding-listbox live-sample___horizontal-listbox live-sample___complex-listbox
 @supports not (appearance: base-select) {
