@@ -19,10 +19,10 @@ A string. Possible values are:
 - `"auto"`
   - : The marker is automatically rotated to follow the direction of the path at the point where it is placed.
 - `"auto-start-reverse"`
-  - : If placed by `marker-start`, the marker is oriented 180° different from the orientation that would be used if `auto` were specified. For all other markers, `auto-start-reverse` means the same as `auto`.
-- An `<angle>` value (e.g., `"45deg"`, `"0.5turn"`)
+  - : If placed by {{SVGAttr("marker-start")}}, the marker is oriented at an angle 180° from the orientation that would be used if `auto` were specified. For all other markers, `auto-start-reverse` means the same as `auto`.
+- An [`<angle>`](/en-US/docs/Web/SVG/Guides/Content_type#angle) value (e.g., `"45deg"`)
   - : The marker is rotated by the specified angle, measured from the horizontal.
-- A `<number>` value (e.g., `"45"`)
+- A [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number) value (e.g., `"45"`)
   - : The marker is oriented at the specified angle in degrees.
 
 ## Examples

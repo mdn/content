@@ -37,10 +37,10 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
     - 1
       - : `SVG_MARKERUNITS_ORIENT_AUTO` which means that the {{SVGattr("orient")}} attribute has the keyword value `auto`.
     - 2
-      - : `SVG_MARKERUNITS_ORIENT_ANGLE` which means that the {{SVGattr("orient")}} attribute has an {{cssxref("angle")}} or {{cssxref("number")}} value indicating the angle.
+      - : `SVG_MARKERUNITS_ORIENT_ANGLE` which means that the {{SVGattr("orient")}} attribute has an [`<angle>`](/en-US/docs/Web/SVG/Guides/Content_type#angle) or [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number) value indicating the angle.
 
 - {{domxref("SVGMarkerElement.orient")}}
-  - : A string corresponding to the {{SVGattr("orient")}} attribute of the given {{SVGElement("marker")}} element.
+  - : A string defining how the marker is rotated when it is placed at its position on the shape. It reflects the {{SVGAttr("orient")}} attribute of the {{SVGElement("marker")}} element.
 - {{domxref("SVGMarkerElement.orientAngle")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedAngle")}} object containing the angle of the {{SVGattr("orient")}} attribute.
 - {{domxref("SVGMarkerElement.refX")}} {{ReadOnlyInline}}

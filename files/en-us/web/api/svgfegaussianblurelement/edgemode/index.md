@@ -8,7 +8,9 @@ browser-compat: api.SVGFEGaussianBlurElement.edgeMode
 
 {{APIRef("SVG")}}
 
-The **`edgeMode`** read-only property of the {{domxref("SVGFEGaussianBlurElement")}} interface reflects the {{SVGAttr("edgeMode")}} attribute of the given {{SVGElement("feGaussianBlur")}} element. It takes one of the `SVG_EDGEMODE_*` constants defined on this interface. It determines what color values to use when the blur needs to sample pixels beyond the edge of the input image.
+The **`edgeMode`** read-only property of the {{domxref("SVGFEGaussianBlurElement")}} interface determines what color values to use when the blur needs to sample pixels beyond the edge of the input image. It reflects the {{SVGAttr("edgeMode")}} attribute of the given {{SVGElement("feGaussianBlur")}} element.
+
+Its value is one of the `SVG_EDGEMODE_*` constants defined on the {{domxref("SVGFEGaussianBlurElement")}} interface.
 
 ## Value
 
