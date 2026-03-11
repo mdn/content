@@ -12,7 +12,6 @@ The **`session`** module contains commands for managing the lifecycle and event 
 ## Commands
 
 {{ListSubPages}}
-{{SubpagesWithSummaries}}
 
 ## Events
 

@@ -55,7 +55,7 @@ Each object may include any of the following optional capabilities:
 
 ### Return value
 
-A `result` object with the following fields:
+The `result` object in the response with the following fields:
 
 - `sessionId`
   - : A string that contains the unique identifier for the newly created session.

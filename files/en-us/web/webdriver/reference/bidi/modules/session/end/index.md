@@ -24,7 +24,7 @@ None. However, you must include a `params` field and set it to an empty object (
 
 ### Return value
 
-The `result` field is an empty object (`{}`).
+The `result` field in the response is an empty object (`{}`).
 
 ## Examples
 

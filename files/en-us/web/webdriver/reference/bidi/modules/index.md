@@ -43,7 +43,7 @@ All commands except [`session.new`](/en-US/docs/Web/WebDriver/Reference/BiDi/Mod
 An event is a notification sent by the browser to the client when something of interest occurs.
 To receive events, the client must first subscribe to them using the `session.subscribe` command.
 
-The client can subscribe to a specific event or to all events in a module. For example, subscribing to `"browsingContext.contextCreated"` subscribes the client to that single event, while subscribing to `"browsingContext"` subscribes the client to every event in the `browsingContext` module. Once subscribed, the browser sends matching events on its own, without the client having to request each one.
+The client can subscribe to a specific event or to all events in a module. For example, subscribing to `"browsingContext.contextCreated"` subscribes the client to that single event, while subscribing to `"browsingContext"` subscribes the client to every event in the `browsingContext` module.
 
 The following is a sample event message sent by the browser when the client is subscribed to `log.entryAdded` and a console message is logged (some fields have been omitted for brevity):
 
