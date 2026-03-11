@@ -319,6 +319,34 @@ The {{cssxref("@custom-media")}} CSS at-rule defines aliases for long or complex
 - `layout.css.custom-media.enabled`
   - : Set to `true` to enable.
 
+### `<attr-type>` values in `attr()` CSS function
+
+The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/Web/CSS/Reference/Values/attr#attr-type) values. This allows you to specify how an attribute value is parsed into a CSS value and take those values directly from [`data-*`](/en-US/docs/Web/HTML/How_to/Use_data_attributes). ([Firefox bug 1986631](https://bugzil.la/1986631) & [Firefox bug 1998245](https://bugzil.la/1998245))
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 149           | No                  |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `layout.css.attr.enabled`
+  - : Set to `true` to enable.
+
+### `color-mix()` accepts multiple color arguments
+
+The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now supports multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix many colors and set the percentages of each. ([Firefox bug 2007772](https://bugzil.la/2007772)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 150           | Yes                 |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `layout.css.color-mix-multi-color.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -328,52 +356,6 @@ The {{cssxref("@custom-media")}} CSS at-rule defines aliases for long or complex
 **No experimental features in this release cycle.**
 
 ## APIs
-
-### CloseWatcher Interface
-
-Built-in web components with "open" and "close" semantics, such as modal dialogs and popovers, can be closed using device-native mechanisms.
-For example, on Android you can close a dialog using the back button.
-The {{domxref("CloseWatcher")}} interface allows developers to implement UI components, such as custom sidebars, that can similarly be closed using native mechanisms.
-([Firefox bug 1888729](https://bugzil.la/1888729)).
-
-| Release channel   | Version added | Enabled by default?          |
-| ----------------- | ------------- | ---------------------------- |
-| Nightly           | 140           | Yes (Desktop). No (Android). |
-| Developer Edition | 132           | No                           |
-| Beta              | 132           | No                           |
-| Release           | 132           | No                           |
-
-- `dom.closewatcher.enabled`
-  - : Set to `true` to enable.
-
-### HTML Sanitizer API
-
-The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 146           | Yes                 |
-| Developer Edition | 147           | Yes                 |
-| Beta              | 147           | Yes                 |
-| Release           | 138           | No                  |
-
-- `dom.security.sanitizer.enabled`
-  - : Set to `true` to enable.
-
-### Removal of `beforescriptexecute` and `afterscriptexecute` events
-
-The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) and [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) on the {{domxref("Document")}} interface, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) on the {{domxref("Element")}} interface are on the path to removal. They have been disabled in Nightly.
-([Firefox bug 1954685](https://bugzil.la/1954685)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 139           | No                  |
-| Developer Edition | 139           | Yes                 |
-| Beta              | 139           | Yes                 |
-| Release           | 139           | Yes                 |
-
-- `dom.events.script_execute.enable`
-  - : Set to `true` to enable.
 
 ### Notification actions and maxActions properties
 
@@ -596,24 +578,6 @@ This feature is enabled on Android in all builds, but behind a preference on Des
 | Release           | 71              | No (Desktop). Yes (Android).                |
 
 - `dom.webshare.enabled`
-  - : Set to `true` to enable.
-
-### Screen Orientation API
-
-#### ScreenOrientation.lock()
-
-The {{domxref("ScreenOrientation.lock()")}} method allows a device to be locked to a particular orientation, if supported by the device and allowed by browser pre-lock requirements.
-Typically locking the orientation is only allowed on mobile devices when the document is being displayed full screen.
-See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 111             | Yes                 |
-| Developer Edition | 97              | No                  |
-| Beta              | 97              | No                  |
-| Release           | 97              | No                  |
-
-- `dom.screenorientation.allow-lock`
   - : Set to `true` to enable.
 
 ### Notifications API
