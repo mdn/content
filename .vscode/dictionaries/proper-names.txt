@@ -306,6 +306,7 @@ Kaku
 Kang
 Kaply
 Karmadrome
+KASI
 Kaspersky
 Katari
 Kazam
@@ -450,7 +451,6 @@ Orendorff
 Osmani
 Owlman
 Paavo
-Paciello
 Pacman
 Pagella
 Paletton
@@ -610,6 +610,7 @@ Verou
 Vieno
 Vint
 Visio
+Vispero
 Voikko
 Volkman
 Vorbis

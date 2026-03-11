@@ -28,7 +28,9 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 
 ## Example
 
-### HTML
+### Basic example
+
+#### HTML
 
 ```html
 <p id="firstParagraph">
@@ -44,7 +46,7 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 :root {
@@ -72,9 +74,77 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 }
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample('Example', 500, 130)}}
+{{EmbedLiveSample('basic example', 500, 130)}}
+
+### Registering custom properties with @property
+
+In this example, we use the {{cssxref("@property")}} at-rule to register a custom property.
+
+#### HTML
+
+Our HTML includes an ordered list ({{htmlelement("ol")}}) containing three list items ({{htmlelement("li")}}).
+
+```html
+<ol>
+  <li class="one">Item one</li>
+  <li class="two">Item two</li>
+  <li class="three">Item three</li>
+</ol>
+```
+
+#### CSS
+
+We use the {{cssxref("@property")}} at-rule to register two custom properties.
+
+```css
+@property --itemSize {
+  syntax: "<length> | <percentage>";
+  inherits: true;
+  initial-value: 200px;
+}
+
+@property --borderWidth {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 10px;
+}
+```
+
+We try to override the custom property values. The values set on `.two` are valid while the values set on `.three` are invalid.
+
+```css
+ol {
+  --itemSize: 100px;
+  --borderWidth: 1px;
+}
+.two {
+  --itemSize: initial;
+  --borderWidth: inherit;
+}
+.three {
+  --itemSize: large;
+  --borderWidth: 3%;
+}
+```
+
+We use the two custom properties to style the items, setting the border and width for all the items at once:
+
+```css
+li {
+  width: var(--itemSize);
+  border: var(--borderWidth) solid red;
+  background-color: yellow;
+  margin-bottom: 10px;
+}
+```
+
+#### Results
+
+{{EmbedLiveSample('Registering custom properties with @property', 500, 130)}}
+
+The `--itemSize` property is inheritable; the `--borderWidth` is not. The properties are set on the `ol` parent, overriding the default values defined in their registration. Item one inherits the size but not the border width from the OL. The global keywords, declared for `.two`, are valid for `<length>`, so are used. The values in `.three` are invalid ("large" is not a `<length-percentage>` and `3%` is not a `<length>`). See
 
 ## Specifications
 
@@ -89,4 +159,5 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 - The {{cssxref("var()")}} function
 - {{cssxref("@property")}} at-rule
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) guide
+- [Registering CSS custom properties](/en-US/docs/Web/CSS/Guides/Properties_and_values_API/Registering_properties) guide
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module

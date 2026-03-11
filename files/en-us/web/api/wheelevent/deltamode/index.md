@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WheelEvent.deltaMode
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("Pointer Events")}}
 
 The **`WheelEvent.deltaMode`** read-only property returns an
 `unsigned long` representing the unit of the delta values scroll amount.

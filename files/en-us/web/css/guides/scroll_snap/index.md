@@ -265,7 +265,7 @@ To compare scroll snapping to regular scrolling, check the "disable snapping" ch
 
 ### Properties on children
 
-- {{cssxref("scroll-snap-align")}}
+- {{cssxref("scroll-initial-target")}}
 - {{cssxref("scroll-margin")}}
   - {{cssxref("scroll-margin-top")}}
   - {{cssxref("scroll-margin-right")}}
@@ -277,6 +277,7 @@ To compare scroll snapping to regular scrolling, check the "disable snapping" ch
   - {{cssxref("scroll-margin-block")}}
   - {{cssxref("scroll-margin-block-start")}}
   - {{cssxref("scroll-margin-block-end")}}
+- {{cssxref("scroll-snap-align")}}
 - {{cssxref("scroll-snap-stop")}}
 
 ### Events
@@ -321,6 +322,6 @@ To compare scroll snapping to regular scrolling, check the "disable snapping" ch
 - [CSS scroll anchoring](/en-US/docs/Web/CSS/Guides/Scroll_anchoring) module
 - [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) on adrianroselli.com (2022)
 - [Scroll snap examples](https://codepen.io/collection/KpqBGW) on CodePen (2022)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2021)
 - [Practical CSS scroll snapping/](https://css-tricks.com/practical-css-scroll-snapping/) on CSS-Tricks (2020)
 - [CSS scroll snap](https://12daysofweb.dev/2022/css-scroll-snap/) on 12 Days of Web (2019)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2018)

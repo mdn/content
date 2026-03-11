@@ -52,6 +52,8 @@ Someone from the team will respond with some comments, hints, or guidance.
 Make sure you're not working on something that's already in-progress - it can be frustrating to duplicate or lose work.
 If in doubt, ask questions on the issue.
 
+MDN Web Docs is a complex project with lots of moving parts. It's a good idea to get familiar with the [different code repositories](/en-US/docs/MDN/Community/Our_repositories).
+
 ## Ways to contribute
 
 Here's a list of ways you can contribute to MDN Web Docs:

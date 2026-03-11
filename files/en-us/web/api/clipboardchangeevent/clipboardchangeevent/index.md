@@ -3,10 +3,12 @@ title: "ClipboardChangeEvent: ClipboardChangeEvent() constructor"
 short-title: ClipboardChangeEvent()
 slug: Web/API/ClipboardChangeEvent/ClipboardChangeEvent
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.ClipboardChangeEvent.ClipboardChangeEvent
 ---
 
-{{securecontext_header}}{{APIRef("Clipboard API")}}
+{{securecontext_header}}{{APIRef("Clipboard API")}}{{SeeCompatTable}}
 
 The **`ClipboardChangeEvent()`** constructor creates a new {{domxref("ClipboardChangeEvent")}} object instance when a `clipboardchange` event occurs. The `clipboardchange` event fires whenever the system clipboard contents are changed either by a web app or any other system application.
 

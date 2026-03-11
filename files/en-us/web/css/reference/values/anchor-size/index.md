@@ -13,12 +13,15 @@ For detailed information on anchor features and usage, see the [CSS anchor posit
 ## Syntax
 
 ```css
-/* sizing relative to anchor side */
-width: anchor-size(width);
-block-size: anchor-size(block);
-height: calc(anchor-size(self-inline) + 2em);
+/* without parameters */
+anchor-size()
 
-/* sizing relative to named anchor's side */
+/* anchor size parameter */
+anchor-size(width);
+anchor-size(block);
+anchor-size(self-inline);
+
+/* anchor-name and anchor-side */
 width: anchor-size(--my-anchor width);
 block-size: anchor-size(--my-anchor block);
 
@@ -249,7 +252,7 @@ body {
 .anchor {
   anchor-name: --my-anchor;
   width: 100px;
-  height: 100px;
+  height: 50px;
 }
 
 .infobox {
@@ -262,7 +265,7 @@ We set some distinct property values on the positioned elements:
 
 - The positioned elements are tethered to the anchor with different {{cssxref("position-area")}} values that position the elements in different places around the anchor element.
 - The {{cssxref("height")}} of the first infobox is set to the same height as the anchor element: `anchor-size(height)` returns the anchor element's height. The element's {{cssxref("width")}} is set to double the anchor element's width using the `anchor-size()` function within a {{cssxref("calc()")}} function: `anchor-size(width)` retrieves the anchor element's width, which is then multiplied by two.
-- The {{cssxref("height")}} of the second infobox is set to two-thirds of the anchor element's height, using a similar technique.
+- The {{cssxref("height")}} of the second infobox is set to 80% of the anchor element's height, using a similar technique.
 - Margin values are included to provide some separation from the anchor element.
 
 ```css
@@ -275,7 +278,7 @@ We set some distinct property values on the positioned elements:
 
 #infobox2 {
   position-area: top span-right;
-  height: calc(anchor-size(height) / 1.5);
+  height: calc(anchor-size(height) / 1.25);
   margin-bottom: 5px;
 }
 ```
@@ -284,7 +287,7 @@ We set some distinct property values on the positioned elements:
 
 {{EmbedLiveSample("Basic `anchor-size()` usage", "100%", "240")}}
 
-Use your browser tools to inspect the anchor-positioned elements. The first infobox will be `100px` tall and `200px` wide, while the second infobox will have a height of approximately `66.7px`, with the `width` defaulting to {{cssxref("max-content")}}.
+Use your browser tools to inspect the anchor-positioned elements. The first infobox will be `50px` tall and `200px` wide, while the second infobox will be `40px` tall, with the `width` defaulting to {{cssxref("max-content")}}.
 
 ### Position and margin example
 

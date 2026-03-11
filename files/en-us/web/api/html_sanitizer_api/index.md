@@ -36,7 +36,7 @@ If no sanitizer is passed as a parameter they will use the default sanitizer con
 If a custom sanitizer is used, it is implicitly updated to remove any elements and attributes that are not XSS-safe (note that the passed sanitizer is not modified, and might still allow unsafe entities if used with an unsafe method).
 
 The safe methods should be used instead of {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, or {{domxref("ShadowRoot.innerHTML")}}, for injecting untrusted HTML content.
-For example, in most case you can use {{domxref('Element.setHTML()')}} with the default sanitizer as a drop-in replacement for {{domxref("Element.innerHTML")}}.
+For example, in most cases you can use {{domxref('Element.setHTML()')}} with the default sanitizer as a drop-in replacement for {{domxref("Element.innerHTML")}}.
 The same methods can also be used for injecting trusted HTML strings that do not need to contain any XSS-unsafe elements.
 
 The XSS-unsafe methods will use whatever sanitizer configuration is passed as an argument.
