@@ -80,6 +80,9 @@ async function cookieTest() {
 cookieTest();
 ```
 
+> [!NOTE]
+> In [supporting browsers](/en-US/docs/Web/API/CookieStore/set#browser_compatibility), you can set the cookie's expiry using `maxAge` instead of `expires`.
+
 ### Getting cookies
 
 This example shows how you can get a particular cookie using {{domxref("CookieStore.get()")}} or all cookies using {{domxref("CookieStore.getAll()")}}.

@@ -119,7 +119,7 @@ If the iframe is set to 50vw, it will be 50% of the width of the `1200px` parent
 A width-based media query within the iframe document is relative to the iframe's viewport.
 
 ```css
-@media screen and (width >= 500px) {
+@media screen and (width <= 500px) {
   p {
     color: red;
   }
