@@ -1,12 +1,12 @@
 ---
-title: Default `Sanitizer` configuration
+title: Default Sanitizer configuration
 slug: Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration
 page-type: guide
 ---
 
 {{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The default `Sanitizer` configuration defines the {{domxref("Sanitizer")}} that is used by default if you call the [safe sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods), such as {{domxref("Element.setHTML()")}}, {{domxref("ShadowRoot.setHTML()")}}, and {{domxref("Document.parseHTML_static","Document.parseHTML()")}}, without specifying a custom sanitizer.
+The default sanitizer configuration defines the {{domxref("Sanitizer")}} that is used by default if you call the [safe sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods), such as {{domxref("Element.setHTML()")}}, {{domxref("ShadowRoot.setHTML()")}}, and {{domxref("Document.parseHTML_static","Document.parseHTML()")}}, without specifying a custom sanitizer.
 It is also the default configuration returned by the [`Sanitizer()` constructor](/en-US/docs/Web/API/Sanitizer/Sanitizer) if no `configuration` is passed as an argument.
 
 This configuration removes the following sorts of items:
