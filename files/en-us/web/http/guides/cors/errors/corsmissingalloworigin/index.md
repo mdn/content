@@ -73,6 +73,16 @@ For **Nginx** ([docs](https://nginx.org/en/docs/http/ngx_http_headers_module.htm
 add_header 'Access-Control-Allow-Origin' 'https://example.com' always;
 ```
 
+## If you don't control the server
+
+If the remote server is not under your control and does not include the `Access-Control-Allow-Origin` header, you cannot fix this error on the server side. Consider these alternatives:
+
+- If you don't need to read the response, use [`mode: "no-cors"`](/en-US/docs/Web/API/Request/mode) in your `fetch()` call. The response will be opaque (unreadable), but the request will succeed.
+- Route the request through a proxy server you control, which fetches the resource and returns it with appropriate CORS headers.
+- Restructure your request as a [simple request](/en-US/docs/Web/HTTP/Guides/CORS#simple_requests) to avoid triggering a preflight, if the server handles simple cross-origin requests.
+
+See [Client-side considerations](/en-US/docs/Web/HTTP/Guides/CORS/Errors#client-side_considerations) for more detail.
+
 ## See also
 
 - [CORS errors](/en-US/docs/Web/HTTP/Guides/CORS/Errors)

@@ -49,6 +49,38 @@ Firefox's console displays messages in its console when requests fail due to COR
 - [Reason: missing token 'xyz' in CORS header 'Access-Control-Allow-Headers' from CORS preflight channel](/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowHeaderFromPreflight)
 - [Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed](/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSMultipleAllowOriginNotAllowed)
 
+## Client-side considerations
+
+Most CORS errors can only be resolved on the server, because the server controls whether cross-origin access is allowed. However, there are some things you can do on the client side:
+
+### Avoid triggering a preflight
+
+Browsers send a [preflight request](/en-US/docs/Web/HTTP/Guides/CORS#preflighted_requests) before the actual request when certain conditions are met (custom headers, methods other than `GET`/`HEAD`/`POST`, or non-simple content types). If the server does not handle preflight requests, you can restructure your request to qualify as a [simple request](/en-US/docs/Web/HTTP/Guides/CORS#simple_requests):
+
+- Use only `GET`, `HEAD`, or `POST` methods.
+- Set only [CORS-safelisted request headers](/en-US/docs/Glossary/CORS-safelisted_request_header) (such as {{HTTPHeader("Accept")}}, {{HTTPHeader("Content-Language")}}, or {{HTTPHeader("Content-Type")}}).
+- Use only `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain` for {{HTTPHeader("Content-Type")}}.
+
+Simple requests bypass the preflight step entirely, which avoids a class of CORS errors related to preflight handling.
+
+### Use `no-cors` mode for opaque responses
+
+If you do not need to read the response body or headers — for example, when sending analytics beacons or loading resources into a cache via a service worker — you can set the {{domxref("Request/mode", "mode")}} to `"no-cors"` in a {{domxref("Window/fetch", "fetch()")}} call:
+
+```js
+fetch("https://api.example.com/log", {
+  method: "POST",
+  mode: "no-cors",
+  body: data,
+});
+```
+
+The response will be [opaque](/en-US/docs/Web/API/Response/type): its status is `0`, its headers are empty, and its body is not readable by JavaScript. This is by design — `no-cors` disables the CORS check, but in exchange you lose all access to the response content.
+
+### Use a proxy server
+
+If you do not control the remote server and it does not set CORS headers, you can route requests through a server you do control. Your server fetches the resource on your behalf and returns it with appropriate CORS headers. This approach adds latency and introduces a dependency on your proxy, but it works when other options are unavailable.
+
 ## See also
 
 - Glossary: {{Glossary("CORS")}}
