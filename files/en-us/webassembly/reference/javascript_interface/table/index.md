@@ -29,6 +29,8 @@ The **`WebAssembly.Table`** object is a JavaScript wrapper object — an array-l
   - : Increases the size of the `Table` instance by a specified number of elements.
 - [`Table.prototype.set()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/set)
   - : Sets an element stored at a given index to a given value.
+- [`Table.prototype.type()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/type)
+  - : Returns an object describing the type of this table (its element type and size bounds).
 
 ## Examples
 
