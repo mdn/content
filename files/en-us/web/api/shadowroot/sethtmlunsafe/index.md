@@ -30,7 +30,7 @@ setHTMLUnsafe(input, options)
 ### Parameters
 
 - `input`
-  - : A {{domxref("TrustedHTML")}} or string instance defining HTML to be parsed.
+  - : A {{domxref("TrustedHTML")}} instance or a string defining HTML to be parsed.
 - `options` {{optional_inline}}
   - : An options object with the following optional parameters:
     - `sanitizer` {{optional_inline}}

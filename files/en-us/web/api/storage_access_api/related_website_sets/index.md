@@ -3,6 +3,7 @@ title: Related Website Sets
 slug: Web/API/Storage_Access_API/Related_website_sets
 page-type: guide
 status:
+  - deprecated
   - non-standard
 spec-urls: https://wicg.github.io/first-party-sets/
 ---
