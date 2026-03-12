@@ -96,6 +96,7 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
   - Inclusion of the split view ID in {{WebExtAPIRef("tabs.query")}}, {{WebExtAPIRef("tabs.onUpdated")}}, and {{WebExtAPIRef("tabs.Tab")}}
   - Documentation of the behavior when {{WebExtAPIRef("tabs.move")}} or {{WebExtAPIRef("tabs.remove")}} include tabs in a split view.
     ([Firefox bug 1993037](https://bugzil.la/1993037))
+- Adds support for `tabId` as a top-level parameter in {{WebExtAPIRef("action.isEnabled")}} and {{WebExtAPIRef("browserAction.isEnabled")}}. This change provides for compatibility with the Chrome implementation of `action.isEnabled`. ([Firefox bug 2013477](https://bugzil.la/2013477))
 - A user gesture is no longer required for {{WebExtAPIRef("action.openPopup")}} and {{WebExtAPIRef("browserAction.openPopup")}} to open a popup. This feature was available behind the `extensions.openPopupWithoutUserGesture.enabled` preference from Firefox 108. This change aligns Firefox's behavior with Chrome and Safari. ([Firefox bug 1799344](https://bugzil.la/1799344))
 
 <!-- ### Removals -->
