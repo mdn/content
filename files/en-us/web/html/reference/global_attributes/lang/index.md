@@ -10,7 +10,7 @@ sidebar: htmlsidebar
 The **`lang`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single {{glossary("BCP 47 language tag")}}.
 
 > [!NOTE]
-> If the value of `lang` is set to empty string the language is explicitly unknown. Therefore, it is recommended to always specify an appropriate value for this attribute.
+> If the value of `lang` is set to an empty string, the language is explicitly unknown. Therefore, it is recommended to always specify an appropriate value for this attribute.
 
 {{InteractiveExample("HTML Demo: lang", "tabbed-shorter")}}
 
