@@ -10,6 +10,24 @@ The **`backdrop-filter`** [CSS](/en-US/docs/Web/CSS) property lets you apply gra
 
 {{InteractiveExample("CSS Demo: backdrop-filter()")}}
 
+## Description
+
+The `backdrop-filter` property applies filter effects to the pixels painted _behind_ an element, up to the nearest ancestor that is a **backdrop root**. Content above the backdrop root is not affected.
+
+### Backdrop root
+
+A backdrop root is an element that establishes a boundary for `backdrop-filter` effects. The following elements are backdrop roots:
+
+- The root element ({{HTMLElement("html")}})
+- An element with a {{cssxref("filter")}} value other than `none`
+- An element with an {{cssxref("opacity")}} value less than `1`
+- An element with a {{cssxref("mask")}}, {{cssxref("mask-image")}}, {{cssxref("mask-border")}}, or {{cssxref("clip-path")}} value other than `none`
+- An element with a `backdrop-filter` value other than `none`
+- An element with a {{cssxref("mix-blend-mode")}} value other than `normal`
+- An element with {{cssxref("will-change")}} set to any of the above properties
+
+This means that if a parent element has `opacity: 0.9`, it becomes a backdrop root and any child's `backdrop-filter` will only blur the content between that parent and the child — not the content behind the parent. This is a common source of confusion when `backdrop-filter` appears to have no visible effect despite being correctly applied.
+
 ```css interactive-example-choice
 backdrop-filter: blur(10px);
 ```
