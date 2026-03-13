@@ -13,13 +13,16 @@ sidebar: mdnsidebar
 > **Page front matter:**
 >
 > The front matter at the top of the page is used to define "page metadata".
-> The values should be updated appropriately for the particular WebExtension API event.
+> The values must be updated appropriately for the WebExtension API event.
 >
 > ```md
 > ---
 > title: Namespace.onEventName
 > slug: Mozilla/Add-ons/WebExtensions/API/Namespace/onEventName
 > page-type: webextension-api-event
+> status:
+>   - deprecated
+>   - experimental
 > browser-compat: webextensions.api.Namespace.onEventName
 > sidebar: addonsidebar
 > ---
@@ -33,39 +36,35 @@ sidebar: mdnsidebar
 >     This is formatted like `Mozilla/Add-ons/WebExtensions/API/Namespace/onEventName`.
 > - **page-type**
 >   - : The `page-type` key for WebExtension API events is always `webextension-api-event`.
+> - **status**
+>   - : Include status flags as appropriate: `experimental`, `deprecated`, or `non-standard`. WebExtension features do not have automatic status blocks from BCD, so you must add the `status` field in front matter manually and include the corresponding banner macro(s) in the page content. Remove the `status` field entirely if neither flag applies.
 > - **browser-compat**
->   - : Replace the placeholder value `webextensions.api.Namespace.onEventName` with the query string for the event in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->     The toolchain automatically uses the key to populate the compatibility section (replacing the `\{{Compat}}` macros).
->
->     Note that you may first need to create/update an entry for the API event in our [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>   - : Replace the placeholder value `webextensions.api.Namespace.onEventName` with the query string for the event in the [browser-compat-data repo](https://github.com/mdn/browser-compat-data). For guidance on creating this data, see the [Browser Compatibility tables and Browser Compatibility Data (BCD)](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>     The toolchain uses the key to populate the compatibility section (replacing the `\{{Compat}}` macros).
+> - **sidebar**
+>   - : Always set to `addonsidebar`. The sidebar is determined by the directory structure and front matter — placing the page in the correct location under `Mozilla/Add-ons/WebExtensions/API/` is sufficient.
 >
 > ---
 >
 > **Top-of-page macros**
 >
-> A number of macro calls appear at the top of the content section (immediately below the page front matter).
+> Macro calls may appear at the top of the content section (immediately below the page front matter). For WebExtension pages, you must add these manually as needed:
 >
-> These macros are automatically added by the toolchain (there is no need to add/remove):
+> - `\{{SeeCompatTable}}` — add this if the event is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Also add `experimental` to the `status` list in the front matter.
+> - `\{{Deprecated_Header}}` — add this if the event is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated). Also add `deprecated` to the `status` list in the front matter. In general, WebExtension pages prefer a custom deprecation warning with information about the replacement feature, for example:
 >
-> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
+>   ```md
+>   > [!WARNING]
+>   > This event is deprecated. Use \{{WebExtAPIRef("Namespace.onReplacementEvent")}} instead.
+>   ```
 >
-> You should update or delete the following macros according to the advice below:
->
-> - `\{{WebExtAPIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page.
->   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
->   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide for information on how to do this.
->
-> Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
->
-> Samples of the **Secure context**, **Available in workers**, **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
+> Remove any macros or banners that do not apply.
 >
 > _Remember to remove this whole explanatory note before publishing._
 
 {{SeeCompatTable}}{{Deprecated_Header}}
 
-Begin the content on the page with an introductory paragraph — start by naming the event, saying what WebExtension namespace it is part of, and saying when it fires and why it is useful.
+Begin the content on the page with an introductory paragraph describing when the event fires and why it is useful.
 This should ideally be one or two short sentences.
 
 ## Syntax
@@ -133,6 +132,10 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 >
 > For examples of this API, see [the page on Namespace.onEventName](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Namespace/onEventName).
 > ```
+
+`\{{WebExtExamples}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file. This macro generates links to examples from the [webextensions-examples](https://github.com/nicolo-ribaudo/webextensions-examples) repository. For API overview pages, use `\{{WebExtExamples("h2")}}` instead._
 
 ## Browser compatibility
 
