@@ -70,6 +70,7 @@ Below are examples of the various pages you'll find on MDN along with templates 
 - [CSS feature reference page](#css_feature_reference_page)
 - [HTTP header reference page](#http_header_reference_page)
 - [ARIA reference page](#aria_reference_page)
+- [WebExtension reference pages](#webextension_reference_pages)
 - [Conceptual page](#conceptual_page)
 - [Glossary page](#glossary_page)
 - [Landing page](#landing_page)
@@ -233,6 +234,29 @@ An **ARIA reference page** describes a [role](/en-US/docs/Web/Accessibility/ARIA
 #### Templates
 
 - [ARIA page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template)
+
+### WebExtension reference pages
+
+**WebExtension reference pages** document browser extension APIs, their members (functions, events, properties, and types), and manifest keys.
+Each page type has a copyable template file in `files/templates/webextensions/` and a corresponding writing guidance page that explains section-by-section how to fill it in.
+
+#### Examples
+
+- [`bookmarks` API overview](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
+- [`runtime.openOptionsPage()` function](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage)
+- [`tabs.onActivated` event](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onActivated)
+- [`browserSettings.homepageOverride` property](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride)
+- [`extension.ViewType` type](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/ViewType)
+- [`permissions` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)
+
+#### Templates
+
+- [API overview page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/WebExtension_API_page_template)
+- [API function page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/WebExtension_API_function_page_template)
+- [API event page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/WebExtension_API_event_page_template)
+- [API property page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/WebExtension_API_property_page_template)
+- [API type page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/WebExtension_API_type_page_template)
+- [Manifest key page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/WebExtension_manifest_key_page_template)
 
 ### Conceptual page
 

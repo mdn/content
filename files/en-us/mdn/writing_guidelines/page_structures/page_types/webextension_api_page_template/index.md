@@ -5,138 +5,134 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-> [!NOTE]
-> _Remove this whole explanatory note before publishing._
->
-> ---
->
-> **Page front matter:**
->
-> The front matter at the top of the page is used to define "page metadata".
-> The values must be updated appropriately for the WebExtension API namespace/module.
->
-> ```md
-> ---
-> title: Namespace
-> slug: Mozilla/Add-ons/WebExtensions/API/Namespace
-> page-type: webextension-api
-> status:
->   - deprecated
->   - experimental
-> browser-compat: webextensions.api.Namespace
-> sidebar: addonsidebar
-> ---
-> ```
->
-> - **title**
->   - : Title heading displayed at the top of the page. This is just the name of the WebExtension API namespace, for example `runtime` or `downloads`.
-> - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
->     This is formatted like `Mozilla/Add-ons/WebExtensions/API/Namespace`.
-> - **page-type**
->   - : The `page-type` key for WebExtension API namespaces is always `webextension-api`.
-> - **status**
->   - : Include status flags as appropriate: `experimental`, `deprecated`, or `non-standard`. WebExtension features do not have automatic status blocks from BCD, so you must add the `status` field in front matter manually and include the corresponding banner macro(s) in the page content. Remove the `status` field entirely if neither flag applies.
-> - **browser-compat**
->   - : Replace the placeholder value `webextensions.api.Namespace` with the query string for the namespace in the [browser-compat-data repo](https://github.com/mdn/browser-compat-data). For guidance on creating this data, see the [Browser Compatibility tables and Browser Compatibility Data (BCD)](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
->     The toolchain uses the key to populate the compatibility section (replacing the `\{{Compat}}` macros).
-> - **sidebar**
->   - : Always set to `addonsidebar`. The sidebar is determined by the directory structure and front matter — placing the page in the correct location under `Mozilla/Add-ons/WebExtensions/API/` is sufficient.
->
-> ---
->
-> **Top-of-page macros**
->
-> Macro calls may appear at the top of the content section (immediately below the page front matter). For WebExtension pages, you must add these manually as needed:
->
-> - `\{{SeeCompatTable}}` — add this if the namespace is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Also add `experimental` to the `status` list in the front matter.
-> - `\{{Deprecated_Header}}` — add this if the namespace is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated). Also add `deprecated` to the `status` list in the front matter. In general, WebExtension pages prefer a custom deprecation warning with information about the replacement feature, for example:
->
->   ```md
->   > [!WARNING]
->   > This API is deprecated. Use \{{WebExtAPIRef("ReplacementNamespace")}} instead.
->   ```
->
-> Remove any macros or banners that do not apply.
->
-> _Remember to remove this whole explanatory note before publishing._
+This page describes the structure and content of a WebExtension API overview page. To get started quickly, copy the template file at [`files/templates/webextensions/api-overview.md`](https://github.com/mdn/content/blob/main/files/templates/webextensions/api-overview.md) in the content repository. Save it as `index.md` in a directory that corresponds to the slug. Then use the guidance below to fill in each section.
 
-{{SeeCompatTable}}{{Deprecated_Header}}
+## Page front matter
 
-Begin the content on the page with an introductory paragraph giving a brief high-level description of what the namespace does and when you might use it.
-This should ideally be one or two short sentences.
+The front matter at the top of the page defines page metadata. The values must be updated appropriately for the WebExtension API namespace.
+
+```md
+---
+title: Namespace
+slug: Mozilla/Add-ons/WebExtensions/API/Namespace
+page-type: webextension-api
+status:
+  - deprecated
+  - experimental
+browser-compat: webextensions.api.Namespace
+sidebar: addonsidebar
+---
+```
+
+- **title**
+  - : Title heading displayed at the top of the page. This is just the name of the WebExtension API namespace, for example `runtime` or `downloads`.
+- **slug**
+  - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
+    This is formatted like `Mozilla/Add-ons/WebExtensions/API/Namespace`.
+- **page-type**
+  - : Always `webextension-api`.
+- **status**
+  - : Include status flags as appropriate: `experimental`, `deprecated`, or `non-standard`. WebExtension features do not have automatic status blocks from BCD, so you must add the `status` field in front matter manually and include the corresponding banner macro(s) in the page content. Remove the `status` field entirely if neither flag applies.
+- **browser-compat**
+  - : Replace the placeholder value `webextensions.api.Namespace` with the query string for the namespace in the [browser-compat-data repo](https://github.com/mdn/browser-compat-data). For guidance on creating this data, see [Browser Compatibility tables and Browser Compatibility Data (BCD)](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables). The toolchain uses the key to populate the compatibility section (replacing the `{{Compat}}` macro).
+- **sidebar**
+  - : Always set to `addonsidebar`. The sidebar is determined by the directory structure and front matter — placing the page in the correct location under `Mozilla/Add-ons/WebExtensions/API/` is sufficient.
+
+## Top-of-page macros
+
+Macro calls may appear at the top of the content section (immediately below the page front matter). For WebExtension pages, you must add these manually as needed:
+
+- `{{SeeCompatTable}}` — add this if the namespace is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Also add `experimental` to the `status` list in the front matter.
+- `{{Deprecated_Header}}` — add this if the namespace is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated). Also add `deprecated` to the `status` list in the front matter. In general, WebExtension pages prefer a custom deprecation warning with information about the replacement feature, for example:
+
+  ```md
+  > [!WARNING]
+  > This API is deprecated. Use \{{WebExtAPIRef("ReplacementNamespace")}} instead.
+  ```
+
+Remove any macros or banners that do not apply.
+
+## Introductory paragraph
+
+Begin the content on the page with an introductory paragraph giving a brief high-level description of what the namespace does and when you might use it. This should ideally be one or two short sentences. There is no need to repeat the namespace name since the title already communicates this.
 
 If useful, you can add a short bulleted list summarizing key capabilities of the namespace, as is done on pages like [`runtime`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime).
 
-## Types
+If the API requires a permission, state this immediately after the introduction. For example, see [`bookmarks`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks):
 
-If the namespace defines types, list them here using `{{WebExtAPIRef}}` macros and provide a brief description of each type.
+```md
+To use this API, an extension must request the "bookmarks" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+```
 
-- {{WebExtAPIRef("Namespace.Type1")}}
-  - : Include a brief description of the type and what it represents.
-- {{WebExtAPIRef("Namespace.Type2")}}
-  - : etc.
+## Types section
 
-If there are no types, omit this section.
+If the namespace defines types, list them using `{{WebExtAPIRef}}` macros and provide a brief, single-sentence description of each. Omit this section if there are no types.
 
-## Properties
+## Properties section
 
-If the namespace defines properties, list them here using `{{WebExtAPIRef}}` macros and provide a brief description of each property.
+If the namespace defines properties, list them using `{{WebExtAPIRef}}` macros and provide a brief, single-sentence description of each. Omit this section if there are no properties.
 
-- {{WebExtAPIRef("Namespace.property1")}}
-  - : Include a brief description of the property and what it does here.
-- {{WebExtAPIRef("Namespace.property2")}}
-  - : etc.
+## Functions section
 
-If there are no properties, omit this section.
+List all the functions in the namespace using `{{WebExtAPIRef}}` macros and provide a short, single-sentence description of each, following existing pages like [`runtime`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime) or [`extension`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension). Omit this section if there are no functions.
 
-## Functions
+## Events section
 
-List all the functions in this namespace using `{{WebExtAPIRef}}` macros and provide a short, single-sentence description of each, following existing pages like [`runtime`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime) or [`extension`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension).
+If the namespace defines events, list them using `{{WebExtAPIRef}}` macros and provide a brief description of when each event fires. Omit this section if there are no events.
 
-- {{WebExtAPIRef("Namespace.function1()")}}
-  - : Include a brief description of the function and what it does here.
-- {{WebExtAPIRef("Namespace.function2()")}}
-  - : etc.
+## WebExtExamples macro
 
-If there are no functions, omit this section.
+After the last member-listing section (Types, Properties, Functions, or Events), include the `{{WebExtExamples("h2")}}` macro. On API overview pages, always pass `"h2"` so the generated heading is at the correct level. This macro generates links to relevant examples from the [webextensions-examples](https://github.com/nicolo-ribaudo/webextensions-examples) repository.
 
-## Methods
+## Browser compatibility section
 
-If the namespace distinguishes between methods and free functions (for example, some devtools-related or extension-helper APIs), you can add a separate methods section. List the methods here using `{{WebExtAPIRef}}` macros and provide a short, single-sentence description of each.
+Include `{{Compat}}`, which is automatically populated from the `browser-compat` key in the front matter.
 
-- {{WebExtAPIRef("Namespace.method1()")}}
-  - : Include a brief description of the method and what it does here.
-- {{WebExtAPIRef("Namespace.method2()")}}
-  - : etc.
+## Chromium attribution
 
-If the namespace does not distinguish methods from functions, omit this section and only use the **Functions** section.
+If the API is based on a Chromium API, include a `[!NOTE]` callout after `{{Compat}}` crediting the Chromium source. Link to the relevant Chrome API docs and the JSON source file:
 
-## Events
+```md
+> [!NOTE]
+> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action) API. This documentation is derived from [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json) in the Chromium code.
+```
 
-If the namespace defines events, list them here using `{{WebExtAPIRef}}` macros and provide a brief description of when each event fires.
+Follow it with the BSD license text in an HTML comment:
 
-- {{WebExtAPIRef("Namespace.onEvent1")}}
-  - : Fired when (include the description of when the event fires).
-- {{WebExtAPIRef("Namespace.onEvent2")}}
-  - : etc.
+```md
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//    * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//    * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+```
 
-If there are no events, omit this section.
+Omit both the note and the license comment if the API is not based on a Chromium API. This pattern applies to all API page types (overview, function, event, property, and type).
 
-`\{{WebExtExamples("h2")}}`
+## See also section
 
-_To use this macro, remove the backticks and backslash in the markdown file. This macro generates links to examples from the [webextensions-examples](https://github.com/nicolo-ribaudo/webextensions-examples) repository. Use `\{{WebExtExamples("h2")}}` on API overview pages so the generated heading is at the correct level._
-
-## Browser compatibility
-
-`\{{Compat}}`
-
-_To use this macro, remove the backticks and backslash in the markdown file._
-
-## See also
-
-Include links to reference pages and guides related to the current API. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
-
-- link1
-- link2
-- external_link (year)
+Include links to reference pages and guides related to the current namespace. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.

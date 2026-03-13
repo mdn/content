@@ -5,148 +5,94 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-> [!NOTE]
-> _Remove this whole explanatory note before publishing._
->
-> ---
->
-> **Page front matter:**
->
-> The front matter at the top of the page is used to define "page metadata".
-> The values must be updated appropriately for the WebExtension API event.
->
-> ```md
-> ---
-> title: Namespace.onEventName
-> slug: Mozilla/Add-ons/WebExtensions/API/Namespace/onEventName
-> page-type: webextension-api-event
-> status:
->   - deprecated
->   - experimental
-> browser-compat: webextensions.api.Namespace.onEventName
-> sidebar: addonsidebar
-> ---
-> ```
->
-> - **title**
->   - : Title heading displayed at the top of the page.
->     Format as `"Namespace.onEventName"`. For example, the [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) event page has a _title_ of `runtime.onMessage`.
-> - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
->     This is formatted like `Mozilla/Add-ons/WebExtensions/API/Namespace/onEventName`.
-> - **page-type**
->   - : The `page-type` key for WebExtension API events is always `webextension-api-event`.
-> - **status**
->   - : Include status flags as appropriate: `experimental`, `deprecated`, or `non-standard`. WebExtension features do not have automatic status blocks from BCD, so you must add the `status` field in front matter manually and include the corresponding banner macro(s) in the page content. Remove the `status` field entirely if neither flag applies.
-> - **browser-compat**
->   - : Replace the placeholder value `webextensions.api.Namespace.onEventName` with the query string for the event in the [browser-compat-data repo](https://github.com/mdn/browser-compat-data). For guidance on creating this data, see the [Browser Compatibility tables and Browser Compatibility Data (BCD)](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
->     The toolchain uses the key to populate the compatibility section (replacing the `\{{Compat}}` macros).
-> - **sidebar**
->   - : Always set to `addonsidebar`. The sidebar is determined by the directory structure and front matter — placing the page in the correct location under `Mozilla/Add-ons/WebExtensions/API/` is sufficient.
->
-> ---
->
-> **Top-of-page macros**
->
-> Macro calls may appear at the top of the content section (immediately below the page front matter). For WebExtension pages, you must add these manually as needed:
->
-> - `\{{SeeCompatTable}}` — add this if the event is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Also add `experimental` to the `status` list in the front matter.
-> - `\{{Deprecated_Header}}` — add this if the event is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated). Also add `deprecated` to the `status` list in the front matter. In general, WebExtension pages prefer a custom deprecation warning with information about the replacement feature, for example:
->
->   ```md
->   > [!WARNING]
->   > This event is deprecated. Use \{{WebExtAPIRef("Namespace.onReplacementEvent")}} instead.
->   ```
->
-> Remove any macros or banners that do not apply.
->
-> _Remember to remove this whole explanatory note before publishing._
+This page describes the structure and content of a WebExtension API event page. To get started quickly, copy the template file at [`files/templates/webextensions/api-event.md`](https://github.com/mdn/content/blob/main/files/templates/webextensions/api-event.md) in the content repository. Save it as `index.md` in a directory that corresponds to the slug. Then use the guidance below to fill in each section.
 
-{{SeeCompatTable}}{{Deprecated_Header}}
+## Page front matter
 
-Begin the content on the page with an introductory paragraph describing when the event fires and why it is useful.
-This should ideally be one or two short sentences.
+The front matter at the top of the page defines page metadata. The values must be updated appropriately for the WebExtension API event.
 
-## Syntax
-
-Describe how to register a listener for the event, and show a short code example.
-
-```js-nolint
-function handleEvent(details) {
-  // …
-}
-
-browser.Namespace.onEventName.addListener(handleEvent);
+```md
+---
+title: Namespace.onEventName
+slug: Mozilla/Add-ons/WebExtensions/API/Namespace/onEventName
+page-type: webextension-api-event
+status:
+  - deprecated
+  - experimental
+browser-compat: webextensions.api.Namespace.onEventName
+sidebar: addonsidebar
+---
 ```
 
-If the event supports filters or extra options objects (for example, some `webRequest` events), show that pattern instead.
+- **title**
+  - : Title heading displayed at the top of the page.
+    Format as `"Namespace.onEventName"`. For example, the [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) event page has a _title_ of `runtime.onMessage`.
+- **slug**
+  - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
+    This is formatted like `Mozilla/Add-ons/WebExtensions/API/Namespace/onEventName`.
+- **page-type**
+  - : Always `webextension-api-event`.
+- **status**
+  - : Include status flags as appropriate: `experimental`, `deprecated`, or `non-standard`. WebExtension features do not have automatic status blocks from BCD, so you must add the `status` field in front matter manually and include the corresponding banner macro(s) in the page content. Remove the `status` field entirely if neither flag applies.
+- **browser-compat**
+  - : Replace the placeholder value `webextensions.api.Namespace.onEventName` with the query string for the event in the [browser-compat-data repo](https://github.com/mdn/browser-compat-data). For guidance on creating this data, see [Browser Compatibility tables and Browser Compatibility Data (BCD)](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables). The toolchain uses the key to populate the compatibility section (replacing the `{{Compat}}` macro).
+- **sidebar**
+  - : Always set to `addonsidebar`. The sidebar is determined by the directory structure and front matter — placing the page in the correct location under `Mozilla/Add-ons/WebExtensions/API/` is sufficient.
 
-### Event details
+## Top-of-page macros
 
-Describe the arguments passed to the event listener callback.
+Macro calls may appear at the top of the content section (immediately below the page front matter). For WebExtension pages, you must add these manually as needed:
 
-- `details`
-  - : An object containing information about the event. Document the shape of this object here or link to a dedicated type page using `{{WebExtAPIRef}}`.
+- `{{SeeCompatTable}}` — add this if the event is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Also add `experimental` to the `status` list in the front matter.
+- `{{Deprecated_Header}}` — add this if the event is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated). Also add `deprecated` to the `status` list in the front matter. In general, WebExtension pages prefer a custom deprecation warning with information about the replacement feature, for example:
 
-If the listener receives multiple arguments, list each argument separately.
+  ```md
+  > [!WARNING]
+  > This event is deprecated. Use \{{WebExtAPIRef("Namespace.onReplacementEvent")}} instead.
+  ```
 
-### Return value
+Remove any macros or banners that do not apply.
 
-If the listener is expected to return a value or a `Promise` (for example, to block or modify a request), document the expected return value here. Otherwise, state `None ({{jsxref('undefined')}}).`.
+## Introductory paragraph
 
-## Examples
+Begin the content on the page with an introductory paragraph describing when the event fires and why it is useful. This should ideally be one or two short sentences. There is no need to repeat the name and namespace since the title already communicates this.
 
-Note that we use the plural "Examples" even if the page only contains one example.
+## Syntax section
 
-### A descriptive heading
+Show how to register a listener for the event. Include the three standard event functions (`addListener`, `removeListener`, `hasListener`) with brief descriptions. If the event supports filters or extra parameters for `addListener` (for example, some `webRequest` events accept a `filter` and `extraInfoSpec`), show that pattern instead of or in addition to the basic form.
 
-Each example must have an H3 heading naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
+## addListener syntax section
 
-See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
+### Parameters subsection
 
-> [!NOTE]
-> Sometimes you will want to link to examples given on another page.
->
-> **Scenario 1:** If you have some examples on this page and some more examples on another page:
->
-> Include an H3 heading (`###`) for each example on this page and then a final H3 heading (`###`) with the text "More examples", under which you can link to the examples on other pages. For example:
->
-> ```md
-> ## Examples
->
-> ### Listening for the event
->
-> Example of using the event
->
-> ### More examples
->
-> Links to more examples on other pages
-> ```
->
-> **Scenario 2:** If you _only_ have examples on another page and none on this page:
->
-> Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
->
-> ```md
-> ## Examples
->
-> For examples of this API, see [the page on Namespace.onEventName](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Namespace/onEventName).
-> ```
+Describe the arguments passed to the listener callback function. Use a definition list with one term and definition per parameter. If the listener receives a simple object, you can document its fields inline. For complex objects with many fields, briefly reference them here and document the full shape in a separate `## Additional objects` section (see below).
 
-`\{{WebExtExamples}}`
+### Return value subsection
 
-_To use this macro, remove the backticks and backslash in the markdown file. This macro generates links to examples from the [webextensions-examples](https://github.com/nicolo-ribaudo/webextensions-examples) repository. For API overview pages, use `\{{WebExtExamples("h2")}}` instead._
+If the listener is expected to return a value or a `Promise` (for example, to block or modify a request in `webRequest` events), document the expected return value here. If the listener does not return anything, you can omit this subsection.
 
-## Browser compatibility
+## Additional objects section
 
-`\{{Compat}}`
+When the listener callback receives complex objects with many fields (for example, a `details` object), document the full shape of each object in a separate `## Additional objects` section placed between `addListener syntax` and `Examples`. Each object gets an H3 (`###`) heading, and its fields are listed in a definition list. This pattern is used widely across existing event pages — see [`tabs.onActivated`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onActivated) for a simple example and [`webRequest.onBeforeSendHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders) for a complex one.
 
-_To use this macro, remove the backticks and backslash in the markdown file._
+If the listener parameters are simple enough to document inline in the Parameters subsection, omit this section entirely.
 
-## See also
+## Examples section
 
-Include links to reference pages and guides related to the current API. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+Provide one or more examples demonstrating how to listen for the event. Each example must have an H3 (`###`) heading with a concise, descriptive title that says what the example does. See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-- link1
-- link2
-- external_link (year)
+If you have examples on this page _and_ links to more examples on other pages, add a final H3 heading called "More examples" with the links. If you _only_ have examples on another page and none on this page, add the links directly under the H2 heading without any H3 headings.
+
+After all examples, include the `{{WebExtExamples}}` macro, which generates links to relevant examples from the [webextensions-examples](https://github.com/nicolo-ribaudo/webextensions-examples) repository.
+
+## Browser compatibility section
+
+Include `{{Compat}}`, which is automatically populated from the `browser-compat` key in the front matter.
+
+## Chromium attribution
+
+If the event is part of an API based on a Chromium API, include a `[!NOTE]` callout after `{{Compat}}` crediting the Chromium source, followed by the BSD license text in an HTML comment. See the [API overview page guidance](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/WebExtension_API_page_template#chromium_attribution) for details and the full license text to use.
+
+## See also section
+
+Include links to reference pages and guides related to the current event. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
