@@ -35,7 +35,7 @@ To unsubscribe using event name:
 
 ### Parameters
 
-The input is an object with one of the following fields:
+The `params` field contains one of the following fields:
 
 - `subscriptions`
   - : An array of one or more subscription IDs that specifies the subscriptions to cancel, including both global and context-scoped subscriptions.
@@ -46,7 +46,7 @@ The input is an object with one of the following fields:
 
 ### Return value
 
-None.
+The `result` field in the response is an empty object (`{}`).
 
 ### Errors
 

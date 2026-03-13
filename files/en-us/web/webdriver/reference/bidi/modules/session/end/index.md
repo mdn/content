@@ -30,7 +30,7 @@ The `result` field in the response is an empty object (`{}`).
 
 ### Ending an automation session with the browser
 
-With a WebDriver BiDi connection established, send the following message to end the current session:
+With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) established, send the following message to end the current session:
 
 ```json
 {
