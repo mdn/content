@@ -11,7 +11,7 @@ spec-urls:
 
 Some CSSOM APIs _serialize_ property values into standardized string representations based on the value's [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). For example, you might set a color using the `hsl(240 100% 50%)` syntax, but when accessed through JavaScript, the value will be returned in the equivalent `"rgb(0, 0, 255)"` syntax.
 
-CSS data types can often be expressed in multiple syntaxes. For example, the [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type can be represented using named colors (`red`), hexadecimal notation (`#ff0000`), functional notation (`rgb(255 0 0)`), and more. These different syntaxes are exactly equivalent at every stage of [CSS value processing](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing), similar to how in JavaScript, the same string can be written with single quotes or double quotes, or the same number can be written in different formats (like `16`, `16.0`, or `0x10`).
+CSS data types can often be expressed in multiple syntaxes. For example, the {{cssxref("&lt;color&gt;")}} data type can be represented using named colors (`red`), hexadecimal notation (`#ff0000`), functional notation (`rgb(255 0 0)`), and more. These different syntaxes are exactly equivalent at every stage of [CSS value processing](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing), similar to how in JavaScript, the same string can be written with single quotes or double quotes, or the same number can be written in different formats (like `16`, `16.0`, or `0x10`).
 
 Because CSS converts all these surface representations to the same underlying value during value processing, it is often impossible to recover the original syntax from the already-parsed CSSOM. Furthermore, a _canonical_ representation is often more useful for scripts, because it allows comparisons and calculations based on how the content is presented to the user, rather than how it was originally authored.
 
@@ -31,14 +31,14 @@ Different APIs return `CSSStyleDeclaration` objects at different stages of [valu
 Each CSS value type has an associated serialization format defined by the CSS specifications. Some common rules include:
 
 - Keywords (like `auto`, `block`, `none`) serialize to all lowercase.
-- [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle): serialized to some angle unit, depending on the context (unspecified). For `element.style` and `getComputedStyle()`, this is `deg`.
-- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value):
+- {{cssxref("angle")}}: serialized to some angle unit, depending on the context (unspecified). For `element.style` and `getComputedStyle()`, this is `deg`.
+- {{cssxref("&lt;color&gt;")}}:
   - For sRGB colors ({{cssxref("named-color")}}, `transparent`, {{cssxref("system-color")}}, {{cssxref("hex-color")}}, `rgb`, `hsl`, `hwb`): serialized as legacy comma-separated syntax `rgb(R, G, B)` or `rgba(R, G, B, A)`, where all arguments are numbers. The `rgb` form is selected if the alpha is exactly `1`.
   - For `lab()`, `lch()`, `oklab()`, `oklch()`, and `color()` colors: the function form is preserved, with numeric arguments.
   - The keyword `currentColor` serializes as `currentcolor`.
-- [`<percentage>`](/en-US/docs/Web/CSS/Reference/Values/percentage): preserved as a percentage.
-- [`<ratio>`](/en-US/docs/Web/CSS/Reference/Values/ratio): serialized to two numbers separated by `" / "`.
-- [`<url>`](/en-US/docs/Web/CSS/Reference/Values/url_value): serialized as a quoted {{cssxref("&lt;url&gt;")}} (`url("...")`), with the URL resolved to an absolute URL.
+- {{cssxref("percentage")}}: preserved as a percentage.
+- {{cssxref("ratio")}}: serialized to two numbers separated by `" / "`.
+- {{cssxref("url_value", "&lt;url&gt;")}}: serialized as a quoted {{cssxref("url_value", "&lt;url&gt;")}} (`url("...")`), with the URL resolved to an absolute URL.
 
 Note that `<percentage>` values often get computed into absolute dimensions (like `<length>`) during value processing, so they may not appear as percentages when serialized from computed styles. For dimensions with units, such as {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;resolution&gt;")}}, and {{cssxref("&lt;time&gt;")}}, the serialized unit depends on the context and is not well-specified. `getComputedStyle()` and `element.style` serialize them into `Hz`, `px`, `dppx`, and `s` respectively.
 
@@ -179,5 +179,5 @@ This normalization allows scripts to compare or calculate lengths consistently.
 - [`CSSStyleDeclaration.getPropertyValue()`](/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue)
 - [`Window.getComputedStyle()`](/en-US/docs/Web/API/Window/getComputedStyle)
 - [CSS colors](/en-US/docs/Web/CSS/Guides/Colors)
-- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value)
+- {{cssxref("&lt;color&gt;")}}
 - [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module

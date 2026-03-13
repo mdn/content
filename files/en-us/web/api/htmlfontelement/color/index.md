@@ -15,7 +15,7 @@ The obsolete
 property is a string that reflects the [`color`](/en-US/docs/Web/HTML/Reference/Elements/font#color) HTML attribute, containing either a named color or a color specified in the
 hexadecimal #RRGGBB format.
 
-The format of the string must follow one of the following HTML microsyntaxes (see [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value)):
+The format of the string must follow one of the following HTML microsyntaxes (see {{cssxref("&lt;color&gt;")}}):
 
 | Microsyntax              | Description                      | Examples                  |
 | ------------------------ | -------------------------------- | ------------------------- |

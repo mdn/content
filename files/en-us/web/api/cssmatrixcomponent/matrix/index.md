@@ -11,7 +11,7 @@ browser-compat: api.CSSMatrixComponent.matrix
 The **`matrix`** property of the
 {{domxref("CSSMatrixComponent")}} interface gets and sets a 2d or 3d matrix.
 
-See the [matrix()](/en-US/docs/Web/CSS/Reference/Values/transform-function/matrix) and [matrix3d()](/en-US/docs/Web/CSS/Reference/Values/transform-function/matrix3d) pages for
+See the {{cssxref("transform-function/matrix", "matrix()")}} and {{cssxref("transform-function/matrix3d", "matrix3d()")}} pages for
 examples.
 
 ## Value

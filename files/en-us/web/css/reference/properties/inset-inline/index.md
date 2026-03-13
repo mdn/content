@@ -94,7 +94,7 @@ inset-inline: unset;
 
 ### Values
 
-The `inset-inline` property takes the same values as the {{cssxref("left")}} property.
+The `inset-inline` property takes the same values as the {{cssxref("top")}} property.
 
 ## Formal definition
 

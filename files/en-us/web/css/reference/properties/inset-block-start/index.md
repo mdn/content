@@ -90,7 +90,7 @@ inset-block-start: unset;
 
 ### Values
 
-The `inset-block-start` property takes the same values as the {{cssxref("left")}} property.
+The `inset-block-start` property takes the same values as the {{cssxref("top")}} property.
 
 ## Formal definition
 
@@ -143,6 +143,6 @@ div {
 
 ## See also
 
-- The properties which defines other insets: {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}
+- The properties that define other insets: {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}
 - The mapped physical properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

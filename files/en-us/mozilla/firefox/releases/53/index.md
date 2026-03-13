@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 53 was released on April 19, 2017. This article lists key changes that are useful not only for web developers but also for Firefox and Gecko developers, as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 

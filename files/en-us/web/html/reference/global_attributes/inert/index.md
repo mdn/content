@@ -12,7 +12,7 @@ The **`inert`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attribu
 Modal {{htmlelement("dialog")}}s generated with [`showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal) escape inertness, meaning that they don't inherit inertness from their ancestors, but can be made inert by having the `inert` attribute explicitly set on themselves. No other element can escape inertness.
 
 > [!NOTE]
-> While `inert` is a global attribute and can be applied to any element, it is generally used for sections of content. To make individual controls "inert", consider using the [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) attribute, along with CSS [`:disabled`](/en-US/docs/Web/CSS/Reference/Selectors/:disabled) styles, instead.
+> While `inert` is a global attribute and can be applied to any element, it is generally used for sections of content. To make individual controls "inert", consider using the [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) attribute, along with CSS {{cssxref(":disabled")}} styles, instead.
 
 Inert HTML elements and their flat tree descendants:
 

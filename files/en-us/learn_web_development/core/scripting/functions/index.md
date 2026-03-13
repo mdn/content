@@ -109,7 +109,7 @@ This function draws 100 random circles inside a {{htmlelement("canvas")}} elemen
 draw();
 ```
 
-rather than having to write all that code out again every time we want to repeat it. Functions can contain whatever code you like — you can even call other functions from inside functions. The above function, for example, calls the `random()` function three times, which is defined by the following code:
+rather than having to write all that code out again every time we want to repeat it. Functions can contain whatever code you like — you can even call other functions from inside functions. For example, the `draw()` function seen above calls the `random()` function three times; `random()` is defined by the following code:
 
 ```js
 function random(number) {

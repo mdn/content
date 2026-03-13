@@ -119,7 +119,7 @@ Each single-property transition describes the transition that should be applied 
   - A {{cssxref("&lt;custom-ident&gt;")}} representing a single property.
   - The special value `all`, which specifies that the transition will be applied to all properties that change as the element changes state.
   - No value, in which case a value of `all` will be inferred and the specified transition will still apply to all changing properties.
-- zero or one {{cssxref("&lt;easing-function&gt;")}} value representing the easing function to use
+- zero or one {{cssxref("easing-function")}} value representing the easing function to use
 - zero, one, or two {{cssxref("&lt;time&gt;")}} values. The first value that can be parsed as a time is assigned to the {{cssxref("transition-duration")}}, and the second value that can be parsed as a time is assigned to {{cssxref("transition-delay")}}.
 - zero or one value declaring whether to start transitions for properties whose animation behavior is [discrete](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete). The value, if present, is either the keyword `allow-discrete` or the keyword `normal`.
 

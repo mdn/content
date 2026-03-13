@@ -127,7 +127,7 @@ The `<container-condition>` queries include [size](#size_container_descriptors) 
 
 #### Size container descriptors
 
-The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The queries always measures the [content box](/en-US/docs/Web/CSS/Reference/Values/box-edge#content-box) as the comparison. The syntax for including multiple conditions is the same as for [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) size feature queries.
+The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The queries always measures the [content box](/en-US/docs/Web/CSS/Reference/Values/box-edge#content-box) as the comparison. The syntax for including multiple conditions is the same as for {{cssxref("@media")}} size feature queries.
 
 ```css
 @container (min-width: 400px) {
@@ -167,6 +167,9 @@ Scroll-state container descriptors are specified inside the `<container-conditio
 @container scroll-state(scrollable: top) {
   /* … */
 }
+@container scroll-state(scrolled: block-end) {
+  /* … */
+}
 @container scroll-state(stuck: inline-end) {
   /* … */
 }
@@ -175,7 +178,7 @@ Scroll-state container descriptors are specified inside the `<container-conditio
 }
 ```
 
-Supported keywords for scroll-state container descriptors include physical and {{glossary("flow relative values")}}
+Supported keywords for scroll-state container descriptors include {{glossary("physical properties", "physical")}} and {{glossary("flow relative values", "flow relative")}} values.
 
 - `scrollable`
   - : Queries whether the container can be scrolled in the given direction via user-initiated scrolling, such as by dragging the scrollbar or using a trackpad gesture. In other words, is there overflowing content in the given direction that can be scrolled to? Valid `scrollable` values include the following keywords:
@@ -212,6 +215,45 @@ Supported keywords for scroll-state container descriptors include physical and {
 
     ```css
     @container not scroll-state(scrollable: none) {
+      /* … */
+    }
+    ```
+
+- `scrolled`
+  - : Queries whether the container was most recently scrolled in a specified direction. Valid `scrolled` values include the following keywords:
+    - `none`
+      - : The container is not a {{glossary("scroll container")}} or otherwise has not previously been scrolled in any direction.
+    - `top`
+      - : The container was most recently scrolled towards its top edge.
+    - `right`
+      - : The container was most recently scrolled towards its right-hand edge.
+    - `bottom`
+      - : The container was most recently scrolled towards its bottom edge.
+    - `left`
+      - : The container was most recently scrolled towards its left-hand edge.
+    - `x`
+      - : The container was most recently scrolled towards either its left-hand or right-hand edges.
+    - `y`
+      - : The container was most recently scrolled towards either its top or bottom edges.
+    - `block-start`
+      - : The container was most recently scrolled towards its block-start edge.
+    - `block-end`
+      - : The container was most recently scrolled towards its block-end edge.
+    - `inline-start`
+      - : The container was most recently scrolled towards its inline-start edge.
+    - `inline-end`
+      - : The container was most recently scrolled towards its inline-end edge.
+    - `block`
+      - : The container was most recently scrolled towards either its block-start or block-end edges.
+    - `inline`
+      - : The container was most recently scrolled towards either its inline-start or inline-end edges.
+
+    If the test returns true, the rules nested in the `@container` block are applied to the descendants of the scroll container.
+
+    To evaluate whether a container has recently been scrolled, without being concerned about the direction, use the `none` value with the `not` operator:
+
+    ```css
+    @container not scroll-state(scrolled: none) {
       /* … */
     }
     ```

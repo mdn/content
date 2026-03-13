@@ -264,8 +264,8 @@ function sepia() {
 
 ## Related concepts
 
-- {{CSSxRef("&lt;image&gt;")}} data type
-- {{cssxref("&lt;filter-function&gt;")}} data type
+- {{cssxref("image")}} data type
+- {{cssxref("filter-function")}} data type
 
 - {{cssxref("background-image")}} CSS property
 - {{cssxref("background-blend-mode")}} CSS property

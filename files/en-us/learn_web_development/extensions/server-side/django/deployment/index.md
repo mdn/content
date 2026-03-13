@@ -70,7 +70,7 @@ Some developers will choose the increased flexibility provided by IaaS over PaaS
 
 ## Choosing a hosting provider
 
-There are many hosting providers that are known to either actively support or work well with Django, including: [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/), [Railway](https://railway.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us/), [Google Cloud](https://cloud.google.com/), [Hetzner](https://www.hetzner.com/), and [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan) — to name just a few.
+There are many hosting providers that are known to either actively support or work well with Django, including: [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/), [Railway](https://railway.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us), [Google Cloud](https://cloud.google.com/), [Hetzner](https://www.hetzner.com/), and [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan) — to name just a few.
 These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.
 
 Some of the things to consider when choosing a host:
@@ -127,8 +127,10 @@ Then open **/locallibrary/settings.py** and insert the following code after `BAS
 # Support env variables from .env file if defined
 import os
 from dotenv import load_dotenv
-env_path = load_dotenv(os.path.join(BASE_DIR, '.env'))
-load_dotenv(env_path)
+
+env_path = os.path.join(BASE_DIR, ".env")
+if os.path.exists(env_path):
+    load_dotenv(env_path)
 ```
 
 This loads the `.env` file from the root of the web application.
@@ -694,7 +696,7 @@ Railway is an attractive hosting option for several reasons:
 
 - Railway takes care of most of the infrastructure so you don't have to.
   Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
-- Railway has a [focus on developer experience for development and deployment](https://docs.railway.com/maturity/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
+- Railway has a [focus on developer experience for development and deployment](https://docs.railway.com/platform/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
 - The skills and concepts you will learn when using Railway are transferrable.
   While Railway has some excellent new features, other popular hosting services use many of the same ideas and approaches.
 - [Railway documentation](https://docs.railway.com/) is clear and complete.
@@ -714,11 +716,11 @@ For Django apps we provide this information in a number of text files:
   For Django this will usually be the Gunicorn web application server (with a `.wsgi` script).
 - **wsgi.py**: [WSGI](https://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Railway environment.
 
-Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.com/guides/variables).
+Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.com/variables).
 For example, an application that uses a database can get the address using the variable `DATABASE_URL`.
 The database service itself may be hosted by Railway or some other provider.
 
-Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.com/guides/cli) tool.
+Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.com/cli) tool.
 The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
 One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
@@ -901,11 +903,11 @@ Note that you could also have opened the Postgres database, then its variable ta
 
 If you open the project now it should display just as it did locally.
 Note however that there is no way to populate the library with data yet, because we have not yet created a superuser account.
-We'll do that using the [CLI](https://docs.railway.com/guides/cli) tool on our local computer.
+We'll do that using the [CLI](https://docs.railway.com/cli) tool on our local computer.
 
 ### Install the client
 
-Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.com/guides/cli).
+Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.com/cli).
 
 After the client is installed you will be able to run commands.
 Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to GitHub), and running your Django project locally using the same settings as you have on the production server.
@@ -1003,7 +1005,7 @@ The next step is to read our last few articles, and then complete the assessment
   - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/gunicorn/) (Django docs)
 
 - Railway Docs
-  - [CLI](https://docs.railway.com/guides/cli)
+  - [CLI](https://docs.railway.com/cli)
 
 - DigitalOcean
   - [How To Serve Django Applications with uWSGI and Nginx on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)

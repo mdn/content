@@ -3,18 +3,14 @@ title: "Sanitizer: removeUnsafe() method"
 short-title: removeUnsafe()
 slug: Web/API/Sanitizer/removeUnsafe
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Sanitizer.removeUnsafe
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
-The **`removeUnsafe()`** method of the {{domxref("Sanitizer")}} interface configures the sanitizer configuration so that it will remove all elements, attributes, and event handler content attributes that are considered XSS-unsafe by the browser.
+The **`removeUnsafe()`** method of the {{domxref("Sanitizer")}} interface configures the sanitizer so that it will remove all elements and attributes that are considered XSS-unsafe by the browser.
 
-The method can be called to make any custom configuration XSS-safe.
-Note that if you're using the sanitizer with one of the "safe" HTML setters, such as {{domxref("Element.setHTML()")}} and {{domxref("ShadowRoot.setHTML()")}}, you do not need to call this method to make the sanitizer safe.
-When used in these setters the method is called implicitly, without modifying the `Sanitizer` instance that is passed.
+The method can be called to make any `Sanitizer` XSS-safe.
 
 ## Syntax
 
@@ -29,6 +25,14 @@ None.
 ### Return value
 
 `true` if the operation removed any elements, attributes, or event handler content attributes that are considered XSS-unsafe, and `false` if no elements or attributes were removed.
+
+## Description
+
+The **`removeUnsafe()`** method configures the sanitizer so that it will remove all elements and attributes that are considered XSS-unsafe by the browser.
+This includes the elements {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}}, and {{SVGElement("use")}}, and the event handler content attributes such as `onafterprint`, `onbeforeinput`, and so on.
+
+Note that if you're using the sanitizer with one of the "safe" HTML setters, such as {{domxref("Element.setHTML()")}} and {{domxref("ShadowRoot.setHTML()")}}, you do not need to call this method to make the sanitizer safe.
+When used in these setters the same elements and attributes are removed from the input, without modifying the `Sanitizer` instance that is passed.
 
 ## Examples
 

@@ -131,7 +131,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 ### Creating a complex clipping region
 
-This example uses two paths, a rectangle and a square to create a complex clipping
+This example uses two paths, a circle and a square to create a complex clipping
 region. The `clip()` method is called twice, first to set the current
 clipping region to the circle using a `Path2D` object, then again to
 intersect the circle clipping region with a square. The final clipping region is a shape

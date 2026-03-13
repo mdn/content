@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 sidebar: firefox
 ---
 
-## Changes for Web developers
+## Changes for web developers
 
 ### New in Firefox DevTools
 
@@ -51,7 +51,7 @@ ECMAScript 2015 implementation continues!
 - Renamed the `Future` interface to `Promise` ([Firefox bug 884279](https://bugzil.la/884279)).
 - The `srcDoc` property on the {{domxref("HTMLIFrameElement")}} interface, allowing the inline specification of the content of an {{HTMLElement("iframe")}}, is now supported ([Firefox bug 802895](https://bugzil.la/802895)).
 - The `createTBody()` method on the {{domxref("HTMLTableElement")}} interface, allowing to get its {{HTMLElement("tbody")}}, is now supported ([Firefox bug 813034](https://bugzil.la/813034)).
-- The {{domxref("Range.collapse()")}} method `toStart` parameter is now optional and default to `false`, as defined in the spec ([Firefox bug 891340](https://bugzil.la/891340)).
+- The {{domxref("Range.collapse()")}} method `toStart` parameter is now optional and defaults to `false`, as defined in the spec ([Firefox bug 891340](https://bugzil.la/891340)).
 - Support of the `ParentNode` mixin on {{domxref("Document")}} and {{domxref("DocumentFragment")}} has been added ([Firefox bug 895974](https://bugzil.la/895974)).
 - The `previousElementSibling` and `nextElementSibling` have been moved to the `ChildNode` mixin allowing them to be called not only on an {{domxref("Element")}} object but also on a {{domxref("CharacterData")}} or {{domxref("DocumentType")}} object ([Firefox bug 895974](https://bugzil.la/895974)).
 - The `navigator.geolocation` property has been updated to match the spec. It never returns `null`. When the preference `geo.enabled` is set to `false`, it now returns `undefined` ([Firefox bug 884921](https://bugzil.la/884921)).

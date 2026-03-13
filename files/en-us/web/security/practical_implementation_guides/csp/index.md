@@ -22,7 +22,7 @@ CSP can also help to fix other problems, which are covered in other articles:
 
 ## Solution
 
-Implementing a [strict CSP](/en-US/docs/Web/HTTP/Guides/CSP#strict_csp) is the best way to mitigate XSS vulnerabilities with CSP. This uses [nonce-](/en-US/docs/Web/HTTP/Guides/CSP#nonces) or [hash-](/en-US/docs/Web/HTTP/Guides/CSP#hashes)based fetch directives to ensure that only scripts and/or styles that include the correct nonce or hash will be executed. JavaScript inserted by a hacker will simply not run.
+Implementing a [strict CSP](/en-US/docs/Web/HTTP/Guides/CSP#strict_csp) is the best way to mitigate XSS vulnerabilities with CSP. This uses [nonce-](/en-US/docs/Web/HTTP/Guides/CSP#nonces) or [hash-](/en-US/docs/Web/HTTP/Guides/CSP#hashes)based fetch directives to ensure that only scripts and/or styles that include the correct {{Glossary("Nonce", "nonce")}} or hash will be executed. JavaScript inserted by a hacker will simply not run.
 
 Strict CSPs also:
 

@@ -5,65 +5,6 @@ sidebar:
     link: /Web/CSS
     title: CSS
   - type: section
-    link: /Web/CSS/Reference
-  - type: listSubPagesGrouped
-    path: /Web/CSS/Reference/Properties
-    tags:
-      - css-property
-      - css-shorthand-property
-    link: /Web/CSS/Reference/Properties
-    title: Properties
-    details: closed
-  - type: listSubPages
-    path: /Web/CSS/Reference/Selectors
-    tags: css-selector
-    link: /Web/CSS/Reference/Selectors
-    title: Selectors
-    details: closed
-  - type: listSubPages
-    path: /Web/CSS/Reference/Selectors
-    tags: css-combinator
-    link: /Web/CSS/Reference/Selectors/Combinators
-    title: Combinators
-    details: closed
-  - type: listSubPagesGrouped
-    path: /Web/CSS/Reference/Selectors
-    tags: css-pseudo-class
-    link: /Web/CSS/Reference/Selectors/Pseudo-classes
-    title: Pseudo-classes
-    details: closed
-  - type: listSubPagesGrouped
-    path: /Web/CSS/Reference/Selectors
-    tags: css-pseudo-element
-    link: /Web/CSS/Reference/Selectors/Pseudo-elements
-    title: Pseudo-elements
-    details: closed
-  - type: listSubPages
-    path: /Web/CSS/Reference/At-rules
-    tags: css-at-rule
-    link: /Web/CSS/Reference/At-rules
-    title: At-rules
-    details: closed
-  - type: listSubPages
-    path: /Web/CSS/Reference/Values
-    tags: css-keyword
-    link: /Web/CSS/Reference/Values
-    title: Values
-    details: closed
-  - type: listSubPages
-    path: /Web/CSS/Reference/Values
-    tags: css-type
-    link: /Web/CSS/Reference/Values/Data_types
-    title: Types
-    details: closed
-  - type: listSubPages
-    path: /Web/CSS/Reference/Values
-    tags: css-function
-    depth: 2
-    link: /Web/CSS/Reference/Values/Functions
-    title: Functions
-    details: closed
-  - type: section
     link: /Web/CSS/Guides
     title: Guides
   - type: listSubPages
@@ -147,6 +88,10 @@ sidebar:
       - /Web/CSS/Guides/Containment/Container_queries
       - /Web/CSS/Guides/Containment/Using
       - /Web/CSS/Guides/Containment/Container_size_and_style_queries
+  - title: Counters
+    details: closed
+    children:
+      - /Web/CSS/Guides/Counter_styles/Using_counters
   - title: CSSOM_view
     details: closed
     children:
@@ -215,10 +160,9 @@ sidebar:
       - /Web/CSS/Guides/Images/Using_object-view-box
       - /Web/CSS/Guides/Images/Replaced_element_properties
       - /Web/CSS/Guides/Images/Implementing_image_sprites
-  - title: Lists_and_counters
+  - title: Lists
     details: closed
     children:
-      - /Web/CSS/Guides/Counter_styles/Using_counters
       - /Web/CSS/Guides/Lists/Indenting
   - title: Logical_properties
     details: closed
@@ -255,13 +199,14 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/Guides/Positioned_layout/Stacking_context
-      - /Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1
-      - /Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2
-      - /Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3
       - /Web/CSS/Guides/Positioned_layout/Stacking_floating_elements
       - /Web/CSS/Guides/Positioned_layout/Understanding_z-index
       - /Web/CSS/Guides/Positioned_layout/Using_z-index
       - /Web/CSS/Guides/Positioned_layout/Stacking_without_z-index
+  - title: Properties and Values API
+    details: closed
+    children:
+      - /Web/CSS/Guides/Properties_and_values_API/Houdini
   - type: listSubPages
     path: /Web/CSS/Guides/Scroll_anchoring
     title: Scroll_anchoring
@@ -288,6 +233,7 @@ sidebar:
       - /Web/CSS/Guides/Shapes/From_box_values
       - /Web/CSS/Guides/Shapes/From_images
       - /Web/CSS/Guides/Shapes/Using_shape-outside
+      - /Web/CSS/Guides/Shapes/Shape_generator
   - title: Syntax
     details: closed
     children:
@@ -355,6 +301,65 @@ sidebar:
       - /Web/CSS/Guides/Colors/Color_format_converter
       - /Web/CSS/Guides/Colors/Color_mixer
       - /Web/CSS/Guides/Shapes/Shape_generator
+  - type: section
+    link: /Web/CSS/Reference
+  - type: listSubPagesGrouped
+    path: /Web/CSS/Reference/Properties
+    tags:
+      - css-property
+      - css-shorthand-property
+    link: /Web/CSS/Reference/Properties
+    title: Properties
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Selectors
+    tags: css-selector
+    link: /Web/CSS/Reference/Selectors
+    title: Selectors
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Selectors
+    tags: css-combinator
+    link: /Web/CSS/Reference/Selectors/Combinators
+    title: Combinators
+    details: closed
+  - type: listSubPagesGrouped
+    path: /Web/CSS/Reference/Selectors
+    tags: css-pseudo-class
+    link: /Web/CSS/Reference/Selectors/Pseudo-classes
+    title: Pseudo-classes
+    details: closed
+  - type: listSubPagesGrouped
+    path: /Web/CSS/Reference/Selectors
+    tags: css-pseudo-element
+    link: /Web/CSS/Reference/Selectors/Pseudo-elements
+    title: Pseudo-elements
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/At-rules
+    tags: css-at-rule
+    link: /Web/CSS/Reference/At-rules
+    title: At-rules
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Values
+    tags: css-keyword
+    link: /Web/CSS/Reference/Values
+    title: Values
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Values
+    tags: css-type
+    link: /Web/CSS/Reference/Values/Data_types
+    title: Types
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/Reference/Values
+    tags: css-function
+    depth: 2
+    link: /Web/CSS/Reference/Values/Functions
+    title: Functions
+    details: closed
 l10n:
   de:
     Guides: Leitfäden
@@ -370,6 +375,7 @@ l10n:
     Combinators: Kombinatoren
     Conditional_rules: Bedingte Regeln
     Containment: Containment
+    Counters: Zähler
     CSSOM_view: CSSOM-Ansicht
     Display: Display
     Flexbox: Flexbox
@@ -377,7 +383,7 @@ l10n:
     Functions: Funktionen
     Grid: Raster
     Images: Bilder
-    Lists_and_counters: Listen und Zähler
+    Lists: Listen
     Logical_properties: Logische Eigenschaften
     Media_queries: Media-Abfragen
     Modules: Module
@@ -408,6 +414,7 @@ l10n:
     Conditional_rules: Conditional rules
     Containment: Containment
     Coordinate_systems: Coordinate systems (API)
+    Counters: Counters
     CSSOM_view: CSSOM view
     Custom_functions_and_mixins: Custom functions and mixins
     Display: Display
@@ -417,10 +424,10 @@ l10n:
     Fonts: Fonts
     Grid: Grid
     Images: Images
-    Lists_and_counters: Lists and counters
+    Lists: Lists
     Logical_properties: Logical properties
     Media_queries: Media queries
-    Nesting: Nesting style rules
+    Nesting: Nesting
     Overflow: Overflow
     Positioning: Positioning
     Selectors: Selectors
@@ -440,13 +447,14 @@ l10n:
     Box_model: Modèle de boîte
     Columns: Colonnes
     Conditional_rules: Règles conditionnelles
+    Counters: Compteurs
     CSSOM_view: Vue CSSOM
     Flexbox: Boîtes flexibles
     Display: Mis en page
     Fonts: Polices
     Grid: Grille
     Images: Images
-    Lists_and_counters: Listes et compteurs
+    Lists: Listes
     Logical_properties: Propriétés logiques
     Media_queries: Requêtes média
     Positioning: Positionnement
@@ -464,24 +472,32 @@ l10n:
     Animations: アニメーション
     Backgrounds_and_Borders: 背景と境界
     Box alignment: ボックス配置
+    Box sizing: ボックスサイズ指定
     Box_model: ボックスモデル
     Cascade: カスケード
+    Cascading variables: カスケード変数
     Colors: 色
     Color_contrast: "アクセシビリティ: 色のコントラスト"
     Columns: 段組み
     Combinators: 結合子
     Conditional_rules: 条件付きルール
     Containment: コンテナー
+    Counters: カウンター
+    Coordinate_systems: 座標系 (API)
     CSSOM_view: CSSOM view
+    Custom_functions_and_mixins: カスタム関数とミックスイン
     Display: 表示方法
+    Environment_variables: 環境変数
     Filter_effects: フィルター効果
     Flexbox: フレックスボックス
     Fonts: フォント
     Functions: 関数
     Grid: グリッド
     Images: 画像
-    Lists_and_counters: リストとカウンター
+    Layout cookbook: レイアウト料理帳
+    Lists: リスト
     Logical_properties: 論理的プロパティ
+    Masking: マスク
     Media_queries: メディアクエリー
     Modules: モジュール
     Nesting: 入れ子のスタイルルール
@@ -490,7 +506,8 @@ l10n:
     Properties: プロパティ
     Pseudo-classes: 擬似クラス
     Pseudo-elements: 擬似要素
-    Scroll_anchoring: スクロールアンカリング
+    Scroll_anchoring: スクロール固定
+    Scroll-driven_animations: スクロール駆動アニメーション
     Scroll_snap: スクロールスナップ
     Selectors: セレクター
     Shapes: シェイプ
@@ -501,7 +518,9 @@ l10n:
     Transitions: トランジション
     Tools: ツール
     Types: データ型
+    Values: 値
     Values and units: 値と単位
+    Writing modes: 書字方向
   ko:
     Guides: 안내서
     Animations: 애니메이션
@@ -509,13 +528,14 @@ l10n:
     Box_model: 박스 모델
     Columns: 열
     Conditional_rules: CSS에서 규칙 정의하기
+    Counters: 카운터
     CSSOM_view: CSSOM view
     Display: 플로 레이아웃
     Flexbox: 플렉스박스
     Fonts: 글꼴
     Grid: 그리드
     Images: 이미지
-    Lists_and_counters: 리스트와 카운터
+    Lists: 리스트
     Logical_properties: Logical 속성
     Media_queries: 미디어 쿼리
     Positioning: 위치 잡기
@@ -535,13 +555,14 @@ l10n:
     Box_model: Блочная модель
     Columns: Колонки
     Conditional_rules: Условные конструкции
+    Counters: Счетчики
     CSSOM_view: CSSOM View
     Display: Потоковая раскладка
     Flexbox: Флексбокс
     Fonts: Шрифты
     Grid: Грид
     Images: Изображения
-    Lists_and_counters: Списки и счетчики
+    Lists: Списки
     Logical_properties: Логические свойства
     Media_queries: Медиа-запросы
     Positioning: Позиционирование
@@ -566,6 +587,7 @@ l10n:
     Color_contrast: Web 无障碍：色彩对比度
     Columns: 多列
     Conditional_rules: 条件规则
+    Counters: 计数器
     CSSOM_view: CSS 对象模型视图
     Display: 流式布局
     Filter_effects: 滤镜效果
@@ -574,7 +596,7 @@ l10n:
     Functions: 函数
     Grid: 网格布局
     Images: 图片
-    Lists_and_counters: 列表和计数器
+    Lists: 列表
     Logical_properties: 逻辑属性
     Media_queries: 媒体查询
     Nesting: 嵌套样式规则

@@ -13,7 +13,7 @@ browser-compat:
   - http.headers.Content-Encoding.dcz
   - http.headers.Dictionary-ID
   - http.headers.Use-As-Dictionary
-spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary
+spec-urls: https://www.rfc-editor.org/rfc/rfc9842
 sidebar: http
 ---
 
@@ -190,6 +190,9 @@ Compression algorithms are at risk of security attacks, so there are a number of
 
 Additionally, dictionaries could themselves become tracking vectors so browsers may restrict this feature when cookies are disabled or when other extra privacy protections are enabled.
 
+As with other resources, if a website uses the {{HTTPHeader("Content-Security-Policy")}} header, the compression dictionary must be an allowed source in order for it to be loaded.
+In particular, when loading a [separate dictionary](#separate_dictionary) using [`<link rel="compression-dictionary">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary), the `connect-src` directive (or `default-src`, if `connect-src` is not set) must allow the dictionary location.
+
 ## Specifications
 
 {{Specifications}}
@@ -209,5 +212,5 @@ Additionally, dictionaries could themselves become tracking vectors so browsers 
 - {{HTTPHeader("Available-Dictionary")}}
 - {{HTTPHeader("Dictionary-ID")}}
 - {{HTTPHeader("Use-As-Dictionary")}}
-- [Draft specification](https://datatracker.ietf.org/doc/draft-ietf-httpbis-compression-dictionary/)
+- [RFC 9842: Compression Dictionary Transport](https://www.rfc-editor.org/rfc/rfc9842)
 - [Resources for Compression Dictionary Transport](https://use-as-dictionary.com/)

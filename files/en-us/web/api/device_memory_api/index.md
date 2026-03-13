@@ -5,7 +5,7 @@ page-type: web-api-overview
 browser-compat:
   - api.Navigator.deviceMemory
   - api.WorkerNavigator.deviceMemory
-  - http.headers.Device-Memory
+  - http.headers.Sec-CH-Device-Memory
 spec-urls: https://www.w3.org/TR/device-memory/
 ---
 
@@ -48,4 +48,4 @@ You may also use the [Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints) HT
 
 ## See also
 
-- {{HTTPHeader("Device-Memory")}} header
+- {{HTTPHeader("Sec-CH-Device-Memory")}} header

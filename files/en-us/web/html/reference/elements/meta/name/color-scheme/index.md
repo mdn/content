@@ -63,4 +63,4 @@ Whether the light or dark color scheme is used depends on user preferences such 
 ## See also
 
 - {{cssxref("color-scheme")}} CSS property
-- [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media query
+- {{cssxref("@media/prefers-color-scheme")}} media query

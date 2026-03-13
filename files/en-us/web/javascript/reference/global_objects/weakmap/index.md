@@ -193,6 +193,8 @@ class Thing {
   }
 }
 
+const thing = new Thing();
+
 console.log(thing);
 // Thing {someProperty: "foo"}
 

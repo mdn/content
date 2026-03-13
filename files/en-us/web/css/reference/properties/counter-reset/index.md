@@ -116,7 +116,7 @@ Setting `counter-increment: none` on a selector with greater specificity overrid
 
 ### Default initial values
 
-The default initial values of both regular and reversed counters make it easy to implement the two most common numbering patterns: counting up from one to the number of elements and counting down from the number of elements to one, respectively. By including a counter value for a named counter, your counter can count up or down, starting at an integer value.
+The default initial values of both regular and reversed counters enable implementing the two most common numbering patterns: counting up from one to the number of elements and counting down from the number of elements to one, respectively. By including a counter value for a named counter, your counter can count up or down, starting at an integer value.
 
 Regular counters default to `0` if no reset value is provided. By default, regular counters increment by one, which can be adjusted with the {{cssxref("counter-increment")}} property.
 
@@ -242,7 +242,7 @@ In the output, the items are numbered in reversed order from 5 to 1. Notice in t
 - {{cssxref("counter-increment")}} property
 - {{cssxref("counter-set")}} property
 - {{cssxref("@counter-style")}} at-rule
-- {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
+- {{cssxref("counter()")}} and {{cssxref("counters()")}} functions
 - {{cssxref("content")}} property
 - {{cssxref("::marker")}} pseudo-class
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module

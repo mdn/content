@@ -22,7 +22,7 @@ In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Reference/G
     - `infix`: The operator appears between its operands. In the expression `a + b`, the `+` is an infix operator.
     - `postfix`: The operator appears after its operands. For example, in the expression `a +`, the `+` is a postfix operator.
 - `largeop`
-  - : A [`<boolean>`](/en-US/docs/Web/MathML/Reference/Values#mathml-specific_types) indicating whether the operator should be drawn bigger when [`math-style`](/en-US/docs/Web/CSS/Reference/Properties/math-style) is set to `normal`.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Reference/Values#mathml-specific_types) indicating whether the operator should be drawn bigger when {{cssxref("math-style")}} is set to `normal`.
 - `lspace`
   - : A {{cssxref("length-percentage")}} indicating the amount of space before the operator.
 - `maxsize`
@@ -30,7 +30,7 @@ In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Reference/G
 - `minsize`
   - : A {{cssxref("length-percentage")}} indicating the minimum size of the operator when it is stretchy.
 - `movablelimits`
-  - : A [`<boolean>`](/en-US/docs/Web/MathML/Reference/Values#mathml-specific_types) indicating whether attached under- and overscripts move to sub- and superscript positions when [`math-style`](/en-US/docs/Web/CSS/Reference/Properties/math-style) is set to `compact`.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Reference/Values#mathml-specific_types) indicating whether attached under- and overscripts move to sub- and superscript positions when {{cssxref("math-style")}} is set to `compact`.
 - `rspace`
   - : A {{cssxref("length-percentage")}} indicating the amount of space after the operator.
 - `separator`
