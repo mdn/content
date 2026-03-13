@@ -3,10 +3,12 @@ title: "CSPViolationReportBody: sample property"
 short-title: sample
 slug: Web/API/CSPViolationReportBody/sample
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.CSPViolationReportBody.sample
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{deprecated_header}}
 
 The **`sample`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that contains a part of the resource that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
 

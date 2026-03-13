@@ -3,11 +3,11 @@ title: InterventionReportBody
 slug: Web/API/InterventionReportBody
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.InterventionReportBody
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The `InterventionReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of an intervention report.
 
@@ -25,22 +25,22 @@ An instance of `InterventionReportBody` is returned as the value of {{domxref("R
 
 This interface also inherits properties from {{domxref("ReportBody")}}.
 
-- {{domxref("InterventionReportBody.id")}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref("InterventionReportBody.id")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A string representing the intervention that generated the report. This can be used to group reports.
-- {{domxref("InterventionReportBody.message")}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref("InterventionReportBody.message")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A string containing a human-readable description of the intervention, including information such how the intervention could be avoided. This typically matches the message a browser will display in its DevTools console when an intervention is imposed, if one is available.
-- {{domxref("InterventionReportBody.sourceFile")}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref("InterventionReportBody.sourceFile")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A string containing the path to the source file where the intervention occurred, if known, or `null` otherwise.
-- {{domxref("InterventionReportBody.lineNumber")}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref("InterventionReportBody.lineNumber")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A string representing the line in the source file in which the intervention occurred, if known, or `null` otherwise.
-- {{domxref("InterventionReportBody.columnNumber")}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref("InterventionReportBody.columnNumber")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A string representing the column in the source file in which the intervention occurred, if known, or `null` otherwise.
 
 ## Instance methods
 
 This interface also inherits methods from {{domxref("ReportBody")}}.
 
-- {{domxref("InterventionReportBody.toJSON()")}} {{experimental_inline}}
+- {{domxref("InterventionReportBody.toJSON()")}} {{deprecated_inline}}
   - : A _serializer_ which returns a JSON representation of the `InterventionReportBody` object.
 
 ## Examples

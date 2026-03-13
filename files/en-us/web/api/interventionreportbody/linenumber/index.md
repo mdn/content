@@ -4,11 +4,11 @@ short-title: lineNumber
 slug: Web/API/InterventionReportBody/lineNumber
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.InterventionReportBody.lineNumber
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`lineNumber`** read-only property of the {{domxref("InterventionReportBody")}} interface returns the line in the source file in which the intervention occurred.
 

@@ -2,10 +2,12 @@
 title: Report
 slug: Web/API/Report
 page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.Report
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The `Report` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents a single report.
 
@@ -17,11 +19,11 @@ Reports can be accessed in a number of ways:
 
 ## Instance properties
 
-- {{domxref("Report.body")}} {{ReadOnlyInline}}
+- {{domxref("Report.body")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : The body of the report, which is a `ReportBody` object containing the detailed report information.
-- {{domxref("Report.type")}} {{ReadOnlyInline}}
+- {{domxref("Report.type")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : The type of report generated, e.g., `deprecation` or `intervention`.
-- {{domxref("Report.url")}} {{ReadOnlyInline}}
+- {{domxref("Report.url")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : The URL of the document that generated the report.
 
 ## Instance methods

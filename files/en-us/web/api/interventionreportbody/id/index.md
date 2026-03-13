@@ -4,11 +4,11 @@ short-title: id
 slug: Web/API/InterventionReportBody/id
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.InterventionReportBody.id
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`id`** read-only property of the {{domxref("InterventionReportBody")}} interface returns a string identifying the intervention that generated the report. This can be used to group reports.
 

@@ -4,11 +4,11 @@ short-title: columnNumber
 slug: Web/API/DeprecationReportBody/columnNumber
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.DeprecationReportBody.columnNumber
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`columnNumber`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the line in the source file in which the deprecated feature was used.
 

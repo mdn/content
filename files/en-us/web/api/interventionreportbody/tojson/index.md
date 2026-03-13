@@ -4,11 +4,11 @@ short-title: toJSON()
 slug: Web/API/InterventionReportBody/toJSON
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.InterventionReportBody.toJSON
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`toJSON()`** method of the {{domxref("InterventionReportBody")}} interface is a _serializer_, and returns a JSON representation of the `InterventionReportBody` object.
 

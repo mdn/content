@@ -4,11 +4,11 @@ short-title: lineNumber
 slug: Web/API/DeprecationReportBody/lineNumber
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.DeprecationReportBody.lineNumber
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`lineNumber`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the line in the source file in which the deprecated feature was used.
 

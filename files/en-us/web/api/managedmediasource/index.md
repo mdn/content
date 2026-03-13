@@ -2,10 +2,12 @@
 title: ManagedMediaSource
 slug: Web/API/ManagedMediaSource
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.ManagedMediaSource
 ---
 
-{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`ManagedMediaSource`** interface of the {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} is a {{domxref("MediaSource")}} that actively manages its memory content. Unlike a regular `MediaSource`, the user agent can evict content from its {{domxref("ManagedSourceBuffer")}} objects at any time, for reasons such as memory or hardware limitations. This makes it suitable for power-efficient streaming scenarios where the user agent needs more control over buffered media data.
 
@@ -18,14 +20,14 @@ When {{domxref("MediaSource.addSourceBuffer", "addSourceBuffer()")}} is called o
 
 ## Constructor
 
-- {{domxref("ManagedMediaSource.ManagedMediaSource", "ManagedMediaSource()")}}
+- {{domxref("ManagedMediaSource.ManagedMediaSource", "ManagedMediaSource()")}} {{experimental_inline}}
   - : Creates and returns a new `ManagedMediaSource` object instance with no associated source buffers.
 
 ## Instance properties
 
 _Also inherits properties from its parent interface, {{domxref("MediaSource")}}._
 
-- {{domxref("ManagedMediaSource.streaming")}} {{ReadOnlyInline}}
+- {{domxref("ManagedMediaSource.streaming")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A boolean indicating whether the `ManagedMediaSource` object is currently streaming. When `true`, the application should actively fetch and append media data. When `false`, the application can stop fetching new data.
 
 ## Instance methods
@@ -36,9 +38,9 @@ _Inherits methods from its parent interface, {{domxref("MediaSource")}}._
 
 _Also inherits events from its parent interface, {{domxref("MediaSource")}}._
 
-- {{domxref("ManagedMediaSource.startstreaming_event", "startstreaming")}}
+- {{domxref("ManagedMediaSource.startstreaming_event", "startstreaming")}} {{experimental_inline}}
   - : Fired when the `ManagedMediaSource`'s {{domxref("ManagedMediaSource.streaming", "streaming")}} property changes from `false` to `true`, meaning the media source has started streaming.
-- {{domxref("ManagedMediaSource.endstreaming_event", "endstreaming")}}
+- {{domxref("ManagedMediaSource.endstreaming_event", "endstreaming")}} {{experimental_inline}}
   - : Fired when the `ManagedMediaSource`'s {{domxref("ManagedMediaSource.streaming", "streaming")}} property changes from `true` to `false`, meaning the media source has stopped streaming.
 
 ## Examples

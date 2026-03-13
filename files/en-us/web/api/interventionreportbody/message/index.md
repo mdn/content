@@ -4,11 +4,11 @@ short-title: message
 slug: Web/API/InterventionReportBody/message
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.InterventionReportBody.message
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`message`** read-only property of the {{domxref("InterventionReportBody")}} interface returns a human-readable description of the intervention, including information such as how the intervention could be avoided. This typically matches the message a browser will display in its DevTools console when an intervention is imposed, if one is available.
 

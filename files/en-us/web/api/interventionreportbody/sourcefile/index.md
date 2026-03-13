@@ -4,11 +4,11 @@ short-title: sourceFile
 slug: Web/API/InterventionReportBody/sourceFile
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.InterventionReportBody.sourceFile
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`sourceFile`** read-only property of the {{domxref("InterventionReportBody")}} interface returns the path to the source file where the intervention occurred.
 

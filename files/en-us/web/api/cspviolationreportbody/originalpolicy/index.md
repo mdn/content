@@ -3,10 +3,12 @@ title: "CSPViolationReportBody: originalPolicy property"
 short-title: originalPolicy
 slug: Web/API/CSPViolationReportBody/originalPolicy
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.CSPViolationReportBody.originalPolicy
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{deprecated_header}}
 
 The **`originalPolicy`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) whose enforcement uncovered the violation.
 

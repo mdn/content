@@ -2,10 +2,12 @@
 title: CSPViolationReportBody
 slug: Web/API/CSPViolationReportBody
 page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.CSPViolationReportBody
 ---
 
-{{APIRef("Reporting API")}} {{SecureContext_Header}}
+{{APIRef("Reporting API")}} {{SecureContext_Header}}{{deprecated_header}}
 
 The `CSPViolationReportBody` interface is an extension of the [Reporting API](/en-US/docs/Web/API/Reporting_API) that represents the body of a Content Security Policy (CSP) violation report.
 
@@ -27,27 +29,27 @@ These reports similarly have a `type` of `"csp-violation"`, and a `body` propert
 
 _Also inherits properties from its parent interface, {{DOMxRef("ReportBody")}}._
 
-- {{domxref("CSPViolationReportBody.blockedURL")}} {{ReadOnlyInline}}
+- {{domxref("CSPViolationReportBody.blockedURL")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A string representing either the type or the URL of the resource that was blocked because it violates the CSP.
-- {{domxref("CSPViolationReportBody.columnNumber")}} {{ReadOnlyInline}}
+- {{domxref("CSPViolationReportBody.columnNumber")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : The column number in the script at which the violation occurred.
-- {{domxref("CSPViolationReportBody.disposition")}} {{ReadOnlyInline}}
+- {{domxref("CSPViolationReportBody.disposition")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Indicates how the violated policy is configured to be treated by the user agent. This will be `"enforce"` or `"report"`.
-- {{domxref("CSPViolationReportBody.documentURL")}} {{ReadOnlyInline}}
+- {{domxref("CSPViolationReportBody.documentURL")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A string representing the URL of the document or worker in which the violation was found.
-- {{domxref("CSPViolationReportBody.effectiveDirective")}} {{ReadOnlyInline}}
+- {{domxref("CSPViolationReportBody.effectiveDirective")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A string representing the directive whose enforcement uncovered the violation.
-- {{domxref("CSPViolationReportBody.lineNumber")}} {{ReadOnlyInline}}
+- {{domxref("CSPViolationReportBody.lineNumber")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : The line number in the script at which the violation occurred.
-- {{domxref("CSPViolationReportBody.originalPolicy")}} {{ReadOnlyInline}}
+- {{domxref("CSPViolationReportBody.originalPolicy")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A string containing the policy whose enforcement uncovered the violation.
-- {{domxref("CSPViolationReportBody.referrer")}} {{ReadOnlyInline}}
+- {{domxref("CSPViolationReportBody.referrer")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A string representing the URL for the referrer of the resources whose policy was violated, or `null`.
-- {{domxref("CSPViolationReportBody.sample")}} {{ReadOnlyInline}}
+- {{domxref("CSPViolationReportBody.sample")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A string representing a sample of the resource that caused the violation, usually the first 40 characters. This will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.
-- {{domxref("CSPViolationReportBody.sourceFile")}} {{ReadOnlyInline}}
+- {{domxref("CSPViolationReportBody.sourceFile")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : If the violation occurred as a result of a script, this will be the URL of the script; otherwise, it will be `null`. Both `columnNumber` and `lineNumber` should have non-null values if this property is not `null`.
-- {{domxref("CSPViolationReportBody.statusCode")}} {{ReadOnlyInline}}
+- {{domxref("CSPViolationReportBody.statusCode")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A number representing the HTTP status code of the document or worker in which the violation occurred.
 
 ## Instance methods

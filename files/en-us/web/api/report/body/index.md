@@ -3,10 +3,12 @@ title: "Report: body property"
 short-title: body
 slug: Web/API/Report/body
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Report.body
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`body`** read-only property of the {{domxref("Report")}}
 interface returns the body of the report, which is a `ReportBody` object

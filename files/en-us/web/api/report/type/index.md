@@ -3,10 +3,12 @@ title: "Report: type property"
 short-title: type
 slug: Web/API/Report/type
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Report.type
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`type`** read-only property of the {{domxref("Report")}}
 interface returns the type of report generated, e.g., `deprecation` or

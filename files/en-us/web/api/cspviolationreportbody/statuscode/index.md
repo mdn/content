@@ -3,10 +3,12 @@ title: "CSPViolationReportBody: statusCode property"
 short-title: statusCode
 slug: Web/API/CSPViolationReportBody/statusCode
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.CSPViolationReportBody.statusCode
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{deprecated_header}}
 
 The **`statusCode`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a number representing the [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) of the response to the request that triggered a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violation (when loading a window or worker).
 

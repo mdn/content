@@ -3,10 +3,12 @@ title: "CSPViolationReportBody: sourceFile property"
 short-title: sourceFile
 slug: Web/API/CSPViolationReportBody/sourceFile
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.CSPViolationReportBody.sourceFile
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{deprecated_header}}
 
 The **`sourceFile`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the URL of the source file that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
 
