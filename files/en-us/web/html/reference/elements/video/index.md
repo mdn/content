@@ -40,6 +40,9 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     To disable video autoplay, `autoplay="false"` will not work; the video will autoplay if the attribute is there in the `<video>` tag at all. To remove autoplay, the attribute needs to be removed altogether.
 
+    > [!NOTE]
+    > Videos with the [`loading="lazy"`](#loading) attribute will not start autoplaying until the element intersects for lazy loading.
+
 - `controls`
   - : If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
 - `controlslist`
@@ -67,14 +70,38 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 - `height`
   - : The height of the video's display area, in [CSS pixels](https://drafts.csswg.org/css-values/#px) (absolute values only; [no percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
+
+- `loading`
+  - : Indicates how the browser should load the video (including any poster image):
+    - `eager`
+      - : Loads the video immediately, regardless of whether or not the video is currently within the visible viewport (this is the default value).
+    - `lazy`
+      - : Defers loading the video until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the video until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
+
+    While explicit [`width`](#width) and [`height`](#height) attributes are recommended for all videos to avoid layout shift, they are especially important for lazy-loaded ones. Lazy-loaded videos will never be loaded if they do not intersect a visible part of an element, even if loading them would change that, because unloaded videos have a `width` and `height` of `0`. It creates an even more disruptive user experience when the content visible in the viewport reflows in the middle of reading it.
+
+    The {{domxref("Window.load_event", "load")}} event is fired after eager-loaded videos have been fetched and processed, but before lazy-laded ones are, even if the lazy-loaded videos are located within the visual viewport immediately upon initial page load. These videos are still loaded as soon as layout completes; they just don't affect the timing of the `load` event. That means that when `load` fires, it's possible that any lazy-loaded videos located in the visual viewport may not yet be visible.
+
+    Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing videos in a page's markup such that a server can track how many videos are requested and when.
+
+    > [!NOTE]
+    > The `loading="lazy"` attribute also impacts the [`autoplay`](#autoplay), [`poster`](#poster), and [`preload`](#preload) attributes, as described in each of those sections of the page.
+
 - `loop`
   - : A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.
+
 - `muted`
   - : A Boolean attribute that indicates the default audio mute setting contained in the video. If set, the audio will be initially silenced. Its default value is `false`, meaning the audio will be played when the video is played.
+
 - `playsinline`
   - : A Boolean attribute indicating that the video is to be played "inline", that is, within the element's playback area. Note that the absence of this attribute _does not_ imply that the video will always be played in fullscreen.
+
 - `poster`
   - : A URL for an image to be shown while the video is downloading. If this attribute isn't specified, nothing is displayed until the first frame is available, then the first frame is shown as the poster frame.
+
+  > [!NOTE]
+  > Videos with the [`loading="lazy"`](#loading) attribute will only download the `poster` behavior once the video intersects for lazy loading.
+
 - `preload`
   - : This {{Glossary("enumerated")}} attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience regarding what content is loaded before the video is played. It may have one of the following values:
     - `none`: Indicates that the video should not be preloaded.
@@ -88,6 +115,9 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     >
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
     > - The specification does not force the browser to follow the value of this attribute; it is a mere hint.
+
+    > [!NOTE]
+    > Videos with the [`loading="lazy"`](#loading) attribute will only apply the `preload` behavior once the video intersects for lazy loading.
 
 - `src`
   - : The URL of the video to embed. This is optional; you may instead use the {{HTMLElement("source")}} element within the video block to specify the video to embed.
