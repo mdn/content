@@ -63,12 +63,12 @@ value_type.splat
 ### Type
 
 ```plain
-[value] -> [v128]
+[value] -> [output]
 ```
 
 - `value`
   - : The value you want to copy to all lanes of the `v128`, for example `(f32.const 16)`.
-- `v128`
+- `output`
   - : The resulting `v128` value after all lanes of the initial `v128` value have been updated with the `value`.
 
 ### Binary encoding

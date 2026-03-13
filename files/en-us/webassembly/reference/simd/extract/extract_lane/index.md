@@ -74,4 +74,4 @@ value_type.extract_lane
 
 ## See also
 
-- [`replace_lane`](/en-US/docs/WebAssembly/Reference/SIMD/replace/replace_lane)
+- [`replace_lane`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/replace_lane)
