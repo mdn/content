@@ -56,6 +56,9 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### DOM
 
+- The [`HTMLSelectElement.showPicker()`](/en-US/docs/Web/API/HTMLInputElement/showPicker#showpicker_for_a_datalist_input) method is now supported for a list of options defined in a {{htmlelement("datalist")}}.
+  This allows the browser picker for a `<datalist>` to be programmatically launched when triggered by user interaction ([Firefox bug 1998668](https://bugzil.la/1998668)).
+
 - The {{domxref("CloseWatcher")}} interface is now supported.
   This allows developers to implement components that can be closed using device-native mechanisms, such as the <kbd>Esc</kbd> on Windows or the <kbd>Back</kbd> key on Android, in the same way as built-in components such as [dialogs](/en-US/docs/Web/HTML/Reference/Elements/dialog) and [popovers](/en-US/docs/Web/API/Popover_API).
   ([Firefox bug 1966073](https://bugzil.la/1966073)).
