@@ -20,7 +20,10 @@ new Sanitizer(configuration)
 ### Parameters
 
 - `configuration` {{optional_inline}}
-  - : A {{domxref("SanitizerConfig")}} defining a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration), or the string `"default"` to indicate the default configuration.
+  - : A {{domxref("SanitizerConfig")}} defining a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration), or the string `"default"` to indicate the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
+    The "empty configuration" (`{}`) can also be passed, and results in a [remove configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#remove_configurations) with empty arrays.
+
+    If omitted, the constructor returns a `Sanitizer` with the default configuration.
 
 ### Returns
 
@@ -38,7 +41,8 @@ An instance of the {{domxref("Sanitizer")}} object.
 
 The constructor creates a new {{domxref("Sanitizer")}} object, which can be used to filter unwanted elements and attributes from HTML or documents before they are inserted/parsed into the DOM.
 
-The default `Sanitizer` allows only XSS-safe input by default, omitting elements such as {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, `<use>`, and event handler attributes from their respective allow lists, and disallowing data attributes, and comments.
+The [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) is an [allow sanitizer](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations) that omits XSS-unsafe elements and attributes, along with other elements and attributes that can potentially be used in other attacks, such as clickjacking and spoofing.
+This configuration is suitable for the majority of sanitization use cases.
 It is created if `"default"` or no object is passed to the constructor.
 
 The constructor can be passed a {{domxref("SanitizerConfig")}} with a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration) to customize the sanitizer behavior.
@@ -104,7 +108,7 @@ Note that the default configuration is an allow configuration, having both `elem
 
 {{EmbedLiveSample("Creating the default sanitizer","100","480px")}}
 
-### Creating a sanitizer and using it with `setHTML()`
+### Creating a `Sanitizer` and using it with `setHTML()`
 
 This example shows how you might create and use a custom sanitizer in a safe HTML DOM insertion method.
 
