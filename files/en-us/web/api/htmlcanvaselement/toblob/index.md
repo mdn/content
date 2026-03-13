@@ -17,6 +17,9 @@ Browsers are required to support `image/png`; many will support additional forma
 
 The created image will have a resolution of 96dpi for file formats that support encoding resolution metadata.
 
+> [!NOTE]
+> Some browsers randomize the pixel data encoded by this method as an anti-fingerprinting measure. This means the blob may not exactly match what was drawn to the canvas. See [Anti-fingerprinting randomization](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData#anti-fingerprinting_randomization) for details.
+
 ## Syntax
 
 ```js-nolint

@@ -21,6 +21,14 @@ transparent black in the returned `ImageData` object.
 > Image data can be painted onto a canvas using the
 > {{domxref("CanvasRenderingContext2D.putImageData()", "putImageData()")}} method.
 
+## Anti-fingerprinting randomization
+
+Some browsers add small random perturbations to the pixel data returned by `getImageData()` as an anti-fingerprinting measure. [Canvas fingerprinting](https://en.wikipedia.org/wiki/Canvas_fingerprinting) works by drawing content to a canvas and reading back the pixel data, which varies subtly across devices due to differences in GPU hardware, drivers, and font rendering. By randomizing the readback data, browsers make it harder to create a stable fingerprint.
+
+When this protection is active, the color channel values in the returned {{domxref("ImageData")}} may differ by a small amount (typically a few units per channel) from the values that were originally drawn. For example, filling a rectangle with `rgb(255, 127, 0)` and reading it back may yield values like `[254, 128, 0, 255]` instead of `[255, 127, 0, 255]`. This randomization applies to all canvas readback — not only cross-origin content — because fingerprinting exploits same-origin drawing.
+
+This behavior also affects {{domxref("HTMLCanvasElement.toDataURL()")}} and {{domxref("HTMLCanvasElement.toBlob()")}}, since they encode the same (randomized) pixel data. Code that depends on reading back exact pixel values from a canvas — such as pixel-perfect round-trip tests or color-picking tools — may need to account for this variation.
+
 You can find more information about `getImageData()` and general
 manipulation of canvas contents in [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas).
 

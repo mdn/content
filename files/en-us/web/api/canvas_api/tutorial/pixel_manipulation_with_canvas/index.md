@@ -73,6 +73,9 @@ This method returns an `ImageData` object representing the pixel data for the ar
 > [!NOTE]
 > Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
 
+> [!NOTE]
+> Some browsers slightly randomize the pixel data returned by `getImageData()` as an anti-fingerprinting measure, so the values may not exactly match what was drawn. See [Anti-fingerprinting randomization](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData#anti-fingerprinting_randomization) for details.
+
 This method is also demonstrated in the article [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas).
 
 ## Creating a color picker

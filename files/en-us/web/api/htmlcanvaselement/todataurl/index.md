@@ -21,6 +21,9 @@ The created image data will have a resolution of 96dpi for file formats that sup
 > [!WARNING]
 > `toDataURL()` encodes the whole image in an in-memory string. For larger images, this can have performance implications, and may even overflow browsers' URL length limit when assigned to {{domxref("HTMLImageElement.src")}}. You should generally prefer [`toBlob()`](/en-US/docs/Web/API/HTMLCanvasElement/toBlob) instead, in combination with {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}}.
 
+> [!NOTE]
+> Some browsers randomize the pixel data encoded by this method as an anti-fingerprinting measure. This means the encoded image may not exactly match what was drawn to the canvas. See [Anti-fingerprinting randomization](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData#anti-fingerprinting_randomization) for details.
+
 ## Syntax
 
 ```js-nolint
