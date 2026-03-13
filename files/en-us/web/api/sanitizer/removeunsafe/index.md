@@ -8,7 +8,7 @@ browser-compat: api.Sanitizer.removeUnsafe
 
 {{APIRef("HTML Sanitizer API")}}
 
-The **`removeUnsafe()`** method of the {{domxref("Sanitizer")}} interface configures the sanitizer so that it will remove all elements and attributes attributes that are considered XSS-unsafe by the browser.
+The **`removeUnsafe()`** method of the {{domxref("Sanitizer")}} interface configures the sanitizer so that it will remove all elements and attributes that are considered XSS-unsafe by the browser.
 
 The method can be called to make any `Sanitizer` XSS-safe.
 

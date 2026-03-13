@@ -140,7 +140,7 @@ log(JSON.stringify(defaultConfig, null, 2));
 
 #### Results
 
-The [default `Sanitizer` configuration](/docs/Web/API/HTML_Sanitizer_API#default_sanitizer_configuration) is logged below.
+The [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) is logged below.
 Note that the default configuration is quite big, allowing many elements and attributes.
 
 {{EmbedLiveSample("Getting the default sanitizer","100","480px")}}

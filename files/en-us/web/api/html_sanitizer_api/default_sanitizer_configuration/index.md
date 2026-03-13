@@ -1,28 +1,30 @@
 ---
-title: Default Sanitizer configuration
+title: Default sanitizer configuration
 slug: Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration
 page-type: guide
 ---
 
 {{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The default sanitizer configuration defines the {{domxref("Sanitizer")}} that is used by default if you call the [safe sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods), such as {{domxref("Element.setHTML()")}}, {{domxref("ShadowRoot.setHTML()")}}, and {{domxref("Document.parseHTML_static","Document.parseHTML()")}}, without specifying a custom sanitizer.
-It is also the default configuration returned by the [`Sanitizer()` constructor](/en-US/docs/Web/API/Sanitizer/Sanitizer) if no `configuration` is passed as an argument.
+The default sanitizer configuration defines the configuration returned by the [`Sanitizer()` constructor](/en-US/docs/Web/API/Sanitizer/Sanitizer) if no `configuration` is passed as an argument.
+This same configuration is implicitly used if you call the [safe sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods), such as {{domxref("Element.setHTML()")}}, {{domxref("ShadowRoot.setHTML()")}}, and {{domxref("Document.parseHTML_static","Document.parseHTML()")}}, without specifying a custom sanitizer.
 
 This configuration removes the following sorts of items:
 
 1. Those that are known to be XSS-unsafe:
    - {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}}, and {{SVGElement("use")}}.
    - All event handler content attributes, such as `onafterprint`, `onbeforeinput`, and so on.
-2. Additional items that might be be used in clickjacking, spoofing, or other attacks.
+2. Additional items that might be used in clickjacking, spoofing, or other attacks.
 3. Comments and `data-*` attributes.
 
 It therefore provides a sanitizer with a minimal attack surface, which is still suitable for the majority of sanitization use cases.
 
 > [!NOTE]
-> The specification calls this configuration the [built-in safe default configuration](https://wicg.github.io/sanitizer-api/#built-in-safe-default-configuration).
+> Calling {{domxref("Sanitizer.removeUnsafe()")}}, or passing a custom sanitizer to the safe sanitization method, only removes the XSS-unsafe items.
+> It does not remove the additional items, comments, and `data-*` attributes.
 
-The following sections list all the elements, with a &check; mark indicating those that are allowed by the default configuration, and also listing the attributes that are allowed only for particular elements.
+The following sections list all the elements, with a &check; mark indicating those that are _allowed_ by the default configuration (the ❌ therefore indicates those that will be removed).
+The "Additional allowed attributes" column lists the attributes that are allowed for the corresponding elements; any other attributes on the element would be removed (unless allowed by the global attributes).
 The [Global attributes](#global_attributes) section lists the attributes that are allowed on all elements (the attributes that are not removed when the configuration is used).
 
 ## HTML elements
