@@ -135,7 +135,7 @@ button.addEventListener("click", () => {
 });
 ```
 
-A for the other pickers we can't show this code running as a live example because it runs in a cross-origin frame, and would cause a [`SecurityError`](#securityerror).
+As for the other pickers, we can't show this code running as a live example because it runs in a cross-origin frame, and would cause a [`SecurityError`](#securityerror).
 
 ### showPicker() for autocomplete
 
