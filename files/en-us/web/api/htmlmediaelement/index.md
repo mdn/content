@@ -50,7 +50,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.error")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MediaError")}} object for the most recent error, or `null` if there has not been an error.
 - {{domxref("HTMLMediaElement.loading")}}
-  - : A string providing a hint to the browser used to optimize loading the document by determining whether to load the media immediately (`eager`) or on an as-needed basis (`lazy`). See [`<video loading>`](/en-US/docs/Web/HTML/Reference/Elements/video#loading) and [`<audio loading>`](/en-US/docs/Web/HTML/Reference/Elements/autio#loading) HTML attributes for more information.
+  - : A string providing a hint to the browser used to optimize loading the document by determining whether to load the media immediately (`eager`) or on an as-needed basis (`lazy`). See [`<video loading>`](/en-US/docs/Web/HTML/Reference/Elements/video#loading) and [`<audio loading>`](/en-US/docs/Web/HTML/Reference/Elements/audio#loading) HTML attributes for more information.
 - {{domxref("HTMLMediaElement.loop")}}
   - : A boolean that reflects the [`loop`](/en-US/docs/Web/HTML/Reference/Elements/video#loop) HTML attribute, which indicates whether the media element should start over when it reaches the end.
 - {{domxref("HTMLMediaElement.mediaKeys")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
@@ -98,9 +98,9 @@ These properties are obsolete and should not be used, even if a browser still su
   - : A {{domxref("MediaController")}} object that represents the media controller assigned to the element, or `null` if none is assigned.
 - {{domxref("HTMLMediaElement.mediaGroup")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A string that reflects the `mediagroup` HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.
-- {{domxref("HTMLMediaElement.mozAudioCaptured")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- `HTMLMediaElement.mozAudioCaptured` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Returns a boolean. Related to audio stream capture.
-- {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- `HTMLMediaElement.mozFragmentEnd` {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : A `double` that provides access to the fragment end time if the media element has a fragment URI for `currentSrc`, otherwise it is equal to the media duration.
 
 ## Instance methods
@@ -134,9 +134,9 @@ _These methods are obsolete and should not be used, even if a browser still supp
 
 - {{domxref("HTMLMediaElement.captureStream", "HTMLMediaElement.mozCaptureStream()")}} {{Non-standard_Inline}}
   - : The Firefox-prefixed equivalent of {{domxref("HTMLMediaElement.captureStream()")}}. See its [browser compatibility](/en-US/docs/Web/API/HTMLMediaElement/captureStream#browser_compatibility) for details.
-- {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : \[enter description]
-- {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- `HTMLMediaElement.mozCaptureStreamUntilEnded()` {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : A non-standard, deprecated, method to capture the steam until it ended.
+- `HTMLMediaElement.mozGetMetadata()` {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as `{key: value}` pairs. A separate copy of the data is returned each time the method is called. This method must be called after the [`loadedmetadata`](/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event) event fires.
 
 ## Events
