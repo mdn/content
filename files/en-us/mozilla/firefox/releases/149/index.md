@@ -151,3 +151,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`@container style()` queries** (Nightly): `layout.css.style-queries.enabled`
 
   The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2014404](https://bugzil.la/2014404)).
+
+- **CSS Typed Object Model Level 1**: `layout.css.typed-om.enabled`
+
+  The CSS Typed Object Model Level 1 specification is being implemented.
+  In this release, support for the {{domxref("CSSNumericValue/to","to()")}} method of the {{domxref("CSSNumericValue")}} interface was added, allowing the conversion of a CSS numeric value from one unit to another. ([Firefox bug 1278697](https://bugzil.la/1278697)).
