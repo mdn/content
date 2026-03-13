@@ -64,6 +64,10 @@ If the API requires a permission, state this immediately after the introduction.
 To use this API, an extension must request the "bookmarks" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 ```
 
+## Description section
+
+If there is additional detail to convey beyond what fits in the introductory paragraph — such as key concepts, usage patterns, or important caveats — include a `## Description` section placed between the introduction and the member-listing sections (Types, Properties, Functions, Events). Omit this section if the introductory paragraph is sufficient.
+
 ## Types section
 
 If the namespace defines types, list them using `{{WebExtAPIRef}}` macros and provide a brief, single-sentence description of each. Omit this section if there are no types.

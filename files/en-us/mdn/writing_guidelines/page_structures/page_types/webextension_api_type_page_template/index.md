@@ -64,6 +64,10 @@ Describe the structure and semantics of the type:
 - For simple types (for example, enumerated strings), list the possible values and what each means.
 - For object types, describe the object and list its fields in a definition list. Indicate whether fields are optional and what defaults are used.
 
+## Description section
+
+If there is additional detail to convey beyond what fits in the introductory paragraph and Type section — such as how the type is used across the API, edge cases, platform-specific behavior, or important caveats — include a `## Description` section placed between the Type and Examples sections. Omit this section if the introductory paragraph and Type section are sufficient.
+
 ## Examples section
 
 Provide one or more examples demonstrating how to create or use a value of the type. Each example must have an H3 (`###`) heading with a concise, descriptive title that says what the example does. See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.

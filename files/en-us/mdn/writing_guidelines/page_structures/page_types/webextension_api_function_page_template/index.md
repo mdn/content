@@ -71,6 +71,14 @@ Include one definition-list term and definition for each parameter. If the param
 
 Describe the function's return value, including the data type and what it represents. Most WebExtension functions are asynchronous and return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the function does not return anything, write `None ({{jsxref('undefined')}}).`.
 
+### Exceptions subsection
+
+If the function can throw exceptions or reject the returned Promise with specific errors, list them in a `### Exceptions` subsection using a definition list with one term and definition per exception. Omit this subsection if the function does not throw any exceptions.
+
+## Description section
+
+If there is additional detail to convey beyond what fits in the introductory paragraph — such as edge cases, interactions with other APIs, platform-specific behavior, or important caveats — include a `## Description` section placed between the Syntax and Examples sections. Omit this section if the introductory paragraph is sufficient.
+
 ## Examples section
 
 Provide one or more examples demonstrating how to use the function. Each example must have an H3 (`###`) heading with a concise, descriptive title that says what the example does. See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.

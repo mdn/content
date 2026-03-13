@@ -71,7 +71,8 @@ Events have three functions:
 
 <!-- If the listener receives complex objects, document their shape here under H3 headings -->
 <!-- This section is used when the details object has many fields (see tabs.onActivated, webRequest.onBeforeSendHeaders) -->
-<!-- Remove this section if the listener parameters are simple enough to document inline above -->
+<!-- Remove this section if the listener parameters are simple enough to document inline above. -->
+<!-- When removed, the Description section below moves up to follow addListener syntax directly. -->
 
 ### details
 
@@ -79,6 +80,11 @@ Events have three functions:
   - : `type`. Description of the field.
 - `field2`
   - : `type`. Description of the field.
+
+## Description
+
+<!-- Add a detailed description of when and why this event fires, edge cases, interactions with other events or APIs, etc. -->
+<!-- This section can be omitted if the introductory paragraph is sufficient. -->
 
 ## Examples
 

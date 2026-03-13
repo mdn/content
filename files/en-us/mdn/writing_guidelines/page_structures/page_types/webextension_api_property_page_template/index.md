@@ -68,6 +68,10 @@ Explain the type and meaning of the property's value:
 
 Where relevant, describe how the value interacts with other APIs (for example, how to change a setting using a related function).
 
+## Description section
+
+If there is additional detail to convey beyond what fits in the introductory paragraph and Value section — such as how the property interacts with other APIs, edge cases, platform-specific behavior, or important caveats — include a `## Description` section placed between the Value and Examples sections. Omit this section if the introductory paragraph and Value section are sufficient.
+
 ## Examples section
 
 Provide one or more examples demonstrating how to use the property. Each example must have an H3 (`###`) heading with a concise, descriptive title that says what the example does. See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.

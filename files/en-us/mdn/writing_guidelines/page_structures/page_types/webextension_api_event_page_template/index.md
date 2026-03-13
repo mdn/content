@@ -77,6 +77,10 @@ When the listener callback receives complex objects with many fields (for exampl
 
 If the listener parameters are simple enough to document inline in the Parameters subsection, omit this section entirely.
 
+## Description section
+
+If there is additional detail to convey beyond what fits in the introductory paragraph — such as when and why the event fires in detail, edge cases, interactions with other events or APIs, or platform-specific behavior — include a `## Description` section placed between the Additional objects section (or addListener syntax section, if Additional objects is omitted) and the Examples section. Omit this section if the introductory paragraph is sufficient.
+
 ## Examples section
 
 Provide one or more examples demonstrating how to listen for the event. Each example must have an H3 (`###`) heading with a concise, descriptive title that says what the example does. See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.

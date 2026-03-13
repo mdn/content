@@ -54,21 +54,65 @@ Remove any macros or banners that do not apply.
 
 ## Introductory paragraph
 
-Begin the content on the page with an introductory paragraph describing what kind of value the manifest key takes and what it is used for. This should ideally be one or two short sentences. There is no need to repeat the key name since the title already communicates this.
+Begin the content on the page with an introductory paragraph that uses the backtick-quoted key name as the subject and describes what the key is used for. This should ideally be one or two short sentences. For example:
 
-## Summary table
-
-Manifest key pages typically include a summary table immediately after the introduction, showing the key's type, whether it is mandatory, the manifest version(s) it applies to, and a short example. See existing manifest key pages like [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) or [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) for the expected format.
+```md
+The `action` manifest key is used to define the appearance and behavior of an extension's browser toolbar button.
+```
 
 ## Syntax section
 
-If the key value is an object with multiple properties, provide a JSON syntax block and then list each property in a definition list, noting the type, whether it is optional, and what it does.
+Provide a `## Syntax` section containing a `json-nolint` code block that shows one or more representative usages of the key. For simple keys (a string, boolean, or array of strings), the code block can show just `"key_name": "value"`. For object keys, show the object form with its properties. If multiple usage patterns exist, use JSON comments to label them. Follow the code block with a `### Values` subsection.
 
-For simpler keys (for example, a string or an array of strings), the summary table and introductory paragraph may be sufficient and a separate Syntax section can be omitted.
+For example:
+
+````md
+## Syntax
+
+\```json-nolint
+"key_name": {
+"property": "value",
+"other_property": "value"
+}
+\```
+````
+
+### Values subsection
+
+Under `### Values`, use a definition list to describe the key's value. The template shows the object-key pattern by default. For simple keys, simplify the definition list to a direct description instead:
+
+- For **object keys** (the default in the template), describe the object and list its properties as nested definition list items. Use `\{{optional_inline}}` for optional properties:
+
+  ```md
+  - `key_name`
+    - : An object that specifies … It can have the following properties:
+      - `property`
+        - : A string that … This property is required.
+      - `other_property` \{{optional_inline}}
+        - : A string that …
+  ```
+
+- For **simple keys** (a string, boolean, or array of strings), describe the value directly without nested properties:
+
+  ```md
+  - `key_name`
+    - : A string that specifies …
+  ```
+
+## Description section
+
+Include a `## Description` section for any additional context about how the key works, its default behavior, interactions with other keys or APIs, and any important caveats. This is the place to note:
+
+- Which manifest versions the key applies to (for example, "This key is available in Manifest V3 and later.").
+- Whether the key is required or optional.
+- How the key interacts with related APIs or other manifest keys.
+- Edge cases and platform-specific behavior.
+
+For simple keys where the introductory paragraph and Syntax section are sufficient, this section can be omitted.
 
 ## Examples section
 
-Provide one or more realistic manifest snippets showing how to use the key. Each example must have an H3 (`###`) heading with a concise, descriptive title that says what the example does.
+Provide one or more realistic manifest snippets showing how to use the key. Each example must have an H3 (`###`) heading with a concise, descriptive title that says what the example does. Examples should show the key within the context of a full or partial manifest object (wrapped in curly braces) to make them easy to copy and use.
 
 ## Example extensions section
 

@@ -55,6 +55,11 @@ Its value is:
 
 This property is read-only.
 
+## Description
+
+<!-- Add a detailed description of the property's behavior, how it interacts with other APIs, edge cases, etc. -->
+<!-- This section can be omitted if the introductory paragraph and Value section are sufficient. -->
+
 ## Examples
 
 ### Example title

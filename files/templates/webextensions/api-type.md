@@ -42,6 +42,11 @@ Values of this type are strings. Possible values are:
 - `field2` {{optional_inline}}
   - : `type`. Description of the field.
 
+## Description
+
+<!-- Add a detailed description of the type's purpose, how it is used across the API, edge cases, etc. -->
+<!-- This section can be omitted if the introductory paragraph and Type section are sufficient. -->
+
 ## Examples
 
 ### Example title

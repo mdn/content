@@ -29,6 +29,11 @@ To use this API, an extension must request the "permissionName" [permission](/en
 
 <!-- If useful, add a short bulleted list summarizing key capabilities -->
 
+## Description
+
+<!-- Add a detailed description of the namespace's purpose, concepts, usage patterns, or important caveats. -->
+<!-- This section can be omitted if the introductory paragraph is sufficient. -->
+
 ## Types
 
 <!-- List any types defined in the namespace. Remove this section if there are none -->

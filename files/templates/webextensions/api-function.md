@@ -49,6 +49,19 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 <!-- If the function does not return anything, use "None ({{jsxref('undefined')}})." instead -->
 
+### Exceptions
+
+<!-- List the exceptions the function can throw. Use a definition list with one term and definition per exception. -->
+<!-- Remove this subsection if the function does not throw any exceptions. -->
+
+- `Error`
+  - : Description of when this error is thrown.
+
+## Description
+
+<!-- Add a detailed description of how the function behaves, edge cases, interactions with other APIs, etc. -->
+<!-- This section can be omitted if the introductory paragraph is sufficient. -->
+
 ## Examples
 
 ### Example title
