@@ -84,7 +84,6 @@ You can change any of the page action properties programmatically using the [`pa
 
 You can use bitmap image formats, such as PNG, or provide SVG icons. If you use an SVG icon, you can use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For example:
 
-```json
 <style>
   #outside { fill: black; }
   #inside { fill: red; }

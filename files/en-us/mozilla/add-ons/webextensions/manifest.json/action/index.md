@@ -59,7 +59,7 @@ If you supply a popup, then the popup is opened when the user clicks the button,
 
 The `action` key is an object that may have any of these properties, all optional:
 
-- `browser_style` {{optional_inline}} {{deprecated_inline}}
+- [`browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) {{optional_inline}} {{deprecated_inline}}
   - : `Boolean`. Optional, defaulting to `false`.
     > [!WARNING]
     > Do not set `browser_style` to true: its support in Manifest V3 was removed in Firefox 118. See [Manifest V3 migration for `browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration).
@@ -78,7 +78,7 @@ The `action` key is an object that may have any of these properties, all optiona
     You can specify a single icon file by supplying a string here:
 
     ```json
-    "default_icon": "path/to/geo.svg"`
+    "default_icon": "path/to/geo.svg"
     ```
 
     To specify multiple icons in different sizes, specify an object here. The name of each property is the icon's height in pixels, and must be convertible to an integer. The value is the URL. For example:
@@ -93,9 +93,9 @@ The `action` key is an object that may have any of these properties, all optiona
     You cannot specify multiple icons of the same sizes. See [Choosing icon sizes](#choosing_icon_sizes) for more guidance on this.
 
 - `default_popup` {{optional_inline}}
-  - : `String`. The path to an HTML file containing the specification of the popup. The HTML file may include CSS and JavaScript files using `<link>` and `<script>` elements, just like a normal web page. However, `<script>` must have a `src` attribute to load a file. Don't use `<script>` with embedded code, because you'll get a confusing Content Violation Policy error. Unlike a normal web page, JavaScript running in the popup can access all the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) (subject, of course, to the extension having the appropriate [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)). This is a localizable property.
+  - : `String`. The path to an HTML file containing the specification of the popup. The HTML file may include CSS and JavaScript files using `<link>` and `<script>` elements, just like a normal web page. However, `<script>` must have a `src` attribute to load a file. Don't use `<script>` with embedded code, because you'll get a confusing Content Violation Policy error. Unlike a normal web page, JavaScript running in the popup can access all the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) (subject, of course, to the extension having the appropriate [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)). This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 - `default_title` {{optional_inline}}
-  - : `String`. Tooltip for the button, displayed when the user moves their mouse over it. If the button is added to the browser's menu panel, this is also shown under the app icon. This is a localizable property.
+  - : `String`. Tooltip for the button, displayed when the user moves their mouse over it. If the button is added to the browser's menu panel, this is also shown under the app icon. This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 - `theme_icons` {{optional_inline}}
   - : `Array`. This property enables you to specify different icons for themes depending on whether Firefox detects that the theme uses dark or light text. If this property is present, it's an array containing at least one `ThemeIcons` object. A `ThemeIcons` object contains three mandatory properties:
     - `"dark"`
@@ -110,7 +110,7 @@ The `action` key is an object that may have any of these properties, all optiona
     > [!NOTE]
     > When using SVG icons, you can use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For example:
     >
-    > ```json
+    > 
     > <style>
     >   #outside { fill: black; }
     >   #inside { fill: red; }

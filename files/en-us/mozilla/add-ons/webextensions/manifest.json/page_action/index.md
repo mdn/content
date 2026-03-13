@@ -54,18 +54,18 @@ While browser actions are displayed by default, page actions are hidden by defau
 
 The `page_action` key is an object that may have any of three properties, all optional:
 
-- `browser_style` {{optional_inline}} {{deprecated_inline}}
-  - : `Boolean`. Optional. Defaults to `false`.
+- [`browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) {{optional_inline}} {{deprecated_inline}}
+  - : `Boolean`. Defaults to `false`.
 
     > [!WARNING]
-    > Do not set `browser_style` to true: its not support in Manifest V3 from Firefox 118. See [Manifest V3 migration for `browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration).
+    > Do not set `browser_style` to true: it's not supported in Manifest V3, starting from Firefox 118. See [Manifest V3 migration for `browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration).
 
     In Firefox, the stylesheet can be seen at `chrome://browser/content/extension.css` or `chrome://browser/content/extension-mac.css` on macOS. The [latest-download](https://github.com/mdn/webextensions-examples/tree/main/latest-download) example extension uses `browser_style` in its popup.
 
-- `default_icon`
+- `default_icon` {{optional_inline}}
   - : `Object` or `String`. Use this to specify an icon for the action.
 
-    It's recommended that you supply two icons here (19×19 pixels and 38×38 pixels), and specify them in an object with properties named `"19"` and `"38", like this:
+    It's recommended that you supply two icons here (19×19 pixels and 38×38 pixels), and specify them in an object with properties named `"19"` and `"38"`, like this:
 
     ```json
     "default_icon": {
@@ -79,14 +79,14 @@ The `page_action` key is an object that may have any of three properties, all op
     You can just supply a string here:
 
     ```json
-    `"default_icon": "geo.png"`.
+    "default_icon": "geo.png"
     ```
 
     If you do this, then the icon will be scaled to fit the toolbar, and may appear blurry.
 
     You can use an SVG icon. You can also have the icon adapt to light and dark themes using a media query on `prefers-color-scheme`. For example:
 
-    ```json
+    
     <style>
       #outside { fill: black; }
       #inside { fill: red; }
@@ -99,18 +99,18 @@ The `page_action` key is an object that may have any of three properties, all op
 
     For more information, see the [themed-icons](https://github.com/mdn/webextensions-examples/tree/master/themed-icons) example.
 
-- `default_popup`
+- `default_popup` {{optional_inline}}
   - : `String`. The path to an HTML file containing the specification of the popup. The HTML file may include CSS and JavaScript files using `<link>` and `<script>` elements, just like a normal web page.
 
     However, don't use `<script>` with embedded code, because you'll get a Content Violation Policy error. Instead, `<script>` must use the `src` attribute to load a separate script file.
 
-    Unlike a normal web page, JavaScript running in the popup can access all the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) (subject to the extension having the appropriate [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)). This is a localizable property.
+    Unlike a normal web page, JavaScript running in the popup can access all the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) (subject to the extension having the appropriate [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)). This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
-- `default_title`
-  - : `String`. Tooltip for the icon, displayed when the user moves their mouse over it. This is a localizable property.
+- `default_title` {{optional_inline}}
+  - : `String`. Tooltip for the icon, displayed when the user moves their mouse over it. This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
-- `hide_matches`
-  - : `Array` of `Match Pattern` except `<all_urls>`. Hide the page action by default for pages whose URLs match any of the given [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
+- `hide_matches` {{optional_inline}}
+  - : `Array` of `MatchPattern` except `<all_urls>`. Hide the page action by default for pages whose URLs match any of the given [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 
     Note that page actions are always hidden by default unless `show_matches` is given. Therefore, it only makes sense to include this property if `show_matches` is also given, and will override the patterns in `show_matches`.
 
@@ -119,16 +119,16 @@ The `page_action` key is an object that may have any of three properties, all op
     ```json
     "page_action": {
       "show_matches": ["https://*.mozilla.org/*"],
-      "hide_matches": ["[https://developer.mozilla.org/](https://developer.mozilla.org/)*"]
+      "hide_matches": ["https://developer.mozilla.org/*"]
     }
     ```
 
     This shows the page action by default for all HTTPS URLs under the `"mozilla.org"` domain, except for pages under `"developer.mozilla.org"`.
 
-- `show_matches`
-  - : `Array` of `Match Pattern`. Show the page action by default for pages whose URLs match any of the given patterns. See also `hide_matches`.
+- `show_matches` {{optional_inline}}
+  - : `Array` of `MatchPattern`. Show the page action by default for pages whose URLs match any of the given patterns. See also `hide_matches`.
 
-- `pinned` {{deprecated_inline}}
+- `pinned` {{optional_inline}} {{deprecated_inline}}
   - : `Boolean`. Optional. Defaults to `true`. Controls whether or not the page action should appear in the location bar by default when the user installs the extension. This property is no longer supported since Firefox 89.
 
 ## Example

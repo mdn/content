@@ -71,7 +71,6 @@ You can use SVG, and the browser scales your icon appropriately. There are two c
 
 You can use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For example:
 
-```json
 <style>
   #outside { fill: black; }
   #inside { fill: red; }
