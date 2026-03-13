@@ -12,8 +12,12 @@ The header allows you to avoid [MIME type sniffing](/en-US/docs/Web/HTTP/Guides/
 
 Site security testers usually expect this header to be set.
 
-> [!NOTE]
-> The `X-Content-Type-Options` header only apply request-blocking [due to `nosniff`](https://fetch.spec.whatwg.org/#ref-for-determine-nosniff) for [request destinations](/en-US/docs/Web/API/Request/destination) of `"script"` and `"style"`.
+The `nosniff` directive has two effects depending on the context:
+
+- **Request blocking**: For requests with a [destination](/en-US/docs/Web/API/Request/destination) of `"script"` or `"style"`, the browser blocks the response if the MIME type doesn't match an expected type (a [JavaScript MIME type](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type) for scripts, or `text/css` for stylesheets). See the [Fetch specification](https://fetch.spec.whatwg.org/#ref-for-determine-nosniff) for details.
+- **MIME type sniffing disabled**: For other response types, including navigations (HTML documents), the browser uses the supplied {{HTTPHeader("Content-Type")}} as-is instead of examining the content to infer the type. For example, if a server sends a response with `Content-Type: text/plain` and `X-Content-Type-Options: nosniff`, the browser will not sniff it as HTML, even if the content contains HTML markup. See the [MIME Sniffing specification](https://mimesniff.spec.whatwg.org/#mime-type-sniffing-algorithm) for details.
+
+Because of this, servers should always send an accurate `Content-Type` header; using `X-Content-Type-Options: nosniff` complements correct server configuration rather than replacing it.
 
 <table class="properties">
   <tbody>
@@ -33,9 +37,7 @@ X-Content-Type-Options: nosniff
 ## Directives
 
 - `nosniff`
-  - : Blocks a request if the request destination is of type
-    `style` and the MIME type is not `text/css`,
-    or of type `script` and the MIME type is not a [JavaScript MIME type](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type).
+  - : Blocks a request if the request destination is of type `style` and the MIME type is not `text/css`, or of type `script` and the MIME type is not a [JavaScript MIME type](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type). Also prevents MIME type sniffing for all other response types, causing the browser to use the declared {{HTTPHeader("Content-Type")}} without examining the response content.
 
 ## Specifications
 
