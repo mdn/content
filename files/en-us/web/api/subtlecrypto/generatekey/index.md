@@ -33,8 +33,7 @@ generateKey(algorithm, extractable, keyUsages)
     - For [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519): pass the string `X25519` or an object of the form `{ name: "X25519" }`.
 
 - `extractable`
-  - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
-  -  : When generating asymmetric key pairs (such as RSA or ECDSA), the `extractable` parameter determines whether the private key can be exported, while the public key in the generated key pair is generally extractable.
+  - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}. When generating asymmetric key pairs (such as RSA or ECDSA), the `extractable` parameter determines whether the private key can be exported, while the public key in the generated key pair is generally extractable.
 - `keyUsages`
   - : An {{jsxref("Array")}} of strings indicating what can be done with the newly generated key.
     Possible values for array elements are:
