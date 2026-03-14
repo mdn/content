@@ -180,3 +180,4 @@ Selection and traversal on the DOM tree
 {{domxref("Document.querySelectorAll()")}}
 
 {{domxref("Element.querySelectorAll()")}}
+```
