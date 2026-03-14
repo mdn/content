@@ -19,6 +19,21 @@ document, the first element with that ID is returned.
 
 [CSS pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) will never return any elements.
 
+## Difference between Document.querySelector() and Element.querySelector()
+
+`Document.querySelector()` searches the entire document for the first element
+that matches the specified CSS selector.
+
+`Element.querySelector()` performs the same search but only within the subtree
+of the element on which it is called.
+
+For example:
+
+```js
+document.querySelector(".item"); // searches the entire document
+
+container.querySelector(".item"); // searches only inside the container element
+
 ## Syntax
 
 ```js-nolint
