@@ -29,7 +29,7 @@ of the element on which it is called.
 
 For example:
 
-```js
+````js
 document.querySelector(".item"); // searches the entire document
 
 container.querySelector(".item"); // searches only inside the container element
