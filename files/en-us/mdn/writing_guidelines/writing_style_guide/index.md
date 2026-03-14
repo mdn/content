@@ -97,7 +97,7 @@ Some terms, while not intending to be offensive, may alienate readers of certain
 - Instead of **dummy**, use **placeholder**.
 - You should not need to use the terms **crazy** and **insane** in documentation; however, if the case arises, consider using **fantastic** instead.
 
-Avoid figurative idioms with depictions of violence or cruelty, which triggers certain audiences and sets the wrong tone for documentation. For example:
+Avoid figurative idioms with depictions of violence or cruelty, which trigger certain audiences and set the wrong tone for documentation. For example:
 
 - Instead of "kill two birds with one stone," use "solve two problems at once."
 - Instead of "beating a dead horse," use "belaboring the point" or "going round in circles."
