@@ -82,28 +82,7 @@ You can change any of the page action properties programmatically using the [`pa
 
 ## Icons
 
-You can use bitmap image formats, such as PNG, or provide SVG icons. If you use an SVG icon, you can use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For example:
-
-```html
-<style>
-  #outside {
-    fill: black;
-  }
-  #inside {
-    fill: red;
-  }
-  @media (prefers-color-scheme: dark) {
-    #outside {
-      fill: white;
-    }
-    #inside {
-      fill: black;
-    }
-  }
-</style>
-```
-
-For more information, see the [themed-icons](https://github.com/mdn/webextensions-examples/tree/master/themed-icons) example.
+You can use bitmap image formats, such as PNG, or provide SVG icons. If you use an SVG icon, you can use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For more information, see [`"page_action"` `"default_icon"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action#default_icon) and the [themed-icons](https://github.com/mdn/webextensions-examples/tree/master/themed-icons) example .
 
 For details on how to create icons to use with your page action, see [Iconography](https://acorn.firefox.com/latest/foundations/styles/iconography-QEDMXQqj) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
