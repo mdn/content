@@ -3,7 +3,7 @@ title: preserveAspectRatio
 slug: Web/SVG/Reference/Attribute/preserveAspectRatio
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feimage-preserveaspectratio
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-feimage-preserveaspectratio
   - https://svgwg.org/svg2-draft/coords.html#PreserveAspectRatioAttribute
 sidebar: svgref
 ---
