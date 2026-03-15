@@ -13,7 +13,8 @@ sidebar: cssref
 The **`:target-current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selects the **active** scroll marker — the scroll marker of a {{cssxref("scroll-marker-group")}} that is currently scrolled to. This [selector](/en-US/docs/Web/CSS/Guides/Selectors) can be used to style the active navigation position within a scroll marker group.
 
 > [!NOTE]
->The `:target-current` pseudo-class was previously limited to ::scroll-marker pseudo-elements, but it may now apply to other elements designated as scroll markers using the scroll-target-group property.
+> The `:target-current` pseudo-class was previously limited to ::scroll-marker pseudo-elements, but it may now apply to other elements designated as scroll markers using the scroll-target-group property.
+
 ## Syntax
 
 ```css-nolint
