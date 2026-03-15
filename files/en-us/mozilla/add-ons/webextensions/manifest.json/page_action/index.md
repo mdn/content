@@ -86,13 +86,21 @@ The `page_action` key is an object that may have any of three properties, all op
 
     You can use an SVG icon. You can also have the icon adapt to light and dark themes using a media query on `prefers-color-scheme`. For example:
 
-    
+    ```html
     <style>
-      #outside { fill: black; }
-      #inside { fill: red; }
+      #outside {
+        fill: black;
+      }
+      #inside {
+        fill: red;
+      }
       @media (prefers-color-scheme: dark) {
-        #outside { fill: white; }
-        #inside { fill: black; }
+        #outside {
+          fill: white;
+        }
+        #inside {
+          fill: black;
+        }
       }
     </style>
     ```

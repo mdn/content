@@ -52,12 +52,21 @@ If you don't specify `"default_icon"`, the extension icon is used. If the extens
 
 You can provide icons for light and dark UI themes using the `"theme_icons"` property or use a media query on `prefers-color-scheme` in an SVG icon. For example:
 
+```html
 <style>
-  #outside { fill: black; }
-  #inside { fill: red; }
+  #outside {
+    fill: black;
+  }
+  #inside {
+    fill: red;
+  }
   @media (prefers-color-scheme: dark) {
-    #outside { fill: white; }
-    #inside { fill: black; }
+    #outside {
+      fill: white;
+    }
+    #inside {
+      fill: black;
+    }
   }
 </style>
 ```

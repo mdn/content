@@ -110,15 +110,23 @@ The `action` key is an object that may have any of these properties, all optiona
     > [!NOTE]
     > When using SVG icons, you can use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For example:
     >
-    > 
+    > ```html
     > <style>
-    >   #outside { fill: black; }
-    >   #inside { fill: red; }
-    >   @media (prefers-color-scheme: dark) {
-    >     #outside { fill: white; }
-    >     #inside { fill: black; }
+    >   #outside {
+    >     fill: black;
     >   }
-    >  </style>
+    >   #inside {
+    >     fill: red;
+    >   }
+    >   @media (prefers-color-scheme: dark) {
+    >     #outside {
+    >       fill: white;
+    >     }
+    >     #inside {
+    >       fill: black;
+    >     }
+    >   }
+    > </style>
     > ```
     >
     > For more information, see the [themed-icons](https://github.com/mdn/webextensions-examples/tree/master/themed-icons) example.
@@ -127,7 +135,7 @@ The `action` key is an object that may have any of these properties, all optiona
 
 The action's icon may need to be displayed in different sizes in different contexts:
 
-- The icon is displayed in the browser toolbar. Older versions of Firefox supported the option of placng the icon in the browser's menu panel (the panel that opens when the user clicks the "hamburger" icon). In those versions of Firefox the icon in the menu panel was larger than the icon in the toolbar.
+- The icon is displayed in the browser toolbar. Older versions of Firefox supported the option of placing the icon in the browser's menu panel (the panel that opens when the user clicks the "hamburger" icon). In those versions of Firefox, the menu panel icon was larger than the toolbar icon.
 - On a high-density display like a Retina screen, icons needs to be twice as big.
 
 If the browser can't find an icon of the right size in a given situation, it will pick the best match and scale it. Scaling may make the icon appear blurry, so it's important to choose icon sizes carefully.
