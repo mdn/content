@@ -10,11 +10,15 @@ browser-compat: api.Notification.Notification
 
 The **`Notification()`** constructor creates a new {{domxref("Notification")}} object instance, which represents a user notification.
 
-Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`. Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
+Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`.
+Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
 
-You must first get permission before being able to display notifications, using {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}. The permission may not be grantable, for example if the page is in private browsing mode.
+You must first get permission before being able to display notifications, using {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}.
+The permission may not be grantable, for example if the page is in private browsing mode.
 
-This constructor throws a {{jsxref("TypeError")}} when called in nearly all mobile browsers and this is unlikely to change, because web pages on mobile devices almost never "run in the background", which is the main use case for notifications. Instead, you need to register a service worker and use {{domxref("ServiceWorkerRegistration.showNotification()")}}. See [Chrome issue](https://crbug.com/481856) for more information.
+This constructor throws a {{jsxref("TypeError")}} when called in nearly all mobile browsers and this is unlikely to change, because web pages on mobile devices almost never "run in the background", which is the main use case for notifications.
+Instead, you need to register a service worker and use {{domxref("ServiceWorkerRegistration.showNotification()")}}.
+See [Chrome issue](https://crbug.com/481856) for more information.
 
 ## Syntax
 
@@ -28,37 +32,55 @@ new Notification(title, options)
 - `title`
   - : Defines a title for the notification, which is shown at the top of the notification window.
 - `options` {{optional_inline}}
-  - : An options object containing any custom settings that you want to apply to the notification. The possible options are:
+  - : An options object containing any custom settings that you want to apply to the notification.
+    The possible options are:
     - `actions` {{optional_inline}}
-      - : Must be unspecified or an empty array. `actions` is only supported for persistent notifications fired from a service worker using {{domxref("ServiceWorkerRegistration.showNotification()")}}.
+      - : Must be unspecified or an empty array.
+        `actions` is only supported for [persistent notifications](/en-US/docs/Web/API/Notifications_API#persistent_and_non-persistent_notifications) fired from a service worker using {{domxref("ServiceWorkerRegistration.showNotification()")}}.
     - `badge` {{optional_inline}}
-      - : A string containing the URL of the image used to represent the notification when there isn't enough space to display the notification itself; for example, the Android Notification Bar. On Android devices, the badge should accommodate devices up to 4x resolution, about 96x96px, and the image will be automatically masked.
+      - : A string containing the URL of the image used to represent the notification when there isn't enough space to display the notification itself; for example, the Android Notification Bar.
+        On Android devices, the badge should accommodate devices up to 4x resolution, about 96x96px, and the image will be automatically masked.
     - `body` {{optional_inline}}
-      - : A string representing the body text of the notification, which is displayed below the title. The default is the empty string.
+      - : A string representing the body text of the notification, which is displayed below the title.
+        The default is the empty string.
     - `data` {{optional_inline}}
-      - : Arbitrary data that you want associated with the notification. This can be of any [structured-clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types) data type. The default is `null`.
+      - : Arbitrary data that you want associated with the notification.
+        This can be of any [structured-clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types) data type.
+        The default is `null`.
     - `dir` {{optional_inline}}
-      - : The direction in which to display the notification. It defaults to `auto`, which just adopts the browser's language setting behavior, but you can override that behavior by setting values of `ltr` and `rtl` (although most browsers seem to ignore these settings.)
+      - : The direction in which to display the notification.
+        It defaults to `auto`, which just adopts the browser's language setting behavior, but you can override that behavior by setting values of `ltr` and `rtl` (although most browsers seem to ignore these settings.)
     - `icon` {{optional_inline}}
       - : A string containing the URL of an icon to be displayed in the notification.
     - `image` {{optional_inline}}
       - : A string containing the URL of an image to be displayed in the notification.
     - `lang` {{optional_inline}}
-      - : The notification's language, as specified using a string representing a {{glossary("BCP 47 language tag")}}. The default is the empty string.
+      - : The notification's language, as specified using a string representing a {{glossary("BCP 47 language tag")}}.
+        The default is the empty string.
     - `navigate` {{optional_inline}} {{experimental_inline}}
-      - : A string containing a URL to navigate to when the user activates the notification. When set, the user agent navigates to this URL instead of firing the {{domxref("Notification.click_event", "click")}} event. The value is parsed relative to the base URL of the page. See {{domxref("Notification.navigate")}} for more information.
+      - : A string containing a URL to navigate to when the user activates the notification.
+        When set, the user agent navigates to this URL instead of firing the {{domxref("Notification.click_event", "click")}} event.
+        The value is parsed relative to the base URL of the page.
+        See {{domxref("Notification.navigate")}} for more information.
     - `renotify` {{optional_inline}}
-      - : A boolean value specifying whether the user should be notified after a new notification replaces an old one. The default is `false`, which means they won't be notified. If `true`, then `tag` also must be set.
+      - : A boolean value specifying whether the user should be notified after a new notification replaces an old one.
+        The default is `false`, which means they won't be notified.
+        If `true`, then `tag` also must be set.
     - `requireInteraction` {{optional_inline}}
-      - : Indicates that a notification should remain active until the user clicks or dismisses it, rather than closing automatically. The default value is `false`.
+      - : Indicates that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
+        The default value is `false`.
     - `silent` {{optional_inline}}
-      - : A boolean value specifying whether the notification should be silent, i.e., no sounds or vibrations should be issued regardless of the device settings. If set to `true`, the notification is silent; if set to `null` (the default value), the device's default settings are respected.
+      - : A boolean value specifying whether the notification should be silent, i.e., no sounds or vibrations should be issued regardless of the device settings.
+        If set to `true`, the notification is silent; if set to `null` (the default value), the device's default settings are respected.
     - `tag` {{optional_inline}}
-      - : A string representing an identifying tag for the notification. The default is the empty string.
+      - : A string representing an identifying tag for the notification.
+        The default is the empty string.
     - `timestamp` {{optional_inline}}
-      - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, representing the time associated with the notification. This could be in the past when a notification is used for a message that couldn't immediately be delivered because the device was offline, or in the future for a meeting that is about to start.
+      - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, representing the time associated with the notification.
+        This could be in the past when a notification is used for a message that couldn't immediately be delivered because the device was offline, or in the future for a meeting that is about to start.
     - `vibrate` {{optional_inline}}
-      - : A [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns) for the device's vibration hardware to emit with the notification. If specified, `silent` must not be `true`.
+      - : A [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns) for the device's vibration hardware to emit with the notification.
+        If specified, `silent` must not be `true`.
 
 ### Return value
 
@@ -77,7 +99,8 @@ An instance of the {{domxref("Notification")}} object.
 
 ## Examples
 
-Here is a most basic example to only show a notification if permission is already granted. For more complete examples, see the {{domxref("Notification")}} page.
+Here is a most basic example to only show a notification if permission is already granted.
+For more complete examples, see the {{domxref("Notification")}} page.
 
 ```js
 if (Notification.permission === "granted") {

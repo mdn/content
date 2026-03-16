@@ -11,7 +11,9 @@ spec-urls: https://notifications.spec.whatwg.org/
 
 {{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-The Notifications API allows web pages to control the display of system notifications to the end user. These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app. The API is designed to be compatible with existing notification systems, across different platforms.
+The Notifications API allows web pages to control the display of system notifications to the end user.
+These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app.
+The API is designed to be compatible with existing notification systems, across different platforms.
 
 ## Concepts and usage
 
@@ -35,12 +37,13 @@ This will spawn a request dialog, along the following lines:
 
 ![A dialog box asking the user to allow notifications from that origin. There are options to never allow or allow notifications.](screen_shot_2019-12-11_at_9.59.14_am.png)
 
-From here the user can choose to allow notifications from this origin, or block them. Once a choice has been made, the setting will generally persist for the current session.
+From here the user can choose to allow notifications from this origin, or block them.
+Once a choice has been made, the setting will generally persist for the current session.
 
 ### Notification display and handling
 
 Notifications are created using the {{domxref("Notification.Notification","Notification()")}} constructor.
-This must be passed a title argument, and can optionally be passed an options object to specify options, such as text direction, body text, icon to display, notification sound to play, and more.
+This must be passed a title argument, and can optionally be passed a parameter to specify options such as text direction, body text, icon to display, notification sound to play, and more.
 
 For example, the following code shows how you might create a notification that sets the [`navigate`](/en-US/docs/Web/API/Notification/Notification#navigate) option, specifying a URL that will be opened if the notification is accepted (you can also defined click handlers to process notification actions).
 
@@ -71,7 +74,8 @@ The Notifications API supports two types of notifications:
 ## Interfaces
 
 - {{domxref("Notification")}}
-  - : Defines a notification object. When activated, a non-persistent notification fires a {{domxref("Notification.click_event", "click")}} event, unless a {{domxref("Notification.navigate", "navigate")}} URL is set, in which case the user agent navigates to that URL instead.
+  - : Defines a notification object.
+    When activated, a non-persistent notification fires a {{domxref("Notification.click_event", "click")}} event, unless a {{domxref("Notification.navigate", "navigate")}} URL is set, in which case the user agent navigates to that URL instead.
 - {{domxref("NotificationEvent")}}
   - : Represents a notification event dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}.
 
