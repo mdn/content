@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
 
-This article follows on from the previous one, looking at how to style customizable listbox {{htmlelement("select")}} elements.
+This article follows on from the previous one, and looks at how to style customizable listbox {{htmlelement("select")}} elements.
 
 One of the major advantages of customizable `<select>` listboxes over "classic" select listboxes is that you can fully style all parts of the control, and you can include a much wider variety of child elements inside them, which means greater flexibility in terms of design and functionality.
 
