@@ -112,6 +112,6 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now supports multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix many colors and set the percentages of each. ([Firefox bug 2007772](https://bugzil.la/2007772)).
 
-- **Media based pseudo-classes**: `dom.media.pseudo-classes.enabled`
+- **Media-based pseudo-classes**: `dom.media.pseudo-classes.enabled`
 
-  The media based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}}, {{cssxref(":paused")}}, {{cssxref(":playing")}}, {{cssxref(":seeking")}}, {{cssxref(":stalled")}} and {{cssxref(":volume-locked")}} are now supported. This allows styling based upon the current states, such as playing or paused, of the media elements {{htmlelement("audio")}} and {{htmlelement("video")}}. ([Firefox bug 1707584](https://bugzil.la/1707584) & [Firefox bug 2014512](https://bugzil.la/2014512)).
+  The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}}, {{cssxref(":paused")}}, {{cssxref(":playing")}}, {{cssxref(":seeking")}}, {{cssxref(":stalled")}}, and {{cssxref(":volume-locked")}} allow you to style {{htmlelement("audio")}} and {{htmlelement("video")}} elements based on their current state, such as playing or paused. ([Firefox bug 1707584](https://bugzil.la/1707584), [Firefox bug 2014512](https://bugzil.la/2014512)).
