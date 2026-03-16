@@ -46,6 +46,7 @@ The start date is not guaranteed to be available as soon as the {{domxref("HTMLM
 This example retrieves the start date of a live stream — the real-world date and time at which the broadcast began, as embedded in the stream by the server — and displays it. It listens for the {{domxref("HTMLMediaElement/loadeddata_event", "loadeddata")}} event, which fires once enough data has been loaded for the start date to be available.
 
 #### HTML
+
 ```html
 <video src="livestream.m3u8" controls></video>
 <output>Start date: loading…</output>
