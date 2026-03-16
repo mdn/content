@@ -12,11 +12,11 @@ This article follows on from the previous one, and looks at how to style customi
 
 One of the major advantages of customizable `<select>` listboxes over "classic" select listboxes is that you can fully style all parts of the control, and you can include a much wider variety of child elements inside them, which means greater flexibility in terms of design and functionality.
 
-## Dropdown selects versus listboxes
+## Select listboxes vs dropdown selects
 
-When we talk about "dropdown" `<select>` elements, we are talking about controls featuring a select button that, when pressed, shows a dropdown picker from which you can select an option. These are specified using basic HTML such as `<select>`.
+In the previous article we talked about "dropdown" `<select>` elements, which are controls that have a button that, when pressed, shows a dropdown picker from which you can select an option. These are specified using basic HTML such as `<select>`.
 
-"Listbox" `<select>` elements on the other hand are controls featuring a box that shows multiple options at once, from which you can select one or multiple options. You opt into rendering a "listbox" select by specifying the `multiple` attribute (to allow multiple selections) and/or a `size` value of more than `1`. For example, `<select multiple>` or `<select size="3">`.
+"Listbox" `<select>` elements by contrast are controls featuring a box that shows multiple options at once, from which you can select one or multiple options. You opt into rendering a "listbox" select by specifying the `multiple` attribute (to allow multiple selections) and/or a `size` value of more than `1`. For example, `<select multiple>` or `<select size="3">`.
 
 The following live example illustrates the difference:
 
