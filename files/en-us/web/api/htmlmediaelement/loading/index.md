@@ -16,7 +16,7 @@ A string whose value is one of `eager` or `lazy`. For their meanings, see the HT
 
 ## Examples
 
-The `addImageToList()` function shown below adds a photo thumbnail to a list of items, using lazy-loading to avoid loading the image from the network until it's actually needed.
+The `addVideoToList()` function shown below adds a video thumbnail to a list of items, using lazy-loading to avoid loading the video from the network until it's actually needed.
 
 ```js
 function addVideoToList(url) {
