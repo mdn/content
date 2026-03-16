@@ -10,7 +10,7 @@ Moves one or more tabs to a new position in the same window or to a different wi
 
 You can only move tabs to and from windows whose {{WebExtAPIRef('windows.WindowType', 'WindowType')}} is `"normal"`.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+When the call moves a tab or tabs in a split view, Firefox moves the tabs in the split view together to preserve the split view. In Chrome, moving a tab away from the other tab in a split view removes the split view.
 
 ## Syntax
 
@@ -38,7 +38,7 @@ let moving = browser.tabs.move(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object or an `array` of {{WebExtAPIRef('tabs.Tab')}} objects, containing details about the moved tabs. If no tabs were moved (for example, because you tried to move an unpinned tab before a pinned tab) this will be an empty array. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object or an `array` of {{WebExtAPIRef('tabs.Tab')}} objects, containing details about the moved tabs. If no tabs were moved (for example, because you tried to move an unpinned tab before a pinned tab) this is an empty array. If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 
