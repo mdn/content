@@ -70,9 +70,12 @@ The HTML [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 149           | Yes                 |
-| Developer Edition | -             |                     |
-| Beta              | -             |                     |
-| Release           | -             |                     |
+| Developer Edition | -             | -                   |
+| Beta              | -             | -                   |
+| Release           | -             | -                   |
+
+- `dom.forms.html_color_picker.enabled`
+  - : Set to `true` to enable.
 
 ## CSS
 
