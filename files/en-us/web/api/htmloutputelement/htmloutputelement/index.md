@@ -13,7 +13,7 @@ browser-compat: api.HTMLOutputElement.HTMLOutputElement
 The **`HTMLOutputElement()`** constructor creates a new {{domxref("HTMLOutputElement")}} object.
 
 > [!NOTE]
-> This is a built-in constructor that not all browsers support yet. Because only Safari currently implements it, using {{domxref("Document.createElement()")}} is recommended for broader compatibility — see the [example below](#creating_an_output_element_programmatically).
+> Currently only Safari currently implements this constructor, so using {{domxref("Document.createElement()")}} is recommended for broader compatibility — see the [example below](#creating_an_output_element_programmatically).
 
 ## Syntax
 
