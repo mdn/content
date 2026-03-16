@@ -26,7 +26,10 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### MathML -->
+### MathML
+
+- The CSS [`font-family: math`](/en-US/docs/Web/CSS/Reference/Properties/font-family#math) property is now supported, and applied to {{mathmlelement('math')}} elements by default.
+  This ensures that websites can use an appropriate math font and/or MathML without having to know what fonts are present on the underlying OS. ([Firefox bug 2014703](https://bugzil.la/2014703)).
 
 <!-- #### Removals -->
 
@@ -56,9 +59,17 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### DOM
 
+- The [`HTMLSelectElement.showPicker()`](/en-US/docs/Web/API/HTMLInputElement/showPicker#showpicker_for_a_datalist_input) method is now supported for a list of options defined in a {{htmlelement("datalist")}}.
+  This allows the browser picker for a `<datalist>` to be programmatically launched when triggered by user interaction ([Firefox bug 1998668](https://bugzil.la/1998668)).
+
 - The {{domxref("CloseWatcher")}} interface is now supported.
   This allows developers to implement components that can be closed using device-native mechanisms, such as the <kbd>Esc</kbd> on Windows or the <kbd>Back</kbd> key on Android, in the same way as built-in components such as [dialogs](/en-US/docs/Web/HTML/Reference/Elements/dialog) and [popovers](/en-US/docs/Web/API/Popover_API).
   ([Firefox bug 1966073](https://bugzil.la/1966073)).
+
+- DOM methods now allow wider range of characters for element and attribute names.
+  Previously, DOM methods were far more restrictive, but now they allow the same set of characters as the HTML parser.
+  The affected methods are: {{domxref("Document/createAttribute","createAttribute()")}}, {{domxref("Document/createAttributeNS","createAttributeNS()")}}, {{domxref("Document/createElement","createElement()")}} and {{domxref("Document/createElementNS","createElementNS()")}} of the {{domxref("Document")}} interface, {{domxref("Element/toggleAttribute","toggleAttribute()")}}, {{domxref("Element/setAttribute","setAttribute()")}}, {{domxref("Element/setAttributeNS","setAttributeNS()")}} of the {{domxref("Element")}} interface, {{domxref("DOMImplementation/createDocument","createDocument()")}} of the {{domxref("DOMImplementation")}} interface, and {{domxref("CustomElementRegistry/define","define()")}} and {{domxref("CustomElementRegistry/whenDefined","whenDefined()")}} of the {{domxref("CustomElementRegistry/whenDefined","whenDefined()")}} interface.
+  ([Firefox bug 1773312](https://bugzil.la/1773312)).
 
 #### Media, WebRTC, and Web Audio
 
@@ -92,6 +103,7 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
+- Adds support for `tabId` as a top-level parameter in {{WebExtAPIRef("action.isEnabled")}} and {{WebExtAPIRef("browserAction.isEnabled")}}. This change provides for compatibility with the Chrome implementation of `action.isEnabled`. ([Firefox bug 2013477](https://bugzil.la/2013477))
 - A user gesture is no longer required for {{WebExtAPIRef("action.openPopup")}} and {{WebExtAPIRef("browserAction.openPopup")}} to open a popup. This feature was available behind the `extensions.openPopupWithoutUserGesture.enabled` preference from Firefox 108. This change aligns Firefox's behavior with Chrome and Safari. ([Firefox bug 1799344](https://bugzil.la/1799344))
 
 <!-- ### Removals -->
@@ -113,3 +125,11 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`color-mix()` accepts multiple color arguments**: `layout.css.color-mix-multi-color.enabled`
 
   The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now supports multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix many colors and set the percentages of each. ([Firefox bug 2007772](https://bugzil.la/2007772)).
+
+- **Media-based pseudo-classes**: `dom.media.pseudo-classes.enabled`
+
+  The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}}, {{cssxref(":paused")}}, {{cssxref(":playing")}}, {{cssxref(":seeking")}}, {{cssxref(":stalled")}}, and {{cssxref(":volume-locked")}} allow you to style {{htmlelement("audio")}} and {{htmlelement("video")}} elements based on their current state, such as playing or paused. ([Firefox bug 1707584](https://bugzil.la/1707584), [Firefox bug 2014512](https://bugzil.la/2014512)).
+
+- **`alpha` & `colorspace` attributes in `color` input elements** (Nightly only): `dom.forms.html_color_picker.enabled`
+
+  The HTML [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) element supports [`alpha`](/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha) & [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attributes. ([Firefox bug 1919718](https://bugzil.la/1919718)).
