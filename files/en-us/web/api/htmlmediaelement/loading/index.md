@@ -30,7 +30,7 @@ function addVideoToList(url) {
   const newVideo = document.createElement("video");
 
   // Lazy-load if supported
-  if ('loading' in HTMLVideoElement.prototype) {
+  if ("loading" in HTMLVideoElement.prototype) {
     newVideo.loading = "lazy";
   } else {
     // If not native lazy-loading is not supported you may want to consider
