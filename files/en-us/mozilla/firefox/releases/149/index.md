@@ -129,3 +129,6 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **Media-based pseudo-classes**: `dom.media.pseudo-classes.enabled`
 
   The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}}, {{cssxref(":paused")}}, {{cssxref(":playing")}}, {{cssxref(":seeking")}}, {{cssxref(":stalled")}}, and {{cssxref(":volume-locked")}} allow you to style {{htmlelement("audio")}} and {{htmlelement("video")}} elements based on their current state, such as playing or paused. ([Firefox bug 1707584](https://bugzil.la/1707584), [Firefox bug 2014512](https://bugzil.la/2014512)).
+- **`alpha` & `colorspace` attributes in `color` input elements** (Nightly only): `dom.forms.html_color_picker.enabled`
+
+  The HTML [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) element supports [`alpha`](/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha) & [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attributes. ([Firefox bug 1919718](https://bugzil.la/1919718)).
