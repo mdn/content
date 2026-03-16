@@ -26,7 +26,10 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### MathML -->
+### MathML
+
+- The CSS [`font-family: math`](/en-US/docs/Web/CSS/Reference/Properties/font-family#math) property is now supported, and applied to {{mathmlelement('math')}} elements by default.
+  This ensures that websites can use an appropriate math font and/or MathML without having to know what fonts are present on the underlying OS. ([Firefox bug 2014703](https://bugzil.la/2014703)).
 
 <!-- #### Removals -->
 
@@ -122,3 +125,11 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`color-mix()` accepts multiple color arguments**: `layout.css.color-mix-multi-color.enabled`
 
   The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now supports multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix many colors and set the percentages of each. ([Firefox bug 2007772](https://bugzil.la/2007772)).
+
+- **Media-based pseudo-classes**: `dom.media.pseudo-classes.enabled`
+
+  The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}}, {{cssxref(":paused")}}, {{cssxref(":playing")}}, {{cssxref(":seeking")}}, {{cssxref(":stalled")}}, and {{cssxref(":volume-locked")}} allow you to style {{htmlelement("audio")}} and {{htmlelement("video")}} elements based on their current state, such as playing or paused. ([Firefox bug 1707584](https://bugzil.la/1707584), [Firefox bug 2014512](https://bugzil.la/2014512)).
+
+- **`alpha` & `colorspace` attributes in `color` input elements** (Nightly only): `dom.forms.html_color_picker.enabled`
+
+  The HTML [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) element supports [`alpha`](/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha) & [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attributes. ([Firefox bug 1919718](https://bugzil.la/1919718)).
