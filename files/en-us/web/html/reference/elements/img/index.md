@@ -174,6 +174,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : Loads the image immediately, regardless of whether or not the image is currently within the visible viewport (this is the default value).
     - `lazy`
       - : Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser.
+        
         Lazy loading avoids the network and storage bandwidth required to handle the image until it's reasonably certain that it will be needed. This improves the performance in most typical use cases.
 
     While explicit [`width`](#width) and [`height`](#height) attributes are recommended for all images to avoid layout shift, they are especially important for lazy-loaded ones. Lazy-loaded images will never be loaded if they do not intersect a visible part of an element, even if loading them would change that, because unloaded images have a `width` and `height` of `0`. It creates an even more disruptive user experience when the content visible in the viewport reflows in the middle of reading it.
