@@ -63,7 +63,7 @@ form {
 > [!NOTE]
 > The `multiple` attribute, as well as any `size` value greater than `1`, opts the `<select>` element into listbox mode.
 
-### How do customizable listboxes compared to customizable dropdowns?
+### How do customizable listboxes compare to customizable dropdowns?
 
 A customizable listbox `<select>` is easier to style than the dropdown variant:
 
