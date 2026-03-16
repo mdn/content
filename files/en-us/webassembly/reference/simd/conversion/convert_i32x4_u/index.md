@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.convert_i32x4_u
 sidebar: webassemblysidebar
 ---
 
-The **`convert_i32x4_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the lanes of a `v128` `f32x4` value interpretation into unsigned `i32x4` values.
+The **`convert_i32x4_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the lanes of a `v128` `f32x4` value interpretation into an unsigned `i32x4` value interpretation.
 
 {{InteractiveExample("Wat Demo: convert_i32x4_u", "tabbed-taller")}}
 
