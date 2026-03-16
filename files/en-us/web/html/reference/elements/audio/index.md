@@ -77,7 +77,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
         Lazy loading avoids the network and storage bandwidth required to handle the audio until it's reasonably certain that it will be needed. This improves the performance in most typical use cases.
 
-    Lazy-loaded audio located in the visual viewport may not yet be downloaded when the Window {{domxref("Window.load_event", "load")}} event is fired. This is because the event is fired based on eager-loaded audio and lazy-loaded audio is not considered — even if they are located within the visual viewport upon initial page load.
+    Lazy-loaded audio located in the visual viewport may not yet be downloaded when the Window {{domxref("Window.load_event", "load")}} event is fired. This is because the event is fired based on eager-loaded audio only — lazy-loaded audio is not considered even if it is located within the visual viewport upon initial page load.
 
     Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing audio in a page's markup such that a server can track how many audio are requested and when.
 

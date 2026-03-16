@@ -179,7 +179,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     While explicit [`width`](#width) and [`height`](#height) attributes are recommended for all images to avoid layout shift, they are especially important for lazy-loaded ones. Lazy-loaded images will never be loaded if they do not intersect a visible part of an element, even if loading them would change that, because unloaded images have a `width` and `height` of `0`. It creates an even more disruptive user experience when the content visible in the viewport reflows in the middle of reading it.
 
-    Lazy-loaded images located in the visual viewport may not yet be visible when the Window {{domxref("Window.load_event", "load")}} event is fired. This is because the event is fired based on eager-loaded images and lazy-loaded images are not considered — even if they are located within the visual viewport upon initial page load.
+    Lazy-loaded images located in the visual viewport may not yet be visible when the Window {{domxref("Window.load_event", "load")}} event is fired. This is because the event is fired based on eager-loaded images — lazy-loaded images are not considered even if they are located within the visual viewport upon initial page load.
 
     Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
 
