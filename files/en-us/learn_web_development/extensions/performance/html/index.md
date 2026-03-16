@@ -154,7 +154,7 @@ You can also lazy load video content until the video is played, by using the `pr
 
 Giving `preload` a value of `none` tells the browser to not preload any of the video data before the user decides to play it, which is obviously good for performance. Instead, it will just show the image indicated by the `poster` attribute. Different browsers have different default video loading behavior, so it is good to be explicit.
 
-The `loading` attribute can further enhance lazy loading for videos by deferring loading of any `preload=meta` or `preload=auto` data, as well as the `poster` image until the video in near the viewport.
+The `loading` attribute can further enhance lazy loading for videos by deferring loading of any `preload=meta` or `preload=auto` data, as well as the `poster` image until the video is near the viewport.
 
 ```html
 <video controls preload="none" poster="poster.jpg" loading="lazy">
