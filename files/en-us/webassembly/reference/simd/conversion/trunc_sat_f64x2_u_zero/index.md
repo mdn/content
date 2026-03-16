@@ -52,7 +52,7 @@ value_type.trunc_sat_f64x2_u_zero
 - `input`
   - : The `v128` value interpretation you want to convert.
 - `output`
-  - : The output `v128` value interpretation. The input float values are rounded to their nearest integer values.
+  - : The output `v128` value interpretation.
 
 ### Binary encoding
 
