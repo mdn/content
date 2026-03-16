@@ -349,7 +349,7 @@ The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) 
 
 ### Media-based pseudo-classes
 
-The media based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}}, {{cssxref(":paused")}}, {{cssxref(":playing")}}, {{cssxref(":seeking")}}, {{cssxref(":stalled")}} and {{cssxref(":volume-locked")}} are now supported. This allows styling based upon the current states, such as playing or paused, of the media elements {{htmlelement("audio")}} and {{htmlelement("video")}}. ([Firefox bug 1707584](https://bugzil.la/1707584) & [Firefox bug 2014512](https://bugzil.la/2014512)).
+The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}}, {{cssxref(":paused")}}, {{cssxref(":playing")}}, {{cssxref(":seeking")}}, {{cssxref(":stalled")}}, and {{cssxref(":volume-locked")}} allow you to style {{htmlelement("audio")}} and {{htmlelement("video")}} elements based on their current state, such as playing or paused. ([Firefox bug 1707584](https://bugzil.la/1707584), [Firefox bug 2014512](https://bugzil.la/2014512)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
