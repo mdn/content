@@ -15,4 +15,3 @@ Its value is `-1`.
 ## Browser compatibility
 
 {{Compat}}
-
