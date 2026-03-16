@@ -52,6 +52,7 @@ This example retrieves the start date of a live stream — the real-world date a
 ```
 
 #### JavaScript
+
 ```js
 const video = document.querySelector("video");
 const display = document.querySelector("output");
