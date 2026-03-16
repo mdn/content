@@ -108,7 +108,9 @@ select {
 }
 ```
 
-This enables us to style our {{htmlelement("select")}} and {{htmlelement("option")}} elements however we want. Our basic styles look like this:
+With that done, we can now style our {{htmlelement("select")}} and {{htmlelement("option")}} elements however we want.
+
+Our basic styles look like this:
 
 ```css live-sample___basic-listbox live-sample___expanding-listbox live-sample___horizontal-listbox
 select {
