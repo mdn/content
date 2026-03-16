@@ -83,7 +83,7 @@ Let's walk through a basic example to show how a customized listbox is implement
     <option value="dog">Dog</option>
     <option value="chicken">Chicken</option>
     <option value="fish">Fish</option>
-    <option value="Hamster">Hamster</option>
+    <option value="hamster">Hamster</option>
   </select>
 </p>
 ```
