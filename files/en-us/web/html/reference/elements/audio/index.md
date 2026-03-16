@@ -44,7 +44,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     > See our [autoplay guide](/en-US/docs/Web/Media/Guides/Autoplay) for additional information about how to properly use autoplay.
 
     > [!NOTE]
-    > Audio with the [`loading="lazy"`](#loading) attribute will not start autoplaying until the element intersects for lazy loading.
+    > Audio with the [`loading="lazy"`](#loading) attribute set will not start downloading and autoplaying until the element is near or within the viewport.
 
 - `controls`
   - : If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
@@ -73,9 +73,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - `eager`
       - : Loads the audio immediately, regardless of whether or not the audio is currently within the visible viewport (this is the default value).
     - `lazy`
-      - : Defers loading the audio until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the audio until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
+      - : Defers loading the audio until it reaches a calculated distance from the viewport, as defined by the browser.
+      
+        Lazy loading avoids the network and storage bandwidth required to handle the audio until it's reasonably certain that it will be needed. This improves the performance in most typical use cases.
 
-    The {{domxref("Window.load_event", "load")}} event is fired after eager-loaded audio has been fetched and processed, but before lazy-laded ones are, even if the lazy-loaded audio is located within the visual viewport immediately upon initial page load. These audio are still loaded as soon as layout completes; they just don't affect the timing of the `load` event. That means that when `load` fires, it's possible that any lazy-loaded audio located in the visual viewport may not yet be visible.
+    Lazy-loaded audio located in the visual viewport may not yet be downloaded when the Window {{domxref("Window.load_event", "load")}} event is fired. This is because the event is fired based on eager-loaded audio and lazy-loaded audio is not considered — even if they are located within the visual viewport upon initial page load.
 
     Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing audio in a page's markup such that a server can track how many audio are requested and when.
 
