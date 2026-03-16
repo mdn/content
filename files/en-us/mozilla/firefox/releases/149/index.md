@@ -26,7 +26,10 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### MathML -->
+### MathML
+
+- The CSS [`font-family: math`](/en-US/docs/Web/CSS/Reference/Properties/font-family#math) property is now supported, and applied to {{mathmlelement('math')}} elements by default.
+  This ensures that websites can use an appropriate math font and/or MathML without having to know what fonts are present on the underlying OS. ([Firefox bug 2014703](https://bugzil.la/2014703)).
 
 <!-- #### Removals -->
 
