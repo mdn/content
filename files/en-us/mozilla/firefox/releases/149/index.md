@@ -125,3 +125,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`color-mix()` accepts multiple color arguments**: `layout.css.color-mix-multi-color.enabled`
 
   The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now supports multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix many colors and set the percentages of each. ([Firefox bug 2007772](https://bugzil.la/2007772)).
+
+- **`alpha` & `colorspace` attributes in `color` input elements** (Nightly only): `dom.forms.html_color_picker.enabled`
+
+  The HTML [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) element supports [`alpha`](/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha) & [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attributes. ([Firefox bug 1919718](https://bugzil.la/1919718)).
