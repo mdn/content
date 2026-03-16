@@ -10,7 +10,7 @@ Moves one or more tabs to a new position in the same window or to a different wi
 
 You can only move tabs to and from windows whose {{WebExtAPIRef('windows.WindowType', 'WindowType')}} is `"normal"`.
 
-Where the call moves a tab or the tabs from a split view, Firefox moves the other tabs of the split view along with it to preserve the unity of the split view. In Chrome, moving a tab away from the other member of the split view removes the split view.
+When the call moves a tab or tabs in a split view, Firefox moves the tabs in the split view together to preserve the split view. In Chrome, moving a tab away from the other tab in a split view removes the split view.
 
 ## Syntax
 
