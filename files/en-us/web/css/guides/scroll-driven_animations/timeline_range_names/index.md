@@ -7,15 +7,15 @@ sidebar: cssref
 
 By default, [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) track elements across the entire viewport. The animation timeline begins when the first pixel of the element's start edge crosses the viewport's end edge, and ends when the element's end edge crosses the viewport's start edge. You can customize this range, limiting the animation timeline to a specific portion of the viewport. For example, you can restrict the view progress timeline to begin only when the subject element has fully entered the viewport.
 
-This guide explains how to modify timeline range names, specifically examining the various timeline range names, their meanings, and how they are used in the {{cssxref("animation-range")}} property and its longhands.
+This guide explains how to modify timeline range names, specifically examining the various timeline range names, their meanings, and how they are used.
 
 ## Viewport progress timelines primer
 
 [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) are created by attaching {{cssxref("@keyframes")}} animations to an element using the {{cssxref("animation-name")}} property (or {{cssxref("animation")}} shorthand). The keyframes define the animation's behavior, while the {{cssxref("animation-timeline")}} determines when and how the element progresses through those keyframes.
 
-By default, the animation's timeline is the document's default time-based {{domxref("DocumentTimeline")}}. With [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines), the animation's timeline, or progress, is driven either by user scroll ([scroll progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines)) or element visibility ([view-progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines)), instead of the passage of time.
+By default, the animation's timeline is the document's default time-based {{domxref("DocumentTimeline")}}. With [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines), the animation's timeline, or progress, is driven either by user scroll ([scroll progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines)) or element visibility ([view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines)), instead of the passage of time.
 
-In view-progress timelines, keyframe progression is tied to how much of the subject element is visible within the scroller, and its position within the scroller. As the element enters the viewport, the timeline advances. If the user reverses the scrolling, the timeline reverses: as the view progress element comes into or moves out of view, the timeline progresses or reverses, respectively. The animation only occurs when the element is visible within its scrollport. If scrolling stops while the element is in view, the animation pauses.
+With view progress timelines, keyframe progression is tied to how much of the subject element is visible within the scroller, and its position within the scroller. As the element enters the viewport, the timeline advances. If the user reverses the scrolling, the timeline reverses. In other words, as the element comes into or moves out of view, the timeline progresses or reverses, respectively. The animation only occurs when the element is visible within its scrollport. If scrolling stops while the element is in view, the animation pauses.
 
 By default, the [view timeline progress](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) starts when the tracked subject's start edge intersects the scrollport at the end edge and ends when the subject's end edge exits the scrollport at the start edge. These are the subject and scrollport's top and bottom edges when scrolling vertically, and the left and right or right and left edges when scrolling horizontally, depending on the writing mode.
 
@@ -198,15 +198,15 @@ In the following example, try scrolling down. Note how the animation begins just
 
 By default, the element is being animated the entire time any portion of the subject element is visible. This means the default **animation attachment range** is the sum of the height of the scroll container and the height of the subject element, with that extra height being at the scroll end edge.
 
-In the previous example, the scroll container was `250px` tall and the animated element was originally `50px` tall; which meant the vertical animation attachment range was `300px` tall. The default animation attachment range starts from the scrollport container's block-end edge and continues above it's block-start edge, with the total size being the sum of the block-size of the container and the block-size of the subject. In our example, when we set the subject to `250px`, the range became `500px`; when the element was set to `500px`, the animation attachment range size grew to `750px`.
+In the previous example, the scroll container is `250px` tall, and the animated element is `50px` tall by default, which means the vertical animation attachment range is `300px` tall. When the subject is set to `250px`, the range becomes `500px`; when the element is set to `500px`, the animation attachment range size grows to `750px`.
 
 The scroll container's writing mode and scroll direction determine the scroll container's start and end edges.
 
 The [CSS scroll driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module provides mechanisms for defining different animation attachment ranges. The {{cssxref("animation-range")}} properties define the attachment range for the animation timeline, including the animation attachment range's start and end edges and insets.
 
-#### Setting insets using percentages
+#### Setting insets using lengths and percentages
 
-The animation-range properties allow insetting animations from the animation attachment ranges using {{cssxref("length-percentage")}} insets values, such as `20%` or `100px`. In this guide, we are focusing on the {{cssxref("timeline-range-name")}} keywords, which specify the edges the inset values are relative to, so we will only briefly discuss the inset values here. <!-- see [timeline insets](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets) when it's published -->
+The animation-range properties allow insetting animations from the animation attachment ranges using {{cssxref("length-percentage")}} inset values, such as `20%` or `100px`. In this guide, we focus on the {{cssxref("timeline-range-name")}} keywords, which specify the edges the inset values are relative to, so we will only briefly discuss the inset values here. <!-- see [timeline insets](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets) when it's published -->
 
 The {{cssxref("animation-range-start")}} and {{cssxref("animation-range-end")}} properties—which can both be set using the `animation-range` shorthand—define an animation's attachment range, limiting the keyframe's active interval to that specific portion of the range.
 
@@ -241,7 +241,7 @@ main {
 }
 ```
 
-Here we use `animation-range-start` and `animation-range-end` to inset the animation timeline, defining a subsection of the element's full animation attachment range as the active interval. In this example, the active interval begins `20%` into the default attachment range and ends at `60%` of that same range. Because no `<named-timeline-range>` keyword is included, these values are interpreted relative to the default animation attachment range, from the point where the subject element's start border edge first enters the scrollport's view progress visibility range to the point where the end border edge has completely left it.
+Here we use `animation-range-start` and `animation-range-end` to inset the animation timeline, defining a subsection of the element's full animation attachment range as the active interval. In this example, the active interval begins `20%` into the default attachment range and ends `60%` through that same range. Because no `<timeline-range-name>` keyword is included, these values are interpreted relative to the default `cover` animation attachment range, from the point where the subject element's start border edge first enters the scrollport's view progress visibility range to the point where the end border edge has completely left it.
 
 For illustrative purposes, horizontal lines were added `20%` and `60%` from the bottom of the container and `20%` and `60%` from the top of the subject element. Notice the animation begins when the the line that is 20% from the start edge of the subject crosses the line that is 20% from the end edge of the container, and the animation ends at the 60% marks.
 
@@ -279,11 +279,11 @@ The animation-range properties accept the keyword `normal`, a {{cssxref("timelin
 
 ## Timeline range names
 
-The `<timeline-range-name>` value type accepts six keywords: `cover`, `contain`, `entry`, `exit`, `entry-crossing`, and `exit-crossing`. Each of these represents a predefined named timeline range. A _named timeline range_ is a named segment of an animation timeline. These keywords allow the developer to set the animation attachment range base that offsets are relative to. The start of the segment is represented as `0%` progress through the range; the end of the segment is represented as `100%` progress through the range. Where these points are depend on the named range used.
+The `<timeline-range-name>` value type accepts six keywords: `cover`, `contain`, `entry`, `exit`, `entry-crossing`, and `exit-crossing`. Each of these represents a predefined _named timeline range_. A named timeline range is a named segment of an animation timeline. These keywords allow the developer to set the animation attachment range base that offsets are relative to. The start of the segment is represented as `0%` progress through the range; the end of the segment is represented as `100%` progress through the range. Where these points are depends on the named range used.
 
 ### Cover
 
-The animation attachment range in the previous examples all "cover" the entire range. This range represents the full range of the view progress timeline, with `0%` progress representing the point at which the start border edge of the subject aligns with the end edge container and `100%` progress being the when the subject's end border edge reaches the start edge viewport. As we've seen, the size of the `cover` is the sum of subject and viewport dimensions in the scroll direction. In all the examples thus far, the height of the animation attachment range was the height of the container plus the height of the animated element.
+The animation attachment range in the previous examples all "cover" the entire range. This range represents the full range of the view progress timeline. `0%` progress represents the point at which the start border edge of the subject aligns with the end edge of the scrollport, and `100%` progress represents the point where the subject's end border edge reaches the start edge of the scrollport. As we've seen, the size of the `cover` range is the sum of subject and viewport dimensions in the scroll direction. In all the examples thus far, the height of the animation attachment range is the height of the container plus the height of the animated element.
 
 The `cover` named timeline is the default range. We could have explicitly set the `<timeline-range-name>` to achieve the same results:
 
@@ -339,14 +339,18 @@ body svg {
 {{EmbedLiveSample("svg_cover", "100%", "680")}}
 
 The image demonstrates the animation timeline. The location of the element when it reaches the start of the animation range, either the `0%` view progress or the `20%` view progress mark depending on the `animation-range-start`, is shown in yellow. This represents the position of the element when the `from` keyframe is applied. The red represents the location of the subject element relative to the scrollport when the `to` keyframe is applied. This is the position of the animated element when it reaches the end of the animation. The striped areas in the inset example occur where the red and yellow overlap.
-. T
 
 ### Contain
 
 We can set the attachment range to the `contain` named timeline range to have the animation start when 20% of it is 20% of the way through the container and end when 60% of it is 60% of the way through.
 
 The `contain` keyword fully _contains_ the animation within the scrollport, making it so the range starts when the animated element is 100% visible and end when it ceases to be fully visible, if it can be fully visible.
-The `contain` value represents the range during which the principal box is either fully contained by, or fully covers, its view progress visibility range within the scrollport. What the `0%` progress represents depends on whether the animated element is smaller or larger than the scrollport. If the element is smaller than the scrollport in the scroll direction, `0%` occurs when the animated element's end border edge aligns with the end edge of the scrollport and `100%` and `100%` occurs when the animated element's start border edge aligns with the start edge of the scrollport. If the element is larger than the scrollport, the `0%` progress is when the animated element's start border edge reaches the start edge of the viewport and and `100%` is when the end border edge aligns with the end edge. If the animated element is the same size as its container, the animation still happens, but over `0px`.
+
+The `contain` value represents the range during which the principal box is either fully contained by, or fully covers, its view progress visibility range within the scrollport. What the `0%` progress represents depends on whether the animated element is smaller or larger than the scrollport.
+
+- If the element is smaller than the scrollport in the scroll direction, `0%` occurs when the animated element's end border edge aligns with the end edge of the scrollport, and `100%` occurs when the animated element's start border edge aligns with the start edge of the scrollport.
+- If the element is larger than the scrollport, the `0%` progress is when the animated element's start border edge reaches the start edge of the viewport, and `100%` is when the end border edge aligns with the end edge.
+- If the animated element is the same size as its container, the animation still happens, but over `0px`.
 
 ```css live-sample___contains
 .animated_element {
@@ -422,7 +426,7 @@ main {
 
 Again we use the `animation-range-start` and `animation-range-end` properties to inset the animation timeline, defining a subsection of the element's full animation attachment range as the active interval.
 
-If the element is smaller than the scrollport in the scroll direction, the `20%` occurs when the point that is 20% from the animated element's end border edge (which is 60% from its start edge) is 20% of the way from the end edge of the scrollport. The `60%` range end occurs when 20% of the element, which is 60% from the end edge, is 60% of the way through that viewport.
+If the element is smaller than the scrollport in the scroll direction, the `20%` occurs when the point that is 20% from the animated element's end border edge (which is 80% from its start edge) is 20% of the way from the end edge of the scrollport. The `60%` range end occurs when the point 20% from the animated element's start edge, which is 80% from the end edge, is 60% of the way through that viewport.
 
 The positions are different when the animated element is larger than the scrollport. As demonstrated by the lighter grey lines in the demonstration, the `20%` animation start is reached when the point that is 20% from the animated element's start end is 20% of the way from the scrollport's start end. The 60% animation end is when the 60% of the animated element has progressed to 60% of the way from the start edge. When the element is the same size as the scrollport in the scroll direction, the start and end of the range occur at the same point, so the animation occurs, but over `0px`, so is not visible.
 
@@ -558,7 +562,7 @@ Let's look at the other `<timeline-range-name>` keyword values!
 
 To make the entire animation happen only when the subject is in the process of entering or exiting the viewport, use the `entry` or `exit` values, respectively. With these two values, the animation attachment range is based on the size of the animated element, not the size of the viewport.
 
-With `entry`, the `0%` progress occurs the moment the animated element enters the viewport, when the subject's start edge crosses the viewport's end edge. Setting `animation-range-start: entry 0%` is the same as setting `animation-range-start: cover 0%`.
+With `entry`, `0%` progress occurs the moment the animated element starts to enter the viewport, when the subject's start edge crosses the viewport's end edge. Setting `animation-range-start: entry 0%` is the same as setting `animation-range-start: cover 0%`.
 
 If the animated element is smaller than the scrollport, the animation attachment range is the size of the subject. If the subject is larger than the scrollport, the animation attachment range is the entire scrollport, so the `100%` progress occurs when the start edge of the element reaches the start edge of its scroll container.
 
@@ -874,7 +878,7 @@ Like when we compared `entry` with `entry-crossing`, the effects are similar, ex
     <rect class="medium end" width="100" height="250" x="120" y="250" />
     <rect class="large end" width="100" height="500" x="230" y="0" />
     <rect class="container" width="350" height="250" x="0" y="500" />
-    <rect cln h"small start" width="100" height="50" x="10" y="501" />
+    <rect class="small start" width="100" height="50" x="10" y="501" />
     <rect class="medium start" width="100" height="250" x="120" y="500" />
     <rect class="large start" width="100" height="500" x="230" y="500" />
     <text y="800" x="-10">exit-crossing</text>
@@ -898,7 +902,6 @@ Like when we compared `entry` with `entry-crossing`, the effects are similar, ex
 
 ```html hidden live-sample___svg_exit_crossing live-sample___svg_entry_exit live-sample___svg_contain live-sample___svg_cover live-sample___svg_entry-crossing live-sample___insets2
 <svg>
-  g l
   <defs>
     <linearGradient
       id="g"
