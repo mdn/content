@@ -6,7 +6,11 @@ page-type: how-to
 sidebar: webdriver
 ---
 
-The client and the browser communicate using the WebDriver BiDi protocol over a WebSocket connection. There are two ways a client can establish this connection. In one method, the client starts the browser from the command line with the required flag and on the specified port. The sections in this article walk you through this method. This method works with Firefox directly; Chromium-based browsers need the additional Chromium BiDi wrapper package. In the other method, when creating a classic WebDriver session, the client can set the `webSocketUrl` capability to request BiDi be enabled; the client then starts the browser with the required port open.
+The client and the browser communicate using the WebDriver BiDi protocol over a WebSocket connection. There are two ways a client can establish this connection.
+
+In one method, when creating a classic WebDriver session, the client can set the `webSocketUrl` capability to request BiDi be enabled; the client then starts the browser with the required port open.
+
+In the other method, the client starts the browser from the command line with the required flag and on the specified port. This method works with Firefox directly; Chromium-based browsers need the additional Chromium BiDi wrapper package. The sections in this article walk you through this method.
 
 ## Launching the browser
 
@@ -47,3 +51,4 @@ Once connected, you can send WebDriver BiDi [commands](/en-US/docs/Web/WebDriver
 - [`session.new`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) command
 - [WebSockets API](/en-US/docs/Web/API/WebSockets_API)
 - [Chromium BiDi wrapper](https://github.com/GoogleChromeLabs/chromium-bidi)
+- [WebDriver BiDi web client](https://firefox-dev.tools/bidi-web-client/web/)

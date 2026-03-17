@@ -55,7 +55,7 @@ The `result` field in the response is an object with the following field:
     - The `events` array is empty, omitted, or contains an unrecognized event name.
     - `contexts` or `userContexts` is provided but empty.
     - Both `contexts` and `userContexts` are provided in the same request.
-    - A parameter value has an invalid type or an out-of-range value.
+    - A parameter value has an invalid type.
 
 ## Examples
 
