@@ -19,7 +19,7 @@ The **`shuffle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Referenc
     v128.const i8x16 0 80 5 7 3 5 9 2 4 6 1 7 0 3 5 1
     i8x16.shuffle 0 17 2 3 8 9 10 11 31 30 28 27 16 17 18 19
 
-    i8x16.extract_lane_u 1
+    i8x16.extract_lane_u 14
     call $log ;; log the result
   )
   (start $main)
@@ -30,7 +30,7 @@ The **`shuffle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Referenc
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
 
-In the above example, we extract and log the value at index position 1 of the `shuffle` instruction output value. This will be `80`, because the shuffle instruction has selected the value at index position 1 of the second `v128` input (represented by the index value `17`) to be put at index position 1 of the `output`.
+In the above example, we extract and log the value at index position 14 of the `shuffle` instruction output value. This will be `5`, because the shuffle instruction has selected the value at index position 3 of the second `v128` input (represented by the index value `18`) to be put at index position 14 of the `output`.
 
 ## Syntax
 

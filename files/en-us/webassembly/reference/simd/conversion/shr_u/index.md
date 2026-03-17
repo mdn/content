@@ -19,7 +19,7 @@ The **`shr_u`** [SIMD extract instruction](/en-US/docs/WebAssembly/Reference/SIM
     i32.const 3
 
     i32x4.shr_u
-    i32x4.extract_lane 3
+    i32x4.extract_lane 2
     call $log ;; log the result
   )
   (start $main)

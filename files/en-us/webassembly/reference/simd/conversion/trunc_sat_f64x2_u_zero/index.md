@@ -15,12 +15,12 @@ If any input lane is a {{jsxref("NaN")}}, the resulting output lane is set to `0
 
 ```wat interactive-example
 (module
-  (import "console" "log" (func $log (param f64)))
+  (import "console" "log" (func $log (param i32)))
   (func $main
-    v128.const f64x2 1300.5 1345400000.9
+    v128.const f64x2 1345400000.9 90000000000.5
 
     i32x4.trunc_sat_f64x2_u_zero
-    f64x2.extract_lane 0
+    i32x4.extract_lane 1
     call $log ;; log the result
   )
   (start $main)

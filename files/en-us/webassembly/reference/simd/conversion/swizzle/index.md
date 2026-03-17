@@ -19,7 +19,7 @@ The **`swizzle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Referenc
     v128.const i8x16 0 2 5 7 3 5 9 2 4 6 1 7 0 3 5 1
     i8x16.swizzle
 
-    i8x16.extract_lane_u 1
+    i8x16.extract_lane_u 6
     call $log ;; log the result
   )
   (start $main)
@@ -30,7 +30,7 @@ The **`swizzle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Referenc
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
 
-In the above example, we extract and log the value at index position 1 of the `swizzle` instruction output value. This will be `56`, because the swizzle instruction has selected the value at index position 2 of the `input` to be put at index position 1 of the `output`.
+In the above example, we extract and log the value at index position 6 of the `swizzle` instruction output value. This will be `4`, because the swizzle instruction has selected the value at index position 9 of the `input` to be put at index position 6 of the `output`.
 
 ## Syntax
 
