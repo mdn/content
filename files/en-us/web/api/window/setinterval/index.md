@@ -132,9 +132,7 @@ setTimeout(myArray.myMethod, 1000); // Alerts "[object Window]" after 1 second
 setTimeout(myArray.myMethod, 1500, "1"); // Alerts "undefined" after 1.5 seconds
 ```
 
-You can use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to adopt the `this` of the function in which `setTimeout()` is called (arrow functions have a lexical `this`).
-
-You can test this with the following code.
+You can work around this by wrapping the method call in an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (or any wrapper function), so the method is called on the object directly using dot notation.
 
 ```js
 setTimeout(() => myArray.myMethod(), 1000); // Alert "zero,one,two" after 1 second
