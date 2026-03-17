@@ -6,9 +6,7 @@ page-type: how-to
 sidebar: webdriver
 ---
 
-The client and the browser communicate using the WebDriver BiDi protocol over a WebSocket connection. There are two ways to establish this connection: you can manually launch the browser from the command line, or let the WebDriver framework handle the browser startup via the `webSocketUrl` capability when creating a classic WebDriver session. The second method works across browsers, including Firefox with `geckodriver` and Chrome with `ChromeDriver`.
-
-The following sections walk you through the manual approach.
+The client and the browser communicate using the WebDriver BiDi protocol over a WebSocket connection. There are two ways a client can establish this connection. In one method, the client starts the browser from the command line with the required flag and on the specified port. The sections in this article walk you through this method. This method works with Firefox directly; Chromium-based browsers need the additional Chromium BiDi wrapper package. In the other method, when creating a classic WebDriver session, the client can set the `webSocketUrl` capability to request BiDi be enabled; the client then starts the browser with the required port open.
 
 ## Launching the browser
 
@@ -39,7 +37,7 @@ For example, if you launched Firefox with `--remote-debugging-port 9222`, the UR
 
 ## Connecting to the WebSocket endpoint
 
-With the WebSocket URL, use any WebSocket client to open a connection. Common options include the `ws` package for Node.js and the `websockets` package for Python. The initial connection starts as HTTP and is automatically [upgraded to WebSocket](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism#upgrading_to_a_websocket_connection) when the client connects.
+With the WebSocket URL, use any WebSocket client to open a connection. Common options include the `ws` package for Node.js and the `websockets` package for Python.
 
 Once connected, you can send WebDriver BiDi [commands](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) as JSON messages and receive responses and [events](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) from the browser. See [`session.new`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) to create a BiDi session after connecting.
 
@@ -48,3 +46,4 @@ Once connected, you can send WebDriver BiDi [commands](/en-US/docs/Web/WebDriver
 - [WebDriver BiDi reference](/en-US/docs/Web/WebDriver/Reference/BiDi)
 - [`session.new`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) command
 - [WebSockets API](/en-US/docs/Web/API/WebSockets_API)
+- [Chromium BiDi wrapper](https://github.com/GoogleChromeLabs/chromium-bidi)
