@@ -93,7 +93,7 @@ The optional first`<random-value-sharing>` parameter controls how the random bas
 
 #### The `element-shared` keyword
 
-All the `random()` functions with the `element-shared` keyword share the random base value for the other elements but only for the same property. For example, when the following is declared, A, B, and C will be identically sized rectangles with all the same random width and all the same random height:
+All `random()` functions with the `element-shared` keyword share the random base value for a single property across all elements. For example, when the following is declared, A, B, and C will be identically sized rectangles, all three having the same random width and all three having the same, independently-generated random height:
 
 ```css
 A,
@@ -119,7 +119,7 @@ C {
 
 #### Setting both `<dashed-ident>` and `element-shared`
 
-Combining a `<dashed-ident>` with `element-shared` (e.g., `random(--custom-name element-shared, 0, 100)`) shares the random base value across elements and properties that use the same `<random-value-sharing>` parameter. Given the following, A, B, and C will all be squares of the same size:
+Combining a `<dashed-ident>` with `element-shared` (e.g., `random(--custom-name element-shared, 0, 100)`) shares the random base value across both the elements and the properties that use the same `<random-value-sharing>` parameter. Given the following, A, B, and C will all be squares of the same size:
 
 ```css
 A,
@@ -150,7 +150,7 @@ When the first parameter is omitted, or explicitly set to `auto`, an ident is au
 }
 ```
 
-When the seed defaults or is explicitly set to `auto`, the user agent auto-generates a seed name following consistent rules based on property name and order. Because of this, `random()` functions end up with the same random base value. In this example, the generated value sharing identifier is the same for `.foo` and `.foo:hover` width values, so the value won't change between states. Similarly, the first two random values in the `margin` declaration will be unchanged when hovered, so `bar`'s top and right margins will remain the same, but the bottom and left margins will get independent random values on hover. To get an independent value for each `random()` function, provide a unique {{cssxref("dashed-ident")}}.
+When the `<random-value-sharing>` defaults or is explicitly set to `auto`, the user agent auto-generates a seed name, or _generated value sharing identifier_, following consistent rules based on property name and order. Because of this, `random()` functions can end up with the same seed name and, therefore, the same random base value. In this example, the generated value sharing identifier for the `random()` function in the `width` property value is the same for `.foo` as for `.foo:hover`, so the value won't change between states. Similarly, the first two `random()` functions in both `margin` declarations have the same generated value sharing identifier, meaning the first two values in the `margin` shorthand will be unchanged when hovered; on hover, `bar`'s top and right margins will remain the same, but the bottom and left margins will get independent random values. To get an independent value for each `random()` function, provide a unique {{cssxref("dashed-ident")}}.
 
 ### Custom properties
 
@@ -162,7 +162,7 @@ As with all CSS functions, when a `random()` function is included within a custo
 
 In this example, the `--random-size` custom property does not "store" the randomly generated result. When `var(--random-size)` is parsed it is effectively replaced with `random(1px, 100px)`, meaning each use creates a new `random()` function call with its own base value depending on the context in which its used.
 
-This is not true in the case of using `random()` when registering a custom property with {{cssxref("@property")}}. Registered custom properties compute random values and store them. In this example, A, B, and C will be squares of equal size:
+This is not true in the case of using `random()` when registering a custom property with {{cssxref("@property")}}. Registered custom properties compute random values and store them. In this example, as ` --defaultSize` is registered, A, B, and C will be squares of equal size, but their colors will be random, as `--random-angle` was not registered:
 
 ```css
 @property --defaultSize {
@@ -297,7 +297,7 @@ body {
 ## See also
 
 - {{cssxref("calc()")}}
-- {{domxref("Math.random()")}}
 - [CSS units and values](/en-US/docs/Web/CSS/Guides/Values_and_units) module
+- {{domxref("Math.random()")}}
 - [Rolling the Dice with CSS random()](https://webkit.org/blog/17285/rolling-the-dice-with-css-random/) via webkit.org (2025)
 - [CSS Almanac: random()](https://css-tricks.com/almanac/functions/r/random/) via CSS-Tricks.com
