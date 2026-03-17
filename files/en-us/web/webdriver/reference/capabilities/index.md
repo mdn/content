@@ -1,5 +1,5 @@
 ---
-title: WebDriver classic capabilities
+title: WebDriver capabilities
 short-title: Capabilities
 slug: Web/WebDriver/Reference/Capabilities
 page-type: landing-page
