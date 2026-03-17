@@ -92,6 +92,7 @@ browser.safebrowsing
 browser.sessionhistory
 browsingtopics
 bstack
+bufferedchange
 buttondisabledaccept
 bvec
 byterange
@@ -220,6 +221,7 @@ emptytext
 emsdk
 enable-tracejit
 enableiOES
+endstreaming
 enterpictureinpicture
 equalsize
 EquationiOES
@@ -525,6 +527,7 @@ oldstyle
 oldstyle-nums
 onao
 onbeforematch
+onbufferedchange
 oncanmakepayment
 oncharacterboundsupdate
 onclipboardchange
@@ -535,6 +538,7 @@ ondequeue
 ondispose
 ondownloadprogress
 onefive
+onendstreaming
 ongesturestart
 oninterest
 onlocation
@@ -555,6 +559,7 @@ onscreenschange
 onscrollsnapchange
 onscrollsnapchanging
 onsinkchange
+onstartstreaming
 ontextformatupdate
 ontextupdate
 onuncapturederror
@@ -738,6 +743,7 @@ sscanf
 stackoverflow_url
 startapp
 startproject
+startstreaming
 staticfiles
 storageaccess
 strcmp
