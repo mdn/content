@@ -7,18 +7,18 @@ browser-compat: webassembly.simd.convert_i32x4_s
 sidebar: webassemblysidebar
 ---
 
-The **`convert_i32x4_s`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the lanes of a `v128` `f32x4` value interpretation into a signed `i32x4` value interpretation.
+The **`convert_i32x4_s`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the lanes of a signed `v128` `i32x4` value interpretation into an `f64x2` value interpretation.
 
 {{InteractiveExample("Wat Demo: convert_i32x4_s", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
-  (import "console" "log" (func $log (param i32)))
+  (import "console" "log" (func $log (param f32)))
   (func $main
-    v128.const f32x4 0x3 0x3a 0xa9 0xff
+    v128.const i32x4 0x3 0x3a 0xa9 0xff
 
     f32x4.convert_i32x4_s
-    i32x4.extract_lane 3
+    f32x4.extract_lane 3
     call $log ;; log the result
   )
   (start $main)
@@ -50,7 +50,7 @@ value_type.convert_i32x4_s
 - `input`
   - : The `v128` value interpretation you want to convert.
 - `output`
-  - : The output `v128` value interpretation. The input float values are rounded to their nearest integer values.
+  - : The output `v128` value interpretation.
 
 ### Binary encoding
 

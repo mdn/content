@@ -7,18 +7,18 @@ browser-compat: webassembly.simd.convert_low_i32x4_u
 sidebar: webassemblysidebar
 ---
 
-The **`convert_low_i32x4_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the lanes of a `v128` `f64x2` value interpretation into an unsigned `i32x4` value interpretation.
+The **`convert_low_i32x4_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the first two lanes of an unsigned `v128` `i32x4` value interpretation into an `f32x4` value interpretation.
 
 {{InteractiveExample("Wat Demo: convert_low_i32x4_u", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
-  (import "console" "log" (func $log (param i32)))
+  (import "console" "log" (func $log (param f64)))
   (func $main
-    v128.const f64x2 0x3 0x3a
+    v128.const i32x4 0x3 0x3a 0xa9 0xff
 
     f64x2.convert_low_i32x4_u
-    i32x4.extract_lane 3
+    f64x2.extract_lane 1
     call $log ;; log the result
   )
   (start $main)
@@ -50,7 +50,7 @@ value_type.convert_low_i32x4_u
 - `input`
   - : The `v128` value interpretation you want to convert.
 - `output`
-  - : The output `v128` value interpretation. The input float values are rounded to their nearest integer values.
+  - : The output `v128` value interpretation. The first two values of the input `i32x4` are included in the output `f64x2`.
 
 ### Binary encoding
 
