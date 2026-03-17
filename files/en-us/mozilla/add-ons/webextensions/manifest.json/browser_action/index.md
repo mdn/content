@@ -126,7 +126,7 @@ The `browser_action` key is an object that may have any of the following propert
     Icons are specified as URLs relative to the manifest.json file. You should supply 16x16 and 32x32 (for retina display) `ThemeIcons`.
 
     > [!NOTE]
-    > When using SVG icons, you can use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For example:
+    > Alternatively, you can specify an SVG icon in `default_icon` and use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For example:
     >
     > ```html
     > <style>
