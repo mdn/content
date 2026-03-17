@@ -129,3 +129,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`alpha` & `colorspace` attributes in `color` input elements** (Nightly only): `dom.forms.html_color_picker.enabled`
 
   The HTML [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) element supports [`alpha`](/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha) & [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attributes. ([Firefox bug 1919718](https://bugzil.la/1919718)).
+
+- **`@container style()` queries**: `layout.css.style-queries.enabled`
+
+  The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule now supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values) or not and applied styles based upon the outcome. ([Firefox bug 2014404](https://bugzil.la/2014404)).
