@@ -72,7 +72,7 @@ value_type.splat
 - `value`
   - : The value you want to copy to all lanes of the `v128`.
 - `output`
-  - : The resulting `v128` value interpretation after all lanes of the `input` value have been updated with the `value`.
+  - : The resulting `v128` value interpretation after all lanes of the `input` value have been set to the `value`.
 
 ### Binary encoding
 
