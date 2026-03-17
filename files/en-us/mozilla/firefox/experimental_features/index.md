@@ -319,6 +319,22 @@ The CSS `text-decoration-trim` property allows you to specify {{cssxref("text-de
 - `layout.css.text-decoration-trim.enabled`
   - : Set to `true` to enable.
 
+### `text-box`, `text-box-edge`, `text-box-trim`
+
+The CSS {{cssxref("text-box")}} shorthand property, or the corresponding {{cssxref("text-box-trim")}} and {{cssxref("text-box-edge")}} longhand properties, allow you to trim space from the block-start and block-end edges of a text element's block container, aligning the container edges with the actual ink bounds of the text rather than the abstract box edges defined by font metrics.
+This makes it possible to achieve consistent visual spacing around text regardless of which font is used.
+([Firefox bug 2013458](https://bugzil.la/2013458)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 149           | No                  |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `layout.css.text-box.enabled`
+  - : Set to `true` to enable.
+
 ### `@custom-media` at-rule
 
 The {{cssxref("@custom-media")}} CSS at-rule defines aliases for long or complex media queries. Instead of repeating the same hardcoded `<media-query-list>` in multiple `@media` at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed. ([Firefox bug 1744292](https://bugzil.la/1744292)).

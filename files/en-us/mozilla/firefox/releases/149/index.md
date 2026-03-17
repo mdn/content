@@ -137,3 +137,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`alpha` & `colorspace` attributes in `color` input elements** (Nightly only): `dom.forms.html_color_picker.enabled`
 
   The HTML [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) element supports [`alpha`](/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha) & [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attributes. ([Firefox bug 1919718](https://bugzil.la/1919718)).
+
+- **`text-box`, `text-box-trim` and `text-box-edge` properties**: `layout.css.text-box.enabled`
+
+  The CSS {{cssxref("text-box")}} shorthand property, and the corresponding {{cssxref("text-box-trim")}} and {{cssxref("text-box-edge")}} longhand properties, are now supported.
+  These allow you to trim space from the block-start and block-end edges of a text element's block container, aligning the container edges with the actual ink bounds of the text rather than the abstract box edges defined by font metrics.
+  This makes it possible to achieve consistent visual spacing around text regardless of which font is used.
+  ([Firefox bug 2013458](https://bugzil.la/2013458)).
