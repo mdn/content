@@ -160,6 +160,19 @@ Clicking the first button gives an error, while the second and third buttons wor
 
 {{embedlivesample("escaping_attribute_values", "", 200)}}
 
+### Difference between Document.querySelector() and Element.querySelector()
+
+The `Document.querySelector()` method searches the entire document for the first matching element.
+
+In contrast, {{domxref("Element.querySelector()")}} only searches within the specified element's descendants.
+
+```js
+document.querySelector(".item"); // searches entire document
+
+const container = document.querySelector(".container");
+container.querySelector(".item"); // searches only inside .container
+```
+
 ## Specifications
 
 {{Specifications}}
