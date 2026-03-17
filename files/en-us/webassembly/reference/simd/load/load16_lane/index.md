@@ -17,9 +17,9 @@ The **`load16_lane`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/
   (memory $memory 1)
   (data (i32.const 0) "\01\02\03\04\05\06\07\08\09\0a\0b\0c\0d\0e\0f\00\01\02\03")
   (func $main
-    (i32.const 0)
-    (v128.const i16x8 10 4 6 5 8 7 11 3)
-    (v128.load16_lane 0)
+    i32.const 0
+    v128.const i16x8 10 4 6 5 8 7 11 3
+    v128.load16_lane 0
     i16x8.extract_lane_s 0
     call $log
   )
