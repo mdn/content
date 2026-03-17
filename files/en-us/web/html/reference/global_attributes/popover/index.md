@@ -50,7 +50,7 @@ For detailed information on usage, see the {{domxref("Popover API", "Popover API
 
 ### Making an element a popover
 
-The following code renders a button that, when activated, will open a popover element. This behaviour can be achieved using HTML alone.
+The following code renders a button that, when activated, will open a popover element. This behavior can be achieved using HTML alone.
 
 ```html
 <button popovertarget="my-popover">Open Popover</button>
