@@ -27,10 +27,6 @@ For more information, see our [Content Security Policy (CSP)](/en-US/docs/Web/HT
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
-    <tr>
       <th colspan="2" scope="row">
         This header is not supported inside a {{HTMLElement("meta")}} element.
       </th>

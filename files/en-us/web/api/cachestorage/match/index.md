@@ -38,7 +38,7 @@ match(request, options)
       - : A boolean value that specifies whether the
         matching process should ignore the query string in the URL. For example, if set
         to `true`, the `?value=bar` part of
-        `http://foo.com/?value=bar` would be ignored when performing a match.
+        `https://example.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
     - `ignoreMethod`
       - : A boolean value that, when set to
@@ -57,7 +57,7 @@ match(request, options)
 
 ### Return value
 
-a {{jsxref("Promise")}} that resolves to the matching {{domxref("Response")}}. If
+A {{jsxref("Promise")}} that resolves to the matching {{domxref("Response")}}. If
 no matching response to the specified request is found, the promise resolves
 with `undefined`.
 

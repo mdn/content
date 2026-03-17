@@ -53,13 +53,12 @@ inputElement.addEventListener("compositionend", (event) => {
 
 ```html
 <div class="control">
-  <label for="example">
-    First select textbox, then to open IME:
-    <ul>
-      <li>on macOS type <kbd>option</kbd> + <kbd>`</kbd></li>
-      <li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li>
-    </ul>
-  </label>
+  <p>First select textbox, then to open IME:</p>
+  <ul>
+    <li>on macOS type <kbd>option</kbd> + <kbd>`</kbd></li>
+    <li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li>
+  </ul>
+  <label for="example">Example input</label>
   <input type="text" id="example" name="example" />
 </div>
 

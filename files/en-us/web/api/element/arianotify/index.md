@@ -5,11 +5,10 @@ slug: Web/API/Element/ariaNotify
 page-type: web-api-instance-method
 status:
   - experimental
-  - non-standard
 browser-compat: api.Element.ariaNotify
 ---
 
-{{ApiRef("DOM")}}{{SeeCompatTable}}{{non-standard_header}}
+{{ApiRef("DOM")}}{{SeeCompatTable}}
 
 The **`ariaNotify()`** method of the {{domxref("Element")}} interface specifies that a given string of text should be announced by a {{glossary("screen reader")}} if available and activated.
 

@@ -7,17 +7,17 @@ sidebar: webassemblysidebar
 
 WebAssembly variable instructions.
 
-- [Declare local](/en-US/docs/WebAssembly/Reference/Variables/Local)
+- [`local`](/en-US/docs/WebAssembly/Reference/Variables/local)
   - : Declare a new local variable.
-- [Get local](/en-US/docs/WebAssembly/Reference/Variables/Local_get)
+- [`local.get`](/en-US/docs/WebAssembly/Reference/Variables/local.get)
   - : Load the value of a local variable onto the stack.
-- [Set local](/en-US/docs/WebAssembly/Reference/Variables/Local_set)
+- [`local.set`](/en-US/docs/WebAssembly/Reference/Variables/local.set)
   - : Set the value of a local variable.
-- [Tee local](/en-US/docs/WebAssembly/Reference/Variables/Local_tee)
+- [`local.tee`](/en-US/docs/WebAssembly/Reference/Variables/local.tee)
   - : Set the value of a local variable and keep the value on the stack.
-- [Declare global](/en-US/docs/WebAssembly/Reference/Variables/Global)
+- [`global`](/en-US/docs/WebAssembly/Reference/Variables/global)
   - : Declare a new global variable.
-- [Get global](/en-US/docs/WebAssembly/Reference/Variables/Global_get)
+- [`global.get`](/en-US/docs/WebAssembly/Reference/Variables/global.get)
   - : Load the value of a global variable onto the stack.
-- [Set global](/en-US/docs/WebAssembly/Reference/Variables/Global_set)
+- [`global.set`](/en-US/docs/WebAssembly/Reference/Variables/global.set)
   - : Set the value of a global variable.

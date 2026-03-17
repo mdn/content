@@ -81,7 +81,7 @@ Using code in JAR files loaded from other domains is no longer allowed in frames
 
 ### Changes to same-origin policy for file: URIs
 
-The same-origin policy for file: URIs has changed in Firefox 3. This may affect your content; please see [Same-origin policy for file: URIs](/en-US/docs/Web/Security/Same-origin_policy#file_origins) for details.
+The same-origin policy for file: URIs has changed in Firefox 3. This may affect your content; please see [Same-origin policy for file: URIs](/en-US/docs/Web/Security/Defenses/Same-origin_policy#file_origins) for details.
 
 ## JavaScript changes
 

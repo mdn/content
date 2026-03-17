@@ -11,8 +11,9 @@ The **`ViewTransition`** interface of the {{domxref("View Transition API", "View
 
 This object type is made available in the following ways:
 
-- In the case of same-document (SPA) transitions, it is returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method.
-- In the case of cross-document (MPA) transitions, it is made available:
+- Via the {{domxref("Document.activeViewTransition")}} property. This provides a consistent way to access the active view transition in any context, without having to worry about saving it for easy access later on.
+- In the case of same-document (SPA) transitions, it is also returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method.
+- In the case of cross-document (MPA) transitions, it is also made available:
   - In the outgoing page via the {{domxref("Window.pageswap_event", "pageswap")}} event object's {{domxref("PageSwapEvent.viewTransition")}} property.
   - In the inbound page via the {{domxref("Window.pagereveal_event", "pagereveal")}} event object's {{domxref("PageRevealEvent.viewTransition")}} property.
 
@@ -24,6 +25,8 @@ When a view transition is triggered by a `startViewTransition()` call (or a page
   - : A {{jsxref("Promise")}} that fulfills once the transition animation is finished, and the new page view is visible and interactive to the user.
 - {{domxref("ViewTransition.ready")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
+- {{domxref("ViewTransition.types")}} {{ReadOnlyInline}}
+  - : A {{domxref("ViewTransitionTypeSet")}} that allows the types set on the view transition to be accessed and modified.
 - {{domxref("ViewTransition.updateCallbackDone")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} that fulfills when the promise returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method's callback fulfills.
 
@@ -108,4 +111,7 @@ This animation also requires the following CSS, to turn off the default CSS anim
 
 ## See also
 
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)
+- [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
+- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types)
 - [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

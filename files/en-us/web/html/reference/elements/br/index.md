@@ -12,7 +12,7 @@ The **`<br>`** [HTML](/en-US/docs/Web/HTML) element produces a line break in tex
 
 ```html interactive-example
 <p>
-  O’er all the hilltops<br />
+  O'er all the hilltops<br />
   Is quiet now,<br />
   In all the treetops<br />
   Hearest thou<br />

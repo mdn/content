@@ -45,5 +45,5 @@ console.log(matrix.rotate(30).isIdentity); // output: false
 - {{domxref("CanvasRenderingContext2D")}} interface
 - CSS {{cssxref("transform-function/matrix()")}} function
 - CSS {{cssxref("transform")}} property
-- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module
 - SVG [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) attribute

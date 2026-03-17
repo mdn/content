@@ -47,7 +47,7 @@ disposer.use(reader);
 
 ### Using use()
 
-This code consumes a {{domxref("ReadableStream")}} via a {{domxref("ReadableStreamDefaultReader")}}. The reader is automatically closed when the function completes, assuming it implements an `[Symbol.dispose]()` method that synchronously releases the lock on the stream.
+This code consumes a {{domxref("ReadableStream")}} via a {{domxref("ReadableStreamDefaultReader")}}. The reader is automatically closed when the function completes, assuming it implements a `[Symbol.dispose]()` method that synchronously releases the lock on the stream.
 
 ```js
 {

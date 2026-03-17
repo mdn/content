@@ -74,7 +74,7 @@ The {{htmlelement("canvas")}} element is generated automatically by the framewor
 
 ## Running the application
 
-To run the app, you cannot directly open the `index.html` file, because later we will be loading external assets, which will be blocked by the browser's [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+To run the app, you cannot directly open the `index.html` file, because later we will be loading external assets, which will be blocked by the browser's [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
 To fix the problem, you need to run a local web server to serve the HTML files and the image files. [As the official document of Phaser suggests](https://docs.phaser.io/phaser/getting-started/set-up-dev-environment#installing-a-web-server), we have a lot of options to run a local web server. We also have our own [tutorials for setting up a local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)—use any option you prefer. For example, if you choose to use the Python HTTP server, then open a terminal, navigate to the directory where your `index.html` file is located, and run the following command:
 

@@ -95,7 +95,7 @@ These interfaces are defined as part of the HTTP [Content Security Policy (CSP)]
 - {{domxref("SecurityPolicyViolationEvent")}}
   - : Represents the event object of a `securitypolicyviolation` event fired on an element, document, or worker when its CSP is violated.
 
-This interface is defined as part of the [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) specification:
+This interface is defined as part of the [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) specification:
 
 - {{domxref("IntegrityViolationReportBody")}}
   - : Contains information about a resource that was blocked because it did not meet the Subresource Integrity guarantees required by its {{httpheader("Integrity-Policy")}}, or that would be blocked for report-only policies set using {{httpheader("Integrity-Policy-Report-Only")}}.

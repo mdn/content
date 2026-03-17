@@ -216,7 +216,7 @@ console.log(moods.match(regexpEmoticons));
           Matches a control character using
           <a href="https://en.wikipedia.org/wiki/Caret_notation"
             >caret notation</a
-          >, where "X" is a letter from A–Z (corresponding to code points
+          >, where "X" is a letter from A–Z or a–z (corresponding to code points
           <code>U+0001</code><em>–</em><code>U+001A</code>). For example,
           <code>/\cM\cJ/</code> matches "\r\n".
         </p>

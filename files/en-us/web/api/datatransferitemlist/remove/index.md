@@ -74,7 +74,7 @@ div {
 #### JavaScript
 
 ```js
-function dragstart_handler(ev) {
+function dragstartHandler(ev) {
   console.log("dragStart");
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
@@ -85,7 +85,7 @@ function dragstart_handler(ev) {
   dataList.add("http://www.example.org", "text/uri-list");
 }
 
-function drop_handler(ev) {
+function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
   const data = event.dataTransfer.items;
@@ -110,14 +110,14 @@ function drop_handler(ev) {
   }
 }
 
-function dragover_handler(ev) {
+function dragoverHandler(ev) {
   console.log("dragOver");
   ev.preventDefault();
   // Set the dropEffect to move
   ev.dataTransfer.dropEffect = "move";
 }
 
-function dragend_handler(ev) {
+function dragendHandler(ev) {
   console.log("dragEnd");
   const dataList = ev.dataTransfer.items;
   // Clear all the files. Iterate in reverse order to safely remove.
@@ -131,12 +131,12 @@ function dragend_handler(ev) {
 }
 
 const source = document.querySelector("#source");
-source.addEventListener("dragstart", dragstart_handler);
-source.addEventListener("dragend", dragend_handler);
+source.addEventListener("dragstart", dragstartHandler);
+source.addEventListener("dragend", dragendHandler);
 
 const target = document.querySelector("#target");
-target.addEventListener("drop", drop_handler);
-target.addEventListener("dragover", dragover_handler);
+target.addEventListener("drop", dropHandler);
+target.addEventListener("dragover", dragoverHandler);
 ```
 
 #### Result

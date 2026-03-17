@@ -19,13 +19,12 @@ _The `Performance` interface doesn't inherit any properties._
 
 - {{domxref("Performance.eventCounts")}} {{ReadOnlyInline}}
   - : An {{domxref("EventCounts")}} map containing the number of events which have been dispatched per event type.
-
+- {{domxref("Performance.interactionCount")}} {{ReadOnlyInline}}
+  - : The number of real-user interactions that have occurred on the page, which is useful when calculating {{Glossary("Interaction_to_next_paint", "Interaction to Next Paint (INP)")}}.
 - {{domxref("Performance.navigation")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : A legacy {{domxref("PerformanceNavigation")}} object that provides useful context about the operations included in the times listed in `timing`, including whether the page was a load or a refresh, how many redirections occurred, and so forth.
-
 - {{domxref("Performance.timing")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : A legacy {{domxref("PerformanceTiming")}} object containing latency-related performance information.
-
 - {{domxref("Performance.memory")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : A _non-standard_ extension added in Chrome, this property provides an object with basic memory usage information. _You **should not use** this non-standard API._
 - {{domxref("Performance.timeOrigin")}} {{ReadOnlyInline}}
@@ -40,7 +39,7 @@ _The `Performance` interface doesn't inherit any methods._
 - {{domxref("Performance.clearMeasures()")}}
   - : Removes the given _measure_ from the browser's performance entry buffer.
 - {{domxref("Performance.clearResourceTimings()")}}
-  - : Removes all [performance entries](/en-US/docs/Web/API/PerformanceEntry) with a {{domxref("PerformanceEntry.entryType","entryType")}} of `"resource"` from the browser's performance data buffer.
+  - : Removes all [performance entries](/en-US/docs/Web/API/PerformanceEntry) with an {{domxref("PerformanceEntry.entryType","entryType")}} of `"resource"` from the browser's performance data buffer.
 - {{domxref("Performance.getEntries()")}}
   - : Returns a list of {{domxref("PerformanceEntry")}} objects based on the given _filter_.
 - {{domxref("Performance.getEntriesByName()")}}

@@ -11,7 +11,7 @@ Most authentication occurs only at the start of a {{glossary("TCP")}} session. I
 
 ![The attacker sniffs and accesses a legitimate session id from a user interacting with a web server, then uses that session identifier to spoof the session between the regular user and the server to exploit the user's session and access the server directly.](session_hijacking_3.jpg)
 
-### Session hijacking occurs because
+## Session hijacking occurs because
 
 - no account lockout for invalid session IDs
 - weak session-ID generation algorithm
@@ -20,7 +20,7 @@ Most authentication occurs only at the start of a {{glossary("TCP")}} session. I
 - short session IDs
 - transmission in plain text
 
-### Session hijacking process
+## Session hijacking process
 
 1. **Sniff**, that is perform a man-in-the-middle (MITM) attack, place yourself between victim and server.
 2. **Monitor** packets flowing between server and user.
@@ -28,7 +28,7 @@ Most authentication occurs only at the start of a {{glossary("TCP")}} session. I
 4. **Take control** of the session.
 5. **Inject** new packets to the server using the Victim's Session ID.
 
-### Protection against session hijacking
+## Protection against session hijacking
 
 - create a secure communication channel with SSH (secure shell)
 - pass authentication cookies over HTTPS connection

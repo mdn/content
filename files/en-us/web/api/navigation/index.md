@@ -2,12 +2,10 @@
 title: Navigation
 slug: Web/API/Navigation
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.Navigation
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`Navigation`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} allows control over all navigation actions for the current `window` in one central place, including initiating navigations programmatically, examining navigation history entries, and managing navigations as they happen.
 
@@ -21,20 +19,20 @@ The Navigation API only exposes history entries created in the current browsing 
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("Navigation.activation", "activation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigation.activation", "activation")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NavigationActivation")}} object containing information about the most recent cross-document navigation, which "activated" this Document.
-- {{domxref("Navigation.canGoBack", "canGoBack")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigation.canGoBack", "canGoBack")}} {{ReadOnlyInline}}
   - : Returns `true` if it is possible to navigate backwards in the navigation history
     (i.e., the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the first one in the history entry list),
     and `false` if it is not.
-- {{domxref("Navigation.canGoForward", "canGoForward")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigation.canGoForward", "canGoForward")}} {{ReadOnlyInline}}
   - : Returns `true` if it is possible to navigate forwards in the navigation history
     (i.e., the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the last one in the history entry list),
     and `false` if it is not.
-- {{domxref("Navigation.currentEntry", "currentEntry")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigation.currentEntry", "currentEntry")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NavigationHistoryEntry")}} object representing the location the user is currently
     navigated to right now.
-- {{domxref("Navigation.transition", "transition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigation.transition", "transition")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NavigationTransition")}} object representing the status of an in-progress navigation,
     which can be used to track it. Returns `null` if no navigation is currently in progress.
 
@@ -42,19 +40,19 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("Navigation.back", "back()")}} {{Experimental_Inline}}
+- {{domxref("Navigation.back", "back()")}}
   - : Navigates backwards by one entry in the navigation history.
-- {{domxref("Navigation.entries", "entries()")}} {{Experimental_Inline}}
+- {{domxref("Navigation.entries", "entries()")}}
   - : Returns an array of {{domxref("NavigationHistoryEntry")}} objects representing all existing history entries.
-- {{domxref("Navigation.forward", "forward()")}} {{Experimental_Inline}}
+- {{domxref("Navigation.forward", "forward()")}}
   - : Navigates forwards by one entry in the navigation history.
-- {{domxref("Navigation.navigate", "navigate()")}} {{Experimental_Inline}}
+- {{domxref("Navigation.navigate", "navigate()")}}
   - : Navigates to a specific URL, updating any provided state in the history entries list.
-- {{domxref("Navigation.reload", "reload()")}} {{Experimental_Inline}}
+- {{domxref("Navigation.reload", "reload()")}}
   - : Reloads the current URL, updating any provided state in the history entries list.
-- {{domxref("Navigation.traverseTo", "traverseTo()")}} {{Experimental_Inline}}
+- {{domxref("Navigation.traverseTo", "traverseTo()")}}
   - : Navigates to a specific {{domxref("NavigationHistoryEntry")}} identified by {{domxref("NavigationHistoryEntry.key", "key")}}.
-- {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}} {{Experimental_Inline}}
+- {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}
   - : Updates the state of the {{domxref("Navigation.currentEntry","currentEntry")}}; used
     in cases where the state change will be independent from a navigation or reload.
 
@@ -62,13 +60,13 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 _Inherits events from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("Navigation/currententrychange_event", "currententrychange")}} {{Experimental_Inline}}
+- {{domxref("Navigation/currententrychange_event", "currententrychange")}}
   - : Fired when the {{domxref("Navigation.currentEntry")}} has changed.
-- {{domxref("Navigation/navigate_event", "navigate")}} {{Experimental_Inline}}
+- {{domxref("Navigation/navigate_event", "navigate")}}
   - : Fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, allowing you to intercept as required.
-- {{domxref("Navigation/navigateerror_event", "navigateerror")}} {{Experimental_Inline}}
+- {{domxref("Navigation/navigateerror_event", "navigateerror")}}
   - : Fired when a navigation fails.
-- {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} {{Experimental_Inline}}
+- {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}}
   - : Fired when a successful navigation has finished.
 
 ## Examples

@@ -13,10 +13,6 @@ This article provides information about the changes in Firefox 89 that will affe
 
 ## Changes for web developers
 
-### Developer Tools
-
-_No changes._
-
 ### HTML
 
 _No changes._

@@ -32,9 +32,7 @@ isPointInStroke(path, x, y)
 
 ### Return value
 
-- A boolean value
-  - : A Boolean, which is `true` if the point is inside the area contained by
-    the stroking of a path, otherwise `false`.
+A boolean value, which is `true` if the point is inside the area contained by the stroking of a path, otherwise `false`.
 
 ## Examples
 

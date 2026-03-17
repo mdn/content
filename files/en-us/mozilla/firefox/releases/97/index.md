@@ -23,11 +23,11 @@ No notable changes
   The `color-adjust` shorthand name is deprecated.
   See [Firefox bug 747595](https://bugzil.la/747595) for details.
 
-- CSS cascade layers are now available by default. The [`@layer`](/en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which allows declaration of styles and can be imported via the [`@import`](/en-US/docs/Web/CSS/@import) rule using the `layer()` function. See [Firefox bug 1699217](https://bugzil.la/1699217) for more details.
+- CSS cascade layers are now available by default. The [`@layer`](/en-US/docs/Web/CSS/Reference/At-rules/@layer) rule declares a cascade layer, which allows declaration of styles and can be imported via the [`@import`](/en-US/docs/Web/CSS/Reference/At-rules/@import) rule using the `layer()` function. See [Firefox bug 1699217](https://bugzil.la/1699217) for more details.
 
 - The global CSS keyword {{cssxref("revert-layer")}} has been added to allow rolling back of property values in one cascade layer to the matching rules in the previous cascade layer. This keyword can be applied on any property, including the CSS shorthand property {{cssxref("all")}}. For more information, see [Firefox bug 1699220](https://bugzil.la/1699220).
 
-- The CSS [`scrollbar-gutter`](/en-US/docs/Web/CSS/scrollbar-gutter) property is now supported. This gives developers control over reserved space for the scrollbar, preventing unwanted layout changes as the content grows.
+- The CSS [`scrollbar-gutter`](/en-US/docs/Web/CSS/Reference/Properties/scrollbar-gutter) property is now supported. This gives developers control over reserved space for the scrollbar, preventing unwanted layout changes as the content grows.
   See [Firefox bug 1715112](https://bugzil.la/1715112) for more details.
 
 ### JavaScript
@@ -37,7 +37,7 @@ No notable changes
 ### SVG
 
 - The SVG {{SVGAttr('d')}} attribute, used to define a path to be drawn, can now be used as a property in CSS.
-  It accepts the values [path()](/en-US/docs/Web/CSS/basic-shape/path) or `none`. (See [Firefox bug 1744599](https://bugzil.la/1744599) for details.)
+  It accepts the values [path()](/en-US/docs/Web/CSS/Reference/Values/basic-shape/path) or `none`. (See [Firefox bug 1744599](https://bugzil.la/1744599) for details.)
 
 #### Removals
 

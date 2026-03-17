@@ -20,7 +20,7 @@ Technically, `color` can be applied to any element, but it has no direct effect 
     <tr>
       <th scope="row">Value</th>
       <td>
-        <code><a href="/en-US/docs/Web/CSS/color_value">&#x3C;color></a></code>
+        <code><a href="/en-US/docs/Web/CSS/Reference/Values/color_value">&#x3C;color></a></code>
         | <code>inherit</code>
       </td>
     </tr>

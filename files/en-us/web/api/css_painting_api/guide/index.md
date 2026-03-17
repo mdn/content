@@ -108,11 +108,11 @@ While you can't play with the worklet's script, you can alter the `background-si
 
 ## PaintSize
 
-In the example above, we created a 20x200 unit box, painted 15 units from the top of the element it is the same regardless of the size of the element. If the text is small, the yellow box looks like a huge underline. If the text is huge, the box might look like an bar above the first three letters. It would be better if the background image was relative to the size of the element — we can use the element's `paintSize` property to ensure the background image is proportional to the size of the element's box model size.
+In the example above, we created a 20x200 unit box, painted 15 units from the top of the element it is the same regardless of the size of the element. If the text is small, the yellow box looks like a huge underline. If the text is huge, the box might look like a bar above the first three letters. It would be better if the background image was relative to the size of the element — we can use the element's `paintSize` property to ensure the background image is proportional to the size of the element's box model size.
 
 ![The background is 50% of the height and 60% of the width of the element](mycoolheadersized.png)
 
-In the above image, the background proportional to the size of the element. The 3rd example has `width: 50%`; set on the block level element, making the element narrower and therefore the background image narrower.
+In the above image, the background is proportional to the size of the element. The 3rd example has `width: 50%`; set on the block level element, making the element narrower and therefore the background image narrower.
 
 ### The paint worklet
 
@@ -207,7 +207,7 @@ registerPaint(
 );
 ```
 
-The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables), and returns an {{jsxref("Array", "array", "", 1)}} of property names. We'll take a look at [`inputArguments`](#passing_parameters) in the last section.
+The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables), and returns an {{jsxref("Array", "array", "", 1)}} of property names. We'll take a look at [`inputArguments`](#passing_parameters) in the last section.
 
 Let's create a list of items with a background image that rotates between three different colors and three widths.
 
@@ -387,7 +387,7 @@ We can then create a little HTML that will accept this image as backgrounds:
 <h6 class="fancy">Smallest Header</h6>
 ```
 
-We give each header a different value for the `--high-color` [custom property](/en-US/docs/Web/CSS/CSS_cascading_variables)
+We give each header a different value for the `--high-color` [custom property](/en-US/docs/Web/CSS/Guides/Cascading_variables)
 
 ```css
 .fancy {

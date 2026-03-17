@@ -298,7 +298,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
         </p>
         <p>
           The <code>cover</code> value means that the viewport is scaled to fill the device display.
-          It is highly recommended to make use of the <a href="/en-US/docs/Web/CSS/env">safe area inset</a> variables to
+          It is highly recommended to make use of the <a href="/en-US/docs/Web/CSS/Reference/Values/env">safe area inset</a> variables to
           ensure that important content doesn't end up outside the display.
         </p>
       </td>
@@ -358,9 +358,7 @@ if (5 < 30 && 55 > 20 && 5 < 20 && 55 > 10) {
   Move the rectangle with arrow keys. Green means collision, blue means no
   collision.
 </p>
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
 ```
 
 ```js

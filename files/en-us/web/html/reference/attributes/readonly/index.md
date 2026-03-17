@@ -97,23 +97,23 @@ If the element is read-only, then the element's value can not be updated by the 
 
 ```html
 <div class="group">
-  <input type="text" value="Some value" readonly="readonly" id="text" />
+  <input type="text" value="Some value" readonly id="text" />
   <label for="text">Text box</label>
 </div>
 <div class="group">
-  <input type="date" value="2020-01-01" readonly="readonly" id="date" />
+  <input type="date" value="2020-01-01" readonly id="date" />
   <label for="date">Date</label>
 </div>
 <div class="group">
-  <input type="email" value="Some value" readonly="readonly" id="email" />
+  <input type="email" value="Some value" readonly id="email" />
   <label for="email">Email</label>
 </div>
 <div class="group">
-  <input type="password" value="Some value" readonly="readonly" id="pwd" />
+  <input type="password" value="Some value" readonly id="pwd" />
   <label for="pwd">Password</label>
 </div>
 <div class="group">
-  <textarea readonly="readonly" id="ta">Some value</textarea>
+  <textarea readonly id="ta">Some value</textarea>
   <label for="ta">Message</label>
 </div>
 ```

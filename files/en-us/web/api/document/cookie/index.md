@@ -283,7 +283,7 @@ clearBtn.addEventListener("click", () => {
 
 It is important to note that the `path` attribute does _not_ protect against unauthorized reading of the cookie from a different path.
 It can be easily bypassed using the DOM, for example by creating a hidden {{HTMLElement("iframe")}} element with the path of the cookie, then accessing this iframe's `contentDocument.cookie` property.
-The only way to protect the cookie is by using a different domain or subdomain, due to the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+The only way to protect the cookie is by using a different domain or subdomain, due to the [same origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
 Cookies are often used in web applications to identify a user and their authenticated session.
 Stealing a cookie from a web application leads to hijacking the authenticated user's session.

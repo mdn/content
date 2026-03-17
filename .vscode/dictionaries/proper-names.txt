@@ -55,6 +55,7 @@ Binaryen
 Birtles
 bitsies
 Bitsov
+Bitwarden
 Bixa
 Blackman
 Blackmoon
@@ -73,6 +74,7 @@ Browsersync
 Bubka
 Bundlesize
 Bunyakovsky
+Bushell
 Butterick
 Buzzcocks
 Bynens
@@ -114,6 +116,7 @@ codingintrigue
 Codrops
 Coleoptera
 Colomb
+Comeau
 Conde
 Corber
 Cortana
@@ -185,6 +188,7 @@ Elly
 Emscripten
 Endtest
 Ensatina
+Ente
 Envato
 Ephesis
 Eplepsia
@@ -301,9 +305,12 @@ Kahlo
 Kaku
 Kang
 Kaply
+Karmadrome
+KASI
 Kaspersky
 Katari
 Kazam
+Keegan
 kenji-yamasaki
 Kerckhoffs
 Kersee
@@ -444,7 +451,6 @@ Orendorff
 Osmani
 Owlman
 Paavo
-Paciello
 Pacman
 Pagella
 Paletton
@@ -524,6 +530,7 @@ Scrimba
 Seamonkey
 Serpentina
 Shadeed
+Sharma
 Shilpa
 Shinoda
 Shireen
@@ -603,6 +610,7 @@ Verou
 Vieno
 Vint
 Visio
+Vispero
 Voikko
 Volkman
 Vorbis
@@ -625,6 +633,7 @@ Willee
 Willigers
 Winamp
 Winchelsea
+Winnifred
 Wireshark
 Wirfs
 wisedog
@@ -662,5 +671,6 @@ Zheng
 Zilla
 Zinsser
 Zosia
+zxcvbn
 Émanuel
 Österreich

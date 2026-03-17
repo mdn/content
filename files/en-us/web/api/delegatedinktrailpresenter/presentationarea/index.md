@@ -16,7 +16,7 @@ If the preceding {{domxref("Ink.requestPresenter", "Ink.requestPresenter()")}} m
 
 This area is always the client coordinates for the element's border box, so moving the element or scrolling the element requires no recalculation on the developer's part.
 
-### Value
+## Value
 
 An {{domxref("Element")}}.
 

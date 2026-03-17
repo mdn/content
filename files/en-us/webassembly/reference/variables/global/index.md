@@ -1,6 +1,7 @@
 ---
-title: Global
-slug: WebAssembly/Reference/Variables/Global
+title: "global: Wasm text instruction"
+short-title: global
+slug: WebAssembly/Reference/Variables/global
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---

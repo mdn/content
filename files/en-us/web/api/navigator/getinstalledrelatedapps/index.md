@@ -13,7 +13,7 @@ browser-compat: api.Navigator.getInstalledRelatedApps
 The **`getInstalledRelatedApps()`** method returns a promise that resolves with an array of objects representing any related platform-specific apps or [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) that the user has installed. This could be used for content personalization such as removing "install our app" banners from the web app if the platform-specific app and/or PWA is already installed.
 
 > [!NOTE]
-> This method must be invoked in a top-level [secure context](/en-US/docs/Web/Security/Secure_Contexts), that is, not embedded in an {{htmlelement("iframe")}}.
+> This method must be invoked in a top-level [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts), that is, not embedded in an {{htmlelement("iframe")}}.
 
 ## Description
 

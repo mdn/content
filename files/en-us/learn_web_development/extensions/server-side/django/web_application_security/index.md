@@ -91,48 +91,30 @@ They would then send the file to all the Librarians and suggest that they open t
       action="http://127.0.0.1:8000/catalog/author/create/"
       method="post"
       name="EvilForm">
-      <table>
-        <tr>
-          <th><label for="id_first_name">First name:</label></th>
-          <td>
-            <input
-              id="id_first_name"
-              maxlength="100"
-              name="first_name"
-              type="text"
-              value="Mad"
-              required />
-          </td>
-        </tr>
-        <tr>
-          <th><label for="id_last_name">Last name:</label></th>
-          <td>
-            <input
-              id="id_last_name"
-              maxlength="100"
-              name="last_name"
-              type="text"
-              value="Man"
-              required />
-          </td>
-        </tr>
-        <tr>
-          <th><label for="id_date_of_birth">Date of birth:</label></th>
-          <td>
-            <input id="id_date_of_birth" name="date_of_birth" type="text" />
-          </td>
-        </tr>
-        <tr>
-          <th><label for="id_date_of_death">Died:</label></th>
-          <td>
-            <input
-              id="id_date_of_death"
-              name="date_of_death"
-              type="text"
-              value="12/10/2016" />
-          </td>
-        </tr>
-      </table>
+      <label for="id_first_name">First name:</label>
+      <input
+        id="id_first_name"
+        maxlength="100"
+        name="first_name"
+        type="text"
+        value="Mad"
+        required />
+      <label for="id_last_name">Last name:</label>
+      <input
+        id="id_last_name"
+        maxlength="100"
+        name="last_name"
+        type="text"
+        value="Man"
+        required />
+      <label for="id_date_of_birth">Date of birth:</label>
+      <input id="id_date_of_birth" name="date_of_birth" type="text" />
+      <label for="id_date_of_death">Died:</label>
+      <input
+        id="id_date_of_death"
+        name="date_of_death"
+        type="text"
+        value="12/10/2016" />
       <input type="submit" value="Submit" />
     </form>
   </body>

@@ -6,17 +6,14 @@ browser-compat: webextensions.api.browsingData.RemovalOptions
 sidebar: addonsidebar
 ---
 
-The **`browsingData.RemovalOptions`** type contains options to control certain aspects of browsing data removal.
+The **`browsingData.RemovalOptions`** type contains options to control browsing data removal.
 
 ## Type
 
-Values of this type are objects. They contain the following properties:
+Values of this type are objects. They contain these properties:
 
 - `cookieStoreId` {{optional_inline}}
-  - : `string`. This property only applies to cookies and indexedDB items. The removal is limited to items belonging to a specific [cookie store](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore) as specified by the ID. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
-
-    > [!NOTE]
-    > On Firefox Nightly removal of localStorage items by `cookieStoreId` is also supported.
+  - : `string`. This property only applies to cookies, indexedDB, and local storage ([`localStorage`](/en-US/docs/Web/API/Window/localStorage)) items. The removal is limited to items belonging to a specific [cookie store](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore) as specified by the ID. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 
 - `excludeOrigin` {{optional_inline}}
   - : `array` of `string`. List of origins to exclude from the removal process. Can't be used together with `origins`. Only supported for cookies, storage, and cache. Cookies are excluded for the entire registrable domain.
@@ -30,13 +27,13 @@ Values of this type are objects. They contain the following properties:
   - : `array` of `string`. List of origins to remove data for. Can't be used together with `excludeOrigins`. Only supported for cookies, storage, and cache. Cookies are cleared for the entire registrable domain.
 
 - `originTypes` {{optional_inline}}
-  - : `object`. Used to control whether to remove data only from normal web pages, or also from hosted web apps and extensions. If this option is omitted, only data from normal web pages (`unprotectedWeb`) is removed. Before removing data from web apps or extensions, be very careful to ensure that this is really what the user wants.
+  - : `object`. Used to control whether to remove data only from normal web pages, or also from extensions. If this option is omitted, only data from normal web pages (`unprotectedWeb`) is removed. Before removing data from web apps or extensions, be very careful to ensure that this is really what the user wants.
 
     This object may contain any of the following properties:
     - `unprotectedWeb` {{optional_inline}}
       - : `boolean`. If present and `true`, remove data from normal web pages.
     - `protectedWeb` {{optional_inline}}
-      - : `boolean`. If present and `true`, remove data from websites that have been installed as hosted apps.
+      - : `boolean`. If present and `true`, remove data from websites that have been installed as hosted apps. (This option is redundant, as hosted web apps are no longer supported.)
     - `extension` {{optional_inline}}
       - : `boolean`. If present and `true`, remove data from extensions.
 

@@ -86,13 +86,13 @@ Each browser determines, using whatever mechanism it chooses, the maximum amount
 In Firefox, the maximum storage space an origin can use in best-effort mode is whichever is the smaller of:
 
 - 10% of the total disk size where the profile of the user is stored.
-- Or 10 GiB, which is the _group limit_ that Firefox applies to all origins that are part of the same {{Glossary("eTLD", "eTLD+1 domain")}}.
+- Or 10 GiB, which is the _group limit_ that Firefox applies to all origins that are part of the same {{Glossary("site")}}.
 
-Origins for which persistent storage has been granted can store up to 50% of the total disk size, capped at 8 TiB, and are not subject to the eTLD+1 group limit.
+Origins for which persistent storage has been granted can store up to 50% of the total disk size, capped at 8 TiB, and are not subject to the group limit.
 
 For example, if the device has a 500 GiB hard drive, Firefox will allow an origin to store up to:
 
-- In best-effort mode: 10 GiB of data, which is the eTLD+1 group limit.
+- In best-effort mode: 10 GiB of data, which is the group limit.
 - In persistent mode: 250 GiB, which is 50% of the total disk size.
 
 Note that it might not actually be possible for the origin to reach its quota because it is calculated based on the hard drive **total** size, not the currently available disk space. This is done for security reasons, to avoid {{Glossary("fingerprinting")}}.
@@ -107,12 +107,12 @@ Like with Firefox, because this quota is calculated based on the hard drive tota
 
 #### Safari
 
-Webkit imposes different quotas for _browser apps_ and for other applications which can embed web content (for example, apps that use WKWebView). A browser app is an application that can be set as the system's default browser. This includes Safari and some other WebKit-based third-party browsers.
+WebKit imposes different quotas for _browser apps_ and for other applications which can embed web content (for example, apps that use WKWebView). A browser app is an application that can be set as the system's default browser. This includes Safari and some other WebKit-based third-party browsers.
 
 Starting with macOS 14 and iOS 17:
 
-- For Webkit-based browser apps, each origin can store up to around 60% of total disk.
-- For other Webkit-based apps that embed web content, each origin can store up to around 15% of total disk. If the user has saved the site as a web app on the Home Screen or the Dock, it uses the same origin quota as the browser app (around 60% of disk space).
+- For WebKit-based browser apps, each origin can store up to around 60% of total disk.
+- For other WebKit-based apps that embed web content, each origin can store up to around 15% of total disk. If the user has saved the site as a web app on the Home Screen or the Dock, it uses the same origin quota as the browser app (around 60% of disk space).
 
 For instance, a macOS device with a 1 TiB drive will limit each origin within the Safari web browser to around 600 GiB. Origins running in another app's embedded WebView will be allotted a lesser limit of around 150 GiB.
 

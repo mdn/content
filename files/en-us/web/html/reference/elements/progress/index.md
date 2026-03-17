@@ -152,7 +152,7 @@ If the `<progress>` element is describing the loading progress of a section of a
 
 ## See also
 
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
 - {{htmlelement("meter")}}
 - {{ cssxref(":indeterminate") }}
 - {{ cssxref("-moz-orient") }}

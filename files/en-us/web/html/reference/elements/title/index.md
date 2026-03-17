@@ -131,4 +131,4 @@ This example establishes a page whose title (as displayed at the top of the wind
 
 ## See also
 
-- SVG [`<title>`](/en-US/docs/Web/SVG/Reference/Element/title) element
+- SVG {{svgelement("title")}} element

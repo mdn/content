@@ -76,7 +76,7 @@ All desktop operating systems come with a basic text editor. These editors are a
         <ul>
           <li><a href="https://notepad-plus-plus.org/">Notepad++</a></li>
           <li>
-            <a href="https://visualstudio.microsoft.com/">Visual Studio Code</a>
+            <a href="https://code.visualstudio.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://www.jetbrains.com/webstorm/">Web Storm</a></li>
           <li><a href="https://brackets.io/">Brackets</a></li>
@@ -104,7 +104,7 @@ All desktop operating systems come with a basic text editor. These editors are a
             >
           </li>
           <li>
-            <a href="https://visualstudio.microsoft.com/">Visual Studio Code</a>
+            <a href="https://code.visualstudio.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
@@ -147,7 +147,7 @@ All desktop operating systems come with a basic text editor. These editors are a
           <li><a href="https://www.gnu.org/software/emacs/">Emacs</a></li>
           <li><a href="https://www.vim.org/" rel="external">VIM</a></li>
           <li>
-            <a href="https://visualstudio.microsoft.com/">Visual Studio Code</a>
+            <a href="https://code.visualstudio.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
@@ -159,7 +159,7 @@ All desktop operating systems come with a basic text editor. These editors are a
       <td>ChromeOS</td>
       <td>
         <ul>
-          <li><a href="https://en.wikipedia.org/wiki/Text_(Chrome_app)">Text</a></li>
+          <li><a href="https://github.com/GoogleChromeLabs/text-app">Text</a></li>
         </ul>
       </td>
       <td>

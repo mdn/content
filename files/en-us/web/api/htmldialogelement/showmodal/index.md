@@ -8,10 +8,11 @@ browser-compat: api.HTMLDialogElement.showModal
 
 {{ APIRef("HTML DOM") }}
 
-The **`showModal()`** method of the
-{{domxref("HTMLDialogElement")}} interface displays the dialog as a modal, over the top
-of any other dialogs that might be present. It displays in the {{glossary("top layer")}}, along with a
-{{cssxref('::backdrop')}} pseudo-element. Elements inside the same document as the dialog, except the dialog and its descendants, become _inert_ (as if the [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute is specified). Only the containing document becomes blocked; if the dialog is rendered inside an iframe, the rest of the page remains interactive.
+The **`showModal()`** method of the {{domxref("HTMLDialogElement")}} interface displays the dialog as a modal dialog, over the top of any other dialogs or elements that might be visible.
+
+A modal dialog displays in the {{glossary("top layer")}}, along with a {{cssxref('::backdrop')}} pseudo-element.
+Elements inside the same document as the dialog, except the dialog and its descendants, become _inert_ (as if the [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute is specified).
+Only the containing document becomes blocked; if the dialog is rendered inside an iframe, the rest of the page remains interactive.
 
 ## Syntax
 
@@ -34,69 +35,52 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-### Opening a modal dialog
+### Basic usage
 
-The following example shows a button that, when clicked, opens a modal {{htmlelement("dialog")}} containing a form via the `HTMLDialogElement.showModal()` function. While open, everything other than the modal dialog's contents is inert. From there you can click the _Cancel_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} function), or submit the form via the submit button. Selecting the cancel button closes the dialog, creating a {{domxref("HTMLDialogElement/close_event", "close")}} event, not a {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event.
+The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} using the `showModal()` method.
+
+When the dialog is open, you cannot interact with the rest of the page, including clicking the _Click me_ button that would otherwise trigger an alert.
+
+You can click the _Close dialog_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} method).
 
 #### HTML
 
 ```html
-<!-- pop-up dialog box, containing a form -->
-<dialog id="favDialog">
-  <form method="dialog">
-    <p>
-      <label for="favAnimal">Favorite animal:</label>
-      <select id="favAnimal" name="favAnimal">
-        <option></option>
-        <option>Brine shrimp</option>
-        <option>Red panda</option>
-        <option>Spider monkey</option>
-      </select>
-    </p>
-    <div>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
-    </div>
-  </form>
+<dialog id="dialog">
+  <button type="button" id="close">Close dialog</button>
 </dialog>
 
-<div>
-  <button id="updateDetails">Update details</button>
-</div>
+<p><button id="open">Open dialog</button></p>
+<p><button id="alert">Trigger alert</button></p>
 ```
 
 #### JavaScript
 
 ```js
-const updateButton = document.getElementById("updateDetails");
-const cancelButton = document.getElementById("cancel");
-const dialog = document.getElementById("favDialog");
-dialog.returnValue = "favAnimal";
+const dialog = document.getElementById("dialog");
+const openButton = document.getElementById("open");
+const closeButton = document.getElementById("close");
+const alertButton = document.getElementById("alert");
 
-function openCheck(dialog) {
-  if (dialog.open) {
-    console.log("Dialog open");
-  } else {
-    console.log("Dialog closed");
-  }
-}
-
-// Update button opens a modal dialog
-updateButton.addEventListener("click", () => {
+// Open button opens a modal dialog
+openButton.addEventListener("click", () => {
   dialog.showModal();
-  openCheck(dialog);
 });
 
-// Form cancel button closes the dialog box
-cancelButton.addEventListener("click", () => {
-  dialog.close("animalNotChosen");
-  openCheck(dialog);
+// Alert button triggers an alert
+alertButton.addEventListener("click", () => {
+  alert("you clicked me!");
+});
+
+// Close button closes the dialog box
+closeButton.addEventListener("click", () => {
+  dialog.close();
 });
 ```
 
 #### Result
 
-{{EmbedLiveSample("Opening a modal dialog")}}
+{{EmbedLiveSample("Basic usage", '100%', "250px")}}
 
 ## Specifications
 
@@ -108,4 +92,5 @@ cancelButton.addEventListener("click", () => {
 
 ## See also
 
-- The HTML element implementing this interface: {{ HTMLElement("dialog") }}.
+- HTML {{htmlelement("dialog")}} element
+- {{domxref("HTMLDialogElement.show()")}}

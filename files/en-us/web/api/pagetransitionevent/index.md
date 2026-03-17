@@ -25,17 +25,6 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
 ## Example
 
-### HTML
-
-```html
-<!doctype html>
-<html lang="en-US">
-  <body></body>
-</html>
-```
-
-### JavaScript
-
 ```js
 window.addEventListener("pageshow", (event) => {
   if (event.persisted) {

@@ -36,7 +36,7 @@ It's hard to imagine a game without collision detection — we always need to wo
 
 The concept of virtual reality is not new, but it's storming onto the web thanks to hardware advancements such as the [Meta Quest](https://www.meta.com/quest/), and the (currently experimental) [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) for capturing information from XR hardware and making it available for use in JavaScript applications. For more, read [WebXR — Virtual and Augmented Reality for the Web](/en-US/docs/Games/Techniques/3D_on_the_web/WebXR).
 
-There's also the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) article showing you how easy it is to build 3D environments for virtual reality using the [A-Frame](https://aframe.io/) framework.
+There's also the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) article showing you how to build 3D environments for virtual reality using the [A-Frame](https://aframe.io/) framework.
 
 ## The rise of libraries and frameworks
 
@@ -58,7 +58,7 @@ PlayCanvas is a popular 3D WebGL game engine open-sourced on GitHub, with an edi
 
 ### Building up a basic demo with Three.js
 
-Three.js, like any other library, gives you a huge advantage: instead of writing hundreds of lines of WebGL code to build anything interesting you can use built-in helper functions to do it a lot easier and faster. See the [Building up a basic demo with Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) subpage for the step-by-step process of creating the demo.
+Three.js, like any other library, gives you a huge advantage: instead of writing hundreds of lines of WebGL code to build anything interesting you can use built-in helper functions to do it a lot faster. See the [Building up a basic demo with Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) subpage for the step-by-step process of creating the demo.
 
 ### Other tools
 

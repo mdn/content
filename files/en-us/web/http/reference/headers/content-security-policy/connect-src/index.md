@@ -73,23 +73,22 @@ Content-Security-Policy: connect-src https://example.com/
 The following connections are blocked and won't load:
 
 ```html
-<a ping="https://not-example.com">
-  <script>
-    const response = fetch("https://not-example.com/");
+<a ping="https://not-example.com" href="/">Link</a>
+<script>
+  const response = fetch("https://not-example.com/");
 
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://not-example.com/");
-    xhr.send();
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://not-example.com/");
+  xhr.send();
 
-    const ws = new WebSocket("wss://not-example.com/");
+  const ws = new WebSocket("wss://not-example.com/");
 
-    const es = new EventSource("https://not-example.com/");
+  const es = new EventSource("https://not-example.com/");
 
-    navigator.sendBeacon("https://not-example.com/", {
-      /* … */
-    });
-  </script></a
->
+  navigator.sendBeacon("https://not-example.com/", {
+    /* … */
+  });
+</script>
 ```
 
 ## Specifications

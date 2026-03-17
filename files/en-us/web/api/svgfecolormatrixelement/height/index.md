@@ -39,6 +39,6 @@ console.log(verticalSize.baseVal.value); // the `height` value
 - {{domxref("SVGFEColorMatrixElement.width")}}
 - CSS {{cssxref("blend-mode")}} data type
 - CSS {{cssxref("mix-blend-mode")}} property
-- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects)
+- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects)
 - SVG {{SVGElement("filter")}} element, SVG {{SVGAttr("filter")}} attribute in [SVG](/en-US/docs/Web/SVG)
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

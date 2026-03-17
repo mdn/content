@@ -40,8 +40,8 @@ This article provides information about the changes in Firefox 71 that will affe
 
 ### CSS
 
-- Added the [subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid) value from CSS Grid Level 2 to {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} ([Firefox bug 1580894](https://bugzil.la/1580894))
-- Added support for the {{cssxref("column-span")}} property to [Multiple-column Layout](/en-US/docs/Web/CSS/CSS_multicol_layout) ([Firefox bug 1426010](https://bugzil.la/1426010))
+- Added the [subgrid](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid) value from CSS Grid Level 2 to {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} ([Firefox bug 1580894](https://bugzil.la/1580894))
+- Added support for the {{cssxref("column-span")}} property to [Multiple-column Layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) ([Firefox bug 1426010](https://bugzil.la/1426010))
 - Added support for the `path()` value of {{cssxref("clip-path")}} ([Firefox bug 1488530](https://bugzil.la/1488530))
 - Mapped the `height` and `width` HTML attributes on the {{htmlelement("img")}} element to an internal {{cssxref("aspect-ratio")}} property ([Firefox bug 1585637](https://bugzil.la/1585637)). [See the guide to this feature on MDN](/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images).
 

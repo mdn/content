@@ -1,5 +1,6 @@
 ---
-title: br_table
+title: "br_table: Wasm text instruction"
+short-title: br_table
 slug: WebAssembly/Reference/Control_flow/br_table
 page-type: webassembly-instruction
 sidebar: webassemblysidebar

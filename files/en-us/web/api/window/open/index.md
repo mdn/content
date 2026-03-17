@@ -81,7 +81,7 @@ open(url, target, windowFeatures)
 ### Return value
 
 If the browser successfully opens the new browsing context, a [`WindowProxy`](/en-US/docs/Glossary/WindowProxy) object is returned.
-The returned reference can be used to access properties and methods of the new context as long as it complies with [the same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security requirements.
+The returned reference can be used to access properties and methods of the new context as long as it complies with [the same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy) security requirements.
 
 If the {{httpheader("Cross-Origin-Opener-Policy")}} HTTP header is being used, and the document policies are such that the document is opened in a new {{glossary("Browsing context","browsing context group")}}, references to the opened window are severed and the returned object will indicate that the opened window is closed ({{domxref("Window.closed","closed")}} is `true`).
 
@@ -252,7 +252,7 @@ console.log(sameOriginContext.origin);
 // https://example.com
 ```
 
-For more information, refer to the [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) article.
+For more information, refer to the [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy) article.
 
 ## Accessibility concerns
 
@@ -310,4 +310,4 @@ When extreme changes in context are explicitly identified before they occur, the
 - [`window.focus()`](/en-US/docs/Web/API/Window/focus)
 - [`window.opener`](/en-US/docs/Web/API/Window/opener)
 - [`rel="opener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#opener) and [`rel="noopener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#noopener)
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)

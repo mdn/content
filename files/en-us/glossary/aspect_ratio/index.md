@@ -41,8 +41,8 @@ myTrack.applyConstraints(constraints);
 ## See also
 
 - CSS {{cssxref("aspect-ratio")}} property
-- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio) guide
-- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios) guide
+- [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
 - Related glossary terms:
   - {{glossary("intrinsic size")}}
 - CSS {{cssxref("min-content")}}, {{cssxref("max-content")}}, and {{cssxref("fit-content")}} property values.

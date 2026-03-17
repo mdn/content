@@ -32,7 +32,9 @@ async function signIn() {
         {
           configURL: "https://accounts.idp.example/config.json",
           clientId: "********",
-          nonce: "******",
+          params: {
+            /* IdP-specific parameters */
+          },
         },
       ],
     },
@@ -56,4 +58,4 @@ Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedC
 
 ## See also
 
-- [Federated Credential Management API](https://privacysandbox.google.com/cookies/fedcm)
+- [Federated Credential Management API](https://developer.chrome.com/docs/identity/fedcm/overview)

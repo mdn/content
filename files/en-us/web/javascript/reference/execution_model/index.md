@@ -49,7 +49,7 @@ The diagram below illustrates the execution model of agents:
 
 ## Realms
 
-Each agent owns one or more **realms**. Each piece of JavaScript code is associated with a realm when it's loaded, which remains the same even when called from another realm. A realm consists of the follow information:
+Each agent owns one or more **realms**. Each piece of JavaScript code is associated with a realm when it's loaded, which remains the same even when called from another realm. A realm consists of the following information:
 
 - A list of intrinsic objects like `Array`, `Array.prototype`, etc.
 - Globally declared variables, the value of [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), and the global object
@@ -61,7 +61,7 @@ Realms are usually mentioned when talking about the identities of global objects
 
 ## Stack and execution contexts
 
-We first consider synchronous code execution. Each [job](#job_queue_and_event_loop) enters by calling its associated callback. Code inside this callback may create variables, call functions, or exit. Each function needs to keep track of its own variable environments and where to return to. To handle this, the agent needs a stack to keep track of the execution contexts. A **execution context**, also known generally as a _stack frame_, is the smallest unit of execution. It tracks the following information:
+We first consider synchronous code execution. Each [job](#job_queue_and_event_loop) enters by calling its associated callback. Code inside this callback may create variables, call functions, or exit. Each function needs to keep track of its own variable environments and where to return to. To handle this, the agent needs a stack to keep track of the execution contexts. An **execution context**, also known generally as a _stack frame_, is the smallest unit of execution. It tracks the following information:
 
 - Code evaluation state
 - The module or script, the function (if applicable), and the currently executing [generator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) that contains this code
@@ -173,7 +173,7 @@ promise.then(() => {
 
 In this example, we create an already-resolved promise, which means any callback attached to it will be immediately scheduled as jobs. The two callbacks seem to cause a race condition, but actually, the output is fully predictable: `1` and `2` will be logged in order. This is because each job runs to completion before the next one is executed, so the overall order is always `i += 1; console.log(i); i += 1; console.log(i);` and never `i += 1; i += 1; console.log(i); console.log(i);`.
 
-A downside of this model is that if a job takes too long to complete, the web application is unable to process user interactions like click or scroll. The browser mitigates this with the "a script is taking too long to run" dialog. A good practice to follow is to make job processing short and if possible cut down one job into several jobs.
+A downside of this model is that if a job takes too long to complete, the web application is unable to process user interactions like click or scroll. The browser mitigates this with the "a script is taking too long to run" dialog. A good practice to follow is to make job processing short and, if possible, cut down one job into several jobs.
 
 ### Never blocking
 

@@ -3,12 +3,10 @@ title: "NavigationHistoryEntry: id property"
 short-title: id
 slug: Web/API/NavigationHistoryEntry/id
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigationHistoryEntry.id
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`id`** read-only property of the {{domxref("NavigationHistoryEntry")}} interface returns the `id` of the history entry, or an empty string if current document is not fully active. This is a unique, UA-generated value that always represents a specific history entry, useful to correlate it with an external resource such as a storage cache.
 

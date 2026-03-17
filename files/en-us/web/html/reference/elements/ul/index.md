@@ -212,6 +212,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - CSS properties that may be specially useful to style the `<ul>` element:
   - the {{CSSxRef("list-style")}} property, to choose the way the ordinal displays.
-  - [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), to handle complex nested lists.
+  - [CSS counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters), to handle complex nested lists.
   - the {{CSSxRef("line-height")}} property, to simulate the deprecated [`compact`](#compact) attribute.
   - the {{CSSxRef("margin")}} property, to control the list indentation.

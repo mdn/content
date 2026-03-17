@@ -147,6 +147,9 @@ Add these lines right below the `"name"`:
 
 So this is the config file that defines your package. This is good for now, so let's move on.
 
+> [!NOTE]
+> [The package.json file](https://scrimba.com/intro-to-git-c0l4grs2sa) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba provides a practical introduction to using `package.json` files.
+
 ### Installing Vite
 
 We will first install Vite, the build tool for our website. It is responsible for bundling our HTML, CSS, and JavaScript files into an optimized bundle for the browser.
@@ -199,7 +202,7 @@ In Vite, the `index.html` file is front and central. It defines the starting poi
 </html>
 ```
 
-Note that the `<script>` elements creates a dependency on a file called `src/main.jsx`, which declares the entry point of the JavaScript logic for the app. Create the `src` folder and create `main.jsx` in this folder, but leave it blank for now.
+Note that the `<script>` element creates a dependency on a file called `src/main.jsx`, which declares the entry point of the JavaScript logic for the app. Create the `src` folder and create `main.jsx` in this folder, but leave it blank for now.
 
 > [!NOTE]
 > The [`type="module"`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute is important. It tells the browser to treat the script as an ES module, which allows us to use `import` and `export` syntax in our JavaScript code. The file extension is `.jsx`, because in the next article, we will add React JSX syntax to it. Browsers don't understand JSX, but Vite will transform it to regular JavaScript for us, as if browsers do!

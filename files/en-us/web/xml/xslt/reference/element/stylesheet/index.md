@@ -7,7 +7,7 @@ sidebar: xmlsidebar
 
 The `<xsl:stylesheet>` element (or the equivalent `<xsl:transform>` element) is the outermost element of a stylesheet.
 
-### Namespace Declaration
+## Namespace Declaration
 
 A pseudo-attribute required to identify the document as an XSLT stylesheet. Typically this is `xmlns:xsl="http://www.w3.org/1999/XSL/Transform"`.
 

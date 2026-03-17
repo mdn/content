@@ -13,7 +13,7 @@ browser-compat:
   - http.headers.Content-Encoding.dcz
   - http.headers.Dictionary-ID
   - http.headers.Use-As-Dictionary
-spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary
+spec-urls: https://www.rfc-editor.org/rfc/rfc9842
 sidebar: http
 ---
 
@@ -184,11 +184,14 @@ Note that you will need {{glossary("OpenSSL")}} installed locally as well as Bro
 
 Compression algorithms are at risk of security attacks, so there are a number of restrictions for Compression Dictionary Transport, including:
 
-- Dictionaries must same-origin with the resource using the dictionary.
+- Dictionaries must be same-origin with the resource using the dictionary.
 - Dictionary-compressed resources must be same-origin with the document origin, or follow the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) rules, and so be requested with the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute and served with an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
 - Dictionaries are bound by the usual HTTP Cache partitioning and so cannot be shared between origins even if they download the same resources. The dictionary will need to be downloaded again for each origin.
 
 Additionally, dictionaries could themselves become tracking vectors so browsers may restrict this feature when cookies are disabled or when other extra privacy protections are enabled.
+
+As with other resources, if a website uses the {{HTTPHeader("Content-Security-Policy")}} header, the compression dictionary must be an allowed source in order for it to be loaded.
+In particular, when loading a [separate dictionary](#separate_dictionary) using [`<link rel="compression-dictionary">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary), the `connect-src` directive (or `default-src`, if `connect-src` is not set) must allow the dictionary location.
 
 ## Specifications
 
@@ -209,5 +212,5 @@ Additionally, dictionaries could themselves become tracking vectors so browsers 
 - {{HTTPHeader("Available-Dictionary")}}
 - {{HTTPHeader("Dictionary-ID")}}
 - {{HTTPHeader("Use-As-Dictionary")}}
-- [Draft specification](https://datatracker.ietf.org/doc/draft-ietf-httpbis-compression-dictionary/)
+- [RFC 9842: Compression Dictionary Transport](https://www.rfc-editor.org/rfc/rfc9842)
 - [Resources for Compression Dictionary Transport](https://use-as-dictionary.com/)

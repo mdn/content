@@ -8,7 +8,7 @@ sidebar: addonsidebar
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
 
-By default, of course, web pages can specify the fonts they want using CSS properties like [`font-family`](/en-US/docs/Web/CSS/font-family). This setting enables an extension to instruct Firefox to ignore the fonts specified by the page, and only use system fonts.
+By default, of course, web pages can specify the fonts they want using CSS properties like [`font-family`](/en-US/docs/Web/CSS/Reference/Properties/font-family). This setting enables an extension to instruct Firefox to ignore the fonts specified by the page, and only use system fonts.
 
 Its underlying value is a boolean:
 

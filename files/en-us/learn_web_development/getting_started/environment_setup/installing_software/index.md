@@ -49,7 +49,7 @@ The most common browsers you'll come across are as follows:
   - WebKit: [Apple Safari](https://www.apple.com/safari/).
 - Mobile/alternative device browsers:
   - Chromium (Android): [Google Chrome](https://www.google.com/chrome/go-mobile/), [Opera](https://www.opera.com/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge/mobile), [Samsung Internet](https://www.samsung.com/us/support/owners/app/samsung-internet), [Vivaldi](https://vivaldi.com/android/).
-  - Gecko (Android): [Mozilla Firefox](https://www.firefox.com/en-US/browsers/mobile/android/).
+  - Gecko (Android): [Mozilla Firefox](https://www.firefox.com/en-US/download/android/).
   - WebKit (iOS): [Apple Safari](https://www.apple.com/safari/).
     > [!NOTE]
     > Most of the Android browsers listed above have iOS versions, but these were historically all powered by Apple's WebKit engine under the hood due to Apple's App Store rules. At the time of writing, browsers are starting to create versions of their iOS browsers based on their own rendering engines, due to regulatory changes. See [Apple is finally allowing full versions of Chrome and Firefox to run on the iPhone](https://www.theverge.com/2024/1/25/24050478/apple-ios-17-4-browser-engines-eu).
@@ -95,7 +95,7 @@ There are many free software tools and online services that will probably be goo
 - The built-in Windows [Photos app](https://support.microsoft.com/en-gb/windows/manage-photos-and-videos-with-microsoft-photos-app-c0c6422f-d4cb-2e3d-eb65-7069071b2f9b) comes with many similar features.
 - The [tinypng](https://tinypng.com/) website, provides a free service allowing you to compress PNGs, JPEGs, and more. This is a very common task you'll have to do when preparing assets for use on a website.
 
-In terms of commercial offerings, [Adobe Photoshop](https://www.adobe.com/products/photoshop.html) has long been the industry standard especially for photo editing, while programs like [Sketch](https://www.sketch.com/) are better suited to icon and UI work. There are also popular newcomers such as [Figma](https://www.figma.com/), [The Affinity Suite](https://affinity.serif.com/en-us/), and [Canva](https://www.canva.com/).
+In terms of commercial offerings, [Adobe Photoshop](https://www.adobe.com/products/photoshop.html) has long been the industry standard especially for photo editing, while programs like [Sketch](https://www.sketch.com/) are better suited to icon and UI work. There are also popular newcomers such as [Figma](https://www.figma.com/), [The Affinity Suite](https://www.affinity.studio/), and [Canva](https://www.canva.com/).
 
 Most of the above apps have trials or free modes there are worth exploring. There are also some well-regarded free apps available such as [GIMP](https://www.gimp.org/), [Adobe Express](https://www.adobe.com/express/), and [Paint.NET](https://www.getpaint.net/).
 

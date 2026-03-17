@@ -38,4 +38,4 @@ if (navigator.userActivation.isActive) {
 
 - {{domxref("UserActivation")}}
 - {{domxref("UserActivation.hasBeenActive")}}
-- [Features gated by user activation](/en-US/docs/Web/Security/User_activation)
+- [Features gated by user activation](/en-US/docs/Web/Security/Defenses/User_activation)

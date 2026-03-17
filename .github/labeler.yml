@@ -4,7 +4,7 @@ system:
   - changed-files:
       - any-glob-to-any-file:
           - package.json
-          - yarn.lock
+          - package-lock.json
           - .github/**
           - .vscode/**
           - .*

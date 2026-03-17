@@ -13,11 +13,8 @@ For those who may have found XLink 1.0 cumbersome for regular links, XLink 1.1 d
 
 XLink is used in [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML), and other important standards.
 
-### Specifications
+## See also
 
 - [XLink 1.1](https://www.w3.org/TR/xlink/)
-
-### See also
-
 - [XML](/en-US/docs/Web/XML)
 - [Code snippets:getAttributeNS](/en-US/docs/Web/API/Element/getAttributeNS) - a wrapper for dealing with some browsers not supporting this DOM method

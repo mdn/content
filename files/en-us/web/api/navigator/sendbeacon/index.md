@@ -35,9 +35,9 @@ sendBeacon(url, data)
     a string literal or object, a {{domxref("FormData")}} or a {{domxref("URLSearchParams")}}
     object containing the data to send.
 
-### Return values
+### Return value
 
-The **`sendBeacon()`** method returns `true` if the
+Returns `true` if the
 {{glossary("user agent")}} successfully queued the `data` for transfer.
 Otherwise, it returns `false`.
 

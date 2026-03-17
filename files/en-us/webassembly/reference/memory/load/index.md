@@ -1,7 +1,7 @@
 ---
 title: "load: Wasm text instruction"
 short-title: load
-slug: WebAssembly/Reference/Memory/Load
+slug: WebAssembly/Reference/Memory/load
 page-type: webassembly-instruction
 browser-compat:
   - webassembly.api.Memory

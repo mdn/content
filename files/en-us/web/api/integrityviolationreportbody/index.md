@@ -29,7 +29,7 @@ They have a {{domxref("Report.type","type")}} of `"integrity-violation"`, a {{do
 
 ## Description
 
-Integrity Policy violations are reported when a document attempts to load a resource that does not meet the [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees of a policy set using either the {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers.
+Integrity Policy violations are reported when a document attempts to load a resource that does not meet the [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) guarantees of a policy set using either the {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers.
 
 Specifically, a report is sent when a document attempts to load a {{htmlelement("script")}} resource (or other [request destination](/en-US/docs/Web/API/Request/destination) listed in the policy) that does not have valid integrity metadata, or to make a request in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
 
@@ -162,5 +162,5 @@ The report in this case would look the same as our JSON report in the previous e
 - {{HTTPHeader("Integrity-Policy")}}
 - {{HTTPHeader("Integrity-Policy-Report-Only")}}
 - {{HTTPHeader("Reporting-Endpoints")}}
-- [Integrity Policy](/en-US/docs/Web/Security/Subresource_Integrity#integrity_policy) in [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity#integrity_policy)
+- [Integrity Policy](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy) in [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy)
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)

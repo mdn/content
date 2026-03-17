@@ -18,7 +18,7 @@ Firefox 95 was released on December 7, 2021.
 
 ### CSS
 
-- The CSS [`cursor`](/en-US/docs/Web/CSS/cursor) property is now supported on Firefox for Android,
+- The CSS [`cursor`](/en-US/docs/Web/CSS/Reference/Properties/cursor) property is now supported on Firefox for Android,
   making it easier for Android users with a mouse to determine which elements are clickable ([Firefox bug 1672609](https://bugzil.la/1672609)).
 
 ### JavaScript

@@ -32,8 +32,7 @@ createConicGradient(startAngle, x, y)
 
 ### Return value
 
-- {{domxref("CanvasGradient")}}
-  - : A conic `CanvasGradient`.
+A conic {{domxref("CanvasGradient")}}.
 
 ## Examples
 

@@ -24,7 +24,7 @@ An object or `null`.
 ## Examples
 
 In the example below, the {{domxref('PaymentRequest.shippingaddresschange_event', 'shippingaddresschange')}} and the {{domxref('PaymentRequest.shippingoptionchange_event', 'shippingoptionchange')}} events are dispatched.
-In each calls to `updateDetails()` are made, one using a promise, and the other with a plain JS object.
+In each event, `updateWith()` is called, one using a promise, and the other with a plain JS object.
 This demonstrates synchronous and asynchronous updates to a payment sheet.
 
 ```js

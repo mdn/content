@@ -3,13 +3,9 @@ title: Map.prototype.getOrInsertComputed()
 short-title: getOrInsertComputed()
 slug: Web/JavaScript/Reference/Global_Objects/Map/getOrInsertComputed
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Map.getOrInsertComputed
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`getOrInsertComputed()`** method of {{jsxref("Map")}} instances returns the value corresponding to the specified key in this `Map`. If the key is not present, it inserts a new entry with the key and a default value computed from a given callback, and returns the inserted value.
 
@@ -46,6 +42,11 @@ getOrInsertComputed(key, callback)
 ### Return value
 
 The value associated with the specified key in the `Map` object. If the key can't be found, the result of `callback(key)` is inserted and returned.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `callback` isn't callable.
 
 ## Examples
 

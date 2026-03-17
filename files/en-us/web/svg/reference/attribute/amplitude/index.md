@@ -21,7 +21,7 @@ You can use this attribute with the following SVG elements:
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
     </tr>
     <tr>
       <th scope="row">Default value</th>

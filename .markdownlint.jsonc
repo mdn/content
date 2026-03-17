@@ -14,7 +14,6 @@
   "no-hard-tabs": {
     "spaces_per_tab": 2,
   },
-  "line-length": false,
   "no-duplicate-heading": {
     "siblings_only": true,
   },
@@ -31,7 +30,9 @@
     "style": "ordered",
   },
   // Duplicate with with Prettier
+  "line-length": false,
   "blanks-around-fences": false,
+  "table-column-style": false,
   "no-inline-html": {
     "allowed_elements": [
       "a",

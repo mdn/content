@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-A **grid area** is one or more {{glossary("grid cell", "grid cells")}} that make up a rectangular area on the grid. Grid areas are created when you place an item using [line-based placement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement) or when defining areas using [named grid areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas).
+A **grid area** is one or more {{glossary("grid cell", "grid cells")}} that make up a rectangular area on the grid. Grid areas are created when you place an item using [line-based placement](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement) or when defining areas using [named grid areas](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas).
 
 ![Image showing a highlighted grid area](1_grid_area.png)
 
@@ -75,6 +75,6 @@ In the example below I have a grid container with two grid items. I have named t
 ### Further reading
 
 - CSS grid layout Guide:
-  - [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-  - [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+  - [Basic concepts of grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+  - [Grid template areas](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
 - [Definition of grid areas in the CSS grid layout specification](https://drafts.csswg.org/css-grid/#grid-area-concept)

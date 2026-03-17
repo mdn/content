@@ -86,6 +86,6 @@ document
 - {{domxref("DOMMatrixReadOnly.scale()")}}
 - {{domxref("DOMMatrix.scale3dSelf()")}}
 - CSS {{cssxref("transform")}} property and the {{cssxref("transform-function/scale", "scaleSelf()")}} and {{cssxref("transform-function/matrix", "matrix()")}} functions
-- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module
 - SVG [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) attribute
 - {{domxref("CanvasRenderingContext2D")}} interface {{domxref("CanvasRenderingContext2D.transform()", "transform()")}} method

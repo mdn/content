@@ -84,7 +84,7 @@ A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref("MediaStr
 
 As an API that may involve significant privacy concerns, `getUserMedia()`'s specification lays out a wide array of privacy and security requirements that browsers are obligated to meet.
 
-`getUserMedia()` is a powerful feature that can only be used in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts); in insecure contexts, `navigator.mediaDevices` is `undefined`, preventing access to `getUserMedia()`.
+`getUserMedia()` is a powerful feature that can only be used in [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts); in insecure contexts, `navigator.mediaDevices` is `undefined`, preventing access to `getUserMedia()`.
 A secure context is, in short, a page loaded using HTTPS or the `file:///` URL scheme, or a page loaded from `localhost`.
 
 In addition, user permission is always required to access the user's audio and video inputs.
@@ -138,7 +138,7 @@ Here, indicate we need the ability to use both camera and microphone:
 
 #### Encryption based security
 
-The `getUserMedia()` method is only available in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts).
+The `getUserMedia()` method is only available in [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 A secure context is one the browser is reasonably confident contains a document which was loaded securely, using HTTPS/TLS, and has limited exposure to insecure contexts.
 If a document isn't loaded in a secure context, the {{domxref("navigator.mediaDevices")}} property is `undefined`, making access to `getUserMedia()` impossible.
 

@@ -11,7 +11,7 @@ The **`Worker`** interface of the [Web Workers API](/en-US/docs/Web/API/Web_Work
 
 Creating a worker is done by calling the `Worker("path/to/worker/script")` constructor.
 
-Workers may themselves spawn new workers, as long as those workers are hosted at the same [origin](/en-US/docs/Web/Security/Same-origin_policy) as the parent page.
+Workers may themselves spawn new workers, as long as those workers are hosted at the same [origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) as the parent page.
 
 Note that not all interfaces and functions are available to web workers. See [Functions and classes available to Web Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) for details.
 

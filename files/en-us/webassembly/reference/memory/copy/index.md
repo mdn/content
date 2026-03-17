@@ -1,7 +1,7 @@
 ---
 title: "copy: Wasm text instruction"
 short-title: copy
-slug: WebAssembly/Reference/Memory/Copy
+slug: WebAssembly/Reference/Memory/copy
 page-type: webassembly-instruction
 browser-compat:
   - webassembly.bulk-memory-operations
@@ -10,7 +10,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`copy`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) copies data from one region of a memory to another.
+The **`memory.copy`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) copies data from one region of a memory to another.
 
 The instruction does not return a value.
 If either the source or destination range is out of bounds, the instruction traps.

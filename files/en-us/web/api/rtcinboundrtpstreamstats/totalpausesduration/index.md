@@ -21,7 +21,7 @@ The average pause duration can be calculated using `totalPausesDuration / pauseC
 
 ## Value
 
-An positive number, in seconds.
+A positive number, in seconds.
 
 ## Specifications
 

@@ -9,7 +9,7 @@ sidebar: glossarysidebar
 
 These kinds of apps enjoy all the best parts of the Web — such as discoverability via search engines, being linkable via {{Glossary("URL")}}s, and working across multiple form factors, but are progressively enhanced with modern APIs (such as [Service Workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API)).
 
-These features include being installable, working offline, and being easy to sync with and re-engage the user from the server.
+These features include being installable, working offline, and syncing with and re-engaging the user from the server.
 
 ## See also
 

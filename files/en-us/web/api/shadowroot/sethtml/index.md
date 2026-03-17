@@ -3,12 +3,19 @@ title: "ShadowRoot: setHTML() method"
 short-title: setHTML()
 slug: Web/API/ShadowRoot/setHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ShadowRoot.setHTML
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
-The **`setHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an XSS-safe method to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, which then replaces the existing tree in the Shadow DOM.
+The **`setHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an XSS-safe method to parse and sanitize a string of HTML, which then replaces the existing tree in the Shadow DOM.
+
+The method removes any elements and attributes that are considered XSS-unsafe, even if allowed by a passed sanitizer.
+Notably, the following elements are always removed: {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{SVGElement("use")}}, and event handler attributes.
+
+It is recommended (if supported) as a drop-in replacement for {{domxref("ShadowRoot.innerHTML")}} when setting a user-provided string of HTML.
 
 ## Syntax
 
@@ -24,9 +31,11 @@ setHTML(input, options)
 - `options` {{optional_inline}}
   - : An options object with the following optional parameters:
     - `sanitizer`
-      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the default sanitizer configuration.
-        Note that generally a `"Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to reused.
-        If not specified, the default sanitizer configuration is used.
+      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
+        The method will remove any XSS-unsafe elements and attributes, even if allowed by the sanitizer.
+        If not specified, the default `Sanitizer` configuration is used.
+
+        Note that if you're using the same configuration multiple times, it's expected to be more efficient to use a `Sanitizer` and modify it when you need to.
 
 ### Return value
 
@@ -36,7 +45,8 @@ None (`undefined`).
 
 - `TypeError`
   - : This is thrown if `options.sanitizer` is passed a:
-    - non-normalized {{domxref("SanitizerConfig")}} (one that includes both "allowed" and "removed" configuration settings).
+    - {{domxref("SanitizerConfig")}} that isn't [valid](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
+      For example, a configuration that includes both "allowed" and "removed" configuration settings.
     - string that does not have the value `"default"`.
     - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
 
@@ -46,10 +56,11 @@ The **`setHTML()`** method provides an XSS-safe method to parse and sanitize a s
 
 `setHTML()` removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer configuration.
 
-If no sanitizer configuration is specified in the `options.sanitizer` parameter, `setHTML()` is used with the default {{domxref("Sanitizer")}} configuration.
-This configuration allows all elements and attributes that are considered XSS-safe, thereby disallowing entities that are considered unsafe.
-A custom sanitizer or sanitizer configuration can be specified to choose which elements, attributes, and comments are allowed or removed.
-Note that even if unsafe options are allowed by the sanitizer configuration, they will still be removed when using this method (which implicitly calls {{domxref('Sanitizer.removeUnsafe()')}}).
+If no sanitizer is specified in the `options.sanitizer` parameter, `setHTML()` is used with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
+This configuration is suitable for the majority of use cases as it prevents XSS attacks, as well as other attacks like clickjacking or spoofing.
+
+A custom `Sanitizer` or `SanitizerConfig` can be specified to choose which elements, attributes, and comments are allowed or removed.
+Note that even if unsafe options are allowed by the sanitizer, they will still be removed when using this method (it removes the same elements as a sanitizer on which {{domxref('Sanitizer.removeUnsafe()')}} has been called).
 
 `setHTML()` should be used instead of {{domxref("ShadowRoot.innerHTML")}} for inserting untrusted strings of HTML into the shadow DOM.
 It should also be used instead of {{domxref("ShadowRoot.setHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
@@ -128,7 +139,7 @@ The HTML defines two {{htmlelement("button")}} elements for applying different s
 
 ```css hidden
 #log {
-  height: 220px;
+  height: 320px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -164,8 +175,11 @@ We also get variable `shadow`, which is our handle to the shadow root.
 // Define unsafe string of HTML
 const unsanitizedString = `
   <div>
-    <p>Paragraph to inject into shadow DOM. <button onclick="alert('You clicked the button!')">Click me</button></p>
-    <script src="path/to/a/module.js" type="module"><script>
+    <p>Paragraph to inject into shadow DOM.
+      <button onclick="alert('You clicked the button!')">Click me</button>
+    </p>
+    <script src="path/to/a/module.js" type="module"><\/script>
+    <p data-id="123">Para with <code>data-</code> attribute</p>
   </div>
 `;
 
@@ -184,9 +198,9 @@ defaultSanitizerButton.addEventListener("click", () => {
 
   // Log HTML before sanitization and after being injected
   logElement.textContent =
-    "Default sanitizer: remove &lt;script&gt; element and onclick attribute\n\n";
+    "Default sanitizer: remove script element, onclick attribute, data- attribute\n\n";
   log(`\nunsanitized: ${unsanitizedString}`);
-  log(`\nsanitized: ${shadow.innerHTML}`);
+  log(`\n\nsanitized: ${shadow.innerHTML}`);
 });
 ```
 
@@ -206,7 +220,7 @@ allowScriptButton.addEventListener("click", () => {
   logElement.textContent =
     "Sanitizer: {elements: ['div', 'p', 'script']}\n Script removed even though allowed\n";
   log(`\nunsanitized: ${unsanitizedString}`);
-  log(`\nsanitized: ${shadow.innerHTML}`);
+  log(`\n\nsanitized: ${shadow.innerHTML}`);
 });
 ```
 
@@ -220,9 +234,11 @@ allowScriptButton.addEventListener("click", () => {
 #### Results
 
 Click the "Default" and "allowScript" buttons to see the effects of the default and custom sanitizer, respectively.
-Note that because we are using a same sanitization method, in both cases the `<script>` element and `onclick` handler are removed, even if explicitly allowed by the sanitizer.
 
-{{EmbedLiveSample("setHTML() live example","100","350px")}}
+Note that because we are using a safe sanitization method, in both cases the `<script>` element and `onclick` handler are removed, even if explicitly allowed by the sanitizer.
+However while the `data-` attribute is removed with the default sanitizer, it is allowed when we pass a sanitizer.
+
+{{EmbedLiveSample("setHTML() live example","100","450px")}}
 
 ## Specifications
 

@@ -25,7 +25,7 @@ A {{domxref("Node")}} that is the last child of the node, or `null` if there are
 
 ```js
 const tr = document.getElementById("row1");
-const corner_td = tr.lastChild;
+const cornerTd = tr.lastChild;
 ```
 
 ## Specifications

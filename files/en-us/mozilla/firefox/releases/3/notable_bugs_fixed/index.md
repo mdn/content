@@ -23,6 +23,6 @@ This article offers a list of important bug fixes offered by Firefox 3 that are 
 - The image-sniffing-services category allows for image decoders implemented as extensions to correctly decode images sent with incorrect mime-types. ([Firefox bug 391667](https://bugzil.la/391667))
 - Right-clicks on form controls no longer brings up a context menu by default ([Firefox bug 404536](https://bugzil.la/404536). See [Offering a context menu for form controls](https://web.archive.org/web/20210612231358/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Offering_a_context_menu_for_form_controls) to learn how to enable this on a case-by-case basis.
 
-### See also
+## See also
 
 - [Firefox 3 for developers](/en-US/docs/Mozilla/Firefox/Releases/3)

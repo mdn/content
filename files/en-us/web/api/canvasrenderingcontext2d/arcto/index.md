@@ -371,18 +371,18 @@ function findConstruction([P0, P1, P2], r, canvasSize, errorTolCenter) {
   const dir2Mag = Math2D.L2(dir2);
 
   /* Make direction vectors unit length */
-  const dir1_unit = Math2D.vector(dir1.x / dir1Mag, dir1.y / dir1Mag);
-  const dir2_unit = Math2D.vector(dir2.x / dir2Mag, dir2.y / dir2Mag);
+  const dir1Unit = Math2D.vector(dir1.x / dir1Mag, dir1.y / dir1Mag);
+  const dir2Unit = Math2D.vector(dir2.x / dir2Mag, dir2.y / dir2Mag);
 
   /* Angle between lines -- cos angle = a.b/(|a||b|)
    * Using unit vectors, so |a| = |b| = 1 */
-  const dp = Math2D.dot(dir1_unit, dir2_unit);
+  const dp = Math2D.dot(dir1Unit, dir2Unit);
   /* Test for collinearity */
   if (Math.abs(dp) > 0.999999) {
     /* Angle 0 or 180 degrees, or nearly so */
     return [false];
   }
-  const angle = Math.acos(Math2D.dot(dir1_unit, dir2_unit));
+  const angle = Math.acos(Math2D.dot(dir1Unit, dir2Unit));
 
   /* Distance to tangent points from P1 --
    * (T1, P1, C) form a right triangle (T2, P1, C) same triangle.
@@ -391,16 +391,16 @@ function findConstruction([P0, P1, P2], r, canvasSize, errorTolCenter) {
   const distToTangent = r / Math.tan(0.5 * angle);
 
   /* Locate tangent points */
-  const T1 = Math2D.linePointAt(P1, distToTangent, dir1_unit);
-  const T2 = Math2D.linePointAt(P1, distToTangent, dir2_unit);
+  const T1 = Math2D.linePointAt(P1, distToTangent, dir1Unit);
+  const T2 = Math2D.linePointAt(P1, distToTangent, dir2Unit);
 
   /* Center is along normal to tangent at tangent point at
    * a distance equal to the radius of the circle.
    * Locate center two ways. Should be equal */
-  const dirT2_T1 = Math2D.vector(T2.x - T1.x, T2.y - T1.y);
-  const dirT1_T2 = Math2D.vector(-dirT2_T1.x, -dirT2_T1.y);
-  const C1 = findCenter(T1, dir1_unit, r, dirT2_T1);
-  const C2 = findCenter(T2, dir2_unit, r, dirT1_T2);
+  const dirT2T1 = Math2D.vector(T2.x - T1.x, T2.y - T1.y);
+  const dirT1T2 = Math2D.vector(-dirT2T1.x, -dirT2T1.y);
+  const C1 = findCenter(T1, dir1Unit, r, dirT2T1);
+  const C2 = findCenter(T2, dir2Unit, r, dirT1T2);
 
   /* Error in center calculations */
   const deltaC = Math2D.vector(C2.x - C1.x, C2.y - C1.y);
@@ -423,8 +423,8 @@ function findConstruction([P0, P1, P2], r, canvasSize, errorTolCenter) {
    * is assured to be sufficiently far away and has the advantage of
    * being easily found. */
   const distToInf = canvasSize.x + canvasSize.y;
-  const L1inf = Math2D.linePointAt(P1, distToInf, dir1_unit);
-  const L2inf = Math2D.linePointAt(P1, distToInf, dir2_unit);
+  const L1inf = Math2D.linePointAt(P1, distToInf, dir1Unit);
+  const L2inf = Math2D.linePointAt(P1, distToInf, dir2Unit);
 
   return [true, L1inf, L2inf, T1, T2, C];
 } /* end of function findConstruction */

@@ -40,14 +40,12 @@ Because `SQRT1_2` is a static property of `Math`, you always use it as `Math.SQR
 
 ### Using Math.SQRT1_2
 
-The following function returns 1 over the square root of 2:
+The following function calculates the side length of a square given its diagonal length:
 
 ```js
-function getRoot1_2() {
-  return Math.SQRT1_2;
+function getSquareSideLength(diagonalLength) {
+  return diagonalLength * Math.SQRT1_2;
 }
-
-getRoot1_2(); // 0.7071067811865476
 ```
 
 ## Specifications

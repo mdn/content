@@ -59,7 +59,12 @@ async function init() {
     throw Error("WebGPU not supported.");
   }
 
-  const adapter = await navigator.gpu.requestAdapter();
+  let adapter;
+  try {
+    adapter = await navigator.gpu.requestAdapter();
+  } catch (error) {
+    console.error(error);
+  }
   if (!adapter) {
     throw Error("Couldn't request WebGPU adapter.");
   }
@@ -587,7 +592,7 @@ You can find more information about WebGPU error handling in the explainer — s
 
 ## Security requirements
 
-The whole API is available only in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+The whole API is available only in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Examples
 

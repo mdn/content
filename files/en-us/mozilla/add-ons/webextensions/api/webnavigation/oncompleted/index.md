@@ -48,14 +48,22 @@ Events have three functions:
   - : `integer`. The ID of the tab in which the navigation has occurred.
 - `url`
   - : `string`. The URL to which the given frame has navigated.
-- `processId` {{optional_inline}} {{deprecated_inline}}
-  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 - `frameId`
   - : `integer`. Frame in which the navigation has occurred. `0` indicates that navigation happened in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happened in a nested iframe. Frame IDs are unique for a given tab and process.
+- `frameType`
+  - : `string`. The type of frame the navigation occurred in. Returns the values `"outermost_frame"`, `"fenced_frame"`, and `"sub_frame"`.
 - `parentFrameId`
   - : `integer`. ID of this frame's parent. Set to `-1` if this is a top-level frame.
+- `documentId`
+  - : `string`. A UUID of the document loaded.
+- `parentDocumentId`
+  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
+- `documentLifecycle`
+  - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, and `"pending_deletion"`.
 - `timeStamp`
   - : `number`. The time at which the page finished loading, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 
 ## Examples
 

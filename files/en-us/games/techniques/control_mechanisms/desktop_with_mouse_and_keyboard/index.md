@@ -9,10 +9,10 @@ sidebar: games
 
 Now, when we have our mobile controls in place and the game is playable on touch-enabled devices, it would be good to add mouse and keyboard support so the game can be playable on desktop also. That way we can broaden the list of supported platforms. We'll look at this below.
 
-It's also easier to test control-independent features like gameplay on desktop if you develop it there, so you don't have to push the files to a mobile device every time you make a change in the source code.
+It's also more straightforward to test control-independent features like gameplay on desktop if you develop it there, so you don't have to push the files to a mobile device every time you make a change in the source code.
 
 > [!NOTE]
-> The [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's totally up to you which approach you chose.
+> The [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for faster development, but it's totally up to you which approach you chose.
 
 ## Pure JavaScript approach
 
@@ -79,7 +79,7 @@ You can see this example in action online at [end3r.github.io/JavaScript-Game-Co
 
 ## Phaser approach
 
-As I mentioned before, you can write everything on your own, but you can also take advantage of built-in functions in frameworks like Phaser. These will make your life easier and development a lot faster. All the edge cases--differences between browser implementations, etc.--are handled by the framework, so you can focus on the actual task you want to do.
+As I mentioned before, you can write everything on your own, but you can also take advantage of built-in functions in frameworks like Phaser. These should make development a lot faster. All the edge cases--differences between browser implementations, etc.--are handled by the framework, so you can focus on the actual task you want to do.
 
 ### Mouse
 

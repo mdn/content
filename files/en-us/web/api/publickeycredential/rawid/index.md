@@ -20,7 +20,7 @@ The {{domxref("PublicKeyCredential.id")}} property is a [base64url encoded](/en-
 
 ## Value
 
-A {{jsxref("ArrayBuffer")}} containing the identifier of the credentials. This
+An {{jsxref("ArrayBuffer")}} containing the identifier of the credentials. This
 identifier is expected to be globally unique and is appointed for the current
 `PublicKeyCredential` and its associated
 {{domxref("AuthenticatorAssertionResponse")}}.

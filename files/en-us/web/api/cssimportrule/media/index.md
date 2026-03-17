@@ -8,15 +8,13 @@ browser-compat: api.CSSImportRule.media
 
 {{APIRef("CSSOM")}}
 
-The read-only **`media`** property of the
-{{domxref("CSSImportRule")}} interface returns a {{domxref("MediaList")}} object,
-containing the value of the `media` attribute of the associated stylesheet.
+The read-only **`media`** property of the {{domxref("CSSImportRule")}} interface returns a {{domxref("MediaList")}} object representing the media query list of the {{cssxref("@import")}} rule.
 
 ## Value
 
-Returns a {{domxref("MediaList")}} object.
+A {{domxref("MediaList")}} object.
 
-The value of `media` can be set by passing a string containing the `media` attribute; for example `"print"`.
+Although the `media` property itself is read-only in the sense that you can't replace the `MediaList` object, you can still assign to the `media` property directly, which is equivalent to assigning to its {{domxref("MediaList/mediaText", "mediaText")}} property. You can also modify the `MediaList` object using the {{domxref("MediaList/appendMedium", "appendMedium()")}} and {{domxref("MediaList/deleteMedium", "deleteMedium()")}} methods.
 
 ## Examples
 

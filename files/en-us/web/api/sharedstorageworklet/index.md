@@ -3,11 +3,11 @@ title: SharedStorageWorklet
 slug: Web/API/SharedStorageWorklet
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SharedStorageWorklet
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`SharedStorageWorklet`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the shared storage worklet for the current origin.
 

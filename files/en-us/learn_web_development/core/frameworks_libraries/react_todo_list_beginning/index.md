@@ -211,7 +211,7 @@ The class `visually-hidden` has no effect yet, because we have not included any 
 
 Further down, you can find our [`<ul>`](/en-US/docs/Web/HTML/Reference/Elements/ul) element:
 
-```html
+```jsx
 <ul
   role="list"
   className="todo-list stack-large stack-exception"

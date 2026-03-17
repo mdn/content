@@ -119,7 +119,7 @@ Several session features and the various reference spaces have minimum security 
 | `unbounded`     | Always required                     | `xr-spatial-tracking`          |
 | `viewer`        | Always required                     | —                              |
 
-See also [transient user activation](/en-US/docs/Web/Security/User_activation).
+See also [transient user activation](/en-US/docs/Web/Security/Defenses/User_activation).
 
 ## Examples
 

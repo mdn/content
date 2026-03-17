@@ -81,4 +81,4 @@ The `referrerpolicy` attribute doesn't support multiple values, so only set `no-
 
 ## See also
 
-- [Referer header: Privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
+- [Referer header: Privacy and security concerns](/en-US/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns)

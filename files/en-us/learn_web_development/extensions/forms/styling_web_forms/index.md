@@ -345,7 +345,7 @@ form {
 }
 ```
 
-Notice that we've used some [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
+Notice that we've used some [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout) and [Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
 
 ```css
 h1 {
@@ -428,7 +428,7 @@ textarea {
 
 #### Styling the submit button
 
-The {{HTMLElement("button")}} element is really convenient to style with CSS; you can do whatever you want, even using [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements):
+The {{HTMLElement("button")}} element is really convenient to style with CSS; you can do whatever you want, even using [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements):
 
 ```css
 button {

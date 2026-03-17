@@ -26,5 +26,5 @@ If the resource that is being blocked doesn't need authentication, you can fix t
 
 ## See also
 
-- [Enhanced Tracking Protection in Firefox for desktop](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-deskto) on [support.mozilla.org](https://support.mozilla.org/)
+- [Enhanced Tracking Protection in Firefox for desktop](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) on [support.mozilla.org](https://support.mozilla.org/)
 - [The `crossorigin` attribute](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)

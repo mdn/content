@@ -25,7 +25,7 @@ Before starting this module, you should be familiar with [HTML](/en-US/docs/Lear
 - [Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
   - : Positioning allows you to take elements out of normal document flow and make them behave differently, for example, sitting on top of one another or always remaining in the same place inside the browser viewport. This article explains the different {{cssxref("position")}} values and how to use them.
 - [Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox)
-  - : [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox) is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces. This article explains all the fundamentals.
+  - : [Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases) is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces. This article explains all the fundamentals.
 - [CSS grid layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids)
   - : CSS grid layout is a two-dimensional layout system for the web. It lets you organize content into rows and columns and offers many features to simplify the creation of complex layouts. This article will explain all you need to know to get started with grid layout.
 - [Fundamental layout comprehension](/en-US/docs/Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension) <sup>Challenge</sup>
@@ -54,7 +54,9 @@ These tutorials are not part of the learning pathway, but they are interesting n
 
 ## See also
 
-- [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook)
+- [CSS layout cookbook](/en-US/docs/Web/CSS/How_to/Layout_cookbook)
   - : The CSS layout cookbook aims to bring together recipes for common layout patterns, things you might need to implement in your sites. In addition to providing code you can use as a starting point in your projects, these recipes highlight the different ways layout specifications can be used and the choices you can make as a developer.
+- [Learn Flexbox](https://scrimba.com/learn-flexbox-c0k?via=mdn) and [Learn CSS Grid](https://scrimba.com/learn-css-grid-c02k?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : These courses from Scrimba provide interactive lessons teaching you all you need to know about Flexbox and Grid.
 
 {{NextMenu("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core")}}

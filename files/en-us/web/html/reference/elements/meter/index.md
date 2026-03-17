@@ -69,7 +69,7 @@ Note that in this example the [`min`](#min) attribute is omitted. This is allowe
 ```html
 <p>
   Student's exam score:
-  <meter min="0" low="50" high="80" max="100" value="84">84%</meter>
+  <meter low="50" high="80" max="100" value="84">84%</meter>
 </p>
 ```
 
@@ -148,6 +148,6 @@ Note that in this example the [`min`](#min) attribute is omitted. This is allowe
 
 ## See also
 
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
 - {{HTMLElement("progress")}}
 - {{cssxref("::-webkit-meter-bar")}}, {{cssxref("::-webkit-meter-inner-element") }}, {{cssxref("::-webkit-meter-even-less-good-value")}}, {{cssxref("::-webkit-meter-optimum-value")}}, {{cssxref("::-webkit-meter-suboptimum-value")}}: non-standard pseudo-elements

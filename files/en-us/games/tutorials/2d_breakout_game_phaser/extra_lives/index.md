@@ -53,7 +53,7 @@ The `lifeLostText` will be shown only when the life is lost, so its visibility i
 
 ### Making our text styling DRY
 
-As you probably noticed, we're using the same styling for all three texts: `scoreText`, `livesText`, and `lifeLostText`. If we ever want to change the font size or color, we will have to do it in multiple places. To make it easier for us to maintain in the future, we can create a separate variable that will hold our styling, let's call it `textStyle` and place it before the text definitions:
+As you probably noticed, we're using the same styling for all three texts: `scoreText`, `livesText`, and `lifeLostText`. If we ever want to change the font size or color, we will have to do it in multiple places. To better enable us to maintain it in the future, we can create a separate variable that will hold our styling, let's call it `textStyle` and place it before the text definitions:
 
 ```js
 const textStyle = { font: "18px Arial", fill: "#0095dd" };

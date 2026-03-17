@@ -320,7 +320,7 @@ The example below demonstrates this.
 }
 ```
 
-With this mapping, if a script with an URL that contains `/node_modules/dependency/` imports `cool-module`, the version in `/node_modules/some/other/location/cool-module/index.js` will be used.
+With this mapping, if a script with a URL that contains `/node_modules/dependency/` imports `cool-module`, the version in `/node_modules/some/other/location/cool-module/index.js` will be used.
 The map in `imports` is used as a fallback if there is no matching scope in the scoped map, or the matching scopes don't contain a matching specifier. For example, if `cool-module` is imported from a script with a non-matching scope path, then the module specifier map in `imports` will be used instead, mapping to the version in `/node_modules/cool-module/index.js`.
 
 Note that the path used to select a scope does not affect how the address is resolved.
@@ -421,7 +421,7 @@ Module-defined variables are scoped to the module unless explicitly attached to 
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <title>Example page</title>
     <link rel="stylesheet" href="" />
   </head>
   <body>

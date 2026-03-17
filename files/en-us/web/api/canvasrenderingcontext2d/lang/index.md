@@ -129,7 +129,7 @@ Try changing the document language using the `<select>` element. When the langua
 
 ### Language support for offscreen canvases
 
-This example is the similar to the previous example, except that the font is rendered to a {{domxref("OffscreenCanvasRenderingContext2D")}} then the resulting bitmap is transferred to the on-screen `<canvas>` to display.
+This example is the similar to the previous example, except that the font is rendered to an {{domxref("OffscreenCanvasRenderingContext2D")}} then the resulting bitmap is transferred to the on-screen `<canvas>` to display.
 
 In addition, because an inherited off-screen canvas language is only set once, and not dynamically updated if the inherited `lang` attribute value is changed, we explicitly set the `lang` property on the `OffscreenCanvasRenderingContext2D` instead.
 
@@ -159,7 +159,7 @@ const canvasElem = document.querySelector("canvas");
 const ctx = canvasElem.getContext("bitmaprenderer");
 
 const offscreen = new OffscreenCanvas(canvasElem.width, canvasElem.height);
-const offscreen_ctx = offscreen.getContext("2d");
+const offscreenCtx = offscreen.getContext("2d");
 
 const selectElem = document.querySelector("select");
 
@@ -176,11 +176,11 @@ latoMediumFontFace.load().then((font) => {
 
 function init() {
   function drawText() {
-    offscreen_ctx.clearRect(0, 0, canvasElem.width, canvasElem.height);
-    offscreen_ctx.lang = selectElem.value;
-    offscreen_ctx.font = "30px Lato-Medium";
-    offscreen_ctx.color = "black";
-    offscreen_ctx.fillText("finish crafting", 50, 100);
+    offscreenCtx.clearRect(0, 0, canvasElem.width, canvasElem.height);
+    offscreenCtx.lang = selectElem.value;
+    offscreenCtx.font = "30px Lato-Medium";
+    offscreenCtx.color = "black";
+    offscreenCtx.fillText("finish crafting", 50, 100);
 
     const bitmap = offscreen.transferToImageBitmap();
     ctx.transferFromImageBitmap(bitmap);

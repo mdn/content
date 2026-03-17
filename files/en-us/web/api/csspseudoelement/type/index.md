@@ -12,7 +12,7 @@ browser-compat: api.CSSPseudoElement.type
 
 The **`type`** read-only property of the
 {{DOMxRef('CSSPseudoElement')}} interface returns the type of the pseudo-element as a
-string, represented in the form of a [CSS selector](/en-US/docs/Web/CSS/CSS_pseudo-elements#selectors).
+string, represented in the form of a [CSS selector](/en-US/docs/Web/CSS/Guides/Pseudo-elements#selectors).
 
 ## Value
 
@@ -47,4 +47,4 @@ console.log(mySelector === typeOfPseudoElement); // Outputs true
 ## See also
 
 - {{DOMxRef('Element.pseudo()')}}
-- [List of pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#alphabetical_index)
+- [List of pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#alphabetical_index)

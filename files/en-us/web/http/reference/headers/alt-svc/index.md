@@ -17,10 +17,6 @@ Doing so allows new protocol versions to be advertised without affecting in-flig
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

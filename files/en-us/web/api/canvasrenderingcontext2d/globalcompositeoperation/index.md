@@ -401,7 +401,7 @@ function createInterlace(size, color1, color2) {
   return pattern;
 }
 
-const op_8x8 = createInterlace(8, "white", "#eeeeee");
+const op8x8 = createInterlace(8, "white", "#eeeeee");
 ```
 
 #### Start running
@@ -411,7 +411,7 @@ Finally, we call the functions to set everything in motion.
 ```js
 lightMix();
 colorSphere();
-runComposite(op_8x8);
+runComposite(op8x8);
 ```
 
 #### Result

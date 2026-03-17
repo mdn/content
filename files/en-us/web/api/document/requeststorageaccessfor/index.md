@@ -38,7 +38,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
   - : Thrown if the current {{domxref("Document")}} is not yet active.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
-    - The document's window is not a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+    - The document's window is not a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
     - The document is not the top-level document.
     - The document has a `null` origin.
     - The supplied `requestedOrigin` is [opaque](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque).

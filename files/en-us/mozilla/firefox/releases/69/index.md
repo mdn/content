@@ -28,7 +28,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Network
 
-- Resources that got blocked because of [CSP](/en-US/docs/Web/HTTP/Guides/CSP) or [Mixed Content](/en-US/docs/Web/Security/Mixed_content) are now shown in the Network panel, with details of the reason ([Firefox bug 1556451](https://bugzil.la/1556451)).
+- Resources that got blocked because of [CSP](/en-US/docs/Web/HTTP/Guides/CSP) or [Mixed Content](/en-US/docs/Web/Security/Defenses/Mixed_content) are now shown in the Network panel, with details of the reason ([Firefox bug 1556451](https://bugzil.la/1556451)).
 - A new optional _URL_ column in the Network panel can be enabled to show the full URL for resources ([Firefox bug 1341155](https://bugzil.la/1341155)).
 
 #### Inspector
@@ -61,7 +61,7 @@ This article provides information about the changes in Firefox 69 that will affe
 - The {{cssxref("overflow-block")}} and {{cssxref("overflow-inline")}} properties have been implemented ([Firefox bug 1470695](https://bugzil.la/1470695)).
 - We added the ability to test for support of a selector when using CSS Feature Queries ({{cssxref("@supports")}}), with the `selector()` method ([Firefox bug 1513643](https://bugzil.la/1513643)).
 - The {{cssxref("user-select")}} property — which specifies whether or not the user is able to select text in the affected element — has been unprefixed ([Firefox bug 1492739](https://bugzil.la/1492739)).
-- We implemented local-specific casing behavior for Lithuanian ([Firefox bug 1322992](https://bugzil.la/1322992)), [as seen in this example](/en-US/docs/Web/CSS/text-transform#example_using_lowercase_lithuanian).
+- We implemented local-specific casing behavior for Lithuanian ([Firefox bug 1322992](https://bugzil.la/1322992)), [as seen in this example](/en-US/docs/Web/CSS/Reference/Properties/text-transform#example_using_lowercase_lithuanian).
 - We've implemented the {{cssxref("line-break")}} property of CSS Text ([Firefox bug 1011369](https://bugzil.la/1011369) and [Firefox bug 1531715](https://bugzil.la/1531715)).
 - The {{cssxref("contain")}} property — which allows developers to define that an element and its contents are mostly independent of the rest of the DOM tree — got implemented [Firefox bug 1487493](https://bugzil.la/1487493).
 

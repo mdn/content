@@ -14,7 +14,7 @@ A FEC packet provides parity information that can be used to attempt to reconstr
 
 ## Value
 
-An positive integer value.
+A positive integer value.
 
 ## Description
 

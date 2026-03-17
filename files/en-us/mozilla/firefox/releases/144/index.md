@@ -1,8 +1,8 @@
 ---
-title: Firefox 144 release notes for developers (Stable)
-short-title: Firefox 144 (Stable)
+title: Firefox 144 release notes for developers
+short-title: Firefox 144
 slug: Mozilla/Firefox/Releases/144
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -45,6 +45,7 @@ Firefox 144 was released on [October 14, 2025](https://whattrainisitnow.com/rele
 - The [View Transition API](/en-US/docs/Web/API/View_Transition_API) is now supported for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). This provides a mechanism for easily creating animated transitions between different website views. ([Firefox bug 1985809](https://bugzil.la/1985809)).
 - The {{domxref("CSSStyleProperties")}} interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) is now implemented (this was renamed from a non-standard interface `CSS2Properties`). The new interface is present but not yet used. ([Firefox bug 1919582](https://bugzil.la/1919582)).
 - The {{domxref("PerformanceEventTiming.interactionId", "interactionId")}} property of the {{domxref("PerformanceEventTiming")}} interface is a unique identifier that associates related events belonging to a single user interaction. This can be used to calculate the {{glossary("Interaction to next paint")}} metric, which helps analyze responsiveness to user interaction over the lifetime of a page. ([Firefox bug 1956809](https://bugzil.la/1956809)).
+- The {{domxref("Navigation.navigate()")}} method of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} no longer accepts URLs with a scheme of `javascript`. Calling `navigate()` with a `javascript:` URL now throws a `NotSupportedError` exception. ([Firefox bug 1981104](https://bugzil.la/1981104)).
 
 #### DOM
 
@@ -95,6 +96,10 @@ These features are shipping in Firefox 144 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
-- **datetime-local time picker:** `dom.forms.datetime.timepicker`.
+- **Time picker in `datetime-local` and `time` input elements:** `dom.forms.datetime.timepicker`.
 
-  HTML datetime-local input elements ([`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)) now includes a time picker. ([Firefox bug 1726108](https://bugzil.la/1726108)).
+  The HTML [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local) and [`<input type="time">`](/en-US/docs/Web/HTML/Reference/Elements/input/time) elements support a time picker. ([Firefox bug 1726108](https://bugzil.la/1726108)).
+
+- **:heading():** `layout.css.heading-selector.enabled`
+
+  The [`:heading()`](/en-US/docs/Web/CSS/Reference/Selectors/:heading_function) functional pseudo-class now has a much simpler syntax that takes a comma-separated list of integers that match the heading level. ([Firefox bug 1974386](https://bugzil.la/1974386) & [Firefox bug 1984310](https://bugzil.la/1984310)).

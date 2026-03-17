@@ -79,4 +79,4 @@ These features are newly shipped in Firefox 133 but are disabled by default. To 
 
 - **:has-slotted CSS pseudo-class:** `layout.css.has-slotted-selector.enabled`.
 
-  The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components). ([Firefox bug 1921747](https://bugzil.la/1921747).)
+  The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components). ([Firefox bug 1921747](https://bugzil.la/1921747).)

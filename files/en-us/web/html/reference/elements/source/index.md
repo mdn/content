@@ -48,7 +48,7 @@ This element supports all [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     The list consists of source sizes separated by commas. Each source size is media condition-length pair. Before laying the page out, the browser uses this information to determine which image defined in [`srcset`](#srcset) to display. Note that `sizes` will take effect only if width descriptors are provided with `srcset`, not pixel density descriptors (i.e., `200w` should be used instead of `2x`).
 
 - `media`
-  - : Specifies the [media query](/en-US/docs/Web/CSS/CSS_media_queries) for the resource's intended media.
+  - : Specifies the [media query](/en-US/docs/Web/CSS/Guides/Media_queries) for the resource's intended media.
 
 - `height`
   - : Specifies the intrinsic height of the image in pixels. Allowed if the parent of `<source>` is a {{HTMLElement("picture")}}. Not allowed if the parent is {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
@@ -122,7 +122,7 @@ With the `<picture>` element, you must always include an `<img>` with a fallback
 ### Using `height` and `width` attributes with `<picture>`
 
 In this example, three `<source>` elements with `height` and `width` attributes are included in a {{HTMLElement("picture")}} element.
-A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allows the browser to select an image to display with the `height` and `width` attributes based on the [viewport](/en-US/docs/Glossary/Viewport) size.
+A [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using) allows the browser to select an image to display with the `height` and `width` attributes based on the [viewport](/en-US/docs/Glossary/Viewport) size.
 
 ```html
 <picture>

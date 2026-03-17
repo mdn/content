@@ -437,7 +437,7 @@ dateRange(day1, month1, year1, day2, month2, year2, gmt)
 If only a single value is specified (from each category: day, month, year), the function returns a true value only on days that match that specification. If both values are specified, the result is true between those times, including bounds, _but the bounds are ordered_.
 
 > [!WARNING]
-> **The order of the days, months, and years matter**; Before Firefox 49, `dateRange("JAN", "DEC")` will always evaluate to `true`. Now `dateRange("DEC", "JAN")` will only evaluate true if the current month is December or January.
+> **The order of the days, months, and years matter**. Before Firefox 49, `dateRange("JAN", "DEC")` will always evaluate to `true`. Now `dateRange("DEC", "JAN")` will only evaluate true if the current month is December or January.
 
 #### Examples
 
@@ -493,7 +493,7 @@ timeRange(hour1, min1, sec1, hour2, min2, sec2, gmt)
 If only a single value is specified (from each category: hour, minute, second), the function returns a true value only at times that match that specification. If both values are specified, the result is true between those times, including bounds, _but the bounds are ordered_.
 
 > [!WARNING]
-> **The order of the hour, minute, second matter**; Before Firefox 49, `timeRange(0, 23)` will always evaluate to true. Now `timeRange(23, 0)` will only evaluate true if the current hour is 23:00 or midnight.
+> **The order of the hour, minute, second matter**. Before Firefox 49, `timeRange(0, 23)` will always evaluate to true. Now `timeRange(23, 0)` will only evaluate true if the current hour is 23:00 or midnight.
 
 #### Examples
 
@@ -584,7 +584,7 @@ function FindProxyForURL(url, host) {
   if (isResolvable(host)) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.example.com:8080";
 }
 ```
 
@@ -594,12 +594,12 @@ The above requires consulting the DNS every time; it can be grouped intelligentl
 function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
-    dnsDomainIs(host, ".mydomain.com") ||
+    dnsDomainIs(host, ".example.com") ||
     isResolvable(host)
   ) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.example.com:8080";
 }
 ```
 
@@ -614,7 +614,7 @@ function FindProxyForURL(url, host) {
   if (isInNet(host, "192.0.2.172", "255.255.0.0")) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.example.com:8080";
 }
 ```
 
@@ -624,12 +624,12 @@ Again, use of the DNS server in the above can be minimized by adding redundant r
 function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
-    dnsDomainIs(host, ".mydomain.com") ||
+    dnsDomainIs(host, ".example.com") ||
     isInNet(host, "192.0.2.0", "255.255.0.0")
   ) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.example.com:8080";
 }
 ```
 
@@ -650,14 +650,14 @@ All local accesses are desired to be direct. All proxy servers run on the port 8
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com")) {
+  if (isPlainHostName(host) || dnsDomainIs(host, ".example.com")) {
     return "DIRECT";
   } else if (shExpMatch(host, "*.com")) {
-    return "PROXY proxy1.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+    return "PROXY proxy1.example.com:8080; PROXY proxy4.example.com:8080";
   } else if (shExpMatch(host, "*.edu")) {
-    return "PROXY proxy2.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+    return "PROXY proxy2.example.com:8080; PROXY proxy4.example.com:8080";
   }
-  return "PROXY proxy3.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  return "PROXY proxy3.example.com:8080; PROXY proxy4.example.com:8080";
 }
 ```
 
@@ -670,13 +670,13 @@ Most of the standard JavaScript functionality is available for use in the `FindP
 ```js
 function FindProxyForURL(url, host) {
   if (url.startsWith("http:")) {
-    return "PROXY http-proxy.mydomain.com:8080";
+    return "PROXY http-proxy.example.com:8080";
   } else if (url.startsWith("ftp:")) {
-    return "PROXY ftp-proxy.mydomain.com:8080";
+    return "PROXY ftp-proxy.example.com:8080";
   } else if (url.startsWith("gopher:")) {
-    return "PROXY gopher-proxy.mydomain.com:8080";
+    return "PROXY gopher-proxy.example.com:8080";
   } else if (url.startsWith("https:") || url.startsWith("snews:")) {
-    return "PROXY security-proxy.mydomain.com:8080";
+    return "PROXY security-proxy.example.com:8080";
   }
   return "DIRECT";
 }
@@ -689,7 +689,7 @@ For example:
 
 ```js
 if (shExpMatch(url, "http:*")) {
-  return "PROXY http-proxy.mydomain.com:8080";
+  return "PROXY http-proxy.example.com:8080";
 }
 ```
 

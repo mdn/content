@@ -50,7 +50,7 @@ The most performant, least blocking JavaScript you can use is JavaScript that yo
 - **Consider built-in browser features**: It might be that you can use a feature the browser already has, rather than creating your own via JavaScript. For example:
   - Use [built-in client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#using_built-in_form_validation).
   - Use the browser's own {{htmlelement("video")}} player.
-  - Use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) instead of a JavaScript animation library (see also [Handling animations](#handling_javascript_animations)).
+  - Use [CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using) instead of a JavaScript animation library (see also [Handling animations](#handling_javascript_animations)).
 
 You should also split your JavaScript into multiple files representing critical and non-critical parts. [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) allow you to do this more efficiently than just using separate external JavaScript files.
 
@@ -232,7 +232,7 @@ Animations can improve perceived performance, making interfaces feel snappier an
 
 The most obvious piece of animation advice is to use less animations — cut out any non-essential animations, or consider giving your users a preference they can set to turn off animations, for example if they are using a low-powered device or a mobile device with limited battery power.
 
-For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript). Using the browser to directly perform DOM animations rather than manipulating inline styles using JavaScript is much faster and more efficient. See also [CSS performance optimization > Handling animations](/en-US/docs/Learn_web_development/Extensions/Performance/CSS#handling_animations).
+For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript). Using the browser to directly perform DOM animations rather than manipulating inline styles using JavaScript is much faster and more efficient. See also [CSS performance optimization > Handling animations](/en-US/docs/Learn_web_development/Extensions/Performance/CSS#handling_animations).
 
 For animations that can't be handled in JavaScript, for example, animating an HTML {{htmlelement("canvas")}}, you are advised to use {{domxref("Window.requestAnimationFrame()")}} rather than older options such as {{domxref("Window.setInterval()")}}. The `requestAnimationFrame()` method is specially designed for handling animation frames efficiently and consistently, for a smooth user experience. The basic pattern looks like this:
 

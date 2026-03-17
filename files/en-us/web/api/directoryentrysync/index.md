@@ -59,8 +59,7 @@ None.
 
 ##### Return value
 
-- [`DirectoryReaderSync`](/en-US/docs/Web/API/DirectoryReaderSync)
-  - : Represents a directory in a file system.
+A [`DirectoryReaderSync`](/en-US/docs/Web/API/DirectoryReaderSync) object represents a directory in a file system.
 
 ##### Exceptions
 
@@ -134,8 +133,7 @@ getFile(path, options)
 
 ##### Return value
 
-- [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync)
-  - : Represents a file in a file system.
+A [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync) object representing a file in a file system.
 
 ##### Exceptions
 
@@ -216,8 +214,7 @@ getDirectory(path, options)
 
 ##### Return value
 
-- [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryReaderSync)
-  - : Represents a directory in a file system.
+A [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryReaderSync) object representing a directory in a file system.
 
 ##### Exceptions
 

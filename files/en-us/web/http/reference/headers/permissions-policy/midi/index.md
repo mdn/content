@@ -13,7 +13,7 @@ sidebar: http
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `midi` directive controls whether the current document is allowed to use the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API).
 
-Specifically, where a defined policy blocks use of this feature, {{domxref("Navigator.requestMIDIAccess()")}} calls will return a {{jsxref("Promise")}} that rejects with a {{domxref("DOMException")}} of type `SecurityError`.
+Specifically, where a defined policy blocks use of this feature, {{domxref("Navigator.requestMIDIAccess()")}} calls will return a {{jsxref("Promise")}} that rejects with a {{domxref("DOMException")}} of type `NotAllowedError`.
 
 ## Syntax
 
