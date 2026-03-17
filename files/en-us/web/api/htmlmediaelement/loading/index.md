@@ -33,7 +33,7 @@ function addVideoToList(url) {
   if ("loading" in HTMLVideoElement.prototype) {
     newVideo.loading = "lazy";
   } else {
-    // If not native lazy-loading is not supported you may want to consider
+    // If native lazy-loading is not supported you may want to consider
     // alternatives, though this may be fine as a progressive enhancement.
   }
 
