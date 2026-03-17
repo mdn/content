@@ -45,11 +45,15 @@ value_type.extract_lane_u
 ### Type
 
 ```plain
-[lane] -> []
+[input, lane] -> [output]
 ```
 
+- `input`
+  - : The `v128` value interpretation you want to extract a lane from.
 - `lane`
   - : The index of the lane whose value you wish to extract, for example `0`.
+- `output`
+  - : The value extracted from the lane.
 
 ### Binary encoding
 
