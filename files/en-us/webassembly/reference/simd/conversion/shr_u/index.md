@@ -15,8 +15,8 @@ The **`shr_u`** [SIMD extract instruction](/en-US/docs/WebAssembly/Reference/SIM
 (module
   (import "console" "log" (func $log (param i32)))
   (func $main
-    (v128.const i32x4 8 16 32 64)
-    (i32.const 3)
+    v128.const i32x4 8 16 32 64
+    i32.const 3
 
     i32x4.shr_u
     i32x4.extract_lane 3

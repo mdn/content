@@ -15,7 +15,7 @@ The **`demote_f64x2_zero`** [SIMD conversion instruction](/en-US/docs/WebAssembl
 (module
   (import "console" "log" (func $log (param f32)))
   (func $main
-    (v128.const f64x2 0x3 0x3a)
+    v128.const f64x2 0x3 0x3a
 
     f32x4.demote_f64x2_zero
     f32x4.extract_lane 1

@@ -15,8 +15,8 @@ The **`shl`** [SIMD extract instruction](/en-US/docs/WebAssembly/Reference/SIMD/
 (module
   (import "console" "log" (func $log (param i32)))
   (func $main
-    (v128.const i32x4 1 2 4 6)
-    (i32.const 3)
+    v128.const i32x4 1 2 4 6
+    i32.const 3
 
     i32x4.shl
     i32x4.extract_lane 1

@@ -15,7 +15,7 @@ The **`ceil`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/S
 (module
   (import "console" "log" (func $log (param i32)))
   (func $main
-    (v128.const f32x4 1.9 2.5 0.5 12.1)
+    v128.const f32x4 1.9 2.5 0.5 12.1
 
     f32x4.ceil
     i32x4.extract_lane 0

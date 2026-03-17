@@ -15,7 +15,7 @@ The **`trunc`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/
 (module
   (import "console" "log" (func $log (param f32)))
   (func $main
-    (v128.const f32x4 0.5 4.9 34.3 33.5)
+    v128.const f32x4 0.5 4.9 34.3 33.5
 
     f32x4.trunc
     f32x4.extract_lane 0

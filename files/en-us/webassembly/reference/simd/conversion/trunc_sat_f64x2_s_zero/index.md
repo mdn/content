@@ -17,7 +17,7 @@ If any input lane is a {{jsxref("NaN")}}, the resulting output lane is set to `0
 (module
   (import "console" "log" (func $log (param f64)))
   (func $main
-    (v128.const f64x2 1300.5 1345400000.9)
+    v128.const f64x2 1300.5 1345400000.9
 
     i32x4.trunc_sat_f64x2_s_zero
     f64x2.extract_lane 0

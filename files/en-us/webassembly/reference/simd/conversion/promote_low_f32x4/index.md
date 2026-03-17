@@ -15,7 +15,7 @@ The **`promote_low_f32x4`** [SIMD conversion instruction](/en-US/docs/WebAssembl
 (module
   (import "console" "log" (func $log (param f64)))
   (func $main
-    (v128.const f32x4 0x3 0x3a 0x4b 0x5a)
+    v128.const f32x4 0x3 0x3a 0x4b 0x5a
 
     f64x2.promote_low_f32x4
     f64x2.extract_lane 0

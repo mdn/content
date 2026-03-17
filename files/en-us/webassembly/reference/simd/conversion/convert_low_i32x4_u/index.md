@@ -15,7 +15,7 @@ The **`convert_low_i32x4_u`** [SIMD conversion instruction](/en-US/docs/WebAssem
 (module
   (import "console" "log" (func $log (param i32)))
   (func $main
-    (v128.const f64x2 0x3 0x3a)
+    v128.const f64x2 0x3 0x3a
 
     f64x2.convert_low_i32x4_u
     i32x4.extract_lane 3
