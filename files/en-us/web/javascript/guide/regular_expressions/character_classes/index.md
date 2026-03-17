@@ -227,6 +227,7 @@ console.log(moods.match(regexpEmoticons));
         <code>\x<em>hh</em></code>
       </td>
       <td>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape"><strong>Hex escape:</strong></a>
         Matches the character with the code <code><em>hh</em></code> (two
         hexadecimal digits).
       </td>
@@ -236,17 +237,19 @@ console.log(moods.match(regexpEmoticons));
         <code>\u<em>HHHH</em></code>
       </td>
       <td>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape"><strong>Unicode escape:</strong></a>
         Matches a UTF-16 code-unit with the value
         <code><em>HHHH</em></code> (four hexadecimal digits).
       </td>
     </tr>
     <tr>
       <td>
-        <code>\u{<em>HHHH</em>}</code>
+        <code>\u{<em>H…H</em>}</code>
       </td>
       <td>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape"><strong>Unicode code point escape:</strong></a>
         (Only when the <code>u</code> flag is set.) Matches the character with
-        the Unicode value <code>U+<em>HHHH</em></code> (1 to 6 hexadecimal digits).
+        the Unicode value <code>U+<em>H…H</em></code> (1 to 6 hexadecimal digits).
       </td>
     </tr>
     <tr>
