@@ -82,10 +82,16 @@ You can change any of the page action properties programmatically using the [`pa
 
 ## Icons
 
-You can use bitmap image formats, such as PNG, or provide SVG icons. If you use an SVG icon, you can use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For more information, see [`"page_action"` `"default_icon"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action#default_icon) and the [themed-icons](https://github.com/mdn/webextensions-examples/tree/master/themed-icons) example .
+You can use bitmap image formats, such as PNG, or provide SVG icons. If you use an SVG icon, you can use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For more information, see [`"page_action"` `"default_icon"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action#default_icon) and the [themed-icons](https://github.com/mdn/webextensions-examples/tree/master/themed-icons) example.
+
+> [!NOTE]
+> An implicit CSS filter applies to SVG icons in dark UI themes when `about:config` preference `extensions.webextensions.pageActionIconDarkModeFilter.enabled` is set to `true` or not defined. This filter is deactivated in Nightly starting with Firefox 149; see [Firefox bug 2001318](https://bugzil.la/2001318). It will be deactivated on the release channel as part of [Firefox bug 2016509](https://bugzil.la/2016509), which is planned for Firefox 152.
 
 For details on how to create icons to use with your page action, see [Iconography](https://acorn.firefox.com/latest/foundations/styles/iconography-QEDMXQqj) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
 ## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [chill-out](https://github.com/mdn/webextensions-examples/tree/main/chill-out) example which implements a page action without a popup.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the:
+
+- [chill-out](https://github.com/mdn/webextensions-examples/tree/main/chill-out) example, which implements a page action without a popup.
+- [themed-icons](https://github.com/mdn/webextensions-examples/tree/master/themed-icons) example, which shows how an SVG page action icon can respond to the light and dark themes in the browser UI.
