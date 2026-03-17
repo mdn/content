@@ -17,9 +17,9 @@ The **`load`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/SIMD/lo
   (memory $memory 1)
   (data (i32.const 0) "\00\01\02\03\04\05\06\07\08\09\0a\0b\0c\0d\0e\0f\00\01\02\03")
   (func $main
-    i32.const 0
+    i32.const 5
     v128.load
-    i32x4.extract_lane 0
+    i32x4.extract_lane 3
     call $log
   )
   (start $main)
