@@ -72,6 +72,9 @@ This means:
 
 The data is sent as an [HTTP POST](/en-US/docs/Web/HTTP/Reference/Methods/POST) request.
 
+> [!NOTE]
+> The `navigator.sendBeacon()` method has a payload size limit (typically around 64 KB depending on the browser). For larger data transfers, consider using `fetch()` instead.
+
 ### Sending analytics at the end of a session
 
 Websites often want to send analytics or diagnostics to the server when the user has finished with the page.
