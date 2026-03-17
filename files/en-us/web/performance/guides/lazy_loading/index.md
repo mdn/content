@@ -59,7 +59,7 @@ See also: [Element Link](/en-US/docs/Web/HTML/Reference/Elements/link).
 
 ### Images, iframes, videos and audio
 
-Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/en-US/docs/Web/Performance/Guides/Critical_rendering_path)), requiring a user interaction, like scrolling, in order to view them. Similarly manny iframes, videos, and audio may be offscreen initially.
+Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/en-US/docs/Web/Performance/Guides/Critical_rendering_path)), requiring a user interaction, like scrolling, in order to view them. Similarly, many iframes, videos, and audio may be offscreen initially.
 
 #### Loading attribute
 
