@@ -6,6 +6,8 @@ page-type: web-api-instance-method
 browser-compat: api.Document.querySelector
 ---
 
+---
+
 {{ApiRef("DOM")}}
 
 The {{domxref("Document")}} method **`querySelector()`**
@@ -89,10 +91,6 @@ This example shows that if an HTML document contains an [`id`](/en-US/docs/Web/H
 
 #### HTML
 
-In the following code, a {{htmlelement("div")}} element has an `id` of `"this?element"`, which is not a valid CSS identifier, because the `"?"` character is not allowed in CSS identifiers.
-
-We also have three buttons, and a {{htmlelement("pre")}} element for logging errors.
-
 ```html
 <div id="this?element"></div>
 
@@ -115,12 +113,6 @@ div {
 ```
 
 #### JavaScript
-
-All three buttons, when clicked, try to select the `<div>`, and then set its background color to a random value.
-
-- The first button uses the `"this?element"` value directly.
-- The second button escapes the value using {{domxref("CSS.escape_static", "CSS.escape()")}}.
-- The third button explicitly escapes the `"?"` character using a backslash. Note that we must also escape the backslash itself, using another backslash, like: `"\\?"`.
 
 ```js
 const log = document.querySelector("#log");
@@ -159,6 +151,19 @@ document.querySelector("#manual-escape").addEventListener("click", () => {
 Clicking the first button gives an error, while the second and third buttons work properly.
 
 {{embedlivesample("escaping_attribute_values", "", 200)}}
+
+### Difference between Document.querySelector() and Element.querySelector()
+
+The `Document.querySelector()` method searches the entire document for the first matching element.
+
+In contrast, {{domxref("Element.querySelector()")}} only searches within the descendants of the specified element.
+
+```js
+document.querySelector(".item"); // searches entire document
+
+const container = document.querySelector(".container");
+container.querySelector(".item"); // searches only inside .container
+```
 
 ## Specifications
 
