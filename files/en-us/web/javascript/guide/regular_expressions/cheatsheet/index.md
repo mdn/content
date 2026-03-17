@@ -218,23 +218,20 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
     </tr>
     <tr>
       <td>
-        <code>\u<em>hhhh</em></code>
+        <code>\u<em>HHHH</em></code>
       </td>
       <td>
         Matches a UTF-16 code-unit with the value
-        <code><em>hhhh</em></code> (four hexadecimal digits).
+        <code><em>HHHH</em></code> (four hexadecimal digits).
       </td>
     </tr>
     <tr>
       <td>
-        <code>\u<em>{hhhh}</em> or <em>\u{hhhhh}</em></code>
+        <code>\u{<em>HHHH</em>}</code>
       </td>
       <td>
         (Only when the <code>u</code> flag is set.) Matches the character with
-        the Unicode value <code>U+<em>hhhh</em></code> or <code
-          >U+<em>hhhhh</em></code
-        >
-        (hexadecimal digits).
+        the Unicode value <code>U+<em>HHHH</em></code> (1 to 6 hexadecimal digits).
       </td>
     </tr>
     <tr>
