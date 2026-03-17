@@ -69,6 +69,7 @@ backgroundfetchabort
 backgroundfetchclick
 backgroundfetchfail
 backgroundfetchsuccess
+bufferedchange
 BACKTAB
 backzone
 Basetime
@@ -220,12 +221,16 @@ emptytext
 emsdk
 enable-tracejit
 enableiOES
+endstreaming
+onendstreaming
+onstartstreaming
 enterpictureinpicture
 equalsize
 EquationiOES
 ethi
 ethioaa
 exitpictureinpicture
+startstreaming
 exnref
 Exsel
 externref
