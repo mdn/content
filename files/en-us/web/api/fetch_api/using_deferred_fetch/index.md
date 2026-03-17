@@ -2,6 +2,7 @@
 title: Using Deferred Fetch
 slug: Web/API/Fetch_API/Using_Deferred_Fetch
 page-type: guide
+browser-compat: api.Window.fetchLater
 ---
 
 {{DefaultAPISidebar("Fetch API")}}
@@ -235,3 +236,27 @@ Assuming a top-level document at `a.com`, which embeds `<iframe src="https://b.c
 1. The top-level frame of `a.com` has the default 512KiB quota.
 2. `<iframe src="https://b.com/">` receives 8KiB of the default shared quota of 128KiB.
 3. The 8KiB is not transferred to `a.com` when `<iframe src="https://b.com/">` redirects there, but it can share the full top-level quota again, and the previously-allocated 8KiB quota is released.
+
+## Interfaces
+
+- {{domxref("Window.fetchLater()")}}
+  - : Used to make a deferred fetch request.
+- {{domxref("DeferredRequestInit")}}
+  - : Represents the set of options that can be used to configure a deferred fetch request.
+- {{domxref("FetchLaterResult")}}
+  - : Represents the result of requesting a deferred fetch.
+
+## HTTP headers
+
+- {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}}
+  - : Controls the [top-level quota](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas) for the `fetchLater()` API.
+- {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}}
+  - : Controls the [shared cross-origin subframe quota](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas) for the `fetchLater()` API.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
