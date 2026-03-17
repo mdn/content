@@ -57,9 +57,9 @@ v128.load16_lane lane_value
 
 ### Binary encoding
 
-| Instruction        | Binary equivalent       | Example text => binary                    |
-| ------------------ | ----------------------- | ----------------------------------------- |
-| `v128.load16_lane` | `0xFD 85:u32 𝑖:laneidx` | `v128.load16_lane 0` => `0xfd 0x55 0 0 0` |
+| Instruction        | Binary equivalent                            | Example text => binary                               |
+| ------------------ | -------------------------------------------- | ---------------------------------------------------- |
+| `v128.load16_lane` | `0xFD 85:u32 align:u32 offset:u32 𝑖:laneidx` | `v128.load16_lane 0 0` => `0xfd 0x55 0x00 0x00 0x00` |
 
 ## Specifications
 

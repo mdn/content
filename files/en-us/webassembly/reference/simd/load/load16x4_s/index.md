@@ -52,9 +52,9 @@ v128.load16x4_s
 
 ### Binary encoding
 
-| Instruction       | Binary equivalent | Example text => binary           |
-| ----------------- | ----------------- | -------------------------------- |
-| `v128.load16x4_s` | `0xFD 3:u32`      | `v128.load16x4_s` => `0xfd 0x03` |
+| Instruction       | Binary equivalent                 | Example text => binary                       |
+| ----------------- | --------------------------------- | -------------------------------------------- |
+| `v128.load16x4_s` | `0xFD 3:u32 align:u32 offset:u32` | `v128.load16x4_s 0` => `0xfd 0x03 0x00 0x00` |
 
 ## Specifications
 
