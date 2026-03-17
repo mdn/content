@@ -6,8 +6,6 @@ page-type: web-api-instance-method
 browser-compat: api.Document.querySelector
 ---
 
----
-
 {{ApiRef("DOM")}}
 
 The {{domxref("Document")}} method **`querySelector()`**
