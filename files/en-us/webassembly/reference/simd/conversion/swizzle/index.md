@@ -62,9 +62,9 @@ value_type.swizzle
 
 ### Binary encoding
 
-| Instruction     | Binary equivalent | Example text => binary                 |
-| --------------- | ----------------- | -------------------------------------- |
-| `i8x16.swizzle` | `0xfd 14:u32`     | `i8x16.swizzle ...` => `0xfd 0x0e ...` |
+| Instruction     | Binary equivalent | Example text => binary         |
+| --------------- | ----------------- | ------------------------------ |
+| `i8x16.swizzle` | `0xfd 14:u32`     | `i8x16.swizzle` => `0xfd 0x0e` |
 
 ## Specifications
 

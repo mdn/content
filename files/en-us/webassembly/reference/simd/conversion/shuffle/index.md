@@ -61,9 +61,9 @@ value_type.shuffle indices
 
 ### Binary encoding
 
-| Instruction     | Binary equivalent          | Example text => binary                 |
-| --------------- | -------------------------- | -------------------------------------- |
-| `i8x16.shuffle` | `0xfd 31:u32 l:laneidx^16` | `i8x16.shuffle ...` => `0xfd 0x0d ...` |
+| Instruction     | Binary equivalent         | Example text => binary                                                                                                                             |
+| --------------- | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `i8x16.shuffle` | `0xfd 31:u32 l:laneidx¹⁶` | `i8x16.shuffle 0 17 2 3 8 9 10 11 31 30 28 27 16 17 18 19` => `0xfd 0x1f 0x0 0x11 0x2 0x3 0x8 0x9 0xa 0xb 0x1f 0x1e 0x1c 0x1b 0x10 0x11 0x12 0x13` |
 
 ## Specifications
 
