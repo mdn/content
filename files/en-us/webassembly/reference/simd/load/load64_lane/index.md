@@ -49,7 +49,7 @@ v128.load64_lane lane_value
 ```
 
 - `memory_address`
-  - : an integer representing the memory address to load from.
+  - : An integer representing the memory address to load from.
 - `input`
   - : The input `v128` `i64x2` value interpretation.
 - `output`

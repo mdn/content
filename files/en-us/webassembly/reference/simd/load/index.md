@@ -45,3 +45,10 @@ WebAssembly SIMD load instructions.
   - : Loads a single value from a given heap address into all lanes of a `v128` `i32x4` value interpretation.
 - [`load64_splat`](/en-US/docs/WebAssembly/Reference/SIMD/load/load64_splat)
   - : Loads a single value from a given heap address into all lanes of a `v128` `i64x2` value interpretation.
+
+## Load and zero-pad
+
+- [`load32_zero`](/en-US/docs/WebAssembly/Reference/SIMD/load/load32_zero)
+  - : Loads a single value from a given heap address into the first lane of a `v128` `i32x4` value interpretation, and initializes the other lanes to `0`.
+- [`load64_zero`](/en-US/docs/WebAssembly/Reference/SIMD/load/load64_zero)
+  - : Loads a single value from a given heap address into the first lane of a `v128` `i64x2` value interpretation, and initializes the other lane to `0`.

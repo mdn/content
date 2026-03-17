@@ -46,7 +46,7 @@ v128.load32x2_u
 ```
 
 - `memory_address`
-  - : an integer representing the memory address to load from.
+  - : An integer representing the memory address to load from.
 - `output`
   - : The output `v128` `i64x2` value interpretation.
 

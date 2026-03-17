@@ -46,7 +46,7 @@ v128.load8x8_s
 ```
 
 - `memory_address`
-  - : an integer representing the memory address to load from.
+  - : An integer representing the memory address to load from.
 - `output`
   - : The output `v128` `i16x8` value interpretation.
 

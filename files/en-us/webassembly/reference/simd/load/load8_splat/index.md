@@ -46,7 +46,7 @@ v128.load8_splat
 ```
 
 - `memory_address`
-  - : an integer representing the memory address to load from.
+  - : An integer representing the memory address to load from.
 - `output`
   - : The output `v128` `i8x16` value interpretation.
 
