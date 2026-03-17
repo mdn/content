@@ -24,6 +24,9 @@ None.
 
 Returns a {{domxref("DOMHighResTimeStamp")}} measured in milliseconds.
 
+> [!NOTE]
+> The value returned by `performance.now()` is a floating-point number and may include fractional milliseconds, not just integers.
+
 ## Description
 
 ### `Performance.now` vs. `Date.now`
