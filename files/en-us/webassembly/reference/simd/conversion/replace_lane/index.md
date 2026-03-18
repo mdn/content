@@ -1,5 +1,5 @@
 ---
-title: "replace_lane: Wasm SIMD extract instruction"
+title: "replace_lane: Wasm SIMD conversion instruction"
 short-title: replace_lane
 slug: WebAssembly/Reference/SIMD/conversion/replace_lane
 page-type: webassembly-instruction
@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.replace_lane
 sidebar: webassemblysidebar
 ---
 
-The **`replace_lane`** [SIMD extract instruction](/en-US/docs/WebAssembly/Reference/SIMD/extract) replaces the specified lane of a `v128` value interpretation with a new value and returns the resulting `v128` value interpretation.
+The **`replace_lane`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) replaces the specified lane of a `v128` value interpretation with a new value and returns the resulting `v128` value interpretation.
 
 {{InteractiveExample("Wat Demo: replace_lane", "tabbed-taller")}}
 

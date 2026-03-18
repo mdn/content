@@ -1,13 +1,13 @@
 ---
-title: "shr_s: Wasm SIMD extract instruction"
+title: "shr_s: Wasm SIMD bitwise instruction"
 short-title: shr_s
-slug: WebAssembly/Reference/SIMD/conversion/shr_s
+slug: WebAssembly/Reference/SIMD/bitwise/shr_s
 page-type: webassembly-instruction
 browser-compat: webassembly.simd.shr_s
 sidebar: webassemblysidebar
 ---
 
-The **`shr_s`** [SIMD extract instruction](/en-US/docs/WebAssembly/Reference/SIMD/extract) shifts the bits in each lane of a `v128` value interpretation to the right by the same specified amount, outputting signed values. This is an arithmetic right shift.
+The **`shr_s`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) shifts the bits in each lane of a `v128` value interpretation to the right by the same specified amount, outputting signed values. This is an arithmetic right shift.
 
 {{InteractiveExample("Wat Demo: shr_s", "tabbed-taller")}}
 

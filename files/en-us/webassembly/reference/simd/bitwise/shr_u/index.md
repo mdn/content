@@ -1,13 +1,13 @@
 ---
-title: "shr_u: Wasm SIMD extract instruction"
+title: "shr_u: Wasm SIMD bitwise instruction"
 short-title: shr_u
-slug: WebAssembly/Reference/SIMD/conversion/shr_u
+slug: WebAssembly/Reference/SIMD/bitwise/shr_u
 page-type: webassembly-instruction
 browser-compat: webassembly.simd.shr_u
 sidebar: webassemblysidebar
 ---
 
-The **`shr_u`** [SIMD extract instruction](/en-US/docs/WebAssembly/Reference/SIMD/extract) shifts the bits in each lane of a `v128` value interpretation to the right by the same specified amount, outputting unsigned values. This is a logical right shift.
+The **`shr_u`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) shifts the bits in each lane of a `v128` value interpretation to the right by the same specified amount, outputting unsigned values. This is a logical right shift.
 
 {{InteractiveExample("Wat Demo: shr_u", "tabbed-taller")}}
 

@@ -1,13 +1,13 @@
 ---
-title: "shl: Wasm SIMD extract instruction"
+title: "shl: Wasm SIMD bitwise instruction"
 short-title: shl
-slug: WebAssembly/Reference/SIMD/conversion/shl
+slug: WebAssembly/Reference/SIMD/bitwise/shl
 page-type: webassembly-instruction
 browser-compat: webassembly.simd.shl
 sidebar: webassemblysidebar
 ---
 
-The **`shl`** [SIMD extract instruction](/en-US/docs/WebAssembly/Reference/SIMD/extract) shifts the bits in each lane of a `v128` value interpretation to the left by the same specified amount.
+The **`shl`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) shifts the bits in each lane of a `v128` value interpretation to the left by the same specified amount.
 
 {{InteractiveExample("Wat Demo: shl", "tabbed-taller")}}
 
