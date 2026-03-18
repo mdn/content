@@ -5,13 +5,13 @@ page-type: guide
 sidebar: cssref
 ---
 
-By default, [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) track elements across the entire viewport. The animation timeline begins when the first pixel of the element's start edge crosses the viewport's end edge, and ends when the element's end edge crosses the viewport's start edge. You can change this default animation attachment range. For example, you can restrict the view progress timeline to begin only when the subject element has fully entered the viewport.
+By default, [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) track elements across the entire scrollport. The animation timeline begins when the first pixel of the element's start edge crosses the scrollport's end edge, and ends when the element's end edge crosses the scrollport's start edge. You can change this default animation attachment range. For example, you can restrict the view progress timeline to begin only when the subject element has fully entered the scrollport.
 
 This guide explains how to modify timeline range names, specifically examining the various timeline range names, their meanings, and how they are used.
 
 <!--Limiting the animation timeline to a specific portion of an named animation timeline range is discussed in the [insetting scroll animations guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets).-->
 
-## Viewport progress timelines primer
+## View progress timeline primer
 
 [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) are created by attaching {{cssxref("@keyframes")}} animations to an element using the {{cssxref("animation-name")}} property (or {{cssxref("animation")}} shorthand). The keyframes define the animation's behavior, while the {{cssxref("animation-timeline")}} determines when and how the element progresses through those keyframes.
 
@@ -212,7 +212,7 @@ The `<timeline-range-name>` value type accepts six keywords: `cover`, `contain`,
 
 ### Cover
 
-The animation attachment range in the previous examples all "cover" the entire range. This range represents the full range of the view progress timeline. `0%` progress represents the point at which the start border edge of the subject aligns with the end edge of the scrollport, and `100%` progress represents the point where the subject's end border edge reaches the start edge of the scrollport. As we've seen, the size of the `cover` range is the sum of subject and viewport dimensions in the scroll direction. In all the examples thus far, the height of the animation attachment range is the height of the container plus the height of the animated element.
+The animation attachment range in the previous examples all "cover" the entire range. This range represents the full range of the view progress timeline. `0%` progress represents the point at which the start border edge of the subject aligns with the end edge of the scrollport, and `100%` progress represents the point where the subject's end border edge reaches the start edge of the scrollport. As we've seen, the size of the `cover` range is the sum of subject and scrollport dimensions in the scroll direction. In all the examples thus far, the height of the animation attachment range is the height of the container plus the height of the animated element.
 
 The `cover` named timeline is the default range. We could have explicitly set the `<timeline-range-name>` to achieve the same results:
 
@@ -253,7 +253,7 @@ The `contain` keyword fully _contains_ the animation within the scrollport, maki
 The `contain` value represents the range during which the principal box is either fully contained by or fully covers its view progress visibility range within the scrollport, depending on whether the subject element is smaller (can be fully contained by) or larger than the scrollport.
 
 - If the element is smaller than the scrollport in the scroll direction, `0%` occurs when the animated element's end border edge aligns with the end edge of the scrollport, and `100%` occurs when the animated element's start border edge aligns with the start edge of the scrollport. In other words, the `contain` value ranges from the point where the subject element is first completely contained by the scroll port (`0%`), to the point where it is no longer completely contained by the scroll port (`100%`).
-- If the element is larger than the scrollport, the `0%` progress is when the animated element's start border edge reaches the start edge of the viewport, and `100%` is when the end border edge aligns with the end edge. in other words, if the animation is larger than its container, the animated element is never fully-visible as it is not "contained" within the viewport. In this case, the animation starts when the start edge reaches the start edge of the scrollport, and ends when the animated element's end edge reaches the end edge of the container.
+- If the element is larger than the scrollport, the `0%` progress is when the animated element's start border edge reaches the start edge of the scrollport, and `100%` is when the end border edge aligns with the end edge. in other words, if the animation is larger than its container, the animated element is never fully-visible as it is not "contained" within the scrollport. In this case, the animation starts when the start edge reaches the start edge of the scrollport, and ends when the animated element's end edge reaches the end edge of the container.
 - If the animated element is the same size as its container, the animation still happens, but over `0px`, which is not visible to the user.
 
 ```css live-sample___contains
@@ -270,9 +270,9 @@ body::before {
 
 {{EmbedLiveSample("contains", "100%", "400")}}
 
-In this example, the original height of the animated element is 20% of the height of the viewport, and therefore can be completely contained within it.
+In this example, the original height of the animated element is 20% of the height of the scrollport, and therefore can be completely contained within it.
 
-If you check the `500px` radio button, the subject becomes twice as tall as the viewport, so the animation range begins when the subject element first completely covers the scroll port, with the `0%` occurring when the start edge reaches the start edge of the container, and ends when it no longer completely covers the scrollport, with the `100%` occurring when the end edge crosses the containers end edge.
+If you check the `500px` radio button, the subject becomes twice as tall as the scrollport, so the animation range begins when the subject element first completely covers the scroll port, with the `0%` occurring when the start edge reaches the start edge of the container, and ends when it no longer completely covers the scrollport, with the `100%` occurring when the end edge crosses the containers end edge.
 
 When the subject is the same size as the scroll container, as occurs when `250px` is selected, the animation still occurs, but over `0px`. As the `0%` and `100%` occur at the same time, the animation is instantaneous, and is only perceivable because the properties defined in the `100%` keyframe state are maintained after the animation ends because the {{cssxref("animation-fill-mode")}} property is set to `forwards`, meaning the property values defined in the `to` @keyframes animation remain after the animation concludes. Otherwise, the middle-sized `250px` subject, being the same height as the scroll container, would appear to not animate at all.
 
@@ -337,23 +337,28 @@ body::before {
 
 {{EmbedLiveSample("cover_contain", "100%", "420")}}
 
-Select different radio buttons and scroll the scrollport to compare the effects of the `cover` and `contain` values on animation timelines.
+Select different radio buttons and scroll the scrollport to compare the effects of the `over` and `contain` values on animation timelines.
 
 Let's look at the other `<timeline-range-name>` keyword values!
 
 ### Entry and exit
 
-To make the entire animation happen only when the subject is in the process of entering or exiting the viewport, use the `entry` or `exit` values, respectively. With these two values, the animation attachment range is based on the size of the animated element, not the size of the viewport.
+To make the entire animation happen only when the subject is in the process of entering or exiting the scrollport, use the `entry` or `exit` values, respectively. With these two values, the animation attachment range is based on the size of the animated element, not the size of the scrollport.
 
 #### Entry
 
-With `entry`, `0%` progress occurs the moment the animated element starts to enter the viewport, when the subject's start edge crosses the viewport's end edge. Setting `animation-range-start: entry` is the same as setting `animation-range-start: cover`.
+With `entry`, `0%` progress occurs the moment the animated element starts to enter the scrollport, when the subject's start edge crosses the scrollport's end edge.
 
-If the animated element is smaller than the scrollport, the animation attachment range is the size of the subject. If the subject is larger than the scrollport, the animation attachment range is the entire scrollport, so the `100%` progress occurs when the start edge of the element reaches the start edge of its scroll container.
+The entire animation occurs as the subject comes into view, ending when it becomes completely visible or when it reaches the start edge; whichever occurs first. If the animated element is smaller than the scrollport, the animation attachment range is the size of the subject.
 
-Setting `animation-range-end: entry` is equivalent to setting `animation-range-end: contain`. With `entry`, the `100%` occurs when the subject's end edge crosses the end edge of the viewport or, if the animated element is larger than the viewport in the scroll direction, when the animated element's start edge reaches the start edge of the viewport.
+{{EmbedLiveSample("svg_entry_only", "100%", "500")}}
 
-The entire animation occurs as the subject comes into view, ending when it becomes completely visible or when it reaches the start edge; whichever occurs first. In other words, with `entry`, the animation attachment range is the size of the animated element, touching the end edge of the scrollport, with a maximum size being the size of the container.
+The position at `0%` progress is shown in yellow. The position at `100%` progress is displayed in red. When the animated element is larger than the scrollport, these two positions overlap, which is denoted by a striped background.
+
+With `entry`, the animation attachment range is either the size of the animated element or the size of the container, whichever is smaller. If the subject is larger than the scrollport, the animation attachment range is the entire scrollport. With `entry`, the `100%` occurs when the subject's end edge crosses the end edge of the scrollport or, if the animated element is larger than the scrollport in the scroll direction, when the animated element's start edge reaches the start edge of the scrollport.
+
+Setting `animation-range-start: entry` is the same as setting `animation-range-start: cover`.
+Setting `animation-range-end: entry` is equivalent to setting `animation-range-end: contain`.
 
 ```html hidden live-sample___svg_entry_only
 <div>
@@ -377,14 +382,12 @@ The entire animation occurs as the subject comes into view, ending when it becom
 </div>
 ```
 
-{{EmbedLiveSample("svg_entry_only", "100%", "500")}}
-
 #### Exit
 
 The `exit` value is the inverse of `entry`.
-With `exit`, the attachment range starts when the animated element's start edge crosses the viewport's start edge. Setting `animation-range-start: exit 0%` is equivalent to setting `animation-range-start: contain 100%`. The `100%` progress occurs when the subject's end edge crosses the start edge; setting `animation-range-end: exit 100%` is equivalent to `animation-range-end: cover 100%`.
+With `exit`, the attachment range starts when the animated element's start edge crosses the scrollport's start edge.
 
-With `exit`, the entire animation occurs as the subject exits the viewport, only completing when it is completely out of the viewport. As with `entry`, with `exit`, the animation attachment range is the size of the animated element, but up against the start edge of the scrollport rather than the end edge, with the maximum size being the size of the container in the scroll direction.
+With `exit`, the entire animation occurs as the subject exits the scrollport, only completing when it is completely out of the scrollport. As with `entry`, with `exit`, the animation attachment range is the size of the animated element, but up against the start edge of the scrollport rather than the end edge, with the maximum size being the size of the container in the scroll direction.
 
 ```html hidden live-sample___svg_exit_only
 <div>
@@ -416,7 +419,14 @@ With `exit`, the entire animation occurs as the subject exits the viewport, only
 
 {{EmbedLiveSample("svg_exit_only", "100%", "460")}}
 
-The position at `0%` progress is shown in yellow. The position at `100%` progress is displayed in red. In the case, where the animated element is larger than the viewport, these two positions overlap, which is denoted by a striped background.
+The `0%` progress occurs when the subject's start edge reaches the scrollport's start edge.
+The `100%` progress occurs when the subject's end edge crosses the start edge.
+Setting `animation-range-start: exit 0%` is equivalent to setting `animation-range-start: contain 100%`.
+Setting `animation-range-end: exit 100%` is equivalent to `animation-range-end: cover 100%`.
+
+#### Comparing entry and exit
+
+It may help to take a look at `entry` and `exit` side-by-side to understand the effect the size of the subject has on the animation attachment range: with these two values, the animation attachment range is never larger than the container.
 
 ```css live-sample___entry_exit
 #A {
@@ -443,21 +453,25 @@ body::before {
 }
 ```
 
-Scroll the viewbox to see the range of the `entry` and `exit` values.
+Scroll the viewbox to see the range of the `entry` and `exit` values, then change the size of the subjects using the radio buttons and scroll again.
 
 {{EmbedLiveSample("entry_exit", "100%", "400")}}
 
-When the subjects are small enough to be fully contained within the viewport, the animation attachment timeline is at the start (`entry`) or end (`exit`) of the scrollport and the size of the attachment range is limited to the size of the animated element in the scroll direction. The percent offset, if any, is relative to the subject's size, not the viewport size.
+When the subjects are small enough to be fully contained within the scrollport, the animation attachment timeline is at the start (`entry`) or end (`exit`) of the scrollport and the size of the attachment range is limited to the size of the animated element in the scroll direction.
 
-If the animated element is the size of the viewport or larger, the animation doesn't begin until the element fully covers the scrollport in the scroll direction. If your animated element is larger than the scrollport, you may prefer to use `entry-crossing` and `exit-crossing`.
+With `entry` and `exit` the animation range is contained in the scrollport, while the element is not. If the subject element is the size of the scrollport or larger, the animation either ends when, or doesn't begin until, the element fully covers the scrollport in the scroll direction, which may not be the effect you seek. In these cases, you may prefer to use `entry-crossing` and `exit-crossing`.
 
 ### Entry- and exit-crossing
 
-If the subject element is smaller than the scrollport, and you want the full animation to occur as it enters or exits the scrollport, you can happily use `entry` or `exit`, respectively. If your animated element is larger than the viewport, the animation range is contained in the scrollport, while the element is not. The `entry` value sets the `100%` progress to be when the element's start edge reaches the start-edge of the scrollport, and `exit` only reaches the `0%` that is when the element's end-edge reaches the scroll container's end edge; when the animated element has already partially scrolled past the scrollport's start edge.
+If the subject element is smaller than the scrollport, and you want the full animation to occur as it enters or exits the scrollport, you can happily use `entry` or `exit`, respectively. When the subject is larger than the scrollport, as the `entry` value sets the `100%` progress to be when the element's start edge reaches the start-edge of the scrollport, and `exit` only reaches the `0%` that is when the element's end-edge reaches the scroll container's end edge, with these values, the animation attachment range is smaller than the subject in the scroll direction. If this isn't the effect you want, the `*-crossing` values may be the solution you seek.
 
 #### Entry-crossing
 
-The `entry-crossing` value represents the range during which the animated element crosses the end edge of the viewport, with `0%` progress occurring when the element's start edge aligns with the end edge the viewport and `100%` progress occurring when the element's end edge reaches the end edge of the viewport, meaning it has finished fully scrolling into the viewport.
+The `entry-crossing` value represents the range during which the animated element crosses the end edge of the scrollport, with `0%` progress occurring when the element's start edge aligns with the end edge the scrollport and `100%` progress occurring when the element's end edge reaches the end edge of the scrollport, meaning it has finished fully scrolling into the scrollport.
+
+{{EmbedLiveSample("svg_entry-crossing", "100%", "600")}}
+
+It may be helpful to compare the two values in a live example.
 
 ```css live-sample___entry_crossing
 #A {
@@ -480,9 +494,14 @@ body::before {
 }
 ```
 
+Select the the different height values, then scroll to compare `entry` with `entry-crossing` for each size.
+
 {{EmbedLiveSample("entry_crossing", "100%", "400")}}
 
-Note how the effects are similar, except for when the `500px` is selected and the animated element is taller than the container. With `entry`, when the animated element is larger than the viewport, the `100%` progress occurs when the element first fully spans the viewport.
+Note how the effects are similar, except for when the `500px` is selected and the animated element is taller than the container.
+The `entry-crossing` produces the same results as `entry` when the element is equal to or smaller than the scrollport, but when the element is larger than the scrollport, the `100%` occurs later, occurring only when the end edge has entered the view port.
+
+With `entry`, when the animated element is larger than the scrollport, the `100%` progress occurs when the element first fully spans the scrollport, when the start-edge of the subject reaches the start-edge of the container. With `entry-crossing`, the `100%` progress occurs with the end-edge of the subject crosses the end edge of the container, which means the animation attachment range is the size of the subject, and not clamped at the scrollport size.
 
 ```html hidden live-sample___svg_entry-crossing
 <div>
@@ -531,13 +550,13 @@ Note how the effects are similar, except for when the `500px` is selected and th
 }
 ```
 
-{{EmbedLiveSample("svg_entry-crossing", "100%", "600")}}
-
-The `entry-crossing` produces the same results as `entry` when the element is equal to or smaller than the viewport, but when the element is larger than the viewport, the `100%` occurs later, occurring only when the end edge has entered the view port. The yellow represents the position of the element when it reaches `0%` progress. The red represents the position at `100%` progress. The striped area indicates an overlap in these positions.
-
 #### Exit-crossing
 
-The `exit-crossing` value represents the range during which the animated element crosses the start edge of the viewport, with `0%` progress occurring when the element's start edge aligns with the start edge the viewport and `100%` progress occurring when the element's end edge reaches the start edge of the viewport, meaning it starts animating as soon as it covers the viewport, and continues animating until it fully exits the viewport's start edge.
+The `exit-crossing` value represents the range during which the animated element crosses the start edge of the scrollport, with `0%` progress occurring when the element's start edge aligns with the start edge the scrollport and `100%` progress occurring when the element's end edge reaches the start edge of the scrollport.
+
+{{EmbedLiveSample("svg_exit_crossing", "100%", "540")}}
+
+With `exit-crossing`, the animation starts animating as soon as it covers the scrollport, which `exit` doesn't start until the end edge of the subject enters into view. In both cases, the animation continue until the subject fully exits the scrollport's start edge.
 
 ```css live-sample___exit_crossing
 #A {
@@ -560,9 +579,11 @@ body::before {
 }
 ```
 
+The `exit-crossing` produces the same results as `exit` when the element is equal to or smaller than the scrollport, but when the element is larger than the scrollport, the `0%` occurs earlier, occurring as soon as the element's start edge reaches the scrollport's start edge, rather than waiting until the element's end edge enters the scrollport.
+
 {{EmbedLiveSample("exit_crossing", "100%", "400")}}
 
-Like when we compared `entry` with `entry-crossing`, the effects are similar, except for when the `500px` is selected, which makes the animated element taller than the container. With `exit`, when the animated element is larger than the viewport, the `0%` progress only occurs when the element's end edge crosses the end edge of the viewport. The `exit-crossing` produces the same results as `exit` when the element is equal to or smaller than the viewport, but when the element is larger than the viewport, the `0%` occurs earlier, occurring as soon as the element's start edge reaches the viewport's start edge, rather than waiting until the element's end edge enters the viewport.
+Like when we compared `entry` with `entry-crossing`, the effects are similar, except for when the `500px` is selected, which makes the animated element taller than the container. With `exit`, when the animated element is larger than the scrollport, the `0%` progress only occurs when the element's end edge crosses the end edge of the scrollport.
 
 ```html hidden live-sample___svg_exit_crossing
 <div>
@@ -607,8 +628,6 @@ Like when we compared `entry` with `entry-crossing`, the effects are similar, ex
   margin-bottom: -300px;
 }
 ```
-
-{{EmbedLiveSample("svg_exit_crossing", "100%", "540")}}
 
 ```html hidden live-sample___svg_exit_crossing live-sample___svg_entry_only live-sample___svg_exit_only live-sample___svg_contain live-sample___svg_cover live-sample___svg_entry-crossing
 <svg id="gradient">
@@ -670,6 +689,11 @@ line {
   stroke-dasharray: 10;
 }
 ```
+
+<!--
+### Other progress values
+
+In this guide, we have mentioned `0%` and `100%` progress points. The animation-range values aren't limited to these to progress points. You can inset any of the named animation ranges by a set amount or a percentage of the full animation attachment range. This is discussed in the [insets]() guide. -->
 
 ## See also
 
