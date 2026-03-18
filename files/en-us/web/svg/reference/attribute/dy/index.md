@@ -3,8 +3,8 @@ title: dy
 slug: Web/SVG/Reference/Attribute/dy
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fedropshadow-dy
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dy
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fedropshadow-dy
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-feoffset-dy
   - https://svgwg.org/svg2-draft/text.html#TextElementDYAttribute
 sidebar: svgref
 ---

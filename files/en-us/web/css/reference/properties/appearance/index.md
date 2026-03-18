@@ -73,7 +73,7 @@ The `appearance` property can be applied to all elements and pseudo-elements, bu
   - : Sets interactive widgets to render with their _OS-native_ appearance. Behaves as `none` on elements with no OS-native styling.
 
 - `base-select`
-  - : Only relevant to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, allowing them to be styled.
+  - : Relevant only to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, allowing them to be fully styled.
 
 - `<compat-special>`
   - : Has an effect similar to `auto` on certain elements.
@@ -110,7 +110,11 @@ Some widgets disappear completely when set to `appearance: none`. The hidden con
 
 Because `none` can cause a widget to be hidden, the `base` value is being added to provide widgets with a base appearance. When supported, the `base` value will ensure widgets maintain their native appearance while enabling CSS to be used to change a widget's styles that are not changeable by default. Unlike `none`, which can make radio buttons and checkboxes disappear, `base` gives the widget a primitive appearance with default native styles that are usable and interoperable, as well as enabling a good degree of customization via CSS. While this `base` value is not yet supported, the many `<compat-auto>` values provide similar functionality but are type-specific and not global.
 
+### Customizable select elements
+
 The `base-select` value, which is relevant only to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, enables [styling `<select>` elements and the select picker](#setting_the_appearance_of_a_select) (which contains the `<option>` elements). The picker is rendered in the top layer, similar to a popover. When `base-select` is set, the picker can be positioned relative to the select (or other elements) using [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) features. In addition, the `base-select` value causes the `<select>` not to render outside the browser pane or to trigger built-in mobile operating system components. It is also no longer sized based on the width of the widest `<option>`.
+
+See [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) for more information.
 
 ### Prefixed non-standard values
 

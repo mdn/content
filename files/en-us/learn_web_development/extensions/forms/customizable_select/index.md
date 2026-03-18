@@ -3,10 +3,11 @@ title: Customizable select elements
 short-title: Customizable selects
 slug: Learn_web_development/Extensions/Forms/Customizable_select
 page-type: learn-module-chapter
+browser-compat: css.properties.appearance.base-select
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Customizable_select_listboxes", "Learn_web_development/Extensions/Forms")}}
 
 This article explains how to create fully-customized {{htmlelement("select")}} elements using experimental browser features. This includes having full control over styling the select button, drop-down picker, arrow icon, current selection checkmark, and each individual {{htmlelement("option")}} element.
 
@@ -19,13 +20,18 @@ Traditionally it has been difficult to customize the look and feel of `<select>`
 
 Previously, the best available option — aside from using a custom JavaScript library — was to set an {{cssxref("appearance")}} value of `none` on the `<select>` element to strip away some of the OS-level styling, and then use CSS to customize the bits that can be styled. This technique is explained in [Advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling).
 
-Customizable `<select>` elements provide a solution to these issues. They allow you to build examples like the following, using only HTML and CSS, which are fully customized in supporting browsers. This includes `<select>` and drop-down picker layout, color scheme, icons, font, transitions, positioning, markers to indicate the selected icon, and more.
+Customizable `<select>` elements provide a solution to these issues. They allow you to build examples like the following, using only HTML and CSS, which are fully customized in [supporting browsers](#browser_compatibility). This includes `<select>` and drop-down picker layout, color scheme, icons, font, transitions, positioning, markers to indicate the selected icon, and more.
 
 {{EmbedLiveSample("full-render", "100%", "410px")}}
 
 In addition, they provide a progressive enhancement on top of existing functionality, falling back to "classic" selects in non-supporting browsers.
 
 You'll find out how to build this example in the sections below.
+
+> [!NOTE]
+> This article covers the background behind customizable selects and shows how to build "single dropdown" selects that take advantage of these features — that is, dropdown menus that display a single option at a time and allow a single option to be selected.
+>
+> For information on creating "listbox" selects — menus that display multiple options at once and allow a single option or multiple options to be selected — see [Customizable select listboxes](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes).
 
 ## What features comprise a customizable select?
 
@@ -44,10 +50,7 @@ You can build customizable `<select>` elements using the following HTML and CSS 
 - The {{cssxref(":checked")}} pseudo-class, which targets the currently-selected `<option>` element.
 - The {{cssxref("::checkmark")}} pseudo-element, which targets the checkmark placed inside the currently-selected `<option>` element to provide a visual indication of which one is selected.
 
-In addition, the `<select>` element and its drop-down picker have the following behavior assigned to them automatically:
-
-- They have an invoker/popover relationship, as specified by the [Popover API](/en-US/docs/Web/API/Popover_API), which provides the ability to select the picker when open via the {{cssxref(":popover-open")}} pseudo-class. See [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using) for more details of popover behavior.
-- They have an implicit anchor reference, meaning that the picker is automatically associated with the `<select>` element via [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning). The browser default styles position the picker relative to the button (the anchor) and you can customize this position as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor). The browser default styles also define some position-try fallbacks that reposition the picker if it is in danger of overflowing the viewport. Position try fallback are explained in [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding).
+In addition, the `<select>` element and its drop-down picker have an implicit anchor reference, meaning that the picker is automatically associated with the `<select>` element via [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning). The browser default styles position the picker relative to the button (the anchor) and you can customize this position as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor). The browser default styles also define some position-try fallbacks that reposition the picker if it is in danger of overflowing the viewport. Position try fallback are explained in [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding).
 
 > [!NOTE]
 > You can check browser support for customizable `<select>` by viewing the browser compatibility tables on the reference pages for related features such as {{htmlelement("selectedcontent")}}, {{cssxref("::picker()", "::picker(select)")}}, and {{cssxref("::checkmark")}}.
@@ -333,7 +336,7 @@ Let's check in again on how the example is rendering. The updated state after th
 
 ## Animating the picker using popover states
 
-The customizable `<select>` element's select `button` and drop-down picker are automatically given an invoker/popover relationship, as described in [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using). There are many advantages that this brings to `<select>` elements; our example takes advantage of the ability to animate between popover hidden and showing states using transitions. The {{cssxref(":popover-open")}} pseudo-class represents popovers in the showing state.
+The customizable `<select>` element's select `button` and drop-down picker are automatically given an invoker/popover relationship, as described in [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using). There are many advantages that this brings to `<select>` elements; our example takes advantage of the ability to animate between popover hidden and showing states using transitions. The {{cssxref(":open")}} pseudo-class represents select elements in an open state.
 
 The technique is covered quickly in this section — read [Animating popovers](/en-US/docs/Web/API/Popover_API/Using#animating_popovers) for a more detailed description.
 
@@ -356,10 +359,10 @@ The list of transitioned properties features `opacity`, however it also includes
 > [!NOTE]
 > The [`allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) value is needed to enable discrete property animations.
 
-Next, the picker is selected in the showing state using `::picker(select):popover-open` and given an `opacity` value to `1` — this is the end state of the transition:
+Next, the picker is selected in the showing state using `:open::picker(select)` and given an `opacity` value to `1` — this is the end state of the transition:
 
 ```css live-sample___full-render
-::picker(select):popover-open {
+:open::picker(select) {
   opacity: 1;
 }
 ```
@@ -368,7 +371,7 @@ Finally, because the picker is being transitioned while it is moving from `displ
 
 ```css live-sample___full-render
 @starting-style {
-  ::picker(select):popover-open {
+  :open::picker(select) {
     opacity: 0;
   }
 }
@@ -396,24 +399,135 @@ This results in the top edge of the picker always being positioned 1 pixel down 
 > [!NOTE]
 > If you want to remove the implicit anchor reference to stop the picker from being anchored to the `<select>` element, you can do so by setting the `position-anchor` property of the picker to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`. See also [removing an anchor association](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#removing_an_anchor_association).
 
-## Final result
+## Main example final result
 
 After the last two sections, the final updated state of our `<select>` is rendered like this:
 
 {{EmbedLiveSample("full-render", "100%", "410px")}}
 
-## Customizing other classic select features
+## Styling optgroups
 
-The above sections have covered all the new functionality available in customizable selects, and shown how it interacts with both classic single-line selects, and related modern features such as popovers and anchor positioning. There are some other `<select>` element features not mentioned above; this section talks about how they currently work alongside customizable selects:
+The default styling of {{htmlelement("optgroup")}} elements in customizable selects is the same as in classic `<select>` elements — bolded and indented less than the contained options. In customizable selects, however, optgroups behave just like any other block-level container, and can be styled as such. In addition, the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.
 
-- [`<select multiple>`](/en-US/docs/Web/HTML/Reference/Attributes/multiple)
-  - : There isn't currently any support specified for the `multiple` attribute on customizable `<select>` elements, but this will be worked on in the future.
-- {{htmlelement("optgroup")}}
-  - : The default styling of `<optgroup>` elements is the same as in classic `<select>` elements — bolded and indented less than the contained options. You need to make sure to style the `<optgroup>` elements so they fit into the overall design, and bear in mind that they will behave just as containers are expected to behave in conventional HTML. In customizable `<select>` elements, the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.
+Let's look at a basic example. Our HTML looks like this:
+
+```html live-sample___optgroup-example
+<label for="animal-select">Select animal:</label><br />
+<select id="animal-select">
+  <optgroup>
+    <legend>Domestic</legend>
+    <option value="cat">Cat</option>
+    <option value="dog">Dog</option>
+    <option value="guinea">Guinea pig</option>
+  </optgroup>
+  <optgroup>
+    <legend>Farm</legend>
+    <option value="chicken">Chicken</option>
+    <option value="cow">Cow</option>
+    <option value="pig">Pig</option>
+  </optgroup>
+</select>
+```
+
+We start our CSS by styling the `<optgroup>` elements themselves. These are mostly rudimentary styles to make the optgroups look like containers for their descendant `<option>` elements. We've given them some {{cssxref("margin-top")}} to put some space between each optgroup, and between the top optgroup and the select button.
+
+```css hidden live-sample___optgroup-example
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+  width: 200px;
+}
+
+select {
+  border: 2px solid #ddd;
+  background: #eee;
+  padding: 10px;
+}
+
+::picker(select) {
+  border: none;
+}
+```
+
+```css live-sample___optgroup-example
+optgroup {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: #eee;
+  padding: 10px 0 0 0;
+  margin-top: 5px;
+}
+```
+
+Next, we style the `<legend>` elements, aligning the text to the center and including some margin to separate them from the options.
+
+```css live-sample___optgroup-example
+optgroup legend {
+  text-align: center;
+  margin-bottom: 10px;
+}
+```
+
+Finally, we style the `<option>` elements, providing a {{cssxref("background")}} color and some {{cssxref("padding")}} and styling the bottom {{cssxref("border-radius")}} of the last `<option>` in each case to make it fit in with the rounded corners of the parent `<optgroup>`. We also implement zebra-striping by giving the odd-numbered `<option>` elements a different background color, and provide a distinct option hover and focus state.
+
+```css live-sample___optgroup-example
+option {
+  background: #eee;
+  padding: 10px;
+}
+
+option:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
+
+option:nth-of-type(odd) {
+  background: #fff;
+}
+
+option:hover,
+option:focus {
+  background: plum;
+}
+```
+
+We've hidden the rest of the styles for brevity.
+
+The example renders like this:
+
+{{EmbedLiveSample("optgroup-example", "100%", "410px")}}
+
+```css hidden live-sample___plain-render live-sample___second-render live-sample___third-render live-sample___fourth-render live-sample___full-render live-sample___optgroup-example
+@supports not (appearance: base-select) {
+  body::before {
+    content: "Your browser does not support `appearance: base-select`.";
+    color: black;
+    background-color: wheat;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 1;
+  }
+}
+```
+
+## Browser compatibility
+
+{{Compat}}
 
 ## Next up
 
-In the next article of this module, we will explore the different [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes) available to us in modern browsers for styling forms in different states.
+In the next article of this module, we will show you how to style [Customizable select listboxes](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes).
 
 ## See also
 
@@ -422,4 +536,4 @@ In the next article of this module, we will explore the different [UI pseudo-cla
 - {{cssxref("::picker()", "::picker(select)")}}, {{cssxref("::picker-icon")}}, {{cssxref("::checkmark")}}
 - {{cssxref(":open")}}, {{cssxref(":checked")}}
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Customizable_select_listboxes", "Learn_web_development/Extensions/Forms")}}

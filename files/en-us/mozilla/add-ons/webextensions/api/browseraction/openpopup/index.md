@@ -8,8 +8,6 @@ sidebar: addonsidebar
 
 Open the browser action's popup.
 
-In stable versions of Firefox, you can only call this function from inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions). See [Browser compatibility](#browser_compatibility) for details.
-
 ## Syntax
 
 ```js-nolint
