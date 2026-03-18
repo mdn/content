@@ -132,12 +132,44 @@ setTimeout(myArray.myMethod, 1000); // Alerts "[object Window]" after 1 second
 setTimeout(myArray.myMethod, 1500, "1"); // Alerts "undefined" after 1.5 seconds
 ```
 
-You can work around this by wrapping the method call in an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (or any wrapper function), so the method is called on the object directly using dot notation.
+One way to work around this is to wrap the method call in a function, so the method is called on the object directly using dot notation:
 
 ```js
 setTimeout(() => myArray.myMethod(), 1000); // Alert "zero,one,two" after 1 second
 setTimeout(() => myArray.myMethod(1), 1500); // Alert "one" after 1.5 seconds
-setTimeout(() => myArray.myMethod(2), 3000); // Alert "one" after 3 seconds
+setTimeout(() => myArray.myMethod(2), 3000); // Alert "two" after 3 seconds
+```
+
+Another approach is to use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), which have a lexical `this` — meaning they inherit `this` from the surrounding scope instead of having their own. This is useful when your callback needs to access `this` directly:
+
+```js
+const counter = {
+  count: 0,
+  start() {
+    // Arrow function inherits "this" from start(), so this.count works
+    setInterval(() => {
+      this.count++;
+      console.log(this.count);
+    }, 1000);
+  },
+};
+
+counter.start(); // Logs 1, 2, 3, ...
+```
+
+If you used a regular `function` expression instead, `this` would refer to the global object (`window`), not `counter`:
+
+```js
+const counter = {
+  count: 0,
+  start() {
+    // Regular function has its own "this", which is "window" here
+    setInterval(function () {
+      this.count++; // "this" is window, not counter!
+      console.log(this.count); // NaN
+    }, 1000);
+  },
+};
 ```
 
 You might also use the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function.
