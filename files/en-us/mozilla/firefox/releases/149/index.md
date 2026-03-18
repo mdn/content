@@ -59,6 +59,10 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
+- The [`options.resizeQuality`](/en-US/docs/Web/API/Window/createImageBitmap#resizequality) parameter is now supported by {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}}.
+  In addition, the methods now allow both resize options ([`options.resizeWidth`](/en-US/docs/Web/API/Window/createImageBitmap#resizewidth) or [`options.resizeHeight`](/en-US/docs/Web/API/Window/createImageBitmap#resizeheight)) and image bitmap parameters ([`sx`, `sy`, `sw`, and `sh`](/en-US/docs/Web/API/Window/createImageBitmap#sx)) to be set at the same time — previously setting both returned the unscaled source bitmap.
+  ([Firefox bug 2010125](https://bugzil.la/2010125)).
+
 #### DOM
 
 - The [`HTMLSelectElement.showPicker()`](/en-US/docs/Web/API/HTMLInputElement/showPicker#showpicker_for_a_datalist_input) method is now supported for a list of options defined in a {{htmlelement("datalist")}}.
