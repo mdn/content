@@ -46,7 +46,7 @@
     "@caporal/core": "^2.0.7",
     "@mdn/yari": "4.9.1",
     "@octokit/rest": "^21.1.1",
-    "ajv": "^8.17.1",
+    "ajv": "^8.18.0",
     "ajv-formats": "^3.0.1",
     "async": "^3.2.6",
     "caporal": "^1.4.0",
