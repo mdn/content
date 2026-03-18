@@ -56,7 +56,7 @@ value_type.convert_low_i32x4_s
 
 | Instruction                 | Binary equivalent | Example text => binary                     |
 | --------------------------- | ----------------- | ------------------------------------------ |
-| `f32x4.convert_low_i32x4_s` | `0xfd 0xfe`       | `f32x4.convert_low_i32x4_s` => `0xfd 0xfe` |
+| `f64x2.convert_low_i32x4_s` | `0xfd 0xfe`       | `f64x2.convert_low_i32x4_s` => `0xfd 0xfe` |
 
 ## Specifications
 
