@@ -57,8 +57,8 @@ value_type.trunc
 
 | Instruction   | Binary equivalent | Example text => binary       |
 | ------------- | ----------------- | ---------------------------- |
-| `f32x4.trunc` | `0xfd 0x69`       | `f32x4.trunc` => `0xfd 0x69` |
-| `f64x2.trunc` | `0xfd 0x7a`       | `f64x2.trunc` => `0xfd 0x7a` |
+| `f32x4.trunc` | `0xfd 105:u32`    | `f32x4.trunc` => `0xfd 0x69` |
+| `f64x2.trunc` | `0xfd 122:u32`    | `f64x2.trunc` => `0xfd 0x7a` |
 
 ## Specifications
 
