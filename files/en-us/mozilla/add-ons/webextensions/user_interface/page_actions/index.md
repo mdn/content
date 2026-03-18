@@ -85,7 +85,7 @@ You can change any of the page action properties programmatically using the [`pa
 You can use bitmap image formats, such as PNG, or provide SVG icons. If you use an SVG icon, you can use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For more information, see [`"page_action"` `"default_icon"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action#default_icon) and the [themed-icons](https://github.com/mdn/webextensions-examples/tree/master/themed-icons) example.
 
 > [!NOTE]
-> An implicit CSS filter applies to SVG icons in dark UI themes when `about:config` preference `extensions.webextensions.pageActionIconDarkModeFilter.enabled` is set to `true` or not defined. This filter is deactivated in Nightly starting with Firefox 149; see [Firefox bug 2001318](https://bugzil.la/2001318). It will be deactivated on the release channel as part of [Firefox bug 2016509](https://bugzil.la/2016509), which is planned for Firefox 152.
+> An implicit CSS filter applies to SVG icons in dark UI themes. This filter will be deactivated in Firefox Desktop version 152 ([Firefox bug 2016509](https://bugzil.la/2016509)). You can test SVG icons with the CSS filter disabled in Firefox Desktop Nightly from 149 and in other editions by creating a boolean `about:config` preference called `extensions.webextensions.pageActionIconDarkModeFilter.enabled` and setting it to `false`.
 
 For details on how to create icons to use with your page action, see [Iconography](https://acorn.firefox.com/latest/foundations/styles/iconography-QEDMXQqj) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
