@@ -37,7 +37,9 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The {{CSSXRef("shape-outside")}} CSS property now supports the [`xywh()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/xywh) function as a value. This allows you to define a shape for inline content to wrap around, using distances from the left (`x`) and top (`y`) edges of the containing block and a width (`w`) and height (`h`). ([Firefox bug 1983187](https://bugzil.la/1983187)).
 
 <!-- #### Removals -->
 
@@ -56,6 +58,10 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 <!-- #### Removals -->
 
 ### APIs
+
+- The [`options.resizeQuality`](/en-US/docs/Web/API/Window/createImageBitmap#resizequality) parameter is now supported by {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}}.
+  In addition, the methods now allow both resize options ([`options.resizeWidth`](/en-US/docs/Web/API/Window/createImageBitmap#resizewidth) or [`options.resizeHeight`](/en-US/docs/Web/API/Window/createImageBitmap#resizeheight)) and image bitmap parameters ([`sx`, `sy`, `sw`, and `sh`](/en-US/docs/Web/API/Window/createImageBitmap#sx)) to be set at the same time — previously setting both returned the unscaled source bitmap.
+  ([Firefox bug 2010125](https://bugzil.la/2010125)).
 
 #### DOM
 
@@ -137,3 +143,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`alpha` & `colorspace` attributes in `color` input elements** (Nightly only): `dom.forms.html_color_picker.enabled`
 
   The HTML [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) element supports [`alpha`](/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha) & [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attributes. ([Firefox bug 1919718](https://bugzil.la/1919718)).
+
+- **`@container style()` queries** (Nightly): `layout.css.style-queries.enabled`
+
+  The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2014404](https://bugzil.la/2014404)).
