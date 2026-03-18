@@ -64,6 +64,7 @@ Events have three functions:
         - "mutedInfo"
         - "openerTabId"
         - "pinned"
+        - "splitViewId"
         - "status"
         - "title"
         - "url"
@@ -106,6 +107,8 @@ Lists the changes to the state of the tab that is updated. To learn more about t
   - : `integer`. The ID of the tab that opened this tab, if any. This property is only present if the opener tab exists and is in the same window.
 - `pinned` {{optional_inline}}
   - : `boolean`. The tab's new pinned state.
+- `splitViewId` {{optional_inline}}
+  - : `integer`. The ID of the split view the tab belongs to. Set to {{WebExtAPIRef('tabs.SPLIT_VIEW_ID_NONE')}} when the tab doesn't belong to a split view.
 - `status` {{optional_inline}}
   - : `string`. The status of the tab. Can be either _loading_ or _complete_.
 - `title` {{optional_inline}}
