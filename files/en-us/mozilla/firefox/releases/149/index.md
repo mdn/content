@@ -39,7 +39,7 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### CSS
 
-- The {{CSSXRef("shape-outside")}} CSS property now supports the [`xywh()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/xywh) CSS function as a value. This allows developers to define a shape that inline content should wrap around using `x` and `y` coordinates and specify a width (`w`) and height (`h`). ([Firefox bug 1983187](https://bugzil.la/1983187)).
+- The {{CSSXRef("shape-outside")}} CSS property now supports the [`xywh()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/xywh) function as a value. This allows you to define a shape for inline content to wrap around, using distances from the left (`x`) and top (`y`) edges of the containing block and a width (`w`) and height (`h`). ([Firefox bug 1983187](https://bugzil.la/1983187)).
 
 <!-- #### Removals -->
 
