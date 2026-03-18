@@ -377,7 +377,7 @@ The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}},
 
 ### `@container style()` queries
 
-The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule now supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values) or not and applied styles based upon the outcome. ([Firefox bug 2014404](https://bugzil.la/2014404)).
+The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2014404](https://bugzil.la/2014404)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
