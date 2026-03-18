@@ -31,8 +31,9 @@ console.timeStamp(label, start, end, trackName, trackGroup, color, data);
 - `data` {{Optional_Inline}} {{Experimental_Inline}}
   - : An object with additional data to display. URLs may automatically be turned into links by some browsers.
 
-    > [!NOTE]
-    > Support for displaying the `data` parameter in developer tools is inconsistent across browsers. For example, in some versions of Chrome, this data may not appear in the Performance panel. Behavior may vary depending on the browser and its DevTools implementation.
+> [!NOTE]
+
+> Support for the `data` parameter varies across browsers and their DevTools implementations. For example, in some versions of Chrome, this data may not appear in the Performance panel.
 
 - `end` {{Optional_Inline}} {{Experimental_Inline}}
   - : A string referencing a previously defined `timeStamp` label or a timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time.
