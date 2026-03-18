@@ -583,7 +583,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("user-modify")}}
 - {{CSSxRef("user-select")}}
 - {{CSSxRef("vector-effect")}}
-- {{CSSxRef("vertical-align")}}
+- {{CSSxRef("vertical-align")}} (shorthand)
 - {{CSSxRef("view-timeline-axis")}}
 - {{CSSxRef("view-timeline-inset")}}
 - {{CSSxRef("view-timeline-name")}}
