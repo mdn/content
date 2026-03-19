@@ -32,24 +32,11 @@ Additional key paint moments are provided by the {{domxref("PerformancePaintTimi
 
 To get an accurate measurement of render time for cross-origin resources, set the {{httpheader("Timing-Allow-Origin")}} header.
 
-Developers should use `startTime` instead of `renderTime` as the LCP value, as the `renderTime` may not be set in some browsers.
-
 See [Cross-origin image render time](/en-US/docs/Web/API/LargestContentfulPaint/renderTime#cross-origin_image_render_time) and [Use startTime over renderTime](/en-US/docs/Web/API/LargestContentfulPaint/renderTime#use_starttime_over_rendertime) for more details.
 
 ## Instance properties
 
-This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying and constraining the properties as follows:
-
-- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns `"largest-contentful-paint"`.
-- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Always returns an empty string.
-- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the value of this entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}.
-- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns `0`, as `duration` is not applicable to this interface.
-
-It also supports the following properties:
+This interface directly defines the following properties:
 
 - {{domxref("LargestContentfulPaint.element")}} {{ReadOnlyInline}}
   - : The element that is the current largest contentful paint.
@@ -61,8 +48,23 @@ It also supports the following properties:
   - : The intrinsic size of the element returned as the area (width \* height).
 - {{domxref("LargestContentfulPaint.id")}} {{ReadOnlyInline}}
   - : The id of the element. This property returns an empty string when there is no id.
+- {{domxref("LargestContentfulPaint.paintTime")}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the paint phase started.
+- {{domxref("LargestContentfulPaint.presentationTime")}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the painted pixels were actually drawn on the screen.
 - {{domxref("LargestContentfulPaint.url")}} {{ReadOnlyInline}}
   - : If the element is an image, the request url of the image.
+
+It also extends the following {{domxref("PerformanceEntry")}} properties, qualifying and constraining them as described:
+
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns `"largest-contentful-paint"`.
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Always returns an empty string.
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns the value of this entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}.
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns `0`, as `duration` is not applicable to this interface.
 
 ## Instance methods
 
@@ -75,7 +77,7 @@ _This interface also inherits methods from {{domxref("PerformanceEntry")}}._
 
 ### Observing the largest contentful paint
 
-In the following example, an observer is registered to get the largest contentful paint while the page is loading. The `buffered` flag is used to access data from before observer creation.
+In the following example, a {{domxref("PerformanceObserver")}} is registered to get the largest contentful paint while the page is loading. The `buffered` flag is used to access data from before observer creation.
 
 The LCP API analyzes all content it finds (including content that is removed from the DOM). When new largest content is found, it creates a new entry. It stops searching for larger content when scroll or input events occur, since these events likely introduce new content on the website. Thus the LCP is the last performance entry reported by the observer.
 
@@ -85,6 +87,32 @@ const observer = new PerformanceObserver((list) => {
   const lastEntry = entries[entries.length - 1]; // Use the latest LCP candidate
   console.log("LCP:", lastEntry.startTime);
   console.log(lastEntry);
+});
+observer.observe({ type: "largest-contentful-paint", buffered: true });
+```
+
+### Observing separate paint and presentation timings
+
+The `paintTime` and `presentationTime` properties enable you to retrieve specific timings for the paint phase starting and the painted pixels being drawn on the screen. The `paintTime` is broadly interoperable, whereas the `presentationTime` is implementation-dependant.
+
+This example builds on the earlier observer example, showing how to check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `startTime`.
+
+```js
+const observer = new PerformanceObserver((list) => {
+  const entries = list.getEntries();
+  const lastEntry = entries[entries.length - 1]; // Use the latest LCP candidate
+  if (lastEntry.paintTime && lastEntry.presentationTime) {
+    console.log(
+      `LCP paint time: ${lastEntry.paintTime} milliseconds; presentation time: ${lastEntry.presentationTime} milliseconds.`,
+    );
+    // Logs:
+    // LCP paint time: 473.30000001192093 milliseconds;
+    // presentation time: 516 milliseconds.
+  } else {
+    console.log(`LCP start time: ${lastEntry.startTime} milliseconds.`);
+    // Logs:
+    // LCP start time: 516 milliseconds.
+  }
 });
 observer.observe({ type: "largest-contentful-paint", buffered: true });
 ```

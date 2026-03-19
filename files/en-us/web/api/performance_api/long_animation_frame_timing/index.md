@@ -49,6 +49,8 @@ The following is a complete `"long-animation-frame"` performance entry example, 
   entryType: "long-animation-frame",
   firstUIEventTimestamp: 11801.099999999627,
   name: "long-animation-frame",
+  paintTime: 11758.199999999255,
+  presentationTime: 11803.199999999255,
   renderStart: 11858.800000000745,
   scripts: [
     {
@@ -81,6 +83,10 @@ Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, th
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time in milliseconds for which the main thread was blocked from responding to high priority tasks, such as user input. This is calculated by taking all the [long tasks](/en-US/docs/Web/API/PerformanceLongTaskTiming#description) within the LoAF that have a `duration` of more than `50ms`, subtracting `50ms` from each, adding the rendering time to the longest task time, and summing the results.
 - {{domxref("PerformanceLongAnimationFrameTiming.firstUIEventTimestamp", "firstUIEventTimestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event — such as a mouse or keyboard event — to be processed during the current animation frame. Note this timestamp can be before the start of this animation frame if there was a delay between the event happening and it being processed.
+- {{domxref("PerformanceLongAnimationFrameTiming.paintTime", "paintTime")}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the animation frame started.
+- {{domxref("PerformanceLongAnimationFrameTiming.presentationTime", "presentationTime")}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the UI update was actually drawn on the screen.
 - {{domxref("PerformanceLongAnimationFrameTiming.renderStart", "renderStart")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the start time of the rendering cycle, which includes {{domxref("Window.requestAnimationFrame()")}} callbacks, style and layout calculation, {{domxref("ResizeObserver")}} callbacks, and {{domxref("IntersectionObserver")}} callbacks.
 - {{domxref("PerformanceLongAnimationFrameTiming.styleAndLayoutStart", "styleAndLayoutStart")}}
@@ -112,7 +118,7 @@ The timestamps provided in the {{domxref("PerformanceLongAnimationFrameTiming")}
 
 | Timing                            | Calculation                                                              |
 | --------------------------------- | ------------------------------------------------------------------------ |
-| Start time                        | `startTime`                                                              |
+| Start time                        | `startTime` (or `presentationTime`)                                      |
 | End time                          | `startTime + duration`                                                   |
 | Work duration                     | `renderStart ? renderStart - startTime : duration`                       |
 | Render duration                   | `renderStart ? (startTime + duration) - renderStart : 0`                 |
@@ -142,7 +148,8 @@ const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
     if (entry.duration > REPORTING_THRESHOLD_MS) {
       // Example here logs to console; real code could send to analytics endpoint
-      console.log(entry);
+      console.log(entry.paintTime);
+      console.log(entry.presentationTime);
     }
   }
 });

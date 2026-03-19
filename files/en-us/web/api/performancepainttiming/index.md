@@ -26,7 +26,14 @@ Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
 
 ## Instance properties
 
-This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying and constraining the properties as follows:
+This interface directly defines the following properties:
+
+- {{domxref("PerformancePaintTiming.paintTime")}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the paint phase started.
+- {{domxref("PerformancePaintTiming.presentationTime")}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the painted pixels were actually drawn on the screen.
+
+It also extends the following {{domxref("PerformanceEntry")}} properties, qualifying and constraining them as described:
 
 - {{domxref("PerformanceEntry.entryType")}}
   - : Returns `"paint"`.
@@ -44,7 +51,7 @@ This interface has no properties but it extends the following {{domxref("Perform
 
 ## Examples
 
-### Getting paint timings
+### Getting basic paint timings
 
 Example using a {{domxref("PerformanceObserver")}}, which notifies of new `paint` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
@@ -70,6 +77,33 @@ entries.forEach((entry) => {
   console.log(`The time to ${entry.name} was ${entry.startTime} milliseconds.`);
   // Logs "The time to first-paint was 386.7999999523163 milliseconds."
   // Logs "The time to first-contentful-paint was 400.6999999284744 milliseconds."
+});
+```
+
+### Getting separate paint and presentation timings
+
+The `paintTime` and `presentationTime` properties enable you to retrieve specific timings for the paint phase starting and the painted pixels being drawn on the screen. The `paintTime` is broadly interoperable, whereas the `presentationTime` is implementation-dependant.
+
+This example builds on the earlier {{domxref("Performance.getEntriesByType()")}} example, showing how to check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `startTime`.
+
+```js
+const entries = performance.getEntriesByType("paint");
+entries.forEach((entry) => {
+  if (entry.paintTime && entry.presentationTime) {
+    console.log(
+      `${entry.name} paint time: ${entry.paintTime} milliseconds; presentation time: ${entry.presentationTime} milliseconds.`,
+    );
+    // Logs:
+    // first-paint paint time: 473.30000001192093 milliseconds;
+    // presentation time: 516 milliseconds.
+    // first-contentful-paint paint time: 473.30000001192093 milliseconds;
+    // presentation time: 516 milliseconds.
+  } else {
+    console.log(`${entry.name} start time: ${entry.startTime} milliseconds.`);
+    // Logs:
+    // first-paint start time: 592 milliseconds.
+    // first-contentful-paint start time: 592 milliseconds.
+  }
 });
 ```
 
