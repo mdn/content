@@ -3,11 +3,11 @@ title: x
 slug: Web/SVG/Reference/Attribute/x
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-x
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-x
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-x
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-x
-  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-x
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-x
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fespotlight-x
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fepointlight-x
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-x
+  - https://drafts.csswg.org/css-masking-1/#element-attrdef-mask-x
   - https://svgwg.org/svg2-draft/geometry.html#X
   - https://svgwg.org/svg2-draft/pservers.html#PatternElementXAttribute
   - https://svgwg.org/svg2-draft/text.html#TextElementXAttribute
