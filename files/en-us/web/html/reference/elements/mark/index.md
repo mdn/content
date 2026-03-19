@@ -75,7 +75,7 @@ mark::after {
 Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been highlighted would adversely affect understanding.
 
 - [Short note on making your mark (more accessible) | Vispero](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/)
-- [Tweaking Text Level Styles, Reprised | Adrian Roselli](https://adrianroselli.com/2025/04/tweaking-text-level-styles-reprised.html)
+- [Tweaking Text Level Styles, Reprised](https://adrianroselli.com/2025/04/tweaking-text-level-styles-reprised.html) via Adrian Roselli (2025)
 
 ## Examples
 
