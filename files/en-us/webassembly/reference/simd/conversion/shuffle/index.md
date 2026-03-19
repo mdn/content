@@ -44,18 +44,14 @@ value_type.shuffle indices
 - `shuffle`
   - : The `shuffle` instruction. Must always be included after the `value_type` and a period (`.`).
 - `indices`
-  - : 16 integers in the range `0` to `31` inclusive, representing the indices of the values to take from the `input1` and `input2` values. Values of `0` to `15` represent the 16 indices of the `input1` value, and values of `16` to `31` represent the 16 indices of the `input2` value.
+  - : 16 integers in the range `0` to `31` inclusive, representing the indices of the values to take from the two input values. Values of `0` to `15` represent the 16 indices of the first input value, and values of `16` to `31` represent the 16 indices of the second input value.
 
 ### Type
 
 ```plain
-[input1, input2] -> [output]
+[] -> [output]
 ```
 
-- `input1`
-  - : The first `v128` value interpretation you want to take values from.
-- `input2`
-  - : The second `v128` value interpretation you want to take values from.
 - `output`
   - : The output `v128` value interpretation.
 

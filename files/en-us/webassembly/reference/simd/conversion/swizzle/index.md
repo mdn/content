@@ -30,7 +30,7 @@ The **`swizzle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Referenc
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
 
-In the above example, we extract and log the value at index position 6 of the `swizzle` instruction output value. This will be `4`, because the swizzle instruction has selected the value at index position 9 of the `input` to be put at index position 6 of the `output`.
+In the above example, we extract and log the value at index position 6 of the `swizzle` instruction output value. This will be `4`, because the swizzle instruction has selected the value at index position 9 of the input value to be put at index position 6 of the output value.
 
 ## Syntax
 
@@ -47,13 +47,11 @@ value_type.swizzle
 ### Type
 
 ```plain
-[input, indices] -> [output]
+[indices] -> [output]
 ```
 
-- `input`
-  - : The `v128` value interpretation you want to take values from.
 - `indices`
-  - : The `v128` value containing the indices you want to use to select which values should be taken from the `input` value and included in the output. In each case, the index number represents the index position to take from the `input` value, and the position of the index represents the position it should appear in the `output` value.
+  - : The `v128` value containing the indices you want to use to select which values should be taken from the input value and included in the output. In each case, the index number represents the index position to take from the input value, and the position of the index represents the position it should appear in the `output` value.
 
     These values must be between `0` and `15`, inclusive. For indices outside this range, the resulting lanes will be initialized to `0`.
 

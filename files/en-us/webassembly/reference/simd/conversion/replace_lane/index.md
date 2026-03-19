@@ -52,11 +52,9 @@ value_type.replace_lane index
 ### Type
 
 ```plain
-[input, replace_value] -> [output]
+[replace_value] -> [output]
 ```
 
-- `input`
-  - : The `v128` value interpretation within which you want to replace a lane.
 - `replace_value`
   - : The value that you want to replace the lane with.
 - `output`

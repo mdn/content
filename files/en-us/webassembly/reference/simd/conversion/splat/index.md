@@ -17,7 +17,7 @@ The **`splat`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/
   (func $main
     (local $s v128)
     f32.const 16.2
-    (f32x4.splat)
+    f32x4.splat
     local.set $s
 
     local.get $s
@@ -64,15 +64,13 @@ value_type.splat
 ### Type
 
 ```plain
-[input, value] -> [output]
+[value] -> [output]
 ```
 
-- `input`
-  - : The `v128` value interpretation you want to run the `splat` instruction on.
 - `value`
   - : The value you want to copy to all lanes of the `v128`.
 - `output`
-  - : The resulting `v128` value interpretation after all lanes of the `input` value have been set to the `value`.
+  - : The resulting `v128` value interpretation after all lanes of the input value have been set to the `value`.
 
 ### Binary encoding
 

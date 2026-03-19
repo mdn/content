@@ -44,11 +44,9 @@ value_type.convert_low_i32x4_s
 ### Type
 
 ```plain
-[input] -> [output]
+[] -> [output]
 ```
 
-- `input`
-  - : The `v128` value interpretation you want to convert.
 - `output`
   - : The output `v128` value interpretation. The first two values of the input `i32x4` are included in the output `f64x2`.
 

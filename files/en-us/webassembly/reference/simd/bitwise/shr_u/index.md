@@ -48,11 +48,9 @@ value_type.shr_u
 ### Type
 
 ```plain
-[input, shift_value] -> [output]
+[shift_value] -> [output]
 ```
 
-- `input`
-  - : The `v128` value interpretation that you want to shift.
 - `shift_value`
   - : The value that you want to shift the lanes by.
 - `output`

@@ -44,11 +44,9 @@ value_type.demote_f64x2_zero
 ### Type
 
 ```plain
-[input] -> [output]
+[] -> [output]
 ```
 
-- `input`
-  - : The `v128` value interpretation you want to convert.
 - `output`
   - : The output `v128` value interpretation.
 

@@ -45,11 +45,9 @@ value_type.trunc
 ### Type
 
 ```plain
-[input] -> [output]
+[] -> [output]
 ```
 
-- `input`
-  - : The `v128` value interpretation you want to convert.
 - `output`
   - : The output `v128` value interpretation.
 
