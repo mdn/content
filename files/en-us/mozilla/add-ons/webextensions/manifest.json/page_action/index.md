@@ -108,7 +108,7 @@ The `page_action` key is an object that may have any of three properties, all op
     For more information, see the [themed-icons](https://github.com/mdn/webextensions-examples/tree/master/themed-icons) example.
 
     > [!NOTE]
-    > An implicit CSS filter applies to SVG icons in dark UI themes. This filter will be deactivated in Firefox Desktop version 152 ([Firefox bug 2016509](https://bugzil.la/2016509)). You can test SVG icons with the CSS filter disabled in Firefox Desktop Nightly from 149 and in other editions by creating a boolean `about:config` preference called `extensions.webextensions.pageActionIconDarkModeFilter.enabled` and setting it to `false`.
+    > An implicit CSS filter applies to SVG icons in dark UI themes. This filter will be deactivated in Firefox Desktop version 152 ([Firefox bug 2016509](https://bugzil.la/2016509)). You can test SVG icons with the CSS filter disabled by creating a boolean `about:config` preference called `extensions.webextensions.pageActionIconDarkModeFilter.enabled` and setting it to `false`. The filter is deactivated by default in Firefox Desktop Nightly from 149.
 
 - `default_popup` {{optional_inline}}
   - : `String`. The path to an HTML file containing the specification of the popup. The HTML file may include CSS and JavaScript files using `<link>` and `<script>` elements, just like a normal web page.
