@@ -111,7 +111,7 @@
   },
   "Compositing": {
     "name": "Compositing and Blending Level 1",
-    "url": "https://drafts.fxtf.org/compositing-1/",
+    "url": "https://drafts.csswg.org/compositing-1/",
     "status": "CR"
   },
   "Console API": {
@@ -586,7 +586,7 @@
   },
   "CSS Masks": {
     "name": "CSS Masking Module Level 1",
-    "url": "https://drafts.fxtf.org/css-masking-1/",
+    "url": "https://drafts.csswg.org/css-masking-1/",
     "status": "CR"
   },
   "CSS Non-element Selectors": {
@@ -896,12 +896,12 @@
   },
   "Filters 1.0": {
     "name": "Filter Effects Module Level 1",
-    "url": "https://drafts.fxtf.org/filter-effects/",
+    "url": "https://drafts.csswg.org/filter-effects-1/",
     "status": "WD"
   },
   "Filters 2.0": {
     "name": "Filter Effects Module Level 2",
-    "url": "https://drafts.fxtf.org/filter-effects-2/",
+    "url": "https://drafts.csswg.org/filter-effects-2/",
     "status": "ED"
   },
   "Frame Timing": {
@@ -936,7 +936,7 @@
   },
   "Geometry Interfaces": {
     "name": "Geometry Interfaces Module Level 1",
-    "url": "https://drafts.fxtf.org/geometry/",
+    "url": "https://drafts.csswg.org/geometry-1/",
     "status": "CR"
   },
   "Gyroscope": {
@@ -1201,7 +1201,7 @@
   },
   "Motion Path Level 1": {
     "name": "Motion Path Module Level 1",
-    "url": "https://drafts.fxtf.org/motion-1/",
+    "url": "https://drafts.csswg.org/motion-1/",
     "status": "WD"
   },
   "Navigation Timing": {
