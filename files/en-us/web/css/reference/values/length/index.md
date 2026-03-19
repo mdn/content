@@ -228,7 +228,7 @@ html {
 }
 
 .outer {
-  width: 100%;
+  width: 500%;
   height: 200px;
   background-color: #eeeeee;
   position: relative;
