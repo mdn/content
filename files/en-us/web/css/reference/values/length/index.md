@@ -229,7 +229,7 @@ html {
 
 .outer {
   width: 100%;
-  height: 50px;
+  height: 200px;
   background-color: #eeeeee;
   position: relative;
 }
