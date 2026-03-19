@@ -73,7 +73,7 @@ This means:
 The data is sent as an [HTTP POST](/en-US/docs/Web/HTTP/Reference/Methods/POST) request.
 
 > [!NOTE]
-> The `navigator.sendBeacon()` method has a payload size limit (typically around 64 KB depending on the browser). For larger data transfers, consider using `fetch()` instead.
+> The `navigator.sendBeacon()` method has a [spec-defined](https://fetch.spec.whatwg.org/#:~:text=length.-,If%20the%20sum%20of%20contentLength%20and%20inflightKeepaliveBytes%20is%20greater%20than%2064%20kibibytes%2C%20then%20return%20a%20network%20error.,-The) payload size limit of 64 KB. For larger data transfers, consider using `fetch()` instead.
 
 ### Sending analytics at the end of a session
 
