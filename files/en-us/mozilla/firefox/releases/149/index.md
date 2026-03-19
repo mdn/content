@@ -105,15 +105,15 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### General
 
-- Updated the WebDriver classic and BiDi screenshot commands to correctly return an error when the requested screenshot area exceeds the maximum supported dimensions, rather than silently clipping it. ([Firefox bug 1994148](https://bugzil.la/1994148)).
-- Updated the WebDriver classic and BiDi implementations to allow scroll amount larger than a page on a single wheel event. ([Firefox bug 1962355](https://bugzil.la/1962355)).
+- Updated the screenshot implementations for both the WebDriver BiDi and WebDriver classic protocols to correctly return an error when the requested screenshot area exceeds the maximum supported dimensions, rather than silently clipping it. ([Firefox bug 1994148](https://bugzil.la/1994148)).
+- Updated the Actions implementation for both the WebDriver BiDi and WebDriver classic protocols to allow a `scroll` action of input source type `wheel` to scroll more than the visual viewport dimensions. ([Firefox bug 1962355](https://bugzil.la/1962355)).
 
 #### WebDriver BiDi
 
 - Added support for automatic user prompt handling, which can be configured through capabilities with the `session.new` command. ([Firefox bug 1905086](https://bugzil.la/1905086)).
 - Implemented the `browser.setDownloadBehavior` command, which lets clients allow or prohibit the downloads and also set a custom download folder. This behavior can be configured per session or per user contexts. ([Firefox bug 1989022](https://bugzil.la/1989022)).
 - Fixed an issue where the `browsingContext.userPromptOpened` and `browsingContext.userPromptClosed` events incorrectly reported the top-level context ID instead of the iframe's context ID on Android. ([Firefox bug 2007385](https://bugzil.la/2007385)).
-- Fixed the node serialization logic to stop exposing user agent shadow roots. ([Firefox bug 2016673](https://bugzil.la/2016673)).
+- Fixed the serialization for DOM nodes to stop exposing User Agent specific shadow roots. ([Firefox bug 2016673](https://bugzil.la/2016673)).
 - Implemented the `script.realmCreated` and `script.realmDestroyed` events for worker realms (for dedicated, shared and service workers). ([Firefox bug 1936770](https://bugzil.la/1936770)).
 - Updated the logic of applying different settings to new browsing contexts to make sure that in the case of creating a browsing context with the `window.open` command, emulations, viewport overrides and preload scripts apply before the command returns. ([Firefox bug 1985997](https://bugzil.la/1985997), [Firefox bug 2005546](https://bugzil.la/2005546), and [Firefox bug 2005558](https://bugzil.la/2005558)).
 
