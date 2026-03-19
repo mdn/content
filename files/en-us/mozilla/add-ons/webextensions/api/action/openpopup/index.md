@@ -24,7 +24,7 @@ browser.action.openPopup(
 - `details` {{optional_inline}}
   - : An object with these properties:
     - `windowId` {{optional_inline}}
-      - : `integer`. Window to open the popup in. Defaults to the focused (active) window. In Chrome and from Firefox 149, if the window ID is for an unfocused window, the popup isn't opened.
+      - : `integer`. Window to open the popup in. Defaults to the focused (active) window. In Chrome and from Firefox 149, if the window ID is for an unfocused window, the API call is rejected. A window can be focused by calling {{WebExtAPIRef("windows.update")}} with `focused: true`.
 
 ### Return value
 
