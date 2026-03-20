@@ -13,11 +13,11 @@ The **`sourceFile`** property of the {{domxref("CSPViolationReport")}} dictionar
 For a violation triggered by the use of an inline script, `sourceFile` is the URL of the current document.
 Similarly, if a document successfully loads a script that then violates the document CSP, the `sourceFile` is the URL of the script.
 
+This property is used with the {{domxref("CSPViolationReport.lineNumber")}} and {{domxref("CSPViolationReport.columnNumber")}} properties, which together provide the the exact location in the source that caused the violation.
+
 Note however that if a document with a CSP that blocks external resources attempts to load an external resource, `sourceFile` will be `null`.
 This is because the browser extracts the value from _the global object_ of the file that triggered the violation.
 Because of the CSP restriction the external resource is never loaded, and therefore has no corresponding global object.
-
-This property is most useful alongside {{domxref("CSPViolationReport.lineNumber")}} and {{domxref("CSPViolationReport.columnNumber")}}, which provide the location within the file that resulted in a violation.
 
 ## Value
 
