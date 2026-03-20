@@ -37,7 +37,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ;; Example of a v128-specific instruction
 (v128.load32_splat align=2 (i32.const 0))
 
-;; Example of general numeric instuction
+;; Example of general numeric instruction
 (v128.const f32x4 0x10 0x11 0x12 0x13)
 
 ;; Example of an instruction working on

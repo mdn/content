@@ -47,7 +47,7 @@ value_type.const
 ### Type
 
 ```plain
-[value] -> []
+[] -> [value]
 ```
 
 - `value`

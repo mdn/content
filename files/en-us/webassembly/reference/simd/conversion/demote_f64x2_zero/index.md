@@ -48,7 +48,7 @@ value_type.demote_f64x2_zero
 ```
 
 - `input`
-  - : The input `v128` `f62x2` value interpretation.
+  - : The input `v128` `f64x2` value interpretation.
 - `output`
   - : The output `v128` `f32x4` value interpretation.
 
