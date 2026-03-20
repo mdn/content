@@ -59,8 +59,8 @@ None ({{jsxref("undefined")}}).
 
 - `NamespaceError` {{domxref("DOMException")}}
   - : Thrown if the [`namespaceURI`](#namespaceURI) value is:
-    - not a valid namespace URI
-    - set to the empty string when `prefix` has a value
+    - not a valid namespace URI.
+    - set to the empty string when `prefix` has a value.
     - not the value `http://www.w3.org/XML/1998/namespace` or `http://www.w3.org/2000/xmlns/` when [`prefix`](#prefix) is set to `xml` or `xmlns`, respectively.
 - `InvalidCharacterError` {{domxref("DOMException")}}
   - : Thrown if either the [`prefix`](#prefix) or [`localName`](#localname) is not valid:
