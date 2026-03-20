@@ -91,11 +91,11 @@ The minimum, maximum and step values specified must be of the same data type for
 
 The random base value works like a [seed for randomness](/en-US/docs/Glossary/RNG). It's a starting number that is used to generate the final random result. When two `random()` functions share the same base value, their results vary together in a predictable pattern. When they have different base values, their results are completely independent of each other.
 
-The optional first`<random-value-sharing>` parameter controls how the random base value is shared. Sharing enables reusing the same randomly generated value, a necessity for some design effects. The value can be set to use `auto`, an `element-shared` keyword, a custom {{cssxref("dashed-ident")}} , or `fixed <number>`. Including a custom {{cssxref("dashed-ident")}} with the `element-shared` keyword, space-separated, is also valid.
+The optional first`<random-value-sharing>` parameter controls how the random base value is shared. Sharing enables reusing the same randomly generated value, a necessity for some design effects. The value can be set to use `auto`, the `element-shared` keyword, a custom {{cssxref("dashed-ident")}} , or `fixed <number>`. Including a custom {{cssxref("dashed-ident")}} with the `element-shared` keyword, space-separated, is also valid.
 
 #### The `element-shared` keyword
 
-All `random()` functions with the `element-shared` keyword share the random base value for a single property across all elements. For example, when the following is declared, A, B, and C will be identically sized rectangles, all three having the same random width and all three having the same, independently-generated random height:
+All `random()` functions with the `element-shared` keyword share the same random base value for a single property across all elements. For example, when the following is declared, A, B, and C will be identically sized rectangles, all three having the same random width and all three having the same, independently-generated random height:
 
 ```css
 A,
