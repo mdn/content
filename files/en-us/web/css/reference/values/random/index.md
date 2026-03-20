@@ -72,7 +72,7 @@ random(--my-base, 1em, 3rem, 2px)
       - : Specifies a base value between `0` and `1`, inclusive, for the random value to be generated from.
 
 - `<calc-sum>, <calc-sum>`
-  - : Two required, comma-separated, `<number>`, `<dimension>`, or `<percentage>` values, or calculations resolving to one of these types, defining the minimum and maximum values, respectively. Both values must be resolvable to the same [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). If the maximumis less than the minimum, the function will return the first `<calc-sum>` value.
+  - : Two required, comma-separated, `<number>`, `<dimension>`, or `<percentage>` values, or calculations resolving to one of these types, defining the minimum and maximum values, respectively. Both values must be resolvable to the same [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). If the maximum is less than the minimum, the function will return the first `<calc-sum>` value.
 
 - `<calc-sum>` {{optional_inline}}
   - : The optional third `<calc-sum>`, preceded by a comma, specifies the step interval. If present, and of the same data type as the two comma-separated minimum and maximum `<calc-sum>` values, it defines the return value to be minimum value or at increments of the step value from the minimum value, up to the maximum value.
@@ -264,7 +264,7 @@ We include five particles, all sharing the same class name.
 
 #### CSS
 
-Every particle has the same styles. We use the `random()` function for the {{cssxref("height")}},  {{cssxref("width")}}, {{cssxref("top")}}, and {{cssxref("left")}} values to randomly size and position each particle. We use a `<dashed-ident>` as the base value for the `height` and `width`, meaning the size of the particles are independent of each other, within a specified range, but each particle's `height` will be the same as it's `width`. We allow the base value to resolve to `auto` for the `top` and `left` properties, so the base value for each property and element is independent of each other.
+Every particle has the same styles. We use the `random()` function for the {{cssxref("height")}}, {{cssxref("width")}}, {{cssxref("top")}}, and {{cssxref("left")}} values to randomly size and position each particle. We use a `<dashed-ident>` as the base value for the `height` and `width`, meaning the size of the particles are independent of each other, within a specified range, but each particle's `height` will be the same as it's `width`. We allow the base value to resolve to `auto` for the `top` and `left` properties, so the base value for each property and element is independent of each other.
 
 ```css
 body {
