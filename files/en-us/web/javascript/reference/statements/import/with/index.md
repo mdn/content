@@ -74,7 +74,7 @@ For example, the code above can be written to specify that the expected type is 
 import data from "https://example.com/data.json" with { type: "json" };
 ```
 
-The `type` attribute allows you to specify that modules are served as JSON or CSS (and implicitly as JavaScript).
+The `type` attribute allows you to specify that modules are served as JSON, CSS, or plain text (and implicitly as JavaScript).
 
 Other attributes may also be supported, and [can affect the behavior of different parts of the loading process](#intended_semantics_for_import_attributes).
 A syntax error is thrown if an unknown attribute is used.
@@ -82,9 +82,9 @@ A syntax error is thrown if an unknown attribute is used.
 ### Standard attributes
 
 The available attributes depend on the language and runtime environment.
-The ECMAScript standard [defines the `type` attribute with the value of `"json"`](https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-HostLoadImportedModule).
+The ECMAScript standard [defines the `type` attribute with the values `"json"` and `"text"`](https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-HostLoadImportedModule).
 
-The HTML specification also [defines the `type` attribute with values `"json"` and `"css"`](https://html.spec.whatwg.org/multipage/webappapis.html#module-type-allowed) — these are the attributes that are supported in browser environments.
+The HTML specification also [defines the `type` attribute with values `"json"`, `"text"` and `"css"`](https://html.spec.whatwg.org/multipage/webappapis.html#module-type-allowed) — these are the attributes that are supported in browser environments.
 
 #### JSON Modules (`{ type: "json" }`)
 
@@ -127,6 +127,19 @@ document.adoptedStyleSheets.push(exampleStyles);
 
 Note that importing CSS modules into workers is usually not supported, because the CSSOM specification only exposes `CSSStyleSheet` in the window context.
 
+#### Text Modules (`{ type: "text" }`)
+
+The `text` type allows importing a file as a UTF-8 string value.
+You can load text from a file into the `text` string using the following code:
+
+```js
+import text from "https://example.com/file.txt" with { type: "text" };
+```
+
+The file will be requested with an `{{HTTPHeader("Accept")}}: text/plain` header,
+but the value of the response's `{{HTTPHeader("Content-Type")}}` header is ignored,
+and all files are parsed as UTF-8.
+
 ### Intended semantics for import attributes
 
 An attribute can change the runtime's behavior at every stage of the module loading process:
@@ -139,7 +152,7 @@ An attribute can change the runtime's behavior at every stage of the module load
   };
   ```
 
-- Fetching: for example, CSS modules are fetched with the [`destination`](/en-US/docs/Web/API/Request/destination) set to `"style"`, and JSON modules are fetched with `destination: "json"`. This means given the same destination URL, the server may still return different content.
+- Fetching: for example, CSS modules are fetched with the [`destination`](/en-US/docs/Web/API/Request/destination) set to `"style"`, JSON modules are fetched with `destination: "json"`, and text modules are fetched with `destination: "text"`. This means given the same destination URL, the server may still return different content.
 - Parsing and evaluation: the runtime may use the attribute to determine how to parse and evaluate the module.
 
 ## Examples
@@ -205,3 +218,4 @@ Note that, like static imports, dynamic imports are cached for the lifetime of t
 - [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
 - [Import attributes proposal](https://github.com/tc39/proposal-import-attributes)
 - [JSON modules proposal](https://github.com/tc39/proposal-json-modules)
+- [Import Text proposal](https://github.com/tc39/proposal-import-text)
