@@ -37,7 +37,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
     - `lineNumber` {{experimental_inline}}
       - : A number representing the line in the source file in which the deprecated feature was used, if known, or `null` otherwise.
     - `columnNumber` {{experimental_inline}}
-      - : A number representing the column in the source file in which the deprecated feature was first used, if known, or `null` otherwise.
+      - : A number representing the character position in the line of the source file in which the deprecated feature was first used, if known, or `null` otherwise.
 
 - `type`
   - : The string `"deprecation"` indicating that this is a deprecation report.

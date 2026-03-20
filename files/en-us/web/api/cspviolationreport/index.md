@@ -22,7 +22,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
       - : The column number in the script at which the violation occurred.
     - {{domxref("CSPViolationReport.disposition","disposition")}}
       - : A string indicating whether the violation was enforced or only reported.
-        This can have the value `"enforce"` or `"reporting"`.
+        This can have the value `"enforce"` for violations of policies set with {{httpheader("Content-Security-Policy")}}, or `"reporting"` for policies set with {{httpheader("Content-Security-Policy-Report-Only")}}.
     - {{domxref("CSPViolationReport.documentURL","documentURL")}}
       - : A string representing the URL of the document or worker in which the violation was found.
     - {{domxref("CSPViolationReport.effectiveDirective","effectiveDirective")}}
@@ -116,7 +116,7 @@ The structure of the server report is almost exactly the same as `CSPViolationRe
 
 ### Using the `ReportingObserver` interface
 
-To obtain a `CSPViolationReport` object, you must configure your page so that a CSP violation will occur.
+You can obtain a `CSPViolationReport` object by configuring your page so that a CSP violation will occur.
 In this example, we will set our CSP to only allow content from the site's own origin, and then attempt to load a script from `apis.google.com`, which is an external origin.
 
 First, we will set our {{HTTPHeader("Content-Security-Policy")}} header in the HTTP response:
