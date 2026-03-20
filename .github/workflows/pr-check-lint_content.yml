@@ -4,15 +4,12 @@ on:
   pull_request:
     paths:
       - .github/workflows/pr-check-lint_content.yml
-  pull_request_target:
-    paths:
       - .nvmrc
       - "*.md"
       - "files/**/*.md"
 
 permissions:
-  # Compare commits and add reviewdog comments.
-  pull-requests: write
+  contents: read
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number }}
@@ -23,17 +20,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check if PR reviews can be posted
-        id: permissions
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
-          BASE_REPO: ${{ github.repository }}
-        run: |
-          if [[ "${EVENT_NAME}" == "pull_request_target" || "${HEAD_REPO}" == "${BASE_REPO}" ]]; then
-            echo "CAN_POST_REVIEWS=true" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Checkout BASE
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -215,40 +201,18 @@ jobs:
             echo "FILES_MODIFIED=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Setup reviewdog
-        if: (steps.lint-diff.outputs.FILES_MODIFIED == 'true' || steps.markdownlint.outputs.MD_LINT_FAILED == 'true') && steps.permissions.outputs.CAN_POST_REVIEWS == 'true'
-        uses: reviewdog/action-setup@d8a7baabd7f3e8544ee4dbde3ee41d0011c3a93f # v1.5.0
+      - name: Collect lint diff
+        if: always() && steps.check.outputs.HAS_FILES == 'true'
+        run: |
+          mkdir -p lint-results
+          git diff HEAD > lint-results/lint.diff
+
+      - name: Upload lint results
+        if: always() && steps.lint-diff.outputs.FILES_MODIFIED == 'true'
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
-          reviewdog_version: latest
-
-      - name: Suggest changes using diff
-        if: steps.lint-diff.outputs.FILES_MODIFIED == 'true' && steps.permissions.outputs.CAN_POST_REVIEWS == 'true'
-        env:
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          TMPFILE=$(mktemp)
-          git diff >"${TMPFILE}"
-          git stash -u && git stash drop
-          reviewdog \
-            -name="mdn-linter" \
-            -f=diff \
-            -f.diff.strip=1 \
-            -filter-mode=diff_context \
-            -reporter=github-pr-review < "${TMPFILE}"
-
-      - name: Add reviews for markdownlint errors
-        if: steps.markdownlint.outputs.MD_LINT_FAILED == 'true' && steps.permissions.outputs.CAN_POST_REVIEWS == 'true'
-        env:
-          MD_LINT_LOG: ${{ steps.markdownlint.outputs.MD_LINT_LOG }}
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "${MD_LINT_LOG}" | \
-            reviewdog \
-            -efm="%f:%l:%c %m" \
-            -efm="%f:%l %m" \
-            -name="markdownlint" \
-            -diff="git diff" \
-            -reporter="github-pr-review"
+          name: lint-results
+          path: lint-results/
 
       - name: Fail if any issues pending
         if: steps.lint-diff.outputs.FILES_MODIFIED == 'true' || steps.crlf.outputs.CRLF_FAILED == 'true' || steps.markdownlint.outputs.MD_LINT_FAILED == 'true' || steps.frontmatter.outputs.FM_LINT_FAILED == 'true'
