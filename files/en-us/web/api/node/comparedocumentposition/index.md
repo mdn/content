@@ -8,8 +8,7 @@ browser-compat: api.Node.compareDocumentPosition
 
 {{APIRef("DOM")}}
 
-The **`compareDocumentPosition()`** method of the {{domxref("Node")}} interface
-reports the position of its argument node relative to the node on which it is called.
+The **`compareDocumentPosition()`** method of the {{domxref("Node")}} interface reports the position of its argument node relative to the node on which it is called.
 
 ## Syntax
 
@@ -24,9 +23,7 @@ compareDocumentPosition(otherNode)
 
 ### Return value
 
-An integer value representing `otherNode`'s position relative to `node`
-as a [bitmask](<https://en.wikipedia.org/wiki/Mask_(computing)>) combining the
-following constant properties of {{domxref("Node")}} or `0` if `otherNode` is the same as this node:
+An integer value representing `otherNode`'s position relative to `node` as a [bitmask](<https://en.wikipedia.org/wiki/Mask_(computing)>) combining the following constant properties of {{domxref("Node")}} or `0` if `otherNode` is the same as this node:
 
 - `Node.DOCUMENT_POSITION_DISCONNECTED` (`1`)
   - : Both nodes are in different documents or different trees in the same document.
@@ -41,11 +38,8 @@ following constant properties of {{domxref("Node")}} or `0` if `otherNode` is th
 - `Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC` (`32`)
   - : The result relies upon arbitrary and/or implementation-specific behavior and is not guaranteed to be portable.
 
-Zero or more bits can be set, depending on which scenarios apply. For example, if
-`otherNode` is located earlier in the document **_and_**
-contains the node on which `compareDocumentPosition()` was
-called, then both the `DOCUMENT_POSITION_CONTAINS` and
-`DOCUMENT_POSITION_PRECEDING` bits would be set, producing a value of `10` (`0x0A`).
+Zero or more bits can be set, depending on which scenarios apply.
+For example, if `otherNode` is located earlier in the document **_and_** contains the node on which `compareDocumentPosition()` was called, then both the `DOCUMENT_POSITION_CONTAINS` and `DOCUMENT_POSITION_PRECEDING` bits would be set, producing a value of `10` (`0x0A`).
 
 ## Example
 
@@ -61,9 +55,7 @@ if (head.compareDocumentPosition(body) & Node.DOCUMENT_POSITION_FOLLOWING) {
 ```
 
 > [!NOTE]
-> Because the result returned by `compareDocumentPosition()` is a bitmask,
-> the [bitwise AND operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
-> must be used for meaningful results.
+> Because the result returned by `compareDocumentPosition()` is a bitmask, the [bitwise AND operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND) must be used for meaningful results.
 
 ## Specifications
 
