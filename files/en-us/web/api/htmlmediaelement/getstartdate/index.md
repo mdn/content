@@ -71,6 +71,9 @@ video.addEventListener("loadeddata", () => {
 
 #### Results
 
+The output below shows the start date of the media, as provided by the server.
+Note that this is encoded in the example metadata in [stream.m3u8](https://github.com/mdn/dom-examples/blob/main/media/getstartdate/stream.m3u8).
+
 {{EmbedGHLiveSample("dom-examples/media/getstartdate/", '100%', 400)}}
 
 ## Specifications

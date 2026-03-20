@@ -12,11 +12,11 @@ browser-compat: api.HTMLAnchorElement.attributionSourceId
 
 The **`attributionSourceId`** property of the {{domxref("HTMLAnchorElement")}} interface gets and sets the `attributionsourceid` HTML attribute on an {{htmlelement("a")}} element.
 
-The `attributionSourceId` is used as part of the [Private Click Measurement](https://privacycg.github.io/private-click-measurement/) specification to identify the content that was clicked when following a link to another site. Valid values are from `0` to `255`.
+The `attributionSourceId` is used as part of the [Private Click Measurement](https://privacycg.github.io/private-click-measurement/) specification to identify the content that was clicked when following a link to another site.
 
 ## Value
 
-A number. Valid values for Private Click Measurement are between `0` and `255`. The default value is `0`. Values outside this range will not cause an error when setting the property, but will be ignored by the browser for attribution purposes.
+A number. Valid values for private click measurement are between `0` and `255`. The default value is `0`. Values outside this range will not cause an error when setting the property, but will be ignored by the browser for attribution purposes.
 
 ## Examples
 

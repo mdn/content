@@ -13,7 +13,7 @@ browser-compat: api.HTMLOutputElement.HTMLOutputElement
 The **`HTMLOutputElement()`** constructor creates a new {{domxref("HTMLOutputElement")}} object.
 
 > [!NOTE]
-> Currently only Safari currently implements this constructor, so using {{domxref("Document.createElement()")}} is recommended for broader compatibility — see the [example below](#creating_an_output_element_programmatically).
+> Currently only Safari implements this constructor, so using {{domxref("Document.createElement()")}} is recommended for broader compatibility — see the [example below](#creating_an_output_element_programmatically).
 
 ## Syntax
 
@@ -27,7 +27,12 @@ None.
 
 ### Return value
 
-A new {{domxref("HTMLOutputElement")}} object. In browsers that do not support this constructor, calling it will throw an `"Illegal constructor"` {{jsxref("TypeError")}}.
+A new {{domxref("HTMLOutputElement")}} object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown with the message `"Illegal constructor"` in browsers that do not support this constructor.
 
 ## Examples
 
@@ -41,12 +46,12 @@ This example creates an {{htmlelement("output")}} element using the `HTMLOutputE
 ```html
 <form id="my-form">
   <label>
-    Addend one
+    Number one
     <input type="number" id="a" value="5" />
   </label>
   +
   <label>
-    Addend two
+    Number two
     <input type="number" id="b" value="3" />
   </label>
   =

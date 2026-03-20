@@ -114,7 +114,7 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
 - {{domxref("HTMLMediaElement.fastSeek()")}}
   - : Quickly seeks to the given time with low precision.
 - {{domxref("HTMLMediaElement.getStartDate()")}}
-  - : Returns a {{jsxref("Date")}} object representing the real-world date and time corresponding to the beginning of the media.
+  - : Returns a {{jsxref("Date")}} object representing the real-world date and time corresponding to the beginning of the media. For live streams, this is the time the broadcast began on the server, which may be before the user started watching.
 - {{domxref("HTMLMediaElement.load()")}}
   - : Resets the media to the beginning and selects the best available source from the sources provided using the [`src`](/en-US/docs/Web/HTML/Reference/Elements/video#src) attribute or the {{HTMLElement("source")}} element.
 - {{domxref("HTMLMediaElement.pause()")}}
