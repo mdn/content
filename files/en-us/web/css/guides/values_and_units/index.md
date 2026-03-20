@@ -55,7 +55,7 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("tan()")}}
 - {{cssxref("url_function", "url()")}}
 
-The CSS values and units module also introduces the `calc-mix()`, `cross-origin()`, `first-valid()`, `integrity()`, `random-item()`, `referrer-policy()`, `src()`, `type()`, and `toggle()` functions. Currently, no browsers support these features.
+The CSS values and units module also introduces the `calc-mix()`, `first-valid()`, `integrity()`, `random-item()`, `src()`, `type()`, and `toggle()` functions. Currently, no browsers support these features.
 
 ### Data types
 

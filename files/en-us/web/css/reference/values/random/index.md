@@ -8,7 +8,9 @@ browser-compat: css.types.random
 sidebar: cssref
 ---
 
-The **`random()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) generates a random value within a specified range, optionally limiting the possible values to step size intervals between those limits. The `random()` function can be used when specifying a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{cssxref("angle")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} within a property value.
+he **`random()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) generates a random value within a specified range, optionally limiting the possible values to step size intervals between those limits.
+
+The `random()` function can be used when specifying a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{cssxref("angle")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} within a property value.
 
 {{InteractiveExample("CSS Demo: random()")}}
 
@@ -58,19 +60,19 @@ random(--my-base, 1em, 3rem, 2px)
 ### Parameters
 
 - `<random-value-sharing>` {{optional_inline}}
-  - : Controls which random functions in the document will share a random base value and which will get distinct values.
+  - : Controls which `random()` functions in the document will share a random base value and which will get distinct values.
     This can be one of the following values, or both a custom key and the keyterm `element-shared`, separated by a space:
     - `auto`
       - : Each use of `random()` in an element's style gets its own unique random base value.
     - {{cssxref("dashed-ident")}}
-      - : A custom key for sharing (e.g., `--my-random-key`) the same random base value across properties of an element.
+      - : A custom key (e.g., `--my-random-key`) for sharing the same random base value across properties of an element.
     - `element-shared`
       - : A random base value is shared across all elements for the same property using this key term. This base value is independent from the `random()` functions included in the values of other properties on that same element, unless the random functions also include the same custom key.
     - `fixed <number>`
       - : Specifies a base value between `0` and `1`, inclusive, for the random value to be generated from.
 
 - `<calc-sum>, <calc-sum>`
-  - : Two required, comma-separated, `<number>`, `<dimension>`, or `<percentage>` values, or calculations resolving to one of these types, defining the minimum and maximum values, respectively. Both values must be resolvable the same [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). If the second `<calc-sum>` is less than the first `<calc-sum>`, the function will return the first `<calc-sum>`.
+  - : Two required, comma-separated, `<number>`, `<dimension>`, or `<percentage>` values, or calculations resolving to one of these types, defining the minimum and maximum values, respectively. Both values must be resolvable to the same [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). If the maximumis less than the minimum, the function will return the first `<calc-sum>` value.
 
 - `<calc-sum>` {{optional_inline}}
   - : The optional third `<calc-sum>`, preceded by a comma, specifies the step interval. If present, and of the same data type as the two comma-separated minimum and maximum `<calc-sum>` values, it defines the return value to be minimum value or at increments of the step value from the minimum value, up to the maximum value.
@@ -106,7 +108,7 @@ C {
 
 #### Custom names
 
-When you specify a `<dashed-ident>` (e.g., `--custom-name`), each element in an element's styles with the same name shares the same random base value, and ones with different `<dashed-ident>` values will be assigned distinct random base values. When the following is declared, A, B, and C will all be squares, because within each element, all properties that reference the same ident will share the same base value. Therefore, the width of each will be the same as it's height. Note that, in this case, A, B, and C will have distinct sizes because the sharing between properties of an element, not between elements.
+When you specify a `<dashed-ident>` (e.g., `--custom-name`), each element in an element's styles with the same name shares the same random base value, and ones with different `<dashed-ident>` values will be assigned distinct random base values. When the following is declared, A, B, and C will all be squares, because within each element, all properties that reference the same ident will share the same base value. Therefore, the width of each will be the same as it's height. Note that, in this case, A, B, and C will have distinct sizes because the base value sharing is between properties of an element, not between elements.
 
 ```css
 A,
@@ -162,7 +164,9 @@ As with all CSS functions, when a `random()` function is included within a custo
 
 In this example, the `--random-size` custom property does not "store" the randomly generated result. When `var(--random-size)` is parsed it is effectively replaced with `random(1px, 100px)`, meaning each use creates a new `random()` function call with its own base value depending on the context in which its used.
 
-This is not true in the case of using `random()` when registering a custom property with {{cssxref("@property")}}. Registered custom properties compute random values and store them. In this example, as `--defaultSize` is registered, A, B, and C will be squares of equal size, but their colors will be random, as `--random-angle` was not registered:
+This is not true in the case of using `random()` when registering a custom property with {{cssxref("@property")}}. Registered custom properties compute random values and store them.
+
+In this example, as `--defaultSize` is registered, A, B, and C will be squares of equal size, but their colors will be random, as `--random-angle` was not registered:
 
 ```css
 @property --defaultSize {
@@ -238,9 +242,13 @@ We render the five badges as circles. We use the `random()` function within an {
 
 {{EmbedLiveSample('Generate random colors for circular badge', '100%', '300px')}}
 
-### Creating a starry backdrop
+### Random value sharing between properties 
+
+In this example, we create a starry backdrop to demonstrate using a `<dashed-ident>` to share a seed value between properties of an element.
 
 #### HTML
+
+We include five particles, all sharing the same class name.
 
 ```html
 <html>
@@ -255,6 +263,8 @@ We render the five badges as circles. We use the `random()` function within an {
 ```
 
 #### CSS
+
+Every particle has the same styles. We use the `random()` function for the {{cssxref("height")}},  {{cssxref("width")}}, {{cssxref("top")}}, and {{cssxref("left")}} values to randomly size and position each particle. We use a `<dashed-ident>` as the base value for the `height` and `width`, meaning the size of the particles are independent of each other, within a specified range, but each particle's `height` will be the same as it's `width`. We allow the base value to resolve to `auto` for the `top` and `left` properties, so the base value for each property and element is independent of each other.
 
 ```css
 body {
@@ -284,7 +294,7 @@ body {
 
 #### Result
 
-{{EmbedLiveSample('Creating a starry backdrop', '100%', '300px')}}
+{{EmbedLiveSample('Random value sharing between properties', '100%', '300px')}}
 
 ## Specifications
 
