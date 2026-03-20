@@ -43,6 +43,10 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{CSSXRef("vertical-align")}} CSS property is now a shorthand property for {{CSSXRef("alignment-baseline")}}, {{CSSXRef("baseline-shift")}} and {{CSSXRef("baseline-source")}} properties. ([Firefox bug 1830771](https://bugzil.la/1830771)).
 
+- The [`<container-query>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container-query) part of the {{cssxref("@container")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) condition is now optional.
+  This allows matching against containers based solely on their names.
+  ([Firefox bug 2016474](https://bugzil.la/2016474)).
+
 <!-- #### Removals -->
 
 <!-- ### JavaScript -->
