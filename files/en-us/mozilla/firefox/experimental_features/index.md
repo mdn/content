@@ -534,14 +534,16 @@ This allows Firefox users to display images that render on some other browsers, 
 
 Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images if this feature is enabled.
 See [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
-In Firefox 149, the internal JPEG XL image decoder was replaced with a new Rust-based implementation using the `jxl-rs` library ([Firefox bug 1986393](https://bugzil.la/1986393)).
+
+Note that, as shown below, the feature is only available on Nightly builds (irrespective of whether the preference is set).
+In Firefox 149, the previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decoder was replaced with a new Rust-based implementation that uses the `jxl-rs` library ([Firefox bug 1986393](https://bugzil.la/1986393)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 90            | No                  |
-| Developer Edition | 149           | No                  |
-| Beta              | 149           | No                  |
-| Release           | 149           | No                  |
+| Developer Edition | —             | —                   |
+| Beta              | —             | —                   |
+| Release           | —             | —                   |
 
 - `image.jxl.enabled`
   - : Set to `true` to enable.
