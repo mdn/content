@@ -46,17 +46,19 @@ value_type.trunc_sat_f32x4_u
 ### Type
 
 ```plain
-[] -> [output]
+[input] -> [output]
 ```
 
+- `input`
+  - : The input `v128` `f32x4` value interpretation.
 - `output`
-  - : The output `v128` value interpretation.
+  - : The output `v128` `i32x4` value interpretation.
 
 ### Binary encoding
 
-| Instruction               | Binary equivalent | Example text => binary                        |
-| ------------------------- | ----------------- | --------------------------------------------- |
-| `i32x4.trunc_sat_f32x4_u` | `0xfd 0xf9 0x01`  | `i32x4.trunc_sat_f32x4_u` => `0xfd 0xf9 0x01` |
+| Instruction               | Binary format  | Example text => binary                        |
+| ------------------------- | -------------- | --------------------------------------------- |
+| `i32x4.trunc_sat_f32x4_u` | `0xfd 249:u32` | `i32x4.trunc_sat_f32x4_u` => `0xfd 0xf9 0x01` |
 
 ## Specifications
 

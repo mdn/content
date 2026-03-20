@@ -49,17 +49,21 @@ value_type.shuffle indices
 ### Type
 
 ```plain
-[] -> [output]
+[input1, input2] -> [output]
 ```
 
+- `input1`
+  - : The first input `v128` value interpretation.
+- `input2`
+  - : The second input `v128` value interpretation.
 - `output`
   - : The output `v128` value interpretation.
 
 ### Binary encoding
 
-| Instruction     | Binary equivalent         | Example text => binary                                                                                                                            |
-| --------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `i8x16.shuffle` | `0xfd 13:u32 l:laneidx¹⁶` | `i8x16.shuffle 0 17 2 3 8 9 10 11 31 30 28 27 16 17 18 19` => `0xfd 0xd 0x0 0x11 0x2 0x3 0x8 0x9 0xa 0xb 0x1f 0x1e 0x1c 0x1b 0x10 0x11 0x12 0x13` |
+| Instruction     | Binary format             | Example text => binary                                                                                                                                   |
+| --------------- | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `i8x16.shuffle` | `0xfd 13:u32 l:laneidx¹⁶` | `i8x16.shuffle 0 17 2 3 8 9 10 11 31 30 28 27 16 17 18 19` => `0xfd 0xd 0x00 0x11 0x02 0x03 0x08 0x09 0x0a 0x0b 0x1f 0x1e 0x1c 0x1b 0x10 0x11 0x12 0x13` |
 
 ## Specifications
 

@@ -60,8 +60,8 @@ A `v128` value represents 128-bits of packed integer or floating-point data, and
 
 Some instructions operate on the `v128` type itself:
 
-- [`v128-specific instructions`](/en-US/docs/WebAssembly/Reference/SIMD/v128_specific)
-- [`General numeric instructions`](/en-US/docs/WebAssembly/Reference/Numeric)
+- v128-specific instructions such as [`load`](/en-US/docs/WebAssembly/Reference/SIMD/load) instructions.
+- General numeric instructions such as [`const`](/en-US/docs/WebAssembly/Reference/Numeric/const).
 
 Most of the instructions, however, operate on interpretations of the `v128` type. See the [SIMD instructions](/en-US/docs/WebAssembly/Reference/SIMD) landing page for the full list.
 

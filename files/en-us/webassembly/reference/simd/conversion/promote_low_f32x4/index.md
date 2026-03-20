@@ -44,17 +44,19 @@ value_type.promote_low_f32x4
 ### Type
 
 ```plain
-[] -> [output]
+[input] -> [output]
 ```
 
+- `input`
+  - : The input `v128` `f32x4` value interpretation.
 - `output`
-  - : The output `v128` value interpretation.
+  - : The output `v128` `f64x2` value interpretation.
 
 ### Binary encoding
 
-| Instruction               | Binary equivalent | Example text => binary                   |
-| ------------------------- | ----------------- | ---------------------------------------- |
-| `f64x2.promote_low_f32x4` | `0xfd 0x5f`       | `f64x2.promote_low_f32x4` => `0xfd 0x5f` |
+| Instruction               | Binary format | Example text => binary                   |
+| ------------------------- | ------------- | ---------------------------------------- |
+| `f64x2.promote_low_f32x4` | `0xfd 95:u32` | `f64x2.promote_low_f32x4` => `0xfd 0x5f` |
 
 ## Specifications
 

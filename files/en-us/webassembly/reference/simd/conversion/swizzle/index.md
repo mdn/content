@@ -47,9 +47,11 @@ value_type.swizzle
 ### Type
 
 ```plain
-[indices] -> [output]
+[input, indices] -> [output]
 ```
 
+- `input`
+  - : The input `v128` `i8x16` value interpretation.
 - `indices`
   - : The `v128` value containing the indices you want to use to select which values should be taken from the input value and included in the output. In each case, the index number represents the index position to take from the input value, and the position of the index represents the position it should appear in the `output` value.
 
@@ -60,9 +62,9 @@ value_type.swizzle
 
 ### Binary encoding
 
-| Instruction     | Binary equivalent | Example text => binary         |
-| --------------- | ----------------- | ------------------------------ |
-| `i8x16.swizzle` | `0xfd 14:u32`     | `i8x16.swizzle` => `0xfd 0x0e` |
+| Instruction     | Binary format | Example text => binary         |
+| --------------- | ------------- | ------------------------------ |
+| `i8x16.swizzle` | `0xfd 14:u32` | `i8x16.swizzle` => `0xfd 0x0e` |
 
 ## Specifications
 

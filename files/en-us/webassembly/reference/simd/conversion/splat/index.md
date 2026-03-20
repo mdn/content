@@ -64,9 +64,11 @@ value_type.splat
 ### Type
 
 ```plain
-[value] -> [output]
+[input, value] -> [output]
 ```
 
+- `input`
+  - : The input `v128` value interpretation.
 - `value`
   - : The value you want to copy to all lanes of the `v128`.
 - `output`
@@ -74,14 +76,14 @@ value_type.splat
 
 ### Binary encoding
 
-| Instruction   | Binary equivalent | Example text => binary       |
-| ------------- | ----------------- | ---------------------------- |
-| `i8x16.splat` | `0xfd 15:u32`     | `i8x16.splat` => `0xfd 0x0f` |
-| `i16x8.splat` | `0xfd 16:u32`     | `i16x8.splat` => `0xfd 0x10` |
-| `i32x4.splat` | `0xfd 17:u32`     | `i32x4.splat` => `0xfd 0x11` |
-| `i64x2.splat` | `0xfd 18:u32`     | `i64x2.splat` => `0xfd 0x12` |
-| `f32x4.splat` | `0xfd 19:u32`     | `f32x4.splat` => `0xfd 0x13` |
-| `f64x2.splat` | `0xfd 20:u32`     | `f64x2.splat` => `0xfd 0x14` |
+| Instruction   | Binary format | Example text => binary       |
+| ------------- | ------------- | ---------------------------- |
+| `i8x16.splat` | `0xfd 15:u32` | `i8x16.splat` => `0xfd 0x0f` |
+| `i16x8.splat` | `0xfd 16:u32` | `i16x8.splat` => `0xfd 0x10` |
+| `i32x4.splat` | `0xfd 17:u32` | `i32x4.splat` => `0xfd 0x11` |
+| `i64x2.splat` | `0xfd 18:u32` | `i64x2.splat` => `0xfd 0x12` |
+| `f32x4.splat` | `0xfd 19:u32` | `f32x4.splat` => `0xfd 0x13` |
+| `f64x2.splat` | `0xfd 20:u32` | `f64x2.splat` => `0xfd 0x14` |
 
 ## Specifications
 

@@ -52,9 +52,11 @@ value_type.replace_lane index
 ### Type
 
 ```plain
-[replace_value] -> [output]
+[input, replace_value] -> [output]
 ```
 
+- `input`
+  - : The input `v128` value interpretation.
 - `replace_value`
   - : The value that you want to replace the lane with.
 - `output`
@@ -62,14 +64,14 @@ value_type.replace_lane index
 
 ### Binary encoding
 
-| Instruction          | Binary equivalent       | Example text => binary                    |
-| -------------------- | ----------------------- | ----------------------------------------- |
-| `i8x16.replace_lane` | `0xfd 23:u32 l:laneidx` | `i8x16.replace_lane 3` => `0xfd 0x17 0x3` |
-| `i16x8.replace_lane` | `0xfd 26:u32 l:laneidx` | `i16x8.replace_lane 3` => `0xfd 0x1a 0x3` |
-| `i32x4.replace_lane` | `0xfd 28:u32 l:laneidx` | `i32x4.replace_lane 3` => `0xfd 0x1c 0x3` |
-| `i64x2.replace_lane` | `0xfd 30:u32 l:laneidx` | `i64x2.replace_lane 1` => `0xfd 0x1e 0x1` |
-| `f32x4.replace_lane` | `0xfd 32:u32 l:laneidx` | `f32x4.replace_lane 3` => `0xfd 0x20 0x3` |
-| `f64x2.replace_lane` | `0xfd 34:u32 l:laneidx` | `f64x2.replace_lane 1` => `0xfd 0x22 0x1` |
+| Instruction          | Binary format           | Example text => binary                     |
+| -------------------- | ----------------------- | ------------------------------------------ |
+| `i8x16.replace_lane` | `0xfd 23:u32 l:laneidx` | `i8x16.replace_lane 3` => `0xfd 0x17 0x03` |
+| `i16x8.replace_lane` | `0xfd 26:u32 l:laneidx` | `i16x8.replace_lane 3` => `0xfd 0x1a 0x03` |
+| `i32x4.replace_lane` | `0xfd 28:u32 l:laneidx` | `i32x4.replace_lane 3` => `0xfd 0x1c 0x03` |
+| `i64x2.replace_lane` | `0xfd 30:u32 l:laneidx` | `i64x2.replace_lane 1` => `0xfd 0x1e 0x01` |
+| `f32x4.replace_lane` | `0xfd 32:u32 l:laneidx` | `f32x4.replace_lane 3` => `0xfd 0x20 0x03` |
+| `f64x2.replace_lane` | `0xfd 34:u32 l:laneidx` | `f64x2.replace_lane 1` => `0xfd 0x22 0x01` |
 
 ## Specifications
 

@@ -44,17 +44,19 @@ value_type.convert_low_i32x4_s
 ### Type
 
 ```plain
-[] -> [output]
+[input] -> [output]
 ```
 
+- `input`
+  - : The input `v128` `i32x4` value interpretation.
 - `output`
-  - : The output `v128` value interpretation. The first two values of the input `i32x4` are included in the output `f64x2`.
+  - : The output `v128` `f64x2` value interpretation. The first two values of the input `i32x4` are included in the output `f64x2`.
 
 ### Binary encoding
 
-| Instruction                 | Binary equivalent | Example text => binary                     |
-| --------------------------- | ----------------- | ------------------------------------------ |
-| `f64x2.convert_low_i32x4_s` | `0xfd 0xfe`       | `f64x2.convert_low_i32x4_s` => `0xfd 0xfe` |
+| Instruction                 | Binary format  | Example text => binary                          |
+| --------------------------- | -------------- | ----------------------------------------------- |
+| `f64x2.convert_low_i32x4_s` | `0xfd 254:u32` | `f64x2.convert_low_i32x4_s` => `0xfd 0xfe 0x01` |
 
 ## Specifications
 

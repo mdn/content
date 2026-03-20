@@ -45,18 +45,20 @@ value_type.ceil
 ### Type
 
 ```plain
-[] -> [output]
+[input] -> [output]
 ```
 
+- `input`
+  - : The input `v128` value interpretation.
 - `output`
   - : The output `v128` value interpretation.
 
 ### Binary encoding
 
-| Instruction  | Binary equivalent | Example text => binary      |
-| ------------ | ----------------- | --------------------------- |
-| `f32x4.ceil` | `0xfd 103:u32`    | `f32x4.ceil` => `0xfd 0x67` |
-| `f64x2.ceil` | `0xfd 116:u32`    | `f64x2.ceil` => `0xfd 0x74` |
+| Instruction  | Binary format  | Example text => binary      |
+| ------------ | -------------- | --------------------------- |
+| `f32x4.ceil` | `0xfd 103:u32` | `f32x4.ceil` => `0xfd 0x67` |
+| `f64x2.ceil` | `0xfd 116:u32` | `f64x2.ceil` => `0xfd 0x74` |
 
 ## Specifications
 

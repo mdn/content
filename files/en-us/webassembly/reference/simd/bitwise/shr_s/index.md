@@ -48,9 +48,11 @@ value_type.shr_s
 ### Type
 
 ```plain
-[shift_value] -> [output]
+[input, shift_value] -> [output]
 ```
 
+- `input`
+  - : The input `v128` value interpretation.
 - `shift_value`
   - : The value that you want to shift the lanes by.
 - `output`
@@ -58,12 +60,12 @@ value_type.shr_s
 
 ### Binary encoding
 
-| Instruction   | Binary equivalent | Example text => binary       |
-| ------------- | ----------------- | ---------------------------- |
-| `i8x16.shr_s` | `0xfd 108:u32`    | `i8x16.shr_s` => `0xfd 0x6c` |
-| `i16x8.shr_s` | `0xfd 140:u32`    | `i16x8.shr_s` => `0xfd 0x8c` |
-| `i32x4.shr_s` | `0xfd 172:u32`    | `i32x4.shr_s` => `0xfd 0xac` |
-| `i64x2.shr_s` | `0xfd 204:u32`    | `i64x2.shr_s` => `0xfd 0xcc` |
+| Instruction   | Binary format  | Example text => binary            |
+| ------------- | -------------- | --------------------------------- |
+| `i8x16.shr_s` | `0xfd 108:u32` | `i8x16.shr_s` => `0xfd 0x6c`      |
+| `i16x8.shr_s` | `0xfd 140:u32` | `i16x8.shr_s` => `0xfd 0x8c 0x01` |
+| `i32x4.shr_s` | `0xfd 172:u32` | `i32x4.shr_s` => `0xfd 0xac 0x01` |
+| `i64x2.shr_s` | `0xfd 204:u32` | `i64x2.shr_s` => `0xfd 0xcc 0x01` |
 
 ## Specifications
 
@@ -75,5 +77,5 @@ value_type.shr_s
 
 ## See also
 
-- [`shl`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/shl)
-- [`shr_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/shr_u)
+- [`shl`](/en-US/docs/WebAssembly/Reference/SIMD/bitwise/shl)
+- [`shr_u`](/en-US/docs/WebAssembly/Reference/SIMD/bitwise/shr_u)

@@ -17,4 +17,4 @@ This section documents the different WebAssembly types.
 ## Value types
 
 - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128)
-  - : A vector type representing a 128-bit vector of packed integer or floating-point data. A `v128` value can be interpreted in several different ways by [SIMD instructions](#).
+  - : A vector type representing a 128-bit vector of packed integer or floating-point data. A `v128` value can be interpreted in several different ways by [SIMD instructions](/en-US/docs/WebAssembly/Reference/SIMD).

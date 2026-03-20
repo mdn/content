@@ -44,17 +44,19 @@ value_type.demote_f64x2_zero
 ### Type
 
 ```plain
-[] -> [output]
+[input] -> [output]
 ```
 
+- `input`
+  - : The input `v128` `f62x2` value interpretation.
 - `output`
-  - : The output `v128` value interpretation.
+  - : The output `v128` `f32x4` value interpretation.
 
 ### Binary encoding
 
-| Instruction               | Binary equivalent | Example text => binary                   |
-| ------------------------- | ----------------- | ---------------------------------------- |
-| `f32x4.demote_f64x2_zero` | `0xfd 0x5e`       | `f32x4.demote_f64x2_zero` => `0xfd 0x5e` |
+| Instruction               | Binary format | Example text => binary                   |
+| ------------------------- | ------------- | ---------------------------------------- |
+| `f32x4.demote_f64x2_zero` | `0xfd 94:u32` | `f32x4.demote_f64x2_zero` => `0xfd 0x5e` |
 
 ## Specifications
 

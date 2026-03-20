@@ -46,17 +46,19 @@ value_type.trunc_sat_f64x2_s_zero
 ### Type
 
 ```plain
-[] -> [output]
+[input] -> [output]
 ```
 
+- `input`
+  - : The input `v128` `f64x2` value interpretation.
 - `output`
-  - : The output `v128` value interpretation.
+  - : The output `v128` `i32x4` value interpretation.
 
 ### Binary encoding
 
-| Instruction                    | Binary equivalent | Example text => binary                             |
-| ------------------------------ | ----------------- | -------------------------------------------------- |
-| `i32x4.trunc_sat_f64x2_s_zero` | `0xfd 0xfc 0x01`  | `i32x4.trunc_sat_f64x2_s_zero` => `0xfd 0xfc 0x01` |
+| Instruction                    | Binary format  | Example text => binary                             |
+| ------------------------------ | -------------- | -------------------------------------------------- |
+| `i32x4.trunc_sat_f64x2_s_zero` | `0xfd 252:u32` | `i32x4.trunc_sat_f64x2_s_zero` => `0xfd 0xfc 0x01` |
 
 ## Specifications
 

@@ -86,9 +86,9 @@ table.fill identifier
 
 ### Binary encoding
 
-| Instruction  | Binary equivalent | Example text => binary                                                                                        |
-| ------------ | ----------------- | ------------------------------------------------------------------------------------------------------------- |
-| `table.fill` | `0xfc 17:u32`     | `(table.fill 0 (i32.const 0) (ref.func $f1) (i32.const 3))` => `0xfc 0x11 0x00 0x41 0x00 0xd2 0x00 0x41 0x03` |
+| Instruction  | Binary format | Example text => binary                                                                                        |
+| ------------ | ------------- | ------------------------------------------------------------------------------------------------------------- |
+| `table.fill` | `0xfc 17:u32` | `(table.fill 0 (i32.const 0) (ref.func $f1) (i32.const 3))` => `0xfc 0x11 0x00 0x41 0x00 0xd2 0x00 0x41 0x03` |
 
 ## Examples
 

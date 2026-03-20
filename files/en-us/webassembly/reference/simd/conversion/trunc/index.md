@@ -45,18 +45,20 @@ value_type.trunc
 ### Type
 
 ```plain
-[] -> [output]
+[input] -> [output]
 ```
 
+- `input`
+  - : The input `v128` value interpretation.
 - `output`
   - : The output `v128` value interpretation.
 
 ### Binary encoding
 
-| Instruction   | Binary equivalent | Example text => binary       |
-| ------------- | ----------------- | ---------------------------- |
-| `f32x4.trunc` | `0xfd 105:u32`    | `f32x4.trunc` => `0xfd 0x69` |
-| `f64x2.trunc` | `0xfd 122:u32`    | `f64x2.trunc` => `0xfd 0x7a` |
+| Instruction   | Binary format  | Example text => binary       |
+| ------------- | -------------- | ---------------------------- |
+| `f32x4.trunc` | `0xfd 105:u32` | `f32x4.trunc` => `0xfd 0x69` |
+| `f64x2.trunc` | `0xfd 122:u32` | `f64x2.trunc` => `0xfd 0x7a` |
 
 ## Specifications
 

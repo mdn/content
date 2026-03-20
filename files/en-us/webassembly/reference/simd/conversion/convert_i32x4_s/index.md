@@ -44,17 +44,19 @@ value_type.convert_i32x4_s
 ### Type
 
 ```plain
-[] -> [output]
+[input] -> [output]
 ```
 
+- `input`
+  - : The input `v128` `i32x4` value interpretation.
 - `output`
-  - : The output `v128` value interpretation.
+  - : The output `v128` `f32x4` value interpretation.
 
 ### Binary encoding
 
-| Instruction             | Binary equivalent | Example text => binary                 |
-| ----------------------- | ----------------- | -------------------------------------- |
-| `f32x4.convert_i32x4_s` | `0xfd 0xfa`       | `f32x4.convert_i32x4_s` => `0xfd 0xfa` |
+| Instruction             | Binary format  | Example text => binary                      |
+| ----------------------- | -------------- | ------------------------------------------- |
+| `f32x4.convert_i32x4_s` | `0xfd 250:u32` | `f32x4.convert_i32x4_s` => `0xfd 0xfa 0x01` |
 
 ## Specifications
 

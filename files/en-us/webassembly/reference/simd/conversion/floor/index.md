@@ -45,18 +45,20 @@ value_type.floor
 ### Type
 
 ```plain
-[] -> [output]
+[input] -> [output]
 ```
 
+- `input`
+  - : The input `v128` value interpretation.
 - `output`
   - : The output `v128` value interpretation.
 
 ### Binary encoding
 
-| Instruction   | Binary equivalent | Example text => binary       |
-| ------------- | ----------------- | ---------------------------- |
-| `f32x4.floor` | `0xfd 104:u32`    | `f32x4.floor` => `0xfd 0x68` |
-| `f64x2.floor` | `0xfd 117:u32`    | `f64x2.floor` => `0xfd 0x75` |
+| Instruction   | Binary format  | Example text => binary       |
+| ------------- | -------------- | ---------------------------- |
+| `f32x4.floor` | `0xfd 104:u32` | `f32x4.floor` => `0xfd 0x68` |
+| `f64x2.floor` | `0xfd 117:u32` | `f64x2.floor` => `0xfd 0x75` |
 
 ## Specifications
 
