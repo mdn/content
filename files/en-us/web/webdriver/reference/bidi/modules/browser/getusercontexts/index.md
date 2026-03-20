@@ -24,7 +24,7 @@ None. However, you must include the `params` field and set it to an empty object
 
 ### Return value
 
-The `result` object in the response with the following fields:
+The following field in the `result` object of the response describes the user contexts in the browser:
 
 - `userContexts`
   - : An array of one or more objects, each representing a user context.

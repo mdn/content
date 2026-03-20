@@ -22,8 +22,8 @@ The `browser.createUserContext` [command](/en-US/docs/Web/WebDriver/Reference/Bi
 
 Set `params` to an empty object (`{}`) or include any of the following optional fields:
 
-- `acceptInsecureCerts` {{optional_inline}}
-  - : A boolean that indicates whether untrusted TLS certificates (for example, self-signed or expired) are accepted within this user context. When set, it overrides the [session-level](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new#acceptinsecurecerts) `acceptInsecureCerts` setting for this user context.
+- [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts) {{optional_inline}}
+  - : A boolean that controls whether untrusted TLS certificates (for example, self-signed or expired) are accepted within this user context. When set, it overrides the [session-level](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new#acceptinsecurecerts) `acceptInsecureCerts` setting for this user context.
 - `proxy` {{optional_inline}}
   - : An object that specifies the proxy configuration the browser should use for network requests within this user context. When set, it overrides the [session-level](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new#proxy) `proxy` setting for this user context.
 - `unhandledPromptBehavior` {{optional_inline}}
@@ -31,7 +31,7 @@ Set `params` to an empty object (`{}`) or include any of the following optional 
 
 ### Return value
 
-The `result` object in the response with the following field:
+The following field in the `result` object of the response describes the created user context:
 
 - `userContext`
   - : A string that uniquely identifies the created user context.
