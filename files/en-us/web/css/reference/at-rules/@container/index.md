@@ -487,7 +487,7 @@ The following container query checks if the [computed value](/en-US/docs/Web/CSS
 
 Style features that query a shorthand property are true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style(border: 2px solid red)` will resolve to true if all 12 longhand properties (`border-bottom-style`, etc.) that make up that shorthand are true.
 
-Note that `!important` is allowed in style queries but will be ignored.
+Note that [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) is allowed in style queries but is ignored.
 
 ```css
 /* !important is valid but has no effect */

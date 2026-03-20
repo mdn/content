@@ -22,7 +22,7 @@ There are three types of container queries:
 
 - **[Container style queries](/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries)**
   - : Style queries enable applying styles to elements based on a containing element's style features, where any non-empty element can be a style query container. A style feature can be a CSS property, CSS [custom property](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), or a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations).
-    This allows you to apply styles to any element's descendants based on any property, declaration, or computed value — for example if the container is `display: inline flex`, or has a non-transparent background color.
+    This allows you to apply styles to any container element's descendants based on its style features — such as whether it has a `display: inline` flex declaration set, or the value of a custom property.
 
 - **[Container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)**
   - : Scroll-state queries allow you to selectively apply CSS rules to a container's descendants based on scroll-state conditions, such as whether the queried element is partially scrolled or whether the container is snapped to a scroll snap container. The containing elements need to be explicitly declared as _scroll-state query containers_.
