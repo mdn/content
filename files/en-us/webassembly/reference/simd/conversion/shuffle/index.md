@@ -53,9 +53,9 @@ value_type.shuffle indices
 ```
 
 - `input1`
-  - : The first input `v128` value interpretation.
+  - : The first input `v128` `i8x16` value interpretation.
 - `input2`
-  - : The second input `v128` value interpretation.
+  - : The second input `v128` `i8x16` value interpretation.
 - `output`
   - : The output `v128` value interpretation.
 
