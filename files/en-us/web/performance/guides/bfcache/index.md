@@ -5,7 +5,7 @@ page-type: guide
 sidebar: performancesidebar
 ---
 
-The **back/forward cache** (**bfcache**) is a browser optimization that stores a complete snapshot of a page in memory when a user navigates away. When the user presses the back or forward button, the browser restores the snapshot instantly instead of reloading the page from the network. This makes back/forward navigations feel nearly instant.
+The **back/forward cache** (**bfcache**) is a browser optimization that may store a complete snapshot of a page in memory when a user navigates away. When the user presses the back or forward button, if the page is stored in the bfcache, the browser restores the snapshot instantly instead of reloading the page from the network. This makes back/forward navigations feel nearly instant.
 
 This guide explains how bfcache works, how it differs from HTTP caching, what can prevent a page from being cached, and how to design pages that work well with it.
 
@@ -18,9 +18,17 @@ When a user navigates away from a page, the browser may store the entire page st
 - Active timers, promises, and other pending work
 - Loaded resources (images, stylesheets, scripts)
 
-When the user navigates back, the browser restores this snapshot. JavaScript execution resumes where it left off, scroll position is preserved, and form inputs retain their values. No network requests are made to reconstruct the page.
+When the user navigates back, the browser restores this snapshot if available. JavaScript execution resumes where it left off, scroll position is preserved, and form inputs retain their values. No network requests are necessary to reconstruct the page.
 
-## bfcache vs. HTTP caching
+A page can be evicted from the bfcache, and no longer be able to be restored for a number of reasons including:
+
+- A period of time having passed
+- A maximum number of history entries
+- Certain APIs being used which are likely to be ineligible with restoring the page.
+
+These reasons differ between browsers.
+
+## bfcache versus HTTP caching
 
 bfcache and HTTP caching solve different problems and operate independently:
 
@@ -31,7 +39,7 @@ bfcache and HTTP caching solve different problems and operate independently:
 | **Speed**           | Near-instant (memory restore)                 | Faster than network, but page must still be parsed and rendered |
 | **Freshness**       | No revalidation — snapshot is restored as-is  | Subject to `Cache-Control`, `ETag`, and `Last-Modified` headers |
 
-[RFC 9111 Section 6](https://httpwg.org/specs/rfc9111.html#history.lists) makes this distinction explicit: HTTP cache directives apply to caching, not to history mechanisms like bfcache. A history mechanism _may_ display a previous representation even if it has expired according to HTTP cache rules. This means that `Cache-Control: no-cache` or `max-age=0` do not prevent bfcache — they only control HTTP cache revalidation.
+[RFC 9111 Section 6](https://httpwg.org/specs/rfc9111.html#history.lists) makes this distinction explicit: HTTP cache directives apply to caching, not to history mechanisms like bfcache. A history mechanism _may_ display a previous representation even if it has expired according to HTTP cache rules. This means that `Cache-Control: no-cache` or `max-age=0` do not prevent bfcache — they only control HTTP cache revalidation. However, browsers may take decisions on bfcache eligibility based on various signals including `Cache-Control` headers. See the [`no-store`](#cache-control_no-store) section later in this article.
 
 ### Stale content after bfcache restoration
 
@@ -56,7 +64,10 @@ Certain APIs and page behaviors prevent the browser from storing a page in bfcac
 
 ### `unload` event listeners
 
-Registering an [`unload`](/en-US/docs/Web/API/Window/unload_event) handler is the most common reason pages are excluded from bfcache. Chrome and Firefox do not cache pages with `unload` listeners. Safari attempts to cache them, but will not run the listener, which can lead to unreliable behavior.
+Registering an [`unload`](/en-US/docs/Web/API/Window/unload_event) handler is the most common reason pages are excluded from bfcache. In the past Chrome and Firefox did not cache pages with `unload` listeners on desktop. Safari attempts to cache them, but will not run the listener, which can lead to unreliable behavior. On mobile, where `unload` is often much less reliable due to the nature of mobile applications including browsers, all browsers follow similar behavior to Safari and prioritise bfcache over running `unload` handlers.
+
+> [!NOTE]
+> Chrome is [moving toward allowing pages with `unload` handlers to use bfcache](https://developer.chrome.com/docs/web-platform/deprecating-unload), but this behavior varies across browser versions.
 
 Use {{domxref("Window/pagehide_event", "pagehide")}} instead of `unload`. It fires in all the same situations, and does not block bfcache:
 
@@ -70,8 +81,8 @@ window.addEventListener("pagehide", (event) => {
 
 Pages with active connections may be excluded from bfcache. Close them during navigation:
 
-- **IndexedDB** connections
-- Open **WebSocket** or **WebRTC** connections
+- {{domxref("IndexedDB_API", "IndexedDB")}} connections
+- Open {{domxref("WebSocket")}} or {{domxref("WebRTC")}} connections
 - In-progress {{domxref("Window/fetch", "fetch()")}} requests
 
 Listen for the `pagehide` event to close connections, and re-open them in the `pageshow` event when restoring from bfcache.
@@ -81,7 +92,7 @@ Listen for the `pagehide` event to close connections, and re-open them in the `p
 Pages served with `Cache-Control: no-store` are ineligible for bfcache in most browsers. This header is intended for sensitive content that should not be stored in any cache. If your page is not sensitive, prefer `Cache-Control: no-cache` instead, which forces HTTP revalidation without blocking bfcache.
 
 > [!NOTE]
-> Chrome is moving toward allowing `no-store` pages to use bfcache in limited cases, but this behavior varies across browser versions.
+> Chrome [allows `no-store` pages to use bfcache in limited cases](https://developer.chrome.com/docs/web-platform/bfcache-ccns), but many sites do not meet that criteria and other browsers do not do the same. Therefore it is still recommended to limit usage of `no-store` where possible.
 
 ### Other blocking conditions
 
@@ -106,6 +117,8 @@ window.addEventListener("pageshow", (event) => {
 });
 ```
 
+For [browsers that do not support `notRestoredReasons`](/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons#browser_compatibility), the `pageshow` `persisted` property is still a good signal as to whether the bfcache was used or not.
+
 You can also test bfcache behavior in Chrome DevTools by navigating to **Application > Back/forward cache** and clicking **Test back/forward cache**.
 
 ## Best practices
@@ -113,7 +126,7 @@ You can also test bfcache behavior in Chrome DevTools by navigating to **Applica
 To maximize bfcache hit rates and handle restorations correctly:
 
 - **Replace `unload` with `pagehide`**: The `unload` event is unreliable (especially on mobile) and blocks bfcache.
-- **Avoid `Cache-Control: no-store`** unless the page contains genuinely sensitive data. Use `no-cache` instead.
+- **Avoid `Cache-Control: no-store`** unless the page contains genuinely sensitive data. Use `no-cache` instead or even a short caching period.
 - **Update stale content in `pageshow`**: Listen for `event.persisted` and refresh any data that may have changed.
 - **Close and reopen connections**: Tear down IndexedDB, WebSocket, and other connections in `pagehide`; re-establish them in `pageshow`.
 - **Avoid `beforeunload` unless needed**: Only add `beforeunload` conditionally (e.g., when the user has unsaved changes), and remove it when it's no longer needed.
