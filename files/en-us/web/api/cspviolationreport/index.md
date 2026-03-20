@@ -80,7 +80,7 @@ We can also see that the violation was caused by the page attempting to load a s
 }
 ```
 
-Violation reports may also sent as a JSON object in a `POST` to one or more configured [reporting server endpoints](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
+Violation reports may also sent as a JSON object in a {{httpmethod("POST")}} request to one or more configured [reporting server endpoints](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
 Reporting server endpoint names are specified in the [`report-to`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to) policy directive of the {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}} header.
 Valid endpoint names and their mapping to a particular URL are defined using the {{httpheader("Reporting-Endpoints")}} header.
 

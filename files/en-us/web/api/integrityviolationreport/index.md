@@ -18,7 +18,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
   - : The body of the report.
     This is an object with the following properties:
     - `blockedURL`
-      - : A string representing the URL of the resource blocked by an enforced integrity policy (or just reported for a [reportOnly](#reportonly) policy).
+      - : A string representing the URL of the resource blocked by an enforced integrity policy (or just reported for a [`reportOnly`](#reportonly) policy).
     - `documentURL`
       - : A string representing the URL of the document that is attempting to load the resource.
     - `destination`
@@ -61,7 +61,7 @@ We can also see that the report was due to loading a script, and that it was tri
 }
 ```
 
-Violation reports may also sent as a JSON object in a `POST` to one or more configured [reporting server endpoints](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
+Violation reports may also sent as a JSON object in a {{httpmethod("POST")}} request to one or more configured [reporting server endpoints](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
 Reporting server endpoint names are specified in the [`endpoints` list](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) when setting {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}}.
 Valid endpoint names and their mapping to a particular URL are defined using the {{httpheader("Reporting-Endpoints")}} header.
 

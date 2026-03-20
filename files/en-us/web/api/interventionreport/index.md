@@ -69,7 +69,7 @@ Note that `url` represents the original page that was loaded, while `body.source
 }
 ```
 
-Intervention reports are also sent as a JSON object in a `POST` to the [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) named `"default"`, if it is defined.
+Intervention reports are also sent as a JSON object in a {{httpmethod("POST")}} request to the [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) named `"default"`, if it is defined.
 The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} header.
 
 The structure of the server report is almost exactly the same as `InterventionReport`, except that it additionally includes `age` and `user_agent` fields.
@@ -140,7 +140,7 @@ Below we set the `default` endpoint to `https://some-example.com/intervention`:
 Reporting-Endpoints: default="https://some-example.com/intervention"
 ```
 
-The report will then be sent as a JSON object in a `POST` to the endpoint whenever an intervention occurs.
+The report will then be sent as a JSON object in a {{httpmethod("POST")}} request to the endpoint whenever an intervention occurs.
 It has the same structure as `InterventionReport`, except for the addition of `age` and `user_agent` properties.
 
 ```json

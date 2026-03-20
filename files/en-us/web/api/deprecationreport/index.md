@@ -71,7 +71,7 @@ Note that `url` represents the original page that was loaded, while `body.source
 }
 ```
 
-Deprecation reports are also sent as a JSON object in a `POST` to the [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) named `"default"`, if it is defined.
+Deprecation reports are also sent as a JSON object in a {{httpmethod("POST")}} request to the [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) named `"default"`, if it is defined.
 The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} header.
 
 The structure of the server report is almost exactly the same as `DeprecationReport`, except that it additionally includes `age` and `user_agent` fields.
@@ -167,7 +167,7 @@ Below we set the `default` endpoint to `https://some-example.com/deprecation`:
 Reporting-Endpoints: default="https://some-example.com/deprecation"
 ```
 
-The report will then be sent as a JSON object in a `POST` to the endpoint whenever a deprecated API is used.
+The report will then be sent as a JSON object in a {{httpmethod("POST")}} request to the endpoint whenever a deprecated API is used.
 It has the same structure as `DeprecationReport`, except for the addition of `age` and `user_agent` properties.
 
 ```json
