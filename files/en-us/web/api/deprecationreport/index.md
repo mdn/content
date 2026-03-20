@@ -161,10 +161,8 @@ Note that the `type` is `"deprecation"`.
 ### Sending a report to a reporting endpoint
 
 Configuring a web page to send a deprecation report requires that you set a [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) named "default" using the {{httpheader("Reporting-Endpoints")}} header.
-Below we set the `default` endpoint to `https://some-example.com/deprecation`:
+Below we set the `default` endpoint to `https://example.com/deprecation`:
 
-```http
-Reporting-Endpoints: default="https://some-example.com/deprecation"
 ```
 
 The report will then be sent as a JSON object in a {{httpmethod("POST")}} request to the endpoint whenever a deprecated API is used.
