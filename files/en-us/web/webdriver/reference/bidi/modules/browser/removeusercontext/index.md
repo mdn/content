@@ -7,7 +7,10 @@ browser-compat: webdriver.bidi.browser.removeUserContext
 sidebar: webdriver
 ---
 
-The `browser.removeUserContext` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browser`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser) module removes the specified [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) and all its tabs, thereby removing its associated storage. Tabs are closed without running [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) event handler functions.
+The `browser.removeUserContext` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browser`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser) module removes the specified [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) and all its tabs across all windows. Tabs are closed without running [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) event handler functions.
+
+> [!WARNING]
+> This command is irreversible, and all storage associated with the user context is permanently deleted.
 
 ## Syntax
 
@@ -37,7 +40,7 @@ The `result` field in the response is an empty object (`{}`).
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : The `userContext` field is `"default"`. The default user context cannot be removed.
 - `no such user context`
-  - : No user context with the given `userContext` ID is found.
+  - : No user context with the given user context ID is found.
 
 ## Examples
 
