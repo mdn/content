@@ -26,7 +26,21 @@ To provide a reasonable user experience on mobile devices, and to cut down on am
 
 - A text input for entering a title for your to-do list. This is the least avoidable bit of user typing.
 - Number inputs for the hour and minute parts of the deadline. On browsers that support `type="number"`, you get a nice little up and down arrow number picker. On mobile platforms you tend to get a numeric keypad for entering data, which is helpful. On others you just get a standard text input, which is okay.
-- {{HTMLElement("select")}} elements for inputting the day, month and year of the deadline. Because these values are the most ambiguous for users to enter (7, sunday, sun? 04, 4, April, Apr? 2013, '13, 13?), I decided the best solution was to give them a choice to pick from, which also saves on annoying typing for mobile users. The days are recorded as numerical days of the month, the months are recorded as full month names, and the years are recorded as full four digit year numbers.
+- {{HTMLElement("select")}} elements for inputting the day, month and year of the deadline. Because these values are the most ambiguous for users to enter (7, sunday, sun? 04, 4, April, Apr? 2013, '13, 13?), I decided the best solution was to give them a choice to pick from, which also saves on annoying typing for mobile users. The days are recorded as numerical days of the month, the months are recorded as full month names, and the years are populated starting from the current year and 12 years into the future.
+
+During the app initialization, we populate the year dropdown and store the current year for later use:
+
+```js
+const currentYear = new Date().getFullYear();
+for (let i = 0; i <= 12; i++) {
+  const option = document.createElement("option");
+  const yearValue = currentYear + i;
+  option.value = yearValue;
+  option.textContent = yearValue;
+  year.appendChild(option);
+}
+year.value = currentYear;
+```
 
 When the form's submit button is pressed, we run the `addData()` function, which starts like this:
 
@@ -108,14 +122,14 @@ function addData(e) {
     minutes.value = null;
     day.value = "01";
     month.value = "January";
-    year.value = 2020;
+    year.value = currentYear;
   };
   // update the display of data to show the newly added item, by running displayData() again.
   displayData();
 }
 ```
 
-This next section creates a log message to say the new item addition is successful, and resets the form so it's ready for the next task to be entered. Last of all, we run the `displayData()` function, which updates the display of data in the app to show the new task that was just entered.
+This next section creates a log message to say the new item addition is successful, and resets the form so it's ready for the next task to be entered. Note that the year field is reset to `currentYear`, which is set when the app initializes. Last of all, we run the `displayData()` function, which updates the display of data in the app to show the new task that was just entered.
 
 ### Checking whether a deadline has been reached
 
