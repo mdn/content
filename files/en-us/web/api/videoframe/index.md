@@ -70,6 +70,8 @@ Created frames may then turned into a media track, for example with the {{domxre
   - : Creates a new `VideoFrame` object with reference to the same media resource as the original.
 - {{domxref("VideoFrame.close()")}}
   - : Clears all states and releases the reference to the media resource.
+- {{domxref("VideoFrame.metadata()")}}
+  - : Returns the metadata asssociated with the `VideoFrame`.
 
 ## Examples
 

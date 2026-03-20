@@ -13,14 +13,17 @@ The **`VideoFrame()`** constructor creates a new {{domxref("VideoFrame")}} objec
 ## Syntax
 
 ```js-nolint
+// Image constructor
 new VideoFrame(image)
 new VideoFrame(image, options)
+
+// Data constructor
 new VideoFrame(data, options)
 ```
 
 ### Parameters
 
-The first type of constructor (see above) creates a new {{domxref("VideoFrame")}} from an image. Its parameters are:
+The first type of constructor creates a new {{domxref("VideoFrame")}} from an image. Its parameters are:
 
 - `image`
   - : An image containing the image data for the new `VideoFrame`. It can be one of the following objects:
@@ -32,14 +35,26 @@ The first type of constructor (see above) creates a new {{domxref("VideoFrame")}
     or another {{domxref("VideoFrame")}}.
 - `options` {{Optional_Inline}}
   - : An object containing the following:
-    - `duration` {{Optional_Inline}}
-      - : An integer representing the duration of the frame in microseconds.
-    - `timestamp`
-      - : An integer representing the timestamp of the frame in microseconds.
     - `alpha` {{Optional_Inline}}
       - : A string, describing how the user agent should behave when dealing with alpha channels. The default value is "keep".
         - `"keep"`: Indicates that the user agent should preserve alpha channel data.
         - `"discard"`: Indicates that the user agent should ignore or remove alpha channel data.
+    - `displayHeight` {{Optional_Inline}}
+      - : The height of the `VideoFrame` when displayed after applying aspect-ratio adjustments.
+    - `displayWidth` {{Optional_Inline}}
+      - : The width of the `VideoFrame` when displayed after applying aspect-ratio adjustments.
+    - `duration` {{Optional_Inline}}
+      - : An integer representing the duration of the frame in microseconds.
+    - `flip` {{optional_inline}}
+      - : A boolean. If `true`, horizontal mirroring is applied. Defaults to `false`.
+    - `metadata` {{optional_inline}}
+      - : An object containing metadata describing the video frame, specified by the [WebCodecs VideoFrame Metadata Registry](https://w3c.github.io/webcodecs/video_frame_metadata_registry.html), which can contain the following properties:
+        - `rtpTimestamp` {{optional_inline}}
+          - : The RTP timestamp of the corresponding encoded frame. Only video frames originating from [WebRTC](/en-US/docs/Web/API/WebRTC_API) sources will have `rtpTimestamp` metadata.
+    - `rotation` {{optional_inline}}
+      - : An integer representing the rotation (0, 90, 180, or 270) in degrees clockwise. Defaults to `0`. Arbitrary numbers (including negatives) are rounded to the next quarter turn.
+    - `timestamp`
+      - : An integer representing the timestamp of the frame in microseconds.
     - `visibleRect` {{Optional_Inline}}
       - : An object representing the visible rectangle of the `VideoFrame`, containing the following:
         - `x`
@@ -50,21 +65,35 @@ The first type of constructor (see above) creates a new {{domxref("VideoFrame")}
           - : The width of the frame.
         - `height`
           - : The height of the frame.
-    - `displayWidth` {{Optional_Inline}}
-      - : The width of the `VideoFrame` when displayed after applying aspect-ratio adjustments.
-    - `displayHeight` {{Optional_Inline}}
-      - : The height of the `VideoFrame` when displayed after applying aspect-ratio adjustments.
-    - `flip` {{optional_inline}}
-      - : A boolean. If `true`, horizontal mirroring is applied. Defaults to `false`.
-    - `rotation` {{optional_inline}}
-      - : An integer representing the rotation (0, 90, 180, or 270) in degrees clockwise. Defaults to `0`. Arbitrary numbers (including negatives) are rounded to the next quarter turn.
 
-The second type of constructor (see above) creates a new {{domxref("VideoFrame")}} from an {{jsxref("ArrayBuffer")}}. Its parameters are:
+The second type of constructor creates a new {{domxref("VideoFrame")}} from an {{jsxref("ArrayBuffer")}}. Its parameters are:
 
 - `data`
   - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing the data for the new `VideoFrame`.
 - `options`
   - : An object containing the following:
+    - `codedHeight`
+      - : Height of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
+    - `codedWidth`
+      - : Width of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
+    - `colorSpace`
+      - : An object representing the color space of the `VideoFrame`, containing the following:
+        - `primaries`
+          - : A string representing the video color primaries, described on the page for the {{domxref("VideoColorSpace.primaries")}} property.
+        - `transfer`
+          - : A string representing the video color transfer function, described on the page for the {{domxref("VideoColorSpace.transfer")}} property.
+        - `matrix`
+          - : A string representing the video color matrix, described on the page for the {{domxref("VideoColorSpace.matrix")}} property.
+        - `fullRange`
+          - : A Boolean. If `true`, indicates that full-range color values are used.
+    - `displayHeight` {{Optional_Inline}}
+      - : The height of the `VideoFrame` when displayed after applying aspect ratio adjustments.
+    - `displayWidth` {{Optional_Inline}}
+      - : The width of the `VideoFrame` when displayed after applying aspect ratio adjustments.
+    - `duration` {{Optional_Inline}}
+      - : An integer representing the duration of the frame in microseconds.
+    - `flip` {{optional_inline}}
+      - : A boolean. If `true`, horizontal mirroring is applied. Defaults to `false`.
     - `format`
       - : A string representing the video pixel format. One of the following strings, which are fully described on the page for the {{domxref("VideoFrame.format","format")}} property:
         - `"I420"`
@@ -76,14 +105,6 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
         - `"RGBX"`
         - `"BGRA"`
         - `"BGRX"`
-    - `codedWidth`
-      - : Width of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
-    - `codedHeight`
-      - : Height of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
-    - `timestamp`
-      - : An integer representing the timestamp of the frame in microseconds.
-    - `duration` {{Optional_Inline}}
-      - : An integer representing the duration of the frame in microseconds.
     - `layout` {{Optional_Inline}}
       - : A list containing the following values for each plane in the `VideoFrame`:
         - `offset`
@@ -91,6 +112,16 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
         - `stride`
           - : An integer representing the number of bytes, including padding, used by each row of the plane.
             Planes may not overlap. If no `layout` is specified, the planes will be tightly packed.
+    - `metadata` {{optional_inline}}
+      - : An object containing metadata describing the video frame, specified by the [WebCodecs VideoFrame Metadata Registry](https://w3c.github.io/webcodecs/video_frame_metadata_registry.html), which can contain the following properties:
+        - `rtpTimestamp` {{optional_inline}}
+          - : The RTP timestamp of the corresponding encoded frame. Only video frames originating from [WebRTC](/en-US/docs/Web/API/WebRTC_API) sources will have `rtpTimestamp` metadata.
+    - `rotation` {{optional_inline}}
+      - : An integer representing the rotation (0, 90, 180, or 270) in degrees clockwise. Defaults to `0`. Arbitrary numbers (including negatives) are rounded to the next quarter turn.
+    - `timestamp`
+      - : An integer representing the timestamp of the frame in microseconds.
+    - `transfer`
+      - : An array of {{jsxref("ArrayBuffer")}}s that `VideoFrame` will detach and take ownership of. If the array contains the {{jsxref("ArrayBuffer")}} backing `data`, `VideoFrame` will use that buffer directly instead of copying from it.
     - `visibleRect` {{Optional_Inline}}
       - : An object representing the visible rectangle of the `VideoFrame`, containing the following:
         - `x`
@@ -101,26 +132,6 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
           - : The width of the frame.
         - `height`
           - : The height of the frame.
-    - `displayWidth` {{Optional_Inline}}
-      - : The width of the `VideoFrame` when displayed after applying aspect ratio adjustments.
-    - `displayHeight` {{Optional_Inline}}
-      - : The height of the `VideoFrame` when displayed after applying aspect ratio adjustments.
-    - `colorSpace`
-      - : An object representing the color space of the `VideoFrame`, containing the following:
-        - `primaries`
-          - : A string representing the video color primaries, described on the page for the {{domxref("VideoColorSpace.primaries")}} property.
-        - `transfer`
-          - : A string representing the video color transfer function, described on the page for the {{domxref("VideoColorSpace.transfer")}} property.
-        - `matrix`
-          - : A string representing the video color matrix, described on the page for the {{domxref("VideoColorSpace.matrix")}} property.
-        - `fullRange`
-          - : A Boolean. If `true`, indicates that full-range color values are used.
-    - `transfer`
-      - : An array of {{jsxref("ArrayBuffer")}}s that `VideoFrame` will detach and take ownership of. If the array contains the {{jsxref("ArrayBuffer")}} backing `data`, `VideoFrame` will use that buffer directly instead of copying from it.
-    - `flip` {{optional_inline}}
-      - : A boolean. If `true`, horizontal mirroring is applied. Defaults to `false`.
-    - `rotation` {{optional_inline}}
-      - : An integer representing the rotation (0, 90, 180, or 270) in degrees clockwise. Defaults to `0`. Arbitrary numbers (including negatives) are rounded to the next quarter turn.
 
 ## Examples
 
