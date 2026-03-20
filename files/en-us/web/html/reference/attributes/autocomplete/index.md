@@ -257,6 +257,12 @@ Using appropriate `autocomplete` values helps users with cognitive disabilities,
 
 Providing valid autocomplete tokens also satisfies [WCAG 2.2 Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose) (Level AA), which requires that the purpose of input fields collecting user information can be programmatically determined. This enables user agents and assistive technologies to apply personalized presentations, such as displaying familiar icons next to fields, to help users understand and complete forms.
 
+### Avoid `autocomplete="off"` and invalid values
+
+Setting `autocomplete="off"` prevents the browser from offering stored data for a field. While developers sometimes use this to prevent autofill for security reasons (such as one-time codes), it removes a feature that many users depend on. Users with cognitive disabilities may rely on autocomplete to recall personal information, and users with motor impairments benefit from reduced typing. Browsers may also ignore `autocomplete="off"` on login fields to support password managers.
+
+Using invalid or non-standard values (such as made-up strings to circumvent autofill) has a similar effect: the browser cannot match the field to any known purpose, so it cannot offer relevant suggestions. This also fails the WCAG requirement above, since the input purpose is no longer programmatically determinable. If you need to disable autofill for a specific field, consider using `autocomplete="off"` only where genuinely necessary (such as for CAPTCHA or one-time token fields) rather than applying it broadly across a form.
+
 ## Examples
 
 ```html
