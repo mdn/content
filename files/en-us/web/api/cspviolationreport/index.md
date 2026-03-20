@@ -19,7 +19,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
     - {{domxref("CSPViolationReport.blockedURL","blockedURL")}}
       - : A string representing either the type or the URL of the resource that was blocked because it violates the CSP.
     - {{domxref("CSPViolationReport.columnNumber", "columnNumber")}}
-      - : The column number in the script at which the violation occurred.
+      - : The charactrer position in the line of the script at which the violation occurred.
     - {{domxref("CSPViolationReport.disposition","disposition")}}
       - : A string indicating whether the violation was enforced or only reported.
         This can have the value `"enforce"` for violations of policies set with {{httpheader("Content-Security-Policy")}}, or `"reporting"` for policies set with {{httpheader("Content-Security-Policy-Report-Only")}}.
