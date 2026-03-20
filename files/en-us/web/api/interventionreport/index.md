@@ -20,7 +20,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
   - : The body of the report.
     This is an object with the following properties:
     - `columnNumber` {{experimental_inline}}
-      - : A string representing the column in the source file in which the intervention occurred, if known, or `null` otherwise.
+      - : A string representing the character position in the source file line in which the intervention occurred, if known, or `null` otherwise.
 
     - `id` {{experimental_inline}}
       - : A string representing the intervention that generated the report.
