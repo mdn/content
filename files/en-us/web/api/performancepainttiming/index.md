@@ -82,27 +82,26 @@ entries.forEach((entry) => {
 
 ### Getting separate paint and presentation timings
 
-The `paintTime` and `presentationTime` properties enable you to retrieve specific timings for the paint phase starting and the painted pixels being drawn on the screen. The `paintTime` is broadly interoperable, whereas the `presentationTime` is implementation-dependant.
+The `paintTime` and `presentationTime` properties enable you to retrieve specific timings for the paint phase starting and the painted pixels being drawn on the screen. The `paintTime` is broadly interoperable, whereas the `presentationTime` is implementation-dependent.
 
-This example builds on the earlier {{domxref("Performance.getEntriesByType()")}} example, showing how to check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `startTime`.
+This example builds on the earlier {{domxref("Performance.getEntriesByType()")}} example, showing how to check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `startTime` or `loadTime`, depending on what is most appropriate.
 
 ```js
 const entries = performance.getEntriesByType("paint");
 entries.forEach((entry) => {
-  if (entry.paintTime && entry.presentationTime) {
+  if (entry.presentationTime) {
     console.log(
-      `${entry.name} paint time: ${entry.paintTime} milliseconds; presentation time: ${entry.presentationTime} milliseconds.`,
+      "paintTime:",
+      entry.paintTime,
+      "presentationTime:",
+      entry.presentationTime,
     );
-    // Logs:
-    // first-paint paint time: 473.30000001192093 milliseconds;
-    // presentation time: 516 milliseconds.
-    // first-contentful-paint paint time: 473.30000001192093 milliseconds;
-    // presentation time: 516 milliseconds.
+  } else if (entry.paintTime) {
+    console.log("paintTime:", entry.paintTime);
+  } else if (entry.startTime !== entry.loadTime) {
+    console.log("startTime:", entry.startTime);
   } else {
-    console.log(`${entry.name} start time: ${entry.startTime} milliseconds.`);
-    // Logs:
-    // first-paint start time: 592 milliseconds.
-    // first-contentful-paint start time: 592 milliseconds.
+    console.log("loadTime", entry.loadTime);
   }
 });
 ```

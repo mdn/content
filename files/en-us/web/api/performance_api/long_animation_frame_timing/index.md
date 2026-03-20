@@ -49,8 +49,8 @@ The following is a complete `"long-animation-frame"` performance entry example, 
   entryType: "long-animation-frame",
   firstUIEventTimestamp: 11801.099999999627,
   name: "long-animation-frame",
-  paintTime: 11758.199999999255,
-  presentationTime: 11803.199999999255,
+  paintTime: 11862.400000000373,
+  presentationTime: 11863.199999999255,
   renderStart: 11858.800000000745,
   scripts: [
     {
@@ -118,8 +118,8 @@ The timestamps provided in the {{domxref("PerformanceLongAnimationFrameTiming")}
 
 | Timing                            | Calculation                                                              |
 | --------------------------------- | ------------------------------------------------------------------------ |
-| Start time                        | `startTime` (or `presentationTime`)                                      |
-| End time                          | `startTime + duration`                                                   |
+| Start time                        | `startTime`                                                              |
+| End time                          | `startTime + duration` (or `paintTime`/`presentationTime`)               |
 | Work duration                     | `renderStart ? renderStart - startTime : duration`                       |
 | Render duration                   | `renderStart ? (startTime + duration) - renderStart : 0`                 |
 | Render: Pre-layout duration       | `styleAndLayoutStart ? styleAndLayoutStart - renderStart : 0`            |

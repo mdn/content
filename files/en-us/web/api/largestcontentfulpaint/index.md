@@ -93,25 +93,27 @@ observer.observe({ type: "largest-contentful-paint", buffered: true });
 
 ### Observing separate paint and presentation timings
 
-The `paintTime` and `presentationTime` properties enable you to retrieve specific timings for the paint phase starting and the painted pixels being drawn on the screen. The `paintTime` is broadly interoperable, whereas the `presentationTime` is implementation-dependant.
+The `paintTime` and `presentationTime` properties enable you to retrieve specific timings for the paint phase starting and the painted pixels being drawn on the screen. The `paintTime` is broadly interoperable, whereas the `presentationTime` is implementation-dependent.
 
-This example builds on the earlier observer example, showing how to check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `startTime`.
+This example builds on the earlier observer example, showing how to check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `startTime` or `loadTime`, depending on what is most appropriate.
 
 ```js
 const observer = new PerformanceObserver((list) => {
   const entries = list.getEntries();
   const lastEntry = entries[entries.length - 1]; // Use the latest LCP candidate
-  if (lastEntry.paintTime && lastEntry.presentationTime) {
+  if (lastEntry.presentationTime) {
     console.log(
-      `LCP paint time: ${lastEntry.paintTime} milliseconds; presentation time: ${lastEntry.presentationTime} milliseconds.`,
+      "LCP paintTime:",
+      lastEntry.paintTime,
+      "LCP presentationTime:",
+      lastEntry.presentationTime,
     );
-    // Logs:
-    // LCP paint time: 473.30000001192093 milliseconds;
-    // presentation time: 516 milliseconds.
+  } else if (lastEntry.paintTime) {
+    console.log("LCP paintTime:", lastEntry.paintTime);
+  } else if (lastEntry.startTime !== lastEntry.loadTime) {
+    console.log("LCP startTime:", lastEntry.startTime);
   } else {
-    console.log(`LCP start time: ${lastEntry.startTime} milliseconds.`);
-    // Logs:
-    // LCP start time: 516 milliseconds.
+    console.log("LCP loadTime:", lastEntry.loadTime);
   }
 });
 observer.observe({ type: "largest-contentful-paint", buffered: true });

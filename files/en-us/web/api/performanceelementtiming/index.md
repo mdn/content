@@ -96,25 +96,27 @@ Two entries will be output to the console. The first containing details of the i
 
 ### Observing separate paint and presentation timings
 
-The `paintTime` and `presentationTime` properties enable you to retrieve specific timings for the paint phase starting and the element being drawn on the screen. The `paintTime` is broadly interoperable, whereas the `presentationTime` is implementation-dependant.
+The `paintTime` and `presentationTime` properties enable you to retrieve specific timings for the paint phase starting and the element being drawn on the screen. The `paintTime` is broadly interoperable, whereas the `presentationTime` is implementation-dependent.
 
-This example uses a `PerformanceObserver` to observe all performance entries of type `"element"` (remember that, to be observed, elements need to have `elementtiming` attributes set on them). We check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `startTime`.
+This example uses a `PerformanceObserver` to observe all performance entries of type `"element"` (remember that, to be observed, elements need to have `elementtiming` attributes set on them). We check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `startTime` or `loadTime`, depending on what is most appropriate.
 
 ```js
 const observer = new PerformanceObserver((list) => {
   const entries = list.getEntries();
   entries.forEach((entry) => {
-    if (entry.paintTime && entry.presentationTime) {
+    if (entry.presentationTime) {
       console.log(
-        `Element paint time: ${entry.paintTime} milliseconds; presentation time: ${entry.presentationTime} milliseconds.`,
+        "Element paintTime:",
+        entry.paintTime,
+        "Element presentationTime:",
+        entry.presentationTime,
       );
-      // Logs:
-      // Element paint time: 473.30000001192093 milliseconds;
-      // presentation time: 516 milliseconds.
+    } else if (entry.paintTime) {
+      console.log("Element paintTime:", entry.paintTime);
+    } else if (entry.startTime !== entry.loadTime) {
+      console.log("Element startTime:", entry.startTime);
     } else {
-      console.log(`Element start time: ${entry.startTime} milliseconds.`);
-      // Logs:
-      // Element start time: 516 milliseconds.
+      console.log("Element loadTime", entry.loadTime);
     }
   });
 });

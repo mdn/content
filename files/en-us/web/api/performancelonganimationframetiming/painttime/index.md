@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceLongAnimationFrameTiming.paintTime
 ---
 
-{{APIRef("Performance API")}}{{AvailableInWorkers}}
+{{APIRef("Performance API")}}
 
 The **`paintTime`** read-only property of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the animation frame started.
 

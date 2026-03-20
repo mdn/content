@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.LargestContentfulPaint.paintTime
 ---
 
-{{APIRef("Performance API")}}{{AvailableInWorkers}}
+{{APIRef("Performance API")}}
 
 The **`paintTime`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the paint phase started.
 
