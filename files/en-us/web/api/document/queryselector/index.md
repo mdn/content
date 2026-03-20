@@ -12,6 +12,10 @@ The {{domxref("Document")}} method **`querySelector()`**
 returns the first {{domxref("Element")}} within the document that matches the specified
 [CSS selector](/en-US/docs/Web/CSS/Guides/Selectors), or group of CSS selectors. If no matches are found, `null` is returned.
 
+> **Note:**
+> `Document.querySelector()` searches the entire document for the first matching element.
+> In contrast, {{domxref("Element.querySelector()")}} only searches within the element it is called on (its subtree).
+
 The matching is done using depth-first pre-order traversal of the document's nodes starting with the first element in the document's markup and iterating through sequential nodes by order of the number of child nodes.
 
 If the specified selector matches an ID that is incorrectly used more than once in the
