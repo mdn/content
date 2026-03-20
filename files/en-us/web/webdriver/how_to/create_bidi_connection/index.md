@@ -8,9 +8,9 @@ sidebar: webdriver
 
 The client and the browser communicate using the WebDriver BiDi protocol over a WebSocket connection. There are two ways a client can establish this connection.
 
-In one method, when creating a classic WebDriver session, the client can set the `webSocketUrl` capability to request BiDi be enabled; the client then starts the browser with the required port open.
+In one method, when creating a classic WebDriver session, the WebDriver client sets the `webSocketUrl` capability to `true` to request BiDi to be enabled; the client then starts the browser with the WebSocket port open.
 
-In the other method, the client starts the browser from the command line with the required flag and on the specified port. This method works with Firefox directly; Chromium-based browsers need the additional Chromium BiDi wrapper package. The sections in this article walk you through this method.
+In the other method, the WebDriver client starts the browser from the command line by passing the required flag and the desired port. This method works with Firefox directly; however, Chromium-based browsers require the additional Chromium BiDi wrapper package. The sections in this article walk you through this method using Firefox.
 
 ## Launching the browser
 
