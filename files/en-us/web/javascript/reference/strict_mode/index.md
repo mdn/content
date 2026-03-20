@@ -123,7 +123,7 @@ mistypeVarible = 17;
 
 #### Failing to assign to object properties
 
-Strict mode makes assignments which would otherwise silently fail to throw an exception. There are three ways to fail a property assignment:
+In strict mode, certain object property assignments throw errors instead of failing silently. There are three ways to fail a property assignment:
 
 - assignment to a non-writable data property
 - assignment to a getter-only accessor property
