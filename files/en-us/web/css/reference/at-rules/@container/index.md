@@ -10,12 +10,12 @@ The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gu
 Style declarations are filtered by a condition and applied to the container if the condition is true.
 The condition is evaluated when the queried container size, [`<style-feature>`](#container_style_queries), or scroll-state changes.
 
-The condition must specify one or both of a {{cssxref("container-name")}} and a `<container-condition>`.
+The condition must specify one or both of {{cssxref("container-name")}} and `<container-query>`.
 
 The {{cssxref("container-name")}} property specifies a list of query container names, which are used to filter which containers are targeted by the `@container` rules.
-The container features in the `<container-condition>` are evaluated against the selected containers.
-If no `<container-name>` is specified, the `<container-condition>` rules apply to the nearest ancestor query container that has the matching [`container-type`](/en-US/docs/Web/CSS/Reference/Properties/container-type).
-If no `<container-condition>` is specified, the named container is selected.
+The container features in the `<container-query>` are evaluated against the selected containers.
+If no `<container-name>` is specified, the `<container-query>` features are evaluated against the nearest ancestor query container that has the matching [`container-type`](/en-US/docs/Web/CSS/Reference/Properties/container-type).
+If no `<container-query>` is specified, named containers are selected.
 
 ## Syntax
 
