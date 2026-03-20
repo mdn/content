@@ -19,7 +19,7 @@ The **`load64_lane`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/
   (func $main
     i32.const 0
     v128.const i64x2 90000000 216000
-    v128.load64_lane 1
+    v128.load64_lane 0 offset=0 align=0
     i64x2.extract_lane 1
     call $log
   )
@@ -34,13 +34,19 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ## Syntax
 
 ```plain
-v128.load64_lane lane_value
+v128.load64_lane memidx offset align laneidx
 ```
 
 - `load64_lane`
   - : The `load64_lane` instruction. Must always be included after `v128.`.
-- `lane_value`
-  - : The lane to load a value into.
+- `memidx` {{optional_inline}}
+  - : An integer representing the memory index, in cases where the module uses multiple memories.
+- `offset` {{optional_inline}}
+  - : An integer representing an offset value for [EDITORIAL: I'm not sure what to write here].
+- `align` {{optional_inline}}
+  - : An integer representing [EDITORIAL: I'm not sure what to write here].
+- `laneidx`
+  - : An integer representing the index of the lane to load a value into.
 
 ### Type
 
@@ -57,9 +63,9 @@ v128.load64_lane lane_value
 
 ### Binary encoding
 
-| Instruction        | Binary equivalent                            | Example text => binary                               |
-| ------------------ | -------------------------------------------- | ---------------------------------------------------- |
-| `v128.load64_lane` | `0xFD 87:u32 align:u32 offset:u32 𝑖:laneidx` | `v128.load64_lane 0 0` => `0xfd 0x57 0x00 0x00 0x00` |
+| Instruction        | Binary format                                           | Example text => binary                                                     |
+| ------------------ | ------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `v128.load64_lane` | `0xFD 87:u32 memidx:u8 offset:u64 align:u32 laneidx:u8` | `v128.load64_lane 0 offset=0 align=0 0` => `0xfd 0x57 0x00 0x00 0x00 0x00` |
 
 ## Specifications
 

@@ -57,7 +57,7 @@ v128.load32_lane lane_value
 
 ### Binary encoding
 
-| Instruction        | Binary equivalent                            | Example text => binary                               |
+| Instruction        | Binary format                                | Example text => binary                               |
 | ------------------ | -------------------------------------------- | ---------------------------------------------------- |
 | `v128.load32_lane` | `0xFD 86:u32 align:u32 offset:u32 𝑖:laneidx` | `v128.load32_lane 0 0` => `0xfd 0x56 0x00 0x00 0x00` |
 

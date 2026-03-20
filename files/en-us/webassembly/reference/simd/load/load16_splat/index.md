@@ -52,7 +52,7 @@ v128.load16_splat
 
 ### Binary encoding
 
-| Instruction         | Binary equivalent                 | Example text => binary                         |
+| Instruction         | Binary format                     | Example text => binary                         |
 | ------------------- | --------------------------------- | ---------------------------------------------- |
 | `v128.load16_splat` | `0xFD 8:u32 align:u32 offset:u32` | `v128.load16_splat 0` => `0xfd 0x08 0x00 0x00` |
 

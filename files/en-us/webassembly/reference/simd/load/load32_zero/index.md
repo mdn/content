@@ -52,7 +52,7 @@ v128.load32_zero
 
 ### Binary encoding
 
-| Instruction        | Binary equivalent                  | Example text => binary                        |
+| Instruction        | Binary format                      | Example text => binary                        |
 | ------------------ | ---------------------------------- | --------------------------------------------- |
 | `v128.load32_zero` | `0xFD 92:u32 align:u32 offset:u32` | `v128.load32_zero 0` => `0xfd 0x5c 0x00 0x00` |
 

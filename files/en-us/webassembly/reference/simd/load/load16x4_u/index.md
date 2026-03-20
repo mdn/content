@@ -52,7 +52,7 @@ v128.load16x4_u
 
 ### Binary encoding
 
-| Instruction       | Binary equivalent                 | Example text => binary                       |
+| Instruction       | Binary format                     | Example text => binary                       |
 | ----------------- | --------------------------------- | -------------------------------------------- |
 | `v128.load16x4_u` | `0xFD 4:u32 align:u32 offset:u32` | `v128.load16x4_u 0` => `0xfd 0x04 0x00 0x00` |
 

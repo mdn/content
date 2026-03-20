@@ -52,7 +52,7 @@ v128.load32x2_u
 
 ### Binary encoding
 
-| Instruction       | Binary equivalent                 | Example text => binary                       |
+| Instruction       | Binary format                     | Example text => binary                       |
 | ----------------- | --------------------------------- | -------------------------------------------- |
 | `v128.load32x2_u` | `0xFD 6:u32 align:u32 offset:u32` | `v128.load32x2_u 0` => `0xfd 0x06 0x00 0x00` |
 
