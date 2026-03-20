@@ -69,6 +69,29 @@ You can use SVG, and the browser scales your icon appropriately. There are two c
    }
    ```
 
+You can use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For example:
+
+```html
+<style>
+  #outside {
+    fill: black;
+  }
+  #inside {
+    fill: red;
+  }
+  @media (prefers-color-scheme: dark) {
+    #outside {
+      fill: white;
+    }
+    #inside {
+      fill: black;
+    }
+  }
+</style>
+```
+
+For more information, see the [themed-icons](https://github.com/mdn/webextensions-examples/tree/master/themed-icons) example.
+
 > [!NOTE]
 > Chromium-based browsers don't support this feature. See [Chromium bug 29683](https://crbug.com/29683).
 
