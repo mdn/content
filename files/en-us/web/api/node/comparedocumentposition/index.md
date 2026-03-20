@@ -26,7 +26,7 @@ compareDocumentPosition(otherNode)
 
 An integer value representing `otherNode`'s position relative to `node`
 as a [bitmask](<https://en.wikipedia.org/wiki/Mask_(computing)>) combining the
-following constant properties of {{domxref("Node")}}:
+following constant properties of {{domxref("Node")}} or `0` if the position is the same:
 
 - `Node.DOCUMENT_POSITION_DISCONNECTED` (`1`)
   - : Both nodes are in different documents or different trees in the same document.
