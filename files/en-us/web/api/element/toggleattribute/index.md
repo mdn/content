@@ -8,7 +8,7 @@ browser-compat: api.Element.toggleAttribute
 
 {{APIRef("DOM")}}
 
-The **`toggleAttribute()`** method of the {{domxref("Element")}} interface toggles a Boolean attribute (removing it if it is present and adding it if it is not present) on the given element.
+The **`toggleAttribute()`** method of the {{domxref("Element")}} interface toggles a Boolean attribute on the given element, removing it if present and adding it if not present.
 
 ## Syntax
 
@@ -36,8 +36,8 @@ present, and `false` otherwise.
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : The specified attribute `name` contains one or more characters which are not valid in attribute names.
-    The `name` must have at least 1 character, and may not contain ASCII whitespace, `NULL`, `/` , `=` or `>` (U+0000, U+002F, U+003D or U+003E, respectively).
+  - : The specified attribute `name` contains one or more characters that are not valid in attribute names.
+    The `name` must have at least one character, and may not contain ASCII whitespace, `NULL`, `/` , `=` or `>` (U+0000, U+002F, U+003D, or U+003E, respectively).
 
 ## Examples
 

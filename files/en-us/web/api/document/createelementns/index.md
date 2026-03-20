@@ -41,7 +41,7 @@ createElementNS(namespaceURI, qualifiedName, options)
         If the prefix is set to `xml` or `xmlns`, the `namespaceURI` must be set to `http://www.w3.org/XML/1998/namespace` or `http://www.w3.org/2000/xmlns/`, respectively.
 
         The value is used to initialize the new element's {{DOMxRef("Element/prefix", "prefix")}} property.
-        If not set, its value is `null`.
+        Defaults to `null`.
 
     - `localName`:
       - : The local name of the element.
@@ -50,7 +50,7 @@ createElementNS(namespaceURI, qualifiedName, options)
 - `options` {{Optional_Inline}}
   - : An object with the following optional properties (note that only one of `is` and `customElementRegistry` may be set):
     - `is` {{Optional_Inline}}
-      - : A string defining the tag name for a custom element (that was previously defined using {{domxref("CustomElementRegistry/define", "customElements.define()")}}).
+      - : A string defining the tag name for a custom element previously defined using {{domxref("CustomElementRegistry/define", "customElements.define()")}}.
         The new element will be given an `is` attribute whose value is the custom element's tag name.
         See [Web component example](#web_component_example) for more details.
     - `customElementRegistry` {{Optional_Inline}}
@@ -75,7 +75,7 @@ The new {{DOMxRef("Element")}}.
     - The `prefix` must have at least one character, and cannot contain ASCII whitespace, `NULL`, `/` , or `>` (U+0000, U+002F, or U+003E, respectively).
     - The `localName` is a valid element name if it has a length of at least 1 and:
       - it starts with an alphabet character and does not contain ASCII whitespace, `NULL`, `/` , or `>` (U+0000, U+002F, or U+003E, respectively).
-      - it starts with `:` (U+003A ), `_` (U+005F), or any characters in the range U+0080 to U+10FFFF (inclusive), AND the remaining code points only include those same characters along with the ASCII alphanumeric characters, `-` (U+002D), and `.` (U+002E),
+      - it starts with `:` (U+003A ), `_` (U+005F), or any characters in the range U+0080 to U+10FFFF (inclusive), _and_ the remaining code points only include those same characters along with the ASCII alphanumeric characters, `-` (U+002D), and `.` (U+002E),
 
     > [!NOTE]
     > Earlier versions of the specification were more restrictive, requiring that the `qualifiedName` be a valid [XML name](https://www.w3.org/TR/xml/#dt-name).
@@ -124,7 +124,7 @@ function init() {
 ```
 
 > [!NOTE]
-> The example given above uses inline script which is not recommended in XHTML documents.
+> The example given above uses an inline script, which is not recommended in XHTML documents.
 > This particular example is actually an XUL document with embedded XHTML, however, the recommendation still applies.
 
 ## Specifications

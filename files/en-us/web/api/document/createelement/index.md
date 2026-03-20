@@ -24,12 +24,12 @@ createElement(localName, options)
 - `localName`
   - : A string that specifies the type of element to be created.
     Don't use qualified names (like "html:a") with this method.
-    When called on an HTML document, `createElement()` converts `localName` to lower case before creating the element.
+    When called on an HTML document, `createElement()` converts `localName` to lowercase before creating the element.
     In Firefox, Opera, and Chrome, `createElement(null)` works like `createElement("null")`.
 - `options` {{Optional_Inline}}
   - : An object with the following optional properties (note that only one of `is` and `customElementRegistry` may be set):
     - `is` {{Optional_Inline}}
-      - : A string defining the tag name for a custom element (that was previously defined using {{domxref("CustomElementRegistry/define", "customElements.define()")}}).
+      - : A string defining the tag name for a custom element previously defined using {{domxref("CustomElementRegistry/define", "customElements.define()")}}.
         The new element will be given an `is` attribute whose value is the custom element's tag name.
         See [Web component example](#web_component_example) for more details.
     - `customElementRegistry` {{Optional_Inline}}

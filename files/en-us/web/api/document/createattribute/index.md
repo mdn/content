@@ -36,7 +36,7 @@ An {{domxref("Attr")}} node.
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
   - : Thrown if the [`localName`](#localName) value is not a valid attribute name.
-    It must have at least 1 character, and may not contain ASCII whitespace, `NULL`, `/` , `=` or `>` (U+0000, U+002F, U+003D or U+003E, respectively).
+    It must have at least one character, and may not contain ASCII whitespace, `NULL`, `/` , `=` or `>` (U+0000, U+002F, U+003D, or U+003E, respectively).
 
     > [!NOTE]
     > Earlier versions of the specification were more restrictive, requiring that the `localName` be a valid [XML name](https://www.w3.org/TR/xml/#dt-name).
