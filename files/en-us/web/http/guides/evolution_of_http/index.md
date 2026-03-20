@@ -57,6 +57,7 @@ HTTP/1.0 200 OK
 Date: Tue, 15 Nov 1994 08:12:31 GMT
 Server: CERN/3.0 libwww/2.17
 Content-Type: text/html
+
 <HTML>
 A page with an image
   <IMG SRC="/my-image.gif">
@@ -73,6 +74,7 @@ HTTP/1.0 200 OK
 Date: Tue, 15 Nov 1994 08:12:32 GMT
 Server: CERN/3.0 libwww/2.17
 Content-Type: text/gif
+
 (image content)
 ```
 
