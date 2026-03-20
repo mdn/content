@@ -10,7 +10,7 @@ browser-compat: api.Request.destination
 
 The **`destination`** read-only property of the **{{domxref("Request")}}** interface returns a string describing the type of content being requested.
 
-The string must be one of the `audio`, `audioworklet`, `document`, `embed`, `fencedframe`, `font`, `frame`, `iframe`, `image`, `json`, `manifest`, `object`, `paintworklet`, `report`, `script`, `sharedworker`, `speculationrules`, `style`, `track`, `video`, `worker` or `xslt` strings, or the empty string, which is the default value.
+The string must be one of the `audio`, `audioworklet`, `document`, `embed`, `fencedframe`, `font`, `frame`, `iframe`, `image`, `json`, `manifest`, `object`, `paintworklet`, `report`, `script`, `sharedworker`, `speculationrules`, `style`, `text`, `track`, `video`, `worker` or `xslt` strings, or the empty string, which is the default value.
 
 The `destination` is used by the {{Glossary("user agent")}} to, for example, help determine which set of rules to follow for CORS purposes, or how to navigate any complicated code paths that affect how specific types of request get handled.
 
@@ -68,6 +68,8 @@ Possible values are:
   - : The target is a [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) JSON document.
 - `"style"`
   - : The target is a style
+- `"text"`
+  - : The target is a text file.
 - `"track"`
   - : The target is an HTML {{HTMLElement("track")}}.
 - `"video"`
