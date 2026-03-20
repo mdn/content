@@ -104,7 +104,7 @@ Keyboard users can select multiple non-contiguous items by:
 ## Styling with CSS
 
 The `<select>` element has historically been difficult to style effectively with CSS.
-The following guides contain information about newer features that have been introduced to enable fully customizable select elements:
+The following guides contain information about features that enable fully customizable select elements:
 
 - [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
 - [Customizable select listboxes](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes)

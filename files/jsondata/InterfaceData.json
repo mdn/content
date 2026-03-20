@@ -1772,10 +1772,6 @@
       "inh": "HTMLElement",
       "impl": []
     },
-    "HTMLPermissionElement": {
-      "inh": "HTMLElement",
-      "impl": []
-    },
     "HTMLPictureElement": {
       "inh": "HTMLElement",
       "impl": []
