@@ -242,7 +242,7 @@ We render the five badges as circles. We use the `random()` function within an {
 
 {{EmbedLiveSample('Generate random colors for circular badge', '100%', '300px')}}
 
-### Random value sharing between properties 
+### Random value sharing between properties
 
 In this example, we create a starry backdrop to demonstrate using a `<dashed-ident>` to share a seed value between properties of an element.
 
