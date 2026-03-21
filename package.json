@@ -13,9 +13,15 @@
     "type": "git",
     "url": "git+https://github.com/mdn/content.git"
   },
-  "packageManager": "npm@11.6.2",
+  "packageManager": "npm@11.9.0",
   "engines": {
     "node": ">=24"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": ">=11.8.0"
+    }
   },
   "type": "module",
   "scripts": {
@@ -44,7 +50,7 @@
   },
   "devDependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
-    "@mdn/fred": "2.3.0",
+    "@mdn/fred": "2.4.0",
     "@octokit/rest": "^22.0.1",
     "ajv": "^8.18.0",
     "ajv-formats": "^3.0.1",
@@ -56,7 +62,7 @@
     "cspell-group-by-file-reporter": "^1.0.1",
     "env-cmd": "11.0.0",
     "fdir": "^6.5.0",
-    "file-type": "^21.3.2",
+    "file-type": "^21.3.3",
     "fs-extra": "^11.3.4",
     "gray-matter": "^4.0.3",
     "imagemin": "^9.0.1",

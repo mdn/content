@@ -158,7 +158,7 @@ This property supports multiple background images. You can specify a different `
 
 #### HTML
 
-We include all of Dr. Suess's poem.
+We include all of Dr. Seuss's poem.
 
 ```html
 <div>
