@@ -24,7 +24,7 @@ There are two types of custom element:
 For both kinds of custom element, the basic steps to create and use them are the same:
 
 - You first [implement its behavior](#implementing_a_custom_element) by defining a JavaScript class.
-- You then [register the custom element](#registering_a_custom_element) to the current page.
+- You then [register the custom element](#registering_a_custom_element) to the current page. You can also create [scoped registries](#scoped_custom_element_registries) to limit definitions to a particular DOM subtree.
 - Finally, you can [use the custom element](#using_a_custom_element) in your HTML or JavaScript code.
 
 ## Implementing a custom element
@@ -166,6 +166,74 @@ To use an autonomous custom element, use the custom name just like a built-in HT
 <popup-info>
   <!-- content of the element -->
 </popup-info>
+```
+
+## Scoped custom element registries
+
+The examples above register custom elements on the global {{domxref("CustomElementRegistry")}} accessed via {{domxref("Window.customElements")}}. This means every custom element name you register must be globally unique across the entire page. As applications grow and begin combining components from multiple libraries, global name collisions can become a problem — if two libraries both try to define `<my-button>`, one of them will fail.
+
+**Scoped custom element registries** solve this by letting you create an independent registry whose definitions only apply to a specific DOM subtree, such as a {{domxref("ShadowRoot")}}. Different shadow trees can each use their own registry with their own definitions, even if the element names overlap.
+
+### Creating a scoped registry
+
+Create a scoped registry using the {{domxref("CustomElementRegistry.CustomElementRegistry()", "CustomElementRegistry()")}} constructor and register elements on it with {{domxref("CustomElementRegistry.define()", "define()")}}, just like the global registry:
+
+```js
+const myRegistry = new CustomElementRegistry();
+
+myRegistry.define(
+  "my-element",
+  class extends HTMLElement {
+    connectedCallback() {
+      this.textContent = "Hello from scoped registry!";
+    }
+  },
+);
+```
+
+> [!NOTE]
+> Scoped registries do not support the `extends` option in `define()` (for creating [customized built-in elements](#types_of_custom_element)). Attempting to use `extends` with a scoped registry throws a `NotSupportedError` {{domxref("DOMException")}}.
+
+### Associating a scoped registry with a shadow root
+
+One way to use a scoped registry is to pass it to {{domxref("Element.attachShadow()")}} via the `customElementRegistry` option. Elements parsed or created inside that shadow tree will then use the scoped registry's definitions instead of the global one:
+
+```js
+const host = document.createElement("div");
+document.body.appendChild(host);
+
+const shadow = host.attachShadow({
+  mode: "open",
+  customElementRegistry: myRegistry,
+});
+
+// <my-element> is upgraded using myRegistry's definition
+shadow.innerHTML = "<my-element></my-element>";
+```
+
+You can also associate a scoped registry after the shadow root has been created by calling {{domxref("CustomElementRegistry.initialize()", "initialize()")}}. This is useful when you need to set up the DOM structure first and attach the registry later:
+
+```js
+const shadow = host.attachShadow({
+  mode: "open",
+  customElementRegistry: null, // no registry yet
+});
+shadow.innerHTML = "<my-element></my-element>";
+
+// Later, associate the scoped registry and upgrade elements
+myRegistry.initialize(shadow);
+```
+
+### Declarative shadow DOM with scoped registry
+
+For [declarative shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html), you can use the `shadowrootcustomelementregistry` attribute on a {{HTMLElement("template")}} element. This tells the HTML parser to leave the shadow root's {{domxref("ShadowRoot.customElementRegistry", "customElementRegistry")}} as `null`, so a scoped registry can be attached later with `initialize()`:
+
+```html
+<my-host>
+  <template shadowrootmode="open" shadowrootcustomelementregistry>
+    <my-element></my-element>
+  </template>
+</my-host>
 ```
 
 ## Responding to attribute changes

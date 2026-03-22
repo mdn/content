@@ -2,12 +2,10 @@
 title: WebTransportSendStream
 slug: Web/API/WebTransportSendStream
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.WebTransportSendStream
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{securecontext_header}} {{AvailableInWorkers}}
+{{APIRef("WebTransport API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The `WebTransportSendStream` interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} is a specialized {{domxref("WritableStream")}} that is used to send outbound data in both unidirectional or bidirectional {{domxref("WebTransport")}} streams.
 
@@ -27,7 +25,7 @@ When a bidirectional stream is initiated by the remote end, an object of this ty
 
 _Also inherits properties from its parent interface, {{domxref("WritableStream")}}._
 
-- {{domxref("WebTransportSendStream.getStats()")}} {{Experimental_Inline}}
+- {{domxref("WebTransportSendStream.getStats()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with statistics related to this stream.
 
 ## Instance methods
@@ -36,7 +34,7 @@ _Also inherits methods from its parent interface, {{domxref("WritableStream")}}.
 
 <!-- WebTransportSendStream.sendGroup not implemented in any browser -->
 
-- {{domxref("WebTransportSendStream.sendOrder")}} {{Experimental_Inline}}
+- {{domxref("WebTransportSendStream.sendOrder")}}
   - : Indicates the send priority of this stream relative to other streams for which the value has been set.
 
 ## Examples

@@ -14,6 +14,7 @@ This article explains how to use container scroll-state queries, walking through
 There are three `@container` descriptors you can use in a `scroll-state()` query:
 
 - `scrollable`: Queries whether a container can be scrolled in the given direction via user-initiated scrolling (for example by dragging the scrollbar or using a trackpad gesture). In other words, is there any overflowing content in the given direction that can be scrolled to? This is useful for applying styling related to the scroll position of a scroll container. For example, you could display a hint that encourages people to scroll down and see more content when the scrollbar is up at the top, and hide it when the user has actually started scrolling.
+- `scrolled`: Queries whether a container was most recently scrolled in the given direction. This allows you to selectively apply styles based on the user's scroll direction, for example a top menu bar that only displays when the user is scrolling upwards.
 - `snapped`: Queries whether a container is going to be snapped to a [scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) container ancestor along a given axis. This is useful for applying styles when an element is snapped to a scroll snap container. For example, you might want to highlight a snapped element in some way, or reveal some of its content that was previously hidden.
 - `stuck`: Queries whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scroll container ancestor. This is useful for styling `position: sticky` elements differently when stuck — for example, you could give them a different color scheme or layout.
 
@@ -43,9 +44,9 @@ Here, we query only containers named `my-container` to determine whether the con
 
 ## Using `scrollable` queries
 
-Scroll-state [`scrollable`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrollable) queries, written as `scroll-state(scrollable: value)`, test whether a container's scrolling ancestor can be scrolled in the given direction via user-initiated scrolling. If not, the query returns false.
+Scroll-state [`scrollable`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrollable) queries, written as `scroll-state(scrollable: <keyword>)`, test whether a container's scrolling ancestor can be scrolled in the given direction via user-initiated scrolling. If not, the query returns false.
 
-The `value` indicates the direction you are testing for scrolling availability in, for example:
+The keyword value indicates the direction you are testing for scrolling availability in, for example:
 
 - `top`: Tests whether the container can be scrolled towards its top edge.
 - `inline-end`: Tests whether the container can be scrolled towards its inline-end edge.
@@ -325,11 +326,304 @@ We've hidden the rest of the example CSS for brevity.
 
 Try scrolling the document down, and note how the "back-to-top" link appears as a result, animating smoothly from the right side of the viewport due to the `transition`. If you scroll back to the top by activating the link or manually scrolling, the "back-to-top" link transitions off-screen.
 
+## Using `scrolled` queries
+
+Scroll-state [`scrolled`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrolled) queries, written as `scroll-state(scrolled: <keyword>)`, test whether a container's scrolling ancestor was most recently scrolled in the given direction. If not, the query returns false.
+
+The keyword value indicates the direction you are testing. For example:
+
+- `block-start`: Tests whether the container was most recently scrolled towards its block-start edge.
+- `right`: Tests whether the container was most recently scrolled towards its right-hand edge.
+- `y`: Tests whether the container was most recently scrolled up or down along the y axis.
+- `none`: Tests whether the container is not a {{glossary("scroll container")}} or has not been scrolled in any direction since rendering.
+
+If the test returns true, the rules inside the `@container` block are applied to the descendants of the matching scroll container.
+
+Let's look at an example of a scroll container with a `scrolled` query that displays top and bottom content "bars" only when the user is scrolling up or down, respectively.
+
+### HTML
+
+In our HTML, we have an {{htmlelement("article")}} element containing enough content to cause the document to scroll, preceded by two {{htmlelement("div")}} elements that represent our top and bottom "bars":
+
+```html
+<div class="bar" id="top-bar">You're currently scrolling towards the top.</div>
+<div class="bar" id="bottom-bar">
+  You're currently scrolling towards the bottom.
+</div>
+<article>
+  <h1>Document with scrolled container query</h1>
+  <section>
+    <header>
+      <h2>This first section is interesting</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+
+    ...
+  </section>
+
+  ...
+</article>
+```
+
+We have hidden most of the HTML for brevity.
+
+```html hidden live-sample___scrolled
+<div class="bar" id="top-bar">You're currently scrolling towards the top.</div>
+<div class="bar" id="bottom-bar">
+  You're currently scrolling towards the bottom.
+</div>
+<article>
+  <h1>Document with scrolled container query</h1>
+  <section>
+    <header>
+      <h2>This first section is interesting</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+
+    <p>
+      Mauris non malesuada est, sed vestibulum nibh. Duis vestibulum iaculis
+      lectus, eu sagittis dolor dignissim iaculis. Nunc et orci sed sapien
+      eleifend placerat. Curabitur dapibus risus eget odio sollicitudin, sit
+      amet luctus justo pellentesque.
+    </p>
+
+    <p>
+      <strong>Morbi non pharetra quam.</strong> Fusce vestibulum sem diam, ac
+      consequat augue consectetur ut. Donec at augue viverra, tempus urna sit
+      amet, porta augue.
+      <em>Phasellus fringilla tincidunt sem ullamcorper varius.</em> Aenean
+      gravida feugiat sem nec ultricies.
+    </p>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      Sed pellentesque placerat mi sed maximus. Sed vitae dui vitae mi pulvinar
+      gravida sed et libero.
+      <a href="#">Duis nec venenatis dolor, sed tristique felis.</a>
+      Integer dapibus facilisis leo elementum vulputate. Curabitur a urna quis
+      nulla vulputate tincidunt quis ac enim.
+    </p>
+
+    <p>
+      Cras non elit vel leo dignissim convallis. Duis eros urna, varius sit amet
+      lorem vel, feugiat euismod est.
+      <strong>Aliquam ornare eu elit ut iaculis.</strong>
+      Suspendisse vulputate tempor leo, non rhoncus risus aliquam vel.
+    </p>
+  </section>
+  <section>
+    <header>
+      <h2>This one, not so much</h2>
+
+      <p>Suspendisse varius est ac turpis mollis cursus.</p>
+    </header>
+
+    <p>
+      <strong
+        >Curabitur faucibus condimentum eros, ut auctor felis lacinia
+        sed.</strong
+      >
+      Praesent vitae scelerisque eros.
+    </p>
+
+    <p>
+      <em>Ut vitae suscipit augue.</em> Cras et orci condimentum ante dignissim
+      iaculis. Sed consectetur quis est sed dignissim. Nulla egestas orci erat,
+      et commodo arcu feugiat ut.
+    </p>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      Sed non tempor massa, at accumsan ante. Pellentesque habitant morbi
+      <a href="#">tristique senectus</a> et netus et malesuada fames ac turpis
+      egestas.
+    </p>
+
+    <p>
+      Pellentesque placerat luctus tempor. Nunc congue dapibus eros, at
+      vulputate nulla. Sed rutrum eleifend magna vel porta. Integer cursus orci
+      faucibus turpis scelerisque, nec pharetra arcu molestie.
+    </p>
+  </section>
+  <section>
+    <header>
+      <h2>Hopefully this section provides some clarity?</h2>
+
+      <p>Curabitur facilisis ornare lorem et eleifend.</p>
+    </header>
+
+    <p>
+      <strong>Aenean mollis non neque sed finibus.</strong> Lorem ipsum dolor
+      sit amet, consectetur adipiscing elit. Suspendisse sagittis viverra urna.
+      In hac habitasse platea dictumst. Vestibulum neque orci, mollis sagittis
+      augue et, pharetra vehicula diam.
+    </p>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      <a href="#">Pellentesque sollicitudin</a> nunc quis nisl condimentum, ac
+      iaculis libero feugiat.
+      <strong>Nullam ultrices purus a nulla dignissim hendrerit.</strong> In
+      molestie consectetur est quis pulvinar.
+    </p>
+
+    <p>
+      Vivamus ac erat eu est lobortis commodo. Orci varius natoque penatibus et
+      magnis dis parturient montes, nascetur ridiculus mus. In nulla turpis,
+      <strong>mollis et est tempor</strong>, dignissim aliquam metus. Proin eu
+      arcu quis erat mollis pulvinar. Vivamus at facilisis neque.
+    </p>
+
+    <p>
+      Integer bibendum laoreet erat, quis vulputate mauris bibendum nec. Class
+      aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+      himenaeos. Nam ut est in arcu interdum hendrerit.
+    </p>
+  </section>
+  <section>
+    <header>
+      <h2>A summary of sorts</h2>
+
+      <p>Nunc facilisis augue quis ex porta aliquam.</p>
+    </header>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      <strong
+        >Fusce nisi enim, venenatis a est vel, varius placerat lacus.</strong
+      >
+      Nunc tempus rutrum nisl bibendum aliquet. Pellentesque vitae nunc sed nisl
+      tincidunt elementum a sit amet nisi. Morbi pretium at dolor in pulvinar.
+      Curabitur dapibus eleifend accumsan.
+    </p>
+
+    <p>
+      Donec rhoncus, leo vitae mollis maximus, tellus lorem interdum arcu, eu
+      <em>tempor lectus libero in risus</em>. Ut sit amet magna vitae mauris
+      tempor bibendum. <a href="#">Integer id mauris ut ex mattis finibus.</a>
+    </p>
+
+    <p>
+      Curabitur dui felis, elementum et tellus id, blandit facilisis lorem.
+      Aliquam sed posuere ligula, at auctor ipsum. Morbi dignissim accumsan
+      tellus pretium iaculis.
+    </p>
+  </section>
+</article>
+```
+
+### CSS
+
+The "bars" are given some rudimentary styling. Most significantly, they are given a {{cssxref("position")}} value of `fixed`, which we offset from either side using {{cssxref("left")}} and {{cssxref("right")}} values.
+
+```css hidden live-sample___scrolled
+/* General styling */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  width: 90%;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 90%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid gray;
+  aspect-ratio: 3/2;
+}
+```
+
+```css live-sample___scrolled
+.bar {
+  border-radius: 10px;
+  border: 1px solid #000;
+  background-color: #0009;
+  padding: 10px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  left: 5px;
+  right: 5px;
+}
+```
+
+Next, we set negative {{cssxref("top")}} and {{cssxref("bottom")}} length values on the top and bottom bars so they are hidden above and below the viewport by default. We add a {{cssxref("transition")}} to smoothly animate them into view when their {{cssxref("translate")}} values change.
+
+```css live-sample___scrolled
+#top-bar {
+  top: -50px;
+  transition: 0.6s translate;
+}
+
+#bottom-bar {
+  bottom: -50px;
+  transition: 0.6s translate;
+}
+```
+
+The {{glossary("scroll container")}} in this example is the `<html>` element itself, denoted as a scroll-state query container with a {{cssxref("container-type")}} value of `scroll-state`. The {{cssxref("container-name")}} isn't strictly necessary, but it is useful when a codebase has multiple scroll-state query containers targeted with different queries.
+
+```css live-sample___scrolled
+html {
+  container-type: scroll-state;
+  container-name: scroller;
+}
+```
+
+Next, we define two {{cssxref("@container")}} blocks, both of which target the `scroller` container name. The first block defines a query `scrolled: block-end` and the second defines a query `scrolled: block-start`. Respectively, these queries apply the rules contained within their block only if the `<html>` element was most recently scrolled toward its block-end edge or block-start edge. In other words, when the container is scrolled down or up. When either condition becomes true, the bar referenced inside the block has a `translate` value set to cause it to transition on-screen. The bar referenced in the `@condition` that is no longer true transitions off-screen.
+
+```css live-sample___scrolled
+@container scroller scroll-state(scrolled: block-start) {
+  #top-bar {
+    translate: 0 55px;
+  }
+}
+
+@container scroller scroll-state(scrolled: block-end) {
+  #bottom-bar {
+    translate: 0 -55px;
+  }
+}
+```
+
+We've hidden the rest of the example CSS for brevity.
+
+### Result
+
+{{EmbedLiveSample("scrolled", "100%", "400px")}}
+
+Try scrolling the document up and down, and note how the different bars appear as a result, animating smoothly on- and off-screen.
+
 ## Using `snapped` queries
 
-Relevant only when [scroll snapping](/en-US/docs/Web/CSS/Guides/Scroll_snap) is implemented, scroll-state [`snapped`](/en-US/docs/Web/CSS/Reference/At-rules/@container#snapped) queries (written as `scroll-state(snapped: value)`) test whether a container is going to be snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor along the given axis. If not, the query returns false.
+Relevant only when [scroll snapping](/en-US/docs/Web/CSS/Guides/Scroll_snap) is implemented, scroll-state [`snapped`](/en-US/docs/Web/CSS/Reference/At-rules/@container#snapped) queries, written as `scroll-state(snapped: <keyword>)`, test whether a container is going to be snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor along the given axis. If not, the query returns false.
 
-The `value` in this case indicates the direction you are testing the element's ability to snap in, for example:
+The keyword value in this case indicates the direction you are testing the element's ability to snap in, for example:
 
 - `x`: Tests whether the container is snapping horizontally to its scroll-snap container ancestor.
 - `inline`: Tests whether the container is snapping to its scroll-snap container ancestor in the inline direction.
@@ -549,9 +843,9 @@ The rendered result is shown below. Try scrolling the container up and down, and
 
 ## Using `stuck` queries
 
-Scroll-state [`stuck`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrollable) queries, written as `scroll-state(stuck: value)`, test whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scroll container ancestor. If not, the query returns false.
+Scroll-state [`stuck`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrollable) queries, written as `scroll-state(stuck: <keyword>)`, test whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scroll container ancestor. If not, the query returns false.
 
-The `value` in this case indicates the scroll container edge you are testing, for example:
+The keyword value in this case indicates the scroll container edge you are testing, for example:
 
 - `top`: Tests whether the container is stuck to the top edge of its scroll container ancestor.
 - `block-end`: Tests whether the container is stuck to the block-end edge of its scroll container ancestor.
@@ -822,6 +1116,23 @@ Next, we define a {{cssxref("@container")}} block that sets the container name w
   p {
     background: #cccccc;
     box-shadow: 0 5px 2px #00000077;
+  }
+}
+```
+
+```css hidden live-sample___scrollable live-sample___scrolled live-sample___snapped live-sample___stuck
+@supports not (container-type: scroll-state) {
+  body::before {
+    content: "Your browser does not support `scroll-state` container queries.";
+    color: black;
+    background-color: wheat;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 1;
   }
 }
 ```

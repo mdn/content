@@ -135,7 +135,7 @@ Here is a list of common features controllable with HTTP:
   HTTP requests then go through proxies to cross this network barrier.
   Not all proxies are HTTP proxies.
   The SOCKS protocol, for example, operates at a lower level.
-  Other protocols, like ftp, can be handled by these proxies.
+  Other protocols, like FTP, can be handled by these proxies.
 - _Sessions_:
   Using HTTP cookies allows you to link requests with the state of the server.
   This creates sessions, despite basic HTTP being a state-less protocol.

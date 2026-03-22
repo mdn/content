@@ -25,11 +25,11 @@ In our first looping task we want you to write a basic loop that iterates throug
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___loops-1 live-sample___loops-2 live-sample___loops-3
+```html hidden live-sample___loops-1 live-sample___loops-2 live-sample___loops-3 live-sample___loops-1-finish live-sample___loops-2-finish live-sample___loops-3-finish
 <section></section>
 ```
 
-```css hidden live-sample___loops-1 live-sample___loops-2 live-sample___loops-3
+```css hidden live-sample___loops-1 live-sample___loops-2 live-sample___loops-3 live-sample___loops-1-finish live-sample___loops-2-finish live-sample___loops-3-finish
 * {
   box-sizing: border-box;
 }
@@ -42,6 +42,12 @@ p {
 
 <!-- Example-specific code -->
 
+The starting point of the task looks like this (nothing is shown yet):
+
+{{ EmbedLiveSample("loops-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___loops-1
 const myArray = ["tomatoes", "chick peas", "onions", "rice", "black beans"];
 const list = document.createElement("ul");
@@ -53,7 +59,9 @@ section.appendChild(list);
 // Add your code here
 ```
 
-{{ EmbedLiveSample("loops-1", "100%", 60) }}
+The updated output should look like this:
+
+{{ EmbedLiveSample("loops-1-finish", "100%", 150) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -63,6 +71,19 @@ Your finished JavaScript should look something like this:
 ```js
 // ...
 // Don't edit the code above here!
+
+for (let item of myArray) {
+  const listItem = document.createElement("li");
+  listItem.textContent = item;
+  list.appendChild(listItem);
+}
+```
+
+```js hidden live-sample___loops-1-finish
+const myArray = ["tomatoes", "chick peas", "onions", "rice", "black beans"];
+const list = document.createElement("ul");
+const section = document.querySelector("section");
+section.appendChild(list);
 
 for (let item of myArray) {
   const listItem = document.createElement("li");
@@ -92,6 +113,12 @@ To complete the task:
 2. If the `name` is found, write it and the associated `number` into the `textContent` of the provided paragraph (`para`), in the form "&lt;name>'s number is &lt;number>." After that, exit the loop before it has run its course.
 3. If none of the objects contain the `name`, print "Name not found in the phonebook" into the `textContent` of the provided paragraph.
 
+The starting point of the task looks like this (nothing is shown yet):
+
+{{ EmbedLiveSample("loops-2", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___loops-2
 const name = "Mustafa";
 const para = document.createElement("p");
@@ -115,7 +142,9 @@ section.appendChild(para);
 // Add your code here
 ```
 
-{{ EmbedLiveSample("loops-2", "100%", 60) }}
+The updated output should look like this:
+
+{{ EmbedLiveSample("loops-2-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -125,6 +154,36 @@ Your finished JavaScript should look something like this:
 ```js
 // ...
 // Don't edit the code above here!
+
+for (let i = 0; i < phonebook.length; i++) {
+  if (phonebook[i].name === name) {
+    para.textContent = `${phonebook[i].name}'s number is ${phonebook[i].number}.`;
+    break;
+  }
+
+  if (i === phonebook.length - 1) {
+    para.textContent = "Name not found in the phonebook";
+  }
+}
+```
+
+```js hidden live-sample___loops-2-finish
+const name = "Mustafa";
+const para = document.createElement("p");
+
+const phonebook = [
+  { name: "Chris", number: "1549" },
+  { name: "Li Kang", number: "9634" },
+  { name: "Anne", number: "9065" },
+  { name: "Francesca", number: "3001" },
+  { name: "Mustafa", number: "6888" },
+  { name: "Tina", number: "4312" },
+  { name: "Bert", number: "7780" },
+  { name: "Jada", number: "2282" },
+];
+
+const section = document.querySelector("section");
+section.appendChild(para);
 
 for (let i = 0; i < phonebook.length; i++) {
   if (phonebook[i].name === name) {
@@ -157,6 +216,12 @@ To complete the task:
 
 You should use a type of loop that you've not used in the previous two tasks.
 
+The starting point of the task looks like this (nothing is shown yet):
+
+{{ EmbedLiveSample("loops-3", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
 ```js live-sample___loops-3
 let i = 500;
 const para = document.createElement("p");
@@ -178,7 +243,9 @@ function isPrime(num) {
 section.appendChild(para);
 ```
 
-{{ EmbedLiveSample("loops-3", "100%", 60) }}
+The updated output should look like this:
+
+{{ EmbedLiveSample("loops-3-finish", "100%", 120) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -198,6 +265,29 @@ do {
 
 // Don't edit the code below here!
 // ...
+```
+
+```js hidden live-sample___loops-3-finish
+let i = 500;
+const para = document.createElement("p");
+const section = document.querySelector("section");
+function isPrime(num) {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+do {
+  if (isPrime(i)) {
+    para.textContent += `${i}, `;
+  }
+  i--;
+} while (i > 1);
+
+section.appendChild(para);
 ```
 
 </details>

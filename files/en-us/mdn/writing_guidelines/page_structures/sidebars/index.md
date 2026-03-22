@@ -11,8 +11,10 @@ Most of them are created using a system that defines data structures in YAML fil
 In this guide, you will learn how these sidebars work so you can edit existing sidebars and create new ones as required.
 
 > [!NOTE]
-> If you're editing sidebars, you can use `yarn tool` commands for formatting and syncing with redirects.
-> See [Yari's CLI Tool](https://github.com/mdn/yari/blob/main/docs/cli-tool.md) documentation for information.
+> If you're editing sidebars, you can use `npm run content` commands:
+>
+> - Run `npm run content -- fmt-sidebars` to format sidebars.
+> - Run `npm run content -- sync-sidebars` to sync with redirects.
 
 ## How sidebars work
 

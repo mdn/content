@@ -272,7 +272,7 @@ For example:
 - Form controls and buttons are keyboard-accessible by default. In the previous example, try moving forward and backward between the form elements using <kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd> (called "tabbing").
 - Notice also how tabbing between the form elements causes the focused element to be highlighted using a blue outline (called the **focus outline**). This is an important feature for keyboard users to know where they currently are in the form.
 
-If you don't use the correct semantic elements to implement your forms, you'll have re-implement all of this functionality, otherwise your form elements will not behave as users expect, and therefore seem broken. It all adds up.
+If you don't use the correct semantic elements to implement your forms, you'll have to re-implement all of this functionality, otherwise your form elements will not behave as users expect, and therefore seem broken. It all adds up.
 
 ## Other control types
 

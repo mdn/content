@@ -100,7 +100,7 @@ Module workers and their dependencies are loaded and executed using ECMAScript m
 Classic workers are fetched and executed as scripts:
 
 - Dependencies are imported using the {{domxref("WorkerGlobalScope.importScripts()")}} method
-- Fetched synchonously in `no-cors` mode
+- Fetched synchronously in `no-cors` mode
 
 ### Importing scripts or modules
 
