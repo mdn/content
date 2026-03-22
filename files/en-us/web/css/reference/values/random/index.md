@@ -91,7 +91,7 @@ The minimum, maximum and step values specified must be of the same data type for
 
 The random base value works like a [seed for randomness](/en-US/docs/Glossary/RNG). It's a starting number that is used to generate the final random result. When two `random()` functions share the same base value, their results vary together in a predictable pattern. When they have different base values, their results are completely independent of each other.
 
-The optional first`<random-value-sharing>` parameter controls how the random base value is shared. Sharing enables reusing the same randomly generated value, a necessity for some design effects. The value can be set to use `auto`, the `element-shared` keyword, a custom {{cssxref("dashed-ident")}} , or `fixed <number>`. Including a custom {{cssxref("dashed-ident")}} with the `element-shared` keyword, space-separated, is also valid.
+The optional first `<random-value-sharing>` parameter controls how the random base value is shared. Sharing enables reusing the same randomly generated value, a necessity for some design effects. The value can be set to use `auto`, the `element-shared` keyword, a custom {{cssxref("dashed-ident")}} , or `fixed <number>`. Including a custom {{cssxref("dashed-ident")}} with the `element-shared` keyword, space-separated, is also valid.
 
 #### The `element-shared` keyword
 
@@ -242,7 +242,7 @@ We render the five badges as circles. We use the `random()` function within an {
 
 {{EmbedLiveSample('Generate random colors for circular badge', '100%', '300px')}}
 
-### Random value sharing between properties 
+### Random value sharing between properties
 
 In this example, we create a starry backdrop to demonstrate using a `<dashed-ident>` to share a seed value between properties of an element.
 
@@ -251,15 +251,11 @@ In this example, we create a starry backdrop to demonstrate using a `<dashed-ide
 We include five particles, all sharing the same class name.
 
 ```html
-<html>
-  <body>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-  </body>
-</html>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
 ```
 
 #### CSS
