@@ -19,7 +19,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
     - {{domxref("CSPViolationReport.blockedURL","blockedURL")}}
       - : A string representing either the type or the URL of the resource that was blocked because it violates the CSP.
     - {{domxref("CSPViolationReport.columnNumber", "columnNumber")}}
-      - : The charactrer position in the line of the script at which the violation occurred.
+      - : The character position in the line of the script at which the violation occurred.
     - {{domxref("CSPViolationReport.disposition","disposition")}}
       - : A string indicating whether the violation was enforced or only reported.
         This can have the value `"enforce"` for violations of policies set with {{httpheader("Content-Security-Policy")}}, or `"reporting"` for policies set with {{httpheader("Content-Security-Policy-Report-Only")}}.
@@ -58,7 +58,7 @@ For CSP violations, the object will be a `CSPViolationReport` instance (which ha
 
 The structure of a typical report is shown below.
 Note that we can see the URL of both the page that had its policy violated (`url`), the document that attempted to load the resource (`body.documentURL`) and the resource that was blocked from loading (`body.blockedURL`).
-We can also see that the violation was caused by the page attempting to load a script element with a source from another origin, which violated the `body.originalPolicy`, and that the violations was enforced (and not just reported).
+We can also see that the violation was caused by the page attempting to load a script element with a source from another origin, which violated the `body.originalPolicy`, and that the violation was enforced (and not just reported).
 
 ```json
 {
@@ -68,7 +68,7 @@ We can also see that the violation was caused by the page attempting to load a s
     "sourceFile": null,
     "lineNumber": null,
     "columnNumber": null,
-    "documentURL": "https://url-of-document-attmpting-to-load-resource-in-violation",
+    "documentURL": "https://url-of-document-attempting-to-load-resource-in-violation",
     "referrer": "",
     "blockedURL": "https://url-of-blocked-resource.js",
     "effectiveDirective": "script-src-elem",
@@ -99,7 +99,7 @@ The structure of the server report is almost exactly the same as `CSPViolationRe
     "sourceFile": null,
     "lineNumber": null,
     "columnNumber": null,
-    "documentURL": "https://url-of-document-attmpting-to-load-resource-in-violation",
+    "documentURL": "https://url-of-document-attempting-to-load-resource-in-violation",
     "referrer": "",
     "blockedURL": "https://url-of-blocked-resource.js",
     "effectiveDirective": "script-src-elem",

@@ -38,7 +38,7 @@ A reporting server at these endpoints can collect the reports, and process and p
 The {{httpheader("Reporting-Endpoints")}} HTTP header is used to specify details about the different endpoints that a user-agent has available to it for delivering reports.
 The endpoints can then be used on particular HTTP response headers to indicate the specific endpoint (or in some cases endpoints) that will be used for the associated report.
 The directive or parameter used to specify an endpoint depends on the header.
-For example, the CSP {{CSP("report-to")}} directive can be used on the {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP headers to specify the endpoint that CSP violation reports should be sent to, while the [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) field is used on {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}} to specify where to send integrity-policy violation fields.
+For example, the CSP {{CSP("report-to")}} directive can be used on the {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP headers to specify the endpoint that CSP violation reports should be sent to, while the [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) field is used on {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}} to specify where to send integrity-policy violation reports.
 
 Report types that don't have an associated HTTP header, such as `crash`, `deprecation`, and `intervention` reports, will usually send reports to the "default reporting endpoint".
 This is just an endpoint named "default" specified using the `Reporting-Endpoints` header.
@@ -47,7 +47,7 @@ This is just an endpoint named "default" specified using the `Reporting-Endpoint
 > There is no absolute guarantee of report delivery — a report could still fail to be collected if a serious error occurs.
 
 The reports themselves are sent to the target endpoint by the user agent in a `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
-They are serializations of corresponding dictionary for each [report type](#report_types).
+They are serializations of the corresponding dictionary for each [report type](#report_types).
 For example, CSP violation reports are a serialization of a {{domxref("CSPViolationReport")}} object.
 
 Reports sent to endpoints can be retrieved independently of the running of the websites they relate to, which is useful — a crash for example could bring down a website and stop anything running, but a report could still be obtained to give the developer some clues as to why it happened.
@@ -77,7 +77,7 @@ A list of documented report types and their corresponding report dictionary are 
 
 ### Generating reports via WebDriver
 
-The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/docs/Web/WebDriver) extension, which allows you to simulate report generation during automation. Reports generated via WebDriver are observed by any registered `ReportObserver` objects present in the loaded website. This is not yet documented.
+The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/docs/Web/WebDriver) extension, which allows you to simulate report generation during automation. Reports generated via WebDriver are observed by any registered `ReportingObserver` objects present in the loaded website. This is not yet documented.
 
 ## Interfaces
 
@@ -88,7 +88,7 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
 
 - {{domxref("SecurityPolicyViolationEvent")}}
   - : Represents the event object of a `securitypolicyviolation` event fired on an element, document, or worker when its CSP is violated.
-    This is defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) specifications
+    This is defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) specifications.
 
 ## Dictionaries
 
@@ -103,7 +103,7 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
   - : Contains details of an intervention report, which is generated when a request made by the website has been denied by the browser; e.g., for security reasons.
 - {{domxref("IntegrityViolationReport")}}
   - : Contains information about a resource that was blocked because it did not meet the Subresource Integrity guarantees required by its {{httpheader("Integrity-Policy")}}, or that would be blocked for report-only policies set using {{httpheader("Integrity-Policy-Report-Only")}}.
-    This is defined as part of the [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) specification,
+    This is defined as part of the [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) specification.
 
 ## Related HTTP Headers
 
