@@ -86,26 +86,24 @@ The `page_action` key is an object that may have any of three properties, all op
 
     You can use an SVG icon. You can also have the icon adapt to light and dark themes using a media query on `prefers-color-scheme`. For example:
 
-    ```html
-    <style>
+    ```css
+    #outside {
+      fill: black;
+    }
+    #inside {
+      fill: red;
+    }
+    @media (prefers-color-scheme: dark) {
       #outside {
-        fill: black;
+        fill: white;
       }
       #inside {
-        fill: red;
+        fill: black;
       }
-      @media (prefers-color-scheme: dark) {
-        #outside {
-          fill: white;
-        }
-        #inside {
-          fill: black;
-        }
-      }
-    </style>
+    }
     ```
 
-    For more information, see the [themed-icons](https://github.com/mdn/webextensions-examples/tree/master/themed-icons) example.
+    For more information, see the [themed-icons](https://github.com/mdn/webextensions-examples/tree/main/themed-icons) example.
 
     > [!NOTE]
     > An implicit CSS filter applies to SVG icons in dark UI themes. This filter will be deactivated in Firefox Desktop version 152 ([Firefox bug 2016509](https://bugzil.la/2016509)). You can test SVG icons with the CSS filter disabled by creating a boolean `about:config` preference called `extensions.webextensions.pageActionIconDarkModeFilter.enabled` and setting it to `false`. The filter is deactivated by default in Firefox Desktop Nightly from 149.
