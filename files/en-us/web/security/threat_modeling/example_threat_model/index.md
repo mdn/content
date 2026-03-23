@@ -85,18 +85,20 @@ Threats are most likely to occur where data crosses these boundaries.
 | S2  | Registered users    | Account safety, data protection      |
 | S3  | Disabled users      | Equal access                         |
 | S4  | Blog administrators | System integrity and availability    |
+| S5  | Blog developer      | Fixing flaws early on                |
+| S6  | Business owner      | Protecting brand reputation          |
 
 ## 2. What can go wrong?
 
 ### Identified threats
 
-| ID  | Threat                     | Affected elements | Description                                                            |
-| --- | -------------------------- | ----------------- | ---------------------------------------------------------------------- |
-| T1  | Cross-site scripting (XSS) | C3, A4            | Malicious comments inject JavaScript that run in other user's browsers |
-| T2  | Account takeover           | C2, A1, A2, A3    | Stolen credentials or sessions                                         |
-| T3  | Spam and abuse             | C3, C4            | Automated spam                                                         |
-| T4  | Data leakage               | A3, A5            | Sensitive data exposed via misconfiguration                            |
-| T5  | Denial of service          | C1                | Excessive requests overwhelm server                                    |
+| ID  | Threat                     | Affected elements  | Description                                                            |
+| --- | -------------------------- | ------------------ | ---------------------------------------------------------------------- |
+| T1  | Cross-site scripting (XSS) | C3, A4, S1,        | Malicious comments inject JavaScript that run in other user's browsers |
+| T2  | Account takeover           | C2, A1, A2, A3, S2 | Stolen credentials or sessions                                         |
+| T3  | Spam and abuse             | C3, C4, S4         | Automated spam                                                         |
+| T4  | Data leakage               | A3, A5, S2         | Sensitive data exposed via misconfiguration                            |
+| T5  | Denial of service          | C1, S4, S5         | Excessive requests overwhelm server                                    |
 
 ## 3. What are we going to do about it?
 
