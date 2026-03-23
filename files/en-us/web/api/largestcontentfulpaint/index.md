@@ -41,7 +41,7 @@ This interface directly defines the following properties:
 - {{domxref("LargestContentfulPaint.element")}} {{ReadOnlyInline}}
   - : The element that is the current largest contentful paint.
 - {{domxref("LargestContentfulPaint.renderTime")}} {{ReadOnlyInline}}
-  - : The time the element was rendered to the screen. May be a coarsened value or `0` if the element is a cross-origin image loaded without the `Timing-Allow-Origin` header.
+  - : The time the element was rendered to the screen. May be a coarsened value if the element is a cross-origin image loaded without the `Timing-Allow-Origin` header.
 - {{domxref("LargestContentfulPaint.loadTime")}} {{ReadOnlyInline}}
   - : The time the element was loaded.
 - {{domxref("LargestContentfulPaint.size")}} {{ReadOnlyInline}}
@@ -62,7 +62,7 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Always returns an empty string.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the value of this entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}.
+  - : Returns the value of this entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}}.
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `0`, as `duration` is not applicable to this interface.
 
@@ -95,7 +95,7 @@ observer.observe({ type: "largest-contentful-paint", buffered: true });
 
 The `paintTime` and `presentationTime` properties enable you to retrieve specific timings for the paint phase starting and the painted pixels being drawn on the screen. The `paintTime` is broadly interoperable, whereas the `presentationTime` is implementation-dependent.
 
-This example builds on the earlier observer example, showing how to check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `startTime` or `loadTime`, depending on what is most appropriate.
+This example builds on the earlier observer example, showing how to check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `renderTime` or `loadTime`, depending on what is supported.
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -110,8 +110,8 @@ const observer = new PerformanceObserver((list) => {
     );
   } else if (lastEntry.paintTime) {
     console.log("LCP paintTime:", lastEntry.paintTime);
-  } else if (lastEntry.startTime !== lastEntry.loadTime) {
-    console.log("LCP startTime:", lastEntry.startTime);
+  } else if (lastEntry.renderTime) {
+    console.log("LCP renderTime:", lastEntry.renderTime);
   } else {
     console.log("LCP loadTime:", lastEntry.loadTime);
   }

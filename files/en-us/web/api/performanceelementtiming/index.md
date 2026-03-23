@@ -98,7 +98,7 @@ Two entries will be output to the console. The first containing details of the i
 
 The `paintTime` and `presentationTime` properties enable you to retrieve specific timings for the paint phase starting and the element being drawn on the screen. The `paintTime` is broadly interoperable, whereas the `presentationTime` is implementation-dependent.
 
-This example uses a `PerformanceObserver` to observe all performance entries of type `"element"` (remember that, to be observed, elements need to have `elementtiming` attributes set on them). We check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `startTime` or `loadTime`, depending on what is most appropriate.
+This example uses a `PerformanceObserver` to observe all performance entries of type `"element"` (remember that, to be observed, elements need to have `elementtiming` attributes set on them). We check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `renderTime` or `loadTime`, depending on what is supported.
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -113,8 +113,8 @@ const observer = new PerformanceObserver((list) => {
       );
     } else if (entry.paintTime) {
       console.log("Element paintTime:", entry.paintTime);
-    } else if (entry.startTime !== entry.loadTime) {
-      console.log("Element startTime:", entry.startTime);
+    } else if (entry.renderTime) {
+      console.log("Element renderTime:", entry.renderTime);
     } else {
       console.log("Element loadTime", entry.loadTime);
     }

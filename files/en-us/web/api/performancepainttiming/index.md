@@ -84,7 +84,7 @@ entries.forEach((entry) => {
 
 The `paintTime` and `presentationTime` properties enable you to retrieve specific timings for the paint phase starting and the painted pixels being drawn on the screen. The `paintTime` is broadly interoperable, whereas the `presentationTime` is implementation-dependent.
 
-This example builds on the earlier {{domxref("Performance.getEntriesByType()")}} example, showing how to check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `startTime` or `loadTime`, depending on what is most appropriate.
+This example builds on the earlier {{domxref("Performance.getEntriesByType()")}} example, showing how to check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `loadTime`.
 
 ```js
 const entries = performance.getEntriesByType("paint");
@@ -98,8 +98,6 @@ entries.forEach((entry) => {
     );
   } else if (entry.paintTime) {
     console.log("paintTime:", entry.paintTime);
-  } else if (entry.startTime !== entry.loadTime) {
-    console.log("startTime:", entry.startTime);
   } else {
     console.log("loadTime", entry.loadTime);
   }
