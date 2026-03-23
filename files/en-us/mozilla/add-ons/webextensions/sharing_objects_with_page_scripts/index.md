@@ -6,7 +6,7 @@ sidebar: addonsidebar
 ---
 
 > [!NOTE]
-> The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards.
+> The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards. {{domxref("structuredClone","globalThis.structuredClone")}} provides a cross-browser API that creates structured clones.
 
 > [!WARNING]
 > As an extension developer you should consider that scripts running in arbitrary web pages are hostile code whose aim is to steal the user's personal information, damage their computer, or attack them in some other way.
@@ -19,8 +19,8 @@ As the [content scripts guide notes](/en-US/docs/Mozilla/Add-ons/WebExtensions/C
 
 However, Firefox provides some APIs that enable content scripts to:
 
-- access JavaScript objects created by page scripts
-- expose their own JavaScript objects to page scripts.
+- access JavaScript objects created by page scripts.
+- expose their JavaScript objects to page scripts.
 
 ## Xray vision in Firefox
 

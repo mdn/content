@@ -8,10 +8,17 @@ browser-compat: api.structuredClone
 
 {{APIRef("HTML DOM")}}
 
-The **`structuredClone()`** method of the {{domxref("Window")}} interface creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+The **`structuredClone()`** method of the {{domxref("Window")}} interface creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
 The method also allows [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) in the original value to be _transferred_ rather than cloned to the new object.
 Transferred objects are detached from the original object and attached to the new object; they are no longer accessible in the original object.
+
+> [!NOTE]
+> For web extension developers: Up to Firefox 148. `structuredClone.call(iframe.contentWindow)` incorrectly created objects in the caller's realm instead of the iframe's realm. This behavior meant that, for web extensions, the call created an object in the scope of a content script. In Firefox 149, the implementation changed to instantiate objects in the `this` realm, so the method's behavior more closely matched the specification. Therefore, to enable the creation of objects in the scope of a content script, `globalThis.structuredClone` is provided.
+>
+> See also [cloneInto](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto), a method that predated `structuredClone` and offers web extensions functionality beyond structured cloning, such as exporting functions.
+>
+> `structuredClone`, `globalThis.structuredClone`, `window.structuredClone`, and `self.structuredClone` are identical in other browsers. Firefox is the only browser that has differences in behavior due to differences in [the content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment).
 
 ## Syntax
 
@@ -66,8 +73,8 @@ console.assert(clone.itself === clone); // and the circular reference is preserv
 > To avoid the buffer being modified before the data is saved, you can clone the buffer and validate that data.
 > If you also _transfer_ the data, any attempts to modify the original buffer will fail, preventing its accidental misuse.
 
-The following code shows how to clone an array and transfer its underlying resources to the new object.
-On return, the original `uInt8Array.buffer` will be cleared.
+This code shows how to clone an array and transfer its underlying resources to the new object.
+On return, the original `uInt8Array.buffer` is cleared.
 
 ```js
 // 16MB = 1024 * 1024 * 16
@@ -80,7 +87,7 @@ console.log(uInt8Array.byteLength); // 0
 ```
 
 You can clone any number of objects and transfer any subset of those objects.
-For example, the code below would transfer `arrayBuffer1` from the passed in value, but not `arrayBuffer2`.
+For example, this code transfers `arrayBuffer1` from the passed in value, but not `arrayBuffer2`.
 
 ```js
 const transferred = structuredClone(
@@ -111,7 +118,7 @@ console.log(mushrooms1.amanita); // ["muscaria"]
 
 ### Transferring an object
 
-In this example we create an {{jsxref("ArrayBuffer")}} and then clone the object it is a member of, transferring the buffer. We can use the buffer in the cloned object, but if we try to use the original buffer we will get an exception.
+In this example we create an {{jsxref("ArrayBuffer")}} and then clone the object it is a member of, transferring the buffer. We can use the buffer in the cloned object, but if we try to use the original buffer we get an exception.
 
 ```js
 // Create an ArrayBuffer with a size in bytes
@@ -146,3 +153,4 @@ const int32View1 = new Int32Array(object1.buffer);
 - [A polyfill of `structuredClone`](https://github.com/zloirock/core-js#structuredclone) is available in [`core-js`](https://github.com/zloirock/core-js)
 - [Structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
 - [Structured clone polyfill](https://github.com/ungap/structured-clone)
+- [`cloneInto`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto) for web extensions

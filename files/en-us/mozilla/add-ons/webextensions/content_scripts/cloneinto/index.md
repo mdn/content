@@ -20,6 +20,9 @@ targetWindow.foo = clonedObject;
 
 This enables privileged code, such as an extension, to share an object with less-privileged code, such as a web page script.
 
+> [!NOTE]
+> You can also use {{domxref("structuredClone","globalThis.structuredClone")}} to create structured clones.
+
 ## Syntax
 
 ```js-nolint
