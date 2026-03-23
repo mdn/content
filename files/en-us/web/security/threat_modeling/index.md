@@ -20,7 +20,7 @@ This page describes the overall threat modeling process. The following pages giv
 
 A threat is something that has a negative effect on your objectives or your assets, if it happens.
 
-In practice, security is about reducing the chances that a threat can reach something you care about.
+In practice, security is about reducing the chances that a threat can reach something you care about, or to limit the impact if the threat materializes. Also, another approach to limit the threat is to avoid it - e.g., elimitating the affected.
 
 Threats are always present but they don't have to turn into attacks. An attack is a realization of a threat on an operational system (a system is a collection of assets) and ideally, if the security posture of a system is strong enough, potential threats won't turn into actual attacks.
 
@@ -49,9 +49,9 @@ Threat modeling is a structured, repeatable process with the goal to secure syst
 
 ## How to do threat modeling?
 
-Ideally, threat modeling happens early and frequently. Much like you constantly iterate over your software, you should also continuously analyze the system's security using your threat model.
+Ideally, threat modeling happens early and frequently. Much like you constantly iterate over your software, you should also continuously analyze the system's security using your threat model. Usually, this begins right after the features have been defined.
 
-Threat modeling activities are not done by security auditors exclusively. Anyone who is concerned about the privacy or security of a system should be empowered to help with threat modeling. Cross-functional collaboration from a diverse set of participants makes the threat model stronger.
+Threat modeling activities are not done by security auditors exclusively. Anyone who is concerned about the privacy or security of a system should be empowered to help with threat modeling. Cross-functional collaboration from a diverse set of participants makes the threat model stronger. For example, whoever is designing the system surely has a clear understanding of what is being built and of the concerns that might keep them up at night.
 
 Documentation of the common understanding of your system in a threat model enables you to measure the robustness of your system. It can be quite some work to get to an initial threat modeling document. Often, the initial work gets done as part of a workshop with your team, either self-guided or mediated by a professional. The produced threat model document needs to be extensible for future re-assessment and ideally lives version-controlled within your codebase.
 
@@ -107,6 +107,7 @@ Things an attacker wants and are in need of protection. This could be:
 To reference identified assets, you index them with the letter A (A1, A2, A3, ...) in your threat model.
 
 ### Data flows and trust boundaries
+
 
 Anything that happens inside the browser or comes from a user's input is _untrusted_. Threat modeling helps you identify the **trust boundary**, exactly where data crosses from untrusted, outside, areas out of your control, into your trusted application logic.
 
