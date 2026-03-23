@@ -72,7 +72,7 @@ The rest of this page walks through these steps in order.
 
 To answer this question, you typically create a model of the system, such as a data flow diagram, architecture diagram, or use-case diagram, showing components, data flows, trust boundaries, dependencies, and key stakeholders.
 
-To define the scope of the threat model, we need to delineate which threats target our own project and which target the browser or other layers of the web platform stack, which we can define are external dependencies to our threat model. The [Threat Model for the Web Platform](https://github.com/w3c/threat-model-web/blob/main/index.md) provides a useful starting point and gives an idea of the environment any website or web application resides in.
+To define the scope of the threat model, we need to delineate which threats target our own project and which target the browser or other layers of the web platform stack, which we can define are external dependencies to our threat model. The [Threat Model for the Web Platform](https://w3c.github.io/threat-model-web/) provides a useful starting point and gives an idea of the environment any website or web application resides in.
 
 It is helpful to make yourself aware about which parts you will be responsible for vs. which parts will be taken care of by others, such as protections the browser usually provides for you. If you maintain a list of relevant existing threat models for your software dependencies and your environment, you can reference them in your own threat model and don't need to redo the modeling again. Threat modeling is not about completeness; it's about improving understanding over time.
 
@@ -125,7 +125,7 @@ To reference identified data flows, you index them with the letter F (F1, F2, F3
 You may not model external dependencies in full detail, but you should document your assumptions about them and model them at the level needed to reason about your own risks. We can look at them like black boxes whose internals are unknown to us but ideally they also have their own threat models which we reference in our own. For example:
 
 - Operating system (OS)
-- Browser and the web platform (see also [web platform threat model](https://github.com/w3c/threat-model-web/blob/main/index.md))
+- Browser and the web platform (see also [web platform threat model](https://w3c.github.io/threat-model-web/))
 - Browser extensions (WebExtensions)
 
 To reference identified external dependencies, you index them with the letter E (E1, E2, E3, ...) in your threat model.
@@ -283,6 +283,6 @@ There are tools designed to make threat modeling easier through standards for vi
 
 - [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org)
 - [W3C Threat Modeling Guide for specification authors](https://w3c.github.io/threat-modeling-guide/)
-- [Threat Model for the Web Platform](https://github.com/w3c/threat-model-web/blob/main/index.md)
+- [Threat Model for the Web Platform](https://w3c.github.io/threat-model-web/)
 - [OWASP Threat Modeling Playbook](https://github.com/OWASP/threat-modeling-playbook)
 - [OWASP Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)
