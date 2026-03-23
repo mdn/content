@@ -136,9 +136,7 @@ You can load text from a file into the `text` string using the following code:
 import text from "https://example.com/file.txt" with { type: "text" };
 ```
 
-The file will be requested with an `{{HTTPHeader("Accept")}}: text/plain` header,
-but the value of the response's `{{HTTPHeader("Content-Type")}}` header is ignored,
-and all files are parsed as UTF-8.
+The file will be requested with an `{{HTTPHeader("Accept")}}: text/plain` header, but the value of the response's `{{HTTPHeader("Content-Type")}}` header is ignored, and all files are parsed as UTF-8. It can contain any textual data, even JavaScript code (which is treated as plain text).
 
 ### Intended semantics for import attributes
 
