@@ -60,7 +60,7 @@ You can interpret a `v128` value as:
 - `f32x4` : 4 32-bit float values
 - `f64x2` : 2 64-bit float values
 
-For example, the following uses the [`const`](/en-US/docs/WebAssembly/Reference/Numeric/const) instruction to create an `f32x4` value that contains 4 32-bit float values — `65.4`, `780.6`, `1011`, and `3.0`.
+For example, the following uses the [`const`](/en-US/docs/WebAssembly/Reference/Numeric/const) instruction to create an `f32x4` value that contains 4 32-bit float values — `65.4`, `780.9`, `1011.1`, and `3.0`.
 
 ```wat
 v128.const f32x4 65.4 780.9 1011.1 3.0
