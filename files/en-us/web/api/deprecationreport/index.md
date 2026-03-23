@@ -2,12 +2,10 @@
 title: DeprecationReport
 slug: Web/API/DeprecationReport
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.deprecation
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}
 
 The `DeprecationReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents a deprecation report.
 
