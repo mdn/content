@@ -184,7 +184,7 @@ The `<container-condition>` can include one or more boolean size queries, each w
 
 #### Scroll-state container descriptors
 
-Scroll-state container descriptors are specified inside the `<container-condition>` within a set of parentheses following the `scroll-state` keyword, for example:
+Scroll-state container descriptors are specified inside the `<container-condition>` as an argument for the `scroll-state()` function, for example:
 
 ```css
 @container scroll-state(scrollable: top) {
@@ -331,7 +331,7 @@ Supported keywords for scroll-state container descriptors include {{glossary("ph
 
     To evaluate a container with a non-`none` `stuck` scroll-state query, it must have `position: sticky` set on it, and be inside a scroll container. If the test passes, the rules inside the `@container` block are applied to descendants of the `position: sticky` container.
 
-    It is possible for two values from opposite axes to match at the same time:
+    It is possible for two values from adjacent axes to match at the same time:
 
     ```css
     @container scroll-state((stuck: top) and (stuck: left)) {
@@ -357,7 +357,7 @@ Supported keywords for scroll-state container descriptors include {{glossary("ph
 
 #### Anchored container descriptors
 
-Anchored container descriptors are specified inside the `<container-condition>` within a set of parentheses following the `anchored` keyword, for example:
+Anchored container descriptors are specified inside the `<container-condition>` as an argument for the `anchored()` function, for example:
 
 ```css
 @container anchored(fallback: top) {

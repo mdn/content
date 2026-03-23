@@ -376,7 +376,7 @@ Scroll the page and check out the effect of these position-try fallback options 
 
 ## Styling anchor-positioned elements based on active fallback
 
-One problem the above functionality doesn't solve on its own is updating the styling of an anchor-positioned element to suit its different fallback options. For example, it is common to include a small arrow on a tooltip that points to the anchor element it is associated with, improving UX by making the visual association clearer. When the tooltip moves to a different position, you'll need to change the position and orientation of the arrow, otherwise it will look wrong.
+One problem the above functionality doesn't solve is updating the styling of an anchor-positioned element to suit its different fallback options. For example, it is common to include a small arrow on a tooltip that points to the anchor element it is associated with, improving UX by making the visual association clearer. When the tooltip moves to a different position, you'll need to change the position and orientation of the arrow, otherwise it will look wrong.
 
 To solve this problem, you can use anchored container queries. These extend the functionality of [CSS container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries) to enable you to detect when a specific fallback option is applied to an anchor-positioned element, and apply CSS to its descendants as a result. Specifically, anchored container queries rely on two features:
 

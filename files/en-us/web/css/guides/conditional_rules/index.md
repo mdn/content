@@ -50,9 +50,11 @@ The CSS conditional rules module also introduces the `@else` and `@when` at-rule
 
 ### Functions
 
+- [`anchored()`](/en-US/docs/Web/CSS/Reference/At-rules/@container#anchored_container_descriptors)
 - [`style()`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries)
 - [`font-tech()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
 - [`font-format()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-format)
+- [`scroll-state()`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scroll-state_container_descriptors)
 - [`selector()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#function_syntax)
 - [`supports()`](/en-US/docs/Web/CSS/Reference/At-rules/@import#supports-condition)
 

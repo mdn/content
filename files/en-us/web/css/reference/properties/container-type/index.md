@@ -41,7 +41,7 @@ container-type: unset;
 The `container-type` property can take a single value from the list below, or two values — one must be `scroll-state` and the other can be `inline-size` or `size`. In other words, an element can be established as a size query container, a scroll-state query container, both, or neither.
 
 - `anchored`
-  - : Establishes a query container for anchored container queries on the container. In this case, the size of the element is not computed in isolation; no containment is applied.
+  - : Establishes a query container for anchored container queries on the container. In this case, the size of the element is not computed in isolation; no [containment](/en-US/docs/Web/CSS/Guides/Containment/Using) is applied.
 - `inline-size`
   - : Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#block_and_inline_dimensions) of the container.
     Applies [style](/en-US/docs/Web/CSS/Reference/Properties/contain#style) and [inline-size](/en-US/docs/Web/CSS/Reference/Properties/contain#inline-size) containment to the element. The inline size of the element can be [computed in isolation](/en-US/docs/Web/CSS/Guides/Containment/Using#size_containment), ignoring the child elements (see [Using CSS containment](/en-US/docs/Web/CSS/Guides/Containment/Using)).

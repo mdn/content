@@ -6,23 +6,25 @@ page-type: guide
 sidebar: cssref
 ---
 
-[CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) includes mechanisms for providing [fallback options](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding). These are alternative fallback positions that the browser can try placing an anchor-positioned element in, relative to its anchor, to put it back on-screen if the positioned element starts to overflow the viewport.
+[CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) includes mechanisms for providing [fallback options](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding). These are alternative positions that the browser can try placing an anchor-positioned element in, relative to its anchor, to put it back on-screen if the positioned element starts to overflow the viewport.
 
-An additional requirement is styling the anchor-positioned element differently depending on which fallback position it is placed in, which is achieved using **anchored container queries**. This guide shows how to use anchored container queries, and provides a couple of examples.
+**Anchored container queries** further increase the usefulness of anchor positioning fallback options by enabling different styling of the anchor-positioned element depending on which fallback position it is placed in. This guide shows how to use anchored container queries and provides a couple of examples.
 
 > [!NOTE]
 > For information on the basic fundamentals of CSS anchor positioning, see [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using).
 
 ## Feature summary
 
-When positioning a tooltip relative to a UI element using anchor positioning, it is useful to provide position-try fallback options via the {{cssxref("position-try-fallbacks")}} property so that the user will be able to see the tooltip for as much of the time they are using your site as possible. For example, if the tooltip is placed above the UI element it is anchored to by default, you might want to move it below as the user starts to scroll down so that the UI element nears the top of the page and the tooltip starts to go off-screen.
+When positioning a tooltip relative to a UI element using anchor positioning, it is useful to provide `position-try` fallback options, via the {{cssxref("position-try-fallbacks")}} property. These can be used to ensure that the tooltip is displayed on-screen for as long as possible.
 
-One problem this doesn't solve on its own is updating the styling of the anchor-positioned element to suit the different fallback options. For example, it is common to include a small arrow on the tooltip that points to the anchor element it is associated with, improving UX by making the visual association clearer. When the tooltip moves to a different position, you'll need to change the position and orientation of the arrow, otherwise it will look wrong.
+For example, if the tooltip is placed above the UI element it is anchored to by default, if the user scrolls upward you can use fallbacks to move the tooltip below the element just before the tooltip goes off-screen.
+
+One problem this doesn't solve on its own is updating the styling of the anchor-positioned element to suit the different fallback options. For example, it is common to include a small arrow on the tooltip that points to the anchor element it is associated with, improving UX by making the visual association clearer. When the tooltip moves to a different position, the position and orientation of the arrow must also change, otherwise it will look wrong.
 
 To solve this problem, you can use anchored container queries. These extend the functionality of [CSS container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries) to enable you to detect when a specific fallback option is applied to an anchor-positioned element, and apply CSS to its descendants as a result. Specifically, anchored container queries rely on two features:
 
 - The {{cssxref("container-type")}} property `anchored` value: Apply this to the anchor-positioned element to start detecting when different fallback options are applied to it.
-- The {{cssxref("@container")}} at-rule `anchored` keyword: This is followed by a set of parentheses inside which the `fallback` descriptor is included. The descriptor's value is a `position-try-fallbacks` value.
+- The {{cssxref("@container")}} at-rule `anchored()` function: This is given a [`fallback` descriptor](/en-US/docs/Web/CSS/Reference/At-rules/@container#fallback) as an argument. The descriptor's value is a `position-try-fallbacks` value.
 
 For example, let's say we have a tooltip element that is positioned above its anchor by default via a {{cssxref("position-area")}} value of `top`, but has a {{cssxref("position-try-fallbacks")}} value of `flip-block` specified. This will cause the tooltip to flip in the block direction to the bottom of its anchor when it starts to overflow the top of the viewport. If we want to detect when the fallback is applied to the tooltip, we first need to set `container-type: anchored` on it to turn it into an anchored query container.
 
@@ -215,7 +217,7 @@ Now we'll add the arrow to the infobox using generated content on its {{cssxref(
 }
 ```
 
-Now onto the anchored container query. We include a `@container` at-rule with its test defined as `anchored(fallback: bottom)`. This means that when the `bottom` position-try fallback is applied to the infobox, the CSS inside the at-rule is applied to the document. Inside, we define alternative styling for the infobox `::before` pseudo-element that swaps out the down arrow icon for an up arrow and positions it at the top of the infobox.
+Next we add the anchored container query. We include a `@container` at-rule with its test defined as `anchored(fallback: bottom)`. This means that when the `bottom` position-try fallback is applied to the infobox, the CSS inside the at-rule is applied to the document. Inside, we define alternative styling for the infobox `::before` pseudo-element that swaps out the down arrow icon for an up arrow and positions it at the top of the infobox.
 
 ```css live-sample___basic-example
 @container anchored(fallback: bottom) {
