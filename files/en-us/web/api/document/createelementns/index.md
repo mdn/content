@@ -52,7 +52,6 @@ createElementNS(namespaceURI, qualifiedName, options)
     - `is` {{Optional_Inline}}
       - : A string defining the tag name for a custom element previously defined using {{domxref("CustomElementRegistry/define", "customElements.define()")}}.
         The new element will be given an `is` attribute whose value is the custom element's tag name.
-        See [Web component example](#web_component_example) for more details.
     - `customElementRegistry` {{Optional_Inline}}
       - : A {{domxref("CustomElementRegistry")}} that sets the [Scoped custom element registry](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) of a custom element.
 
