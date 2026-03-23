@@ -41,7 +41,7 @@ No notable changes.
   ([Firefox bug 2010125](https://bugzil.la/2010125)).
 
 - The [Reporting API](/en-US/docs/Web/API/Reporting_API) is now supported for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) and {{httpheader("Integrity-Policy")}} violations.
-  This allows report objects that are {{domxref("CSPViolationReport")}} objects and {{domxref("IntegrityViolationReport")}} objects to be reported in violating pages using a {{domxref("ReportingObserver")}} (reports can be filtered on the `type` property: `"csp-violation"` or `"integrity-violation"`).
+  This API allows {{domxref("CSPViolationReport")}} and {{domxref("IntegrityViolationReport")}} objects to be reported in violating pages using a {{domxref("ReportingObserver")}} (reports can be filtered on the `type` property: `"csp-violation"` or `"integrity-violation"`).
   A serialized version of the report objects can also be sent to a reporting server specified in the corresponding HTTP header — endpoint names and corresponding URLs must first be defined in the {{httpheader('Reporting-Endpoints')}} or {{httpheader('Report-To')}} HTTP response headers.
   ([Firefox bug 1976074](https://bugzil.la/1976074), [Firefox bug 2008916](https://bugzil.la/2008916)).
 
