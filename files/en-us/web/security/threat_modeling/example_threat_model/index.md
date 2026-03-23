@@ -21,13 +21,13 @@ For more information and guidance on how to create a threat model, see the [thre
 
 ### Assumptions and scope
 
-This threat model covers the blog website itself, including user interaction and backend services. The following are considered **out of scope**, but assumed to provide baseline protections:
+This threat model covers the blog website itself, including user interaction and backend services.
+
+Threats targeting the following layers are assumed to provide baseline protections, but are considered **out of scope** and not modeled here unless they directly affect this project:
 
 - Web browser and web platform
 - Operating system
 - Hosting provider infrastructure
-
-Threats targeting those layers are not modeled here unless they directly affect this project.
 
 ### Trust boundaries
 
