@@ -9,12 +9,10 @@ Threat modeling is a process that can help developers identify and understand po
 
 Depending on your goal, threat modeling can be more involved than described here. Maybe you or your team wants to exercise lightweight threat modeling for your own benefit, so that security isn't an afterthought or neglected at all, or maybe you are required to perform a more heavyweight assessment because your software will be audited and you use threat modeling to be prepared for that.
 
-This page describes the overall threat modeling process. The following pages give practical advice and inspiration for threat modeling as well:
+This page describes the overall threat modeling process. For an example threat model, see:
 
 - [Example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model)
-  - : An example threat model document for a website.
-- [Threat map](/en-US/docs/Web/Security/Threat_modeling/Threat_map)
-  - : A map of threats and their responses. If you did THIS then do THAT for protection.
+  - : An example threat model for a public-facing blog serving static pages. Interactive components include user comments, a contact form, analytics scripts, and a map embed.
 
 ## What is a threat?
 
@@ -149,7 +147,6 @@ To reference identified stakeholders, you index them with the letter S (S1, S2, 
 
 Now that we've identified what we're working on, we can start thinking about what can go wrong with it. Threats can be identified in different ways and one common way is to look at threat lists. For example, we could start by taking a look at threat maps or rely on external threat lists such as OWASP top ten or others.
 
-- [Threat map](/en-US/docs/Web/Security/Threat_modeling/Threat_map)
 - [OWASP top ten](https://owasp.org/Top10/2025/)
 - Security consideration sections in web platform specifications as well as on MDN Web Docs.
 
