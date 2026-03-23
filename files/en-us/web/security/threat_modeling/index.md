@@ -9,8 +9,6 @@ Threat modeling is a process that can help developers identify and understand po
 
 Depending on your goal, threat modeling can be more involved than described here. Maybe you or your team wants to exercise lightweight threat modeling for your own benefit, so that security isn't an afterthought or neglected at all, or maybe you are required to perform a more heavyweight assessment because your software will be audited and you use threat modeling to be prepared for that.
 
-In any case, it always makes sense to think about threats and a process that regularly assesses the security of your systems. The goal of this article is to provide some inspiration for how to do threat modeling, but ultimately you'll have to introduce a process that works for you, your team, and your goals.
-
 This page describes the overall threat modeling process. The following pages give practical advice and inspiration for threat modeling as well:
 
 - [Example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model)
@@ -26,7 +24,7 @@ In practice, security is about reducing the chances that a threat can reach some
 
 Threats are always present but they don't have to turn into attacks. An attack is a realization of a threat on an operational system (a system is a collection of assets) and ideally, if the security posture of a system is strong enough, potential threats won't turn into actual attacks.
 
-When thinking about threats, we can identify system weaknesses (vulnerabilities), like unpatched software or cross-site scripting (XSS).
+When thinking about threats, we can identify system weaknesses (vulnerabilities), like [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) or [JavaScript prototype pollution](/en-US/docs/Web/Security/Attacks/Prototype_pollution).
 
 We then implement mitigations as a response to vulnerabilities: they defend the system to the extent they are able to. In certain specific cases, it is also possible to accept that the threat might materialize, prepare oneself to accept the adverse consequences, and monitor whether this actually happens. This must be a conscious choice: accepting a threat is not something to be taken lightly
 
@@ -109,6 +107,7 @@ Things an attacker wants and are in need of protection. This could be:
 To reference identified assets, you index them with the letter A (A1, A2, A3, ...) in your threat model.
 
 ### Data flows and trust boundaries
+
 Anything that happens inside the browser or comes from a user's input is _untrusted_. Threat modeling helps you identify the **trust boundary**, exactly where data crosses from untrusted, outside, areas out of your control, into your trusted application logic.
 
 We identify the mechanism by which assets move between components. They may be uni- or bi-directional.
@@ -269,6 +268,8 @@ A variety of other documents exists which can help you to think about a diverse 
 - [RFC 9620 Human Rights Considerations](https://datatracker.ietf.org/doc/rfc9620/)
 - [W3C TAG: Ethical Web Principles](https://w3ctag.github.io/ethical-web-principles/)
 - [W3C Self-Review Questionnaire: Security and Privacy](https://www.w3.org/TR/security-privacy-questionnaire/#missing-questions)
+- [RFC 6973 Privacy Considerations for Internet Protocols](https://datatracker.ietf.org/doc/html/rfc6973)
+- [RFC 3552 Guidelines for Writing RFC Text on Security Considerations](https://datatracker.ietf.org/doc/html/rfc3552)
 - [Invariant-centric threat modeling](https://github.com/defuse/ictm)
 
 ## Threat modeling tools
