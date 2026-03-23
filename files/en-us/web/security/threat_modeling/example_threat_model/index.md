@@ -40,13 +40,13 @@ Threats are most likely to occur where data crosses these boundaries.
 
 ### Components
 
-| ID  | Component                     | Description                                |
-| --- | ----------------------------- | ------------------------------------------ |
-| C1  | Server with blog software | Receives and processes requests, returning static pages     |
-| C2  | Authentication system         | Handles user login and sessions            |
-| C3  | Comment system                | Stores and displays user-submitted content |
-| C4  | Contact form                  | Allows users to send emails                |
-| C5  | Third-party scripts           | Analytics and embedded map                 |
+| ID  | Component                 | Description                                             |
+| --- | ------------------------- | ------------------------------------------------------- |
+| C1  | Server with blog software | Receives and processes requests, returning static pages |
+| C2  | Authentication system     | Handles user login and sessions                         |
+| C3  | Comment system            | Stores and displays user-submitted content              |
+| C4  | Contact form              | Allows users to send emails                             |
+| C5  | Third-party scripts       | Analytics and embedded map                              |
 
 ### Assets
 
