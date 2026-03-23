@@ -57,6 +57,7 @@ jobs:
       - name: Suggest changes using diff
         if: steps.check.outputs.HAS_ARTIFACT == 'true'
         env:
+          CI_PULL_REQUEST: ${{ steps.identify-pr.outputs.number }}
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           reviewdog \
