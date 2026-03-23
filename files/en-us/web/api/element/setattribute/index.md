@@ -35,7 +35,7 @@ setAttribute(qualifiedName, value)
     The format of the qualified name is `prefix:localName` or `localName`, where the parts are defined as:
     - `prefix` {{optional_inline}}
       - : A "short alias" for the namespace, as returned by the {{DOMxRef("Attr.prefix", "prefix")}} property.
-    - `localName`:
+    - `localName`
       - : The local name of the attribute, as returned by the {{DOMxRef("Attr.localName", "localName")}} property.
 
 - `value`
@@ -63,8 +63,8 @@ None ({{jsxref("undefined")}}).
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
   - : Thrown if either the [`prefix`](#prefix) or [`localName`](#localname) is not valid:
-    - The `prefix` must have at least one character, and cannot contain ASCII whitespace, `NULL`, `/` , or `>` (U+0000, U+002F, or U+003E, respectively).
-    - The `localName` must have at least one character, and may not contain ASCII whitespace, `NULL`, `/` , `=` or `>` (U+0000, U+002F, U+003D, or U+003E, respectively).
+    - The `prefix` must have at least one character, and cannot contain ASCII whitespace, `NULL`, `/`, or `>` (U+0000, U+002F, or U+003E, respectively).
+    - The `localName` must have at least one character, and may not contain ASCII whitespace, `NULL`, `/`, `=` or `>` (U+0000, U+002F, U+003D, or U+003E, respectively).
 
     > [!NOTE]
     > Earlier versions of the specification were more restrictive, requiring that the `qualifiedName` be a valid [XML name](https://www.w3.org/TR/xml/#dt-name).

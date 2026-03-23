@@ -65,7 +65,7 @@ Custom element names must:
 - start with an ASCII lowercase letter (a-z)
 - contain a hyphen
 - not contain any ASCII uppercase letters
-- not contain ASCII whitespace, `NULL`, `/` , or `>` (U+0000, U+002F, or U+003E, respectively)
+- not contain ASCII whitespace, `NULL`, `/`, or `>` (U+0000, U+002F, or U+003E, respectively)
 - not be any of:
   - "annotation-xml"
   - "color-profile"
