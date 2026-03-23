@@ -8,7 +8,7 @@ browser-compat: api.VideoFrame.metadata
 
 {{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`metadata()`** method of the {{domxref("VideoFrame")}} interface returns the metadata asssociated with the `VideoFrame`.
+The **`metadata()`** method of the {{domxref("VideoFrame")}} interface returns the metadata asssociated with the frame.
 
 ## Syntax
 
