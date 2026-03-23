@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.shr_s
 sidebar: webassemblysidebar
 ---
 
-The **`shr_s`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) shifts the bits in each lane of a `v128` value interpretation to the right by the same specified amount, outputting signed values. This is an arithmetic right shift.
+The **`shr_s`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) shifts the bits in each lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation to the right by the same specified amount, outputting signed values. This is an arithmetic right shift.
 
 {{InteractiveExample("Wat Demo: shr_s", "tabbed-taller")}}
 

@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.demote_f64x2_zero
 sidebar: webassemblysidebar
 ---
 
-The **`demote_f64x2_zero`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the lanes of a `v128` `f64x2` value interpretation into an `f32x4` value interpretation. The two higher lanes of the result are initialized to zero.
+The **`demote_f64x2_zero`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `f64x2` value interpretation into an `f32x4` value interpretation. The two higher lanes of the result are initialized to zero.
 
 {{InteractiveExample("Wat Demo: demote_f64x2_zero", "tabbed-taller")}}
 

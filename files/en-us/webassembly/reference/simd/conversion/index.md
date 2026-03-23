@@ -11,7 +11,7 @@ WebAssembly SIMD conversion instructions.
 ## Convert between types
 
 - [`convert_low_i32x4_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/convert_low_i32x4_s)
-  - : Converts the lanes of a `v128` `f64x2` value interpretation into a signed `i32x4` value interpretation.
+  - : Converts the lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `f64x2` value interpretation into a signed `i32x4` value interpretation.
 - [`convert_low_i32x4_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/convert_low_i32x4_u)
   - : Converts the lanes of a `v128` `f64x2` value interpretation into an unsigned `i32x4` value interpretation.
 - [`convert_i32x4_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/convert_i32x4_s)

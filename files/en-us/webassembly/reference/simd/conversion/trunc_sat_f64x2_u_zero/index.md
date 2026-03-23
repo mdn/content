@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.trunc_sat_f64x2_u_zero
 sidebar: webassemblysidebar
 ---
 
-The **`trunc_sat_f64x2_u_zero`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) performs a saturating conversion of the lanes of a `v128` `f64x2` value interpretation into an unsigned `i32x4` value interpretation. The two higher lanes of the result are initialized to zero.
+The **`trunc_sat_f64x2_u_zero`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) performs a saturating conversion of the lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `f64x2` value interpretation into an unsigned `i32x4` value interpretation. The two higher lanes of the result are initialized to zero.
 
 If any input lane is a {{jsxref("NaN")}}, the resulting output lane is set to `0`. If the rounded integer value of a lane is outside the range of the destination type, the result is saturated to the nearest representable integer value.
 

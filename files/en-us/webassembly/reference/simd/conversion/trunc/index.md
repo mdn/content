@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.trunc
 sidebar: webassemblysidebar
 ---
 
-The **`trunc`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) rounds the value in each lane of a `v128` value interpretation to the nearest integer towards zero with a magnitude not larger than the input.
+The **`trunc`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) rounds the value in each lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation to the nearest integer towards zero with a magnitude not larger than the input.
 
 {{InteractiveExample("Wat Demo: trunc", "tabbed-taller")}}
 

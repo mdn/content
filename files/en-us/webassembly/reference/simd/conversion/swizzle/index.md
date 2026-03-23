@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.swizzle
 sidebar: webassemblysidebar
 ---
 
-The **`swizzle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) returns a new `v128` value with its lane values selected from an input `v128` value, determined by indices provided in a second input `v128`.
+The **`swizzle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) returns a new [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value with its lane values selected from an input `v128` value, determined by indices provided in a second input `v128`.
 
 {{InteractiveExample("Wat Demo: swizzle", "tabbed-taller")}}
 

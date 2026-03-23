@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.extract_lane
 sidebar: webassemblysidebar
 ---
 
-The **`extract_lane`** [SIMD extract instruction](/en-US/docs/WebAssembly/Reference/SIMD/extract) extracts the value contained within the specified lane of a `v128` value interpretation.
+The **`extract_lane`** [SIMD extract instruction](/en-US/docs/WebAssembly/Reference/SIMD/extract) extracts the value contained within the specified lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation.
 
 {{InteractiveExample("Wat Demo: extract_lane", "tabbed-taller")}}
 

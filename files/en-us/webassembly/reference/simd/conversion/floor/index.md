@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.floor
 sidebar: webassemblysidebar
 ---
 
-The **`floor`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) rounds the value in each lane of a `v128` value interpretation down to the nearest integer below.
+The **`floor`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) rounds the value in each lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation down to the nearest integer below.
 
 {{InteractiveExample("Wat Demo: floor", "tabbed-taller")}}
 

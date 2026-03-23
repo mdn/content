@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.extract_lane_s
 sidebar: webassemblysidebar
 ---
 
-The **`extract_lane_s`** [SIMD extract instruction](/en-US/docs/WebAssembly/Reference/SIMD/extract) extracts the value contained within the specified lane of a `v128` value interpretation as a signed integer.
+The **`extract_lane_s`** [SIMD extract instruction](/en-US/docs/WebAssembly/Reference/SIMD/extract) extracts the value contained within the specified lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation as a signed integer.
 
 {{InteractiveExample("Wat Demo: extract_lane_s", "tabbed-taller")}}
 

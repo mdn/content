@@ -13,3 +13,7 @@ WebAssembly SIMD (single instruction, multiple data) instructions.
   - : SIMD conversion instructions.
 - [Extract instructions](/en-US/docs/WebAssembly/Reference/SIMD/extract)
   - : SIMD extract instructions.
+
+## See also
+
+- [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) type

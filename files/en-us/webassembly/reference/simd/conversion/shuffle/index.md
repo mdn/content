@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.shuffle
 sidebar: webassemblysidebar
 ---
 
-The **`shuffle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) returns a new `v128` value with its lane values selected from two input `v128` values, determined by provided index values.
+The **`shuffle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) returns a new [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value with its lane values selected from two input `v128` values, determined by provided index values.
 
 {{InteractiveExample("Wat Demo: shuffle", "tabbed-taller")}}
 

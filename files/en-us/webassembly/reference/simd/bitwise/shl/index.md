@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.shl
 sidebar: webassemblysidebar
 ---
 
-The **`shl`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) shifts the bits in each lane of a `v128` value interpretation to the left by the same specified amount.
+The **`shl`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) shifts the bits in each lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation to the left by the same specified amount.
 
 {{InteractiveExample("Wat Demo: shl", "tabbed-taller")}}
 

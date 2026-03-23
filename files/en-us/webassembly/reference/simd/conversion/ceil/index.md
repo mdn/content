@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.ceil
 sidebar: webassemblysidebar
 ---
 
-The **`ceil`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) rounds the value in each lane of a `v128` value interpretation up to the nearest integer above.
+The **`ceil`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) rounds the value in each lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation up to the nearest integer above.
 
 {{InteractiveExample("Wat Demo: ceil", "tabbed-taller")}}
 

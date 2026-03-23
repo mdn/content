@@ -47,9 +47,11 @@ i32x4.add
 
 ## Description
 
-The `v128` type is used to define and manipulate SIMD (single instruction, multiple data) values in Wasm modules, which enable more data processing by allowing single instructions to operate on multiple data points simultaneously.
+The `v128` type is used to define and manipulate SIMD (single instruction, multiple data) values in Wasm modules, which enable more efficient data processing by allowing single instructions to operate on multiple data points simultaneously.
 
-A `v128` value represents 128-bits of packed integer or floating-point data, and can be interpreted in several different ways by SIMD instructions, depending on what value structure you specify. You can interpret a `v128` value as:
+A `v128` value represents 128-bits of packed integer or floating-point data, which can be interpreted in several different ways by SIMD instructions. Depending on what value structure you specify, the 128-bits of data will be portioned into multiple **lanes**, each one containing a separate value.
+
+You can interpret a `v128` value as:
 
 - `i8x16` : 16 8-bit integer values
 - `i16x8` : 8 16-bit integer values
@@ -58,12 +60,33 @@ A `v128` value represents 128-bits of packed integer or floating-point data, and
 - `f32x4` : 4 32-bit float values
 - `f64x2` : 2 64-bit float values
 
+For example, the following uses the [`const`](/en-US/docs/WebAssembly/Reference/Numeric/const) instruction to create an `f32x4` value that contains 4 32-bit float values — `65.4`, `780.6`, `1011`, and `3.0`.
+
+```wat
+v128.const f32x4 65.4 780.9 1011.1 3.0
+```
+
+We could then round all four values down to the nearest integer simultaneously using the [`floor`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/floor) instruction:
+
+```wat
+f32x4.floor
+```
+
+The previous instruction would output a value of `f32x4 65 780 1011 3`.
+
+Note that SIMD lanes are zero-indexed. In the previous output value:
+
+- Lane 0 contains `65`.
+- Lane 1 contains `780`.
+- Lane 2 contains `1011`.
+- Lane 3 contains `3`.
+
 Some instructions operate on the `v128` type itself:
 
 - v128-specific instructions such as [`load`](/en-US/docs/WebAssembly/Reference/SIMD/load) instructions.
 - General numeric instructions such as [`const`](/en-US/docs/WebAssembly/Reference/Numeric/const).
 
-Most of the instructions, however, operate on interpretations of the `v128` type. See the [SIMD instructions](/en-US/docs/WebAssembly/Reference/SIMD) landing page for the full list.
+Most of the SIMD instructions, however, operate on interpretations of the `v128` type. See the [SIMD instructions](/en-US/docs/WebAssembly/Reference/SIMD) landing page for the full list.
 
 > [!NOTE]
 > Wasm SIMD values can only be used inside of Wasm modules. Attempting to use them outside (for example, by passing them into imported JavaScript functions as parameters) will result in an error.
