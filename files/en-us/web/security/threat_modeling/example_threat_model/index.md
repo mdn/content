@@ -6,12 +6,12 @@ sidebar: security
 ---
 
 This page shows an example threat model for a website. You are encouraged to copy it and change it to suit your own project. You can remove components your projects does not have, add different data flows, etc. Go through each of the four key questions and modify them as needed.
-For more information and guidance on how to create a threat model, see the main [threat modeling page](/en-US/docs/Web/Security/Threat_modeling).
+For more information and guidance on how to create a threat model, see the [threat modeling guide](/en-US/docs/Web/Security/Threat_modeling).
 
 ## Overview
 
 - Project: Blog website
-- Description: Public-facing blog serving static pages, with user comments, a contact form, analytics scripts, and a map embed.
+- Description: Public-facing blog serving static pages. Interactive components include user comments, a contact form, analytics scripts, and a map embed.
 - Version: 1.0
 - Last updated: 2026-02-23
 
@@ -31,7 +31,7 @@ Threats targeting those layers are not modeled here unless they directly affect 
 
 ### Trust boundaries
 
-This threat model assumes a trust boundary between:
+This threat model assumes a [trust boundary](/en-US/docs/Web/Security/Threat_modeling#data_flows_and_trust_boundaries) between:
 
 - The user's browser and the server
 - First-party server components and third-party scripts
@@ -42,7 +42,7 @@ Threats are most likely to occur where data crosses these boundaries.
 
 | ID  | Component                     | Description                                |
 | --- | ----------------------------- | ------------------------------------------ |
-| C1  | Web server with blog software | Serves static pages and API endpoints      |
+| C1  | Server with blog software | Receives and processes requests, returning static pages     |
 | C2  | Authentication system         | Handles user login and sessions            |
 | C3  | Comment system                | Stores and displays user-submitted content |
 | C4  | Contact form                  | Allows users to send emails                |
@@ -138,4 +138,4 @@ This threat model is intentionally incomplete and will evolve. Its purpose is to
 ## See also
 
 - [Threat modeling guide](/en-US/docs/Web/Security/Threat_modeling)
-- [Threat Model for the Web Platform](https://github.com/w3c/threat-model-web/blob/main/index.md)
+- [Threat Model for the Web Platform](https://w3c.github.io/threat-model-web/)
