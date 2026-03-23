@@ -38,7 +38,7 @@ A {{domxref("ToggleEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
-The examples below demonstrates how the `beforetoggle` event might be used for a {{domxref("Popover_API", "popover", "", "nocode")}} element.
+The examples below demonstrate how the `beforetoggle` event might be used for a {{domxref("Popover_API", "popover", "", "nocode")}} element.
 The same examples would work similarly on a {{htmlelement("dialog")}} element.
 
 ### Basic example
@@ -99,7 +99,7 @@ popover.addEventListener("beforetoggle", (event) => {
 
 The `beforetoggle` event is cancelable if fired when opening an element.
 
-Below we show how a popover that might first check if it is allowed to open, and if not, call {{domxref("Event.preventDefault()")}} to cancel the event.
+Below we show how a popover might first check if it is allowed to open, and if not, call {{domxref("Event.preventDefault()")}} to cancel the event.
 In this example we use a checkbox to set whether the popover can open or not: in a more "full featured" example this might depend on the application state, or the data in the popover being ready to display.
 
 #### HTML
