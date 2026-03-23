@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.load32_zero
 sidebar: webassemblysidebar
 ---
 
-The **`load32_zero`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/SIMD/load) loads a single value from a given heap address into the first lane of a `v128` `i32x4` value interpretation, and initializes the other lanes to `0`.
+The **`load32_zero`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/SIMD/load) loads a single value from a given heap address into the first lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i32x4` value interpretation, and initializes the other lanes to `0`.
 
 {{InteractiveExample("Wat Demo: load32_zero", "tabbed-taller")}}
 

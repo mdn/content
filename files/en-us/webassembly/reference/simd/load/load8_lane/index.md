@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.load8_lane
 sidebar: webassemblysidebar
 ---
 
-The **`load8_lane`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/SIMD/load) loads a single value from a given heap address into the specified lane of a `v128` `i8x16` value interpretation.
+The **`load8_lane`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/SIMD/load) loads a single value from a given heap address into the specified lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i8x16` value interpretation.
 
 {{InteractiveExample("Wat Demo: load8_lane", "tabbed-taller")}}
 

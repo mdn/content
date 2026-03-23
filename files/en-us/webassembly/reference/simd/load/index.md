@@ -10,7 +10,7 @@ WebAssembly SIMD load instructions.
 ## Load and load lane
 
 - [`load`](/en-US/docs/WebAssembly/Reference/SIMD/load/load)
-  - : Loads a `v128` value interpretation from a given heap address.
+  - : Loads a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation from a given heap address.
 - [`load8_lane`](/en-US/docs/WebAssembly/Reference/SIMD/load/load8_lane)
   - : Loads a single value from a given heap address into the specified lane of a `v128` `i8x16` value interpretation.
 - [`load16_lane`](/en-US/docs/WebAssembly/Reference/SIMD/load/load16_lane)

@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.load64_splat
 sidebar: webassemblysidebar
 ---
 
-The **`load64_splat`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/SIMD/load) loads a single value from a given heap address into all lanes of a `v128` `i64x2` value interpretation.
+The **`load64_splat`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/SIMD/load) loads a single value from a given heap address into all lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i64x2` value interpretation.
 
 {{InteractiveExample("Wat Demo: load64_splat", "tabbed-taller")}}
 

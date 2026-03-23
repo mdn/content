@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.load64_zero
 sidebar: webassemblysidebar
 ---
 
-The **`load64_zero`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/SIMD/load) loads a single value from a given heap address into the first lane of a `v128` `i64x2` value interpretation, and initializes the other lane to `0`.
+The **`load64_zero`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/SIMD/load) loads a single value from a given heap address into the first lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i64x2` value interpretation, and initializes the other lane to `0`.
 
 {{InteractiveExample("Wat Demo: load64_zero", "tabbed-taller")}}
 

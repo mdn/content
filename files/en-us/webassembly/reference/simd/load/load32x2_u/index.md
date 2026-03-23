@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.load32x2_u
 sidebar: webassemblysidebar
 ---
 
-The **`load32x2_u`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/SIMD/load) loads two 32-bit integers from a given heap address and zero extends each one to a 64-bit lane, outputting a `v128` `i64x2` value interpretation.
+The **`load32x2_u`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/SIMD/load) loads two 32-bit integers from a given heap address and zero extends each one to a 64-bit lane, outputting a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i64x2` value interpretation.
 
 {{InteractiveExample("Wat Demo: load32x2_u", "tabbed-taller")}}
 
