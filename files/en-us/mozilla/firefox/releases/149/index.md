@@ -43,6 +43,10 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{CSSXRef("vertical-align")}} CSS property is now a shorthand property for {{CSSXRef("alignment-baseline")}}, {{CSSXRef("baseline-shift")}} and {{CSSXRef("baseline-source")}} properties. ([Firefox bug 1830771](https://bugzil.la/1830771)).
 
+- The [`<container-query>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container-query) part of the {{cssxref("@container")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) condition is now optional.
+  This allows matching against containers based solely on their names.
+  ([Firefox bug 2016474](https://bugzil.la/2016474)).
+
 <!-- #### Removals -->
 
 <!-- ### JavaScript -->
@@ -101,13 +105,25 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- Updated the screenshot implementations for both the WebDriver BiDi and WebDriver classic protocols to correctly return an error when the requested screenshot area exceeds the maximum supported dimensions, rather than silently clipping it. ([Firefox bug 1994148](https://bugzil.la/1994148)).
+- Updated the Actions implementation for both the WebDriver BiDi and WebDriver classic protocols to allow a `scroll` action of input source type `wheel` to scroll more than the visual viewport dimensions. ([Firefox bug 1962355](https://bugzil.la/1962355)).
 
-<!-- #### Marionette -->
+#### WebDriver BiDi
+
+- Added support for automatic user prompt handling, which can be configured through capabilities with the `session.new` command. ([Firefox bug 1905086](https://bugzil.la/1905086)).
+- Added the `browser.setDownloadBehavior` command, which lets clients allow or prohibit the downloads and also set a custom download folder. This behavior can be configured per session or per user contexts. ([Firefox bug 1989022](https://bugzil.la/1989022)).
+- Added the `script.realmCreated` and `script.realmDestroyed` events for worker realms (for dedicated, shared and service workers). ([Firefox bug 1936770](https://bugzil.la/1936770)).
+- Fixed an issue where the `browsingContext.userPromptOpened` and `browsingContext.userPromptClosed` events incorrectly reported the top-level context ID instead of the iframe's context ID on Android. ([Firefox bug 2007385](https://bugzil.la/2007385)).
+- Fixed the serialization for DOM nodes to stop exposing User Agent specific shadow roots. ([Firefox bug 2016673](https://bugzil.la/2016673)).
+- Updated the logic of applying different settings to new browsing contexts to make sure that in the case of creating a browsing context with the `window.open` command, emulations, viewport overrides and preload scripts apply before the command returns. ([Firefox bug 1985997](https://bugzil.la/1985997), [Firefox bug 2005546](https://bugzil.la/2005546), and [Firefox bug 2005558](https://bugzil.la/2005558)).
+
+#### Marionette
+
+- Improved several WebDriver classic commands to handle `implicit` and `pageLoad` timeouts in line with the script timeout, allowing `null` values to disable the timeouts. ([Firefox bug 2008345](https://bugzil.la/2008345)).
 
 ## Changes for add-on developers
 
@@ -117,10 +133,12 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
     ([Firefox bug 1993037](https://bugzil.la/1993037))
 - Adds support for `tabId` as a top-level parameter in {{WebExtAPIRef("action.isEnabled")}} and {{WebExtAPIRef("browserAction.isEnabled")}}. This change provides for compatibility with the Chrome implementation of `action.isEnabled`. ([Firefox bug 2013477](https://bugzil.la/2013477))
 - A user gesture is no longer required for {{WebExtAPIRef("action.openPopup")}} and {{WebExtAPIRef("browserAction.openPopup")}} to open a popup. This feature was available behind the `extensions.openPopupWithoutUserGesture.enabled` preference from Firefox 108. This change aligns Firefox's behavior with Chrome and Safari. ([Firefox bug 1799344](https://bugzil.la/1799344))
+- If `windowId` is passed in {{WebExtAPIRef("action.openPopup")}} or {{WebExtAPIRef("browserAction.openPopup")}}, the window must be focused (active) for the popup to open. To open a popup in an unfocused window {{WebExtAPIRef("windows.update","windows.update(windowId, { focused: true })")}} must be called first. This change aligns Firefox behavior with Chrome. ([Firefox bug 2011516](https://bugzil.la/2011516))
 
 <!-- ### Removals -->
 
-The ability of extensions to dynamically execute code in their `moz-extension:` documents with {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, and {{WebExtAPIRef("scripting.removeCSS")}} is deprecated. The feature is no longer available in Firefox Nightly, and the beta and release versions of Firefox provide a warning in the tab's console. This restriction will apply to all versions of Firefox 152 and later. As an alternative, an extension can run code in its documents dynamically by registering a {{WebExtAPIRef("runtime.onMessage")}} listener in the document's script, then sending a message to trigger execution of the required code.([Firefox bug 2011234](https://bugzil.la/2011234))
+- The ability of extensions to dynamically execute code in their `moz-extension:` documents with {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, and {{WebExtAPIRef("scripting.removeCSS")}} is deprecated. ([Firefox bug 2011234](https://bugzil.la/2011234)) The feature is no longer available in Firefox Nightly, and the beta and release versions of Firefox provide a warning in the tab's console. This restriction will apply to all versions of Firefox 152 and later. ([Firefox bug 2015559](https://bugzil.la/2015559)) As an alternative, an extension can run code in its documents dynamically by registering a {{WebExtAPIRef("runtime.onMessage")}} listener in the document's script, then sending a message to trigger execution of the required code.
+- The implicit CSS filter applied to [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) SVG icons on dark themes is deactivated in Nightly builds ([Firefox bug 2001318](https://bugzil.la/2001318)) and will be deactivated in other Firefox editions from version 152 ([Firefox bug 2016509](https://bugzil.la/2016509)). You can test page action SVG icons with the CSS filter disabled in other Firefox editions by creating a boolean `about:config` preference called `extensions.webextensions.pageActionIconDarkModeFilter.enabled` and setting it to `false`.
 
 <!-- ### Other -->
 
@@ -149,3 +167,12 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`@container style()` queries** (Nightly): `layout.css.style-queries.enabled`
 
   The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2014404](https://bugzil.la/2014404)).
+
+- **CSS Typed Object Model Level 1**: `layout.css.typed-om.enabled`
+
+  The CSS Typed Object Model Level 1 specification is being implemented.
+  In this release, support for the {{domxref("CSSNumericValue/to","to()")}} method of the {{domxref("CSSNumericValue")}} interface was added, allowing the conversion of a CSS numeric value from one unit to another. ([Firefox bug 1278697](https://bugzil.la/1278697)).
+
+- **JPEG XL image support: Rust-based decoder**: `image.jxl.enabled`
+
+  The previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decoder has been replaced with a new Rust-based implementation that uses the `jxl-rs` library. ([Firefox bug 1986393](https://bugzil.la/1986393)).

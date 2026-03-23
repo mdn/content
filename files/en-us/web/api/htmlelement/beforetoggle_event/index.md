@@ -38,8 +38,8 @@ A {{domxref("ToggleEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
-The examples below demonstrates how the `beforetoggle` event might be used for a {{domxref("Popover_API", "popover", "", "nocode")}} or {{htmlelement("dialog")}} element.
-The same examples would work similarly on the other element types.
+The examples below demonstrate how the `beforetoggle` event might be used for a {{domxref("Popover_API", "popover", "", "nocode")}} element.
+The same examples would work similarly on a {{htmlelement("dialog")}} element.
 
 ### Basic example
 
@@ -77,7 +77,7 @@ function log(text) {
 
 #### JavaScript
 
-The code gets adds an event listener for the `beforetoggle` event and logs the state.
+The code adds an event listener for the `beforetoggle` event and logs the state.
 
 ```js
 const popover = document.getElementById("mypopover");
@@ -99,12 +99,12 @@ popover.addEventListener("beforetoggle", (event) => {
 
 The `beforetoggle` event is cancelable if fired when opening an element.
 
-Below we show how a popover that might first check if it is allowed to open, and if not, call {{domxref("Event.preventDefault()")}} to cancel the event.
-In this example we use a button to set whether the popover can open or not: in a more "full featured" example this might depend on the application state, or the data in the popover being ready to display.
+Below we show how a popover might first check if it is allowed to open, and if not, call {{domxref("Event.preventDefault()")}} to cancel the event.
+In this example we use a checkbox to set whether the popover can open or not: in a more "full featured" example this might depend on the application state, or the data in the popover being ready to display.
 
 #### HTML
 
-The HTML consists of a popover, a button for toggling it open and closed, and a button for setting whether the button can be opened.
+The HTML consists of a popover, a button for toggling it open and closed, and a checkbox for setting whether the popover can be opened.
 
 ```html
 <button popovertarget="mypopover">Toggle the popover</button>
@@ -137,7 +137,7 @@ function log(text) {
 
 #### JavaScript
 
-First we set up the code to simulate a state where we don't want to allow the popover to open.
+First we set up the code to simulate a state where we want to allow the popover to open.
 This is represented by the variable `allowOpen`, which is toggled when the associated checkbox is toggled.
 
 ```js
@@ -150,7 +150,7 @@ allowCheckbox.addEventListener("change", (event) => {
 });
 ```
 
-The code gets adds an event listener for the `beforetoggle` event.
+The code adds an event listener for the `beforetoggle` event.
 If `allowOpen` is false then `preventDefault()` is called, which stops the popup from opening.
 
 ```js
@@ -173,23 +173,6 @@ popover.addEventListener("beforetoggle", (event) => {
 #### Result
 
 {{EmbedLiveSample("Prevent a popover opening", '100%', "250px")}}
-
-### A note on beforetoggle event coalescing
-
-If multiple `beforetoggle` events are fired before the event loop has a chance to cycle, only a single event will be fired.
-This is referred to as "event coalescing".
-
-For example:
-
-```js
-popover.addEventListener("beforetoggle", () => {
-  // …
-});
-
-popover.showPopover();
-popover.hidePopover();
-// `beforetoggle` only fires once
-```
 
 ### Other examples
 

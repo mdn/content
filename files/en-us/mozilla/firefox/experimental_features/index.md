@@ -399,6 +399,22 @@ The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rul
 
 ## APIs
 
+### CSS Typed Object Model Level 1
+
+Implementation work has started on the [CSS Typed OM Level 1](https://drafts.css-houdini.org/css-typed-om/).
+For example, the {{domxref("CSSNumericValue/to","to()")}} method of the {{domxref("CSSNumericValue")}} interface is supported for converting a CSS numeric value from one unit to another.
+([Firefox bug 1278697](https://bugzil.la/1278697)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 149           | No                  |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `layout.css.typed-om.enabled`
+  - : Set to `true` to enable.
+
 ### Notification actions and maxActions properties
 
 The {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface are supported in Nightly on desktop.
@@ -520,6 +536,7 @@ Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images if this feature is e
 See [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
 
 Note that, as shown below, the feature is only available on Nightly builds (irrespective of whether the preference is set).
+In Firefox 149, the previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decoder was replaced with a new Rust-based implementation that uses the `jxl-rs` library ([Firefox bug 1986393](https://bugzil.la/1986393)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |

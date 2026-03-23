@@ -45,6 +45,11 @@ The following WGSL language extensions are defined at [WGSL language extensions]
     > [!NOTE]
     > For the `subgroup_id` WGSL feature to be usable, the [`subgroups`](https://gpuweb.github.io/gpuweb/wgsl/#extension-subgroups) extension needs to be enabled in the {{domxref("GPUDevice")}} (see {{domxref("GPUSupportedFeatures")}}).
 
+- `uniform_buffer_standard_layout`
+  - : When available, uniform buffers use the same [memory layout constraints](https://gpuweb.github.io/gpuweb/wgsl/#address-space-layout-constraints) as storage buffers, which makes it easier to share data structures across both kinds of buffers. This means uniform buffers are no longer required to have 16-byte alignment on array elements, or to pad nested structure offsets to a multiple of 16 bytes.
+
+    See [WGSL uniform_buffer_standard_layout extension](https://developer.chrome.com/blog/new-in-webgpu-144#wgsl_uniform_buffer_standard_layout_extension) for more details.
+
 - `unrestricted_pointer_parameters`
   - : Loosens restrictions on pointers being passed to WGSL functions. When available, the following are allowed:
     - Parameter pointers to storage, uniform, and workgroup address spaces being passed to user-declared functions.
