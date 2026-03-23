@@ -26244,7 +26244,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/DeprecationReportBody": {
+  "Web/API/DeprecationReport": {
     "modified": "2020-10-15T22:16:17.596Z",
     "contributors": ["chrisdavidmills"]
   },
@@ -43363,7 +43363,7 @@
     "modified": "2019-03-23T22:12:06.007Z",
     "contributors": ["Sheppy", "Giveitup007"]
   },
-  "Web/API/InterventionReportBody": {
+  "Web/API/InterventionReport": {
     "modified": "2020-10-15T22:16:18.407Z",
     "contributors": ["chrisdavidmills"]
   },
@@ -54829,22 +54829,6 @@
   "Web/API/RelativeOrientationSensor/RelativeOrientationSensor": {
     "modified": "2020-10-15T22:09:06.275Z",
     "contributors": ["sideshowbarker", "jpmedley"]
-  },
-  "Web/API/Report": {
-    "modified": "2020-10-15T22:16:18.021Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Web/API/Report/body": {
-    "modified": "2020-10-15T22:16:16.430Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Web/API/Report/type": {
-    "modified": "2020-10-15T22:16:18.423Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Web/API/Report/url": {
-    "modified": "2020-10-15T22:16:17.693Z",
-    "contributors": ["chrisdavidmills"]
   },
   "Web/API/ReportingObserver": {
     "modified": "2020-10-15T22:16:12.954Z",
