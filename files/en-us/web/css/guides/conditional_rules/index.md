@@ -127,7 +127,7 @@ The CSS conditional rules module also introduces a `media()` CSS function. Curre
   - {{cssxref("@namespace")}} at-rule
 
 - [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
-  - [Using anchored container queries](/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
+  - [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 
 ## Specifications
 

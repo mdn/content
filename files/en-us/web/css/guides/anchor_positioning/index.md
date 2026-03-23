@@ -65,7 +65,7 @@ In addition, the specification provides CSS-only mechanisms to:
 - [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)
   - : A guide to the mechanisms CSS anchor positioning provides to prevent anchor-positioned elements from overflowing their containing elements or the viewport, including position try fallback options and conditionally hiding elements.
 
-- [Using anchored container queries](/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
+- [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
   - : Explains how to use anchored container queries to conditionally apply styles to anchor-positioned elements depending on what position try fallback options are active on them.
 
 ## Related concepts

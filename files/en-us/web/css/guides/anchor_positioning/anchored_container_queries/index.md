@@ -8,7 +8,7 @@ sidebar: cssref
 
 [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) includes mechanisms for providing [fallback options](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding). These are alternative fallback positions that the browser can try placing an anchor-positioned element in, relative to its anchor, to put it back on-screen if the positioned element starts to overflow the viewport.
 
-An additional requirement is styling the anchor-positioned element differently depending on which fallback position it is placed in, which is achieved using **anchored container queries**. This guide show how to use anchored container queries, and provides a couple of examples.
+An additional requirement is styling the anchor-positioned element differently depending on which fallback position it is placed in, which is achieved using **anchored container queries**. This guide shows how to use anchored container queries, and provides a couple of examples.
 
 > [!NOTE]
 > For information on the basic fundamentals of CSS anchor positioning, see [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using).
@@ -40,18 +40,19 @@ With this in place, we can now write a container query like so:
 
 ```css
 @container anchored(fallback: flip-block) {
-  /* Descendent styles here */
+  /* Descendant styles here */
 }
 ```
 
 The query test — `anchored(fallback: flip-block)` — will return true when the `flip-block` fallback option is applied to the tooltip, in which case the styles specified within the `@container` block will be applied. You might for example want to change the position and orientation of an arrow so that it points upwards rather than downwards, or change the direction of a gradient.
 
 > [!NOTE]
-> Bear in mind that, as with all container queries, the applied styles can only affect descendents of the container, not the container itself. This might require you to apply some of your positioned element styles to a wrapper element inside it, rather than to the element itself, as demonstrated in [Multiple fallbacks example](#multiple_fallbacks_example).
+> Bear in mind that, as with all container queries, the applied styles can only affect descendants of the container, not the container itself. This might require you to apply some of your positioned element styles to a wrapper element inside it, rather than to the element itself, as demonstrated in [Multiple fallbacks example](#multiple_fallbacks_example).
 
 ## Basic usage example
 
-This example includes an anchor element that has a infobox positioned relative to it. Initially, the infobox is positioned above the anchor and includes an arrow pointing down towards the anchor. We include a position try fallback so that the infobox moves below the anchor when the content scrolls up enough that the infobox starts to scroll off the top of the viewport. In addition, we use an anchored container query to change styles once the fallback kicks in, moving the arrow and pointing it upwards instead.
+This example includes an anchor element that has an infobox positioned relative to it.
+Initially, the infobox is positioned above the anchor and includes an arrow pointing down towards the anchor. We include a position try fallback so that the infobox moves below the anchor when the content scrolls up enough that the infobox starts to scroll off the top of the viewport. In addition, we use an anchored container query to change styles once the fallback kicks in, moving the arrow and pointing it upwards instead.
 
 The anchor and infobox are represented by two {{htmlelement("div")}} elements, as shown below. They are surrounded by text content in the final rendering to cause the page to scroll, but we've hidden it for brevity:
 
@@ -192,7 +193,7 @@ p {
 
 Next, we give the `infobox` `<div>` a {{cssxref("position")}} value of `fixed` and a {{cssxref("position-anchor")}} value of `--my-anchor` to associate it with the anchor element. We then give the infobox a {{cssxref("position-area")}} value of `top` to position it above the anchor element and a {{cssxref("position-try-fallbacks")}} value of `bottom` so that the infobox will be moved below the anchor when it starts to overflow the top of the viewport as the content is scrolled upwards.
 
-Finally, we set a {{cssxref("container-type")}} value of `anchored` on the infobox to designate it as an anchored query container, meaning that we can now detect when different `position-try-fallbacks` are active on the infobox via {{cssxref("@container")}} at-rules, and update styles on its descendents as a result.
+Finally, we set a {{cssxref("container-type")}} value of `anchored` on the infobox to designate it as an anchored query container, meaning that we can now detect when different `position-try-fallbacks` are active on the infobox via {{cssxref("@container")}} at-rules, and update styles on its descendants as a result.
 
 ```css live-sample___basic-example
 .infobox {
@@ -214,7 +215,7 @@ Now we'll add the arrow to the infobox using generated content on its {{cssxref(
 }
 ```
 
-Now onto the anchored container query. We include a `@container` at-rule with its test defined as `anchored(fallback: bottom)`. This means that when the `bottom` position-try fallback is applied to the inbox, the CSS inside the at-rule is applied to the document. Inside, we define alternative styling for the infobox `::before` pseudo-element that swaps out the down arrow icon for an up arrow and positions it at the top of the infobox.
+Now onto the anchored container query. We include a `@container` at-rule with its test defined as `anchored(fallback: bottom)`. This means that when the `bottom` position-try fallback is applied to the infobox, the CSS inside the at-rule is applied to the document. Inside, we define alternative styling for the infobox `::before` pseudo-element that swaps out the down arrow icon for an up arrow and positions it at the top of the infobox.
 
 ```css live-sample___basic-example
 @container anchored(fallback: bottom) {
@@ -239,7 +240,7 @@ If you scroll the anchor back down towards the bottom of the viewport, the infob
 
 ## Multiple fallbacks example
 
-This example shows multiple position-try fallbacks and anchored container queries in action, and also addresses the problem of what to do if you want to use anchored container queries to set styles on the anchor-positioned element itself, rather than its descendents, using an extra wrapper element. The example also includes some JavaScript that allows you to move the anchor element around the screen using the mouse or the keyboard to check out the different fallbacks.
+This example shows multiple position-try fallbacks and anchored container queries in action, and also addresses the problem of what to do if you want to use anchored container queries to set styles on the anchor-positioned element itself, rather than its descendants, using an extra wrapper element. The example also includes some JavaScript that allows you to move the anchor element around the screen using the mouse or the keyboard to check out the different fallbacks.
 
 The HTML for this example includes two {{htmlelement("div")}} elements to represent the anchor and infobox. The `anchor` `<div>` includes a [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute to make it keyboard-focusable, while the `infobox` `<div>` includes an extra wrapper `<div>` to apply the infobox styles to, so we can style it via `@container` at-rules.
 

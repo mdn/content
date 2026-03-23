@@ -528,7 +528,7 @@ See [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditiona
 
 ### Anchored queries
 
-See [Using anchored container queries](/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries) for anchored query examples.
+See [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries) for anchored query examples.
 
 ## Specifications
 
@@ -543,7 +543,7 @@ See [Using anchored container queries](/docs/Web/CSS/Guides/Anchor_positioning/A
 - [Using container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
-- [Using anchored container queries](/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
+- [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}

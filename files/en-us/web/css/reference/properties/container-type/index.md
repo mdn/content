@@ -13,7 +13,7 @@ An element can be established as a query container using the **`container-type`*
 
 - [Size](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries): Enable selectively applying CSS rules to a container's children based on a general size or inline size condition such as a maximum or minimum dimension, aspect ratio, or orientation.
 - [Scroll-state](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries): Enable selectively applying CSS rules to a container's children based on a scroll-state condition such as whether the container is a scroll container that is partially scrolled or whether the container is a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) that is going to be snapped to its scroll snap container.
-- [Anchored](/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries): Enable selectively applying CSS rules to a container's children based on whether the container is [anchor-positioned](/en-US/docs/Web/CSS/Guides/Anchor_positioning) and has a [position-try fallback option](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) applied to it.
+- [Anchored](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries): Enable selectively applying CSS rules to a container's children based on whether the container is [anchor-positioned](/en-US/docs/Web/CSS/Guides/Anchor_positioning) and has a [position-try fallback option](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) applied to it.
 
 ## Syntax
 
@@ -90,7 +90,7 @@ In the first case, the queried container is the scroll container itself. In the 
 
 ### Anchored container queries
 
-[Anchored container queries](/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries) allow you to selectively apply CSS rules to the descendants of an anchor-positioned container when it has a position-try fallback active on it, as specified via the {{cssxref("position-try-fallbacks")}} property.
+[Anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries) allow you to selectively apply CSS rules to the descendants of an anchor-positioned container when it has a position-try fallback active on it, as specified via the {{cssxref("position-try-fallbacks")}} property.
 
 For example, you might have an anchor-positioned tooltip element that is positioned above its anchor by default via a {{cssxref("position-area")}} value of `top`, but has a `position-try-fallbacks` value of `flip-block` specified. This will cause the tooltip to flip in the block direction to the bottom of its anchor when it starts to overflow the top of the viewport. If we set `container-type: anchored` on it, we can detect when the position-try fallback is applied via a `@container` at-rule and apply CSS as a result.
 
@@ -195,7 +195,7 @@ Writing a container query via the {{Cssxref("@container")}} at-rule will apply s
 - [CSS container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
-- [Using anchored container queries](/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
+- [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 - {{Cssxref("@container")}} at-rule
 - CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-name")}} property

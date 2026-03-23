@@ -399,13 +399,13 @@ With this in place, we can now write a container query like so:
 
 ```css
 @container anchored(fallback: flip-block) {
-  /* Descendent styles here */
+  /* Descendant styles here */
 }
 ```
 
 The query test — `anchored(fallback: flip-block)` — will return true when the `flip-block` fallback option is applied to the tooltip, in which case the styles specified within the `@container` block will be applied. You might for example want to change the position and orientation of the arrow icon so that it continues to point towards the anchor, change the direction of a gradient, etc.
 
-For more information on anchored container queries and some examples, see [Using anchored container queries](/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries).
+For more information on anchored container queries and some examples, see [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries).
 
 ## Using `position-try-order`
 
