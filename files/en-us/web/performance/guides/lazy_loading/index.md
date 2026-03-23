@@ -63,7 +63,7 @@ Very often, webpages contain many images that contribute to data-usage and how f
 
 #### Loading attribute
 
-The [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) attribute on an {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("video")}}, or , {{HTMLElement("audio")}} element can be used to instruct the browser to defer loading of images/iframes/videos/audio that are off-screen until the user scrolls near them.
+The [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) attribute on an {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("video")}}, or {{HTMLElement("audio")}} element can be used to instruct the browser to defer loading of linked resources when elements are off-screen until the user scrolls near them.
 This allows non-critical resources to load only if needed, potentially speeding up initial page loads and reducing network usage.
 
 ```html
