@@ -425,7 +425,7 @@ In a real site you will probably pull in an up-to-date contacts list from a serv
 ```js
 const contacts = [
   { name: "Aisha Khan", selected: false },
-  ...
+  // …
 ];
 ```
 

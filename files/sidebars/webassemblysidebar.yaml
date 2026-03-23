@@ -139,6 +139,21 @@ sidebar:
         details: closed
         children:
           - type: listSubPages
+            path: /WebAssembly/Reference/SIMD/bitwise
+            link: /WebAssembly/Reference/SIMD/bitwise
+            title: Bitwise
+            details: closed
+          - type: listSubPages
+            path: /WebAssembly/Reference/SIMD/conversion
+            link: /WebAssembly/Reference/SIMD/conversion
+            title: Conversion
+            details: closed
+          - type: listSubPages
+            path: /WebAssembly/Reference/SIMD/extract
+            link: /WebAssembly/Reference/SIMD/extract
+            title: Extract
+            details: closed
+          - type: listSubPages
             path: /WebAssembly/Reference/SIMD/load
             link: /WebAssembly/Reference/SIMD/load
             title: Load

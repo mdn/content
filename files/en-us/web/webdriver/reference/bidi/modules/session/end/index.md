@@ -3,9 +3,13 @@ title: session.end command
 short-title: session.end
 slug: Web/WebDriver/Reference/BiDi/Modules/session/end
 page-type: webdriver-command
+status:
+  - experimental
 browser-compat: webdriver.bidi.session.end
 sidebar: webdriver
 ---
+
+{{SeeCompatTable}}
 
 The `session.end` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`session`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session) module ends the client's current BiDi session with the browser.
 

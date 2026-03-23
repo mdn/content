@@ -207,6 +207,7 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/Guides/Properties_and_values_API/Houdini
+      - /Web/CSS/Guides/Properties_and_values_API/Registering_properties
   - type: listSubPages
     path: /Web/CSS/Guides/Scroll_anchoring
     title: Scroll_anchoring
