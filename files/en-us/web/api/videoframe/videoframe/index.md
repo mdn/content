@@ -13,11 +13,9 @@ The **`VideoFrame()`** constructor creates a new {{domxref("VideoFrame")}} objec
 ## Syntax
 
 ```js-nolint
-// Image constructor
 new VideoFrame(image)
 new VideoFrame(image, options)
 
-// Data constructor
 new VideoFrame(data, options)
 ```
 
@@ -50,7 +48,7 @@ The first type of constructor creates a new {{domxref("VideoFrame")}} from an im
     - `metadata` {{optional_inline}}
       - : An object containing metadata describing the video frame, specified by the [WebCodecs VideoFrame Metadata Registry](https://w3c.github.io/webcodecs/video_frame_metadata_registry.html), which can contain the following properties:
         - `rtpTimestamp` {{optional_inline}}
-          - : The RTP timestamp of the corresponding encoded frame. Only video frames originating from [WebRTC](/en-US/docs/Web/API/WebRTC_API) sources will have `rtpTimestamp` metadata.
+          - : The RTP timestamp of the corresponding encoded frame.
     - `rotation` {{optional_inline}}
       - : An integer representing the rotation (0, 90, 180, or 270) in degrees clockwise. Defaults to `0`. Arbitrary numbers (including negatives) are rounded to the next quarter turn.
     - `timestamp`
@@ -115,7 +113,7 @@ The second type of constructor creates a new {{domxref("VideoFrame")}} from an {
     - `metadata` {{optional_inline}}
       - : An object containing metadata describing the video frame, specified by the [WebCodecs VideoFrame Metadata Registry](https://w3c.github.io/webcodecs/video_frame_metadata_registry.html), which can contain the following properties:
         - `rtpTimestamp` {{optional_inline}}
-          - : The RTP timestamp of the corresponding encoded frame. Only video frames originating from [WebRTC](/en-US/docs/Web/API/WebRTC_API) sources will have `rtpTimestamp` metadata.
+          - : The RTP timestamp of the corresponding encoded frame.
     - `rotation` {{optional_inline}}
       - : An integer representing the rotation (0, 90, 180, or 270) in degrees clockwise. Defaults to `0`. Arbitrary numbers (including negatives) are rounded to the next quarter turn.
     - `timestamp`

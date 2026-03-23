@@ -26,7 +26,7 @@ An object containing metadata describing the video frame, as specified by the [W
 This can contain the following properties:
 
 - `rtpTimestamp` {{optional_inline}}
-  - : The RTP timestamp of the corresponding encoded frame. Only video frames originating from [WebRTC](/en-US/docs/Web/API/WebRTC_API) sources will have `rtpTimestamp` metadata. This allows applications using a {{domxref("MediaStreamTrackProcessor")}} (for example, to render decoded WebRTC frames to a `<canvas>`) or [WebCodecs](/en-US/docs/Web/API/WebCodecs_API) (for example, for custom decoding pipelines) to correlate each exposed frame with its original RTP transport timestamp. This is useful for example when aligning video with audio segments or debugging latency issues.
+  - : The RTP timestamp of the corresponding encoded frame. Video frames originating from [WebRTC](/en-US/docs/Web/API/WebRTC_API) sources will have `rtpTimestamp` metadata. This allows applications using a {{domxref("MediaStreamTrackProcessor")}} (for example, to render decoded WebRTC frames to a `<canvas>`) or a custom decoding pipeline to correlate each exposed frame with its original RTP transport timestamp. This is useful for example when aligning video with audio segments or debugging latency issues.
 
 If the video frame doesn't have any of the listed metadata items associated with it, `metadata()` will return an empty object.
 
