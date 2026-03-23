@@ -3,12 +3,12 @@ title: text-decoration-skip
 slug: Web/CSS/Reference/Properties/text-decoration-skip
 page-type: css-property
 status:
-  - experimental
+  - deprecated
 browser-compat: css.properties.text-decoration-skip
 sidebar: cssref
 ---
 
-{{SeeCompatTable}}
+{{deprecated_header}}
 
 The **`text-decoration-skip`** [CSS](/en-US/docs/Web/CSS) property sets what parts of an element's content any text decoration affecting the element must skip over. It controls all text decoration lines drawn by the element and also any text decoration lines drawn by its ancestors.
 
