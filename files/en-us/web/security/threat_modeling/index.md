@@ -20,7 +20,7 @@ This page describes the overall threat modeling process. The following pages giv
 
 A threat is something that has a negative effect on your objectives or your assets, if it happens.
 
-In practice, security is about reducing the chances that a threat can reach something you care about, or to limit the impact if the threat materializes. Also, another approach to limit the threat is to avoid it - e.g., elimitating the affected.
+In practice, security is about reducing the chances that a threat can reach something you care about, or to limit the impact if the threat materializes. Also, another approach to limit the threat is to avoid it - e.g., removing the affected feature.
 
 Threats are always present but they don't have to turn into attacks. An attack is a realization of a threat on an operational system (a system is a collection of assets) and ideally, if the security posture of a system is strong enough, potential threats won't turn into actual attacks.
 
