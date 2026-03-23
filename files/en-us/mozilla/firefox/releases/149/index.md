@@ -1,41 +1,24 @@
 ---
-title: Firefox 149 release notes for developers (Beta)
-short-title: Firefox 149 (Beta)
+title: Firefox 149 release notes for developers (Stable)
+short-title: Firefox 149 (Stable)
 slug: Mozilla/Firefox/Releases/149
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 149 that affect developers.
-Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [March 24, 2026](https://whattrainisitnow.com/release/?version=149).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 149 was released on [March 24, 2026](https://whattrainisitnow.com/release/?version=149).
 
 ## Changes for web developers
-
-<!-- ### Developer Tools -->
 
 ### HTML
 
 - The [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) global attribute now supports the [`hint`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover#hint) value. Popovers with the `hint` value will not close `auto` popovers when they are displayed, but will close other hint popovers. ([Firefox bug 1867743](https://bugzil.la/1867743)).
 
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
 ### MathML
 
 - The CSS [`font-family: math`](/en-US/docs/Web/CSS/Reference/Properties/font-family#math) property is now supported, and applied to {{mathmlelement('math')}} elements by default.
   This ensures that websites can use an appropriate math font and/or MathML without having to know what fonts are present on the underlying OS. ([Firefox bug 2014703](https://bugzil.la/2014703)).
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
 
 ### CSS
 
@@ -47,21 +30,9 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This allows matching against containers based solely on their names.
   ([Firefox bug 2016474](https://bugzil.la/2016474)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### APIs
 
@@ -104,12 +75,6 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Prior to this change, the media element's volume affected the volume of the captured stream.
   ([Firefox bug 2010427](https://bugzil.la/2010427)).
 
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### General
@@ -140,12 +105,8 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - A user gesture is no longer required for {{WebExtAPIRef("action.openPopup")}} and {{WebExtAPIRef("browserAction.openPopup")}} to open a popup. This feature was available behind the `extensions.openPopupWithoutUserGesture.enabled` preference from Firefox 108. This change aligns Firefox's behavior with Chrome and Safari. ([Firefox bug 1799344](https://bugzil.la/1799344))
 - If `windowId` is passed in {{WebExtAPIRef("action.openPopup")}} or {{WebExtAPIRef("browserAction.openPopup")}}, the window must be focused (active) for the popup to open. To open a popup in an unfocused window {{WebExtAPIRef("windows.update","windows.update(windowId, { focused: true })")}} must be called first. This change aligns Firefox behavior with Chrome. ([Firefox bug 2011516](https://bugzil.la/2011516))
 
-<!-- ### Removals -->
-
 - The ability of extensions to dynamically execute code in their `moz-extension:` documents with {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, and {{WebExtAPIRef("scripting.removeCSS")}} is deprecated. ([Firefox bug 2011234](https://bugzil.la/2011234)) The feature is no longer available in Firefox Nightly, and the beta and release versions of Firefox provide a warning in the tab's console. This restriction will apply to all versions of Firefox 152 and later. ([Firefox bug 2015559](https://bugzil.la/2015559)) As an alternative, an extension can run code in its documents dynamically by registering a {{WebExtAPIRef("runtime.onMessage")}} listener in the document's script, then sending a message to trigger execution of the required code.
 - The implicit CSS filter applied to [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) SVG icons on dark themes is deactivated in Nightly builds ([Firefox bug 2001318](https://bugzil.la/2001318)) and will be deactivated in other Firefox editions from version 152 ([Firefox bug 2016509](https://bugzil.la/2016509)). You can test page action SVG icons with the CSS filter disabled in other Firefox editions by creating a boolean `about:config` preference called `extensions.webextensions.pageActionIconDarkModeFilter.enabled` and setting it to `false`.
-
-<!-- ### Other -->
 
 ## Experimental web features
 
