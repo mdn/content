@@ -13,9 +13,12 @@ The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gu
 Style declarations are filtered by a condition and applied to the container if the condition is true.
 The condition is evaluated when the queried container size, [`<style-feature>`](#container_style_queries), scroll-state, or state of the applied [position-try fallback](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) (in the case of [anchor-positioned](/en-US/docs/Web/CSS/Guides/Anchor_positioning) containers) changes.
 
-The {{cssxref("container-name")}} property specifies a list of query container names. These names can be used by `@container` rules to filter which query containers are targeted. The optional, case-sensitive `<container-name>` filters the query containers that are targeted by the query.
+The condition must specify one or both of {{cssxref("container-name")}} and `<container-query>`.
 
-Once an eligible query container has been selected for an element, each container feature in the `<container-condition>` is evaluated against that query container.
+The {{cssxref("container-name")}} property specifies a list of query container names, which are used to filter which containers are targeted by the `@container` rules.
+The container features in the `<container-query>` are evaluated against the selected containers.
+If no `<container-name>` is specified, the `<container-query>` features are evaluated against the nearest ancestor query container that has the matching [`container-type`](/en-US/docs/Web/CSS/Reference/Properties/container-type).
+If no `<container-query>` is specified, named containers are selected.
 
 ## Syntax
 
@@ -31,6 +34,13 @@ Once an eligible query container has been selected for an element, each containe
 @container tall (height > 30rem) {
   p {
     line-height: 1.6;
+  }
+}
+
+/* With a <container-name> only (query is optional) */
+@container sidebar {
+  h2 {
+    background: blue;
   }
 }
 
@@ -76,10 +86,11 @@ Once an eligible query container has been selected for an element, each containe
 ### Parameters
 
 - `<container-condition>`
-  - : An optional `<container-name>` and a `<container-query>`. Styles defined in the `<stylesheet>` are applied if the condition is true.
-    - `<container-name>`
-      - : Optional. The name of the container that the styles will be applied to when the query evaluates to true, specified as an {{cssxref("ident")}}.
-    - `<container-query>`
+  - : One or both of `<container-name>` and `<container-query>`.
+    Styles defined in the `<stylesheet>` are applied if the condition is `true`.
+    - `<container-name>` {{optional_inline}}
+      - : The name of the container that the styles will be applied to when the query evaluates to `true`, specified as an {{cssxref("ident")}}.
+    - `<container-query>` {{optional_inline}}
       - : A set of features that are evaluated against the query container when the size, [`<style-feature>`](#container_style_queries), scroll-state, or applied position-try fallback of the container changes.
 
 ### Logical keywords in container queries
@@ -519,6 +530,15 @@ The following container query checks if the [computed value](/en-US/docs/Web/CSS
 > If a custom property has a value of `blue`, the equivalent hexadecimal code `#0000ff` will not match unless the property has been defined as a color with {{cssxref("@property")}} so the browser can properly compare computed values.
 
 Style features that query a shorthand property are true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style(border: 2px solid red)` will resolve to true if all 12 longhand properties (`border-bottom-style`, etc.) that make up that shorthand are true.
+
+Note that [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) is allowed in style queries but is ignored.
+
+```css
+/* !important is valid but has no effect */
+@container style(--themeColor: purple !important) {
+  /* <stylesheet> */
+}
+```
 
 The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
 

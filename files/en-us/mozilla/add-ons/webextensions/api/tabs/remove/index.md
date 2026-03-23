@@ -8,7 +8,10 @@ sidebar: addonsidebar
 
 Closes one or more tabs.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+If any of the tabs are:
+
+- part of a split view, the split view is removed.
+- the last tab in a group, the group is removed.
 
 ## Syntax
 
@@ -25,7 +28,7 @@ let removing = browser.tabs.remove(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been removed or their `beforeunload` prompts have been handled. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with no arguments when all the specified tabs have been removed or their `beforeunload` prompts have been handled. If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 
