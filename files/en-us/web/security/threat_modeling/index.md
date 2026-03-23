@@ -108,7 +108,6 @@ To reference identified assets, you index them with the letter A (A1, A2, A3, ..
 
 ### Data flows and trust boundaries
 
-
 Anything that happens inside the browser or comes from a user's input is _untrusted_. Threat modeling helps you identify the **trust boundary**, exactly where data crosses from untrusted, outside, areas out of your control, into your trusted application logic.
 
 We identify the mechanism by which assets move between components. They may be uni- or bi-directional.
