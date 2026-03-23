@@ -129,7 +129,7 @@ Note that importing CSS modules into workers is usually not supported, because t
 
 #### Text Modules (`{ type: "text" }`)
 
-The `text` type allows importing a file as a UTF-8 string value.
+The `text` type allows importing a module's source as a string value.
 You can load text from a file into the `text` string using the following code:
 
 ```js
