@@ -436,6 +436,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("pow")}}
 - {{cssxref("progress")}} {{experimental_inline}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
+- {{cssxref("random")}}
 - {{cssxref("ray")}}
 - {{cssxref("basic-shape/rect", "rect()")}}
 - {{cssxref("rem")}}

@@ -375,6 +375,20 @@ The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}},
 - `dom.media.pseudo-classes.enabled`
   - : Set to `true` to enable.
 
+### `@container style()` queries
+
+The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2014404](https://bugzil.la/2014404)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 149           | Yes                 |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `layout.css.style-queries.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -384,6 +398,22 @@ The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}},
 **No experimental features in this release cycle.**
 
 ## APIs
+
+### CSS Typed Object Model Level 1
+
+Implementation work has started on the [CSS Typed OM Level 1](https://drafts.css-houdini.org/css-typed-om/).
+For example, the {{domxref("CSSNumericValue/to","to()")}} method of the {{domxref("CSSNumericValue")}} interface is supported for converting a CSS numeric value from one unit to another.
+([Firefox bug 1278697](https://bugzil.la/1278697)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 149           | No                  |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `layout.css.typed-om.enabled`
+  - : Set to `true` to enable.
 
 ### Notification actions and maxActions properties
 
@@ -426,29 +456,6 @@ See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this AP
   - : Set to `true` to enable (enabled in Nightly and on Windows in all releases)
 - `dom.webgpu.service-workers.enabled`
   - : Set to `true` to enable (enabled in Nightly)
-
-### Reporting API support for CSP Violations
-
-The [Reporting API](/en-US/docs/Web/API/Reporting_API) now has support for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violations.
-
-{{domxref('Report')}} instances returned by the {{domxref('ReportingObserver')}} interface can now have a `type` value of `"csp-violation"` and a `body` property that contains an instance of the {{domxref('CSPViolationReportBody')}} interface.
-This allows CSP violations to be reported within a web page.
-
-CSP violation reports can also be sent to remote endpoints that are specified by name in the CSP {{CSP("report-to")}} directive — endpoints names and corresponding URLs must first be defined in the {{httpheader('Reporting-Endpoints')}} or {{httpheader('Report-To')}} HTTP response headers.
-The report is a serialization of the {{domxref('Report')}} object described above, with a `body` property that is a serialization of a {{domxref('CSPViolationReportBody')}} instance.
-
-This violation report replaces a similar CSP-specific mechanism for sending violation reports, which uses the CSP {{CSP("report-uri")}} directive to set the URL of the reporting endpoint, and has a [CSP-specific JSON violation report format](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri#violation_report_syntax).
-([Firefox bug 1391243](https://bugzil.la/1391243)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 130           | No                  |
-| Developer Edition | 130           | No                  |
-| Beta              | 130           | No                  |
-| Release           | 130           | No                  |
-
-- `dom.reporting.enabled`
-  - : Set to `true` to enable.
 
 ### WebRTC and media
 
@@ -506,6 +513,7 @@ Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images if this feature is e
 See [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
 
 Note that, as shown below, the feature is only available on Nightly builds (irrespective of whether the preference is set).
+In Firefox 149, the previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decoder was replaced with a new Rust-based implementation that uses the `jxl-rs` library ([Firefox bug 1986393](https://bugzil.la/1986393)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
