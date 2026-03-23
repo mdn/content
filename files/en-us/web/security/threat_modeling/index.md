@@ -40,7 +40,7 @@ To illustrate the different terms, let's take a house as an example:
 
 ## What is threat modeling?
 
-Threat modeling is a structured, repeatable process with the goal to secure systems, to identify vulnerabilities, and to prioritize mitigations. It is a form of risk assessment with the goal to analyze the most probable attack vectors and to identify assets most desired by an attacker. Per the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org) you typically try to answer four key questions:
+Threat modeling is a form of risk assessment with the goal to analyze the most probable attack vectors and to identify assets most desired by an attacker. It is a structured, repeatable process for analyzing a representation of a system so you can identify relevant security and privacy concerns, understand what can go wrong, and decide how to respond. Per the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org), creating a threat model typically involves answering four key questions:
 
 1. What are we working on?
 2. What can go wrong?
