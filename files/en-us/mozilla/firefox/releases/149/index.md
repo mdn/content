@@ -69,6 +69,11 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
   In addition, the methods now allow both resize options ([`options.resizeWidth`](/en-US/docs/Web/API/Window/createImageBitmap#resizewidth) or [`options.resizeHeight`](/en-US/docs/Web/API/Window/createImageBitmap#resizeheight)) and image bitmap parameters ([`sx`, `sy`, `sw`, and `sh`](/en-US/docs/Web/API/Window/createImageBitmap#sx)) to be set at the same time — previously setting both returned the unscaled source bitmap.
   ([Firefox bug 2010125](https://bugzil.la/2010125)).
 
+- The [Reporting API](/en-US/docs/Web/API/Reporting_API) is now supported for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) and {{httpheader("Integrity-Policy")}} violations.
+  This allows report objects that are {{domxref("CSPViolationReport")}} objects and {{domxref("IntegrityViolationReport")}} objects to be reported in violating pages using a {{domxref("ReportingObserver")}} (reports can be filtered on the `type` property: `"csp-violation"` or `"integrity-violation"`).
+  A serialized version of the report objects can also be sent to a reporting server specified in the corresponding HTTP header — endpoint names and corresponding URLs must first be defined in the {{httpheader('Reporting-Endpoints')}} or {{httpheader('Report-To')}} HTTP response headers.
+  ([Firefox bug 1976074](https://bugzil.la/1976074), [Firefox bug 2008916](https://bugzil.la/2008916)).
+
 #### DOM
 
 - The [`HTMLSelectElement.showPicker()`](/en-US/docs/Web/API/HTMLInputElement/showPicker#showpicker_for_a_datalist_input) method is now supported for a list of options defined in a {{htmlelement("datalist")}}.
