@@ -95,7 +95,7 @@ However, content scripts get a "clean" view of the DOM. This means:
 As noted at ["Content script environment" at Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#content_script_environment), the behavior differs across browsers:
 
 - In Firefox, this behavior is called [Xray vision](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox).
-  Content scripts may encounter JavaScript objects from its own global scope or Xray-wrapped versions from the web page.
+  Content scripts may encounter JavaScript objects from its own global scope or Xray-wrapped versions from the web page. In regular web pages, {{domxref("globalThis")}} is identical to `window`, but in Firefox's content scripts, `globalThis` is a distinct object inheriting from `window`. This distinction often makes no practical difference for the availability of global APIs, except when the global scope contains its own definition of a standard API that shadows the definition in `window`, such as [`structuredClone` in content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#structuredclone).
 
 - In Chrome this behavior is enforced through an [isolated world](https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/bindings/core/v8/V8BindingDesign.md#world), which uses a fundamentally different approach.
 
