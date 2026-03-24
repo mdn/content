@@ -41,7 +41,7 @@ The `result` object in the response with the following fields:
 
 ### Checking browser status before creating a session
 
-With a WebDriver BiDi connection established, send the following message to check whether the browser is ready to create a new session:
+With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) established, send the following message to check whether the browser is ready to create a new session:
 
 ```json
 {
