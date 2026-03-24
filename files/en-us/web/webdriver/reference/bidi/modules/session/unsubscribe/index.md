@@ -50,7 +50,7 @@ The `result` field in the response is an empty object (`{}`).
 
 ### Errors
 
-- [invalid argument](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
+- [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : When unsubscribing using IDs, a subscription ID is not found.
     When unsubscribing using event names, the `events` array is empty or omitted, or an event name does not match any active global subscription.
 

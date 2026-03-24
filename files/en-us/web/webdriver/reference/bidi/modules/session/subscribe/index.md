@@ -50,7 +50,7 @@ The `result` field in the response is an object with the following field:
 
 ### Errors
 
-- [invalid argument](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
+- [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : Thrown in any of the following cases:
     - The `events` array is empty, omitted, or contains an unrecognized event name.
     - `contexts` or `userContexts` is provided but empty.
