@@ -3,10 +3,12 @@ title: "BufferedChangeEvent: removedRanges property"
 short-title: removedRanges
 slug: Web/API/BufferedChangeEvent/removedRanges
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BufferedChangeEvent.removedRanges
 ---
 
-{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`removedRanges`** read-only property of the {{domxref("BufferedChangeEvent")}} interface returns a {{domxref("TimeRanges")}} object representing the time ranges that were removed from the associated {{domxref("ManagedSourceBuffer")}}. These are the ranges removed between the last `updatestart` and `updateend` events, during the most recent run of the coded frame removal or coded frame eviction algorithm, or as a consequence of the user agent running the memory cleanup algorithm.
 

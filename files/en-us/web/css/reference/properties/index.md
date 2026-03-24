@@ -87,7 +87,9 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("background-position-x")}}
 - {{CSSxRef("background-position-y")}}
 - {{CSSxRef("background-position")}}
-- {{CSSxRef("background-repeat")}}
+- {{CSSxRef("background-repeat")}} (shorthand)
+- {{CSSxRef("background-repeat-x")}}
+- {{CSSxRef("background-repeat-y")}}
 - {{CSSxRef("background-size")}}
 - {{CSSxRef("background")}} (shorthand)
 - {{CSSxRef("baseline-shift")}}

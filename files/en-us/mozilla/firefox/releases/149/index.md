@@ -1,41 +1,24 @@
 ---
-title: Firefox 149 release notes for developers (Beta)
-short-title: Firefox 149 (Beta)
+title: Firefox 149 release notes for developers (Stable)
+short-title: Firefox 149 (Stable)
 slug: Mozilla/Firefox/Releases/149
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 149 that affect developers.
-Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [March 24, 2026](https://whattrainisitnow.com/release/?version=149).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 149 was released on [March 24, 2026](https://whattrainisitnow.com/release/?version=149).
 
 ## Changes for web developers
-
-<!-- ### Developer Tools -->
 
 ### HTML
 
 - The [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) global attribute now supports the [`hint`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover#hint) value. Popovers with the `hint` value will not close `auto` popovers when they are displayed, but will close other hint popovers. ([Firefox bug 1867743](https://bugzil.la/1867743)).
 
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
 ### MathML
 
 - The CSS [`font-family: math`](/en-US/docs/Web/CSS/Reference/Properties/font-family#math) property is now supported, and applied to {{mathmlelement('math')}} elements by default.
   This ensures that websites can use an appropriate math font and/or MathML without having to know what fonts are present on the underlying OS. ([Firefox bug 2014703](https://bugzil.la/2014703)).
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
 
 ### CSS
 
@@ -47,27 +30,20 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This allows matching against containers based solely on their names.
   ([Firefox bug 2016474](https://bugzil.la/2016474)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### APIs
 
 - The [`options.resizeQuality`](/en-US/docs/Web/API/Window/createImageBitmap#resizequality) parameter is now supported by {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}}.
   In addition, the methods now allow both resize options ([`options.resizeWidth`](/en-US/docs/Web/API/Window/createImageBitmap#resizewidth) or [`options.resizeHeight`](/en-US/docs/Web/API/Window/createImageBitmap#resizeheight)) and image bitmap parameters ([`sx`, `sy`, `sw`, and `sh`](/en-US/docs/Web/API/Window/createImageBitmap#sx)) to be set at the same time — previously setting both returned the unscaled source bitmap.
   ([Firefox bug 2010125](https://bugzil.la/2010125)).
+
+- The [Reporting API](/en-US/docs/Web/API/Reporting_API) is now supported for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) and {{httpheader("Integrity-Policy")}} violations.
+  This allows report objects that are {{domxref("CSPViolationReport")}} objects and {{domxref("IntegrityViolationReport")}} objects to be reported in violating pages using a {{domxref("ReportingObserver")}} (reports can be filtered on the `type` property: `"csp-violation"` or `"integrity-violation"`).
+  A serialized version of the report objects can also be sent to a reporting server specified in the corresponding HTTP header — endpoint names and corresponding URLs must first be defined in the {{httpheader('Reporting-Endpoints')}} or {{httpheader('Report-To')}} HTTP response headers.
+  ([Firefox bug 1976074](https://bugzil.la/1976074), [Firefox bug 2008916](https://bugzil.la/2008916)).
 
 #### DOM
 
@@ -99,19 +75,25 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Prior to this change, the media element's volume affected the volume of the captured stream.
   ([Firefox bug 2010427](https://bugzil.la/2010427)).
 
-<!-- #### Removals -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- ### WebAssembly -->
+#### General
 
-<!-- #### Removals -->
+- Updated the screenshot implementations for both the WebDriver BiDi and WebDriver classic protocols to correctly return an error when the requested screenshot area exceeds the maximum supported dimensions, rather than silently clipping it. ([Firefox bug 1994148](https://bugzil.la/1994148)).
+- Updated the Actions implementation for both the WebDriver BiDi and WebDriver classic protocols to allow a `scroll` action of input source type `wheel` to scroll more than the visual viewport dimensions. ([Firefox bug 1962355](https://bugzil.la/1962355)).
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+#### WebDriver BiDi
 
-<!-- #### General -->
+- Added support for automatic user prompt handling, which can be configured through capabilities with the `session.new` command. ([Firefox bug 1905086](https://bugzil.la/1905086)).
+- Added the `browser.setDownloadBehavior` command, which lets clients allow or prohibit the downloads and also set a custom download folder. This behavior can be configured per session or per user contexts. ([Firefox bug 1989022](https://bugzil.la/1989022)).
+- Added the `script.realmCreated` and `script.realmDestroyed` events for worker realms (for dedicated, shared and service workers). ([Firefox bug 1936770](https://bugzil.la/1936770)).
+- Fixed an issue where the `browsingContext.userPromptOpened` and `browsingContext.userPromptClosed` events incorrectly reported the top-level context ID instead of the iframe's context ID on Android. ([Firefox bug 2007385](https://bugzil.la/2007385)).
+- Fixed the serialization for DOM nodes to stop exposing User Agent specific shadow roots. ([Firefox bug 2016673](https://bugzil.la/2016673)).
+- Updated the logic of applying different settings to new browsing contexts to make sure that in the case of creating a browsing context with the `window.open` command, emulations, viewport overrides and preload scripts apply before the command returns. ([Firefox bug 1985997](https://bugzil.la/1985997), [Firefox bug 2005546](https://bugzil.la/2005546), and [Firefox bug 2005558](https://bugzil.la/2005558)).
 
-<!-- #### WebDriver BiDi -->
+#### Marionette
 
-<!-- #### Marionette -->
+- Improved several WebDriver classic commands to handle `implicit` and `pageLoad` timeouts in line with the script timeout, allowing `null` values to disable the timeouts. ([Firefox bug 2008345](https://bugzil.la/2008345)).
 
 ## Changes for add-on developers
 
@@ -121,14 +103,10 @@ Firefox 149 is the current [Beta version of Firefox](https://www.firefox.com/en-
     ([Firefox bug 1993037](https://bugzil.la/1993037))
 - Adds support for `tabId` as a top-level parameter in {{WebExtAPIRef("action.isEnabled")}} and {{WebExtAPIRef("browserAction.isEnabled")}}. This change provides for compatibility with the Chrome implementation of `action.isEnabled`. ([Firefox bug 2013477](https://bugzil.la/2013477))
 - A user gesture is no longer required for {{WebExtAPIRef("action.openPopup")}} and {{WebExtAPIRef("browserAction.openPopup")}} to open a popup. This feature was available behind the `extensions.openPopupWithoutUserGesture.enabled` preference from Firefox 108. This change aligns Firefox's behavior with Chrome and Safari. ([Firefox bug 1799344](https://bugzil.la/1799344))
-- If `winedowId` is passed in {{WebExtAPIRef("action.openPopup")}} or {{WebExtAPIRef("browserAction.openPopup")}}, the window must be focused (active) for the popup to open. To open a popup in an unfocused window {{WebExtAPIRef("windows.update","windows.update(windowId, { focused: true })")}} must be called first. This change aligns Firefox behavior with Chrome. ([Firefox bug 2011516](https://bugzil.la/2011516))
-
-<!-- ### Removals -->
+- If `windowId` is passed in {{WebExtAPIRef("action.openPopup")}} or {{WebExtAPIRef("browserAction.openPopup")}}, the window must be focused (active) for the popup to open. To open a popup in an unfocused window {{WebExtAPIRef("windows.update","windows.update(windowId, { focused: true })")}} must be called first. This change aligns Firefox behavior with Chrome. ([Firefox bug 2011516](https://bugzil.la/2011516))
 
 - The ability of extensions to dynamically execute code in their `moz-extension:` documents with {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, and {{WebExtAPIRef("scripting.removeCSS")}} is deprecated. ([Firefox bug 2011234](https://bugzil.la/2011234)) The feature is no longer available in Firefox Nightly, and the beta and release versions of Firefox provide a warning in the tab's console. This restriction will apply to all versions of Firefox 152 and later. ([Firefox bug 2015559](https://bugzil.la/2015559)) As an alternative, an extension can run code in its documents dynamically by registering a {{WebExtAPIRef("runtime.onMessage")}} listener in the document's script, then sending a message to trigger execution of the required code.
 - The implicit CSS filter applied to [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) SVG icons on dark themes is deactivated in Nightly builds ([Firefox bug 2001318](https://bugzil.la/2001318)) and will be deactivated in other Firefox editions from version 152 ([Firefox bug 2016509](https://bugzil.la/2016509)). You can test page action SVG icons with the CSS filter disabled in other Firefox editions by creating a boolean `about:config` preference called `extensions.webextensions.pageActionIconDarkModeFilter.enabled` and setting it to `false`.
-
-<!-- ### Other -->
 
 ## Experimental web features
 
@@ -161,6 +139,6 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The CSS Typed Object Model Level 1 specification is being implemented.
   In this release, support for the {{domxref("CSSNumericValue/to","to()")}} method of the {{domxref("CSSNumericValue")}} interface was added, allowing the conversion of a CSS numeric value from one unit to another. ([Firefox bug 1278697](https://bugzil.la/1278697)).
 
-- **JPEG XL image support: Rust-based decoder**: `image.jxl.enabled`
+- **JPEG XL image support: Rust-based decoder** (Nightly only): `image.jxl.enabled`
 
   The previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decoder has been replaced with a new Rust-based implementation that uses the `jxl-rs` library. ([Firefox bug 1986393](https://bugzil.la/1986393)).

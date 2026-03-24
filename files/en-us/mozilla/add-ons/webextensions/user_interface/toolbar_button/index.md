@@ -50,7 +50,7 @@ You can change many of the browser action properties programmatically using:
 
 If you don't specify `"default_icon"`, the extension icon is used. If the extension doesn't specify an icon, the default web extension puzzle piece icon is used. If `"default_title"` isn't specified, the extension name is used.
 
-You can provide icons for light and dark UI themes using the `"theme_icons"` property or use a media query on `prefers-color-scheme` in an SVG icon. For more information, see [`"browser_action"` `"theme_icons"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#theme_icons) or [`"action"` `"theme_icons"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action#theme_icons), and the [themed-icons](https://github.com/mdn/webextensions-examples/tree/master/themed-icons) example.
+You can provide icons for light and dark UI themes using the `"theme_icons"` property or use a media query on `prefers-color-scheme` in an SVG icon. For more information, see [`"browser_action"` `"theme_icons"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#theme_icons) or [`"action"` `"theme_icons"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action#theme_icons), and the [themed-icons](https://github.com/mdn/webextensions-examples/tree/main/themed-icons) example.
 
 For details on how to create icons to use with your browser action, see [Iconography](https://acorn.firefox.com/latest/foundations/styles/iconography-QEDMXQqj) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
