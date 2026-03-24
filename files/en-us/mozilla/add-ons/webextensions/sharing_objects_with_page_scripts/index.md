@@ -200,10 +200,14 @@ Firefox is the only browser that has these differences in behavior due to differ
 For example, here is a content script that attempts to share a value through the page's global scope:
 
 ```js
-et value = { test: "hello" };
+let value = { test: "hello" };
+
+// Wrong usage: page access to sharedBad's properties will be denied
 window.wrappedJSObject.sharedBad = structuredClone(value);
+
 // Good usage, works in Firefox 149+:
 window.wrappedJSObject.sharedGood = window.structuredClone(value);
+
 // Alternative with same effect:
 window.wrappedJSObject.sharedGood2 = cloneInto(value, window);
 ```
