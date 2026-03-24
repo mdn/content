@@ -196,18 +196,17 @@ Firefox is the only browser that has these differences in behavior due to differ
 
 > [!NOTE]
 > In Firefox 148 and earlier, `window.structuredClone(value)` creates values in the scope of the caller instead of the window's scope. Use [`cloneInto()`](#cloneinto) if you want to support Firefox 148 and earlier.
->
-> For example, here is a content script that attempts to share a value through the page's global scope:
->
-> ```js
-> let value = { test: "hello" };
-> // Wrong usage: page access to sharedBad's properties is denied
-> window.wrappedJSObject.sharedBad = structuredClone(value);
-> // Good usage, works in Firefox 149+:
-> window.wrappedJSObject.sharedGood = window.structuredClone(value);
-> // Alternative with same effect:
-> window.wrappedJSObject.sharedGood2 = cloneInto(value, window);
-> ```
+
+For example, here is a content script that attempts to share a value through the page's global scope:
+
+```js
+et value = { test: "hello" };
+window.wrappedJSObject.sharedBad = structuredClone(value);
+// Good usage, works in Firefox 149+:
+window.wrappedJSObject.sharedGood = window.structuredClone(value);
+// Alternative with same effect:
+window.wrappedJSObject.sharedGood2 = cloneInto(value, window);
+```
 
 ### Constructors from the page context
 
