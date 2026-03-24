@@ -21,7 +21,7 @@ targetWindow.foo = clonedObject;
 This enables privileged code, such as an extension, to share an object with less-privileged code, such as a web page script.
 
 > [!NOTE]
-> You can also use {{domxref("structuredClone")}} to create structured clones. From Firefox 149, `targetWindow.structuredClone(value)` clones the value into the realm of the target window.
+> You can also use {{domxref("structuredClone")}} to create structured clones. From Firefox 149, `targetWindow.structuredClone(value)` clones the value into the [realm](/en-US/docs/Web/JavaScript/Reference/Execution_model#realms) of the target window.
 
 ## Syntax
 
