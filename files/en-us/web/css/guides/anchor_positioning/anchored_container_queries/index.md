@@ -31,7 +31,7 @@ For example, let's say we have a tooltip element that is positioned above its an
 ```css
 .tooltip {
   position: absolute;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top;
   position-try-fallbacks: flip-block;
   container-type: anchored;
@@ -189,7 +189,7 @@ p {
 
 ```css live-sample___basic-example
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 ```
 
@@ -200,7 +200,7 @@ Finally, we set a {{cssxref("container-type")}} value of `anchored` on the infob
 ```css live-sample___basic-example
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top;
   position-try-fallbacks: bottom;
   container-type: anchored;
@@ -238,7 +238,7 @@ This example renders like so:
 
 Try scrolling the demo so that the anchor moves near to the top of the viewport and note how, not only does the infobox move below the anchor to remain on the screen, but the styling also updates so that the arrow icon still works for the new infobox position.
 
-If you scroll the anchor back down towards the bottom of the viewport, the infobox will move back up above it again.
+If you scroll the anchor back down towards the bottom of the viewport, the infobox will move back up above it again. We don't need to specify an additional `position-try-fallbacks` value of `top` to achieve this because `position-area: top` is the infobox's default provided position. If the provided fallbacks don't stop the anchor-positioned element from overflowing, the browser will revert to its default position.
 
 ## Multiple fallbacks example
 
@@ -303,7 +303,7 @@ p {
 
 ```css live-sample___multiple-fallbacks
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
 }
 ```
@@ -315,7 +315,7 @@ Finally, we turn the infobox into an anchored query container by setting `contai
 ```css live-sample___multiple-fallbacks
 .infobox {
   position: absolute;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top left;
   position-try-fallbacks:
     flip-block,
@@ -341,7 +341,7 @@ Most notably, here we are setting a {{cssxref("border-radius")}} value that crea
 }
 ```
 
-Finally, we define an anchored container query for each position-try fallback that may be applied to the infobox using `@container` at-rules. In each case, we alter the rounded corners applied to the infobox wrapper `<div>` so that the the nearest corner to the anchor is always not rounded.
+Finally, we define an anchored container query for each position-try fallback that may be applied to the infobox using `@container` at-rules. In each case, we alter the rounded corners applied to the infobox wrapper `<div>` so that the nearest corner to the anchor is always not rounded.
 
 ```css live-sample___multiple-fallbacks
 @container anchored(fallback: flip-block) {
