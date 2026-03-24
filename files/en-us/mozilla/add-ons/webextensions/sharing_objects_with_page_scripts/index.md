@@ -6,7 +6,7 @@ sidebar: addonsidebar
 ---
 
 > [!NOTE]
-> The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards. {{domxref("structuredClone","globalThis.structuredClone")}} provides a cross-browser API that creates structured clones.
+> The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards. {{domxref("structuredClone")}} provides a cross-browser API that creates structured clones.
 
 > [!WARNING]
 > As an extension developer you should consider that scripts running in arbitrary web pages are hostile code whose aim is to steal the user's personal information, damage their computer, or attack them in some other way.
@@ -88,6 +88,7 @@ Firefox also provides APIs enabling content scripts to make objects available to
 
 - [`exportFunction()`](#exportfunction): export a function to page scripts.
 - [`cloneInto()`](#cloneinto): export an object to page scripts.
+- `window.structuredClone()` is an alternative to `cloneInto` in some cases, see [`structuredClone` in content scripts](#structuredcloneincontentscripts).
 - constructors from the page context
 
 ### exportFunction

@@ -14,11 +14,9 @@ The method also allows [transferable objects](/en-US/docs/Web/API/Web_Workers_AP
 Transferred objects are detached from the original object and attached to the new object; they are no longer accessible in the original object.
 
 > [!NOTE]
-> For web extension developers: Up to Firefox 148. `structuredClone.call(iframe.contentWindow)` incorrectly created objects in the caller's realm instead of the iframe's realm. This behavior meant that, for web extensions, the call created an object in the scope of a content script. In Firefox 149, the implementation changed to instantiate objects in the `this` realm, so the method's behavior more closely matched the specification. Therefore, to enable the creation of objects in the scope of a content script, `globalThis.structuredClone` is provided.
->
-> See also [cloneInto](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto), a method that predated `structuredClone` and offers web extensions functionality beyond structured cloning, such as exporting functions.
->
-> `structuredClone`, `globalThis.structuredClone`, `window.structuredClone`, and `self.structuredClone` are identical in other browsers. Firefox is the only browser that has differences in behavior due to differences in [the content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment).
+> Up to Firefox 148. `structuredClone.call(iframe.contentWindow)` incorrectly created objects in the caller's [realm](/en-US/docs/Web/JavaScript/Reference/Execution_model#realms) instead of the iframe's realm. In Firefox 149, the implementation changed to instantiate objects in the `this` realm, so the method's behavior more closely matched the specification.
+> Across all browsers, a direct call `structuredClone(value)` clones values in the caller's realm. From Firefox 149, [WebExtensions' content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) can call `window.structuredClone(value)` to clone values in the page's realm, distinct from `globalThis.structuredClone(value)` which clones into the realm of the content script.
+Firefox is the only browser that has differences in behavior due to differences in [the content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment).
 
 ## Syntax
 
@@ -153,4 +151,3 @@ const int32View1 = new Int32Array(object1.buffer);
 - [A polyfill of `structuredClone`](https://github.com/zloirock/core-js#structuredclone) is available in [`core-js`](https://github.com/zloirock/core-js)
 - [Structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
 - [Structured clone polyfill](https://github.com/ungap/structured-clone)
-- [`cloneInto`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto) for web extensions
