@@ -88,7 +88,7 @@ Firefox also provides APIs enabling content scripts to make objects available to
 
 - [`exportFunction()`](#exportfunction): export a function to page scripts.
 - [`cloneInto()`](#cloneinto): export an object to page scripts.
-- [`window.structuredClone()`](#structuredclone): an alternative to `cloneInto` in some cases.
+- `window.structuredClone()`: an alternative to `cloneInto` in some cases, see [`structuredClone` in content scripts](#structuredclone).
 - [constructors from the page context](#constructors_from_the_page_context).
 
 ### exportFunction
@@ -188,14 +188,26 @@ window.messenger.notify("Message from the page script!");
 
 ### structuredClone
 
-Content scripts can also use {{domxref("structuredClone")}} to create structured clones. Use `window.structuredClone(value)` to clone values in the page's scope. A direct call to `structuredClone(value)` or `globalThis.structuredClone(value)` clones into the content script's scope. The choice of method affects how the return value can be used. A value cloned into the content script can be used in the content script like any other regular value, but when shared with the web page, the web page is denied access to its properties. Conversely, a value cloned into the web page can be used by the web page like any other value, but content scripts may have [Xray vision](#xray_vision_in_firefox). One of the consequences of Xray vision is the inability to assign functions from the content script to objects in the page's scope.
+Content scripts can also use {{domxref("structuredClone")}} to create structured clones. Use `window.structuredClone(value)` to clone values in the page's scope. A direct call to `structuredClone(value)` or `globalThis.structuredClone(value)` clones into the content script's scope.
 
-Firefox is the only browser that has differences in behavior due to differences in [the content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment).
+The choice of method affects how the return value can be used. A value cloned into the content script can be used in the content script like any other regular value, but when shared with the web page, the web page is denied access to its properties. Conversely, a value cloned into the web page can be used by the web page like any other value, but content scripts may have [Xray vision](#xray_vision_in_firefox). One consequence of Xray vision is the inability to assign functions from the content script to objects in the page's scope.
+
+Firefox is the only browser that has these differences in behavior due to differences in [the content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment).
 
 > [!NOTE]
-> In Firefox 148 and earlier, `window.structuredClone(value)` creates values in the realm of the caller instead of the window's realm. Use [`cloneInto()`](#cloneinto) if you want to support Firefox 148 and earlier.
-
-For example, here is a content script that attempts to share a value through the page's global scope:
+> In Firefox 148 and earlier, `window.structuredClone(value)` creates values in the scope of the caller instead of the window's scope. Use [`cloneInto()`](#cloneinto) if you want to support Firefox 148 and earlier.
+>
+> For example, here is a content script that attempts to share a value through the page's global scope:
+>
+> ```js
+> let value = { test: "hello" };
+> // Wrong usage: page access to sharedBad's properties is denied
+> window.wrappedJSObject.sharedBad = structuredClone(value);
+> // Good usage, works in Firefox 149+:
+> window.wrappedJSObject.sharedGood = window.structuredClone(value);
+> // Alternative with same effect:
+> window.wrappedJSObject.sharedGood2 = cloneInto(value, window);
+> ```
 
 ### Constructors from the page context
 
