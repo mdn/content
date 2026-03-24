@@ -77,7 +77,7 @@ If no `<container-query>` is specified, named containers are selected.
   - : One or both of `<container-name>` and `<container-query>`.
     Styles defined in the `<stylesheet>` are applied if the condition is `true`.
     - `<container-name>` {{optional_inline}}
-      - : The name of the container that the styles will be applied to when the query evaluates to `true`, specified as an {{cssxref("ident")}}.
+      - : The name of the container to query; it is specified as an {{cssxref("ident")}}. If the query evaluates to `true`, the declared styles are applied to the container's descendant elements.
     - `<container-query>` {{optional_inline}}
       - : A set of features that are evaluated against the query container when the size, [`<style-feature>`](#container_style_queries), or scroll-state of the container changes.
 
