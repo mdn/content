@@ -168,8 +168,9 @@ If a content script needs to use a JavaScript library, then the library itself s
 ```
 
 > [!NOTE]
- > Firefox provides [cloneInto()](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto) and [exportFunction()](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction) to enable content scripts to access JavaScript objects created by page scripts and expose their JavaScript objects to page scripts.
-The cross-browser {{domxref("structuredClone")}} method can be used for structured cloneable values, as an alternative.
+> Firefox provides [cloneInto()](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto) and [exportFunction()](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction) to enable content scripts to access JavaScript objects created by page scripts and expose their JavaScript objects to page scripts.
+>
+> The cross-browser {{domxref("structuredClone")}} method can be used for structured cloneable values, as an alternative.
 >
 > See [Sharing objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) for more details.
 

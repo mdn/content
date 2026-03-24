@@ -15,8 +15,10 @@ Transferred objects are detached from the original object and attached to the ne
 
 > [!NOTE]
 > Up to Firefox 148. `structuredClone.call(iframe.contentWindow)` incorrectly created objects in the caller's [realm](/en-US/docs/Web/JavaScript/Reference/Execution_model#realms) instead of the iframe's realm. In Firefox 149, the implementation changed to instantiate objects in the `this` realm, so the method's behavior more closely matched the specification.
+>
 > Across all browsers, a direct call `structuredClone(value)` clones values in the caller's realm. From Firefox 149, [WebExtensions' content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) can call `window.structuredClone(value)` to clone values in the page's realm, distinct from `globalThis.structuredClone(value)` which clones into the realm of the content script.
-Firefox is the only browser that has differences in behavior due to differences in [the content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment).
+>
+> eFirefox is the only browser that has differences in behavior due to differences in [the content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment).
 
 ## Syntax
 
