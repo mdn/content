@@ -49,6 +49,8 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 
 - {{WebExtAPIRef("tabs.TAB_ID_NONE")}}
   - : A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows).
+- {{WebExtAPIRef("tabs.SPLIT_VIEW_ID_NONE")}}
+  - : A special ID value given to tabs that aren't in a split view.
 
 ## Functions
 

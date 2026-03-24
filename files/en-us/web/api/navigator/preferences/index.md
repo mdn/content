@@ -3,10 +3,12 @@ title: "Navigator: preferences property"
 short-title: preferences
 slug: Web/API/Navigator/preferences
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Navigator.preferences
 ---
 
-{{SeeCompatTable}}
+{{APIRef("User Preferences API")}}{{SeeCompatTable}}
 
 The **`preferences`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("PreferenceManager")}} object for the current document. This is the entry point for the [User Preferences API](/en-US/docs/Web/API/User_Preferences_API) functionality.
 

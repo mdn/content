@@ -1,5 +1,5 @@
 ---
-title: WebDriver classic errors
+title: WebDriver errors
 short-title: Errors
 slug: Web/WebDriver/Reference/Errors
 page-type: landing-page

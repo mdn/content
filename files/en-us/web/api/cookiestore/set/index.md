@@ -34,6 +34,8 @@ Or
       - : A string containing the domain of the cookie. Defaults to `null`.
     - `expires` {{Optional_Inline}}
       - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie. Defaults to `null`.
+    - `maxAge` {{Optional_Inline}}
+      - : A number representing the number of seconds until the cookie expires. A zero or negative number will expire the cookie immediately. If both `expires` and `maxAge` are set, the `set()` call fails with a `TypeError`. Defaults to `null`.
     - `name`
       - : A string with the name of a cookie.
     - `partitioned` {{Optional_Inline}}
@@ -57,7 +59,9 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the origin can not be {{glossary("Serialization", "serialized")}} to a URL.
 - {{jsxref("TypeError")}}
-  - : Thrown if setting the cookie with the given `name` and `value` or `options` fails.
+  - : Thrown if:
+    - Both the `expires` and `maxAge` properties are set.
+    - Setting the cookie with the given `name` and `value` or `options` fails in any other way.
 
 ## Examples
 
