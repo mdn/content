@@ -8,42 +8,7 @@ browser-compat: api.Element.attachShadow
 
 {{APIRef("Shadow DOM")}}
 
-The **`Element.attachShadow()`** method attaches a shadow DOM tree to the specified element and returns a reference to its {{domxref("ShadowRoot")}}.
-
-## Elements you can attach a shadow to
-
-Note that you can't attach a shadow root to every type of element.
-There are some that can't have a shadow DOM for security reasons (for example {{htmlelement("a")}}).
-
-The following is a list of elements you _can_ attach a shadow root to:
-
-- Any autonomous custom element with a [valid name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
-- {{htmlelement("article")}}
-- {{htmlelement("aside")}}
-- {{htmlelement("blockquote")}}
-- {{htmlelement("body")}}
-- {{htmlelement("div")}}
-- {{htmlelement("footer")}}
-- {{htmlelement("Heading_Elements", "h1")}}
-- {{htmlelement("Heading_Elements", "h2")}}
-- {{htmlelement("Heading_Elements", "h3")}}
-- {{htmlelement("Heading_Elements", "h4")}}
-- {{htmlelement("Heading_Elements", "h5")}}
-- {{htmlelement("Heading_Elements", "h6")}}
-- {{htmlelement("header")}}
-- {{htmlelement("main")}}
-- {{htmlelement("nav")}}
-- {{htmlelement("p")}}
-- {{htmlelement("section")}}
-- {{htmlelement("span")}}
-
-## Calling this method on an element that is already a shadow host
-
-The method may be called on an element that already has a [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom), provided the specified mode `mode` matches the existing mode.
-In this case the {{domxref("ShadowRoot")}} that was already present will be cleared and returned.
-This allows for cases where, for example, server-side rendering has already declaratively created a shadow root, and then client-side code attempts to attach the root again.
-
-Otherwise calling `attachShadow()` on an element that already has a shadow root will throw an exception.
+The **`Element.attachShadow()`** method attaches a {{domxref("ShadowRoot")}} to the specified element and returns a reference to it.
 
 ## Syntax
 
@@ -59,8 +24,7 @@ attachShadow(options)
       - : A string specifying the _encapsulation mode_ for the shadow DOM tree.
         This can be one of:
         - `open`
-          - : Elements of the shadow root are accessible from JavaScript outside the root,
-            for example using {{domxref("Element.shadowRoot")}}:
+          - : Elements of the shadow root are accessible from JavaScript outside the root, for example using {{domxref("Element.shadowRoot")}}:
 
             ```js
             element.attachShadow({ mode: "open" });
@@ -68,8 +32,7 @@ attachShadow(options)
             ```
 
         - `closed`
-          - : Denies access to the node(s) of a closed shadow root
-            from JavaScript outside it:
+          - : Denies access to the node(s) of a closed shadow root from JavaScript outside it:
 
             ```js
             element.attachShadow({ mode: "closed" });
@@ -111,6 +74,51 @@ Returns a {{domxref("ShadowRoot")}} object.
     - where the element definition static property `disabledFeatures` has been given a value of `"shadow"`.
     - that already has a shadow root that was not created declaratively.
     - that has a [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) but the specified `mode` does not match the existing mode.
+
+## Description
+
+The **`attachShadow()`** method attaches a {{domxref("ShadowRoot")}} to the specified element and returns a reference to it.
+
+The returned {{domxref("ShadowRoot")}} is the root node of a shadow tree, which can then be populated with its own DOM content.
+The element to which the shadow root is attached is referred to as the "shadow host", and remains in its original DOM.
+
+The `ShadowRoot` acts as a boundary between the original DOM and the shadow tree.
+It controls encapsulation — for example, styles defined inside the shadow tree do not affect the original DOM.
+
+### Elements you can attach a shadow to
+
+Note that you can't attach a shadow root to every type of element.
+There are some that can't have a shadow DOM for security reasons (for example {{htmlelement("a")}}).
+
+The following is a list of elements you _can_ attach a shadow root to:
+
+- Any autonomous custom element with a [valid name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
+- {{htmlelement("article")}}
+- {{htmlelement("aside")}}
+- {{htmlelement("blockquote")}}
+- {{htmlelement("body")}}
+- {{htmlelement("div")}}
+- {{htmlelement("footer")}}
+- {{htmlelement("Heading_Elements", "h1")}}
+- {{htmlelement("Heading_Elements", "h2")}}
+- {{htmlelement("Heading_Elements", "h3")}}
+- {{htmlelement("Heading_Elements", "h4")}}
+- {{htmlelement("Heading_Elements", "h5")}}
+- {{htmlelement("Heading_Elements", "h6")}}
+- {{htmlelement("header")}}
+- {{htmlelement("main")}}
+- {{htmlelement("nav")}}
+- {{htmlelement("p")}}
+- {{htmlelement("section")}}
+- {{htmlelement("span")}}
+
+### Calling this method on an element that is already a shadow host
+
+The method may be called on an element that already has a [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom), provided the specified mode `mode` matches the existing mode.
+In this case the {{domxref("ShadowRoot")}} that was already present will be cleared and returned.
+This allows for cases where, for example, server-side rendering has already declaratively created a shadow root, and then client-side code attempts to attach the root again.
+
+Otherwise calling `attachShadow()` on an element that already has a shadow root will throw an exception.
 
 ## Examples
 
@@ -199,5 +207,6 @@ customElements.define("my-custom-element", MyCustomElement);
 - {{domxref("ShadowRoot.mode")}}
 - {{domxref("ShadowRoot.delegatesFocus")}}
 - {{domxref("ShadowRoot.slotAssignment")}}
+- {{domxref("ShadowRoot.referenceTarget")}}
 - Declaratively attach a shadow root with the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute of the [`<template>` element](/en-US/docs/Web/HTML/Reference/Elements/template)
 - [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) on web.dev (2023)
