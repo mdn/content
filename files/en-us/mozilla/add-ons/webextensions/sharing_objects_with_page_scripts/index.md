@@ -88,8 +88,8 @@ Firefox also provides APIs enabling content scripts to make objects available to
 
 - [`exportFunction()`](#exportfunction): export a function to page scripts.
 - [`cloneInto()`](#cloneinto): export an object to page scripts.
-- `window.structuredClone()` is an alternative to `cloneInto` in some cases, see [`structuredClone` in content scripts](#structuredcloneincontentscripts).
-- constructors from the page context
+- [`window.structuredClone()`](#structuredclone): an alternative to `cloneInto` in some cases.
+- [constructors from the page context](#constructors_from_the_page_context).
 
 ### exportFunction
 
@@ -185,6 +185,13 @@ Now page scripts see a new property on the window, `messenger`, which has a func
 ```js
 window.messenger.notify("Message from the page script!");
 ```
+
+### structuredClone
+
+Content scripts can also use {{domxref("structuredClone")}} to create structured clones. They can call `window.structuredClone(value)` to clone values in the page's scope and also call `globalThis.structuredClone(value)` to clone into the content script's scope.
+
+> [!NOTE]
+> In Firefox 148 and earlier,  `structuredClone.call(iframe.contentWindow)` incorrectly created objects in the caller's scope, instead of the iframe's scope. This behavior meant that content scripts calling `structuredClone` created objects in the content script's scope.
 
 ### Constructors from the page context
 
