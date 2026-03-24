@@ -65,9 +65,9 @@ v128.load64_lane memidx offset=int align=int laneidx
 
 ### Binary encoding
 
-| Instruction        | Binary format                                           | Example text => binary                                                     |
-| ------------------ | ------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `v128.load64_lane` | `0xFD 87:u32 memidx:u8 offset:u32 align:u32 laneidx:u8` | `v128.load64_lane 0 offset=0 align=8 0` => `0xfd 0x57 0x00 0x00 0x03 0x00` |
+| Instruction        | Binary format                                           | Example text => binary                                                |
+| ------------------ | ------------------------------------------------------- | --------------------------------------------------------------------- |
+| `v128.load64_lane` | `0xFD 87:u32 memidx:u8 offset:u32 align:u32 laneidx:u8` | `v128.load64_lane 0 offset=0 align=8 0` => `0xfd 0x57 0x03 0x00 00x0` |
 
 ## Specifications
 
