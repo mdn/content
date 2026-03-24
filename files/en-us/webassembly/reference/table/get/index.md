@@ -87,9 +87,9 @@ table.get identifier
 
 ### Opcodes
 
-| Instruction | Binary opcode                                                                                           |
-| ----------- | ------------------------------------------------------------------------------------------------------- |
-| `table.get` | `𝟶𝚡𝟸𝟶` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
+| Instruction | Binary format     | Example text => binary       |
+| ----------- | ----------------- | ---------------------------- |
+| `table.get` | `0x25 𝑥:tableidx` | `table.get 0` => `0x25 0x01` |
 
 ## Description
 

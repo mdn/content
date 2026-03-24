@@ -3,6 +3,9 @@ title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
 page-type: css-at-rule
 browser-compat: css.at-rules.container
+spec-urls:
+  - https://drafts.csswg.org/css-conditional-5/#container-type
+  - https://drafts.csswg.org/css-anchor-position-2/#container-rule-anchored
 sidebar: cssref
 ---
 
@@ -48,6 +51,15 @@ If no `<container-query>` is specified, named containers are selected.
   }
 }
 
+/* With an anchored query */
+@container anchored(fallback: bottom) {
+  .infobox::before {
+    content: "▲";
+    bottom: 100%;
+    top: auto;
+  }
+}
+
 /* With a <container-name> and a <scroll-state> */
 @container sticky-heading scroll-state(stuck: top) {
   h2 {
@@ -79,7 +91,7 @@ If no `<container-query>` is specified, named containers are selected.
     - `<container-name>` {{optional_inline}}
       - : The name of the container to query; it is specified as an {{cssxref("ident")}}. If the query evaluates to `true`, the declared styles are applied to the container's descendant elements.
     - `<container-query>` {{optional_inline}}
-      - : A set of features that are evaluated against the query container when the size, [`<style-feature>`](#container_style_queries), or scroll-state of the container changes.
+      - : A set of features that are evaluated against the query container when the size, [`<style-feature>`](#container_style_queries), scroll-state, or applied position-try fallback of the container changes.
 
 ### Logical keywords in container queries
 
@@ -134,7 +146,7 @@ Details about usage and naming restrictions are described in the {{cssxref("cont
 
 ### Descriptors
 
-The `<container-condition>` queries include [size](#size_container_descriptors) and [scroll-state](#scroll-state_container_descriptors) container descriptors.
+The `<container-condition>` queries include [size](#size_container_descriptors), [scroll-state](#scroll-state_container_descriptors), and [anchored](#anchored_container_descriptors) container descriptors.
 
 #### Size container descriptors
 
@@ -172,7 +184,7 @@ The `<container-condition>` can include one or more boolean size queries, each w
 
 #### Scroll-state container descriptors
 
-Scroll-state container descriptors are specified inside the `<container-condition>` within a set of parentheses following the `scroll-state` keyword, for example:
+Scroll-state container descriptors are specified inside the `<container-condition>` as an argument for the `scroll-state()` function, for example:
 
 ```css
 @container scroll-state(scrollable: top) {
@@ -319,7 +331,7 @@ Supported keywords for scroll-state container descriptors include {{glossary("ph
 
     To evaluate a container with a non-`none` `stuck` scroll-state query, it must have `position: sticky` set on it, and be inside a scroll container. If the test passes, the rules inside the `@container` block are applied to descendants of the `position: sticky` container.
 
-    It is possible for two values from opposite axes to match at the same time:
+    It is possible for two values from adjacent axes to match at the same time:
 
     ```css
     @container scroll-state((stuck: top) and (stuck: left)) {
@@ -342,6 +354,27 @@ Supported keywords for scroll-state container descriptors include {{glossary("ph
       /* … */
     }
     ```
+
+#### Anchored container descriptors
+
+Anchored container descriptors are specified inside the `<container-condition>` as an argument for the `anchored()` function, for example:
+
+```css
+@container anchored(fallback: top) {
+  /* … */
+}
+@container anchored(fallback: flip-block flip-inline) {
+  /* … */
+}
+@container anchored(fallback: --custom-fallback) {
+  /* … */
+}
+```
+
+- `fallback`
+  - : Queries whether a specific position-try fallback is currently active on an anchor-positioned container, as specified via the {{cssxref("position-try-fallbacks")}} property. Valid `fallback` values include any component value that is valid for inclusion in a `position-try-fallbacks` property value.
+
+    If the `fallback` value named in the test is currently active on the anchor-positioned container, the test passes, and the rules inside the `@container` block are applied to descendants of the anchor-positioned container.
 
 ## Formal syntax
 
@@ -511,7 +544,11 @@ The global `revert` and `revert-layer` are invalid as values in a `<style-featur
 
 ### Scroll-state queries
 
-See [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) for full walkthroughs of scroll-state query examples.
+See [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) for scroll-state query examples.
+
+### Anchored queries
+
+See [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries) for anchored query examples.
 
 ## Specifications
 
@@ -526,6 +563,7 @@ See [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditiona
 - [Using container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
+- [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}

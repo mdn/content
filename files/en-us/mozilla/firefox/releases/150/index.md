@@ -1,13 +1,13 @@
 ---
-title: Firefox 150 release notes for developers (Nightly)
-short-title: Firefox 150 (Nightly)
+title: Firefox 150 release notes for developers (Beta)
+short-title: Firefox 150 (Beta)
 slug: Mozilla/Firefox/Releases/150
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 150 that affect developers.
-Firefox 150 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [April 21, 2026](https://whattrainisitnow.com/release/?version=150).
+Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [April 21, 2026](https://whattrainisitnow.com/release/?version=150).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
