@@ -32,7 +32,9 @@ Firefox 149 was released on [March 24, 2026](https://whattrainisitnow.com/releas
 
 ### JavaScript
 
-No notable changes.
+- The `"islamic-umalqura"` [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) is now supported by {{jsxref("Intl")}}.
+  This string will be in the list of calendars returned by {{jsxref("Intl.supportedValuesOf()")}}, and can be set as the [`options.calendar`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#calendar) parameter in the [`DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)/
+  ([Firefox bug 2011505](https://bugzil.la/2011505)).
 
 ### APIs
 
