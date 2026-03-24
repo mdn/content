@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.load32_lane
 sidebar: webassemblysidebar
 ---
 
-The **`load32_lane`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/SIMD/load) loads a single value from a given heap address into the specified lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i32x4` value interpretation.
+The **`load32_lane`** [SIMD load instruction](/en-US/docs/WebAssembly/Reference/SIMD/load) loads a single value from a given memory address into the specified lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) type `i32x4` value interpretation.
 
 {{InteractiveExample("Wat Demo: load32_lane", "tabbed-taller")}}
 
@@ -34,11 +34,21 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ## Syntax
 
 ```plain
+;; Common usage
 v128.load32_lane lane_value
+
+;; With optional immediates
+v128.load32_lane memidx offset=int align=int lane_value
 ```
 
-- `load32_lane`
-  - : The `load32_lane` instruction. Must always be included after `v128.`.
+- `v128.load32_lane`
+  - : The `v128.load32_lane` instruction.
+- `memidx` {{optional_inline}}
+  - : An integer representing the memory index, in cases where the module uses multiple memories. The default is `0`.
+- `offset=int` {{optional_inline}}
+  - : An integer representing a constant number of bytes to add to the memory address before loading. The default is `0`.
+- `align=int` {{optional_inline}}
+  - : An integer representing a hint to the Wasm engine about what alignment to expect for the final address. The minimum value is `1` and the default and maximum value is `4`. An `align` value has to be a power of `2`.
 - `lane_value`
   - : The lane to load a value into.
 
@@ -51,15 +61,18 @@ v128.load32_lane lane_value
 - `memory_address`
   - : An integer representing the memory address to load from.
 - `input`
-  - : The input `v128` `i32x4` value interpretation.
+  - : The input `v128` type `i32x4` value interpretation.
 - `output`
-  - : The output `v128` `i32x4` value interpretation.
+  - : The output `v128` type `i32x4` value interpretation.
 
 ### Binary encoding
 
-| Instruction        | Binary format                                | Example text => binary                               |
-| ------------------ | -------------------------------------------- | ---------------------------------------------------- |
-| `v128.load32_lane` | `0xFD 86:u32 align:u32 offset:u32 𝑖:laneidx` | `v128.load32_lane 0 0` => `0xfd 0x56 0x00 0x00 0x00` |
+| Instruction        | Binary format                                           | Example text => binary                                                |
+| ------------------ | ------------------------------------------------------- | --------------------------------------------------------------------- |
+| `v128.load32_lane` | `0xFD 86:u32 memidx:u8 offset:u32 align:u32 laneidx:u8` | `v128.load32_lane 0 offset=0 align=4 3` => `0xfd 0x56 0x02 0x00 0x03` |
+
+> [!NOTE]
+> While Wasm text format specifies the literal `align` value, the binary equivalent represents the exponent of the formula `2^x` used to calculate the alignment. So for example, `align=1` is equivalent to `0x00` (`2^0`), while `align=4` is equivalent to `0x02` (`2^2`).
 
 ## Specifications
 
