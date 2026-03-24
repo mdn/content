@@ -10,7 +10,7 @@ browser-compat: api.ShadowRoot.referenceTarget
 
 The **`referenceTarget`** property of the {{domxref("ShadowRoot")}} interface is a nullable string that represents the effective target of any element reference made against the shadow host from outside the host element.
 
-Some elements are associated with other elements using attributes that reference their `id` attribute.
+Some elements are associated with other elements using attributes that take _element references_: strings that specify the other element's `id`.
 For example, a {{htmlelement("label")}} element can use the {{htmlattribute("for")}} attribute to specify the `id` of the element it is labelling.
 Similarly, {{htmlattribute("popovertarget")}} can be used to indicate the `id` of an element that will be triggered by a {{htmlelement("button")}}, and [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) can indicate the element that supplies its [ARIA](/en-US/docs/Web/Accessibility/ARIA/Guides) description.
 
