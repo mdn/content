@@ -58,6 +58,8 @@ window.addEventListener("pageshow", (event) => {
 
 The `event.persisted` property is `true` only when the page is restored from bfcache.
 
+Note that bfcache restores can also affect analytics: if a page is frequently restored from bfcache rather than reloaded, pageview counts may drop because the initial page load event does not fire again. Some analytics providers handle this automatically, but others require you to send a new pageview in the `pageshow` handler shown above.
+
 ## What blocks bfcache
 
 Certain APIs and page behaviors prevent the browser from storing a page in bfcache:
@@ -82,7 +84,7 @@ window.addEventListener("pagehide", (event) => {
 Pages with active connections may be excluded from bfcache. Close them during navigation:
 
 - {{domxref("IndexedDB_API", "IndexedDB")}} connections
-- Open {{domxref("WebSocket")}} or {{domxref("WebRTC")}} connections
+- Open {{domxref("WebSocket")}} or {{domxref("WebRTC")}} connections (currently blocks bfcache in Chrome but not in Safari; Chrome plans to close WebSockets on tab hide rather than blocking bfcache)
 - In-progress {{domxref("Window/fetch", "fetch()")}} requests
 
 Listen for the `pagehide` event to close connections, and re-open them in the `pageshow` event when restoring from bfcache.
