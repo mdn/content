@@ -214,6 +214,16 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
   - : A string that sets a policy for the {{httpheader("Referer")}} header. The syntax and semantics of this option are exactly the same as for the {{httpheader("Referrer-Policy")}} header.
 - `signal` {{optional_inline}}
   - : An {{domxref("AbortSignal")}}. If this option is set, the request can be canceled by calling {{domxref("AbortController.abort()", "abort()")}} on the corresponding `AbortController`.
+- `targetAddressSpace` {{optional_inline}}
+  - : An enumerated value that specifies whether the request is intended to be a loopback, local, or public request. Valid values are:
+    - `local`
+      - : The request URL is a local address, which is only accessible on the local network: Its target will differ on different networks. For example, `http://192.168.0.1`.
+    - `loopback`
+      - : The request URL is a loopback address, which is only accessible on the local device: Its target will differ on every device. For example, `127.0.0.1`, which is generally known as `localhost`.
+    - `public`
+      - : The request URL is a public web address, that is, an address whose target is the same for all devices globally on the IP network. For example, `https://example.com`.
+
+    See [Local Network Access](/en-US/docs/Web/Security/Defenses/Local_network_access) for more information.
 
 ## Examples
 
