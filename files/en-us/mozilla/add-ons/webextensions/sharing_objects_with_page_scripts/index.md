@@ -28,7 +28,7 @@ In Firefox, part of the isolation between content scripts and page scripts is im
 
 The purpose of this feature is to make it harder for the less-privileged script to confuse the more-privileged script by redefining the native properties of objects.
 
-So, for example, when a content script accesses the page's [window](/en-US/docs/Web/API/Window), it won't see any properties the page script added to the window, and if the page script has redefined any existing properties of the window, the content script will see the original version.
+So, for example, when a content script accesses the page's [window](/en-US/docs/Web/API/Window) from a [content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment), it won't see any properties the page script added to the window, and if the page script has redefined any existing properties of the window, the content script will see the original version.
 
 ## Accessing page script objects from content scripts
 

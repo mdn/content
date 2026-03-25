@@ -95,7 +95,7 @@ However, content scripts get a "clean" view of the DOM. This means:
 As noted at ["Content script environment" at Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#content_script_environment), the behavior differs across browsers:
 
 - In Firefox, this behavior is called [Xray vision](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox).
-  A content script may encounter JavaScript objects from its global scope or Xray-wrapped versions from the web page. In regular web pages, {{domxref("globalThis")}} is identical to `window`, but in Firefox's content scripts, `globalThis` is a distinct object inheriting from `window`. This distinction often makes no practical difference for the availability of global APIs. The exception is when the global scope contains a definition of a standard API that shadows the definition in `window`, such as [`structuredClone` in content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#structuredclone).
+  A content script may encounter JavaScript objects from its global scope or Xray-wrapped versions from the web page. In regular web pages, {{jsxref("globalThis")}} is identical to `window`, but in Firefox's content scripts, `globalThis` is a distinct object inheriting from `window`. This distinction often makes no practical difference for the availability of global APIs. The exception is when the global scope contains a definition of a standard API that shadows the definition in `window`, such as [`structuredClone` in content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#structuredclone).
 
 - In Chrome this behavior is enforced through an [isolated world](https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/bindings/core/v8/V8BindingDesign.md#world), which uses a fundamentally different approach.
 
@@ -169,8 +169,6 @@ If a content script needs to use a JavaScript library, then the library itself s
 
 > [!NOTE]
 > Firefox provides [cloneInto()](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto) and [exportFunction()](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction) to enable content scripts to access JavaScript objects created by page scripts and expose their JavaScript objects to page scripts.
->
-> The cross-browser {{domxref("structuredClone")}} method can also be used to create structured clones.
 >
 > See [Sharing objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) for more details.
 
