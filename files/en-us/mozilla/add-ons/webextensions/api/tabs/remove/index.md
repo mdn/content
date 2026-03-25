@@ -10,7 +10,7 @@ Closes one or more tabs.
 
 If any of the tabs are:
 
-- part of a split view, the split view is removed.
+- part of a split view, the [split view](https://support.mozilla.org/en-US/kb/split-view-firefox) is removed.
 - the last tab in a group, the group is removed.
 
 ## Syntax

@@ -101,7 +101,7 @@ Firefox 149 was released on [March 24, 2026](https://whattrainisitnow.com/releas
 
 ## Changes for add-on developers
 
-- Adds initial support for split view. This support covers:
+- Adds initial support for [split view](https://support.mozilla.org/en-US/kb/split-view-firefox). This support covers:
   - Inclusion of the split view ID in {{WebExtAPIRef("tabs.query")}}, {{WebExtAPIRef("tabs.onUpdated")}}, and {{WebExtAPIRef("tabs.Tab")}}
   - Documentation of the behavior when {{WebExtAPIRef("tabs.move")}} or {{WebExtAPIRef("tabs.remove")}} include tabs in a split view.
     ([Firefox bug 1993037](https://bugzil.la/1993037))
