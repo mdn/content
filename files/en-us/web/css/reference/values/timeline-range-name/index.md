@@ -38,10 +38,13 @@ Valid `<timeline-range-name>` values:
 
 - `exit-crossing`
   - : Represents the range where the principal box crosses the start border edge. The range start (0% progress) occurs when the start border edge of the element's principal box coincides with the start edge of its view progress visibility range. The range end (100% progress) is the point at which the end border edge of the element's principal box coincides with the start edge of its view progress visibility range. The size of the range is the size of the element's principle box in the scroll direction.
+ 
+- `scroll`
+  - : Represents the full range of the {{glossary("scroll container")}} on which the view progress timeline is defined. The range start (0% progress) occurs at the startmost scroll position of the scroll container underlying the view progress timeline. The range end (100% progress) is the endmost scroll position of the scroll container underlying the view progress timeline.
 
 ## Formal syntax
 
-{{CSSSyntaxRaw(`<timeline-range-name> = cover | contain | entry | exit | entry-crossing | exit-crossing`)}}
+{{CSSSyntaxRaw(`<timeline-range-name> = cover | contain | entry | exit | entry-crossing | exit-crossing | scroll`)}}
 
 ## Examples
 
