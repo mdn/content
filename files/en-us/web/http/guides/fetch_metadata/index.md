@@ -1,8 +1,8 @@
 ---
 title: Fetch metadata
-slug: Web/Security/Defenses/Fetch_metadata
+slug: Web/HTTP/Guides/Fetch_metadata
 page-type: guide
-sidebar: security
+sidebar: http
 ---
 
 **Fetch metadata** is the term for a group of HTTP request headers that give the server information about the context in which the request is being made.
