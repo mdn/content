@@ -13,10 +13,6 @@ permissions:
   # Post inline review comments via reviewdog.
   pull-requests: write
 
-concurrency:
-  group: ci-${{ github.workflow }}-${{ github.event.workflow_run.id }}
-  cancel-in-progress: true
-
 jobs:
   reviewdog:
     runs-on: ubuntu-latest
