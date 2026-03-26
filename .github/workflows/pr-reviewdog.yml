@@ -58,6 +58,10 @@ jobs:
         if: steps.check.outputs.HAS_ARTIFACT == 'true'
         env:
           CI_PULL_REQUEST: ${{ steps.identify-pr.outputs.number }}
+          CI_COMMIT: ${{ github.event.workflow_run.head_sha }}
+          CI_REPO_OWNER: ${{ github.repository_owner }}
+          CI_REPO_NAME: ${{ github.event.repository.name }}
+          CI_BRANCH: ${{ github.event.workflow_run.head_branch }}
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           reviewdog \
