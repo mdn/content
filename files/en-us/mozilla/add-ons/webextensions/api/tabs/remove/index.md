@@ -13,7 +13,7 @@ If any of the tabs are:
 - part of a split view, the split view is removed.
 - the last tab in a group, the group is removed.
 
-See also [Working with tab groups and split views](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_groups_and_split_views).
+See also [Working with tab groups](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_groups) and [Working with tab split views](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_split_views).
 
 ## Syntax
 

@@ -554,24 +554,31 @@ Let's walk through how it's set up.
     });
     ```
 
-## Working with tab groups and split views
+## Working with tab groups
 
-Tab functionality provides users with the ability to:
+Tab functionality enables users to create [group tabs](https://support.mozilla.org/en-US/kb/tab-groups).
 
-- [group tabs](https://support.mozilla.org/en-US/kb/tab-groups).
-- present two tabs side-by-side in a [split view](https://support.mozilla.org/en-US/kb/split-view-firefox).
-
-Various tab methods enable you to work with the content of groups and split views, including:
+Various tab methods enable you to work with the content of groups, including:
 
 - {{WebExtAPIRef("tabs.group")}} and {{WebExtAPIRef("tabs.ungroup")}} to create or remove groups.
-- {{WebExtAPIRef("tabs.move")}} to move tabs within, into, or out of a group, or within or out of a split view.
-- {{WebExtAPIRef("tabs.remove")}} to close tabs in a group, and close the group if the tab was the last one in the group, or in a split view and close the split view.
+- {{WebExtAPIRef("tabs.move")}} to move tabs within, into, or out of a group.
+- {{WebExtAPIRef("tabs.remove")}} to close tabs in a group, and close the group if the tab was the last one in the group
 
 > [!NOTE]
 > Features to work with a tab group are provided in {{WebExtAPIRef("tabGroups")}}.
 
+## Working with tab split views
+
+Tab functionality lets display two tabs side-by-side in a [split view](https://support.mozilla.org/en-US/kb/split-view-firefox).
+
+Various tab methods enable you to work with the content of groups and split views, including:
+
+- {{WebExtAPIRef("tabs.move")}} to move tabs within or out of a split view.
+- {{WebExtAPIRef("tabs.remove")}} to close a tab in a split view, which closes the split view.
+
 > [!NOTE]
-> APIs to enable the creation and removal of split views (without moving or removing the tabs) are being developed under ([Firefox bug 2016928](https://bugzil.la/2016928)).
+> APIs to enable the creation and removal of split views (without moving or removing the tabs) are being developed under W3C
+web extensions issue [#967](https://github.com/w3c/webextensions/issues/967).
 
 ## Some other interesting abilities
 

@@ -22,7 +22,7 @@ When tabs associated with a split view are moved:
     > [!NOTE]
     > In Firefox 149, when a call moves a tab or tabs in a split view, the tabs in the split view are moved together to preserve the split view and the order of the tabs is unchanged.
 
-See also [Working with tab groups and split views](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_groups_and_split_views).
+See also [Working with tab split views](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_split_views).
 
 ## Syntax
 
