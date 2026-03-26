@@ -20,12 +20,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout BASE
+      - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          # explicitly specify base ref to ensure `pull_request` runs
-          # behave the same as `pull_request_target` runs
-          ref: ${{ github.event.pull_request.base.sha }}
           persist-credentials: false
 
       - name: Get changed files
@@ -55,42 +52,6 @@ jobs:
           else
             echo "HAS_FILES=false" >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Checkout HEAD
-        if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          path: pr_head
-          persist-credentials: false
-
-      - name: Get changed content from HEAD
-        if: steps.check.outputs.HAS_FILES == 'true'
-        run: |
-          git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
-          git config --global user.name "mdn-bot"
-
-          # Remove non-Markdown files from BASE.
-          find files -type f ! -name '*.md' -delete
-          git commit --quiet -m "Remove non-Markdown files from PR base" files
-
-          # Remove files from BASE.
-          rm -r files *.md
-
-          # Remove non-Markdown files from HEAD.
-          find pr_head -type f ! -name '*.md' -delete
-
-          # Move Markdown files from HEAD into BASE.
-          mv pr_head/files pr_head/*.md .
-
-          # Remove HEAD checkout.
-          rm -r pr_head
-
-          # To avoid contents of PR getting into the diff that we are going to generate
-          # after running the linters, here we make a dummy commit.
-          # Note, this commit is not getting pushed.
-          git add .
-          git commit -m "Use Markdown files from PR head" .
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
