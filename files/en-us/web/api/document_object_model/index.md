@@ -300,7 +300,7 @@ Similarly, a document containing SVG is also described using the {{DOMxRef("Docu
 
 This example uses a {{HTMLElement("div")}} element containing a {{HTMLElement("textarea")}} and two {{HTMLElement("button")}} elements. When the user clicks the first button we set some text in the `<textarea>`. When the user clicks the second button we clear the text. We use:
 
-- {{domxref("Document.querySelector()")}} to access the `<textarea>` and the button
+- {{domxref("Element.querySelector()")}} to access the `<textarea>` and the button
 - {{domxref("EventTarget.addEventListener()")}} to listen for button clicks
 - {{domxref("Node.textContent")}} to set and clear the text.
 
@@ -352,7 +352,7 @@ clearText.addEventListener("click", () => {
 
 This example uses a {{HTMLElement("div")}} element containing a {{HTMLElement("div")}} and two {{HTMLElement("button")}} elements. When the user clicks the first button we create a new element and add it as a child of the `<div>`. When the user clicks the second button we remove the child element. We use:
 
-- {{domxref("Document.querySelector()")}} to access the `<div>` and the buttons
+- {{domxref("Element.querySelector()")}} to access the `<div>` and the buttons
 - {{domxref("EventTarget.addEventListener()")}} to listen for button clicks
 - {{domxref("Document.createElement")}} to create the element
 - {{domxref("Node.appendChild()")}} to add the child
