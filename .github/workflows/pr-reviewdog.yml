@@ -64,7 +64,7 @@ jobs:
           CI_BRANCH: ${{ github.event.workflow_run.head_branch }}
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          reviewdog \
+          env -u GITHUB_ACTIONS reviewdog \
             -guess \
             -name="mdn-linter" \
             -f=diff \
