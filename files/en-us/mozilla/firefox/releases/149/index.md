@@ -22,7 +22,7 @@ Firefox 149 was released on [March 24, 2026](https://whattrainisitnow.com/releas
 
 ### CSS
 
-- The {{CSSXRef("shape-outside")}} CSS property now supports the [`xywh()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/xywh) function as a value. This allows you to define a shape for inline content to wrap around, using distances from the left (`x`) and top (`y`) edges of the containing block and a width (`w`) and height (`h`). ([Firefox bug 1983187](https://bugzil.la/1983187)).
+- The {{CSSXRef("shape-outside")}} CSS property now supports the [`xywh()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/xywh) and [`rect()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/rect) functions as values. These functions were previously already implemented for the {{CSSXRef("clip-path")}} and {{CSSXRef("offset-path")}} properties, and are now also available for `shape-outside`. ([Firefox bug 1983187](https://bugzil.la/1983187)).
 
 - The {{CSSXRef("vertical-align")}} CSS property is now a shorthand property for {{CSSXRef("alignment-baseline")}}, {{CSSXRef("baseline-shift")}} and {{CSSXRef("baseline-source")}} properties. ([Firefox bug 1830771](https://bugzil.la/1830771)).
 
