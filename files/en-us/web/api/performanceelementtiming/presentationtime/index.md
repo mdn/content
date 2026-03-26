@@ -14,7 +14,7 @@ The `presentationTime` is implementation-dependent, therefore the value may diff
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}} or {{jsxref("null")}} if the value is not exposed.
+A {{domxref("DOMHighResTimeStamp")}} or {{jsxref("Operators/null", "null")}} if the value is not exposed.
 
 ## Examples
 
