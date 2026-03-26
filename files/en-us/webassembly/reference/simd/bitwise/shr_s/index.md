@@ -77,5 +77,5 @@ value_type.shr_s
 
 ## See also
 
-- [`shl`](/en-US/docs/WebAssembly/Reference/SIMD/bitwise/shl)
+- [`shl`](/en-US/docs/WebAssembly/Reference/Numeric/shl)
 - [`shr_u`](/en-US/docs/WebAssembly/Reference/SIMD/bitwise/shr_u)
