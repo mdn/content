@@ -130,7 +130,6 @@ td {
   padding: 5px;
 }
 ```
-
 ```html hidden
 <table>
   <thead>
@@ -149,11 +148,10 @@ td {
           alt="Pride flag" />
       </td>
       <td>
-          <img
-            class="svgFilter"
-            href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            alt="Pride flag"
-          />
+        <img
+          class="svgFilter"
+          href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
         <img
