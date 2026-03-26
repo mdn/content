@@ -13,7 +13,7 @@ sidebar: http
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `local-network` directive controls whether the current document is allowed to make network requests to local addresses.
 
-A local address is only accessible on the local network: Its target will differ on different networks. For example, `http://192.168.0.1`.
+A local address is only accessible on the local network; its target will differ on different networks. For example, `192.168.0.1`.
 
 Specifically, where a defined policy blocks use of this feature, requests to local addresses will always fail.
 

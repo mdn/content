@@ -15,11 +15,11 @@ The read-only **`targetAddressSpace`** property of the {{DOMxRef("Request")}} in
 An enumerated value, which can be one of:
 
 - `local`
-  - : The request URL is a local address, which is only accessible on the local network: iIts target will differ on different networks. For example, `http://192.168.0.1`.
+  - : The request is to a local address, which is only accessible on the local network; its target will differ on different networks. For example, `192.168.0.1`.
 - `loopback`
-  - : The request URL is a loopback address, which is only accessible on the local device: Its target will differ on every device. For example, `127.0.0.1`, which is generally known as `localhost`.
+  - : The request is to a loopback address, which is only accessible on the local device; its target will differ on every device. For example, `127.0.0.1`, which is generally known as `localhost`.
 - `public`
-  - : The request URL is a public web address, that is, an address whose target is the same for all devices globally on the IP network. For example, `https://example.com`.
+  - : The request is to an address available from anywhere on the internet; its target is the same for all devices globally. For example, `104.18.27.120` (the IP address of `example.com`)
 - `unknown`
   - : No `targetAddressSpace` was set on the request.
 
@@ -29,9 +29,9 @@ In browsers that support [Local Network Access](/en-US/docs/Web/Security/Defense
 
 This permission is restricted to secure contexts. If granted, the permissions additionally relax [mixed content](/en-US/docs/Web/Security/Defenses/Mixed_content) blocking for local network requests. This is useful because many local devices are not able to obtain publicly trusted TLS certificates for various reasons. For example, it allows public websites to access local testing servers or devices running on HTTP.
 
-The `targetAddressSpace` property, when set to `local` or `loopback` on new requests (via the {{domxref("Request.Request", "Request()")}} constructor or directly in the {{domxref("Window.fetch", "fetch()")}} method), explicitly tells supporting browsers to skip mixed content checks. This is needed in cases where a URL is a public domain address, but ends up resolving to a local network address, such as `http://example.com`.
+The `targetAddressSpace` property, when set to `local` or `loopback` on new requests (via the {{domxref("Request.Request", "Request()")}} constructor or directly in the {{domxref("Window.fetch", "fetch()")}} method), explicitly tells supporting browsers to skip mixed content checks. This is needed in cases where a URL is a public domain address, but ends up resolving to a local network address, such as `http://internal.example.com`.
 
-Some addresses such as private IP literals (such as `http://192.168.0.1`) and `local` addresses (such as `http://router.local`) are exempt from mixed content checks, so don't need the `targetAddressSpace` property to be set.
+Some addresses such as private IP literals (for example, `192.168.0.1`) and `local` addresses (such as `http://router.local`) are exempt from mixed content checks, so don't need the `targetAddressSpace` property to be set.
 
 ## Examples
 

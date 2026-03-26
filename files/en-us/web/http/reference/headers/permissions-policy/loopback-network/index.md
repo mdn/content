@@ -13,7 +13,7 @@ sidebar: http
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `loopback-network` directive controls whether the current document is allowed to make network requests to loopback addresses.
 
-A loopback address is only accessible on the local host: Its target will differ on every device. For example, `127.0.0.1`, which is generally known as `localhost`.
+A loopback address is only accessible on the local host; its target will differ on every device. For example, `127.0.0.1`, which is generally known as `localhost`.
 
 Specifically, where a defined policy blocks use of this feature, requests to loopback addresses will always fail.
 

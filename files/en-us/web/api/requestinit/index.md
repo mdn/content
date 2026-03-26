@@ -217,11 +217,11 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 - `targetAddressSpace` {{optional_inline}}
   - : An enumerated value that specifies whether the request is intended to be a loopback, local, or public request. Valid values are:
     - `local`
-      - : The request URL is a local address, which is only accessible on the local network: Its target will differ on different networks. For example, `http://192.168.0.1`.
+      - : The request is to a local address, which is only accessible on the local network; its target will differ on different networks. For example, `192.168.0.1`.
     - `loopback`
-      - : The request URL is a loopback address, which is only accessible on the local device: Its target will differ on every device. For example, `127.0.0.1`, which is generally known as `localhost`.
+      - : The request is to a loopback address, which is only accessible on the local device; its target will differ on every device. For example, `127.0.0.1`, which is generally known as `localhost`.
     - `public`
-      - : The request URL is a public web address, that is, an address whose target is the same for all devices globally on the IP network. For example, `https://example.com`.
+      - : The request is to an address available from anywhere on the internet; its target is the same for all devices globally. For example, `104.18.27.120` (the IP address of `example.com`)
 
     See [Local Network Access](/en-US/docs/Web/Security/Defenses/Local_network_access) for more information.
 

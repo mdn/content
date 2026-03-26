@@ -22,11 +22,11 @@ Allowing local network access comes with risks — attackers can use such reques
 Local network access defines three different **address spaces**, which all network addresses are categorised under:
 
 - Local
-  - : A local address is only accessible on the local network: Its target will differ on different networks. For example, `http://192.168.0.1`.
+  - : A local address is only accessible on the local network; its target will differ on different networks. For example, `192.168.0.1`.
 - Loopback
-  - : A loopback address is only accessible on the local device: Its target will differ on every device. For example, `127.0.0.1`, which is generally known as `localhost`.
+  - : A loopback address is only accessible on the local device; its target will differ on every device. For example, `127.0.0.1`, which is generally known as `localhost`.
 - Public
-  - : A public web address is available from anywhere on the internet: Its target is the same for all devices globally on the IP network. For example, `https://example.com`.
+  - : A public address is available from anywhere on the internet; its target is the same for all devices globally. For example, `104.18.27.120` (the IP address of `example.com`).
 
 Depending on which address space a request URL is categorised in, the browser will handle its permissions differently.
 
@@ -84,9 +84,9 @@ console.log(req.targetAddressSpace);
 // loopback
 ```
 
-This is needed in cases where a URL is a public domain address, but ends up resolving to a local network address, such as `http://example.com`.
+This is needed in cases where a URL is a public domain address, but ends up resolving to a local network address, such as `http://internal.example.com`.
 
-Some addresses such as private IP literals (such as `http://192.168.0.1`) and `local` addresses (such as `http://router.local`) are exempt from mixed content checks, so don't need the `targetAddressSpace` property to be set.
+Some addresses such as private IP literals (for example, `192.168.0.1`) and `local` addresses (such as `http://router.local`) are exempt from mixed content checks, so don't need the `targetAddressSpace` property to be set.
 
 ## Local network access permissions policies
 
@@ -124,7 +124,7 @@ You could also specify `allow="local-network *"` to allow any origin loaded in t
 
 Local network access was originally implemented with the {{httpheader('Permissions-Policy/local-network-access','local-network-access')}} permission, which was used to control network requests to both local and loopback addresses together. This was updated to the more granular {{httpheader('Permissions-Policy/local-network','local-network')}} and {{httpheader('Permissions-Policy/loopback-network','loopback-network')}} permissions, which you should use going forward.
 
-However, the `local-network-access` permission continues to be supported for backwards-compatibility, as an alias of `local-network` and `loopback-network`.
+However, the `local-network-access` permission continues to be supported for backwards-compatibility [where already implemented](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/local-network-access#browser_compatibility), as an alias of `local-network` and `loopback-network`.
 
 ### Permission status for `local-network-access`
 
