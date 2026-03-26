@@ -130,6 +130,7 @@ td {
   padding: 5px;
 }
 ```
+
 ```html hidden
 <table>
   <thead>
