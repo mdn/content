@@ -7,15 +7,16 @@ sidebar: addonsidebar
 
 Tabs let a user open several web pages in their browser window and then switch between those web pages. With the Tabs API, you can work with and manipulate these tabs to create utilities that provide users with new ways to work with tabs or to deliver the features of your extension.
 
-In this how-to article we'll look at:
+This how-to article look at:
 
 - Permissions needed to use the Tabs API.
 - Discovering more about tabs and their properties using {{WebExtAPIRef("tabs.query")}}.
 - Creating, duplicating, moving, updating, reloading, and removing tabs.
 - Manipulating a tab's zoom level.
 - Manipulating a tab's CSS.
+- Manipulating tab groups and split views.
 
-We then conclude by looking at some other, miscellaneous features offered by the API.
+The article concludes by looking at some other, miscellaneous features offered by the API.
 
 > [!NOTE]
 > There are some Tab API features covered elsewhere. These are the methods you can use to manipulate tab content with scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, and {{WebExtAPIRef("tabs.executeScript")}}). If you want more information on these methods, see the Concepts article [Content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and the how-to guide [Modify a web page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page).
@@ -552,6 +553,25 @@ Let's walk through how it's set up.
       initializePageAction(tab);
     });
     ```
+
+## Working with tab groups and split views
+
+Tab functionality provides users with the ability to:
+
+- [group tabs](https://support.mozilla.org/en-US/kb/tab-groups).
+- present two tabs side-by-side in a [split view](https://support.mozilla.org/en-US/kb/split-view-firefox) 
+
+Various tab methods enable you to work with the content of groups and split views, including: 
+
+- {{WebExtAPIRef("tabs.group")}} and {{WebExtAPIRef("tabs.ungroup")}} to create or remove groups.
+- {{WebExtAPIRef("tabs.move")}} to move tabs within, into, or out of a group, or within or out of a split view.
+- {{WebExtAPIRef("tabs.remove")}} to close tabs in a group, and close the group if the tab was the last one in the group, or in a split view and close the split view. 
+
+> [!NOTE]
+> Features to work with a tab group are provided in {{WebExtAPIRef("tabGroups")}}.
+
+> [!NOTE]
+> APIs to enable the creation and removal of split views (without moving or removing the tabs) are being developed under ([Firefox bug 2016928](https://bugzil.la/2016928)).
 
 ## Some other interesting abilities
 
