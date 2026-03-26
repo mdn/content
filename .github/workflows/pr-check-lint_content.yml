@@ -164,16 +164,21 @@ jobs:
 
       - name: Collect lint diff
         if: always() && steps.check.outputs.HAS_FILES == 'true'
+        env:
+          MD_LINT_LOG: ${{ steps.markdownlint.outputs.MD_LINT_LOG }}
         run: |
           mkdir -p lint-results
           git diff HEAD > lint-results/lint.diff
+          echo "$MD_LINT_LOG" > lint-results/markdownlint.log
 
       - name: Upload lint results
         if: always() && steps.lint-diff.outputs.FILES_MODIFIED == 'true'
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: lint-results
-          path: lint-results/
+          path: |
+            lint-results/lint.diff
+            lint-results/markdownlint.log
 
       - name: Fail if any issues pending
         if: steps.lint-diff.outputs.FILES_MODIFIED == 'true' || steps.crlf.outputs.CRLF_FAILED == 'true' || steps.markdownlint.outputs.MD_LINT_FAILED == 'true' || steps.frontmatter.outputs.FM_LINT_FAILED == 'true'

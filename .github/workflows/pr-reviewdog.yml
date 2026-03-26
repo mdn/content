@@ -76,3 +76,21 @@ jobs:
             -f.diff.strip=1 \
             -filter-mode=diff_context \
             -reporter=github-pr-review < ../lint-results/lint.diff
+
+      - name: Add reviews for markdownlint errors
+        if: steps.check.outputs.HAS_ARTIFACT == 'true'
+        working-directory: mdn-content
+        env:
+          CI_PULL_REQUEST: ${{ steps.identify-pr.outputs.number }}
+          CI_COMMIT: ${{ github.event.workflow_run.head_sha }}
+          CI_REPO_OWNER: ${{ github.repository_owner }}
+          CI_REPO_NAME: ${{ github.event.repository.name }}
+          CI_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          env -u GITHUB_ACTIONS reviewdog \
+            -efm="%f:%l:%c %m" \
+            -efm="%f:%l %m" \
+            -name="markdownlint" \
+            -diff="git diff" \
+            -reporter="github-pr-review" < ../lint-results/markdownlint.log
