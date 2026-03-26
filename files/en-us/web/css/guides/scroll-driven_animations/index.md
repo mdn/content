@@ -141,6 +141,8 @@ Scroll the element in the inline direction to see its background color change. S
 
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
   - : Scroll-driven animation timelines and creating scroll-driven animations.
+- [Insetting view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets)
+  - : Insetting animation attachment ranges of scroll driven animations.
 
 ## Related concepts
 
