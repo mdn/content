@@ -42,8 +42,6 @@ User agents based on WebKit or Blink (such as Safari and Chrome) support several
 
 ### M
 
-- `-webkit-margin-after`
-- `-webkit-margin-before`
 - {{CSSxRef("-webkit-mask-box-image")}}: See {{cssxref("mask-border")}} and {{cssxref("border-image")}}.
 - {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-outset")}}: See {{cssxref("mask-border")}} and {{cssxref("border-image")}}.
 - {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-repeat")}}: See {{cssxref("mask-border")}} and {{cssxref("border-image")}}.
@@ -129,8 +127,10 @@ For each of the properties below, use the standard equivalents.
 ### J-Z
 
 - `-webkit-line-clamp`: Use {{CSSxRef("line-clamp")}}.
-- `-webkit-margin-end`: Use {{CSSxRef("margin-block-end")}}.
-- `-webkit-margin-start`: Use {{CSSxRef("margin-block-start")}}.
+- `-webkit-margin-after`: Use {{CSSxRef("margin-block-end")}}.
+- `-webkit-margin-before`: Use {{CSSxRef("margin-block-start")}}.
+- `-webkit-margin-end`: Use {{CSSxRef("margin-inline-end")}}.
+- `-webkit-margin-start`: Use {{CSSxRef("margin-inline-start")}}.
 - `-webkit-padding-after`: Use {{CSSxRef("padding-block-end")}}.
 - `-webkit-padding-before`: Use {{CSSxRef("padding-block-start")}}.
 - `-webkit-padding-end`: Use {{CSSxRef("padding-inline-end")}}.

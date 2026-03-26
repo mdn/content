@@ -1,8 +1,8 @@
 ---
-title: Firefox 148 release notes for developers (Stable)
-short-title: Firefox 148 (Stable)
+title: Firefox 148 release notes for developers
+short-title: Firefox 148
 slug: Mozilla/Firefox/Releases/148
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 

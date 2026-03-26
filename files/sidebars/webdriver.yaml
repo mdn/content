@@ -4,6 +4,9 @@ sidebar:
   - type: section
     link: /Web/WebDriver
   - type: section
+    link: /Web/WebDriver/How_to
+  - link: /Web/WebDriver/How_to/Create_BiDi_connection
+  - type: section
     link: /Web/WebDriver/Reference
   - type: section
     link: /Web/WebDriver/Reference/BiDi
