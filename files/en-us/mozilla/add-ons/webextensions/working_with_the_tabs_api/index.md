@@ -565,7 +565,7 @@ Various tab methods enable you to work with the content of groups and split view
 
 - {{WebExtAPIRef("tabs.group")}} and {{WebExtAPIRef("tabs.ungroup")}} to create or remove groups.
 - {{WebExtAPIRef("tabs.move")}} to move tabs within, into, or out of a group, or within or out of a split view.
-- {{WebExtAPIRef("tabs.remove")}} to close tabs in a group, and close the group if the tab was the last one in the group, or in a split view and close the split view. 
+- {{WebExtAPIRef("tabs.remove")}} to close tabs in a group, and close the group if the tab was the last one in the group, or in a split view and close the split view.
 
 > [!NOTE]
 > Features to work with a tab group are provided in {{WebExtAPIRef("tabGroups")}}.
