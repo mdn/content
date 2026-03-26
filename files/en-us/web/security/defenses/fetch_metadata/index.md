@@ -96,7 +96,7 @@ For example, if a user clicks a link in a page at `https://books.example.org/aut
 
 Similar mappings apply for other HTTP requests, such as:
 
-- Form submissions via the [`action`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form#action) attribute of a {{htmlelement("form")}} element.
+- Form submissions via the [`action`](/en-US/docs/Web/HTML/Reference/Elements/form#action) attribute of a {{htmlelement("form")}} element.
 - Requests for subresources such as images, fonts, or scripts.
 - Requests made using the {{domxref("window.fetch()", "fetch()")}} API.
 
