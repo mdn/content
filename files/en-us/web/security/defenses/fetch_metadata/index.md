@@ -132,7 +132,40 @@ A common type of policy is called a _resource isolation policy_. When the server
 - Top-level navigational requests from another origin, so users can get to your site by clicking links in other sites.
 - Requests to specific endpoints that are meant to be accessed cross-origin, including any that use [CORS](/en-US/docs/Web/HTTP/Guides/CORS).
 
-The [Resource Isolation Policy](https://xsleaks.dev/docs/defenses/isolation-policies/resource-isolation/) page provides sample code for such a policy.
+For example, the following [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) code allows only same-origin requests, directly user-initiated requests, and navigations.
+
+```js
+function isAllowed(req) {
+	// Allow same-origin and directly user-initiated requests
+	const secFetchSite = req.headers["sec-fetch-site"];
+	if (secFetchSite === "same-origin" || secFetchSite === "none") {
+		return true;
+	}
+
+	// Allow cross-site navigations, such as clicking links
+	const secFetchMode = req.headers["sec-fetch-mode"];
+	if (secFetchMode === "navigate" && req.method === "GET") {
+		return true;
+	}
+
+	// Deny everything else
+	return false;
+}
+
+app.get("/admin", (req, res) => {
+	res.setHeader("Vary", "sec-fetch-site, sec-fetch-mode");
+	if (isAllowed(req)) {
+		// Respond with the admin page if the user is admin
+		getAdminPage(req, res);
+	} else {
+		res.status(404).send("Not found.");
+	}
+});
+```
+
+Note that it also sends the {{httpheader("Vary")}} response header. This ensures that if the response is cached, the cached response will only be given to requests with the same values for the Fetch metadata headers we are using.
+
+The [Resource Isolation Policy](https://xsleaks.dev/docs/defenses/isolation-policies/resource-isolation/) page provides more sample code for a resource isolation policy.
 
 ## See also
 
