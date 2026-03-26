@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.browser.removeUserContext
 sidebar: webdriver
 ---
 
-The `browser.removeUserContext` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browser`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser) module removes the specified [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) and all its tabs across all windows. Tabs are closed without running [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) event handler functions.
+The `browser.removeUserContext` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browser`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser) module removes the specified [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) and all its tabs across all windows. Tabs are closed without running the [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) event handler functions.
 
 > [!WARNING]
 > This command is irreversible, and all storage associated with the user context is permanently deleted.

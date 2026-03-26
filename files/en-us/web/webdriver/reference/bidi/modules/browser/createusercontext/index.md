@@ -29,6 +29,9 @@ Set `params` to an empty object (`{}`) or include any of the following optional 
 - `unhandledPromptBehavior` {{optional_inline}}
   - : An object that specifies the default behavior when a user prompt (such as an `alert`, `confirm`, or `prompt` dialog) is encountered within this user context. When set, it overrides the [session-level](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new#unhandledpromptbehavior) `unhandledPromptBehavior` setting for this user context.
 
+> [!NOTE]
+> When a parameter is set, it applies to all existing and future tabs within this user context.
+
 ### Return value
 
 The following field in the `result` object of the response describes the created user context:
