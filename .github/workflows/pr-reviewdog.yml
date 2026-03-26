@@ -48,6 +48,14 @@ jobs:
         if: steps.identify-pr.outputs.number && hashFiles('lint-results/') != ''
         run: echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
 
+      - name: Checkout default branch
+        if: steps.identify-pr.outputs.number
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          path: mdn-content
+          ref: main
+          persist-credentials: false
+
       - name: Setup reviewdog
         if: steps.check.outputs.HAS_ARTIFACT == 'true'
         uses: reviewdog/action-setup@d8a7baabd7f3e8544ee4dbde3ee41d0011c3a93f # v1.5.0
@@ -56,6 +64,7 @@ jobs:
 
       - name: Suggest changes using diff
         if: steps.check.outputs.HAS_ARTIFACT == 'true'
+        working-directory: mdn-content
         env:
           CI_PULL_REQUEST: ${{ steps.identify-pr.outputs.number }}
           CI_COMMIT: ${{ github.event.workflow_run.head_sha }}
@@ -70,4 +79,4 @@ jobs:
             -f=diff \
             -f.diff.strip=1 \
             -filter-mode=diff_context \
-            -reporter=github-pr-review < lint-results/lint.diff
+            -reporter=github-pr-review < ../lint-results/lint.diff
