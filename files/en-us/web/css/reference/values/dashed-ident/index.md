@@ -6,21 +6,21 @@ spec-urls: https://drafts.csswg.org/css-values/#dashed-idents
 sidebar: cssref
 ---
 
-The **`<dashed-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) denotes an arbitrary string used as an {{glossary("identifier")}}.
+The **`<dashed-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) is a case-sensitive {{cssxref("custom-ident")}} starting with two dashes that denotes an arbitrary string used as an {{glossary("identifier")}}.
 
 ## Syntax
 
-The syntax of `<dashed-ident>` is similar to CSS identifiers (such as property names), except that it is [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity). It starts with two dashes, followed by the user-defined identifier.
+The syntax of `<dashed-ident>` is similar to CSS identifiers (such as property names), except that it is case-sensitive. It is a user-defined identifier preceded by two dashes (`--`).
 
 The double dash at the beginning makes them easily identifiable when reading through a CSS code block, and helps to avoid name clashes with standard CSS keywords.
 
-Just like [`<custom-ident>`](/en-US/docs/Web/CSS/Reference/Values/custom-ident) `<dashed-ident>`s are defined by the user, but unlike `<custom-ident>` [CSS](/en-US/docs/Web/CSS) will never define a `<dashed-ident>`.
+Just like {{cssxref("custom-ident")}}s, `<dashed-ident>`s are defined by the user. However, some `<custom-ident>`s are defined by the CSS language itself; `<dashed-ident>`s will never be defined in CSS.
 
 ## Examples
 
 ### Using with CSS custom properties
 
-When `<dashed-ident>` is used with [CSS custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), the property is declared first and then used within a [CSS var() function](/en-US/docs/Web/CSS/Reference/Values/var).
+When a `<dashed-ident>` is used as a [CSS custom property](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), the property is declared first, and then the `<dashed-ident>` is used within a [CSS `var()` function](/en-US/docs/Web/CSS/Reference/Values/var).
 
 ```css
 html {
@@ -47,7 +47,7 @@ h6 {
 
 ### Using with @color-profile
 
-When `<dashed-ident>` is used with the [@color-profile](/en-US/docs/Web/CSS/Reference/At-rules/@color-profile) at-rule, the at-rule is declared first and then used within a [CSS color() function](/en-US/docs/Web/CSS/Reference/Values/color_value/color).
+When a `<dashed-ident>` is used with the {{cssxref("@color-profile")}} at-rule, the at-rule is declared first, and then the `<dashed-ident>` is used within a [CSS `color()` function](/en-US/docs/Web/CSS/Reference/Values/color_value/color).
 
 ```css
 @color-profile --my-color-profile {
@@ -61,7 +61,7 @@ When `<dashed-ident>` is used with the [@color-profile](/en-US/docs/Web/CSS/Refe
 
 ### Using with @font-palette-values
 
-When `<dashed-ident>` is used with the [@font-palette-values](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values) at-rule, the at-rule is declared first and then used as the value for the [font-palette](/en-US/docs/Web/CSS/Reference/Properties/font-palette) property.
+When a `<dashed-ident>` is used with the {{cssxref("@font-palette-values")}} at-rule, the at-rule is declared first, and then the `<dashed-ident>` is used as the value for the {{cssxref("font-palette")}} property.
 
 ```css
 @font-palette-values --my-palette {
@@ -88,5 +88,5 @@ _As this type is not a real type but a convenience type used to simplify the def
 
 ## See also
 
-- [&lt;ident&gt;](/en-US/docs/Web/CSS/Reference/Values/ident)
-- [&lt;custom-ident&gt;](/en-US/docs/Web/CSS/Reference/Values/custom-ident)
+- {{cssxref("ident")}}
+- {{cssxref("custom-ident")}}

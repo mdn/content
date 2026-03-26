@@ -50,6 +50,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
   - : A string being the width of the frame margin.
 - {{domxref("HTMLIFrameElement.name")}}
   - : A string that reflects the [`name`](/en-US/docs/Web/HTML/Reference/Elements/iframe#name) HTML attribute, containing a name by which to refer to the frame.
+- {{domxref("HTMLIFrameElement.privateToken")}} {{experimental_inline}}
+  - : A string representation of an options object representing a [private state token](/en-US/docs/Web/API/Private_State_Token_API/Using) operation; this object has the same structure as the `RequestInit` dictionary's [`privateToken`](/en-US/docs/Web/API/RequestInit#privatetoken) property. Mirrors the content of the associated `<iframe>` element's [`privateToken`](/en-US/docs/Web/HTML/Reference/Elements/iframe#privatetoken) attribute.
 - {{domxref("HTMLIFrameElement.referrerPolicy")}}
   - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Reference/Elements/iframe#referrerpolicy) HTML attribute indicating which referrer to use when fetching the linked resource.
 - {{domxref("HTMLIFrameElement.sandbox")}} {{ReadOnlyInline}}

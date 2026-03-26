@@ -38,7 +38,7 @@ This header is modeled on the {{cssxref("@media/prefers-color-scheme", "prefers-
 
 The **`Sec-CH-Prefers-Color-Scheme`** header allows sites to obtain user color scheme preference at request time; they could then choose to provide the relevant CSS for the user's preference inline, for performance reasons. If the server inlines the CSS, it might want to include a {{HTTPHeader("Vary")}} response header specifying `Sec-CH-Prefers-Color-Scheme`, to indicate that the response is tailored for a particular color scheme.
 
-If performance is not a critical consideration in this context, you could instead handle the user's color scheme preference using the [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media query, and/or the {{domxref("Window.matchMedia()")}} API.
+If performance is not a critical consideration in this context, you could instead handle the user's color scheme preference using the {{cssxref("@media/prefers-color-scheme")}} media query, and/or the {{domxref("Window.matchMedia()")}} API.
 
 `Sec-CH-Prefers-Color-Scheme` is a high entropy hint so the site needs to opt into receiving it by sending an appropriate {{HTTPHeader("Accept-CH")}} response header. A user agent may intentionally omit the `Sec-CH-Prefers-Color-Scheme` header to preserve user privacy since the user's preference could, in theory, be used for fingerprinting.
 
@@ -103,5 +103,5 @@ The client will include the header in subsequent requests in the current session
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching varying responses](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}} header
-- [`prefers-color-scheme` CSS Media Query](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)
+- {{cssxref("@media/prefers-color-scheme")}} CSS media query
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

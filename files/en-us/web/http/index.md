@@ -12,30 +12,6 @@ It was designed for communication between web browsers and web servers, but it c
 HTTP follows a classical [client-server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model), with a client opening a connection to make a request, then waiting until it receives a response from the server.
 HTTP is a [stateless protocol](https://en.wikipedia.org/wiki/Stateless_protocol), meaning that the server does not keep any session data between two requests, although the later addition of [cookies](/en-US/docs/Web/HTTP/Guides/Cookies) adds state to some client-server interactions.
 
-## Reference
-
-The [HTTP reference](/en-US/docs/Web/HTTP/Reference) documentation contains detailed information about headers, request methods, status responses, and lists relevant specifications and standards documents.
-
-- [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
-  - : Message headers are used to send metadata about a resource or a HTTP message, and to describe the behavior of the client or the server.
-- [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods)
-  - : Request methods indicate the purpose of the request and what is expected if the request is successful.
-    The most common methods are {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}} for retrieving and sending data to servers, respectively, but there are other methods which serve different purposes.
-- [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status)
-  - : Response status codes indicate the outcome of a specific HTTP request.
-    Responses are grouped in five classes: informational, successful, redirections, client errors, and server errors.
-- [HTTP resources and specifications](/en-US/docs/Web/HTTP/Reference/Resources_and_specifications)
-  - : This page lists relevant resources about HTTP since it was first specified in the early 1990s.
-
-The following subsections are also notable:
-
-- [CSP directives](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives)
-  - : The {{HTTPHeader("Content-Security-Policy")}} (CSP) response header allows website administrators to specify which resources the user agent is allowed to load for a given page.
-    This section lists directives that can be used in a CSP header, with individual documentation pages that describe how the directives work and how to use them.
-- [Permissions-Policy directives](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives)
-  - : The {{HTTPHeader("Permissions-Policy")}} response header provides a mechanism to allow or deny the use of browser features in a document or within any {{HTMLElement("iframe")}} element in the document.
-    This section lists directives that can be used in a Permissions-Policy header, with individual documentation pages that describe how the directives work and how to use them.
-
 ## Guides
 
 HTTP is an extensible protocol that relies on concepts like resources and Uniform Resource Identifiers (URIs), a basic message structure, and client-server communication model.
@@ -143,3 +119,27 @@ Helpful tools and resources for understanding and debugging HTTP.
     Supports HTTP, HTTPS, WS, WSS, among many other protocols.
 - [How Browsers Work (2011)](https://web.dev/articles/howbrowserswork)
   - : A very comprehensive article on browser internals and request flow through HTTP protocol.
+
+## Reference
+
+The [HTTP reference](/en-US/docs/Web/HTTP/Reference) documentation contains detailed information about headers, request methods, status responses, and lists relevant specifications and standards documents.
+
+- [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
+  - : Message headers are used to send metadata about a resource or a HTTP message, and to describe the behavior of the client or the server.
+- [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods)
+  - : Request methods indicate the purpose of the request and what is expected if the request is successful.
+    The most common methods are {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}} for retrieving and sending data to servers, respectively, but there are other methods which serve different purposes.
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status)
+  - : Response status codes indicate the outcome of a specific HTTP request.
+    Responses are grouped in five classes: informational, successful, redirections, client errors, and server errors.
+- [HTTP resources and specifications](/en-US/docs/Web/HTTP/Reference/Resources_and_specifications)
+  - : This page lists relevant resources about HTTP since it was first specified in the early 1990s.
+
+The following subsections are also notable:
+
+- [CSP directives](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives)
+  - : The {{HTTPHeader("Content-Security-Policy")}} (CSP) response header allows website administrators to specify which resources the user agent is allowed to load for a given page.
+    This section lists directives that can be used in a CSP header, with individual documentation pages that describe how the directives work and how to use them.
+- [Permissions-Policy directives](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives)
+  - : The {{HTTPHeader("Permissions-Policy")}} response header provides a mechanism to allow or deny the use of browser features in a document or within any {{HTMLElement("iframe")}} element in the document.
+    This section lists directives that can be used in a Permissions-Policy header, with individual documentation pages that describe how the directives work and how to use them.

@@ -13,8 +13,7 @@ sidebar: http
 {{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 > [!WARNING]
-> The `DPR` header was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07).
-> The proposed replacement is [`Sec-CH-DPR`](https://wicg.github.io/responsive-image-client-hints/#sec-ch-dpr) (Responsive Image Client Hints).
+> The `DPR` header was standardized as {{HTTPHeader("Sec-CH-DPR")}} and the new name is now preferred.
 
 The HTTP **`DPR`** {{Glossary("request header")}} provides [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) about the client device pixel ratio (DPR).
 This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
@@ -24,6 +23,7 @@ This is similar to the role played by `x` descriptors in the `<img>` [`srcset`](
 
 If a server uses the `DPR` hint to choose which resource is sent in a response, the response must include the {{HTTPHeader("Content-DPR")}} header.
 The client must use the value in `Content-DPR` for layout if it differs from the value in the request's `DPR` header.
+
 If the `DPR` header appears more than once in a message the last occurrence is used.
 
 Servers that opt in to the `DPR` client hint will typically also specify it in the {{HTTPHeader("Vary")}} header to inform caches that the server may send different responses based on the header value in a request.
@@ -81,11 +81,16 @@ Content-DPR: 2.0
 
 ## See also
 
-- Device client hints
-  - {{HTTPHeader("Content-DPR")}}
-  - {{HTTPHeader("Device-Memory")}}
-  - {{HTTPHeader("Viewport-Width")}}
-  - {{HTTPHeader("Width")}}
+- Device and responsive image client hints
+  - {{HTTPHeader("Sec-CH-DPR")}}
+  - {{HTTPHeader("Sec-CH-Device-Memory")}}
+  - {{HTTPHeader("Sec-CH-Viewport-Height")}}
+  - {{HTTPHeader("Sec-CH-Viewport-Width")}}
+  - {{HTTPHeader("Sec-CH-Width")}}
+  - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}
+  - {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}
+  - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}
+  - {{HTTPHeader("Width")}} {{deprecated_inline}}
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}}
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

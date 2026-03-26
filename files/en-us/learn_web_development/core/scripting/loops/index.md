@@ -247,6 +247,9 @@ Here we have:
 
 3. Some curly braces that contain a block of code — this code will be run each time the loop iterates.
 
+> [!NOTE]
+> [Aside: Loops](https://scrimba.com/learn-javascript-c0v/~02a?via=mdn) from Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a useful interactive breakdown of the `for` loop syntax.
+
 ### Calculating squares
 
 Let's look at a real example so we can visualize what these do more clearly.

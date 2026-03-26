@@ -3,11 +3,11 @@ title: WorkletSharedStorage
 slug: Web/API/WorkletSharedStorage
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.WorkletSharedStorage
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`WorkletSharedStorage`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the shared storage for a particular origin within a worklet context.
 
@@ -17,27 +17,27 @@ The **`WorkletSharedStorage`** interface of the {{domxref("Shared Storage API", 
 
 ## Instance properties
 
-- {{domxref("WorkletSharedStorage.context", "context")}} {{Experimental_Inline}} {{non-standard_inline}}
+- {{domxref("WorkletSharedStorage.context", "context")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Contains contextual data passed into the shared storage worklet from the associated browsing context via the {{domxref("FencedFrameConfig.setSharedStorageContext()")}} method.
 
 ## Instance methods
 
 _`WorkletSharedStorage` inherits properties from its parent interface, {{domxref("SharedStorage")}}._
 
-- {{domxref("WorkletSharedStorage.get", "get()")}} {{Experimental_Inline}}
+- {{domxref("WorkletSharedStorage.get", "get()")}} {{Deprecated_Inline}}
   - : Retrieves a value from the shared storage.
-- {{domxref("WorkletSharedStorage.length", "length()")}} {{Experimental_Inline}}
+- {{domxref("WorkletSharedStorage.length", "length()")}} {{Deprecated_Inline}}
   - : Returns the number of entries currently stored in the shared storage for the current origin.
-- {{domxref("WorkletSharedStorage.remainingBudget", "remainingBudget()")}} {{Experimental_Inline}}
+- {{domxref("WorkletSharedStorage.remainingBudget", "remainingBudget()")}} {{Deprecated_Inline}}
   - : Returns the remaining navigation budget for the current origin.
 
 `WorkletSharedStorage` also includes the following methods because it has an [async iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator) defined on it:
 
-- {{domxref("WorkletSharedStorage.entries", "entries()")}} {{Experimental_Inline}}
+- {{domxref("WorkletSharedStorage.entries", "entries()")}} {{Deprecated_Inline}}
   - : Returns a new async iterator for the key-value pairs of a `WorkletSharedStorage` object instance's enumerable properties.
-- {{domxref("WorkletSharedStorage.keys", "keys()")}} {{Experimental_Inline}}
+- {{domxref("WorkletSharedStorage.keys", "keys()")}} {{Deprecated_Inline}}
   - : Returns a new async iterator containing the keys for each item in a `WorkletSharedStorage` object instance.
-- `WorkletSharedStorage[Symbol.asyncIterator]()` {{Experimental_Inline}}
+- `WorkletSharedStorage[Symbol.asyncIterator]()` {{Deprecated_Inline}}
   - : Returns the {{domxref("WorkletSharedStorage.entries", "entries()")}} function by default.
 
 ## Examples

@@ -3,7 +3,9 @@ title: CSS anchor positioning
 short-title: Anchor positioning
 slug: Web/CSS/Guides/Anchor_positioning
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-anchor-position-1/
+spec-urls:
+  - https://drafts.csswg.org/css-anchor-position-1/
+  - https://drafts.csswg.org/css-anchor-position-2/
 sidebar: cssref
 ---
 
@@ -18,6 +20,7 @@ In addition, the specification provides CSS-only mechanisms to:
 
 ### Properties
 
+- {{cssxref("anchor-scope")}}
 - {{cssxref("anchor-name")}}
 - {{cssxref("position-anchor")}}
 - {{cssxref("position-area")}}
@@ -25,8 +28,6 @@ In addition, the specification provides CSS-only mechanisms to:
 - {{cssxref("position-try-order")}}
 - {{cssxref("position-try")}} shorthand
 - {{cssxref("position-visibility")}}
-
-The CSS anchor positioning module also introduces the `anchor-scope` property. Currently, no browsers support this feature.
 
 ### At-rules and descriptors
 
@@ -63,6 +64,9 @@ The CSS anchor positioning module also introduces the `anchor-scope` property. C
 
 - [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)
   - : A guide to the mechanisms CSS anchor positioning provides to prevent anchor-positioned elements from overflowing their containing elements or the viewport, including position try fallback options and conditionally hiding elements.
+
+- [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
+  - : Explains how to use anchored container queries to conditionally apply styles to anchor-positioned elements depending on what position try fallback options are active on them.
 
 ## Related concepts
 

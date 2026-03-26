@@ -57,25 +57,25 @@ The syntax component names can be used alone or multiplied and combined in diffe
 The following syntax component names are supported:
 
 - `"<angle>"`
-  - : Accepts any valid {{cssxref("&lt;angle&gt;")}} value.
+  - : Accepts any valid {{cssxref("angle")}} value.
 - `"<color>"`
   - : Accepts any valid {{cssxref("&lt;color&gt;")}} value.
 - `"<custom-ident>"`
   - : Accepts any valid {{cssxref("&lt;custom-ident&gt;")}} value.
 - `"<image>"`
-  - : Accepts any valid {{cssxref("&lt;image&gt;")}} value.
+  - : Accepts any valid {{cssxref("image")}} value.
 - `"<integer>"`
   - : Accepts any valid {{cssxref("&lt;integer&gt;")}} value.
 - `"<length>"`
   - : Accepts any valid {{cssxref("&lt;length&gt;")}} value.
 - `"<length-percentage>"`
-  - : Accepts any valid {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value and any valid {{cssxref("calc", "calc()")}} expression combining `<length>` and `<percentage>` values.
+  - : Accepts any valid {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value and any valid {{cssxref("calc()")}} expression combining `<length>` and `<percentage>` values.
 - `"<number>"`
   - : Accepts any valid {{cssxref("&lt;number&gt;")}} value.
 - `"<percentage>"`
   - : Accepts any valid {{cssxref("&lt;percentage&gt;")}} value.
 - `"<resolution>"`
-  - : Accepts any valid {{cssxref("&lt;resolution&gt;")}} value.
+  - : Accepts any valid {{cssxref("resolution")}} value.
 - `"<string>"`
   - : Accepts any valid {{cssxref("&lt;string&gt;")}} value.
 - `"<time>"`
@@ -131,6 +131,7 @@ window.CSS.registerProperty({
 ## See also
 
 - Other {{cssxref("@property")}} descriptors: {{cssxref("@property/inherits","inherits")}} and {{cssxref("@property/initial-value", "initial-value")}}
+- [Registering CSS custom properties](/en-US/docs/Web/CSS/Guides/Properties_and_values_API/Registering_properties)
 - [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)

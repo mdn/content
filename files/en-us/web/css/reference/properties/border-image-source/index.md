@@ -77,7 +77,7 @@ border-image-source: unset;
 
 - `none`
   - : No border image is used. The appearance defined by {{cssxref("border-style")}} is displayed instead.
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
   - : Image reference to use for the border.
 
 ## Formal definition

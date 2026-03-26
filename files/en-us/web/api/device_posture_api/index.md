@@ -57,4 +57,5 @@ If possible, you should view this on a foldable device. Current browser develope
 
 ## See also
 
+- [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API)
 - [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) on developer.chrome.com (2024)

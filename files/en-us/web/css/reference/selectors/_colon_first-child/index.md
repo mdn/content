@@ -133,4 +133,4 @@ ul li:first-child {
 - {{CSSxRef(":-moz-first-node")}}
 - {{CSSxRef(":first-of-type")}}
 - {{CSSxRef(":last-child")}}
-- {{CSSxRef(":nth-child", ":nth-child()")}}
+- {{cssxref(":nth-child()")}}

@@ -22,18 +22,7 @@ This interface offers the same set of properties and methods as `AbstractRange`.
 
 ## Instance properties
 
-_The properties below are inherited from its parent interface, {{domxref("AbstractRange")}}._
-
-- {{domxref("StaticRange.collapsed")}} {{ReadOnlyInline}}
-  - : Returns a Boolean value that is `true` if the range's start and end positions are the same, resulting in a range of length 0.
-- {{domxref("StaticRange.endContainer")}} {{ReadOnlyInline}}
-  - : Returns the DOM {{domxref("Node")}} which contains the ending point of the range. The offset into the node at which the end position is located is indicated by `endOffset`.
-- {{domxref("StaticRange.endOffset")}} {{ReadOnlyInline}}
-  - : Returns an integer value indicating the offset into the node given by `endContainer` at which the last character of the range is found.
-- {{domxref("StaticRange.startContainer")}} {{ReadOnlyInline}}
-  - : Returns the DOM {{domxref("Node")}} which contains the starting point of the range (which is in turn identified by `startOffset`.
-- {{domxref("StaticRange.startOffset")}} {{ReadOnlyInline}}
-  - : Returns an integer value indicating the offset into the node specified by `startContainer` at which the first character of the range is located.
+_Inherits properties from its parent interface, {{domxref("AbstractRange")}}._
 
 ## Usage notes
 

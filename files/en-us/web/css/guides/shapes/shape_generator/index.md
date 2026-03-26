@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-This shape generator tool can be used to define the coordinates and syntax for features that use {{cssxref("&lt;basic-shape&gt;")}}
+This shape generator tool can be used to define the coordinates and syntax for features that use {{cssxref("basic-shape")}}
 
 - The [`coords`](/en-US/docs/Web/HTML/Reference/Elements/area#coords) attribute of the {{HTMLElement("area")}} element
 - The CSS {{cssxref("basic-shape/inset()")}}, {{cssxref("basic-shape/xywh()")}}, {{cssxref("basic-shape/rect()")}}, {{cssxref("basic-shape/circle()")}}, {{cssxref("basic-shape/polygon()")}} functions

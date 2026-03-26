@@ -175,5 +175,5 @@ li {
 
 ## See also
 
-- {{CSSxRef("sibling-count", "sibling-count()")}}
-- {{CSSxRef("counter", "counter()")}}
+- {{cssxref("sibling-count()")}}
+- {{cssxref("counter()")}}

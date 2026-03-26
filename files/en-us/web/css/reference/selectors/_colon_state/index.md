@@ -24,7 +24,7 @@ The `:state()` pseudo-class takes as its argument a custom identifier that repre
 
 Elements can transition between states due to user interaction and other factors.
 For instance, an element can be in the "hover" state when a user hovers over the element, or a link can be in the "visited" state after a user clicks on it.
-Elements provided by browsers can be styled based on these states using CSS pseudo-classes such as [`:hover`](/en-US/docs/Web/CSS/Reference/Selectors/:hover) and [`:visited`](/en-US/docs/Web/CSS/Reference/Selectors/:visited).
+Elements provided by browsers can be styled based on these states using CSS pseudo-classes such as {{cssxref(":hover")}} and {{cssxref(":visited")}}.
 Similarly, [autonomous custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements#types_of_custom_element) (custom elements that are not derived from built-in elements) can expose their states, allowing pages that use the elements to style them using the CSS `:state()` pseudo-class.
 
 The states of a custom element are represented by string values.

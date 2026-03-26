@@ -73,7 +73,7 @@ threeColumnArticles.forEach((article) => {
 
 ## CSS access
 
-Note that, as data attributes are plain HTML attributes, you can even access them from [CSS](/en-US/docs/Web/CSS). For example to show the parent data on the article you can use [generated content](/en-US/docs/Web/CSS/Reference/Properties/content) in CSS with the [`attr()`](/en-US/docs/Web/CSS/Reference/Values/attr) function:
+Note that, as data attributes are plain HTML attributes, you can even access them from [CSS](/en-US/docs/Web/CSS). For example to show the parent data on the article you can use [generated content](/en-US/docs/Web/CSS/Reference/Properties/content) in CSS with the {{cssxref("attr()")}} function:
 
 ```css
 article::before {

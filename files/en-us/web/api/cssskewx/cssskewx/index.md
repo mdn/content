@@ -10,7 +10,7 @@ browser-compat: api.CSSSkewX.CSSSkewX
 
 The **`CSSSkewX()`** constructor creates a new
 {{domxref("CSSSkewX")}} object which represents the
-[`skewX()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/skewX)
+{{cssxref("transform-function/skewX", "skewX()")}}
 value of the individual {{CSSXRef('transform')}} property in CSS.
 
 ## Syntax

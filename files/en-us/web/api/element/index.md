@@ -41,6 +41,8 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
   - : Returns a number representing the inner width of the element.
 - {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}}
   - : A number indicating the effective zoom size of the element, or 1.0 if the element is not rendered.
+- {{DOMxRef("Element.customElementRegistry")}} {{ReadOnlyInline}}
+  - : The {{domxref("CustomElementRegistry")}} object associated with this element, or `null` if one has not been set.
 - {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
   - : A string reflecting the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute which marks an element for observation in the {{domxref("PerformanceElementTiming")}} API.
 - {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
@@ -215,7 +217,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`.
 - {{DOMxRef("Element.animate()")}}
   - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
-- {{DOMxRef("Element.ariaNotify()")}} {{Experimental_Inline}} {{non-standard_inline}}
+- {{DOMxRef("Element.ariaNotify()")}} {{Experimental_Inline}}
   - : Specifies that a given string of text should be announced by a screen reader.
 - {{DOMxRef("Element.append()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the element.
@@ -317,7 +319,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Sets the value of the attribute with the specified name and namespace, from the current node.
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Sets up mouse event capture, redirecting all mouse events to this element.
-- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}} {{experimental_inline}}
+- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}}
   - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML into a document fragment, which then replaces the element's original subtree in the DOM.
 - {{DOMxRef("Element.setHTMLUnsafe()")}}
   - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the element's original subtree in the DOM. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).

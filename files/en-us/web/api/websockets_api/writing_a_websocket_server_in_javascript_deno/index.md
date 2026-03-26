@@ -12,7 +12,7 @@ Deno is a JavaScript runtime which supports TypeScript compiling and caching on 
 
 The [Deno website](https://deno.com/) provides instructions for installing Deno.
 
-Deno version at the time of writing: `1.36`.
+Deno version at the time of writing: `2.6`.
 
 ## Code
 
@@ -53,16 +53,6 @@ Deno.serve({
 
 `Deno.upgradeWebSocket()` upgrades the connection to a WebSocket connection, which is explained further in [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism).
 
-[`Deno.serve()`](https://docs.deno.com/api/deno/~/Deno.serve) uses `Deno.listen()` and `Deno.serveHttp()` under the hood, and is a higher-level interface to easily set up a HTTP server. Without it, the code would look something like this.
-
-```js
-for await (const conn of Deno.listen({ port: 8080 })) {
-  for await (const { request, respondWith } of Deno.serveHttp(conn)) {
-    respondWith(handler(request));
-  }
-}
-```
-
 ### Client
 
 Create an `index.html` file. This file will invoke a script that will ping the server every five seconds after a connection has been made. It should also contain the following markup:
@@ -74,7 +64,7 @@ Create an `index.html` file. This file will invoke a script that will ping the s
 ```
 
 ```js
-const wsUri = "ws://127.0.0.1/";
+const wsUri = "ws://127.0.0.1:8080/";
 const output = document.querySelector("#output");
 const websocket = new WebSocket(wsUri);
 let pingInterval;

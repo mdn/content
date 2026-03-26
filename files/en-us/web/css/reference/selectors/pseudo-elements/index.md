@@ -57,16 +57,18 @@ A pseudo-element can be selected based on the current state of the originating e
 
 Selects document sections based on content and document status, enabling those areas to be styled differently to indicate that status to the user.
 
-- {{CSSxRef("::selection")}}
-  - : The portion of a document that has been selected.
-- {{CSSxRef("::target-text")}}
-  - : The document's target element. The target element is identified using the URL's fragment identifier.
-- {{CSSxRef("::spelling-error")}}
-  - : A portion of text that the browser thinks is misspelled.
 - {{CSSxRef("::grammar-error")}}
   - : A portion of text that the browser thinks is grammatically incorrect.
 - {{CSSxRef("::highlight()")}}
   - : The elements in the [highlight registry](/en-US/docs/Web/API/CSS/highlights_static). It is used to create custom highlights.
+- {{CSSxRef("::search-text")}}
+  - : Search results identified by the user agent's "Find" or "Find in page" text search feature.
+- {{CSSxRef("::selection")}}
+  - : The portion of a document that has been selected.
+- {{CSSxRef("::spelling-error")}}
+  - : A portion of text that the browser thinks is misspelled.
+- {{CSSxRef("::target-text")}}
+  - : The document's target element. The target element is identified using the [URL's fragment](/en-US/docs/Web/URI/Reference/Fragment) identifier.
 
 ## Tree-Abiding pseudo-elements
 
@@ -95,9 +97,9 @@ These pseudo-elements are real elements that are not otherwise selectable.
 
 - {{CSSxRef("::details-content")}}
   - : The expandable/collapsible contents of a {{HTMLElement("details")}} element.
-- {{CSSxRef("::part", "::part()")}}
+- {{cssxref("::part()")}}
   - : Any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute.
-- {{CSSxRef("::slotted", "::slotted()")}}
+- {{cssxref("::slotted()")}}
   - : Any element placed into a slot inside an HTML template.
 
 ## Form-related pseudo-elements
@@ -132,7 +134,7 @@ C
 
 - {{CSSxRef("::column")}}
 - {{CSSxRef("::checkmark")}}
-- {{CSSxRef("::cue")}} (and {{CSSxRef("::cue", "::cue()")}})
+- {{CSSxRef("::cue")}} (and {{cssxref("::cue()")}})
 
 D
 
@@ -158,7 +160,7 @@ M
 
 P
 
-- {{CSSxRef("::part", "::part()")}}
+- {{cssxref("::part()")}}
 - {{CSSxRef("::picker()")}}
 - {{CSSxRef("::picker-icon")}}
 - {{CSSxRef("::placeholder")}}
@@ -169,7 +171,7 @@ S
 - {{CSSxRef("::scroll-marker")}}
 - {{CSSxRef("::scroll-marker-group")}}
 - {{CSSxRef("::selection")}}
-- {{CSSxRef("::slotted", "::slotted()")}}
+- {{cssxref("::slotted()")}}
 - {{CSSxRef("::spelling-error")}}
 
 T

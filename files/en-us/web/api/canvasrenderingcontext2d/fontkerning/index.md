@@ -13,7 +13,7 @@ The **`CanvasRenderingContext2D.fontKerning`** property of the [Canvas API](/en-
 Kerning adjusts how adjacent letters are spaced in a proportional font, allowing them to edge into each other's visual area if there is space available.
 For example, in well-kerned fonts, the characters `AV`, `Ta` and `We` nest together and make character spacing more uniform and pleasant to read than the equivalent text without kerning.
 
-The property corresponds to the [`font-kerning`](/en-US/docs/Web/CSS/Reference/Properties/font-kerning) CSS property.
+The property corresponds to the {{cssxref("font-kerning")}} CSS property.
 
 ## Value
 

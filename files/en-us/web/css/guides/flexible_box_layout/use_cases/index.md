@@ -374,7 +374,7 @@ img {
 
 Flexbox is particularly useful when it comes to styling form controls. Forms have several small elements that we typically want to align with each other. A common pattern is to have a {{htmlelement("label")}} and {{htmlelement("input")}} pair combined with a {{htmlelement("button")}}, perhaps for a search form or a newsletter sign-up form where you want your visitor to enter their email address.
 
-Flexbox makes this type of layout easy to achieve. The `<label>`, `<input>` and `<button>` are contained in a wrapper that is set to `display: flex`. The flex properties allow the `<input>` field to grow, while the button and label do not grow. The text input field will grow and shrink depending on the space available.
+Flexbox makes this type of layout achievable with just a few declarations. The `<label>`, `<input>` and `<button>` are contained in a wrapper that is set to `display: flex`. The flex properties allow the `<input>` field to grow, while the button and label do not grow. The text input field will grow and shrink depending on the space available.
 
 ```html live-sample___label-input-button
 <form class="example">
@@ -416,7 +416,7 @@ Flexbox makes this type of layout easy to achieve. The `<label>`, `<input>` and 
 
 {{EmbedLiveSample("label-input-button")}}
 
-Patterns like this can make it much easier to create a library of form elements for your design, which easily accommodate additional elements being added. You are taking advantage of the flexibility of flexbox by mixing items that do not grow with those that do.
+Patterns like this can make it easier to create a library of form elements for your design, which easily accommodate additional elements being added. You are taking advantage of the flexibility of flexbox by mixing items that do not grow with those that do.
 
 ## Conclusion
 

@@ -141,20 +141,20 @@ See the {{cssxref("color_value/rgb", "rgb()")}} color function for more informat
 
 ## Color functions with a hue component
 
-The color functions that have a [`<hue>`](/en-US/docs/Web/CSS/Reference/Values/hue) component — an [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle) from that color model's {{glossary("color wheel")}} — include the `srgb` color functions `hsl()` and `hwb()`, CIElab's `lch()` function, and OKLab's `oklch()` color function. These color functions are more intuitive as the hue allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
+The color functions that have a {{cssxref("hue")}} component — an {{cssxref("angle")}} from that color model's {{glossary("color wheel")}} — include the `srgb` color functions `hsl()` and `hwb()`, CIElab's `lch()` function, and OKLab's `oklch()` color function. These color functions are more intuitive as the hue allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
 
 ### HSL functional notation
 
-The `hsl()` CSS color function was the first hue-based color function to be supported in browsers. `hsl()` is more intuitive than `rgb()` — it is easier to determine the effect of varying hue (`h`), saturation (`s`), and lightness (`l`) values than it is to declare specific colors via red, green, and blue channel values. In addition, HSL is similar to the HSB (hue, saturation, and brightness) color picker in Photoshop, which made it immediately familiar to many people when first supported.
+The `hsl()` CSS color function was the first hue-based color function to be supported in browsers. `hsl()` is more intuitive than `rgb()` — it is generally easier to determine the effect of varying hue (`h`), saturation (`s`), and lightness (`l`) values than it is to declare specific colors via red, green, and blue channel values. In addition, HSL is similar to the HSB (hue, saturation, and brightness) color picker in Photoshop, which made it immediately familiar to many people when first supported.
 
-The `hsl()` and `hwb()` sRGB color functions are both cylindrical. Hue defines the color as an [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle) on a circular {{glossary("color wheel")}}. The diagram below shows an HSL color cylinder. Saturation is a percentage that defines how far the color is along a scale between completely grayscale and having the maximum possible amount of the given hue.
+The `hsl()` and `hwb()` sRGB color functions are both cylindrical. Hue defines the color as an {{cssxref("angle")}} on a circular {{glossary("color wheel")}}. The diagram below shows an HSL color cylinder. Saturation is a percentage that defines how far the color is along a scale between completely grayscale and having the maximum possible amount of the given hue.
 As the value of lightness increases, the color transitions from the darkest to the lightest possible color (from black to white).
 
 ![HSL color cylinder](640px-hsl_color_solid_cylinder.png)
 
 Image courtesy of user [SharkD](https://commons.wikimedia.org/wiki/User:SharkD) on [Wikipedia](https://en.wikipedia.org/), distributed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license.
 
-The value of the hue (`H`) component of an HSL (or HWB) color is an angle that starts at 0° as red, then moves through yellow, green, cyan, blue, and magenta, before ending up back at red again at 360°. The value can be specified in any {{cssxref("&lt;angle&gt;")}} unit supported by CSS, including degrees (`deg`), radians (`rad`), gradians (`grad`), or turns (`turn`). The hue value identifies what the base shade of the color is, but it doesn't control how vivid or dull, or how light or dark the color is.
+The value of the hue (`H`) component of an HSL (or HWB) color is an angle that starts at 0° as red, then moves through yellow, green, cyan, blue, and magenta, before ending up back at red again at 360°. The value can be specified in any {{cssxref("angle")}} unit supported by CSS, including degrees (`deg`), radians (`rad`), gradians (`grad`), or turns (`turn`). The hue value identifies what the base shade of the color is, but it doesn't control how vivid or dull, or how light or dark the color is.
 
 The saturation (`S`) component of the color specifies the percentage of the final color comprised of the specified hue, with 100% being fully saturated and 0% being a complete lack of color (greyscale). The lightness (`L`) component specifies how light the color is along a sliding scale between completely black (`0%`) and completely white (`100%`). You can also optionally include an alpha channel, preceded by a slash (`/`) to make the color less than 100% opaque.
 

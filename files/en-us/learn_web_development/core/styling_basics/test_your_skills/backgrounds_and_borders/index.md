@@ -13,7 +13,7 @@ The aim of this skill test is to help you assess whether you understand [backgro
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Backgrounds and borders 1
 
 In this task, we want you to add a background, border, and some basic styles to a page header.
 
@@ -27,17 +27,19 @@ To complete the task:
    https://mdn.github.io/shared-assets/images/examples/balloons.jpg
    ```
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![Images shows a box with a photograph background, rounded border and white text on a semi-transparent black background.](backgrounds-task1.png)
+{{EmbedLiveSample("backgrounds1-start", "", "160px")}}
 
-```html live-sample___backgrounds1
+Here's the underlying code for this starting point:
+
+```html live-sample___backgrounds1-start live-sample___backgrounds1-finish
 <div class="box">
   <h2>Backgrounds & Borders</h2>
 </div>
 ```
 
-```css live-sample___backgrounds1
+```css live-sample___backgrounds1-start live-sample___backgrounds1-finish
 body {
   padding: 1em;
   font: 1.2em / 1.5 sans-serif;
@@ -60,14 +62,16 @@ h2 {
 }
 ```
 
-{{EmbedLiveSample("backgrounds1", "", "200px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("backgrounds1-finish", "", "160px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 You should use `border`, `border-radius`, `background-image`, and `background-size` and understand how to use RGB colors to make a background color partly transparent:
 
-```css
+```css live-sample___backgrounds1-finish
 .box {
   border: 5px solid black;
   border-radius: 10px;
@@ -83,7 +87,7 @@ h2 {
 
 </details>
 
-## Task 2
+## Backgrounds and borders 2
 
 In this task, we want you to add background images, a border, and some other styling to a decorative box.
 
@@ -99,17 +103,19 @@ To complete the task:
 
 3. Make sure that the heading text does not overlay the image, and that it is centered — you will need to use techniques learned in previous lessons to achieve this.
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![Images shows a box with a blue border rounded at the top left and bottom right corners. On the left of the text is a single star, on the right 3 stars.](backgrounds-task2.png)
+{{EmbedLiveSample("backgrounds2-start", "", "200px")}}
 
-```html live-sample___backgrounds2
+Here's the underlying code for this starting point:
+
+```html live-sample___backgrounds2-start live-sample___backgrounds2-finish
 <div class="box">
   <h2>Backgrounds & Borders</h2>
 </div>
 ```
 
-```css live-sample___backgrounds2
+```css live-sample___backgrounds2-start live-sample___backgrounds2-finish
 body {
   padding: 1em;
   font: 1.2em / 1.5 sans-serif;
@@ -131,7 +137,9 @@ h2 {
 }
 ```
 
-{{EmbedLiveSample("backgrounds2", "", "220px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("backgrounds2-finish", "", "220px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -139,7 +147,7 @@ h2 {
 You need to add padding to the heading so that it doesn't overlay the star image - this links back to learning from the earlier [Box Model lesson](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model).
 The text should be aligned with the `text-align` property:
 
-```css
+```css live-sample___backgrounds2-finish
 .box {
   border: 5px solid lightblue;
   border-top-left-radius: 20px;

@@ -45,6 +45,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the Content-Type from the MIME Header of the current document.
 - {{DOMxRef("Document.currentScript")}} {{ReadOnlyInline}}
   - : Returns the {{HTMLElement("script")}} element whose script is currently being processed and [isn't a JavaScript module](https://github.com/whatwg/html/issues/997).
+- {{DOMxRef("Document.customElementRegistry")}} {{ReadOnlyInline}}
+  - : The {{domxref("CustomElementRegistry")}} object associated with this document, or `null` if one has not been set.
 - {{DOMxRef("Document.doctype")}} {{ReadOnlyInline}}
   - : Returns the Document Type Definition (DTD) of the current document.
 - {{DOMxRef("Document.documentElement")}} {{ReadOnlyInline}}
@@ -184,7 +186,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Adopt node from an external document.
 - {{DOMxRef("Document.append()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the document.
-- {{DOMxRef("Document.ariaNotify()")}} {{Experimental_Inline}} {{non-standard_inline}}
+- {{DOMxRef("Document.ariaNotify()")}} {{Experimental_Inline}}
   - : Specifies that a given string of text should be announced by a screen reader.
 - {{DOMxRef("Document.browsingTopics()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
@@ -250,6 +252,10 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns a list of elements with the given tag name and namespace.
 - {{DOMxRef("Document.getSelection()")}}
   - : Returns a {{DOMxRef('Selection')}} object representing the range of text selected by the user, or the current position of the caret.
+- {{domxref("Document.hasPrivateToken()")}} {{experimental_inline}}
+  - : Returns a promise that fulfills with a boolean indicating whether the browser has a [private state token](/en-US/docs/Web/API/Private_State_Token_API) stored from a particular issuer.
+- {{domxref("Document.hasRedemptionRecord()")}} {{experimental_inline}}
+  - : Returns a promise that fulfills with a boolean indicating whether the browser has a [redemption record](/en-US/docs/Web/API/Private_State_Token_API/Using#redeeming_tokens) originating from a particular issuer.
 - {{DOMxRef("Document.hasStorageAccess()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to unpartitioned cookies.
 - {{DOMxRef("Document.hasUnpartitionedCookieAccess()")}}
@@ -274,7 +280,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Replaces the existing children of a document with a specified new set of children.
 - {{DOMxRef("Document.requestStorageAccess()")}}
   - : Allows a document loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies, in cases where user agents by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy.
-- {{DOMxRef("Document.requestStorageAccessFor()")}} {{experimental_inline}}
+- {{DOMxRef("Document.requestStorageAccessFor()")}} {{deprecated_inline}}
   - : Allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
 - {{domxref("Document.startViewTransition()")}}
   - : Starts a new {{domxref("View Transition API", "view transition", "", "nocode")}} and returns a {{domxref("ViewTransition")}} object to represent it.

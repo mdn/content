@@ -25,9 +25,9 @@ setInterval(code, delay)
 
 setInterval(func)
 setInterval(func, delay)
-setInterval(func, delay, arg1)
-setInterval(func, delay, arg1, arg2)
-setInterval(func, delay, arg1, arg2, /* …, */ argN)
+setInterval(func, delay, param1)
+setInterval(func, delay, param1, param2)
+setInterval(func, delay, param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
@@ -42,7 +42,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
   - : The delay time between executions of the specified function or code, in milliseconds.
     Defaults to 0 if not specified.
     See [Delay restrictions](#delay_restrictions) below for details on the permitted range of `delay` values.
-- `arg1`, …, `argN` {{optional_inline}}
+- `param1`, …, `paramN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by _func_ once the timer expires.
 
 ### Return value
@@ -73,11 +73,10 @@ To mitigate the potential impact this can have on performance, once intervals ar
 Attempts to specify a value less than 4 ms in deeply-nested calls to `setInterval()` will be pinned to 4 ms.
 
 Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common.
-Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for examples.
+Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_longer_delays_than_specified) for examples.
 
 > [!NOTE]
-> The `delay` argument is converted to a signed 32-bit integer.
-> This effectively limits `delay` to 2147483647 ms, roughly 24.8 days, since it's specified as a signed integer in the IDL.
+> The `delay` argument is converted to a signed 32-bit integer, which limits the value to 2147483647 ms, or roughly 24.8 days.
 
 ### Interval IDs are shared with `setTimeout()`
 
@@ -150,23 +149,39 @@ That lets you bypass problems where it's unclear what `this` will be, depending 
 
 The method can be used to execute arbitrary input passed in the `code` parameter.
 If the input is a potentially unsafe string provided by a user, this is a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
-For example, the following example assumes the `scriptElement` is an executable `<script>` element, and that `untrustedCode` was provided by a user:
+
+For example, the following code shows how `setInterval()` might execute `untrustedCode` provided by a user:
 
 ```js example-bad
 const untrustedCode = "alert('Potentially evil code!');";
 const id = setInterval(untrustedCode, 1000);
 ```
 
-Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) will prevent such code running by default; if you need to use the method with `code` then you will first need to allow the [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) in your CSP [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src).
+Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that specifies [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) or [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) will prevent such code running by default.
+You can specify [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) in your CSP to allow `setInterval()` to execute, but this is unsafe as it disables one of the main protections of CSP.
 
-If you must allow the scripts to run you can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+See [Inline JavaScript](/en-US/docs/Web/HTTP/Guides/CSP#inline_javascript) in the CSP guide.
+
+If you must allow the scripts to run via `setInterval()` you can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 This ensures that the input is passed through a transformation function.
+
+To allow `setInterval()` to run, you will additionally need to specify the [`trusted-types-eval` keyword](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) in your CSP `script-src` directive.
+This acts in the same way as `unsafe-eval`, but _only_ allows the method to evaluate if trusted types are enabled (if you were to use `unsafe-eval` it would allow execution even on browsers that do not support trusted types).
+
+For example, the required CSP for your site might look like this:
+
+```http
+Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_allowlist>' 'trusted-types-eval'
+```
 
 The behavior of the transformation function will depend on the specific use case that requires a user provided script.
 If possible you should lock the allowed scripts to exactly the code that you trust to run.
 If that is not possible, you might allow or block the use of certain functions within the provided string.
 
 ## Examples
+
+Note that these examples omit the use of trusted types for brevity.
+See [Using `TrustedScript`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#using_trustedscript) in `eval()` for code showing the expected approach.
 
 ### Example 1: Basic syntax
 
@@ -185,8 +200,7 @@ function myCallback(a, b) {
 
 ### Example 2: Alternating two colors
 
-The following example calls the `flashtext()` function once a second until
-the Stop button is pressed.
+The following example calls the `flashtext()` function once a second until the Stop button is pressed.
 
 #### HTML
 

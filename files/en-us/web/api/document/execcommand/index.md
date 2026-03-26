@@ -79,7 +79,16 @@ execCommand(commandName, showDefaultUI, valueArgument)
     - `insertHorizontalRule`
       - : Inserts a {{HTMLElement("hr")}} element at the insertion point, or replaces the selection with it.
     - `insertHTML`
-      - : Inserts an HTML string at the insertion point (deletes selection). Requires a valid HTML string as a value argument.
+      - : Inserts an {{domxref("TrustedHTML")}} instance or string of HTML markup at the insertion point (deletes selection).
+        This requires valid HTML markup.
+
+        > [!WARNING]
+        > The input is parsed as HTML and written into the DOM.
+        > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
+        >
+        > You can mitigate this risk by always assigning {{domxref("TrustedHTML")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+        > See the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) for more information.
+
     - `insertImage`
       - : Inserts an image at the insertion point (deletes selection). Requires a URL string for the image's `src` as a value argument. The requirements for this string are the same as `createLink`.
     - `insertOrderedList`
@@ -103,7 +112,12 @@ execCommand(commandName, showDefaultUI, valueArgument)
     - `outdent`
       - : Outdents the line containing the selection or insertion point.
     - `paste`
-      - : Pastes the clipboard contents at the insertion point (replaces current selection). Disabled for web content.
+      - : Pastes the clipboard contents at the insertion point (replaces current selection).
+
+        This feature is specified as disabled for _web content_, but has been implemented via the [Clipboard API](/en-US/docs/Web/API/Clipboard_API#security_considerations) on some browsers.
+        On these browsers the feature requires {{glossary("transient activation")}}, and acknowledgement of a popup UI when pasting cross-origin content.
+        See the [Browser compatibility table](#browser_compatibility) for more information.
+
     - `redo`
       - : Redoes the previous undo command.
     - `removeFormat`
@@ -218,6 +232,41 @@ function insertText(newText, selector) {
 #### Result
 
 {{EmbedLiveSample("Using insertText", 100, 300)}}
+
+### Using paste
+
+This example has a {{HTMLElement("textarea")}} element, and a {{HTMLElement("button")}} element that you can use to paste content into it.
+
+#### HTML
+
+```html
+<button id="paste">Paste</button>
+<hr />
+<textarea id="text_box">Some text.</textarea>
+```
+
+#### JavaScript
+
+```js
+const pasteButton = document.querySelector("#paste");
+const textBox = document.querySelector("#text_box");
+
+pasteButton.addEventListener("click", () => {
+  textBox.focus();
+
+  let pasted = document.execCommand("paste", false);
+  if (!pasted) {
+    textBox.textContent = "paste unsuccessful, execCommand not supported";
+  }
+});
+```
+
+#### Result
+
+On browsers that implement this feature using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API#security_considerations) you should be able to copy same-origin content, such as text from the text area, and then paste it to replace any selected content.
+When you try to paste cross-origin content, such as text copied from any other page or location, you will first need to select the "Paste" UI that is displayed.
+
+{{EmbedLiveSample("Using paste", 100, 300)}}
 
 ## Specifications
 

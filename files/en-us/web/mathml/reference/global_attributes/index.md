@@ -41,7 +41,7 @@ In addition to the basic MathML global attributes, the following global attribut
 - [`mathsize`](/en-US/docs/Web/MathML/Reference/Global_attributes/mathsize)
   - : A {{cssxref("length-percentage")}} used as a [font-size](/en-US/docs/Web/CSS/Reference/Properties/font-size) for the element.
 - [`nonce`](/en-US/docs/Web/MathML/Reference/Global_attributes/nonce)
-  - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether a given fetch will be allowed to proceed.
+  - : A cryptographic {{Glossary("Nonce", "nonce")}} ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether a given fetch will be allowed to proceed.
 - [`scriptlevel`](/en-US/docs/Web/MathML/Reference/Global_attributes/scriptlevel)
   - : Specifies a [math-depth](/en-US/docs/Web/CSS/Reference/Properties/math-depth) for the element. See the [scriptlevel page](/en-US/docs/Web/MathML/Reference/Global_attributes/scriptlevel#values) for accepted values and mapping.
 - [`style`](/en-US/docs/Web/MathML/Reference/Global_attributes/style)

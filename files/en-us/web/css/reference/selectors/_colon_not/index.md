@@ -182,8 +182,8 @@ If `:invalid-pseudo-class` was a valid selector, the first two rules above would
 - [Pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - Other functional CSS pseudo-classes:
-  - {{cssxref(":has", ":has()")}}
-  - {{cssxref(":is", ":is()")}}
-  - {{cssxref(":where", ":where()")}}
+  - {{cssxref(":has()")}}
+  - {{cssxref(":is()")}}
+  - {{cssxref(":where()")}}
 
 - [How :not() chains multiple selectors](/en-US/blog/css-not-pseudo-multiple-selectors/) on MDN blog (2023)

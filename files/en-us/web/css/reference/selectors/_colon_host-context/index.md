@@ -18,7 +18,7 @@ Think of it like this: Imagine you have a `<greenhouse>` custom element, that ha
 
 This selector pierces through all shadow boundaries. It will look for the sunny or shady theme applied directly to the `<greenhouse>` or on any of the host's ancestors and ancestor DOMs all the way up until it reaches the document root.
 
-To limit the selector to only the `<greenhouse>` host directly or limit the selection to host's DOM, use the {{cssxref(":host")}} or {{cssxref(":host_function", ":host()")}} pseudo-class instead.
+To limit the selector to only the `<greenhouse>` host directly or limit the selection to host's DOM, use the {{cssxref(":host")}} or {{cssxref(":host()")}} pseudo-class instead.
 
 > [!NOTE]
 > This has no effect when used outside a shadow DOM.
@@ -144,7 +144,7 @@ The `:host-context(h1) { font-style: italic; }` and `:host-context(h1)::after { 
 
 - [Web components](/en-US/docs/Web/API/Web_components)
 - CSS {{cssxref(":host")}} pseudo-class
-- CSS {{cssxref(":host_function", ":host()")}} pseudo-class
+- CSS {{cssxref(":host()")}} pseudo-class
 - CSS {{cssxref(":state",":state()")}} pseudo-class
 - CSS {{CSSXref("::slotted")}} pseudo-element
 - HTML {{HTMLElement("template")}} element

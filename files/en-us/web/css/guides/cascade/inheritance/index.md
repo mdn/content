@@ -57,7 +57,7 @@ The words "emphasized text" will not have another border (since the initial valu
 
 ## Notes
 
-The [`inherit`](/en-US/docs/Web/CSS/Reference/Values/inherit) keyword allows authors to explicitly specify inheritance. It works on both inherited and non-inherited properties.
+The {{cssxref("inherit")}} keyword allows authors to explicitly specify inheritance. It works on both inherited and non-inherited properties.
 
 You can control inheritance for all properties at once using the {{cssxref("all")}} shorthand property, which applies its value to all properties. For example:
 
@@ -99,7 +99,7 @@ We can see here another border around the word "emphasized text".
 
 ## See also
 
-- CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/Reference/Values/inherit), [`initial`](/en-US/docs/Web/CSS/Reference/Values/initial), [`revert`](/en-US/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/en-US/docs/Web/CSS/Reference/Values/revert-layer), and [`unset`](/en-US/docs/Web/CSS/Reference/Values/unset)
+- CSS values for controlling inheritance: {{cssxref("inherit")}}, {{cssxref("initial")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, and {{cssxref("unset")}}
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module
 - [CSS error handling](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling)
 - [Introduction to the CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)

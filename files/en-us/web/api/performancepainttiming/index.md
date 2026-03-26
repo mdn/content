@@ -39,7 +39,8 @@ This interface has no properties but it extends the following {{domxref("Perform
 
 ## Instance methods
 
-This interface has no methods.
+- {{domxref("PerformancePaintTiming.toJSON()")}}
+  - : Returns a JSON representation of the `PerformancePaintTiming` object.
 
 ## Examples
 

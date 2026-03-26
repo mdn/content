@@ -117,6 +117,38 @@ The `precommitHandler()` callback takes a {{domxref("NavigationPrecommitControll
 > [!NOTE]
 > Because `precommitHandler()` can be used to cancel navigations, it will only work as expected when the event's {{domxref("Event.cancelable")}} property is `true`. Calling `intercept()` with a `precommitHandler()` on a non-cancelable event results in a `SecurityError` being thrown.
 
+### Scheduling post-commit actions in `precommitHandler()`
+
+As we saw above, you can specify a `handler()` callback in the object passed to the `intercept()` method in order to preform actions after a navigation is is committed.
+This approach works well if the actions required after commit do not depend on any actions run in the pre-commit phase.
+If they do, then you can use {{domxref("NavigationPrecommitController.addHandler()")}} in `precommitHandler()` to dynamically add a handler that will run after the navigation commits.
+
+For example, consider this code that extends the previous example for redirecting a logged-out user to a sign-in page.
+The code uses `addHandler()` to add a post-commit handler callback that shows a message explaining the redirect reason.
+Note that the handler only runs for the specific case of a redirect to the sign-in page.
+
+```js
+navigation.addEventListener("navigate", (event) => {
+  const url = new URL(event.destination.url);
+
+  if (url.pathname.startsWith("/restricted/") && !userSignedIn) {
+    event.intercept({
+      async precommitHandler(controller) {
+        controller.redirect("/signin/", {
+          state: "signin-redirect",
+          history: "push",
+        });
+
+        // Use addHandler to trigger logic once the /signin/ page commits
+        controller.addHandler(() => {
+          showMessage("Please sign in to view that content.");
+        });
+      },
+    });
+  }
+});
+```
+
 ### Responding to navigation success or failure
 
 When the promises returned by the `intercept()` handler functions fulfill, the `Navigation` object's {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} event fires, allowing you to run cleanup code after a successful navigation has completed. If those promises reject, meaning the navigation has failed, {{domxref("Navigation/navigateerror_event", "navigateerror")}} fires instead, allowing you to gracefully handle the failure case.
@@ -137,7 +169,8 @@ Both `precommitHandler()` and `handler()` callbacks can be included inside the s
    - When the `handler()` promise fulfills and the `navigatesuccess` event fires, the navigation `finished` promise fulfills as well, to indicate the navigation is finished.
    - If `handler()` rejects, the `navigateerror` event fires, the `finished` promise rejects, and the navigation is canceled.
 
-Note that the above process is upheld even across multiple `intercept()` calls on the same `NavigateEvent`. All `precommitHandler()` callbacks are called first, and when all of them resolve, the navigation commits, and all the `handler()` callbacks are called.
+Note that the above process is upheld even across multiple `intercept()` calls on the same `NavigateEvent`, and for `handler()` callbacks added in the `precommitHandler()`.
+All `precommitHandler()` callbacks are called first, and when all of them resolve, the navigation commits, and all the `handler()` callbacks are called.
 
 ### Controlling focus behavior
 

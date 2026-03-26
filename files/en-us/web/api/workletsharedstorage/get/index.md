@@ -4,11 +4,11 @@ short-title: get()
 slug: Web/API/WorkletSharedStorage/get
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.WorkletSharedStorage.get
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`get()`** method of the
 {{domxref("WorkletSharedStorage")}} interface retrieves a value from shared storage.

@@ -124,10 +124,10 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - `<fixed-size>`
   - : One of the following forms:
     - a {{cssxref("&lt;length-percentage&gt;")}} value
-    - a {{cssxref("minmax", "minmax()")}} function with:
+    - a {{cssxref("minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value
       - `max` given as one of a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("minmax", "minmax()")}} function with:
+    - a {{cssxref("minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
       - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value.
 - {{cssxref("&lt;flex&gt;")}}
@@ -141,10 +141,10 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - `<track-size>`
   - : One of the following forms:
     - a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("minmax", "minmax()")}} function with:
+    - a {{cssxref("minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
       - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("fit-content_function", "fit-content()")}} function, passed a {{cssxref("&lt;length-percentage&gt;")}} value.
+    - a {{cssxref("fit-content()")}} function, passed a {{cssxref("&lt;length-percentage&gt;")}} value.
 - `auto`
   - : As a maximum, identical to `max-content`. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
 - `auto-fill`

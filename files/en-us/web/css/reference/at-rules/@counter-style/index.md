@@ -125,8 +125,8 @@ The [Counter styles converter](https://r12a.github.io/app-counters/) pulls from 
 
 ## See also
 
-- {{Cssxref("counter", "counter()")}}
-- {{Cssxref("counters", "counters()")}}
-- {{cssxref("symbols", "symbols()")}}
+- {{cssxref("counter()")}}
+- {{cssxref("counters()")}}
+- {{cssxref("symbols()")}}
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}, {{Cssxref("list-style-type")}}
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

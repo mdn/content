@@ -4,11 +4,11 @@ short-title: run()
 slug: Web/API/SharedStorageSelectURLOperation/run
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SharedStorageSelectURLOperation.run
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`run()`** method of the {{domxref("SharedStorageSelectURLOperation")}} interface defines the structure to which the `run()` method defined inside a URL Selection output gate operation should conform.
 

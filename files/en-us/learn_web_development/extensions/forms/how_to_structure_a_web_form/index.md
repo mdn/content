@@ -45,7 +45,7 @@ Let's move forward and cover the structural elements you'll find nested in a for
 
 The {{HTMLElement("fieldset")}} element is a convenient way to create groups of widgets that share the same purpose, for styling and semantic purposes. You can label a {{HTMLElement("fieldset")}} by including a {{HTMLElement("legend")}} element just below the opening {{HTMLElement("fieldset")}} tag. The text content of the {{HTMLElement("legend")}} formally describes the purpose of the {{HTMLElement("fieldset")}} it is included inside.
 
-Many assistive technologies will use the {{HTMLElement("legend")}} element as if it is a part of the label of each control inside the corresponding {{HTMLElement("fieldset")}} element. For example, some screen readers such as [Jaws](https://www.freedomscientific.com/products/software/jaws/) and [NVDA](https://www.nvaccess.org/) will speak the legend's content before speaking the label of each control.
+Many assistive technologies will use the {{HTMLElement("legend")}} element as if it is a part of the label of each control inside the corresponding {{HTMLElement("fieldset")}} element. For example, some screen readers such as [Jaws](https://vispero.com/jaws-screen-reader-software/) and [NVDA](https://www.nvaccess.org/) will speak the legend's content before speaking the label of each control.
 
 Here is a little example:
 

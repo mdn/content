@@ -60,13 +60,13 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 _Inherits events from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("Navigation/currententrychange_event", "currententrychange")}} {{Experimental_Inline}}
+- {{domxref("Navigation/currententrychange_event", "currententrychange")}}
   - : Fired when the {{domxref("Navigation.currentEntry")}} has changed.
-- {{domxref("Navigation/navigate_event", "navigate")}} {{Experimental_Inline}}
+- {{domxref("Navigation/navigate_event", "navigate")}}
   - : Fired when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated, allowing you to intercept as required.
-- {{domxref("Navigation/navigateerror_event", "navigateerror")}} {{Experimental_Inline}}
+- {{domxref("Navigation/navigateerror_event", "navigateerror")}}
   - : Fired when a navigation fails.
-- {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} {{Experimental_Inline}}
+- {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}}
   - : Fired when a successful navigation has finished.
 
 ## Examples

@@ -44,27 +44,35 @@ Activate-Storage-Access: load
 ## Directives
 
 - `retry`
-  - : Request that the browser activate the storage-access permission for the context and then retry the request with cookies included.
+  - : The server uses this token to indicate that it needs its third party cookies in order to properly respond to this request.
+
+    The server should check for `Sec-Fetch-Storage-Access: inactive` in the request before responding with this token to check that the permission has already been granted (but is inactive).
     The `allowed-origin` parameter must be specified to allow the specific origin (specify `*` to allow any origin).
+
+    The browser should respond by activating an _already-granted_ storage-access permission, and retrying the request with unpartitioned cookies included.
+
 - `load`
-  - : Request that the browser activate the store-access permission for the context and then load the resource.
+  - : The server uses this token to indicate that it is sending the browser an HTML document that needs to activate a pre-existing `storage-access` permission grant — in order to access unpartitioned cookies while it loads.
+
+    The server should check for `Sec-Fetch-Storage-Access: inactive` or `Sec-Fetch-Storage-Access: active` in the request before responding with `load` to confirm that the permission has already been granted.
+
+    The browser should respond by loading the resource and granting it access to its unpartitioned cookies.
 
 ## Description
 
-The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API#) provides a JavaScript mechanism to allow an embedded resource to request `storage-access` permission.
+The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) provides a JavaScript mechanism to allow an embedded resource to request `storage-access` permission.
 This enables sending third-party cookies in requests, which would otherwise be blocked by default in most browsers.
 The resource must first be requested without cookies, so the server returns an uncredentialed version of the resource that will not have access to its own cookies.
 After loading, this resource can call {{domxref("Document.requestStorageAccess()")}} with transient activation to request the storage-access permission.
 If granted by the user, the permission is stored by the browser in a key associated with the embedder and embedded _site_.
 The browser must then reload the resource, which it can now request with cookies because it has the `active` permission state for the current context.
 
-The permission is granted for a particular embedder/embedded site, but only activated for a particular context, such as an `<iframe>` or browser tab.
-This means that if you load the same page in a new tab or `<iframe>`, the permission state of that context will be `inactive`; it won't become `active` until the permission is activated.
-The normal storage access flow is to again request the resource without cookies, call `Document.requestStorageAccess()` to activate the existing permission, then reload the resource with cookies.
+The permission is granted for a particular embedder/embedded site, but only _activated_ for a particular origin, and for a particular context such as an `<iframe>` or browser tab.
+This means that if you load the same page in a new tab or `<iframe>`, the permission state of that context will be granted but `inactive`; it won't become `active` until the permission is activated.
+Similarly, if you load another origin in the same site, the permission will be granted but you'll need to activate the permission for third party cookies to be sent or loaded for that resource.
 
 The resource has to be loaded at least once to be granted the storage-access permission.
-However, once granted, a server can use `Activate-Storage-Access` to activate the permission for other contexts.
-This avoids the need to load the resource just to activate the permission by calling `Document.requestStorageAccess()`.
+However, once granted, a server can use `Activate-Storage-Access` to activate the permission for other origins and contexts.
 
 The way this works is that:
 
@@ -75,6 +83,9 @@ The way this works is that:
    Once loaded by the browser, this resource has access to its cookies as though it were a first-party resource.
 
 Responses must also include the {{httpheader("Vary")}} header with `Sec-Fetch-Storage-Access`.
+
+> [!NOTE]
+> It is also possible (but less efficient) to activate a permission by loading a resource and calling `Document.requestStorageAccess()`.
 
 ## Examples
 

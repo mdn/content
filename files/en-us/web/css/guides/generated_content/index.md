@@ -119,7 +119,7 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
 
 ### Data types
 
-- [`<content-list>`](/en-US/docs/Web/CSS/Reference/Properties/content)
+- [`<content-list>`](/en-US/docs/Web/CSS/Reference/Properties/content#values)
 - `<content-replacement>` (see {{cssxref("image")}})
 - {{cssxref("image")}}
 - [`<counter>`](/en-US/docs/Web/CSS/Reference/Properties/content#counter)
@@ -142,8 +142,8 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
   - {{cssxref("::marker")}} pseudo-element
 
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
-  - {{cssxref("counter", "counter()")}} function
-  - {{cssxref("counters", "counters()")}} function
+  - {{cssxref("counter()")}} function
+  - {{cssxref("counters()")}} function
   - {{cssxref("counter-increment")}} property
   - {{cssxref("counter-reset")}} property
 
@@ -153,7 +153,7 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
   - {{cssxref(":target-current")}} pseudo-class
 
 - [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units) module
-  - {{cssxref("attr", "attr()")}} function
+  - {{cssxref("attr()")}} function
   - {{cssxref("string")}} data type
   - {{cssxref("image")}} data type
 

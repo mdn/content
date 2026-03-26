@@ -36,15 +36,15 @@ animation-range-start: unset;
   - : Represents the start of the timeline. This is the default value.
 - {{cssxref("length-percentage")}}
   - : Specifies a length or percentage value measured from the beginning of the timeline.
-- [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name)
+- {{cssxref("timeline-range-name")}}
   - : Specifies a named timeline range within the overall timeline. The range starts at `0%`.
 - `<timeline-range-name> <length-percentage>`
   - : Specifies a length or percentage value measured from the beginning of the specified named timeline range.
 
 ## Description
 
-Allowed values for the `animation-range-start` property are `normal`, a {{cssxref("length-percentage")}}, a `<timeline-range-name>`, or a `<timeline-range-name>` followed by a `<length-percentage>`. If the [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) value does not include a `<length-percentage>`, the percentage defaults to `0%`.
-See [`animation-range`](/en-US/docs/Web/CSS/Reference/Properties/animation-range) for a detailed description of the available values.
+Allowed values for the `animation-range-start` property are `normal`, a {{cssxref("length-percentage")}}, a `<timeline-range-name>`, or a `<timeline-range-name>` followed by a `<length-percentage>`. If the {{cssxref("timeline-range-name")}} value does not include a `<length-percentage>`, the percentage defaults to `0%`.
+See {{cssxref("animation-range")}} for a detailed description of the available values.
 Also check out the [View progress timeline visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/), which shows what the different values mean in an easy-to-follow visual format.
 
 The `animation-range-start` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that using the `animation` shorthand resets any previously declared `animation-range-start` value of equal or lower specificity to `normal`; the shorthand cannot be used to set a new `animation-range-start` value. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you should declare `animation-range-start` _after_ declaring any `animation` shorthand to avoid resetting the value to `normal`.
@@ -110,7 +110,7 @@ In the middle of a long block of text, we've included an element that we'll anim
 
 #### CSS
 
-A scroll progress timeline is defined using setting a [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) function as the value of the {{cssxref("animation-timeline")}} property. This is declared **after** the {{cssxref("animation")}} shorthand to avoid resetting the longhand property value.
+A scroll progress timeline is defined using setting a {{cssxref("animation-timeline/scroll", "scroll()")}} function as the value of the {{cssxref("animation-timeline")}} property. This is declared **after** the {{cssxref("animation")}} shorthand to avoid resetting the longhand property value.
 
 We've also set `animation-range-start` to make the animation start earlier than expected.
 

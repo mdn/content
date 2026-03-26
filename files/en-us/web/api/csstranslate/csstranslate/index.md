@@ -9,7 +9,7 @@ browser-compat: api.CSSTranslate.CSSTranslate
 {{APIRef("CSS Typed OM")}}
 
 The **`CSSTranslate()`** constructor creates a
-new {{domxref("CSSTranslate")}} object representing the [translate()](/en-US/docs/Web/CSS/Reference/Values/transform-function/translate) value of the
+new {{domxref("CSSTranslate")}} object representing the {{cssxref("transform-function/translate", "translate()")}} value of the
 individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax

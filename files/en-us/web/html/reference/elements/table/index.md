@@ -108,7 +108,7 @@ The following attributes are deprecated and should not be used. They are documen
   - : Specifies the horizontal alignment of the table within its parent element. The possible {{Glossary("enumerated")}} values are `left`, `center`, and `right`. Use the {{cssxref("margin-inline-start")}} and {{cssxref("margin-inline-end")}} CSS properties instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
-  - : Defines the background color of the table. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/Reference/Values/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/Reference/Values/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of the table. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/Reference/Values/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/Reference/Values/named-color). Other CSS {{cssxref("&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `border` {{deprecated_inline}}
   - : Defines, as a non-negative integer value (in pixels), the size of the frame surrounding the table. If set to `0`, the [`frame`](#frame) attribute is set to void. Use the {{cssxref("border")}} CSS property instead, as this attribute is deprecated.

@@ -20,8 +20,9 @@ There are three types of container queries:
 - **Container size queries**
   - : Size queries enable applying styles to elements based on the current [size](/en-US/docs/Web/CSS/Reference/At-rules/@container#descriptors) of a containing element, including the orientation and {{glossary("aspect ratio")}}. The containing elements need to be explicitly declared as _size query containers_.
 
-- **Container style queries**
-  - : Style queries enable applying styles to elements based on a containing element's style features. Any non-empty element can be a style query container. Currently, the only style feature supported by style queries is CSS [custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties). In this case, the query returns true or false depending on the computed value of the containing element's custom properties. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any property, declaration, or computed value — for example if the container is `display: inline flex` or has a non-transparent background color.
+- **[Container style queries](/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries)**
+  - : Style queries enable applying styles to elements based on a containing element's style features, where any non-empty element can be a style query container. A style feature can be a CSS property, CSS [custom property](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), or a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations).
+    This allows you to apply styles to any container element's descendants based on its style features — such as whether it has a `display: inline` flex declaration set, or the value of a custom property.
 
 - **[Container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)**
   - : Scroll-state queries allow you to selectively apply CSS rules to a container's descendants based on scroll-state conditions, such as whether the queried element is partially scrolled or whether the container is snapped to a scroll snap container. The containing elements need to be explicitly declared as _scroll-state query containers_.
@@ -52,7 +53,7 @@ Elements are declared as _size query containers_ by setting their {{cssxref("con
 
 Declaring size query containers adds [containment](/en-US/docs/Web/CSS/Guides/Containment/Using) to them. This is a performance necessity — querying the size of every element in the DOM, all the time, would be bad for performance and user experience. Additionally, if a descendant style changed the size of the container element, an infinite loop could occur.
 
-In a container size query, the `<container-condition>` includes one or more `<size-query>`s. Each size query includes a size feature name, a comparison operator, and a value. The size features that can be queried are limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`. The boolean syntax and logic combining one or more `<size-query>`s is the same as for [`@media`](/en-US/docs/Web/CSS/Reference/At-rules/@media) size feature queries.
+In a container size query, the `<container-condition>` includes one or more `<size-query>`s. Each size query includes a size feature name, a comparison operator, and a value. The size features that can be queried are limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`. The boolean syntax and logic combining one or more `<size-query>`s is the same as for {{cssxref("@media")}} size feature queries.
 
 ```css
 form {

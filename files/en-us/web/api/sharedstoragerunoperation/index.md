@@ -3,11 +3,11 @@ title: SharedStorageRunOperation
 slug: Web/API/SharedStorageRunOperation
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SharedStorageRunOperation
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`SharedStorageRunOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents a [Run output gate](/en-US/docs/Web/API/Shared_Storage_API#run) operation.
 
@@ -15,7 +15,7 @@ The **`SharedStorageRunOperation`** interface of the {{domxref("Shared Storage A
 
 ## Instance methods
 
-- {{domxref("SharedStorageRunOperation.run", "run()")}} {{Experimental_Inline}}
+- {{domxref("SharedStorageRunOperation.run", "run()")}} {{Deprecated_Inline}}
   - : Defines the structure to which the `run()` method defined inside a Run output gate operation should conform.
 
 ## Examples
