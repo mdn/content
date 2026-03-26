@@ -559,9 +559,9 @@ Let's walk through how it's set up.
 Tab functionality provides users with the ability to:
 
 - [group tabs](https://support.mozilla.org/en-US/kb/tab-groups).
-- present two tabs side-by-side in a [split view](https://support.mozilla.org/en-US/kb/split-view-firefox) 
+- present two tabs side-by-side in a [split view](https://support.mozilla.org/en-US/kb/split-view-firefox).
 
-Various tab methods enable you to work with the content of groups and split views, including: 
+Various tab methods enable you to work with the content of groups and split views, including:
 
 - {{WebExtAPIRef("tabs.group")}} and {{WebExtAPIRef("tabs.ungroup")}} to create or remove groups.
 - {{WebExtAPIRef("tabs.move")}} to move tabs within, into, or out of a group, or within or out of a split view.
