@@ -6,7 +6,7 @@ page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`shl`** instructions, short for _shift-left_, are used for performing a bitwise left-shift, similar to the **`<<`** operator in other languages.
+The **`shl`** instruction, short for _shift-left_, is used for performing a bitwise left-shift, similar to the **`<<`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: shl", "tabbed-taller")}}
 
@@ -48,7 +48,7 @@ function numToBin(num) {
 
 ## Syntax
 
-```wat
+```plain
 value_type.shl
 ```
 
@@ -114,11 +114,11 @@ In this example, we demonstrate performing a left-shift on a SIMD value and outp
 
 In our script, we grab a reference to a {{htmlelement("p")}} element that we will output our result to, then define an object for import into Wasm containing a single function that writes a value to the output `<p>`. We then compile and instantiate our Wasm module using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) method, importing the object in the process.
 
-```html hidden live-sample___simd_add
+```html hidden live-sample___simd_shl
 <p></p>
 ```
 
-```js live-sample___simd_add
+```js live-sample___simd_shl
 const outputElem = document.querySelector("p");
 
 const obj = {
@@ -136,15 +136,15 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
 
 In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has an `i32` parameter. We then declare a SIMD `i32x4` value, then left-shift it by 2 using `i32x4.shl`. Finally we extract the value stored in lane `3` of the output SIMD value using the [`extract_lane`](/en-US/docs/WebAssembly/Reference/SIMD/extract/extract_lane) instruction, and output it to the DOM by calling the imported `output()` function.
 
-```wat live-sample___simd_add
+```wat live-sample___simd_shl
 (module
   ;; Import output function
   (import "obj" "output" (func $output (param i32)))
 
   (func $main
     ;; load two SIMD values onto the stack
-    (v128.const i32x4 9 10 11 12)
-    (i32.const 2)
+    v128.const i32x4 9 10 11 12
+    i32.const 2
 
     i32x4.shl ;; shift-left by 2
     i32x4.extract_lane 3 ;; Extract a value from the result
@@ -160,7 +160,7 @@ In our Wasm module, we first import the JavaScript `output()` function, making s
 
 The output is as follows:
 
-{{embedlivesample("simd_add", "100%", 100)}}
+{{embedlivesample("simd_shl", "100%", 100)}}
 
 The result is `48`, because the value stored in lane `3` of the input value is `12`. Once shifted left by two positions, the output value's lane `3` will contain the value `48`.
 

@@ -1,5 +1,5 @@
 ---
-title: WebAssembly SIMD bitwise instructions
+title: WebAssembly SIMD-specific bitwise instructions
 short-title: Bitwise instructions
 slug: WebAssembly/Reference/SIMD/bitwise
 page-type: landing-page

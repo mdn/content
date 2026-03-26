@@ -6,7 +6,7 @@ page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`add`** instructions are used for adding up two numbers, similar to the **`+`** operator in other languages.
+The **`add`** instruction is used for adding up two numbers, similar to the **`+`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: add", "tabbed-taller")}}
 
@@ -32,7 +32,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 ## Syntax
 
-```wat
+```plain
 value_type.add
 ```
 
@@ -70,18 +70,18 @@ For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `add`, these will be [`v128
 
 ### Binary encoding
 
-| Instruction | Binary format    | Example text => binary          |
-| ----------- | ---------------- | ------------------------------- |
-| `i32.add`   | `0x6a`           | `i32.add` => `0x6a`             |
-| `i64.add`   | `0x7c`           | `i64.add` => `0x7c`             |
-| `f32.add`   | `0x92`           | `f32.add` => `0x92`             |
-| `f64.add`   | `0xa0`           | `f64.add` => `0xa0`             |
-| `i8x16.add` | `0xfd 0x6e`      | `i8x16.add` => `0xfd 0x6e`      |
-| `i16x8.add` | `0xfd 0x8e 0x01` | `i16x8.add` => `0xfd 0x8e 0x01` |
-| `i32x4.add` | `0xfd 0xae 0x01` | `i32x4.add` => `0xfd 0xae 0x01` |
-| `i64x2.add` | `0xfd 0xce 0x01` | `i64x2.add` => `0xfd 0xce 0x01` |
-| `f32x4.add` | `0xfd 0xe4 0x01` | `f32x4.add` => `0xfd 0xe4 0x01` |
-| `f64x2.add` | `0xfd 0xf0 0x01` | `f64x2.add` => `0xfd 0xf0 0x01` |
+| Instruction | Binary format  | Example text => binary          |
+| ----------- | -------------- | ------------------------------- |
+| `i32.add`   | `0x6a`         | `i32.add` => `0x6a`             |
+| `i64.add`   | `0x7c`         | `i64.add` => `0x7c`             |
+| `f32.add`   | `0x92`         | `f32.add` => `0x92`             |
+| `f64.add`   | `0xa0`         | `f64.add` => `0xa0`             |
+| `i8x16.add` | `0xfd 110:u32` | `i8x16.add` => `0xfd 0x6e`      |
+| `i16x8.add` | `0xfd 142:u32` | `i16x8.add` => `0xfd 0x8e 0x01` |
+| `i32x4.add` | `0xfd 174:u32` | `i32x4.add` => `0xfd 0xae 0x01` |
+| `i64x2.add` | `0xfd 206:u32` | `i64x2.add` => `0xfd 0xce 0x01` |
+| `f32x4.add` | `0xfd 228:u32` | `f32x4.add` => `0xfd 0xe4 0x01` |
+| `f64x2.add` | `0xfd 240:u32` | `f64x2.add` => `0xfd 0xf0 0x01` |
 
 ## Examples
 
@@ -122,8 +122,8 @@ In our Wasm module, we first import the JavaScript `output()` function, making s
 
   (func $main
     ;; load two SIMD values onto the stack
-    (v128.const i32x4 9 10 11 12)
-    (v128.const i32x4 9 10 11 12)
+    v128.const i32x4 9 10 11 12
+    v128.const i32x4 9 10 11 12
 
     i32x4.add ;; add the two values
     i32x4.extract_lane 3 ;; Extract a value from the result
