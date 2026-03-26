@@ -151,7 +151,7 @@ td {
       <td>
         <img
           class="svgFilter"
-          href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag" />
       </td>
       <td>
