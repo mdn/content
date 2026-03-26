@@ -33,7 +33,35 @@ _This interface has no events that fire on it._
 
 ## Examples
 
-In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) example, we create a simple reporting observer to observe usage of deprecated features on our web page:
+### Displaying deprecation reports
+
+This example shows how to observe `"deprecation"` reports using a `ReportingObserver`.
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 200px;
+  margin: 10px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+#### JavaScript
+
+First we construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"deprecation"`, passing a callback that will receive and log the reports.
 
 ```js
 const options = {
@@ -42,32 +70,31 @@ const options = {
 };
 
 const observer = new ReportingObserver((reports, observer) => {
-  reportBtn.onclick = () => displayReports(reports);
+  reports.forEach((report) => {
+    // console.log(report);
+    log(JSON.stringify(report, null, 2));
+  });
 }, options);
-```
 
-We then tell it to start observing reports using {{domxref("ReportingObserver.observe()")}}; this tells the observer to start collecting reports in its report queue, and runs the callback function specified inside the constructor:
-
-```js
+// Start the observer
 observer.observe();
 ```
 
-Later on in the example we deliberately use the deprecated version of {{domxref("MediaDevices.getUserMedia()")}}:
+We then call the following code which uses synchronous XHR (deprecated API).
+Note that this is defined after the observer it triggers once the observer is running.
 
 ```js
-if (navigator.mozGetUserMedia) {
-  navigator.mozGetUserMedia(constraints, success, failure);
-} else {
-  navigator.getUserMedia(constraints, success, failure);
-}
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "/", false); // false = synchronous (deprecated)
+xhr.send();
 ```
 
-This causes a deprecation report to be generated; because of the event handler we set up inside the `ReportingObserver()` constructor, we can now click the button to display the report details.
+#### Results
 
-![image of a jolly bearded man with various stats displayed below it about a deprecated feature](reporting_api_example.png)
+On browsers that support deprecation reports, a report should be displayed below.
+Note that the `type` is `"deprecation"`.
 
-> [!NOTE]
-> If you look at the [complete source code](https://github.com/mdn/dom-examples/blob/main/reporting-api/deprecation_report.html), you'll notice that we actually call the deprecated `getUserMedia()` method twice. After the first time we call {{domxref("ReportingObserver.takeRecords()")}}, which returns the first generated report and empties the queue. Because of this, when the button is pressed only the second report is listed.
+{{EmbedLiveSample("Using the `ReportingObserver` interface", "100%", "280px")}}
 
 ## Specifications
 
