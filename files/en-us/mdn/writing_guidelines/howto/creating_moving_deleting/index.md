@@ -107,7 +107,7 @@ For example, let's say you want to move the entire
 Documents should only be removed from MDN Web Docs under special circumstances. If you are thinking about deleting pages, please discuss it with the MDN Web Docs team on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) first.
 
 > [!NOTE]
-> This section covers deleting individual pages or page trees. If you need to retire an entire section of MDN content, see the [Sunsetting content](/en-US/docs/MDN/Writing_guidelines/Howto/Sunsetting_content) guide.
+> This section covers deleting individual pages or page trees. If you need to retire an entire section of MDN content, consult the [Sunsetting content](/en-US/docs/MDN/Writing_guidelines/Howto/Sunsetting_content) guide.
 
 Deleting one or more documents or an entire tree of documents is easy, just like moving pages, because we've created a special command that takes care of the details for you:
 

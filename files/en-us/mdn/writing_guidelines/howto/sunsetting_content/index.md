@@ -8,7 +8,7 @@ sidebar: mdnsidebar
 
 This article describes the process for retiring entire sections of MDN Web Docs content, known as _sunsetting_. Sunsetting is different from [deleting or moving individual pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting); it applies when a whole section is no longer actively maintained, relevant, or aligned with MDN's goals and needs to be retired in a planned and transparent way.
 
-Sunsetting is a very rare occurrence. The process will differ depending on the circumstances, but this guide gives an overview of when and how to sunset a section, and the steps that must be followed to do so responsibly.
+Sunsetting is a very rare occurrence, and the process will differ depending on the circumstances. This guide provides an overview of when and how to sunset a section, and the steps to follow to do so responsibly.
 
 ## When to consider sunsetting content
 
@@ -22,7 +22,7 @@ You may want to propose sunsetting a section of MDN Web Docs content if any of t
 Sunsetting should always be a deliberate, visible process. Large-scale removals should never happen without discussion or notice. The final decision to sunset a section lies with the MDN team.
 
 > [!NOTE]
-> If you want to remove individual pages rather than an entire section, see [Deleting pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#deleting_pages). For guidance on labeling individual features as deprecated, see [How to label a technology](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete).
+> If you want to remove individual pages rather than an entire section, consult our [Deleting pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#deleting_pages) guide. For guidance on labeling individual features as deprecated, see [How to label a technology](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete).
 
 ## The sunsetting process
 
@@ -37,7 +37,7 @@ If a section is seriously being considered for sunsetting, a GitHub discussion m
 - The reasoning for removal.
 - The impact of the removal.
 - That relevant stakeholders are aware.
-- That alternative approaches have been considered.
+- Alternative approaches have been considered.
 
 In some cases, the decision may also involve **gathering feedback from MDN users**. This can include:
 
@@ -63,7 +63,7 @@ Add a [note banner](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_a
 - That the content will be archived.
 - A link to the GitHub discussion for more details.
 
-Use the following format:
+Use the following template:
 
 ```md
 > [!NOTE]
@@ -74,7 +74,7 @@ This notice ensures transparency and gives users time to adjust.
 
 #### Archive and remove the content
 
-After the agreed sunsetting period has passed, the content can be removed from MDN Web Docs:
+After the agreed-upon sunsetting period has passed, the content can be removed from MDN Web Docs as follows:
 
 1. **Archive the content.** Copy the section to the [MDN Museum repository](https://github.com/mdn/museum) for archival purposes. Keep the content in a directory that matches the original URL path. For example, content at `https://developer.mozilla.org/en-US/docs/Games` would go in a `/docs/games/` directory in the museum repository. This preserves MDN's content history while keeping deprecated material off the active site.
 
