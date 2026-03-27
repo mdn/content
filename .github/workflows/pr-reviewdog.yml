@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}
-      STATUS_CONTEXT: pr-reviewdog
+      STATUS_CONTEXT: ${{ github.workflow }}
       STATUS_TARGET: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
       - name: Mark status as pending
