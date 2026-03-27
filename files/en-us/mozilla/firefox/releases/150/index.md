@@ -50,9 +50,11 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
-<!-- #### DOM -->
+#### DOM
+
+- The non-standard {{domxref("Document/caretRangeFromPoint","caretRangeFromPoint()")}} method of the {{domxref("Document")}} interface is now supported. ([Firefox bug 1550635](https://bugzil.la/1550635)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
