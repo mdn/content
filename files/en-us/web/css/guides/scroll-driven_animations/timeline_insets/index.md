@@ -639,8 +639,6 @@ For the start and end percentages to be relative to the scrollport and the subje
 
 The `contain` range fully _contains_ the animation within the scrollport. It represents the range during which the principal box is either fully contained by, or fully covers, its view progress visibility range within the scrollport. With `contain`, if the subject is the same size or smaller than the scrollport, it can be fully visible, but if the element is the same size as the container, the animation is over `0px`, so happens, but is not visible to the user.
 
-Without worrying about the size of the container or the subjects, we can limit our animation to the middle of scrollport:
-
 ```css live-sample___center
 .animated_element {
   animation-range-start: contain 25%;
@@ -671,7 +669,9 @@ body .animated_element {
 }
 ```
 
-{{EmbedLiveSample("center", "100%", "400")}}
+Without needing to know the size of the container or the subjects, we are able to limit our animation to the middle of scrollport.
+
+{{EmbedLiveSample("center", "100%", "310")}}
 
 ```html hidden live-sample___svg_contain live-sample___svg_insets2 live-sample___svg_view
 <svg class="gradient">
