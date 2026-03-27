@@ -12,10 +12,16 @@ permissions:
   actions: read
   # Post inline review comments via reviewdog.
   pull-requests: write
+  # Report commit status.
+  statuses: write
 
 jobs:
   reviewdog:
     runs-on: ubuntu-latest
+    env:
+      STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}
+      STATUS_CONTEXT: pr-reviewdog
+      STATUS_TARGET: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
       - name: Identify PR
         id: identify-pr
@@ -51,6 +57,17 @@ jobs:
           path: mdn-content
           ref: main
           persist-credentials: false
+
+      - name: Mark status as pending
+        if: steps.check.outputs.HAS_ARTIFACT == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=pending \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Reviewdog pending' \
+            -f target_url="$STATUS_TARGET"
 
       - name: Setup reviewdog
         if: steps.check.outputs.HAS_ARTIFACT == 'true'
@@ -94,3 +111,25 @@ jobs:
             -name="markdownlint" \
             -diff="git diff" \
             -reporter="github-pr-review" < ../lint-results/markdownlint.log
+
+      - name: Mark status as success
+        if: steps.check.outputs.HAS_ARTIFACT == 'true' && success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=success \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Reviewdog succeeded' \
+            -f target_url="$STATUS_TARGET"
+
+      - name: Mark status as failure
+        if: steps.check.outputs.HAS_ARTIFACT == 'true' && failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=failure \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Reviewdog failed' \
+            -f target_url="$STATUS_TARGET"
