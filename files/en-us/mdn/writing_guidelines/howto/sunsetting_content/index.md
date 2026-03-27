@@ -36,7 +36,7 @@ If a section is seriously being considered for sunsetting, a GitHub discussion m
 
 - The reasoning for removal.
 - The impact of the removal.
-- That relevant stakeholders are aware.
+- Relevant stakeholders are aware and have been consulted.
 - Alternative approaches have been considered.
 
 In some cases, the decision may also involve **gathering feedback from MDN users**. This can include:
