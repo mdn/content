@@ -162,23 +162,30 @@ jobs:
             echo "FILES_MODIFIED=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Collect lint diff
+      - name: Collect artifact files
         if: always() && steps.check.outputs.HAS_FILES == 'true'
         env:
+          FILES_MODIFIED: ${{ steps.lint-diff.outputs.FILES_MODIFIED }}
+          MD_LINT_FAILED: ${{ steps.markdownlint.outputs.MD_LINT_FAILED }}
           MD_LINT_LOG: ${{ steps.markdownlint.outputs.MD_LINT_LOG }}
         run: |
+          rm -rf lint-results
           mkdir -p lint-results
-          git diff HEAD > lint-results/lint.diff
-          echo "$MD_LINT_LOG" > lint-results/markdownlint.log
 
-      - name: Upload lint results
-        if: always() && steps.lint-diff.outputs.FILES_MODIFIED == 'true'
+          if [[ "$FILES_MODIFIED" == 'true' ]]; then
+            git diff HEAD > lint-results/lint.diff
+          fi
+
+          if [[ "$MD_LINT_FAILED" == 'true' ]]; then
+            echo "$MD_LINT_LOG" > lint-results/markdownlint.log
+          fi
+
+      - name: Upload artifact
+        if: always() && steps.check.outputs.HAS_FILES == 'true' && hashFiles('lint-results/*') != ''
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: lint-results
-          path: |
-            lint-results/lint.diff
-            lint-results/markdownlint.log
+          path: lint-results
 
       - name: Fail if any issues pending
         if: steps.lint-diff.outputs.FILES_MODIFIED == 'true' || steps.crlf.outputs.CRLF_FAILED == 'true' || steps.markdownlint.outputs.MD_LINT_FAILED == 'true' || steps.frontmatter.outputs.FM_LINT_FAILED == 'true'

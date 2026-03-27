@@ -76,7 +76,7 @@ jobs:
           reviewdog_version: latest
 
       - name: Add PR review with suggested changes using `git diff` output
-        if: steps.check.outputs.HAS_ARTIFACT == 'true'
+        if: steps.check.outputs.HAS_ARTIFACT == 'true' && hashFiles('lint-results/lint.diff') != ''
         working-directory: mdn-content
         env:
           CI_PULL_REQUEST: ${{ steps.identify-pr.outputs.number }}
@@ -95,7 +95,7 @@ jobs:
             -reporter=github-pr-review < ../lint-results/lint.diff
 
       - name: Add PR review with comments for errors in markdownlint output
-        if: steps.check.outputs.HAS_ARTIFACT == 'true'
+        if: steps.check.outputs.HAS_ARTIFACT == 'true' && hashFiles('lint-results/markdownlint.log') != ''
         working-directory: mdn-content
         env:
           CI_PULL_REQUEST: ${{ steps.identify-pr.outputs.number }}
