@@ -5,11 +5,18 @@ page-type: guide
 sidebar: security
 ---
 
-Threat modeling is a process that can help developers identify and understand potential security risks in applications and websites. This article describes how to perform threat modeling, providing a lightweight overview of the threat modeling process.
+Threat modeling is a process that can help developers identify and understand potential security risks in applications and websites. Threat modeling can help you understand the specific vulnerabilities of your application, the browser environment, and the user's interaction with your UI. This article describes what a threat model is and how to perform threat modeling, providing a lightweight overview and walking through the threat modeling process.
 
-Depending on your goal, threat modeling can be more involved than described here. Maybe you or your team wants to exercise lightweight threat modeling for your own benefit, so that security isn't an afterthought or neglected at all, or maybe you are required to perform a more heavyweight assessment because your software will be audited and you use threat modeling to be prepared for that.
+Depending on your goal, threat modeling can be more involved than described here. Whether you are exercising lightweight threat modeling for your own benefit, so that security isn't an afterthought or neglected at all, or performing a more heavyweight assessment for a software audit, a threat model enables identifying and resolving actual and perceived threats.
 
-This page describes the overall threat modeling process. For an example threat model, see:
+This page describes the overall threat modeling process.
+
+For threat model frameworks and resources, see:
+
+- [Threat model frameworks an resources](/en-US/docs/Web/Security/Threat_modeling/Frameworks)
+  - : Overview of the STRIDE and LUNDDUN frameworks that provide structure for threat modeling processes, and additional threat modeling resources.
+
+For an example threat model, see:
 
 - [Example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model)
   - : An example threat model for a public-facing blog serving static pages. Interactive components include user comments, a contact form, analytics scripts, and a map embed.
@@ -17,6 +24,8 @@ This page describes the overall threat modeling process. For an example threat m
 ## What is a threat?
 
 A threat is something that has a negative effect on your objectives or your assets, if it happens.
+
+A threat model is a structured representation of potential threats. It includes all the information that affects the security of your product, whether that product is a server, application or website. It is a living document, or mental map, that identifies your assets (What are you protecting?), potential adversaries (who would want to attack you, your product, or your users?), and potential vulnerabilities (where and what are your product's weak spots?)
 
 In practice, security is about reducing the chances that a threat can reach something you care about, or to limit the impact if the threat materializes. Also, another approach to limit the threat is to avoid it - e.g., removing the affected feature.
 
@@ -38,7 +47,7 @@ To illustrate the different terms, let's take a house as an example:
 
 ## What is threat modeling?
 
-Threat modeling is a form of risk assessment with the goal to analyze the most probable attack vectors and to identify assets most desired by an attacker. It is a structured, repeatable process for analyzing a representation of a system so you can identify relevant security and privacy concerns, understand what can go wrong, and decide how to respond. Per the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org), creating a threat model typically involves answering four key questions:
+Threat modeling is a the process of creating a threat model. It is form of risk assessment with the goal to analyze the most probable attack vectors and to identify assets most desired by an attacker. It is a structured, repeatable process for analyzing a representation of a system so you can identify relevant security and privacy concerns, understand what can go wrong, and decide how to respond. Per the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org), creating a threat model typically involves answering four key questions:
 
 1. What are we working on?
 2. What can go wrong?
@@ -62,13 +71,22 @@ For any threat model, it helps to:
 - Consider threat responses
 - Iterate
 
-There is no single ideal threat modeling representation, therefore it is a good idea to use multiple threat modeling frameworks (see below for more on some popular ones) to illuminate different problems. We will focus on a lightweight threat modeling exercise which focuses on the four main questions from the Threat Modeling Manifesto.
+## Questions to be answered
 
-The rest of this page walks through these steps in order.
+There is no single ideal threat modeling representation, therefore it is a good idea to use multiple [threat modeling frameworks]() to illuminate different problems.
+
+One form of threat model includes asking and answering the four main questions from the Threat Modeling Manifesto.
+
+- [What are we working on?](#1-what-are-we-working-on)
+- [What can go wrong?](#2-what-can-go-wrong)
+- [What are we going to do about it?](#3-what-are-we-going-to-do-about-it)
+- [Did we do a good job?](#4-did-we-do-a-good-enough-job)
+
+Let's walk through these questions in order.
 
 ## 1. What are we working on?
 
-To answer this question, you typically create a model of the system, such as a data flow diagram, architecture diagram, or use-case diagram, showing components, data flows, trust boundaries, dependencies, and key stakeholders.
+To answer this what we are working on or building, you can create a model of the system, such as a data flow diagram, architecture diagram, or use-case diagram, showing components, data flows, trust boundaries, dependencies, and key stakeholders.
 
 To define the scope of the threat model, we need to delineate which threats target our own project and which target the browser or other layers of the web platform stack, which we can define are external dependencies to our threat model. The [Threat Model for the Web Platform](https://w3c.github.io/threat-model-web/) provides a useful starting point and gives an idea of the environment any website or web application resides in.
 
@@ -152,7 +170,7 @@ Now that we've identified what we're working on, we can start thinking about wha
 
 For a web application, this might include cross-site scripting, cross-site request forgery, account takeover, or data leakage via third-party scripts.
 
-Another common way to identify threats is to use [threat analysis frameworks](#threat_analysis_frameworks) which are described in more details below.
+Another common way to identify threats is to use [threat analysis frameworks](/en-US/docs/Web/Security/Threat_modeling/Frameworks) which are described in more details below.
 
 You can decide whether you present identified threats in a table or prefer describing them more analytical, for example by writing down the chain of events that leading up to an attack ("kill chain"). The [W3C Threat Modeling Guide](https://w3c.github.io/threat-modeling-guide/#curatorial-storytelling) recommends to tell a story and give threats priorities, so that the most important threats are discussed first and that readers are not overwhelmed with extraneous details.
 
@@ -188,93 +206,7 @@ You can revisit the issues you filed and the documentation you've written in the
 
 We provide an [example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model) for inspiration. Threat model documents don't get published very often and aren't shared broadly unfortunately; they are often an internal resource. Although it is good practice to publish your threat model, both to demonstrate trustworthiness and to solicit additional feedback.
 
-## Threat analysis frameworks
-
-In our threat modeling above, we focus on the four key questions as defined in the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org). There are also existing frameworks providing you with structure for threat modeling processes. Maybe you want to adopt some of these frameworks, or your security audit or certification process requires you to do threat modeling with them.
-
-A diverse set of frameworks and techniques can help you to think about threats from different perspectives. In essence, these frameworks can help you to explore more structured answers to the second question "What can go wrong?" by thinking about a variety of threat categories. In your threat model you can reference these categories (for example, "STRIDE: Tampering") to signal that you have thought about a certain threat category. However, you don't need to use all categories necessarily.
-
-Two popular threat analysis frameworks are STRIDE (focus on security) and LINDDUN (focus on privacy):
-
-### STRIDE
-
-The [STRIDE](https://en.wikipedia.org/wiki/STRIDE_model) framework is a widely recognized threat modeling method developed by Microsoft. The acronym stands for six categories of security threats:
-
-- Spoofing
-  - : Impersonating another user or system to gain unauthorized access. Questions could be:
-    - Are cookies protected from theft or reuse?
-    - Could an attacker reuse old credentials or sessions?
-- Tampering
-  - : Unauthorized modification of data or systems. Questions could be:
-    - Is everything encrypted with HTTPS?
-    - Can users modify requests parameters, headers, API payloads?
-- Repudiation
-  - : Claiming not to have performed an action; lack of audit trails. Questions could be:
-    - Do we log security-relevant events like login failures?
-    - Can we trace back actions to a specific user?
-- Information Disclosure
-  - : Unauthorized access to confidential information. Questions could be:
-    - Is personal data exposed via URL query strings?
-    - Are secret credentials exposed to the client?
-- Denial of Service (DoS)
-  - : Disrupting services to make them unavailable. Questions could be:
-    - Can large uploads or heavy database queries be triggered by users?
-    - Can API endpoints be called repeatedly without limits?
-- Elevation of Privilege
-  - : Gaining higher access rights than permitted. Questions could be:
-    - Can users guess admin endpoint URLs?
-    - When are privilege checks performed?
-
-### LINDDUN
-
-The [LINDDUN](https://linddun.org) framework is a widely recognized threat modeling framework about data privacy and is inspired by STRIDE. The acronym stands for seven categories of privacy threats:
-
-- Linking
-  - : The ability to associate data or actions to an individual or group. Questions could be:
-    - Are cookies used unnecessarily?
-    - Can third parties track user behaviors across sites?
-- Identifying
-  - : Learning the identity of an individual. Questions could be:
-    - Are pseudonyms or user IDs truly non-identifying?
-    - Could identities be revealed through combining publicly available data?
-- Non-repudiation
-  - : The ability to link or attribute a claim (or action) to an individual. Questions could be:
-    - Can users perform actions without creating permanent records?
-    - Are logs kept longer than necessary?
-- Detecting
-  - : Determining the involvement of an individual based on observation. Questions could be:
-    - Does the login reveal if a user exist?
-    - Does the system leak if an admin is currently online?
-- Data disclosure
-  - : Excessively collecting, storing, processing or sharing personal data. Questions could be:
-    - Are backups, logs, or exports protected?
-    - Are analytics or other metric gathering embeds receiving personal data?
-- Unawareness
-  - : Insufficiently informing, involving or empowering individuals in the processing of personal data. Questions could be:
-    - Do users understand opt-in or opt-out dialogs?
-    - Do users understand what data is collected and why?
-- Non-compliance
-  - : Deviation from security and data management best practices, standards and legislation. Questions could be:
-    - Can users request deletion or export of their data?
-    - Are third-party services compliant with your policies?
-
-### Other resources
-
-A variety of other documents exists which can help you to think about a diverse set of threats even outside of the STRIDE and LINDDUN categories:
-
-- [RFC 9620 Human Rights Considerations](https://datatracker.ietf.org/doc/rfc9620/)
-- [W3C TAG: Ethical Web Principles](https://w3ctag.github.io/ethical-web-principles/)
-- [W3C Self-Review Questionnaire: Security and Privacy](https://www.w3.org/TR/security-privacy-questionnaire/#missing-questions)
-- [RFC 6973 Privacy Considerations for Internet Protocols](https://datatracker.ietf.org/doc/html/rfc6973)
-- [RFC 3552 Guidelines for Writing RFC Text on Security Considerations](https://datatracker.ietf.org/doc/html/rfc3552)
-- [Invariant-centric threat modeling](https://github.com/defuse/ictm)
-
-## Threat modeling tools
-
-There are tools designed to make threat modeling easier through standards for visualizing system components, data flows, etc. These tools can help you with creating diagrams, for example. However, these tools are secondary. Even a (digital) drawing board would do it if it leads to discussions with your team. The primary goal should always be better understanding of your systems. The discussions had during threat modeling are more important than tool usage. Keep in mind that a complex diagram that is difficult to understand might not spark great interest in discussing your project's architecture and its threats.
-
-- [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/)
-- [Microsoft Threat Modeling Tool](https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool)
+In our threat modeling above, we focus on the four key questions as defined in the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org). Frameworks exist, including STRIDE and LUNDDUN, that provide structure for threat modeling processes. See the [threat modeling frameworks and resources](/en-US/docs/Web/Security/Threat_modeling/Frameworks) guide for a list of privacy and security threats, along with example questions that may help guide you in your own threat model development.
 
 ## See also
 
