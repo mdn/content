@@ -3,7 +3,7 @@ name: PR Reviewdog
 on:
   workflow_run:
     workflows:
-      - "Lint and review content files"
+      - "Lint content"
     types:
       - completed
 

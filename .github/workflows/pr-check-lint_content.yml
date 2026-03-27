@@ -1,4 +1,4 @@
-name: Lint and review content files
+name: Lint content
 
 on:
   pull_request:
@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  lint-and-review-docs:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
