@@ -22,7 +22,7 @@ Firefox 149 was released on [March 24, 2026](https://whattrainisitnow.com/releas
 
 ### CSS
 
-- The {{CSSXRef("shape-outside")}} CSS property now supports the [`xywh()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/xywh) function as a value. This allows you to define a shape for inline content to wrap around, using distances from the left (`x`) and top (`y`) edges of the containing block and a width (`w`) and height (`h`). ([Firefox bug 1983187](https://bugzil.la/1983187)).
+- The {{CSSXRef("shape-outside")}} CSS property now supports the [`xywh()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/xywh) and [`rect()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/rect) functions as values. These functions were previously already implemented for the {{CSSXRef("clip-path")}} and {{CSSXRef("offset-path")}} properties, and are now also available for `shape-outside`. ([Firefox bug 1983187](https://bugzil.la/1983187)).
 
 - The {{CSSXRef("vertical-align")}} CSS property is now a shorthand property for {{CSSXRef("alignment-baseline")}}, {{CSSXRef("baseline-shift")}} and {{CSSXRef("baseline-source")}} properties. ([Firefox bug 1830771](https://bugzil.la/1830771)).
 
@@ -32,7 +32,9 @@ Firefox 149 was released on [March 24, 2026](https://whattrainisitnow.com/releas
 
 ### JavaScript
 
-No notable changes.
+- The `"islamic-umalqura"` [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) is now supported by {{jsxref("Intl")}}.
+  This string will be in the list of calendars returned by {{jsxref("Intl.supportedValuesOf()")}}, and can be set as the [`options.calendar`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#calendar) parameter in the [`DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat).
+  ([Firefox bug 2011505](https://bugzil.la/2011505)).
 
 ### APIs
 
@@ -41,9 +43,11 @@ No notable changes.
   ([Firefox bug 2010125](https://bugzil.la/2010125)).
 
 - The [Reporting API](/en-US/docs/Web/API/Reporting_API) is now supported for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) and {{httpheader("Integrity-Policy")}} violations.
-  This allows report objects that are {{domxref("CSPViolationReport")}} objects and {{domxref("IntegrityViolationReport")}} objects to be reported in violating pages using a {{domxref("ReportingObserver")}} (reports can be filtered on the `type` property: `"csp-violation"` or `"integrity-violation"`).
+  This API allows {{domxref("CSPViolationReport")}} and {{domxref("IntegrityViolationReport")}} objects to be reported in violating pages using a {{domxref("ReportingObserver")}} (reports can be filtered on the `type` property: `"csp-violation"` or `"integrity-violation"`).
   A serialized version of the report objects can also be sent to a reporting server specified in the corresponding HTTP header — endpoint names and corresponding URLs must first be defined in the {{httpheader('Reporting-Endpoints')}} or {{httpheader('Report-To')}} HTTP response headers.
   ([Firefox bug 1976074](https://bugzil.la/1976074), [Firefox bug 2008916](https://bugzil.la/2008916)).
+
+- Up to Firefox 148, `structuredClone.call(iframe.contentWindow)` incorrectly created objects in the caller's [realm](/en-US/docs/Web/JavaScript/Reference/Execution_model#realms) instead of the iframe's realm. The implementation now instantiates objects in the `this` realm, so the method's behavior more closely matched the specification.
 
 #### DOM
 
@@ -104,6 +108,7 @@ No notable changes.
 - Adds support for `tabId` as a top-level parameter in {{WebExtAPIRef("action.isEnabled")}} and {{WebExtAPIRef("browserAction.isEnabled")}}. This change provides for compatibility with the Chrome implementation of `action.isEnabled`. ([Firefox bug 2013477](https://bugzil.la/2013477))
 - A user gesture is no longer required for {{WebExtAPIRef("action.openPopup")}} and {{WebExtAPIRef("browserAction.openPopup")}} to open a popup. This feature was available behind the `extensions.openPopupWithoutUserGesture.enabled` preference from Firefox 108. This change aligns Firefox's behavior with Chrome and Safari. ([Firefox bug 1799344](https://bugzil.la/1799344))
 - If `windowId` is passed in {{WebExtAPIRef("action.openPopup")}} or {{WebExtAPIRef("browserAction.openPopup")}}, the window must be focused (active) for the popup to open. To open a popup in an unfocused window {{WebExtAPIRef("windows.update","windows.update(windowId, { focused: true })")}} must be called first. This change aligns Firefox behavior with Chrome. ([Firefox bug 2011516](https://bugzil.la/2011516))
+- The implementation of {{domxref("structuredClone")}} has changed to instantiate objects in the `this` realm instead of the caller's realm. For backwards compatibility, the global scope of content scripts now includes its own `structuredClone` method that shadows the `window.structuredClone` method. For more information, see [`structuredClone` in Sharing objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#structuredclone).
 
 - The ability of extensions to dynamically execute code in their `moz-extension:` documents with {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, and {{WebExtAPIRef("scripting.removeCSS")}} is deprecated. ([Firefox bug 2011234](https://bugzil.la/2011234)) The feature is no longer available in Firefox Nightly, and the beta and release versions of Firefox provide a warning in the tab's console. This restriction will apply to all versions of Firefox 152 and later. ([Firefox bug 2015559](https://bugzil.la/2015559)) As an alternative, an extension can run code in its documents dynamically by registering a {{WebExtAPIRef("runtime.onMessage")}} listener in the document's script, then sending a message to trigger execution of the required code.
 - The implicit CSS filter applied to [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) SVG icons on dark themes is deactivated in Nightly builds ([Firefox bug 2001318](https://bugzil.la/2001318)) and will be deactivated in other Firefox editions from version 152 ([Firefox bug 2016509](https://bugzil.la/2016509)). You can test page action SVG icons with the CSS filter disabled in other Firefox editions by creating a boolean `about:config` preference called `extensions.webextensions.pageActionIconDarkModeFilter.enabled` and setting it to `false`.
@@ -139,6 +144,6 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The CSS Typed Object Model Level 1 specification is being implemented.
   In this release, support for the {{domxref("CSSNumericValue/to","to()")}} method of the {{domxref("CSSNumericValue")}} interface was added, allowing the conversion of a CSS numeric value from one unit to another. ([Firefox bug 1278697](https://bugzil.la/1278697)).
 
-- **JPEG XL image support: Rust-based decoder**: `image.jxl.enabled`
+- **JPEG XL image support: Rust-based decoder** (Nightly only): `image.jxl.enabled`
 
   The previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decoder has been replaced with a new Rust-based implementation that uses the `jxl-rs` library. ([Firefox bug 1986393](https://bugzil.la/1986393)).
