@@ -41,7 +41,7 @@ for (let i = 0; i < data.length; i += 3) {
 }
 // "ff0000"
 // "00ff00"
-// "00ff00"
+// "0000ff"
 ```
 
 ## Specifications

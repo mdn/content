@@ -3,16 +3,15 @@ title: action.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setIcon
 page-type: webextension-api-function
 browser-compat: webextensions.api.action.setIcon
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the icon for the browser action.
 
 > [!NOTE]
 > This API is available in Manifest V3 or higher.
 
-You can specify a single icon as either the path to an image file or a {{WebExtAPIRef('action.ImageDataType')}} object.
+You can specify a single icon as either the path to an image file or an {{WebExtAPIRef('action.ImageDataType')}} object.
 
 You can specify multiple icons in different sizes by supplying a dictionary containing multiple paths or `ImageData` objects. This means the icon doesn't have to be scaled for a device with a different pixel density.
 

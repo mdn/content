@@ -3,9 +3,8 @@ title: runtime.connectNative()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.connectNative
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Connects the extension to a native application on the user's computer. This takes the name of a native application as a parameter. It starts the native application and returns a {{WebExtAPIRef("runtime.Port")}} object to the caller. The caller can then use the `Port` to exchange messages with the native application using `Port.postMessage()` and `port.onMessage`. The native application will run until it exits itself, or the caller calls `Port.disconnect()`, or the page that created the `Port` is destroyed. Once the `Port` is disconnected the browser will give the process a few seconds to exit gracefully, and then kill it if it has not exited.
 
@@ -27,10 +26,6 @@ let port = browser.runtime.connectNative(
 ### Return value
 
 A {{WebExtAPIRef('runtime.Port')}} object. The port which the caller can use to exchange messages with the native application.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -59,6 +54,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-connectNative) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

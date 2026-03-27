@@ -3,9 +3,8 @@ title: menus.overrideContext()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 page-type: webextension-api-function
 browser-compat: webextensions.api.menus.overrideContext
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Hide all default Firefox menu items in favor of providing a custom context menu UI.
 

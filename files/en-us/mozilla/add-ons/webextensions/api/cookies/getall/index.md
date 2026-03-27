@@ -3,9 +3,8 @@ title: cookies.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAll
 page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.getAll
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`getAll()`** method of the {{WebExtAPIRef("cookies")}} API retrieves all cookies from a cookie store that match the details provided.
 

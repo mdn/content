@@ -21,15 +21,15 @@ The **`<hr>`** [HTML](/en-US/docs/Web/HTML) element represents a thematic break 
 ```css interactive-example
 hr {
   border: none;
-  border-top: 3px double #333;
-  color: #333;
+  border-top: 3px double #333333;
+  color: #333333;
   overflow: visible;
   text-align: center;
   height: 5px;
 }
 
 hr::after {
-  background: #fff;
+  background: white;
   content: "§";
   padding: 0 4px;
   position: relative;
@@ -37,7 +37,9 @@ hr::after {
 }
 ```
 
-Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.
+Historically, the `<hr>` element has always been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms. Therefore, if you wish to draw a horizontal line, you should do so by adding a border to an existing element using CSS.
+
+The `border-*` properties (for example, {{cssxref("border-style")}} and {{cssxref("border-color")}}) allow you to significantly customize a line's appearance, whether you are customizing an `<hr>` element or a border drawn on a different element.
 
 ## Attributes
 

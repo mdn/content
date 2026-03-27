@@ -7,7 +7,7 @@ sidebar: firefox
 
 Firefox 3 provides a number of new XUL elements, as well as improvements to existing elements. While this material is documented in detail elsewhere, this article provides a convenient list of these improvements as well as links to the detailed documentation.
 
-### New elements
+## New elements
 
 - Numeric controls:
   - The new `<scale>` element lets you create sliding scales that let the user select any value in a specified range. This widget would typically be used, for example, to create a volume control.
@@ -19,14 +19,14 @@ Firefox 3 provides a number of new XUL elements, as well as improvements to exis
   - A `<dropmarker>` element is added which is useful when creating menu-like widgets using XBL bindings. ([Firefox bug 348614](https://bugzil.la/348614))
   - The `<panel>` element is new and designed for popups that are not menus. They can support any type of content. The \<menupopup> element should be used for menus. Menus provide keyboard navigation and support opening and closing submenus.
 
-### Improvements to trees
+## Improvements to trees
 
 - Trees can now be scrolled horizontally. If the columns don't fit into the available width, a horizontal scrollbar appears. This happens if the columns' specified widths add up to more than the available space. See [Firefox bug 212789](https://bugzil.la/212789) for details.
 - A new selection style allows cells to be selected individually, instead of entire rows. To use this selection style, set the tree's `seltype` attribute to `cell`.
 - Trees now support editing of individual cells. When the user double-clicks an editable cell, a text field appears in which the user can edit the cell's contents. See [these notes](https://wiki.mozilla.org/XUL:Tree) for details.
 - \<treecol> elements now support an `overflow` attribute which may be set to true to allow the text of cells within that column to expand to neighboring blank cells if the text is too large to fit into that single cell.
 
-### Improvements to menus
+## Improvements to menus
 
 - The `image` attribute is now used consistently for setting images.
 - Menu lists fire the `select` event when selecting an item.
@@ -38,7 +38,7 @@ Firefox 3 provides a number of new XUL elements, as well as improvements to exis
 - Editable menu lists now offer an `editor` property to get the internal `nsIEditor` for its text field.
 - Menus may now be made translucent on platforms that support it ([Firefox bug 70798](https://bugzil.la/70798)).
 
-### Improvements to textboxes
+## Improvements to textboxes
 
 - Setting a textbox's `spellcheck` attribute to `true` enables inline spellchecking for that textbox.
 - The `<textbox>` now has a `reset()` method to reset the value of the textbox to the default value. The `defaultValue` property may be used to retrieve and modify the default value of the textbox.
@@ -51,7 +51,7 @@ Firefox 3 provides a number of new XUL elements, as well as improvements to exis
   - `strip` - strip out all line breaks
   - `stripsurroundingwhitespace` - strip out all line breaks and surrounding whitespace
 
-### Other improvements
+## Other improvements
 
 - The `type` attribute on a `<button>` may be set to `repeat` to create buttons which fire their command event repeatedly while the mouse button is held down.
 - The `buttondisabledaccept` attribute can now be used on the `<dialog>` element to have the accept (OK) button initially disabled.
@@ -63,6 +63,6 @@ Firefox 3 provides a number of new XUL elements, as well as improvements to exis
 - Handling of the `<key>` element improved for non-Latin keyboard layout users.
 - On Mac OS X, the `activetitlebarcolor` and `inactivetitlebarcolor` attributes of the root elements (`<window>`, `<dialog>`, `<prefwindow>` and `<wizard>`) are available to customize the color of the windows' title bars.
 
-### See also
+## See also
 
 - [Firefox 3 for developers](/en-US/docs/Mozilla/Firefox/Releases/3)

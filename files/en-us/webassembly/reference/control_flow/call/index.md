@@ -1,5 +1,6 @@
 ---
-title: call
+title: "call: Wasm text instruction"
+short-title: call
 slug: WebAssembly/Reference/Control_flow/call
 page-type: webassembly-instruction
 sidebar: webassemblysidebar

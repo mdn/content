@@ -25,7 +25,7 @@ This example shows how to use the `selectionStart` property to render the select
 ```css
 #editor {
   height: 200px;
-  background: #eee;
+  background: #eeeeee;
   color: black;
 }
 

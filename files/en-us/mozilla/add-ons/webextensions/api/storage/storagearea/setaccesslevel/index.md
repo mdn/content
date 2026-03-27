@@ -3,9 +3,8 @@ title: StorageArea.setAccessLevel()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/setAccessLevel
 page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.setAccessLevel
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the access level for the storage area.
 

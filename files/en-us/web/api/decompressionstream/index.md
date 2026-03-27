@@ -7,7 +7,7 @@ browser-compat: api.DecompressionStream
 
 {{APIRef("Compression Streams API")}}{{AvailableInWorkers}}
 
-The **`DecompressionStream`** interface of the {{domxref('Compression Streams API','','',' ')}} is an API for decompressing a stream of data.
+The **`DecompressionStream`** interface of the {{domxref('Compression Streams API','','',' ')}} decompresses a stream of data. It implements the same shape as a {{domxref("TransformStream")}}, allowing it to be used in {{domxref("ReadableStream.pipeThrough()")}} and similar methods.
 
 ## Constructor
 
@@ -37,3 +37,8 @@ const decompressedStream = blob.stream().pipeThrough(ds);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("CompressionStream")}}
+- {{domxref("TransformStream")}}

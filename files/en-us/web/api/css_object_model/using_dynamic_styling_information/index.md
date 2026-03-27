@@ -12,7 +12,7 @@ In many cases, and where possible, it is best practice to dynamically manipulate
 
 The basic `style` object exposes the {{domxref("Stylesheet")}} and the {{domxref("CSSStylesheet")}} interfaces. Those interfaces contain members like `insertRule`, `selectorText`, and `parentStyleSheet` for accessing and manipulating the individual style rules that make up a CSS stylesheet.
 
-To get to the `style` objects from the `document`, you can use the {{domxref("Document.styleSheets")}} property and access the individual objects by index (e.g., `document.styleSheets[0]` is the first stylesheet defined for the document, etc.).
+To get to the `style` objects from the `document`, you can use the {{domxref("Document.styleSheets")}} property and access the individual objects by index (e.g., `document.styleSheets[0]` is the first stylesheet defined for the document, etc.). You can also access the {{domxref("HTMLStyleElement.sheet", "sheet")}} property on a specific `<style>` element to get its associated stylesheet object.
 
 ## Modify a stylesheet rule with CSSOM
 
@@ -32,7 +32,7 @@ body {
 ```
 
 ```js live-sample___modify-rule
-const stylesheet = document.styleSheets[1];
+const stylesheet = document.getElementById("css-output").sheet;
 stylesheet.cssRules[0].style.backgroundColor = "cornflowerblue";
 ```
 

@@ -12,7 +12,7 @@ The **`Navigator.gpu`** read-only property returns the {{domxref("GPU")}} object
 
 ## Value
 
-An {{domxref("GPU")}} object.
+A {{domxref("GPU")}} object.
 
 ## Examples
 

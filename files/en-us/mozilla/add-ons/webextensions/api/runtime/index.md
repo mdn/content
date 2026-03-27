@@ -3,9 +3,8 @@ title: runtime
 slug: Mozilla/Add-ons/WebExtensions/API/runtime
 page-type: webextension-api
 browser-compat: webextensions.api.runtime
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This module provides information about your extension and the environment it's running in.
 
@@ -58,9 +57,11 @@ It also provides messaging APIs enabling you to:
 - {{WebExtAPIRef("runtime.getFrameId()")}}
   - : Gets the frame ID of any window global or frame element.
 - {{WebExtAPIRef("runtime.getManifest()")}}
-  - : Gets the complete [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, serialized as an object.
+  - : Gets an object representation of the complete [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 - {{WebExtAPIRef("runtime.getURL()")}}
   - : Given a relative path from the [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to a resource packaged with the extension, returns a fully-qualified URL.
+- {{WebExtAPIRef("runtime.getVersion()")}}
+  - : Gets the extension version string from the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) key. The returned version may differ from the string in the file because the browser can parse and serialize it.
 - {{WebExtAPIRef("runtime.setUninstallURL()")}}
   - : Sets a URL to be visited when the extension is uninstalled.
 - {{WebExtAPIRef("runtime.reload()")}}
@@ -113,11 +114,11 @@ It also provides messaging APIs enabling you to:
 - {{WebExtAPIRef("runtime.onRestartRequired")}}
   - : Fired when the device needs to be restarted.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

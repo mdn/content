@@ -1,5 +1,5 @@
 ---
-title: Firefox 9 for developers
+title: Firefox 9 release notes for developers
 short-title: Firefox 9
 slug: Mozilla/Firefox/Releases/9
 page-type: firefox-release-notes
@@ -9,6 +9,11 @@ sidebar: firefox
 Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9.0.1, which fixed a crashing bug discovered at the last minute, were released on December 21, 2011.
 
 ## Changes for web developers
+
+### Developer tools
+
+- The web console now supports basic [string substitutions](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#string-substitutions) in its logging methods.
+- You can now [create visually nested blocks of output](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#using-groups-in-the-console) in the web console, to help make it easier to read.
 
 ### HTML
 
@@ -43,7 +48,7 @@ _No change._
 - DOM Level 3 [composition events](/en-US/docs/Web/API/CompositionEvent) are now supported.
 - The {{ domxref("Document.scripts") }} attribute has been implemented; this returns an {{ domxref("HTMLCollection") }} of all the {{ HTMLElement("script") }} elements on the document.
 - The {{ domxref("Document.queryCommandSupported()") }} method has been implemented.
-- The set of events that can be listened for on {{ HTMLElement("body") }} elements has been revised to match the latest draft of the HTML5 specification. The list of events in the [DOM event reference](/en-US/docs/Web/Events) reflects which events can be listened for on {{ HTMLElement("body") }}.
+- The set of events that can be listened for on {{ HTMLElement("body") }} elements has been revised to match the latest draft of the HTML5 specification. The list of events in the [DOM events](/en-US/docs/Web/API/Document_Object_Model/Events#event_index) guide reflects which events can be listened for on {{ HTMLElement("body") }}.
 - The `readystatechange` event is now fired only on the {{ domxref("Document") }}, as intended.
 - Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect content, but there are exceptions.
 - A new response type, `"moz-json"`, has been added to `XMLHttpRequest`, letting `XMLHttpRequest` automatically parse [JSON](/en-US/docs/Glossary/JSON) strings for you; when you request this type, a returned JSON string is parsed, so that the value of the `response` property is the resulting JavaScript object.
@@ -75,11 +80,6 @@ _No change._
 - Attempts by a server to use the `301 Moved Permanently` or `307 Temporary Redirect` response codes to redirect the user to a `javascript:` URI now result in a "bad connection" error instead of actually redirecting. This prevents certain types of cross-site scripting attacks.
 - Content served with an empty {{ HTTPHeader("Content-Disposition") }} were previously treated as if the {{ HTTPHeader("Content-Disposition") }} were "attachment"; this didn't always work as expected. These are now handled as if the {{ HTTPHeader("Content-Disposition") }} were "inline".
 - The default maximum size of an item in the disk cache has been increased to 50 MB; previously, only items up to 5 MB were cached.
-
-### Developer tools
-
-- The web console now supports basic [string substitutions](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#string-substitutions) in its logging methods.
-- You can now [create visually nested blocks of output](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#using-groups-in-the-console) in the web console, to help make it easier to read.
 
 ## Changes for Mozilla and add-on developers
 

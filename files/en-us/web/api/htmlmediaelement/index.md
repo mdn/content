@@ -17,7 +17,7 @@ The {{domxref("HTMLVideoElement")}} and {{domxref("HTMLAudioElement")}} elements
 
 _This interface also inherits properties from its ancestors {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
-- {{domxref("HTMLMediaElement.audioTracks")}}
+- {{domxref("HTMLMediaElement.audioTracks")}} {{ReadOnlyInline}}
   - : An {{domxref("AudioTrackList")}} that lists the {{domxref("AudioTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.autoplay")}}
   - : A boolean value that reflects the [`autoplay`](/en-US/docs/Web/HTML/Reference/Elements/video#autoplay) HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption.
@@ -113,6 +113,8 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
   - : Given a string specifying a MIME media type (potentially with the [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) included), `canPlayType()` returns the string `probably` if the media should be playable, `maybe` if there's not enough information to determine whether the media will play or not, or an empty string if the media cannot be played.
 - {{domxref("HTMLMediaElement.fastSeek()")}}
   - : Quickly seeks to the given time with low precision.
+- {{domxref("HTMLMediaElement.getStartDate()")}}
+  - : Returns a {{jsxref("Date")}} object representing the real-world date and time corresponding to the beginning of the media. For live streams, this is the time the broadcast began on the server, which may be before the user started watching.
 - {{domxref("HTMLMediaElement.load()")}}
   - : Resets the media to the beginning and selects the best available source from the sources provided using the [`src`](/en-US/docs/Web/HTML/Reference/Elements/video#src) attribute or the {{HTMLElement("source")}} element.
 - {{domxref("HTMLMediaElement.pause()")}}

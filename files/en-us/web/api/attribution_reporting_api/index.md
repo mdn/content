@@ -3,11 +3,11 @@ title: Attribution Reporting API
 slug: Web/API/Attribution_Reporting_API
 page-type: web-api-overview
 status:
-  - experimental
+  - deprecated
 browser-compat: html.elements.a.attributionsrc
 ---
 
-{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Attribution Reporting API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Attribution Reporting API")}}{{deprecated_header}}
 
 The **Attribution Reporting API** enables developers to measure conversions — for example when a user clicks an ad embedded on one site and then proceeds to purchase the item over on the vendor's site — and then access reports on those conversions. It does this without relying on third-party tracking cookies.
 
@@ -33,11 +33,11 @@ The Attribution Reporting API provides a way to measure ad conversions in a way 
 
 Let's illustrate how the Attribution Reporting API works via an example.
 
-Say we have a online shop, `shop.example` (aka the advertiser), which embeds an ad for one of its products on a content site, `news.example` (aka the publisher). The ad content is found at `ad.shop.example`.
+Say we have an online shop, `shop.example` (aka the advertiser), which embeds an ad for one of its products on a content site, `news.example` (aka the publisher). The ad content is found at `ad.shop.example`.
 
 The online shop owners want to measure how many conversions they get from users interacting with the ad, viewing the product page on their site, and putting the product into their shopping cart.
 
-![Image representation of the steps described below](ara-flow.png)
+![Image representation of the steps described below](/shared-assets/images/diagrams/api/attribution-reporting/ara-flow.svg)
 
 The steps involved are as follows:
 
@@ -45,7 +45,7 @@ The steps involved are as follows:
    - A link. In this case, the interaction is the user clicking on the link (directly via an {{htmlelement("a")}} element, or via a {{domxref("Window.open()")}} call). The source is registered via the response to the navigation request.
    - An image such as an advertising banner or a 1x1 transparent tracking pixel. In this case, the interaction is the user visiting the page. The source is registered when the image loads, i.e., when the server responds to the image request.
    - A fetch request (i.e., a {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}}). In this case the interaction can be specified as whatever makes sense for your app — for example the fetch request could be invoked by a `click` or `submit` event. The source is registered once the response comes back.
-2. When the attribution source interaction occurs, the source data returned in the {{httpheader("Attribution-Reporting-Register-Source")}} header is stored in a private local cache accessible only by the browser. This data includes the contextual and first-party data available to the page and the advertiser, the origin of the ad tech company that is collecting the conversion data, and one or more destinations ([eTLD+1](/en-US/docs/Glossary/eTLD)s) where you expect the conversion from that ad to occur (i.e., the advertiser's site(s), for example `shop.example`).
+2. When the attribution source interaction occurs, the source data returned in the {{httpheader("Attribution-Reporting-Register-Source")}} header is stored in a private local cache accessible only by the browser. This data includes the contextual and first-party data available to the page and the advertiser, the origin of the ad tech company that is collecting the conversion data, and one or more destinations ({{glossary("registrable domain", "registrable domains")}}) where you expect the conversion from that ad to occur (i.e., the advertiser's site(s), for example `shop.example`).
 3. When the user later visits `shop.example`, this site can register an **attribution trigger** when an interaction indicates that a conversion has occurred (for example, the user clicks the "Add to cart" button on `shop.example`). The browser will then send a request along with an {{httpheader("Attribution-Reporting-Eligible")}} header to indicate that the response is eligible to register an attribution trigger, and registration will be completed if the response includes an appropriate {{httpheader("Attribution-Reporting-Register-Trigger")}} header. The attribution trigger can be, for example:
    - An image such as a shopping cart icon or a 1x1 transparent tracking pixel. In this case, the interaction is the user visiting the page. The trigger is registered when the image loads, i.e., when the server responds to the image request.
    - A fetch request (i.e., a {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}}). In this case the interaction can be specified as whatever makes sense for your app — for example the fetch request could be invoked by a `click` or `submit` event. The trigger is registered once the response comes back.

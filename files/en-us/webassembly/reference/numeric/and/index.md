@@ -1,11 +1,12 @@
 ---
-title: AND
-slug: WebAssembly/Reference/Numeric/AND
+title: "and: Wasm text instruction"
+short-title: and
+slug: WebAssembly/Reference/Numeric/and
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`and`** instructions, are used for performing a bitwise AND, similar to the **`&`** operator in other languages.
+The **`and`** instructions are used for performing a bitwise AND, similar to the **`&`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: and", "tabbed-taller")}}
 

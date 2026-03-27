@@ -3,9 +3,8 @@ title: userScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/register
 page-type: webextension-api-function
 browser-compat: webextensions.api.userScripts.register
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Registers user scripts for the extension.
 

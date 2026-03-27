@@ -10,7 +10,7 @@ browser-compat: api.EditContext.compositionstart_event
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
-The `compositionstart` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window starts.
+The `compositionstart` event of the {{domxref("EditContext")}} interface fires when composition using an {{glossary("Input Method Editor")}} (IME) window starts.
 
 ## Syntax
 

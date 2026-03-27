@@ -27,4 +27,4 @@ As always, you can find out what ciphers are supported — and which are enabled
 
 ## Security improved for the jar: protocol
 
-In order to correct a potential security problem when using the `jar:` protocol, it's now necessary to serve JAR files with the MIME type `application/java-archive`. See [Security and the jar protocol](/en-US/docs/Security_and_the_jar_protocol) for further details.
+In order to correct a potential security problem when using the `jar:` protocol, it's now necessary to serve JAR files with the MIME type `application/java-archive`. See [Security and the jar protocol](https://web.archive.org/web/20180706040540/https://developer.mozilla.org/en-US/docs/Mozilla/Security/Security_and_the_jar_protocol) for further details.

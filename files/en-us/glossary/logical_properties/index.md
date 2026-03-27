@@ -23,4 +23,4 @@ The **inline axis** is perpendicular to the block axis. The inline axis represen
 
 ## See also
 
-- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
+- [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module

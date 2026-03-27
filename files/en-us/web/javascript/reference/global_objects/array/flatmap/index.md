@@ -12,9 +12,9 @@ The **`flatMap()`** method of {{jsxref("Array")}} instances returns a new array 
 {{InteractiveExample("JavaScript Demo: Array.prototype.flatMap()", "shorter")}}
 
 ```js interactive-example
-const arr1 = [1, 2, 1];
+const arr = [1, 2, 1];
 
-const result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+const result = arr.flatMap((num) => (num === 2 ? [2, 2] : 1));
 
 console.log(result);
 // Expected output: Array [1, 2, 2, 1]
@@ -81,16 +81,16 @@ its flexibility and readability are desired.
 ### map() and flatMap()
 
 ```js
-const arr1 = [1, 2, 3, 4];
+const arr = [1, 2, 3, 4];
 
-arr1.map((x) => [x * 2]);
+arr.map((x) => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap((x) => [x * 2]);
+arr.flatMap((x) => [x * 2]);
 // [2, 4, 6, 8]
 
 // only one level is flattened
-arr1.flatMap((x) => [[x * 2]]);
+arr.flatMap((x) => [[x * 2]]);
 // [[2], [4], [6], [8]]
 ```
 
@@ -100,12 +100,12 @@ better showcases the use of `flatMap()`.
 Let's generate a list of words from a list of sentences.
 
 ```js
-const arr1 = ["it's Sunny in", "", "California"];
+const arr = ["it's Sunny in", "", "California"];
 
-arr1.map((x) => x.split(" "));
+arr.map((x) => x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap((x) => x.split(" "));
+arr.flatMap((x) => x.split(" "));
 // ["it's","Sunny","in", "", "California"]
 ```
 

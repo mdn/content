@@ -32,7 +32,7 @@ It is also possible (but not mandatory) to access the {{DOMxRef("FileList")}} th
 
 ```js
 const inputElement = document.getElementById("input");
-inputElement.addEventListener("change", handleFiles, false);
+inputElement.addEventListener("change", handleFiles);
 function handleFiles() {
   const fileList = this.files; /* now you can work with the file list */
 }
@@ -76,32 +76,28 @@ The following example shows a possible use of the `size` property:
 
 ```js
 const uploadInput = document.getElementById("uploadInput");
-uploadInput.addEventListener(
-  "change",
-  () => {
-    // Calculate total size
-    let numberOfBytes = 0;
-    for (const file of uploadInput.files) {
-      numberOfBytes += file.size;
-    }
+uploadInput.addEventListener("change", () => {
+  // Calculate total size
+  let numberOfBytes = 0;
+  for (const file of uploadInput.files) {
+    numberOfBytes += file.size;
+  }
 
-    // Approximate to the closest prefixed unit
-    const units = ["B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
-    const exponent = Math.min(
-      Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
-      units.length - 1,
-    );
-    const approx = numberOfBytes / 1024 ** exponent;
-    const output =
-      exponent === 0
-        ? `${numberOfBytes} bytes`
-        : `${approx.toFixed(3)} ${units[exponent]} (${numberOfBytes} bytes)`;
+  // Approximate to the closest prefixed unit
+  const units = ["B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
+  const exponent = Math.min(
+    Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
+    units.length - 1,
+  );
+  const approx = numberOfBytes / 1024 ** exponent;
+  const output =
+    exponent === 0
+      ? `${numberOfBytes} bytes`
+      : `${approx.toFixed(3)} ${units[exponent]} (${numberOfBytes} bytes)`;
 
-    document.getElementById("fileNum").textContent = uploadInput.files.length;
-    document.getElementById("fileSize").textContent = output;
-  },
-  false,
-);
+  document.getElementById("fileNum").textContent = uploadInput.files.length;
+  document.getElementById("fileSize").textContent = output;
+});
 ```
 
 ## Using hidden file input elements using the click() method
@@ -127,15 +123,11 @@ The code that handles the `click` event can look like this:
 const fileSelect = document.getElementById("fileSelect");
 const fileElem = document.getElementById("fileElem");
 
-fileSelect.addEventListener(
-  "click",
-  (e) => {
-    if (fileElem) {
-      fileElem.click();
-    }
-  },
-  false,
-);
+fileSelect.addEventListener("click", (e) => {
+  if (fileElem) {
+    fileElem.click();
+  }
+});
 ```
 
 You can style the {{HTMLElement("button")}} however you wish.
@@ -186,9 +178,9 @@ The first step is to establish a drop zone. Exactly what part of your content wi
 let dropbox;
 
 dropbox = document.getElementById("dropbox");
-dropbox.addEventListener("dragenter", dragenter, false);
-dropbox.addEventListener("dragover", dragover, false);
-dropbox.addEventListener("drop", drop, false);
+dropbox.addEventListener("dragenter", dragenter);
+dropbox.addEventListener("dragover", dragover);
+dropbox.addEventListener("drop", drop);
 ```
 
 In this example, we're turning the element with the ID `dropbox` into our drop zone. This is done by adding listeners for the {{domxref("HTMLElement/dragenter_event", "dragenter")}}, {{domxref("HTMLElement/dragover_event", "dragover")}}, and {{domxref("HTMLElement/drop_event", "drop")}} events.
@@ -299,18 +291,14 @@ const fileSelect = document.getElementById("fileSelect"),
   fileElem = document.getElementById("fileElem"),
   fileList = document.getElementById("fileList");
 
-fileSelect.addEventListener(
-  "click",
-  (e) => {
-    if (fileElem) {
-      fileElem.click();
-    }
-    e.preventDefault(); // prevent navigation to "#"
-  },
-  false,
-);
+fileSelect.addEventListener("click", (e) => {
+  if (fileElem) {
+    fileElem.click();
+  }
+  e.preventDefault(); // prevent navigation to "#"
+});
 
-fileElem.addEventListener("change", handleFiles, false);
+fileElem.addEventListener("change", handleFiles);
 
 function handleFiles() {
   fileList.textContent = "";
@@ -392,26 +380,18 @@ function FileUpload(img, file) {
   const xhr = new XMLHttpRequest();
   this.xhr = xhr;
 
-  this.xhr.upload.addEventListener(
-    "progress",
-    (e) => {
-      if (e.lengthComputable) {
-        const percentage = Math.round((e.loaded * 100) / e.total);
-        this.ctrl.update(percentage);
-      }
-    },
-    false,
-  );
+  this.xhr.upload.addEventListener("progress", (e) => {
+    if (e.lengthComputable) {
+      const percentage = Math.round((e.loaded * 100) / e.total);
+      this.ctrl.update(percentage);
+    }
+  });
 
-  xhr.upload.addEventListener(
-    "load",
-    (e) => {
-      this.ctrl.update(100);
-      const canvas = this.ctrl.ctx.canvas;
-      canvas.parentNode.removeChild(canvas);
-    },
-    false,
-  );
+  xhr.upload.addEventListener("load", (e) => {
+    this.ctrl.update(100);
+    const canvas = this.ctrl.ctx.canvas;
+    canvas.parentNode.removeChild(canvas);
+  });
   xhr.open(
     "POST",
     "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
@@ -476,6 +456,15 @@ if (isset($_FILES["myFile"])) {
   <head>
     <meta charset="UTF-8" />
     <title>dnd binary upload</title>
+  </head>
+  <body>
+    <div>
+      <div
+        id="dropzone"
+        style="margin:30px; width:500px; height:300px; border:1px dotted grey;">
+        Drag & drop your file here
+      </div>
+    </div>
     <script>
       function sendFile(file) {
         const uri = "/index.php";
@@ -493,33 +482,21 @@ if (isset($_FILES["myFile"])) {
         xhr.send(fd);
       }
 
-      window.onload = () => {
-        const dropzone = document.getElementById("dropzone");
-        dropzone.ondragover = dropzone.ondragenter = (event) => {
-          event.stopPropagation();
-          event.preventDefault();
-        };
+      const dropzone = document.getElementById("dropzone");
+      dropzone.addEventListener("dragover", (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+      });
 
-        dropzone.ondrop = (event) => {
-          event.stopPropagation();
-          event.preventDefault();
+      dropzone.addEventListener("drop", (event) => {
+        event.preventDefault();
 
-          const filesArray = event.dataTransfer.files;
-          for (let i = 0; i < filesArray.length; i++) {
-            sendFile(filesArray[i]);
-          }
-        };
-      };
+        const filesArray = event.dataTransfer.files;
+        for (let i = 0; i < filesArray.length; i++) {
+          sendFile(filesArray[i]);
+        }
+      });
     </script>
-  </head>
-  <body>
-    <div>
-      <div
-        id="dropzone"
-        style="margin:30px; width:500px; height:300px; border:1px dotted grey;">
-        Drag & drop your file here
-      </div>
-    </div>
   </body>
 </html>
 ```

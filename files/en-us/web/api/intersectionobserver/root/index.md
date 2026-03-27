@@ -14,7 +14,7 @@ If the `root` is `null`, then the bounds of the actual document viewport are use
 
 ## Value
 
-A {{domxref("Element")}} or {{domxref("Document")}} object whose bounding box is used as the bounds of the viewport for the purposes of determining how much of the target element is visible.
+An {{domxref("Element")}} or {{domxref("Document")}} object whose bounding box is used as the bounds of the viewport for the purposes of determining how much of the target element is visible.
 The intersection of this bounding rectangle, offset by any margins specified in the options passed to the {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} constructor, the target element's bounds, minus the bounds of every element or other object which overlaps the target element, is considered to be the visible area of the target element.
 
 If `root` is `null`, then the owning document is used as the root, and the bounds its viewport (that is, the visible area of the document) are used as the root bounds.

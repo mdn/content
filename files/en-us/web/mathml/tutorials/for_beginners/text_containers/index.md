@@ -34,9 +34,7 @@ Since most of these characters are not part of Basic Latin Unicode block, it is 
 
 ```css
 p {
-  font-family:
-    Latin Modern Math,
-    math;
+  font-family: "Latin Modern Math", math;
 }
 ```
 
@@ -51,11 +49,11 @@ We noticed in the [getting started with MathML](/en-US/docs/Web/MathML/Tutorials
 - The `<mo>` element represents an operator or anything that should be rendered as an operator. For example `<mo>+</mo>` (binary operation), `<mo>≤</mo>` (binary relation), `<mo>∑</mo>` (summation symbol) or `<mo>[</mo>` (fence).
 - The `<mtext>` element is used to represent arbitrary text. For example short words in formulas such as `<mtext>if<mtext>` or `<mtext>maps to</mtext>`.
 
-### Active learning: recognize token elements
+### Your turn: Recognizing token elements
 
-Below is a more complex example, which says that the absolute value of a real number is equal to that number if and only if it is nonnegative. Spot the different token elements and what they are used for. Each time you click the corresponding text, it is highlighted and a confirmation message is displayed.
+Below is a more complex example, which says that the absolute value of a real number is equal to that number if and only if it is non-negative. We'd like you to have a go at spotting the different token elements and what they are used for. Each time you click the corresponding text, it is highlighted and a confirmation message is displayed.
 
-```html hidden
+```html hidden live-sample___recognize_token_elements
 <!doctype html>
 <html lang="en-US">
   <head>
@@ -89,7 +87,7 @@ Below is a more complex example, which says that the absolute value of a real nu
 </html>
 ```
 
-```css hidden
+```css hidden live-sample___recognize_token_elements
 .highlight {
   color: red;
 }
@@ -98,7 +96,7 @@ math {
 }
 ```
 
-```js hidden
+```js hidden live-sample___recognize_token_elements
 const tokenElements = Array.from(
   document.querySelectorAll("mi, mo, mn, mtext"),
 );
@@ -124,9 +122,9 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 });
 ```
 
-{{ EmbedLiveSample('Active_learning_recognize_token_elements', 700, 400, "", "") }}
+{{ EmbedLiveSample('recognize_token_elements', 700, 400, "", "") }}
 
-Finally, read the MathML source to verify whether that corresponds to your expectation:
+Finally, read the MathML source to verify whether that corresponds to your expectations:
 
 ```xml
 <math display="block">
@@ -190,34 +188,36 @@ MathML contains an [operator dictionary](https://w3c.github.io/mathml-core/#oper
 
 ```html
 <table>
-  <tr>
-    <td>Prefix plus</td>
-    <td>
-      <math>
-        <mo>+</mo>
-        <mi>i</mi>
-      </math>
-    </td>
-  </tr>
-  <tr>
-    <td>Infix plus</td>
-    <td>
-      <math>
-        <mi>j</mi>
-        <mo>+</mo>
-        <mi>i</mi>
-      </math>
-    </td>
-  </tr>
-  <tr>
-    <td>Prefix sum</td>
-    <td>
-      <math>
-        <mo>∑</mo>
-        <mi>i</mi>
-      </math>
-    </td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Prefix plus</td>
+      <td>
+        <math>
+          <mo>+</mo>
+          <mi>i</mi>
+        </math>
+      </td>
+    </tr>
+    <tr>
+      <td>Infix plus</td>
+      <td>
+        <math>
+          <mi>j</mi>
+          <mo>+</mo>
+          <mi>i</mi>
+        </math>
+      </td>
+    </tr>
+    <tr>
+      <td>Prefix sum</td>
+      <td>
+        <math>
+          <mo>∑</mo>
+          <mi>i</mi>
+        </math>
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -227,9 +227,9 @@ This example should render similarly to the screenshot below. Observe the spacin
 
 Operators have many other properties that we will see in more details later. For now, remember to use an `<mo>` container for characters in the operator dictionary and to properly group subexpressions with `<mrow>` elements in order to help MathML renderers.
 
-### Active learning: spot the difference
+### Spot the difference
 
-Now that you are a bit familiar with special features of `<mi>` and `<mo>`, let's rewrite the `<p>` element in the [example at the top of the page](#unicode_characters_for_mathematics) with some actual MathML. Compare the visual rendering in your browser and explain the differences with the text-only version.
+Now that you are somewhat familiar with special features of `<mi>` and `<mo>`, we'd like you to rewrite the `<p>` element in the [example at the top of the page](#unicode_characters_for_mathematics) with some actual MathML. Compare the visual rendering in your browser and explain the differences with the text-only version.
 
 ```html
 <!doctype html>
@@ -283,9 +283,7 @@ div {
 }
 
 .text {
-  font-family:
-    Latin Modern Math,
-    math;
+  font-family: "Latin Modern Math", math;
 }
 ```
 
@@ -305,14 +303,14 @@ document.getElementById("showSolution").addEventListener(
 );
 ```
 
-{{ EmbedLiveSample('active_learning_spot_the_difference', 700, 500, "", "") }}
+{{ EmbedLiveSample('spot_the_difference', 700, 500, "", "") }}
 
 > [!NOTE]
 > An obvious difference is that the source code became much more verbose with MathML. Recall that this tutorial is about learning the language but in practice MathML content is generally not written manually. See the [Authoring MathML](/en-US/docs/Web/MathML/Guides/Authoring) page for more information.
 
-### Active learning: stretchy operators
+### Recognizing stretchy operators
 
-The operator dictionary defines a default _stretchy_ property as well as corresponding _stretch axis_ for some operators. For example, an operator can stretch vertically by default to cover the maximum height of non-stretchy siblings within its `<mrow>` container. By tweaking a bit the [previous exercise](#active_learning_recognize_token_elements), one can make operators stretch vertically. Can you find them?
+The operator dictionary defines a default _stretchy_ property as well as corresponding _stretch axis_ for some operators. For example, an operator can stretch vertically by default to cover the maximum height of non-stretchy siblings within its `<mrow>` container. By tweaking an [earlier exercise](#your_turn_recognizing_token_elements), one can make operators stretch vertically. Can you find them?
 
 ```html hidden
 <!doctype html>
@@ -408,7 +406,7 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 });
 ```
 
-{{ EmbedLiveSample('Active_learning_stretchy_fences', 700, 400, "", "") }}
+{{ EmbedLiveSample('recognizing_stretchy_operators', 700, 400, "", "") }}
 
 As usual, you are invited to read the source code when you are done:
 

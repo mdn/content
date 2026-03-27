@@ -3,9 +3,8 @@ title: history.search()
 slug: Mozilla/Add-ons/WebExtensions/API/history/search
 page-type: webextension-api-function
 browser-compat: webextensions.api.history.search
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Searches the browser's history for {{WebExtAPIRef("history.HistoryItem")}} objects matching the given criteria.
 

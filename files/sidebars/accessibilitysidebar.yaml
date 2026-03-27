@@ -19,18 +19,6 @@ sidebar:
     link: /Web/Accessibility/Guides/Understanding_WCAG
     title: Understanding WCAG
     details: closed
-  - link: /Learn_web_development/Core/Accessibility
-    title: Beginners
-    details: closed
-    children:
-      - /Learn_web_development/Core/Accessibility/What_is_accessibility
-      - /Learn_web_development/Core/Accessibility/Tooling
-      - /Learn_web_development/Core/Accessibility/HTML
-      - /Learn_web_development/Core/Accessibility/CSS_and_JavaScript
-      - /Learn_web_development/Core/Accessibility/WAI-ARIA_basics
-      - /Learn_web_development/Core/Accessibility/Multimedia
-      - /Learn_web_development/Core/Accessibility/Mobile
-      - /Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
   - type: section
     link: /Web/Accessibility/ARIA
     title: ARIA
@@ -42,9 +30,6 @@ sidebar:
       - /Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors
       - /Web/Accessibility/ARIA/Guides/Techniques
       - /Web/Accessibility/ARIA/Guides/Multipart_labels
-  - type: section
-    link: /Web/Accessibility/ARIA/How_to
-  - /Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
   - type: section
     link: /Web/Accessibility/ARIA/Reference
     title: ARIA reference
@@ -63,11 +48,9 @@ l10n:
     ARIA: ARIA
     ARIA_guides: ARIA-Anleitungen
   en-US:
-    Beginners: Tutorials for beginners
     ARIA: ARIA
     ARIA_guides: ARIA guides
   ja:
-    Beginners: 初心者向けチュートリアル
     ARIA: ARIA
     ARIA_guides: ARIA ガイド
   zh-CN:

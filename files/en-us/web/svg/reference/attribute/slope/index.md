@@ -3,7 +3,7 @@ title: slope
 slug: Web/SVG/Reference/Attribute/slope
 page-type: svg-attribute
 browser-compat: svg.elements.feFuncR
-spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-slope
+spec-urls: https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomponenttransfer-slope
 sidebar: svgref
 ---
 
@@ -73,8 +73,8 @@ In this example, a gradient box has two text elements with linear filters applie
       y1="0"
       x2="600"
       y2="0">
-      <stop offset="0" stop-color="#ff0000" />
-      <stop offset="1" stop-color="#0000ff" />
+      <stop offset="0" stop-color="red" />
+      <stop offset="1" stop-color="blue" />
     </linearGradient>
     <filter
       id="Linear1"

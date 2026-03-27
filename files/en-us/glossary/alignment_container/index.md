@@ -9,7 +9,7 @@ The **alignment container** is the rectangle that the {{glossary("alignment subj
 
 ## See also
 
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 - Properties reference
   - CSS {{CSSXref("align-content")}} property
   - CSS {{CSSXref("align-items")}} property

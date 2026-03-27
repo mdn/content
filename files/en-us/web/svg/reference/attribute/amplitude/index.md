@@ -2,7 +2,7 @@
 title: amplitude
 slug: Web/SVG/Reference/Attribute/amplitude
 page-type: svg-attribute
-spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-amplitude
+spec-urls: https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomponenttransfer-amplitude
 sidebar: svgref
 ---
 
@@ -21,7 +21,7 @@ You can use this attribute with the following SVG elements:
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
     </tr>
     <tr>
       <th scope="row">Default value</th>

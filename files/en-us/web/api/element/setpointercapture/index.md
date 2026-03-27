@@ -59,7 +59,7 @@ div {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fbe;
+  background: #ffbbee;
   touch-action: none;
 }
 ```
@@ -67,6 +67,8 @@ div {
 ### JavaScript
 
 ```js
+const slider = document.getElementById("slider");
+
 function beginSliding(e) {
   slider.onpointermove = slide;
   slider.setPointerCapture(e.pointerId);
@@ -80,8 +82,6 @@ function stopSliding(e) {
 function slide(e) {
   slider.style.transform = `translate(${e.clientX - 70}px)`;
 }
-
-const slider = document.getElementById("slider");
 
 slider.onpointerdown = beginSliding;
 slider.onpointerup = stopSliding;

@@ -3,9 +3,8 @@ title: menus.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/remove
 page-type: webextension-api-function
 browser-compat: webextensions.api.menus.remove
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes a menu item.
 

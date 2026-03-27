@@ -56,7 +56,7 @@ It accepts an integer as a value, with different results depending on the intege
 - If the `tabindex` attribute is included with no value set, whether the element is focusable is determined by the user agent.
 
   > [!WARNING]
-  > You are recommended to only use `0` and `-1` as `tabindex` values. Avoid using `tabindex` values greater than `0` and CSS properties that can change the order of focusable HTML elements ([Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)). Doing so makes it difficult for people who rely on using keyboard for navigation or assistive technology to navigate and operate page content. Instead, write the document with the elements in a logical sequence.
+  > You are recommended to only use `0` and `-1` as `tabindex` values. Avoid using `tabindex` values greater than `0` and CSS properties that can change the order of focusable HTML elements ([Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)). Doing so makes it difficult for people who rely on using keyboard for navigation or assistive technology to navigate and operate page content. Instead, write the document with the elements in a logical sequence.
 
 Some focusable HTML elements have a default `tabindex` value of `0` set under the hood by the [user agent](/en-US/docs/Glossary/User_agent). These elements are an {{HTMLElement("a")}} or {{HTMLElement("area")}} with `href` attribute, {{HTMLElement("button")}}, {{HTMLElement("frame")}} {{deprecated_inline}}, {{HTMLElement("iframe")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, and SVG {{SVGElement("a")}} element, or a {{HTMLElement("summary")}} element that provides summary for a {{HTMLElement("details")}} element. Developers shouldn't add the `tabindex` attribute to these elements unless it changes the default behavior (for example, including a negative value will remove the element from the focus navigation order).
 
@@ -69,7 +69,7 @@ Avoid using the `tabindex` attribute in conjunction with non-[interactive conten
 
 Interactive components authored using non-interactive elements are not listed in the [accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis). This prevents assistive technology from being able to navigate to and manipulate those components. The content should be semantically described using interactive elements ({{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, etc.) instead. These elements have built-in roles and states that communicate status to the accessibility that would otherwise have to be managed by [ARIA](/en-US/docs/Web/Accessibility/ARIA).
 
-- [Using the tabindex attribute | The Paciello Group](https://www.tpgi.com/using-the-tabindex-attribute/)
+- [Using the tabindex attribute | Vispero](https://vispero.com/resources/using-the-tabindex-attribute/)
 
 ## Specifications
 

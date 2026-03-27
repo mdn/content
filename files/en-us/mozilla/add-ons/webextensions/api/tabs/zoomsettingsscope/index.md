@@ -3,9 +3,8 @@ title: tabs.ZoomSettingsScope
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsScope
 page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.ZoomSettingsScope
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Defines whether zoom changes will persist for the page's origin, or only take effect in this tab. This defaults to `per-origin` when {{WebExtAPIRef("tabs.zoomSettingsMode")}} is "automatic", and is always `per-tab` otherwise.
 
@@ -20,11 +19,11 @@ Values of this type are strings. Possible values are:
     - in Firefox the zoom level persists across page loads and navigation within the tab.
     - in Chrome-based browsers zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-ZoomSettingsScope) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.

@@ -3,9 +3,8 @@ title: userScripts.WorldProperties
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/WorldProperties
 page-type: webextension-api-type
 browser-compat: webextensions.api.userScripts.WorldProperties
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The configuration of a `USER_SCRIPT` execution environment. Used in {{WebExtAPIRef("userScripts.configureWorld")}} and {{WebExtAPIRef("userScripts.getWorldConfigurations")}}.
 

@@ -3,9 +3,8 @@ title: bookmarks.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when there is a change to:
 

@@ -1,5 +1,5 @@
 ---
-title: Firefox 87 for developers
+title: Firefox 87 release notes for developers
 short-title: Firefox 87
 slug: Mozilla/Firefox/Releases/87
 page-type: firefox-release-notes

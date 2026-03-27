@@ -1,5 +1,5 @@
 ---
-title: Smoke Test
+title: Smoke test
 slug: Glossary/Smoke_Test
 page-type: glossary-definition
 sidebar: glossarysidebar

@@ -15,10 +15,6 @@ The HTTP **`Timing-Allow-Origin`** {{Glossary("response header")}} specifies ori
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

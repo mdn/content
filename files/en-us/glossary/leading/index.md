@@ -17,6 +17,6 @@ The half-leading can be trimmed from the block-start edge and block-end edge of 
 
 - {{cssxref("line-height")}}
 - {{cssxref("text-box")}}
-- [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) module
+- [CSS inline layout](/en-US/docs/Web/CSS/Guides/Inline_layout) module
 - [Leading](https://en.wikipedia.org/wiki/Leading) on Wikipedia
 - [The Thing With Lead­ing in CSS](https://matthiasott.com/notes/the-thing-with-leading-in-css) on matthiasott.com (2022)

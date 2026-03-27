@@ -3,9 +3,8 @@ title: storage.managed
 slug: Mozilla/Add-ons/WebExtensions/API/storage/managed
 page-type: webextension-api-property
 browser-compat: webextensions.api.storage.managed
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A {{WebExtAPIRef("storage.StorageArea")}} object that represents the `managed` storage area. Items in `managed` storage are set by the domain administrator or other native applications installed on the user's computer and are read-only for the extension. Trying to modify this storage area results in an error.
 
@@ -48,6 +47,8 @@ The `managed` object implements the methods defined on the {{WebExtAPIRef("stora
   - : Retrieves one or more items from the storage area.
 - {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.managed.getBytesInUse()")}}
   - : Gets the amount of storage space (in bytes) used for one or more items in the storage area.
+- {{WebExtAPIRef("storage.StorageArea.getKeys()", "storage.managed.getKeys()")}}
+  - : Retrieves the keys of all items in the storage area.
 
 ## Events
 

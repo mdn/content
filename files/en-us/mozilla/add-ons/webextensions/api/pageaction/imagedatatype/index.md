@@ -3,9 +3,8 @@ title: pageAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/ImageDataType
 page-type: webextension-api-type
 browser-compat: webextensions.api.pageAction.ImageDataType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Pixel data for an image.
 
@@ -13,11 +12,11 @@ Pixel data for an image.
 
 An [`ImageData`](/en-US/docs/Web/API/ImageData) object, e.g., from a {{htmlelement("canvas")}} element.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction#type-ImageDataType) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.

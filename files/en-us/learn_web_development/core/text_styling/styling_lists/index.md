@@ -112,7 +112,7 @@ The CSS used for the text styling and spacing is as follows:
 /* General styles */
 
 html {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 10px;
 }
 
@@ -194,7 +194,7 @@ The {{cssxref("list-style-image")}} property allows you to use a custom image fo
 
 ```css
 ul {
-  list-style-image: url(star.svg);
+  list-style-image: url("star.svg");
 }
 ```
 
@@ -210,7 +210,7 @@ ul {
 
 ul li {
   padding-left: 2rem;
-  background-image: url(star.svg);
+  background-image: url("star.svg");
   background-position: 0 0;
   background-size: 1.6rem 1.6rem;
   background-repeat: no-repeat;
@@ -238,7 +238,7 @@ The three properties mentioned above can all be set using a single shorthand pro
 ```css
 ul {
   list-style-type: square;
-  list-style-image: url(example.png);
+  list-style-image: url("example.png");
   list-style-position: inside;
 }
 ```
@@ -247,7 +247,7 @@ Could be replaced by this:
 
 ```css
 ul {
-  list-style: square url(example.png) inside;
+  list-style: square url("example.png") inside;
 }
 ```
 

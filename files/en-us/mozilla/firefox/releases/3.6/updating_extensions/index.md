@@ -46,7 +46,7 @@ The most probable upgrade problem is the pattern `if (elt.localName === "FOO")`.
 
 Support for the obsolete `contents.rdf` method for registering chrome has been removed in Gecko 1.9.2, and is no longer supported by Firefox 3.6. This means that add-ons that use contents.rdf can no longer be installed.
 
-Make sure you include a [chrome.manifest](/en-US/docs/Chrome_Registration) in your XPI.
+Make sure you include a [chrome.manifest](https://web.archive.org/web/20191029205045/https://developer.mozilla.org/en-US/docs/Mozilla/Chrome_Registration) in your XPI.
 
 > [!NOTE]
 > Add-ons that are already installed using the old contents.rdf method for registering chrome will continue to function if already installed. Make sure that you test your add-on by actually removing and reinstalling it to ensure that the install works after updating it to use an install manifest.

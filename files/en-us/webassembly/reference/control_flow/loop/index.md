@@ -1,5 +1,6 @@
 ---
-title: loop
+title: "loop: Wasm text instruction"
+short-title: loop
 slug: WebAssembly/Reference/Control_flow/loop
 page-type: webassembly-instruction
 sidebar: webassemblysidebar

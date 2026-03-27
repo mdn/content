@@ -3,9 +3,8 @@ title: webRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
 page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.ResourceType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This type is a string, which represents the context in which a resource was fetched in a web request.
 
@@ -64,11 +63,11 @@ Values of this type are strings. Possible values are:
 - `other`
   - : Resources that aren't covered by any other available type.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#type-ResourceType) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.

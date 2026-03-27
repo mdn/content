@@ -1,33 +1,35 @@
 ---
 title: "Test your skills: Selectors"
-short-title: Selectors
+short-title: "Test: Selectors"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand [CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
+
+The aim of this skill test is to help you assess whether you understand [CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
+
+To complete these tasks you should only edit the CSS, not the HTML.
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Selectors 1
 
-In this task, use CSS to do the following things, without changing the HTML:
+To complete the task:
 
-- Make `<h1>` headings blue.
-- Give `<h2>` headings a blue background and white text.
-- Cause text wrapped in a `<span>` to have a font-size of 200%.
+1. Make the `<h1>` headings blue.
+2. Give `<h2>` headings a blue background and white text.
+3. Cause text wrapped in a `<span>` to have a font-size of `200%`.
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![Text with the CSS applied for the solution to task 1.](selectors1.jpg)
+{{EmbedLiveSample("selectors1-start", "", "370px")}}
 
-Try to update the code below to recreate the finished example:
+Here's the underlying code for this starting point:
 
-```html live-sample___type
+```html live-sample___selectors1-start live-sample___selectors1-finish
 <div class="container">
   <h1>This is a heading</h1>
   <p>
@@ -44,21 +46,23 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css live-sample___type
+```css live-sample___selectors1-start live-sample___selectors1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
 /* Add styles here */
 ```
 
-{{EmbedLiveSample("type", "", "260px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("selectors1-finish", "", "400px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 You need to target the `h1`, `h2` and `span` selectors to change their color or size.
 
-```css
+```css live-sample___selectors1-finish
 h1 {
   color: blue;
 }
@@ -75,22 +79,22 @@ span {
 
 </details>
 
-## Task 2
+## Selectors 2
 
-In this task, we want you to make the following changes to the look of the content in this example, without changing the HTML:
+To complete the task:
 
-- Give the element with an id of `special` a yellow background.
-- Give the element with a class of `alert` a 2px grey border.
-- If the element with a class of `alert` also has a class of `stop`, make the background red.
-- If the element with a class of `alert` also has a class of `go`, make the background green.
+1. Give the element with an id of `special` a yellow background.
+2. Give the element with a class of `alert` a `2px` solid grey border.
+3. If the element with a class of `alert` also has a class of `stop`, make the background red.
+4. If the element with a class of `alert` also has a class of `go`, make the background green.
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![Text with the CSS applied for the solution to task 2.](selectors2.jpg)
+{{EmbedLiveSample("selectors2-start", "", "480px")}}
 
-Try to update the code below to recreate the finished example:
+Here's the underlying code for this starting point:
 
-```html live-sample___class-id
+```html live-sample___selectors2-start live-sample___selectors2-finish
 <div class="container">
   <h1>This is a heading</h1>
   <p>
@@ -109,21 +113,23 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css live-sample___class-id
+```css live-sample___selectors2-start live-sample___selectors2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
 /* Add styles here */
 ```
 
-{{EmbedLiveSample("class-id", "", "320px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("selectors2-finish", "", "480px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 This tests that you understand the difference between class and id selectors and also how to target multiple classes on an item.
 
-```css
+```css live-sample___selectors2-finish
 #special {
   background-color: yellow;
 }
@@ -143,21 +149,21 @@ This tests that you understand the difference between class and id selectors and
 
 </details>
 
-## Task 3
+## Selectors 3
 
-In this task, we want you to make the following changes without changing the HTML:
+To complete the task:
 
-- Style links, making the link-state orange, visited links green, and remove the underline on hover.
-- Make the first element inside the container `font-size: 150%` and the first line of that element red.
-- Stripe every other row in the table by selecting these rows and giving them a background color of `#333` and foreground white.
+1. Style links, making the link-state orange, visited links green, and remove the underline on hover.
+2. Make the first element inside the container `font-size: 150%` and the first line of that element red.
+3. Stripe every other row in the table by selecting these rows and giving them a background color of `#333333` and foreground white.
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![Text with the CSS applied for the solution to task 3.](selectors3.jpg)
+{{EmbedLiveSample("selectors3-start", "", "440px")}}
 
-Try to update the code below to recreate the finished example:
+Here's the underlying code for this starting point:
 
-```html live-sample___pseudo
+```html live-sample___selectors3-start live-sample___selectors3-finish
 <div class="container">
   <p>
     Veggies es <a href="http://example.com">bonus vobis</a>, proinde vos postulo
@@ -200,7 +206,7 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___pseudo
+```css live-sample___selectors3-start live-sample___selectors3-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -218,13 +224,13 @@ th {
   padding: 0.2em;
   text-align: left;
 }
-```
 
-```css live-sample___pseudo
 /* Add styles here */
 ```
 
-{{EmbedLiveSample("pseudo", "", "320px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("selectors3-finish", "", "540px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -232,7 +238,7 @@ th {
 Apply a pseudo-class (`:first-child`) and pseudo-element (`::first-line`) to the content.
 Style the `:link`, `:visited`, and `:hover` states of the `a` element, and create striped table rows using the `:nth-child` pseudo-class.
 
-```css
+```css live-sample___selectors3-finish
 .container p:first-child {
   font-size: 150%;
 }
@@ -254,27 +260,29 @@ a:hover {
 }
 
 tr:nth-child(even) {
-  background-color: #333;
-  color: #fff;
+  background-color: #333333;
+  color: white;
 }
 ```
 
 </details>
 
-## Task 4
+## Selectors 4
 
-In this task, we want you to do the following:
+To complete the task:
 
-- Make any paragraph that directly follows an `<h2>` element red.
-- Remove the bullets and add a 1px grey bottom border only to list items that are a direct child of the ul with a class of `list`.
+1. Make any paragraph that directly follows an `<h2>` element red.
+2. Style list items that are a direct child of the `<ul>` with a class of `list` as follows:
+   - Remove their bullets.
+   - Give them a `1px` grey bottom border.
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![Text with the CSS applied for the solution to task 4.](selectors4.jpg)
+{{EmbedLiveSample("selectors4-start", "", "500px")}}
 
-Try to update the code below to recreate the finished example:
+Here's the underlying code for this starting point:
 
-```html live-sample___combinators
+```html live-sample___selectors4-start live-sample___selectors4-finish
 <div class="container">
   <h2>This is a heading</h2>
   <p>This paragraph comes after the heading.</p>
@@ -296,14 +304,17 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css live-sample___combinators
+```css live-sample___selectors4-start live-sample___selectors4-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
+
 /* Add styles here */
 ```
 
-{{EmbedLiveSample("combinators", "", "350px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("selectors4-finish", "", "500px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -311,34 +322,34 @@ body {
 This task checks that you understand how to use different combinators.
 Here's an appropriate solution:
 
-```css
+```css live-sample___selectors4-finish
 h2 + p {
   color: red;
 }
 
 .list > li {
   list-style: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
 }
 ```
 
 </details>
 
-## Task 5
+## Selectors 5
 
-In this task, add CSS using attribute selectors to do the following:
+To complete the task, provide solutions for the following challenges using attribute selectors:
 
-- Target the `<a>` element with a `title` attribute and make the border pink (`border-color: pink`).
-- Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).
-- Target the `<a>` element with an `href` value starting with `https` and give it a green border (`border-color: green`).
+1. Target the `<a>` element with a `title` attribute and make the border pink (`border-color: pink`).
+2. Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).
+3. Target the `<a>` element with an `href` value starting with `https` and give it a green border (`border-color: green`).
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![Four links with different color borders.](selectors-attribute.png)
+{{EmbedLiveSample("selectors5-start", "", "300px")}}
 
-Try to update the code below to recreate the finished example:
+Here's the underlying code for this starting point:
 
-```html live-sample___attribute-links
+```html live-sample___selectors5-start live-sample___selectors5-finish
 <ul>
   <li><a href="https://example.com">Link 1</a></li>
   <li><a href="http://example.com" title="Visit example.com">Link 2</a></li>
@@ -347,7 +358,7 @@ Try to update the code below to recreate the finished example:
 </ul>
 ```
 
-```css hidden live-sample___attribute-links
+```css live-sample___selectors5-start live-sample___selectors5-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -359,23 +370,24 @@ ul {
 }
 
 li {
-  margin: 0 0 0.5em 0;
+  margin-bottom: 0.5em;
 }
 
 a {
   display: block;
   padding: 0.5em;
 }
-```
 
-```css live-sample___attribute-links
 a {
   border: 5px solid grey;
 }
+
 /* Add styles here */
 ```
 
-{{EmbedLiveSample("attribute-links", "", "300px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("selectors5-finish", "", "300px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -388,7 +400,7 @@ a {
 - Target the `<a>` element with an href value starting with `https` and give it a green border (`border-color: green`).
   Look for an `href` value which starts with "https", so use `^=` to only select the first link.
 
-```css
+```css live-sample___selectors5-finish
 a[title] {
   border-color: pink;
 }
@@ -402,6 +414,4 @@ a[href^="https"] {
 
 </details>
 
-## See also
-
-- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}

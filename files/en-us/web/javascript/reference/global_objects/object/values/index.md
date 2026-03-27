@@ -12,13 +12,13 @@ The **`Object.values()`** static method returns an array of a given object's own
 {{InteractiveExample("JavaScript Demo: Object.values()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   a: "some string",
   b: 42,
   c: false,
 };
 
-console.log(Object.values(object1));
+console.log(Object.values(object));
 // Expected output: Array ["some string", 42, false]
 ```
 

@@ -372,10 +372,6 @@ A `color` control can be created using the {{HTMLElement("input")}} element with
 
 Clicking a color control generally displays the operating system's default color-picking functionality for you to choose. The value returned is always a lowercase 6-value hexadecimal color.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: HTML5 controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types).
-
 ## Summary
 
 That brings us to the end of our tour of the HTML5 form input types. There are a few other control types that cannot be easily grouped due to their very specific behaviors but are still essential to know. We cover those in the next article.

@@ -3,15 +3,14 @@ title: sidebarAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
 page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.setTitle
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the sidebar's title. The title is displayed anywhere the browser lists available sidebars. For example, Firefox will show it in the "View > Sidebar" menu. It's also shown at the top of the sidebar when the sidebar is open.
 
 ## Types of title
 
-Your extension should specify an title for the sidebar in the [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest title"_. If you don't specify the manifest title, it will default to the extension name.
+Your extension should specify a title for the sidebar in the [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest title"_. If you don't specify the manifest title, it will default to the extension name.
 
 If you set a new title using `setTitle()`, and include the `tabId` option, then the title is set only for the given tab. This title is called the _"tab-specific title"_.
 
@@ -51,10 +50,6 @@ browser.sidebarAction.setTitle(
 - If `windowId` and `tabId` are both supplied, the function fails and the title is not set.
 - If `windowId` and `tabId` are both omitted, the global title is set.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code changes the title for the sidebar when the user clicks a browser action, but only for the current tab:
@@ -70,6 +65,10 @@ browser.browserAction.onClicked.addListener(setTitleForTab);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.

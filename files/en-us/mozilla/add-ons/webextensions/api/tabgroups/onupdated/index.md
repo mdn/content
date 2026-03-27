@@ -3,9 +3,8 @@ title: tabGroups.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/onUpdated
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabGroups.onUpdated
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fires when a tab group's state changes.
 

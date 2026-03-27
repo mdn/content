@@ -24,10 +24,6 @@ The HTTP **`Tk`** {{Glossary("response header")}} indicates the tracking status 
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
@@ -86,6 +82,10 @@ Tk: N
 ## Specifications
 
 {{specifications}}
+
+## Browser compatibility
+
+This response header doesn't trigger any browser behavior, so browser compatibility is irrelevant.
 
 ## See also
 

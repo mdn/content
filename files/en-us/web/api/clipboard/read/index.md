@@ -40,7 +40,7 @@ A {{jsxref("Promise")}} that resolves with an array of {{domxref("ClipboardItem"
 
 ## Security considerations
 
-Reading from the clipboard can only be done in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+Reading from the clipboard can only be done in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 Additional security requirements are covered in the [Security consideration](/en-US/docs/Web/API/Clipboard_API#security_considerations) section of the API overview topic.
 
@@ -54,7 +54,7 @@ This example uses the `read()` method to read image data from the clipboard and 
 
 ```html
 <img id="source" src="butterfly.jpg" alt="A butterfly" />
-<img id="destination" />
+<img id="destination" src="" alt="Pasted image" />
 <button id="reload" type="button">Reload</button>
 <p id="log"></p>
 ```

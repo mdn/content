@@ -11,7 +11,7 @@ The HTTP **`ETag`** (entity tag) {{Glossary("response header")}} is an identifie
 It lets [caches](/en-US/docs/Web/HTTP/Guides/Caching) be more efficient and save bandwidth, as a web server does not need to resend a full response if the content has not changed.
 Additionally, ETags help to prevent simultaneous updates of a resource from overwriting each other (["mid-air collisions"](#avoiding_mid-air_collisions)).
 
-If the resource at a given URL changes, a new `Etag` value _must_ be generated.
+If the resource at a given URL changes, a new `ETag` value _must_ be generated.
 A comparison of them can determine whether two representations of a resource are the same.
 
 <table class="properties">
@@ -59,7 +59,7 @@ ETag: W/"0815"
 
 With the help of the `ETag` and the {{HTTPHeader("If-Match")}} headers, you can detect mid-air edit collisions (conflicts).
 
-For example, when editing a wiki, the current wiki content may be hashed and put into an `Etag` header in the response:
+For example, when editing a wiki, the current wiki content may be hashed and put into an `ETag` header in the response:
 
 ```http
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"

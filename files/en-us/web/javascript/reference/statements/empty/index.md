@@ -12,12 +12,12 @@ JavaScript syntax would expect one.
 {{InteractiveExample("JavaScript Demo: Empty statement")}}
 
 ```js interactive-example
-const array1 = [1, 2, 3];
+const array = [1, 2, 3];
 
 // Assign all array values to 0
-for (let i = 0; i < array1.length; array1[i++] = 0 /* empty statement */);
+for (let i = 0; i < array.length; array[i++] = 0 /* empty statement */);
 
-console.log(array1);
+console.log(array);
 // Expected output: Array [0, 0, 0]
 ```
 

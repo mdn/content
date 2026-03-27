@@ -50,30 +50,30 @@ Register an event handler for each touch event type.
 
 ```js
 // Register touch event handlers
-someElement.addEventListener("touchstart", process_touchstart, false);
-someElement.addEventListener("touchmove", process_touchmove, false);
-someElement.addEventListener("touchcancel", process_touchcancel, false);
-someElement.addEventListener("touchend", process_touchend, false);
+someElement.addEventListener("touchstart", processTouchStart);
+someElement.addEventListener("touchmove", processTouchMove);
+someElement.addEventListener("touchcancel", processTouchCancel);
+someElement.addEventListener("touchend", processTouchEnd);
 ```
 
 Process an event in an event handler, implementing the application's gesture semantics.
 
 ```js
 // touchstart handler
-function process_touchstart(ev) {
+function processTouchStart(event) {
   // Use the event's data to call out to the appropriate gesture handlers
-  switch (ev.touches.length) {
+  switch (event.touches.length) {
     case 1:
-      handle_one_touch(ev);
+      handleOneTouch(event);
       break;
     case 2:
-      handle_two_touches(ev);
+      handleTwoTouches(event);
       break;
     case 3:
-      handle_three_touches(ev);
+      handleThreeTouches(event);
       break;
     default:
-      gesture_not_supported(ev);
+      gestureNotSupported(event);
       break;
   }
 }
@@ -83,26 +83,22 @@ Access the attributes of a touch point.
 
 ```js
 // Create touchstart handler
-someElement.addEventListener(
-  "touchstart",
-  (ev) => {
-    // Iterate through the touch points that were activated
-    // for this element and process each event 'target'
-    for (const touch of ev.targetTouches) {
-      process_target(touch.target);
-    }
-  },
-  false,
-);
+someElement.addEventListener("touchstart", (event) => {
+  // Iterate through the touch points that were activated
+  // for this element and process each event 'target'
+  for (const touch of event.targetTouches) {
+    processTarget(touch.target);
+  }
+});
 ```
 
 Prevent the browser from processing _emulated mouse events_.
 
 ```js
 // touchmove handler
-function process_touchmove(ev) {
+function processTouchMove(event) {
   // Set call preventDefault()
-  ev.preventDefault();
+  event.preventDefault();
 }
 ```
 

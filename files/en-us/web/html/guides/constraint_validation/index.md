@@ -35,7 +35,7 @@ The intrinsic constraints for the [`type`](/en-US/docs/Web/HTML/Reference/Elemen
 | [`<input type="URL">`](/en-US/docs/Web/HTML/Reference/Elements/input/url)     | The value must be an absolute [URL](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), as defined in the [URL Living Standard](https://url.spec.whatwg.org/). | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
 | [`<input type="email">`](/en-US/docs/Web/HTML/Reference/Elements/input/email) | The value must be a syntactically valid email address, which generally has the format `username@hostname.tld` but can also be local such as `username@hostname`.                 | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
 
-For both of these input types, if the [`multiple`](/en-US/docs/Web/HTML/Reference/Elements/input#multiple) attribute is set, several values can be set, as a comma-separated list. If any of these do not satisfy the condition described here, the **Type mismatch** constraint violation is triggered.
+For the `email` input type, if the [`multiple`](/en-US/docs/Web/HTML/Reference/Elements/input#multiple) attribute is set, several values can be set as a comma-separated list. If any of the values in the list do not satisfy the condition described here, the **Type mismatch** constraint violation is triggered.
 
 Note that most input types don't have intrinsic constraints, as some are barred from constraint validation or have a sanitization algorithm transforming incorrect values to a correct default.
 
@@ -322,6 +322,9 @@ This displays the following form:
 First, we write a function checking the constraint itself:
 
 ```js
+const countrySelect = document.getElementById("country");
+const postalCodeField = document.getElementById("postal-code");
+
 function checkPostalCode() {
   // For each country, defines the pattern that the postal code has to follow
   const constraints = {
@@ -344,10 +347,7 @@ function checkPostalCode() {
   };
 
   // Read the country id
-  const country = document.getElementById("country").value;
-
-  // Get the NPA field
-  const postalCodeField = document.getElementById("postal-code");
+  const country = countrySelect.value;
 
   // Build the constraint checker
   const constraint = new RegExp(constraints[country][0], "");
@@ -365,13 +365,11 @@ function checkPostalCode() {
 }
 ```
 
-Then we link it to the **onchange** event for the {{ HTMLElement("select") }} and the **oninput** event for the {{ HTMLElement("input") }}:
+Then we link it to the `change` event for the {{ HTMLElement("select") }} and the `input` event for the {{ HTMLElement("input") }}:
 
 ```js
-window.onload = () => {
-  document.getElementById("country").onchange = checkPostalCode;
-  document.getElementById("postal-code").oninput = checkPostalCode;
-};
+countrySelect.addEventListener("change", checkPostalCode);
+postalCodeField.addEventListener("input", checkPostalCode);
 ```
 
 ### Limiting the size of a file before its upload
@@ -392,8 +390,9 @@ This displays:
 The JavaScript reads the file selected, uses the `File.size()` method to get its size, compares it to the (hard coded) limit, and calls the Constraint API to inform the browser if there is a violation:
 
 ```js
+const fs = document.getElementById("fs");
+
 function checkFileSize() {
-  const fs = document.getElementById("fs");
   const files = fs.files;
 
   // If there is (at least) one file selected
@@ -413,9 +412,7 @@ function checkFileSize() {
 Finally, we hook the method with the correct event:
 
 ```js
-window.onload = () => {
-  document.getElementById("fs").onchange = checkFileSize;
-};
+fs.addEventListener("change", checkFileSize);
 ```
 
 ## Visual styling of constraint validation
@@ -428,7 +425,7 @@ The look of elements can be controlled via CSS pseudo-classes.
 
 #### :required and :optional CSS pseudo-classes
 
-The {{cssxref(':required')}} and {{cssxref(':optional')}} [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) allow writing selectors that match form elements that have the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute, or that don't have it.
+The {{cssxref(':required')}} and {{cssxref(':optional')}} [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) allow writing selectors that match form elements that have the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute, or that don't have it.
 
 #### :placeholder-shown CSS pseudo-class
 
@@ -436,7 +433,7 @@ See {{cssxref(':placeholder-shown')}}.
 
 #### :valid :invalid CSS pseudo-classes
 
-The {{cssxref(':valid')}} and {{cssxref(':invalid')}} [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) are used to represent \<input> elements whose content validates and fails to validate respectively according to the input's type setting. These classes allow the user to style valid or invalid form elements to make it easier to identify elements that are either formatted correctly or incorrectly.
+The {{cssxref(':valid')}} and {{cssxref(':invalid')}} [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) are used to represent \<input> elements whose content validates and fails to validate respectively according to the input's type setting. These classes allow the user to style valid or invalid form elements to make it easier to identify elements that are either formatted correctly or incorrectly.
 
 ### Controlling the text of constraint violation
 

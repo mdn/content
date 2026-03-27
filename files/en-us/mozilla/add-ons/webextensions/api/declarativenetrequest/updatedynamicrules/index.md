@@ -3,9 +3,8 @@ title: declarativeNetRequest.updateDynamicRules
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateDynamicRules
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.updateDynamicRules
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Modifies the set of dynamic rules for the extension. The rules with IDs listed in `options.removeRuleIds` are first removed, and then the rules given in `options.addRules` are added. Note that:
 
@@ -23,7 +22,7 @@ Modifies the set of dynamic rules for the extension. The rules with IDs listed i
 ## Syntax
 
 ```js-nolint
-let updatedRules = browser.declarativeNetRequest.updateDynamicRules(
+let rulesUpdated = browser.declarativeNetRequest.updateDynamicRules(
     options                // object
 );
 ```

@@ -3,9 +3,8 @@ title: scripting.removeCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/removeCSS
 page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.removeCSS
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes a CSS stylesheet injected by a call to {{WebExtAPIRef("scripting.insertCSS()")}}.
 

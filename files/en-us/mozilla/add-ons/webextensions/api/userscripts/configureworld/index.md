@@ -3,9 +3,8 @@ title: userScripts.configureWorld()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/configureWorld
 page-type: webextension-api-function
 browser-compat: webextensions.api.userScripts.configureWorld
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Configures `USER_SCRIPT` execution environments for the extension.
 

@@ -42,7 +42,7 @@ We will be rendering our game on Canvas, but we won't do it manually — this wi
     <style>
       body {
         margin: 0;
-        background: #333;
+        background: #333333;
       }
     </style>
     <script src="src/phaser-arcade-physics.2.2.2.min.js"></script>
@@ -306,7 +306,7 @@ That way we can check which key is pressed at the given frame and apply the defi
 Probably the most interesting part of the game is its usage of the **Device Orientation API** for control on mobile devices. Thanks to this you can play the game by tilting the device in the direction you want the ball to roll. Here's the code from the `create()` function responsible for this:
 
 ```js
-window.addEventListener("deviceorientation", this.handleOrientation, true);
+window.addEventListener("deviceorientation", this.handleOrientation);
 ```
 
 We're adding an event listener to the `"deviceorientation"` event and binding the `handleOrientation` function which looks like this:
@@ -434,7 +434,7 @@ if (this.audioStatus) {
 }
 ```
 
-That's all — loading and playing the sounds is easy with Phaser.
+That's all — loading and playing the sounds is achieved with Phaser.
 
 #### Implementing the Vibration API
 

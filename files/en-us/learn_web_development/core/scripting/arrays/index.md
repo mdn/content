@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Strings", "Learn_web_development/Core/Scripting/Test_your_skills/Arrays", "Learn_web_development/Core/Scripting")}}
 
 In this lesson we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), retrieve, add, and remove items stored in an array, and more besides.
 
@@ -493,19 +493,15 @@ searchBtn.addEventListener("click", () => {
 
 </details>
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Arrays).
-
-## Conclusion
+## Summary
 
 After reading through this article, we are sure you will agree that arrays seem pretty darn useful; you'll see them crop up everywhere in JavaScript, often in association with loops in order to do the same thing to every item in an array. We'll be teaching you all about loops later on in the module.
 
-In the next article we're giving you a challenge to test your understanding of the articles that came before it.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on arrays.
 
 ## See also
 
 - {{jsxref("Array")}}
   - : The `Array` object reference page provides a detailed reference guide to the features discussed in this page, and many other `Array` features.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Strings", "Learn_web_development/Core/Scripting/Test_your_skills/Arrays", "Learn_web_development/Core/Scripting")}}

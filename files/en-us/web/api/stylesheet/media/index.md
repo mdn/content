@@ -8,11 +8,13 @@ browser-compat: api.StyleSheet.media
 
 {{APIRef("CSSOM")}}
 
-The **`media`** property of the {{domxref("StyleSheet")}} interface specifies the intended destination media for style information. It is a read-only, array-like `MediaList` object and can be removed with `deleteMedium()` and added with `appendMedium()`.
+The read-only **`media`** property of the {{domxref("StyleSheet")}} interface contains a {{domxref("MediaList")}} object representing the intended destination media for style information.
 
 ## Value
 
-A read-only array-like `MediaList` object.
+A {{domxref("MediaList")}} object. Its value is set by the [`media`](/en-US/docs/Web/HTML/Reference/Elements/link#media) attribute on the corresponding `<link>` or `<style>` element. If the `media` attribute is not set or empty, it returns an empty `MediaList`, i.e., a `MediaList` with the `length` property equal to `0`.
+
+Although the `media` property itself is read-only in the sense that you can't replace the `MediaList` object, you can still assign to the `media` property directly, which is equivalent to assigning to its {{domxref("MediaList/mediaText", "mediaText")}} property. You can also modify the `MediaList` object using the {{domxref("MediaList/appendMedium", "appendMedium()")}} and {{domxref("MediaList/deleteMedium", "deleteMedium()")}} methods.
 
 ## Examples
 

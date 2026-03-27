@@ -52,45 +52,50 @@ button {
 ```
 
 ```js
-window.addEventListener("load", setupAnimation, false);
+const canvas = document.querySelector("canvas");
+
 // Variables to hold the WebGL context, and the color and
 // position of animated squares.
-let gl;
+const gl = getRenderingContext();
 let color = getRandomColor();
-let position;
+// Unlike the browser window, vertical position in WebGL is
+// measured from bottom to top. In here we set the initial
+// position of the square to be at the top left corner of the
+// drawing buffer.
+let position = [0, gl.drawingBufferHeight];
 
-function setupAnimation(evt) {
-  window.removeEventListener(evt.type, setupAnimation, false);
-  if (!(gl = getRenderingContext())) return;
+gl.enable(gl.SCISSOR_TEST);
+gl.clearColor(color[0], color[1], color[2], 1.0);
 
-  gl.enable(gl.SCISSOR_TEST);
-  gl.clearColor(color[0], color[1], color[2], 1.0);
-  // Unlike the browser window, vertical position in WebGL is
-  // measured from bottom to top. In here we set the initial
-  // position of the square to be at the top left corner of the
-  // drawing buffer.
-  position = [0, gl.drawingBufferHeight];
+const button = document.querySelector("button");
+let timer;
 
-  const button = document.querySelector("button");
-  let timer;
-
-  function startAnimation(evt) {
-    button.removeEventListener(evt.type, startAnimation, false);
-    button.addEventListener("click", stopAnimation, false);
-    document.querySelector("strong").textContent = "stop";
-    timer = setInterval(drawAnimation, 17);
-    drawAnimation();
-  }
-
-  function stopAnimation(evt) {
-    button.removeEventListener(evt.type, stopAnimation, false);
-    button.addEventListener("click", startAnimation, false);
-    document.querySelector("strong").textContent = "start";
-    clearInterval(timer);
-  }
-
-  stopAnimation({ type: "click" });
+function getRenderingContext() {
+  canvas.width = canvas.clientWidth;
+  canvas.height = canvas.clientHeight;
+  const gl = canvas.getContext("webgl");
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.clearColor(0.0, 0.0, 0.0, 1.0);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+  return gl;
 }
+
+function startAnimation(evt) {
+  button.removeEventListener(evt.type, startAnimation);
+  button.addEventListener("click", stopAnimation);
+  document.querySelector("strong").textContent = "stop";
+  timer = setInterval(drawAnimation, 17);
+  drawAnimation();
+}
+
+function stopAnimation(evt) {
+  button.removeEventListener(evt.type, stopAnimation);
+  button.addEventListener("click", startAnimation);
+  document.querySelector("strong").textContent = "start";
+  clearInterval(timer);
+}
+
+stopAnimation({ type: "click" });
 
 // Variables to hold the size and velocity of the square.
 const size = [60, 60];
@@ -120,26 +125,6 @@ function drawAnimation() {
 
 function getRandomColor() {
   return [Math.random(), Math.random(), Math.random()];
-}
-```
-
-```js hidden
-function getRenderingContext() {
-  const canvas = document.querySelector("canvas");
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  const gl =
-    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    const paragraph = document.querySelector("p");
-    paragraph.textContent =
-      "Failed. Your browser or device may not support WebGL.";
-    return null;
-  }
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  return gl;
 }
 ```
 

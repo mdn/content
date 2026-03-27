@@ -3,9 +3,8 @@ title: tabs.setZoomSettings()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/setZoomSettings
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.setZoomSettings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets zoom settings for the specified tab. These settings are reset to the default settings upon navigating the tab.
 

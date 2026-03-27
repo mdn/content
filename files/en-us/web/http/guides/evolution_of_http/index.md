@@ -32,7 +32,7 @@ The response was extremely simple, too: it only consisted of the file itself.
 
 ```html
 <html>
-  An text-only web page
+  A text-only web page
 </html>
 ```
 
@@ -57,6 +57,7 @@ HTTP/1.0 200 OK
 Date: Tue, 15 Nov 1994 08:12:31 GMT
 Server: CERN/3.0 libwww/2.17
 Content-Type: text/html
+
 <HTML>
 A page with an image
   <IMG SRC="/my-image.gif">
@@ -73,6 +74,7 @@ HTTP/1.0 200 OK
 Date: Tue, 15 Nov 1994 08:12:32 GMT
 Server: CERN/3.0 libwww/2.17
 Content-Type: text/gif
+
 (image content)
 ```
 
@@ -176,7 +178,7 @@ Since 2005, more APIs have become available to web pages. Several of these APIs 
 
 ### Relaxing the security-model of the web
 
-HTTP is independent of the web security model, known as the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). In fact, the current web security model was developed after the creation of HTTP! Over the years, it proved useful to lift some restrictions of this policy under certain constraints. The server transmitted how much and when to lift such restrictions to the client using a new set of HTTP headers. These were defined in specifications like [Cross-Origin Resource Sharing](/en-US/docs/Glossary/CORS) (CORS) and the [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) (CSP).
+HTTP is independent of the web security model, known as the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy). In fact, the current web security model was developed after the creation of HTTP! Over the years, it proved useful to lift some restrictions of this policy under certain constraints. The server transmitted how much and when to lift such restrictions to the client using a new set of HTTP headers. These were defined in specifications like [Cross-Origin Resource Sharing](/en-US/docs/Glossary/CORS) (CORS) and the [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) (CSP).
 
 In addition to these large extensions, many other headers were added, sometimes only experimentally. Notable headers are the Do Not Track ({{HTTPHeader("DNT")}}) header to control privacy, {{HTTPHeader("X-Frame-Options")}}, and {{HTTPHeader('Upgrade-Insecure-Requests')}} but many more exist.
 

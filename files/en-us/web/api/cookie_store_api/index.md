@@ -5,7 +5,7 @@ page-type: web-api-overview
 browser-compat:
   - api.CookieStore
   - api.CookieStoreManager
-spec-urls: https://wicg.github.io/cookie-store/
+spec-urls: https://cookiestore.spec.whatwg.org/
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}

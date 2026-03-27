@@ -8,13 +8,11 @@ browser-compat: api.HTMLInputElement.setSelectionRange
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLInputElement.setSelectionRange()`** method sets the start and end positions of the current text selection in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
-
-The element must be focused for the call to have any effect.
+The **`HTMLInputElement.setSelectionRange()`** method sets the start and end positions of the current text selection in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element. This updates the selection state immediately, though the visual highlight only appears when the element is focused.
 
 Optionally, you can specify the direction in which selection should be considered to have occurred. This lets you indicate, for example, that the selection was set by the user clicking and dragging from the end of the selected text toward the beginning.
 
-This method updates the {{domxref("HTMLInputElement.selectionStart")}}, {{domxref("HTMLInputElement.selectionEnd")}}, and {{domxref("HTMLInputElement.selectionDirection")}} properties in one call.
+This method updates the {{domxref("HTMLInputElement.selectionStart")}}, {{domxref("HTMLInputElement.selectionEnd")}}, and {{domxref("HTMLInputElement.selectionDirection")}} properties in one call, regardless of whether the element is focused. The visual selection highlight will only appear when the element has focus.
 
 The element must be of one of the following input types: [`password`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`search`](/en-US/docs/Web/HTML/Reference/Elements/input/search), [`tel`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text), or [`url`](/en-US/docs/Web/HTML/Reference/Elements/input/url). Otherwise the browser throws an `InvalidStateError` exception.
 

@@ -3,9 +3,8 @@ title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.query
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets all tabs that have the specified properties, or all tabs if no properties are specified.
 
@@ -49,6 +48,8 @@ let querying = browser.tabs.query(queryInfo)
       - : `boolean`. Whether the tabs are in the last focused window.
     - `pinned` {{optional_inline}}
       - : `boolean`. Whether the tabs are pinned.
+    - `splitViewId` {{optional_inline}}
+      - : `integer`. The ID of the split view the tab belongs to. Set to {{WebExtAPIRef('tabs.SPLIT_VIEW_ID_NONE')}} to query the tabs that don't belong to a split view.
     - `status` {{optional_inline}}
       - : {{WebExtAPIRef('tabs.TabStatus')}}. Whether the tabs have completed loading.
     - `title` {{optional_inline}}

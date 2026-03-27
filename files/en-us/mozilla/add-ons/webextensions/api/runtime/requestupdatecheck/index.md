@@ -3,9 +3,8 @@ title: runtime.requestUpdateCheck()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.requestUpdateCheck
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Checks to see if an update for the extension is available.
 

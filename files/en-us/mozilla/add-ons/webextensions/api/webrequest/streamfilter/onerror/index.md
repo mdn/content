@@ -3,19 +3,14 @@ title: webRequest.StreamFilter.onerror
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onerror
 page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.StreamFilter.onerror
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An event handler that will be called when an error occurs. This is most often because an invalid request ID was passed into {{WebExtAPIRef("webRequest.filterResponseData()")}}.
 
 After this event is fired, the {{WebExtAPIRef("webRequest.StreamFilter.error")}} property will contain a message giving more information about the error.
 
 Note that this event is **not** triggered for network errors.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -57,3 +52,7 @@ browser.webRequest.onBeforeRequest.addListener(listener, {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

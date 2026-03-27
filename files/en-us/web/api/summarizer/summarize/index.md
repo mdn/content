@@ -36,6 +36,8 @@ A {{jsxref("Promise")}} that fulfills with a string containing the generated sum
 
 ### Exceptions
 
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if the `Summarizer` was previously destroyed (had {{domxref("Summarizer.destroy()")}} called on it, or was aborted via its abort [`signal`](/en-US/docs/Web/API/Summarizer/create_static#signal) after creation).
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the current {{domxref("Document")}} is not active.
 - `NotAllowedError` {{domxref("DOMException")}}
@@ -44,7 +46,7 @@ A {{jsxref("Promise")}} that fulfills with a string containing the generated sum
   - : Thrown if the output summary was filtered by the user agent, for example because it was detected to be harmful, inaccurate, or nonsensical.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the provided `context` is not in language the `Summarizer` supports.
-- `QuotaExceededError` {{domxref("DOMException")}}
+- {{domxref("QuotaExceededError")}}
   - : Thrown if the summarize operation exceeds the available {{domxref("Summarizer.inputQuota", "inputQuota")}}.
 - `UnknownError` {{domxref("DOMException")}}
   - : Thrown if the `summarize()` call failed for any other reason, or a reason the user agent did not wish to disclose.

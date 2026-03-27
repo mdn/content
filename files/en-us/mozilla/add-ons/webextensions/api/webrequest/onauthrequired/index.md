@@ -3,9 +3,8 @@ title: webRequest.onAuthRequired
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
 page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onAuthRequired
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the server sends a `401` or `407` status code and a `WWW-Authenticate` header using the `Basic` scheme (that is, when the server asks the client to provide authentication credentials, such as a username and password).
 
@@ -27,7 +26,7 @@ The listener can respond in one of four ways:
   - : The extension might need to fetch credentials asynchronously. For example, the extension might need to fetch credentials from storage or ask the user. In this case, the listener can supply credentials asynchronously as follows:
     - in addListener, pass `"asyncBlocking"` in Chrome and Firefox or `"blocking"` in Firefox in the `extraInfoSpec` parameter
     - If `"blocking"` is provided, the extension can return a `webRequest.BlockingResponse` object or a Promise that resolves to a `webRequest.BlockingResponse` object
-    - If `"asyncBlocking"` is provided, the event listener function receives a `asyncCallback` function as its second parameter. `asyncCallback` can be called asynchronously and takes a `webRequest.BlockingResponse` object as its only parameter
+    - If `"asyncBlocking"` is provided, the event listener function receives an `asyncCallback` function as its second parameter. `asyncCallback` can be called asynchronously and takes a `webRequest.BlockingResponse` object as its only parameter
 
       > [!NOTE]
       > Chrome does not support a Promise as a return value ([Chromium issue 1510405](https://crbug.com/1510405)). For alternatives, see [the return value of the `listener`](#listener).

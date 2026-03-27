@@ -3,9 +3,8 @@ title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.set
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Stores one or more items in the storage area or updates stored items.
 

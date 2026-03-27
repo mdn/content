@@ -48,10 +48,10 @@ function log(msg) {
 }
 
 document.querySelectorAll("li").forEach((item) => {
-  item.addEventListener("dragstart", dragstart_handler);
+  item.addEventListener("dragstart", dragstartHandler);
 });
 
-function dragstart_handler(ev) {
+function dragstartHandler(ev) {
   log(`dragStart: target.id = ${ev.target.id}`);
 
   // Add this element's id to the drag payload so the drop handler will
@@ -103,4 +103,4 @@ target.addEventListener("dragover", (ev) => {
 
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Working with the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

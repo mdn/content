@@ -2,9 +2,8 @@
 title: Work with the Bookmarks API
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Bookmarks enable users to collect and organize lists of web pages, so they can easily get back to their favorites. Using the Bookmarks API, your extensions can manipulate bookmarks in much the same way users can.
 

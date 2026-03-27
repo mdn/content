@@ -1,5 +1,5 @@
 ---
-title: Continuous Media
+title: Continuous media
 slug: Glossary/Continuous_Media
 page-type: glossary-definition
 sidebar: glossarysidebar

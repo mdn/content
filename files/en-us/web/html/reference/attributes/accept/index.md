@@ -47,7 +47,7 @@ For instance, there are a number of ways Microsoft Word files can be identified,
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
-Whereas if you're accepting a media file, you may want to be include any format of that media type:
+Whereas if you're accepting a media file, you may want to include any format of that media type:
 
 ```html
 <input type="file" id="soundFile" accept="audio/*" />

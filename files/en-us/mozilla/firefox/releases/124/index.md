@@ -1,5 +1,5 @@
 ---
-title: Firefox 124 for developers
+title: Firefox 124 release notes for developers
 short-title: Firefox 124
 slug: Mozilla/Firefox/Releases/124
 page-type: firefox-release-notes

@@ -76,7 +76,7 @@ If a non-same-origin `start_url` is specified, browsers will fallback to using t
 
 - **Fingerprinting**:
 
-  Encoding strings into `start_url` to uniquely identify users (e.g., server-assigned identifiers, such as `?user=123`, `/user/123/`, or `https://user123.foo.bar`) creates a persistent fingerprint.
+  Encoding strings into `start_url` to uniquely identify users (e.g., server-assigned identifiers, such as `?user=123`, `/user/123/`, or `https://user123.example.com`) creates a persistent fingerprint.
   Users may not be aware that their privacy-sensitive information can persist even after they've cleared site data.
   It is bad practice to include any information in `start_url` that could uniquely identify users.
 
@@ -99,7 +99,7 @@ You want users to land on the `trail-hub.html` page when they launch the app.
 You can specify this starting URL in your manifest file like so:
 
 ```json
-"start_url": "https://hiking-pro.com/trail-hub.html"
+{ "start_url": "https://hiking-pro.com/trail-hub.html" }
 ```
 
 This `start_url` value is valid because it is same-origin with the manifest URL (`https://hiking-pro.com/resources/manifest.json`).
@@ -107,7 +107,7 @@ This `start_url` value is valid because it is same-origin with the manifest URL 
 The following `start_url` is invalid because it is not the same-origin with the manifest URL:
 
 ```json example-bad
-"start_url": "https://other-domain.com/trail-hub.html"
+{ "start_url": "https://other-domain.com/trail-hub.html" }
 ```
 
 In the above case, `https://hiking-pro.com/index.html` will be used as the default starting page when users launch the app.
@@ -118,7 +118,7 @@ For your hiking app in the previous scenario, you can specify the same starting 
 This relative URL will resolve to `https://hiking-pro.com/trail-hub.html` using the manifest file's URL (`https://hiking-pro.com/resources/manifest.json`) as the base.
 
 ```json
-"start_url": "../trail-hub.html"
+{ "start_url": "../trail-hub.html" }
 ```
 
 ## Specifications

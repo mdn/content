@@ -64,7 +64,7 @@ We can use pseudoclasses to style the element based on whether the value is vali
 
 ```css
 input {
-  border: 2px solid currentcolor;
+  border: 2px solid currentColor;
 }
 input:invalid {
   border: 2px dashed red;

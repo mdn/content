@@ -1,5 +1,5 @@
 ---
-title: Firefox 15 for developers
+title: Firefox 15 release notes for developers
 short-title: Firefox 15
 slug: Mozilla/Firefox/Releases/15
 page-type: firefox-release-notes
@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 15 shipped on August 28, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### HTML
 

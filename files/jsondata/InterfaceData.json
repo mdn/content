@@ -120,6 +120,10 @@
       "inh": "",
       "impl": []
     },
+    "AudioPlaybackStats": {
+      "inh": "",
+      "impl": []
+    },
     "AudioProcessingEvent": {
       "inh": "Event",
       "impl": []
@@ -170,6 +174,10 @@
     },
     "AuthenticatorResponse": {
       "inh": "",
+      "impl": []
+    },
+    "AutofillEvent": {
+      "inh": "Event",
       "impl": []
     },
     "BackgroundFetchEvent": {
@@ -408,6 +416,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "ClipboardChangeEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "ClipboardEvent": {
       "inh": "Event",
       "impl": []
@@ -484,6 +496,10 @@
       "inh": "",
       "impl": []
     },
+    "CrashReportContext": {
+      "inh": "",
+      "impl": []
+    },
     "CreateMonitor": {
       "inh": "EventTarget",
       "impl": []
@@ -512,6 +528,14 @@
       "inh": "Animation",
       "impl": []
     },
+    "CSSApplyBlockRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
+    "CSSApplyStatementRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
     "CSSColor": {
       "inh": "CSSColorValue",
       "impl": []
@@ -532,7 +556,19 @@
       "inh": "CSSConditionRule",
       "impl": []
     },
+    "CSSContentsBlockRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
+    "CSSContentsStatementRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
     "CSSCounterStyleRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
+    "CSSCustomMediaRule": {
       "inh": "CSSRule",
       "impl": []
     },
@@ -660,6 +696,10 @@
       "inh": "CSSConditionRule",
       "impl": []
     },
+    "CSSMixinRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSNamespaceRule": {
       "inh": "CSSRule",
       "impl": []
@@ -737,7 +777,7 @@
       "impl": []
     },
     "CSSPseudoElement": {
-      "inh": "EventTarget",
+      "inh": "",
       "impl": []
     },
     "CSSRGB": {
@@ -798,6 +838,10 @@
     },
     "CSSStyleValue": {
       "inh": "",
+      "impl": []
+    },
+    "CSSSupportsConditionRule": {
+      "inh": "CSSGroupingRule",
       "impl": []
     },
     "CSSSupportsRule": {
@@ -1044,6 +1088,10 @@
       "inh": "",
       "impl": []
     },
+    "Exception": {
+      "inh": "",
+      "impl": []
+    },
     "EXT_blend_minmax": {
       "inh": "",
       "impl": []
@@ -1134,6 +1182,10 @@
     },
     "FetchEvent": {
       "inh": "ExtendableEvent",
+      "impl": []
+    },
+    "FetchLaterResult": {
+      "inh": "",
       "impl": []
     },
     "File": {
@@ -1298,10 +1350,6 @@
     },
     "GeolocationPositionError": {
       "inh": "",
-      "impl": []
-    },
-    "GeolocationSensor": {
-      "inh": "Sensor",
       "impl": []
     },
     "Global": {
@@ -1612,6 +1660,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLGeolocationElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLHeadElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1744,6 +1796,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLSelectedContentElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLSelectElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1850,6 +1906,10 @@
     },
     "IDBOpenDBRequest": {
       "inh": "IDBRequest",
+      "impl": []
+    },
+    "IDBRecord": {
+      "inh": "",
       "impl": []
     },
     "IDBRequest": {
@@ -2180,6 +2240,10 @@
       "inh": "Event",
       "impl": []
     },
+    "MediaStreamTrackHandle": {
+      "inh": "",
+      "impl": []
+    },
     "MediaStreamTrackProcessor": {
       "inh": "",
       "impl": []
@@ -2264,6 +2328,14 @@
       "inh": "",
       "impl": []
     },
+    "ModelContext": {
+      "inh": "",
+      "impl": []
+    },
+    "ModelContextClient": {
+      "inh": "",
+      "impl": []
+    },
     "Module": {
       "inh": "",
       "impl": []
@@ -2318,6 +2390,10 @@
     },
     "NavigationHistoryEntry": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "NavigationPrecommitController": {
+      "inh": "",
       "impl": []
     },
     "NavigationPreloadManager": {
@@ -2450,6 +2526,10 @@
     },
     "OrientationSensor": {
       "inh": "Sensor",
+      "impl": []
+    },
+    "Origin": {
+      "inh": "",
       "impl": []
     },
     "OscillatorNode": {
@@ -2593,6 +2673,10 @@
       "impl": []
     },
     "PerformanceTiming": {
+      "inh": "",
+      "impl": []
+    },
+    "PerformanceTimingConfidence": {
       "inh": "",
       "impl": []
     },
@@ -2762,6 +2846,10 @@
     },
     "PushSubscriptionOptions": {
       "inh": "",
+      "impl": []
+    },
+    "QuotaExceededError": {
+      "inh": "DOMException",
       "impl": []
     },
     "RadioNodeList": {
@@ -3056,8 +3144,20 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "SFrameTransform": {
+    "SFrameDecrypterStream": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "SFrameEncrypterStream": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "SFrameReceiverTransform": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "SFrameSenderTransform": {
+      "inh": "",
       "impl": []
     },
     "SFrameTransformErrorEvent": {
@@ -3338,10 +3438,6 @@
     },
     "SVGDescElement": {
       "inh": "SVGElement",
-      "impl": []
-    },
-    "SVGDiscardElement": {
-      "inh": "SVGAnimationElement",
       "impl": []
     },
     "SVGElement": {
@@ -3645,6 +3741,10 @@
       "impl": []
     },
     "Table": {
+      "inh": "",
+      "impl": []
+    },
+    "Tag": {
       "inh": "",
       "impl": []
     },
@@ -4268,6 +4368,14 @@
       "inh": "",
       "impl": []
     },
+    "XRBody": {
+      "inh": "",
+      "impl": []
+    },
+    "XRBodySpace": {
+      "inh": "XRSpace",
+      "impl": []
+    },
     "XRBoundedReferenceSpace": {
       "inh": "XRReferenceSpace",
       "impl": []
@@ -4450,6 +4558,10 @@
     },
     "XRViewport": {
       "inh": "",
+      "impl": []
+    },
+    "XRVisibilityMaskChangeEvent": {
+      "inh": "Event",
       "impl": []
     },
     "XRWebGLBinding": {

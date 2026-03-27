@@ -3,9 +3,8 @@ title: declarativeNetRequest.Redirect
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/Redirect
 page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.Redirect
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Details describing how a redirect should be performed, as the `redirect` property of a {{WebExtAPIRef("declarativeNetRequest.RuleAction", "RuleAction")}}. Only valid for redirect rules.
 

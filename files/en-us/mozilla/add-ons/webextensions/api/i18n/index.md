@@ -3,9 +3,8 @@ title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
 page-type: webextension-api
 browser-compat: webextensions.api.i18n
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Functions to internationalize your extension. You can use these APIs to get localized strings from locale files packaged with your extension, find out the browser's current language, and find out the value of its [Accept-Language header](/en-US/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header).
 
@@ -31,11 +30,11 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 - {{WebExtAPIRef("i18n.getSystemUILanguage()")}}
   - : Returns the current UI locale of the operating system.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.

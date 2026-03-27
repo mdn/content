@@ -3,9 +3,8 @@ title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
 page-type: webextension-api-function
 browser-compat: webextensions.api.find.find
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Searches for text in a tab.
 
@@ -94,10 +93,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
     - `text`
       - : The complete text of the match, "You may" in the example above.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -280,3 +275,7 @@ browser.runtime.onMessage.addListener((message) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

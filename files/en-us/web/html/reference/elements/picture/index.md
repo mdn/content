@@ -70,6 +70,16 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 </picture>
 ```
 
+You can swap image assets for light and dark themes using the {{cssxref("@media/prefers-color-scheme")}} media feature:
+
+```html
+<picture>
+  <source srcset="logo-dark.png" media="(prefers-color-scheme: dark)" />
+  <source srcset="logo-light.png" media="(prefers-color-scheme: light)" />
+  <img src="logo-light.png" alt="Product logo" />
+</picture>
+```
+
 ### The srcset attribute
 
 The [srcset](/en-US/docs/Web/HTML/Reference/Elements/source#srcset) attribute is used to offer a list of possible images based on size or the display's pixel density.
@@ -106,7 +116,28 @@ The `srcset` attribute can also be used on the `<img>` element without needing t
   alt="MDN Web Docs logo" />
 ```
 
-The `sizes` attribute is not mandatory when using srcset, but it is recommended to use it in order to provide additional information to the browser to help it select the best image source.
+### The sizes attribute
+
+The [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) attribute of the `<source>` element allows you to specify a set of media condition-length pairs and indicate the image display size for each condition. This helps the browser select the most appropriate image from the `srcset` attribute, which lists images with their [intrinsic](/en-US/docs/Glossary/Intrinsic_Size) widths.
+
+The browser evaluates the media conditions in the sizes attribute before it downloads any images. See the sizes attribute of the [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) and [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) elements for more information.
+
+For example:
+
+```html
+<picture>
+  <source
+    srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1200w"
+    sizes="(max-width: 600px) 400px, 800px"
+    type="image/jpeg" />
+  <img src="fallback.jpg" alt="Example image" />
+</picture>
+```
+
+In this example:
+
+- If the viewport is 600px wide or less, the slot size is 400px; otherwise, it is 800px.
+- The browser multiplies the slot size by the device pixel ratio to determine the ideal image width, then picks the closest available image from `srcset`.
 
 Without sizes, the browser will use the default size of the image as specified by its dimensions in pixels. This may not be the best fit for all devices, especially if the image is displayed on different screen sizes or in different contexts.
 
@@ -190,3 +221,4 @@ The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_ty
 - {{HTMLElement("source")}} element
 - Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 - [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)
+- {{cssxref("@media/prefers-color-scheme")}} media feature

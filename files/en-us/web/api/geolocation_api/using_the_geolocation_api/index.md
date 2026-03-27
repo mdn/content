@@ -133,7 +133,7 @@ button {
 ```html
 <button id="find-me">Show my location</button><br />
 <p id="status"></p>
-<a id="map-link" target="_blank"></a>
+<a id="map-link" href="" target="_blank">Location unknown</a>
 ```
 
 ### JavaScript
@@ -173,3 +173,7 @@ document.querySelector("#find-me").addEventListener("click", geoFindMe);
 ### Result
 
 {{EmbedLiveSample('Examples', 350, 150, "", "", "", "geolocation")}}
+
+## See also
+
+- {{htmlelement("geolocation")}} element

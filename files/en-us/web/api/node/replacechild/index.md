@@ -65,10 +65,10 @@ const sp1 = document.createElement("span");
 sp1.id = "newSpan";
 
 // Create some content for the new element.
-const sp1_content = document.createTextNode("new replacement span element.");
+const sp1Content = document.createTextNode("new replacement span element.");
 
 // Apply that content to the new element
-sp1.appendChild(sp1_content);
+sp1.appendChild(sp1Content);
 
 // Build a reference to the existing node to be replaced
 const sp2 = document.getElementById("childSpan");

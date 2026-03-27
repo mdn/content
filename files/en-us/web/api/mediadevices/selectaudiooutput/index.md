@@ -56,8 +56,8 @@ A {{ jsxref("Promise") }} that is fulfilled with a {{domxref("MediaDeviceInfo")}
 
 Access to the API is subject to the following constraints:
 
-- The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-- [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
+- The method must be called in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+- [Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required.
   The user has to interact with the page or a UI element for this feature to work.
 - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 

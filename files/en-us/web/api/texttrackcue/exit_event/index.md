@@ -26,10 +26,10 @@ A generic {{DOMxRef("Event")}} with no added properties.
 
 ## Example
 
-In the following example, `cue1` prints to the console when it stops being displayed as the active cue.
+In the following example, `cue` prints to the console when it stops being displayed as the active cue.
 
 ```js
-cue1.addEventListener("enter", (event) => {
+cue.addEventListener("enter", (event) => {
   console.log("Cue 1 has left the building.");
 });
 ```

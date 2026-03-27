@@ -4,6 +4,9 @@ short-title: setParameters()
 slug: Web/API/RTCRtpSender/setParameters
 page-type: web-api-instance-method
 browser-compat: api.RTCRtpSender.setParameters
+spec-urls:
+  - https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender-setparameters
+  - https://w3c.github.io/mst-content-hint/#dom-rtcdegradationpreference
 ---
 
 {{APIRef("WebRTC API")}}
@@ -29,6 +32,29 @@ setParameters(parameters)
         The properties of the objects include:
         - `active`
           - : Setting this value `true` (the default) causes this encoding to be sent, while `false` stops it from being sent and used (but does not cause the SSRC to be removed).
+
+        - `codec` {{optional_inline}}
+          - : Selects the [media codec](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) that is used for this encoding's RTP stream.
+            If not set, the user agent may select any codec negotiated for sending.
+            <!-- RTCRtpCodec -->
+            - `channels` {{optional_inline}}
+              - : A positive integer indicating the number of channels supported by the codec.
+                For example, for audio codecs a value of 1 specifies monaural sound, while 2 indicates stereo.
+
+            - `clockRate`
+              - : A positive integer specifying the codec's clock rate in Hertz (Hz).
+                The clock rate is the rate at which the codec's RTP timestamp advances.
+                Most codecs have specific values or ranges of values they permit.
+                The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+
+            - `mimeType`
+              - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
+                The MIME type strings used by RTP differ from those used elsewhere.
+                IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
+                Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+
+            - `sdpFmtpLine` {{optional_inline}}
+              - : A string giving the format specific parameters provided by the local description.
 
         - `dtx` {{Deprecated_Inline}} {{Non-standard_Inline}}
           - : Only used for an {{domxref("RTCRtpSender")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} is `audio`, this property indicates whether or not to use discontinuous transmission (a feature by which a phone is turned off or the microphone muted automatically in the absence of voice activity).
@@ -95,12 +121,25 @@ setParameters(parameters)
         Header extensions are described in {{RFC(3550, "", "5.3.1")}}.
         This parameter cannot be changed.
     - `rtcp`
-      - : An {{domxref("RTCRtcpParameters")}} object providing the configuration parameters used for {{Glossary("RTCP")}} on the sender.
+      - : An object providing the configuration parameters used for {{Glossary("RTCP")}} on the sender.
         This parameter cannot be changed.
-    - `degradationPreference` {{deprecated_inline}}
-      - : Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations.
-        The possible values are `maintain-framerate`, `maintain-resolution`, or `balanced`.
-        The default value is `balanced`.
+
+        The object may have the following properties: <!-- RTCRtcpParameters -->
+        - `cname`
+          - : A read-only string giving the canonical name (CNAME) used by RTCP (e.g., in SDES messages).
+        - `reducedSize`
+          - : A read-only boolean that is `True` if reduced size RTCP is configured ({{rfc("5506")}}), and `False` if compound RTCP is specified ({{rfc("3550")}}).
+
+    - `degradationPreference` {{optional_inline}}
+      - : Specifies the preferred way in which the WebRTC layer should handle optimizing performance in constrained-bandwidth situations. The possible values are:
+        - `balanced`
+          - : The default value. The browser will balance degradation of framerate and resolution.
+        - `maintain-framerate`
+          - : The browser will degrade resolution to maintain framerate.
+        - `maintain-resolution`
+          - : The browser will degrade framerate to maintain resolution.
+        - `maintain-framerate-and-resolution`
+          - : The browser will maintain framerate and resolution regardless of video quality, which may cause frames to be dropped before encoding if necessary so as not to overuse network and encoder resources. This setting is useful for applications that implement their own video encoding quality and performance optimization mechanism, and don't want the browser's own internal mechanism to interfere with it.
 
 ### Return value
 

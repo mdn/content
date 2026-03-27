@@ -165,7 +165,7 @@ The functions are defined as below:
 - [`validationResult(req)`](https://express-validator.github.io/docs/api/validation-result/#validationresult): Runs the validation, making errors available in the form of a `validation` result object. This is invoked in a separate callback, as shown below:
 
   ```js
-  asyncHandler(async (req, res, next) => {
+  async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -175,7 +175,7 @@ The functions are defined as below:
     } else {
       // Data from form is valid.
     }
-  });
+  };
   ```
 
   We use the validation result's `isEmpty()` method to check if there were errors, and its `array()` method to get the set of error messages. See the [Handling validation section](https://express-validator.github.io/docs/guides/getting-started/#handling-validation-errors) for more information.

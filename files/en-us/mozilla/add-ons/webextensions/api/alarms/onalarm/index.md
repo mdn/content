@@ -3,9 +3,8 @@ title: alarms.onAlarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
 page-type: webextension-api-event
 browser-compat: webextensions.api.alarms.onAlarm
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when any alarm set by the extension goes off.
 

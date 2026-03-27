@@ -3,9 +3,8 @@ title: menus.update()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/update
 page-type: webextension-api-function
 browser-compat: webextensions.api.menus.update
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Updates a previously created menu item.
 

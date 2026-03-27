@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.keydown_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`keydown`** event is fired when a key is pressed.
 

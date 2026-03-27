@@ -22,6 +22,8 @@ accessibility.disablecache
 accessibilitysidebar
 acodec
 activetitlebarcolor
+addonsidebar
+addonsidebarmain
 addstream
 adduser
 adlm
@@ -36,6 +38,7 @@ ALTGR
 amssymb
 android-safetynet
 animalfound
+anims
 anonid
 apacheconf
 apachectl
@@ -59,12 +62,15 @@ associationlistitemvalue
 attributionsrc
 audiocontext
 authorid
+autolocate
+autospace
 backdrag
 backgroundfetchabort
 backgroundfetchclick
 backgroundfetchfail
 backgroundfetchsuccess
 BACKTAB
+backzone
 Basetime
 bbaw
 beforeinstallprompt
@@ -72,17 +78,21 @@ beforematch
 beforescriptexecute
 beforexrselect
 BGRX
+bgtest
 bhks
+biske
 bmatrix
 BPPV1
 Brai
 braillelabel
 brailleroledescription
+broc
 browser-bottombox
 browser.safebrowsing
 browser.sessionhistory
 browsingtopics
 bstack
+bufferedchange
 buttondisabledaccept
 bvec
 byterange
@@ -117,6 +127,8 @@ color-colrv0
 color-colrv1
 color-sbix
 colorMaskiOES
+com.apple.quicktime.mdta
+com.apple.quicktime.udta
 commandfor
 congres
 connectionavailable
@@ -136,10 +148,13 @@ Crsel
 cryptomining
 csiso
 csrfmiddlewaretoken
+css.selectors.headingfunction
+css.selectors.hostfunction
 CSS_RGBCOLOR
 csslint
 cssref
 cssruleview
+cssxref
 ctron
 ctrz
 Cubehelix
@@ -165,6 +180,7 @@ docbook
 documentboundary
 dom.abortablepromise
 dom.closewatcher
+dom.documentpip
 dom.element.customstateset
 dom.input.dirpicker
 dom.media.webcodecs
@@ -190,6 +206,7 @@ dweb
 ebuttm
 ebutts
 ECLF
+EdgiOS
 ehtml
 EISU
 elementname
@@ -204,6 +221,7 @@ emptytext
 emsdk
 enable-tracejit
 enableiOES
+endstreaming
 enterpictureinpicture
 equalsize
 EquationiOES
@@ -231,6 +249,7 @@ fullscreenbutton
 fullwide
 FunciOES
 funcref
+funcrefs
 fwdred
 fwid
 gara
@@ -248,8 +267,10 @@ Gloc
 glossarysidebar
 gonm
 GPOS
+grba
 Grek
 greklow
+gsettings
 GSUB
 gujr
 gukh
@@ -289,6 +310,7 @@ indexeddb-examples
 indexifembedded
 inputreport
 inputsourceschange
+interestfor
 intitle
 intl.uidirection.locale
 intrinsicsize
@@ -314,6 +336,7 @@ jssidebar
 jsval
 kaios
 kawi
+kdeglobals
 kerx
 Key_Codeinput
 KEY_dead_abovecomma
@@ -349,6 +372,7 @@ KIND_NONHEAP
 knda
 Kore
 krai
+kwriteconfig
 lanatham
 laoo
 largeop
@@ -374,9 +398,11 @@ localecho
 localstore
 longdiv
 longtask
+loseinterest
 lowdelay
 lowp
 lquote
+LRGB
 ltrh
 makemigrations
 mathbb
@@ -384,6 +410,7 @@ mathbold
 mathdbl
 mathit
 mathml
+mathml.stixgeneral_operator_stretching.disabled
 mathmlref
 mathmono
 mathrm
@@ -500,8 +527,10 @@ oldstyle
 oldstyle-nums
 onao
 onbeforematch
+onbufferedchange
 oncanmakepayment
 oncharacterboundsupdate
+onclipboardchange
 oncontentvisibilityautostatechange
 oncurrententrychange
 oncurrentscreenchange
@@ -509,7 +538,11 @@ ondequeue
 ondispose
 ondownloadprogress
 onefive
+onendstreaming
 ongesturestart
+oninterest
+onlocation
+onloseinterest
 onnavigate
 onnavigateerror
 onnavigatesuccess
@@ -518,16 +551,21 @@ onpageswap
 onpaymentrequest
 onpointerrawupdate
 onprerenderingchange
+onpromptaction
+onpromptdismiss
 onrtctransform
 onsamplebufferfull
 onscreenschange
 onscrollsnapchange
 onscrollsnapchanging
 onsinkchange
+onstartstreaming
 ontextformatupdate
 ontextupdate
 onuncapturederror
+onvalidationstatuschange
 onwebkitmouseforcewillbegin
+onzoomlevelchange
 opendocument
 openidconnect
 openpgp4fpr
@@ -542,6 +580,7 @@ orya
 oscpu
 osfile.jsm
 osma
+otpauth
 otpcredential
 outbound-rtpp
 overlayinfo
@@ -594,6 +633,8 @@ privacy.clearsitedata
 privacy.globalprivacycontrol
 privacy.restrict3rdpartystorage
 privatebrowsingmode
+promptaction
+promptdismiss
 propfind
 prophoto-rgb
 proportional-nums
@@ -626,11 +667,13 @@ romanlow
 rotr
 roundedbox
 rowindextext
+rozaj
 rport
 rquote
 rspadd
 RTCICECandidatePairStats
 rtctransform
+rtlm
 rtpmap
 runserver
 rustc
@@ -664,7 +707,6 @@ seekbackward
 seekforward
 seekto
 seeother
-selectchange
 selectedcontent
 selectend
 seltype
@@ -675,6 +717,8 @@ serviceworker
 setenvif
 SHA-256-sess
 SHA-512-sess
+shadowrootcustomelementregistry
+shadowrootreferencetarget
 sharpyuv
 shrd
 shtm
@@ -699,6 +743,7 @@ sscanf
 stackoverflow_url
 startapp
 startproject
+startstreaming
 staticfiles
 storageaccess
 strcmp
@@ -709,6 +754,7 @@ strncpy
 SUBDOCUMENT
 sund
 sunu
+superellipse
 superspeed
 SVGMPathElement
 svgref
@@ -726,7 +772,6 @@ telu
 testingbot-api
 texlive
 texlive-fontsextra
-text-autospace
 textformatupdate
 textupdate
 TEXTUREI
@@ -740,6 +785,7 @@ tnsa
 todoapp
 togglecamera
 togglemicrophone
+togglescreenshare
 toolbar-bgalignment
 toolbar-bgimage
 toolbaritem
@@ -781,6 +827,7 @@ utterleft
 uuencode
 uvec
 vaii
+validationstatuschange
 validlink
 vcard
 vcdiff
@@ -791,6 +838,7 @@ veryverythickmathspace
 veryverythinmathspace
 vfprintf
 videooutput
+viewbox
 viewsource.css
 VIRTUALENVWRAPPER
 virtualkeyboardpolicy
@@ -870,3 +918,4 @@ xpcnativewrappers
 xpidl
 xpinstall
 xywh
+zoomlevelchange

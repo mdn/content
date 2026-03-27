@@ -48,7 +48,7 @@ Every method and property listed in this document has its own reference page and
 
 ### Reading the data in a paste or drop event
 
-In the following example, we have a {{htmlelement("form")}} containing three different types of text inputs: a text {{htmlelement("input")}} element, a {{htmlelement("textarea")}} element, and a {{htmlelement("div")}} element with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set to `true`. The user can paste or drop text into any of these elements, and the data in the {{domxref("ClipboardEvent.clipboardData")}} or {{domxref("DragEvent.dataTransfer")}} object will be displayed.
+In the following example, we have a {{htmlelement("form")}} containing three different types of text inputs: a text {{htmlelement("input")}} element, a {{htmlelement("textarea")}} element, and a {{htmlelement("div")}} element with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set to `true`. The user can paste or drop text into any of these elements, and the data in the {{domxref("ClipboardEvent.clipboardData")}} or {{domxref("DragEvent.dataTransfer")}} object will be displayed.
 
 #### HTML
 
@@ -58,42 +58,48 @@ In the following example, we have a {{htmlelement("form")}} containing three dif
     <legend>&lt;input /></legend>
     <input type="text" />
     <table class="center">
-      <tr>
-        <th scope="row">Operation type</th>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">Content type</th>
-        <td></td>
-      </tr>
+      <tbody>
+        <tr>
+          <th scope="row">Operation type</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">Content type</th>
+          <td></td>
+        </tr>
+      </tbody>
     </table>
   </fieldset>
   <fieldset>
     <legend>&lt;textarea /></legend>
     <textarea></textarea>
     <table class="center">
-      <tr>
-        <th scope="row">Operation type</th>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">Content type</th>
-        <td></td>
-      </tr>
+      <tbody>
+        <tr>
+          <th scope="row">Operation type</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">Content type</th>
+          <td></td>
+        </tr>
+      </tbody>
     </table>
   </fieldset>
   <fieldset>
     <legend>&lt;div contenteditable /></legend>
     <div contenteditable></div>
     <table class="center">
-      <tr>
-        <th scope="row">Operation type</th>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">Content type</th>
-        <td></td>
-      </tr>
+      <tbody>
+        <tr>
+          <th scope="row">Operation type</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">Content type</th>
+          <td></td>
+        </tr>
+      </tbody>
     </table>
   </fieldset>
   <p class="center">
@@ -179,4 +185,4 @@ form.addEventListener("reset", () => {
 
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Working with the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

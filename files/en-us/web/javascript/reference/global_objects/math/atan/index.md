@@ -82,3 +82,4 @@ Note that you may want to avoid the `theta` function and use {{jsxref("Math.atan
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("atan()")}} function

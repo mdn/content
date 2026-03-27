@@ -33,250 +33,196 @@ Touch events are similar to mouse events except they support simultaneous touche
 - {{domxref("TouchList")}}
   - : Represents a group of touches; this is used when the user has, for example, multiple fingers on the surface at the same time.
 
-## Example
-
-This example tracks multiple touchpoints at a time, allowing the user to draw in a {{HTMLElement("canvas")}} with more than one finger at a time. It will only work on a browser that supports touch events.
+## Examples
 
 > [!NOTE]
 > The text below uses the term "finger" when describing the contact with the surface, but it could, of course, also be a stylus or other contact method.
 
-### Create a canvas
+### Drawing application
+
+This example tracks multiple touchpoints at a time, allowing the user to draw in a {{HTMLElement("canvas")}} with more than one finger at a time. It will only work on a browser that supports touch events.
+
+#### Create a canvas
+
+The HTML consists of a single {{HTMLElement("canvas")}} element. Curves will be drawn in response to the user's touch gestures. A button is also included to clear the canvas.
 
 ```html
 <canvas id="canvas" width="600" height="600">
-  Your browser does not support canvas element.
+  Your browser does not support the canvas element.
 </canvas>
-<br />
-Log:
-<pre id="log"></pre>
+<button id="clear">Clear canvas</button>
 ```
 
 ```css
 #canvas {
   border: 1px solid black;
+  display: block;
 }
-
-#log {
-  height: 200px;
-  width: 600px;
-  overflow: scroll;
-  border: 1px solid #ccc;
-}
-```
-
-### Setting up the event handlers
-
-When the page loads, the `startup()` function shown below will be called.
-This sets up all the event listeners for our {{HTMLElement("canvas")}} element so we can handle the touch events as they occur.
-
-```js
-function startup() {
-  const el = document.getElementById("canvas");
-  el.addEventListener("touchstart", handleStart);
-  el.addEventListener("touchend", handleEnd);
-  el.addEventListener("touchcancel", handleCancel);
-  el.addEventListener("touchmove", handleMove);
-  log("Initialized.");
-}
-
-document.addEventListener("DOMContentLoaded", startup);
 ```
 
 #### Tracking new touches
 
-We'll keep track of the touches in-progress.
+We will keep track of all ongoing touches and draw lines for each of them.
 
 ```js
-const ongoingTouches = [];
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+// Mapping from the pointerId to the current finger position
+const ongoingTouches = new Map();
 ```
 
 When a {{domxref("Element/touchstart_event", "touchstart")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
 
 ```js
-function handleStart(evt) {
-  evt.preventDefault();
-  log("touchstart.");
-  const el = document.getElementById("canvas");
-  const ctx = el.getContext("2d");
-  const touches = evt.changedTouches;
+function handleStart(event) {
+  event.preventDefault();
 
-  for (const [i, touch] of touches.entries()) {
-    log(`touchstart: ${i}.`);
-    ongoingTouches.push(copyTouch(touch));
-    const color = colorForTouch(touch);
-    log(`color of touch with id ${touch.identifier} = ${color}`);
+  for (const changedTouch of event.changedTouches) {
+    const touch = {
+      pageX: changedTouch.pageX,
+      pageY: changedTouch.pageY,
+      color: colorForTouch(changedTouch),
+    };
+    ongoingTouches.set(changedTouch.identifier, touch);
     ctx.beginPath();
-    ctx.arc(touch.pageX, touch.pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
-    ctx.fillStyle = color;
+    ctx.arc(touch.pageX, touch.pageY, 4, 0, 2 * Math.PI, false);
+    ctx.fillStyle = touch.color;
     ctx.fill();
   }
 }
+
+canvas.addEventListener("touchstart", handleStart);
 ```
 
 This calls {{domxref("event.preventDefault()")}} to keep the browser from continuing to process the touch event (this also prevents a mouse event from also being delivered). Then we get the context and pull the list of changed touch points out of the event's {{domxref("TouchEvent.changedTouches")}} property.
 
 After that, we iterate over all the {{domxref("Touch")}} objects in the list, pushing them onto an array of active touchpoints and drawing the start point for the draw as a small circle; we're using a 4-pixel wide line, so a 4-pixel radius circle will show up neatly.
 
-#### Drawing as the touches move
-
-Each time one or more fingers move, a {{domxref("Element/touchmove_event", "touchmove")}} event is delivered, resulting in our `handleMove()` function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.
+To make each touch's drawing look different, the `colorForTouch()` function is used to pick a color based on the touch's unique identifier.
+This identifier is an opaque number, but we can at least rely on it differing between the currently-active touches.
 
 ```js
-function handleMove(evt) {
-  evt.preventDefault();
-  const el = document.getElementById("canvas");
-  const ctx = el.getContext("2d");
-  const touches = evt.changedTouches;
-
-  for (const touch of touches) {
-    const color = colorForTouch(touch);
-    const idx = ongoingTouchIndexById(touch.identifier);
-
-    if (idx >= 0) {
-      log(`continuing touch ${idx}`);
-      ctx.beginPath();
-      log(
-        `ctx.moveTo( ${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY} );`,
-      );
-      ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      log(`ctx.lineTo( ${touch.pageX}, ${touch.pageY} );`);
-      ctx.lineTo(touch.pageX, touch.pageY);
-      ctx.lineWidth = 4;
-      ctx.strokeStyle = color;
-      ctx.stroke();
-
-      ongoingTouches.splice(idx, 1, copyTouch(touch)); // swap in the new touch record
-    } else {
-      log("can't figure out which touch to continue");
-    }
-  }
+function colorForTouch(touch) {
+  const r = touch.identifier % 16;
+  const g = Math.floor(touch.identifier / 3) % 16;
+  const b = Math.floor(touch.identifier / 7) % 16;
+  // convert to hex digits
+  return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
 }
 ```
 
-This iterates over the changed touches as well, but it looks in our cached touch information array for the previous information about each touch to determine the starting point for each touch's new line segment to be drawn. This is done by looking at each touch's {{domxref("Touch.identifier")}} property. This property is a unique integer for each touch and remains consistent for each event during the duration of each finger's contact with the surface.
-
-This lets us get the coordinates of the previous position of each touch and use the appropriate context methods to draw a line segment joining the two positions together.
-
-After drawing the line, we call [`Array.splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) to replace the previous information about the touchpoint with the current information in the `ongoingTouches` array.
+The result from this function is a string that can be used when calling {{HTMLElement("canvas")}} functions to set drawing colors.
+For example, for a {{domxref("Touch.identifier")}} value of 10, the resulting string is "#aa3311".
 
 #### Handling the end of a touch
 
-When the user lifts a finger off the surface, a {{domxref("Element/touchend_event", "touchend")}} event is sent. We handle this by calling the `handleEnd()` function below. Its job is to draw the last line segment for each touch that ended and remove the touchpoint from the ongoing touch list.
+When the user lifts a finger off the surface, a {{domxref("Element/touchend_event", "touchend")}} event is sent. We handle this by calling the `handleEnd()` function below. Its job is to draw the last line segment for each touch that ended and remove the touchpoint from the ongoing touch map.
 
 ```js
-function handleEnd(evt) {
-  evt.preventDefault();
-  log("touchend");
-  const el = document.getElementById("canvas");
-  const ctx = el.getContext("2d");
-  const touches = evt.changedTouches;
+function handleEnd(event) {
+  event.preventDefault();
 
-  for (const touch of touches) {
-    const color = colorForTouch(touch);
-    let idx = ongoingTouchIndexById(touch.identifier);
-
-    if (idx >= 0) {
-      ctx.lineWidth = 4;
-      ctx.fillStyle = color;
-      ctx.beginPath();
-      ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      ctx.lineTo(touch.pageX, touch.pageY);
-      ctx.fillRect(touch.pageX - 4, touch.pageY - 4, 8, 8); // and a square at the end
-      ongoingTouches.splice(idx, 1); // remove it; we're done
-    } else {
-      log("can't figure out which touch to end");
+  for (const changedTouch of event.changedTouches) {
+    const touch = ongoingTouches.get(changedTouch.identifier);
+    if (!touch) {
+      console.error(`End: Could not find touch ${changedTouch.identifier}`);
+      continue;
     }
+    ctx.lineWidth = 4;
+    ctx.fillStyle = touch.color;
+    ctx.beginPath();
+    ctx.moveTo(touch.pageX, touch.pageY);
+    ctx.lineTo(changedTouch.pageX, changedTouch.pageY);
+    ctx.fillRect(changedTouch.pageX - 4, changedTouch.pageY - 4, 8, 8);
+    ongoingTouches.delete(changedTouch.identifier);
   }
 }
+
+canvas.addEventListener("touchend", handleEnd);
 ```
 
-This is very similar to the previous function; the only real differences are that we draw a small square to mark the end and that when we call [`Array.splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice), we remove the old entry from the ongoing touch list, without adding in the updated information. The result is that we stop tracking that touchpoint.
+This is very similar to the previous function; the only real differences are that we draw a small square to mark the end and that when we call [`Map.delete()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/delete), we remove the old entry from the ongoing touch map, without adding in the updated information. The result is that we stop tracking that touchpoint.
 
 #### Handling canceled touches
 
 If the user's finger wanders into browser UI, or the touch otherwise needs to be canceled, the {{domxref("Element/touchcancel_event", "touchcancel")}} event is sent, and we call the `handleCancel()` function below.
 
 ```js
-function handleCancel(evt) {
-  evt.preventDefault();
-  log("touchcancel.");
-  const touches = evt.changedTouches;
+function handleCancel(event) {
+  event.preventDefault();
 
-  for (const touch of touches) {
-    let idx = ongoingTouchIndexById(touches[i].identifier);
-    ongoingTouches.splice(idx, 1); // remove it; we're done
-  }
-}
-```
-
-Since the idea is to immediately abort the touch, we remove it from the ongoing touch list without drawing a final line segment.
-
-### Convenience functions
-
-This example uses two convenience functions that should be looked at briefly to help make the rest of the code more clear.
-
-#### Selecting a color for each touch
-
-To make each touch's drawing look different, the `colorForTouch()` function is used to pick a color based on the touch's unique identifier.
-This identifier is an opaque number, but we can at least rely on it differing between the currently-active touches.
-
-```js
-function colorForTouch(touch) {
-  let r = touch.identifier % 16;
-  let g = Math.floor(touch.identifier / 3) % 16;
-  let b = Math.floor(touch.identifier / 7) % 16;
-  r = r.toString(16); // make it a hex digit
-  g = g.toString(16); // make it a hex digit
-  b = b.toString(16); // make it a hex digit
-  const color = `#${r}${g}${b}`;
-  return color;
-}
-```
-
-The result from this function is a string that can be used when calling {{HTMLElement("canvas")}} functions to set drawing colors.
-For example, for a {{domxref("Touch.identifier")}} value of 10, the resulting string is "#a31".
-
-#### Copying a touch object
-
-Some browsers (mobile Safari, for one) re-use touch objects between events, so it's best to copy the properties you care about, rather than referencing the entire object.
-
-```js
-function copyTouch({ identifier, pageX, pageY }) {
-  return { identifier, pageX, pageY };
-}
-```
-
-#### Finding an ongoing touch
-
-The `ongoingTouchIndexById()` function below scans through the `ongoingTouches` array to find the touch matching the given identifier then returns that touch's index into the array.
-
-```js
-function ongoingTouchIndexById(idToFind) {
-  for (let i = 0; i < ongoingTouches.length; i++) {
-    const id = ongoingTouches[i].identifier;
-
-    if (id === idToFind) {
-      return i;
+  for (const changedTouch of event.changedTouches) {
+    if (!ongoingTouches.has(changedTouch.identifier)) {
+      console.error(`Cancel: Could not find touch ${changedTouch.identifier}`);
+      continue;
     }
+    ongoingTouches.delete(changedTouch.identifier);
   }
-  return -1; // not found
 }
+
+canvas.addEventListener("touchcancel", handleCancel);
 ```
 
-#### Showing what's going on
+Since the idea is to immediately abort the touch, we remove it from the ongoing touch map without drawing a final line segment.
+
+#### Drawing as the touches move
+
+Each time one or more fingers move, a {{domxref("Element/touchmove_event", "touchmove")}} event is delivered, resulting in our `handleMove()` function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.
 
 ```js
-function log(msg) {
-  const container = document.getElementById("log");
-  container.textContent = `${msg} \n${container.textContent}`;
+function handleMove(event) {
+  event.preventDefault();
+
+  for (const changedTouch of event.changedTouches) {
+    const touch = ongoingTouches.get(changedTouch.identifier);
+
+    if (!touch) {
+      console.error(`Move: Could not find touch ${changedTouch.identifier}`);
+      continue;
+    }
+
+    ctx.beginPath();
+    ctx.moveTo(touch.pageX, touch.pageY);
+    ctx.lineTo(changedTouch.pageX, changedTouch.pageY);
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = touch.color;
+    ctx.stroke();
+
+    const newTouch = {
+      pageX: changedTouch.pageX,
+      pageY: changedTouch.pageY,
+      color: touch.color,
+    };
+
+    ongoingTouches.set(changedTouch.identifier, newTouch);
+  }
 }
+
+canvas.addEventListener("touchmove", handleMove);
+```
+
+This iterates over the changed touches as well, but it looks in our cached touch information array for the previous information about each touch to determine the starting point for each touch's new line segment to be drawn. This is done by looking at each touch's {{domxref("Touch.identifier")}} property. This property is a unique integer for each touch and remains consistent for each event during the duration of each finger's contact with the surface.
+
+This lets us get the coordinates of the previous position of each touch and use the appropriate context methods to draw a line segment joining the two positions together.
+
+After drawing the line, we call [`Map.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set) to replace the previous information about the touchpoint with the current information in the `touches` map.
+
+#### Clearing button
+
+Finally, add clearing functionality.
+
+```js
+document.getElementById("clear").addEventListener("click", () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
 ```
 
 ### Result
 
 You can test this example on mobile devices by touching the box below.
 
-{{EmbedLiveSample('Example','100%', 900)}}
+{{EmbedLiveSample('drawing application','100%', 900)}}
 
 > [!NOTE]
 > More generally, the example will work on platforms that provide touch events.
@@ -294,51 +240,51 @@ This section provides additional tips on how to handle touch events in your web 
 Since calling `preventDefault()` on a {{domxref("Element/touchstart_event", "touchstart")}} or the first {{domxref("Element/touchmove_event", "touchmove")}} event of a series prevents the corresponding mouse events from firing, it's common to call `preventDefault()` on `touchmove` rather than `touchstart`. That way, mouse events can still fire and things like links will continue to work. Alternatively, some frameworks have taken to re-firing touch events as mouse events for this same purpose. (This example is oversimplified and may result in strange behavior. It is only intended as a guide.)
 
 ```js
-function onTouch(evt) {
-  evt.preventDefault();
+function onTouch(event) {
+  event.preventDefault();
+
   if (
-    evt.touches.length > 1 ||
-    (evt.type === "touchend" && evt.touches.length > 0)
+    event.touches.length > 1 ||
+    (event.type === "touchend" && event.touches.length > 0)
   )
     return;
 
-  const newEvt = document.createEvent("MouseEvents");
-  let type = null;
-  let touch = null;
+  let type;
+  let touch;
 
-  switch (evt.type) {
+  switch (event.type) {
     case "touchstart":
       type = "mousedown";
-      touch = evt.changedTouches[0];
+      touch = event.changedTouches[0];
       break;
     case "touchmove":
       type = "mousemove";
-      touch = evt.changedTouches[0];
+      touch = event.changedTouches[0];
       break;
     case "touchend":
       type = "mouseup";
-      touch = evt.changedTouches[0];
+      touch = event.changedTouches[0];
       break;
   }
 
-  newEvt.initMouseEvent(
-    type,
-    true,
-    true,
-    evt.originalTarget.ownerDocument.defaultView,
-    0,
-    touch.screenX,
-    touch.screenY,
-    touch.clientX,
-    touch.clientY,
-    evt.ctrlKey,
-    evt.altKey,
-    evt.shiftKey,
-    evt.metaKey,
-    0,
-    null,
-  );
-  evt.originalTarget.dispatchEvent(newEvt);
+  const newEvent = new MouseEvent(type, {
+    bubbles: true,
+    cancelable: true,
+    view: event.originalTarget.ownerDocument.defaultView,
+    detail: 0,
+    screenX: touch.screenX,
+    screenY: touch.screenY,
+    clientX: touch.clientX,
+    clientY: touch.clientY,
+    ctrlKey: event.ctrlKey,
+    altKey: event.altKey,
+    shiftKey: event.shiftKey,
+    metaKey: event.metaKey,
+    button: 0,
+    relatedTarget: null,
+  });
+
+  event.originalTarget.dispatchEvent(newEvent);
 }
 ```
 

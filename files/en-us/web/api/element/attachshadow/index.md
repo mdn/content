@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Element.attachShadow
 ---
 
-{{APIRef('Shadow DOM')}}
+{{APIRef("Shadow DOM")}}
 
 The **`Element.attachShadow()`** method attaches a shadow DOM tree to the specified element and returns a reference to its {{domxref("ShadowRoot")}}.
 
@@ -82,6 +82,9 @@ attachShadow(options)
     - `delegatesFocus` {{Optional_Inline}}
       - : A boolean that, when set to `true`, specifies behavior that mitigates custom element issues around focusability.
         When a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling. Its default value is `false`.
+
+    - `referenceTarget` {{Optional_Inline}} {{Experimental_Inline}}
+      - : A string value that indicates the effective target of any element reference made against the shadow host from outside the host element. The value should be the ID of an element inside the shadow DOM. If set, target references to the host element from outside the shadow DOM will cause the referenced target element to become the effective target of the reference to the host element.
 
     - `serializable` {{Optional_Inline}}
       - : A boolean that, when set to `true`, indicates that the shadow root is serializable.

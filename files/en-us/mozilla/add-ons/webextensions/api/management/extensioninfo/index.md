@@ -3,9 +3,8 @@ title: ExtensionInfo
 slug: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
 page-type: webextension-api-type
 browser-compat: webextensions.api.management.ExtensionInfo
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An `ExtensionInfo` object contains information about an add-on.
 
@@ -65,11 +64,11 @@ It is an object with the following properties:
 - `versionName`
   - : `string`. Descriptive name for this add-on's version, taken from the manifest.json [version_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) key.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#type-ExtensionInfo) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.

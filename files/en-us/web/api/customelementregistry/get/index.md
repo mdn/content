@@ -34,16 +34,16 @@ customElements.define(
   "my-paragraph",
   class extends HTMLElement {
     constructor() {
-      let templateContent = document.getElementById("custom-paragraph").content;
+      const template = document.getElementById("custom-paragraph");
       super() // returns element this scope
         .attachShadow({ mode: "open" }) // sets AND returns this.shadowRoot
-        .append(templateContent.cloneNode(true));
+        .append(document.importNode(template.content, true));
     }
   },
 );
 
 // Return a reference to the my-paragraph constructor
-let ctor = customElements.get("my-paragraph");
+const ctor = customElements.get("my-paragraph");
 ```
 
 ## Specifications

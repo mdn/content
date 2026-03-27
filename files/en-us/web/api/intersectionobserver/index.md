@@ -23,7 +23,7 @@ When an `IntersectionObserver` is created, it's configured to watch for given ra
 - {{domxref("IntersectionObserver.root")}} {{ReadOnlyInline}}
   - : The {{domxref("Element")}} or {{domxref("Document")}} whose bounds are used as the bounding box when testing for intersection. If no `root` value was passed to the constructor or its value is `null`, the top-level document's viewport is used.
 - {{domxref("IntersectionObserver.rootMargin")}} {{ReadOnlyInline}}
-  - : An offset rectangle applied to the root's {{Glossary('bounding box')}} when calculating intersections, effectively shrinking or growing the root for calculation purposes. The value returned by this property may not be the same as the one specified when calling the constructor as it may be changed to match internal requirements. Each offset can be expressed in pixels (`px`) or as a percentage (`%`). The default is "0px 0px 0px 0px".
+  - : An offset rectangle applied to the root's {{Glossary('bounding box')}} when calculating intersections, effectively shrinking or growing the root for calculation purposes. The value returned by this property may not be the same as the one specified when calling the constructor as it may be changed to match internal requirements. Each offset can be expressed in pixels (`px`) or percentages (`%`). The default is "0px 0px 0px 0px".
 - {{domxref("IntersectionObserver.scrollMargin")}} {{ReadOnlyInline}}
   - : An offset rectangle applied to each {{glossary("scroll container")}} on the path from intersection root to target, effectively shrinking or growing the clip rectangles used to calculate intersections.
     The value returned by this property may not be the same as the one specified when calling the constructor.

@@ -1,6 +1,6 @@
 ---
 title: "Test your skills: CSS styling basics"
-short-title: Test your skills
+short-title: "Test: Styling basics tests index"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills
 page-type: learn-module-assessment
 sidebar: learnsidebar

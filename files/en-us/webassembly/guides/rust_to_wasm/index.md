@@ -5,7 +5,7 @@ page-type: guide
 sidebar: webassemblysidebar
 ---
 
-If you have some Rust code, you can compile it into [WebAssembly](/en-US/docs/WebAssembly) (Wasm). This tutorial will show you how to compile a Rust project into WebAssembly and use it in an existing web app.
+This tutorial shows you how to compile a Rust project into WebAssembly and use it in an existing web app.
 
 ## Rust and WebAssembly use cases
 
@@ -24,7 +24,7 @@ We'll start by setting up the necessary environment.
 
 ### Install Rust
 
-Install Rust by going to the [Install Rust](https://www.rust-lang.org/tools/install) page and following the instructions. This installs a tool called "rustup", which lets you manage multiple versions of Rust. By default, it installs the latest stable Rust release, which you can use for general Rust development. Rustup installs `rustc`, the Rust compiler, `cargo`, Rust's package manager, `rust-std`, Rust's standard libraries, and some helpful docs — `rust-docs`.
+Install Rust by going to the [Install Rust](https://rust-lang.org/tools/install/) page and following the instructions. This installs a tool called "rustup", which lets you manage multiple versions of Rust. By default, it installs the latest stable Rust release, which you can use for general Rust development. Rustup installs `rustc`, the Rust compiler, `cargo`, Rust's package manager, `rust-std`, Rust's standard libraries, and some helpful docs — `rust-docs`.
 
 > [!NOTE]
 > Pay attention to the post-install note about needing cargo's `bin` directory in your system `PATH`. This is added automatically, but you must restart your terminal for it to take effect.

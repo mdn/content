@@ -3,9 +3,8 @@ title: webRequest.SecurityInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/SecurityInfo
 page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.SecurityInfo
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An object describing the security properties of a particular web request. An object of this type is returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API.
 
@@ -83,8 +82,8 @@ Values of this type are objects. They contain the following properties:
 - `weaknessReasons` {{optional_inline}}
   - : `String`. If `state` is "weak", this indicates the reason. Currently this may contain only a single value "cipher", indicating that the negotiated cipher suite is considered weak.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}

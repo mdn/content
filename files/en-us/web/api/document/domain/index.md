@@ -8,11 +8,11 @@ status:
 browser-compat: api.Document.domain
 ---
 
-{{ApiRef}} {{Deprecated_Header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 The **`domain`** property of the {{domxref("Document")}}
 interface gets/sets the domain portion of the {{glossary("origin")}} of the current
-document, as used by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+document, as used by the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
 ## Value
 
@@ -90,7 +90,7 @@ have not done the same thing.
 #### Deprecation
 
 The `document.domain` setter is deprecated. It undermines the security
-protections provided by the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), and complicates the origin model in browsers, leading to
+protections provided by the [same origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy), and complicates the origin model in browsers, leading to
 interoperability problems and security bugs.
 
 Attempting to set `document.domain` is dangerous. It opens up full access to
@@ -151,7 +151,7 @@ Affected APIs include (but are not limited to):
 
 ## See also
 
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
 - {{domxref("Location.hostname")}}
 - {{domxref("Location.host")}}
 - {{domxref("Window.origin")}}

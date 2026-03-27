@@ -3,9 +3,8 @@ title: tabs.ZoomSettingsMode
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsMode
 page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.ZoomSettingsMode
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Defines how zoom changes are handled. Extensions can pass this value into {{WebExtAPIRef("tabs.setZoomSettings()")}} to control how the browser handles attempts to change zoom settings for a tab. Defaults to "automatic".
 
@@ -20,11 +19,11 @@ Values of this type are strings. Possible values are:
 - "manual"
   - : The extension will handle zoom changes itself, by listening for the {{WebExtAPIRef("tabs.onZoomChange")}} event and scaling the page accordingly. This mode does not support `per-origin` zooming: it will ignore the `scope` [zoom setting](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettings) and always use `per-tab`.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-ZoomSettingsMode) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.

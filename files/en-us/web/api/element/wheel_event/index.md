@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.wheel_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`wheel`** event fires when the user rotates a wheel button on a pointing device (typically a mouse). It is also fired for related devices that simulate wheel actions, such as trackpads and mouse balls.
 
@@ -14,7 +14,7 @@ This event replaces the non-standard deprecated {{domxref("Element/mousewheel_ev
 
 Don't confuse the `wheel` event with the {{domxref("Element/scroll_event", "scroll")}} event:
 
-- A `wheel` event doesn't necessarily dispatch a `scroll` event. For example, the element may be unscrollable at all. Zooming actions using the wheel or trackpad also fire `wheel` events.
+- A `wheel` event doesn't necessarily dispatch a `scroll` event. For example, the element may be unscrollable at all. Zooming actions using the wheel or trackpad also fire `wheel` events (with {{domxref("MouseEvent/ctrlKey", "ctrlKey")}} set to true).
 - A `scroll` event isn't necessarily triggered by a `wheel` event. Elements can also be scrolled by using the keyboard, dragging a scrollbar, or using JavaScript.
 - Even when the `wheel` event does trigger scrolling, the `delta*` values in the `wheel` event don't necessarily reflect the content's scrolling direction.
 
@@ -86,12 +86,15 @@ body {
 div {
   width: 105px;
   height: 105px;
-  background: #cdf;
+  background: #ccddff;
   padding: 5px;
 }
 ```
 
 ```js
+let scale = 1;
+const el = document.querySelector("div");
+
 function zoom(event) {
   event.preventDefault();
 
@@ -104,8 +107,6 @@ function zoom(event) {
   el.style.transform = `scale(${scale})`;
 }
 
-let scale = 1;
-const el = document.querySelector("div");
 el.onwheel = zoom;
 ```
 

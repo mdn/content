@@ -11,7 +11,7 @@ browser-compat: api.VRPose.orientation
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`orientation`** read-only property of the {{domxref("VRPose")}} interface returns the orientation of the sensor at the current timestamp, as a quarternion value.
+The **`orientation`** read-only property of the {{domxref("VRPose")}} interface returns the orientation of the sensor at the current timestamp, as a quaternion value.
 
 > [!NOTE]
 > This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).

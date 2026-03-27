@@ -3,9 +3,8 @@ title: action.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/action/getPopup
 page-type: webextension-api-function
 browser-compat: webextensions.api.action.getPopup
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the HTML document set as the popup for this browser action.
 

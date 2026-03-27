@@ -3,9 +3,8 @@ title: privacy.network
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/network
 page-type: webextension-api-property
 browser-compat: webextensions.api.privacy.network
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `privacy.network` property contains privacy-related network settings. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
 
@@ -35,10 +34,6 @@ Default values for these properties tend to vary across browsers.
 - `globalPrivacyControl`
   - : this setting allows your extension to determine if a user has enabled
     [Global Privacy Control](/en-US/docs/Web/API/Navigator/globalPrivacyControl). This property is read-only on all platforms. Its underlying value is a boolean where `true` indicates that the browser sends Global Privacy Control signals and `false` indicates the browser does not send the signals.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -73,6 +68,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.

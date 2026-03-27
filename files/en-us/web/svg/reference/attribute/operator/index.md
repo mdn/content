@@ -3,8 +3,8 @@ title: operator
 slug: Web/SVG/Reference/Attribute/operator
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-femorphology-operator
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomposite-operator
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-femorphology-operator
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomposite-operator
 sidebar: svgref
 ---
 
@@ -23,8 +23,8 @@ body,
 svg {
   height: 100%;
   font:
-    20px Arial,
-    Helvetica,
+    20px "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```

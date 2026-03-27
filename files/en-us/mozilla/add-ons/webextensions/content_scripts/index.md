@@ -2,16 +2,15 @@
 title: Content scripts
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A content script is a part of your extension that runs in the context of a web page. It can read and modify page content using the standard [Web APIs](/en-US/docs/Web/API). Content script behavior is similar to scripts that are part of a website, such as those loaded using the {{HTMLElement("script")}} element). However, content scripts can only access page content when [host permissions for the web page's origin are granted](#permissions).
 
 Content scripts can access [a small subset of the WebExtension APIs](#webextension_apis), but they can [communicate with background scripts](#communicating_with_background_scripts) using a messaging system and thereby indirectly access the WebExtension APIs. [Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) can access all the [WebExtension JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) but can't directly access the content of web pages.
 
 > [!NOTE]
-> Some Web APIs are restricted to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which also applies to content scripts running in these contexts. Except for {{domxref("PointerEvent.getCoalescedEvents()")}}, which can be called from content scripts in insecure contexts in Firefox.
+> Some Web APIs are restricted to [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts), which also applies to content scripts running in these contexts. Except for {{domxref("PointerEvent.getCoalescedEvents()")}}, which can be called from content scripts in insecure contexts in Firefox.
 
 ## Loading content scripts
 
@@ -25,10 +24,6 @@ You can load a content script into a web page:
    - Using {{WebExtAPIRef("scripting.executeScript()")}} or (in Manifest V2 only) {{WebExtAPIRef("tabs.executeScript()")}}, you can load a content script into a specific tab whenever you want. (For example, in response to the user clicking on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button).)
 
 There is only one global scope _per frame, per extension_. This means that variables from a content script can be accessed by any other content scripts, regardless of how the content script was loaded.
-
-Using methods (1) and (2), you can only load scripts into pages whose URLs can be represented using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
-
-Using method (3), you can also load scripts into pages packaged with your extension, but you can't load scripts into privileged browser pages (like `about:debugging` or `about:addons`).
 
 > [!NOTE]
 > [Dynamic JS module imports](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading) are now working in content scripts. For more details, see [Firefox bug 1536094](https://bugzil.la/1536094).
@@ -50,7 +45,7 @@ Registered content scripts are only executed if the extension is granted [host p
 
 To inject scripts programmatically, the extension needs either the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). The `scripting` permission is required to use methods from the {{WebExtAPIRef("scripting")}} API.
 
-Starting with Manifest V3, host permissions are not automatically granted at install time. Users may opt in or out of host permissions after installing the extension.
+On installation, an extension can request host permissions for hosts in its `matches` lists of the `content_scripts` manifest key. Users can opt in or out of host permissions after installing the extension.
 
 ### Restricted domains
 
@@ -80,7 +75,11 @@ The set of domains can be restricted further through enterprise policies: Firefo
 
 ### Limitations
 
-Whole tabs or frames may be loaded using [`data:` URI](/en-US/docs/Web/URI/Reference/Schemes/data), {{DOMxRef("URL.createObjectURL_static", "Blob")}} objects, and other similar techniques. Support of content scripts injection into such special documents varies across browsers, see the Firefox [bug #1411641 comment 41](https://bugzil.la/1411641#c41) for some details.
+By default, content scripts do not run in `about:blank`, `about:srcdoc`, `data:`, and `blob:` pages. To enable their execution, use the [`match_origin_as_fallback`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#match_origin_as_fallback) option in the `content_scripts` manifest key or the [`matchOriginAsFallback`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/RegisteredContentScript#matchoriginasfallback) option in the `scripting` API.
+
+Extensions cannot inject content scripts into privileged browser UI pages (such as `about:debugging`, `about:addons`, reader view, view-source, or the PDF viewer) or [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages).
+
+If an extension wants to run code in an extension page dynamically, it can include a script in the page. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
 
 ## Content script environment
 
@@ -96,7 +95,7 @@ However, content scripts get a "clean" view of the DOM. This means:
 As noted at ["Content script environment" at Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#content_script_environment), the behavior differs across browsers:
 
 - In Firefox, this behavior is called [Xray vision](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox).
-  Content scripts may encounter JavaScript objects from its own global scope or Xray-wrapped versions from the web page.
+  A content script may encounter JavaScript objects from its global scope or Xray-wrapped versions from the web page. In regular web pages, {{jsxref("globalThis")}} is identical to `window`, but in Firefox's content scripts, `globalThis` is a distinct object inheriting from `window`. This distinction often makes no practical difference for the availability of global APIs. The exception is when the global scope contains a definition of a standard API that shadows the definition in `window`, such as [`structuredClone` in content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#structuredclone).
 
 - In Chrome this behavior is enforced through an [isolated world](https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/bindings/core/v8/V8BindingDesign.md#world), which uses a fundamentally different approach.
 

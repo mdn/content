@@ -3,9 +3,8 @@ title: notifications.onButtonClicked
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked
 page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onButtonClicked
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the user clicks one of the notification's buttons.
 
@@ -37,11 +36,11 @@ Events have three functions:
     - `buttonIndex`
       - : `integer`. The [zero-based](https://en.wikipedia.org/wiki/Zero-based_numbering) index of the button that was clicked.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

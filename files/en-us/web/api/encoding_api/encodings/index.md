@@ -124,7 +124,7 @@ The following table lists all encoding labels that user agents must support, alo
         <code>"logical"</code>
       </td>
       <td>
-        <a href="https://en.wikipedia.org/wiki/ISO-8859-8-I">iso-8859-8i</a>
+        <a href="https://en.wikipedia.org/wiki/ISO-8859-8-I">iso-8859-8-i</a>
       </td>
     </tr>
     <tr>
@@ -320,12 +320,6 @@ The following table lists all encoding labels that user agents must support, alo
       </td>
     </tr>
     <tr>
-      <td><code>"hz-gb-2312"</code></td>
-      <td>
-        <a href="https://en.wikipedia.org/wiki/HZ_(character_encoding)">hz-gb-2312</a>
-      </td>
-    </tr>
-    <tr>
       <td>
         <code>"big5"</code>, <code>"big5-hkscs"</code>, <code>"cn-big5"</code>,
         <code>"csbig5"</code>, <code>"x-x-big5"</code>
@@ -356,7 +350,7 @@ The following table lists all encoding labels that user agents must support, alo
         <code>"windows-31j"</code>, <code>"x-sjis"</code>
       </td>
       <td>
-        <a href="https://en.wikipedia.org/wiki/Shift_JIS">shift-jis</a>
+        <a href="https://en.wikipedia.org/wiki/Shift_JIS">shift_jis</a>
       </td>
     </tr>
     <tr>
@@ -369,12 +363,6 @@ The following table lists all encoding labels that user agents must support, alo
       </td>
       <td>
         <a href="https://en.wikipedia.org/wiki/Extended_Unix_Code#EUC-KR">euc-kr</a>
-      </td>
-    </tr>
-    <tr>
-      <td><code>"csiso2022kr"</code>, <code>"iso-2022-kr"</code></td>
-      <td>
-        <a href="https://en.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-KR">iso-2022-kr</a>
       </td>
     </tr>
     <tr>
@@ -392,10 +380,6 @@ The following table lists all encoding labels that user agents must support, alo
     <tr>
       <td><code>"x-user-defined"</code></td>
       <td><code>"x-user-defined"</code></td>
-    </tr>
-    <tr>
-      <td><code>"iso-2022-cn"</code>, <code>"iso-2022-cn-ext"</code></td>
-      <td><code>"replacement"</code></td>
     </tr>
   </tbody>
 </table>

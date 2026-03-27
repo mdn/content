@@ -23,7 +23,7 @@ In HTML, for example, the {{htmlelement("Heading_Elements", "h1")}} element is a
 <h1>This is a top level heading</h1>
 ```
 
-By default, most browser's [user agent stylesheet](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user-agent_stylesheets) will style an {{htmlelement("Heading_Elements", "h1")}} with a large font size to make it _look_ like a heading (although you could style it to look like anything you wanted).
+By default, most browser's [user agent stylesheet](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#user-agent_stylesheets) will style an {{htmlelement("Heading_Elements", "h1")}} with a large font size to make it _look_ like a heading (although you could style it to look like anything you wanted).
 
 On the other hand, you could make any element _look_ like a top level heading. Consider the following:
 

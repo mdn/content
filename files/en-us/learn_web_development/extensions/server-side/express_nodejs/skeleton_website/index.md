@@ -10,10 +10,6 @@ sidebar: learnsidebar
 
 This second article in our [Express Tutorial](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) shows how you can create a "skeleton" website project which you can then go on to populate with site-specific routes, templates/views, and database calls.
 
-> [!WARNING]
-> The Express tutorial is written for Express version 4, while the latest version is Express 5.
-> We plan to update the documentation in the second half of 2025.
-
 <table>
   <tbody>
     <tr>
@@ -44,7 +40,7 @@ The following sections show you how to call the application generator, and provi
 > - The _Express Application Generator_ declares most variables using `var`.
 >   We have changed most of these to [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) (and a few to [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)) in the tutorial, because we want to demonstrate modern JavaScript practice.
 > - This tutorial uses the version of _Express_ and other dependencies that are defined in the **package.json** created by the _Express Application Generator_.
->   These are not (necessarily) the latest version, and you may want to update them when deploying a real application to production.
+>   These are not (necessarily) the latest version, and you should update them when deploying a real application to production.
 
 ## Using the application generator
 
@@ -112,7 +108,7 @@ Generally speaking, you should select a templating engine that delivers all the 
 > [!NOTE]
 > There are many resources on the Internet to help you compare the different options!
 
-For this project, we'll use the [Pug](https://pugjs.org/api/getting-started.html) templating engine (this is the recently-renamed Jade engine), as this is one of the most popular Express/JavaScript templating languages and is supported out of the box by the generator.
+For this project, we'll use the [Pug](https://pugjs.org/api/getting-started.html) templating engine (previously called "Jade"), as this is one of the most popular Express/JavaScript templating languages and is supported out of the box by the generator.
 
 ### What CSS stylesheet engine should I use?
 
@@ -170,7 +166,7 @@ The generator will create (and list) the project's files.
      > DEBUG=express-locallibrary-tutorial:* npm start
 
    run the app (PowerShell (Windows))
-     > $ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
+     > $env:DEBUG = "express-locallibrary-tutorial:*"; npm start
 
    run the app (Command Prompt (Windows)):
      > SET DEBUG=express-locallibrary-tutorial:* & npm start
@@ -203,7 +199,7 @@ At this point, we have a complete skeleton project. The website doesn't actually
    - On Windows PowerShell, use this command:
 
      ```powershell
-     ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
+     $env:DEBUG = "express-locallibrary-tutorial:*"; npm start
      ```
 
      > [!NOTE]
@@ -258,21 +254,25 @@ npm install -g nodemon
 If you open your project's **package.json** file you'll now see a new section with this dependency:
 
 ```json
- "devDependencies": {
-    "nodemon": "^3.1.3"
+{
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
 ```
 
-Because the tool isn't installed globally we can't launch it from the command line (unless we add it to the path) but we can call it from an npm script because npm knows all about the installed packages. Find the `scripts` section of your package.json. Initially, it will contain one line, which begins with `"start"`. Update it by putting a comma at the end of that line, and adding the `"devstart"` and `"serverstart"` lines:
+Because the tool isn't installed globally, we can't launch it from the command line (unless we add it to the path). However, we can call it from an npm script because npm knows which packages are installed. Find the `scripts` section of your **package.json**. Initially, it will contain one line, which begins with `"start"`. Update it by putting a comma at the end of that line, and adding the `"devstart"` and `"serverstart"` lines:
 
 - On Linux and macOS, the scripts section will look like this:
 
   ```json
+  {
     "scripts": {
       "start": "node ./bin/www",
       "devstart": "nodemon ./bin/www",
       "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
-    },
+    }
+  }
   ```
 
 - On Windows, the "serverstart" value would instead look like this (if using the command prompt):
@@ -293,6 +293,7 @@ We can now start the server in almost exactly the same way as previously, but us
 ## The generated project
 
 Let's now take a look at the project we just created.
+We'll be making some minor modifications to this as we go along.
 
 ### Directory structure
 
@@ -349,7 +350,7 @@ The **package.json** file defines the application dependencies and other informa
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "nodemon": "^3.1.3"
+    "nodemon": "^3.1.10"
   }
 }
 ```
@@ -360,11 +361,13 @@ We already modified this section in [Enable server restart on file changes](#ena
 These can be used to start the same **./bin/www** file with _nodemon_ rather than _node_ (this version of the scripts is for Linux and macOS, as discussed above).
 
 ```json
+{
   "scripts": {
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
     "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
-  },
+  }
+}
 ```
 
 The dependencies include the _express_ package and the package for our selected view engine (_pug_).
@@ -379,14 +382,16 @@ The default versions in the generated project are a little out of date.
 Replace the dependencies section of your `package.json` file with the following text, which specifies the latest versions of these libraries at the time of writing:
 
 ```json
+{
   "dependencies": {
-    "cookie-parser": "^1.4.6",
-    "debug": "^4.3.5",
-    "express": "^4.19.2",
+    "cookie-parser": "^1.4.7",
+    "debug": "^4.4.1",
+    "express": "^5.1.0",
     "http-errors": "~2.0.0",
     "morgan": "^1.10.0",
     "pug": "3.0.3"
-  },
+  }
+}
 ```
 
 Then update your installed dependencies using the command:
@@ -396,7 +401,7 @@ npm install
 ```
 
 > [!NOTE]
-> It is a good idea to regularly update to the latest compatible versions of your dependency libraries — this may even be done automatically or semi-automatically as part of a continuous integration setup.
+> It is a good idea to regularly update to the latest compatible versions of your dependency libraries — this may even be done automatically or semi-automatically as part of a {{glossary("continuous integration")}} setup.
 >
 > Usually library updates to the minor and patch version remain compatible.
 > We've prefixed each version with `^` above so that we can automatically update to the latest `minor.patch` version by running:
@@ -553,7 +558,7 @@ One thing of interest above is that the callback function has the third argument
 
 ### Views (templates)
 
-The views (templates) are stored in the **/views** directory (as specified in **app.js**) and are given the file extension **.pug**. The method [`Response.render()`](https://expressjs.com/en/4x/api.html#res.render) is used to render a specified template along with the values of named variables passed in an object, and then send the result as a response. In the code below from **/routes/index.js** you can see how that route renders a response using the template "index" passing the template variable "title".
+The views (templates) are stored in the **/views** directory (as specified in **app.js**) and are given the file extension **.pug**. The method [`Response.render()`](https://expressjs.com/en/5x/api.html#res.render) is used to render a specified template along with the values of named variables passed in an object, and then send the result as a response. In the code below from **/routes/index.js** you can see how that route renders a response using the template "index" passing the template variable "title".
 
 ```js
 /* GET home page. */

@@ -3,9 +3,8 @@ title: runtime.getBrowserInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getBrowserInfo
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns information about the browser in which the extension is installed.
 

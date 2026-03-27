@@ -28,7 +28,7 @@ p {
 }
 
 u {
-  text-decoration: #f00 wavy underline;
+  text-decoration: red wavy underline;
 }
 ```
 

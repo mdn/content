@@ -1,5 +1,5 @@
 ---
-title: Firefox 89 for developers
+title: Firefox 89 release notes for developers
 short-title: Firefox 89
 slug: Mozilla/Firefox/Releases/89
 page-type: firefox-release-notes
@@ -12,10 +12,6 @@ This article provides information about the changes in Firefox 89 that will affe
 > See also [Looking fine with Firefox 89](https://hacks.mozilla.org/2021/06/looking-fine-with-firefox-89/) on Mozilla Hacks.
 
 ## Changes for web developers
-
-### Developer Tools
-
-_No changes._
 
 ### HTML
 

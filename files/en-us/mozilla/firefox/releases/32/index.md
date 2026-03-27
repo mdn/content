@@ -1,5 +1,5 @@
 ---
-title: Firefox 32 for developers
+title: Firefox 32 release notes for developers
 short-title: Firefox 32
 slug: Mozilla/Firefox/Releases/32
 page-type: firefox-release-notes
@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 32 was released on September 2, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -51,10 +51,10 @@ Highlights:
 - The {{domxref("KeyboardEvent.getModifierState()")}} and {{domxref("MouseEvent.getModifierState()")}} methods have been extended to support the `Accel` virtual modifier ([Firefox bug 1009388](https://bugzil.la/1009388)).
 - The {{domxref("KeyboardEvent.code")}} property have been experimentally implemented: it is disabled on release build ([Firefox bug 865649](https://bugzil.la/865649)).
 - Scoped selectors for {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, for example `querySelector(":scope > li")` have been implemented ([Firefox bug 528456](https://bugzil.la/528456)).
-- The experimental implementation of the {{domxref("Document.timeline")}} interface, related to the [Web Animation API](https://drafts.fxtf.org/web-animations/), has been added ([Firefox bug 998246](https://bugzil.la/998246)). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
-- The [Data Store API](/en-US/docs/Web/API/Data_Store_API) has been made available to [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) ([Firefox bug 949325](https://bugzil.la/949325)). It still is only activated for certified applications.
-- The [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API) {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ([Firefox bug 967264](https://bugzil.la/967264)).
-- The [MSISDN Verification API](/en-US/docs/Web/API/MSISDN_Verification_API), only activated for privileged apps, has been added ([Firefox bug 988469](https://bugzil.la/988469)).
+- The experimental implementation of the {{domxref("Document.timeline")}} interface, related to the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API), has been added ([Firefox bug 998246](https://bugzil.la/998246)). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
+- The [Data Store API](https://web.archive.org/web/20210613234447/https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/Data_Store_API) has been made available to [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) ([Firefox bug 949325](https://bugzil.la/949325)). It still is only activated for certified applications.
+- The [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API) `InstallPhaseEvent` and {{domxref("InstallEvent")}} interfaces have been implemented ([Firefox bug 967264](https://bugzil.la/967264)).
+- The MSISDN Verification API, only activated for privileged apps, has been added ([Firefox bug 988469](https://bugzil.la/988469)).
 - The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is now supported on Firefox for Android ([Firefox bug 852935](https://bugzil.la/852935)).
 - To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape_static", "CSS.escape()")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ([Firefox bug 1008719](https://bugzil.la/1008719))
 - To complete our Hit Regions implementation, `MouseEvent.region` has been implemented ([Firefox bug 979692](https://bugzil.la/979692)).
@@ -109,8 +109,8 @@ A `getDataDirectory()` method has been added to `Addon` instances. This method r
 
 #### Highlights
 
-- Added [`exclude`](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-mod#pagemod%28options%29) option to `PageMod`.
-- Added [`anonymous`](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/request#request%28options%29) option to `Request`.
+- Added [`exclude`](https://web.archive.org/web/20210216122834/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/High-Level_APIs/page-mod#pagemod%28options%29) option to `PageMod`.
+- Added [`anonymous`](https://web.archive.org/web/20201201022954/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/High-Level_APIs/request#request%28options%29) option to `Request`.
 - [Add-on Debugger](https://extensionworkshop.com/documentation/develop/debugging/) now includes a Console and a Scratchpad.
 
 #### Details

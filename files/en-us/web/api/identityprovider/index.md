@@ -9,7 +9,7 @@ browser-compat: api.IdentityProvider
 
 {{APIRef("FedCM API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`IdentityProvider`** interface of the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) represents an identity provider (IdP) and provides access to related information and functionality.
+The **`IdentityProvider`** interface of the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) represents an {{glossary("Identity provider", "IdP")}} and provides access to related information and functionality.
 
 {{InheritanceDiagram}}
 
@@ -18,9 +18,13 @@ The **`IdentityProvider`** interface of the [Federated Credential Management (Fe
 - {{domxref("IdentityProvider.close_static", "close()")}} {{experimental_inline}}
   - : Provides a manual signal to the browser that an IdP sign-in flow is finished. This is needed to, for example, close the IdP sign-in dialog when sign-in is completely finished and the IdP has finished collecting data from the user.
 - {{domxref("IdentityProvider.getUserInfo_static", "getUserInfo()")}} {{experimental_inline}}
-  - : Returns information about a previously signed in user on their return to an IdP, which can be used to provide a personalized welcome message and sign-in button.
+  - : Returns information about a previously-signed in user on their return to an IdP, which can be used to provide a personalized welcome message and sign-in button.
 
 ## Examples
+
+### Basic `IdentityProvider.getUserInfo()` usage
+
+The following example shows how the {{domxref("IdentityProvider.getUserInfo_static", "getUserInfo()")}} method can be used to return information on a previously-signed in user from a specific IdP.
 
 ```js
 // Iframe displaying a page from the https://idp.example origin
@@ -55,4 +59,4 @@ if (userInfo.length > 0) {
 
 ## See also
 
-- [Federated Credential Management API](https://privacysandbox.google.com/cookies/fedcm) on privacysandbox.google.com (2023)
+- [Federated Credential Management API](https://developer.chrome.com/docs/identity/fedcm/overview) on developer.chrome.com (2023)

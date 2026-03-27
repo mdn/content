@@ -1,11 +1,12 @@
 ---
-title: Extend
-slug: WebAssembly/Reference/Numeric/Extend
+title: "extend: Wasm text instruction"
+short-title: extend
+slug: WebAssembly/Reference/Numeric/extend
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`extend`** instructions, are used to convert (extend) numbers of type `i32` to type `i64`. There are signed and unsigned versions of this instruction.
+The **`extend`** instructions are used to convert (extend) numbers of type `i32` to type `i64`. There are signed and unsigned versions of this instruction.
 
 {{InteractiveExample("Wat Demo: extend", "tabbed-taller")}}
 

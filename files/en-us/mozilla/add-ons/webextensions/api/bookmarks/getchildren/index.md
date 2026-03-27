@@ -3,9 +3,8 @@ title: bookmarks.getChildren()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
 page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.getChildren
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 **`bookmarks.getChildren()`** retrieves all the immediate children of a bookmark folder, identified as a {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} ID.
 

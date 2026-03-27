@@ -1,5 +1,5 @@
 ---
-title: Firefox 34 for developers
+title: Firefox 34 release notes for developers
 short-title: Firefox 34
 slug: Mozilla/Firefox/Releases/34
 page-type: firefox-release-notes
@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 34 was released on December 1st, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -106,8 +106,8 @@ _No change._
 
 #### Highlights
 
-- New API: [dev/panel](/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/dev_panel) enables you to extend the Firefox Developer Tools.
-- [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm) beta released.
+- New API: [dev/panel](https://web.archive.org/web/20210517043357/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Low-Level_APIs/dev_panel) enables you to extend the Firefox Developer Tools.
+- [jpm](https://web.archive.org/web/20210221222338/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Tools/jpm) beta released.
 - `"./my-file"` introduced everywhere as an alias for `require("sdk/self").data.url("my-file")`
 - Added the ability to [attach stylesheets to individual tabs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#manipulating_a_tabs_css).
 

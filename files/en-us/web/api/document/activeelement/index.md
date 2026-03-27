@@ -10,7 +10,7 @@ browser-compat: api.Document.activeElement
 
 The **`activeElement`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("Element")}} within the DOM that is receiving keyboard events such as {{domxref("Element/keydown_event", "keydown")}} and {{domxref("Element/keyup_event", "keyup")}}. This is usually analogous to the focused element.
 
-Which elements are focusable varies depending on the platform and the browser's current configuration. For example, on Safari, following the behavior of macOS, elements that aren't text input elements are not focusable by default, unless the "Full Keyboard Access" setting is enabled in System Preferences.
+Which elements are focusable varies depending on the platform and the browser's current configuration. For example, on Safari, following the behavior of macOS, elements that aren't text input elements are not focusable by default, unless the "Full Keyboard Access" setting is enabled in System Settings.
 
 Typically a user can press the <kbd>Tab</kbd> key to move the focus around the page among focusable elements, and use keyboard gestures such as <kbd>Space</kbd> or <kbd>Enter</kbd> to simulate clicks on the focused element.
 
@@ -63,8 +63,8 @@ function onMouseUp(e) {
 
 const textarea1 = document.getElementById("ta-example-one");
 const textarea2 = document.getElementById("ta-example-two");
-textarea1.addEventListener("mouseup", onMouseUp, false);
-textarea2.addEventListener("mouseup", onMouseUp, false);
+textarea1.addEventListener("mouseup", onMouseUp);
+textarea2.addEventListener("mouseup", onMouseUp);
 ```
 
 ### Result

@@ -3,9 +3,8 @@ title: downloads.getFileIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.getFileIcon
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`getFileIcon()`** function of the {{WebExtAPIRef("downloads")}} API retrieves an icon for the specified download.
 
@@ -37,10 +36,6 @@ let gettingIcon = browser.downloads.getFileIcon(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the request succeeds, the promise will be fulfilled with a string representing the absolute URL of the icon. If the request fails, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example logs the icon URL for the most recent download:
@@ -71,6 +66,10 @@ searching.then(getIcon, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-getFileIcon) API.

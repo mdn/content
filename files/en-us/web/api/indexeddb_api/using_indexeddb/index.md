@@ -44,8 +44,9 @@ The open request doesn't open the database or start the transaction right away. 
 The second parameter to the open method is the version of the database. The version of the database determines the database schema — the object stores in the database and their structure. If the database doesn't already exist, it is created by the `open` operation, then an `onupgradeneeded` event is triggered and you create the database schema in the handler for this event. If the database does exist but you are specifying an upgraded version number, an `onupgradeneeded` event is triggered straight away, allowing you to provide an updated schema in its handler. More on this later in [Creating or updating the version of the database](#creating_or_updating_the_version_of_the_database) below, and the {{ domxref("IDBFactory.open") }} reference page.
 
 > [!WARNING]
-> The version number is an `unsigned long long` number, which means that it can be a very big integer. It also means that you can't use a float, otherwise it will be converted to the closest lower integer and the transaction may not start, nor the `upgradeneeded` event trigger. So for example, don't use 2.4 as a version number:
-> `const request = indexedDB.open("MyTestDatabase", 2.4); // don't do this, as the version will be rounded to 2`
+> Version numbers are integers, so the values passed are subject to rounding—for example, values of 2.1 and 2.4 are both rounded to 2.
+> Attempting to upgrade between numbers that round to the same integer will not fire an `onupgradeneeded` event.
+> When working with large version numbers please also note the [range of integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding) representable in JavaScript.
 
 #### Generating handlers
 
@@ -490,6 +491,25 @@ index.openKeyCursor().onsuccess = (event) => {
 };
 ```
 
+The index can also be created on multiple properties, allowing to look up records using a combination of values, such as finding a person by both their name and email. To create a compound index, pass an array of property names as the key path when calling `createIndex`. You can then query the index by passing an array of values in the same order.
+
+First, make sure you created the index in `request.onupgradeneeded`:
+
+```js
+const index = objectStore.createIndex("name_email", ["name", "email"]);
+```
+
+Then later you can query the index like this:
+
+```js
+const index = objectStore.index("name_email");
+
+index.get(["Donna", "donna@home.org"]).onsuccess = (event) => {
+  console.log(event.target.result);
+  // {ssn: '555-55-5555', name: 'Donna', age: 32, email: 'donna@home.org'}
+};
+```
+
 ### Specifying the range and direction of cursors
 
 If you would like to limit the range of values you see in a cursor, you can use an `IDBKeyRange` object and pass it as the first argument to `openCursor()` or `openKeyCursor()`. You can make a key range that only allows a single key, or one that has a lower or upper bound, or one that has both a lower and upper bound. The bound may be "closed" (i.e., the key range includes the given value(s)) or "open" (i.e., the key range does not include the given value(s)). Here's how it works:
@@ -642,7 +662,7 @@ Further reading for you to find out more information if desired.
 
 - [IndexedDB API Reference](/en-US/docs/Web/API/IndexedDB_API)
 - [Indexed Database API Specification](https://w3c.github.io/IndexedDB/)
-- IndexedDB [interface files](https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) in the Firefox source code
+- IndexedDB [interface files](https://searchfox.org/firefox-main/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) in the Firefox source code
 
 ### Tutorials and guides
 

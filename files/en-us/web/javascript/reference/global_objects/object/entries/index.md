@@ -12,12 +12,12 @@ The **`Object.entries()`** static method returns an array of a given object's ow
 {{InteractiveExample("JavaScript Demo: Object.entries()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   a: "some string",
   b: 42,
 };
 
-for (const [key, value] of Object.entries(object1)) {
+for (const [key, value] of Object.entries(object)) {
   console.log(`${key}: ${value}`);
 }
 

@@ -242,7 +242,6 @@ async function receiveBidirectional() {
 For complete examples, see:
 
 - [WebTransport over HTTP/3 client](https://webtransport.day/)
-- [WebTransport (BYOB) Echo with WebCodecs in Worker](https://webrtc.internaut.com/wc/wtSender4/)
 
 ## Specifications
 

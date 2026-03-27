@@ -1,14 +1,14 @@
 ---
-title: Firefox 47 for developers
+title: Firefox 47 release notes for developers
 short-title: Firefox 47
 slug: Mozilla/Firefox/Releases/47
 page-type: firefox-release-notes
 sidebar: firefox
 ---
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 47 was released on June 6, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) Firefox 47 was released on June 6, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -35,7 +35,7 @@ _No change._
 ### CSS
 
 - Support for the {{cssxref("::backdrop")}} pseudo-element has been added ([Firefox bug 1064843](https://bugzil.la/1064843)).
-- The case-insensitive modifier `i` (like in `[foo=bar i]`) for [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) has been implemented ([Firefox bug 888190](https://bugzil.la/888190)).
+- The case-insensitive modifier `i` (like in `[foo=bar i]`) for [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) has been implemented ([Firefox bug 888190](https://bugzil.la/888190)).
 - An experimental implementation of CSS Mask Image properties landed. For the moment, this will only be available on Nightly versions of Firefox.y: shorthand version of {{cssxref("mask")}}, as well as {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-size")}} are now available ([Firefox bug 686281](https://bugzil.la/686281)).
 - The {{cssxref("clip-path")}} property now experimentally supports `polygon()`, `ellipse()`, and `circle()` on HTML elements (does not support [inset()](https://bugzil.la/1246762) and [path()](https://bugzil.la/1246764)), behind the pref `layout.css.clip-path-shapes.enabled` that defaults to `false` ([Firefox bug 1075457](https://bugzil.la/1075457)). Interpolation (and therefore animation) of these values is not yet supported.
 - Our still experimental grid implementation has been updated:
@@ -71,7 +71,7 @@ _No change._
 
 - The {{domxref("Request.Request", "Request()")}} constructor can now accept a referrer option in its init object ([Firefox bug 1251448](https://bugzil.la/1251448)).
 - The {{domxref("Request.referrerPolicy")}} property is now supported ([Firefox bug 1251872](https://bugzil.la/1251872)).
-- [Service workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API) have been disabled in the [Firefox 45 Extended Support Release](https://www.mozilla.org/en-US/firefox/enterprise/) (ESR) ([Firefox bug 1232029](https://bugzil.la/1232029)).
+- [Service workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API) have been disabled in the [Firefox 45 Extended Support Release](https://www.firefox.com/en-US/browsers/enterprise/) (ESR) ([Firefox bug 1232029](https://bugzil.la/1232029)).
 
 #### WebRTC
 

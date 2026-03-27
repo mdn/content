@@ -89,7 +89,7 @@ As with some other programming tools, using the terminal (or command line) on Wi
 
 Windows has traditionally had its own terminal-like program called `cmd` ("the command prompt") for a long time, but this doesn't have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
 
-Better programs exist for providing a terminal experience on Windows, such as PowerShell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Gitbash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset).
+Better programs exist for providing a terminal experience on Windows, such as PowerShell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Git Bash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset).
 
 However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a "true terminal" directly on Windows, without needing a virtual machine.
 
@@ -464,7 +464,7 @@ With Prettier there's a number of ways automation can be achieved and though the
 
 - Before you commit your code into a git repository using [Husky](https://github.com/typicode/husky).
 - Whenever you hit "save" in your code editor, be it [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), or [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
-- As part of continuous integration checks using tools like [GitHub Actions](https://github.com/features/actions).
+- As part of {{glossary("continuous integration")}} checks using tools like [GitHub Actions](https://github.com/features/actions).
 
 Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the [Prettier docs](https://prettier.io/docs/).
 

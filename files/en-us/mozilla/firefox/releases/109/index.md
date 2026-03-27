@@ -1,5 +1,5 @@
 ---
-title: Firefox 109 for developers
+title: Firefox 109 release notes for developers
 short-title: Firefox 109
 slug: Mozilla/Firefox/Releases/109
 page-type: firefox-release-notes
@@ -16,7 +16,7 @@ This article provides information about the changes in Firefox 109 that will aff
 
 ### CSS
 
-- The [`<system-color>`](/en-US/docs/Web/CSS/system-color) CSS data type now supports the values `Mark`, `MarkText`, and `ButtonBorder` ([Firefox bug 1638052](https://bugzil.la/1638052)).
+- The [`<system-color>`](/en-US/docs/Web/CSS/Reference/Values/system-color) CSS data type now supports the values `Mark`, `MarkText`, and `ButtonBorder` ([Firefox bug 1638052](https://bugzil.la/1638052)).
 
 ### JavaScript
 

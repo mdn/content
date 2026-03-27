@@ -12,12 +12,12 @@ The **`exec()`** method of {{jsxref("RegExp")}} instances executes a search with
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.exec()")}}
 
 ```js interactive-example
-const regex1 = /fo+/g;
-const str1 = "table football, foosball";
-let array1;
+const regex = /fo+/g;
+const str = "table football, foosball";
+let array;
 
-while ((array1 = regex1.exec(str1)) !== null) {
-  console.log(`Found ${array1[0]}. Next starts at ${regex1.lastIndex}.`);
+while ((array = regex.exec(str)) !== null) {
+  console.log(`Found ${array[0]}. Next starts at ${regex.lastIndex}.`);
   // Expected output: "Found foo. Next starts at 9."
   // Expected output: "Found foo. Next starts at 19."
 }

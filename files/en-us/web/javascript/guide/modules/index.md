@@ -136,9 +136,9 @@ Once you've imported the features into your script, you can use them just like t
 const myCanvas = create("myCanvas", document.body, 480, 320);
 const reportList = createReportList(myCanvas.id);
 
-const square1 = draw(myCanvas.ctx, 50, 50, 100, "blue");
-reportArea(square1.length, reportList);
-reportPerimeter(square1.length, reportList);
+const square = draw(myCanvas.ctx, 50, 50, 100, "blue");
+reportArea(square.length, reportList);
+reportPerimeter(square.length, reportList);
 ```
 
 > [!NOTE]
@@ -320,7 +320,7 @@ The example below demonstrates this.
 }
 ```
 
-With this mapping, if a script with an URL that contains `/node_modules/dependency/` imports `cool-module`, the version in `/node_modules/some/other/location/cool-module/index.js` will be used.
+With this mapping, if a script with a URL that contains `/node_modules/dependency/` imports `cool-module`, the version in `/node_modules/some/other/location/cool-module/index.js` will be used.
 The map in `imports` is used as a fallback if there is no matching scope in the scoped map, or the matching scopes don't contain a matching specifier. For example, if `cool-module` is imported from a script with a non-matching scope path, then the module specifier map in `imports` will be used instead, mapping to the version in `/node_modules/cool-module/index.js`.
 
 Note that the path used to select a scope does not affect how the address is resolved.
@@ -421,7 +421,7 @@ Module-defined variables are scoped to the module unless explicitly attached to 
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <title>Example page</title>
     <link rel="stylesheet" href="" />
   </head>
   <body>
@@ -611,9 +611,9 @@ import * as Triangle from "./modules/triangle.js";
 In each case, you can now access the module's imports underneath the specified object name, for example:
 
 ```js
-const square1 = Square.draw(myCanvas.ctx, 50, 50, 100, "blue");
-Square.reportArea(square1.length, reportList);
-Square.reportPerimeter(square1.length, reportList);
+const square = Square.draw(myCanvas.ctx, 50, 50, 100, "blue");
+Square.reportArea(square.length, reportList);
+Square.reportPerimeter(square.length, reportList);
 ```
 
 So you can now write the code just the same as before (as long as you include the object names where needed), and the imports are much neater.
@@ -653,10 +653,10 @@ import { Square } from "./modules/square.js";
 And then use the class to draw our square:
 
 ```js
-const square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
-square1.draw();
-square1.reportArea();
-square1.reportPerimeter();
+const square = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
+square.draw();
+square.reportArea();
+square.reportPerimeter();
 ```
 
 ## Aggregating modules
@@ -746,7 +746,7 @@ We then attach an event listener to each button so that when pressed, the releva
 ```js
 squareBtn.addEventListener("click", () => {
   import("./modules/square.js").then((Module) => {
-    const square1 = new Module.Square(
+    const square = new Module.Square(
       myCanvas.ctx,
       myCanvas.listId,
       50,
@@ -754,9 +754,9 @@ squareBtn.addEventListener("click", () => {
       100,
       "blue",
     );
-    square1.draw();
-    square1.reportArea();
-    square1.reportPerimeter();
+    square.draw();
+    square.reportArea();
+    square.reportPerimeter();
   });
 });
 ```
@@ -821,7 +821,7 @@ const circleBtn = document.querySelector(".circle");
 We'll use `colors` instead of the previously used strings when calling our shape functions:
 
 ```js
-const square1 = new Module.Square(
+const square = new Module.Square(
   myCanvas.ctx,
   myCanvas.listId,
   50,
@@ -830,7 +830,7 @@ const square1 = new Module.Square(
   colors.blue,
 );
 
-const circle1 = new Module.Circle(
+const circle = new Module.Circle(
   myCanvas.ctx,
   myCanvas.listId,
   75,
@@ -839,7 +839,7 @@ const circle1 = new Module.Circle(
   colors.green,
 );
 
-const triangle1 = new Module.Triangle(
+const triangle = new Module.Triangle(
   myCanvas.ctx,
   myCanvas.listId,
   100,

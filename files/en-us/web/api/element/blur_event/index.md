@@ -6,13 +6,13 @@ page-type: web-api-event
 browser-compat: api.Element.blur_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`blur`** event fires when an element has lost focus. The event does not bubble, but the related {{domxref("Element/focusout_event", "focusout")}} event that follows does bubble.
 
 An element will lose focus if another element is selected.
 An element will also lose focus if a style that does not allow focus is applied, such as `hidden`, or if the element is removed from the document — in both of these cases focus moves to the `body` element (viewport).
-Note however that `blur` is not fired when a focused element is removed from the document.
+Note that browser behavior differs when a focused element is removed from the document. In Chromium-based browsers, removing a focused element triggers a `blur` event, while in Firefox it does not.
 
 <!-- Prior to FF110 elements did not lose focus if the style changed to hidden (say) -->
 

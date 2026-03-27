@@ -2,10 +2,12 @@
 title: Fetch API
 slug: Web/API/Fetch_API
 page-type: web-api-overview
-browser-compat: api.fetch
+browser-compat:
+  - api.fetch
+  - api.Window.fetchLater
 ---
 
-{{DefaultAPISidebar("Fetch API")}} {{AvailableInWorkers}}
+{{DefaultAPISidebar("Fetch API")}}
 
 The Fetch API provides an interface for fetching resources (including across the network). It is a more powerful and flexible replacement for {{DOMxRef("XMLHttpRequest")}}.
 
@@ -23,16 +25,33 @@ You can create a request and response directly using the {{DOMxRef("Request.Requ
 
 Find out more about using the Fetch API features in [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
+### Deferred Fetch
+
+The {{domxref("Window/fetchLater", "fetchLater()")}} API enables a developer to request a _deferred fetch_, that can be sent after a specified period of time, or when the page is closed or navigated away from. See [Using Deferred Fetch](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch).
+
 ## Interfaces
 
 - {{domxref("Window.fetch()")}} and {{domxref("WorkerGlobalScope.fetch()")}}
   - : The `fetch()` method used to fetch a resource.
+- {{domxref("Window.fetchLater()")}}
+  - : Used to make a deferred fetch request.
+- {{domxref("DeferredRequestInit")}}
+  - : Represents the set of options that can be used to configure a deferred fetch request.
+- {{domxref("FetchLaterResult")}}
+  - : Represents the result of requesting a deferred fetch.
 - {{DOMxRef("Headers")}}
   - : Represents response/request headers, allowing you to query them and take different actions depending on the results.
 - {{DOMxRef("Request")}}
   - : Represents a resource request.
 - {{DOMxRef("Response")}}
   - : Represents the response to a request.
+
+## HTTP headers
+
+- {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}}
+  - : Controls the [top-level quota](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas) for the `fetchLater()` API.
+- {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}}
+  - : Controls the [shared cross-origin subframe quota](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas) for the `fetchLater()` API.
 
 ## Specifications
 

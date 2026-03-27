@@ -3,9 +3,8 @@ title: userScripts.ScriptSource
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/ScriptSource
 page-type: webextension-api-type
 browser-compat: webextensions.api.userScripts.ScriptSource
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The code or source file for a user script. This describes the object values of the "js" property in {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}.
 

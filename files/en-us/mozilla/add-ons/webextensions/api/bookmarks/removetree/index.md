@@ -3,9 +3,8 @@ title: bookmarks.removeTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
 page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.removeTree
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`bookmarks.removeTree()`** method recursively removes a bookmark folder and all of its contents.
 

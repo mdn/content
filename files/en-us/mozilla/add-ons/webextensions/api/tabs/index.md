@@ -3,9 +3,8 @@ title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
 page-type: webextension-api
 browser-compat: webextensions.api.tabs
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Interact with the browser's tab system.
 
@@ -50,6 +49,8 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 
 - {{WebExtAPIRef("tabs.TAB_ID_NONE")}}
   - : A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows).
+- {{WebExtAPIRef("tabs.SPLIT_VIEW_ID_NONE")}}
+  - : A special ID value given to tabs that aren't in a split view.
 
 ## Functions
 
@@ -159,11 +160,11 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 - {{WebExtAPIRef("tabs.onZoomChange")}}
   - : Fired when a tab is zoomed.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.

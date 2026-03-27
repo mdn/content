@@ -3,9 +3,8 @@ title: incognito
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/incognito
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.incognito
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

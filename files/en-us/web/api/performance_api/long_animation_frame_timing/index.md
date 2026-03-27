@@ -40,37 +40,41 @@ Be aware, however, that the maximum buffer size for `"long-animation-frame"` ent
 
 Performance timeline entries returned with a type of `"long-animation-frame"` are represented by {{domxref("PerformanceLongAnimationFrameTiming")}} objects. This object has a {{domxref("PerformanceLongAnimationFrameTiming.scripts", "scripts")}} property containing an array of {{domxref("PerformanceScriptTiming")}} objects, each one of which contains information about a script that contributed to the long animation frame.
 
-The following is a JSON representation of a complete `"long-animation-frame"` performance entry example, containing a single script:
+The following is a complete `"long-animation-frame"` performance entry example, containing a single script:
 
-```json
-{
-  "blockingDuration": 0,
-  "duration": 60,
-  "entryType": "long-animation-frame",
-  "firstUIEventTimestamp": 11801.099999999627,
-  "name": "long-animation-frame",
-  "renderStart": 11858.800000000745,
-  "scripts": [
+```js
+({
+  blockingDuration: 0,
+  duration: 60,
+  entryType: "long-animation-frame",
+  firstUIEventTimestamp: 11801.099999999627,
+  name: "long-animation-frame",
+  paintTime: 11862.400000000373,
+  presentationTime: 11863.199999999255,
+  renderStart: 11858.800000000745,
+  scripts: [
     {
-      "duration": 45,
-      "entryType": "script",
-      "executionStart": 11803.199999999255,
-      "forcedStyleAndLayoutDuration": 0,
-      "invoker": "DOMWindow.onclick",
-      "invokerType": "event-listener",
-      "name": "script",
-      "pauseDuration": 0,
-      "sourceURL": "https://web.dev/js/index-ffde4443.js",
-      "sourceFunctionName": "myClickHandler",
-      "sourceCharPosition": 17796,
-      "startTime": 11803.199999999255,
-      "window": [Window object],
-      "windowAttribution": "self"
-    }
+      duration: 45,
+      entryType: "script",
+      executionStart: 11803.199999999255,
+      forcedStyleAndLayoutDuration: 0,
+      invoker: "DOMWindow.onclick",
+      invokerType: "event-listener",
+      name: "script",
+      pauseDuration: 0,
+      sourceURL: "https://web.dev/js/index-ffde4443.js",
+      sourceFunctionName: "myClickHandler",
+      sourceCharPosition: 17796,
+      startTime: 11803.199999999255,
+      window: {
+        // …Window object…
+      },
+      windowAttribution: "self",
+    },
   ],
-  "startTime": 11802.400000000373,
-  "styleAndLayoutStart": 11858.800000000745
-}
+  startTime: 11802.400000000373,
+  styleAndLayoutStart: 11858.800000000745,
+});
 ```
 
 Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, this contains the following noteworthy items:
@@ -79,6 +83,10 @@ Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, th
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time in milliseconds for which the main thread was blocked from responding to high priority tasks, such as user input. This is calculated by taking all the [long tasks](/en-US/docs/Web/API/PerformanceLongTaskTiming#description) within the LoAF that have a `duration` of more than `50ms`, subtracting `50ms` from each, adding the rendering time to the longest task time, and summing the results.
 - {{domxref("PerformanceLongAnimationFrameTiming.firstUIEventTimestamp", "firstUIEventTimestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event — such as a mouse or keyboard event — to be processed during the current animation frame. Note this timestamp can be before the start of this animation frame if there was a delay between the event happening and it being processed.
+- {{domxref("PerformanceLongAnimationFrameTiming.paintTime", "paintTime")}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the animation frame started.
+- {{domxref("PerformanceLongAnimationFrameTiming.presentationTime", "presentationTime")}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the UI update was actually drawn on the screen.
 - {{domxref("PerformanceLongAnimationFrameTiming.renderStart", "renderStart")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the start time of the rendering cycle, which includes {{domxref("Window.requestAnimationFrame()")}} callbacks, style and layout calculation, {{domxref("ResizeObserver")}} callbacks, and {{domxref("IntersectionObserver")}} callbacks.
 - {{domxref("PerformanceLongAnimationFrameTiming.styleAndLayoutStart", "styleAndLayoutStart")}}
@@ -98,7 +106,7 @@ Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, th
 
         For example, if an event handler calls a top-level function, which in turn calls a slow sub-function, the `source*` fields will report the top-level function's name and location, not the slow sub-function. This is because of performance reasons — a full stack trace is costly.
 
-    - {{domxref("PerformanceScriptTiming.windowAttribution", "script.windowAttribution")}} an {{domxref("PerformanceScriptTiming.window", "script.window")}}
+    - {{domxref("PerformanceScriptTiming.windowAttribution", "script.windowAttribution")}} a {{domxref("PerformanceScriptTiming.window", "script.window")}}
       - : An enumerated value describing the relationship of the container (i.e., either the top-level document or and {{htmlelement("iframe")}}) this script was executed in to the top-level document, and a reference to its {{domxref("Window")}} object.
 
     > [!NOTE]
@@ -111,7 +119,7 @@ The timestamps provided in the {{domxref("PerformanceLongAnimationFrameTiming")}
 | Timing                            | Calculation                                                              |
 | --------------------------------- | ------------------------------------------------------------------------ |
 | Start time                        | `startTime`                                                              |
-| End time                          | `startTime + duration`                                                   |
+| End time                          | `startTime + duration` (or `paintTime`/`presentationTime`)               |
 | Work duration                     | `renderStart ? renderStart - startTime : duration`                       |
 | Render duration                   | `renderStart ? (startTime + duration) - renderStart : 0`                 |
 | Render: Pre-layout duration       | `styleAndLayoutStart ? styleAndLayoutStart - renderStart : 0`            |
@@ -140,7 +148,8 @@ const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
     if (entry.duration > REPORTING_THRESHOLD_MS) {
       // Example here logs to console; real code could send to analytics endpoint
-      console.log(entry);
+      console.log(entry.paintTime);
+      console.log(entry.presentationTime);
     }
   }
 });

@@ -3,9 +3,8 @@ title: idle.onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/idle/onStateChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.idle.onStateChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the system changes to an active, idle or locked state. The event listener is passed a string that has one of three values:
 
@@ -39,10 +38,6 @@ Events have three functions:
     - `newState`
       - : {{WebExtAPIRef('idle.IdleState')}}. The new idle state.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -54,6 +49,10 @@ browser.idle.onStateChanged.addListener(newState);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle#event-onStateChanged) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.

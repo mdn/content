@@ -3,9 +3,8 @@ title: onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onStateChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.captivePortal.onStateChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fires when the captive portal state changes.
 

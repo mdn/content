@@ -3,9 +3,8 @@ title: downloads.DownloadQuery
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
 page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DownloadQuery
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `DownloadQuery` type of the {{WebExtAPIRef("downloads")}} API defines a set of parameters that can be used to search the downloads manager for a specific set of downloads.
 
@@ -58,7 +57,7 @@ Values of this type are objects. They contain the following properties:
 - `paused` {{optional_inline}}
   - : A `boolean` that indicates whether a download is paused — i.e., has stopped reading data from the host, but kept the connection open (`true`), or not (`false`). Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `paused` value.
 - `error` {{optional_inline}}
-  - : A string representing an {{WebExtAPIRef('downloads.InterruptReason')}} — a reason why a download was interrupted. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `error` value.
+  - : A string representing a {{WebExtAPIRef('downloads.InterruptReason')}} — a reason why a download was interrupted. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `error` value.
 - `bytesReceived` {{optional_inline}}
   - : A `number` representing the number of bytes received so far from the host, without considering file compression. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `bytesReceived` value.
 - `totalBytes` {{optional_inline}}
@@ -68,11 +67,11 @@ Values of this type are objects. They contain the following properties:
 - `exists` {{optional_inline}}
   - : A `boolean` indicating whether a downloaded file still exists (`true`) or not (`false`). Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `exists` value.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadQuery) API.

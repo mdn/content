@@ -19,10 +19,6 @@ The HTTP **`NEL`** {{Glossary("response header")}} is used to configure network 
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

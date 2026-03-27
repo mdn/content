@@ -24,13 +24,9 @@ Here we create an {{ htmlelement("audio") }} element, and set its `src` to a fil
 Let's create a {{ htmlelement("video") }} element first, and set up video and playback rate controls in HTML:
 
 ```html
-<video id="myVideo" controls>
-  <source
-    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
-    type="video/mp4" />
-  <source
-    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
-    type="video/webm" />
+<video id="myVideo" controls loop>
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
 </video>
 
 <form>
@@ -39,29 +35,35 @@ Let's create a {{ htmlelement("video") }} element first, and set up video and pl
 </form>
 ```
 
+Some basic CSS:
+
+```css
+form {
+  font-family: monospace;
+}
+
+video {
+  width: 500px;
+  aspect-ratio: 16 / 9;
+}
+```
+
 And apply some JavaScript to it:
 
 ```js
-window.onload = () => {
-  const v = document.getElementById("myVideo");
-  const p = document.getElementById("pbr");
-  const c = document.getElementById("currentPbr");
+const v = document.getElementById("myVideo");
+const p = document.getElementById("pbr");
+const c = document.getElementById("currentPbr");
 
-  p.addEventListener(
-    "input",
-    () => {
-      c.textContent = p.value;
-      v.playbackRate = p.value;
-    },
-    false,
-  );
-};
+p.addEventListener("input", () => {
+  c.textContent = p.value;
+  v.playbackRate = p.value;
+});
 ```
 
 Finally, we listen for the `input` event firing on the {{ htmlelement("input") }} element, allowing us to react to the playback rate control being changed.
 
-> [!NOTE]
-> [Try out this example live](https://jsbin.com/UGIxoJis/1/edit), and try adjusting the playback rate control to see the effect.
+{{EmbedLiveSample("a complete example", "", 400)}}
 
 ## defaultPlaybackRate and ratechange
 

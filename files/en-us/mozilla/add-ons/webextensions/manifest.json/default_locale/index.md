@@ -3,9 +3,8 @@ title: default_locale
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.default_locale
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

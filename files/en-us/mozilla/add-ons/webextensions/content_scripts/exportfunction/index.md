@@ -3,9 +3,8 @@ title: exportFunction()
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction
 page-type: webextension-api-function
 browser-compat: webextensions.api.contentScriptGlobalScope.exportFunction
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 This function provides a safe way to expose a function from a privileged scope to a less-privileged scope. This enables privileged code, such as an extension, to share code with less-privileged code, such as a standard web page script. A function exported from privileged to less-privileged code can be called from the less privileged code's context.
 
@@ -62,17 +61,13 @@ exportFunction(changeMyName, window, {
 
 ```js
 // less-privileged scope: for example, a page script
-var user = { name: "Jim" };
-var test = document.getElementById("test");
-test.addEventListener(
-  "click",
-  function () {
-    console.log(user.name); // "Jim"
-    window.changeMyName(user);
-    console.log(user.name); // "Bill"
-  },
-  false,
-);
+const user = { name: "Jim" };
+const test = document.getElementById("test");
+test.addEventListener("click", () => {
+  console.log(user.name); // "Jim"
+  window.changeMyName(user);
+  console.log(user.name); // "Bill"
+});
 ```
 
 This behavior is subject to the normal rules of Xrays. For example, an expando property added to a DOM node isn't visible in the original object.
@@ -94,19 +89,15 @@ exportFunction(logUser, window, {
 
 ```js
 // less-privileged scope: for example, a page script
-var user = {
-  getUser: function () {
+const user = {
+  getUser() {
     return "Bill";
   },
 };
-var test = document.getElementById("test");
-test.addEventListener(
-  "click",
-  function () {
-    window.logUser(user);
-  },
-  false,
-);
+const test = document.getElementById("test");
+test.addEventListener("click", () => {
+  window.logUser(user);
+});
 ```
 
 See [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) in the Firefox Source Tree documentation for more information.
@@ -130,14 +121,10 @@ exportFunction(logUser, unsafeWindow, {
 function getUser() {
   return "Bill";
 }
-var test = document.getElementById("test");
-test.addEventListener(
-  "click",
-  function () {
-    window.logUser(getUser);
-  },
-  false,
-);
+const test = document.getElementById("test");
+test.addEventListener("click", () => {
+  window.logUser(getUser);
+});
 ```
 
 ### Cross-origin checking
@@ -152,7 +139,7 @@ This script defines a function and then exports it to a content window:
 
 ```js
 // extension-script.js
-var salutation = "hello ";
+const salutation = "hello ";
 function greetMe(user) {
   return salutation + user;
 }
@@ -163,7 +150,7 @@ Instead of using `defineAs`, the script can assign the result of `exportFunction
 
 ```js
 // extension-script.js
-var salutation = "hello ";
+const salutation = "hello ";
 function greetMe(user) {
   return salutation + user;
 }
@@ -174,7 +161,7 @@ Either way, code running in the content window's scope can call the function:
 
 ```js
 // page-script.js
-var greeting = foo("alice");
+const greeting = foo("alice");
 console.log(greeting);
 // "hello alice"
 ```
@@ -185,7 +172,7 @@ Instead of attaching the function to the target's global `window` object, the ca
 
 ```js
 // page-script.js
-var bar = {};
+const bar = {};
 ```
 
 Now the extension script can attach the function to `bar`:
@@ -199,7 +186,7 @@ exportFunction(greetMe, window.bar, {
 
 ```js
 // page-script.js
-var value = bar.greetMe("bob");
+const value = bar.greetMe("bob");
 console.log(value);
 // "hello bob"
 ```

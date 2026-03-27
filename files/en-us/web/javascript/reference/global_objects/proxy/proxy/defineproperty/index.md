@@ -12,7 +12,7 @@ The **`handler.defineProperty()`** method is a trap for the `[[DefineOwnProperty
 {{InteractiveExample("JavaScript Demo: handler.defineProperty()", "taller")}}
 
 ```js interactive-example
-const handler1 = {
+const handler = {
   defineProperty(target, key, descriptor) {
     invariant(key, "define");
     return true;
@@ -25,10 +25,10 @@ function invariant(key, action) {
   }
 }
 
-const monster1 = {};
-const proxy1 = new Proxy(monster1, handler1);
+const monster = {};
+const proxy = new Proxy(monster, handler);
 
-console.log((proxy1._secret = "easily scared"));
+console.log((proxy._secret = "easily scared"));
 // Expected output: Error: Invalid attempt to define private "_secret" property
 ```
 

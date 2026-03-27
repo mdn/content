@@ -3,9 +3,8 @@ title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.create
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Creates a new tab.
 

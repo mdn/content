@@ -1,33 +1,37 @@
 ---
 title: "Test your skills: Links"
-short-title: Links
+short-title: "Test: Links"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Links
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand how to [implement links in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links).
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content")}}
+
+The aim of this skill test is to help you assess whether you understand how to [implement links in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links).
 
 > [!NOTE]
-> You can try solutions in the MDN Playground or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
-
-## Task 1
-
-In this task, we want you to help fill in the links on our Whales information page. To complete the task:
-
-- The first link should be linked to a page called `whales.html`, which is in the same directory as the current page.
-- We'd also like you to give it a tooltip when moused over that tells the user that the page includes information on Blue Whales and Sperm Whales.
-- The second link should be turned into a link you can click to open up an email in the user's default mail application, with the recipient set as "whales\@example.com".
-- Bonus points if you also set it so that the subject line of the email is automatically filled in as "Question about Whales".
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 > [!NOTE]
-> The links in the starting code have the `target="_blank"` attribute set on them, so that when you click on them, they open the linked page in a new tab. This is not strictly best practice, but we've done it here so that the pages don't open in the MDN Playground output `<iframe>`, getting rid of your example code in the process!
+> Some of the links in the starting code for these tasks have the `target="_blank"` attribute set on them, so that when you click on them, they will try to open the linked page in a new tab rather than the same tab. This is not strictly best practice, but we've done it here so that the pages don't open in the MDN Playground output `<iframe>`, getting rid of your example code in the process!
 
-To get started, you can click **"Play"** in the code block below to edit the example in the MDN Playground, or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links1-download.html) and work locally in your own editor.
+## Links 1
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
+In this task, we want you to help fill in the links on our Whales information page.
+
+To complete the task, update the links as follows:
+
+1. The first link should be linked to a page called `whales.html`, which is in the same directory as the current page.
+2. Give it a tooltip when moused over that tells the user that the page includes information on Blue Whales and Sperm Whales.
+3. The second link should be turned into a link you can click to open up an email in the user's default mail application, with the recipient set as "whales\@example.com".
+4. Bonus points if you also set it so that the subject line of the email is automatically filled in as "Question about Whales".
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('links-1', "100%", 170) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___links-1
 <h1>Information on Whales</h1>
@@ -43,14 +47,14 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 </p>
 ```
 
-```css hidden live-sample___links-1
+```css hidden live-sample___links-1 live-sample___links-1-finished
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -72,14 +76,16 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('links-1', "100%", 170) }}
+The updated content should look like this:
+
+{{ EmbedLiveSample('links-1-finished', "100%", 170) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html-nolint
+```html-nolint live-sample___links-1-finished
 <h1>Information on Whales</h1>
 
 <p>
@@ -97,21 +103,22 @@ Your finished HTML should look like this:
 
 </details>
 
-## Task 2
+## Links 2
 
-In this task, we want you to fill in the four links so that they link to the appropriate places. To complete the task:
+In this task, we want you to fill in the four links so that they link to the appropriate places.
 
-- The first link should link to an image called `blue-whale.jpg`, which is located in a directory called `blue` inside the current directory.
-- The second link should link to an image called `narwhal.jpg`, which is located in a directory called `narwhal`, which is located one directory level above the current directory.
-- The third link should link to the UK Google Image search. The base URL is `https://www.google.co.uk`, and the image search is located in a subdirectory called `imghp`.
-- The fourth link should link to the paragraph at the very bottom of the current page. It has an ID of `bottom`.
+To complete the task, update the links as follows:
 
-> [!NOTE]
-> The first three links in the example have the `target="_blank"` attribute set on them, so that when you click on them, they open the linked page in a new tab. This is not strictly best practice, but we've done it here so that the pages don't open in the MDN Playground output `<iframe>`, getting rid of your example code in the process!
+1. The first link should link to an image called `blue-whale.jpg`, which is located in a directory called `blue` inside the current directory.
+2. The second link should link to an image called `narwhal.jpg`, which is located in a directory called `narwhal`, which is located one directory level above the current directory.
+3. The third link should link to the UK Google Image search. The base URL is `https://www.google.co.uk`, and the image search is located in a subdirectory called `imghp`.
+4. The fourth link should link to the paragraph at the very bottom of the current page. It has an ID of `bottom`.
 
-To get started, you can click **"Play"** in the code block below to edit the example in the MDN Playground, or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links2-download.html) and work locally in your own editor.
+The starting point of the task looks like this:
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
+{{ EmbedLiveSample('links-2', "100%", 200) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___links-2
 <h1>List path tests</h1>
@@ -128,14 +135,14 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 <p id="bottom">The bottom of the page!</p>
 ```
 
-```css hidden live-sample___links-2
+```css hidden live-sample___links-2 live-sample___links-2-finished
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -157,14 +164,16 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('links-2', "100%", 200) }}
+The updated content should look like this:
+
+{{ EmbedLiveSample('links-2-finished', "100%", 200) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html-nolint
+```html-nolint live-sample___links-2-finished
 <h1>List path tests</h1>
 
 <ul>
@@ -189,19 +198,20 @@ Your finished HTML should look like this:
 
 </details>
 
-## Task 3
+## Links 3
 
-The following links link to an info page about Narwhals, a support email address, and a PDF factfile that is 4MB in size. In this task, we want you to:
+The following links link to an info page about Narwhals, a support email address, and a PDF factfile that is 4MB in size.
 
-- Take the existing paragraphs with poorly-written link text, and rewrite them so that they have good link text.
-- Add a warning to any links that need a warning added.
+To complete the task:
 
-> [!NOTE]
-> The first and third links in the example have the `target="_blank"` attribute set on them, so that when you click on them, they open the linked page in a new tab. This is not strictly best practice, but we've done it here so that the pages don't open in the MDN Playground output `<iframe>`, getting rid of your example code in the process!
+1. Take the existing paragraphs with poorly-written link text, and rewrite them so that they have good link text.
+2. Add a warning to any links that need a warning added.
 
-To get started, you can click **"Play"** in the code block below to edit the example in the MDN Playground, or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links3-download.html) and work locally in your own editor.
+The starting point of the task looks like this:
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
+{{ EmbedLiveSample('links-3', "100%", 200) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___links-3
 <p>
@@ -222,12 +232,12 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 
 ```css hidden live-sample___links-3
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -243,7 +253,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('links-3', "100%", 200) }}
+We've not provided finished content for this task, as it would give away the solution.
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -266,3 +276,5 @@ Your finished HTML should look like this:
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content")}}

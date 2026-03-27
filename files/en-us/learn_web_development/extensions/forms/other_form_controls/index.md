@@ -260,10 +260,6 @@ This is for implementing anything requiring progress reporting, such as the perc
 
 The content inside the {{HTMLElement("progress")}} element is a fallback for browsers that don't support the element and for screen readers to vocalize it.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Other controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls).
-
 ## Summary
 
 As you'll have seen in the last few articles, there are many types of form controls. You don't need to remember all of these details at once, and can return to these articles as often as you like to check up on details.

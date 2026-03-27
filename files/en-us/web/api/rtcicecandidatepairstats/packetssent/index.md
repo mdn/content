@@ -12,7 +12,7 @@ browser-compat: api.RTCStatsReport.type_candidate-pair.packetsSent
 
 The **`packetsSent`** property of the {{domxref("RTCIceCandidatePairStats")}} dictionary indicates the total number of packets sent on the candidate pair.
 
-### Value
+## Value
 
 An integer value indicating the total number of packets sent on the pair.
 

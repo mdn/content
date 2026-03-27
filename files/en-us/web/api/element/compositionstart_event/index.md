@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.compositionstart_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`compositionstart`** event is fired when a text composition system such as an {{glossary("input method editor")}} starts a new composition session.
 

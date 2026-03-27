@@ -3,9 +3,8 @@ title: action.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/action/onClicked
 page-type: webextension-api-event
 browser-compat: webextensions.api.action.onClicked
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.
 

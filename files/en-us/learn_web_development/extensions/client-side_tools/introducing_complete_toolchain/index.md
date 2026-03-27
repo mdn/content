@@ -88,7 +88,7 @@ Revision control can also allow you to _branch_ out your project code, creating 
 
 Finally, it can help you undo changes or revert your code back to a time "when it was working" if a mistake has been introduced somewhere and you are having trouble fixing it — something all developers need to do once in a while!
 
-Git can be [downloaded and installed via the git-scm website](https://git-scm.com/downloads) — download the relevant installer for your system, run it, and follow the on-screen prompts. This is all you need to do for now.
+Git can be [downloaded and installed via the git-scm website](https://git-scm.com/downloads/) — download the relevant installer for your system, run it, and follow the on-screen prompts. This is all you need to do for now.
 
 You can interact with git in a number of different ways, from using the command line to issue commands, to using a [git GUI app](https://git-scm.com/downloads/guis) to issue the same commands by pushing buttons, or even from directly inside your code editor, as seen in the Visual Studio Code example below:
 
@@ -195,10 +195,12 @@ npx prettier --write ./index.html
 You can also replace `./index.html` with any other file or folder to format them. For example, `.` will format everything in the current directory. In case you may forget the syntax, you can add it as a custom script in your package.json too:
 
 ```json
-"scripts": {
-  // …
-  "format": "prettier --write ."
-},
+{
+  "scripts": {
+    // …
+    "format": "prettier --write ."
+  }
+}
 ```
 
 Now you can run the following to format the directory:

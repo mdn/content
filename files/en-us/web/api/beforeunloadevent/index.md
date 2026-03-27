@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.BeforeUnloadEvent
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`BeforeUnloadEvent`** interface represents the event object for the {{domxref("Window/beforeunload_event", "beforeunload")}} event, which is fired when the current window, contained document, and associated resources are about to be unloaded.
 

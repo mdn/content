@@ -1,5 +1,6 @@
 ---
-title: nop
+title: "nop: Wasm text instruction"
+short-title: nop
 slug: WebAssembly/Reference/Control_flow/nop
 page-type: webassembly-instruction
 sidebar: webassemblysidebar

@@ -3,9 +3,8 @@ title: management.uninstall()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
 page-type: webextension-api-function
 browser-compat: webextensions.api.management.uninstall
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Uninstalls an add-on, given its ID.
 
@@ -38,10 +37,6 @@ let uninstalling = browser.management.uninstall(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled the uninstallation.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Uninstall the add-on whose ID is "addon-id" and ask the user to confirm. In the callback, we check whether the user canceled the uninstallation or if the operation succeeded.
@@ -62,6 +57,10 @@ uninstalling.then(onUninstalled, onCanceled);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-uninstall) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.

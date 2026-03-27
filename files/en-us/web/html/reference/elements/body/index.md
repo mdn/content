@@ -61,7 +61,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : Function to call when the storage area has changed.
 - [`onunhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event)
   - : Function to call when a JavaScript {{jsxref("Promise")}} that has no rejection handler is rejected.
-- [`onunload`](/en-US/docs/Web/API/Window/unload_event)
+- [`onunload`](/en-US/docs/Web/API/Window/unload_event) {{deprecated_inline}}
   - : Function to call when the document is going away.
 
 ### Deprecated attributes
@@ -79,23 +79,21 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : Background color for the document.
     Use the CSS {{cssxref("background-color")}} property instead.
 - `bottommargin` {{deprecated_inline}}
-  - : The margin of the bottom of the body.
-    Use the CSS {{cssxref("margin-bottom")}} property (or the logical {{cssxref("margin-block-end")}} property) instead.
+  - : Ignored.
 - `leftmargin` {{deprecated_inline}}
-  - : The margin of the left of the body.
-    Use the CSS {{cssxref("margin-left")}} property (or the logical {{cssxref("margin-inline-start")}} property) instead.
+  - : The margin of the left and right of the body.
+    Use the CSS {{cssxref("margin-left")}} and {{cssxref("margin-right")}} properties (or the logical {{cssxref("margin-inline")}} property) instead.
 - `link` {{deprecated_inline}}
   - : Color of text for unvisited hypertext links.
     Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":link")}} pseudo-class instead.
 - `rightmargin` {{deprecated_inline}}
-  - : The margin of the right of the body.
-    Use the CSS {{cssxref("margin-right")}} property or the logical {{cssxref("margin-inline-end")}} property) instead.
+  - : Ignored.
 - `text` {{deprecated_inline}}
   - : Foreground color of text.
     Use the CSS {{cssxref("color")}} property instead.
 - `topmargin` {{deprecated_inline}}
-  - : The margin of the top of the body.
-    Use the CSS {{cssxref("margin-top")}} property (or the logical {{cssxref("margin-block-start")}} property) instead.
+  - : The margin of the top and bottom of the body.
+    Use the CSS {{cssxref("margin-top")}} and {{cssxref("margin-bottom")}} properties (or the logical {{cssxref("margin-block")}} property) instead.
 - `vlink` {{deprecated_inline}}
   - : Color of text for visited hypertext links.
     Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":visited")}} pseudo-class instead.
@@ -205,4 +203,4 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - {{HTMLElement("html")}}
 - {{HTMLElement("head")}}
-- [Event handling overview](/en-US/docs/Web/Events/Event_handlers)
+- [Event handling overview](/en-US/docs/Web/API/Document_Object_Model/Events#registering_event_handlers)

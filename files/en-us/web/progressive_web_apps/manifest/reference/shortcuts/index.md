@@ -196,5 +196,5 @@ Building on the previous example, the code below adds icons to the two shortcuts
 - [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) manifest member
 - [`scope`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope) manifest member
 - [`start_url`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) manifest member
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
 - How to [expose common actions as shortcuts](/en-US/docs/Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts) in PWAs

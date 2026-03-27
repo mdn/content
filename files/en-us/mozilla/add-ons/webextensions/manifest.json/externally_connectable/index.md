@@ -3,9 +3,8 @@ title: externally_connectable
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.externally_connectable
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -51,11 +50,11 @@ Externally connectable controls which other extensions and web pages can communi
 > - In Safari, `browser.runtime.connect` and `browser.runtime.sendMessage` are used.
 > - In Firefox, neither API is supported. See [Firefox bug 1319168](https://bugzil.la/1319168).
 
-### "ids" attribute
+## "ids" attribute
 
 `ids` enables communication between this extension and other installed extensions specified by extension identifiers. Use the pattern `"*"` to communicate with all extensions.
 
-### "matches" attribute
+## "matches" attribute
 
 `matches` is a list of regular expressions that enables communication between an extension and the web pages that match the expression.
 

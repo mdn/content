@@ -3,8 +3,8 @@ title: dx
 slug: Web/SVG/Reference/Attribute/dx
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fedropshadow-dx
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dx
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fedropshadow-dx
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-feoffset-dx
   - https://svgwg.org/svg2-draft/text.html#TextElementDXAttribute
 sidebar: svgref
 ---

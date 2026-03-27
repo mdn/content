@@ -12,14 +12,14 @@ The **`Object.getOwnPropertySymbols()`** static method returns an array of all s
 {{InteractiveExample("JavaScript Demo: Object.getOwnPropertySymbols()")}}
 
 ```js interactive-example
-const object1 = {};
+const object = {};
 const a = Symbol("a");
 const b = Symbol.for("b");
 
-object1[a] = "localSymbol";
-object1[b] = "globalSymbol";
+object[a] = "localSymbol";
+object[b] = "globalSymbol";
 
-const objectSymbols = Object.getOwnPropertySymbols(object1);
+const objectSymbols = Object.getOwnPropertySymbols(object);
 
 console.log(objectSymbols.length);
 // Expected output: 2

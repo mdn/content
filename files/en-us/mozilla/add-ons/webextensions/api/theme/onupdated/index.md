@@ -3,9 +3,8 @@ title: theme.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
 page-type: webextension-api-event
 browser-compat: webextensions.api.theme.onUpdated
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fires when a theme supplied as a browser extension is applied or removed. Specifically:
 

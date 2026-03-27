@@ -3,17 +3,16 @@ title: "Sanitizer: removeElement() method"
 short-title: removeElement()
 slug: Web/API/Sanitizer/removeElement
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Sanitizer.removeElement
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
-The **`removeElement()`** method of the {{domxref("Sanitizer")}} interface sets an element to be disallowed — removed from input when the sanitizer is used.
+The **`removeElement()`** method of the {{domxref("Sanitizer")}} interface sets the specified element be removed from the output when the sanitizer is used.
 
-The specified element is added to the list of [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) in this sanitizer's configuration.
-The element is removed from the [`elements`](/en-US/docs/Web/API/SanitizerConfig#elements) or [`replaceWithChildrenElements`](/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements) lists if present.
+The method can be used with either an [allow configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations) or a [remove configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#remove_configurations).
+If used with a remove configuration, the specified element is added to the `removeElements` array.
+If used with an allow configuration, the element is removed from the `elements` array (if present).
 
 ## Syntax
 
@@ -33,7 +32,12 @@ removeElement(element)
 
 ### Return value
 
-None (`undefined`).
+`true` if the operation changed the configuration to disallow the element, and `false` if the element was already disallowed.
+
+Note that `false` might be returned if the internal configuration:
+
+- defines an [`elements`](/en-US/docs/Web/API/SanitizerConfig#elements) array and the element is already omitted (it does not need to be removed)
+- instead defines the [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) array and the specified element is already present (and is hence already filtered)
 
 ## Examples
 

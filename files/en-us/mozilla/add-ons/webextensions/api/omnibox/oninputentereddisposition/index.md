@@ -3,9 +3,8 @@ title: omnibox.OnInputEnteredDisposition
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/OnInputEnteredDisposition
 page-type: webextension-api-type
 browser-compat: webextensions.api.omnibox.OnInputEnteredDisposition
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`omnibox.OnInputEnteredDisposition`** type describes how the extension should handle a user selection from the suggestions in the address bar's drop-down list.
 

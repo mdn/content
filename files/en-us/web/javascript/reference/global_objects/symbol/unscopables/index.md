@@ -12,17 +12,17 @@ The **`Symbol.unscopables`** static data property represents the [well-known sym
 {{InteractiveExample("JavaScript Demo: Symbol.unscopables")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  foo: 42,
 };
 
-object1[Symbol.unscopables] = {
-  property1: true,
+object[Symbol.unscopables] = {
+  foo: true,
 };
 
-with (object1) {
-  console.log(property1);
-  // Expected output: Error: property1 is not defined
+with (object) {
+  console.log(foo);
+  // Expected output: Error: foo is not defined
 }
 ```
 
@@ -107,7 +107,7 @@ with (character) {
 }
 ```
 
-To preserve backward compatibility, you decided to add an `[Symbol.unscopables]` property when adding more properties to `character`. You may naïvely do it like:
+To preserve backward compatibility, you decided to add a `[Symbol.unscopables]` property when adding more properties to `character`. You may naïvely do it like:
 
 ```js example-bad
 const character = {

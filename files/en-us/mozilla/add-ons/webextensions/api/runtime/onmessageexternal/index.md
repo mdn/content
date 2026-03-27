@@ -3,9 +3,8 @@ title: runtime.onMessageExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onMessageExternal
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use this event to listen for messages from other extensions or web pages.
 

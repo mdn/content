@@ -6,96 +6,188 @@ page-type: guide
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
-HTML Drag and Drop interfaces enable web applications to drag and drop files on a web page. This document describes how an application can accept one or more files that are dragged from the underlying platform's _file manager_ and dropped on a web page.
+As mentioned on [the landing page](/en-US/docs/Web/API/HTML_Drag_and_Drop_API#concepts_and_usage), the Drag and Drop API simultaneously models three use cases: dragging elements within a page, dragging data out of a page, and dragging data into a page. This tutorial demonstrates the third use case: dragging data into a page. We will be implementing a basic drop zone that allows the user to drop image files from the user's operation system file explorer and displays them on the page. For users who can't or don't want to use drag and drop, we also provide the alternative functionality of file selection via an `<input>` element.
 
-The main steps to drag and drop are to define a _drop zone_ (i.e., a target element for the file drop) and to define event handlers for the {{domxref("HTMLElement/drop_event", "drop")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events. These steps are described below, including example code snippets. The full source code is available in [MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/main/drag-and-drop) (pull requests and/or issues are welcome).
+## Basic page layout
 
-Note that [HTML drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) defines two different APIs to support dragging and dropping files. One API is the {{domxref("DataTransfer")}} interface and the second API is the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces. This example illustrates the use of both APIs (and does not use any Gecko specific interfaces).
+Because we want to allow normal `<input>` file selection as well, it makes sense for the drop zone to be backed by an `<input>` element so that we can simultaneously drag into it and click on it. We take advantage of a common trick, which is to make the `<input>` invisible, and use its associated {{HTMLElement("label")}} to interact with the user instead, because `<label>` elements are much easier to style. We also add the elements for previewing the dropped images.
 
-## Define the drop zone
-
-The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event needs an `ondrop` event handler. The following code snippet shows how this is done with a {{HTMLelement("div")}} element:
-
-```html
-<div id="drop_zone">
-  <p>Drag one or more files to this <i>drop zone</i>.</p>
-</div>
+```html live-sample___file-dnd
+<label id="drop-zone">
+  Drop images here, or click to upload.
+  <input type="file" id="file-input" multiple accept="image/*" />
+</label>
+<ul id="preview"></ul>
+<button id="clear-btn">Clear</button>
 ```
 
-```js
-document.getElementById("drop_zone").addEventListener("drop", dropHandler);
-```
+We style the label element to visually indicate the element is a drop zone, and hide the file input.
 
-Typically, an application will include a {{domxref("HTMLElement/dragover_event", "dragover")}} event handler on the drop target element and that handler will turn off the browser's default drag behavior. To add this handler, you need to include a {{domxref("HTMLElement.dragover_event","dragover")}} event handler:
+```css live-sample___file-dnd
+body {
+  font-family: "Arial", sans-serif;
+}
 
-```js
-document
-  .getElementById("drop_zone")
-  .addEventListener("dragover", dragOverHandler);
-```
+#drop-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  max-width: 100%;
+  height: 200px;
+  padding: 1em;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  color: slategray;
+  cursor: pointer;
+}
 
-Lastly, an application may want to style the drop target element to visually indicate the element is a drop zone. In this example, the drop target element uses the following styling:
+#file-input {
+  display: none;
+}
 
-```css
-#drop_zone {
-  border: 5px solid blue;
-  width: 200px;
+#preview {
+  width: 500px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  list-style: none;
+  padding: 0;
+}
+
+#preview li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0;
+  width: 100%;
   height: 100px;
 }
+
+#preview img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+```
+
+By virtue of us using the `<label>` and `<input>` elements, no additional JavaScript is needed to implement the file selection UX. We now focus on file dropping and the subsequent processing of the dropped files.
+
+## Declaring the drop target
+
+Our drop target is the `<label>` element. As the _target element_, it listens to the {{domxref("HTMLElement/drop_event", "drop")}} event to process the dropped file.
+
+```js live-sample___file-dnd
+const dropZone = document.getElementById("drop-zone");
+
+dropZone.addEventListener("drop", dropHandler);
+```
+
+For file dropping, the browser may process them by default (such as opening or downloading the file) even when the file is not dropped into a valid drop target. To prevent this behavior, we also need to listen for the `drop` event on `window` and cancel it. We take care to only handle the event only if a file is being dragged; if it's something else, such as a link, we still use the default behavior. If the dragged item is a non-image file, we still handle the event, but provide feedback to the user that it is not allowed.
+
+```js live-sample___file-dnd
+window.addEventListener("drop", (e) => {
+  if ([...e.dataTransfer.items].some((item) => item.kind === "file")) {
+    e.preventDefault();
+  }
+});
+```
+
+In order for the `drop` event to fire, the element must also cancel the {{domxref("HTMLElement/dragover_event", "dragover")}} event. Because we are listening for `drop` on `window`, we need to cancel the `dragover` event for the whole `window` as well. We also set {{domxref("DataTransfer.dropEffect")}} to `none` if the file is not an image or not dragged to the correct place.
+
+```js live-sample___file-dnd
+dropZone.addEventListener("dragover", (e) => {
+  const fileItems = [...e.dataTransfer.items].filter(
+    (item) => item.kind === "file",
+  );
+  if (fileItems.length > 0) {
+    e.preventDefault();
+    if (fileItems.some((item) => item.type.startsWith("image/"))) {
+      e.dataTransfer.dropEffect = "copy";
+    } else {
+      e.dataTransfer.dropEffect = "none";
+    }
+  }
+});
+
+window.addEventListener("dragover", (e) => {
+  const fileItems = [...e.dataTransfer.items].filter(
+    (item) => item.kind === "file",
+  );
+  if (fileItems.length > 0) {
+    e.preventDefault();
+    if (!dropZone.contains(e.target)) {
+      e.dataTransfer.dropEffect = "none";
+    }
+  }
+});
 ```
 
 > [!NOTE]
 > {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/dragend_event", "dragend")}} events are not fired when dragging a file into the browser from the OS. To detect when OS files are dragged into the browser, use {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragleave_event", "dragleave")}}.
 > This means that it is not possible to use {{domxref("DataTransfer.setDragImage","setDragImage()")}} to apply a custom drag image/cursor overlay when dragging files from the OS — because the drag data store can only be modified in the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event. This also applies to {{domxref("DataTransfer.setData","setData()")}}.
 
-## Process the drop
+## Processing the drop
 
-The {{domxref("HTMLElement/drop_event", "drop")}} event is fired when the user drops the file(s). In the following drop handler, if the browser supports {{domxref("DataTransferItemList")}} interface, the {{domxref("DataTransferItem.getAsFile","getAsFile()")}} method is used to access each file; otherwise the {{domxref("DataTransfer")}} interface's {{domxref("DataTransfer.files","files")}} property is used to access each file.
+Now we implement the `dropHandler` by using the {{domxref("DataTransferItem.getAsFile","getAsFile()")}} method to access each file. Then your application can decide how to process this file using the [File API](/en-US/docs/Web/API/File_API). Here we just display them on the page; in practice, you probably want to eventually upload them to the server as well.
 
-This example shows how to write the name of each dragged file to the console. In a _real_ application, an application may want to process a file using the [File API](/en-US/docs/Web/API/File_API).
+```js live-sample___file-dnd
+const preview = document.getElementById("preview");
 
-Note that in this example, any drag item that is not a file is ignored.
-
-```js
-function dropHandler(ev) {
-  console.log("File(s) dropped");
-
-  // Prevent default behavior (Prevent file from being opened)
-  ev.preventDefault();
-
-  if (ev.dataTransfer.items) {
-    // Use DataTransferItemList interface to access the file(s)
-    [...ev.dataTransfer.items].forEach((item, i) => {
-      // If dropped items aren't files, reject them
-      if (item.kind === "file") {
-        const file = item.getAsFile();
-        console.log(`… file[${i}].name = ${file.name}`);
-      }
-    });
-  } else {
-    // Use DataTransfer interface to access the file(s)
-    [...ev.dataTransfer.files].forEach((file, i) => {
-      console.log(`… file[${i}].name = ${file.name}`);
-    });
+function displayImages(files) {
+  for (const file of files) {
+    if (file.type.startsWith("image/")) {
+      const li = document.createElement("li");
+      const img = document.createElement("img");
+      img.src = URL.createObjectURL(file);
+      img.alt = file.name;
+      li.appendChild(img);
+      li.appendChild(document.createTextNode(file.name));
+      preview.appendChild(li);
+    }
   }
 }
-```
 
-## Prevent the browser's default drag behavior
-
-The following {{domxref("HTMLElement/dragover_event", "dragover")}} event handler calls {{domxref("Event.preventDefault","preventDefault()")}} to turn off the browser's default drag and drop handler.
-
-```js
-function dragOverHandler(ev) {
-  console.log("File(s) in drop zone");
-
-  // Prevent default behavior (Prevent file from being opened)
+function dropHandler(ev) {
   ev.preventDefault();
+  const files = [...ev.dataTransfer.items]
+    .map((item) => item.getAsFile())
+    .filter((file) => file);
+  displayImages(files);
 }
 ```
+
+## Adding the same behavior to the input
+
+The above is the whole data flow for the drag and drop; now we need to wire the `displayImages()` function to the file input as well.
+
+```js live-sample___file-dnd
+const fileInput = document.getElementById("file-input");
+fileInput.addEventListener("change", (e) => {
+  displayImages(e.target.files);
+});
+```
+
+## Clear button
+
+Finally we add a way to clear the preview area. We use {{domxref("URL.revokeObjectURL_static","URL.revokeObjectURL()")}} to release the memory used by the image objects.
+
+```js live-sample___file-dnd
+const clearBtn = document.getElementById("clear-btn");
+clearBtn.addEventListener("click", () => {
+  for (const img of preview.querySelectorAll("img")) {
+    URL.revokeObjectURL(img.src);
+  }
+  preview.textContent = "";
+});
+```
+
+## Result
+
+{{EmbedLiveSample("file-dnd", "", 500)}}
 
 ## See also
 
 - [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

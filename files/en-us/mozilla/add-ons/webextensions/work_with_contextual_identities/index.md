@@ -2,9 +2,8 @@
 title: Work with contextual identities
 slug: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Many people need or want to interact with the web using multiple personas. They may have accounts for web-based work and personal email. They might sign out of their social media accounts before accessing online shopping, to ensure that any tracking scripts on the shopping sites can't pick up their social media activity. Users often use a standard and private browser window or two different browsers to address these requirements.
 

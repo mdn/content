@@ -134,7 +134,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : In [conditional requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests), the client has indicated preconditions in its headers which the server does not meet.
 - {{HTTPStatus(413, "413 Content Too Large")}}
   - : The request body is larger than limits defined by server.
-    The server might close the connection or return an {{HTTPHeader("Retry-After")}} header field.
+    The server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.
 - {{HTTPStatus(414, "414 URI Too Long")}}
   - : The URI requested by the client is longer than the server is willing to interpret.
 - {{HTTPStatus(415, "415 Unsupported Media Type")}}
@@ -177,7 +177,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : The server has encountered a situation it does not know how to handle.
     This error is generic, indicating that the server cannot find a more appropriate `5XX` status code to respond with.
 - {{HTTPStatus(501, "501 Not Implemented")}}
-  - : The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore that must not return this code) are {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}}.
+  - : The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore must not return this code) are {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}}.
 - {{HTTPStatus(502, "502 Bad Gateway")}}
   - : This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response.
 - {{HTTPStatus(503, "503 Service Unavailable")}}

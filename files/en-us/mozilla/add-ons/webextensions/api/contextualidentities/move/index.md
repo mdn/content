@@ -3,9 +3,8 @@ title: contextualIdentities.move()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/move
 page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.move
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Moves one or more contextual identities to a new position within the list of contextual identities.
 

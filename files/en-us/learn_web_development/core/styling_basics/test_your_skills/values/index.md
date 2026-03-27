@@ -1,33 +1,35 @@
 ---
 title: "Test your skills: Values and units"
-short-title: Values and units
+short-title: "Test: Values and units"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Values
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand different types of [values and units used in CSS properties](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
+
+The aim of this skill test is to help you assess whether you understand different types of [values and units used in CSS properties](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Values and units 1
 
-In this task, the first list item has been given a background color using a hex color code. Your task is to complete the CSS using the same color in different formats, plus a final list item where you should make the background semi-opaque.
+In this task, the first list item has been given a background color using a hex color code. Complete the CSS using the same color in different formats, plus a final list item where you should make the background semi-opaque.
 
 - The second list item should use RGB color.
 - The third should use HSL color.
 - The fourth should use RGB color but with the alpha channel set to `0.6`.
 
-You [can convert the hex color at convertingcolors.com](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS. Your final result should look like the image below:
+You can convert the hex color using [convertingcolors.com](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS.
 
-![Four list items. The first three with the same background color and the last with a lighter background.](mdn-value-color.png)
+The starting point of the task looks like this:
 
-Try to update the code below to recreate the finished example:
+{{EmbedLiveSample("values1-start", "", "300px")}}
 
-```html live-sample___color
+Here's the underlying code for this starting point:
+
+```html live-sample___values1-start live-sample___values1-finish
 <ul>
   <li class="hex">hex color</li>
   <li class="rgb">RGB color</li>
@@ -36,7 +38,7 @@ Try to update the code below to recreate the finished example:
 </ul>
 ```
 
-```css hidden live-sample___color
+```css live-sample___values1-start live-sample___values1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -50,9 +52,7 @@ li {
   margin: 1em;
   padding: 0.5em;
 }
-```
 
-```css live-sample___color
 .hex {
   background-color: #86defa;
 }
@@ -60,18 +60,16 @@ li {
 /* Add styles here */
 ```
 
-{{EmbedLiveSample("color", "", "300px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("values1-finish", "", "300px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
-By using [a color conversion tool](https://convertingcolors.com/hex-color-86DEFA.html), you should be equipped to use different [color functions](/en-US/docs/Web/CSS/color_value#syntax) to define the same color in different ways:
+By using [a color conversion tool](https://convertingcolors.com/hex-color-86DEFA.html), you should be equipped to use different [color functions](/en-US/docs/Web/CSS/Reference/Values/color_value#syntax) to define the same color in different ways:
 
-```css
-.hex {
-  background-color: #86defa;
-}
-
+```css live-sample___values1-finish
 .rgb {
   background-color: rgb(134 222 250);
 }
@@ -87,22 +85,22 @@ By using [a color conversion tool](https://convertingcolors.com/hex-color-86DEFA
 
 </details>
 
-## Task 2
+## Values and units 2
 
-In this task, we want you to set the size of various items of text, as described below:
+In this task, we want you to set the font size of various items of text:
 
-- The `<h1>` element should be 50 pixels.
-- The `<h2>` element should be 2em.
-- All `<p>` elements should be 16 pixels.
-- A `<p>` element that is directly after an `<h1>` should be 120%.
+- The `<h1>` element should be `50px`.
+- The `<h2>` element should be `2em`.
+- All `<p>` elements should be `16px`.
+- A `<p>` element that is directly after an `<h1>` should be `120%`.
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![Some text at varying sizes.](mdn-value-length.png)
+{{EmbedLiveSample("values2-start", "", "420px")}}
 
-Try to update the code below to recreate the finished example:
+Here's the underlying code for this starting point:
 
-```html live-sample___length
+```html live-sample___values2-start live-sample___values2-finish
 <h1>Level 1 heading</h1>
 <p>
   Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
@@ -116,34 +114,40 @@ Try to update the code below to recreate the finished example:
 </p>
 ```
 
-```css hidden live-sample___length
+```css live-sample___values2-start live-sample___values2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
-```
 
-```css live-sample___length
 h1 {
+  /* Add styles here */
 }
 
 h2 {
+  /* Add styles here */
 }
 
 p {
+  /* Add styles here */
 }
 
 h1 + p {
+  /* Add styles here */
 }
 ```
 
-{{EmbedLiveSample("length", "", "420px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("values2-finish", "", "430px")}}
+
+Here's the underlying code for this starting point:
 
 <details>
 <summary>Click here to show the solution</summary>
 
 You can use the following length values:
 
-```css
+```css live-sample___values2-finish
 h1 {
   font-size: 50px;
 }
@@ -163,44 +167,44 @@ h1 + p {
 
 </details>
 
-## Task 3
+## Values and units 3
 
-In this task, we want you to move the background image so that it is centered horizontally and is 20% from the top of the box.
+To complete the task, update the CSS to move the background image so that it is centered horizontally and is `20%` from the top of the box.
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![A stat centered horizontally in a box and a short distance from the top of the box.](mdn-value-position.png)
+{{EmbedLiveSample("values3-start", "", "400px")}}
 
-Try to update the code below to recreate the finished example:
+Here's the underlying code for this starting point:
 
-```html live-sample___position
+```html live-sample___values3-start live-sample___values3-finish
 <div class="box"></div>
 ```
 
-```css hidden live-sample___position
+```css live-sample___values3-start live-sample___values3-finish
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   height: 350px;
 }
-```
 
-```css live-sample___position
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/purple-star.png");
   background-repeat: no-repeat;
 }
 ```
 
-{{EmbedLiveSample("position", "", "400px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("values3-finish", "", "400px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Use `background-position` with the `center` keyword and a percentage:
 
-```css
+```css live-sample___values3-finish
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/purple-star.png");
   background-repeat: no-repeat;
   background-position: center 20%;
 }
@@ -208,6 +212,4 @@ Use `background-position` with the `center` keyword and a percentage:
 
 </details>
 
-## See also
-
-- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}

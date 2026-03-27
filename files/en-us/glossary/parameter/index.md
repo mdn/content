@@ -28,7 +28,7 @@ There are two kinds of parameters:
 - output/return parameters
   - : primarily return multiple values from a function, but are not recommended since they cause confusion
 
-### Parameters versus arguments
+## Parameters versus arguments
 
 Note the difference between _parameters_ and _arguments_:
 

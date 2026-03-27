@@ -78,7 +78,7 @@ body {
 
 video,
 #demo > p {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 0;
 }
 
@@ -206,7 +206,7 @@ Try running the [Element Capture API example](https://mdn.github.io/dom-examples
 
 ### Restrictions on the Element Capture API
 
-To ensure that the element is **eligible for restriction**, that is, it will be captured when chosen as the restriction target element, it must form a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) and be flattened in 3D space.
+To ensure that the element is **eligible for restriction**, that is, it will be captured when chosen as the restriction target element, it must form a [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) and be flattened in 3D space.
 
 To handle these restrictions, we've set the following additional CSS rule that targets the demo container element:
 

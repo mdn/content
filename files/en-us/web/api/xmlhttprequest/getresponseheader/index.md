@@ -59,7 +59,7 @@ client.send();
 client.onreadystatechange = () => {
   if (client.readyState === client.HEADERS_RECEIVED) {
     const contentType = client.getResponseHeader("Content-Type");
-    if (contentType !== my_expected_type) {
+    if (contentType !== myExpectedType) {
       client.abort();
     }
   }

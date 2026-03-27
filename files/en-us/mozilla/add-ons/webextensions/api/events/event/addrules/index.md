@@ -3,9 +3,8 @@ title: Event.addRules()
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event/addRules
 page-type: webextension-api-event
 browser-compat: webextensions.api.events.Event.addRules
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Registers rules for a declarative event.
 

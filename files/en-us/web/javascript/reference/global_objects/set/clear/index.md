@@ -12,16 +12,16 @@ The **`clear()`** method of {{jsxref("Set")}} instances removes all elements fro
 {{InteractiveExample("JavaScript Demo: Set.prototype.clear()")}}
 
 ```js interactive-example
-const set1 = new Set();
-set1.add(1);
-set1.add("foo");
+const set = new Set();
+set.add(1);
+set.add("foo");
 
-console.log(set1.size);
+console.log(set.size);
 // Expected output: 2
 
-set1.clear();
+set.clear();
 
-console.log(set1.size);
+console.log(set.size);
 // Expected output: 0
 ```
 

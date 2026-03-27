@@ -12,7 +12,7 @@ This page illustrates the application of CSS to the specialized language for cre
 Below you'll create a demonstration that runs in a browser.
 
 > [!NOTE]
-> Elements referenced by {{SVGElement("use")}} elements inherit the styles from that element. So to apply different styles to them you should use [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables).
+> Elements referenced by {{SVGElement("use")}} elements inherit the styles from that element. So to apply different styles to them you should use [CSS custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables).
 
 ## Example
 
@@ -402,7 +402,7 @@ Notes about this demonstration:
 
   ```html
   <style>
-    @import url(style8.css);
+    @import "style8.css";
   </style>
   ```
 
@@ -412,7 +412,24 @@ Notes about this demonstration:
 
 Change the stylesheet so that the inner petals all turn pink when the mouse pointer is over any one of them, without changing the way the outer petals work.
 
-[See a solution to this challenge.](/en-US/docs/Learn_web_development/Core/Challenges#svg_and_css)
+<details>
+<summary>Click here to see the solution</summary>
+
+Move the position of the `:hover` pseudo-class from a specific petal to all petals:
+
+```css
+#inner-petals {
+  --segment-fill-fill-hover: pink;
+}
+
+/* Non-standard way for some older browsers */
+#inner-petals:hover .segment-fill {
+  fill: pink;
+  stroke: none;
+}
+```
+
+</details>
 
 ## Simplified structure
 

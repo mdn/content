@@ -3,9 +3,8 @@ title: webRequest.onSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onSendHeaders
 page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onSendHeaders
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This event is fired just before sending headers. If your extension or some other extension modified headers in {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, you'll see the modified version here.
 
@@ -124,10 +123,6 @@ Events have three functions:
 
     You can find more information on tracker types on the [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) website. The `content` suffix indicates trackers that track and serve content. Blocking them protects users but can lead to sites breaking or elements not being displayed.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code logs all cookies that will be sent in making requests to the target [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns):
@@ -155,6 +150,10 @@ browser.webRequest.onSendHeaders.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#event-onSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.

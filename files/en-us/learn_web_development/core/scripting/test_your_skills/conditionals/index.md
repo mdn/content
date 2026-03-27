@@ -1,18 +1,17 @@
 ---
 title: "Test your skills: Conditionals"
-short-title: Conditionals
+short-title: "Test: Conditionals"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you've understood our [Making decisions in your code — conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals) article.
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
+
+The aim of this skill test is to help you assess whether you've understood our [Making decisions in your code — conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals) article.
 
 > [!NOTE]
-> You can try solutions by downloading the code and putting it in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If there is an error, it will be logged in the results panel on the page or into the browser's JavaScript console to help you.
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Conditionals 1
 
@@ -23,23 +22,16 @@ In this task you are provided with two variables:
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create a conditional that checks whether `season` contains the string "summer", and if so assigns a string to `response` that gives the user an appropriate message about the season. If not, it should assign a generic string to `response` that tells the user we don't know what season it is.
-3. Add another conditional that checks whether `season` contains the string "winter", and again assigns an appropriate string to `response`.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/conditionals/conditionals1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Create a conditional that checks whether `season` contains the string "summer", and if so assigns a string to `response` that gives the user an appropriate message about the season. If not, it should assign a generic string to `response` that tells the user we don't know what season it is.
+2. Add another conditional that checks whether `season` contains the string "winter", and again assigns an appropriate string to `response`.
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___conditionals-1 live-sample___conditionals-2 live-sample___conditionals-3
+```html hidden live-sample___conditionals-1 live-sample___conditionals-2 live-sample___conditionals-3 live-sample___conditionals-1-finish live-sample___conditionals-2-finish live-sample___conditionals-3-finish
 <section></section>
 ```
 
-```css hidden live-sample___conditionals-1 live-sample___conditionals-2 live-sample___conditionals-3
+```css hidden live-sample___conditionals-1 live-sample___conditionals-2 live-sample___conditionals-3 live-sample___conditionals-1-finish live-sample___conditionals-2-finish live-sample___conditionals-3-finish
 * {
   box-sizing: border-box;
 }
@@ -51,6 +43,12 @@ p {
 ```
 
 <!-- Example-specific code -->
+
+The starting point of the task looks like this (nothing is shown yet):
+
+{{ EmbedLiveSample("conditionals-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___conditionals-1
 let season = "summer";
@@ -66,7 +64,9 @@ para1.textContent = response;
 section.appendChild(para1);
 ```
 
-{{ EmbedLiveSample("conditionals-1", "100%", 60) }}
+The initial state of your updated output should look like this:
+
+{{ EmbedLiveSample("conditionals-1-finish", "100%", 60) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -90,6 +90,25 @@ if (season === "summer") {
 // ...
 ```
 
+```js hidden live-sample___conditionals-1-finish
+let season = "summer";
+let response;
+
+if (season === "summer") {
+  response = "It's probably nice and warm where you are; enjoy the sun!";
+} else if (season === "winter") {
+  response = "I hope you are not too cold. Put some warm clothes on!";
+} else {
+  response =
+    "I don't know what the season is where you are. Hope you are well.";
+}
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = response;
+section.appendChild(para1);
+```
+
 </details>
 
 ## Conditionals 2
@@ -102,9 +121,8 @@ For this task you are given three variables:
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create an `if...else` structure that checks whether the machine is switched on and puts a message into the `response` variable if it isn't, telling the user to switch the machine on.
-3. Inside the first `if...else`, nest another `if...else` that puts appropriate messages into the `response` variable depending on what the value of `score` is — if the machine is turned on. The different conditional tests (and resulting responses) are as follows:
+1. Create an `if...else` structure that checks whether the machine is switched on and puts a message into the `response` variable if it isn't, telling the user to switch the machine on.
+2. Inside the first `if...else`, nest another `if...else` that puts appropriate messages into the `response` variable depending on what the value of `score` is — if the machine is turned on. The different conditional tests (and resulting responses) are as follows:
    - Score of less than 0 or more than 100 — "This is not possible, an error has occurred."
    - Score of 0 to 19 — "That was a terrible score — total fail!"
    - Score of 20 to 39 — "You know some things, but it's a pretty bad score. Needs improvement."
@@ -115,11 +133,11 @@ To complete the task:
 After you've entered your code, try changing `machineActive` to `true`, and `score` to a few different values to see if it works.
 Please note that, for the scope of this exercise, the `Your score is __` string will remain on the screen regardless of the `machineActive` variable's value.
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/conditionals/conditionals2-download.html) to work in your own editor or in an online editor.
+The starting point of the task looks like this:
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+{{ EmbedLiveSample("conditionals-2", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___conditionals-2
 let response;
@@ -139,7 +157,9 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-{{ EmbedLiveSample("conditionals-2", "100%", 60) }}
+The initial state of your updated output should look like this:
+
+{{ EmbedLiveSample("conditionals-2-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -174,6 +194,39 @@ if (machineActive) {
 // ...
 ```
 
+```js hidden live-sample___conditionals-2-finish
+let response;
+let score = 75;
+let machineActive = false;
+
+if (machineActive) {
+  if (score < 0 || score > 100) {
+    response = "This is not possible, an error has occurred.";
+  } else if (score >= 0 && score < 20) {
+    response = "That was a terrible score — total fail!";
+  } else if (score >= 20 && score < 40) {
+    response =
+      "You know some things, but it's a pretty bad score. Needs improvement.";
+  } else if (score >= 40 && score < 70) {
+    response = "You did a passable job, not bad!";
+  } else if (score >= 70 && score < 90) {
+    response = "That's a great score, you really know your stuff.";
+  } else if (score >= 90 && score <= 100) {
+    response = "What an amazing score! Did you cheat? Are you for real?";
+  }
+} else {
+  response = "The machine is turned off. Turn it on to process your score.";
+}
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const para2 = document.createElement("p");
+para1.textContent = `Your score is ${score}`;
+para2.textContent = response;
+section.appendChild(para1);
+section.appendChild(para2);
+```
+
 </details>
 
 ## Conditionals 3
@@ -187,15 +240,14 @@ For the final task you are given four variables:
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create an `if...else` structure that checks whether the machine is switched on and puts a message into the `machineResult` variable telling the user whether it is on or off.
-3. If the machine is on, we also want a second conditional to run that checks whether the `pwd` is equal to `cheese`. If so, it should assign a string to `pwdResult` telling the user they logged in successfully. If not, it should assign a different string to `pwdResult` telling the user their login attempt was not successful. We'd like you to do this in a single line, using something that isn't an `if...else` structure.
+1. Create an `if...else` structure that checks whether the machine is switched on and puts a message into the `machineResult` variable telling the user whether it is on or off.
+2. If the machine is on, we also want a second conditional to run that checks whether the `pwd` is equal to `cheese`. If so, it should assign a string to `pwdResult` telling the user they logged in successfully. If not, it should assign a different string to `pwdResult` telling the user their login attempt was not successful. We'd like you to do this in a single line, using something that isn't an `if...else` structure.
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/conditionals/conditionals3-download.html) to work in your own editor or in an online editor.
+The starting point of the task looks like this (nothing is shown yet):
 
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+{{ EmbedLiveSample("conditionals-3", "100%", 60) }}
+
+Here's the underlying code for this starting point:
 
 ```js live-sample___conditionals-3
 let machineActive = true;
@@ -217,7 +269,9 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-{{ EmbedLiveSample("conditionals-3", "100%", 60) }}
+The updated output should look like this:
+
+{{ EmbedLiveSample("conditionals-3-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -245,4 +299,32 @@ if (machineActive) {
 // ...
 ```
 
+```js hidden live-sample___conditionals-3-finish
+let machineActive = true;
+let pwd = "cheese";
+
+let machineResult;
+let pwdResult;
+
+if (machineActive) {
+  machineResult = "Machine is active. Trying login.";
+  pwdResult =
+    pwd === "cheese"
+      ? "Login successful."
+      : "Password incorrect; login failed.";
+} else {
+  machineResult = "Machine is inactive. Activate and try logging in again.";
+}
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const para2 = document.createElement("p");
+para1.textContent = machineResult;
+para2.textContent = pwdResult;
+section.appendChild(para1);
+section.appendChild(para2);
+```
+
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}

@@ -3,9 +3,8 @@ title: tabs.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onCreated
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a tab is created.
 

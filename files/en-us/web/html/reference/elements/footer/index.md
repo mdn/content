@@ -36,7 +36,7 @@ footer {
   justify-content: center;
   padding: 5px;
   background-color: #45a1ff;
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -80,7 +80,7 @@ footer {
   text-align: center;
   padding: 5px;
   background-color: #abbaba;
-  color: #000;
+  color: black;
 }
 ```
 

@@ -3,9 +3,8 @@ title: tabs.group()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/group
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.group
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Adds one or more tabs to a group or, if no group is specified, adds the tabs to a new group. All tabs in a tab group must be adjacent, and tabs are moved if needed. Any pinned tabs are unpinned before grouping.
 

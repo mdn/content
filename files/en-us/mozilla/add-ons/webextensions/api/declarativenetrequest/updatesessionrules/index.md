@@ -3,9 +3,8 @@ title: declarativeNetRequest.updateSessionRules
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateSessionRules
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.updateSessionRules
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Modifies the set of session-scoped rules for the extension. The rules with IDs listed in `options.removeRuleIds` are first removed, and then the rules given in `options.addRules` are added. Note that:
 
@@ -19,7 +18,7 @@ Modifies the set of session-scoped rules for the extension. The rules with IDs l
 ## Syntax
 
 ```js-nolint
-let updatedRuleset = browser.declarativeNetRequest.updateSessionRules(
+let rulesetUpdated = browser.declarativeNetRequest.updateSessionRules(
     options                // object
 );
 ```

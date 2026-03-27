@@ -21,7 +21,7 @@ A string, formatted similarly to the CSS {{cssxref("margin")}} property's value,
 These offsets are added to the corresponding values in the root's bounding box before the intersection between the resulting rectangle and the target element's bounds.
 
 The string returned by this property may not match the one specified when the {{domxref("IntersectionObserver")}} was instantiated.
-The browser is permitted to alter the values
+For example, the result always contains four components, though the input may have fewer.
 
 If `rootMargin` isn't specified when the object was instantiated, it defaults to the string `"0px 0px 0px 0px"`, meaning that the intersection will be computed between the root element's unmodified bounds rectangle and the target's bounds.
 [How intersections are calculated](/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated) describes how the `rootMargin` is used in more detail.

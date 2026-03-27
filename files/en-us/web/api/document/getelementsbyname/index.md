@@ -43,8 +43,8 @@ A live {{domxref("NodeList")}} collection, meaning it automatically updates as n
 ```
 
 ```js
-const up_names = document.getElementsByName("up");
-console.log(up_names[0].tagName); // displays "INPUT"
+const upNames = document.getElementsByName("up");
+console.log(upNames[0].tagName); // displays "INPUT"
 ```
 
 ## Notes

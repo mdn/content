@@ -38,7 +38,7 @@ Note that `typedArray` is modified in-place, and no copy is made.
 
 ### Exceptions
 
-- `QuotaExceededError` {{domxref("DOMException")}}
+- {{domxref("QuotaExceededError")}}
   - : Thrown if the {{jsxref("TypedArray.byteLength", "byteLength")}} of `typedArray` exceeds 65,536.
 
 ## Usage notes

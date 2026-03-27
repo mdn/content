@@ -12,7 +12,7 @@ The **`Iterator.from()`** static method creates a new {{jsxref("Iterator")}} obj
 ## Syntax
 
 ```js-nolint
-from(object)
+Iterator.from(object)
 ```
 
 ### Parameters

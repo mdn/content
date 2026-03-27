@@ -22,7 +22,7 @@ func[Symbol.hasInstance](value)
 
 ### Return value
 
-`true` if `func.prototype` is in the prototype chain of `value`; otherwise, `false`. Always returns `false` if `value` is not an object or `this` is not a function. If `this` is a [bound function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), returns the result of a `instanceof` test on `value` and the underlying target function.
+`true` if `func.prototype` is in the prototype chain of `value`; otherwise, `false`. Always returns `false` if `value` is not an object or `this` is not a function. If `this` is a [bound function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), returns the result of an `instanceof` test on `value` and the underlying target function.
 
 ### Exceptions
 
@@ -47,7 +47,7 @@ const foo = new Foo();
 console.log(foo instanceof Foo === Foo[Symbol.hasInstance](foo)); // true
 ```
 
-You may want to use this method if you want to invoke the default `instanceof` behavior, but you don't know if a constructor has a overridden `[Symbol.hasInstance]()` method.
+You may want to use this method if you want to invoke the default `instanceof` behavior, but you don't know if a constructor has an overridden `[Symbol.hasInstance]()` method.
 
 ```js
 class Foo {

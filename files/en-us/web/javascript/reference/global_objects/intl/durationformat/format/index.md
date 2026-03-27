@@ -79,7 +79,7 @@ new Intl.DurationFormat("en", { style: "short" }).format(duration);
 
 // With style set to "short" and locale set to "pt"
 new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
-// "1h 46min 40s"
+// "1 h 46 min 40 s"
 
 // With style set to "digital" and locale set to "en"
 new Intl.DurationFormat("en", { style: "digital" }).format(duration);

@@ -255,7 +255,7 @@ html {
 }
 
 form {
-  background: #ccc;
+  background: #cccccc;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid black;
@@ -267,7 +267,7 @@ form ol {
 
 form li,
 div > p {
-  background: #eee;
+  background: #eeeeee;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;

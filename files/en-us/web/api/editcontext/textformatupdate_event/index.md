@@ -10,7 +10,7 @@ browser-compat: api.EditContext.textformatupdate_event
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
-The `textformatupdate` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window is happening.
+The `textformatupdate` event of the {{domxref("EditContext")}} interface fires when composition using an {{glossary("Input Method Editor")}} (IME) window is happening.
 
 The event is fired when the IME decides that certain parts of the text being composed should be formatted differently to indicate the composition state.
 

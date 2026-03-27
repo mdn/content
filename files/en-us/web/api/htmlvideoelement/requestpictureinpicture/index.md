@@ -14,7 +14,7 @@ to display the video in picture-in-picture mode.
 
 It's not guaranteed that the video will be put into picture-in-picture. If permission
 to enter that mode is granted, the returned {{jsxref("Promise")}} will resolve and the
-video will receive a {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}} event to let it know that it's now in picture-in-picture.
+video will receive an {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}} event to let it know that it's now in picture-in-picture.
 
 ## Syntax
 
@@ -44,7 +44,7 @@ object that can be used to listen when a user will resize that floating window.
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element for this feature to work.
+[Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required. The user has to interact with the page or a UI element for this feature to work.
 
 ## Examples
 
@@ -54,10 +54,8 @@ listener to handle the floating window resizing.
 ```js
 function enterPictureInPicture() {
   videoElement.requestPictureInPicture().then((pictureInPictureWindow) => {
-    pictureInPictureWindow.addEventListener(
-      "resize",
-      () => onPipWindowResize(),
-      false,
+    pictureInPictureWindow.addEventListener("resize", () =>
+      onPipWindowResize(),
     );
   });
 }

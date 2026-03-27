@@ -17,7 +17,7 @@ A `GPUDevice` object is requested using the {{domxref("GPUAdapter.requestDevice(
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("GPUDevice.adapterInfo", "adapterInfo")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUDevice.adapterInfo", "adapterInfo")}} {{ReadOnlyInline}}
   - : A {{domxref("GPUAdapterInfo")}} object containing identifying information about the device's originating adapter.
 
 - {{domxref("GPUDevice.features", "features")}} {{ReadOnlyInline}}
@@ -95,7 +95,7 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 ## Events
 
-- {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}}
   - : Fired when an error is thrown that has not been observed by a GPU error scope, to provide a way to report unexpected errors. Known error cases should be handled using {{domxref("GPUDevice.pushErrorScope", "pushErrorScope()")}} and {{domxref("GPUDevice.popErrorScope", "popErrorScope()")}}.
 
 ## Examples

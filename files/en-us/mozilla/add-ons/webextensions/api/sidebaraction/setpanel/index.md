@@ -3,9 +3,8 @@ title: sidebarAction.setPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
 page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.setPanel
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the sidebar's panel: that is, the HTML document that defines the content of this sidebar.
 

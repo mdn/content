@@ -10,7 +10,7 @@ The HTTP **`201 Created`** [successful response](/en-US/docs/Web/HTTP/Reference/
 This status code is commonly sent as the result of a {{HTTPMethod("POST")}} request.
 
 The new resource, or a description and link to the new resource, is created before the response is returned.
-The newly-created items are returned in the body of the message, located at either the **URL of the initial request** or the URL in the value of the {{HTTPHeader("Location")}} header in the response.
+The newly-created items can be returned in the body of the response message, but must be locatable by the **URL of the initiating request** or by the URL in the value of the {{HTTPHeader("Location")}} header provided with the response.
 
 ## Status
 

@@ -16,7 +16,7 @@ It contains non-hierarchical data to identify a resource within the scope of the
 ?query
 ```
 
-- `fragment`
+- `query`
   - : A sequence of any characters, except for the `#` character, which starts the [fragment](/en-US/docs/Web/URI/Reference/Fragment).
     The exact format of the query is defined by the resource itself.
 

@@ -9,11 +9,9 @@ browser-compat: api.URL.createObjectURL_static
 {{APIRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The **`createObjectURL()`** static method of the {{domxref("URL")}} interface
-creates a string containing a URL representing the object given in the parameter.
+creates a string containing a [blob URL](/en-US/docs/Web/URI/Reference/Schemes/blob) pointing to the object given in the parameter.
 
-The URL lifetime is tied to the {{domxref("document")}}
-in the window on which it was created. The new object URL represents the specified
-{{domxref("File")}} object or {{domxref("Blob")}} object.
+For more information, see [blob URLs](/en-US/docs/Web/URI/Reference/Schemes/blob).
 
 To release an object URL, call {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}.
 
@@ -30,7 +28,7 @@ URL.createObjectURL(object)
 ### Parameters
 
 - `object`
-  - : A {{domxref("File")}}, {{domxref("Blob")}}, or {{domxref("MediaSource")}} object to
+  - : A {{domxref("Blob")}} (such as a {{domxref("File")}}) or {{domxref("MediaSource")}} object to
     create an object URL for.
 
 ### Return value
@@ -42,30 +40,6 @@ contents of the specified source `object`.
 
 See [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images).
 
-## Usage notes
-
-### Memory management
-
-Each time you call `createObjectURL()`, a new object URL is created, even if
-you've already created one for the same object. Each of these must be released by
-calling {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} when you no longer need them.
-
-Browsers will release object URLs automatically when the document is unloaded; however,
-for optimal performance and memory usage, if there are safe times when you can
-explicitly unload them, you should do so.
-
-### Using object URLs for media streams
-
-In older versions of the Media Source specification, attaching a stream to a
-{{HTMLElement("video")}} element required creating an object URL for the
-{{domxref("MediaStream")}}. This is no longer necessary, and browsers are removing
-support for doing this.
-
-> [!WARNING]
-> If you still have code that relies on
-> `createObjectURL()` to attach streams to media
-> elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject", "srcObject")}} to the `MediaStream` directly.
-
 ## Specifications
 
 {{Specifications}}
@@ -76,6 +50,7 @@ support for doing this.
 
 ## See also
 
+- [Blob URLs](/en-US/docs/Web/URI/Reference/Schemes/blob)
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images)
 - {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}

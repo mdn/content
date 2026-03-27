@@ -46,37 +46,38 @@ several [`<track>`](/en-US/docs/Web/HTML/Reference/Elements/track)
 children
 
 ```html
-<video controls poster="/images/sample.gif">
-  <source src="sample.mp4" type="video/mp4" />
-  <source src="sample.ogv" type="video/ogv" />
-  <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
-  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
-  <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
-  <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
-  <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
-  <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja" />
-  <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz" />
-  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1" />
-  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2" />
-  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3" />
+<video controls>
+  <source src="/shared-assets/videos/sintel-short.webm" type="video/webm" />
+  <source src="/shared-assets/videos/sintel-short.mp4" type="video/mp4" />
+  <track
+    kind="subtitles"
+    src="/shared-assets/misc/sintel-en.vtt"
+    srclang="en"
+    label="English" />
+  <track
+    kind="subtitles"
+    src="/shared-assets/misc/sintel-de.vtt"
+    srclang="de"
+    label="Deutsch" />
+  <track
+    kind="subtitles"
+    src="/shared-assets/misc/sintel-es.vtt"
+    srclang="es"
+    label="Español" />
 </video>
 ```
 
-The `HTMLMediaElement.textTracks` returns a
-`textTracksList` through which we can iterate. Here we print all the properties
-of each English track to the console.
+The `HTMLMediaElement.textTracks` returns a `TextTrackList` through which we can iterate. Here we set all three tracks to show simultaneously.
 
 ```js
 const tracks = document.querySelector("video").textTracks;
 
 for (const track of tracks) {
-  if (track.language === "en") {
-    console.dir(track);
-  }
+  track.mode = "showing";
 }
 ```
 
-{{EmbedLiveSample("Examples", "100%", 155)}}
+{{EmbedLiveSample("Examples", "100%", 350)}}
 
 ## Specifications
 

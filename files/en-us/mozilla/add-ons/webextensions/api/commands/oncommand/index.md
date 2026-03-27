@@ -3,9 +3,8 @@ title: onCommand
 slug: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
 page-type: webextension-api-event
 browser-compat: webextensions.api.commands.onCommand
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a command is executed using its associated keyboard shortcut.
 

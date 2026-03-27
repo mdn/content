@@ -19,11 +19,17 @@ There are two types of custom element:
 - **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation extends the behavior of select instances of the standard element.
 
   > [!NOTE]
-  > Safari does not plan to support custom built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/is) for more information.
+  > Safari does not plan to support customized built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/is) for more information.
+
+For both kinds of custom element, the basic steps to create and use them are the same:
+
+- You first [implement its behavior](#implementing_a_custom_element) by defining a JavaScript class.
+- You then [register the custom element](#registering_a_custom_element) to the current page. You can also create [scoped registries](#scoped_custom_element_registries) to limit definitions to a particular DOM subtree.
+- Finally, you can [use the custom element](#using_a_custom_element) in your HTML or JavaScript code.
 
 ## Implementing a custom element
 
-A custom element is implemented as a [class](/en-US/docs/Web/JavaScript/Reference/Classes) which extends {{domxref("HTMLElement")}} (in the case of autonomous elements) or the interface you want to customize (in the case of customized built-in elements).
+A custom element is implemented as a [class](/en-US/docs/Web/JavaScript/Reference/Classes) which extends {{domxref("HTMLElement")}} (in the case of autonomous elements) or the interface you want to customize (in the case of customized built-in elements). This class will not be called by you, but will be called by the browser. Immediately after defining the class, you should [register](#registering_a_custom_element) the custom element, so you can create instances of it using standard DOM practices, such as writing the element in HTML markup, calling {{domxref("document.createElement()")}}, etc.
 
 Here's the implementation of a minimal custom element that customizes the {{HTMLElement("p")}} element:
 
@@ -110,8 +116,12 @@ If you want to preserve the element's state, you can do so by defining a `connec
 You could add an empty `connectedMoveCallback()` to stop the other two callbacks running, or include some custom logic to handle the move:
 
 ```js
-connectedMoveCallback() {
-  console.log("Custom move-handling logic here.");
+class MyComponent {
+  // ...
+  connectedMoveCallback() {
+    console.log("Custom move-handling logic here.");
+  }
+  // ...
 }
 ```
 
@@ -156,6 +166,74 @@ To use an autonomous custom element, use the custom name just like a built-in HT
 <popup-info>
   <!-- content of the element -->
 </popup-info>
+```
+
+## Scoped custom element registries
+
+The examples above register custom elements on the global {{domxref("CustomElementRegistry")}} accessed via {{domxref("Window.customElements")}}. This means every custom element name you register must be globally unique across the entire page. As applications grow and begin combining components from multiple libraries, global name collisions can become a problem — if two libraries both try to define `<my-button>`, one of them will fail.
+
+**Scoped custom element registries** solve this by letting you create an independent registry whose definitions only apply to a specific DOM subtree, such as a {{domxref("ShadowRoot")}}. Different shadow trees can each use their own registry with their own definitions, even if the element names overlap.
+
+### Creating a scoped registry
+
+Create a scoped registry using the {{domxref("CustomElementRegistry.CustomElementRegistry()", "CustomElementRegistry()")}} constructor and register elements on it with {{domxref("CustomElementRegistry.define()", "define()")}}, just like the global registry:
+
+```js
+const myRegistry = new CustomElementRegistry();
+
+myRegistry.define(
+  "my-element",
+  class extends HTMLElement {
+    connectedCallback() {
+      this.textContent = "Hello from scoped registry!";
+    }
+  },
+);
+```
+
+> [!NOTE]
+> Scoped registries do not support the `extends` option in `define()` (for creating [customized built-in elements](#types_of_custom_element)). Attempting to use `extends` with a scoped registry throws a `NotSupportedError` {{domxref("DOMException")}}.
+
+### Associating a scoped registry with a shadow root
+
+One way to use a scoped registry is to pass it to {{domxref("Element.attachShadow()")}} via the `customElementRegistry` option. Elements parsed or created inside that shadow tree will then use the scoped registry's definitions instead of the global one:
+
+```js
+const host = document.createElement("div");
+document.body.appendChild(host);
+
+const shadow = host.attachShadow({
+  mode: "open",
+  customElementRegistry: myRegistry,
+});
+
+// <my-element> is upgraded using myRegistry's definition
+shadow.innerHTML = "<my-element></my-element>";
+```
+
+You can also associate a scoped registry after the shadow root has been created by calling {{domxref("CustomElementRegistry.initialize()", "initialize()")}}. This is useful when you need to set up the DOM structure first and attach the registry later:
+
+```js
+const shadow = host.attachShadow({
+  mode: "open",
+  customElementRegistry: null, // no registry yet
+});
+shadow.innerHTML = "<my-element></my-element>";
+
+// Later, associate the scoped registry and upgrade elements
+myRegistry.initialize(shadow);
+```
+
+### Declarative shadow DOM with scoped registry
+
+For [declarative shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html), you can use the `shadowrootcustomelementregistry` attribute on a {{HTMLElement("template")}} element. This tells the HTML parser to leave the shadow root's {{domxref("ShadowRoot.customElementRegistry", "customElementRegistry")}} as `null`, so a scoped registry can be attached later with `initialize()`:
+
+```html
+<my-host>
+  <template shadowrootmode="open" shadowrootcustomelementregistry>
+    <my-element></my-element>
+  </template>
+</my-host>
 ```
 
 ## Responding to attribute changes
@@ -206,9 +284,9 @@ For a complete example showing the use of `attributeChangedCallback()`, see [Lif
 
 Built in HTML elements can have different _states_, such as "hover", "disabled", and "read only".
 Some of these states can be set as attributes using HTML or JavaScript, while others are internal, and cannot.
-Whether external or internal, commonly these states have corresponding CSS [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that can be used to select and style the element when it is in a particular state.
+Whether external or internal, commonly these states have corresponding CSS [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) that can be used to select and style the element when it is in a particular state.
 
-Autonomous custom elements (but not elements based on built-in elements) also allow you to define states and select against them using the [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class function.
+Autonomous custom elements (but not elements based on built-in elements) also allow you to define states and select against them using the {{cssxref(":state()")}} pseudo-class function.
 The code below shows how this works using the example of an autonomous custom element that has an internal state `"collapsed"`.
 
 The `collapsed` state is represented as a boolean property (with setter and getter methods) that is not visible outside of the element.
@@ -243,7 +321,7 @@ customElements.define("my-custom-element", MyCustomElement);
 ```
 
 We can use the identifier added to the custom element's `CustomStateSet` (`this._internals.states`) for matching the element's custom state.
-This is matched by passing the identifier to the [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class.
+This is matched by passing the identifier to the {{cssxref(":state()")}} pseudo-class.
 For example, below we select on the `hidden` state being true (and hence the element's `collapsed` state) using the `:hidden` selector, and remove the border.
 
 ```css
@@ -255,7 +333,7 @@ my-custom-element:state(hidden) {
 }
 ```
 
-The `:state()` pseudo-class can also be used within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function to match a custom state [within a custom element's shadow DOM](/en-US/docs/Web/CSS/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom). Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that is in a particular state.
+The `:state()` pseudo-class can also be used within the {{cssxref(":host()")}} pseudo-class function to match a custom state [within a custom element's shadow DOM](/en-US/docs/Web/CSS/Reference/Selectors/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom). Additionally, the `:state()` pseudo-class can be used after the {{cssxref("::part()")}} pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) of a custom element that is in a particular state.
 
 There are several live examples in {{domxref("CustomStateSet")}} showing how this works.
 
@@ -451,7 +529,7 @@ Now let's have a look at a customized built in element example. This example ext
 - [See the source code](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component)
 
 > [!NOTE]
-> Please see the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
+> Please see the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of customized built-in elements.
 
 First of all, we define our element's class:
 

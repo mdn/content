@@ -9,7 +9,7 @@ browser-compat: api.Presentation
 
 {{securecontext_header}}{{SeeCompatTable}}{{DefaultAPISidebar("Presentation API")}}
 
-The Presentation API lets a {{Glossary("user agent")}} (such as a Web browser) effectively display web content through large presentation devices such as projectors and network-connected televisions. Supported types of multimedia devices include both displays which are wired using HDMI, DVI, or the like, or wireless, using [DLNA](https://www.dlna.org/), [Chromecast](https://developers.google.com/cast/), [AirPlay](https://developer.apple.com/airplay/), or [Miracast](https://www.wi-fi.org/applications).
+The Presentation API lets a {{Glossary("user agent")}} (such as a Web browser) effectively display web content through large presentation devices such as projectors and network-connected televisions. Supported types of multimedia devices include both displays which are wired using HDMI, DVI, or the like, or wireless, using [DLNA](https://www.dlna.org/), [Chromecast](https://developers.google.com/cast/), [AirPlay](https://developer.apple.com/documentation/technologyoverviews/streaming), or [Miracast](https://www.wi-fi.org/applications).
 
 ![1-UA mode loaded the Controlling and Presenting pages together before outputting to displays. 2-UA mode loaded them separately using the Presentation Control Protocol.](presentation_mode_illustration.png)
 
@@ -135,7 +135,7 @@ const reconnect = () => {
   }
 };
 // On navigation of the controller, reconnect automatically.
-document.addEventListener("DOMContentLoaded", reconnect);
+reconnect();
 // Or allow manual reconnection.
 reconnectBtn.onclick = reconnect;
 ```

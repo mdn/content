@@ -53,7 +53,7 @@ It is possible to perform some [CSS optimizations](/en-US/docs/Learn_web_develop
 
 By default, font requests are delayed until the render tree is constructed, which can result in delayed text rendering.
 
-It is possible to override the default behavior and preload web font resources using `<link rel="preload">`, the [CSS `font-display` descriptor](/en-US/docs/Web/CSS/@font-face/font-display), and the [Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
+It is possible to override the default behavior and preload web font resources using `<link rel="preload">`, the [CSS `font-display` descriptor](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/font-display), and the [Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
 
 See also: [Element Link](/en-US/docs/Web/HTML/Reference/Elements/link).
 

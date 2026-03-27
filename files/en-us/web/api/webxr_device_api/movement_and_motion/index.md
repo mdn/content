@@ -72,7 +72,12 @@ let polyfill = null;
 let xrSession = null;
 let xrInputSources = null;
 let xrReferenceSpace = null;
-let xrButton = null;
+const xrButton = document.querySelector("#enter-xr");
+const projectionMatrixOut = document.querySelector("#projection-matrix div");
+const modelMatrixOut = document.querySelector("#model-view-matrix div");
+const cameraMatrixOut = document.querySelector("#camera-matrix div");
+const mouseMatrixOut = document.querySelector("#mouse-matrix div");
+
 let gl = null;
 let animationFrameRequestID = 0;
 let shaderProgram = null;
@@ -125,31 +130,17 @@ Suffice it to say that the vertex shader computes the position of each vertex gi
 
 ## Starting up and shutting down WebXR
 
-Upon initially loading the script, we install a handler for the {{domxref("Window.load_event", "load")}} event, so that we can perform initialization.
-
 ```js
-window.addEventListener("load", onLoad);
+xrButton.addEventListener("click", onXRButtonClick);
 
-function onLoad() {
-  xrButton = document.querySelector("#enter-xr");
-  xrButton.addEventListener("click", onXRButtonClick);
-
-  projectionMatrixOut = document.querySelector("#projection-matrix div");
-  modelMatrixOut = document.querySelector("#model-view-matrix div");
-  cameraMatrixOut = document.querySelector("#camera-matrix div");
-  mouseMatrixOut = document.querySelector("#mouse-matrix div");
-
-  if (!navigator.xr || enableForcePolyfill) {
-    console.log("Using the polyfill");
-    polyfill = new WebXRPolyfill();
-  }
-  setupXRButton();
+if (!navigator.xr || enableForcePolyfill) {
+  console.log("Using the polyfill");
+  polyfill = new WebXRPolyfill();
 }
+setupXRButton();
 ```
 
-The `load` event handler gets a reference to the button that toggles WebXR on and off into `xrButton`, then adds a handler for {{domxref("Element.click_event", "click")}} events. Then references are obtained to the four {{HTMLElement("div")}} blocks into which we'll output the current contents of each of the key matrices for informational purposes while our scene is running.
-
-Then we look to see if {{domxref("navigator.xr")}} is defined. If it isn't—and/or the `enableForcePolyfill` configuration constant is set to `true`—we install the WebXR polyfill by instantiating the `WebXRPolyfill` class.
+We add a handler for {{domxref("Element.click_event", "click")}} events. Then we look to see if {{domxref("navigator.xr")}} is defined. If it isn't—and/or the `enableForcePolyfill` configuration constant is set to `true`—we install the WebXR polyfill by instantiating the `WebXRPolyfill` class.
 
 ### Handling the startup and shutdown UI
 

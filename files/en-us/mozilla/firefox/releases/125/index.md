@@ -1,5 +1,5 @@
 ---
-title: Firefox 125 for developers
+title: Firefox 125 release notes for developers
 short-title: Firefox 125
 slug: Mozilla/Firefox/Releases/125
 page-type: firefox-release-notes
@@ -17,8 +17,8 @@ No notable changes.
 ### CSS
 
 - The {{cssxref("align-content")}} property has been updated to work with `display: block;` layouts. This brings all the layout positions from `flex` and `grid` to `block`, enabling developers to align block-level elements without converting their container to a `flex` or `grid` container. ([Firefox bug 1882853](https://bugzil.la/1882853)).
-- The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape ([Firefox bug 1868374](https://bugzil.la/1868374)).
-- The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property value `auto` is now enabled by default. This allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#relevant_to_the_user). ([Firefox bug 1874874](https://bugzil.la/1874874)).
+- The CSS property [`transform-box`](/en-US/docs/Web/CSS/Reference/Properties/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape ([Firefox bug 1868374](https://bugzil.la/1868374)).
+- The [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility) CSS property value `auto` is now enabled by default. This allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/Guides/Containment/Using#relevant_to_the_user). ([Firefox bug 1874874](https://bugzil.la/1874874)).
 
 ### JavaScript
 
@@ -38,8 +38,8 @@ No notable changes.
   - [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) property [`popover`](/en-US/docs/Web/API/HTMLElement/popover), [`hidePopover()`](/en-US/docs/Web/API/HTMLElement/hidePopover), [`showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover), and [`togglePopover()`](/en-US/docs/Web/API/HTMLElement/togglePopover) methods, and [`beforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event) and [`toggle_event`](/en-US/docs/Web/API/HTMLElement/toggle_event) events (of type [`ToggleEvent`](/en-US/docs/Web/API/ToggleEvent)).
 
   The following CSS pseudo class and element are now supported for use with popovers:
-  - [`:popover-open`](/en-US/docs/Web/CSS/:popover-open)
-  - [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) has been extended to support popovers
+  - [`:popover-open`](/en-US/docs/Web/CSS/Reference/Selectors/:popover-open)
+  - [`::backdrop`](/en-US/docs/Web/CSS/Reference/Selectors/::backdrop) has been extended to support popovers
 
   The following HTML global attributes are supported:
   - [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget)
@@ -71,7 +71,7 @@ No notable changes.
 
 #### Removals
 
-- The [`SVGAElement.text`](/en-US/docs/Web/API/SVGAElement#svgaelement.text) property has been removed. The {{domxref("Node.textContent", "textContent")}} property (inherited from `Node`) is broadly supported and should be used instead. ([Firefox bug 1880689](https://bugzil.la/1880689)).
+- The [`SVGAElement.text`](/en-US/docs/Web/API/SVGAElement/text) property has been removed. The {{domxref("Node.textContent", "textContent")}} property (inherited from `Node`) is broadly supported and should be used instead. ([Firefox bug 1880689](https://bugzil.la/1880689)).
 
 ### WebAssembly
 
@@ -109,7 +109,7 @@ These features are shipping in Firefox 125 but only in developer releases or beh
 - **CSS `transition-behavior`:** `layout.css.transition-behavior.enabled`.
 
   The {{cssxref("transition-behavior")}} property is enabled by default in the Nightly release.
-  Authors can use this property to control whether to apply CSS transitions to properties with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete) ([Firefox bug 1882408](https://bugzil.la/1882408), [Firefox bug 1805727](https://bugzil.la/1805727)).
+  Authors can use this property to control whether to apply CSS transitions to properties with a [discrete animation type](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete) ([Firefox bug 1882408](https://bugzil.la/1882408), [Firefox bug 1805727](https://bugzil.la/1805727)).
 
 - **UA styles for `<h1>` nested into sectioning elements:** `layout.css.h1-in-section-ua-styles.enabled`.
 

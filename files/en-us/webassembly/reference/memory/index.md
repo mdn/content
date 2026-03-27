@@ -7,15 +7,15 @@ sidebar: webassemblysidebar
 
 WebAssembly memory instructions.
 
-- [`Grow`](/en-US/docs/WebAssembly/Reference/Memory/Grow)
+- [`grow`](/en-US/docs/WebAssembly/Reference/Memory/grow)
   - : Increase the size of the memory instance.
-- [`Size`](/en-US/docs/WebAssembly/Reference/Memory/Size)
+- [`size`](/en-US/docs/WebAssembly/Reference/Memory/size)
   - : Get the size of the memory instance.
-- [`Load`](/en-US/docs/WebAssembly/Reference/Memory/Load)
+- [`load`](/en-US/docs/WebAssembly/Reference/Memory/load)
   - : Load a number from memory.
-- [`Store`](/en-US/docs/WebAssembly/Reference/Memory/Store)
+- [`store`](/en-US/docs/WebAssembly/Reference/Memory/store)
   - : Store a number in memory.
-- [`Copy`](/en-US/docs/WebAssembly/Reference/Memory/Copy)
+- [`copy`](/en-US/docs/WebAssembly/Reference/Memory/copy)
   - : Copy data from one region in memory to another
-- [`Fill`](/en-US/docs/WebAssembly/Reference/Memory/Fill)
+- [`fill`](/en-US/docs/WebAssembly/Reference/Memory/fill)
   - : Set all values in a region to a specific byte

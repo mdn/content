@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.compositionupdate_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`compositionupdate`** event is fired when a new character is received in the context of a text composition session controlled by a text composition system such as an {{glossary("input method editor")}}.
 
@@ -53,13 +53,12 @@ inputElement.addEventListener("compositionupdate", (event) => {
 
 ```html
 <div class="control">
-  <label for="example">
-    First select textbox, then to open IME:
-    <ul>
-      <li>on macOS type <kbd>option</kbd> + <kbd>`</kbd></li>
-      <li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li>
-    </ul>
-  </label>
+  <p>First select textbox, then to open IME:</p>
+  <ul>
+    <li>on macOS type <kbd>option</kbd> + <kbd>`</kbd></li>
+    <li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li>
+  </ul>
+  <label for="example">Example input</label>
   <input type="text" id="example" name="example" />
 </div>
 

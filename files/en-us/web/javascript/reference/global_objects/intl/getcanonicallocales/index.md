@@ -24,8 +24,7 @@ try {
   Intl.getCanonicalLocales("EN_US");
 } catch (err) {
   console.log(err.toString());
-  // Expected output (Firefox/Safari): RangeError: invalid language tag: "EN_US"
-  // Expected output (Chrome): RangeError: Incorrect locale information provided
+  // Expected output: RangeError: invalid language tag: "EN_US"
 }
 ```
 
@@ -53,7 +52,7 @@ Intl.getCanonicalLocales("EN-US"); // ["en-US"]
 Intl.getCanonicalLocales(["EN-US", "Fr"]); // ["en-US", "fr"]
 
 Intl.getCanonicalLocales("EN_US");
-// RangeError:'EN_US' is not a structurally valid language tag
+// RangeError: invalid language tag: "EN_US"
 ```
 
 ## Specifications

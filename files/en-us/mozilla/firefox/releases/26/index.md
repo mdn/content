@@ -1,5 +1,5 @@
 ---
-title: Firefox 26 for developers
+title: Firefox 26 release notes for developers
 short-title: Firefox 26
 slug: Mozilla/Firefox/Releases/26
 page-type: firefox-release-notes
@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 26 was released on December 10, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### CSS
 

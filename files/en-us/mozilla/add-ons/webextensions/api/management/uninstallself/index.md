@@ -3,9 +3,8 @@ title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 page-type: webextension-api-function
 browser-compat: webextensions.api.management.uninstallSelf
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Uninstalls the calling add-on.
 
@@ -33,10 +32,6 @@ let uninstallingSelf = browser.management.uninstallSelf(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled uninstall.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -72,6 +67,10 @@ uninstalling.then(null, onCanceled);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-uninstallSelf) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.

@@ -3,9 +3,8 @@ title: tabs.onAttached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onAttached
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a tab is attached to a window, for example because it was moved between windows.
 

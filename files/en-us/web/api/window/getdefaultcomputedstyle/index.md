@@ -10,7 +10,7 @@ browser-compat: api.Window.getDefaultComputedStyle
 
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
-The **`getDefaultComputedStyle()`** method gives the default [computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of all the CSS
+The **`getDefaultComputedStyle()`** method gives the default [computed values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) of all the CSS
 properties of an element, ignoring author styling. That is, only user-agent and user
 styles are taken into account.
 
@@ -41,8 +41,8 @@ user rules.
 ### Simple example
 
 ```js
-const elem1 = document.getElementById("elemId");
-const style = getDefaultComputedStyle(elem1);
+const elem = document.getElementById("elemId");
+const style = getDefaultComputedStyle(elem);
 ```
 
 ### Longer example

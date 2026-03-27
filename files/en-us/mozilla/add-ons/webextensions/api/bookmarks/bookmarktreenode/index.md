@@ -3,9 +3,8 @@ title: bookmarks.BookmarkTreeNode
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 page-type: webextension-api-type
 browser-compat: webextensions.api.bookmarks.BookmarkTreeNode
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An object of type `bookmarks.BookmarkTreeNode` represents a node in the bookmark tree, where each node is a bookmark, a bookmark folder, or a separator. Child nodes are ordered by an `index` within their respective parent folders.
 
@@ -36,11 +35,11 @@ An {{jsxref("object")}} with the following properties:
 - `url` {{optional_inline}}
   - : A {{jsxref("string")}} which represents the URL for the bookmark. If the node represents a folder, this property is omitted.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.

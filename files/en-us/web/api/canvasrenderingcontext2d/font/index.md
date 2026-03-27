@@ -6,10 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.font
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.font`** property of the Canvas 2D API specifies the current text style to use when drawing text.
-This string uses the same syntax as the [CSS font](/en-US/docs/Web/CSS/font) specifier.
+This string uses the same syntax as the [CSS font](/en-US/docs/Web/CSS/Reference/Properties/font) specifier.
 
 ## Value
 

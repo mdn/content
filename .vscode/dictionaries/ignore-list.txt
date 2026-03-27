@@ -161,9 +161,11 @@ Graece
 gubergren
 harborside
 hellonode
+HEXA
 HEXDIG
 howtoplay
 HUD5767ghtyfyr4536dh45dg45dg3
+HWBA
 idbkeyrange
 IHdhcyBncmVhdCE
 innerht.ml
@@ -213,8 +215,8 @@ Markmarkimark
 mdnsidebar.yaml
 megastore
 meinheld
-montecarlo
 morethanwarm
+MQCHJLS6FJXT2BGQJ6QMG3WCAVUC2HJZ
 MYAGE
 mybooks
 myclass
@@ -302,6 +304,7 @@ TUROPC
 Tweety
 UCCE
 ultricied
+unoccluded
 updatebg
 urlscheme
 userconnect
@@ -324,6 +327,7 @@ Whereami
 Whereshire
 wisi
 Wookie
+XYZD
 xyzzy
 YOUREXT
 YsAIAAAA-QG4G6kCMAMBAAAAAAAoK

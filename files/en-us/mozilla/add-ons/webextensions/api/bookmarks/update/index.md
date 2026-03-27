@@ -3,9 +3,8 @@ title: bookmarks.update()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.update
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 **`bookmarks.update()`** updates the title and/or URL of a bookmark, or the name of a bookmark folder.
 

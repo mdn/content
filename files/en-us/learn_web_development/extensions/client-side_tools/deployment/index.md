@@ -192,9 +192,11 @@ Let's get started.
 2. In your package.json, find your `scripts` member, and update it so that it contains the following test and build commands:
 
    ```json
-   "scripts": {
-     // …
-     "test": "vitest"
+   {
+     "scripts": {
+       // …
+       "test": "vitest"
+     }
    }
    ```
 

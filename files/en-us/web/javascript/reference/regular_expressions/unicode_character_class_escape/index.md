@@ -110,7 +110,7 @@ mixedCharacters.match(/\p{sc=Cyrillic}/u); // Л
 
 For more details, refer to [the Unicode specification](https://unicode.org/reports/tr24/#Script), the [Scripts table in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#table-unicode-script-values), and the [ISO 15924 list of script codes](https://unicode.org/iso15924/iso15924-codes.html).
 
-If a character is used in a limited set of scripts, the `Script` property will only match for the "predominant" used script. If we want to match characters based on a "non-predominant" script, we could use the `Script_Extensions` property (`Scx` for short).
+If a character is used in a limited set of scripts, the `Script` property will only match for the "predominant" used script. If we want to match characters based on a "non-predominant" script, we could use the `Script_Extensions` property (`scx` for short).
 
 ```js
 // ٢ is the digit 2 in Arabic-Indic notation

@@ -3,9 +3,8 @@ title: tabs.onReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onReplaced
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a tab is replaced with another tab due to prerendering or instant.
 

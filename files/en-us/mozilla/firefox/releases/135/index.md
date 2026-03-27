@@ -1,5 +1,5 @@
 ---
-title: Firefox 135 for developers
+title: Firefox 135 release notes for developers
 short-title: Firefox 135
 slug: Mozilla/Firefox/Releases/135
 page-type: firefox-release-notes
@@ -18,7 +18,7 @@ No notable changes
 
 #### Removals
 
-- The [`-moz-user-input`](/en-US/docs/Web/CSS/-moz-user-input) CSS property allowed you to disable input fields. The property is now deprecated and has been removed ([Firefox bug 1935198](https://bugzil.la/1935198)).
+- The [`-moz-user-input`](/en-US/docs/Web/CSS/Reference/Properties/-moz-user-input) CSS property allowed you to disable input fields. The property is now deprecated and has been removed ([Firefox bug 1935198](https://bugzil.la/1935198)).
 
 ### JavaScript
 
@@ -29,7 +29,7 @@ No notable changes
 
 ### Security
 
-- [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) is a standard for ensuring that certificates are publicly disclosed before web browsers will trust them. Firefox now supports this feature on desktop versions (but not Android).
+- [Certificate Transparency](/en-US/docs/Web/Security/Defenses/Certificate_Transparency) is a standard for ensuring that certificates are publicly disclosed before web browsers will trust them. Firefox now supports this feature on desktop versions (but not Android).
   This only affects servers that use certificates issued by a certificate authority in Mozilla's Root CA Program.
   ([Firefox bug 1938242](https://bugzil.la/1938242)).
 

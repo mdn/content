@@ -455,7 +455,7 @@ const DOMContentLoaded =
 
 We are provided with the duration. The duration is the difference between the [PerformanceNavigationTiming.loadEventEnd](/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd) and [PerformanceEntry.startTime](/en-US/docs/Web/API/PerformanceEntry/startTime) properties.
 
-The PerformanceNavigationTiming interface also provides information about what type of navigation you are measuring, returning `navigate`, `reload`, `back_forward` or `prerender`.
+The PerformanceNavigationTiming interface also provides information about what type of navigation you are measuring, returning `navigate`, `reload`, or `back_forward`.
 
 ## Resource timing
 

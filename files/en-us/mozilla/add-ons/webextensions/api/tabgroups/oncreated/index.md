@@ -3,9 +3,8 @@ title: tabGroups.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/onCreated
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabGroups.onCreated
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fires when a tab group is created.
 

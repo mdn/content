@@ -1,5 +1,5 @@
 ---
-title: Firefox 137 for developers
+title: Firefox 137 release notes for developers
 short-title: Firefox 137
 slug: Mozilla/Firefox/Releases/137
 page-type: firefox-release-notes

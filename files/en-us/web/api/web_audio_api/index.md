@@ -158,7 +158,7 @@ Using audio worklets, you can define custom audio nodes written in JavaScript or
 - {{domxref("AudioWorkletNode")}}
   - : The `AudioWorkletNode` interface represents an {{domxref("AudioNode")}} that is embedded into an audio graph and can pass messages to the corresponding `AudioWorkletProcessor`.
 - {{domxref("AudioWorkletProcessor")}}
-  - : The `AudioWorkletProcessor` interface represents audio processing code running in a `AudioWorkletGlobalScope` that generates, processes, or analyzes audio directly, and can pass messages to the corresponding `AudioWorkletNode`.
+  - : The `AudioWorkletProcessor` interface represents audio processing code running in an `AudioWorkletGlobalScope` that generates, processes, or analyzes audio directly, and can pass messages to the corresponding `AudioWorkletNode`.
 - {{domxref("AudioWorkletGlobalScope")}}
   - : The `AudioWorkletGlobalScope` interface is a `WorkletGlobalScope`-derived object representing a worker context in which an audio processing script is run; it is designed to enable the generation, processing, and analysis of audio data directly using JavaScript in a worklet thread rather than on the main thread.
 
@@ -217,7 +217,6 @@ You can find a number of examples at our [webaudio-examples repo](https://github
 
 ### Libraries
 
-- [Tones](https://github.com/bit101/tones): a simple library for playing specific tones/notes using the Web Audio API.
 - [Tone.js](https://tonejs.github.io/): a framework for creating interactive music in the browser.
 - [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://webaudio.github.io/web-audio-api/) and falls back to [HTML Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), as well as providing other useful features.
 - [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.

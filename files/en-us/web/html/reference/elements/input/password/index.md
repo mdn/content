@@ -44,7 +44,7 @@ Both approaches help a user check that they entered the intended password, which
 
 > [!NOTE]
 > Any forms involving sensitive information like passwords (such as login forms) should be served over HTTPS.
-> Many browsers now implement mechanisms to warn against insecure login forms; see [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
+> Many browsers now implement mechanisms to warn against insecure login forms.
 
 ## Value
 

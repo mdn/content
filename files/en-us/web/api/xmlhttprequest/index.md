@@ -72,37 +72,20 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
   - : Overrides the MIME type returned by the server.
 - {{domxref("XMLHttpRequest.send()")}}
   - : Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
-- {{domxref("XMLHttpRequest.setAttributionReporting()")}} {{securecontext_inline}} {{experimental_inline}}
+- {{domxref("XMLHttpRequest.setAttributionReporting()")}} {{securecontext_inline}} {{deprecated_inline}}
   - : Indicates that you want the request's response to be able to register an attribution source or trigger event.
+- {{domxref("XMLHttpRequest.setPrivateToken()")}} {{experimental_inline}}
+  - : Adds [private state token](/en-US/docs/Web/API/Private_State_Token_API/Using) information to an `XMLHttpRequest` call, to initiate private state token operations.
 - {{domxref("XMLHttpRequest.setRequestHeader()")}}
   - : Sets the value of an HTTP request header. You must call `setRequestHeader()` after {{domxref("XMLHttpRequest.open", "open()")}}, but before {{domxref("XMLHttpRequest.send", "send()")}}.
 
 ## Events
 
-- {{domxref("XMLHttpRequest/abort_event", "abort")}}
-  - : Fired when a request has been aborted, for example because the program called {{domxref("XMLHttpRequest.abort()")}}.
-    Also available via the `onabort` event handler property.
-- {{domxref("XMLHttpRequest/error_event", "error")}}
-  - : Fired when the request encountered an error.
-    Also available via the `onerror` event handler property.
-- {{domxref("XMLHttpRequest/load_event", "load")}}
-  - : Fired when an `XMLHttpRequest` transaction completes successfully.
-    Also available via the `onload` event handler property.
-- {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
-  - : Fired when a request has completed, whether successfully (after {{domxref("XMLHttpRequest/load_event", "load")}}) or unsuccessfully (after {{domxref("XMLHttpRequest/abort_event", "abort")}} or {{domxref("XMLHttpRequest/error_event", "error")}}).
-    Also available via the `onloadend` event handler property.
-- {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}
-  - : Fired when a request has started to load data.
-    Also available via the `onloadstart` event handler property.
-- {{domxref("XMLHttpRequest/progress_event", "progress")}}
-  - : Fired periodically when a request receives more data.
-    Also available via the `onprogress` event handler property.
+_This interface also inherits events of {{domxref("XMLHttpRequestEventTarget")}}._
+
 - {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
   - : Fired whenever the {{domxref("XMLHttpRequest.readyState", "readyState")}} property changes.
     Also available via the `onreadystatechange` event handler property.
-- {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
-  - : Fired when progress is terminated due to preset time expiring.
-    Also available via the `ontimeout` event handler property.
 
 ## Specifications
 

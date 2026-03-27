@@ -3,9 +3,8 @@ title: tabGroups.Color
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/Color
 page-type: webextension-api-type
 browser-compat: webextensions.api.tabGroups.Color
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The color of a tab group.
 

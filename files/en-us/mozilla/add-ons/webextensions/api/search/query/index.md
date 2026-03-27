@@ -3,9 +3,8 @@ title: search.query()
 slug: Mozilla/Add-ons/WebExtensions/API/search/query
 page-type: webextension-api-function
 browser-compat: webextensions.api.search.query
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Perform a search using the browser's default search engine.
 

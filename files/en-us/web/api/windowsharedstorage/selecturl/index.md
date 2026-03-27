@@ -4,11 +4,11 @@ short-title: selectURL()
 slug: Web/API/WindowSharedStorage/selectURL
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.WindowSharedStorage.selectURL
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`selectURL()`** method of the
 {{domxref("WindowSharedStorage")}} interface executes a [URL Selection operation](/en-US/docs/Web/API/SharedStorageSelectURLOperation) that is registered in a module added to the current origin's {{domxref("SharedStorageWorklet")}}.

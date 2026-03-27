@@ -3,9 +3,8 @@ title: proxy.onError
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onError
 page-type: webextension-api-event
 browser-compat: webextensions.api.proxy.onError
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when there is an error evaluating the PAC file or the `onRequest` listener.
 

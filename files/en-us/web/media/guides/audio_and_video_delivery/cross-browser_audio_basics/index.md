@@ -243,23 +243,21 @@ The JavaScript media API allows you to create your own custom player. Let's take
 Next, we attach some functionality to the player using JavaScript:
 
 ```js
-window.onload = () => {
-  const audio = document.getElementById("my-audio");
-  const play = document.getElementById("play");
-  const pause = document.getElementById("pause");
+const audio = document.getElementById("my-audio");
+const play = document.getElementById("play");
+const pause = document.getElementById("pause");
 
-  // associate functions with the 'onclick' events
-  play.onclick = playAudio;
-  pause.onclick = pauseAudio;
+// associate functions with the 'onclick' events
+play.onclick = playAudio;
+pause.onclick = pauseAudio;
 
-  function playAudio() {
-    audio.play();
-  }
+function playAudio() {
+  audio.play();
+}
 
-  function pauseAudio() {
-    audio.pause();
-  }
-};
+function pauseAudio() {
+  audio.pause();
+}
 ```
 
 ## Media loading events
@@ -570,7 +568,7 @@ There are also a couple of events related to buffering:
 
 - [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges)
 - [HTMLMediaElement events](/en-US/docs/Web/API/HTMLMediaElement#events)
-- [Event reference > Media](/en-US/docs/Web/Events#media)
+- [Event reference > Media](/en-US/docs/Web/API/Document_Object_Model/Events#media)
 - [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
 - [jPlayer](https://jplayer.org/): An open source audio and video library for jQuery and Zepto.

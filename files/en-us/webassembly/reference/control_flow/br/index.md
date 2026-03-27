@@ -1,5 +1,6 @@
 ---
-title: br
+title: "br: Wasm text instruction"
+short-title: br
 slug: WebAssembly/Reference/Control_flow/br
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
@@ -7,7 +8,7 @@ sidebar: webassemblysidebar
 
 The **`br`** statement branches to a [`loop`](/en-US/docs/WebAssembly/Reference/Control_flow/loop), a [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block), or an [`if`](/en-US/docs/WebAssembly/Reference/Control_flow/if...else) statement.
 
-Other variants of `br` include [`br_if`](/en-us/docs/WebAssembly/Reference/Control_flow/br_if) and [`br_table`](/en-us/docs/WebAssembly/Reference/Control_flow/br_table).
+Other variants of `br` include [`br_if`](/en-US/docs/WebAssembly/Reference/Control_flow/br_if) and [`br_table`](/en-US/docs/WebAssembly/Reference/Control_flow/br_table).
 
 {{InteractiveExample("Wat Demo: br", "tabbed-taller")}}
 

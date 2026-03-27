@@ -3,9 +3,8 @@ title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
 page-type: webextension-api-function
 browser-compat: webextensions.api.windows.create
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Creates a new window.
 

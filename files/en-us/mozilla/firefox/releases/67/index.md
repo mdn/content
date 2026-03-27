@@ -1,5 +1,5 @@
 ---
-title: Firefox 67 for developers
+title: Firefox 67 release notes for developers
 short-title: Firefox 67
 slug: Mozilla/Firefox/Releases/67
 page-type: firefox-release-notes
@@ -52,7 +52,7 @@ This article provides information about the changes in Firefox 67 that will affe
 
 - The {{cssxref("revert")}} keyword has been implemented ([Firefox bug 1215878](https://bugzil.la/1215878)).
 - The `break-word` value of the {{cssxref("word-break")}} property is now supported ([Firefox bug 1296042](https://bugzil.la/1296042)).
-- The [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media feature is now supported ([Firefox bug 1494034](https://bugzil.la/1494034)).
+- The [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media feature is now supported ([Firefox bug 1494034](https://bugzil.la/1494034)).
 - Custom {{cssxref("cursor")}}s of greater than 32px in size are now disallowed, to mitigate potential malware uses of large cursors ([Firefox bug 1445844](https://bugzil.la/1445844)).
 
 #### Removals
@@ -106,7 +106,7 @@ _No changes._
 
 ### Security
 
-- [Notifications](/en-US/docs/Web/API/Notifications_API) are now only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) ([Firefox bug 1429432](https://bugzil.la/1429432)).
+- [Notifications](/en-US/docs/Web/API/Notifications_API) are now only available in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts) ([Firefox bug 1429432](https://bugzil.la/1429432)).
 - Firefox now blocks the loading of external protocol URLs in {{htmlelement("iframe")}}s ([Firefox bug 1527882](https://bugzil.la/1527882)).
 
 ### WebDriver conformance (Marionette)

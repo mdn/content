@@ -3,9 +3,8 @@ title: runtime.getContexts()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getContexts
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getContexts
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns information about the contexts associated with the extension.
 

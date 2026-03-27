@@ -3,9 +3,8 @@ title: menus.create()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/create
 page-type: webextension-api-function
 browser-compat: webextensions.api.menus.create
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Creates a menu item using an options object defining properties for the item.
 

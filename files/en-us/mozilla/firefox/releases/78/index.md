@@ -1,5 +1,5 @@
 ---
-title: Firefox 78 for developers
+title: Firefox 78 release notes for developers
 short-title: Firefox 78
 slug: Mozilla/Firefox/Releases/78
 page-type: firefox-release-notes
@@ -61,7 +61,7 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 
 #### Service workers
 
-- [Extended Support Releases (ESR)](https://www.mozilla.org/en-US/firefox/enterprise/): Firefox 78 is the first ESR release that supports [Service workers](/en-US/docs/Web/API/Service_Worker_API) (and the [Push API](/en-US/docs/Web/API/Push_API)). Earlier ESR releases had no support ([Firefox bug 1547023](https://bugzil.la/1547023)).
+- [Extended Support Releases (ESR)](https://www.firefox.com/en-US/browsers/enterprise/): Firefox 78 is the first ESR release that supports [Service workers](/en-US/docs/Web/API/Service_Worker_API) (and the [Push API](/en-US/docs/Web/API/Push_API)). Earlier ESR releases had no support ([Firefox bug 1547023](https://bugzil.la/1547023)).
 
 ### WebAssembly
 
@@ -70,7 +70,7 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 
 ### TLS 1.0 and 1.1 removal
 
-- Support for the [Transport Layer Security](/en-US/docs/Web/Security/Transport_Layer_Security) (TLS) protocol's version 1.0 and 1.1, is dropped from all browsers. Read [TLS 1.0 and 1.1 Removal Update](https://hacks.mozilla.org/2019/05/tls-1-0-and-1-1-removal-update/) for the previous announcement and what actions to take if you are affected ([Firefox bug 1643229](https://bugzil.la/1643229)).
+- Support for the [Transport Layer Security](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security) (TLS) protocol's version 1.0 and 1.1, is dropped from all browsers. Read [TLS 1.0 and 1.1 Removal Update](https://hacks.mozilla.org/2019/05/tls-1-0-and-1-1-removal-update/) for the previous announcement and what actions to take if you are affected ([Firefox bug 1643229](https://bugzil.la/1643229)).
 
 ## Changes for add-on developers
 

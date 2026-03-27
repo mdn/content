@@ -13,9 +13,9 @@ modifies existing properties directly on an object, returning the object.
 {{InteractiveExample("JavaScript Demo: Object.defineProperties()")}}
 
 ```js interactive-example
-const object1 = {};
+const object = {};
 
-Object.defineProperties(object1, {
+Object.defineProperties(object, {
   property1: {
     value: 42,
     writable: true,
@@ -23,7 +23,7 @@ Object.defineProperties(object1, {
   property2: {},
 });
 
-console.log(object1.property1);
+console.log(object.property1);
 // Expected output: 42
 ```
 

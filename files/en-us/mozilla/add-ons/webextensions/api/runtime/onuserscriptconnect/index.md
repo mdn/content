@@ -3,9 +3,8 @@ title: runtime.onUserScriptConnect
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onUserScriptConnect
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onUserScriptConnect
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a connection is made with a user script from one of the extension's [`USER_SCRIPT` worlds](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/ExecutionWorld).
 

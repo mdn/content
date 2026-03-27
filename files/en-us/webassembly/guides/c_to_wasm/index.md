@@ -94,12 +94,40 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
 
 4. Now let's run this example. The above command will have generated `hello2.html`, which will have much the same content as the template with some glue code added into load the generated Wasm, run it, etc. Open it in your browser and you'll see much the same output as the last example.
 
-> [!NOTE]
-> You could specify outputting just the JavaScript "glue" file\* rather than the full HTML by specifying a .js file instead of an HTML file in the `-o` flag, e.g., `emcc -o hello2.js hello2.c -O3`. You could then build your custom HTML completely from scratch, although this is an advanced approach; it is usually easier to use the provided HTML template.
->
-> - Emscripten requires a large variety of JavaScript "glue" code to handle memory allocation, memory leaks, and a host of other problems
+### Compiling to a JavaScript module
 
-### Calling a custom function defined in C
+You could specify outputting just the JavaScript "glue" file (Emscripten requires a large variety of JavaScript "glue" code to handle memory allocation, memory leaks, and a host of other problems) rather than the full HTML by specifying a .js file instead of an HTML file in the `-o` flag, like this:
+
+```bash
+emcc -o hello.js hello.c -O3
+```
+
+You could then incorporate this JavaScript file into your program, which is especially useful if you are using a bundler and are not working with the HTML directly. For example, you can import the generated JavaScript glue file so it runs as a side effect. In your app's entry module, add:
+
+```js
+import "./hello.js";
+```
+
+Alternatively, you can produce a factory module, which allows you to produce multiple instances of the module (by default the glue code loads the module globally, causing multiple instances to collide).
+
+```bash
+emcc -o hello.mjs hello.c -O3 -sMODULARIZE
+```
+
+> [!NOTE]
+> If your output file extension is .js and not .mjs, then you have to add the `-sEXPORT_ES6` setting to output a JavaScript module.
+
+Then in your code import the factory and call it:
+
+```js
+import createModule from "./hello.mjs";
+
+createModule().then((Module) => {
+  console.log("Wasm ready", Module);
+});
+```
+
+## Calling a custom function defined in C
 
 If you want to call a function defined in your C code from JavaScript, you can use the Emscripten `ccall()` function and the `EMSCRIPTEN_KEEPALIVE` declaration, which adds your functions to the exported functions list (see [Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-webassembly)). Let's look at how this works.
 

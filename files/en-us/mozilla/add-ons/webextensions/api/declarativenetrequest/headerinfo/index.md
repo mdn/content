@@ -5,9 +5,8 @@ page-type: webextension-api-type
 browser-compat:
   - webextensions.api.declarativeNetRequest.RuleCondition.responseHeaders
   - webextensions.api.declarativeNetRequest.RuleCondition.excludedResponseHeaders
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The response header to match for the request, declared in the [`rule.condition.excludedResponseHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#excludedresponseheaders) array or [`rule.condition.responseHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#responseheaders) array. If specified, the array must be non-empty.
 

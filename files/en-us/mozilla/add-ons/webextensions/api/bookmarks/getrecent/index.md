@@ -3,9 +3,8 @@ title: bookmarks.getRecent()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
 page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.getRecent
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `bookmarks.getRecent()` method retrieves a specified number of the most recently added bookmarks as an array of {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} objects.
 

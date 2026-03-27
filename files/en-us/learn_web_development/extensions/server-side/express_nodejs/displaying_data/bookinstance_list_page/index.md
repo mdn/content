@@ -16,14 +16,14 @@ Find the exported `bookinstance_list()` controller method and replace it with th
 
 ```js
 // Display list of all BookInstances.
-exports.bookinstance_list = asyncHandler(async (req, res, next) => {
+exports.bookinstance_list = async (req, res, next) => {
   const allBookInstances = await BookInstance.find().populate("book").exec();
 
   res.render("bookinstance_list", {
     title: "Book Instance List",
     bookinstance_list: allBookInstances,
   });
-});
+};
 ```
 
 The route handler calls the `find()` function on the `BookInstance` model, and then daisy-chains a call to `populate()` with the `book` field—this will replace the book id stored for each `BookInstance` with a full `Book` document.
@@ -62,7 +62,7 @@ block content
     p There are no book copies in this library.
 ```
 
-This view is much the same as all the others. It extends the layout, replacing the _content_ block, displays the `title` passed in from the controller, and iterates through all the book copies in `bookinstance_list`. For each copy we display its status (color coded) and if the book is not available, its expected return date. One new feature is introduced—we can use dot notation after a tag to assign a class. So `span.text-success` will be compiled to `<span class="text-success">` (and might also be written in Pug as `span(class="text-success")`.
+This view is much the same as all the others. It extends the layout, replacing the _content_ block, displays the `title` passed in from the controller, and iterates through all the book copies in `bookinstance_list`. For each copy we display its status (color coded) and if the book is not available, its expected return date. One new feature is introduced—we can use dot notation after a tag to assign a class. So `span.text-success` will be compiled to `<span class="text-success">` (and might also be written in Pug as `span(class="text-success")`).
 
 ## What does it look like?
 

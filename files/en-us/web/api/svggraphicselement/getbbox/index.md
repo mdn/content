@@ -67,9 +67,9 @@ elements.
     </text>
   </g>
   <!-- Shows BBox in green -->
-  <rect id="rect_1" stroke="#00ff00" stroke-width="3" fill="none"></rect>
+  <rect id="rect_1" stroke="green" stroke-width="3" fill="none"></rect>
   <!-- Shows BoundingClientRect in red -->
-  <rect id="rect_2" stroke="#ff0000" stroke-width="3" fill="none"></rect>
+  <rect id="rect_2" stroke="red" stroke-width="3" fill="none"></rect>
 </svg>
 ```
 

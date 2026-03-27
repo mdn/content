@@ -29,8 +29,8 @@ In [customizable `<select>` elements](/en-US/docs/Learn_web_development/Extensio
 
 ```css interactive-example
 legend {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   padding: 3px 6px;
 }
 
