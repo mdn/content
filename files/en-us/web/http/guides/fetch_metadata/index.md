@@ -136,30 +136,30 @@ For example, the following [Express](/en-US/docs/Learn_web_development/Extension
 
 ```js
 function isAllowed(req) {
-  // Allow same-origin and directly user-initiated requests
-  const secFetchSite = req.headers["sec-fetch-site"];
-  if (secFetchSite === "same-origin" || secFetchSite === "none") {
-    return true;
-  }
+	// Allow same-origin and directly user-initiated requests
+	const secFetchSite = req.headers["sec-fetch-site"];
+	if (secFetchSite === "same-origin" || secFetchSite === "none") {
+		return true;
+	}
 
-  // Allow cross-site navigations, such as clicking links
-  const secFetchMode = req.headers["sec-fetch-mode"];
-  if (secFetchMode === "navigate" && req.method === "GET") {
-    return true;
-  }
+	// Allow cross-site navigations, such as clicking links
+	const secFetchMode = req.headers["sec-fetch-mode"];
+	if (secFetchMode === "navigate" && req.method === "GET") {
+		return true;
+	}
 
-  // Deny everything else
-  return false;
+	// Deny everything else
+	return false;
 }
 
 app.get("/admin", (req, res) => {
-  res.setHeader("Vary", "sec-fetch-site, sec-fetch-mode");
-  if (isAllowed(req)) {
-    // Respond with the admin page if the user is admin
-    getAdminPage(req, res);
-  } else {
-    res.status(404).send("Not found.");
-  }
+	res.setHeader("Vary", "sec-fetch-site, sec-fetch-mode");
+	if (isAllowed(req)) {
+		// Respond with the admin page if the user is admin
+		getAdminPage(req, res);
+	} else {
+		res.status(403).send("Forbidden");
+	}
 });
 ```
 
