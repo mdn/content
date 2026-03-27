@@ -67,7 +67,7 @@ Use the following template:
 
 ```md
 > [!NOTE]
-> This section of MDN is no longer being maintained and will be removed from the website in 6 months (by MONTH YEAR). The content will be archived. See [this discussion](LINK) for further information.
+> This section of MDN is no longer being maintained and will be removed from the website in 6 months (by MONTH YEAR). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](LINK) for further information.
 ```
 
 This notice ensures transparency and gives users time to adjust.
