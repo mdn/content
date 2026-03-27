@@ -30,7 +30,7 @@ jobs:
           gh api "$STATUS_PATH" \
             -f state=pending \
             -f context="$STATUS_CONTEXT" \
-            -f description='Reviewdog pending' \
+            -f description='Running' \
             -f target_url="$STATUS_TARGET"
 
       - name: Identify PR
@@ -119,7 +119,7 @@ jobs:
           gh api "$STATUS_PATH" \
             -f state=success \
             -f context="$STATUS_CONTEXT" \
-            -f description='Reviewdog succeeded' \
+            -f description='Successful' \
             -f target_url="$STATUS_TARGET"
 
       - name: Mark status as failure
@@ -130,5 +130,5 @@ jobs:
           gh api "$STATUS_PATH" \
             -f state=failure \
             -f context="$STATUS_CONTEXT" \
-            -f description='Reviewdog failed' \
+            -f description='Failing' \
             -f target_url="$STATUS_TARGET"
