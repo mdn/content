@@ -110,26 +110,24 @@ The `action` key is an object that may have any of these properties, all optiona
     > [!NOTE]
     > Alternatively, you can specify an SVG icon in `default_icon` and use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For example:
     >
-    > ```html
-    > <style>
+    > ```css
+    > #outside {
+    >   fill: black;
+    > }
+    > #inside {
+    >   fill: red;
+    > }
+    > @media (prefers-color-scheme: dark) {
     >   #outside {
-    >     fill: black;
+    >     fill: white;
     >   }
     >   #inside {
-    >     fill: red;
+    >     fill: black;
     >   }
-    >   @media (prefers-color-scheme: dark) {
-    >     #outside {
-    >       fill: white;
-    >     }
-    >     #inside {
-    >       fill: black;
-    >     }
-    >   }
-    > </style>
+    > }
     > ```
     >
-    > For more information, see the [themed-icons](https://github.com/mdn/webextensions-examples/tree/master/themed-icons) example.
+    > For more information, see the [themed-icons](https://github.com/mdn/webextensions-examples/tree/main/themed-icons) example.
 
 ## Choosing icon sizes
 

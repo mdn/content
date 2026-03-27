@@ -457,29 +457,6 @@ See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this AP
 - `dom.webgpu.service-workers.enabled`
   - : Set to `true` to enable (enabled in Nightly)
 
-### Reporting API support for CSP Violations
-
-The [Reporting API](/en-US/docs/Web/API/Reporting_API) now has support for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violations.
-
-{{domxref('Report')}} instances returned by the {{domxref('ReportingObserver')}} interface can now have a `type` value of `"csp-violation"` and a `body` property that contains an instance of the {{domxref('CSPViolationReportBody')}} interface.
-This allows CSP violations to be reported within a web page.
-
-CSP violation reports can also be sent to remote endpoints that are specified by name in the CSP {{CSP("report-to")}} directive — endpoints names and corresponding URLs must first be defined in the {{httpheader('Reporting-Endpoints')}} or {{httpheader('Report-To')}} HTTP response headers.
-The report is a serialization of the {{domxref('Report')}} object described above, with a `body` property that is a serialization of a {{domxref('CSPViolationReportBody')}} instance.
-
-This violation report replaces a similar CSP-specific mechanism for sending violation reports, which uses the CSP {{CSP("report-uri")}} directive to set the URL of the reporting endpoint, and has a [CSP-specific JSON violation report format](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri#violation_report_syntax).
-([Firefox bug 1391243](https://bugzil.la/1391243)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 130           | No                  |
-| Developer Edition | 130           | No                  |
-| Beta              | 130           | No                  |
-| Release           | 130           | No                  |
-
-- `dom.reporting.enabled`
-  - : Set to `true` to enable.
-
 ### WebRTC and media
 
 The following experimental features include those found in media APIs such as the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).

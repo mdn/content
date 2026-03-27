@@ -8,15 +8,10 @@ browser-compat: api.ReportingObserver.disconnect
 
 {{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`disconnect()`** method of the
-{{domxref("ReportingObserver")}} interface stops a reporting observer that had
-previously started observing from collecting reports.
+The **`disconnect()`** method of the {{domxref("ReportingObserver")}} interface stops a reporting observer that had previously started observing from collecting reports.
 
-After calling `disconnect()`, neither
-{{domxref("ReportingObserver.takeRecords()")}} nor the `records` parameter of
-the
-[`ReportingObserver()`](/en-US/docs/Web/API/ReportingObserver/ReportingObserver)
-callback will return any reports. The associated observer will no longer be active.
+After calling `disconnect()`, neither {{domxref("ReportingObserver.takeRecords()")}} nor the [`reports`](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#reports) parameter of the `ReportingObserver()` callback will return any reports.
+The associated observer will no longer be active.
 
 ## Syntax
 
@@ -33,6 +28,8 @@ None.
 None ({{jsxref("undefined")}}).
 
 ## Examples
+
+### Basic usage
 
 ```js
 const options = {
