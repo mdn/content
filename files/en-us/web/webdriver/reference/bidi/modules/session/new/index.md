@@ -41,7 +41,7 @@ The `params` field contains:
 
 The `alwaysMatch` and `firstMatch` objects can include the following features:
 
-- `acceptInsecureCerts` {{optional_inline}}
+- [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts) {{optional_inline}}
   - : A boolean that indicates whether untrusted TLS certificates (for example, self-signed or expired) are accepted for the duration of the session.
 - `browserName` {{optional_inline}}
   - : A string that specifies the name of the browser to use (for example, `"firefox"` or `"chrome"`).
@@ -62,7 +62,7 @@ The following fields in the `result` object of the response describe the charact
   - : A string that contains the unique identifier for the newly created session.
 - `capabilities`
   - : An object that describes the capabilities that were negotiated and are active for the session. It includes the following fields:
-    - `acceptInsecureCerts`
+    - [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts)
       - : A boolean that indicates whether untrusted TLS certificates (for example, self-signed or expired) are accepted for the duration of the session.
     - `browserName`
       - : A string that contains the name of the browser.
@@ -78,7 +78,7 @@ The following fields in the `result` object of the response describe the charact
       - : An object that describes the active proxy configuration. An empty object (`{}`) indicates no proxy is configured.
     - `unhandledPromptBehavior` {{optional_inline}}
       - : An object that describes the default behavior when a user prompt (such as an `alert`, `confirm`, or `prompt` dialog) is encountered during a command. This field is present only when specified in the `capabilities` parameter.
-    - `webSocketUrl` {{optional_inline}}
+    - [`webSocketUrl`](/en-US/docs/Web/WebDriver/Reference/Capabilities/webSocketUrl) {{optional_inline}}
       - : A string that contains the WebSocket URL for the session.
 
 The browser may also return vendor-specific capabilities prefixed with a browser identifier (for example, `moz:buildID` for Firefox).

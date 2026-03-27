@@ -5,64 +5,32 @@ page-type: landing-page
 sidebar: webdriver
 ---
 
-WebDriver is a remote control interface that enables introspection and control of user agents. It provides a platform- and language-neutral wire protocol as a way for out-of-process programs to remotely instruct the behavior of web browsers.
+WebDriver is a browser automation interface that allows external programs to remotely inspect and control a browser. It is a platform- and language-neutral wire protocol, supporting both command-based automation and real-time, event-driven communication.
 
-To have the ability to write instruction sets that can be run interchangeably in many browsers on different platforms is critical to deliver a consistent experience to users. With the new wave of developments on the web platform, the increase diversity in devices and demands for real interoperability between the technologies, WebDriver provides tooling for [cross-browser testing](/en-US/docs/Learn_web_development/Extensions/Testing/Introduction).
+WebDriver provides tooling for [cross-browser testing](/en-US/docs/Learn_web_development/Extensions/Testing/Introduction), helping teams deliver consistent user experiences across many browsers and platforms. It is intended to allow web authors to write tests to automate a browser from a separate controlling process.
 
-Provided is a set of interfaces to discover and manipulate DOM elements in web documents and to control the behavior of a user agent. It is primarily intended to allow web authors to write tests that automate a user agent from a separate controlling process, but may also be used in such a way as to allow in-browser scripts to control a — possibly separate — browser.
-
-## Usage
-
-So what does WebDriver let you do and what does it look like? Since WebDriver is programming language neutral, the answer to this question depends on which WebDriver client you're using and the choice of language.
-
-But using a popular client written in Python, your interaction with WebDriver might look like this:
-
-```python
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support.expected_conditions import presence_of_element_located
-
-with webdriver.Firefox() as driver:
-
-    driver.get("https://google.com/ncr")
-    wait = WebDriverWait(driver, 10)
-    driver.find_element(By.NAME, "q").send_keys(f"cheese{Keys.RETURN}")
-    wait.until(presence_of_element_located((By.XPATH, '//*[@id="rcnt"]')))
-    results = driver.find_elements(By.XPATH, "//a[@href]")
-
-    for i, elem in enumerate(results):
-        print(f'#{i} {elem.text} ({elem.get_attribute("href")})')
-```
-
-This might produce output akin to this:
-
-```plain
-#1 Cheese - Wikipedia (https://en.wikipedia.org/wiki/Cheese)
-```
+WebDriver is available in two variants: [WebDriver classic](/en-US/docs/Web/WebDriver/Reference/Classic) that uses HTTP, and [WebDriver BiDi](/en-US/docs/Web/WebDriver/Reference/BiDi) that uses WebSocket and enables bidirectional, event-driven communication.
 
 ## Reference
 
 Browse the complete [WebDriver reference](/en-US/docs/Web/WebDriver/Reference) documentation.
 
-### WebDriver classic reference
+- [WebDriver BiDi](/en-US/docs/Web/WebDriver/Reference/BiDi)
+  - : Reference for WebDriver BiDi modules, commands, and events.
 
-- [Commands](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)
-  - : Reference for all WebDriver classic commands.
+- [WebDriver classic](/en-US/docs/Web/WebDriver/Reference/Classic)
+  - : Reference for WebDriver classic commands and timeouts.
 
 - [Capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
-  - : Reference for all WebDriver classic capabilities.
+  - : Reference for WebDriver capabilities.
 
 - [Errors](/en-US/docs/Web/WebDriver/Reference/Errors)
-  - : Reference for WebDriver classic errors.
-
-- [Timeouts](/en-US/docs/Web/WebDriver/Reference/Classic/Timeouts)
-  - : Reference for WebDriver classic timeouts.
+  - : Reference for WebDriver errors.
 
 ## Specifications
 
 - [WebDriver](https://w3c.github.io/webdriver/)
+- [WebDriver BiDi](https://w3c.github.io/webdriver-bidi/)
 
 ## See also
 
