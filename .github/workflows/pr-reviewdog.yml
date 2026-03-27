@@ -23,6 +23,16 @@ jobs:
       STATUS_CONTEXT: pr-reviewdog
       STATUS_TARGET: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
+      - name: Mark status as pending
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=pending \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Reviewdog pending' \
+            -f target_url="$STATUS_TARGET"
+
       - name: Identify PR
         id: identify-pr
         env:
@@ -57,17 +67,6 @@ jobs:
           path: mdn-content
           ref: main
           persist-credentials: false
-
-      - name: Mark status as pending
-        if: steps.check.outputs.HAS_ARTIFACT == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh api "$STATUS_PATH" \
-            -f state=pending \
-            -f context="$STATUS_CONTEXT" \
-            -f description='Reviewdog pending' \
-            -f target_url="$STATUS_TARGET"
 
       - name: Setup reviewdog
         if: steps.check.outputs.HAS_ARTIFACT == 'true'
@@ -113,7 +112,7 @@ jobs:
             -reporter="github-pr-review" < ../lint-results/markdownlint.log
 
       - name: Mark status as success
-        if: steps.check.outputs.HAS_ARTIFACT == 'true' && success()
+        if: success()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -124,7 +123,7 @@ jobs:
             -f target_url="$STATUS_TARGET"
 
       - name: Mark status as failure
-        if: steps.check.outputs.HAS_ARTIFACT == 'true' && failure()
+        if: failure()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
