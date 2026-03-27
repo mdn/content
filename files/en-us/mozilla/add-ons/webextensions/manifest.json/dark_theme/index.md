@@ -47,23 +47,3 @@ See the [`theme` key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/th
 ## Browser compatibility
 
 {{Compat}}
-
-### Chrome compatibility
-
-In Chrome:
-
-- `colors/toolbar_text` is not used, use `colors/bookmark_text` instead.
-- `images/theme_frame` anchors the image to the top left of the header and if the image doesn't fill the header area tile the image.
-- all colors must be specified as an array of RGB values, like this:
-
-  ```json
-  "theme": {
-    "colors": {
-       "frame": [255, 0, 0],
-       "tab_background_text": [0, 255, 0],
-       "bookmark_text": [0, 0, 255]
-    }
-  }
-  ```
-
-  The array form and the CSS color form are accepted for all properties.
