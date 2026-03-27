@@ -7,13 +7,55 @@ browser-compat: api.PerformanceTimingConfidence
 
 {{APIRef("Performance API")}}
 
-The **`PerformanceTimingConfidence`** interface provides access to information that indicates whether the user agent considers returned navigation metrics to be representative of the current user's device.
+The **`PerformanceTimingConfidence`** interface provides access to information that indicates whether the user agent considers returned navigation metrics to be free from external system load unrelated to the page.
 
-For example, if the browser has launched from a "cold start" before loading a website or has resource-intensive extensions running, or if other applications running on the user's device are taking up a lot of resource cycles, web pages may load more slowly as a result. In such cases, a `low` confidence {{domxref("PerformanceTimingConfidence.value", "value")}} would be returned.
+For example, if a website has loaded after a browser "cold start" or session restore, its pages may load more slowly as a result. In such cases, a `low` confidence {{domxref("PerformanceTimingConfidence.value", "value")}} would be returned for an associated performance record. On the other hand, if the browser determines a returned performance record to be representative of typical application performance, a `high` confidence value is returned.
 
 This confidence measure is useful for developers when trying to determine whether a performance issue is a legitimate concern, or an outlier being caused by external factors.
 
-The `PerformanceTimingConfidence` object for each navigation timing entry is accessed via the {{domxref("PerformanceNavigationTiming")}} interface's `confidence` property.
+The `PerformanceTimingConfidence` object for each navigation timing entry is accessed via the {{domxref("PerformanceNavigationTiming")}} interface's {{domxref("PerformanceNavigationTiming.confidence", "confidence")}} property.
+
+## Interpreting confidence data
+
+Since the {{domxref("PerformanceTimingConfidence.randomizedTriggerRate", "randomizedTriggerRate")}} can vary across records, per-record weighting is needed to recover unbiased aggregates. The procedure below illustrates how weighting based on {{domxref("PerformanceTimingConfidence.value", "value")}} can be applied before computing summary statistics.
+
+To compute debiased means for both [`high` and `low` values](/en-US/docs/Web/API/PerformanceTimingConfidence/value#value):
+
+1. For each record:
+   - Let `p` be the record's {{domxref("PerformanceTimingConfidence.randomizedTriggerRate", "randomizedTriggerRate")}}.
+   - Let `c` be the record's {{domxref("PerformanceTimingConfidence.value", "value")}}.
+   - Let `R` be `1` when `c` is `high`, otherwise `0`.
+2. Compute per-record weight `w` based on `c`:
+   - For estimating the `high` mean: `w = (R - (p / 2)) / (1 - p)`.
+   - For estimating the `low` mean: `w = ((1 - R) - (p / 2)) / (1 - p)`.
+     > [!NOTE]
+     > `w` may be negative for some records; you should keep every record.
+   - Let `weighted_duration = duration * w` (see {{domxref("PerformanceEntry.duration", "duration")}}).
+3. Let `total_weighted_duration` be the sum of the `weighted_duration` values across all records.
+4. Let `sum_weights` be the sum of the `w` values across all records.
+5. Let `debiased_mean = total_weighted_duration / sum_weights`, provided `sum_weights` is not near zero.
+
+To compute debiased percentiles for both `high` and `low`:
+
+1. Follow the _computing debiased means_ steps to compute a per-record weight `w`.
+2. Let `sum_weights` be the sum of the `w` values across all records.
+3. Let `sorted_records` be all records sorted by duration in ascending order.
+4. For a desired percentile (0-100), compute `q = percentile / 100.0`.
+5. Walk `sorted_records` and for each record:
+   - Compute cumulative weight `cw` per-record: `cw = sum_{i: duration_i <= duration_j} w_i`.
+   - Compute debiased cumulative distribution function per-record: `cdf = cw / sum_weights`.
+6. Find the first index `idx` where `cdf >= q`.
+   - If `idx` is `0`, return `duration` for `sorted_records[0]`.
+   - If no such `idx` exists, return `duration` for `sorted_records[n]`.
+7. Compute interpolation fraction:
+   - Let `lower_cdf` be `cdf` for `sorted_records[idx-1]`.
+   - Let `upper_cdf` be `cdf` for `sorted_records[idx]`.
+   - if `lower_cdf = upper_cdf`, return `duration` for `sorted_records[idx]`.
+   - Otherwise:
+     - Let `ifrac = (q - lower_cdf) / (upper_cdf - lower_cdf)`.
+     - Let `lower_duration` be `duration` for `sorted_records[idx-1]`.
+     - Let `upper_duration` be `duration` for `sorted_records[idx]`.
+     - Return `lower_duration + (upper_duration - lower_duration) * ifrac`.
 
 ## Instance properties
 
