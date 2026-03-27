@@ -10,7 +10,7 @@ browser-compat: api.PerformanceTimingConfidence.value
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`value`** read-only property of the {{domxref("PerformanceTimingConfidence")}} interface is an enumerated value indicating a broad confidence measure of whether the user agent considers returned navigation metrics to be representative of the current user's device.
+The **`value`** read-only property of the {{domxref("PerformanceTimingConfidence")}} interface is an enumerated value indicating a broad confidence measure of whether the user agent considers returned navigation metrics to be free from external system load unrelated to the page.
 
 ## Value
 
