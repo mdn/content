@@ -29,7 +29,7 @@ jobs:
             --jq ".[] | select(.base.repo.full_name == \"$BASE_REPO\") | .number")
           echo "number=$PR_NUMBER" >> $GITHUB_OUTPUT
 
-      - name: Download lint results
+      - name: Download artifact
         if: steps.identify-pr.outputs.number
         continue-on-error: true
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
@@ -44,7 +44,7 @@ jobs:
         if: steps.identify-pr.outputs.number && hashFiles('lint-results/') != ''
         run: echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
 
-      - name: Checkout default branch
+      - name: Checkout
         if: steps.identify-pr.outputs.number
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -58,7 +58,7 @@ jobs:
         with:
           reviewdog_version: latest
 
-      - name: Suggest changes using diff
+      - name: Add PR review with suggested changes using `git diff` output
         if: steps.check.outputs.HAS_ARTIFACT == 'true'
         working-directory: mdn-content
         env:
@@ -77,7 +77,7 @@ jobs:
             -filter-mode=diff_context \
             -reporter=github-pr-review < ../lint-results/lint.diff
 
-      - name: Add reviews for markdownlint errors
+      - name: Add PR review with comments for errors in markdownlint output
         if: steps.check.outputs.HAS_ARTIFACT == 'true'
         working-directory: mdn-content
         env:
