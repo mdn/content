@@ -78,7 +78,7 @@ After the agreed-upon sunsetting period has passed, the content can be removed f
 
 1. **Archive the content.** Copy the section to the [MDN Museum repository](https://github.com/mdn/museum) for archival purposes. Keep the content in a directory that matches the original URL path. For example, content at `https://developer.mozilla.org/en-US/docs/Games` would go in a `/docs/games/` directory in the museum repository. This preserves MDN's content history while keeping deprecated material off the active site.
 
-2. **Remove the content and add redirects.** Use the `delete` command documented in the [Creating, moving, and deleting](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#deleting_pages) guide to remove the pages and set up redirects. Redirects should point users to the most relevant alternative content if available. If there is no suitable alternative, redirect to the MDN Web Docs homepage.
+2. **Remove the content and add redirects.** Use the [`delete` command](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#deleting_pages) to remove the pages and set up redirects. Redirects should point users to the most relevant alternative content if available. If there is no suitable alternative, redirect to the MDN Web Docs homepage.
 
 > [!WARNING]
 > Do not permanently delete content without archiving it first.
