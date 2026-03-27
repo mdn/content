@@ -3,10 +3,12 @@ title: "HTMLMediaElement: loading property"
 short-title: loading
 slug: Web/API/HTMLMediaElement/loading
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLMediaElement.loading
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`loading`** property of the {{domxref("HTMLMediaElement")}} interface provides a hint to the browser on how to handle the loading of the media which is currently outside the window's {{Glossary("visual viewport")}}. This helps to optimize the loading of the document's contents by postponing loading the media until it's expected to be needed, rather than immediately during the initial page load. It reflects the `<audio>` element's [`loading`](/en-US/docs/Web/HTML/Reference/Elements/audio#loading) content attribute or the `<video>` element's [`loading`](/en-US/docs/Web/HTML/Reference/Elements/video#loading) content attribute.
 

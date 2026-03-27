@@ -47,9 +47,9 @@ This interface directly defines the following properties:
   - : An unsigned 32-bit integer (unsigned long) which is the intrinsic height of the image if this is applied to an image, 0 for text.
 - {{domxref("PerformanceElementTiming.naturalWidth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An unsigned 32-bit integer (unsigned long) which is the intrinsic width of the image if this is applied to an image, 0 for text.
-- {{domxref("PerformanceElementTiming.paintTime")}}
+- {{domxref("PerformanceElementTiming.paintTime")}} {{experimental_inline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the paint phase started.
-- {{domxref("PerformanceElementTiming.presentationTime")}}
+- {{domxref("PerformanceElementTiming.presentationTime")}} {{experimental_inline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the element was actually drawn on the screen.
 - {{domxref("PerformanceElementTiming.renderTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("DOMHighResTimeStamp")}} with the renderTime of the element.

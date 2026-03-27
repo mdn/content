@@ -68,7 +68,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
     In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
 
-- `loading`
+- `loading` {{experimental_inline}}
   - : Indicates how the browser should load the audio:
     - `eager`
       - : Loads the audio immediately, regardless of whether or not the audio is currently within the visible viewport (this is the default value).
