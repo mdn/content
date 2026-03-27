@@ -10,7 +10,7 @@ browser-compat: api.PerformanceElementTiming.presentationTime
 
 The **`presentationTime`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the element was actually drawn on the screen.
 
-The `presentationTime` is implementation-dependent, therefore the value may differ across implementing browsers. Some browsers may choose to always return `0` or not to expose the value.
+The `presentationTime` is optional — some browsers may choose always to return `0` or not to expose the value at all. The value is also implementation-dependent — it may differ across browsers that choose to expose it.
 
 ## Value
 
