@@ -79,6 +79,10 @@ attachShadow(options)
     - `clonable` {{Optional_Inline}}
       - : A boolean that specifies whether the shadow root is clonable: when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy. Its default value is `false`.
 
+    - `customElementRegistry` {{Optional_Inline}}
+      - : A {{DOMxRef('CustomElementRegistry')}} that will be used as the [scoped custom element registry](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) of the attached shadow root.
+        If `null` or `undefined`, the shadow root will use the global registry provided by {{domxref("Window.customElements")}}.
+
     - `delegatesFocus` {{Optional_Inline}}
       - : A boolean that, when set to `true`, specifies behavior that mitigates custom element issues around focusability.
         When a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling. Its default value is `false`.
@@ -99,6 +103,9 @@ attachShadow(options)
           - : Elements are not automatically assigned to {{HTMLElement("slot")}} elements. Instead, they must be manually assigned with {{domxref("HTMLSlotElement.assign()")}}.
             Its default value is `named`.
 
+  Note that if you pass a {{DOMxRef('ShadowRoot')}} the method will read the corresponding properties as though it was an [`options`](#options) object.
+  It will still attach a new `ShadowRoot`.
+
 ### Return value
 
 Returns a {{domxref("ShadowRoot")}} object.
@@ -111,6 +118,8 @@ Returns a {{domxref("ShadowRoot")}} object.
     - where the element definition static property `disabledFeatures` has been given a value of `"shadow"`.
     - that already has a shadow root that was not created declaratively.
     - that has a [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) but the specified `mode` does not match the existing mode.
+    - passing a `customElementRegistry` value that isn't `null` or a locally scoped registry (that you created using `new CustomElementRegistry()`).
+      The error would be thrown if you passed the global registry.
 
 ## Examples
 
