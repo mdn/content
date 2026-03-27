@@ -39,7 +39,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.isMap")}}
   - : A boolean value that reflects the [`ismap`](/en-US/docs/Web/HTML/Reference/Elements/img#ismap) HTML attribute, indicating that the image is part of a server-side image map. This is different from a client-side image map, specified using an `<img>` element and a corresponding {{HTMLElement("map")}} which contains {{HTMLElement("area")}} elements indicating the clickable areas in the image. The image _must_ be contained within an {{HTMLElement("a")}} element; see the `ismap` page for details.
 - {{domxref("HTMLImageElement.loading")}}
-  - : A string providing a hint to the browser used to optimize loading the document by determining whether to load the image immediately (`eager`) or on an as-needed basis (`lazy`).
+  - : A string indicating whether the browser should load the image immediately (`eager`) or when it is needed (`lazy`).
 - {{domxref("HTMLImageElement.naturalHeight")}} {{ReadOnlyInline}}
   - : Returns an integer value representing the intrinsic height of the image in CSS pixels, if it is available; else, it shows `0`. This is the height the image would be if it were rendered at its natural full size.
 - {{domxref("HTMLImageElement.naturalWidth")}} {{ReadOnlyInline}}
