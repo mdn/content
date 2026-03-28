@@ -9,6 +9,8 @@ browser-compat: api.VideoFrame.copyTo
 {{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`copyTo()`** method of the {{domxref("VideoFrame")}} interface copies the contents of the `VideoFrame` to an `ArrayBuffer`.
+> **Note**
+> Converting from YUV to RGB is supported starting from Chromium 127.
 
 ## Syntax
 
