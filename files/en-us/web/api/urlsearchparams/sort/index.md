@@ -28,23 +28,20 @@ None.
 None ({{jsxref("undefined")}}).
 
 ## Examples
-
-```js
 // Create a test URLSearchParams object
 const searchParams = new URLSearchParams("c=4&a=2&b=3&a=1");
+
+// Display the original query string
+console.log(searchParams.toString());
+// Expected output: c=4&a=2&b=3&a=1
 
 // Sort the key/value pairs
 searchParams.sort();
 
 // Display the sorted query string
 console.log(searchParams.toString());
-```
+// Expected output: a=2&a=1&b=3&c=4
 
-The result is:
-
-```plain
-a=2&a=1&b=3&c=4
-```
 
 ## Specifications
 
