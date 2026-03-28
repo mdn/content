@@ -69,24 +69,24 @@ If you are reading this site, you are probably interested in some kind of web de
 
 If you are not sure of the answers to these questions, that's okay. Ask your peers, friends, teachers, or mentor what they are interested in, to get some inspiration, and look around the industry to see what's available. Realistically, many of you will probably start by seeing an interesting job ad or company, then working out how it fits in to the above categories and how to "sell yourself" to that company.
 
-## Sell yourself
+To get a job, you need to learn how to **sell yourself**—that is, present yourself as a strong candidate for the roles you’re targeting. This involves several key steps, outlined below.
 
-To get a job, you have to learn how to **sell yourself**, which means making yourself look like a great candidate for the jobs you want. This involves a few different steps, which are described in the sections below.
+### Develop qualities that employers look for
 
-### Develop qualities for that employers look for
+As a general guideline, you should understand the attributes hiring managers seek in candidates and prepare accordingly. While technical skills are essential for performing job-specific tasks, companies also highly value "soft skills." These skills support collaboration, improve workplace relationships, and contribute to a positive work environment.
 
-As a general point, you should be aware of the attributes that hiring managers look for in a candidate and prepare accordingly. Obviously, you'll need technical skills and other abilities that help you to directly do the task at hand. However, companies also look for "soft skills" that indirectly help you do the job; they also make their employees' lives easier and happier while they are at work. We already touched on some of these in our [Collaboration and teamwork](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork) article.
+We previously discussed some of these in our [Collaboration and teamwork](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork) article.
 
-To summarize, hiring managers will look for:
+To summarize, hiring managers typically look for:
 
-- Someone they can get along with.
-- A positive attitude, someone who is respectful, empathic, and constructive.
-- An open-minded individual who works well in a diverse team with diverse viewpoints.
-- Someone that is graceful when a decision does not go their way, and able to align for the greater good.
-- A good communicator and relationship builder.
-- A tenacious, focused individual with good problem solving skills.
+- Someone who is easy to work with and gets along well with others.
+- A positive attitude—respectful, empathetic, and constructive.
+- An open-minded individual who works effectively in teams with diverse perspectives.
+- Someone who handles setbacks gracefully and aligns with the greater good.
+- A strong communicator and relationship builder.
+- A focused and persistent problem solver.
 
-Think about whether these statements describe you or not. This could be a useful way to identify some of your weaknesses, meaning that you can take steps to improve them. For example, if you are not good at communication or problem solving, look up some guides or classes to help you improve those skills. Even something informal such as talking to your friends about your work and describing your projects will help you become better at communicating.
+Reflect on whether these qualities describe you. This self-assessment can help you identify areas for improvement. For example, if communication or problem-solving is not your strength, consider taking courses or practicing regularly. Even informal activities, such as discussing your projects with friends, can significantly enhance your communication skills.
 
 ### Create a CV/résumé
 
