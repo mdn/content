@@ -23,7 +23,7 @@ A string.
 const url = new URL(
   "https://developer.mozilla.org/en-US/docs/Web/API/URL/href",
 );
-console.log(url.href); // Logs: 'https://developer.mozilla.org/en-US/docs/Web/API/URL/href'
+console.log(url.href); // https://developer.mozilla.org/en-US/docs/Web/API/URL/href
 ```
 
 ### Origin-only URL
@@ -32,7 +32,7 @@ For [hierarchical schemes](https://www.rfc-editor.org/rfc/rfc3986#section-1.2.3)
 
 ```js
 const url = new URL("https://developer.mozilla.org");
-console.log(url.href); // Logs: 'https://developer.mozilla.org/'
+console.log(url.href); // https://developer.mozilla.org/
 ```
 
 ## Specifications
