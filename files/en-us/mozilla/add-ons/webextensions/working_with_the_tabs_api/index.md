@@ -577,7 +577,7 @@ Various tab methods enable you to work with the content of groups and split view
 - {{WebExtAPIRef("tabs.remove")}} to close a tab in a split view, which closes the split view.
 
 > [!NOTE]
-> APIs to enable the creation and removal of split views (without moving or removing the tabs) are being developed under W3C web extensions issue [#967](https://github.com/w3c/webextensions/issues/967).
+> APIs to enable the creation and removal of split views (without moving or removing the tabs) are being developed under [issue #967](https://github.com/w3c/webextensions/issues/967) of W3C's WebExtensions Community Group (WECG).
 
 ## Some other interesting abilities
 
