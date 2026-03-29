@@ -10,8 +10,8 @@ sidebar: cssref
 ---
 
 The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#naming_containment_contexts).
-Style declarations are filtered by a condition and applied to the container if the condition is true.
-The condition is evaluated when the queried container size, [`<style-feature>`](#container_style_queries), scroll-state, or state of the applied [position-try fallback](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) (in the case of [anchor-positioned](/en-US/docs/Web/CSS/Guides/Anchor_positioning) containers) changes.
+Style declarations are filtered by a condition and applied to the elements within the container if the condition is true.
+The condition is evaluated when the queried container size, [`<style-feature>`](#container_style_queries), or scroll-state changes.
 
 The condition must specify one or both of {{cssxref("container-name")}} and `<container-query>`.
 
@@ -89,7 +89,7 @@ If no `<container-query>` is specified, named containers are selected.
   - : One or both of `<container-name>` and `<container-query>`.
     Styles defined in the `<stylesheet>` are applied if the condition is `true`.
     - `<container-name>` {{optional_inline}}
-      - : The name of the container that the styles will be applied to when the query evaluates to `true`, specified as an {{cssxref("ident")}}.
+      - : The name of the container to query; it is specified as an {{cssxref("ident")}}. If the query evaluates to `true`, the declared styles are applied to the container's descendant elements.
     - `<container-query>` {{optional_inline}}
       - : A set of features that are evaluated against the query container when the size, [`<style-feature>`](#container_style_queries), scroll-state, or applied position-try fallback of the container changes.
 
