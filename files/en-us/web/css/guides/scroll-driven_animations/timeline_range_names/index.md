@@ -510,7 +510,7 @@ Select the the different height values, then scroll to compare `entry` with `ent
 {{EmbedLiveSample("entry_crossing", "100%", "400")}}
 
 Note how the effects are similar, except for when the `500px` is selected and the animated element is taller than the container.
-The `entry-crossing` produces the same results as `entry` when the element is equal to or smaller than the scrollport, but when the element is larger than the scrollport, the `100%` occurs later, occurring only when the end edge has entered the view port.
+The `entry-crossing` range produces the same results as `entry` when the element is equal to or smaller than the scrollport, but when the element is larger than the scrollport, the `100%` occurs later, occurring only when the end edge has entered the view port.
 The animation attachment range is the size of the subject, and not clamped to the size of the scrollport.
 
 ```html hidden live-sample___svg_entry-crossing
