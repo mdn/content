@@ -9,7 +9,7 @@ browser-compat: api.NavigationTransition
 
 The **`NavigationTransition`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} represents an ongoing navigation, that is, a navigation that hasn't yet reached the {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} or {{domxref("Navigation/navigateerror_event", "navigateerror")}} stage.
 
-It is accessed via the {{domxref("Navigation.transition")}} property.
+It is accessed via the {{domxref("Navigation.transition")}} property. This is only available during a [navigation interception](/en-US/docs/Web/API/Navigation/navigate_event#handling_a_navigation_using_intercept).
 
 {{InheritanceDiagram}}
 
