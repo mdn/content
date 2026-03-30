@@ -49,7 +49,7 @@
     "up-to-date-check": "node scripts/up-to-date-check.js"
   },
   "devDependencies": {
-    "@apideck/better-ajv-errors": "^0.3.6",
+    "@apideck/better-ajv-errors": "^0.3.7",
     "@mdn/fred": "2.4.0",
     "@octokit/rest": "^22.0.1",
     "ajv": "^8.18.0",
