@@ -10,7 +10,7 @@ browser-compat: api.Document.ariaNotify
 
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 
-The **`ariaNotify()`** method of the {{domxref("Document")}} interface specifies that a given string of text should be announced by a {{glossary("screen reader")}} if available and activated.
+The **`ariaNotify()`** method of the {{domxref("Document")}} interface queues a string of text to be announced by a {{glossary("screen reader")}}.
 
 ## Syntax
 
@@ -26,11 +26,15 @@ ariaNotify(announcement, options)
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `priority`
-      - : An enumerated value specifying the priority of the announcement. Possible values are:
+      - : An enumerated value specifying the priority of the announcement.
+        Possible values are:
         - `normal`
-          - : The announcement has normal priority. It will be spoken after any announcement that a screen reader is currently making.
+          - : The announcement has normal priority.
+            It will be spoken after any announcement that a screen reader is currently making.
+            This is the default value.
         - `high`
-          - : The announcement has high priority. It will be spoken immediately, interrupting any announcement that a screen reader is currently making.
+          - : The announcement has high priority.
+            It will be spoken immediately, interrupting any announcement that a screen reader is currently making.
 
 ### Return value
 
