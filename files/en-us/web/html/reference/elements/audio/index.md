@@ -73,8 +73,10 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - `eager`
       - : Loads the audio immediately, regardless of whether or not the audio is currently within the visible viewport (this is the default value).
     - `lazy`
-      - : Defers loading the audio until it reaches a calculated distance from the viewport, as defined by the browser.
+      - : Defers loading the audio until the controls reach a calculated distance from the viewport, as defined by the browser.
 
+        In order for audio elements to intersect visibly with the viewport, they need to be visible. Browsers use the `controls` attribute to make audio elements visible, so it's needed for lazy loading.
+        
         Lazy loading avoids the network and storage bandwidth required to handle the audio until it's reasonably certain that it will be needed. This improves the performance in most typical use cases.
 
     Lazy-loaded audio located in the visual viewport may not yet be downloaded when the Window {{domxref("Window.load_event", "load")}} event is fired. This is because the event is fired based on eager-loaded audio only — lazy-loaded audio is not considered even if it is located within the visual viewport upon initial page load.
