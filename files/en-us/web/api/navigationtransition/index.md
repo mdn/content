@@ -21,7 +21,7 @@ It is accessed via the {{domxref("Navigation.transition")}} property.
   - : Returns the {{domxref("NavigationHistoryEntry")}} that the transition is coming from.
 - {{domxref("NavigationTransition.navigationType", "navigationType")}} {{ReadOnlyInline}}
   - : Returns the type of the ongoing navigation.
-- {{domxref("NavigationTransition.to", "to")}} {{ReadOnlyInline}}
+- {{domxref("NavigationTransition.to", "to")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("NavigationHistoryEntry")}} that the transition is navigating to.
 
 ## Examples
