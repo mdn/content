@@ -24,7 +24,12 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
 ## Examples
 
-This example uses the CSS found as an example on the {{cssxref("@font-face")}} page. The first {{domxref("CSSRule")}} returned will be a `CSSFontFaceRule`.
+### Accessing @font-face properties
+
+This example defines a {{cssxref("@font-face")}} rule and then iterates the rules on the page to the associated `CSSFontFaceRule`.
+It then logs some of the properties.
+
+#### CSS
 
 ```css
 @font-face {
@@ -36,10 +41,46 @@ This example uses the CSS found as an example on the {{cssxref("@font-face")}} p
 }
 ```
 
-```js
-const myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); // A CSSFontFaceRule
+```css hidden
+#log {
+  height: 200px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
 ```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+#### JavaScript
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+```js
+const myRules = document.getElementById("css-output").sheet.cssRules;
+for (const rule of myRules) {
+  if (rule instanceof CSSFontFaceRule) {
+    log(`this: ${rule}`);
+    log(` cssText: ${rule.cssText}`);
+    log(` parentRule: ${rule.parentRule}`);
+    log(` parentStyleSheet: ${rule.parentStyleSheet}`);
+    log(` type: ${rule.type}`);
+    log(` style: ${rule.style}`);
+  }
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Accessing @font-face properties", "100%", "250px")}}
 
 ## Specifications
 
