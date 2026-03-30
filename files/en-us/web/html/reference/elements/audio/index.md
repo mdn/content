@@ -102,6 +102,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
     > [!NOTE]
     >
+    > - Audio with the [`loading="lazy"`](#loading) attribute set will only apply the `preload` behavior once the audio controls are near or within the viewport.
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the audio for playback.
     > - The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.
 

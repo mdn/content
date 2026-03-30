@@ -80,14 +80,14 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
         Lazy loading avoids the network and storage bandwidth required to handle the video until it's reasonably certain that it will be needed. This improves the performance in most typical use cases.
 
-    While explicit [`width`](#width) and [`height`](#height) attributes are recommended for all videos to avoid layout shift, they are especially important for lazy-loaded ones. Lazy-loaded videos will never be loaded if they do not intersect a visible part of an element, even if loading them would change that, because unloaded videos have a `width` and `height` of `0`. It creates an even more disruptive user experience when the content visible in the viewport reflows in the middle of reading it.
+        While explicit [`width`](#width) and [`height`](#height) attributes are recommended for all videos to avoid layout shift, they are especially important for lazy-loaded ones. Lazy-loaded videos will never be loaded if they do not intersect a visible part of an element, even if loading them would change that, because unloaded videos have a `width` and `height` of `0`. It creates an even more disruptive user experience when the content visible in the viewport reflows in the middle of reading it.
 
-    Lazy-loaded videos located in the visual viewport may not yet be visible when the Window {{domxref("Window.load_event", "load")}} event is fired. This is because the event is fired based on eager-loaded videos — lazy-loaded videos are not considered even if they are located within the visual viewport upon initial page load.
+        Lazy-loaded videos located in the visual viewport may not yet be visible when the Window {{domxref("Window.load_event", "load")}} event is fired. This is because the event is fired based on eager-loaded videos — lazy-loaded videos are not considered even if they are located within the visual viewport upon initial page load.
 
-    Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing videos in a page's markup such that a server can track how many videos are requested and when.
+        Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing videos in a page's markup such that a server can track how many videos are requested and when.
 
-    > [!NOTE]
-    > The `loading="lazy"` attribute also impacts the [`autoplay`](#autoplay), [`poster`](#poster), and [`preload`](#preload) attributes, as described in each of those sections of the page.
+        > [!NOTE]
+        > The `loading="lazy"` attribute also impacts the [`autoplay`](#autoplay), [`poster`](#poster), and [`preload`](#preload) attributes, as described in each of those sections of the page.
 
 - `loop`
   - : A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.
@@ -114,12 +114,9 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     The default value is different for each browser. The spec advises it to be set to `metadata`.
 
     > [!NOTE]
-    >
+    > - Videos with the [`loading="lazy"`](#loading) attribute set will only apply the `preload` behavior once the video is near or within the viewport.
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
     > - The specification does not force the browser to follow the value of this attribute; it is a mere hint.
-
-    > [!NOTE]
-    > Videos with the [`loading="lazy"`](#loading) attribute set will only apply the `preload` behavior once the video is near or within the viewport.
 
 - `src`
   - : The URL of the video to embed. This is optional; you may instead use the {{HTMLElement("source")}} element within the video block to specify the video to embed.
