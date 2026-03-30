@@ -137,7 +137,7 @@ Threats are most likely to occur where data crosses these boundaries.
 
 ### Notes
 
-This threat model is intentionally incomplete and will evolve. Its purpose is to improve shared understanding and guide security decisions, not to guarantee the absence of vulnerabilities.
+This model is incomplete. Threat models continue to evolve as the site and security vulnerabilities continue to evolve. The purpose of a threat model is to improve shared understanding and guide security decisions, not to guarantee the absence of vulnerabilities.
 
 ## See also
 

@@ -23,7 +23,7 @@ For an example threat model, see:
 
 ## What is a threat?
 
-A threat is something that has a negative effect on your objectives or your assets, if it happens.
+A threat is anything that could potentially harm your website's functionality, or the data it holds.
 
 A threat model is a structured representation of potential threats. It includes all the information that affects the security of your product, whether that product is a server, application or website. It is a living document, or mental map, that identifies your assets (What are you protecting?), potential adversaries (who would want to attack you, your product, or your users?), and potential vulnerabilities (where and what are your product's weak spots?)
 
@@ -44,6 +44,7 @@ To illustrate the different terms, let's take a house as an example:
 - Attack: the burglar climbing through the window or picking the lock.
 - Mitigation: a strong deadbolt, an alarm system, policy to ensure all windows are locked.
 - Risk: we announced publicly that we are away on vacation, which increases the risk for burglars to try to get into our house.
+- Severity of impact: The impact will be greater if the burglar knows we're on vacation, as they will feel confident spending more time in our home. The severity will be less if I have a house sitter or I have placed all my valuables in an off-site safe. 
 
 ## What is threat modeling?
 
@@ -56,11 +57,13 @@ Threat modeling is a the process of creating a threat model. It is form of risk 
 
 ## How to do threat modeling?
 
-Ideally, threat modeling happens early and frequently. Much like you constantly iterate over your software, you should also continuously analyze the system's security using your threat model. Usually, this begins right after the features have been defined.
+Threat modeling should happen early in your development process and frequently revisted. Much like you constantly iterate over your software, you should also continuously analyze the system's security using your threat model. Usually, this begins right after the features have been defined.
 
 Threat modeling activities are not done by security auditors exclusively. Anyone who is concerned about the privacy or security of a system should be empowered to help with threat modeling. Cross-functional collaboration from a diverse set of participants makes the threat model stronger. For example, whoever is designing the system surely has a clear understanding of what is being built and of the concerns that might keep them up at night.
 
-Documentation of the common understanding of your system in a threat model enables you to measure the robustness of your system. It can be quite some work to get to an initial threat modeling document. Often, the initial work gets done as part of a workshop with your team, either self-guided or mediated by a professional. The produced threat model document needs to be extensible for future re-assessment and ideally lives version-controlled within your codebase.
+Having a shared/common understanding of your system and its threats allows you to measure the robustness of your system. This should be captured in a threat model document.
+
+It can be quite some work to get to an initial threat modeling document. Often, the initial work gets done as part of a workshop with your team, either self-guided or mediated by a professional. The produced threat model document needs to be extensible for future re-assessment and ideally lives version-controlled within your codebase.
 
 For any threat model, it helps to:
 
@@ -88,11 +91,12 @@ Let's walk through these questions in order.
 
 To answer this what we are working on or building, you can create a model of the system, such as a data flow diagram, architecture diagram, or use-case diagram, showing components, data flows, trust boundaries, dependencies, and key stakeholders.
 
-To define the scope of the threat model, we need to delineate which threats target our own project and which target the browser or other layers of the web platform stack, which we can define are external dependencies to our threat model. The [Threat Model for the Web Platform](https://w3c.github.io/threat-model-web/) provides a useful starting point and gives an idea of the environment any website or web application resides in.
+To define the scope of the threat model, we need to delineate which threats target our own project and which target the browser or other layers of the web platform stack — we define these as external dependencies to our threat model. The [Threat Model for the Web Platform](https://w3c.github.io/threat-model-web/) provides a useful starting point, and outlines the environment shared by most websites and web applications.
 
-It is helpful to make yourself aware about which parts you will be responsible for vs. which parts will be taken care of by others, such as protections the browser usually provides for you. If you maintain a list of relevant existing threat models for your software dependencies and your environment, you can reference them in your own threat model and don't need to redo the modeling again. Threat modeling is not about completeness; it's about improving understanding over time.
+It is helpful to make yourself aware about which parts you will be responsible for and which parts will be taken care of by others, such as protections the browser usually provides for you. If you maintain a list of relevant existing threat models for your software dependencies and your environment, you can reference them in your own threat model and don't need to redo the modeling again. Threat modeling is not about completeness; it's about improving understanding over time.
 
-For learning purposes, we can make the following example assumptions about a blog website. Note that these assumptions are incomplete and recognize that the assumptions you make yourself will likely also be incomplete. It is a good idea to brainstorm with your team to get a more complete overview of the system you want to protect.
+For learning purposes, the following sections will use the example of a blog website.
+Note that the assumptions we will make about the blog are incomplete, and recognize that the assumptions you will make about your own system will likely also be incomplete. It is a good idea to brainstorm with your team to get a more complete overview of the system you want to protect.
 
 ### Components
 
@@ -118,13 +122,13 @@ Things an attacker wants and are in need of protection. This could be:
 - User data: General user data and personally identifying information (PII).
 - User credentials: Login information, usernames, passwords, passkeys.
 - Cookies and session information.
-- Private content assets (for example, draft blog posts)
+- Private content assets (for example, draft blog posts).
 
 To reference identified assets, you index them with the letter A (A1, A2, A3, ...) in your threat model.
 
 ### Data flows and trust boundaries
 
-Anything that happens inside the browser or comes from a user's input is _untrusted_. Threat modeling helps you identify the **trust boundary**, exactly where data crosses from untrusted, outside, areas out of your control, into your trusted application logic.
+Anything that happens inside the browser or comes from a user's input is _untrusted_. Threat modeling helps you identify the **trust boundary** — the point where data crosses from untrusted areas outside of your control into your trusted application logic.
 
 We identify the mechanism by which assets move between components. They may be uni- or bi-directional.
 
@@ -132,7 +136,7 @@ We identify the mechanism by which assets move between components. They may be u
 - Contact form flow
 - Data flows to external services
 
-When data flows between the user and your application, or between your application and third party services, it moves across trusted boundaries that are controlled by different authorities. Attacks often happen between these unequally privileged components and we should make ourselves aware of these attack surfaces, identifying where validation, encryption or other security controls are necessary.
+When data flows between a user and your application, or between your application and third party services, it moves across trusted boundaries that are controlled by different authorities. Attacks often happen between these unequally privileged components and we should make ourselves aware of these attack surfaces, identifying where validation, encryption or other security controls are necessary.
 
 To reference identified data flows, you index them with the letter F (F1, F2, F3, ...) in your threat model. Trust boundaries are usually visualized using a dashed line.
 
