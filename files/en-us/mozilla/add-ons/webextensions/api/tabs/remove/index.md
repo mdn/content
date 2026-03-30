@@ -10,10 +10,8 @@ Closes one or more tabs.
 
 If any of the tabs are:
 
-- part of a split view, the split view is removed.
-- the last tab in a group, the group is removed.
-
-See also [Working with tab groups](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_groups) and [Working with tab split views](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_split_views).
+- part of a [split view](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_split_views), the split view] is removed.
+- the last tab in a {{WebExtAPIRef("tabGroups","group")}}, the group is removed.
 
 ## Syntax
 

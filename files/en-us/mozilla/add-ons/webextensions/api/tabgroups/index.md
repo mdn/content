@@ -10,7 +10,14 @@ This API enables extensions to modify and rearrange [tab groups](https://support
 
 Tab groups may persist across browser restarts as part of session restore. Tab groups in private browsing windows do not persist across restarts. When a tab group is restored, its `groupId` may differ from its original value.
 
-The `tabGroups` API doesn't offer the ability to create or remove tab groups. Use the {{WebExtAPIRef("tabs.group()")}} and {{WebExtAPIRef("tabs.ungroup()")}} methods instead. To query the position of a tab group within a window, use {{WebExtAPIRef("tabs.query()")}}. These APIs in the `tabs` namespace don't require any permissions.
+The `tabGroups` API doesn't offer the ability to create, alter, or remove tab groups. Use:
+
+- {{WebExtAPIRef("tabs.group")}} and {{WebExtAPIRef("tabs.ungroup")}} to create or remove groups.
+- {{WebExtAPIRef("tabs.move")}} to move tabs within, into, or out of a group.
+- {{WebExtAPIRef("tabs.remove")}} to close tabs in a group, and close the group if the tab was the last one in the group.
+- {{WebExtAPIRef("tabs.query()")}} to query the position of a tab group within a window. 
+
+These APIs in the `tabs` namespace don't require any permissions.
 
 ## Permissions
 

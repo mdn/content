@@ -14,7 +14,7 @@ This how-to article look at:
 - Creating, duplicating, moving, updating, reloading, and removing tabs.
 - Manipulating a tab's zoom level.
 - Manipulating a tab's CSS.
-- Manipulating tab groups and split views.
+- Manipulating tab groups and [split views](#working_with_tab_split_views).
 
 The article concludes by looking at some other, miscellaneous features offered by the API.
 
@@ -554,27 +554,15 @@ Let's walk through how it's set up.
     });
     ```
 
-## Working with tab groups
-
-Tab functionality enables users to create [group tabs](https://support.mozilla.org/en-US/kb/tab-groups).
-
-Various tab methods enable you to work with the content of groups, including:
-
-- {{WebExtAPIRef("tabs.group")}} and {{WebExtAPIRef("tabs.ungroup")}} to create or remove groups.
-- {{WebExtAPIRef("tabs.move")}} to move tabs within, into, or out of a group.
-- {{WebExtAPIRef("tabs.remove")}} to close tabs in a group, and close the group if the tab was the last one in the group
-
-> [!NOTE]
-> Features to work with a tab group are provided in {{WebExtAPIRef("tabGroups")}}.
-
 ## Working with tab split views
 
-Tab functionality lets display two tabs side-by-side in a [split view](https://support.mozilla.org/en-US/kb/split-view-firefox).
+Tab functionality lets users display two tabs, side-by-side in a [split view](https://support.mozilla.org/en-US/kb/split-view-firefox). 
 
-Various tab methods enable you to work with the content of groups and split views, including:
+In the UI, a split view is treated as one unit, so that when someone moves a tab in a split, the other tab in the split moves with it, preserving the split. Your extension can observe the moved tab using {{WebExtAPIRef("tabs.onMoved")}}. The split behavior is the same when moving one tab in the split with {{WebExtAPIRef("tabs.move")}}. However, specifying both split tabs in a move and placing a tab between them closes the split.
 
-- {{WebExtAPIRef("tabs.move")}} to move tabs within or out of a split view.
-- {{WebExtAPIRef("tabs.remove")}} to close a tab in a split view, which closes the split view.
+When someone closes one of the tabs in a split, the split view closes and the other tab remains. Your extension can remove a split's tab using {{WebExtAPIRef("tabs.remove")}}. 
+
+Your extension can find out if a tab is in a split view using its `splitViewId`](en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab#splitviewid). Split view membership changes are observed using {{WebExtAPIRef("tabs.onUpdated")}}.
 
 > [!NOTE]
 > APIs to enable the creation and removal of split views (without moving or removing the tabs) are being developed under [issue #967](https://github.com/w3c/webextensions/issues/967) of W3C's WebExtensions Community Group (WECG).
