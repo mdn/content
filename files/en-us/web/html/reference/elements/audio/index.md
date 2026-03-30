@@ -44,7 +44,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     > See our [autoplay guide](/en-US/docs/Web/Media/Guides/Autoplay) for additional information about how to properly use autoplay.
 
     > [!NOTE]
-    > Audio with the [`loading="lazy"`](#loading) attribute set will not start downloading and autoplaying until the element is near or within the viewport.
+    > Audio with the [`loading="lazy"`](#loading) attribute set will not start downloading and autoplaying until the controls for the media are near or within the viewport. Lazy-loaded audio without the `controls` attribute will not autoplay.
 
 - `controls`
   - : If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
@@ -75,7 +75,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - `lazy`
       - : Defers loading the audio until the controls reach a calculated distance from the viewport, as defined by the browser.
 
-        In order for audio elements to intersect visibly with the viewport, they need to be visible. Browsers use the `controls` attribute to make audio elements visible, so it's needed for lazy loading.
+        In order for audio elements to intersect visibly with the viewport, they need to be visible. Browsers use the `controls` attribute to make audio elements visible, so it's needed for lazy loading. Lazy-loaded audio without the `controls` attribute will not load.
 
         Lazy loading avoids the network and storage bandwidth required to handle the audio until it's reasonably certain that it will be needed. This improves the performance in most typical use cases.
 
