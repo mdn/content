@@ -56,7 +56,7 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The non-standard {{domxref("Document/caretRangeFromPoint","caretRangeFromPoint()")}} method of the {{domxref("Document")}} interface is now supported. ([Firefox bug 1550635](https://bugzil.la/1550635)).
 - The `ariaNotify()` method is now supported on {{domxref("Document/ariaNotify","Document")}} and {{domxref("Element/ariaNotify","Element")}}.
-  This queues a string of text to be announced by a {{glossary("screen reader")}}.
+  This queues a string of text to be announced by a {{glossary("screen reader")}}, providing a more ergonomic and reliable alternative to [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions).
   ([Firefox bug 2018095](https://bugzil.la/2018095)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
