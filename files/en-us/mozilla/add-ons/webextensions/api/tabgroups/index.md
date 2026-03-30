@@ -15,7 +15,7 @@ The `tabGroups` API doesn't offer the ability to create, alter, or remove tab gr
 - {{WebExtAPIRef("tabs.group")}} and {{WebExtAPIRef("tabs.ungroup")}} to create or remove groups.
 - {{WebExtAPIRef("tabs.move")}} to move tabs within, into, or out of a group.
 - {{WebExtAPIRef("tabs.remove")}} to close tabs in a group, and close the group if the tab was the last one in the group.
-- {{WebExtAPIRef("tabs.query()")}} to query the position of a tab group within a window.
+- {{WebExtAPIRef("tabs.query")}} to query the position of a tab group within a window.
 
 These APIs in the `tabs` namespace don't require any permissions.
 
