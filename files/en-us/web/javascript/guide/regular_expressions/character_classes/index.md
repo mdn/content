@@ -56,7 +56,7 @@ console.log(moods.match(regexpEmoticons));
         <p>
           For example, <code>[\w-]</code> is the same as
           <code>[A-Za-z0-9_-]</code>. They both match the "b" in "brisket", the
-          "c" in "chop", and the "n" in "non-profit".
+          "c" in "chop", and the "-" in "non-profit".
         </p>
         <p>
           When the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets"><code>unicodeSets</code></a> (<code>v</code>) flag is enabled, the character class has some additional features. See the <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class">character class</a> reference for more information.
