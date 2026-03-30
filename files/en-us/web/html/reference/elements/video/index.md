@@ -114,6 +114,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     The default value is different for each browser. The spec advises it to be set to `metadata`.
 
     > [!NOTE]
+    >
     > - Videos with the [`loading="lazy"`](#loading) attribute set will only apply the `preload` behavior once the video is near or within the viewport.
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
     > - The specification does not force the browser to follow the value of this attribute; it is a mere hint.
