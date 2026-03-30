@@ -104,13 +104,13 @@ This threat model covers CycleTracker, a menstrual cycle tracking PWA that store
 ### Threat responses
 
 | Threat | Response ID                     | Strategy | Description                                                               |
-| ------ | ------------------------------- | -------- | ------------------------------------------------------------------------- | --- |
+| ------ | ------------------------------- | -------- | ------------------------------------------------------------------------- |
 | T1     | Local device access             | Reduce   | Encourage users to secure their device with a passcode/biometrics.        |
 | T1     | Local device access             | Reduce   | Optional app-level PIN or passphrase.                                     |
 | T2     | Shared browser profile exposure | Reduce   | Provide guidance to use private browsing or separate profiles.            |
 | T2     | Shared browser profile exposure | Reduce   | Add "Delete all data" button.                                             |
 | T3     | Browser sync leakage            | Reduce   | Document that browser sync may upload data.                               |
-| T4     | Malicious extensions            | Accept   | Outside app control; warn users about extension risks.                    |     |
+| T4     | Malicious extensions            | Accept   | Outside app control; warn users about extension risks.                    |
 | T5     | XSS                             | Reduce   | Apply strict Content Security Policy.                                     |
 | T5     | XSS                             | Reduce   | Avoid inline scripts.                                                     |
 | T5     | XSS                             | Reduce   | Keep code simple and auditable.                                           |
