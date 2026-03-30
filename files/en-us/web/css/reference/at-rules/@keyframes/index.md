@@ -160,6 +160,7 @@ See [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using) and [scr
 - [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [CSS scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}

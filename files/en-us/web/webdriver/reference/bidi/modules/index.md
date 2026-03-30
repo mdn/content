@@ -65,3 +65,7 @@ The following is a sample event message sent by the browser when the client is s
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [WebDriver BiDi web client](https://firefox-dev.tools/bidi-web-client/web/)
