@@ -7,17 +7,36 @@ browser-compat: api.PerformanceTimingConfidence
 
 {{APIRef("Performance API")}}
 
-The **`PerformanceTimingConfidence`** interface provides access to information that indicates whether the user agent considers returned navigation metrics to be free from external system load unrelated to the page.
-
-For example, if a website has loaded after a browser "cold start" or session restore, its pages may load more slowly as a result. In such cases, a `low` confidence {{domxref("PerformanceTimingConfidence.value", "value")}} would be returned for an associated performance record. On the other hand, if the browser determines a returned performance record to be representative of typical application performance, a `high` confidence value is returned.
-
-This confidence measure is useful for developers when trying to determine whether a performance issue is a legitimate concern, or an outlier being caused by external factors.
+The **`PerformanceTimingConfidence`** interface provides access to information that indicates whether a performance record reflects typical application performance, or is likely affected by external factors.
 
 The `PerformanceTimingConfidence` object for each navigation timing entry is accessed via the {{domxref("PerformanceNavigationTiming")}} interface's {{domxref("PerformanceNavigationTiming.confidence", "confidence")}} property.
 
-## Interpreting confidence data
+## Instance properties
 
-Since the {{domxref("PerformanceTimingConfidence.randomizedTriggerRate", "randomizedTriggerRate")}} can vary across records, per-record weighting is needed to recover unbiased aggregates. The procedure below illustrates how weighting based on {{domxref("PerformanceTimingConfidence.value", "value")}} can be applied before computing summary statistics.
+- {{domxref("PerformanceTimingConfidence.randomizedTriggerRate")}} {{ReadOnlyInline}}
+  - : A number indicating how often noise is applied when exposing the `value`.
+- {{domxref("PerformanceTimingConfidence.value")}} {{ReadOnlyInline}}
+  - : An enumerated value indicating a broad confidence measure of whether a performance record reflects typical application performance, or is likely affected by external factors.
+
+## Instance methods
+
+- {{domxref("PerformanceTimingConfidence.toJSON()")}}
+  - : Returns a JSON representation of the `PerformanceTimingConfidence` object.
+
+## Description
+
+If a website has loaded after a browser "cold start" or session restore, its pages may load more slowly as a result. In such cases, a `low` confidence {{domxref("PerformanceTimingConfidence.value", "value")}} is returned for an associated performance record. On the other hand, if the browser determines a returned performance record to be representative of typical application performance, a `high` confidence value is returned.
+
+> [!NOTE]
+> Device factors such as CPU do not contribute to the performance assessment. Other factors than browser "cold start" and session restore may be taken into account in future updates.
+
+This confidence measure is useful for developers when trying to determine whether a performance issue is a legitimate concern, or an outlier being caused by external factors.
+
+### Interpreting confidence data
+
+Since the {{domxref("PerformanceTimingConfidence.randomizedTriggerRate", "randomizedTriggerRate")}} can vary across records, per-record weighting is needed to recover unbiased aggregates. The procedures below illustrate how weighting based on {{domxref("PerformanceTimingConfidence.value", "value")}} can be applied before computing summary statistics.
+
+#### Computing debiased means
 
 To compute debiased means for both [`high` and `low` values](/en-US/docs/Web/API/PerformanceTimingConfidence/value#value):
 
@@ -35,9 +54,11 @@ To compute debiased means for both [`high` and `low` values](/en-US/docs/Web/API
 4. Let `sum_weights` be the sum of the `w` values across all records.
 5. Let `debiased_mean = total_weighted_duration / sum_weights`, provided `sum_weights` is not near zero.
 
+#### Computing debiased percentiles
+
 To compute debiased percentiles for both `high` and `low`:
 
-1. Follow the _computing debiased means_ steps to compute a per-record weight `w`.
+1. Follow the [computing debiased means](#computing_debiased_means) steps to compute a per-record weight `w`.
 2. Let `sum_weights` be the sum of the `w` values across all records.
 3. Let `sorted_records` be all records sorted by duration in ascending order.
 4. For a desired percentile (0-100), compute `q = percentile / 100.0`.
@@ -56,18 +77,6 @@ To compute debiased percentiles for both `high` and `low`:
      - Let `lower_duration` be `duration` for `sorted_records[idx-1]`.
      - Let `upper_duration` be `duration` for `sorted_records[idx]`.
      - Return `lower_duration + (upper_duration - lower_duration) * ifrac`.
-
-## Instance properties
-
-- {{domxref("PerformanceTimingConfidence.randomizedTriggerRate")}} {{ReadOnlyInline}}
-  - : A number representing a percentage value that indicates how often noise is applied when exposing the `value`.
-- {{domxref("PerformanceTimingConfidence.value")}} {{ReadOnlyInline}}
-  - : An enumerated value indicating a broad confidence measure of whether the user agent considers returned navigation metrics to be representative of the current user's device.
-
-## Instance methods
-
-- {{domxref("PerformanceTimingConfidence.toJSON()")}}
-  - : Returns a JSON representation of the `PerformanceTimingConfidence` object.
 
 ## Examples
 

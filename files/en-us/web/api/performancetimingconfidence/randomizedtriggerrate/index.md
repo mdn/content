@@ -10,11 +10,11 @@ browser-compat: api.PerformanceTimingConfidence.randomizedTriggerRate
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`randomizedTriggerRate`** read-only property of the {{domxref("PerformanceTimingConfidence")}} interface is a number representing a percentage value that indicates how often noise is applied when exposing the {{domxref("PerformanceTimingConfidence.value")}}.
+The **`randomizedTriggerRate`** read-only property of the {{domxref("PerformanceTimingConfidence")}} interface is a number indicating how often noise is applied when exposing the {{domxref("PerformanceTimingConfidence.value")}}.
 
 ## Value
 
-A number inside the interval `0` to `1` inclusive.
+A number between `0` to `1`, inclusive, which represents a percentage value.
 
 ## Examples
 
