@@ -32,7 +32,7 @@ This page lists references for [WebAssembly](/en-US/docs/WebAssembly).
 - [WebAssembly numeric instructions](/en-US/docs/WebAssembly/Reference/Numeric)
   - : WebAssembly numeric instructions.
 - [WebAssembly SIMD instructions](/en-US/docs/WebAssembly/Reference/SIMD)
-  - : The SIMD instructions available in Wasm.
+  - : The SIMD (single instruction, multiple data) instructions available in Wasm.
 - [WebAssembly table instructions](/en-US/docs/WebAssembly/Reference/Table)
   - : The instructions available in Wasm to manipulate tables.
 - [WebAssembly variable instructions](/en-US/docs/WebAssembly/Reference/Variables)
