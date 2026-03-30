@@ -41,7 +41,7 @@ The interface also supports the following properties:
 - {{domxref('PerformanceNavigationTiming.activationStart')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time between when a document starts prerendering and when it is activated.
 - {{domxref('PerformanceNavigationTiming.confidence')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : A {{domxref("PerformanceTimingConfidence")}} object containing information that indicates whether the user agent considers returned navigation metrics to be free from external system load unrelated to the page.
+  - : A {{domxref("PerformanceTimingConfidence")}} object containing information that indicates whether a performance record reflects typical application performance, or is likely affected by external factors.
 - {{domxref('PerformanceNavigationTiming.criticalCHRestart')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time at which the connection restart occurred due to {{HTTPHeader("Critical-CH")}} HTTP response header mismatch.
 - {{domxref('PerformanceNavigationTiming.domComplete')}} {{ReadOnlyInline}}

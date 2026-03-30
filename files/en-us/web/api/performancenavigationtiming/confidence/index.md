@@ -10,7 +10,7 @@ browser-compat: api.PerformanceNavigationTiming.confidence
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`confidence`** read-only property of the {{domxref("PerformanceNavigationTiming")}} interface returns a {{domxref("PerformanceTimingConfidence")}} object containing information that indicates whether the user agent considers returned navigation metrics to be free from external system load unrelated to the page.
+The **`confidence`** read-only property of the {{domxref("PerformanceNavigationTiming")}} interface returns a {{domxref("PerformanceTimingConfidence")}} object containing information that indicates whether a performance record reflects typical application performance, or is likely affected by external factors.
 
 For example, if a website has loaded after a browser "cold start" or session restore, its pages may load more slowly as a result. In such cases, a `low` confidence {{domxref("PerformanceTimingConfidence.value", "value")}} would be returned for an associated performance record. On the other hand, if the browser determines a returned performance record to be representative of typical application performance, a `high` confidence value is returned.
 
