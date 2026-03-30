@@ -49,7 +49,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : Returns a boolean that indicates whether the media element has finished playing.
 - {{domxref("HTMLMediaElement.error")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MediaError")}} object for the most recent error, or `null` if there has not been an error.
-- {{domxref("HTMLMediaElement.loading")}}
+- {{domxref("HTMLMediaElement.loading")}} {{experimental_inline}}
   - : A string indicating whether the browser should load the media immediately (`eager`) or when it is needed (`lazy`). See [`<video loading>`](/en-US/docs/Web/HTML/Reference/Elements/video#loading) and [`<audio loading>`](/en-US/docs/Web/HTML/Reference/Elements/audio#loading) HTML attributes for more information.
 - {{domxref("HTMLMediaElement.loop")}}
   - : A boolean that reflects the [`loop`](/en-US/docs/Web/HTML/Reference/Elements/video#loop) HTML attribute, which indicates whether the media element should start over when it reaches the end.

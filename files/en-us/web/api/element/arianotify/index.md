@@ -3,12 +3,10 @@ title: "Element: ariaNotify() method"
 short-title: ariaNotify()
 slug: Web/API/Element/ariaNotify
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Element.ariaNotify
 ---
 
-{{ApiRef("DOM")}}{{SeeCompatTable}}
+{{ApiRef("DOM")}}
 
 The **`ariaNotify()`** method of the {{domxref("Element")}} interface queues a string of text to be announced by a {{glossary("screen reader")}}.
 
