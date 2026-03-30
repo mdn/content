@@ -1,5 +1,5 @@
 ---
-title: "NavigationTransition: from property"
+title: "NavigationTransition: to property"
 short-title: to
 slug: Web/API/NavigationTransition/to
 page-type: web-api-instance-property
