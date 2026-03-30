@@ -15,10 +15,10 @@ When tabs associated with a [split view](/en-US/docs/Mozilla/Add-ons/WebExtensio
 - When both tabs in a split are specified and they remain adjacent but their order is changed, the tabs are swapped in the split view.
 - When both tabs in a split view are specified but are separated by one or more tabs, the tabs are moved and the split view removed.
 - When only one of the tabs in a split view is moved:
-   - In Firefox, the other tab is moved to preserve the split view. The tabs are re-ordered if necessary.
+  - In Firefox, the other tab is moved to preserve the split view. The tabs are re-ordered if necessary.
     > [!NOTE]
     > In Firefox 149 only, when a call moves a tab or tabs in a split view, the tabs in the split view are moved together, but the order of the tabs is unchanged.
-   - In Chrome, moving a tab away from the other tab in the split view removes the split view. (This behavior may change in a future release.) Otherwise, the tabs are re-ordered as necessary.
+  - In Chrome, moving a tab away from the other tab in the split view removes the split view. (This behavior may change in a future release.) Otherwise, the tabs are re-ordered as necessary.
 
 ## Syntax
 
