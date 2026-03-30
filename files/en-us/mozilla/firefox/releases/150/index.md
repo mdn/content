@@ -54,6 +54,10 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### DOM
 
+- The [`options.shadowRoots`](/en-US/docs/Web/API/Document/caretPositionFromPoint#shadowroots) argument of the {{domxref('Document.caretPositionFromPoint()')}} method is now supported.
+  This allows the method to return the node containing the caret from within a shadow DOM, provided its associated {{domxref("ShadowRoot")}} was passed as an option.
+  ([Firefox bug 1914596](https://bugzil.la/1914596)).
+
 - The non-standard {{domxref("Document/caretRangeFromPoint","caretRangeFromPoint()")}} method of the {{domxref("Document")}} interface is now supported. ([Firefox bug 1550635](https://bugzil.la/1550635)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
