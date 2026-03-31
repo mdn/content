@@ -13,7 +13,7 @@ sidebar: svgref
 The **`font-stretch`** attribute indicates the desired amount of condensing or expansion in the glyphs used to render the text.
 
 > [!NOTE]
-> The `font-stretch` attribute was renamed to {{SVGAttr("font-width")}} following the renaming of the corresponding CSS property. The {{cssxref("font-stretch")}} CSS property is now a legacy alias for the {{cssxref("font-width")}} property. While `font-width` is the specification's preferred name, `font-stretch` currently has broader browser support.
+> The `font-stretch` attribute was renamed to {{SVGAttr("font-width")}} following the renaming of the corresponding CSS property. To preserve compatibility, the specification retains `font-stretch` as a legacy alias for the `font-width` attribute.
 
 You can use this attribute with the following SVG elements:
 

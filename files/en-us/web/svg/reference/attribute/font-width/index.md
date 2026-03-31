@@ -13,7 +13,7 @@ sidebar: svgref
 The **`font-width`** attribute selects a normal, condensed, or expanded face from a font family for the glyphs used to render the text.
 
 > [!NOTE]
-> The `font-width` attribute is the modern replacement for the deprecated {{SVGAttr("font-stretch")}} attribute. While `font-width` is the specification's preferred name, `font-stretch` currently has broader browser support.
+> The `font-width` attribute is the modern replacement for the {{SVGAttr("font-stretch")}} attribute, which is a legacy alias. While `font-width` is the specification's preferred name, `font-stretch` currently has broader browser support.
 
 You can use this attribute with the following SVG elements:
 
