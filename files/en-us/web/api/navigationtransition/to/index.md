@@ -21,11 +21,11 @@ A {{domxref("NavigationDestination")}} object.
 ## Examples
 
 ```js
-navigation.onnavigateerror = e => {
+navigation.onnavigateerror = (e) => {
   if (navigation.transition?.to?.url === login_page_url) {
     /* do something when failing to go to login page */
   }
-}
+};
 ```
 
 ## Specifications
