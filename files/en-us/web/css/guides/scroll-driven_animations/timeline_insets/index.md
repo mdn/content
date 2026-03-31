@@ -7,7 +7,7 @@ sidebar: cssref
 
 By default, [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) track elements across the entire [animation attachment range](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#the_animation_attachment_range). The `0%` progress point is at the start of the range, while the `100%` progress point is at the end. The animation attachment range can be changed by setting a [timeline range name](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/timeline_range_names), and the location of the `0%` and `100%` progress points along the range can be adjusted by setting length or percentage-based inset values.
 
-The various timeline range names, their meanings, and how they are used are discussed in the [timeline range name guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/timeline_range_name). This guide explains limiting the animation timeline to a specific portion of the animation timeline range, effectively _insetting_ the animation timeline, using length or percentage values.
+This guide explains how to limit the animation timeline to a specific portion of the animation timeline range using length or percentage inset values.
 
 ## Animation timelines: a primer
 
@@ -299,7 +299,7 @@ main {
 
 We've added lines `1em` and `125px` from the block end edge of the scroll container. The animation starts when the block start edge of the subject element reaches the `1em` line and ends when it reaches the `125px` line.
 
-In this case, as the animation attachment range is the same for both properties, the location of the insets was fairly straightforward.
+In this case, as the animation attachment range is the same for both the start and end inset values, the location of the insets is fairly straightforward.
 
 ## Lengths and ranges
 
