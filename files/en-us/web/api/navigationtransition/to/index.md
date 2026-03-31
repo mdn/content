@@ -19,13 +19,12 @@ A {{domxref("NavigationDestination")}} object.
 ## Examples
 
 ```js
-  navigation.addEventListener("navigate", e => {
-    e.intercept({
-        async precommitHandler() {
-            console.log(`About to transition to ${navigation.transition.to.url}`);
-        }
-    });
-  });
+navigation.addEventListener("navigate", (e) => {
+  e.intercept({
+    async precommitHandler() {
+      console.log(`About to transition to ${navigation.transition.to.url}`);
+    },
+});
 ```
 
 ## Specifications
