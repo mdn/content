@@ -10,16 +10,22 @@ browser-compat: api.NavigationTransition.to
 
 {{APIRef("Navigation API")}}{{seecompattable}}
 
-The **`to`** read-only property of the {{domxref("NavigationTransition")}} interface returns the {{domxref("NavigationHistoryEntry")}} that the transition is navigating to.
+The **`to`** read-only property of the {{domxref("NavigationTransition")}} interface returns the {{domxref("NavigationDestination")}} that the transition is navigating to. This is especially useful when using precommit handlers, as during precommit the current URL has not yet switched to the destination.
 
 ## Value
 
-A {{domxref("NavigationHistoryEntry")}} object.
+A {{domxref("NavigationDestination")}} object.
 
 ## Examples
 
 ```js
-console.log(navigation.transition.to);
+  navigation.addEventListener("navigate", e => {
+    e.intercept({
+        async precommitHandler() {
+            console.log(`About to transition to ${navigation.transition.to.url}`);
+        }
+    });
+  });
 ```
 
 ## Specifications
