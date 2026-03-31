@@ -3,10 +3,12 @@ title: "PerformanceLongAnimationFrameTiming: presentationTime property"
 short-title: presentationTime
 slug: Web/API/PerformanceLongAnimationFrameTiming/presentationTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceLongAnimationFrameTiming.presentationTime
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`presentationTime`** read-only property of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the UI update was actually drawn on the screen.
 
