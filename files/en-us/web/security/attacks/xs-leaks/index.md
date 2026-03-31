@@ -141,7 +141,7 @@ Since cross-site leaks can work in many different ways, there isn't a single def
 
 ### Fetch metadata
 
-{{glossary("Fetch metadata request header", "Fetch metadata")}} is the term used for a collection of HTTP request headers which provide information about the context of an HTTP request, including:
+[Fetch metadata](/en-US/docs/Web/HTTP/Guides/Fetch_metadata) is the term used for a collection of HTTP request headers which provide information about the context of an HTTP request, including:
 
 - {{httpheader("Sec-Fetch-Site")}}: Whether the request is same-origin, same-site, or cross-site.
 - {{httpheader("Sec-Fetch-Mode")}}: The request's {{domxref("Request.mode", "mode")}}.
