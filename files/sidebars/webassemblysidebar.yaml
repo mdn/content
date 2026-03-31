@@ -153,6 +153,11 @@ sidebar:
             link: /WebAssembly/Reference/SIMD/extract
             title: Extract
             details: closed
+          - type: listSubPages
+            path: /WebAssembly/Reference/SIMD/load
+            link: /WebAssembly/Reference/SIMD/load
+            title: Load
+            details: closed
       - type: listSubPages
         path: /WebAssembly/Reference/Table
         link: /WebAssembly/Reference/Table
