@@ -7,20 +7,13 @@ sidebar: http
 
 **Fetch metadata** is the term for a group of HTTP request headers that give the server information about the context in which the request is being made.
 
-For example, this enables the server to know:
+Among other things, fetch metadata allows the server to know:
 
 - Whether the request represents a navigation between documents, or a request for a subresource, or was explicitly made from JavaScript, for example using the {{domxref("window.fetch()", "fetch()")}} API.
 
 - The relationship between the requester of the resource and the resource being requested: whether they are same-{{glossary("origin")}}, or same-{{glossary("site")}}, or from completely different sites.
 
-By using the information in these headers to allow or deny specific requests, a server can implement a defense against _cross-origin attacks_: that is, attacks in which a request is made from the attacker's origin to a resource belonging to the target origin. This includes [cross-site request forgeries (CSRF)](/en-US/docs/Web/Security/Attacks/CSRF) and various [cross-site leaks](/en-US/docs/Web/Security/Attacks/XS-Leaks).
-
-> [!NOTE]
-> We use the term _cross-origin_ attack in this guide, although many attacks are conventionally called _cross-site_ attacks.
->
-> An {{glossary("origin")}} is a more restrictive concept than a {{glossary("site")}}. In particular, a site includes a domain's subdomains, and an origin does not: so `https://example.org` and `https://login.example.org` are the same site, but different origins.
->
-> This means that while all cross-site attacks are cross-origin attacks, some cross-origin attacks are _not_ cross-site attacks. For example, if an attacker gains control of a subdomain of a site, then they can attack the site using _cross-origin_, _same-site_ requests. To include these attacks, we use the more restrictive term.
+By using the information in these headers to allow or deny specific requests, a server can implement a defense against [_cross-origin attacks_](#cross-origin_attacks) such as [cross-site request forgeries (CSRF)](/en-US/docs/Web/Security/Attacks/CSRF) and various [cross-site leaks](/en-US/docs/Web/Security/Attacks/XS-Leaks).
 
 ## Fetch metadata headers
 
@@ -41,7 +34,7 @@ We could think of it, roughly, as the way the returned resource would be used.
 
 For most {{glossary("replaced elements")}}, the value of the header names the element that this resource will be used for, such as `iframe`, `object`, `audio`, or `video`. A value of `image` indicates that the resource will be used as an image referenced by a replaced element such as an HTML {{htmlelement("img")}} element, a CSS {{cssxref("background-image")}} property, an SVG {{svgelement("image")}}, or any other place in the web platform that use images loaded from subresources.
 
-For the complete set of possible values, see the {{HTTPHeader("Sec-Fetch-Site", "reference page", "", "nocode")}} for this header, but other interesting values include:
+Some other interesting destination values include:
 
 - `document`
   - : The request is for a new document that is the target of a top-level navigation (for example, the user clicking a link in the page or submitting a form).
@@ -54,9 +47,11 @@ For the complete set of possible values, see the {{HTTPHeader("Sec-Fetch-Site", 
 - `empty`
   - : The request does not have a defined destination: among other possible causes, this is the value given if the request is the result of a {{domxref("Window.fetch()", "fetch()")}} call.
 
+For the complete set of possible values, see the {{HTTPHeader("Sec-Fetch-Site", "reference page", "", "nocode")}} for this header.
+
 ### Sec-Fetch-Mode
 
-This header indicates the _mode_ of the request. Like _destination_, the mode is defined in the Fetch API, where it is exposed as the {{domxref("Request.mode")}} property.
+This header indicates the _mode_ of the request. Like _destination_, the mode is defined in the [Fetch API](/en-US/docs/Web/API/Fetch_API), where it is exposed as the {{domxref("Request.mode")}} property.
 
 Its most commonly used values are:
 
@@ -64,7 +59,9 @@ Its most commonly used values are:
   - : The request represents a navigation between documents (for example, the user clicking a link).
 
 - `no-cors`
-  - : The request was made in `no-cors` mode, which means that it is allowed cross-origin without the server sending the appropriate [CORS](/en-US/docs/Web/HTTP/Guides/CORS) headers, but the response is _opaque_, meaning that its headers and bodies can't be accessed by JavaScript running in the client.
+  - : The request was made in `no-cors` mode.
+
+    This means that it is allowed cross-origin without the server sending the appropriate [CORS](/en-US/docs/Web/HTTP/Guides/CORS) headers, with the restriction that the response can't be accessed by JavaScript running in the client (it is _opaque_).
 
     This is the default mode for pages that load subresources such as images, fonts, scripts, and stylesheets, and explains why a different site is by default allowed to use your site's subresources, even if you haven't configured CORS to allow it.
 
@@ -110,6 +107,13 @@ This header is included only if the request was initiated by a user action (such
 
 Fetch metadata is especially useful as a defense against _cross-origin attacks_. These attacks typically target a user who has an account with a legitimate site, and is signed into this site. The attacker creates a website that makes a _cross-origin request_ to the legitimate site, and then tricks the user into executing that request.
 
+> [!NOTE]
+> We use the term _cross-origin_ attack in this guide, although many attacks are conventionally called _cross-site_ attacks.
+>
+> An {{glossary("origin")}} is a more restrictive concept than a {{glossary("site")}}. In particular, a site includes a domain's subdomains, and an origin does not: so `https://example.org` and `https://login.example.org` are the same site, but different origins.
+>
+> This means that while all cross-site attacks are cross-origin attacks, some cross-origin attacks are _not_ cross-site attacks. For example, if an attacker gains control of a subdomain of a site, then they can attack the site using _cross-origin_, _same-site_ requests. To include these attacks, we use the more restrictive term.
+
 For example, the attacker's site might contain a {{htmlelement("form")}} element that submits to the legitimate site. For some cross-origin attacks, no user interaction is needed at all: the attacker's page can just execute a {{domxref("Window.fetch()", "fetch()")}} request to the legitimate site on page load, and then the user only has to open the attacker's page for the cross-origin request to be executed.
 
 Because the request came from the user's browser, it will include any cookies set for the user by the legitimate site, including cookies that the legitimate site uses to identify users. The request will therefore be given the privileges for that user.
@@ -136,7 +140,8 @@ For example, the following [Express](/en-US/docs/Learn_web_development/Extension
 
 ```js
 function isAllowed(req) {
-  // Allow same-origin and directly user-initiated requests
+  // Allow same-origin requests
+  // Allow directly user-initiated requests (from bookmarks, address bar etc.)
   const secFetchSite = req.headers["sec-fetch-site"];
   if (secFetchSite === "same-origin" || secFetchSite === "none") {
     return true;
