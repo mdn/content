@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-By default, [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) track elements across the entire [animation attachment range](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#the_animation_attachment_range), and the `0%` progress point is at the start and `100%` progress point is at the end of that range, respectively. The animation attachment range can be changed setting a [timeline range name](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/timeline_range_name), and the location of the `0%` and `100%` progress points can be inset along the range by setting length or percentage-based insets.
+By default, [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) track elements across the entire [animation attachment range](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#the_animation_attachment_range). The `0%` progress point is at the start of the range, while the `100%` progress point is at the end. The animation attachment range can be changed by setting a [timeline range name](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/timeline_range_names), and the location of the `0%` and `100%` progress points along the range can be adjusted by setting length or percentage-based inset values.
 
 The various timeline range names, their meanings, and how they are used are discussed in the [timeline range name guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/timeline_range_name). This guide explains limiting the animation timeline to a specific portion of the animation timeline range, effectively _insetting_ the animation timeline, using length or percentage values.
 
@@ -257,13 +257,13 @@ The {{cssxref("animation-range-start")}} and {{cssxref("animation-range-end")}} 
 
 These properties specify the start and end of the animations's attachment range, shifting the start time and/or end of the animation, where the `0%` and `100%` keyframes occur when the {{cssxref("animation-iteration-count")}} is set or defaults to `1`. Both the start and end offsets are from the start of the attachment range.
 
-Setting an inset is similar to setting the {{cssxref("animation-delay")}} on time-based {{domxref("DocumentTimeline")}} animations. Just like the `animation-delay` property can delay the animation start until `500ms` after the animation is otherwise applied, the `animation-range-start` property can be used to delay a view progress timeline animation until `50px` of the subject are in view. The `animation-range-end` property can similarly end the animation early. We also have the `animation-range` shorthand property, which can both move the `from` animation progress point to a scroll position occurring after the default `0%` progress point and move the `to` animation progress point to a scroll position occurring before the default `100%` progress point.
+Setting an inset is similar to setting the {{cssxref("animation-delay")}} on time-based {{domxref("DocumentTimeline")}} animations. Just like the `animation-delay` property can delay the animation start until `500ms` after the animation is otherwise applied, the `animation-range-start` property can be used to delay a view progress timeline animation until `50px` of the subject is in view. The `animation-range-end` property can similarly end the animation early. We also have the `animation-range` shorthand property, which can both move the `from` animation progress point to a scroll position occurring after the default `0%` progress point and the `to` animation progress point to a scroll position occurring before the default `100%` progress point.
 
-See the [timeline range name guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/timeline_range_name) to learn about the predefined named timeline ranges. The focus of this guide is insetting the starts and ends of the animation attachment range using {{cssxref("length-percentage")}} inset values, regardless of which animation timeline range is set.
+See the [timeline range name guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/timeline_range_name) to learn about the different named timeline ranges. The focus of this guide is insetting the start and end of the animation attachment range using {{cssxref("length-percentage")}} inset values.
 
 ## Setting insets using lengths
 
-The `animation-range-start` and `animation-range-end` properties each accept a named animation range, a {{cssxref("length-percentage")}} offset value, or both. Any length or percentage offset is from the _start_ of the animation attachment range.
+The `animation-range-start` and `animation-range-end` properties each accept a named animation range, a {{cssxref("length-percentage")}} offset value, or both. Any length or percentage offset is measured from the _start_ of the animation attachment range.
 
 When a {{cssxref("length")}} is set, the offset is fairly intuitive.
 Here we use the `animation-range-start` and `animation-range-end` properties to inset the animation timeline. In this way, we define a subsection of the element's full animation attachment range as the active interval, set the distance from the start of the animation attachment range.
@@ -297,7 +297,7 @@ main {
 
 {{EmbedLiveSample("inset_length", "100%", "400")}}
 
-We've added a lines `1em` and `125px` from the block end edge of the scroll container. The animation starts when the block start edge of the subject element reaches the line `1em` line and ends when it reaches the `125px` line.
+We've added lines `1em` and `125px` from the block end edge of the scroll container. The animation starts when the block start edge of the subject element reaches the `1em` line and ends when it reaches the `125px` line.
 
 In this case, as the animation attachment range is the same for both properties, the location of the insets was fairly straightforward.
 
@@ -342,9 +342,9 @@ As the start edge of both the `normal` and `entry` ranges is the container's end
 
 ### Length offsets with varying ranges
 
-The size of range matters when the range doesn't start at the element's end edge, as is the case with `exit` and `exit-crossing`, or if the offset is a percentage value. This fact, and the fact that you can mix and match animation range names, make [understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_name) important while making view progress timeline offsets a bit more complicated.
+The size of range matters when the range doesn't start at the element's end edge, as is the case with `exit` and `exit-crossing`, or if the offset is a percentage value. This fact, and the fact that you can mix and match animation range names, make view progress timeline offsets a bit more complicated to understand than non-offsetted [timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names).
 
-For example, when setting `exit` as the timeline range name, the subject size matters as it determines where the location of the end edge of the range.
+For example, when setting `exit` as the timeline range name, the subject size matters as it determines the location of the range's end edge.
 
 ```css live-sample___exit_length
 .animated_element {
@@ -353,7 +353,7 @@ For example, when setting `exit` as the timeline range name, the subject size ma
 }
 ```
 
-The offset position is relative to the start of the declarations animation range. With `animation-range-start` set to `entry 50px`, the animation's `0%` progress occurs `50px` from the container's end edge (denoted by the blue line) for all three subject sizes; this is the same as in the previous example.
+The offset position is relative to the start of the declaration's animation range. With `animation-range-start` set to `entry 50px`, the animation's `0%` progress occurs `50px` from the container's end edge (denoted by the blue line) for all three subject sizes; this is the same as in the previous example.
 
 ```css hidden live-sample___exit_length
 article {

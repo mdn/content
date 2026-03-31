@@ -9,7 +9,7 @@ By default, [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_a
 
 This guide explains how to modify timeline range names, specifically examining the various timeline range names, their meanings, and how they are used.
 
-<!--Limiting the animation timeline to a specific portion of an named animation timeline range is discussed in the [insetting scroll animations guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets).-->
+Limiting the animation timeline to a specific portion of an named animation timeline range is discussed in the [insetting scroll animations guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets).
 
 ## View progress timeline primer
 
@@ -204,7 +204,7 @@ The [CSS scroll driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_anim
 
 The animation-range properties accept the keyword `normal`, a {{cssxref("timeline-range-name")}}, a {{cssxref("length-percentage")}}, or both a `<timeline-range-name>` and the `<length-percentage>`. In this guide, we are covering the values for the `<timeline-range-name>` component of the value only.
 
-<!--The length-percentage values, such as `20%` or `100px`, inset the animation timeline from the named animation attachment ranges, by the set amount, with the value defaulting to `0`. This is covered in xxx.-->
+The length-percentage values, such as `20%` or `100px`, inset the animation timeline from the named animation attachment ranges, by the set amount, with the value defaulting to `0`. This is covered in [Understanding timeline insets](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets).
 
 ## Timeline range names
 
@@ -700,16 +700,16 @@ line {
 }
 ```
 
-<!--
 ### Other progress values
 
-In this guide, we have mentioned `0%` and `100%` progress points. The animation-range values aren't limited to these to progress points. You can inset any of the named animation ranges by a set amount or a percentage of the full animation attachment range. This is discussed in the [insets]() guide. -->
+In this guide, we have mentioned `0%` and `100%` progress points. The animation-range values aren't limited to these to progress points. You can inset any of the named animation ranges by a set amount or a percentage of the full animation attachment range. This is discussed in the [insets](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets) guide.
 
 ## See also
 
 - {{cssxref("timeline-range-name")}} data type
 - [Keyframe selectors](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [Understanding timeline insets](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets)
 - [Scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
