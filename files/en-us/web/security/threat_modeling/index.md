@@ -44,7 +44,7 @@ To illustrate the different terms, let's take a house as an example:
 - Attack: the burglar climbing through the window or picking the lock.
 - Mitigation: a strong deadbolt, an alarm system, policy to ensure all windows are locked.
 - Risk: we announced publicly that we are away on vacation, which increases the risk for burglars to try to get into our house.
-- Severity of impact: The impact will be greater if the burglar knows we're on vacation, as they will feel confident spending more time in our home. The severity will be less if I have a house sitter or I have placed all my valuables in an off-site safe. 
+- Severity of impact: The impact will be greater if the burglar knows we're on vacation, as they will feel confident spending more time in our home. The severity will be less if I have a house sitter or I have placed all my valuables in an off-site safe.
 
 ## What is threat modeling?
 
@@ -59,7 +59,7 @@ Threat modeling is a the process of creating a threat model. It is form of risk 
 
 Threat modeling should happen early in your development process and frequently revisted. Much like you constantly iterate over your software, you should also continuously analyze the system's security using your threat model. Usually, this begins right after the features have been defined.
 
-Threat modeling activities are not done by security auditors exclusively. Anyone who is concerned about the privacy or security of a system should be empowered to help with threat modeling. Cross-functional collaboration from a diverse set of participants makes the threat model stronger. For example, whoever is designing the system surely has a clear understanding of what is being built and of the concerns that might keep them up at night.
+Modeling activities are not done by security auditors exclusively. Anyone who is concerned about the privacy or security of a system should be empowered to help. Cross-functional collaboration from a diverse set of participants makes the threat model stronger. For example, whoever is designing the system surely has a clear understanding of what is being built and of the concerns that might keep them up at night.
 
 Having a shared/common understanding of your system and its threats allows you to measure the robustness of your system. This should be captured in a threat model document.
 
@@ -174,9 +174,9 @@ Now that we've identified what we're working on, we can start thinking about wha
 
 For a web application, this might include cross-site scripting, cross-site request forgery, account takeover, or data leakage via third-party scripts.
 
-Another common way to identify threats is to use [threat analysis frameworks](/en-US/docs/Web/Security/Threat_modeling/Frameworks) which are described in more details below.
+Another common way to identify threats is to use [threat analysis frameworks](/en-US/docs/Web/Security/Threat_modeling/Frameworks), which are described in more detail below.
 
-You can decide whether you present identified threats in a table or prefer describing them more analytical, for example by writing down the chain of events that leading up to an attack ("kill chain"). The [W3C Threat Modeling Guide](https://w3c.github.io/threat-modeling-guide/#curatorial-storytelling) recommends to tell a story and give threats priorities, so that the most important threats are discussed first and that readers are not overwhelmed with extraneous details.
+You can decide whether you present identified threats in a table or prefer describing them more analytically, for example, by writing down the chain of events that lead up to an attack ("kill chain"). The [W3C Threat Modeling Guide](https://w3c.github.io/threat-modeling-guide/#curatorial-storytelling) recommends telling a story and giving threats priorities, so that the most important threats are discussed first and that readers are not overwhelmed with extraneous details.
 
 To reference the identified threats, you index them with the letter T (T1, T2, T3, ...) in your threat model.
 
@@ -206,7 +206,7 @@ To reference the identified responses, you index them with the letter R (R1, R2,
 
 Once you have done a round of threat modeling, file (private) issues with your project and describe your findings in a threat model document. Even if no action or bugfix is needed, the documentation of your threat model will be useful later.
 
-You can revisit the issues you filed and the documentation you've written in the next round of threat modeling and see if anything changed or needs reassessment. It is helpful to revalidate your documented issues. With every iteration of threat modeling, your system should become more secure and you will be more aware of further threats and risks. The experience you gather over time will help you to make your threat modeling more robust; it doesn't need to be perfect or complete from the start.
+You can revisit the issues you filed and the documentation you've written in the next round of threat modeling and see if anything changed or needs reassessment. It is helpful to revalidate your documented issues. With every iteration of threat modeling, your system should become more secure and you will be more aware of further threats and risks. The experience you gather over time will help you to make your threat modeling more robust; it won't be perfect or complete from the start, and it doesn't need to be in order to be useful.
 
 We provide an [example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model) for inspiration. Threat model documents don't get published very often and aren't shared broadly unfortunately; they are often an internal resource. Although it is good practice to publish your threat model, both to demonstrate trustworthiness and to solicit additional feedback.
 

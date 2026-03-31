@@ -7,9 +7,9 @@ sidebar: security
 
 Threat modeling is a process that can help developers identify and understand potential security risks in applications and websites.
 
-The [threat modeling guide](/en-US/docs/Web/Security/Threat_modeling/) describes how to perform threat modeling, providing a lightweight overview of the threat modeling process, focusing on the four key questions as defined in the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org).
+The [threat modeling guide](/en-US/docs/Web/Security/Threat_modeling/) describes how to perform threat modeling. It provides a lightweight overview of the threat modeling process, focusing on the four key questions as defined in the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org).
 
-This article describes [STRIDE](#stride) and [LINDDUN](#linddun), frameworks providing structure for threat modeling processes, along with additional resources.
+This article describes the [STRIDE](#stride) and [LINDDUN](#linddun) frameworks, which provide structure for threat modeling processes, along with additional resources.
 
 ## Frameworks
 
@@ -21,7 +21,7 @@ Two popular threat analysis frameworks are [STRIDE](#stride), which focuses on s
 
 ### STRIDE
 
-The [STRIDE](https://en.wikipedia.org/wiki/STRIDE_model) framework is a widely recognized threat modeling method developed by Microsoft. Each letter in the STRIDE acronym represents one of the six security threat categories. Within each threat model category, we've included questions you can include in your threat model relevant to the listed category.
+The [STRIDE](https://en.wikipedia.org/wiki/STRIDE_model) framework is a widely recognized threat modeling method developed by Microsoft. Each letter in the STRIDE acronym represents one of the six security threat categories. Within each category we've included relevant questions that you can include in your threat model.
 
 - **Spoofing**
   - : Impersonating another user or system to gain unauthorized access, such as an attacker faking a login user interface to steal user credentials. Questions could be:
@@ -36,7 +36,7 @@ The [STRIDE](https://en.wikipedia.org/wiki/STRIDE_model) framework is a widely r
     - Do we log security-relevant events like login failures?
     - Can we trace back actions to a specific user?
 - **Information Disclosure**
-  - : Unauthorized access to confidential information, such as pushing sensitive environmental values to production. Questions could be:
+  - : Unauthorized exposure of confidential information, such as pushing sensitive environmental values to production. Questions could be:
     - Is personal data exposed via URL query strings?
     - Are secret credentials exposed to the client?
 - **Denial of Service (DoS)**
@@ -50,7 +50,7 @@ The [STRIDE](https://en.wikipedia.org/wiki/STRIDE_model) framework is a widely r
 
 ### LINDDUN
 
-The [LINDDUN](https://linddun.org) framework is a widely recognized threat modeling framework about data privacy and is inspired by STRIDE. Each letter in the LINDDUN acronym represents one of the seven categories of privacy threats. Within each threat model category, we've included questions you can include in your threat model relevant to the listed category.
+The [LINDDUN](https://linddun.org) framework is a widely recognized threat modeling framework, inspired by STRIDE, that focuses on data privacy threats. Each letter in the LINDDUN acronym represents one of the seven categories of privacy threats. Within each threat model category, we've included questions you can include in your threat model relevant to the listed category.
 
 - **Linking**
   - : The ability to associate data or actions to an individual or group. Questions could be:
@@ -66,8 +66,8 @@ The [LINDDUN](https://linddun.org) framework is a widely recognized threat model
     - Are logs kept longer than necessary?
 - **Detecting**
   - : Determining the involvement of an individual based on observation. Questions could be:
-    - Does the login reveal if a user exist?
-    - Does the system leak if an admin is currently online?
+    - Does the login reveal if a user exists?
+    - Does the system leak information when an admin is online?
 - **Data disclosure**
   - : Excessively collecting, storing, processing or sharing personal data. Questions could be:
     - Are backups, logs, or exports protected?
@@ -83,7 +83,7 @@ The [LINDDUN](https://linddun.org) framework is a widely recognized threat model
 
 ## Other resources
 
-A variety of other documents exists which can help you to think about a diverse set of threats even outside of the STRIDE and LINDDUN categories:
+The following documents list a broad and diverse set of threats and threat models for your consideration:
 
 - [RFC 9620 Human Rights Considerations](https://datatracker.ietf.org/doc/rfc9620/)
 - [W3C TAG: Ethical Web Principles](https://w3ctag.github.io/ethical-web-principles/)
@@ -94,7 +94,10 @@ A variety of other documents exists which can help you to think about a diverse 
 
 ## Threat modeling tools
 
-There are tools designed to make threat modeling easier through standards for visualizing system components, data flows, etc. These tools can help you with creating diagrams, for example. However, these tools are secondary. Even a (digital) drawing board would do it if it leads to discussions with your team. The primary goal should always be better understanding of your systems. The discussions had during threat modeling are more important than tool usage. Keep in mind that a complex diagram that is difficult to understand might not spark great interest in discussing your project's architecture and its threats.
+An effective model is one that helps develop a better understanding of your system.
+Threat modeling tools can make it easier to create diagrams, visualize data flows, and so on, that contribute to this goal.
+
+It is important to note that you do not need expensive and powerful tools in order to create an effective threat model. What is important is the methodical approach and discussion around your system. Overly complex diagrams can actually be detrimental if they don't promote and support that discussion.
 
 - [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/)
 - [Microsoft Threat Modeling Tool](https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool)
