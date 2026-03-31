@@ -94,3 +94,9 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 150 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Scoped custom element registries**: `dom.scoped-custom-element-registries.enabled`
+
+  The {{domxref("CustomElementRegistry","customElementRegistry")}} property is supported on {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("ShadowRoot")}}.
+  This allows the definition of [scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries).
+  ([Firefox bug 2018900](https://bugzil.la/2018900)).
