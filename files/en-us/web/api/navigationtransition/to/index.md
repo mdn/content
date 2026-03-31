@@ -10,8 +10,7 @@ browser-compat: api.NavigationTransition.to
 
 {{APIRef("Navigation API")}}{{seecompattable}}
 
-The **`to`** read-only property of the
-{{domxref("NavigationTransition")}} interface returns the {{domxref("NavigationHistoryEntry")}} that the transition is navigating to.
+The **`to`** read-only property of the {{domxref("NavigationTransition")}} interface returns the {{domxref("NavigationHistoryEntry")}} that the transition is navigating to.
 
 ## Value
 
