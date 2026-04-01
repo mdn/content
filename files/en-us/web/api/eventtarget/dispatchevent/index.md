@@ -19,10 +19,7 @@ should have already been created and initialized using an {{domxref("Event/Event
 > [!NOTE]
 > When calling this method, the {{domxref("Event.target")}} property is initialized to the current `EventTarget`.
 
-Unlike "native" events, which are fired by the browser and invoke event handlers
-asynchronously via the [event loop](/en-US/docs/Web/JavaScript/Reference/Execution_model),
-`dispatchEvent()` invokes event handlers _synchronously_. All applicable event
-handlers are called and return before `dispatchEvent()` returns.
+Unlike "native" events, which are fired by the browser and are dispatched via the event loop, event handlers themselves run synchronously. `dispatchEvent()` invokes event handlers _synchronously_. All applicable event handlers are called and return before `dispatchEvent()` returns.
 
 ## Syntax
 
