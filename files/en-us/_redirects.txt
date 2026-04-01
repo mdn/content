@@ -16889,9 +16889,13 @@
 /en-US/docs/WebAssembly/Reference/Numeric/Right_shift	/en-US/docs/WebAssembly/Reference/Numeric/shr
 /en-US/docs/WebAssembly/Reference/Numeric/Square_root	/en-US/docs/WebAssembly/Reference/Numeric/sqrt
 /en-US/docs/WebAssembly/Reference/Numeric/Subtraction	/en-US/docs/WebAssembly/Reference/Numeric/sub
-/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_float	/en-US/docs/WebAssembly/Reference/Numeric/trunc_float
+/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_float	/en-US/docs/WebAssembly/Reference/Numeric/trunc
 /en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_int	/en-US/docs/WebAssembly/Reference/Numeric/trunc_int
+/en-US/docs/WebAssembly/Reference/Numeric/trunc_float	/en-US/docs/WebAssembly/Reference/Numeric/trunc
 /en-US/docs/WebAssembly/Reference/SIMD/bitwise/shl	/en-US/docs/WebAssembly/Reference/Numeric/shl
+/en-US/docs/WebAssembly/Reference/SIMD/conversion/ceil	/en-US/docs/WebAssembly/Reference/Numeric/ceil
+/en-US/docs/WebAssembly/Reference/SIMD/conversion/floor	/en-US/docs/WebAssembly/Reference/Numeric/floor
+/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc	/en-US/docs/WebAssembly/Reference/Numeric/trunc
 /en-US/docs/WebAssembly/Reference/Variables/Local_get	/en-US/docs/WebAssembly/Reference/Variables/local.get
 /en-US/docs/WebAssembly/Reference/Variables/Local_set	/en-US/docs/WebAssembly/Reference/Variables/local.set
 /en-US/docs/WebAssembly/Reference/Variables/Local_tee	/en-US/docs/WebAssembly/Reference/Variables/local.tee

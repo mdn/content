@@ -42,11 +42,12 @@ value_type.mul
     - `i64`
     - `f32`
     - `f64`
-    - `i16x8`
-    - `i32x4`
-    - `i64x2`
-    - `f32x4`
-    - `f64x2`
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+      - `i16x8`
+      - `i32x4`
+      - `i64x2`
+      - `f32x4`
+      - `f64x2`
 - `mul`
   - : The `mul` instruction. Must always be included after the `value_type` and a period (`.`).
 

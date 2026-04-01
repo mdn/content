@@ -40,8 +40,9 @@ value_type.div
   - : The type of value the instruction is being run on. The following types support `div`:
     - `f32`
     - `f64`
-    - `f32x4`
-    - `f64x2`
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+      - `f32x4`
+      - `f64x2`
 - `div`
   - : The `div` instruction. Must always be included after the `value_type` and a period (`.`).
 

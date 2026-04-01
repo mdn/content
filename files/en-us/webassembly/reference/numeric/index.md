@@ -69,7 +69,7 @@ WebAssembly numeric instructions.
   - : Round up a number.
 - [`floor`](/en-US/docs/WebAssembly/Reference/Numeric/floor)
   - : Round down a number.
-- [`trunc` (to float)](/en-US/docs/WebAssembly/Reference/Numeric/trunc_float)
+- [`trunc`](/en-US/docs/WebAssembly/Reference/Numeric/trunc)
   - : Discard the fractional part of a number.
 - [`abs`](/en-US/docs/WebAssembly/Reference/Numeric/abs)
   - : Get the absolute value of a number.

@@ -34,14 +34,8 @@ WebAssembly SIMD conversion instructions.
 - [`swizzle`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/swizzle)
   - : Returns a new `v128` value interpretation with its lane values selected from an input `v128` value, determined by indices provided in a second input `v128`.
 
-## Round values
+## SIMD-specific trunc instructions
 
-- [`ceil`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/ceil)
-  - : Rounds the value in each lane of a `v128` value interpretation up to the nearest integer above.
-- [`floor`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/floor)
-  - : Rounds the value in each lane of a `v128` value interpretation down to the nearest integer below.
-- [`trunc`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc)
-  - : Rounds the value in each lane of a `v128` value interpretation to the nearest integer towards zero.
 - [`trunc_sat_f32x4_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc_sat_f32x4_s)
   - : Performs a saturating conversion of the lanes of a `v128` `f32x4` value interpretation into a signed `i32x4` value interpretation.
 - [`trunc_sat_f32x4_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc_sat_f32x4_u)
@@ -50,3 +44,6 @@ WebAssembly SIMD conversion instructions.
   - : Performs a saturating conversion of the lanes of a `v128` `f64x2` value interpretation into a signed `i32x4` value interpretation. The two higher lanes of the result are initialized to zero.
 - [`trunc_sat_f64x2_u_zero`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc_sat_f64x2_u_zero)
   - : Performs a saturating conversion of the lanes of a `v128` `f64x2` value interpretation into an unsigned `i32x4` value interpretation. The two higher lanes of the result are initialized to zero.
+
+> [!NOTE]
+> See also the non-SIMD-specific [`trunc`](/en-US/docs/WebAssembly/Reference/Numeric/trunc) instruction.

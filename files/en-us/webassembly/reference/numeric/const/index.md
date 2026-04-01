@@ -40,7 +40,7 @@ value_type.const
     - `i64`
     - `f32`
     - `f64`
-    - `v128`
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128)
 - `const`
   - : The `const` instruction. Must always be included after the `value_type` and a period (`.`).
 

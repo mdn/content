@@ -56,10 +56,11 @@ value_type.shl
   - : The type of value the instruction is being run on. The following types support `shl`:
     - `i32`
     - `i64`
-    - `i8x16`
-    - `i16x8`
-    - `i32x4`
-    - `i64x2`
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+      - `i8x16`
+      - `i16x8`
+      - `i32x4`
+      - `i64x2`
 - `shl`
   - : The `shl` instruction. Must always be included after the `value_type` and a period (`.`).
 

@@ -50,12 +50,13 @@ value_type.ne
     - `i64`
     - `f32`
     - `f64`
-    - `i8x16`
-    - `i16x8`
-    - `i32x4`
-    - `i64x2`
-    - `f32x4`
-    - `f64x2`
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+      - `i8x16`
+      - `i16x8`
+      - `i32x4`
+      - `i64x2`
+      - `f32x4`
+      - `f64x2`
 - `ne`
   - : The `ne` instruction. Must always be included after the `value_type` and a period (`.`).
 
