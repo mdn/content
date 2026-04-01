@@ -16,6 +16,8 @@ WebAssembly SIMD (single instruction, multiple data) instructions.
   - : SIMD conversion instructions.
 - [Extract instructions](/en-US/docs/WebAssembly/Reference/SIMD/extract)
   - : SIMD extract instructions.
+- [Load instructions](/en-US/docs/WebAssembly/Reference/SIMD/load)
+  - : SIMD load instructions.
 
 ## See also
 

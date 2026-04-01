@@ -43,6 +43,9 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     > However, this can be useful when creating media elements whose source will be set at a later time, under user control.
     > See our [autoplay guide](/en-US/docs/Web/Media/Guides/Autoplay) for additional information about how to properly use autoplay.
 
+    > [!NOTE]
+    > Audio with the [`loading="lazy"`](#loading) attribute set will not start downloading and autoplaying until the element is near or within the viewport.
+
 - `controls`
   - : If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
 
@@ -64,6 +67,22 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc.). See the proposed [Remote Playback API specification](https://w3c.github.io/remote-playback/#the-disableremoteplayback-attribute) for more information.
 
     In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
+
+- `loading` {{experimental_inline}}
+  - : Indicates how the browser should load the audio:
+    - `eager`
+      - : Loads the audio immediately, regardless of whether or not the audio is currently within the visible viewport (this is the default value).
+    - `lazy`
+      - : Defers loading the audio until it reaches a calculated distance from the viewport, as defined by the browser.
+
+        Lazy loading avoids the network and storage bandwidth required to handle the audio until it's reasonably certain that it will be needed. This improves the performance in most typical use cases.
+
+    Lazy-loaded audio located in the visual viewport may not yet be downloaded when the Window {{domxref("Window.load_event", "load")}} event is fired. This is because the event is fired based on eager-loaded audio only — lazy-loaded audio is not considered even if it is located within the visual viewport upon initial page load.
+
+    Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing audio in a page's markup such that a server can track how many audio are requested and when.
+
+    > [!NOTE]
+    > The `loading="lazy"` attribute also impacts the [`autoplay`](#autoplay) attribute as described in that section of this page.
 
 - `loop`
   - : A Boolean attribute: if specified, the audio player will automatically seek back to the start upon reaching the end of the audio.

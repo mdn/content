@@ -331,14 +331,14 @@ button {
 #### JavaScript
 
 ```js
-const story = document.body.querySelector(".story");
+const story = document.querySelector(".story");
 
-const setText = document.body.querySelector("#set-text");
+const setText = document.querySelector("#set-text");
 setText.addEventListener("click", () => {
   story.textContent = "It was a dark and stormy night...";
 });
 
-const clearText = document.body.querySelector("#clear-text");
+const clearText = document.querySelector("#clear-text");
 clearText.addEventListener("click", () => {
   story.textContent = "";
 });
@@ -401,9 +401,9 @@ div.child {
 #### JavaScript
 
 ```js
-const parent = document.body.querySelector(".parent");
+const parent = document.querySelector(".parent");
 
-const addChild = document.body.querySelector("#add-child");
+const addChild = document.querySelector("#add-child");
 addChild.addEventListener("click", () => {
   // Only add a child if we don't already have one
   // in addition to the text node "parent"
@@ -416,9 +416,9 @@ addChild.addEventListener("click", () => {
   parent.appendChild(child);
 });
 
-const removeChild = document.body.querySelector("#remove-child");
+const removeChild = document.querySelector("#remove-child");
 removeChild.addEventListener("click", () => {
-  const child = document.body.querySelector(".child");
+  const child = document.querySelector(".child");
   parent.removeChild(child);
 });
 ```
