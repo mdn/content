@@ -69,6 +69,7 @@ The extra privileges include:
 - the ability to receive events from the {{webextAPIref("webRequest")}} API for these hosts
 - the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the `"cookies"` API permission.
 - bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards. Content scripts, however, can only bypass tracking protection for hosts specified with a full domain.
+- the ability to create and retrieve WebAuthn credentials. See [Use Web Authn API in web extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Use_the_web_authn_api) for details.
 
 ## API permissions
 
