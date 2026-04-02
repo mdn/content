@@ -101,7 +101,7 @@ One or more single `<animation>` declarations, separated by commas, with each `<
 - `<single-animation-delay>`
   - : Determines the amount of time to wait from applying the animation to an element before beginning to perform the animation. The initial value for {{cssxref("animation-delay")}} is `0s`.
 - `<single-animation-duration>`
-  -  : Determines the length of time that an animation takes to complete one cycle. The initial value for {{cssxref("animation-duration")}} is `0s`.
+  - : Determines the length of time that an animation takes to complete one cycle. The initial value for {{cssxref("animation-duration")}} is `0s`.
 
 ## Description
 
