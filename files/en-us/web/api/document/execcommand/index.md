@@ -91,6 +91,8 @@ execCommand(commandName, showDefaultUI, valueArgument)
 
     - `insertImage`
       - : Inserts an image at the insertion point (deletes selection). Requires a URL string for the image's `src` as a value argument. The requirements for this string are the same as `createLink`.
+    - `insertLineBreak`
+      - : Deletes the selection, and replaces it with a [line break element](/en-US/docs/Web/HTML/Reference/Elements/br).
     - `insertOrderedList`
       - : Creates a [numbered ordered list](/en-US/docs/Web/HTML/Reference/Elements/ol) for the selection or at the insertion point.
     - `insertUnorderedList`
