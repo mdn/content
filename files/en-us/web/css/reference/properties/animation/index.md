@@ -87,7 +87,7 @@ animation:
 One or more single `<animation>` declarations, separated by commas, with each `<animation>` including:
 
 - `<single-animation-name>`
-  - The names of a {{cssxref("@keyframes")}} at-rules that describes the animation to apply to an element. The initial value for {{cssxref("animation-name")}} is `none`.
+  - The name of a {{cssxref("@keyframes")}} at-rules that specifies the animation to apply to an element. The initial value for {{cssxref("animation-name")}} is `none`.
 - `<single-easing-function>`
   - : Determines the type of transition. The value must be one of those available in {{cssxref("easing-function")}}. The initial value for {{cssxref("animation-timing-function")}} is `ease`.
 - `<single-animation-iteration-count>`
@@ -105,11 +105,11 @@ One or more single `<animation>` declarations, separated by commas, with each `<
 
 ## Description
 
-The `animation` property is specified as one or more single animations, separated by commas. Each `animation` within the comma-separated list of animations, sets the {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}, and {{cssxref("animation-timeline")}}. If any of the components is not included in an `animation` declaration, the component value is set to the components inital value.
+The `animation` property is specified as one or more single animations, separated by commas. Each `animation` within the comma-separated list of animations sets the {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}, and {{cssxref("animation-timeline")}}. If any of the components are not included in an `animation` declaration, the component value is set to the component's initial value.
 
 ### animation-name
 
-The `<animation-name>` is optional. The `<animation-name>` component of each animation is the name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}. If no name is provided, the name defaults to `none`. While an animation name must be set for an animation to be applied, all values of the `animation` shorthand are optional, and default to the initial value for each long-hand `animation` component. The initial value of `animation-name` is `none`, meaning if no `animation-name` value is declared in the `animation` shorthand property, there is no animation to apply on any of the properties.
+The `<animation-name>` component of each animation is the name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}. The initial value of `animation-name` is `none`, meaning if no `animation-name` value is declared in the `animation` shorthand property, no animation is applied to any of the properties.
 
 The order of other values within an animation definition is important for distinguishing an {{cssxref("animation-name")}} value from other values. If a value in the `animation` shorthand can be parsed as a value for an animation property other than `animation-name`, then the value will be applied to that property first and not to `animation-name`. For this reason, the recommended practice is to specify a value for `animation-name` as the last value in a list of values when using the `animation` shorthand; this holds true even when you specify multiple, comma-separated animations using the `animation` shorthand.
 
@@ -117,11 +117,11 @@ The order of other values within an animation definition is important for distin
 
 Each animation can include zero, one, or two occurrences of the {{cssxref("&lt;time&gt;")}} value. The order of time values within each animation definition is important: the first value that can be parsed as a {{cssxref("&lt;time&gt;")}} is assigned to the {{cssxref("animation-duration")}}, and the second one is assigned to {{cssxref("animation-delay")}}.
 
-When the `animation-duration` value is omitted from the `animation` shorthand property, the value for this property defaults to `0s`. In this case, the animation will still occur (the [`animationStart`](/en-US/docs/Web/API/Element/animationstart_event) and [`animationEnd`](/en-US/docs/Web/API/Element/animationend_event) events will be fired) but no animation will be visible.
+When no `animation-duration` value is specified in the `animation` shorthand property, the duration defaults to `0s`. In this case, the animation will still occur (the [`animationStart`](/en-US/docs/Web/API/Element/animationstart_event) and [`animationEnd`](/en-US/docs/Web/API/Element/animationend_event) events will be fired), but no animation will be visible to the user.
 
 ### animation-timeline
 
-By default, the `animation-timeline` is the {{domxref("documentTimeline")}}. The list of `animation` [values](#values) did not include {{cssxref("animation-timeline")}} as current implementations are reset-only. If no `<animation-timeline>` is included in the `animation` shorthand, the shorthand declaration will reset any previously-declared `animation-timeline` values to `auto`. If a value is included, but the user-agent doesn't support `<animation-timeline>` values within the shorthand, the declaration is invalid and ignored.
+By default, the `animation-timeline` is the {{domxref("documentTimeline")}}. The list of `animation` [values](#values) does not include {{cssxref("animation-timeline")}} as current implementations are reset-only. If no `<animation-timeline>` is included in the `animation` shorthand, the shorthand declaration will reset any previously-declared `animation-timeline` values to `auto`. If a value is included, but the user-agent doesn't support `<animation-timeline>` values within the shorthand, the declaration is invalid and ignored.
 
 This means that, when creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare the `animation-timeline` property after declaring any `animation` shorthand for it to take effect.
 
