@@ -2,16 +2,10 @@
 title: Subresource Integrity
 slug: Web/Security/Defenses/Subresource_Integrity
 page-type: guide
-browser-compat:
-  - html.elements.link.integrity
-  - html.elements.script.integrity
 sidebar: security
 ---
 
-**Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a [CDN](/en-US/docs/Glossary/CDN)) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
-
-> [!NOTE]
-> For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
+**Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a [CDN](/en-US/docs/Glossary/CDN)) are delivered without unexpected manipulation. It works by allowing you to provide a {{glossary("hash function", "cryptographic hash")}} that a fetched resource must match.
 
 ## How Subresource Integrity helps
 
@@ -21,37 +15,63 @@ Websites sometimes choose to rely on a third party such as a {{glossary("CDN", "
 <script src="https://not-example.com/script.js"></script>
 ```
 
-This comes with a risk, in that if an attacker gains control of the third-party host, the attacker can inject arbitrary malicious content into its files (or replace the files completely) and thus can also potentially attack sites that fetch files from it.
+This comes with a risk, in that if an attacker gains control of the third-party host, the attacker can inject arbitrary malicious content into its files (or replace the files completely) and thus can also potentially attack sites that fetch files from it, in a [supply chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks).
 
-Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches have been delivered without an attacker having injected any additional content into those files — and without any other changes of any kind at all having been made to those files.
+Subresource Integrity is a defense against attacks such as this, by ensuring that the files your web application fetches have not been modified.
 
 ## Using Subresource Integrity
 
-You use the Subresource Integrity feature by specifying a base64-encoded cryptographic hash of a resource (file) you're telling the browser to fetch, in the value of the `integrity` attribute of a {{HTMLElement("script")}} element or a {{HTMLElement("link")}} element with [`rel="stylesheet"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet), [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload), or [`rel="modulepreload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload).
+You can use Subresource Integrity with:
 
-An `integrity` value begins with at least one string, with each string including a prefix indicating a particular hash algorithm (currently the allowed prefixes are `sha256`, `sha384`, and `sha512`), followed by a dash, and ending with the actual base64-encoded hash.
+- {{HTMLElement("script")}} elements
+- {{HTMLElement("link")}} elements whose [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute value is [`stylesheet`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet), [`preload`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload), or [`modulepreload`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload).
 
-> [!NOTE]
-> An **integrity** value may contain multiple hashes separated by whitespace. A resource will be loaded if it matches one of those hashes.
+### Setting the `integrity` attribute
 
-Example `integrity` string with base64-encoded sha384 hash:
+To use the feature, add the [`integrity`](/en-US/docs/Web/HTML/Reference/Attributes/integrity) attribute to the element. The value of `integrity` is a whitespace-separated list of {{glossary("hash function", "cryptographic hashes")}} of the content of the linked resource, where each hash is prefixed with an identifier for the hash algorithm used, followed by a dash, and ending with the actual base64-encoded hash value.
 
-```plain
-sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
+Currently the allowed prefixes are `sha256`, `sha384`, and `sha512`.
+
+For example, the following markup adds an `integrity` attribute to a `<script>` element. The attribute contains two SHA-384 hashes, and two SHA-512 hashes:
+
+```html
+<script
+  src="https://cdn.example.com/script.js"
+  integrity="
+  sha384-Tk2Yjg3YmYzMWNkZTdhMTFkM2FlNDg4ZjE3MzEzNTk3ZDlh
+  sha384-DEzZmZhMGFkMGQ0OTQ3MzZkNGY0OTg4NGIwN2ZiMMTM3YmQ
+  sha512-ZmQ5NjNiYWJjYTM3MjRhMGI4MTQzNWRmZTZkZGYyMzQyOGYYTZkYjBm
+  sha512-OGUwYThkZDc2YzFlZGI5MDEzZmZhMGFkMGQ0OTQ3MzZkNGYZTEzODk2"></script>
 ```
 
-So `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` is the "hash" part, and the prefix `sha384` indicates that it's a sha384 hash.
+### How browsers handle Subresource Integrity
 
-> [!NOTE]
-> An `integrity` value's "hash" part is, strictly speaking, a **_cryptographic_ _digest_** formed by applying a particular hash function to some input (for example, a script or stylesheet file). But it's common to use the shorthand "hash" to mean _cryptographic_ _digest_, so that's what's used in this article.
+When a browser encounters a {{HTMLElement("script")}} or {{HTMLElement("link")}} element with an `integrity` attribute, before executing the script or before applying any stylesheet specified by the {{HTMLElement("link")}} element, the browser must first compare the script or stylesheet to the expected hashes given in the `integrity` value.
 
-### Tools for generating SRI hashes
+The different hash functions have different strengths: from weaker to stronger, the order is SHA-256, SHA-384, SHA-512. When the browser downloads a resource with the integrity attribute set, it will first select the set of hashes that were generated using the strongest hash function present. That is, if the attribute contains values generated with SHA-256 and SHA-384, it will only use the hashes generated using SHA-384. It will ignore all other hashes.
 
-#### SRI Hash Generator
+The browser will then calculate the hash of the resource contents using the specified function, and compare the result with all the specified values: if the actual value matches any of the specified values, then the browser will load the resource, otherwise it will refuse to load the resource, and return a network error.
+
+This means that developers can:
+
+- **Provide multiple values using different hash functions**, and the browser will use only the strongest function provided.
+- **Provide multiple values using the same hash function**, and the browser will validate the attribute if any of them match: this enables a developer to provide alternate versions of a resource, while still checking their integrity.
+
+### Cross-Origin Resource Sharing and Subresource Integrity
+
+For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin. Therefore, the resource must be served with an [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) header that allows the resource to be shared with the requesting origin; for example:
+
+```http
+Access-Control-Allow-Origin: *
+```
+
+## Tools for generating SRI hashes
+
+### SRI Hash Generator
 
 The [SRI Hash Generator](https://srihash.org/) is an online tool you can use to generate SRI hashes.
 
-#### Using OpenSSL
+### Using OpenSSL
 
 You can generate SRI hashes from the command-line using **OpenSSL** with a command invocation such as:
 
@@ -81,7 +101,7 @@ To use that code:
 > [!NOTE]
 > If OpenSSL is not installed on your system, visit the [OpenSSL project website](https://www.openssl.org/) for information about downloading and installing it. The OpenSSL project does not itself host binary distributions of OpenSSL, but does maintain an informal list of third-party distributions: https://github.com/openssl/openssl/wiki/Binaries.
 
-#### Using shasum
+### Using shasum
 
 You can generate SRI hashes using [**shasum**](https://linux.die.net/man/1/shasum) with a command invocation such as:
 
@@ -91,24 +111,6 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 
 - The pipe-through `xxd` step takes the hexadecimal output from `shasum` and converts it to binary.
 - The pipe-through `awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
-
-### Cross-Origin Resource Sharing and Subresource Integrity
-
-For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin. Therefore, the resource must be served with an [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) header that allows the resource to be shared with the requesting origin; for example:
-
-```http
-Access-Control-Allow-Origin: *
-```
-
-## How browsers handle Subresource Integrity
-
-Browsers handle SRI by doing the following:
-
-1. When a browser encounters a {{HTMLElement("script")}} or {{HTMLElement("link")}} element with an `integrity` attribute, before executing the script or before applying any stylesheet specified by the {{HTMLElement("link")}} element, the browser must first compare the script or stylesheet to the expected hash given in the `integrity` value.
-
-   For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
-
-2. If the script or stylesheet doesn't match its associated `integrity` value, the browser must refuse to execute the script or apply the stylesheet, and must instead return a network error indicating that fetching of that script or stylesheet failed.
 
 ## Integrity policy
 
@@ -147,16 +149,23 @@ A typical report might look like this
 
 ## Examples
 
-In the following examples, assume that `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` is already known to be the expected SHA-384 hash (digest) of a particular script `example-framework.js`, and there's a copy of the script hosted at `https://example.com/example-framework.js`.
+### Subresource Integrity with the `<script>` element
 
-### Subresource Integrity with the \<script> element
+This example adds an `integrity` attribute to a {{htmlelement("script")}} element. The attribute contains four hashes: two calculated using SHA-384, and the other two using SHA-512. The browser will:
 
-You can use the following {{HTMLElement("script")}} element to tell a browser that before executing the `https://example.com/example-framework.js` script, the browser must first compare the script to the expected hash, and verify that there's a match.
+- select the two SHA-512 hashes
+- hash the file contents using SHA-512
+
+If the result matches either of the two SHA-512 hashes listed, then the browser will load and execute the script: otherwise it will return a network error.
 
 ```html
 <script
-  src="https://example.com/example-framework.js"
-  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+  src="https://cdn.example.com/script.js"
+  integrity="
+  sha384-Tk2Yjg3YmYzMWNkZTdhMTFkM2FlNDg4ZjE3MzEzNTk3ZDlh
+  sha384-DEzZmZhMGFkMGQ0OTQ3MzZkNGY0OTg4NGIwN2ZiMMTM3YmQ
+  sha512-ZmQ5NjNiYWJjYTM3MjRhMGI4MTQzNWRmZTZkZGYyMzQyOGYYTZkYjBm
+  sha512-OGUwYThkZDc2YzFlZGI5MDEzZmZhMGFkMGQ0OTQ3MzZkNGYZTEzODk2"
   crossorigin="anonymous"></script>
 ```
 
@@ -177,14 +186,6 @@ You can do that with the {{httpheader("Integrity-Policy-Report-Only")}} header.
 ```http
 Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint, some-other-integrity-endpoint)
 ```
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
