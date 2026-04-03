@@ -1,16 +1,16 @@
 ---
-title: "wrap: Wasm text instruction"
-short-title: wrap
-slug: WebAssembly/Reference/Numeric/wrap
+title: "wrap_i64: Wasm text instruction"
+short-title: wrap_i64
+slug: WebAssembly/Reference/Numeric/wrap_i64
 page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`wrap`** instruction, is used to convert numbers of type `i64` to type `i32`. If the number is larger than what an `i32` can hold this operation will wrap, resulting in a different number.
+The **`wrap_i64`** instruction, is used to convert numbers of type `i64` to type `i32`. If the number is larger than what an `i32` can hold this operation will wrap, resulting in a different number.
 
 One can think of wrap either as reducing the value [mod](https://en.wikipedia.org/wiki/Modular_arithmetic) 2<sup>32</sup>, or as discarding the high 32 bits to produce a value containing just the low 32 bits.
 
-{{InteractiveExample("Wat Demo: wrap", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: wrap_i64", "tabbed-taller")}}
 
 ```wat interactive-example
 (module

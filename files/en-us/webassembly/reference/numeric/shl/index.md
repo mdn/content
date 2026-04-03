@@ -73,11 +73,11 @@ value_type.shl
 - `input`
   - : The input value.
 - `shift_value`
-  - : The value that you want to shift the lanes by.
+  - : The value that you want to shift the value by.
 - `output`
   - : The output value.
 
-For a non-SIMD `add`, the `input` and `output` will be basic numeric values such as `3` or `3.5`.
+For a non-SIMD `shl`, the `input` and `output` will be basic numeric values such as `3` or `10`.
 
 For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `shl`, the `input` and `output` will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 4 8 12 16`.
 
@@ -107,7 +107,7 @@ i32.shl
 ;; the top item on the stack will now be 14 (00001110)
 ```
 
-### SIMD addition
+### SIMD left shift
 
 In this example, we demonstrate performing a left-shift on a SIMD value and outputting one of the lane values.
 
@@ -167,5 +167,5 @@ The result is `48`, because the value stored in lane `3` of the input value is `
 
 ## See also
 
-- [`shr_s`](/en-US/docs/WebAssembly/Reference/SIMD/bitwise/shr_s)
-- [`shr_u`](/en-US/docs/WebAssembly/Reference/SIMD/bitwise/shr_u)
+- [`shr_s`](/en-US/docs/WebAssembly/Reference/Numeric/shr_s)
+- [`shr_u`](/en-US/docs/WebAssembly/Reference/Numeric/shr_u)

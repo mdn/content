@@ -10,7 +10,12 @@ The **`trunc`** instruction, short for _truncate_, is used for getting the value
 
 `trunc` differs from [**`floor`**](/en-US/docs/WebAssembly/Reference/Numeric/floor) when used on negative numbers — `floor` will round down in those cases while `trunc` will round up.
 
-There's are other types of `trunc` instruction (see [**`trunc_int`**](/en-US/docs/WebAssembly/Reference/Numeric/trunc_int)) that truncate the fractional part of a floating point and convert it to an integer.
+There are separate truncate instructions that truncate the fractional part of a floating point and convert it to an integer:
+
+- [`trunc_f32_s`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_f32_s)
+- [`trunc_f32_u`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_f32_u)
+- [`trunc_f64_s`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_f64_s)
+- [`trunc_f64_u`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_f64_u)
 
 {{InteractiveExample("Wat Demo: trunc", "tabbed-taller")}}
 
@@ -56,9 +61,9 @@ value_type.trunc
 ```
 
 - `input`
-  - : The input `v128` value interpretation.
+  - : The input value.
 - `output`
-  - : The output `v128` value interpretation.
+  - : The output value.
 
 For a non-SIMD `trunc`, these will be basic numeric values such as `14.3` or `3.0`.
 
@@ -130,3 +135,10 @@ The output is as follows:
 {{embedlivesample("simd_trunc", "100%", 100)}}
 
 `2000` is output because this is the result of removing the fractional part from lane 1 of the input value (`2000.1`).
+
+## See also
+
+- [`trunc_f32_s`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_f32_s)
+- [`trunc_f32_u`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_f32_u)
+- [`trunc_f64_s`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_f64_s)
+- [`trunc_f64_u`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_f64_u)

@@ -8,10 +8,14 @@ sidebar: webassemblysidebar
 
 WebAssembly SIMD-specific bitwise instructions.
 
-- [`shr_s`](/en-US/docs/WebAssembly/Reference/SIMD/bitwise/shr_s)
-  - : Arithmetic right shift. Shifts the bits in each lane of a `v128` value interpretation to the right by the same specified amount, outputting signed values.
-- [`shr_u`](/en-US/docs/WebAssembly/Reference/SIMD/bitwise/shr_u)
-  - : Logical right shift. Shifts the bits in each lane of a `v128` value interpretation to the right by the same specified amount, outputting unsigned values.
+## Bitwise logic
+
+- [`andnot`](/en-US/docs/WebAssembly/Reference/SIMD/bitwise/andnot)
+  - : Takes two [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) input values. It performs a bitwise AND on the first value and a second value equal to the result of performing a bitwise NOT on each byte of the second original value. It returns a new `v128` value containing the result.
+- [`bitselect`](/en-US/docs/WebAssembly/Reference/SIMD/bitwise/bitselect)
+  - : Takes three [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) values as inputs — two inputs and a mask value — and returns a new `v128` value with each byte calculated using the formula `output = (input1 AND mask) OR (input2 AND NOT mask)`.
+- [`not`](/en-US/docs/WebAssembly/Reference/SIMD/bitwise/not)
+  - : Performs a bitwise NOT on each byte of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value and returns a new `v128` value containing the result.
 
 ## See also
 
