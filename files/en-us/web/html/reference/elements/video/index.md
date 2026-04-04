@@ -71,7 +71,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 - `height`
   - : The height of the video's display area, in [CSS pixels](https://drafts.csswg.org/css-values/#px) (absolute values only; [no percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
 
-- `loading`
+- `loading` {{experimental_inline}}
   - : Indicates how the browser should load the video (including any poster image):
     - `eager`
       - : Loads the video immediately, regardless of whether or not the video is currently within the visible viewport (this is the default value).
