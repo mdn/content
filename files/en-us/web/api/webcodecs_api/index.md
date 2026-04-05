@@ -44,6 +44,10 @@ There is currently no API for demuxing media containers. Developers working with
 or use third party libraries. E.g., [MP4Box.js](https://github.com/gpac/mp4box.js/) or [jswebm](https://github.com/jscodec/jswebm) can be
 used to demux audio and video data into {{domxref("EncodedAudioChunk")}} and {{domxref("EncodedVideoChunk")}} objects respectively.
 
+## Guides
+
+{{SubpagesWithSummaries}}
+
 ## Interfaces
 
 - {{domxref("AudioDecoder")}}
