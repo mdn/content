@@ -2088,6 +2088,11 @@
     },
     "WebCodecs API": {
       "overview": ["WebCodecs API"],
+      "guides": [
+        "/docs/Web/API/WebCodecs_API/Video_processing_concepts",
+        "/docs/Web/API/WebCodecs_API/Using_the_WebCodecs_API",
+        "/docs/Web/API/WebCodecs_API/Codec_selection"
+      ],
       "interfaces": [
         "AudioData",
         "AudioDecoder",
