@@ -51,11 +51,31 @@ An `AudioData` object represents a number of individual audio samples (1024 is a
 
 ![AudioData and EncodedAudioChunk](audio-data.png)
 
+#### Video Codecs
+
+- H.264 (AVC)
+  - : The most widely supported video codec. Most MP4 files use H.264.
+- VP9
+  - : Open source, developed by Google. Better compression than H.264. Commonly used on YouTube and in WebM files.
+- AV1
+  - : The newest open source codec, with better compression than VP9. Broad decoder support; hardware encoder support is still limited.
+- H.265 (HEVC)
+  - : Better compression than H.264, but with significant gaps in browser support outside of Apple platforms.
+
+#### Audio Codecs
+
+- Opus
+  - : Open source, low-latency. The recommended choice for most WebCodecs audio encoding.
+- AAC
+  - : Widely supported. Common in MP4 files.
+- MP3
+  - : Broadly supported for decoding, but not available as an encoder in WebCodecs.
+- PCM
+  - : Uncompressed audio. No quality loss, but large file sizes.
+
+The WebCodecs specification only supports a specific set of codecs, and individual devices and browsers may only support a subset of those. Encoders and decoders must be configured with a specific codec string (such as `"vp09.00.40.08"` for VP9 or `"avc1.4d0034"` for H.264) rather than a general codec name. For a full list of codec strings and their browser support, see the [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/) on WebCodecs Fundamentals, or the [Codec selection guide](/en-US/docs/Web/API/WebCodecs_API/Codec_selection) for guidance on choosing the right codec string.
+
 ### Muxing and Demuxing
-
-The WebCodecs API only deals with encoding and decoding, with encoded chunks just representing binary data. I does not provide a built-in way to read `EncodedVideoChunk` objects from a video file, or write them to a playable video file.
-
-Reading encoded chunks from a video file is a complete different process called demuxing, and to fetch `EncodedVideoChunk` objects from a video file, you will need to use a demuxing library such as [MediaBunny](https://mediabunny.dev/) or [web-demuxer](https://github.com/bilibili/web-demuxer).
 
 ![Demuxer](decoder-demuxer.png)
 
@@ -98,7 +118,7 @@ You can find more information on muxing and demuxing in the [Muxing and Demuxing
 
 ## Examples
 
-The basic instantion of a `VideoEncoder` looks like this, where you define the output callback where `EncodedVideoChunk` objects will be returned.
+The basic instantiation of a `VideoEncoder` looks like this, where you define the output callback where `EncodedVideoChunk` objects will be returned.
 
 ```js
 const encoder = new VideoEncoder({
@@ -115,11 +135,11 @@ You then need to configure the encoder with the codec parameter and various othe
 
 ```js
 encoder.configure({
-    'codec': 'vp9.00.10.08.00', // See codec selection guide
-     width: 1280,
-     height: 720,
-     bitrate: 1000000 //1 MBPS,
-     framerate: 25
+  codec: "vp09.00.40.08", // See codec selection guide
+  width: 1280,
+  height: 720,
+  bitrate: 1_000_000, // 1 Mbps
+  framerate: 25,
 });
 ```
 
