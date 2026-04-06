@@ -51,6 +51,10 @@ An `AudioData` object represents a number of individual audio samples (1024 is a
 
 ![AudioData and EncodedAudioChunk](audio-data.png)
 
+### Codecs
+
+A codec is a specific algorithm for encoding (compressing) and decoding (decompressing) video and audio. There are several industry standard codecs for video, and a separate set of codecs for audio. Here are the major ones supported in WebCodecs:
+
 #### Video Codecs
 
 - H.264 (AVC)
