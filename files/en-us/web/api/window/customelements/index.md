@@ -21,6 +21,7 @@ A {{domxref("CustomElementRegistry")}}.
 ### Basic usage
 
 The most common example you'll see of this property being used is to get access to the {{domxref("CustomElementRegistry.define()")}} method to define and register a new custom element.
+
 For example:
 
 ```js
@@ -28,7 +29,7 @@ let customElementRegistry = window.customElements;
 customElementRegistry.define("my-custom-element", MyCustomElement);
 ```
 
-However, it is usually shortened to something like the following:
+Note that the custom element class is commonly defined directly inside the `define()` call, as shown:
 
 ```js
 customElements.define(
