@@ -15,7 +15,7 @@ Websites sometimes choose to rely on a third party such as a {{glossary("CDN", "
 <script src="https://not-example.com/script.js"></script>
 ```
 
-This comes with a risk, in that if an attacker gains control of the third-party host, the attacker can inject arbitrary malicious content into its files (or replace the files completely) and thus can also potentially attack sites that fetch files from it, in a [supply chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks).
+This comes with a risk, in that if an attacker gains control of the third-party host, then they can inject arbitrary malicious content into its files (or replace the files completely). This is referred to as a [supply chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks).
 
 Subresource Integrity is a defense against attacks such as this, by ensuring that the files your web application fetches have not been modified.
 
@@ -23,7 +23,7 @@ Subresource Integrity is a defense against attacks such as this, by ensuring tha
 
 You can use Subresource Integrity with:
 
-- {{HTMLElement("script")}} elements
+- {{HTMLElement("script")}} elements.
 - {{HTMLElement("link")}} elements whose [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute value is [`stylesheet`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet), [`preload`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload), or [`modulepreload`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload).
 
 ### Setting the `integrity` attribute
@@ -48,7 +48,7 @@ For example, the following markup adds an `integrity` attribute to a `<script>` 
 
 When a browser encounters a {{HTMLElement("script")}} or {{HTMLElement("link")}} element with an `integrity` attribute, before executing the script or before applying any stylesheet specified by the {{HTMLElement("link")}} element, the browser must first compare the script or stylesheet to the expected hashes given in the `integrity` value.
 
-The different hash functions have different strengths: from weaker to stronger, the order is SHA-256, SHA-384, SHA-512. When the browser downloads a resource with the integrity attribute set, it will first select the set of hashes that were generated using the strongest hash function present. That is, if the attribute contains values generated with SHA-256 and SHA-384, it will only use the hashes generated using SHA-384. It will ignore all other hashes.
+The different hash functions have different strengths: from weaker to stronger, the order is SHA-256, SHA-384, SHA-512. When the browser downloads a resource with the `integrity` attribute set, it will first select the set of hashes that were generated using the strongest hash function present. That is, if the attribute contains values generated with SHA-256 and SHA-384, it will only use the hashes generated using SHA-384. It will ignore all other hashes.
 
 The browser will then calculate the hash of the resource contents using the specified function, and compare the result with all the specified values: if the actual value matches any of the specified values, then the browser will load the resource, otherwise it will refuse to load the resource, and return a network error.
 
@@ -114,7 +114,7 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 
 ## Integrity policy
 
-The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers enable a document to enforce a policy regarding the integrity metadata requirements on loaded script and stylesheet subresources.
+The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers enable a document to enforce a policy regarding the integrity metadata requirements on loaded script and stylesheet subresources. In other words, the policy allows a website to _require_ that the `integrity` attribute is specified for loaded resources.
 
 When an `Integrity-Policy` header is specified, the browser blocks requests with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode or without an `integrity` attribute from being made, and will also report violations if a valid reporting endpoint is specified.
 When an `Integrity-Policy-Report-Only` header is specified, the browser allows requests that violate the policy, but will report violations to the reporting endpoint (if a valid reporting endpoint is specified).

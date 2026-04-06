@@ -230,7 +230,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `imagesrcset`
   - : For `rel="preload"` and `as="image"` only, the `imagesrcset` attribute has similar syntax and semantics as the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
 - [`integrity`](/en-US/docs/Web/HTML/Reference/Attributes/integrity)
-  - : This attribute contains one or more {{glossary("hash function", "hashes")}} of the resource, and is used to ensure that the content of the resource is what the developer expects it to be, and has not been replaced with a malicious copy in a [supply chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks). The attribute must only be specified when the `rel` attribute is specified to `stylesheet`, `preload`, or `modulepreload`.
+  - : This attribute contains one or more {{glossary("hash function", "hashes")}} of the resource. It is used to ensure that the content of the resource is what the developer expects it to be, and has not been replaced with a malicious copy in a [supply chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks). The attribute must only be specified when the `rel` attribute is set to `stylesheet`, `preload`, or `modulepreload`.
     See [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
 - `media`
   - : This attribute specifies the media that the linked resource applies to. Its value must be a media type / [media query](/en-US/docs/Web/CSS/Guides/Media_queries).

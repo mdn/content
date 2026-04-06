@@ -19,7 +19,7 @@ The attribute can be applied to {{htmlelement("script")}} or {{htmlelement("link
 
 The attribute consists of zero or more components, each of which consists of:
 
-- An identifier for a {{glossary("hash function", "cryptographic hash" function)}}. Three hash functions are supported. In increasing order of strength, these are: SHA-256, SHA-384, and SHA-512.
+- An identifier for a {{glossary("hash function", "cryptographic hash function")}}. Three hash functions are supported. In increasing order of strength, these are: SHA-256, SHA-384, and SHA-512.
 - The result of hashing the resource contents using the specified hash function.
 
 When the browser downloads a resource with the `integrity` attribute set, it will first select the set of hashes that were generated using the strongest hash function present. That is, if the attribute contains values generated with SHA-256 and SHA-384, it will only use the hashes generated using SHA-384.
