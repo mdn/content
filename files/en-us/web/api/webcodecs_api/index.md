@@ -51,27 +51,21 @@ An `AudioData` object represents a number of individual audio samples (1024 is a
 
 ![AudioData and EncodedAudioChunk](audio-data.png)
 
-## Usage
-
-### Decoding
-
-### Encoding
-
-### Rendering
-
 ### Muxing and Demuxing
 
-The WebCodecs API uses an asynchronous [processing model](https://w3c.github.io/webcodecs/#codec-processing-model-section). Each instance
-of an encoder or decoder maintains an internal, independent processing queue. When queueing a substantial amount of work, it's important to
-keep this model in mind.
+The WebCodecs API only deals with encoding and decoding, with encoded chunks just representing binary data. I does not provide a built-in way to read `EncodedVideoChunk` objects from a video file, or write them to a playable video file.
 
-Methods named `configure()`, `encode()`, `decode()`, and `flush()` operate asynchronously by appending control messages
-to the end the queue, while methods named `reset()` and `close()` synchronously abort all pending work and purge the
-processing queue. After `reset()`, more work may be queued following a call to `configure()`, but `close()` is a permanent operation.
+Reading encoded chunks from a video file is a complete different process called demuxing, and to fetch `EncodedVideoChunk` objects from a video file, you will need to use a demuxing library such as [MediaBunny](https://mediabunny.dev/) or [web-demuxer](https://github.com/bilibili/web-demuxer).
 
-Methods named `flush()` can be used to wait for the completion of all work that was pending at the time `flush()` was called. However, it
-should generally only be called once all desired work is queued. It is not intended to force progress at regular intervals. Calling it
-unnecessarily will affect encoder quality and cause decoders to require the next input to be a key frame.
+![Demuxer](decoder-demuxer.png)
+
+These libraries will follow the video container specifications (e.g., webm, mp4) to extract the track data and byte offsets for each encoded chunk, and provide methods for extracting the actual chunks from the raw file.
+
+Likewise, to write to a playable video file, you will need a muxing library, with [MediaBunny](https://mediabunny.dev/) being the primary option for muxing. Muxing libraries will handle formatting the binary encoded data, and placing it in the correct byte position in the output file stream according to the container specification, so that the output video is playable.
+
+You can find more information on muxing and demuxing in the [Muxing and Demuxing guide](https://webcodecsfundamentals.org/basics/muxing/) on WebCodecs Fundamentals.
+
+## Guides
 
 {{SubpagesWithSummaries}}
 
@@ -104,34 +98,46 @@ unnecessarily will affect encoder quality and cause decoders to require the next
 
 ## Examples
 
-In the following example, frames are returned from a {{domxref("MediaStreamTrackProcessor")}}, then encoded.
-See the full example and read more about it in the article [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs).
+The basic instantion of a `VideoEncoder` looks like this, where you define the output callback where `EncodedVideoChunk` objects will be returned.
 
 ```js
-let frameCounter = 0;
-const track = stream.getVideoTracks()[0];
-const mediaProcessor = new MediaStreamTrackProcessor(track);
-const reader = mediaProcessor.readable.getReader();
-while (true) {
-  const result = await reader.read();
-  if (result.done) break;
-  let frame = result.value;
-  if (encoder.encodeQueueSize > 2) {
-    // Too many frames in flight, encoder is overwhelmed
-    // let's drop this frame.
-    frame.close();
-  } else {
-    frameCounter++;
-    const insertKeyframe = frameCounter % 150 === 0;
-    encoder.encode(frame, { keyFrame: insertKeyframe });
-    frame.close();
-  }
+const encoder = new VideoEncoder({
+  output(chunk, meta) {
+    // Do something with chunk, typically send to muxing library
+  },
+  error(e) {
+    console.warn(e);
+  },
+});
+```
+
+You then need to configure the encoder with the codec parameter and various other fields.
+
+```js
+encoder.configure({
+    'codec': 'vp9.00.10.08.00', // See codec selection guide
+     width: 1280,
+     height: 720,
+     bitrate: 1000000 //1 MBPS,
+     framerate: 25
+});
+```
+
+You can then start encoding frames to the encoder. You can construct a `VideoFrame` from a `Canvas`
+
+```js
+for (let i = 0; i < 60; i++) {
+  const frame = new VideoFrame(canvas, { timestamp: (i * 1e6) / 30 }); //30 fps, in microseconds
+  encoder.encode(frame, { keyFrame: i % 60 == 0 });
 }
 ```
+
+See [Using the WebCodecs API](/en-US/docs/Web/API/WebCodecs_API/Using_the_WebCodecs_API) for more examples.
 
 ## See also
 
 - [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs)
 - [WebCodecs API Samples](https://w3c.github.io/webcodecs/samples/)
+- [WebCodecsFundamentals](https://webcodecsfundamentals.org/)
 - [Real-Time Video Processing with WebCodecs and Streams: Processing Pipelines](https://webrtchacks.com/real-time-video-processing-with-webcodecs-and-streams-processing-pipelines-part-1/)
 - [Video Frame Processing on the Web – WebAssembly, WebGPU, WebGL, WebCodecs, WebNN, and WebTransport](https://webrtchacks.com/video-frame-processing-on-the-web-webassembly-webgpu-webgl-webcodecs-webnn-and-webtransport/)
