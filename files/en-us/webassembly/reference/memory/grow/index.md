@@ -10,7 +10,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`grow`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) increases the size of the memory instance by a specified number of pages.
+The **`memory.grow`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) increases the size of the memory instance by a specified number of pages.
 
 The instruction adds the previous size of memory (in pages) to the top of the stack if the operation was successful, or `-1` if the operation failed.
 Currently each page is 64KiB.
@@ -25,7 +25,7 @@ Currently each page is 64KiB.
 
     ;; grow memory by 1 page
     ;; grow returns in 1 for success and -1 for failure
-    ;; will fail if you change to more more than 1 page
+    ;; will fail if you change to more than 1 page
     (memory.grow (i32.const 1))
     call $log ;; log the result
 

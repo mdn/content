@@ -777,7 +777,7 @@
       "impl": []
     },
     "CSSPseudoElement": {
-      "inh": "EventTarget",
+      "inh": "",
       "impl": []
     },
     "CSSRGB": {
@@ -1352,10 +1352,6 @@
       "inh": "",
       "impl": []
     },
-    "GeolocationSensor": {
-      "inh": "Sensor",
-      "impl": []
-    },
     "Global": {
       "inh": "",
       "impl": []
@@ -1773,10 +1769,6 @@
       "impl": []
     },
     "HTMLParamElement": {
-      "inh": "HTMLElement",
-      "impl": []
-    },
-    "HTMLPermissionElement": {
       "inh": "HTMLElement",
       "impl": []
     },
@@ -2336,6 +2328,14 @@
       "inh": "",
       "impl": []
     },
+    "ModelContext": {
+      "inh": "",
+      "impl": []
+    },
+    "ModelContextClient": {
+      "inh": "",
+      "impl": []
+    },
     "Module": {
       "inh": "",
       "impl": []
@@ -2610,6 +2610,10 @@
     },
     "Performance": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "PerformanceContainerTiming": {
+      "inh": "PerformanceEntry",
       "impl": []
     },
     "PerformanceElementTiming": {
@@ -3052,6 +3056,14 @@
       "inh": "",
       "impl": []
     },
+    "RTCSFrameReceiverTransform": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "RTCSFrameSenderTransform": {
+      "inh": "",
+      "impl": []
+    },
     "RTCStatsReport": {
       "inh": "",
       "impl": []
@@ -3150,14 +3162,6 @@
     },
     "SFrameEncrypterStream": {
       "inh": "EventTarget",
-      "impl": []
-    },
-    "SFrameReceiverTransform": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "SFrameSenderTransform": {
-      "inh": "",
       "impl": []
     },
     "SFrameTransformErrorEvent": {

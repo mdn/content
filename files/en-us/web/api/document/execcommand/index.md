@@ -68,7 +68,7 @@ execCommand(commandName, showDefaultUI, valueArgument)
       - : Deletes the character ahead of the [cursor](https://en.wikipedia.org/wiki/Cursor_%28computers%29)'s position, identical to hitting the Delete key on a Windows keyboard.
     - `heading`
       - : Adds a heading element around a selection or insertion point line. Requires the tag-name string as a value argument (i.e., `"H1"`, `"H6"`). (Not supported by Safari.)
-    - `highlightColor`
+    - `hiliteColor`
       - : Changes the background color for the selection or at the insertion point. Requires a color value string as a value argument. `useCSS` must be `true` for this to function.
     - `increaseFontSize`
       - : Adds a {{HTMLElement("big")}} tag around the selection or at the insertion point.
@@ -91,6 +91,8 @@ execCommand(commandName, showDefaultUI, valueArgument)
 
     - `insertImage`
       - : Inserts an image at the insertion point (deletes selection). Requires a URL string for the image's `src` as a value argument. The requirements for this string are the same as `createLink`.
+    - `insertLineBreak`
+      - : Deletes the selection, and replaces it with a [line break element](/en-US/docs/Web/HTML/Reference/Elements/br).
     - `insertOrderedList`
       - : Creates a [numbered ordered list](/en-US/docs/Web/HTML/Reference/Elements/ol) for the selection or at the insertion point.
     - `insertUnorderedList`
@@ -116,7 +118,7 @@ execCommand(commandName, showDefaultUI, valueArgument)
 
         This feature is specified as disabled for _web content_, but has been implemented via the [Clipboard API](/en-US/docs/Web/API/Clipboard_API#security_considerations) on some browsers.
         On these browsers the feature requires {{glossary("transient activation")}}, and acknowledgement of a popup UI when pasting cross-origin content.
-        See the [Browser compatibility table](/en-US/docs/Web/API/Document/execCommand#browser_compatibility) for more information.
+        See the [Browser compatibility table](#browser_compatibility) for more information.
 
     - `redo`
       - : Redoes the previous undo command.

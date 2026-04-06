@@ -341,6 +341,7 @@
         "CSSNamespaceRule",
         "CSSPageRule",
         "CSSPageDescriptors",
+        "CSSFontFeatureValuesMap",
         "CSSFontFeatureValuesRule",
         "CSSFontPaletteValuesRule",
         "CSSPropertyRule",
@@ -941,7 +942,8 @@
     "HTML Sanitizer API": {
       "overview": ["HTML Sanitizer API"],
       "guides": [
-        "/docs/Web/API/HTML_Sanitizer_API/Using_the_HTML_Sanitizer_API"
+        "/docs/Web/API/HTML_Sanitizer_API/Using_the_HTML_Sanitizer_API",
+        "/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration"
       ],
       "interfaces": ["Sanitizer", "SanitizerConfig"],
       "methods": [
@@ -1180,20 +1182,6 @@
       "methods": [],
       "properties": ["Document.hidden", "Document.visibilityState"],
       "events": ["Document: visibilitychange"]
-    },
-    "Payment Handler API": {
-      "overview": ["Payment Handler API"],
-      "interfaces": [
-        "CanMakePaymentEvent",
-        "PaymentManager",
-        "PaymentRequestEvent"
-      ],
-      "methods": [],
-      "properties": ["ServiceWorkerRegistration.paymentManager"],
-      "events": [
-        "ServiceWorkerGlobalScope: canmakepayment",
-        "ServiceWorkerGlobalScope: paymentrequest"
-      ]
     },
     "Payment Request API": {
       "overview": ["Payment Request API"],
@@ -1456,12 +1444,11 @@
       "overview": ["Reporting API"],
       "guides": [],
       "interfaces": [
-        "CSPViolationReportBody",
-        "DeprecationReportBody",
-        "InterventionReportBody",
-        "IntegrityViolationReportBody",
-        "Report",
-        "ReportBody",
+        "COEPViolationReport",
+        "CSPViolationReport",
+        "DeprecationReport",
+        "InterventionReport",
+        "IntegrityViolationReport",
         "ReportingObserver",
         "SecurityPolicyViolationEvent"
       ],
@@ -1900,6 +1887,13 @@
       ],
       "events": []
     },
+    "User Preferences API": {
+      "overview": ["User Preferences API"],
+      "interfaces": ["PreferenceManager", "PreferenceObject"],
+      "methods": [],
+      "properties": ["Navigator.preferences"],
+      "events": []
+    },
     "Vibration API": {
       "overview": ["Vibration API"],
       "interfaces": [],
@@ -2043,6 +2037,20 @@
       ],
       "properties": [],
       "events": []
+    },
+    "Web-Based Payment Handler API": {
+      "overview": ["Web-based Payment Handler API"],
+      "interfaces": [
+        "CanMakePaymentEvent",
+        "PaymentManager",
+        "PaymentRequestEvent"
+      ],
+      "methods": [],
+      "properties": ["ServiceWorkerRegistration.paymentManager"],
+      "events": [
+        "ServiceWorkerGlobalScope: canmakepayment",
+        "ServiceWorkerGlobalScope: paymentrequest"
+      ]
     },
     "Web Components": {
       "overview": ["Web components"],

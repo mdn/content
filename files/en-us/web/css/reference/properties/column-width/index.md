@@ -10,6 +10,8 @@ The **`column-width`** [CSS](/en-US/docs/Web/CSS) property sets the ideal column
 
 This property can help you create responsive designs that fit different screen sizes. Especially in the presence of the {{cssxref("column-count")}} property (which has precedence), you must specify all related length values to achieve an exact column width. In horizontal text these are {{cssxref('width')}}, `column-width`, {{cssxref('column-gap')}}, and {{cssxref('column-rule-width')}}.
 
+The {{cssxref("columns")}} shorthand property can be used to set the `column-width`, {{cssxref("column-count")}}, and {{cssxref("column-height")}} property values in a single declaration.
+
 {{InteractiveExample("CSS Demo: column-width")}}
 
 ```css interactive-example-choice
@@ -121,5 +123,8 @@ The `column-width` property is specified as one of the values listed below.
 
 ## See also
 
+- {{cssxref("column-count")}}
+- {{cssxref("column-height")}}
+- {{cssxref("columns")}} shorthand
 - [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) (Learn Layout)
 - [Basic Concepts of Multicol](/en-US/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)

@@ -529,7 +529,7 @@ This allows you to defend against client-side [cross-site scripting (XSS)](/en-U
 
 Some APIs in the web platform are known as _injection sinks_. These are APIs that can be passed some input, usually in the form of a string, and that can interpret that input as code. In this guide we've already seen `eval()`, but there are many other injection sinks, such as {{domxref("Element.innerHTML")}} or {{domxref("Document.write()")}}.
 
-If an attacker can supply some specially crafted input to your website, and your website passes it to one of these injection sinks, then the attacker can execute malcious code.
+If an attacker can supply some specially crafted input to your website, and your website passes it to one of these injection sinks, then the attacker can execute malicious code.
 
 Some injection sinks, like `eval()`, are very hard to use safely, and we've seen that a CSP will typically [block them entirely](#eval_and_similar_apis). Others can be made safer if the input to them is processed so as to remove unsafe elements. This practice is called [_sanitization_](/en-US/docs/Web/Security/Attacks/XSS#sanitization).
 
@@ -598,8 +598,8 @@ Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 Content-Security-Policy: default-src 'self'; report-to csp-endpoint
 ```
 
-When a CSP violation occurs, the browser sends the report as a JSON object to the specified endpoint via an HTTP `POST` operation, with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
-The report is a serialized form of the {{domxref("Report")}} object containing a `type` property with a value of `"csp-violation"`, and a `body` that is the serialized form of a {{domxref("CSPViolationReportBody")}} object.
+When a CSP violation occurs, the browser sends the report as a JSON object to the specified endpoint via an HTTP {{httpmethod("POST")}} operation, with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
+The report is a serialized form of the {{domxref("CSPViolationReport")}} object containing a `type` property with a value of `"csp-violation"`.
 
 A typical object might look like this:
 

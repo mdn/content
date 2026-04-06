@@ -11,6 +11,8 @@ browser-compat: api.Clipboard.clipboardchange_event
 
 The **`clipboardchange`** event of the {{domxref("Clipboard")}} interface is fired when the system clipboard contents are changed in any way, for example via a system copy command, or via an API method such as {{domxref("Clipboard.writeText()")}}.
 
+The `clipboardchange` event is only fired with [sticky activation](/en-US/docs/Glossary/Sticky_activation) or after the `clipboard-read` permission is granted.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
@@ -69,9 +71,9 @@ body {
   margin: 0 5px;
 }
 #output {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   padding: 10px;
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
   border-radius: 5px;
 }
 ```

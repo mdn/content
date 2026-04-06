@@ -22,6 +22,8 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
     These may be shared with other DOM subtrees that share the same parent {{domxref("Document")}} node, and the document itself.
 - {{domxref("ShadowRoot.clonable")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the shadow root is clonable.
+- {{domxref("ShadowRoot.customElementRegistry")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("CustomElementRegistry")}} object associated with this shadow root, or `null` if one has not been set.
 - {{domxref("ShadowRoot.delegatesFocus")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the shadow root delegates focus if a non-focusable node is selected.
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
