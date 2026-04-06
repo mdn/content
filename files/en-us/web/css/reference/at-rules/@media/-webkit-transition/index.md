@@ -64,7 +64,6 @@ Not part of any standard.
 - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
 - {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 - {{cssxref("transition")}} and [using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
 - {{cssxref("@media")}} and [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@supports")}} and [using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)

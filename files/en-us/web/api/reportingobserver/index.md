@@ -61,7 +61,7 @@ function log(text) {
 
 #### JavaScript
 
-First we construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"deprecation"`, passing a callback that will receive and log the reports.
+First we construct a new `ReportingObserver` object to listen for reports with the type `"deprecation"`, passing a callback that will receive and log the reports.
 
 ```js
 const options = {

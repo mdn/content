@@ -530,7 +530,7 @@ The "bars" are given some rudimentary styling. Most significantly, they are give
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
   height: 100%;
 }
 
@@ -557,8 +557,8 @@ img {
 ```css live-sample___scrolled
 .bar {
   border-radius: 10px;
-  border: 1px solid #000;
-  background-color: #0009;
+  border: 1px solid black;
+  background-color: #00000099;
   padding: 10px;
   color: white;
   text-shadow: 1px 1px 1px black;
