@@ -63,7 +63,7 @@ Common container formats include:
 
 The WebCodecs API handles encoding and decoding only.
 Muxing and demuxing are outside the scope of the API and require a separate library.
-See the [Demuxing](/en-US/docs/Web/API/WebCodecs_API#demuxing) section on the WebCodecs API overview page for library options.
+See the [Muxing and Demuxing](/en-US/docs/Web/API/WebCodecs_API#muxing_and_demuxing) section on the WebCodecs API overview page for library options.
 
 ## See also
 
