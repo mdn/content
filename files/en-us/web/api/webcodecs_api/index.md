@@ -81,6 +81,10 @@ The WebCodecs specification only supports a specific set of codecs, and individu
 
 ### Muxing and Demuxing
 
+The WebCodecs API only deals with encoding and decoding, with encoded chunks just representing binary data. It does not provide a built-in way to read `EncodedVideoChunk` objects from a video file, or write them to a playable video file.
+
+Reading encoded chunks from a video file is a completely different process called demuxing, and to fetch `EncodedVideoChunk` objects from a video file, you will need to use a demuxing library such as [MediaBunny](https://mediabunny.dev/) or [web-demuxer](https://github.com/bilibili/web-demuxer).
+
 ![Demuxer](decoder-demuxer.png)
 
 These libraries will follow the video container specifications (e.g., webm, mp4) to extract the track data and byte offsets for each encoded chunk, and provide methods for extracting the actual chunks from the raw file.
