@@ -17,7 +17,7 @@ This is a defense against a [supply-chain attack](/en-US/docs/Web/Security/Attac
 
 The attribute can be applied to {{htmlelement("script")}} or {{htmlelement("link")}} elements only.
 
-The attribute consists of zero or more components, each of which consists of:
+The attribute consists of one or more components, each of which consists of:
 
 - An identifier for a {{glossary("hash function", "cryptographic hash function")}}. Three hash functions are supported. In increasing order of strength, these are: SHA-256, SHA-384, and SHA-512.
 - The result of hashing the resource contents using the specified hash function.
