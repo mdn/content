@@ -95,7 +95,12 @@ You can find more information on muxing and demuxing in the [Muxing and Demuxing
 
 ## Guides
 
-{{SubpagesWithSummaries}}
+- [Video processing concepts](/en-US/docs/Web/API/WebCodecs_API/Video_processing_concepts)
+  - : A brief primer on video processing, including codecs and containers, muxing and demuxing, that covers conceptual informatio to understand how the WebCodecs API implements these concepts.
+- [Using the WebCodecs API](/en-US/docs/Web/API/WebCodecs_API/Using_the_WebCodecs_API)
+  - : In depth guide to how to actually use the WebCodecs API, including how to instantiate and configure encoders and decoders, how to create and consume video frames, and how to extract samples from AudioData.
+- [Codec selection](/en-US/docs/Web/API/WebCodecs_API/Codec_selection)
+  - : The WebCodecs API requires codec strings — precise identifiers that specify not just the codec family but also the profile, level, and other parameters. This guide explains how codec strings work and how to choose the right codec for common use cases.
 
 ## Interfaces
 
