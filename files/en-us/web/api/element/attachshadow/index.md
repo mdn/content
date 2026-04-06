@@ -81,7 +81,7 @@ attachShadow(options)
 
     - `customElementRegistry` {{Optional_Inline}}
       - : A {{DOMxRef('CustomElementRegistry')}} that will be used as the [scoped custom element registry](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) of the attached shadow root.
-        If `null` or `undefined`, the shadow root will use the global registry provided by {{domxref("Window.customElements")}}.
+        If `null` or `undefined`, the shadow root will use the global registry referenced by {{domxref("Window.customElements")}}.
 
     - `delegatesFocus` {{Optional_Inline}}
       - : A boolean that, when set to `true`, specifies behavior that mitigates custom element issues around focusability.
@@ -118,7 +118,7 @@ Returns a {{domxref("ShadowRoot")}} object.
     - where the element definition static property `disabledFeatures` has been given a value of `"shadow"`.
     - that already has a shadow root that was not created declaratively.
     - that has a [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) but the specified `mode` does not match the existing mode.
-    - passing a `customElementRegistry` value that isn't `null` or a locally scoped registry (that you created using `new CustomElementRegistry()`).
+    - while passing a `customElementRegistry` value that isn't `null` or a locally scoped registry (that you created using `new CustomElementRegistry()`).
       The error would be thrown if you passed the global registry.
 
 ## Examples
