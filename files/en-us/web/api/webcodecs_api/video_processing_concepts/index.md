@@ -19,8 +19,9 @@ Each pixel in the video frame is composed of 3 components, a Red, Green and Blue
 
 ![A video frame decomposed into RGB channels](rgb.svg)
 
-Uncompressed, a single 4K frame (~8 million pixels at 3 bytes per pixel) is approximately 25 MB.
-At 30 frames per second, one hour of uncompressed 4K video would be around 750 GB, which is impractically large for storage or streaming.
+Uncompressed, a single 4K frame (~8 million pixels at 3 bytes per pixel) is approximately 25 MB. At 30 frames per second, one hour of uncompressed 4K video would be around 750 GB, which is impractically large for storage or streaming.
+
+Codecs were developed in order to compress video, typically by 1-2 orders of magnitude, to be able to practically store and stream video content given typical device network and storage constraints.
 
 ## Codecs
 
@@ -69,11 +70,25 @@ When encoding with a `VideoEncoder`, it is possible to determine when to set a v
 
 ## Encoding and decoding
 
-**Encoding** is the process of compressing raw video frames into a compact binary representation.
-**Decoding** is the reverse: reconstructing raw video frames from that compressed representation.
-Encoding is significantly more computationally expensive than decoding.
-Most modern devices include dedicated hardware for accelerated encoding and decoding.
-The WebCodecs API exposes this hardware acceleration to web applications.
+### Codec Compatability
+
+For codecs to be useful, it is necessary to be able to both encode video (turn raw video into compressed binary data) with a codec, and to be able to decode the same video (turn the compressed binary data back into raw video frames) with the same codec. The video industry has therefore coalesced around a handful of standard codecs such as `vp9`, `h264` and `av1`.
+
+Applications which primarily create video content (e.g., video editing tools), and thefore primarily encode video, typically choose a video codec for encoding in order to maximize compatability with video player sofware.
+
+Applications which primarily consume video conent (e.g., video player software) and therefore primarily decode video will typically try to support as many possible codecs as possible.
+
+Applications which control both encoding and decoding (e.g., a video streaming website) have much more flexibility on codec choice, and can therefore choose codecs based on factors such as cost and encoding speed.
+
+### Encoding is Expensive
+
+Encoding is significantly more computationally expensive than decoding, typically by 1-2 orders of magnitude. Video conferencing applications will often use older codecs such as `vp8` because, although it results in lower quality video for the same bitrate, it is also less computationally expensive than newer codecs like `vp9`.
+
+### Hardware Acceleration
+
+Most consumer devices include specialized hardware specifically designed to encode and decode video. Leveraging these specialized chips for encoding and decoding is called hardware acceleration, and can speed up encoding tasks by 2 orders of magnitude compared to standard CPU based encoding.
+
+One of the key advantages of the WebCodecs API is the ability to use hardware accelerated encoding, making applications like video editing and high performance streaming practical on consumer devices.
 
 ## Containers
 
