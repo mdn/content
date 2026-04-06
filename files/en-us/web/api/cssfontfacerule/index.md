@@ -26,7 +26,7 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
 ### Accessing @font-face properties
 
-This example defines a {{cssxref("@font-face")}} rule and then iterates the rules on the page to the associated `CSSFontFaceRule`.
+This example defines a {{cssxref("@font-face")}} rule and then iterates over the rules on the page until the associated `CSSFontFaceRule` is found.
 It then logs some of the properties.
 
 #### CSS
