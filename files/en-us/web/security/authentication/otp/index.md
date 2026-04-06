@@ -134,7 +134,7 @@ The URI includes a number of query string parameters, of which the most importan
 
 ### Authenticator apps
 
-A large number of authenticator apps, both proprietary and open source, support TOTP. For example: [Ente Auth](https://ente.io/auth/), [2FAS](https://2fas.com), and [Microsoft Authenticator](https://www.microsoft.com/en-US/security/mobile-authenticator-app).
+A large number of authenticator apps, both proprietary and open source, support TOTP. For example: [Ente Auth](https://ente.com/auth/), [2FAS](https://2fas.com), and [Microsoft Authenticator](https://www.microsoft.com/en-US/security/mobile-authenticator-app).
 
 ### Securing the secret
 
