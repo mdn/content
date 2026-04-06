@@ -102,9 +102,6 @@ attachShadow(options)
           - : Elements are not automatically assigned to {{HTMLElement("slot")}} elements. Instead, they must be manually assigned with {{domxref("HTMLSlotElement.assign()")}}.
             Its default value is `named`.
 
-    Note that if you pass a {{DOMxRef('ShadowRoot')}} the method will read the corresponding properties as though it was an [`options`](#options) object.
-    It will still attach a new `ShadowRoot`.
-
 ### Return value
 
 Returns a {{domxref("ShadowRoot")}} object.
