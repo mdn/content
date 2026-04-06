@@ -59,8 +59,7 @@ attachShadow(options)
       - : A string specifying the _encapsulation mode_ for the shadow DOM tree.
         This can be one of:
         - `open`
-          - : Elements of the shadow root are accessible from JavaScript outside the root,
-            for example using {{domxref("Element.shadowRoot")}}:
+          - : Elements of the shadow root are accessible from JavaScript outside the root, for example using {{domxref("Element.shadowRoot")}}:
 
             ```js
             element.attachShadow({ mode: "open" });
@@ -103,8 +102,8 @@ attachShadow(options)
           - : Elements are not automatically assigned to {{HTMLElement("slot")}} elements. Instead, they must be manually assigned with {{domxref("HTMLSlotElement.assign()")}}.
             Its default value is `named`.
 
-  Note that if you pass a {{DOMxRef('ShadowRoot')}} the method will read the corresponding properties as though it was an [`options`](#options) object.
-  It will still attach a new `ShadowRoot`.
+    Note that if you pass a {{DOMxRef('ShadowRoot')}} the method will read the corresponding properties as though it was an [`options`](#options) object.
+    It will still attach a new `ShadowRoot`.
 
 ### Return value
 
