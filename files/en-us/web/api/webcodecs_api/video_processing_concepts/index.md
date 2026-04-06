@@ -11,36 +11,66 @@ This guide covers the key concepts: video frames, codecs, encoding and decoding,
 
 ## Video frames
 
-A video is a sequence of images displayed in rapid succession.
-Each image in the sequence is called a **video frame**, and each frame has an associated timestamp indicating when it should be displayed.
+A video is a sequence of images displayed in rapid succession. Each image in the sequence is called a **video frame**, and each frame has an associated timestamp indicating when it should be displayed.
 
-Each frame is composed of pixels, and each pixel is represented by red, green, and blue (RGB) color component values.
+![Video Frames](video-frames.png)
+
+Each pixel in the video frame is composed of 3 components, a Red, Green and Blue value (also called an RGB value). Each color channel is represented by 1 byte (a uint8 representing an integer from 0-255, indicating the insensity of the color channel for that pixel), meaning that each pixel is represented by at least 3 bytes of information.
+
+![A video frame decomposed into RGB channels](rgb.svg)
+
 Uncompressed, a single 4K frame (~8 million pixels at 3 bytes per pixel) is approximately 25 MB.
-At 30 frames per second, one hour of uncompressed 4K video would be around 750 GB.
-Practical video files are orders of magnitude smaller due to compression.
+At 30 frames per second, one hour of uncompressed 4K video would be around 750 GB, which is impractically large for storage or streaming.
 
 ## Codecs
 
-A **codec** (short for encode/decode) is an algorithm for compressing and decompressing video data.
-Codecs reduce file size dramatically — typically by a factor of 100 or more — by exploiting redundancy within and between frames.
+A **codec** (short for encode/decode) is an algorithm for compressing and decompressing video data. Codecs reduce file size dramatically — typically by a factor of 100 or more through a variety of different techniques. While there are a number of video codecs used within the browser, such as `vp9`, `av1` and `h264`, they all apply some form of the following techniques:
 
-Common techniques include:
+### Color space transformations
 
-- **Spatial compression**: Reducing detail within a single frame using transforms such as the Discrete Cosine Transform (DCT).
-- **Temporal compression**: Encoding only the differences between successive frames rather than each frame in full.
+Codecs will transform the original RGB color values into the YUV colorpsace, with the Y channel capturing changes in brightness, and UV channels capturing the other color information. The codecs will then subsample the UV color channels, reducing data use by ~50% for minimal percieved quality loss.
 
-This leads to two frame types:
+![YUV subsampling](yuv.svg)
 
-- **Key frames** (also called I-frames): Fully encoded frames that do not depend on any other frame.
-- **Delta frames** (also called P-frames or B-frames): Frames that encode only the changes relative to a reference frame.
+This colorspace transformation shows up within the `format` property of the `VideoFrame` object. The `format` can take the following values:
 
-Widely used video codecs include H.264 (AVC), VP9, AV1, and H.265 (HEVC).
+- `I420` - Normal YUV subsampling, with a Y channel and sub-sampled U and V channels.
+- `NV12` - Similar to YUV, but instead of storing data in 3 planes, it interleaves the UV data together into one plane
+- `RGBA` - Standard RGB but with an alpha channel
+- `BGRA` - Same as RGB, but in reverse order (Blue, Green, Red)
+
+### Spatial Compression
+
+All the major codecs use a technique called the Discrete Cosine Transform, which transforms a standard image into the frequency domain. Codecs then remove high frequency details before trasnforming back into the original colorspace. The effect looks like this:
+
+![Throwing away high detail information](dct.png)
+
+The amount of detail removed is determined dynamically by the encoding algorithm. This can be adjusted by configuring
+
+-he following shows the tradeoff between quality and bitrate, using baseline `vp9` on a 1080p video:
+
+![Bitrate ladder](bitrate-ladder.png)
+
+### Temporal Compression
+
+![Frame differences](frame-diff.png)
+Codecs will then store the first video frame in a sequence as a key frame, and then storing subsequent frames as just frame differences (called delta frames).
+
+![Key frames vs delta frames](key-frames.png)
+
+Videos are typically encoded with key frames at regular intervals. To reconstruct a given delta frame, it is necessary to decode the previous key frame, and then all the previous delta frames, in order, up until the current delta frame, in order to properly add up all the frame differences and construct the full current frame for display.
+In WebCodecs, the `EncodedVideoChunk` interface has a `type` property which can take the value `"key"` or `"delta"` denoting whether or not the chunk represents a key frame or a delta frame.
+
+When encoding with a `VideoEncoder`, it is possible to determine when to set a video as a key frame or a delta frame by using the `keyFrame` parameter in the encoder method
+
+```js
+ encoder.encode(frame, {keyFrame: /* */})
+```
 
 ## Encoding and decoding
 
 **Encoding** is the process of compressing raw video frames into a compact binary representation.
 **Decoding** is the reverse: reconstructing raw video frames from that compressed representation.
-
 Encoding is significantly more computationally expensive than decoding.
 Most modern devices include dedicated hardware for accelerated encoding and decoding.
 The WebCodecs API exposes this hardware acceleration to web applications.
@@ -67,6 +97,7 @@ See the [Muxing and Demuxing](/en-US/docs/Web/API/WebCodecs_API#muxing_and_demux
 
 ## See also
 
+- [Video Codec Guide](/en-US/docs/Web/Media/Guides/Formats/Video_codecs)
 - [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API)
 - [Using the WebCodecs API](/en-US/docs/Web/API/WebCodecs_API/Using_the_WebCodecs_API)
 - [Codec selection](/en-US/docs/Web/API/WebCodecs_API/Codec_selection)
