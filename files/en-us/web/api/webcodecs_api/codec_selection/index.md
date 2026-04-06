@@ -29,22 +29,22 @@ const { supported } = await VideoEncoder.isConfigSupported({
 
 ### H.264 (AVC)
 
-H.264 is the most widely supported codec for encoding, with near-universal support across browsers and platforms.
+The most widely supported codec, with near-universal support across browsers and platforms. Most MP4 files use H.264.
 It is the appropriate choice when output files need to be compatible with the broadest range of devices, or when the output format is MP4.
 
 ### VP9
 
-VP9 has similarly broad encoding support and is the natural choice for WebM output.
-It provides better compression than H.264 at equivalent quality.
+Open source, developed by Google, and widely used on platforms such as YouTube. Successor to VP8, with better compression than H.264 at equivalent quality.
+VP9 is the natural choice for WebM output and has similarly broad encoding support to H.264.
 
 ### AV1
 
-AV1 offers the best compression efficiency but hardware encoder support is more limited than H.264 or VP9.
-It is well-suited for decoding (playback) use cases where broad output compatibility is not required.
+The newest open source codec, with better compression than both H.264 and VP9. Decoder support is broad; hardware encoder support is more limited.
+AV1 is well-suited for decoding (playback) use cases, or encoding pipelines where broad device compatibility is not required.
 
 ### HEVC (H.265)
 
-HEVC has strong support on Apple platforms (Safari, macOS, iOS) but limited support elsewhere.
+Newer than H.264 with better compression, but with notable gaps in browser support — strong on Apple platforms (Safari, macOS, iOS), limited elsewhere.
 It is not recommended as a general-purpose encoding target.
 
 ## Codec string reference
