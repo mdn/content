@@ -38,12 +38,12 @@ Shorthand properties try not to force a specific order for the values of the pro
 
 Two important cases here are:
 
-- properties related to the sides of the box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}
-- properties related to the corners of the box, like {{cssxref("border-radius")}}
+- Properties related to the sides of the box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}
+- Properties related to the corners of the box, like {{cssxref("border-radius")}}
 
 #### Sides of the box
 
-Shorthands handling properties related to sides of the box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those sides:
+Shorthands handling properties related to the sides of the box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those sides:
 
 - **1-value syntax:** `border-width: 1em` — A single value represents all edges: ![Box edges with one-value syntax](border1.png)
 
@@ -55,7 +55,7 @@ Shorthands handling properties related to sides of the box, like {{cssxref("bord
 
 #### Corners of the box
 
-Similarly, shorthands handling properties related to corners of the box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
+Similarly, shorthands handling properties related to the corners of the box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
 
 - **1-value syntax:** `border-radius: 1em` — A single value represents all corners: ![Box corners with one-value syntax](corner1.png)
 
