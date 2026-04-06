@@ -37,9 +37,9 @@ VP9 is often chosen for internal use cases for its better compression, or when o
 
 ### AV1
 
-AV1 has better compression than both H.264 and VP9, and decoder support is now over 90% coverage globally across browsers †.
+AV1 is a newer open source codec developed by the [Alliance for Open Media](https://aomedia.org/). AV1 has better compression than both H.264 and VP9 for the same quality, and decode support is now over 90% coverage globally across browsers †.
 
-However, hardware encoder support remains limited and encoding is significantly slower than VP9. AV1 is not recommended as a general encoding target; it is best suited for decode-only (playback) use cases.
+However, hardware encoder support remains limited and encoding is significantly slower than VP9. AV1 is not recommended as a general encoding target for typical user-facing applications unless maximum compression is required; it is best suited for decode-only (playback) use cases.
 
 ### HEVC (H.265)
 
