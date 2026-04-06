@@ -15,7 +15,7 @@ A video is a sequence of images displayed in rapid succession. Each image in the
 
 ![Video Frames](video-frames.png)
 
-Each pixel in the video frame is composed of 3 components, a Red, Green and Blue value (also called an RGB value). Each color channel is represented by 1 byte (a uint8 representing an integer from 0-255, indicating the insensity of the color channel for that pixel), meaning that each pixel is represented by at least 3 bytes of information.
+Each pixel in the video frame is composed of 3 components, a Red, Green and Blue value (also called an RGB value). Each color channel is represented by 1 byte (a uint8 representing an integer from 0-255, indicating the intensity of the color channel for that pixel), meaning that each pixel is represented by at least 3 bytes of information.
 
 ![A video frame decomposed into RGB channels](rgb.svg)
 
@@ -29,7 +29,7 @@ A **codec** (short for encode/decode) is an algorithm for compressing and decomp
 
 ### Color space transformations
 
-Codecs will transform the original RGB color values into the YUV colorpsace, with the Y channel capturing changes in brightness, and UV channels capturing the other color information. The codecs will then subsample the UV color channels, reducing data use by ~50% for minimal percieved quality loss.
+Codecs will transform the original RGB color values into the YUV colorspace, with the Y channel capturing changes in brightness, and UV channels capturing the other color information. The codecs will then subsample the UV color channels, reducing data use by ~50% for minimal perceived quality loss.
 
 ![YUV subsampling](yuv.svg)
 
@@ -42,17 +42,22 @@ This colorspace transformation shows up within the `format` property of the `Vid
 
 ### Spatial Compression
 
-All the major codecs use a technique called the Discrete Cosine Transform, which transforms a standard image into the frequency domain. Codecs then remove high frequency details before trasnforming back into the original colorspace. The effect looks like this:
+All the major codecs use a technique called the Discrete Cosine Transform, which transforms a standard image into the frequency domain. Codecs then remove high frequency details before transforming back into the original colorspace. The effect looks like this:
 
 ![Throwing away high detail information](dct.png)
 
 The amount of detail removed is determined dynamically by the encoding algorithm. This can be adjusted by configuring
 
--he following shows the tradeoff between quality and bitrate, using baseline `vp9` on a 1080p video:
+- The codec string, such as `av01.0.12H.08`, which specificies the codec (AV1), as well as the profile and level, which determine the logic used by the codec to determine how much quality to remove given a specified bitrate.
+- The bitrate, which is a parameter determining how much data the output filestream will use. Larger bitrates result in larger file sizes, while also removing less detail, resulting in higher quality
+
+The following shows the tradeoff between quality and bitrate, using baseline `vp9` on a 1080p video:
 
 ![Bitrate ladder](bitrate-ladder.png)
 
 ### Temporal Compression
+
+Successive frames in a video are typically visually similar to one another. Instead of encoding each video frame as an independent image, video codecs calculate the difference between frames, and encode just the frame differences in a compact binary representation. Codecs typically use a number of techniques such as motion compensation to reduce the amount of data required to encode frame differences.
 
 ![Frame differences](frame-diff.png)
 Codecs will then store the first video frame in a sequence as a key frame, and then storing subsequent frames as just frame differences (called delta frames).
@@ -70,13 +75,13 @@ When encoding with a `VideoEncoder`, it is possible to determine when to set a v
 
 ## Encoding and decoding
 
-### Codec Compatability
+### Codec Compatibility
 
 For codecs to be useful, it is necessary to be able to both encode video (turn raw video into compressed binary data) with a codec, and to be able to decode the same video (turn the compressed binary data back into raw video frames) with the same codec. The video industry has therefore coalesced around a handful of standard codecs such as `vp9`, `h264` and `av1`.
 
-Applications which primarily create video content (e.g., video editing tools), and thefore primarily encode video, typically choose a video codec for encoding in order to maximize compatability with video player sofware.
+Applications which primarily create video content (e.g., video editing tools), and therefore primarily encode video, typically choose a video codec for encoding in order to maximize compatibility with video player software.
 
-Applications which primarily consume video conent (e.g., video player software) and therefore primarily decode video will typically try to support as many possible codecs as possible.
+Applications which primarily consume video content (e.g., video player software) and therefore primarily decode video will typically try to support as many possible codecs as possible.
 
 Applications which control both encoding and decoding (e.g., a video streaming website) have much more flexibility on codec choice, and can therefore choose codecs based on factors such as cost and encoding speed.
 
@@ -92,23 +97,35 @@ One of the key advantages of the WebCodecs API is the ability to use hardware ac
 
 ## Containers
 
-A video file is not just encoded video data.
-It also contains encoded audio, metadata (such as duration and dimensions), and timing information.
-A **container format** (such as MP4 or WebM) defines how all of this data is organized within a file.
+Codecs only deal with encoding raw media data into a binary compressed form and vice-versa. A video file, such as a WebM, MP4 or MKV file, contains both metadata such as track information, duration etc.., as well as encoded media data.
 
-Common container formats include:
+![Containers](containers.png)
 
-- **MP4** (.mp4): Widely supported; typically contains H.264 or H.265 video and AAC audio.
-- **WebM** (.webm): An open format; typically contains VP9 or AV1 video and Opus audio.
+Each type of video file has its own container spec, such the [WebM spec](https://www.w3.org/TR/mse-byte-stream-format-webm/) and the [MP4 Spec](https://github.com/alfg/quick-dive-into-mp4), which specifies how metadata and encoded media should be formatted and stored within the file stream.
 
-## Muxing and demuxing
+A given container format can actually support a variety of different codecs. Here are the most common containers and the codecs they support:
 
-**Muxing** (multiplexing) is the process of combining encoded video, encoded audio, and metadata into a container file.
-**Demuxing** (demultiplexing) is the reverse: parsing a container file to extract the encoded video chunks, audio chunks, and metadata.
+| Container     | Video codecs           | Audio codecs         |
+| ------------- | ---------------------- | -------------------- |
+| MP4 (.mp4)    | H.264, H.265, AV1      | AAC, MP3, Opus       |
+| WebM (.webm)  | VP8, VP9, AV1          | Vorbis, Opus         |
+| MKV (.mkv)    | H.264, H.265, VP9, AV1 | AAC, MP3, Opus, FLAC |
+| AVI (.avi)    | H.264, VP8             | MP3, AAC             |
+| MPEG-TS (.ts) | H.264, H.265           | AAC, MP3             |
+| OGG (.ogg)    | Theora                 | Vorbis, Opus         |
 
-The WebCodecs API handles encoding and decoding only.
-Muxing and demuxing are outside the scope of the API and require a separate library.
-See the [Muxing and Demuxing](/en-US/docs/Web/API/WebCodecs_API#muxing_and_demuxing) section on the WebCodecs API overview page for library options.
+A video player needs to both follow the container spec to extract metadata and encoded chunks (called demuxing), as well as to decode the encoded video/audio in order to play the video file.
+
+While the {{domxref("HTMLVideoElement")}} handles both demuxing and decoding, and primarily supports MP4 and WebM formats, the WebCodecs API does not deal with container formats.
+
+To play a video with WebCodecs, it is necessary to both demux the file (typically using a demuxing library) and then decode the encoded chunks.
+
+![Demuxing](decoder-demuxer.png)
+
+e.g.,
+Likewise, to write a video file with WebCodecs it is necessary to also follow the container spec, writing metadata and placing the encoded chunks at the correct position in the output file stream. This is called muxing, and is not handled natively by the WebCodecs API, instead requiring a 3rd party library like [MediaBunny](https://github.com/Vanilagy/mediabunny)
+
+See the [Muxing and Demuxing](/en-US/docs/Web/API/WebCodecs_API#muxing_and_demuxing) section on the WebCodecs API overview page for library options for demuxing and muxing.
 
 ## See also
 
