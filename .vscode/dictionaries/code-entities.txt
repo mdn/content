@@ -919,3 +919,10 @@ xpidl
 xpinstall
 xywh
 zoomlevelchange
+hiliteColor
+attributionDestination
+laneidx
+immediates
+memidx
+tableidx
+attributionSourceId
