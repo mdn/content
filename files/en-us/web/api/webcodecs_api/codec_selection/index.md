@@ -11,7 +11,9 @@ This guide explains how codec strings work and how to choose the right codec for
 
 ## Decoding vs encoding
 
-When **decoding** a video file, the codec is determined by how the file was originally encoded — you do not choose it. Demuxing libraries such as [MediaBunny](https://mediabunny.dev/) and [eb-demuxer](https://github.com/bilibili/web-demuxer) will extract the correct codec string for a given file, which you can supply directly to {{domxref("VideoDecoder")}} during configuration.
+When **decoding** a video file, the codec is determined by how the file was originally encoded — you do not choose it. Demuxing libraries such as [MediaBunny](https://mediabunny.dev/) and [web-demuxer](https://github.com/bilibili/web-demuxer) will extract the correct codec string for a given file, which you can supply directly to {{domxref("VideoDecoder")}} during configuration.
+
+When **encoding**, you choose the codec. The rest of this guide covers how to choose a codec.
 
 ## Choosing a codec family
 
@@ -34,6 +36,8 @@ VP9 is sometimes, but not always supported as a codec within MP4 files, as suppo
 VP9 is often chosen for internal use cases for its better compression, or when open source licensing matters.
 
 ### AV1
+
+AV1 has better compression than both H.264 and VP9, and decoder support is now over 90% coverage globally across browsers †.
 
 However, hardware encoder support remains limited and encoding is significantly slower than VP9. AV1 is not recommended as a general encoding target; it is best suited for decode-only (playback) use cases.
 
@@ -62,6 +66,8 @@ While VP9 and AV1 have partial MP4 support in some environments, pairing them wi
 
 For each codec family, there are hundreds of possible codec strings. The following tables provide a practical starting point for H.264 and VP9 codec strings that maximize encoding compatibility.
 
+### H.264
+
 | Codec string  | Profile  | Max resolution | Support                                                            |
 | ------------- | -------- | -------------- | ------------------------------------------------------------------ |
 | `avc1.42001f` | Baseline | 720p           | [99.6%](https://webcodecsfundamentals.org/codecs/avc1.42001f.html) |
@@ -83,6 +89,8 @@ See the [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-s
 ## Codec string format
 
 The WebCodecs API requires a fully qualified codec string rather than a general codec name. The string encodes the codec family, profile, level, and other parameters that affect which hardware can encode or decode the stream and at what resolution and quality.
+
+The format for these codec strings is specified in the [W3C codec registry](https://www.w3.org/TR/webcodecs-codec-registry/), and the format is different for each codec family.
 
 ### H.264
 
@@ -130,7 +138,7 @@ MP3 and PCM are not supported as encoding targets in WebCodecs. PCM (uncompresse
 
 ## Audio codec string reference
 
-Audio codec strings are simpler than video codec strings. Opus requirt {o additional parameters; AAC uses a short parameter string.
+Audio codec strings are simpler than video codec strings. Opus requires no additional parameters; AAC uses a short parameter string.
 
 | Codec | Codec string | Container | Support                                                          |
 | ----- | ------------ | --------- | ---------------------------------------------------------------- |
@@ -145,10 +153,13 @@ Use {{domxref("AudioEncoder/isConfigSupported_static", "AudioEncoder.isConfigSup
 
 Before encoding, use {{domxref("VideoEncoder/isConfigSupported_static", "VideoEncoder.isConfigSupported()")}} to verify that a given configuration is supported on the current device:
 
-````js
+```js
 const { supported } = await VideoEncoder.isConfigSupported({
+  codec: "avc1.4d0034",
   width: 1920,
   height: 1080,
+});
+```
 
 Since hardware support varies by device, a common pattern is to test codec strings from highest to lowest quality and use the first one supported:
 
@@ -169,7 +180,7 @@ for (const codec of candidates) {
     break;
   }
 }
-````
+```
 
 The same pattern applies to audio. Since {{domxref("AudioEncoder")}} is not available in all browsers, check for its existence before calling `isConfigSupported()`:
 
