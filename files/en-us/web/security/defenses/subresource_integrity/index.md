@@ -17,7 +17,7 @@ Websites sometimes choose to rely on a third party such as a {{glossary("CDN", "
 
 This comes with a risk, in that if an attacker gains control of the third-party host, then they can inject arbitrary malicious content into its files (or replace the files completely). This is referred to as a [supply chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks).
 
-Subresource Integrity is a defense against attacks such as this, by ensuring that the files your web application fetches have not been modified.
+Subresource Integrity is a defense against attacks such as this, by ensuring that the files your web application fetches have exactly the contents that you expect them to have.
 
 ## Using Subresource Integrity
 
