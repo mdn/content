@@ -13,6 +13,9 @@ This guide explains how to limit the animation timeline to a specific portion of
 
 [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) are created by defining named {{cssxref("@keyframes")}} animations, which define an animation's behavior, and then attaching the keyframe animation to an element using the animation's name.
 
+> [!NOTE]
+> In all the examples and explanations in this guide, we will be using the default values for most {{cssxref("animation")}} properties. The {{cssxref("animation-iteration-count")}} will always be set to default to `1` and the {{cssxref("animation-direction")}} will default to `normal`. In some examples, we have set the {{cssxref("animation-fill-mode")}} to `forward` to make the animation completion apparent. See the [Using CSS animations guide](/en-US/docs/Web/CSS/Guides/Animations/Using) to learn more.
+
 The element's animation timeline, defined by the {{cssxref("animation-timeline")}} property, determines how and when the element progresses through those keyframes. By default, the timeline is time-based, using the document's default time-based {{domxref("DocumentTimeline")}}.
 
 The [CSS scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module defines scroll-based and view-based timelines, which are methods of animating property values along a scroll-based timeline rather than the default time-based document timeline.
@@ -28,183 +31,10 @@ With [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animatio
 }
 ```
 
-Setting an {{cssxref("animation-name")}} applies the animation to the selected element. The {{cssxref("animation-iteration-count")}} defaults to `1`. The {{cssxref("animation-direction")}} defaults to `normal`. See the [Using CSS animations guide](/en-US/docs/Web/CSS/Guides/Animations/Using) to learn more.
+Setting an {{cssxref("animation-name")}} applies the animation to the selected element.
 
 > [!NOTE]
 > The `animation-timeline` property should always come after any `animation` shorthand declarations. While the shorthand property can not be used to set the `animation-timeline` property, it does reset the timeline to the default time-based document timeline.
-
-```html hidden live-sample___initial live-sample___entry_exit live-sample___inset_percent live-sample___inset_length live-sample___inset_cover live-sample___inset_contain live-sample___cover_contain live-sample___exit_length_negative live-sample___entry_crossing live-sample___exit_crossing
-<main>
-  <article>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>Scroll down ⇩</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <section class="one animated_element">
-      <div>
-        <i>Animated Element</i>
-        <span></span>
-      </div>
-    </section>
-    <section class="double">
-      <div>
-        <i id="A" class="animated_element">A</i>
-        <i id="B" class="animated_element">B</i>
-      </div>
-    </section>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>Scroll up ⇧</p>
-  </article>
-</main>
-```
-
-```html hidden live-sample___initial live-sample___entry_exit live-sample___inset_percent live-sample___inset_length live-sample___inset_cover live-sample___inset_contain live-sample___cover_contain live-sample___entry_crossing live-sample___exit_crossing live-sample___exit_length_negative
-<fieldset>
-  <legend>Select the height of the animated element</legend>
-
-  <label><input name="height" value="50" type="radio" checked /> 50px</label>
-  <label><input name="height" value="250" type="radio" /> 250px</label>
-  <label><input name="height" value="500" type="radio" /> 500px</label>
-</fieldset>
-<fieldset class="double">
-  <legend>Select the animation range</legend>
-
-  <label><input name="range" value="20" type="radio" checked />20% / 60%</label>
-  <label><input name="range" value="0" type="radio" /> 0% / 100%</label>
-</fieldset>
-```
-
-```css hidden live-sample___initial live-sample___entry_exit live-sample___inset_percent live-sample___inset_length live-sample___inset_cover live-sample___inset_contain live-sample___cover_contain live-sample___exit_length_negative live-sample___entry_crossing live-sample___exit_crossing
-:root {
-  --animElHeight: 50px;
-  --animElHeightWord: "50px";
-  --barColor: black;
-}
-body:has(input[value="250"]:checked) {
-  --animElHeight: 250px;
-  --animElHeightWord: "250px";
-}
-body:has(input[value="500"]:checked) {
-  --animElHeight: 500px;
-  --animElHeightWord: "500px";
-}
-main {
-  padding: 20px 0 0 20px;
-  margin-bottom: 2em;
-}
-article {
-  outline: 3px dashed;
-  width: 500px;
-  margin: auto;
-  overflow: scroll;
-  position: relative;
-  height: 250px;
-  box-sizing: content-box;
-}
-
-p {
-  padding: 10px;
-  margin: 10px;
-}
-
-section {
-  --clr: yellow;
-  --words: "Animation not started";
-  position: relative;
-  margin: 20px;
-  text-align: center;
-}
-.one,
-.double i {
-  animation: showAnim step-end 1 forwards;
-  animation-timeline: view();
-}
-i,
-.animated_element {
-  background-color: hsl(from var(--clr) h s calc(l * 1.4));
-  display: block;
-  height: var(--animElHeight);
-  line-height: var(--animElHeight);
-}
-span {
-  background-color: hsl(from var(--clr) h s 90%);
-  border: 5px solid hsl(from var(--clr) h s 20%);
-  min-width: 250px;
-  height: 30px;
-  line-height: 30px;
-}
-span,
-i {
-  font-family: sans-serif;
-  font-size: 1.5rem;
-}
-span::before {
-  content: var(--words);
-}
-span {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  padding: 10px;
-}
-i::after {
-  content: " ( " var(--animElHeightWord) " )";
-}
-label {
-  padding-right: 2em;
-}
-legend {
-  margin-top: 2em;
-}
-
-@keyframes showAnim {
-  from {
-    --clr: green;
-    --words: "Currently animating";
-  }
-  to {
-    --clr: red;
-    --words: "Animation complete";
-  }
-}
-body::before {
-  display: block;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 1.5rem;
-}
-
-@layer no-support {
-  @supports not (animation-timeline: view()) {
-    body::before {
-      content: "Your browser doesn't support view progress scrolling.";
-      background-color: wheat;
-      display: block;
-      text-align: center;
-    }
-  }
-}
-```
-
-```css hidden live-sample___initial live-sample___inset_percent live-sample___inset_length live-sample___inset_cover live-sample___inset_contain
-.double {
-  display: none;
-}
-```
-
-```css hidden live-sample___cover_contain live-sample___exit_length_negative live-sample___entry_crossing live-sample___exit_crossing live-sample___entry_exit
-.one {
-  display: none;
-}
-.double div {
-  display: flex;
-  gap: 10px;
-}
-```
 
 In every example, the {{glossary("scroll container")}} is `250px` tall. As you scroll up, the animation progresses. As you scroll down, the animation reverses.
 
@@ -214,7 +44,7 @@ In this example, note how any time any part of the subject element is visible in
 
 ### Animation attachment ranges
 
-When no animation range properties are defined, the animation is applied the entire time any portion of the subject element is visible, meaning the default **animation attachment range** is the sum of the height of the scroll container and the height of the subject element, with that extra height being at the scroll end edge.
+When no animation range properties are defined, the the animation is applied the entire time any portion of the subject element is visible, meaning the default **animation attachment range** is the sum of the height of the scroll container and the height of the subject element, with that extra height being at the scroll end edge. The default `<timeline-range-name>` is `normal`, which defaults to `cover`.
 
 By default, the `0%` progression in a [view timeline progress](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) occurs when the subject element's start edge intersects the scrollport at the end edge, reaching `100%` progress when the subject's end edge exits via the scrollport's start edge. These are the subject and scrollport's top and bottom edges when scrolling vertically, and the left and right or right and left edges when scrolling horizontally, depending on the writing mode.
 
@@ -251,13 +81,11 @@ By default, the element animates while it is "in view", but this default definit
 
 ### Animation range properties
 
-The {{cssxref("animation-range")}} properties enable setting a named timeline range and then insetting animations from the animation attachment ranges using {{cssxref("length-percentage")}} inset values, such as `20%` or `100px`.
+The {{cssxref("animation-range")}} properties enable defining a named timeline range and then insetting animations from the animation attachment ranges by setting a {{cssxref("timeline-range-name")}}, such as `contain` or `exit-crossing`, and {{cssxref("length-percentage")}} inset values from the start of the range, such as `20%` or `100px`.
 
-The {{cssxref("animation-range-start")}} and {{cssxref("animation-range-end")}} properties, which can both be set using the `animation-range` shorthand, define an animation's attachment range, limiting the keyframe's active interval to that specific portion of the range.
+Named timeline ranges define the portions of a {{domxref("ViewTimeline")}} that define an animation's range, specifying the start and end of the animations's attachment range.
 
-These properties specify the start and end of the animations's attachment range, shifting the start time and/or end of the animation, where the `0%` and `100%` keyframes occur when the {{cssxref("animation-iteration-count")}} is set or defaults to `1`. Both the start and end offsets are from the start of the attachment range.
-
-Setting an inset is similar to setting the {{cssxref("animation-delay")}} on time-based {{domxref("DocumentTimeline")}} animations. Just like the `animation-delay` property can delay the animation start until `500ms` after the animation is otherwise applied, the `animation-range-start` property can be used to delay a view progress timeline animation until `50px` of the subject is in view. The `animation-range-end` property can similarly end the animation early. We also have the `animation-range` shorthand property, which can both move the `from` animation progress point to a scroll position occurring after the default `0%` progress point and the `to` animation progress point to a scroll position occurring before the default `100%` progress point.
+The `animation-range` property is a shorthand property, defining the {{cssxref("animation-range-start")}} and {{cssxref("animation-range-end")}} properties. The `animation-range-start` defines the position of the subject element when the animation starts. The `animation-range-end` defines the position of the subject element when the animation ends.
 
 See the [timeline range name guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/timeline_range_name) to learn about the different named timeline ranges. The focus of this guide is insetting the start and end of the animation attachment range using {{cssxref("length-percentage")}} inset values.
 
@@ -733,6 +561,180 @@ line {
   width: 1px;
   position: absolute;
   top: -100px;
+}
+```
+
+```html hidden live-sample___initial live-sample___entry_exit live-sample___inset_percent live-sample___inset_length live-sample___inset_cover live-sample___inset_contain live-sample___cover_contain live-sample___exit_length_negative live-sample___entry_crossing live-sample___exit_crossing
+  <article>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>Scroll down ⇩</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <section class="one animated_element">
+      <div>
+        <i>Animated Element</i>
+        <span></span>
+      </div>
+    </section>
+    <section class="double">
+      <div>
+        <i id="A" class="animated_element">A</i>
+        <i id="B" class="animated_element">B</i>
+      </div>
+    </section>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>Scroll up ⇧</p>
+  </article>
+</main>
+```
+
+```html hidden live-sample___initial live-sample___entry_exit live-sample___inset_percent live-sample___inset_length live-sample___inset_cover live-sample___inset_contain live-sample___cover_contain live-sample___entry_crossing live-sample___exit_crossing live-sample___exit_length_negative
+<fieldset>
+  <legend>Select the height of the animated element</legend>
+
+  <label><input name="height" value="50" type="radio" checked /> 50px</label>
+  <label><input name="height" value="250" type="radio" /> 250px</label>
+  <label><input name="height" value="500" type="radio" /> 500px</label>
+</fieldset>
+<fieldset class="double">
+  <legend>Select the animation range</legend>
+
+  <label><input name="range" value="20" type="radio" checked />20% / 60%</label>
+  <label><input name="range" value="0" type="radio" /> 0% / 100%</label>
+</fieldset>
+```
+
+```css hidden live-sample___initial live-sample___entry_exit live-sample___inset_percent live-sample___inset_length live-sample___inset_cover live-sample___inset_contain live-sample___cover_contain live-sample___exit_length_negative live-sample___entry_crossing live-sample___exit_crossing
+@layer {
+  :root {
+    --animElHeight: 50px;
+    --animElHeightWord: "50px";
+    --barColor: black;
+  }
+  body:has(input[value="250"]:checked) {
+    --animElHeight: 250px;
+    --animElHeightWord: "250px";
+  }
+  body:has(input[value="500"]:checked) {
+    --animElHeight: 500px;
+    --animElHeightWord: "500px";
+  }
+  main {
+    padding: 20px 0 0 20px;
+    margin-bottom: 2em;
+  }
+  article {
+    outline: 3px dashed;
+    width: 500px;
+    margin: auto;
+    overflow: scroll;
+    position: relative;
+    height: 250px;
+    box-sizing: content-box;
+  }
+
+  p {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  section {
+    --clr: yellow;
+    --words: "Animation not started";
+    position: relative;
+    margin: 20px;
+    text-align: center;
+  }
+  .one,
+  .double i {
+    animation: showAnim step-end 1 forwards;
+    animation-timeline: view();
+  }
+  i,
+  .animated_element {
+    background-color: hsl(from var(--clr) h s calc(l * 1.4));
+    display: block;
+    height: var(--animElHeight);
+    line-height: var(--animElHeight);
+  }
+  span {
+    background-color: hsl(from var(--clr) h s 90%);
+    border: 5px solid hsl(from var(--clr) h s 20%);
+    min-width: 250px;
+    height: 30px;
+    line-height: 30px;
+  }
+  span,
+  i {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+  }
+  span::before {
+    content: var(--words);
+  }
+  span {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+  }
+  i::after {
+    content: " ( " var(--animElHeightWord) " )";
+  }
+  label {
+    padding-right: 2em;
+  }
+  legend {
+    margin-top: 2em;
+  }
+
+  @keyframes showAnim {
+    from {
+      --clr: green;
+      --words: "Currently animating";
+    }
+    to {
+      --clr: red;
+      --words: "Animation complete";
+    }
+  }
+  body::before {
+    display: block;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+  }
+
+  @layer no-support {
+    @supports not (animation-timeline: view()) {
+      body::before {
+        content: "Your browser doesn't support view progress scrolling.";
+        background-color: wheat;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+```
+
+```css hidden live-sample___initial live-sample___inset_percent live-sample___inset_length live-sample___inset_cover live-sample___inset_contain
+.double {
+  display: none;
+}
+```
+
+```css hidden live-sample___cover_contain live-sample___exit_length_negative live-sample___entry_crossing live-sample___exit_crossing live-sample___entry_exit
+.one {
+  display: none;
+}
+.double div {
+  display: flex;
+  gap: 10px;
 }
 ```
 
