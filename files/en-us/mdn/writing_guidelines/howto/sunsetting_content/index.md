@@ -6,9 +6,9 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-This article describes the process for retiring entire sections of MDN Web Docs content, known as _sunsetting_. Sunsetting is different from [deleting or moving individual pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting); it applies when a whole section is no longer actively maintained, relevant, or aligned with MDN's goals and needs to be retired in a planned and transparent way. Sunsetted content is not permanently deleted — it is always archived in the [MDN Museum repository](https://github.com/mdn/museum).
+This article describes the process for retiring entire sections of MDN Web Docs content, known as _sunsetting_. Sunsetting is different from [deleting or moving individual pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting); it applies when a whole section is no longer actively maintained, relevant, or aligned with MDN's goals and needs to be retired in a planned and transparent way. Sunset content is not permanently deleted — it is always archived in the [MDN Museum repository](https://github.com/mdn/museum).
 
-Sunsetting is a very rare occurrence, and the process will differ depending on the circumstances. This guide provides an overview of when and how to sunset a section, and the steps to follow to do so responsibly.
+Sunsetting is a very rare occurrence, and the process will differ depending on the circumstances. This guide provides an overview of when and how to sunset a section, and the steps to follow to do so responsibly. For a list of sections that have already been sunset, see [Sunset content](/en-US/docs/MDN/Writing_guidelines/Howto/Sunsetting_content/Sunset_content).
 
 ## When to consider sunsetting content
 
