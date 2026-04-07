@@ -35,7 +35,7 @@ Likewise, the WebCodecs API also introduces the {{domxref("AudioDecoder")}} and 
 
 ![AudioEncoder and AudioDecoder](audio-encoder-decoder.png)
 
-There is a 1:1 correspondence between the raw and encoded versions of each media type. Decoding n `EncodedVideoChunk` objects will yield exactly n `VideoFrame` objects (same with audio)
+There is a 1:1 correspondence between the raw and encoded versions of each media type. Decoding n `EncodedVideoChunk` objects will yield exactly n `VideoFrame` objects (same with audio).
 
 ### Video
 
@@ -47,7 +47,7 @@ A `VideoFrame` represents a video frame, and is tied both to actual pixel data o
 
 ### Audio
 
-An `AudioData` object represents a number of individual audio samples (1024 is a typical number). Audio sample data can be extracted as a {{domxref("Float32Array")}} via the `copyTo` method. There is no direct integration to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API).
+An `AudioData` object represents a number of individual audio samples (1024 is a typical number). Audio sample data can be extracted as a {{jsxref("Float32Array")}} via the `copyTo` method. There is no direct integration to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API).
 
 ![AudioData and EncodedAudioChunk](audio-data.png)
 
@@ -148,7 +148,7 @@ You then need to configure the encoder with the codec parameter and various othe
 
 ```js
 encoder.configure({
-  codec: "vp09.00.40.08", // See codec selection guide
+  codec: "vp09.00.40.08.00", // See codec selection guide
   width: 1280,
   height: 720,
   bitrate: 1_000_000, // 1 Mbps
@@ -161,7 +161,7 @@ You can then start encoding frames to the encoder. You can construct a `VideoFra
 ```js
 for (let i = 0; i < 60; i++) {
   const frame = new VideoFrame(canvas, { timestamp: (i * 1e6) / 30 }); //30 fps, in microseconds
-  encoder.encode(frame, { keyFrame: i % 60 == 0 });
+  encoder.encode(frame, { keyFrame: i % 60 === 0 });
 }
 ```
 

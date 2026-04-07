@@ -48,7 +48,7 @@ All the major codecs use a technique called the Discrete Cosine Transform, which
 
 The amount of detail removed is determined dynamically by the encoding algorithm. This can be adjusted by configuring
 
-- The codec string, such as `av01.0.12H.08`, which specificies the codec (AV1), as well as the profile and level, which determine the logic used by the codec to determine how much quality to remove given a specified bitrate.
+- The codec string, such as `av01.0.12H.08`, which specifies the codec (AV1), as well as the profile and level, which determine the logic used by the codec to determine how much quality to remove given a specified bitrate.
 - The bitrate, which is a parameter determining how much data the output filestream will use. Larger bitrates result in larger file sizes, while also removing less detail, resulting in higher quality
 
 The following shows the tradeoff between quality and bitrate, using baseline `vp9` on a 1080p video:
@@ -122,7 +122,6 @@ To play a video with WebCodecs, it is necessary to both demux the file (typicall
 
 ![Demuxing](decoder-demuxer.png)
 
-e.g.,
 Likewise, to write a video file with WebCodecs it is necessary to also follow the container spec, writing metadata and placing the encoded chunks at the correct position in the output file stream. This is called muxing, and is not handled natively by the WebCodecs API, instead requiring a 3rd party library like [MediaBunny](https://github.com/Vanilagy/mediabunny)
 
 See the [Muxing and Demuxing](/en-US/docs/Web/API/WebCodecs_API#muxing_and_demuxing) section on the WebCodecs API overview page for library options for demuxing and muxing.
