@@ -131,5 +131,5 @@ Same example as before with a curved path and following the direction of the pat
 ## See also
 
 - [SVG](/en-US/docs/Web/SVG)
-- [SVG Animation Specification](https://svgwg.org/svg2-draft/animate.html)
+- [SVG Animation Specification](https://w3c.github.io/svgwg/svg2-draft/animate.html)
 - [SMIL Specification](https://www.w3.org/TR/SMIL/)

@@ -2,7 +2,7 @@
 title: pathLength
 slug: Web/SVG/Reference/Attribute/pathLength
 page-type: svg-attribute
-spec-urls: https://svgwg.org/svg2-draft/paths.html#PathLengthAttribute
+spec-urls: https://w3c.github.io/svgwg/svg2-draft/paths.html#PathLengthAttribute
 sidebar: svgref
 ---
 
