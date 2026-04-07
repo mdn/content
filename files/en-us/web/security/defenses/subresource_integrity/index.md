@@ -79,7 +79,7 @@ As a consequence of the requirement to use CORS when requesting a resource with 
   crossorigin="anonymous"></script>
 ```
 
-The reason for this is that, by default, a resource loaded from a document's HTML is loaded in `no-cors` mode:
+This is needed because, by default, a resource loaded from a document's HTML is loaded in `no-cors` mode:
 
 ```html
 <script src="https://cdn.example.com"></script>
