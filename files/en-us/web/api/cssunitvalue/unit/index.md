@@ -10,11 +10,11 @@ browser-compat: api.CSSUnitValue.unit
 
 The **`CSSUnitValue.unit`** read-only property
 of the {{domxref("CSSUnitValue")}} interface returns a string
-indicating the type of unit.
+indicating the [unit type](/en-US/docs/Web/CSS/Guides/Values_and_units#units).
 
 ## Value
 
-A string indicating the unit type of a given {{cssxref("&lt;dimension&gt;")}}, such as `"em"` or `"px"`.
+A string indicating the unit type, such as `"em"`, `"px"`, `"%"`, etc.
 
 
 ## Examples
@@ -44,7 +44,7 @@ console.log(pos.y.unit); // "em"
 ## See also
 
 - {{domxref('CSSUnitValue.value')}}
-- [Dimensions in CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#dimensions)
+- [CSS Numeric data types](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)
 - [CSS Values and Units](/en-US/docs/Web/CSS/Guides/Values_and_units), a listing of all possible unit types 
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
