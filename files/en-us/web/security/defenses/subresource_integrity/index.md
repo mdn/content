@@ -70,15 +70,23 @@ Access-Control-Allow-Origin: *
 
 ### `no-cors` mode and the `crossorigin` attribute
 
-As a consequence of the requirement to use CORS when requesting a resource with integrity, the resource must not be requested in `no-cors` mode.
+As a consequence of the requirement to use CORS when requesting a resource with integrity, you must include the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute in your markup:
 
-In `no-cors` mode, a cross-origin request will succeed even if the owner of the resource does not send the appropriate CORS headers, but the content of the response will not be shared with the requester. That's why a document can _use_ a resource that's requested using `no-cors`, without being able to _read_ it. This is the default mode for a subresource loaded from a document's HTML:
+```html
+<script
+  src="https://cdn.example.com"
+  integrity="sha512-abcde"
+  crossorigin="anonymous"></script>
+```
+
+The reason for this is that, by default, a resource loaded from a document's HTML is loaded in `no-cors` mode:
 
 ```html
 <script src="https://cdn.example.com"></script>
+<!-- loaded in no-cors mode -->
 ```
 
-In this case, `https://cdn.example.com` does not have to explicitly grant the requester access to the resource, but the requester can still load the script: it just can't read its contents.
+In `no-cors` mode, a cross-origin request will succeed even if the owner of the resource does not send the appropriate CORS headers, but the content of the response will not be shared with the requester. So a document can _use_ a resource that it requested using `no-cors`, but isn't able to _read_ it.
 
 However, subresource integrity could enable an attacker to derive information about the content of a subresource, even when it's requested in `no-cors` mode. To do this, the attacker creates a page that:
 
@@ -91,15 +99,6 @@ To prevent this attack, browsers will not allow `no-cors` requests to use subres
 
 ```html example-bad
 <script src="https://cdn.example.com" integrity="sha512-abcde"></script>
-```
-
-Instead, the element must include the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute:
-
-```html example-good
-<script
-  src="https://cdn.example.com"
-  integrity="sha512-abcde"
-  crossorigin="anonymous"></script>
 ```
 
 ## Integrity policy
