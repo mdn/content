@@ -80,7 +80,7 @@ After the agreed-upon sunsetting period has passed, the content can be removed f
 
 2. **Remove the content and add redirects.** Use the [`delete` command](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#deleting_pages) to remove the pages and set up redirects. Redirects should point users to the most relevant alternative content if available. If there is no suitable alternative, redirect to the MDN Web Docs homepage.
 
-3. **Clean up references.** Remove or update any references to the sunset section across MDN, including sidebar definitions, landing pages, and cross-links from other articles. Adding redirects in step 2 will prevent broken links, but it is best practice to update the referring content directly.
+3. **Clean up references.** Remove or update any references to the sunset section across MDN including sidebar definitions, landing pages, and cross-links from other articles. Adding redirects (see Step 2) will prevent broken links, but it is best practice to update the referring content directly.
 
 4. **File an issue for UI updates.** Some sections of the website UI — such as navigation menus and homepage sections — are not part of the `content` repo and are instead managed by the platform team. File an issue in the [mdn/fred](https://github.com/mdn/fred/) repository to check whether any UI changes are needed to remove references to the sunset content. If they are, coordinate the content removal and the UI update so they are deployed at the same time.
 
