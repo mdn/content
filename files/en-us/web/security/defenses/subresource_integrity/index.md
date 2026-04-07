@@ -41,7 +41,8 @@ For example, the following markup adds an `integrity` attribute to a `<script>` 
   sha384-Tk2Yjg3YmYzMWNkZTdhMTFkM2FlNDg4ZjE3MzEzNTk3ZDlh
   sha384-DEzZmZhMGFkMGQ0OTQ3MzZkNGY0OTg4NGIwN2ZiMMTM3YmQ
   sha512-ZmQ5NjNiYWJjYTM3MjRhMGI4MTQzNWRmZTZkZGYyMzQyOGYYTZkYjBm
-  sha512-OGUwYThkZDc2YzFlZGI5MDEzZmZhMGFkMGQ0OTQ3MzZkNGYZTEzODk2"></script>
+  sha512-OGUwYThkZDc2YzFlZGI5MDEzZmZhMGFkMGQ0OTQ3MzZkNGYZTEzODk2"
+  crossorigin="anonymous"></script>
 ```
 
 ### How browsers handle Subresource Integrity
@@ -57,12 +58,48 @@ This means that developers can:
 - **Provide multiple values using different hash functions**, and the browser will use only the strongest function provided.
 - **Provide multiple values using the same hash function**, and the browser will validate the attribute if any of them match: this enables a developer to provide alternate versions of a resource, while still checking their integrity.
 
-### Cross-Origin Resource Sharing and Subresource Integrity
+## Subresource Integrity and CORS
 
-For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin. Therefore, the resource must be served with an [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) header that allows the resource to be shared with the requesting origin; for example:
+If you set the `integrity` attribute on a resource, and the resource is being served from a different {{glossary("origin")}} to the requester, then the site serving the resource must also use [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) to indicate that it has explicitly allowed the resource to be loaded by the requester, by setting the appropriate {{httpheader("Access-Control-Allow-Origin")}} response header.
+
+Often a CDN will use the wildcard value for this:
 
 ```http
 Access-Control-Allow-Origin: *
+```
+
+### `no-cors` mode and the `crossorigin` attribute
+
+As a consequence of the requirement to use CORS when requesting a resource with integrity, the resource must not be requested in `no-cors` mode.
+
+In `no-cors` mode, a cross-origin request will succeed even if the owner of the resource does not send the appropriate CORS headers, but the content of the response will not be shared with the requester. That's why a document can _use_ a resource that's requested using `no-cors`, without being able to _read_ it. This is the default mode for a subresource loaded from a document's HTML:
+
+```html
+<script src="https://cdn.example.com"></script>
+```
+
+In this case, `https://cdn.example.com` does not have to explicitly grant the requester access to the resource, but the requester can still load the script: it just can't read its contents.
+
+However, subresource integrity could enable an attacker to derive information about the content of a subresource, even when it's requested in `no-cors` mode. To do this, the attacker creates a page that:
+
+- Requests the resource, providing a specific hash value as the `integrity` value.
+- Monitors the success or failure of the resource load (for example, by [listening for `error` events](/en-US/docs/Web/Security/Attacks/XS-Leaks#leaking_page_existence_using_error_events)).
+
+The attacker then tricks the target user into loading the page: if the resource is successfully loaded, then the attacker knows that the resource has the contents that match the hash.
+
+To prevent this attack, browsers will not allow `no-cors` requests to use subresource integrity, so a request like this will always fail:
+
+```html example-bad
+<script src="https://cdn.example.com" integrity="sha512-abcde"></script>
+```
+
+Instead, the element must include the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute:
+
+```html example-good
+<script
+  src="https://cdn.example.com"
+  integrity="sha512-abcde"
+  crossorigin="anonymous"></script>
 ```
 
 ## Integrity policy

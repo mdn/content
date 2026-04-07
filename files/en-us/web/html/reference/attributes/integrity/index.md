@@ -53,7 +53,8 @@ Note that we've truncated the example values, for brevity.
   sha384-Tk2Yjg3YmYzMWNkZTdhMTFkM2FlNDg4ZjE3MzEzNTk3ZDlh
   sha384-DEzZmZhMGFkMGQ0OTQ3MzZkNGY0OTg4NGIwN2ZiMMTM3YmQ
   sha512-ZmQ5NjNiYWJjYTM3MjRhMGI4MTQzNWRmZTZkZGYyMzQyOGYYTZkYjBm
-  sha512-OGUwYThkZDc2YzFlZGI5MDEzZmZhMGFkMGQ0OTQ3MzZkNGYZTEzODk2"></script>
+  sha512-OGUwYThkZDc2YzFlZGI5MDEzZmZhMGFkMGQ0OTQ3MzZkNGYZTEzODk2"
+  crossorigin="anonymous"></script>
 ```
 
 ### Including `integrity` on `<link>` elements
@@ -64,7 +65,8 @@ The following {{htmlelement("link")}} element loads a stylesheet and includes an
 <link
   rel="stylesheet"
   href="https://cdn.example.com/style.css"
-  integrity="sha512-MzViNmUxNTFiMDUzZGIwZjcwZDIyYTc5NTA4ZmQyNTYzNjUxYm" />
+  integrity="sha512-MzViNmUxNTFiMDUzZGIwZjcwZDIyYTc5NTA4ZmQyNTYzNjUxYm"
+  crossorigin="anonymous" />
 ```
 
 ## Specifications
