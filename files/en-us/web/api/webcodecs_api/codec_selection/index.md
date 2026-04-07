@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("WebCodecs API")}}
 
-The WebCodecs API requires working not just with codecs such as `vp9` or `h264` but specific codec strings such as `vp09.00.40.08.00`— precise identifiers that specify not just the codec family but also the profile, level, and other parameters.
+The WebCodecs API requires working not just with codecs such as `vp9` or `h264` but specific codec strings such as `vp09.00.40.08.00` — precise identifiers that specify not just the codec family but also the profile, level, and other parameters.
 This guide explains how codec strings work and how to choose the right codec for common use cases.
 
 ## Decoding vs encoding
