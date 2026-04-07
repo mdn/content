@@ -82,7 +82,7 @@ For vertical languages, we use the {{cssxref("writing-mode")}} and {{cssxref("te
 
 ```css hidden
 :lang(ja),
-:lang(mn-MONG) {
+:lang(mn-Mong) {
   float: left;
 }
 ```
