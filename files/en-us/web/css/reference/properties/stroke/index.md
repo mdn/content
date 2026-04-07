@@ -16,7 +16,7 @@ The **`stroke`** [CSS](/en-US/docs/Web/CSS) property defines the color or SVG pa
 ```css
 /* assorted color values */
 stroke: rgb(153 51 102 / 1);
-stroke: color-mix(in lch, var(--primaryColor) 35%, gray 15%));
+stroke: color-mix(in lch, var(--primaryColor) 35%, gray 15%);
 stroke: dodgerblue;
 stroke: currentColor;
 stroke: transparent;
@@ -36,10 +36,10 @@ stroke: unset;
   - : Sets the painting of the stroke with any valid CSS color value.
 
 - `<image>`
-  - : Sets the painting of the stroke with what SVG calls a [_paint server_](https://svgwg.org/svg2-draft/pservers.html), which in this context is an SVG gradient or pattern. CSS gradients cannot be used with the `stroke` property.
+  - : Sets the painting of the stroke with what SVG calls a [_paint server_](https://w3c.github.io/svgwg/svg2-draft/pservers.html), which in this context is an SVG gradient or pattern. CSS gradients cannot be used with the `stroke` property.
 
 - `context-stroke`
-  - : Causes an element to "inherit" its stroke definition from its [_context element_](https://svgwg.org/svg2-draft/painting.html#TermContextElement). If there is no valid context element, then this value will result in no paint being used for the stroke.
+  - : Causes an element to "inherit" its stroke definition from its [_context element_](https://w3c.github.io/svgwg/svg2-draft/painting.html#TermContextElement). If there is no valid context element, then this value will result in no paint being used for the stroke.
 
 ## Formal definition
 

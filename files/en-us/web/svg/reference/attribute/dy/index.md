@@ -5,7 +5,7 @@ page-type: svg-attribute
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fedropshadow-dy
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-feoffset-dy
-  - https://svgwg.org/svg2-draft/text.html#TextElementDYAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementDYAttribute
 sidebar: svgref
 ---
 
