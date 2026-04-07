@@ -72,7 +72,7 @@ For vertical languages, we use the {{cssxref("writing-mode")}} and {{cssxref("te
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
-:lang(mn-MONG) {
+:lang(mn-Mong) {
   writing-mode: vertical-lr;
   text-orientation: sideways;
 }
