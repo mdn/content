@@ -16,7 +16,7 @@ The **`stroke`** [CSS](/en-US/docs/Web/CSS) property defines the color or SVG pa
 ```css
 /* assorted color values */
 stroke: rgb(153 51 102 / 1);
-stroke: color-mix(in lch, var(--primaryColor) 35%, gray 15%));
+stroke: color-mix(in lch, var(--primaryColor) 35%, gray 15%);
 stroke: dodgerblue;
 stroke: currentColor;
 stroke: transparent;

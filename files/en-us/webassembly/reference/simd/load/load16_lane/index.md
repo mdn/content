@@ -37,14 +37,14 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ;; Common usage
 v128.load16_lane lane_value
 
-;; With optional immediates
-v128.load16_lane memidx offset=int align=int lane_value
+;; With optional immediate operands
+v128.load16_lane mem_idx offset=int align=int lane_value
 
 ```
 
 - `v128.load16_lane`
   - : The `v128.load16_lane` instruction.
-- `memidx` {{optional_inline}}
+- `mem_idx` {{optional_inline}}
   - : An integer representing the memory index, in cases where the module uses multiple memories. The default is `0`.
 - `offset=int` {{optional_inline}}
   - : An integer representing a constant number of bytes to add to the memory address before loading. The default is `0`.
@@ -68,9 +68,9 @@ v128.load16_lane memidx offset=int align=int lane_value
 
 ### Binary encoding
 
-| Instruction        | Binary format                                           | Example text => binary                                                |
-| ------------------ | ------------------------------------------------------- | --------------------------------------------------------------------- |
-| `v128.load16_lane` | `0xFD 85:u32 memidx:u8 offset:u32 align:u32 laneidx:u8` | `v128.load16_lane 0 offset=0 align=2 6` => `0xfd 0x55 0x01 0x00 0x06` |
+| Instruction        | Binary format                                             | Example text => binary                                                |
+| ------------------ | --------------------------------------------------------- | --------------------------------------------------------------------- |
+| `v128.load16_lane` | `0xFD 85:u32 mem_idx:u8 offset:u32 align:u32 lane_idx:u8` | `v128.load16_lane 0 offset=0 align=2 6` => `0xfd 0x55 0x01 0x00 0x06` |
 
 > [!NOTE]
 > While Wasm text format specifies the literal `align` value, the binary equivalent represents the exponent of the formula `2^x` used to calculate the alignment. So for example, `align=1` is equivalent to `0x00` (`2^0`), while `align=2` is equivalent to `0x01` (`2^1`).
