@@ -60,7 +60,7 @@ This means that developers can:
 
 ## Subresource Integrity and CORS
 
-If you set the `integrity` attribute on a resource, and the resource is being served from a different {{glossary("origin")}} to the requester, then the site serving the resource must also use [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) to indicate that it has explicitly allowed the resource to be loaded by the requester, by setting the appropriate {{httpheader("Access-Control-Allow-Origin")}} response header.
+Cross-origin requests that use subresource integrity must use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) protocol. That is, the server providing the resource must explicitly indicate to the browser that the requesting origin is allowed to access the resource. It does this by sending the appropriate {{httpheader("Access-Control-Allow-Origin")}} response header.
 
 Often a CDN will use the wildcard value for this:
 
