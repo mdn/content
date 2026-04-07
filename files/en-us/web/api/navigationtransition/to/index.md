@@ -20,6 +20,8 @@ A {{domxref("NavigationDestination")}} object.
 
 ## Examples
 
+### Handling a navigation error
+
 ```js
 navigation.onnavigateerror = (e) => {
   if (navigation.transition?.to?.url === login_page_url) {
