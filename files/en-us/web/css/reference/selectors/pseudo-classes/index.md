@@ -409,7 +409,7 @@ W
 
 X
 
-- {{CSSXref(":xr-overlay")}}
+- {{CSSXref(":xr-overlay")}} {{Experimental_Inline}}
 
 ### Non-standard pseudo-classes
 

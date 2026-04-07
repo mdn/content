@@ -2,6 +2,8 @@
 title: :xr-overlay
 slug: Web/CSS/Reference/Selectors/:xr-overlay
 page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.xr-overlay
 sidebar: cssref
 ---
