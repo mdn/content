@@ -109,6 +109,93 @@ The page is best {{LiveSampleLink('Selecting an image to fit window width', 'vie
 1. Enable the developer tools and change the width of the page — you should see the image change size at the sizes media query trigger points: 480px (30em), and 800px (50em).
 2. Set the width between 50em (800px) and 60em (960px) so that the last media query is selected. Then alternately press each of the buttons and note how the layout size of the image is changed.
 
+{{EmbedLiveSample("Selecting an image to fit window width", "", 1050)}}
+
+### Ex - Slider
+
+In this example, a blog-like layout is created, displaying some text and an image for which three size points are specified, depending on the width of the window. Three versions of the image are also available, with their widths specified. The browser takes all of this information and selects an image and width that best meets the specified values.
+
+How exactly the images are used may depend upon the browser and the pixel density of the user's display.
+
+Buttons at the bottom of the example let you actually modify the `sizes` property slightly, switching the largest of the three widths for the image between 40em and 50em.
+
+#### HTML
+
+```html
+<div id="controls">
+  <input type="range" id="slider" min="100" max="700" value="600" step="1" />
+  <input type="number" id="number" min="100" max="700" value="600" step="1" />
+  <span>px</span>
+</div>
+
+<div id="scroll-container">
+  <div id="spacer"></div>
+  <img
+    loading="lazy"
+    sizes="auto"
+    src="600.png"
+    width="600"
+    max-width:
+    700px;
+    height="600"
+    srcset="600.png 600w, 400.png 400w, 200.png 200w"
+    alt="Square image showing what size we're using." />
+</div>
+```
+
+```js
+const slider = document.getElementById("slider");
+const number = document.getElementById("number");
+const container = document.getElementById("scroll-container");
+
+function setSize(px) {
+  px = Math.min(700, Math.max(100, px));
+  container.style.width = px + "px";
+  slider.value = px;
+  number.value = px;
+}
+
+slider.addEventListener("input", () => setSize(parseInt(slider.value)));
+number.addEventListener("input", () => setSize(parseInt(number.value)));
+```
+
+#### CSS
+
+```css
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#number {
+  width: 60px;
+}
+
+#scroll-container {
+  height: 650px;
+  width: 600px;
+  overflow-y: scroll;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+```
+
+#### Result
+
+The page is best {{LiveSampleLink('Ex4', 'viewed in its own window')}}, so you can adjust the sizes fully (otherwise it is constrained by its containing frame).
+
+1. Enable the developer tools and change the width of the page — you should see the image change size at the sizes media query trigger points: 480px (30em), and 800px (50em).
+2. Set the width between 50em (800px) and 60em (960px) so that the last media query is selected. Then alternately press each of the buttons and note how the layout size of the image is changed.
+
+{{EmbedLiveSample("Ex - Slider", "", 650)}}
+
 ## Specifications
 
 {{Specifications}}
