@@ -49,14 +49,12 @@ let rightPressed = false;
 let leftPressed = false;
 ```
 
-The default value for both is `false` because at the beginning the control buttons are not pressed. To listen for key presses, we will set up two event listeners. Add the following lines near your setup code, before the game loop starts:
+The default value for both is `false` because at the beginning the control buttons are not pressed. To listen for key presses, we will set up two event listeners. Add the following lines just above the `drawBall` function definition:
 
 ```js
 document.addEventListener("keydown", keyDownHandler);
 document.addEventListener("keyup", keyUpHandler);
 ```
-
-In the live sample later on this page, these lines appear outside `startGame()` because that example wraps the `setInterval()` call in a button-triggered function.
 
 When the `keydown` event is fired on any of the keys on your keyboard (when they are pressed), the `keyDownHandler()` function will be executed. The same pattern is true for the second listener: `keyup` events will fire the `keyUpHandler()` function (when the keys stop being pressed). Add these to your code now, below the `addEventListener()` lines:
 
