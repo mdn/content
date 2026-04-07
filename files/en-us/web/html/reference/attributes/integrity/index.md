@@ -42,7 +42,7 @@ In each case, the part preceding `-` identifies the {{glossary("hash function")}
 
 ### Including `integrity` on `<script>` elements
 
-The following {{htmlelement("script")}} element includes an `integrity` attribute containing two values calculated using SHA-384, and two calculated using SHA-512. If the browser supports SHA-512 values then it will only use the SHA-512 values, and if the hash of the script at `https://cdn.example.com/script.js` matches either of them, the browser will load it.
+The following {{htmlelement("script")}} element includes an `integrity` attribute containing two values calculated using SHA-384, and two calculated using SHA-512. If the browser supports SHA-512 values (as all current browsers do) then it will only use the SHA-512 values, and if the hash of the script at `https://cdn.example.com/script.js` matches either of them, the browser will load it.
 
 Note that we've truncated the example values, for brevity.
 
