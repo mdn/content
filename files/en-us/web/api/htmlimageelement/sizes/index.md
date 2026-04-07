@@ -104,9 +104,10 @@ break50.addEventListener(
 
 #### Result
 
-{{EmbedLiveSample("Selecting an image to fit window width", "", 1050)}}
+The page is best {{LiveSampleLink('Selecting an image to fit window width', 'viewed in its own window')}}, so you can adjust the sizes fully (otherwise it is constrained by its containing frame).
 
-The page is best {{LiveSampleLink('Selecting an image to fit window width', 'viewed in its own window')}}, so you can adjust the sizes fully.
+1. Enable the developer tools and change the width of the page — you should see the image change size at the sizes media query trigger points: 480px (30em), and 800px (50em).
+2. Set the width between 50em (800px) and 60em (960px) so that the last media query is selected. Then alternately press each of the buttons and note how the layout size of the image is changed.
 
 ## Specifications
 
