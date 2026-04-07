@@ -183,11 +183,11 @@ SVG elements: {{SVGElement("style")}}, {{SVGElement("script")}}
       <th scope="row">Normative document</th>
       <td>
         <a
-          href="https://svgwg.org/svg2-draft/interact.html#ScriptElementTypeAttribute"
+          href="https://w3c.github.io/svgwg/svg2-draft/interact.html#ScriptElementTypeAttribute"
           rel="external"
           >Scalable Vector Graphics (SVG) 2</a
         ><br /><a
-          href="https://svgwg.org/svg2-draft/styling.html#StyleElementTypeAttribute"
+          href="https://w3c.github.io/svgwg/svg2-draft/styling.html#StyleElementTypeAttribute"
           rel="external"
           >Scalable Vector Graphics (SVG) 2</a
         >
