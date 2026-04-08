@@ -32,7 +32,10 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The [`light-dark()`](/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark) CSS color function now accepts [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) values. This allows the setting of different images, gradients, etc. for different `color-scheme`s.
+  ([Firefox bug 2023569](https://bugzil.la/2023569)).
 
 <!-- #### Removals -->
 
