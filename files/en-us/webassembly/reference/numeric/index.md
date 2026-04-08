@@ -24,7 +24,7 @@ WebAssembly numeric instructions.
   - : Check if a floating point number is greater than another floating point number.
 - [`gt_s`](/en-US/docs/WebAssembly/Reference/Numeric/gt_s)
   - : Check if a signed integer is greater than another signed integer.
-- [`gt_u`](/en-US/docs/WebAssembly/Reference/Numeric/gt_s)
+- [`gt_u`](/en-US/docs/WebAssembly/Reference/Numeric/gt_u)
   - : Check if an unsigned integer is greater than another unsigned integer.
 - [`lt`](/en-US/docs/WebAssembly/Reference/Numeric/lt)
   - : Check if a floating point number is less than another floating point number.
