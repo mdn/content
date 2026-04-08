@@ -166,18 +166,18 @@ This is using the same code as the previous example but includes a `<div>`, inst
   Your browser does not support <code>light-dark()</code> with images.
 </p>
 <div class="wrapper">
-<section>
-  <h2>Automatic</h2>
-  <div></div>
-</section>
-<section class="light">
-  <h2>Light</h2>
-  <div></div>
-</section>
-<section class="dark">
-  <h2>Dark</h2>
-  <div></div>
-</section>
+  <section>
+    <h2>Automatic</h2>
+    <div></div>
+  </section>
+  <section class="light">
+    <h2>Light</h2>
+    <div></div>
+  </section>
+  <section class="dark">
+    <h2>Dark</h2>
+    <div></div>
+  </section>
 </div>
 ```
 
