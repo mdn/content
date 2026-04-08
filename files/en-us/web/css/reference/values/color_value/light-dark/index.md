@@ -162,7 +162,9 @@ This is using the same code as the previous example but includes a `<div>`, inst
 
 ```html hidden
 <h1><code>light-dark()</code> CSS function with images</h1>
-<p class="supports">Your browser does not support <code>light-dark()</code> with images.</p>
+<p class="supports">
+  Your browser does not support <code>light-dark()</code> with images.
+</p>
 <div class="wrapper">
 <section>
   <h2>Automatic</h2>
