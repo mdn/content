@@ -247,8 +247,12 @@ section div {
     var(--dark-code)
   );
 }
-@supports not (background-image: light-dark(url("light.png"), url("dark.png"))) {
-  section  div {width:60%;}
+@supports not (
+  background-image: light-dark(url("light.png"), url("dark.png"))
+) {
+  section div {
+    width: 60%;
+  }
 }
 ```
 
