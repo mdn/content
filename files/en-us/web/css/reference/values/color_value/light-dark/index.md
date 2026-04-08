@@ -76,7 +76,7 @@ Functional notation: `light-dark(light-image, dark-image)`
 
 {{CSSSyntax}}
 
-## Example
+## Examples
 
 ### Setting colors based on color scheme
 
@@ -155,6 +155,111 @@ section {
 #### Result
 
 {{EmbedLiveSample("setting_colors_based_on_color_scheme", "100%", 500)}}
+
+### Setting images based on color scheme
+
+This is using the same code as the previous example but includes a `<div>`, instead of a `<p>` of text, with a `background-image` property.
+
+```html hidden
+<h1><code>light-dark()</code> CSS function with images</h1>
+<p class="supports">Your browser does not support <code>light-dark()</code> with images.</p>
+<div class="wrapper">
+<section>
+  <h2>Automatic</h2>
+  <div></div>
+</section>
+<section class="light">
+  <h2>Light</h2>
+  <div></div>
+</section>
+<section class="dark">
+  <h2>Dark</h2>
+  <div></div>
+</section>
+</div>
+```
+
+#### CSS
+
+```css-nolint hidden
+:root {
+  /* this has to be set to switch between light or dark */
+  color-scheme: light dark;
+
+  --light-bg: ghostwhite;
+  --light-color: darkslategray;
+  --light-code: tomato;
+
+  --dark-bg: darkslategray;
+  --dark-color: ghostwhite;
+  --dark-code: gold;
+}
+* {
+  background-color: light-dark(var(--light-bg), var(--dark-bg));
+  color: light-dark(var(--light-color), var(--dark-color));
+}
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.8rem;
+}
+.light {
+  /* forces light color-scheme */
+  color-scheme: light;
+}
+.dark {
+  /* forces dark color-scheme */
+  color-scheme: dark;
+}
+section {
+  width: 25%;
+  padding: 5px;
+  color: light-dark(
+    var(--light-code),
+    var(--dark-code)
+  );
+  border: 2px solid light-dark(var(--light-code), var(--dark-code));
+}
+@supports (background-image: light-dark(url("light.png"), url("dark.png"))) {
+  .supports {display:none;}
+}
+```
+Firstly, we define the light and dark `linear-gradient()`s using custom properties.
+
+```css
+:root {
+  /*  light dark gradients  */
+  --light-grad: linear-gradient(135deg, var(--light-bg) 20%, var(--light-code));;
+  --dark-grad: linear-gradient(45deg in oklab, var(--dark-bg) 30%, var(--dark-code));
+}
+```
+
+```css hidden
+section div {
+  width: 80%;
+  aspect-ratio: 1/1;
+  margin: auto;
+  border: 1px solid light-dark(
+    var(--light-code),
+    var(--dark-code)
+  );
+}
+```
+
+Then we use the custom properties to set the light and dark `background-image`.
+
+```css
+section div {
+  background-image: light-dark(
+    var(--light-grad),
+    var(--dark-grad)
+  );
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("setting_colors_based_on_color_scheme", "100%", 350)}}
 
 ## Specifications
 
