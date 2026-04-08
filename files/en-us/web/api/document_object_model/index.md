@@ -587,13 +587,12 @@ td {
 ```
 
 ```js
-function showEventProperties(e) {
+function showEventProperties(event) {
   function addCell(row, text) {
     const cell = row.insertCell(-1);
     cell.appendChild(document.createTextNode(text));
   }
 
-  const event = e || window.event;
   document.getElementById("eventType").textContent = event.type;
 
   const table = document.createElement("table");
