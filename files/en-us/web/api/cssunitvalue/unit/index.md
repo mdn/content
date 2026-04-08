@@ -44,6 +44,6 @@ console.log(pos.y.unit); // "em"
 
 - {{domxref('CSSUnitValue.value')}}
 - [CSS Numeric data types](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)
-- [CSS Values and Units](/en-US/docs/Web/CSS/Guides/Values_and_units), a listing of all possible unit types 
+- [CSS Values and Units](/en-US/docs/Web/CSS/Guides/Values_and_units), a listing of all possible unit types
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
