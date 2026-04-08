@@ -224,6 +224,7 @@ section {
   .supports {display:none;}
 }
 ```
+
 Firstly, we define the light and dark `linear-gradient()`s using custom properties.
 
 ```css
