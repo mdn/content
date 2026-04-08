@@ -8,7 +8,7 @@ browser-compat: api.RTCEncodedVideoFrame.type
 
 {{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`type`** read-only property of the {{domxref("RTCEncodedVideoFrame")}} interface indicates whether this frame is a key frame or delta frame. It has the type 
+The **`type`** read-only property of the {{domxref("RTCEncodedVideoFrame")}} interface indicates whether this frame is a key frame or delta frame. It has the type
 of EncodedVideoChunkType.
 
 ## Value
