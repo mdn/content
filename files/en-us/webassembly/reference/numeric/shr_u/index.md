@@ -87,7 +87,7 @@ For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `shr_u`, the `input` and `o
 | ------------- | -------------- | --------------------------------- |
 | `i32.shr_u`   | `0x76`         | `i32.shr_u` => `0x76`             |
 | `i64.shr_u`   | `0x88`         | `i64.shr_u` => `0x88`             |
-| `i8x16.shr_u` | `0xfd 109:u32` | `i8x16.shr_u` => `0xfd 0x6d 0x01` |
+| `i8x16.shr_u` | `0xfd 109:u32` | `i8x16.shr_u` => `0xfd 0x6d`      |
 | `i16x8.shr_u` | `0xfd 141:u32` | `i16x8.shr_u` => `0xfd 0x8d 0x01` |
 | `i32x4.shr_u` | `0xfd 173:u32` | `i32x4.shr_u` => `0xfd 0xad 0x01` |
 | `i64x2.shr_u` | `0xfd 205:u32` | `i64x2.shr_u` => `0xfd 0xcd 0x01` |
