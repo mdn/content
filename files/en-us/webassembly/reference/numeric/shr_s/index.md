@@ -120,7 +120,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
 
 #### Wasm
 
-In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has an `i32` parameter. We then declare a SIMD `i8x16` value, then right-shift it by 2 using `i8x16.shr_s`. Finally we extract the value stored in lane `6` of the output SIMD value using the [`extract_lane_s`](/en-US/docs/WebAssembly/Reference/SIMD/extract/extract_lane_s) instruction, and output it to the DOM by calling the imported `output()` function.
+In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has an `i32` parameter. We then declare a SIMD `i16x8` value, then right-shift it by 2 using `i16x8.shr_s`. Finally we extract the value stored in lane `6` of the output SIMD value using the [`extract_lane_s`](/en-US/docs/WebAssembly/Reference/SIMD/extract/extract_lane_s) instruction, and output it to the DOM by calling the imported `output()` function.
 
 ```wat live-sample___simd_shr_s
 (module
