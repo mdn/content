@@ -242,10 +242,7 @@ section div {
   width: 80%;
   aspect-ratio: 1/1;
   margin: auto;
-  border: 1px solid light-dark(
-    var(--light-code),
-    var(--dark-code)
-  );
+  border: 1px solid light-dark(var(--light-code), var(--dark-code));
 }
 @supports not (
   background-image: light-dark(url("light.png"), url("dark.png"))
