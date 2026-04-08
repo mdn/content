@@ -136,7 +136,13 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHT
 
 Note: this user agent was retrieved from an iPhone XR simulator and may be different on device.
 
-## Firefox for Fire TV
+## Legacy Firefox platforms
+
+> [!NOTE] These platforms are deprecated and no longer supported.
+>
+> This information is retained for historical and compatibility purposes.
+
+### Firefox for Fire TV
 
 Version 3 (and probably earlier) of Firefox for Fire TV use a user agent string with the following format:
 
@@ -148,7 +154,7 @@ Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Ve
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
 | v3.0               | Mozilla/5.0 (Linux; Android 7.1.2) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/3.0 Chrome/59.0.3017.125 Safari/537.36 |
 
-## Firefox for Echo Show
+### Firefox for Echo Show
 
 From version 1.1, Firefox for Echo Show uses a user agent string with the following format:
 
@@ -160,7 +166,7 @@ Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Ve
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | v1.1                          | Mozilla/5.0 (Linux; Android 5.1.1) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.1 Chrome/59.0.3017.125 Safari/537.36 |
 
-## Firefox OS
+### Firefox OS
 
 | Form factor     | Gecko user agent string                                           |
 | --------------- | ----------------------------------------------------------------- |
@@ -169,7 +175,7 @@ Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Ve
 | TV              | Mozilla/5.0 (TV; rv:44.0) Gecko/44.0 Firefox/44.0                 |
 | Device-specific | Mozilla/5.0 (Mobile; **_nnnn;_** rv:26.0) Gecko/26.0 Firefox/26.0 |
 
-### Device-specific user agent strings
+#### Device-specific user agent strings
 
 Although it is **strongly discouraged** by Mozilla, some handset manufacturers unfortunately include a token in their device's UA string that represents their device id. If this is the case, the Firefox OS UA string will look like the device-specific string in the table above, where **_nnnn;_** is the manufacturer's code for the device (see [Guidelines](https://wiki.mozilla.org/B2G/User_Agent/Device_Model_Inclusion_Requirements)). Some of them we have noticed are of the form "**NexusOne;**", "**ZTEOpen;**", or "**Open C;**" (note that putting space is also discouraged). We provide this information to assist with your UA detection logic, but Mozilla discourages the detection of a device id in UA strings.
 
@@ -181,7 +187,7 @@ Here is a JavaScript regular expression that will detect all mobile devices, inc
 
 The `i` makes it case-insensitive, and `mobi` matches all mobile browsers.
 
-### Firefox OS version number
+#### Firefox OS version number
 
 While the version number for Firefox OS is not included in the UA string, it is possible to infer version information from the Gecko version number present in the UA string.
 
