@@ -233,7 +233,7 @@ Firstly, we define the light and dark `linear-gradient()`s using custom properti
 :root {
   /*  light dark gradients  */
   --light-grad: linear-gradient(135deg, var(--light-bg) 20%, var(--light-code));;
-  --dark-grad: linear-gradient(45deg in oklab, var(--dark-bg) 30%, var(--dark-code));
+  --dark-grad: linear-gradient(45deg, var(--dark-bg) 30%, var(--dark-code));
 }
 ```
 
