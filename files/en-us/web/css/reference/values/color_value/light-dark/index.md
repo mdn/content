@@ -24,7 +24,7 @@ body {
 
 ## Syntax
 
-```css
+```css-nolint
 /* Named color values */
 color: light-dark(black, white);
 background-color: light-dark(white, black);
