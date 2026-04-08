@@ -81,8 +81,8 @@ For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `ge_u`, the inputs will be 
 
 | Instruction  | Binary format | Example text => binary      |
 | ------------ | ------------- | --------------------------- |
-| `i32.ge_u`   | `0x4f`        | `f32.ge_u` => `0x4f`        |
-| `i64.ge_u`   | `0x5a`        | `f64.ge_u` => `0x5a`        |
+| `i32.ge_u`   | `0x4f`        | `i32.ge_u` => `0x4f`        |
+| `i64.ge_u`   | `0x5a`        | `i64.ge_u` => `0x5a`        |
 | `i8x16.ge_u` | `0xfd 44:u32` | `i8x16.ge_u` => `0xfd 0x2c` |
 | `i16x8.ge_u` | `0xfd 54:u32` | `i16x8.ge_u` => `0xfd 0x36` |
 | `i32x4.ge_u` | `0xfd 64:u32` | `i32x4.ge_u` => `0xfd 0x40` |

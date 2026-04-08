@@ -82,8 +82,8 @@ For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `gt_s`, the inputs will be 
 
 | Instruction  | Binary format  | Example text => binary           |
 | ------------ | -------------- | -------------------------------- |
-| `i32.gt_s`   | `0x4a`         | `f32.gt_s` => `0x4a`             |
-| `i64.gt_s`   | `0x55`         | `f64.gt_s` => `0x55`             |
+| `i32.gt_s`   | `0x4a`         | `i32.gt_s` => `0x4a`             |
+| `i64.gt_s`   | `0x55`         | `i64.gt_s` => `0x55`             |
 | `i8x16.gt_s` | `0xfd 39:u32`  | `i8x16.gt_s` => `0xfd 0x27`      |
 | `i16x8.gt_s` | `0xfd 49:u32`  | `i16x8.gt_s` => `0xfd 0x31`      |
 | `i32x4.gt_s` | `0xfd 59:u32`  | `i32x4.gt_s` => `0xfd 0x3b`      |

@@ -81,8 +81,8 @@ For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `gt_u`, the inputs will be 
 
 | Instruction  | Binary format | Example text => binary      |
 | ------------ | ------------- | --------------------------- |
-| `i32.gt_u`   | `0x4b`        | `f32.gt_u` => `0x4b`        |
-| `i64.gt_u`   | `0x56`        | `f64.gt_u` => `0x56`        |
+| `i32.gt_u`   | `0x4b`        | `i32.gt_u` => `0x4b`        |
+| `i64.gt_u`   | `0x56`        | `i64.gt_u` => `0x56`        |
 | `i8x16.gt_u` | `0xfd 40:u32` | `i8x16.gt_u` => `0xfd 0x28` |
 | `i16x8.gt_u` | `0xfd 50:u32` | `i16x8.gt_u` => `0xfd 0x32` |
 | `i32x4.gt_u` | `0xfd 60:u32` | `i32x4.gt_u` => `0xfd 0x3c` |
