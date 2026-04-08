@@ -96,16 +96,15 @@ text-indent: unset;
   - : Indentation affects the first line of the block container as well as each line after a _forced line break_, but does not affect lines after a _soft wrap break_.
 - `hanging`
   - : Inverts which lines are indented. All lines _except_ the first line will be indented.
- 
 ## Description
 
-Relevant to block container's, the `text-indent` [CSS](/en-US/docs/Web/CSS) property sets the length of empty space (indentation) that is put before lines of text. The indentation set by the property occurs at the inline-start edge of the content box. The value is a {{cssxref("length-percentage")}}, optionally with one or both of the keywords `each-line` and/or `hanging`. The initial value is `0`.
+The `text-indent` [CSS](/en-US/docs/Web/CSS) property sets the length of empty space (indentation) that is put before lines of text in a block container. The indentation set by the property occurs at the inline-start edge of the content box. The value is a {{cssxref("length-percentage")}}, optionally with one or both of the keywords `each-line` and/or `hanging`. The initial value is `0`.
 
-Percent values are relative to to block container's inline-axis inner size; which is the dimension of the content-area only, excluding the container's padding and border.
+Percent values are relative to the block container's inline-axis inner size, which is the dimension of the content-area only, excluding the container's padding and border.
 
-The `<length-percentage>` can be a positive or negative value. A negative value creates an outdent equal to the absolute value of the `<length-percentage>` equivalent positive value. A negative value effectively pushes the text the size of the value, but in the opposite direction. For example, `text-indent: 3%;` indents the first line of text , adding white space that is 3% of the container's inner-size before the text, pushing the first line of content toward the inline-end direction. Setting `text-indent: -3%` outdents the first line of text, pushing the start of the first line of text 3% of the container's inner-size past the inline-start of the content area, into the padding and border, possibly overflowing the containter.
+The `<length-percentage>` can be a positive or negative value. A negative value creates an outdent equal to the absolute value of the `<length-percentage>` equivalent positive value. A negative value effectively pushes the text the size of the value, but in the opposite direction. For example, `text-indent: 3%;` indents the first line of text, adding white space that is 3% of the container's inner-size before the text, pushing the first line of content toward the inline-end direction. Setting `text-indent: -3%` outdents the first line of text, pushing the start of the first line of text 3% of the container's inner-size past the inline-start of the content area, into the padding and border, possibly overflowing the container.
 
-A negative value is different from adding the `hanging` keyword to a positive value. Continuing with the same example, `text-indent: 3% hanging` doesn't outset the first line of text. Rather, it insets all the lines of text _except_ the first line, by 3% of the container's inner-size. 
+A negative value is different from adding the `hanging` keyword to a positive value. Continuing with the same example, `text-indent: 3% hanging` doesn't outdent the first line of text. Rather, it indents all the lines of text _except_ the first line, by 3% of the container's inner-size.
 
 ## Formal definition
 
@@ -138,7 +137,7 @@ We include two paragraphs of text.
 
 #### CSS
 
-Our use the `text-indent` property to indent the first line of each paragraph by `5em`.  
+We use the `text-indent` property to indent the first line of each paragraph by `5em`.
 
 ```css
 p {
@@ -149,7 +148,7 @@ p {
 
 #### Result
 
-{{ EmbedLiveSample('Basic_indent','100%','100%') }}
+{{ EmbedLiveSample('Basic_usage','100%','100%') }}
 
 ### Percentage indent
 
@@ -168,14 +167,18 @@ Using the same HTML as in the previous example, here we demonstrate using percen
 
 #### CSS
 
-We set the `text-indent` to a percentage value. We also added padding and vertical stripes to better enable guaging the size of the indentation relative to the element's box model. 
+We set the `text-indent` to a percentage value. We also added padding and vertical stripes to better enable gauging the size of the indentation relative to the element's box model.
 
 ```css
 p {
   text-indent: 30%;
 
   padding: 30px;
-  background-image: repeating-linear-gradient(to right, transparent 0 9.5%, #dedede 9.5% 10%);
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent 0 9.5%,
+    #dedede 9.5% 10%
+  );
   background-color: plum;
 }
 ```
@@ -268,6 +271,6 @@ p + p {
   - {{cssxref("text-rendering")}}
   - {{cssxref("text-transform")}}
   - {{cssxref("hanging-punctuation")}}
-- [CSS text ecoration](/en-US/docs/Web/CSS/Guides/Text_decoration) module
+- [CSS text decoration](/en-US/docs/Web/CSS/Guides/Text_decoration) module
 - [CSS text](/en-US/docs/Web/CSS/Guides/Text) module
 - [Learn to style HTML using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)
