@@ -119,7 +119,7 @@ The `precommitHandler()` callback takes a {{domxref("NavigationPrecommitControll
 
 ### Scheduling post-commit actions in `precommitHandler()`
 
-As we saw above, you can specify a `handler()` callback in the object passed to the `intercept()` method in order to preform actions after a navigation is is committed.
+As we saw above, you can specify a `handler()` callback in the object passed to the `intercept()` method in order to preform actions after a navigation is committed.
 This approach works well if the actions required after commit do not depend on any actions run in the pre-commit phase.
 If they do, then you can use {{domxref("NavigationPrecommitController.addHandler()")}} in `precommitHandler()` to dynamically add a handler that will run after the navigation commits.
 

@@ -95,12 +95,12 @@ The optional first `<random-value-sharing>` parameter controls how the random ba
 
 #### The `element-shared` keyword
 
-All `random()` functions with the `element-shared` keyword share the same random base value for a single property across all elements. For example, when the following is declared, A, B, and C will be identically sized rectangles, all three having the same random width and all three having the same, independently-generated random height:
+All `random()` functions with the `element-shared` keyword share the same random base value for a single property across all elements. For example, when the following is declared, `.a`, `.b`, and `.c` will be identically sized rectangles, all three having the same random width and all three having the same, independently-generated random height:
 
 ```css
-A,
-B,
-C {
+.a,
+.b,
+.c {
   width: random(element-shared, 10px, 200px);
   height: random(element-shared, 10px, 200px);
 }
@@ -108,12 +108,12 @@ C {
 
 #### Custom names
 
-When you specify a `<dashed-ident>` (e.g., `--custom-name`), each element in an element's styles with the same name shares the same random base value, and ones with different `<dashed-ident>` values will be assigned distinct random base values. When the following is declared, A, B, and C will all be squares, because within each element, all properties that reference the same ident will share the same base value. Therefore, the width of each will be the same as it's height. Note that, in this case, A, B, and C will have distinct sizes because the base value sharing is between properties of an element, not between elements.
+When you specify a `<dashed-ident>` (e.g., `--custom-name`), each element in an element's styles with the same name shares the same random base value, and ones with different `<dashed-ident>` values will be assigned distinct random base values. When the following is declared, `.a`, `.b`, and `.c` will all be squares, because within each element, all properties that reference the same ident will share the same base value. Therefore, the width of each will be the same as it's height. Note that, in this case, `.a`, `.b`, and `.c` will have distinct sizes because the base value sharing is between properties of an element, not between elements.
 
 ```css
-A,
-B,
-C {
+.a,
+.b,
+.c {
   width: random(--custom-name, 10px, 200px);
   height: random(--custom-name, 10px, 200px);
 }
@@ -121,12 +121,12 @@ C {
 
 #### Setting both `<dashed-ident>` and `element-shared`
 
-Combining a `<dashed-ident>` with `element-shared` (e.g., `random(--custom-name element-shared, 0, 100)`) shares the random base value across both the elements and the properties that use the same `<random-value-sharing>` parameter. Given the following, A, B, and C will all be squares of the same size:
+Combining a `<dashed-ident>` with `element-shared` (e.g., `random(--custom-name element-shared, 0, 100)`) shares the random base value across both the elements and the properties that use the same `<random-value-sharing>` parameter. Given the following, `.a`, `.b`, and `.c` will all be squares of the same size:
 
 ```css
-A,
-B,
-C {
+.a,
+.b,
+.c {
   width: random(--custom-name element-shared, , 10px, 200px);
   height: random(--custom-name element-shared, 10px, 200px);
 }
@@ -166,7 +166,7 @@ In this example, the `--random-size` custom property does not "store" the random
 
 This is not true in the case of using `random()` when registering a custom property with {{cssxref("@property")}}. Registered custom properties compute random values and store them.
 
-In this example, as `--defaultSize` is registered, A, B, and C will be squares of equal size, but their colors will be random, as `--random-angle` was not registered:
+In this example, as `--defaultSize` is registered, `.a`, `.b`, and `.c` will be squares of equal size, but their colors will be random, as `--random-angle` was not registered:
 
 ```css
 @property --defaultSize {
@@ -177,9 +177,9 @@ In this example, as `--defaultSize` is registered, A, B, and C will be squares o
 :root {
   --random-angle: random(0deg, 360deg);
 }
-A,
-B,
-C {
+.a,
+.b,
+.c {
   background-color: hsl(var(--random-angle) 100% 50%);
   height: var(--defaultSize);
   width: var(--defaultSize);
@@ -214,7 +214,7 @@ We include five badges, one using the `desaturated` class and two using the `uni
 
 #### CSS
 
-We render the five badges as circles. We use the `random()` function within an {{cssxref("hsl()")}} color function to define the {{cssxref("angle")}} of the {{cssxref("hue")}}. We set `element-shared` to share the random base value between the default `badge` and the `desaturated` one, so it is a less saturated version of the same {{cssxref("hue")}}. We then override the `unique` badges to have a truly random `hue` by letting the base value sharing parameter default to `auto`.
+We render the five badges as circles. We use the `random()` function within an {{cssxref("color_value/hsl()")}} color function to define the {{cssxref("angle")}} of the {{cssxref("hue")}}. We set `element-shared` to share the random base value between the default `badge` and the `desaturated` one, so it is a less saturated version of the same {{cssxref("hue")}}. We then override the `unique` badges to have a truly random `hue` by letting the base value sharing parameter default to `auto`.
 
 ```css
 .badge {
@@ -304,6 +304,6 @@ body {
 
 - {{cssxref("calc()")}}
 - [CSS units and values](/en-US/docs/Web/CSS/Guides/Values_and_units) module
-- {{domxref("Math.random()")}}
+- {{jsxref("Math.random()")}}
 - [Rolling the Dice with CSS random()](https://webkit.org/blog/17285/rolling-the-dice-with-css-random/) via webkit.org (2025)
 - [CSS Almanac: random()](https://css-tricks.com/almanac/functions/r/random/) via CSS-Tricks.com

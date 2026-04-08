@@ -59,6 +59,8 @@ assetlinks
 associationlist
 associationlistitemkey
 associationlistitemvalue
+attributiondestination
+attributionsourceid
 attributionsrc
 audiocontext
 authorid
@@ -281,6 +283,7 @@ hansfin
 hantfin
 hebr
 highp
+hiliteColor
 HMDVRDevice
 hmng
 hmnp

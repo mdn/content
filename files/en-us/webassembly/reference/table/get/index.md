@@ -87,9 +87,9 @@ table.get identifier
 
 ### Opcodes
 
-| Instruction | Binary format     | Example text => binary       |
-| ----------- | ----------------- | ---------------------------- |
-| `table.get` | `0x25 𝑥:tableidx` | `table.get 0` => `0x25 0x01` |
+| Instruction | Binary format      | Example text => binary       |
+| ----------- | ------------------ | ---------------------------- |
+| `table.get` | `0x25 𝑥:table_idx` | `table.get 0` => `0x25 0x01` |
 
 ## Description
 

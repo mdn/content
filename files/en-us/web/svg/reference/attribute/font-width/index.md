@@ -4,11 +4,12 @@ slug: Web/SVG/Reference/Attribute/font-width
 page-type: svg-attribute
 status:
   - experimental
+  - non-standard
 browser-compat: svg.global_attributes.font-width
 sidebar: svgref
 ---
 
-{{SeeCompatTable}}
+{{SeeCompatTable}}{{non-standard_header}}
 
 The **`font-width`** attribute selects a normal, condensed, or expanded face from a font family for the glyphs used to render the text.
 
