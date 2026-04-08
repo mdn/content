@@ -258,7 +258,7 @@ section div {
 
 Then we use the custom properties to set the light and dark `background-image`.
 
-```css
+```css-nolint
 section div {
   background-image: light-dark(
     var(--light-grad),
