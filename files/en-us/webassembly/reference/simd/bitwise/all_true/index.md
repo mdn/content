@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.all_true
 sidebar: webassemblysidebar
 ---
 
-The **`all_true`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) tests whether all the bits of a `v128` input value are non-zero.
+The **`all_true`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) tests whether all lanes of a `v128` input value are non-zero.
 
 {{InteractiveExample("Wat Demo: all_true", "tabbed-taller")}}
 
