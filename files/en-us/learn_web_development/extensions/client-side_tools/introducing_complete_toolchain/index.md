@@ -234,18 +234,16 @@ npm install --save-dev eslint@9 @eslint/js@9 globals
 ```
 
 > [!NOTE]
-> Keep the major versions of `eslint` and `@eslint/js` aligned so that the predefined configurations remain compatible.
+> The `@9` specifier installs the latest release of the v9 major version. Keep the major versions of `eslint` and `@eslint/js` aligned so that the predefined configurations remain compatible. At the time of writing, the latest ESLint is v10. However, it usually takes a while for the plugins to be catch up, so we remain on v9 at this point. Once issues such as [`eslint-plugin-react`'s ESLint v10 compatibility](https://github.com/jsx-eslint/eslint-plugin-react/issues/3977) become resolved, contributions are welcome to update our article to use the latest versions.
 
 The `@eslint/js` package provides predefined ESLint configuration, while the `globals` package provides a list of known global names in each environment. We will use them later in the configuration. Out of the box, ESLint is going to complain that it can't find the configuration file if you run it with `npx eslint`:
 
 ```plain
 Oops! Something went wrong! :(
 
-ESLint couldn't find an eslint.config.(js|mjs|cjs) file.
+ESLint: 9.39.4
 
-From ESLint v9, the default configuration file is eslint.config.js.
-If you are using .eslintrc.* files, follow the migration guide
-to update your configuration file to the new format:
+ESLint couldn't find an eslint.config.(js|mjs|cjs) file.
 
 ...
 ```
@@ -290,8 +288,7 @@ Then, update the ESLint configuration file to include the recommended config of 
 ```js
 import js from "@eslint/js";
 import globals from "globals";
-import reactRecommended from "eslint-plugin-react/configs/recommended.js";
-import reactJSXRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
+import reactPlugin from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 
 export default [
@@ -312,14 +309,11 @@ export default [
       },
     },
   },
-  reactRecommended,
-  reactJSXRuntime,
+  reactPlugin.configs.flat.recommended,
+  reactPlugin.configs.flat["jsx-runtime"],
   reactHooks.configs.flat.recommended,
 ];
 ```
-
-> [!NOTE]
-> If you want to include the latest React Compiler-related lint rules as they become recommended, use `reactHooks.configs.flat["recommended-latest"]` instead.
 
 There's a complete [list of ESLint rules](https://eslint.org/docs/latest/rules/) that you can tweak and configure to your heart's content and many companies and teams have published their [own ESLint configurations](https://www.npmjs.com/search?q=keywords:eslintconfig), which can sometimes be useful either to get inspiration or to select one that you feel suits your own standards. A forewarning though: ESLint configuration is a very deep rabbit hole!
 
