@@ -6,7 +6,8 @@ browser-compat: css.types.color.light-dark
 sidebar: cssref
 ---
 
-The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [`<color>` function](/en-US/docs/Web/CSS/Reference/Values/Functions#color_functions) enables setting two colors for a property - returning one of the two colors options by detecting if the developer has set a light or dark color scheme or the user has requested light or dark color theme - without needing to encase the theme colors within a [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) [media feature](/en-US/docs/Web/CSS/Guides/Media_queries/Using#targeting_media_features) query.
+The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [`<color>` function](/en-US/docs/Web/CSS/Reference/Values/Functions#color_functions) enables setting two colors or images for a property - returning one of the two color or image options by detecting if the developer has set a light or dark color scheme or the user has requested light or dark color theme - without needing to encase the theme colors within a [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) [media feature](/en-US/docs/Web/CSS/Guides/Media_queries/Using#targeting_media_features) query.
+
 Users are able to indicate their color-scheme preference through their operating system settings (e.g., light or dark mode) or their user agent settings. The `light-dark()` function enables providing two color values where any `<color>` value is accepted. The `light-dark()` CSS color function returns the first value if the user's preference is set to `light` or if no preference is set and the second value if the user's preference is set to `dark`.
 
 To enable support for the `light-dark()` color function, the {{CSSXref("color-scheme")}} must have a value of `light dark`, usually set on the {{CSSXref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes).
@@ -26,12 +27,31 @@ body {
 ```css
 /* Named color values */
 color: light-dark(black, white);
+background-color: light-dark(white, black);
 
 /* RGB color values */
-color: light-dark(rgb(0 0 0), rgb(255 255 255));
+color: light-dark(
+  rgb(0 0 0), /* light value */
+  rgb(255 255 255) /* dark value */
+);
+
+/* image url values */
+color: light-dark(
+  url("light-icon.png"), /* light value */
+  url("dark-icon.png") /* dark value */
+);
+
+/* linear-gradient values */
+color: light-dark(
+  linear-gradient(135deg, ghostwhite 20%, tomato), /* light value */
+  linear-gradient(45deg, darkslategray 20%, gold) /* dark value */
+);
 
 /* Custom properties */
-color: light-dark(var(--light), var(--dark));
+color: light-dark(
+  var(--light), /* light value */
+  var(--dark) /* dark value */
+);
 ```
 
 ### Values
@@ -43,6 +63,14 @@ Functional notation: `light-dark(light-color, dark-color)`
 
 - `dark-color`
   - : {{CSSXref("&lt;color&gt;")}} value to be set for dark {{CSSXref("color-scheme")}}.
+
+Functional notation: `light-dark(light-image, dark-image)`
+
+- `light-image`
+  - : {{CSSXref("&lt;image&gt;")}} value to be set for light {{CSSXref("color-scheme")}}.
+
+- `dark-image`
+  - : {{CSSXref("&lt;image&gt;")}} value to be set for dark {{CSSXref("color-scheme")}}.
 
 ## Formal syntax
 
