@@ -276,6 +276,7 @@ section div {
 
 - {{CSSXref("color-scheme")}}
 - {{CSSXref("&lt;color&gt;")}}
+- {{CSSXref("&lt;image&gt;")}}
 - [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module
 - [`prefers-contrast`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) {{cssxref("@media")}} feature
 - [`contrast()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/contrast)
