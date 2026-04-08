@@ -38,7 +38,10 @@ sidebar:
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
         code: true
-      - link: /Web/WebDriver/Reference/BiDi/Modules/input
+      - type: listSubPages
+        path: /Web/WebDriver/Reference/BiDi/Modules/input
+        link: /Web/WebDriver/Reference/BiDi/Modules/input
+        details: closed
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/log
         details: closed
