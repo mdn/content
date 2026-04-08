@@ -138,7 +138,8 @@ Note: this user agent was retrieved from an iPhone XR simulator and may be diffe
 
 ## Legacy Firefox platforms
 
-> [!NOTE] These platforms are deprecated and no longer supported.
+> [!NOTE]
+> These platforms are deprecated and no longer supported.
 >
 > This information is retained for historical and compatibility purposes.
 
