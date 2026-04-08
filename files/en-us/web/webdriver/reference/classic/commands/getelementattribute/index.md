@@ -6,7 +6,7 @@ browser-compat: webdriver.classic.GetElementAttribute
 sidebar: webdriver
 ---
 
-The _Get Element Attribute_ [command](/en-US/docs/Web/WebDriver/Reference/Command) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the value associated with the attribute of the given name of the referenced [web element](/en-US/docs/Web/WebDriver/Reference/WebElement). For boolean attributes, the associated value is `"true"` if present. Absent attributes return `null`.
+The _Get Element Attribute_ [command](/en-US/docs/Web/WebDriver/Reference/Command) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the value associated with the attribute of the given name of the referenced [web element](/en-US/docs/Web/WebDriver/Reference/WebElement). For boolean attributes, the associated value is `"true"` if present. Absent attributes return `null`. It is equivalent to calling {{domxref("Element.getAttribute()")}} on the element in JavaScript.
 
 ## Syntax
 
