@@ -16,7 +16,7 @@ contact points that are supported by the current device.
 
 A number.
 
-"Classic" desktop computers (Mac, Windows and Linux) return 0 while smartphones (Android and iOS) typically return a value of 5.
+This value is hardware-dependent. Desktop computers without a touchscreen (Mac, Windows and Linux) return 0 while smartphones (Android and iOS) typically return 5.
 
 ## Example
 
