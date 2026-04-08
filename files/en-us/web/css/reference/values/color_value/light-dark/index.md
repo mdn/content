@@ -31,26 +31,26 @@ background-color: light-dark(white, black);
 
 /* RGB color values */
 color: light-dark(
-  rgb(0 0 0), /* light value */
-  rgb(255 255 255) /* dark value */
+  rgb(0 0 0),
+  rgb(255 255 255)
 );
 
 /* image url values */
 color: light-dark(
-  url("light-icon.png"), /* light value */
-  url("dark-icon.png") /* dark value */
+  url("light-icon.png"),
+  url("dark-icon.png")
 );
 
 /* linear-gradient values */
 color: light-dark(
-  linear-gradient(135deg, ghostwhite 20%, tomato), /* light value */
-  linear-gradient(45deg, darkslategray 20%, gold) /* dark value */
+  linear-gradient(135deg, ghostwhite 20%, tomato),
+  linear-gradient(45deg, darkslategray 20%, gold)
 );
 
 /* Custom properties */
 color: light-dark(
-  var(--light), /* light value */
-  var(--dark) /* dark value */
+  var(--light),
+  var(--dark)
 );
 ```
 
