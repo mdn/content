@@ -55,4 +55,4 @@ let pos = new CSSPositionValue(
 ## See also
 
 - [CSS Numeric data types](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)
-- [CSS Values and Units](/en-US/docs/Web/CSS/Guides/Values_and_units), a listing of all possible units and data types 
+- [CSS Values and Units](/en-US/docs/Web/CSS/Guides/Values_and_units), a listing of all possible units and data types
