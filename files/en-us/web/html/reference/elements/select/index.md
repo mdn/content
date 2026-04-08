@@ -194,7 +194,7 @@ The following example is more complex, showing off more features you can use on 
 - The `multiple` attribute enables selecting more than one option.
 - The `size` attribute, set to `4`, means only 4 lines will be displayed at a time. Users will need to scroll to view all the options.
 - Two {{htmlelement("optgroup")}} elements are included creating two visual groupings, generally with the group name being bolded and nested options being indented.
-- The  `disabled` attribute is included on the "Hamster" option making that option not selectable.
+- The `disabled` attribute is included on the "Hamster" option making that option not selectable.
 
 ```html
 <label>
