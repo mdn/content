@@ -21,8 +21,12 @@ A number.
 ## Example
 
 ```js
-if (navigator.maxTouchPoints > 0) {
-  // The device has a touch screen
+if (navigator.maxTouchPoints > 1) {
+  // Device supports tracking at least 2 touch points; offer complex
+  // interaction gestures such as swiping with two/three fingers
+} else {
+  // Device only has 1 touch point or is not a touch screen.
+  // Offer basic gestures such as dragging and clicking
 }
 ```
 
