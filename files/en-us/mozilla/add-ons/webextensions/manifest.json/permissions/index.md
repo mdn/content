@@ -122,7 +122,7 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 - `theme`
 - `topSites`
 - `unlimitedStorage`
-- 'userScripts' (see [userScripts permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions))
+- `userScripts` (see [userScripts permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions))
 - `webNavigation`
 - `webRequest`
 - `webRequestAuthProvider` (Manifest V3 and above)

@@ -7,7 +7,7 @@ sidebar: addonsidebar
 
 The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) (WebAuthn) is a web standard that enables strong, phishing-resistant authentication using public-key cryptography. Instead of relying on passwords, WebAuthn enables users to authenticate with hardware security keys (e.g., YubiKeys), platform authenticators (e.g., fingerprint sensors, Face ID, Windows Hello), or passkeys synced across devices.
 
-When a user registers with a website, the browser generates a public/private key pair bound to a **Relying Party ID (RP ID)**. This ID is typically the site's domain. During authentication, the server challenges the user's authenticator, which signs the challenge with the private key, proving the user's identity without transmitting a shared secret.
+When a user registers with a website, the browser generates a public/private key pair bound to a Relying Party ID (RP ID). This ID is typically the site's domain. During authentication, the server challenges the user's authenticator, which signs the challenge with the private key, proving the user's identity without transmitting a shared secret.
 
 ## Common use cases
 
@@ -18,9 +18,9 @@ When a user registers with a website, the browser generates a public/private key
 
 ## WebAuthn in web extensions
 
-Starting with Firefox 150 and Chrome 122, browser extensions can use the WebAuthn API and specify a Relying Party ID (RP ID) for domains where the extension has scripting access in [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions).
+Starting with Firefox 150 and Chrome 122, browser extensions can use the WebAuthn API and specify an RP ID for domains specified in the extension's [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions).
 
-Ordinarily, the [`rp`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#rp) ID passed to {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} and {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} [`rpId`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#rpid) in their `publicKey` options object must match the calling page's domain (or a parent domain). The methods reject calls from other origins. However, a web extension can call these APIs and specify an RP ID for any domain covered by its host permissions.
+Ordinarily, the [`rp`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#rp) ID passed to {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} and [`rpId`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#rpid) passed to {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} in their `publicKey` object must match the calling page's domain (or a parent domain). The methods reject calls from other origins. However, a web extension can call these APIs and specify an RP ID for any domain covered by its host permissions.
 
 This mechanism enables extensions to act as WebAuthn clients on behalf of web services, creating and retrieving credentials tied to those services' domains.
 
@@ -46,13 +46,13 @@ console.log(clientData.origin);
 // Firefox: moz-extension://ngpncaopklanhjklijieoihgbhbgknjjdklmlpagjoaobbpmknfgmhgghbadgoai
 ```
 
-## Setting up WebAuthn in a WebExtension
+## Setting up WebAuthn in a web extension
 
-This guide walks through building an extension that creates and retrieves WebAuthn credentials. It does this by enabling you to supply the JSON that defines the RP ID from a domain the extension has host permission for.
+This guide walks through building an extension that creates and retrieves WebAuthn credentials. It does this by enabling your extension to supply the JSON that defines the RP ID from a domain the extension has host permission for.
 
 ### Configure the manifest
 
-In your `manifest.json` file, declare `host_permissions` for the domain or domains whose RP ID you want to use. This setting grants the extension scripting access, which is the prerequisite for asserting that domain as an RP ID.
+In your extension's `manifest.json` file, declare `host_permissions` for the domain or domains whose RP ID you want to use. This setting grants the extension permission to run content scripts on those domains, which is the prerequisite for asserting the domain as an RP ID.
 
 ```json
 {
@@ -69,11 +69,11 @@ In your `manifest.json` file, declare `host_permissions` for the domain or domai
 ```
 
 > [!NOTE]
-> The broad `"https://*/*"` pattern grants access to all HTTPS domains. For your extension, set this to the domains you need (e.g., `"https://example.com/*"`).
+> The broad `"https://*/*"` pattern grants access to all HTTPS domains. For your extension, set this to the domains it needs (e.g., `"https://example.com/*"`).
 
 ### Collect WebAuthn options
 
-Add a mechanism to enter the registration JSON. In this case, a pop-up; you could also use an extension page. The reference extension uses a simple `popup.html` with a `textarea` for the JSON input and two buttons: one for registration, one for authentication.
+Add a mechanism to enter the registration JSON. In this case, a pop-up; you could also use an extension page. This example uses a simple `popup.html` with a `textarea` for the JSON input and two buttons: one for registration and one for authentication.
 
 ```html
 <!DOCTYPE html>
@@ -94,9 +94,9 @@ Add a mechanism to enter the registration JSON. In this case, a pop-up; you coul
 
 ### Register the credentials
 
-In your extension script, parse the options JSON and call `navigator.credentials.create()`. The key detail is that you set `rp.id` to a domain covered by your host permissions, even though your extension is not running on that domain.
+In your extension script, parse the options JSON and call `navigator.credentials.create()`. The key detail is that you set `rp.id` to a domain covered by your extension's host permissions, even though your extension is not running on that domain.
 
-Binary fields such as `challenge` and `user.id` must be `ArrayBuffer` instances. If your JSON input uses Base64 strings, convert them first:
+Binary fields, such as `challenge` and `user.id`, must be converted to `ArrayBuffer` instances. If your JSON input uses Base64 strings, add code to convert them:
 
 ```js
 function base64ToArrayBuffer(base64) {
@@ -123,7 +123,11 @@ function convertOptions(options) {
   }
   return options;
 }
+```
 
+You can then add code to register the credentials:
+
+```js
 // Registration
 async function register(optionsJSON) {
   const options = convertOptions(JSON.parse(optionsJSON));
@@ -133,7 +137,7 @@ async function register(optionsJSON) {
 }
 ```
 
-Example registration JSON, with `rp.id` set to an external domain:
+The JSON you use to perform the registration, with `rp.id` set to an external domain, looks something like this:
 
 ```json
 {
@@ -153,7 +157,7 @@ Example registration JSON, with `rp.id` set to an external domain:
 
 ### Authenticate the credential
 
-To authenticate the credentials, call `navigator.credentials.get()` with the `rpId` set to the target domain:
+To authenticate the credentials, call `navigator.credentials.get()` with the `rpId` in the JSON set to the target domain. Again, you need to convert binary fields, such as `challenge` and `user.id`, to `ArrayBuffer` instances before asserting:
 
 ```js
 async function authenticate(optionsJSON) {
@@ -171,7 +175,7 @@ async function authenticate(optionsJSON) {
 }
 ```
 
-Example authentication JSON:
+The JSON you use to perform the assertion, with `rpId` set to an external domain, looks something like this:
 
 ```json
 {
