@@ -16,7 +16,6 @@ indicating the [unit type](/en-US/docs/Web/CSS/Guides/Values_and_units#units).
 
 A string indicating the unit type, such as `"em"`, `"px"`, `"%"`, etc.
 
-
 ## Examples
 
 The following creates a {{domxref('CSSPositionValue')}} from individual
