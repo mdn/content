@@ -21,13 +21,17 @@ new CSSMathClamp(lower, value, upper)
 
 ### Parameters
 
-- `args`
-  - : A comma-separated list of three {{domxref("CSSNumericValue")}} objects – either numbers or {{domxref("CSSUnitValue")}} – representing the lower, preferred, and upper values.
+- `lower`
+  - : A {{domxref("CSSNumericValue")}} object – either a number or {{domxref("CSSUnitValue")}} – representing the minimum value.
+- `value`
+  - : A {{domxref("CSSNumericValue")}} object – either a number or {{domxref("CSSUnitValue")}} – representing the preferred value.
+- `upper`
+  - : A {{domxref("CSSNumericValue")}} object – either a number or {{domxref("CSSUnitValue")}} – representing the maximum value.
 
 ### Exceptions
 
 - [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
-  - : Thrown if there is a _failure_ when adding the three argument values.
+  - : Thrown if there is a _failure_ when adding the three arguments.
 
 ## Examples
 
