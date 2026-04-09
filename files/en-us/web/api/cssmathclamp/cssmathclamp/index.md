@@ -22,7 +22,7 @@ new CSSMathClamp(lower, value, upper)
 ### Parameters
 
 - `args`
-  - : A list of three numbers or {{domxref("CSSNumericValue")}} objects, representing the lower, preferred, and upper values.
+  - : A comma-separated list of three numbers or {{domxref("CSSNumericValue")}s, representing the lower, preferred, and upper values.
 
 ### Exceptions
 
