@@ -173,7 +173,6 @@ A `VideoFrame` can be constructed from any image source. Keep in mind that times
 const bitmapFrame = new VideoFrame(imgBitmap, { timestamp: 0 });
 const imageFrame = new VideoFrame(htmlImageEl, { timestamp: 0 });
 const videoFrame = new VideoFrame(htmlVideoEl, { timestamp: 0 });
-const imgFrame = new VideoFrame(imageData, { timestamp: 0 });
 const canvasFrame = new VideoFrame(canvasEl, { timestamp: 0 });
 ```
 
@@ -223,7 +222,6 @@ const ctx = canvas.getContext("bitmaprenderer");
 const bitmap = await createImageBitmap(frame);
 ctx.transferFromImageBitmap(bitmap);
 frame.close();
-bitmap.close();
 ```
 
 This method involves making a single copy of the frame in graphics memory, resulting in more consistent and generally better performance across browsers than the Canvas2D API while also being relatively simple.

@@ -14,7 +14,7 @@ It is useful for web applications that do heavy media processing, or which requi
 
 There are other APIs which use media codecs internally, such as the [MediaRecorder API](/en-US/docs/Web/API/MediaRecorder) and the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), but these lack the low-level (per-frame) control required by some applications.
 
-Previously, developers used WebAssembly ports of ffmpeg such as [ffmpeg.js](https://github.com/Kagami/ffmpeg.js/), but these lack true hardware acceleration capabilities, and are difficult to integrate with other key APIs like the File API for working with large Files efficiently.
+Previously, developers used WebAssembly ports of ffmpeg, but these lack true hardware acceleration capabilities, and are difficult to integrate with other key APIs like the File API for working with large Files efficiently.
 
 WebCodecs was designed to enable low-level, hardware-accelerated media processing, for applications such as high-performance streaming and video editing, which were not well served by the existing APIs.
 
@@ -47,9 +47,17 @@ A `VideoFrame` represents a video frame, and is tied both to actual pixel data o
 
 ### Audio
 
-An `AudioData` object represents a number of individual audio samples (1024 is a typical number). Audio sample data can be extracted as a {{jsxref("Float32Array")}} via the `copyTo` method. There is no direct integration to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API).
+An `AudioData` object represents a number of individual audio samples (1024 is a typical number). Audio sample data can be extracted as a {{jsxref("Float32Array")}} via the `copyTo` method. There is no direct integration to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), however the extracted `Float32Array` samples can be copied directly into a {{domxref("AudioBuffer")}} for playback.
 
 ![AudioData and EncodedAudioChunk](audio-data.png)
+
+### Processing Model
+
+The WebCodecs API uses an asynchronous [processing model](https://w3c.github.io/webcodecs/#codec-processing-model-section). Each instance of an encoder or decoder maintains an internal, independent processing queue. When queueing a substantial amount of work, it's important to keep this model in mind.
+
+Methods named `configure()`, `encode()`, `decode()`, and `flush()` operate asynchronously by appending control messages to the end of the queue, while methods named `reset()` and `close()` synchronously abort all pending work and purge the processing queue. After `reset()`, more work may be queued following a call to `configure()`, but `close()` is a permanent operation.
+
+The `flush()` method can be used to wait for the completion of all work that was pending at the time `flush()` was called. However, it should generally only be called once all desired work is queued — it is not intended to force progress at regular intervals. Calling it unnecessarily will affect encoder quality and cause decoders to require the next input to be a key frame.
 
 ### Codecs
 
@@ -96,7 +104,7 @@ You can find more information on muxing and demuxing in the [Muxing and Demuxing
 ## Guides
 
 - [Video processing concepts](/en-US/docs/Web/API/WebCodecs_API/Video_processing_concepts)
-  - : A brief primer on video processing, including codecs and containers, muxing and demuxing, that covers conceptual informatio to understand how the WebCodecs API implements these concepts.
+  - : A brief primer on video processing, including codecs and containers, muxing and demuxing, that covers conceptual information to understand how the WebCodecs API implements these concepts.
 - [Using the WebCodecs API](/en-US/docs/Web/API/WebCodecs_API/Using_the_WebCodecs_API)
   - : In depth guide to how to actually use the WebCodecs API, including how to instantiate and configure encoders and decoders, how to create and consume video frames, and how to extract samples from AudioData.
 - [Codec selection](/en-US/docs/Web/API/WebCodecs_API/Codec_selection)
