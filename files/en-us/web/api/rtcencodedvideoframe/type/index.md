@@ -31,7 +31,6 @@ const transformer = new TransformStream({
     if (encodedFrame.type === "key") {
       // Apply key frame transformation
     } else {
-      // Delta
       // Apply delta frame transformation
     }
     controller.enqueue(encodedFrame);
