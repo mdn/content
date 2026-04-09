@@ -1,5 +1,5 @@
 ---
-title: HTML is global attribute
+title: "`is` HTML global attribute"
 short-title: is
 slug: Web/HTML/Reference/Global_attributes/is
 page-type: html-attribute
