@@ -1,26 +1,26 @@
-name: Lint and review content files
+name: Lint content
 
 on:
-  pull_request_target:
+  pull_request:
     paths:
+      - .github/workflows/pr-check-lint_content.yml
       - .nvmrc
       - "*.md"
       - "files/**/*.md"
 
 permissions:
-  # Compare commits and add reviewdog comments.
-  pull-requests: write
+  contents: read
 
 concurrency:
-  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number }}
+  group: ci-${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
-  lint-and-review-docs:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout BASE
+      - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
@@ -38,7 +38,7 @@ jobs:
           # Get files as newline-separated list
           FILTERED_FILES=$(gh api repos/{owner}/{repo}/compare/${BASE_SHA}...${HEAD_SHA} \
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename' | \
-            egrep -i "^files/.*\.md$" || true)
+            egrep -i "^.*\.md$" || true)
 
           # Store as multiline output
           EOF="$(openssl rand -hex 8)"
@@ -53,33 +53,9 @@ jobs:
             echo "HAS_FILES=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Checkout HEAD
-        if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          path: pr_head
-          persist-credentials: false
-
-      - name: Get changed content from HEAD
-        if: steps.check.outputs.HAS_FILES == 'true'
-        run: |
-          git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
-          git config --global user.name "mdn-bot"
-
-          rm -r files *.md
-          mv pr_head/files pr_head/*.md .
-          rm -r pr_head
-
-          # To avoid contents of PR getting into the diff that we are going to generate
-          # after running the linters, here we make a dummy commit.
-          # Note, this commit is not getting pushed.
-          git add .
-          git commit -m "Code from PR head"
-
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: ".nvmrc"
           cache: npm
@@ -90,25 +66,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Lint and format markdown files
-        id: lint
+      - name: Check CRLF line endings
+        id: crlf
         if: steps.check.outputs.HAS_FILES == 'true'
         env:
           DIFF_DOCUMENTS: ${{ steps.check.outputs.DIFF_DOCUMENTS }}
         run: |
-          # Generate random delimiter
-          # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
           EOF="$(openssl rand -hex 8)"
-
-          # The DIFF_DOCUMENTS env var contains the clean newline-separated list
-          # Read into array, one filename per line
           readarray -t files_to_lint <<< "$DIFF_DOCUMENTS"
-
-          # Debug: show what we got
           printf "Files to process (%d files):\n" "${#files_to_lint[@]}"
           printf "'%s'\n" "${files_to_lint[@]}"
 
-          echo "crlf line ending check"
           CRLF_FAILED=true
           CRLF_LOG=$(git ls-files --eol "${files_to_lint[@]}" | grep -E 'w/(mixed|crlf)') || CRLF_FAILED=false
           echo "CRLF_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
@@ -116,7 +84,21 @@ jobs:
           echo "${EOF}" >> "$GITHUB_OUTPUT"
           echo "CRLF_FAILED=${CRLF_FAILED}" >> "$GITHUB_OUTPUT"
 
-          echo "Running markdownlint --fix"
+      - name: Diff
+        if: steps.check.outputs.HAS_FILES == 'true'
+        run: |
+          git status
+          git diff HEAD --color=always --word-diff --word-diff-regex='[[:alnum:]_]+'
+
+      - name: Run markdownlint
+        id: markdownlint
+        if: steps.check.outputs.HAS_FILES == 'true'
+        env:
+          DIFF_DOCUMENTS: ${{ steps.check.outputs.DIFF_DOCUMENTS }}
+        run: |
+          EOF="$(openssl rand -hex 8)"
+          readarray -t files_to_lint <<< "$DIFF_DOCUMENTS"
+
           MD_LINT_FAILED=false
           MD_LINT_LOG=$(npx markdownlint-cli2 --fix "${files_to_lint[@]}" 2>&1) || MD_LINT_FAILED=true
           echo "MD_LINT_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
@@ -124,7 +106,21 @@ jobs:
           echo "${EOF}" >> "$GITHUB_OUTPUT"
           echo "MD_LINT_FAILED=${MD_LINT_FAILED}" >> "$GITHUB_OUTPUT"
 
-          echo "Linting front-matter"
+      - name: Diff
+        if: steps.check.outputs.HAS_FILES == 'true'
+        run: |
+          git status
+          git diff HEAD --color=always --word-diff --word-diff-regex='[[:alnum:]_]+'
+
+      - name: Lint front-matter
+        id: frontmatter
+        if: steps.check.outputs.HAS_FILES == 'true'
+        env:
+          DIFF_DOCUMENTS: ${{ steps.check.outputs.DIFF_DOCUMENTS }}
+        run: |
+          EOF="$(openssl rand -hex 8)"
+          readarray -t files_to_lint <<< "$DIFF_DOCUMENTS"
+
           FM_LINT_FAILED=false
           FM_LINT_LOG=$(node scripts/front-matter_linter.js --fix true "${files_to_lint[@]}" 2>&1) || FM_LINT_FAILED=true
           echo "FM_LINT_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
@@ -132,7 +128,21 @@ jobs:
           echo "${EOF}" >> "$GITHUB_OUTPUT"
           echo "FM_LINT_FAILED=${FM_LINT_FAILED}" >> "$GITHUB_OUTPUT"
 
-          echo "Running Prettier"
+      - name: Diff
+        if: steps.check.outputs.HAS_FILES == 'true'
+        run: |
+          git status
+          git diff HEAD --color=always --word-diff --word-diff-regex='[[:alnum:]_]+'
+
+      - name: Run Prettier
+        id: prettier
+        if: steps.check.outputs.HAS_FILES == 'true'
+        env:
+          DIFF_DOCUMENTS: ${{ steps.check.outputs.DIFF_DOCUMENTS }}
+        run: |
+          EOF="$(openssl rand -hex 8)"
+          readarray -t files_to_lint <<< "$DIFF_DOCUMENTS"
+
           PRETTIER_FAILED=false
           PRETTIER_LOG=$(npx prettier --check "${files_to_lint[@]}" 2>&1) || PRETTIER_FAILED=true
           echo "PRETTIER_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
@@ -141,63 +151,53 @@ jobs:
           echo "PRETTIER_FAILED=${PRETTIER_FAILED}" >> "$GITHUB_OUTPUT"
           npx prettier -w "${files_to_lint[@]}"
 
+      - name: Diff
+        id: lint-diff
+        if: always() && steps.check.outputs.HAS_FILES == 'true'
+        run: |
+          git status
+          git diff HEAD --color=always --word-diff --word-diff-regex='[[:alnum:]_]+'
+
           if [[ -n $(git diff) ]]; then
             echo "FILES_MODIFIED=true" >> "$GITHUB_OUTPUT"
           fi
 
-          # info for troubleshooting
-          echo CRLF_FAILED=${CRLF_FAILED}
-          echo MD_LINT_FAILED=${MD_LINT_FAILED}
-          echo FM_LINT_FAILED=${FM_LINT_FAILED}
-          echo PRETTIER_FAILED=${PRETTIER_FAILED}
-          git diff
+      - name: Collect artifact files
+        if: always() && steps.check.outputs.HAS_FILES == 'true'
+        env:
+          FILES_MODIFIED: ${{ steps.lint-diff.outputs.FILES_MODIFIED }}
+          MD_LINT_FAILED: ${{ steps.markdownlint.outputs.MD_LINT_FAILED }}
+          MD_LINT_LOG: ${{ steps.markdownlint.outputs.MD_LINT_LOG }}
+        run: |
+          rm -rf lint-results
+          mkdir -p lint-results
 
-      - name: Setup reviewdog
-        if: steps.lint.outputs.FILES_MODIFIED == 'true' || steps.lint.outputs.MD_LINT_FAILED == 'true'
-        uses: reviewdog/action-setup@d8a7baabd7f3e8544ee4dbde3ee41d0011c3a93f # v1.5.0
+          if [[ "$FILES_MODIFIED" == 'true' ]]; then
+            git diff HEAD > lint-results/lint.diff
+          fi
+
+          if [[ "$MD_LINT_FAILED" == 'true' ]]; then
+            echo "$MD_LINT_LOG" > lint-results/markdownlint.log
+          fi
+
+      - name: Upload artifact
+        if: always() && steps.check.outputs.HAS_FILES == 'true' && hashFiles('lint-results/*') != ''
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
-          reviewdog_version: latest
-
-      - name: Suggest changes using diff
-        if: steps.lint.outputs.FILES_MODIFIED == 'true'
-        env:
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          TMPFILE=$(mktemp)
-          git diff >"${TMPFILE}"
-          git stash -u && git stash drop
-          reviewdog \
-            -name="mdn-linter" \
-            -f=diff \
-            -f.diff.strip=1 \
-            -filter-mode=diff_context \
-            -reporter=github-pr-review < "${TMPFILE}"
-
-      - name: Add reviews for markdownlint errors
-        if: steps.lint.outputs.MD_LINT_FAILED == 'true'
-        env:
-          MD_LINT_LOG: ${{ steps.lint.outputs.MD_LINT_LOG }}
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "${MD_LINT_LOG}" | \
-            reviewdog \
-            -efm="%f:%l:%c %m" \
-            -efm="%f:%l %m" \
-            -name="markdownlint" \
-            -diff="git diff" \
-            -reporter="github-pr-review"
+          name: lint-results
+          path: lint-results
 
       - name: Fail if any issues pending
-        if: steps.lint.outputs.FILES_MODIFIED == 'true' || steps.lint.outputs.CRLF_FAILED == 'true' || steps.lint.outputs.MD_LINT_FAILED == 'true' || steps.lint.outputs.FM_LINT_FAILED == 'true'
+        if: steps.lint-diff.outputs.FILES_MODIFIED == 'true' || steps.crlf.outputs.CRLF_FAILED == 'true' || steps.markdownlint.outputs.MD_LINT_FAILED == 'true' || steps.frontmatter.outputs.FM_LINT_FAILED == 'true'
         env:
-          CRLF_FAILED: ${{ steps.lint.outputs.CRLF_FAILED }}
-          MD_LINT_FAILED: ${{ steps.lint.outputs.MD_LINT_FAILED }}
-          FM_LINT_FAILED: ${{ steps.lint.outputs.FM_LINT_FAILED }}
-          PRETTIER_FAILED: ${{ steps.lint.outputs.PRETTIER_FAILED }}
-          CRLF_LOG: ${{ steps.lint.outputs.CRLF_LOG }}
-          MD_LINT_LOG: ${{ steps.lint.outputs.MD_LINT_LOG }}
-          FM_LINT_LOG: ${{ steps.lint.outputs.FM_LINT_LOG }}
-          PRETTIER_LOG: ${{ steps.lint.outputs.PRETTIER_LOG }}
+          CRLF_FAILED: ${{ steps.crlf.outputs.CRLF_FAILED }}
+          MD_LINT_FAILED: ${{ steps.markdownlint.outputs.MD_LINT_FAILED }}
+          FM_LINT_FAILED: ${{ steps.frontmatter.outputs.FM_LINT_FAILED }}
+          PRETTIER_FAILED: ${{ steps.prettier.outputs.PRETTIER_FAILED }}
+          CRLF_LOG: ${{ steps.crlf.outputs.CRLF_LOG }}
+          MD_LINT_LOG: ${{ steps.markdownlint.outputs.MD_LINT_LOG }}
+          FM_LINT_LOG: ${{ steps.frontmatter.outputs.FM_LINT_LOG }}
+          PRETTIER_LOG: ${{ steps.prettier.outputs.PRETTIER_LOG }}
         run: |
           echo -e "\nPlease fix all the linting issues mentioned in the following logs and in the PR review comments."
 

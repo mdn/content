@@ -47,7 +47,7 @@ _There are no inherited methods._
   - : Returns a {{ domxref("DocumentFragment") }} created from a given string of code.
 - {{ domxref("Range.deleteContents()")}}
   - : Removes the contents of a `Range` from the {{ domxref("Document") }}.
-- {{ domxref("Range.detach()")}}
+- {{ domxref("Range.detach()")}} {{deprecated_inline}}
   - : Does nothing. Kept for compatibility.
 - {{ domxref("Range.extractContents()")}}
   - : Moves contents of a `Range` from the document tree into a {{ domxref("DocumentFragment") }}.

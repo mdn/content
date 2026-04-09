@@ -53,6 +53,15 @@ _This interface has no parent, and doesn't inherit or implement other properties
 - {{domxref("Touch.force")}} {{ReadOnlyInline}}
   - : Returns the amount of pressure being applied to the surface by the user, as a `float` between `0.0` (no pressure) and `1.0` (maximum pressure).
 
+### Touch type and angle
+
+- {{domxref("Touch.altitudeAngle")}} {{ReadOnlyInline}}
+  - : Returns the angle (in radians) between the transducer (pointer or stylus) axis and the X-Y plane of the device, in the range `0` (parallel to the surface) to `π/2` (perpendicular to the surface). Defaults to `0` for hardware that does not report tilt or angle.
+- {{domxref("Touch.azimuthAngle")}} {{ReadOnlyInline}}
+  - : Returns the azimuth angle (in radians) of the transducer (pointer or stylus), in the range `0` to `2π`. `0` represents a transducer whose cap is pointing in the direction of increasing X values on the X-Y plane, and values increase clockwise.
+- {{domxref("Touch.touchType")}} {{ReadOnlyInline}}
+  - : Returns the type of device that triggered the touch, such as `"direct"` for a finger or `"stylus"` for a pen device.
+
 ## Instance methods
 
 _This interface has no methods and no parent, and doesn't inherit or implement any methods._

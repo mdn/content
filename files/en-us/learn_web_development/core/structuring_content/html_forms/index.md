@@ -57,13 +57,13 @@ However, these features tend to facilitate one-way interactions, with users pass
 
 To provide this two-way experience, you need to use buttons and forms.
 
-Buttons are usually created using HTML {{htmlelement("button")}} elements (they are also sometimes created using {{htmlelement("input")}} elements with their `type` attributes set to a value like `button` or `submit`). These push buttons are general purpose — you can wire them up to trigger any functionality you want, limited only by your imagination and coding skills.
+Buttons are usually created using HTML {{htmlelement("button")}} elements (they are also sometimes created using {{htmlelement("input")}} elements with their `type` attributes set to a value like `button` or `submit`). These push buttons are general-purpose — you can wire them up to trigger any functionality you want, limited only by your imagination and coding skills.
 
-Forms are created using elements such as {{htmlelement("form")}}, {{htmlelement("label")}}, {{htmlelement("input")}}, and {{htmlelement("select")}}. Form elements can be used to create more complex controls than simple buttons allow — for example a drop-down menu containing multiple options that allow you choose between different themes for a user interface element.
+Forms are created using elements such as {{htmlelement("form")}}, {{htmlelement("label")}}, {{htmlelement("input")}}, and {{htmlelement("select")}}. Form elements can be used to create more complex controls than simple buttons allow — for example, a drop-down menu containing multiple options that allow you to choose between different themes for a user interface element.
 
 However, crucially, they can also be used to create forms for users to fill in when they need to submit information to a website server. Think about e-commerce sites — when you want to search for a product to buy, you use a form to enter search terms. When you want to pay for some items and finalize delivery, you use a form to enter your postal address, and another form to enter your credit card details.
 
-We'll be concentrating mainly on this — more traditional — use of form elements in this article. Note that buttons are also commonly used inside forms, to submit the entered data to the server.
+We'll be concentrating mainly on this — more traditional — use of form elements in this article. Note that buttons are also commonly used inside forms to submit the entered data to the server.
 
 With this important theory out of the way, let's move on to explore the code and see how buttons and forms are implemented.
 
@@ -147,13 +147,13 @@ This is rendered as follows:
 
 {{EmbedLiveSample("form-anatomy", "100%", "200", , , , , "allow-forms")}}
 
-If you click "Sign me up!" immediately, you'll see a validation error because no data was entered. If you fill out the fields with a name and email address then click "Sign me up!", you'll see a `404` error message.
+If you click "Sign me up!" immediately, you'll see a validation error because no data was entered. If you fill out the fields with a name and email address, then click "Sign me up!", you'll see a `404` error message.
 
 We'll explain why later on. Before moving on, copy the previous HTML code listing into a new HTML file using your [code editor](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) and open it in a new browser tab.
 
 ### The `<form>` element
 
-As we said earlier, the {{htmlelement("form")}} element acts as the outer wrapper for the form, grouping together all the form controls inside it. When the `<button>` is pressed, all the data represented by the form controls will be submitted to the server. The `<form>` element can take many attributes, but the two most important ones, which we've included in our example, are as follows:
+As we said earlier, the {{htmlelement("form")}} element acts as the outer wrapper for the form, grouping all the form controls inside it. When the `<button>` is pressed, all the data represented by the form controls will be submitted to the server. The `<form>` element can take many attributes, but the two most important ones, which we've included in our example, are as follows:
 
 - `action`: Contains a path to the page that we want to send the submitted form data to, to be processed. Later on, after you submit the form, you'll see `/submit_page` included in the URL. You'll also get a {{HTTPStatus("404")}} error response because the page doesn't actually exist, but that's fine for now.
 - `method`: Specifies the data transmission [method](/en-US/docs/Web/HTTP/Reference/Methods) you want to use for sending the form data to the server. Don't worry about this too much for now; the `get` value causes the data to be sent as parameters attached to the end of the URL.
@@ -179,7 +179,7 @@ We've also put each input/label pair and the submit button inside a separate {{h
 
 This is a common pattern for form structuring. Some people use `<p>` elements to separate out their form elements, some use {{htmlelement("div")}}, {{htmlelement("section")}}, or even {{htmlelement("li")}} elements. It doesn't matter a great deal, as long as the elements used make semantic sense. For example, it makes sense to divide form element groups up into separate paragraphs or sections of content, or even items in a list. It would make less sense to represent them as [blockquotes](/en-US/docs/Web/HTML/Reference/Elements/blockquote), [asides](/en-US/docs/Web/HTML/Reference/Elements/aside), or [addresses](/en-US/docs/Web/HTML/Reference/Elements/address).
 
-There is a specialized element for grouping form elements together called {{htmlelement("fieldset")}}. This is useful in certain circumstances, such as in complex forms, and when grouping together multiple checkboxes and radio buttons. We'll look at a couple of `<fieldset>` examples later on.
+There is a specialized element for grouping form elements together called {{htmlelement("fieldset")}}. This is useful in certain circumstances, such as in complex forms and when grouping multiple checkboxes and radio buttons. We'll look at a couple of `<fieldset>` examples later on.
 
 ### `<input>` elements
 
@@ -208,7 +208,7 @@ In the case of radio buttons, you generally need to provide the value that would
 
 #### Specialized text field inputs
 
-The second exercise above raises an interesting point. The second input field specifically expects an email address, and validates entered values as such. If you look at the form code again, you'll see why — the second `<input>` has a `type` of `email`. There are several specialized text field input types designed to handle specific types of data — [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number), [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`<input type="tel">`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), etc.
+The second exercise above raises an interesting point. The second input field specifically expects an email address and validates entered values as such. If you look at the form code again, you'll see why — the second `<input>` has a `type` of `email`. There are several specialized text field input types designed to handle specific types of data — [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number), [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`<input type="tel">`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), etc.
 
 Follow some of the links above to find out what these input types are used for. Have a look around our [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input) reference and see if you can find any more specialized text field input types.
 
@@ -247,9 +247,9 @@ You can read more about form labeling best practices in [HTML Inputs and Labels:
 
 ### The `<button>` element
 
-When a {{htmlelement("button")}} element is included inside a `<form>` element, its default behavior is that it will submit the form, provided there is no invalid data present causing submission to be blocked by client-side form validation. You've already seen this behavior when playing with our basic form example above.
+When a {{htmlelement("button")}} element is included inside a `<form>` element, its default behavior is that it will submit the form, provided there is no invalid data present, causing submission to be blocked by client-side form validation. You've already seen this behavior when playing with our basic form example above.
 
-There are other button behaviors that can be specified via the `<button>` element's `type` attribute:
+Other button behaviors can be specified via the `<button>` element's `type` attribute:
 
 - `<button type="submit">` explicitly declares that a button should behave like a submit button. You don't ever really need to declare this, unless for some reason you are including other buttons inside your `<form>`, and you want to make it clear which one the submit button is. This will be very rare.
 - `<button type="reset">` creates a _reset button_ — this immediately deletes all data out of the form, resetting it to its initial state. **Don't use reset buttons** — they used to be popular in the early days of the web, but they are usually more annoying than they are helpful. Most people have experienced filling out a long form only to click the reset button by accident instead of the submit button, meaning they have to start again.
@@ -272,7 +272,7 @@ For example:
 - Form controls and buttons are keyboard-accessible by default. In the previous example, try moving forward and backward between the form elements using <kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd> (called "tabbing").
 - Notice also how tabbing between the form elements causes the focused element to be highlighted using a blue outline (called the **focus outline**). This is an important feature for keyboard users to know where they currently are in the form.
 
-If you don't use the correct semantic elements to implement your forms, you'll have re-implement all of this functionality, otherwise your form elements will not behave as users expect, and therefore seem broken. It all adds up.
+If you don't use the correct semantic elements to implement your forms, your form elements will not behave as users expect and will seem broken. You'll have to re-implement all of this functionality yourself, which all adds up.
 
 ## Other control types
 
@@ -394,13 +394,13 @@ Our example code looks like this:
 `radio` input types mostly work the same as `text` input types, but with a few differences:
 
 - The `name` attributes for each set of radio buttons have to contain the same value, to associate them together as one set. If they contain different values, they will effectively be separate sets, with different values on submission.
-- You have to include a `value` attribute containing the value to submit for each radio button. The submitted value will be a name/value pair, but the name will always be the same, for example `hotel=economy` or `hotel=superior`.
-- The `<label>` for each radio button should describe that particular value choice, rather than the overall value you are selecting. The preferred way to provide a description of the overall value choice is to wrap them in a {{htmlelement("fieldset")}}, which takes a {{htmlelement("legend")}} element as a child that contains the description.
+- You have to include a `value` attribute containing the value to submit for each radio button. The submitted value will be a name/value pair, but the name will always be the same, for example, `hotel=economy` or `hotel=superior`.
+- The `<label>` for each radio button should describe that particular value choice, rather than the overall value you are selecting. The preferred way to describe the overall value choice is to wrap them in a {{htmlelement("fieldset")}}, which takes a {{htmlelement("legend")}} element as a child that contains the description.
 
 > [!NOTE]
 > Besides structuring and labeling forms, fieldsets have other uses, such as [disabling](#disabling_form_controls) an entire set of controls as a single unit.
 
-It's also worth noting that we've applied the `checked` attribute to the first radio button — this causes it be selected when the page first loads. This means one option will always be selected, and you can't deselect a radio button without selecting another one.
+It's also worth noting that we've applied the `checked` attribute to the first radio button — this causes it to be selected when the page first loads. This means one option will always be selected, and you can't deselect a radio button without selecting another one.
 
 Try removing the `checked` attribute from the first radio button, save, then reload, to see the effect it has. Put it back before you move on.
 
@@ -414,7 +414,7 @@ Try setting the `disabled` attribute on the two `<fieldset>` elements, save, the
 
 ### Checkboxes
 
-Our "classes to attend" selectors are implemented using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) controls. these render as a set of on/off state checkboxes. Unlike radio buttons, you can select more than one at once.
+Our "classes to attend" selectors are implemented using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) controls. These render as a set of on/off state checkboxes. Unlike radio buttons, you can select more than one at once.
 
 ```html
 <fieldset>
@@ -437,11 +437,11 @@ As you can see from the code snippets, radio buttons and checkboxes are implemen
 The main difference (apart from the `type` value!) is that each checkbox has a different `name` value, and they generally aren't given `value` attributes. Behavior-wise, this means they represent different data values, whereas a radio button set only represents one. On submission, each value is submitted with a value of `on` if the checkbox was checked — `yoga=on`, `balloon=on`, etc.
 
 > [!NOTE]
-> It is possible to change the value submitted for a checkbox by giving it a `value` attribute, for example: `<input type="checkbox" id="yoga" name="yoga" value="yes" />` would result in `yoga=yes` being submitted if checked. However, there is not much point doing this. A checkbox is either submitted with a single value if checked, or it isn't submitted at all. It doesn't really matter what value is sent to the server.
+> It is possible to change the value submitted for a checkbox by giving it a `value` attribute, for example: `<input type="checkbox" id="yoga" name="yoga" value="yes" />` would result in `yoga=yes` being submitted if checked.
 
 ### Drop-down menus
 
-Drop-down menus, for example the "How are you getting here" selection control in our example, are implemented not with an `<input>` type, but with the {{htmlelement("select")}} and {{htmlelement("option")}} elements:
+Drop-down menus, for example, the "How are you getting here" selection control in our example, are implemented not with an `<input>` type, but with the {{htmlelement("select")}} and {{htmlelement("option")}} elements:
 
 ```html
 <label for="transport">How are you getting here:</label>
@@ -483,10 +483,10 @@ Earlier on, we looked at some of the basic client-side form validation provided 
 - Making sure that data is submitted in the correct format so that it doesn't cause errors in your application.
 - Making sure data does not cause security problems. Bad people know how to submit data formatted specifically so that, on insecure applications, it can execute commands to delete databases or take control of a system.
 
-Form validation is a huge topic that is beyond scope for this article, so we will leave it here for now. Just bear in mind that there are two types of form validation:
+Form validation is a huge topic that is beyond the scope of this article, so we will leave it here for now. Just bear in mind that there are two types of form validation:
 
-- Client-side validation, which happens in the browser, implemented using a combination of form validation attributes (like `required`) and JavaScript. Client-side validation is useful for giving users instant hints when they have entered the wrong data, but is not so effective at stopping malicious data from getting through. It is too easy to turn off JavaScript or alter client-side code so that the validation no longer works.
-- Server-side validation, which happens on the server, implemented using whatever language the server is using. Badly-formed messages can be sent to a server by accident or on purpose. Conventional wisdom is to make sure that your server doesn't trust anything a client is sending to avoid bugs or security issues caused by malformed messages. Server-side validation is great for stopping malicious messages, as it's harder to tamper with the code running on the server. Server-side validation is not so good at giving users hints about incorrect data because the data has to go to the server to get validated, then the result has to be sent back to the client before the user can be notified.
+- Client-side validation, which happens in the browser, is implemented using a combination of form validation attributes (like `required`) and JavaScript. Client-side validation is useful for giving users instant hints when they have entered the wrong data, but is not so effective at stopping malicious data from getting through. It is too easy to turn off JavaScript or alter client-side code so that the validation no longer works.
+- Server-side validation, which happens on the server, is implemented using whatever language the server is using. Badly-formed messages can be sent to a server by accident or on purpose. Conventional wisdom is to make sure that your server doesn't trust anything a client is sending to avoid bugs or security issues caused by malformed messages. Server-side validation is great for stopping malicious messages, as it's harder to tamper with the code running on the server. Server-side validation is not so good at giving users hints about incorrect data because the data has to go to the server to get validated, then the result has to be sent back to the client before the user can be notified.
 
 In short, don't decide between using either client-side or server-side validation - you will need both. You need client-side validation to give users feedback on their input and server-side validation to make sure messages are in a format your server can safely handle. If you want to start learning more about validation, a good place to start is [Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
 

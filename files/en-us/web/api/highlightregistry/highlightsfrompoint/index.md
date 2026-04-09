@@ -3,12 +3,10 @@ title: "HighlightRegistry: highlightsFromPoint() method"
 short-title: highlightsFromPoint()
 slug: Web/API/HighlightRegistry/highlightsFromPoint
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.HighlightRegistry.highlightsFromPoint
 ---
 
-{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
+{{APIRef("CSS Custom Highlight API")}}
 
 The **`highlightsFromPoint()`** method of the {{domxref("HighlightRegistry")}} interface returns an array of objects representing the custom highlights applied at a specific point within the viewport.
 

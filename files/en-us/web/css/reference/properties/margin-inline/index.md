@@ -6,7 +6,7 @@ browser-compat: css.properties.margin-inline
 sidebar: cssref
 ---
 
-The **`margin-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) is a shorthand property that defines both the logical inline start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
+The **`margin-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) defines both the logical inline start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
 
 {{InteractiveExample("CSS Demo: margin-inline")}}
 
@@ -98,7 +98,7 @@ The `margin-inline` property may be specified using one or two values.
 
 ### Values
 
-The `margin-inline` property takes the same values as the {{CSSxRef("margin", "", "#values")}} property.
+The `margin-inline` property takes the same values as the {{CSSxRef("margin-top", "", "#values")}} property.
 
 ## Formal definition
 

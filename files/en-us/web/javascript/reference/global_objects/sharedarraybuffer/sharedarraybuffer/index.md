@@ -12,16 +12,6 @@ sidebar: jsref
 
 The **`SharedArrayBuffer()`** constructor creates {{jsxref("SharedArrayBuffer")}} objects.
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer() constructor", "shorter")}}
-
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(8);
-
-console.log(buffer.byteLength);
-// Expected output: 8
-```
-
 ## Syntax
 
 ```js-nolint
@@ -43,16 +33,26 @@ new SharedArrayBuffer(length, options)
 
 ### Return value
 
-A new `SharedArrayBuffer` object of the specified size, with its {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} property set to the specified `maxByteLength` if one was specified. Its contents are
-initialized to 0.
+A new `SharedArrayBuffer` object of the specified size, with its {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} property set to the specified `maxByteLength` if one was specified. Its contents are initialized to 0.
 
 ## Examples
 
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
+
+### Basic usage
+
+Create a buffer specifying its size in bytes.
+
+```js
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength); // 8
+```
+
 ### Always use the new operator to create a SharedArrayBuffer
 
-`SharedArrayBuffer` constructors are required to be constructed with a
-{{jsxref("Operators/new", "new")}} operator. Calling a `SharedArrayBuffer`
-constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+`SharedArrayBuffer` constructors are required to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a `SharedArrayBuffer` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
 
 ```js example-bad
 const sab = SharedArrayBuffer(1024);

@@ -59,9 +59,12 @@ assetlinks
 associationlist
 associationlistitemkey
 associationlistitemvalue
+attributiondestination
+attributionsourceid
 attributionsrc
 audiocontext
 authorid
+autolocate
 autospace
 backdrag
 backgroundfetchabort
@@ -85,11 +88,13 @@ BPPV1
 Brai
 braillelabel
 brailleroledescription
+broc
 browser-bottombox
 browser.safebrowsing
 browser.sessionhistory
 browsingtopics
 bstack
+bufferedchange
 buttondisabledaccept
 bvec
 byterange
@@ -124,6 +129,8 @@ color-colrv0
 color-colrv1
 color-sbix
 colorMaskiOES
+com.apple.quicktime.mdta
+com.apple.quicktime.udta
 commandfor
 congres
 connectionavailable
@@ -216,6 +223,7 @@ emptytext
 emsdk
 enable-tracejit
 enableiOES
+endstreaming
 enterpictureinpicture
 equalsize
 EquationiOES
@@ -243,6 +251,7 @@ fullscreenbutton
 fullwide
 FunciOES
 funcref
+funcrefs
 fwdred
 fwid
 gara
@@ -274,6 +283,7 @@ hansfin
 hantfin
 hebr
 highp
+hiliteColor
 HMDVRDevice
 hmng
 hmnp
@@ -520,8 +530,10 @@ oldstyle
 oldstyle-nums
 onao
 onbeforematch
+onbufferedchange
 oncanmakepayment
 oncharacterboundsupdate
+onclipboardchange
 oncontentvisibilityautostatechange
 oncurrententrychange
 oncurrentscreenchange
@@ -529,8 +541,10 @@ ondequeue
 ondispose
 ondownloadprogress
 onefive
+onendstreaming
 ongesturestart
 oninterest
+onlocation
 onloseinterest
 onnavigate
 onnavigateerror
@@ -540,15 +554,19 @@ onpageswap
 onpaymentrequest
 onpointerrawupdate
 onprerenderingchange
+onpromptaction
+onpromptdismiss
 onrtctransform
 onsamplebufferfull
 onscreenschange
 onscrollsnapchange
 onscrollsnapchanging
 onsinkchange
+onstartstreaming
 ontextformatupdate
 ontextupdate
 onuncapturederror
+onvalidationstatuschange
 onwebkitmouseforcewillbegin
 onzoomlevelchange
 opendocument
@@ -618,6 +636,8 @@ privacy.clearsitedata
 privacy.globalprivacycontrol
 privacy.restrict3rdpartystorage
 privatebrowsingmode
+promptaction
+promptdismiss
 propfind
 prophoto-rgb
 proportional-nums
@@ -700,6 +720,7 @@ serviceworker
 setenvif
 SHA-256-sess
 SHA-512-sess
+shadowrootcustomelementregistry
 shadowrootreferencetarget
 sharpyuv
 shrd
@@ -725,6 +746,7 @@ sscanf
 stackoverflow_url
 startapp
 startproject
+startstreaming
 staticfiles
 storageaccess
 strcmp
@@ -808,6 +830,7 @@ utterleft
 uuencode
 uvec
 vaii
+validationstatuschange
 validlink
 vcard
 vcdiff

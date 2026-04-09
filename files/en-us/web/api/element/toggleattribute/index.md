@@ -8,9 +8,7 @@ browser-compat: api.Element.toggleAttribute
 
 {{APIRef("DOM")}}
 
-The **`toggleAttribute()`** method of the
-{{domxref("Element")}} interface toggles a Boolean attribute (removing it if it is
-present and adding it if it is not present) on the given element.
+The **`toggleAttribute()`** method of the {{domxref("Element")}} interface toggles a Boolean attribute on the given element, removing it if present and adding it if not present.
 
 ## Syntax
 
@@ -22,9 +20,8 @@ toggleAttribute(name, force)
 ### Parameters
 
 - `name`
-  - : A string specifying the name of the attribute to be toggled. The
-    attribute name is automatically converted to all lower-case when
-    `toggleAttribute()` is called on an HTML element in an HTML document.
+  - : A string specifying the name of the attribute to be toggled.
+    The attribute name is automatically converted to all lower-case when `toggleAttribute()` is called on an HTML element in an HTML document.
 - `force` {{optional_inline}}
   - : A boolean value which has the following effects:
     - if not specified at all, the `toggleAttribute` method "toggles" the attribute named `name` — removing it if it is present, or else adding it if it is not present
@@ -39,13 +36,14 @@ present, and `false` otherwise.
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : The specified attribute `name` contains one or more characters which
-    are not valid in attribute names.
+  - : The specified attribute `name` contains one or more characters that are not valid in attribute names.
+    The `name` must have at least one character, and may not contain ASCII whitespace, `NULL`, `/`, `=` or `>` (U+0000, U+002F, U+003D, or U+003E, respectively).
 
 ## Examples
 
-In the following example, `toggleAttribute()` is used to toggle the
-`disabled` attribute of an {{HTMLElement("input")}}.
+### Basic usage
+
+In the following example, `toggleAttribute()` is used to toggle the `disabled` attribute of an {{HTMLElement("input")}}.
 
 ### HTML
 

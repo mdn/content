@@ -10,7 +10,7 @@ spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#synt
 sidebar: webassemblysidebar
 ---
 
-The **`fill`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) sets all bytes in a memory region to a given byte.
+The **`memory.fill`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) sets all bytes in a memory region to a given byte.
 
 The instruction returns no value.
 It traps (exception) if the indicated memory region is out of bounds.
@@ -26,7 +26,7 @@ i32.const 255 ;; The value to set each byte to (must be < 256)
 i32.const 100 ;; The number of bytes to update
 memory.fill ;; Fill default memory
 
-;; Fill default memory using an S-function
+;; Fill default memory using an S-expression
 (memory.fill (i32.const 200) (i32.const 255) (i32.const 100))
 ```
 
@@ -45,7 +45,7 @@ i32.const 255 ;; The value to set each byte to (must be < 256)
 i32.const 100 ;; The number of bytes to update
 memory.fill (memory $memoryName) ;; Fill memory with name "$memoryName"
 
-;; Fill same memory using an S function
+;; Fill same memory using an S-expression
 (memory.fill (memory $memoryName) (i32.const 200) (i32.const 255) (i32.const 100))
 ```
 

@@ -87,9 +87,12 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("background-position-x")}}
 - {{CSSxRef("background-position-y")}}
 - {{CSSxRef("background-position")}}
-- {{CSSxRef("background-repeat")}}
+- {{CSSxRef("background-repeat")}} (shorthand)
+- {{CSSxRef("background-repeat-x")}}
+- {{CSSxRef("background-repeat-y")}}
 - {{CSSxRef("background-size")}}
 - {{CSSxRef("background")}} (shorthand)
+- {{CSSxRef("baseline-shift")}}
 - {{CSSxRef("baseline-source")}}
 - {{CSSxRef("block-size")}}
 
@@ -190,12 +193,14 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("column-count")}}
 - {{CSSxRef("column-fill")}}
 - {{CSSxRef("column-gap")}}
+- {{CSSxRef("column-height")}}
 - {{CSSxRef("column-rule-color")}}
 - {{CSSxRef("column-rule-style")}}
 - {{CSSxRef("column-rule-width")}}
 - {{CSSxRef("column-rule")}} (shorthand)
 - {{CSSxRef("column-span")}}
 - {{CSSxRef("column-width")}}
+- {{CSSxRef("column-wrap")}}
 - {{CSSxRef("columns")}} (shorthand)
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-height")}}
@@ -281,6 +286,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("font-variant")}} (shorthand)
 - {{CSSxRef("font-variation-settings")}}
 - {{CSSxRef("font-weight")}}
+- {{CSSxRef("font-width")}}
 - {{CSSxRef("font")}} (shorthand)
 - {{CSSxRef("forced-color-adjust")}}
 
@@ -473,6 +479,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("ry")}}
 - {{CSSxRef("scale")}}
 - {{CSSxRef("scroll-behavior")}}
+- {{CSSxRef("scroll-initial-target")}}
 - {{CSSxRef("scroll-margin-block-end")}}
 - {{CSSxRef("scroll-margin-block-start")}}
 - {{CSSxRef("scroll-margin-block")}} (shorthand)
@@ -578,7 +585,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("user-modify")}}
 - {{CSSxRef("user-select")}}
 - {{CSSxRef("vector-effect")}}
-- {{CSSxRef("vertical-align")}}
+- {{CSSxRef("vertical-align")}} (shorthand)
 - {{CSSxRef("view-timeline-axis")}}
 - {{CSSxRef("view-timeline-inset")}}
 - {{CSSxRef("view-timeline-name")}}

@@ -59,7 +59,7 @@ By default, the display text of the link is the first parameter passed to the ma
 
 Some reference features have nested pages for related features. For example, the HTML `<input>` element has multiple nested pages for different input types, such as `Web/HTML/Reference/Elements/input/range` for the range input type.
 
-Passing the path info to the macro in the first parameter as in `\{{HTMLElement("input/range")}}` produces the link as "{{HTMLElement("input/range")}}", which is not what you want. Use the second parameter to show a different link text. So for a link to the range input type, we would write the macro as `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;<code>")}}` to produce "{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}". (Note that if the second parameter includes a space, like the one between `input` and `type` here, this macro removes the code formatting; so we've added the {{HTMLElement("code")}} tags explicitly.)
+Passing the path info to the macro in the first parameter as in `\{{HTMLElement("input/range")}}` produces the link as "{{HTMLElement("input/range")}}", which is not what you want. Use the second parameter to show a different link text. So for a link to the range input type, we would write the macro as `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}` to produce "{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}". (Note that if the second parameter includes a space, like the one between `input` and `type` here, this macro removes the code formatting; so we've added the {{HTMLElement("code")}} tags explicitly.)
 
 ### Using `CSSxRef` with the CSS reference
 
@@ -93,7 +93,7 @@ A few other behaviors of the `CSSxRef` macro worth noting include:
 
   - `fit-content()` function (`Web/CSS/Reference/Values/fit-content_function`) vs. `fit-content` keyword (`Web/CSS/Reference/Values/fit-content`)
 
-    **Macro**: `\{{CSSxRef("fit-content_function", "fit-content()")}}` vs. `\{{CSSxRef("fit-content")}}` (this is currently an exception where you need to provide the second parameter to get the correct link text for the function.)
+    **Macro**: `\{{CSSxRef("fit-content()")}}` vs. `\{{CSSxRef("fit-content")}}`
 
   - `flex` property (`Web/CSS/Reference/Properties/flex`) vs. `<flex>` data type (`Web/CSS/Reference/Values/flex_value`)
 
