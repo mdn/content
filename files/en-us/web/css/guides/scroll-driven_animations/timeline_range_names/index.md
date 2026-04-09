@@ -505,7 +505,7 @@ body::before {
 }
 ```
 
-Select the the different height values, then scroll to compare `entry` with `entry-crossing` for each size.
+Select the different height values, then scroll to compare `entry` with `entry-crossing` for each size.
 
 {{EmbedLiveSample("entry_crossing", "100%", "400")}}
 

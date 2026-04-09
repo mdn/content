@@ -437,7 +437,7 @@ We start our CSS by styling the `<optgroup>` elements themselves. These are most
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 select,
@@ -447,8 +447,8 @@ select,
 }
 
 select {
-  border: 2px solid #ddd;
-  background: #eee;
+  border: 2px solid #dddddd;
+  background: #eeeeee;
   padding: 10px;
 }
 
@@ -459,9 +459,9 @@ select {
 
 ```css live-sample___optgroup-example
 optgroup {
-  border: 2px solid #ddd;
+  border: 2px solid #dddddd;
   border-radius: 8px;
-  background: #eee;
+  background: #eeeeee;
   padding: 10px 0 0 0;
   margin-top: 5px;
 }
@@ -480,7 +480,7 @@ Finally, we style the `<option>` elements, providing a {{cssxref("background")}}
 
 ```css live-sample___optgroup-example
 option {
-  background: #eee;
+  background: #eeeeee;
   padding: 10px;
 }
 
@@ -489,7 +489,7 @@ option:last-of-type {
 }
 
 option:nth-of-type(odd) {
-  background: #fff;
+  background: white;
 }
 
 option:hover,

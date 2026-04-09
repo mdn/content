@@ -131,7 +131,7 @@ Support for the prefixed version is typically dropped eventually, so use the sta
 - `-moz-element` {{deprecated_inline}}: Use {{CSSxRef("element")}}.
 - {{CSSxRef("-moz-image-rect")}} {{deprecated_inline}}
 
-### order-style and outline-style
+### border-style and outline-style
 
 **Properties:** {{CSSxRef("border-style")}} and {{CSSxRef("outline-style")}}.
 
