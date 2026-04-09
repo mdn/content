@@ -80,9 +80,6 @@ browser.Namespace.functionName(param1).then((result) => {
 
 {{Compat}}
 
-<!-- If this API is based on a Chromium API, add a Chromium attribution note and license comment after {{Compat}}. -->
-<!-- See https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/WebExtension_API_page_template#chromium_attribution -->
-
 <!-- Add see also links as appropriate -->
 
 ## See also

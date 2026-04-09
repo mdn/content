@@ -93,10 +93,6 @@ After all examples, include the `{{WebExtExamples}}` macro, which generates link
 
 Include `{{Compat}}`, which is automatically populated from the `browser-compat` key in the front matter.
 
-## Chromium attribution
-
-If the event is part of an API based on a Chromium API, include a `[!NOTE]` callout after `{{Compat}}` crediting the Chromium source, followed by the BSD license text in an HTML comment. See the [API overview page guidance](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/WebExtension_API_page_template#chromium_attribution) for details and the full license text to use.
-
 ## See also section
 
 Include links to reference pages and guides related to the current event. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.

@@ -90,52 +90,7 @@ After the last member-listing section (Types, Properties, Functions, or Events),
 
 ## Browser compatibility section
 
-Include `{{Compat}}`, which is automatically populated from the `browser-compat` key in the front matter.
-
-## Chromium attribution
-
-If the API is based on a Chromium API, include a `[!NOTE]` callout after `{{Compat}}` crediting the Chromium source. Link to the relevant Chrome API docs and the JSON source file:
-
-```md
-> [!NOTE]
-> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action) API. This documentation is derived from [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json) in the Chromium code.
-```
-
-Follow it with the BSD license text in an HTML comment:
-
-```md
-<!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
-//
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
-//
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
--->
-```
-
-Omit both the note and the license comment if the API is not based on a Chromium API. This pattern applies to all API page types (overview, function, event, property, and type).
+Include the `{{Compat}}` macro. This uses the `browser-compat` key in the front matter to find the API's compatibility data in the [browser-compat-data repo](https://github.com/mdn/browser-compat-data). The macro then presents this information in a table on the rendered page.
 
 ## See also section
 

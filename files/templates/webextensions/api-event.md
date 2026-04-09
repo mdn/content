@@ -106,9 +106,6 @@ browser.Namespace.onEventName.addListener(handleEvent);
 
 {{Compat}}
 
-<!-- If this API is based on a Chromium API, add a Chromium attribution note and license comment. -->
-<!-- See https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/WebExtension_API_page_template#chromium_attribution -->
-
 <!-- Add see also links as appropriate -->
 
 ## See also
