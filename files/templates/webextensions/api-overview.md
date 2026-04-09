@@ -21,18 +21,19 @@ sidebar: addonsidebar
 
 <!-- Write one or two sentences giving a high-level description of what the namespace does -->
 
-Description of the namespace.
+This API enables an extension to…
 
-<!-- If the API requires a permission, include the following line -->
+<!-- If the API requires permissions, add those details here -->
+<!-- If the API requires a permission, use the following line -->
 
-To use this API, an extension must request the "permissionName" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+To use this API, an extension must request the `permissionName` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
 <!-- If useful, add a short bulleted list summarizing key capabilities -->
 
 ## Description
 
-<!-- Add a detailed description of the namespace's purpose, concepts, usage patterns, or important caveats. -->
-<!-- This section can be omitted if the introductory paragraph is sufficient. -->
+<!-- Add details of the namespace's purpose, concepts, usage patterns, or important caveats. -->
+<!-- Can be omitted if the introductory paragraph is sufficient. -->
 
 ## Types
 
