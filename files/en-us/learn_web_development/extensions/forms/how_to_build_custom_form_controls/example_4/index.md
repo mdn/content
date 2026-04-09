@@ -47,7 +47,11 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
         aria-selected="false">
         Banana
       </li>
-      <li class="option" id="fruit-option-3" role="option" aria-selected="false">
+      <li
+        class="option"
+        id="fruit-option-3"
+        role="option"
+        aria-selected="false">
         Strawberry
       </li>
       <li
