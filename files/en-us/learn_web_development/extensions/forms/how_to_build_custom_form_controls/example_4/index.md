@@ -27,8 +27,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
     aria-label="Fruit"
     aria-haspopup="listbox"
     aria-expanded="false"
-    aria-controls="fruit-options"
-  >
+    aria-controls="fruit-options">
     <span class="value">Cherry</span>
     <ul class="optList hidden" id="fruit-options" role="listbox">
       <li class="option" id="fruit-option-0" role="option" aria-selected="true">
