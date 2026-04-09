@@ -15,6 +15,7 @@ The **`CSSMathValue`** interface of the [CSS Typed Object Model API](/en-US/docs
 
 Below is a list of interfaces based on the CSSMathValue interface.
 
+- {{DOMxRef('CSSMathClamp')}}
 - {{domxref('CSSMathInvert')}}
 - {{domxref('CSSMathMax')}}
 - {{domxref('CSSMathMin')}}
