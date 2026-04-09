@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("WebCodecs API")}}
 
-The WebCodecs API requires working not just with codecs such as `vp9` or `h264` but specific codec strings such as `vp09.00.40.08.00` — precise identifiers that specify not just the codec family but also the profile, level, and other parameters.
+The WebCodecs API requires working with fully specified codec strings, such as `vp09.00.40.08.00`, instead of ambiguous strings like `vp9` or `h264`. Fully specified codec strings detail not just the codec family but also the profile, level, and other parameters.
 This guide explains how codec strings work and how to choose the right codec for common use cases.
 
 ## Decoding vs encoding
@@ -23,13 +23,13 @@ Before choosing a codec string, like `vp09.00.40.08.00` or `avc1.4d0034`, it is 
 
 H.264 is one of the most widely supported codecs across browsers, operating systems, and consumer devices. It is the most common codec used in MP4 files, and applications which encode videos intended for playback in 3rd party software typically choose H.264 as a pragmatic choice for maximum compatibility.
 
-While popular, it is worth noting that H.264 is a patented codec. While browser vendors hold licenses covering the H.264 encoder implementations used by WebCodecs, the codec is subject to royalties in certain circumstances, and developers should be aware of the [Via Licensing Alliance AVC license](https://via-la.com/licensing-programs/avc-h-264/).
+While popular, it is worth noting that H.264 is a patented codec. While browser vendors hold licenses covering the H.264 encoder implementations used by WebCodecs, the codec is subject to royalties in certain circumstances. Developers should review usage with legal counsel.
 
 ### VP9
 
-VP9 is an open source codec developed by Google, and offers better compression than H.264 at equivalent quality. VP9 within WebM containers is widely supported across modern browsers, with coverage comparable to or exceeding H.264 †.
+VP9 is an open source codec developed by Google, and offers better compression than H.264 at equivalent quality. VP9 within WebM containers is widely supported across modern browsers, with coverage comparable to or exceeding H.264.
 
-VP9 within WebM containers is also supported by native video players on Windows (Windows Media Player) and third-party players such as VLC, but lacks native playback support on macOS and iOS.
+VP9 within WebM containers is also supported by native video players on Windows (Windows Media Player) and third-party players such as VLC, but currently lacks native playback support on macOS and iOS.
 
 VP9 is sometimes, but not always supported as a codec within MP4 files, as support for this configuration depends on playback software.
 
@@ -37,16 +37,14 @@ VP9 is often chosen for internal use cases for its better compression, or when o
 
 ### AV1
 
-AV1 is a newer open source codec developed by the [Alliance for Open Media](https://aomedia.org/). AV1 has better compression than both H.264 and VP9 for the same quality, and decode support is now over 90% coverage globally across browsers †.
+AV1 is a newer open source codec developed by the [Alliance for Open Media](https://aomedia.org/). AV1 has better compression than both H.264 and VP9 for the same quality, and decode support is now over 90% coverage globally across browsers.
 
-AV1 encoding support is strong across desktop browsers but limited on Safari and on Android. AV1 is not recommended as a general encoding target for typical user-facing applications unless maximum compression is required; it is best suited for decode-only (playback) use cases.
+AV1 encoding support is strong across desktop browsers but limited on Safari and on Android. AV1 offers better quality-per-bit than VP9, but is more computationally intensive to encode. Consumer devices increasingly have support for AV1 hardware acceleration, which can make AV1 encoding more practical. The decision to use AV1 over VP9 typically comes down to whether the better quality-per-bit justifies the additional encoding overhead for a given use case.
 
-### HEVC (H.265)
-
-HEVC offers better compression than H.264 but has significant gaps in browser encoding support outside of Apple platforms †.
+HEVC offers better compression than H.264 but has significant gaps in browser encoding support outside of Apple platforms.
 It is not recommended as a general-purpose encoding target.
 
-† [WebCodecs Support Dataset](https://zenodo.org/records/19187467)
+Like H.264, HEVC is a patented codec. The codec is subject to royalties in certain circumstances. Developers should review usage with legal counsel.
 
 ## Codec-container compatibility
 
@@ -58,13 +56,14 @@ The following table covers the two most common web video containers:
 | H.264 | Yes     | No   |
 | VP9   | Partial | Yes  |
 | AV1   | Partial | Yes  |
+| HEVC  | Yes     | No   |
 
 H.264 is the standard codec for MP4. VP9 and AV1 are the standard codecs for WebM.
 While VP9 and AV1 have partial MP4 support in some environments, pairing them with WebM is more reliable.
 
 ## Choosing a codec string
 
-For each codec family, there are hundreds of possible codec strings. The following tables provide a practical starting point for H.264 and VP9 codec strings that maximize encoding compatibility.
+For each codec family, there are hundreds of possible codec strings. The following tables provide a practical starting point for codec strings that maximize encoding compatibility.
 
 ### H.264
 
@@ -83,6 +82,22 @@ For each codec family, there are hundreds of possible codec strings. The followi
 | `vp09.00.40.08.00` | 4     | 2K             | [99.96%](https://webcodecsfundamentals.org/codecs/vp09.00.40.08.00.html) |
 | `vp09.00.50.08.00` | 5     | 4K             | [99.97%](https://webcodecsfundamentals.org/codecs/vp09.00.50.08.00.html) |
 | `vp09.00.61.08.00` | 6.1   | 8K             | [99.97%](https://webcodecsfundamentals.org/codecs/vp09.00.61.08.00.html) |
+
+### AV1
+
+| Codec string    | Level | Max resolution | Support                                                              |
+| --------------- | ----- | -------------- | -------------------------------------------------------------------- |
+| `av01.0.05M.08` | 3.1   | 720p           | [87.9%](https://webcodecsfundamentals.org/codecs/av01.0.05M.08.html) |
+| `av01.0.08M.08` | 4.0   | 1080p          | [87.8%](https://webcodecsfundamentals.org/codecs/av01.0.08M.08.html) |
+| `av01.0.12M.08` | 5.0   | 4K             | [87.8%](https://webcodecsfundamentals.org/codecs/av01.0.12M.08.html) |
+
+### HEVC
+
+| Codec string       | Level | Max resolution | Support                                                                 |
+| ------------------ | ----- | -------------- | ----------------------------------------------------------------------- |
+| `hvc1.1.6.L90.B0`  | 3.0   | 1080p          | [73.6%](https://webcodecsfundamentals.org/codecs/hvc1.1.6.L90.B0.html)  |
+| `hvc1.1.6.L150.B0` | 5.0   | 4K             | [73.6%](https://webcodecsfundamentals.org/codecs/hvc1.1.6.L150.B0.html) |
+| `hvc1.1.6.L180.B0` | 6.0   | 8K             | [73.1%](https://webcodecsfundamentals.org/codecs/hvc1.1.6.L180.B0.html) |
 
 See the [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/) for an exhaustive list of potential codec strings, and support across browsers & devices.
 
@@ -120,6 +135,16 @@ The format for these codec strings is specified in the [W3C codec registry](http
 - `05M` — Level and tier (`05` = level 3.1, `M` = Main tier)
 - `08` — Bit depth (8-bit)
 
+### HEVC
+
+`hvc1.1.6.L150.B0`
+
+- `hvc1` — HEVC codec identifier (MP4/QuickTime variant)
+- `1` — Profile (`1` = Main profile)
+- `6` — Compatibility flags
+- `L150` — Level × 30 (`L150` = level 5.0, supports up to 4K)
+- `B0` — Tier and constraint flags (`B0` = Main tier)
+
 ## Choosing an audio codec
 
 ### Opus
@@ -140,12 +165,18 @@ MP3 and PCM are not supported as encoding targets in WebCodecs. PCM (uncompresse
 
 Audio codec strings are simpler than video codec strings. Opus requires no additional parameters; AAC uses a short parameter string.
 
-| Codec | Codec string | Container | Support                                                          |
-| ----- | ------------ | --------- | ---------------------------------------------------------------- |
-| Opus  | `opus`       | WebM      | [94.4%](https://webcodecsfundamentals.org/codecs/opus.html)      |
-| AAC   | `mp4a.40.2`  | MP4       | [87.8%](https://webcodecsfundamentals.org/codecs/mp4a.40.2.html) |
+| Codec  | Codec string | Container | Encoder support                                                  | Decoder support                                                  |
+| ------ | ------------ | --------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Opus   | `opus`       | WebM      | [96.1%](https://webcodecsfundamentals.org/codecs/opus.html)      | [96.5%](https://webcodecsfundamentals.org/codecs/opus.html)      |
+| AAC    | `mp4a.40.2`  | MP4       | [90.1%](https://webcodecsfundamentals.org/codecs/mp4a.40.2.html) | [96.4%](https://webcodecsfundamentals.org/codecs/mp4a.40.2.html) |
+| MP3    | `mp3`        | —         | [0%](https://webcodecsfundamentals.org/codecs/mp3.html)          | [96.5%](https://webcodecsfundamentals.org/codecs/mp3.html)       |
+| FLAC   | `flac`       | —         | [0%](https://webcodecsfundamentals.org/codecs/flac.html)         | [96.5%](https://webcodecsfundamentals.org/codecs/flac.html)      |
+| Vorbis | `vorbis`     | WebM      | [3.8%](https://webcodecsfundamentals.org/codecs/vorbis.html)     | [96.5%](https://webcodecsfundamentals.org/codecs/vorbis.html)    |
+| PCM    | `pcm-f32`    | —         | [8.7%](https://webcodecsfundamentals.org/codecs/pcm-f32.html)    | [94.6%](https://webcodecsfundamentals.org/codecs/pcm-f32.html)   |
 
 The lower AAC encoding support figure reflects the platform gaps described above — Firefox (all platforms), desktop Linux (all browsers), and partial support for `AudioEncoder` on Apple devices.
+
+PCM is available in several variants: `pcm-f32` (32-bit float), `pcm-s16` (16-bit signed), `pcm-s24` (24-bit signed), `pcm-s32` (32-bit signed), and `pcm-u8` (8-bit unsigned). All variants have equivalent browser support. The `pcm-f32` format matches the `f32-planar` layout used by {{domxref("AudioData")}} and is the most practical choice for raw audio processing.
 
 Use {{domxref("AudioEncoder/isConfigSupported_static", "AudioEncoder.isConfigSupported()")}} to check support at runtime before configuring an `AudioEncoder`. Note that `AudioEncoder` itself is not available in all browsers — check for its existence with `typeof AudioEncoder !== "undefined"` before calling `isConfigSupported()`.
 
@@ -196,6 +227,7 @@ if (typeof AudioEncoder !== "undefined") {
 
 ## See also
 
+- [WebCodecs Support Dataset](https://zenodo.org/records/19187467)
 - [Video processing concepts](/en-US/docs/Web/API/WebCodecs_API/Video_processing_concepts)
 - [Using the WebCodecs API](/en-US/docs/Web/API/WebCodecs_API/Using_the_WebCodecs_API)
 - [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/) on WebCodecs Fundamentals

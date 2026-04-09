@@ -85,7 +85,7 @@ A codec is a specific algorithm for encoding (compressing) and decoding (decompr
 - PCM
   - : Uncompressed audio. No quality loss, but large file sizes.
 
-The WebCodecs specification only supports a specific set of codecs, and individual devices and browsers may only support a subset of those. Encoders and decoders must be configured with a specific codec string (such as `"vp09.00.40.08"` for VP9 or `"avc1.4d0034"` for H.264) rather than a general codec name. For a full list of codec strings and their browser support, see the [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/) on WebCodecs Fundamentals, or the [Codec selection guide](/en-US/docs/Web/API/WebCodecs_API/Codec_selection) for guidance on choosing the right codec string.
+The WebCodecs specification only supports a specific set of codecs, and individual devices and browsers may only support a subset of those. Encoders and decoders must be configured with fully specified codec strings (such as `"vp09.00.40.08.00"` for VP9 or `"avc1.4d0034"` for H.264) instead of ambiguous codec names like `"vp9"` or `"h264"`. For a full list of codec strings and their browser support, see the [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/) on WebCodecs Fundamentals, or the [Codec selection guide](/en-US/docs/Web/API/WebCodecs_API/Codec_selection) for guidance on choosing the right codec string.
 
 ### Muxing and Demuxing
 
