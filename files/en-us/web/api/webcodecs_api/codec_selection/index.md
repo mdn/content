@@ -41,6 +41,8 @@ AV1 is a newer open source codec developed by the [Alliance for Open Media](http
 
 AV1 encoding support is strong across desktop browsers but limited on Safari and on Android. AV1 offers better quality-per-bit than VP9, but is more computationally intensive to encode. Consumer devices increasingly have support for AV1 hardware acceleration, which can make AV1 encoding more practical. The decision to use AV1 over VP9 typically comes down to whether the better quality-per-bit justifies the additional encoding overhead for a given use case.
 
+### HEVC (H.265)
+
 HEVC offers better compression than H.264 but has significant gaps in browser encoding support outside of Apple platforms.
 It is not recommended as a general-purpose encoding target.
 
