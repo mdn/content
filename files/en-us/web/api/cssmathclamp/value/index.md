@@ -8,8 +8,8 @@ browser-compat: api.CSSMathClamp.value
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The CSSMathClamp.value read-only property of the
-{{domxref("CSSMathClamp")}} interface returns the {{domxref("CSSNumericValue")}} object containing the preferred value of a {{domxref("CSSMathClamp")}} object.
+The **`value`** read-only property of the
+{{domxref("CSSMathClamp")}} interface returns a {{domxref("CSSNumericValue")}} object containing the preferred value of a {{domxref("CSSMathClamp")}} object.
 
 ## Value
 

@@ -7,7 +7,7 @@ browser-compat: api.CSSMathClamp
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMathClamp`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the CSS {{CSSXref("clamp','clamp()")}} function. It inherits properties and methods from its parent {{domxref("CSSNumericValue")}}.
+The **`CSSMathClamp`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the CSS {{CSSXref("clamp","clamp()")}} function. It inherits properties and methods from its parent {{domxref("CSSNumericValue")}}.
 
 {{InheritanceDiagram}}
 

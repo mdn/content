@@ -8,8 +8,8 @@ browser-compat: api.CSSMathClamp.lower
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The CSSMathClamp.lower read-only property of the
-{{domxref("CSSMathClamp")}} interface returns the {{domxref("CSSNumericValue")}} object containing the minimum value of a {{domxref("CSSMathClamp")}} object.
+The **`lower`** read-only property of the
+{{domxref("CSSMathClamp")}} interface returns a {{domxref("CSSNumericValue")}} object containing the minimum value of a {{domxref("CSSMathClamp")}} object.
 
 ## Value
 

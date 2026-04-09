@@ -8,8 +8,8 @@ browser-compat: api.CSSMathClamp.upper
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The CSSMathClamp.upper read-only property of the
-{{domxref("CSSMathClamp")}} interface returns the {{domxref("CSSNumericValue")}} object containing the maximum value of a {{domxref("CSSMathClamp")}} object.
+The **`upper`** read-only property of the
+{{domxref("CSSMathClamp")}} interface returns a {{domxref("CSSNumericValue")}} object containing the maximum value of a {{domxref("CSSMathClamp")}} object.
 
 ## Value
 
