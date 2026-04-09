@@ -37,16 +37,16 @@ Copy specified memory (if multi-memory supported)
 i32.const 50 ;; Destination address to copy to
 i32.const 100 ;; Source address to copy from
 i32.const 25 ;; Number of bytes to copy
-memory.copy 2 2 ;; Copy memory within memory with index 2
+memory.copy (memory 2) (memory 2) ;; Copy memory within memory with index 2
 
 ;; Copy between memories referenced by their names
 i32.const 50 ;; Destination address (in $destMem)
 i32.const 100 ;; Source address (in $sourceMem)
 i32.const 25 ;; Number of bytes to copy
-memory.copy $destMem $sourceMem ;; Copy memory from "$sourceMem" to "$destMem"
+memory.copy (memory $destMem) (memory $sourceMem) ;; Copy memory from "$sourceMem" to "$destMem"
 
 ;; Copy between memories using an S-expression
-(memory.copy $destMem $sourceMem (i32.const 50) (i32.const 100) (i32.const 25))
+(memory.copy (memory $destMem) (memory $sourceMem) (i32.const 50) (i32.const 100) (i32.const 25))
 ```
 
 ### Instructions and opcodes
