@@ -89,7 +89,7 @@ One or more single `<animation>` declarations, separated by commas, with each `<
 - `<single-animation-name>`
   - The name of a {{cssxref("@keyframes")}} at-rules that specifies the animation to apply to an element. The initial value for {{cssxref("animation-name")}} is `none`.
 - `<single-easing-function>`
-  - : Determines the type of transition. The value must be one of those available in {{cssxref("easing-function")}}. The initial value for {{cssxref("animation-timing-function")}} is `ease`.
+  - : Determines the type of transition. The value must be one of those available in {{cssxref("animation-timing-function")}}. The initial value is `ease`.
 - `<single-animation-iteration-count>`
   - : The number of times the animation is played. The value must be one of those available in {{cssxref("animation-iteration-count")}}. The initial value for {{cssxref("animation-iteration-count")}} is `1`.
 - `<single-animation-direction>`
@@ -99,9 +99,9 @@ One or more single `<animation>` declarations, separated by commas, with each `<
 - `<single-animation-play-state>`
   - : Determines whether the animation is playing or not. The value must be one of those available in {{cssxref("animation-play-state")}}. The initial value for {{cssxref("animation-play-state")}} is `running`.
 - `<single-animation-delay>`
-  - : Determines the amount of time to wait from applying the animation to an element before beginning to perform the animation. The initial value for {{cssxref("animation-delay")}} is `0s`.
+  - : Determines the amount of time to wait from applying the animation to an element before beginning to perform the animation. The value must be one of those available in {{cssxref("animation-delay")}}. The initial value is `0s`.
 - `<single-animation-duration>`
-  - : Determines the length of time that an animation takes to complete one cycle. The initial value for {{cssxref("animation-duration")}} is `0s`.
+  - : Determines the length of time that an animation takes to complete one cycle. The value must be one of those available in {{cssxref("animation-duration")}}. The initial value is `0s`.
 
 ## Description
 
