@@ -3,10 +3,12 @@ title: Iterator.zip()
 short-title: zip()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/zip
 page-type: javascript-static-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Iterator.zip
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Iterator.zip()`** static method creates a new {{jsxref("Iterator")}} object that aggregates elements from multiple iterable objects by yielding arrays containing elements at the same position. It essentially "zips" the input iterables together, allowing simultaneous iteration over them.
 
@@ -92,7 +94,7 @@ const numbers = (function* () {
     yield n++;
   }
 })();
-for (const [index, [name, age]] of Iterator.zip([numbers(), ages])) {
+for (const [index, [name, age]] of Iterator.zip([numbers, ages])) {
   console.log(`${index}: ${name} is ${age} years old.`);
 }
 
@@ -102,7 +104,7 @@ for (const [index, [name, age]] of Iterator.zip([numbers(), ages])) {
 // 2: Evelyn is 35 years old.
 ```
 
-`numbers()` is an infinite iterator that generates incrementing numbers starting from `0`. Because `Iterator.zip()` stops by default when the shortest input iterable is exhausted, the loop iterates exactly three times. The `numbers()` iterator is properly closed after the loop ends; it doesn't cause an infinite loop.
+`numbers` is an infinite iterator that generates incrementing numbers starting from `0`. Because `Iterator.zip()` stops by default when the shortest input iterable is exhausted, the loop iterates exactly three times. The `numbers` iterator is properly closed after the loop ends; it doesn't cause an infinite loop.
 
 ### Creating a Map from lists of keys and values
 

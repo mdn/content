@@ -2,6 +2,8 @@
 title: "<geolocation>: The geolocation element"
 slug: Web/HTML/Reference/Elements/geolocation
 page-type: html-element
+status:
+  - experimental
 browser-compat: html.elements.geolocation
 sidebar: htmlsidebar
 ---
@@ -36,7 +38,7 @@ It also allows for intuitive management of user permissions.
 For example, in Chrome, if the user previously denied permission to access location data, or dismissed the permission dialog without making a choice, they are free to press the button again to update their choice.
 In cases where they previously denied permission, subsequent dialogs will inform them that they previously didn't allow location data to be shared, and ask them whether they want to continue not allowing it, or to allow it.
 
-A key aspect of the `<geolocation>` element is that it reflects the user's conscious choice, and blocks possible usage that might trick the user into providing their location data unwittingly (see [`<geolocation> blocking`](#geolocation_blocking) for more information).
+A key aspect of the `<geolocation>` element is that it reflects the user's conscious choice, and blocks possible usage that might trick the user into providing their location data unwittingly (see [`<geolocation>` blocking](#geolocation_blocking) for more information).
 
 The element's DOM API interface, {{domxref("HTMLGeolocationElement")}}, provides features to access returned position data, current permission status, and errors if the data retrieval was unsuccessful, reducing the amount of JavaScript logic that needs to be written. It also has events available to run code in response to location data being received, changes in permission status, and user interactions with the permission dialog.
 
@@ -45,7 +47,7 @@ The element's DOM API interface, {{domxref("HTMLGeolocationElement")}}, provides
 
 ### Relationship with the Geolocation API
 
-The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) provides an older alternative for handling location data. This API has some shortcomings that the `<gelocation>` element aims to solve, most notably that the UI and underlying logic for requesting the data needs to be implemented from scratch each time, and the handling of permissions can be unintuitive.
+The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) provides an older alternative for handling location data. This API has some shortcomings that the `<geolocation>` element aims to solve, most notably that the UI and underlying logic for requesting the data needs to be implemented from scratch each time, and the handling of permissions can be unintuitive.
 
 The `<geolocation>` element uses features of the Geolocation API in the background. By default, the browser requests location data once, as if the {{domxref("Geolocation.getCurrentPosition()")}} method was called. However, if the `watch` attribute is set to `true`, the browser updates the data whenever the device position changes, as if {{domxref("Geolocation.watchPosition()")}} was called.
 

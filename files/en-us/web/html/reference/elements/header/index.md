@@ -21,7 +21,7 @@ The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory 
     <time>08.12.2014</time>
   </header>
   <p>
-    I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and
+    I love beagles <em>so</em> much! Like, really, a lot. They're adorable and
     their ears are so, so snugly soft!
   </p>
 </article>

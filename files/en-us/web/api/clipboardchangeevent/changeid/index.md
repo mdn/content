@@ -3,10 +3,12 @@ title: "ClipboardChangeEvent: changeId property"
 short-title: changeId
 slug: Web/API/ClipboardChangeEvent/changeId
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.ClipboardChangeEvent.changeId
 ---
 
-{{securecontext_header}}{{APIRef("Clipboard API")}}
+{{securecontext_header}}{{APIRef("Clipboard API")}}{{SeeCompatTable}}
 
 The **`changeId`** read-only property of the {{domxref("ClipboardChangeEvent")}} interface returns an integer representing a unique identifier for this specific clipboard change operation.
 

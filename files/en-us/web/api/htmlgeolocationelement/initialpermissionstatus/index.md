@@ -3,10 +3,12 @@ title: "HTMLGeolocationElement: initialPermissionStatus property"
 short-title: initialPermissionStatus
 slug: Web/API/HTMLGeolocationElement/initialPermissionStatus
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement.initialPermissionStatus
 ---
 
-{{APIRef("Navigation API")}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`initialPermissionStatus`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns an enumerated value representing the permission status for the `geolocation` feature when the page first loads.
 
@@ -81,7 +83,7 @@ if (geo.initialPermissionStatus === "prompt") {
 }
 ```
 
-Finally, we we add a {{domxref("HTMLGeolocationElement.location_event", "location")}} event listener to the `HTMLGeolocationElement` object, to detect when the location data request is returned. If the data is returned successfully, we access it via the {{domxref("HTMLGeolocationElement.position")}} property, and print the latitude and longitude values to the output paragraph. If the data request fails, we access the error via the {{domxref("HTMLGeolocationElement.error")}} property and print it to the output paragraph.
+Finally, we add a {{domxref("HTMLGeolocationElement.location_event", "location")}} event listener to the `HTMLGeolocationElement` object, to detect when the location data request is returned. If the data is returned successfully, we access it via the {{domxref("HTMLGeolocationElement.position")}} property, and print the latitude and longitude values to the output paragraph. If the data request fails, we access the error via the {{domxref("HTMLGeolocationElement.error")}} property and print it to the output paragraph.
 
 ```js
 geo.addEventListener("location", () => {

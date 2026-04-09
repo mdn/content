@@ -3,10 +3,12 @@ title: Iterator.zipKeyed()
 short-title: zipKeyed()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/zipKeyed
 page-type: javascript-static-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Iterator.zipKeyed
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Iterator.zipKeyed()`** static method creates a new {{jsxref("Iterator")}} object that aggregates elements from multiple iterable objects by yielding objects containing elements at the same position, with keys specified by the input. It essentially "zips" the input iterables together, allowing simultaneous iteration over them.
 
