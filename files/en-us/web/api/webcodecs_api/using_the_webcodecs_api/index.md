@@ -10,8 +10,7 @@ This guide covers the basic usage patterns of the WebCodecs API, including how t
 
 ## Encoding Video
 
-The basic usage pattern for {{domxref("VideoEncoder")}} starts with instantiation, where you define the `output` and `error` callback functions. The `output` callback function returns `EncodedVideoChunk` objects, and the `meta` object, which is needed by muxing libraries when muxing to a video file, and
-which has the same structure as the [decoderConfig](/en-US/docs/Web/API/VideoEncoder/VideoEncoder#decoderconfig).
+The basic usage pattern for {{domxref("VideoEncoder")}} starts with instantiation, where you define the `output` and `error` callback functions. The `output` callback receives an `EncodedVideoChunk` and a `metadata` parameter — an `EncodedVideoChunkMetadata` dictionary which contains an optional [decoderConfig](/en-US/docs/Web/API/VideoEncoder/VideoEncoder#decoderconfig) property. This metadata is needed by muxing libraries when muxing to a video file.
 
 ```js
 const encoder = new VideoEncoder({
@@ -47,7 +46,7 @@ for (let i = 0; i < 60; i++) {
 }
 ```
 
-The first frame encoded **needs** to be a key frame, otherwise the encoder will throw an error. Typical key frame intervals are once every 30 or 60 frames. Using more key frames increases video file size, while using fewer key frames can result in unstable video playback by some video players.
+The first frame encoded should be a key frame — while `VideoEncoder` will automatically force the first frame to be a key frame even if not explicitly flagged, it is good practice to set it explicitly. Typical key frame intervals are once every 30 or 60 frames. Using more key frames increases video file size, while using fewer key frames can result in unstable video playback by some video players.
 
 It is important to close `VideoFrame` objects as soon as they are sent for encoding to avoid memory leaks. `VideoFrame` objects are large enough that applications can crash with fewer than 100 active frames in memory.
 
@@ -66,7 +65,7 @@ encoder.addEventListener("dequeue", (event) => {
 Once you are done sending all frames for encoding, you should call the `flush()` method.
 
 ```js
-encoder.flush();
+await encoder.flush();
 ```
 
 Depending on the device/browser, the encoder may not return the last few `EncodedVideoChunk` objects until `flush()` is called. Once you are done using the `VideoEncoder` completely, you should call the `close()` method to free up system resources.
@@ -128,7 +127,7 @@ decoder.addEventListener("dequeue", (event) => {
 Once you are finished sending all frames for decoding, you can run `flush`.
 
 ```js
-decoder.flush();
+await decoder.flush();
 ```
 
 Depending on the device/browser, the decoder may not return the last few `VideoFrame` objects until `flush()` is called. Once you are done using the `VideoDecoder` completely, you should call the `close()` method to free up system resources.
