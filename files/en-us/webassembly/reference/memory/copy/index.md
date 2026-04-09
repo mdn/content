@@ -26,7 +26,7 @@ i32.const 100 ;; Source address to copy from
 i32.const 25 ;; Number of bytes to copy
 memory.copy  ;; Copy memory
 
-;; Copy in default memory using an S-function
+;; Copy in default memory using an S-expression
 (memory.copy (i32.const 50) (i32.const 100) (i32.const 25))
 ```
 

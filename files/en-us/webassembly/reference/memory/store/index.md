@@ -63,7 +63,7 @@ i32.const 0 ;; stack variable with offset in memory to store the number
 i32.const 20 ;; stack variable with the number to store
 i32.store ;; store in default memory
 
-;; Store using S-function (same values and offset)
+;; Store using S-expression (same values and offset)
 (i32.store (i32.const 0) (i32.const 20))
 ```
 
