@@ -176,7 +176,7 @@ Audio codec strings are simpler than video codec strings. Opus requires no addit
 | Vorbis | `vorbis`     | WebM      | [3.8%](https://webcodecsfundamentals.org/codecs/vorbis.html)     | [96.5%](https://webcodecsfundamentals.org/codecs/vorbis.html)    |
 | PCM    | `pcm-f32`    | —         | [8.7%](https://webcodecsfundamentals.org/codecs/pcm-f32.html)    | [94.6%](https://webcodecsfundamentals.org/codecs/pcm-f32.html)   |
 
-The lower AAC encoding support figure reflects the platform gaps described above — Firefox (all platforms), desktop Linux (all browsers), and partial support for `AudioEncoder` on Apple devices.
+The lower AAC encoding support figure reflects the platform gaps described above — Firefox (all platforms), desktop Linux (all browsers), and partial support for `AudioEncoder` on Apple devices. AAC has several variants — `mp4a.40.2` (AAC-LC) is the standard choice for encoding. `mp4a.40.5` and `mp4a.40.29` correspond to HE-AAC configurations using Spectral Band Replication (SBR), which causes the decoder to output audio at double the configured sample rate.
 
 PCM is available in several variants: `pcm-f32` (32-bit float), `pcm-s16` (16-bit signed), `pcm-s24` (24-bit signed), `pcm-s32` (32-bit signed), and `pcm-u8` (8-bit unsigned). All variants have equivalent browser support. The `pcm-f32` format matches the `f32-planar` layout used by {{domxref("AudioData")}} and is the most practical choice for raw audio processing.
 

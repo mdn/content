@@ -14,7 +14,7 @@ It is useful for web applications that do heavy media processing, or which requi
 
 There are other APIs which use media codecs internally, such as the [MediaRecorder API](/en-US/docs/Web/API/MediaRecorder) and the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), but these lack the low-level (per-frame) control required by some applications.
 
-Previously, developers used WebAssembly ports of ffmpeg, but these lack true hardware acceleration capabilities, and are difficult to integrate with other key APIs like the File API for working with large Files efficiently.
+Previously, developers used WebAssembly ports of ffmpeg, but these lack true hardware acceleration capabilities, and are difficult to integrate with other key APIs like the File API for working with large files efficiently.
 
 WebCodecs was designed to enable low-level, hardware-accelerated media processing, for applications such as high-performance streaming and video editing, which were not well served by the existing APIs.
 

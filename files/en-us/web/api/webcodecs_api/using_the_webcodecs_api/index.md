@@ -288,7 +288,7 @@ source.connect(audioContext.destination);
 source.start();
 ```
 
-Alternatively, you can extract raw samples from `AudioData` via `copyTo()` and construct an `AudioBuffer` manually, but this requires a CPU-side data copy for each chunk and is both slower and more complex.
+Alternatively, you can extract raw samples from `AudioData` via `copyTo()` and construct an `AudioBuffer` manually, but this requires a CPU-side data copy for each chunk and is slower.
 
 ### Encoding
 
