@@ -38,7 +38,7 @@ The amount of detail removed is controlled by two things: the **bitrate**, which
 Successive frames in a video are typically visually similar to one another. Instead of encoding each video frame as an independent image, video codecs calculate the difference between frames, and encode just the frame differences in a compact binary representation. Codecs typically use a number of techniques such as motion compensation to reduce the amount of data required to encode frame differences.
 
 ![Frame differences](frame-diff.png)
-Codecs will then store the first video frame in a sequence as a key frame, and then storing subsequent frames as just frame differences (called delta frames).
+Codecs will then store the first video frame in a sequence as a key frame, and then store subsequent frames as just frame differences (called delta frames).
 
 ![Key frames vs delta frames](key-frames.png)
 
