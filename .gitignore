@@ -7,3 +7,5 @@ _githistory.json
 .DS_Store
 .idea
 *.log
+.claude/settings.local.json
+mcp-vscode.json
