@@ -39,20 +39,14 @@ i32.const 100 ;; Source address to copy from
 i32.const 25 ;; Number of bytes to copy
 memory.copy 2 2 ;; Copy memory within memory with index 2
 
-;; Copy within memory referenced by its name
-i32.const 50
-i32.const 100
-i32.const 25
-memory.copy $memoryName $memoryName ;; Copy within memory named "$memoryName"
-
-;; Copy between different memories
+;; Copy between memories referenced by their names
 i32.const 50 ;; Destination address (in $destMem)
 i32.const 100 ;; Source address (in $sourceMem)
 i32.const 25 ;; Number of bytes to copy
 memory.copy $destMem $sourceMem ;; Copy memory from "$sourceMem" to "$destMem"
 
-;; Copy within the same memory using an S-expression
-(memory.copy $memoryName $memoryName (i32.const 50) (i32.const 100) (i32.const 25))
+;; Copy between memories using an S-expression
+(memory.copy $destMem $sourceMem (i32.const 50) (i32.const 100) (i32.const 25))
 ```
 
 ### Instructions and opcodes
