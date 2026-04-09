@@ -325,10 +325,10 @@ The {{cssxref("@custom-media")}} CSS at-rule defines aliases for long or complex
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 146           | No                  |
-| Developer Edition | 146           | No                  |
-| Beta              | 146           | No                  |
-| Release           | 146           | No                  |
+| Nightly           | 148           | No                  |
+| Developer Edition | 148           | No                  |
+| Beta              | 148           | No                  |
+| Release           | 148           | No                  |
 
 - `layout.css.custom-media.enabled`
   - : Set to `true` to enable.
