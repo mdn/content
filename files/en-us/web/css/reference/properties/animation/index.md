@@ -87,7 +87,7 @@ animation:
 One or more single `<animation>` declarations, separated by commas, with each `<animation>` including:
 
 - `<single-animation-name>`
-  - The name of a {{cssxref("@keyframes")}} at-rules that specifies the animation to apply to an element. The initial value for {{cssxref("animation-name")}} is `none`.
+  - : The name of a {{cssxref("@keyframes")}} at-rules that specifies the animation to apply to an element. The initial value for {{cssxref("animation-name")}} is `none`.
 - `<single-easing-function>`
   - : Determines the type of transition. The value must be one of those available in {{cssxref("animation-timing-function")}}. The initial value is `ease`.
 - `<single-animation-iteration-count>`
