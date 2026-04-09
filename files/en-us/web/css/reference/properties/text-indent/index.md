@@ -96,6 +96,7 @@ text-indent: unset;
   - : Indentation affects the first line of the block container as well as each line after a _forced line break_, but does not affect lines after a _soft wrap break_.
 - `hanging`
   - : Inverts which lines are indented. All lines _except_ the first line will be indented.
+
 ## Description
 
 The `text-indent` [CSS](/en-US/docs/Web/CSS) property sets the length of empty space (indentation) that is put before lines of text in a block container. The indentation set by the property occurs at the inline-start edge of the content box. The value is a {{cssxref("length-percentage")}}, optionally with one or both of the keywords `each-line` and/or `hanging`. The initial value is `0`.
