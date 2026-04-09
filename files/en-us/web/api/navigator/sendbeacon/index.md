@@ -31,9 +31,7 @@ sendBeacon(url, data)
 - `url`
   - : The URL that will receive the _data_. Can be relative or absolute.
 - `data` {{Optional_inline}}
-  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}},
-    a string literal or object, a {{domxref("FormData")}} or a {{domxref("URLSearchParams")}}
-    object containing the data to send. The total size of queued data is limited to 64 KiB (65,536 bytes).
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}}, a string literal or object, a {{domxref("FormData")}} or a {{domxref("URLSearchParams")}} object containing the data to send. The total size of queued data is limited to 64 KiB (65,536 bytes).
 
 ### Return value
 
@@ -70,8 +68,7 @@ This means:
 
 The data is sent as an [HTTP POST](/en-US/docs/Web/HTTP/Reference/Methods/POST) request.
 
-> [!NOTE]
-> The `navigator.sendBeacon()` method has a [spec-defined](https://fetch.spec.whatwg.org/#:~:text=length.-,If%20the%20sum%20of%20contentLength%20and%20inflightKeepaliveBytes%20is%20greater%20than%2064%20kibibytes%2C%20then%20return%20a%20network%20error.,-The) payload size limit of about 64 KiB. If this limit is exceeded, the request will fail. For larger data transfers, consider using `fetch()` instead.
+The limitation, however, is that the payload size is limited to about 64 KiB. For larger data transfers, consider using `fetch()` instead.
 
 ### Sending analytics at the end of a session
 
