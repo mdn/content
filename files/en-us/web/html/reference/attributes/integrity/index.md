@@ -40,18 +40,38 @@ In each case, the part preceding `-` identifies the {{glossary("hash function")}
 
 ## Examples
 
-### Including `integrity` on `<script>` elements
+### Including different hash functions
 
-The following {{htmlelement("script")}} element includes an `integrity` attribute containing two values calculated using SHA-384, and two calculated using SHA-512. If the browser supports SHA-512 values (as all current browsers do) then it will only use the SHA-512 values, and if the hash of the script at `https://cdn.example.com/script.js` matches either of them, the browser will load it.
+The following {{htmlelement("script")}} element includes an `integrity` attribute containing three values, one calculated using SHA-256, one calculated using SHA-384, and one calculated using SHA-512.
 
-Note that we've truncated the example values, for brevity.
+The browser will select the value calculated using the strongest algorithm that it supports: since all modern browsers support SHA-512, this means that the browser will select that value. It will hash the file contents using SHA-512 and compare the result with the `sha512-` value, and load the file only if they match.
+
+In this case providing multiple values enables a website to work with browsers that may not support all the hash functions.
 
 ```html
 <script
   src="https://cdn.example.com/script.js"
   integrity="
+  sha256-NmUxNTFiMDUzZGIwZjcwZDIyYTc5NTA4ZmQyNT
   sha384-Tk2Yjg3YmYzMWNkZTdhMTFkM2FlNDg4ZjE3MzEzNTk3ZDlh
-  sha384-DEzZmZhMGFkMGQ0OTQ3MzZkNGY0OTg4NGIwN2ZiMMTM3YmQ
+  sha512-OGUwYThkZDc2YzFlZGI5MDEzZmZhMGFkMGQ0OTQ3MzZkNGYZTEzODk2"
+  crossorigin="anonymous"></script>
+```
+
+Note that in this and subsequent examples, we've truncated the example hash values, for brevity.
+
+### Including different hash values
+
+The following {{htmlelement("script")}} element includes an `integrity` attribute containing two different values, both calculated using the SHA-512 algorithm. These different values reflect alternative contents for the linked file.
+
+If the SHA-512 hash of the linked file matches either of the given values, then the browser will load it.
+
+This enables the server at `cdn.example.com` to respond with one of two versions of the file.
+
+```html
+<script
+  src="https://cdn.example.com/script.js"
+  integrity="
   sha512-ZmQ5NjNiYWJjYTM3MjRhMGI4MTQzNWRmZTZkZGYyMzQyOGYYTZkYjBm
   sha512-OGUwYThkZDc2YzFlZGI5MDEzZmZhMGFkMGQ0OTQ3MzZkNGYZTEzODk2"
   crossorigin="anonymous"></script>
@@ -59,13 +79,23 @@ Note that we've truncated the example values, for brevity.
 
 ### Including `integrity` on `<link>` elements
 
-The following {{htmlelement("link")}} element loads a stylesheet and includes an `integrity` attribute containing a single value, calculated using SHA-512.
+The following {{htmlelement("link")}} element loads a stylesheet and includes an `integrity` attribute containing six values, reflecting two possible contents for the linked file, each calculated using three different hash functions.
+
+The browser will select the set of values that were calculated using the strongest hash function that it supports: in modern browsers, this will be the two `sha512-` values.
+
+It will then calculate the hash of the downloaded file using SHA-512, and compare the result with both the `sha512-` values: if either of them match, then the browser will load the resource.
 
 ```html
 <link
   rel="stylesheet"
   href="https://cdn.example.com/style.css"
-  integrity="sha512-MzViNmUxNTFiMDUzZGIwZjcwZDIyYTc5NTA4ZmQyNTYzNjUxYm"
+  integrity="
+  sha256-NmUxNTFiMDUzZGIwZjcwZDIyYTc5NTA4ZmQyNT
+  sha256-OTcyMGZkY2Y3NGZhZjUwNWU5NGQ0ZWJhYWVhND
+  sha384-Tk2Yjg3YmYzMWNkZTdhMTFkM2FlNDg4ZjE3MzEzNTk3ZDlh
+  sha384-ZTdhYjQ2NTE5OTg0Yjc2ZDU2MDMxMDUxY2Y5NDMxYzI5NjA
+  sha512-OGUwYThkZDc2YzFlZGI5MDEzZmZhMGFkMGQ0OTQ3MzZkNGYZTEzODk2
+  sha512-IxZTcwZjE2ZjU3MzE4NWM5ODU4ZmJkYjBlYzBhYzFkYzU0OGJmM2ZkN"
   crossorigin="anonymous" />
 ```
 
