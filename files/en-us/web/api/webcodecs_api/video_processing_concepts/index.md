@@ -15,7 +15,7 @@ A video is a sequence of images displayed in rapid succession. Each image in the
 
 ![Video Frames](video-frames.png)
 
-Each pixel in a video frame is represented by multiple bytes of data. Uncompressed, a single 4K frame (~8 million pixels) is approximately 25 MB. At 30 frames per second, one hour of uncompressed 4K video would be around 750 GB, which is impractically large for storage or streaming.
+Each pixel in a video frame is represented by a set of numeric color channel values. Uncompressed, a single 4K frame (~8 million pixels) is approximately 25 MB. At 30 frames per second, one hour of uncompressed 4K video would be around 750 GB, which is impractically large for storage or streaming.
 
 Codecs were developed in order to compress video, typically by 1-2 orders of magnitude, to be able to practically store and stream video content given typical device network and storage constraints.
 
@@ -61,7 +61,7 @@ For codecs to be useful, it is necessary to be able to both encode video (turn r
 
 Applications which primarily create video content (e.g., video editing tools), and therefore primarily encode video, typically choose a video codec for encoding in order to maximize compatibility with video player software.
 
-Applications which primarily consume video content (e.g., video player software) and therefore primarily decode video will typically try to support as many possible codecs as possible.
+Applications which primarily consume video content (e.g., video player software) and therefore primarily decode video will typically try to support as many codecs as possible.
 
 Applications which control both encoding and decoding (e.g., a video streaming website) have much more flexibility on codec choice, and can therefore choose codecs based on factors such as cost and encoding speed.
 
