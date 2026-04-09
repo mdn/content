@@ -56,15 +56,15 @@ animation: 0.5s linear 1s infinite alternate slide-in;
 
 This property is a shorthand for the following CSS properties:
 
+- {{cssxref("animation-name")}}
+- {{cssxref("animation-duration")}}
+- {{cssxref("animation-timing-function")}}
 - {{cssxref("animation-delay")}}
 - {{cssxref("animation-direction")}}
-- {{cssxref("animation-duration")}}
-- {{cssxref("animation-fill-mode")}}
 - {{cssxref("animation-iteration-count")}}
-- {{cssxref("animation-name")}}
+- {{cssxref("animation-fill-mode")}}
 - {{cssxref("animation-play-state")}}
 - {{cssxref("animation-timeline")}}
-- {{cssxref("animation-timing-function")}}
 
 ## Syntax
 
@@ -88,20 +88,22 @@ One or more single `<animation>` declarations, separated by commas, with each `<
 
 - `<single-animation-name>`
   - : The name of a {{cssxref("@keyframes")}} at-rules that specifies the animation to apply to an element. The initial value for {{cssxref("animation-name")}} is `none`.
+- `<single-animation-duration>`
+  - : Determines the length of time that an animation takes to complete one cycle. The value must be one of those available in {{cssxref("animation-duration")}}. The initial value is `0s`.
 - `<single-easing-function>`
   - : Determines the type of transition. The value must be one of those available in {{cssxref("animation-timing-function")}}. The initial value is `ease`.
-- `<single-animation-iteration-count>`
-  - : The number of times the animation is played. The value must be one of those available in {{cssxref("animation-iteration-count")}}. The initial value for {{cssxref("animation-iteration-count")}} is `1`.
+- `<single-animation-delay>`
+  - : Determines the amount of time to wait from applying the animation to an element before beginning to perform the animation. The value must be one of those available in {{cssxref("animation-delay")}}. The initial value is `0s`.
 - `<single-animation-direction>`
   - : The direction in which the animation is played. The value must be one of those available in {{cssxref("animation-direction")}}. The initial value for {{cssxref("animation-direction")}} is `normal`.
+- `<single-animation-iteration-count>`
+  - : The number of times the animation is played. The value must be one of those available in {{cssxref("animation-iteration-count")}}. The initial value for {{cssxref("animation-iteration-count")}} is `1`.
 - `<single-animation-fill-mode>`
   - : Determines how styles should be applied to the animation's target before and after its execution. The value must be one of those available in {{cssxref("animation-fill-mode")}}. The initial value for {{cssxref("animation-fill-mode")}} is `none`.
 - `<single-animation-play-state>`
   - : Determines whether the animation is playing or not. The value must be one of those available in {{cssxref("animation-play-state")}}. The initial value for {{cssxref("animation-play-state")}} is `running`.
-- `<single-animation-delay>`
-  - : Determines the amount of time to wait from applying the animation to an element before beginning to perform the animation. The value must be one of those available in {{cssxref("animation-delay")}}. The initial value is `0s`.
-- `<single-animation-duration>`
-  - : Determines the length of time that an animation takes to complete one cycle. The value must be one of those available in {{cssxref("animation-duration")}}. The initial value is `0s`.
+- `<single-animation-timeline>`
+  - : Determines the timeline used to control the progress of the animation. The value must be one of those available in {{cssxref("animation-timeline")}}. The initial value is `auto`.
 
 ## Description
 
@@ -121,7 +123,9 @@ When no `animation-duration` value is specified in the `animation` shorthand pro
 
 ### animation-timeline
 
-By default, the `animation-timeline` is the {{domxref("documentTimeline")}}. The list of `animation` [values](#values) does not include {{cssxref("animation-timeline")}} as current implementations are reset-only. If no `<animation-timeline>` is included in the `animation` shorthand, the shorthand declaration will reset any previously-declared `animation-timeline` values to `auto`. If a value is included, but the user-agent doesn't support `<animation-timeline>` values within the shorthand, the declaration is invalid and ignored.
+The current implementations of `animation` are reset-only: if no `<animation-timeline>` is included in the `animation` shorthand, the shorthand declaration will reset any previously-declared `animation-timeline` values to `auto`.
+
+By default, the `animation-timeline` is the {{domxref("documentTimeline")}}. If a value is included, but the user-agent doesn't support `<animation-timeline>` values within the shorthand, the declaration is invalid and ignored.
 
 This means that, when creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare the `animation-timeline` property after declaring any `animation` shorthand for it to take effect.
 
