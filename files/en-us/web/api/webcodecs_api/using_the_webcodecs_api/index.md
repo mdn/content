@@ -75,14 +75,14 @@ Depending on the device/browser, the encoder may not return the last few `Encode
 encoder.close();
 ```
 
-A `VideoEncoder` may throw an error during the process of encoding for a number of different reasons, such as if the user switches tabs and the browser reclaims the resources. It is good practice to check if the encoder is in the "configured" state before trying to encode a frame. If the encoder is not in the configured state (e.g., if it was closed due to an error), it is possible to re-configure the encoder, and continue encoding, but the first frame needs to be a key frame.
+A `VideoEncoder` may throw an error during the process of encoding for a number of different reasons, such as if the user switches tabs and the browser reclaims the resources. When an error occurs, the encoder transitions permanently to the `"closed"` state. It is not possible to reconfigure a closed encoder — a new `VideoEncoder` instance must be created. The first frame encoded by the new encoder must be a key frame.
 
 ```js
-if (encoder.state !== "configured") {
-  encoder.configure(/**config */)
+if (encoder.state === "closed") {
+  // Close the old encoder, instantiate and configure a new encoder
 }
 
-encoder.encode(frame, { keyFrame: /*first frame should be a key frame */});
+encoder.encode(frame, { keyFrame: true });
 ```
 
 ## Decoding Video
@@ -139,25 +139,23 @@ decoder.close();
 
 A `VideoDecoder` may throw an error decoding for a variety of reasons, such as corrupted or missing data in a source `EncodedVideoChunk`. When the decoder fails, it switches from the `configured` state to the `closed` state.
 
-To gracefully handle decoder failures, it is good practice to check the state of the decoder. If it has failed / closed, then it is possible to recover the decoding process, but it is necessary that the first frame decoded by a decoder be a key frame. The correct way to handle this would be to skip to the next key frame, and then start decoding from the next key frame.
+To gracefully handle decoder failures, it is good practice to check the state of the decoder. When a decoder fails, it transitions permanently to the `"closed"` state and a new `VideoDecoder` instance must be created. The first chunk decoded by the new decoder must be a key frame, so it is necessary to seek forward from the current position to the next key frame before resuming.
 
 ```js
 let chunk_index = 0;
 
 for (let i = 0; i < BATCH_LENGTH; i++) {
   // Check if decoder failed
-  if (decoder.state !== "configured") {
-    // Seek to next key frame
-    for (let j = 0; j < chunks.length; j++) {
+  if (decoder.state === "closed") {
+    // Seek forward to the next key frame from the current position
+    for (let j = chunk_index; j < chunks.length; j++) {
       if (chunks[j].type === "key") {
         chunk_index = j;
         break;
       }
     }
-    //Reconfigure decoder
-    decoder.configure(/**config */);
+    // Close the old decoder, instantiate and configure a new decoder
   }
-  //Start decoding from next key frame
   decoder.decode(chunks[chunk_index]);
   chunk_index++;
 }
