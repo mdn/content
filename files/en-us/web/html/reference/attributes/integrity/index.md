@@ -9,7 +9,7 @@ browser-compat:
 sidebar: htmlsidebar
 ---
 
-The **`integrity`** attribute provides a mechanism for a developer to assert that a linked script or stylesheet must have a particular value. The browser will check that the resource does in fact have that value, and refuse to load the resource if it does not.
+The **`integrity`** attribute provides a mechanism for a developer to assert that a linked script or stylesheet must have a particular content. The browser will check that the resource does in fact have that content, and refuse to load the resource if it does not.
 
 This is a defense against a [supply-chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks) in which an attacker gets access to the domain that serves the script or stylesheet, and changes the expected resource for a malicious one.
 
