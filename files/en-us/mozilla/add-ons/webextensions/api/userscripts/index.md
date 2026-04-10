@@ -18,7 +18,7 @@ This API offers capabilities similar to {{WebExtAPIRef("scripting")}} but with f
 To use this API, you need the `userScripts` permission and [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) for sites where you want to run scripts. However, the approach to enabling the use of this API varies between browsers:
 
 - In Firefox, `userScripts` is an [optional-only permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions#optional-only_permissions) declared in the `optional_permissions` manifest key. Your extension must check that the permission has been granted by checking the availability of the `userScripts` API namespace or using {{WebExtAPIRef("permissions.contains()")}} and, if not, request it using {{WebExtAPIRef("permissions.request()")}}.
-- in Chrome, `userScripts` is an install time requested permission declared in the [`permissions` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). However, to enable use of the API, users must [turn on the developer environment in Chrome](https://developer.chrome.com/docs/extensions/reference/api/userScripts#developer_mode_for_extension_users).
+- in Chrome, `userScripts` is an install-time requested permission declared in the [`permissions` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). However, up to and including Chrome 147, users needed to [enable the developer environment in Chrome](https://developer.chrome.com/docs/extensions/reference/api/userScripts#developer_mode_for_extension_users) to use the API.
 
 ## Execution worlds
 
