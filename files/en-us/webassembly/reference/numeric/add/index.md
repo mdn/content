@@ -143,8 +143,3 @@ The output is as follows:
 {{embedlivesample("simd_add", "100%", 100)}}
 
 The result is `24`, because the value stored in lane `3` of each of the input values is `12`. Once added together, the output value's lane `3` will contain the value `24`.
-
-## See also
-
-- `add_sat_s`
-- `add_sat_u`
