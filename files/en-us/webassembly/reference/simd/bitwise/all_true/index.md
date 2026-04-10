@@ -49,7 +49,7 @@ value_type.all_true
 [input] -> [output]
 ```
 
-- `input1`
+- `input`
   - : The input `v128` value interpretation.
 - `output`
   - : The output value. This is an `i32` type equal to `1` if the `v128` input contains all non-zero bits, or `0` if any of the bits are `0`.

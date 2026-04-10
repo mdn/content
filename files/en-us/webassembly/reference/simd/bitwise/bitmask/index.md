@@ -39,7 +39,7 @@ The output `i32` is therefore equal to:
 
 (only bit `12` is set to `1`).
 
-The example's output value is `4096`, which is the decimal equivent of the above binary pattern.
+The example's output value is `4096`, which is the decimal equivalent of the above binary pattern.
 
 ## Syntax
 
@@ -62,7 +62,7 @@ value_type.bitmask
 [input] -> [output]
 ```
 
-- `input1`
+- `input`
   - : The input `v128` value interpretation.
 - `output`
   - : The output `i32` value.

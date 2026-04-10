@@ -8,7 +8,7 @@ sidebar: webassemblysidebar
 
 WebAssembly SIMD-specific arithmetic instructions.
 
-## Comparison
+## Min and max
 
 - [`max_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/max_s)
   - : Compares two [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) signed integer value interpretations and returns a new interpretation with each lane set to the greater of that lane index's value on the two inputs.

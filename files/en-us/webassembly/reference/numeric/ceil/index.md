@@ -6,7 +6,7 @@ page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`ceil`** instructions are used for getting the value of a number rounded up to the next integer.
+The **`ceil`** instruction is used for getting the value of a number rounded up to the next integer.
 
 {{InteractiveExample("Wat Demo: ceil", "tabbed-standard")}}
 
