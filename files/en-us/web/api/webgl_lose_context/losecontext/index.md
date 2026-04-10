@@ -8,16 +8,9 @@ browser-compat: api.WEBGL_lose_context.loseContext
 
 {{APIRef("WebGL")}}
 
-The **WEBGL_lose_context.loseContext()** method is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows you to simulate losing
-the context of a {{domxref("WebGLRenderingContext")}} context.
+The **WEBGL_lose_context.loseContext()** method is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows you to simulate losing the context of a {{domxref("WebGLRenderingContext")}} context.
 
-It triggers the steps described in the WebGL specification for handling context lost.
-The context will remain lost until {{domxref("WEBGL_lose_context.restoreContext()")}} is
-called.
-
-In addition to simulating context loss for debugging purposes, calling `loseContext()` destroys the underlying graphics context and all
-associated graphics resources. This is the recommended mechanism for applications to programmatically halt use of WebGL API and free GPU
-resources.
+It triggers the steps described in the WebGL specification for handling context lost. The context will remain lost until {{domxref("WEBGL_lose_context.restoreContext()")}} is called. It also destroys the underlying graphics context and all graphics resources. This is the recommended mechanism for applications to programmatically halt their use of the WebGL API.
 
 ## Syntax
 
