@@ -35,21 +35,21 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 
 ```plain
 ;; Common usage
-v128.load64_lane laneidx
+v128.load64_lane lane_idx
 
-;; With optional immediates
-v128.load64_lane memidx offset=int align=int laneidx
+;; With optional immediate operands
+v128.load64_lane mem_idx offset=int align=int lane_idx
 ```
 
 - `v128.load64_lane`
   - : The `v128.load64_lane` instruction.
-- `memidx` {{optional_inline}}
+- `mem_idx` {{optional_inline}}
   - : An integer representing the memory index, in cases where the module uses multiple memories. The default is `0`.
 - `offset=int` {{optional_inline}}
   - : An integer representing a constant number of bytes to add to the memory address before loading. The default is `0`.
 - `align=int` {{optional_inline}}
   - : An integer representing a hint to the Wasm engine about what alignment to expect for the final address. The minimum value is `1` and the default and maximum value is `8`. An `align` value has to be a power of `2`.
-- `laneidx`
+- `lane_idx`
   - : An integer representing the index of the lane to load a value into.
 
 ### Type

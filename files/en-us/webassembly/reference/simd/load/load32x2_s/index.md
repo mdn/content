@@ -36,13 +36,13 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ;; Common usage
 v128.load32x2_s
 
-;; With optional immediates
-v128.load32x2_s memidx offset=int align=int
+;; With optional immediate operands
+v128.load32x2_s mem_idx offset=int align=int
 ```
 
 - `v128.load32x2_s`
   - : The `v128.load32x2_s` instruction.
-- `memidx` {{optional_inline}}
+- `mem_idx` {{optional_inline}}
   - : An integer representing the memory index, in cases where the module uses multiple memories. The default is `0`.
 - `offset=int` {{optional_inline}}
   - : An integer representing a constant number of bytes to add to the memory address before loading. The default is `0`.
@@ -62,9 +62,9 @@ v128.load32x2_s memidx offset=int align=int
 
 ### Binary encoding
 
-| Instruction       | Binary format                               | Example text => binary                                        |
-| ----------------- | ------------------------------------------- | ------------------------------------------------------------- |
-| `v128.load32x2_s` | `0xFD 5:u32 memidx:u8 offset:u32 align:u32` | `v128.load32x2_s 0 offset=0 align=8` => `0xfd 0x05 0x03 0x00` |
+| Instruction       | Binary format                                | Example text => binary                                        |
+| ----------------- | -------------------------------------------- | ------------------------------------------------------------- |
+| `v128.load32x2_s` | `0xFD 5:u32 mem_idx:u8 offset:u32 align:u32` | `v128.load32x2_s 0 offset=0 align=8` => `0xfd 0x05 0x03 0x00` |
 
 > [!NOTE]
 > While Wasm text format specifies the literal `align` value, the binary equivalent represents the exponent of the formula `2^x` used to calculate the alignment. So for example, `align=1` is equivalent to `0x00` (`2^0`), while `align=8` is equivalent to `0x03` (`2^3`).

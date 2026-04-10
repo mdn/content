@@ -151,8 +151,8 @@ touch choose_beast.html choose_beast.css choose_beast.js
 The HTML file looks like this:
 
 ```html
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="choose_beast.css" />
@@ -344,7 +344,7 @@ function reportExecuteScriptError(error) {
 })();
 ```
 
-The popup script executes [the content script](#the-content-script) in the active tab as soon as the popup is loaded, using the [`browser.scripting.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/executeScript) API. If the content script execution is successful, it stays loaded in the page until the tab is closed or the user navigates to a different page.
+The popup script executes [the content script](#the_content_script) in the active tab as soon as the popup is loaded, using the [`browser.scripting.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/executeScript) API. If the content script execution is successful, it stays loaded in the page until the tab is closed or the user navigates to a different page.
 
 The `browser.scripting.executeScript()` call can fail if the extension can't execute content scripts in the active page. For example, an extension can't execute scripts in privileged browser pages such as `about:debugging`, or on pages in the [addons.mozilla.org](https://addons.mozilla.org/) domain. If the call fails, `reportExecuteScriptError()` hides the `<div id="popup-content">` element, displays the `<div id="error-content"...` element, and logs an error to the [console](https://extensionworkshop.com/documentation/develop/debugging/).
 
