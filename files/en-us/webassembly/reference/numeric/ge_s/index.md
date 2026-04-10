@@ -72,11 +72,11 @@ value_type.ge_s
 - `input2`
   - : The second input value.
 - `output`
-  - : The output value. If the first input is greater than or equal to the second input, `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack. The output values are integers.
+  - : The output value, which will be an integer type.
 
-For a non-SIMD `ge_s`, the inputs will be basic numeric values such as `3` or `12`.
+For a non-SIMD `ge_s`, the inputs will be basic numeric values such as `3` or `12`. If the first input is greater than or equal to the second input, `1` will be pushed on to the stack as an output, otherwise `0` will be pushed on to the stack.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `ge_s`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 2 30 86 120`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `ge_s`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 2 30 86 120`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lane of the first input value is greater than or equal to the corresponding lane of the second input value.
 
 ### Binary encoding
 

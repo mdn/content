@@ -60,9 +60,9 @@ value_type.abs
 - `output`
   - : The output value.
 
-For a non-SIMD `abs`, the `input` and `output` will be basic numeric values such as `-3.5` or `3.5`.
+For a non-SIMD `abs`, the `input` and `output` will be basic numeric values such as `3.5` or `10`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `abs`, the `input` and `output` will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 4 -8 12 -16`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `abs`, the `input` and `output` will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 4 8 12 16`. Each lane of the output pushed to the stack is the absolute value of the corresponding lane in the input.
 
 ### Binary encoding
 

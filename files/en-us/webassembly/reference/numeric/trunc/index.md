@@ -63,11 +63,11 @@ value_type.trunc
 - `input`
   - : The input value.
 - `output`
-  - : The output value.
+  - : The output value, which will be a floating point type.
 
 For a non-SIMD `trunc`, these will be basic numeric values such as `14.3` or `3.0`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `trunc`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 100.5 6.0 7.8 83.1`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `trunc`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 100.5 6.0 7.8 83.1`. Each lane of the output pushed to the stack is equal to the input value's corresponding lane with the fractional part removed.
 
 ### Binary encoding
 

@@ -59,11 +59,9 @@ value_type.min
 - `output`
   - : The output value.
 
-For a non-SIMD `min`, the inputs will be basic numeric values such as `3.0` or `3.5`.
+For a non-SIMD `min`, the inputs will be basic numeric values such as `3.0` or `3.5`, and the `output` will be the smaller of `input1` and `input2`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `min`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 2.0 30 86.9 120`.
-
-The `output` will be the greater of `input1` and `input2` in the case of a non-SIMD `min`, or a new SIMD value with the lanes set to the lower value lane from `input1` and `input2` in each case, for a SIMD-`min`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `min`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 2.0 30 86.9 120`. Each lane of the output pushed to the stack is the smaller of the corresponding lanes in the input values.
 
 ### Binary encoding
 

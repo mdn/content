@@ -62,7 +62,7 @@ value_type.neg
 
 For a non-SIMD `neg`, the values will be basic numeric values such as `3` or `-3.5`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `neg`, the values will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 8 -27.3 30 -0.5`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `neg`, the values will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 8 -27.3 30 -0.5`. Each lane of the output pushed to the stack will be equal to the corresponding lane of the input value, negated.
 
 ### Binary encoding
 

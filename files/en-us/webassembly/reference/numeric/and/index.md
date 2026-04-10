@@ -71,7 +71,7 @@ value_type.and
 
 For a non-SIMD `and`, these will be basic numeric values such as `14` or `3`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `and`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 9 4 -16 100`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `and`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 9 4 -16 100`. Each lane of the output pushed to the stack is the bitwise AND of the corresponding lanes in the input values.
 
 ### Binary encoding
 

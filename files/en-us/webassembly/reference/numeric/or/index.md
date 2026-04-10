@@ -71,7 +71,7 @@ value_type.or
 
 For a non-SIMD `or`, these will be basic numeric values such as `14` or `3`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `or`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 9 4 -16 100`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `or`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 9 4 -16 100`. Each lane of the output pushed to the stack is the bitwise OR of the corresponding lanes in the input values.
 
 ### Binary encoding
 

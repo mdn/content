@@ -79,7 +79,7 @@ value_type.shr_u
 
 For a non-SIMD `shr_u`, the `input` and `output` will be basic numeric values such as `3` or `12`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `shr_u`, the `input` and `output` will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 2 30 86 120`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `shr_u`, the `input` and `output` will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 2 30 86 120`. Each lane of the output pushed to the stack contains the corresponding lane in the input value shifted to the right by the specified `shift_value`.
 
 ### Binary encoding
 

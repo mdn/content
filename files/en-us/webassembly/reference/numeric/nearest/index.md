@@ -54,11 +54,11 @@ value_type.nearest
 - `input`
   - : The input value.
 - `output`
-  - : The output value.
+  - : The output value, which will be a floating point number.
 
 For a non-SIMD `nearest`, these will be basic numeric values such as `3.5` or `3`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `nearest`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 3.5 6.0 10.1 40.9`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `nearest`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 3.5 6.0 10.1 40.9`. Each lane of the output pushed to the stack will be equal to the corresponding lane of the input value rounded to the nearest whole number.
 
 ### Binary encoding
 

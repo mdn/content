@@ -67,7 +67,7 @@ value_type.add
 
 For a non-SIMD `add`, these will be basic numeric values such as `3` or `3.5`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `add`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `add`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is the addition of the corresponding lanes in the input values.
 
 ### Binary encoding
 

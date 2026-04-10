@@ -63,7 +63,7 @@ value_type.popcnt
 
 For a non-SIMD `popcnt`, these will be basic numeric values such as `3`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `popcnt`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i8x16 0 1 34 12 2 2 2 8 19 20 3 -1 -45 0 0 30`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `popcnt`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i8x16 0 1 34 12 2 2 2 8 19 20 3 -1 -45 0 0 30`. Each lane of the output pushed to the stack contains the number of `1`s in the binary equivalent of the corresponding lane in the input value.
 
 ### Binary encoding
 

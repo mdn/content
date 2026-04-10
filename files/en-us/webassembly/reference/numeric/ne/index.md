@@ -6,7 +6,7 @@ page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`ne`** instruction, short for _not equal_, checks if two numbers are not equal. If the numbers are not equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.
+The **`ne`** instruction, short for _not equal_, checks if two numbers are not equal.
 
 {{InteractiveExample("Wat Demo: ne", "tabbed-taller")}}
 
@@ -73,9 +73,9 @@ value_type.ne
 - `output`
   - : An value indicating whether the two input values are not equal.
 
-For a non-SIMD `ne`, the input values will be basic numeric values such as `3` or `3.5` and the output value pushed onto the stack will be `0` or `1`
+For a non-SIMD `ne`, the input values will be basic numeric values such as `3` or `3.5`. If the two input values are not equal, `1` will be pushed on to the stack as an output, otherwise `0` will be pushed on to the stack.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `ne`, the input values will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`, and the output value pushed onto the stack will be a `v128` value interpretation with all its lanes filled with `0` or `1`. The equality of each lane is checked separately.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `ne`, the input values will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lanes of the two input values are not equal.
 
 ### Binary encoding
 

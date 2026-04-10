@@ -71,11 +71,11 @@ value_type.eq
 - `input2`
   - : The second input value.
 - `output`
-  - : The output value. If the input values are equal, `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack. The output values are integers.
+  - : The output value, which will be an integer type.
 
-For a non-SIMD `eq`, the inputs will be basic numeric values such as `3` or `3.5`.
+For a non-SIMD `eq`, the inputs will be basic numeric values such as `1` or `3.5`. If the input values are equal, `1` will be pushed on to the stack as an output, otherwise `0` will be pushed on to the stack.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `eq`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `eq`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is a `1` or `0` indicating the equality of the corresponding lanes in the input values.
 
 ### Binary encoding
 
