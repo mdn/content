@@ -18,8 +18,8 @@ Each client window has the following properties:
 - A unique string identifier (`clientWindow`).
 - A state (`state`) indicating whether the window is normal, maximized, minimized, or fullscreen.
 - An active state (`active`) indicating whether the window can receive keyboard input from the operating system.
-- A position expressed as `x` and `y` coordinates in CSS pixels from the left and top edges of the screen, respectively.
-- A size expressed as `width` and `height` in CSS pixels.
+- A position expressed as `x` and `y` coordinates in {{glossary("CSS pixel", "CSS pixels")}} from the left and top edges of the screen, respectively.
+- A size expressed as `width` and `height` in {{glossary("CSS pixel", "CSS pixels")}}.
 
 A list of client windows can be obtained using [`browser.getClientWindows`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getClientWindows) and their state can be changed using [`browser.setClientWindowState`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/setClientWindowState).
 
