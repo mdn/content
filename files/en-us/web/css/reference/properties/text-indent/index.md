@@ -91,7 +91,7 @@ text-indent: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : Indentation is specified as an absolute {{cssxref("&lt;length&gt;")}}. Negative values are allowed. See {{cssxref("&lt;length&gt;")}} values for possible units.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Indentation is a {{cssxref("&lt;percentage&gt;")}}. The percentage is relative to the containing block's width.
+  - : Indentation is a {{cssxref("&lt;percentage&gt;")}}. The percentage is relative to the container's own inner inline size.
 - `each-line`
   - : Indentation affects the first line of the block container as well as each line after a _forced line break_, but does not affect lines after a _soft wrap break_.
 - `hanging`
