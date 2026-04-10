@@ -29,6 +29,21 @@ Which element(s) `:scope` matches depends on the context in which it is used:
 }
 ```
 
+## Notes
+
+### Sibling combinators to the right of `:scope` never match
+
+The `:scope` pseudo-class defines a reference element and only supports matching based on ancestor-descendant relationships from that reference point. Because of this, selectors that place a sibling combinator to the right of `:scope` are invalid in practice and will never match anything.
+
+For example, these selectors never match:
+
+```css
+:scope + *
+:scope ~ *
+```
+
+In Firefox, such selectors generate a warning.
+
 ## Examples
 
 ### Using `:scope` as an alternative to `:root`
