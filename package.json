@@ -62,7 +62,7 @@
     "cspell-group-by-file-reporter": "^1.0.1",
     "env-cmd": "11.0.0",
     "fdir": "^6.5.0",
-    "file-type": "^22.0.0",
+    "file-type": "^22.0.1",
     "fs-extra": "^11.3.4",
     "gray-matter": "^4.0.3",
     "imagemin": "^9.0.1",
