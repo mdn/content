@@ -82,8 +82,8 @@ For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `le_s`, the inputs will be 
 
 | Instruction  | Binary format  | Example text => binary           |
 | ------------ | -------------- | -------------------------------- |
-| `i32.le_s`   | `0x4c`         | `f32.le_s` => `0x4c`             |
-| `i64.le_s`   | `0x57`         | `f64.le_s` => `0x57`             |
+| `i32.le_s`   | `0x4c`         | `i32.le_s` => `0x4c`             |
+| `i64.le_s`   | `0x57`         | `i64.le_s` => `0x57`             |
 | `i8x16.le_s` | `0xfd 41:u32`  | `i8x16.le_s` => `0xfd 0x29`      |
 | `i16x8.le_s` | `0xfd 51:u32`  | `i16x8.le_s` => `0xfd 0x33`      |
 | `i32x4.le_s` | `0xfd 61:u32`  | `i32x4.le_s` => `0xfd 0x3d`      |

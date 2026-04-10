@@ -87,7 +87,7 @@ For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `shr_u`, the `input` and `o
 | ------------- | -------------- | --------------------------------- |
 | `i32.shr_u`   | `0x76`         | `i32.shr_u` => `0x76`             |
 | `i64.shr_u`   | `0x88`         | `i64.shr_u` => `0x88`             |
-| `i8x16.shr_u` | `0xfd 109:u32` | `i8x16.shr_u` => `0xfd 0x6d 0x01` |
+| `i8x16.shr_u` | `0xfd 109:u32` | `i8x16.shr_u` => `0xfd 0x6d`      |
 | `i16x8.shr_u` | `0xfd 141:u32` | `i16x8.shr_u` => `0xfd 0x8d 0x01` |
 | `i32x4.shr_u` | `0xfd 173:u32` | `i32x4.shr_u` => `0xfd 0xad 0x01` |
 | `i64x2.shr_u` | `0xfd 205:u32` | `i64x2.shr_u` => `0xfd 0xcd 0x01` |
@@ -120,7 +120,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
 
 #### Wasm
 
-In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has an `i32` parameter. We then declare a SIMD `i8x16` value, then right-shift it by 2 using `i8x16.shr_u`. Finally we extract the value stored in lane `6` of the output SIMD value using the [`extract_lane_s`](/en-US/docs/WebAssembly/Reference/SIMD/extract/extract_lane_s) instruction, and output it to the DOM by calling the imported `output()` function.
+In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has an `i32` parameter. We then declare a SIMD `i16x8` value, then right-shift it by 2 using `i16x8.shr_u`. Finally we extract the value stored in lane `6` of the output SIMD value using the [`extract_lane_u`](/en-US/docs/WebAssembly/Reference/SIMD/extract/extract_lane_u) instruction, and output it to the DOM by calling the imported `output()` function.
 
 ```wat live-sample___simd_shr_u
 (module
@@ -133,7 +133,7 @@ In our Wasm module, we first import the JavaScript `output()` function, making s
     i32.const 2
 
     i16x8.shr_u ;; shift-right by 2
-    i16x8.extract_lane_s 6 ;; Extract a value from the result
+    i16x8.extract_lane_u 6 ;; Extract a value from the result
 
     call $output
   )

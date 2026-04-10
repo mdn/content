@@ -146,5 +146,5 @@ The result is `24`, because the value stored in lane `3` of each of the input va
 
 ## See also
 
-- [`add_sat_s`](#)
-- [`add_sat_u`](#)
+- `add_sat_s`
+- `add_sat_u`

@@ -58,7 +58,7 @@ value_type.ceil
 
 For a non-SIMD `ceil`, these will be basic numeric values such as `14.3` or `3.0`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `ceil`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 100.5 6.0 7.8 83.1`.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `ceil`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 1.9 2.5 0.5 12.1`.
 
 ### Binary encoding
 

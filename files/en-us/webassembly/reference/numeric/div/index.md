@@ -67,10 +67,10 @@ For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `div`, these will be [`v128
 
 | Instruction | Binary format  | Example text => binary          |
 | ----------- | -------------- | ------------------------------- |
-| `f32.div`   | `0x95`         | `f32.div` => `0x92`             |
-| `f64.div`   | `0xa3`         | `f64.div` => `0xa0`             |
+| `f32.div`   | `0x95`         | `f32.div` => `0x95`             |
+| `f64.div`   | `0xa3`         | `f64.div` => `0xa3`             |
 | `f32x4.div` | `0xfd 231:u32` | `f32x4.div` => `0xfd 0xe7 0x01` |
-| `f64x2.div` | `0xfd 243:u32` | `f64x2.div` => `0xfd 0xf0 0x01` |
+| `f64x2.div` | `0xfd 243:u32` | `f64x2.div` => `0xfd 0xf3 0x01` |
 
 ## Examples
 

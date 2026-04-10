@@ -7,10 +7,10 @@ browser-compat: webassembly.simd.bitmask
 sidebar: webassemblysidebar
 ---
 
-The **`bitmask`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) inspects the **most significant bit** (MSB) — bit 7 — of each byte of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation. This is the sign bit if the value is treated as signed. The instruction's output value is equal to all of those bits collected into a single `i32`, with byte 0's MSB in bit 0 of the result, byte 1's MSB in bit 1, and so on.
+The **`bitmask`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) inspects the **most significant bit** (MSB) of each lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation. This is the sign bit if the lane is treated as signed. The instruction's output value is equal to all of those bits collected into a single `i32`, with lane 0's MSB in bit 0 of the result, lane 1's MSB in bit 1, and so on.
 
 > [!NOTE]
-> In a single byte, an MSB of `1` means the value is greater than or equal to 128 (this can be a negative value if signed), while an MSB of `0` means means the value is less than 128.
+> For `i8x16.bitmask`, an MSB of `1` means the lane value is greater than or equal to 128 (negative if signed), while an MSB of `0` means the value is less than 128. For wider lane types the threshold is correspondingly larger: 32768 for `i16x8`, 2147483648 for `i32x4`.
 
 {{InteractiveExample("Wat Demo: bitmask", "tabbed-taller")}}
 

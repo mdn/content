@@ -82,8 +82,8 @@ For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `lt_s`, the inputs will be 
 
 | Instruction  | Binary format  | Example text => binary           |
 | ------------ | -------------- | -------------------------------- |
-| `i32.lt_s`   | `0x48`         | `f32.lt_s` => `0x48`             |
-| `i64.lt_s`   | `0x53`         | `f64.lt_s` => `0x53`             |
+| `i32.lt_s`   | `0x48`         | `i32.lt_s` => `0x48`             |
+| `i64.lt_s`   | `0x53`         | `i64.lt_s` => `0x53`             |
 | `i8x16.lt_s` | `0xfd 37:u32`  | `i8x16.lt_s` => `0xfd 0x25`      |
 | `i16x8.lt_s` | `0xfd 47:u32`  | `i16x8.lt_s` => `0xfd 0x2f`      |
 | `i32x4.lt_s` | `0xfd 57:u32`  | `i32x4.lt_s` => `0xfd 0x39`      |
