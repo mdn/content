@@ -65,9 +65,9 @@ table.size identifier
 
 ### Opcodes
 
-| Instruction  | Binary opcode                                                                                                  |
-| ------------ | -------------------------------------------------------------------------------------------------------------- |
-| `table.size` | `𝟶𝚡𝙵𝙲 16:𝚞𝟹𝟸` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
+| Instruction  | Binary format             | Example text => binary             |
+| ------------ | ------------------------- | ---------------------------------- |
+| `table.size` | `0xFC 16:u32 𝑥:table_idx` | `table.size 0` => `0xfc 0x10 0x00` |
 
 ## Description
 

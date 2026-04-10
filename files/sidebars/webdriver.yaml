@@ -4,22 +4,53 @@ sidebar:
   - type: section
     link: /Web/WebDriver
   - type: section
+    link: /Web/WebDriver/How_to
+  - link: /Web/WebDriver/How_to/Create_BiDi_connection
+  - type: section
     link: /Web/WebDriver/Reference
-  - link: /Web/WebDriver/Reference/BiDi
-    details: open
+  - type: section
+    link: /Web/WebDriver/Reference/BiDi
+  - link: /Web/WebDriver/Reference/BiDi/Modules
+    details: closed
     children:
+      - link: /Web/WebDriver/Reference/BiDi/Modules/bluetooth
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/browser
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/input
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/log
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/network
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/script
+        code: true
       - type: listSubPages
-        path: /Web/WebDriver/Reference/BiDi/Modules
-        link: /Web/WebDriver/Reference/BiDi/Modules
+        path: /Web/WebDriver/Reference/BiDi/Modules/session
+        link: /Web/WebDriver/Reference/BiDi/Modules/session
         details: closed
-  - link: /Web/WebDriver/Reference/Classic
-    details: open
-    children:
-      - type: listSubPages
-        path: /Web/WebDriver/Reference/Classic/Commands
-        link: /Web/WebDriver/Reference/Classic/Commands
-        details: closed
-      - link: /Web/WebDriver/Reference/Classic/Timeouts
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/storage
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/userAgentClientHints
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/webExtension
+        code: true
+  - type: section
+    link: /Web/WebDriver/Reference/Classic
+  - type: listSubPages
+    path: /Web/WebDriver/Reference/Classic/Commands
+    link: /Web/WebDriver/Reference/Classic/Commands
+    details: closed
+  - link: /Web/WebDriver/Reference/Classic/Timeouts
+  - type: section
+    title: Shared
   - type: listSubPages
     path: /Web/WebDriver/Reference/Capabilities
     link: /Web/WebDriver/Reference/Capabilities

@@ -17,7 +17,7 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
 ## Instance properties
 
 - `body`
-  - : The body of the report, containing more information about the violation.
+  - : The body of the report.
     This is an object with the following properties:
     - `type`
       - : A string representing the cause of the violation that triggered the report.

@@ -339,6 +339,7 @@ p {
 - Legacy {{cssxref("font-stretch")}} alias property with better browser support
 - {{cssxref("font-style")}} property
 - {{cssxref("font-weight")}} property
+- SVG {{SVGAttr("font-width")}} attribute
 - SVG {{SVGAttr("font-stretch")}} attribute
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module

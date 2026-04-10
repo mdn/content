@@ -35,7 +35,7 @@ replaceElementWithChildren(element)
 
 ### Basic usage
 
-This example shows the basic usage of the method, configuring a sanitizer that replaces the `<em>` element in inputs with its child content.
+This example shows the basic usage of the method, configuring a `Sanitizer` that replaces the `<em>` element in inputs with its child content.
 
 ```js
 // Create sanitizer (in this case the default)

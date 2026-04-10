@@ -128,7 +128,7 @@ The header values are defined as structured field dictionaries with the followin
 - `endpoints` {{optional_inline}}
   - : Defines a list of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint). The reporting endpoints need to be defined in a {{httpheader("Reporting-Endpoints")}} header.
 
-In cases where a request is blocked by an integrity policy, a [Reporting API](/en-US/docs/Web/API/Reporting_API) violation report is created with a type of `integrity-violation` and a body of type {{domxref("IntegrityViolationReportBody")}} that includes information such as the URL of the document and the blocked resource.
+In cases where a request is blocked by an integrity policy, a [Reporting API](/en-US/docs/Web/API/Reporting_API) violation report is created with a type property of `integrity-violation` and the structure defined by {{domxref("IntegrityViolationReport")}} that includes information such as the URL of the document and the blocked resource.
 
 A typical report might look like this
 
