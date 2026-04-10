@@ -7,7 +7,7 @@ browser-compat: api.Highlight
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`Highlight`** interface of the [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) is used to represent a collection of {{domxref("Range")}} instances to be styled using the API.
+The **`Highlight`** interface of the [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) is used to represent a collection of {{domxref("AbstractRange")}} instances to be styled using the API.
 
 To style arbitrary ranges in a page, instantiate a new `Highlight` object, add one or more `Range` objects to it, and register it using the {{domxref("HighlightRegistry")}}.
 
@@ -62,7 +62,7 @@ The following example demonstrates how specific parts of a block of text can be 
   molestiae dolores vitae! Quo ex explicabo tempore? Tenetur.</p>
 ```
 
-This JavaScript code creates [ranges](/en-US/docs/Web/API/Range), instantiates a new `Highlight` object for them, and [registers it](/en-US/docs/Web/API/HighlightRegistry/set) to be styled on the page:
+This JavaScript code creates [ranges](/en-US/docs/Web/API/AbstractRange), instantiates a new `Highlight` object for them, and [registers it](/en-US/docs/Web/API/HighlightRegistry/set) to be styled on the page:
 
 ```js
 const parentNode = document.querySelector(".foo");
