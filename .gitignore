@@ -9,3 +9,5 @@ _githistory.json
 *.log
 .claude/settings.local.json
 mcp-vscode.json
+.claude/settings.local.json
+mcp-vscode.json
