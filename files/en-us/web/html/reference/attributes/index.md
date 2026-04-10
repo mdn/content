@@ -710,7 +710,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/Security/Subresource_Integrity">integrity</a></code>
+        <code><a href="/en-US/docs/Web/Security/Defenses/Subresource_Integrity">integrity</a></code>
       </td>
       <td>
         {{ HTMLElement("link") }}, {{ HTMLElement("script") }}
@@ -718,7 +718,7 @@ Elements in HTML have **attributes**; these are additional values that configure
       <td>
         <p>
           Specifies a
-          <a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>
+          <a href="/en-US/docs/Web/Security/Defenses/Subresource_Integrity">Subresource Integrity</a>
           value that allows browsers to verify what they fetch.
         </p>
       </td>

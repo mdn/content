@@ -131,10 +131,9 @@ The `<hr>` within a `<select>` should be considered purely decorative, as they a
 
 ### Basic select
 
-The following example creates a three-value dropdown menu, the second option of which is selected by default.
+The following example creates a three-value dropdown menu. The second option includes the `selected` attribute, making that option selected by default.
 
 ```html
-<!-- The second value will be selected initially -->
 <select name="choice">
   <option value="first">First Value</option>
   <option value="second" selected>Second Value</option>
@@ -190,7 +189,12 @@ The following example creates a dropdown menu with grouping using {{HTMLElement(
 
 ### Advanced select with multiple features
 
-The follow example is more complex, showing off more features you can use on a `<select>` element:
+The following example is more complex, showing off more features you can use on a `<select>` element:
+
+- The `multiple` attribute enables selecting more than one option.
+- The `size` attribute is set to `4`, which means 4 lines are displayed at a time. Users can scroll to view all the options.
+- Two {{htmlelement("optgroup")}} elements are included, creating two visual groupings, generally with the group name being bolded and nested options being indented.
+- The `disabled` attribute is included on the "Hamster" option, making that option not selectable.
 
 ```html
 <label>
@@ -213,13 +217,6 @@ The follow example is more complex, showing off more features you can use on a `
 #### Result
 
 {{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}
-
-You'll see that:
-
-- Multiple options are selectable because we've included the `multiple` attribute.
-- The `size` attribute causes only 4 lines to display at a time; you can scroll to view all the options.
-- We've included {{htmlelement("optgroup")}} elements to divide the options up into different groups. This is a purely visual grouping, its visualization generally consists of the group name being bolded, and the options being indented.
-- The "Hamster" option includes a `disabled` attribute and therefore can't be selected at all.
 
 ## Technical summary
 
@@ -262,11 +259,10 @@ You'll see that:
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        Zero or more {{HTMLElement("option")}},
-        {{HTMLElement("optgroup")}}, or {{HTMLElement("hr")}} elements in traditional <code>&lt;select&gt;</code> elements. In <a href="/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select">customizable select elements</a>:
         <ul>
-        <li>The select {{htmlelement("button")}} is optionally included as a child <code>&lt;button&gt;</code> element with a nested {{htmlelement("selectedcontent")}} element.</li>
-        <li>The drop-down picker is defined as any other content, which can include zero or more <code>&lt;option&gt;</code>, <code>&lt;optgroup&gt;</code>, <code>&lt;hr&gt;</code>, {{htmlelement("div")}}, {{htmlelement("script")}}, {{htmlelement("template")}}, and {{htmlelement("noscript")}} elements.
+          <li>{{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, or {{HTMLElement("hr")}} elements, optionally preceded by a {{htmlelement("button")}} element with a nested {{htmlelement("selectedcontent")}} element if a drop down box.</li>
+          <li>{{htmlelement("div")}}, {{htmlelement("script")}}, {{htmlelement("template")}}, and {{htmlelement("noscript")}} elements.</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -288,7 +284,7 @@ You'll see that:
         <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a> with <strong>no</strong>
         <code>multiple</code> attribute and <strong>no</strong>
         <code>size</code> attribute greater than 1, otherwise
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>.
       </td>
     </tr>
     <tr>
@@ -296,8 +292,8 @@ You'll see that:
       <td>
         <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a> with <strong>no</strong>
         <code>multiple</code> attribute and <strong>no</strong>
-        <code>size</code> attribute greater than 1, otherwise no
-        <code>role</code> permitted
+        <code>size</code> attribute greater than 1, otherwise <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
+        is permitted but not recommended.
       </td>
     </tr>
     <tr>
@@ -317,7 +313,7 @@ You'll see that:
 
 ## See also
 
-- Events fired by `<select>`: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("Element/input_event", "input")}}
 - The {{HTMLElement("option")}} element
 - The {{HTMLElement("optgroup")}} element
 - [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- Events fired by `<select>`: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("Element/input_event", "input")}}
