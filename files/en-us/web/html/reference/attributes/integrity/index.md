@@ -44,7 +44,7 @@ In each case, the part preceding `-` identifies the {{glossary("hash function")}
 
 The following {{htmlelement("script")}} element includes an `integrity` attribute containing three values, one calculated using SHA-256, one calculated using SHA-384, and one calculated using SHA-512.
 
-The browser will select the value calculated using the strongest algorithm that it supports: since all modern browsers support SHA-512, this means that the browser will select that value. It will hash the file contents using SHA-512 and compare the result with the `sha512-` value, and load the file only if they match.
+The browser will select the value that was calculated using the strongest algorithm that the browser supports. Since all modern browsers support SHA-512, this means that the browser will select the `sha512-` value. It will hash the file contents using SHA-512 and compare the result with the `sha512-` value, and load the file only if they match.
 
 In this case providing multiple values enables a website to work with browsers that may not support all the hash functions.
 
