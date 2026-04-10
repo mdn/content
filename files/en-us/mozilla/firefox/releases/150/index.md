@@ -18,7 +18,12 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- ### Developer Tools -->
 
-<!-- ### HTML -->
+### HTML
+
+- The `"auto"` keyword is now supported as an option for the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute of `<img>` elements (and [`HTMLImageElement.sizes`](/en-US/docs/Web/API/HTMLImageElement/sizes)).
+  This allows lazy-loaded `<img>` elements to use the calculated image layout size, after any CSS has been applied, to select which image to display from a [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset).
+  This is simpler that specifying media conditions and their associated sizes in the attribute, which likely duplicates behavior that is already captured in CSS media queries.
+  ([Firefox bug 1819581](https://bugzil.la/1819581)).
 
 <!-- No notable changes. -->
 
