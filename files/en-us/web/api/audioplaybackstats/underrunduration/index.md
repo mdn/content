@@ -12,7 +12,7 @@ The **`underrunDuration`** read-only property of the {{domxref("AudioPlaybackSta
 
 ## Value
 
-A floating point number indicating the duration of underrun events, in seconds. Initialized to `0`.
+A double-precision floating point number indicating the duration of underrun events, in seconds. Initialized to `0`.
 
 ## Examples
 

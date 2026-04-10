@@ -12,7 +12,7 @@ The **`totalDuration`** read-only property of the {{domxref("AudioPlaybackStats"
 
 ## Value
 
-An floating point number indicating the total duration of all audio frames, in seconds. Initialized to `0`.
+A double-precision floating point number indicating the total duration of all audio frames, in seconds. Initialized to `0`.
 
 ## Examples
 

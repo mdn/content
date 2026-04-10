@@ -12,7 +12,7 @@ The **`averageLatency`** read-only property of the {{domxref("AudioPlaybackStats
 
 ## Value
 
-A floating point number indicating the average latency, in seconds.
+A double-precision floating point number indicating the average latency, in seconds.
 
 ## Examples
 

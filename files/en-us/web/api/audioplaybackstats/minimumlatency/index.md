@@ -12,7 +12,7 @@ The **`minimumLatency`** read-only property of the {{domxref("AudioPlaybackStats
 
 ## Value
 
-A floating point number indicating the minimum latency, in seconds. Initialized to `0`.
+A double-precision floating point number indicating the minimum latency, in seconds. Initialized to `0`.
 
 ## Examples
 
