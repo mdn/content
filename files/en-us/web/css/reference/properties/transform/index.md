@@ -101,7 +101,7 @@ The `transform` property may be specified as either the keyword value `none` or 
 
 - {{cssxref("&lt;transform-function&gt;")}}
   - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/Reference/Values/transform-function) to be applied.
-    The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively [applied in order from right to left](#transform_order).
+    The transform functions are multiplied in order from left to right. Each function establishes a new coordinate system for the ones following it, so the visual result follows the written order. Mathematically, this is equivalent to applying them in reverse order (right to left).
 - `none`
   - : Specifies that no transform should be applied.
 
@@ -152,7 +152,9 @@ div {
 
 ### Transform order
 
-The order of transform functions matters. In this example, two boxes are rotated and translated by the same values; only the transform function order is different.
+The order of transform functions matters. Visually, transforms follow the written order (left to right) because each function establishes a new coordinate system for the functions that follow it.
+
+In this example, two boxes are rotated and translated by the same values; only the transform function order is different.
 
 #### HTML
 
