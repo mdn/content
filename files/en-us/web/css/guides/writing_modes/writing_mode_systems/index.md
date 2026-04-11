@@ -70,11 +70,11 @@ For vertical languages, we use the {{cssxref("writing-mode")}} and {{cssxref("te
 ```css
 :lang(ja) {
   writing-mode: vertical-rl;
-  text-orientation: upright;
+  text-orientation: mixed;
 }
 :lang(mn-Mong) {
   writing-mode: vertical-lr;
-  text-orientation: sideways;
+  text-orientation: mixed;
 }
 ```
 
