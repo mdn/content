@@ -40,7 +40,7 @@ Reflect.get(target, propertyKey, receiver)
 - `propertyKey`
   - : The name of the property to get.
 - `receiver` {{optional_inline}}
-  - : The value of `this` provided for the call to `target` if a getter is encountered. Defaults to `target` when this value is not provided.
+  - : The value of `this` provided for the call to `target` if a getter is encountered. Defaults to `target`.
 
 ### Return value
 
