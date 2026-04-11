@@ -12,14 +12,18 @@ The **`replace()`** method of {{jsxref("String")}} values returns a new string w
 {{InteractiveExample("JavaScript Demo: String.prototype.replace()")}}
 
 ```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+const paragraph = "The quick brown fox jumps over the lazy fox.";
 
-console.log(paragraph.replace("Ruth's", "my"));
-// Expected output: "I think my dog is cuter than your dog!"
+console.log(paragraph.replace("fox", "cat"));
+// Expected output: "The quick brown cat jumps over the lazy fox."
 
-const regex = /dog/i;
-console.log(paragraph.replace(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your dog!"
+const regex = /FOX/i;
+console.log(paragraph.replace(regex, "cat"));
+// Expected output: "The quick brown cat jumps over the lazy fox."
+
+const globalRegex = /fox/gi;
+console.log(paragraph.replace(globalRegex, "cat"));
+// Expected output: "The quick brown cat jumps over the lazy cat."
 ```
 
 ## Syntax
