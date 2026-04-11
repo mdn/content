@@ -150,6 +150,18 @@ Scroll the element in the inline direction to see its background color change. S
   - {{cssxref("animation-timeline")}}
   - {{cssxref("@keyframes")}} at-rule
   - [`<keyframe-selector>`](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers) module
+  - {{cssxref("animation-trigger")}}
+  - {{cssxref("timeline-trigger")}} shorthand
+  - {{cssxref("timeline-trigger-activation-range")}} shorthand
+    - {{cssxref("timeline-trigger-activation-range-end")}}
+    - {{cssxref("timeline-trigger-activation-range-start")}}
+  - {{cssxref("timeline-trigger-active-range")}} shorthand
+    - {{cssxref("timeline-trigger-active-range-end")}}
+    - {{cssxref("timeline-trigger-active-range-start")}}
+  - {{cssxref("timeline-trigger-name")}}
+  - {{cssxref("timeline-trigger-source")}}
+  - {{cssxref("trigger-scope")}}
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
   - {{glossary("Scroll container")}}
   - [Scrollport](/en-US/docs/Glossary/Scroll_container#scrollport)
@@ -166,4 +178,5 @@ Scroll the element in the inline direction to see its background color change. S
 
 ## See also
 
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
 - [Animate elements on scroll with scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) via developer.chrome.com (2023)
