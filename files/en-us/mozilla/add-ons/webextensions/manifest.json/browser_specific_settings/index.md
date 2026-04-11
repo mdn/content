@@ -89,7 +89,7 @@ The `gecko` sub-key supports these properties:
     See [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) for more information about setting extension IDs.
 
 - `strict_min_version`
-  - : Minimum version of Gecko to support. If the Firefox version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, all versions earlier than `strict_max_version` are supported. "\*" is not valid in this field.
+  - : Minimum version of Gecko to support. If the Firefox version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, all versions earlier than `strict_max_version` are supported. Neither "\*" nor dot releases are valid in this field, e.g. a value of "140.0" will work while "140.1" will fail the validation on *addons.mozilla.org* with error **Unknown "strict_min_version" 140.1 for Firefox**.
 - `strict_max_version`
   - : Maximum version of Gecko to support. If the Firefox version on which the extension is being installed or run is above this version, the extension is not installed or not run. Defaults to "\*", which disables checking for a maximum version.
 - `update_url`
