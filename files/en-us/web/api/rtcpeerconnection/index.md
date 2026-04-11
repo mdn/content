@@ -38,6 +38,8 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
   - : Returns a string that describes connection's ICE gathering state.
     This lets you detect, for example, when collection of ICE candidates has finished.
     Possible values are: `new`, `gathering`, or `complete`.
+- {{DOMxRef("RTCPeerConnection.idpLoginUrl", "idpLoginUrl")}} {{ReadOnlyInline}}
+  - : Returns a string containing the URL to which the application can navigate to allow the user to log in to the {{Glossary("Identity provider", "identity provider")}} (IdP). May be `null` if no login is needed.
 - {{DOMxRef("RTCPeerConnection.localDescription", "localDescription")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("RTCSessionDescription")}}
     describing the session for the local end of the connection.
