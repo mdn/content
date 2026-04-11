@@ -187,7 +187,7 @@ div {
 
 ### Gradient hints
 
-By default, the gradient transitions evenly from one color to the next. You can include a color-hint to move the midpoint of the transition value to a certain point along the gradient. In this example, we've moved the midpoint of the transition from the 50% mark to the 10% mark.
+By default, a gradient transitions evenly from one color to the next. You can include a color-hint to move the midpoint of the transition value to a certain point along the gradient, letting you control the {{Glossary("interpolation")}}, or progression, between two color stops. In this example, we've moved the midpoint of the transition from the 50% mark to the 10% mark. To highlight the difference the color hint can make, the second example does not contain the hint:
 
 ```html hidden
 <div class="color-hint"></div>
@@ -279,36 +279,6 @@ In the first example above, the lime goes from the 0% mark, which is implied, to
 In the second example, the second color stop for each color is at the same location as the first color stop for the adjacent color, creating a striped effect.
 
 In both examples, the gradient is written twice: the first is the CSS Images Level 3 method of repeating the color for each stop and the second example is the CSS Images Level 4 multiple color stop method of including two color-stop-lengths in a linear-color-stop declaration.
-
-### Controlling the progression of a gradient
-
-By default, a gradient evenly progresses between the colors of two adjacent color stops, with the midpoint between those two color stops being the midpoint color value. You can control the {{Glossary("interpolation")}}, or progression, between two color stops by including a color hint location. In this example, the color reaches the midpoint between lime and cyan 20% of the way through the gradient rather than 50% of the way through. The second example does not contain the hint to highlight the difference the color hint can make:
-
-```html hidden
-<div class="color-hint-gradient"></div>
-<div class="regular-progression"></div>
-```
-
-```css hidden
-div {
-  width: 120px;
-  height: 120px;
-  float: left;
-  margin-right: 10px;
-  box-sizing: border-box;
-}
-```
-
-```css
-.color-hint-gradient {
-  background: linear-gradient(to top, lime, 20%, cyan);
-}
-.regular-progression {
-  background: linear-gradient(to top, lime, cyan);
-}
-```
-
-{{ EmbedLiveSample('Controlling_the_progression_of_a_gradient', 120, 120) }}
 
 ### Overlaying gradients
 
