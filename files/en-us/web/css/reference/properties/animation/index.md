@@ -56,15 +56,15 @@ animation: 0.5s linear 1s infinite alternate slide-in;
 
 This property is a shorthand for the following CSS properties:
 
+- {{cssxref("animation-name")}}
+- {{cssxref("animation-duration")}}
+- {{cssxref("animation-timing-function")}}
 - {{cssxref("animation-delay")}}
 - {{cssxref("animation-direction")}}
-- {{cssxref("animation-duration")}}
-- {{cssxref("animation-fill-mode")}}
 - {{cssxref("animation-iteration-count")}}
-- {{cssxref("animation-name")}}
+- {{cssxref("animation-fill-mode")}}
 - {{cssxref("animation-play-state")}}
 - {{cssxref("animation-timeline")}}
-- {{cssxref("animation-timing-function")}}
 
 ## Syntax
 
@@ -82,46 +82,62 @@ animation:
   3s ease-out 5s slide-out;
 ```
 
-The `animation` property is specified as one or more single animations, separated by commas.
-
-Each individual animation is specified as:
-
-- zero, one, or two occurrences of the {{cssxref("&lt;time&gt;")}} value
-
-- zero or one occurrences of the following values:
-  - [`<single-easing-function>`](#single-easing-function)
-  - [`<single-animation-iteration-count>`](#single-animation-iteration-count)
-  - [`<single-animation-direction>`](#single-animation-direction)
-  - [`<single-animation-fill-mode>`](#single-animation-fill-mode)
-  - [`<single-animation-play-state>`](#single-animation-play-state)
-
-- an optional name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}
-
-> [!NOTE]
-> {{cssxref("animation-timeline")}}, {{cssxref("animation-range-start")}}, and {{cssxref("animation-range-end")}} are not currently included in this list, as current implementations are reset-only. This means that including `animation` resets a previously-declared `animation-timeline` value to `auto` and previously-declared `animation-range-start` and `animation-range-end` values to `normal`, but these properties cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare these properties after declaring any `animation` shorthand for it to take effect.
-
 ### Values
 
+One or more single `<animation>` declarations, separated by commas, with each `<animation>` including:
+
+- `<single-animation-name>`
+  - : The name of a {{cssxref("@keyframes")}} at-rules that specifies the animation to apply to an element. The initial value for {{cssxref("animation-name")}} is `none`.
+- `<single-animation-duration>`
+  - : Determines the length of time that an animation takes to complete one cycle. The value must be one of those available in {{cssxref("animation-duration")}}. The initial value is `0s`.
 - `<single-easing-function>`
-  - : Determines the type of transition. The value must be one of those available in {{cssxref("easing-function")}}.
-- `<single-animation-iteration-count>`
-  - : The number of times the animation is played. The value must be one of those available in {{cssxref("animation-iteration-count")}}.
+  - : Determines the type of transition. The value must be one of those available in {{cssxref("animation-timing-function")}}. The initial value is `ease`.
+- `<single-animation-delay>`
+  - : Determines the amount of time to wait from applying the animation to an element before beginning to perform the animation. The value must be one of those available in {{cssxref("animation-delay")}}. The initial value is `0s`.
 - `<single-animation-direction>`
-  - : The direction in which the animation is played. The value must be one of those available in {{cssxref("animation-direction")}}.
+  - : The direction in which the animation is played. The value must be one of those available in {{cssxref("animation-direction")}}. The initial value for {{cssxref("animation-direction")}} is `normal`.
+- `<single-animation-iteration-count>`
+  - : The number of times the animation is played. The value must be one of those available in {{cssxref("animation-iteration-count")}}. The initial value for {{cssxref("animation-iteration-count")}} is `1`.
 - `<single-animation-fill-mode>`
-  - : Determines how styles should be applied to the animation's target before and after its execution. The value must be one of those available in {{cssxref("animation-fill-mode")}}.
+  - : Determines how styles should be applied to the animation's target before and after its execution. The value must be one of those available in {{cssxref("animation-fill-mode")}}. The initial value for {{cssxref("animation-fill-mode")}} is `none`.
 - `<single-animation-play-state>`
-  - : Determines whether the animation is playing or not. The value must be one of those available in {{cssxref("animation-play-state")}}.
+  - : Determines whether the animation is playing or not. The value must be one of those available in {{cssxref("animation-play-state")}}. The initial value for {{cssxref("animation-play-state")}} is `running`.
+- `<single-animation-timeline>`
+  - : Determines the timeline used to control the progress of the animation. The value must be one of those available in {{cssxref("animation-timeline")}}. The initial value is `auto`.
 
 ## Description
 
-The order of time values within each animation definition is important: the first value that can be parsed as a {{cssxref("&lt;time&gt;")}} is assigned to the {{cssxref("animation-duration")}}, and the second one is assigned to {{cssxref("animation-delay")}}.
+The `animation` property is specified as one or more single animations, separated by commas. Each `animation` within the comma-separated list of animations sets the {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}, and {{cssxref("animation-timeline")}}. If any of the components are not included in an `animation` declaration, the component value is set to the component's initial value.
 
-The order of other values within each animation definition is also important for distinguishing an {{cssxref("animation-name")}} value from other values. If a value in the `animation` shorthand can be parsed as a value for an animation property other than `animation-name`, then the value will be applied to that property first and not to `animation-name`. For this reason, the recommended practice is to specify a value for `animation-name` as the last value in a list of values when using the `animation` shorthand; this holds true even when you specify multiple, comma-separated animations using the `animation` shorthand.
+### animation-name
 
-While an animation name must be set for an animation to be applied, all values of the `animation` shorthand are optional, and default to the initial value for each long-hand `animation` component. The initial value of `animation-name` is `none`, meaning if no `animation-name` value is declared in the `animation` shorthand property, there is no animation to apply on any of the properties.
+The `<animation-name>` component of each animation is the name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}. The initial value of `animation-name` is `none`, meaning if no `animation-name` value is declared in the `animation` shorthand property, no animation is applied to any of the properties.
 
-When the `animation-duration` value is omitted from the `animation` shorthand property, the value for this property defaults to `0s`. In this case, the animation will still occur (the [`animationStart`](/en-US/docs/Web/API/Element/animationstart_event) and [`animationEnd`](/en-US/docs/Web/API/Element/animationend_event) events will be fired) but no animation will be visible.
+The order of other values within an animation definition is important for distinguishing an {{cssxref("animation-name")}} value from other values. If a value in the `animation` shorthand can be parsed as a value for an animation property other than `animation-name`, then the value will be applied to that property first and not to `animation-name`. For this reason, the recommended practice is to specify a value for `animation-name` as the last value in a list of values when using the `animation` shorthand; this holds true even when you specify multiple, comma-separated animations using the `animation` shorthand.
+
+### Time values
+
+Each animation can include zero, one, or two occurrences of the {{cssxref("&lt;time&gt;")}} value. The order of time values within each animation definition is important: the first value that can be parsed as a {{cssxref("&lt;time&gt;")}} is assigned to the {{cssxref("animation-duration")}}, and the second one is assigned to {{cssxref("animation-delay")}}.
+
+When no `animation-duration` value is specified in the `animation` shorthand property, the duration defaults to `0s`. In this case, the animation will still occur (the [`animationStart`](/en-US/docs/Web/API/Element/animationstart_event) and [`animationEnd`](/en-US/docs/Web/API/Element/animationend_event) events will be fired), but no animation will be visible to the user.
+
+### animation-timeline
+
+The current implementations of `animation` are reset-only: if no `<animation-timeline>` is included in the `animation` shorthand, the shorthand declaration will reset any previously-declared `animation-timeline` values to `auto`.
+
+By default, the `animation-timeline` is the {{domxref("documentTimeline")}}. If a value is included, but the user-agent doesn't support `<animation-timeline>` values within the shorthand, the declaration is invalid and ignored.
+
+This means that, when creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare the `animation-timeline` property after declaring any `animation` shorthand for it to take effect.
+
+Alternatively, the `animation-timeline` can be used within the `animation` shorthand within a CSS {{cssxref("@supports")}} block, such as:
+
+```css
+@supports (animation: view()) {
+  /* CSS for browsers that support setting <animation-timeline> within the animation shorthand */
+}
+```
+
+### animation-fill-mode and new stacking contexts
 
 In the case of the `animation-fill-mode` [forwards](/en-US/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) value, animated properties behave as if included in a set {{cssxref("will-change")}} property value. If a new stacking context is created during the animation, the target element retains the stacking context after the animation has finished.
 
