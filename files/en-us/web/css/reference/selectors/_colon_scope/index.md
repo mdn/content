@@ -31,6 +31,24 @@ Which element(s) `:scope` matches depends on the context in which it is used:
 
 ## Examples
 
+### Sibling combinators to the right of `:scope` never match
+
+The relationship defined by `:scope` is always ancestor-to-descendant from the scope root. Because of that, putting a sibling combinator to the right of `:scope` creates a selector that can never match.
+
+```css
+:scope + p {
+  color: red;
+}
+
+:scope ~ * {
+  color: red;
+}
+```
+
+In this case, no element can be both "a sibling of `:scope`" and also inside the same scoped matching relationship, so these selectors never produce a match.
+
+In Firefox, selectors like these can trigger a warning in DevTools because they will never match.
+
 ### Using `:scope` as an alternative to `:root`
 
 This example shows that `:scope` is equivalent to `:root` when used at the root level of a stylesheet. In this case, the provided CSS colors the background of the `<html>` element orange.
