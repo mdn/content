@@ -6,7 +6,8 @@ browser-compat: css.types.color.light-dark
 sidebar: cssref
 ---
 
-The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [`<color>` function](/en-US/docs/Web/CSS/Reference/Values/Functions#color_functions) enables setting two colors for a property - returning one of the two colors options by detecting if the developer has set a light or dark color scheme or the user has requested light or dark color theme - without needing to encase the theme colors within a [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) [media feature](/en-US/docs/Web/CSS/Guides/Media_queries/Using#targeting_media_features) query.
+The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [`<color>` function](/en-US/docs/Web/CSS/Reference/Values/Functions#color_functions) enables setting two colors or images for a property - returning one of the two color or image options by detecting if the developer has set a light or dark color scheme or the user has requested light or dark color theme - without needing to encase the theme colors within a [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) [media feature](/en-US/docs/Web/CSS/Guides/Media_queries/Using#targeting_media_features) query.
+
 Users are able to indicate their color-scheme preference through their operating system settings (e.g., light or dark mode) or their user agent settings. The `light-dark()` function enables providing two color values where any `<color>` value is accepted. The `light-dark()` CSS color function returns the first value if the user's preference is set to `light` or if no preference is set and the second value if the user's preference is set to `dark`.
 
 To enable support for the `light-dark()` color function, the {{CSSXref("color-scheme")}} must have a value of `light dark`, usually set on the {{CSSXref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes).
@@ -23,15 +24,34 @@ body {
 
 ## Syntax
 
-```css
+```css-nolint
 /* Named color values */
 color: light-dark(black, white);
+background-color: light-dark(white, black);
 
 /* RGB color values */
-color: light-dark(rgb(0 0 0), rgb(255 255 255));
+color: light-dark(
+  rgb(0 0 0),
+  rgb(255 255 255)
+);
+
+/* image url values */
+color: light-dark(
+  url("light-icon.png"),
+  url("dark-icon.png")
+);
+
+/* linear-gradient values */
+color: light-dark(
+  linear-gradient(135deg, ghostwhite 20%, tomato),
+  linear-gradient(45deg, darkslategray 20%, gold)
+);
 
 /* Custom properties */
-color: light-dark(var(--light), var(--dark));
+color: light-dark(
+  var(--light),
+  var(--dark)
+);
 ```
 
 ### Values
@@ -44,11 +64,19 @@ Functional notation: `light-dark(light-color, dark-color)`
 - `dark-color`
   - : {{CSSXref("&lt;color&gt;")}} value to be set for dark {{CSSXref("color-scheme")}}.
 
+Functional notation: `light-dark(light-image, dark-image)`
+
+- `light-image`
+  - : {{CSSXref("&lt;image&gt;")}} value to be set for light {{CSSXref("color-scheme")}}.
+
+- `dark-image`
+  - : {{CSSXref("&lt;image&gt;")}} value to be set for dark {{CSSXref("color-scheme")}}.
+
 ## Formal syntax
 
 {{CSSSyntax}}
 
-## Example
+## Examples
 
 ### Setting colors based on color scheme
 
@@ -128,6 +156,118 @@ section {
 
 {{EmbedLiveSample("setting_colors_based_on_color_scheme", "100%", 500)}}
 
+### Setting images based on color scheme
+
+This is using the same code as the previous example but includes a `<div>`, instead of a `<p>` of text, with a `background-image` property.
+
+```html hidden
+<h1><code>light-dark()</code> CSS function with images</h1>
+<p class="supports">
+  Your browser does not support <code>light-dark()</code> with images.
+</p>
+<div class="wrapper">
+  <section>
+    <h2>Automatic</h2>
+    <div></div>
+  </section>
+  <section class="light">
+    <h2>Light</h2>
+    <div></div>
+  </section>
+  <section class="dark">
+    <h2>Dark</h2>
+    <div></div>
+  </section>
+</div>
+```
+
+#### CSS
+
+```css-nolint hidden
+:root {
+  /* this has to be set to switch between light or dark */
+  color-scheme: light dark;
+
+  --light-bg: ghostwhite;
+  --light-color: darkslategray;
+  --light-code: tomato;
+
+  --dark-bg: darkslategray;
+  --dark-color: ghostwhite;
+  --dark-code: gold;
+}
+* {
+  background-color: light-dark(var(--light-bg), var(--dark-bg));
+  color: light-dark(var(--light-color), var(--dark-color));
+}
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.8rem;
+}
+.light {
+  /* forces light color-scheme */
+  color-scheme: light;
+}
+.dark {
+  /* forces dark color-scheme */
+  color-scheme: dark;
+}
+section {
+  width: 25%;
+  padding: 5px;
+  color: light-dark(
+    var(--light-code),
+    var(--dark-code)
+  );
+  border: 2px solid light-dark(var(--light-code), var(--dark-code));
+}
+@supports (background-image: light-dark(url("light.png"), url("dark.png"))) {
+  .supports {display:none;}
+}
+```
+
+Firstly, we define the light and dark `linear-gradient()`s using custom properties.
+
+```css
+:root {
+  /*  light dark gradients  */
+  --light-grad: linear-gradient(135deg, var(--light-bg) 20%, var(--light-code));
+  --dark-grad: linear-gradient(45deg, var(--dark-bg) 30%, var(--dark-code));
+}
+```
+
+```css hidden
+section div {
+  width: 80%;
+  aspect-ratio: 1/1;
+  margin: auto;
+  border: 1px solid light-dark(var(--light-code), var(--dark-code));
+}
+@supports not (
+  background-image: light-dark(url("light.png"), url("dark.png"))
+) {
+  section div {
+    width: 60%;
+  }
+}
+```
+
+Then we use the custom properties to set the light and dark `background-image`.
+
+```css-nolint
+section div {
+  background-image: light-dark(
+    var(--light-grad),
+    var(--dark-grad)
+  );
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("setting_colors_based_on_color_scheme", "100%", 350)}}
+
 ## Specifications
 
 {{Specifications}}
@@ -140,6 +280,7 @@ section {
 
 - {{CSSXref("color-scheme")}}
 - {{CSSXref("&lt;color&gt;")}}
+- {{CSSXref("&lt;image&gt;")}}
 - [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module
 - [`prefers-contrast`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) {{cssxref("@media")}} feature
 - [`contrast()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/contrast)
