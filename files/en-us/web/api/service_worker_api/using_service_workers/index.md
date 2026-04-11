@@ -320,6 +320,10 @@ const cacheFirst = async ({
   // First try to get the resource from the cache
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
+    // Wait for preload to settle to avoid cancellation warning
+    if (preloadResponsePromise) {
+      preloadResponsePromise.catch(() => {});
+    }
     return responseFromCache;
   }
 
