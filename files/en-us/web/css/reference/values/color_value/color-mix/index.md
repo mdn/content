@@ -6,7 +6,7 @@ browser-compat: css.types.color.color-mix
 sidebar: cssref
 ---
 
-The **`color-mix()`** functional notation takes two {{cssxref("&lt;color&gt;")}} values and returns the result of mixing them in a given colorspace by a given amount.
+The **`color-mix()`** functional notation takes one or more {{cssxref("&lt;color&gt;")}} values and returns the result of mixing them in a given colorspace by a given amount.
 
 ## Syntax
 
@@ -43,7 +43,7 @@ A `<color>`; the result of mixing the colors, in the given `<color-space>`, in t
 
 ## Description
 
-The `color-mix()` function enables mixing two {{cssxref("&lt;color&gt;")}} values of any type, in a specific ratio, in a given colorspace, using either a shorter or longer hue interpolation method. Browsers support a plethora of color spaces; the `color-mix()` function enables a wide range of colors to be mixed, not limited to the sRGB color space.
+The `color-mix()` function enables mixing one or more {{cssxref("&lt;color&gt;")}} values of any type, in a specific ratio, in a given colorspace, using either a shorter or longer hue interpolation method. Browsers support a plethora of color spaces; the `color-mix()` function enables a wide range of colors to be mixed, not limited to the sRGB color space.
 
 {{EmbedGHLiveSample("css-examples/tools/color-mixer/", '100%', 400)}}
 
@@ -53,7 +53,7 @@ This demo allows you to select two colors, `color-one` and `color-two`, and mix 
 
 Choosing the correct color space is important for producing desired results. Given the same colors to mix, different color spaces may be more appropriate depending on the interpolation use case.
 
-- If the result of physically mixing two colored lights is desired, the CIE XYZ or srgb-linear color space is appropriate, because they are linear in light intensity.
+- If the result of physically mixing colored lights is desired, the CIE XYZ or srgb-linear color space is appropriate, because they are linear in light intensity.
 - If colors need to be evenly spaced perceptually (such as in a gradient), the Oklab (and older Lab) color spaces are appropriate, because they are designed to be perceptually uniform.
 - If avoiding graying out in color mixing is desired, i.e., maximizing chroma throughout the transition, the Oklch (and older LCH) color spaces work well.
 - Only use sRGB if you need to match the behavior of a specific device or software that uses sRGB. The sRGB color space is neither linear-light nor perceptually uniform, and produces poorer results such as overly dark or grayish mixes.
