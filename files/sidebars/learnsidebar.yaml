@@ -223,6 +223,11 @@ sidebar:
       - /Learn_web_development/Core/Accessibility/Test_your_skills
   - link: /Learn_web_development/Core/Design_for_developers
     title: Design_for_developers
+    details: closed
+    children:
+      - /Learn_web_development/Core/Design_for_developers/Basic_design_theory
+      - /Learn_web_development/Core/Design_for_developers/User-centered_design
+      - /Learn_web_development/Core/Design_for_developers/Interface_designs
   - link: /Learn_web_development/Core/Version_control
     title: Version_control
   - type: section
