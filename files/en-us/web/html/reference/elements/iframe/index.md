@@ -357,3 +357,4 @@ Here's how to write escape sequences when using `srcdoc`:
 
 - [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)
+- [Local network access](/en-US/docs/Web/Security/Defenses/Local_network_access)
