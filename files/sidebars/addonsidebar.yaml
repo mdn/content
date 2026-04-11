@@ -56,6 +56,7 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API
       - /Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
       - /Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
+      - /Mozilla/Add-ons/WebExtensions/Use_the_web_authn_api
       - /Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
       - /Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
   - type: webExtApi
