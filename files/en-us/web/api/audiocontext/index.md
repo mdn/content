@@ -26,6 +26,8 @@ _Also inherits properties from its parent interface, {{domxref("BaseAudioContext
   - : Returns the number of seconds of processing latency incurred by the `AudioContext` passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.
 - {{domxref("AudioContext.outputLatency")}} {{ReadOnlyInline}}
   - : Returns an estimation of the output latency of the current audio context.
+- {{domxref("AudioContext.playbackStats")}} {{ReadOnlyInline}}
+  - : Returns an {{domxref("AudioPlaybackStats")}} object providing access to duration, underrun, and latency statistics for the `AudioContext`.
 - {{domxref("AudioContext.sinkId")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the sink ID of the current output audio device.
 
