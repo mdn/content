@@ -60,7 +60,7 @@ Han-based systems are commonly written using a left-to-right inline direction wi
 Mongolian-based systems are typically written vertically, top to bottom, in columns that flow left to right; a top-to-bottom inline direction with a left-to-right block flow direction. This differs from Chinese, Japanese, and Korean, whose vertical text columns are read right to left. It derives from the fact that Mongolian script descended from Old Uyghur, which was written left-to-right.
 
 ```html
-<p lang="mn-MONG" dir="auto">Үүнийг монгол хэлээр бичжээ</p>
+<p lang="mn-Mong" dir="auto">ᠡᠭᠦᠨ ᠢ ᠮᠣᠩᠭᠤᠯ ᠬᠡᠯᠡ ᠪᠠᠷ ᠪᠢᠴᠢᠵᠡᠢ</p>
 ```
 
 To render the writing modes correctly, we use the global HTML [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) attribute. Because browsers can turn off CSS styling, it is recommended to use the `dir` attribute and {{htmlelement("bdo")}} element to ensure correct bidirectional layout in the absence of a style sheet, rather than the CSS {{cssxref("direction")}} property.
@@ -68,21 +68,21 @@ To render the writing modes correctly, we use the global HTML [`dir`](/en-US/doc
 For vertical languages, we use the {{cssxref("writing-mode")}} and {{cssxref("text-orientation")}} properties:
 
 ```css
-[lang|="ja"] {
+:lang(ja) {
   writing-mode: vertical-rl;
-  text-orientation: upright;
+  text-orientation: mixed;
 }
-[lang|="mn"] {
+:lang(mn-Mong) {
   writing-mode: vertical-lr;
-  text-orientation: sideways;
+  text-orientation: mixed;
 }
 ```
 
 {{EmbedLiveSample("Writing system modes", "100%", "500")}}
 
 ```css hidden
-[lang|="ja"],
-[lang|="mn"] {
+:lang(ja),
+:lang(mn-Mong) {
   float: left;
 }
 ```
