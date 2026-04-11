@@ -29,7 +29,9 @@ replaceElementWithChildren(element)
 
 ### Return value
 
-`true` if the operation changed the configuration to set the element to be replaced by its children, and `false` if the sanitizer was already replacing the element.
+`true` if the operation changed the configuration to set the element to be replaced by its children, and `false` otherwise.
+
+The method returns `false` if the sanitizer was already configured to replace the given element, or if the replacement element was {{htmlelement("html")}} in the HTML namespace.
 
 ## Examples
 
