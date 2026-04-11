@@ -37,7 +37,7 @@ dispatchEvent(event)
 
 ### Return value
 
-`false` if `event` is cancelable, and at least one of the event handlers which received `event` called {{domxref("Event.preventDefault()")}}. Otherwise `true`.
+The `dispatchEvent()` method returns `false` if the event is cancelable and at least one of the event listeners calls {{domxref("Event.preventDefault()")}}. Otherwise, it returns `true`.
 
 ### Exceptions
 
