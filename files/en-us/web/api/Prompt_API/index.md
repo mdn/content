@@ -1,0 +1,90 @@
+---
+title: Prompt API
+slug: Web/API/Prompt_API
+page-type: web-api-overview
+spec-urls: https://webmachinelearning.github.io/prompt-api/
+---
+
+{{DefaultAPISidebar("Prompt API")}}{{SecureContext_Header}}
+
+The **Prompt API** gives web pages the ability to directly prompt a browser-provided language model. It provides a uniform JavaScript interface that abstracts away implementation-specific details of the underlying model, such as prompt templating and tokenization. By relying on a model built into the browser, the Prompt API offers benefits including local processing of sensitive data, offline capability, model sharing across origins, and lower cost compared to cloud-based or bring-your-own-model approaches.
+
+## Concepts and usage
+
+### Sessions
+
+All interaction with the language model happens through a {{domxref("LanguageModel")}} session. A session is created by calling the static {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} method, which returns a {{jsxref("Promise")}} that resolves with a `LanguageModel` instance. If the model is not yet downloaded, the browser begins the download automatically; you can monitor progress with the `monitor` option.
+
+Once you have a session, use {{domxref("LanguageModel.prompt()")}} to send text or multimodal input and receive the model's complete response, or {{domxref("LanguageModel.promptStreaming()")}} to receive the response incrementally as it is generated. Both methods add to the session's running context, maintaining conversational history across multiple turns.
+
+Use {{domxref("LanguageModel.append()")}} to pre-load content into the context window without generating a response — useful for injecting documents, background information, or conversation history before asking a question.
+
+### Checking availability
+
+Before creating a session, call the static {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} method to determine whether the language model supports a given configuration on the current device. The method resolves with one of four string values: `"available"`, `"downloadable"`, `"downloading"`, or `"unavailable"`. This allows pages to adapt gracefully — for example, by displaying a download prompt or falling back to a server-side implementation — rather than creating a session only to have it fail.
+
+### The context window
+
+Every `LanguageModel` session has a finite context window, measured in tokens, which is the total amount of input and output it can hold at once. The {{domxref("LanguageModel.contextWindow")}} property reports the session's maximum capacity, and {{domxref("LanguageModel.contextUsage")}} reports how many tokens have been consumed so far.
+
+When a `prompt()`, `promptStreaming()`, or `append()` call would exceed the context window, it throws a `QuotaExceededError` {{domxref("DOMException")}} and the {{domxref("LanguageModel.oncontextoverflow", "contextoverflow")}} event fires. To check how many tokens a piece of input would consume without actually sending it, use {{domxref("LanguageModel.measureContextUsage()")}}.
+
+To branch from a session at a specific point in a conversation — for example, to explore different response paths in parallel without affecting each other — use {{domxref("LanguageModel.clone()")}}.
+
+### Tool use
+
+The Prompt API supports tool use, allowing the language model to invoke developer-defined functions during generation. Tools are registered when creating a session via the `tools` option of {{domxref("LanguageModelCreateOptions")}}. Each tool is described with a name, a natural-language description, and a JSON Schema object defining its input parameters. When the model decides to call a tool, the user agent invokes the tool's {{domxref("LanguageModelToolFunction")}} callback with the arguments the model specified, and feeds the returned string back to the model to continue generation.
+
+### Multimodal input
+
+Sessions can accept text, image, and audio input, depending on the capabilities of the underlying model. Declare the expected input and output modalities when creating a session using the `expectedInputs` and `expectedOutputs` options, each of which accepts a sequence of {{domxref("LanguageModelExpected")}} objects. These declarations also allow {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired modalities and languages are supported before committing to session creation.
+
+Multimodal messages are expressed using the {{domxref("LanguageModelMessage")}} and {{domxref("LanguageModelMessageContent")}} dictionaries. When a session is configured to accept images or audio, you can include `ImageBitmapSource` or `AudioBuffer` values alongside text parts in a single message.
+
+### Permissions policy
+
+Access to the Prompt API is controlled by the `"language-model"` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) feature, whose default allowlist is `'self'`. This means the API is available to same-origin contexts by default. To enable it in cross-origin `<iframe>` elements, the embedding page must explicitly grant permission via the `allow` attribute or an appropriate `Permissions-Policy` response header.
+
+### Security and privacy
+
+The Prompt API is restricted to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts) (HTTPS). The privacy and security considerations for the API — including protections against fingerprinting through model capability queries, restrictions on the information revealed by availability checks, and requirements on how user agents must handle sensitive or harmful outputs — are discussed in the [Writing Assistance APIs](https://webmachinelearning.github.io/writing-assistance-apis/) specification, which defines the shared infrastructure on which the Prompt API is built.
+
+## Interfaces
+
+- {{domxref("LanguageModel")}}
+  - : Represents a session with a browser-provided language model. Provides static methods for creating sessions and checking availability, and instance methods for prompting the model, managing context, and cloning sessions.
+
+## Dictionaries
+
+- {{domxref("LanguageModelCreateOptions")}}
+  - : The full set of options for {{domxref("LanguageModel.create_static", "LanguageModel.create()")}}, including an abort signal, a download-progress monitor, initial prompts, and all options inherited from {{domxref("LanguageModelCreateCoreOptions")}}.
+- {{domxref("LanguageModelCreateCoreOptions")}}
+  - : The base options shared by {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} and {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}}, covering expected input and output modalities and registered tools.
+- {{domxref("LanguageModelPromptOptions")}}
+  - : Options for {{domxref("LanguageModel.prompt()")}} and {{domxref("LanguageModel.promptStreaming()")}}, including an optional output constraint and an abort signal.
+- {{domxref("LanguageModelAppendOptions")}}
+  - : Options for {{domxref("LanguageModel.append()")}}, consisting of an abort signal.
+- {{domxref("LanguageModelCloneOptions")}}
+  - : Options for {{domxref("LanguageModel.clone()")}}, consisting of an abort signal.
+- {{domxref("LanguageModelTool")}}
+  - : Describes a tool that a language model session can invoke during generation, including its name, description, input schema, and the callback the user agent invokes on the model's behalf.
+- {{domxref("LanguageModelExpected")}}
+  - : Describes an expected input or output capability for a session, specifying a content type (such as `"text"`, `"image"`, or `"audio"`) and an optional list of supported languages.
+- {{domxref("LanguageModelMessage")}}
+  - : Represents a single message in a conversation, with a role (`"system"`, `"user"`, or `"assistant"`), content (a string or a sequence of {{domxref("LanguageModelMessageContent")}} objects), and an optional prefix flag.
+- {{domxref("LanguageModelMessageContent")}}
+  - : Represents a single content part within a {{domxref("LanguageModelMessage")}}, pairing a content type with a corresponding value such as a string, `ImageBitmapSource`, or `AudioBuffer`.
+
+## Callback functions
+
+- {{domxref("LanguageModelToolFunction")}}
+  - : The type of function assigned to the `execute` property of a {{domxref("LanguageModelTool")}}. Called by the user agent when the language model invokes a tool; must return a {{jsxref("Promise")}} that resolves with a string representing the tool's result.
+
+## Specifications
+
+{{Specifications}}
+
+## See also
+
+- [Writing Assistance APIs](https://webmachinelearning.github.io/writing-assistance-apis/) — the specification defining the shared infrastructure underlying the Prompt API
+- [Web Machine Learning Working Group](https://www.w3.org/groups/wg/webmachinelearning/)
