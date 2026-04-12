@@ -55,3 +55,5 @@ function UpdateDisplayTab(elem, tabIdx) {
 
 - {{domxref("Element.attachShadow()")}}
 - {{domxref("HTMLSlotElement.assign()")}}
+- [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) attribute of the `<template>` element
+- {{domxref("HTMLTemplateElement.shadowRootSlotAssignment")}}
