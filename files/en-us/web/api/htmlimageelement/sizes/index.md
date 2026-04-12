@@ -9,14 +9,14 @@ browser-compat: api.HTMLImageElement.sizes
 {{APIRef("HTML DOM")}}
 
 The **`sizes`** property of the {{domxref("HTMLImageElement")}} interface allows you to specify the layout width of the [image](/en-US/docs/Web/HTML/Reference/Elements/img) for each of a list of [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), or `auto` for lazy-loaded images to allow the browser to automatically select an image to display based on the layout size of the element.
-This provides the ability to automatically select among different images specified in the element {{domxref("HTMLImageElement/srcset","srcset")}} — even images of different orientations or aspect ratios — as the document state changes to match different media conditions.
+This allows the browser to choose between different images specified in the element {{domxref("HTMLImageElement/srcset", "srcset")}} to match different media conditions — even images with different orientations or aspect ratios.
 
-It reflects the `<img>` element's [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) content attribute.
+The `sizes` property reflects the `<img>` element's [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) content attribute.
 It can only be present when `srcset` uses width descriptors.
 
 ## Value
 
-A string containing one or more comma-separated values, which can be the `auto` keyword and/or any number of _source sizes_.
+A string containing that is can be the `auto` keyword (optionally followed by any number of _source sizes_), or one or more _source sizes_.
 
 See the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute in the HTML `<img>` reference for more information.
 
@@ -111,7 +111,7 @@ break50.addEventListener(
 
 #### Result
 
-The page is best {{LiveSampleLink('Selecting an image to fit window width', 'viewed in its own window')}}, so you can adjust the sizes fully (otherwise it is constrained by its containing frame).
+The page is best {{LiveSampleLink('Selecting an image to fit window width', 'viewed in its own window')}}, so you can adjust the sizes fully, and the example is not constrained by its containing frame.
 
 1. Enable the developer tools and change the width of the page — you should see the image change size at the sizes media query trigger points: 480px (30em), and 800px (50em).
 2. Set the width between 50em (800px) and 60em (960px) so that the last media query is selected. Then alternately press each of the buttons and note how the layout size of the image is changed.
@@ -120,16 +120,16 @@ The page is best {{LiveSampleLink('Selecting an image to fit window width', 'vie
 
 ### Automatic image selection for lazy loaded images
 
-This example demonstrates how setting the `sizes` value to `auto` affects selection of the image to load from the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) of lazy-loaded {{htmlelement("img")}} elements.
+This example demonstrates how setting the `sizes` value to `auto` affects the selection of the image to load from the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) when {{htmlelement("img")}} elements are lazy-loaded.
 It also allows you to see the effect of changing the size of a container on the loaded image.
 
 #### HTML
 
-In order to demonstrate the effect of lazy loading the images need to be initially hidden from the visual viewport, and then scrolled into view.
+In order to demonstrate the effect of lazy loading the images need to be initially hidden from the {{glossary("visual viewport")}}, and then scrolled into view.
 This is achieved by having an outer `scroll-container` {{htmlelement("div")}} that nests `spacer` and `demo-wrap` containers.
-The images are nested within containers inside the `demo-wrap`, which is pushed out of the visual viewport by the `spacer`.
+The images are contained inside the `demo-wrap` container, which is pushed out of the visual viewport by the height set on the `spacer` container.
 
-The three {{htmlelement("img")}} elements have different `alt` properties, but are otherwise identical:
+The three {{htmlelement("img")}} elements have different `alt` attribute values, but are otherwise identical:
 
 - `srcset` defines three images and indicates that they are 600px, 400px, and 200px wide.
 - `src` specifies the image that will be used if `srcset` is not supported or it can't be parsed.
@@ -216,7 +216,7 @@ function log(text) {
 
 #### CSS
 
-Here we show the size of CSS that sets the size of the image containers.
+Here we show the CSS classes that set the size of the different image containers.
 
 ```css hidden
 #scroll-container {
@@ -331,20 +331,20 @@ const observer = new IntersectionObserver(
 images.forEach((img) => observer.observe(img));
 ```
 
-The remaining CSS and the code for the slider, logging, and so on are not shown (if you are interested select "Play" to view the whole example in the interactive playground).
+The remaining CSS and the JavaScript that powers the slider, logging, and so on, are not shown (if you are interested in examining these, select "Play" to view the whole example in the interactive playground).
 
 #### Result
 
 Scroll the frame to display the three images.
-The browser should have selected a different image for each based on the constrained layout size.
+The browser should have selected a different image for each based on the different width constraints.
 You can use the slider to modify the size of the container for the first image.
-Note that the browser may or may not select a new image to display as the size of the container changes.
+Note that the browser may or may not select a new image to display as the size of the container changes as implementations are not required to react to dynamic changes.
 
 {{EmbedLiveSample("Automatic image selection for lazy loaded images", "", 600)}}
 
 The log provides information when a `load` event fires for each image, and when an image intersects the visible viewport.
-Note that the images are lazy loaded, so the load event should be fired just before the image enters the viewport.
-Also note that the event fires as you modify the container size for the first image, indicating when the browser has recalculated the layout (not necessarily that a new image has been loaded).
+Note that the images are lazy-loaded, so the `load` event should be fired just before the image enters the viewport.
+Also note that the `load` event also fires as you modify the container size for the first image, indicating when the browser has recalculated the layout (not necessarily that a new image has been loaded).
 
 ## Specifications
 

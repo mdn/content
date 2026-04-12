@@ -202,13 +202,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         1. A [media condition](/en-US/docs/Web/CSS/Guides/Media_queries/Using#syntax), omitted for the last item in the list.
         2. A source size value.
 
-        For example, the following source size proposes using an image source of 1000px width if the _viewport_ height is 500px or less.
+        For example, the following source size proposes using a `1000px`-wide image source if the _viewport_ height is 500px or less.
 
         ```css
         (height <= 500px) 1000px
         ```
 
-        Media conditions describe properties of the _viewport_, not the _image_.
+        Media conditions describe properties of the _{{glossary("viewport")}}_, not the _image_.
         Because a source size descriptor specifies the width to use for the image during layout, the media condition is typically (but not necessarily) based on the {{cssxref("@media/width")}}.
 
         Source size values specify the intended display size of the image.
@@ -222,11 +222,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     - `auto`
       - : The `auto` keyword indicates that the browser should use the expected layout width of the element to select the image to display.
         That is, it should use the [concrete size](/en-US/docs/Web/CSS/Reference/Values/image) of the image, calculated after layout from HTML and CSS has been applied.
-        This is only valid when combined with `loading="lazy"`, as the page can be expected to already have CSS and other layout information by the time the image is loaded.
+        This is only valid when combined with `loading="lazy"`, as the page is expected to already have CSS and other layout information by the time the image loads.
 
         Using `auto` saves you having to specify your layout media conditions twice: once for layout, and once for selection of an appropriate image to fetch and display.
 
-        If `auto` cannot resolve — either because the browser does not support it, or because the image has no layout size yet — the browser falls through to the fallback _source sizes_ in the list to determine the width, then to `width`/`height` attributes defined on the element, and finally to the default intrinsic size for `<img>` elements defined in the user agent stylesheet (300px by 150px).
+        If `auto` cannot resolve — either because the browser does not support it, or because the image has no layout size yet — the browser falls back to the _source sizes_ in the list to determine the width, then to `width`/`height` attributes defined on the element, and finally to the default intrinsic size for `<img>` elements defined in the user agent stylesheet (300px by 150px).
 
         For better backward compatibility with browsers that do not support `auto`, you can include fallback sizes after `auto` in the `sizes` attribute.
         You should also set the element's `width` and `height` attributes to the intrinsic dimensions of the largest image in your `srcset`, so the browser can reserve space using the correct aspect ratio:
