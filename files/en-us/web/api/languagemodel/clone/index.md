@@ -1,0 +1,99 @@
+---
+title: "LanguageModel: clone() method"
+short-title: clone()
+slug: Web/API/LanguageModel/clone
+page-type: web-api-instance-method
+spec-urls: https://webmachinelearning.github.io/prompt-api/
+---
+
+{{APIRef("Prompt API")}}{{SecureContext_Header}}
+
+The **`clone()`** method of the {{domxref("LanguageModel")}} interface creates a copy of the current session, including its full context window state. The cloned session can be used independently without affecting the original.
+
+## Syntax
+
+```js-nolint
+clone()
+clone(options)
+```
+
+### Parameters
+
+- `options` {{optional_inline}}
+  - : A {{domxref("LanguageModelCloneOptions")}} object. Options include:
+    - `signal` — An {{domxref("AbortSignal")}} to cancel the clone operation.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} instance. The new instance has the same internal model state, context history, and configuration as the original session at the time of cloning.
+
+### Exceptions
+
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown if the clone operation fails.
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if the operation was cancelled via the `signal` option.
+
+## Description
+
+`clone()` is useful for branching a session at a specific point in a conversation. Because both the original and the clone share the same context history up to the point of cloning, you can explore multiple response paths or test variations without starting from scratch.
+
+For example, you might build up shared context using {{domxref("LanguageModel.append()")}} or early `prompt()` calls, clone the session, and then send different follow-up prompts to each clone in parallel.
+
+## Examples
+
+### Exploring multiple response paths
+
+```js
+const session = await LanguageModel.create({
+  initialPrompts: [
+    { role: "system", content: "You are a creative writing assistant." },
+  ],
+});
+
+await session.append("The story begins in a small coastal town during a storm.");
+
+// Branch into two different continuations
+const [clone1, clone2] = await Promise.all([
+  session.clone(),
+  session.clone(),
+]);
+
+const [ending1, ending2] = await Promise.all([
+  clone1.prompt("Write a happy ending."),
+  clone2.prompt("Write a mysterious ending."),
+]);
+
+console.log("Happy ending:", ending1);
+console.log("Mysterious ending:", ending2);
+```
+
+### Cloning to retry after a context overflow
+
+```js
+let session = await LanguageModel.create();
+const checkpoint = await session.clone();
+
+try {
+  await session.append(veryLargeDocument);
+} catch (err) {
+  if (err.name === "QuotaExceededError") {
+    console.warn("Document too large; reverting to checkpoint.");
+    session = checkpoint;
+  }
+}
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("LanguageModel.append()")}}
+- {{domxref("LanguageModelCloneOptions")}}
+- [Prompt API](/en-US/docs/Web/API/Prompt_API)

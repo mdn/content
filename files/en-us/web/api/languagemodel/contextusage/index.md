@@ -1,0 +1,73 @@
+---
+title: "LanguageModel: contextUsage property"
+short-title: contextUsage
+slug: Web/API/LanguageModel/contextUsage
+page-type: web-api-instance-property
+spec-urls: https://webmachinelearning.github.io/prompt-api/
+---
+
+{{APIRef("Prompt API")}}{{SecureContext_Header}}
+
+The **`contextUsage`** read-only property of the {{domxref("LanguageModel")}} interface returns the number of context window tokens currently consumed by this session, including initial prompts and all subsequent turns.
+
+## Value
+
+A number representing the current context window usage in tokens.
+
+## Description
+
+`contextUsage` reflects the total number of tokens the session has consumed in its context window so far. This value increases as you call {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, or {{domxref("LanguageModel.append()")}}.
+
+Compare `contextUsage` against {{domxref("LanguageModel.contextWindow")}} to determine how much space remains. When `contextUsage` would exceed `contextWindow`, subsequent method calls throw a `QuotaExceededError` and the `contextoverflow` event fires.
+
+To estimate how many tokens a new prompt would use before sending it, call {{domxref("LanguageModel.measureContextUsage()")}}.
+
+## Examples
+
+### Monitoring context usage during a conversation
+
+```js
+const session = await LanguageModel.create();
+
+await session.prompt("Tell me about the history of the internet.");
+
+console.log(
+  `Context used: ${session.contextUsage} / ${session.contextWindow} tokens`,
+);
+```
+
+### Warning when context is nearly full
+
+```js
+const session = await LanguageModel.create();
+
+session.addEventListener("contextoverflow", () => {
+  console.warn("Context window is full.");
+});
+
+async function safePrompt(text) {
+  const remaining = session.contextWindow - session.contextUsage;
+  const needed = await session.measureContextUsage(text);
+
+  if (needed > remaining) {
+    console.warn(`Prompt needs ${needed} tokens but only ${remaining} remain.`);
+    return null;
+  }
+  return session.prompt(text);
+}
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("LanguageModel.contextWindow")}}
+- {{domxref("LanguageModel.measureContextUsage()")}}
+- {{domxref("LanguageModel.oncontextoverflow")}}
+- [Prompt API](/en-US/docs/Web/API/Prompt_API)
